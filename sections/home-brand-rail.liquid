@@ -1,0 +1,365 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .home-brand-rail-{{ section.id }} {
+    --hbr-bg: #ffffff;
+    --hbr-text: #132238;
+    --hbr-muted: #5f6f80;
+    --hbr-border: rgba(19, 34, 56, 0.08);
+    --hbr-hover: rgba(143, 212, 239, 0.14);
+    --hbr-shadow: 0 1.2rem 3rem rgba(15, 31, 68, 0.06);
+    background: linear-gradient(180deg, rgba(246, 250, 252, 0.86), rgba(255, 255, 255, 0.98));
+  }
+
+  .home-brand-rail-{{ section.id }} .page-width {
+    max-width: min(100%, 144rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__shell {
+    display: grid;
+    gap: 1.6rem;
+    padding: 1.6rem;
+    border: 1px solid var(--hbr-border);
+    background: var(--hbr-bg);
+    box-shadow: var(--hbr-shadow);
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__header {
+    display: grid;
+    gap: 0.8rem;
+    justify-items: start;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__title {
+    margin: 0;
+    color: var(--hbr-text);
+    font-size: clamp(2.2rem, 3vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__intro {
+    margin: 0;
+    max-width: 72rem;
+    color: var(--hbr-muted);
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__viewport {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(15rem, 1fr);
+    gap: 1rem;
+    align-items: stretch;
+    min-width: max-content;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__item {
+    min-width: 0;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__link,
+  .home-brand-rail-{{ section.id }} .home-brand-rail__all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8.4rem;
+    padding: 1.4rem 1.8rem;
+    border: 1px solid transparent;
+    background: #ffffff;
+    color: var(--hbr-text);
+    text-decoration: none;
+    transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__link:hover,
+  .home-brand-rail-{{ section.id }} .home-brand-rail__link:focus-visible,
+  .home-brand-rail-{{ section.id }} .home-brand-rail__all:hover,
+  .home-brand-rail-{{ section.id }} .home-brand-rail__all:focus-visible {
+    transform: translateY(-0.1rem);
+    background: var(--hbr-hover);
+    border-color: rgba(19, 34, 56, 0.08);
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 5rem;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__logo img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 4.6rem;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--hbr-text);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__all {
+    gap: 0.9rem;
+    min-width: 16rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .home-brand-rail-{{ section.id }} .home-brand-rail__all-arrow {
+    width: 1rem;
+    height: 1rem;
+    border-top: 0.18rem solid currentColor;
+    border-right: 0.18rem solid currentColor;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .home-brand-rail-{{ section.id }} .page-width {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+    }
+
+    .home-brand-rail-{{ section.id }} .home-brand-rail__shell {
+      padding: 2rem 2.2rem;
+    }
+
+    .home-brand-rail-{{ section.id }} .home-brand-rail__track {
+      grid-auto-columns: minmax(13rem, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .home-brand-rail-{{ section.id }} .page-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .home-brand-rail-{{ section.id }} .home-brand-rail__shell {
+      gap: 1.8rem;
+      padding: 2rem 2.4rem;
+    }
+
+    .home-brand-rail-{{ section.id }} .home-brand-rail__track {
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(10rem, 1fr);
+      min-width: 0;
+    }
+  }
+{%- endstyle -%}
+
+<section class="home-brand-rail home-brand-rail-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="home-brand-rail__shell">
+      {%- if section.settings.title != blank or section.settings.intro != blank -%}
+        <div class="home-brand-rail__header">
+          {%- if section.settings.title != blank -%}
+            <h2 class="home-brand-rail__title">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.intro != blank -%}
+            <p class="home-brand-rail__intro">{{ section.settings.intro }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="home-brand-rail__viewport">
+        <div class="home-brand-rail__track">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign brand_collection = block.settings.collection
+              assign brand_title = block.settings.custom_title | strip
+              if brand_title == blank and brand_collection != blank
+                assign brand_title = brand_collection.title
+              endif
+
+              assign brand_link = ''
+              if brand_collection != blank
+                assign brand_link = brand_collection.url
+              endif
+
+              assign brand_image = block.settings.custom_image
+              if brand_image == blank and brand_collection != blank and brand_collection.image
+                assign brand_image = brand_collection.image
+              endif
+            -%}
+
+            <div class="home-brand-rail__item" {{ block.shopify_attributes }}>
+              <a
+                {% if brand_link != blank %}
+                  href="{{ brand_link }}"
+                {% else %}
+                  role="link" aria-disabled="true"
+                {% endif %}
+                class="home-brand-rail__link"
+              >
+                {%- if brand_image != blank -%}
+                  <span class="home-brand-rail__logo">
+                    {{ brand_image | image_url: width: 360 | image_tag:
+                      widths: '180, 260, 360',
+                      sizes: '(min-width: 990px) 10vw, 25vw',
+                      loading: 'lazy',
+                      alt: brand_image.alt | default: brand_title | escape
+                    }}
+                  </span>
+                {%- elsif brand_title != blank -%}
+                  <span class="home-brand-rail__label">{{ brand_title | escape }}</span>
+                {%- endif -%}
+              </a>
+            </div>
+          {%- endfor -%}
+
+          {%- if section.settings.show_all_brands_link and section.settings.all_brands_label != blank -%}
+            <div class="home-brand-rail__item">
+              <a
+                {% if section.settings.all_brands_link != blank %}
+                  href="{{ section.settings.all_brands_link }}"
+                {% else %}
+                  role="link" aria-disabled="true"
+                {% endif %}
+                class="home-brand-rail__all"
+              >
+                <span>{{ section.settings.all_brands_label | escape }}</span>
+                <span class="home-brand-rail__all-arrow" aria-hidden="true"></span>
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home brand rail",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 16,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Onze merken"
+    },
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Intro",
+      "default": "Kies uit bekende merken en ontdek collecties die passen bij jouw stijl, budget en badkamerwensen."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_all_brands_link",
+      "label": "Toon 'Alle merken' link",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "all_brands_label",
+      "label": "'Alle merken' label",
+      "default": "Alle merken"
+    },
+    {
+      "type": "url",
+      "id": "all_brands_link",
+      "label": "'Alle merken' link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Merk",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collectie"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Aangepaste afbeelding",
+          "info": "Optioneel. Gebruik dit als logo als de collectie-afbeelding niet geschikt is."
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Aangepaste titel",
+          "info": "Wordt gebruikt als er geen afbeelding is."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home brand rail",
+      "blocks": [
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" }
+      ]
+    }
+  ]
+}
+{% endschema %}

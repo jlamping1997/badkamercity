@@ -1,0 +1,109 @@
+.bc-product-pros-cons {
+  max-width: 124rem;
+  margin: 2.4rem auto 0;
+}
+
+.bc-product-pros-cons__inner {
+  max-width: 82rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(15, 39, 64, 0.1);
+  border-bottom: 1px solid rgba(15, 39, 64, 0.1);
+}
+
+.bc-product-pros-cons__title {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.8rem, 1.45vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgb(var(--bc-color-primary));
+}
+
+.bc-product-pros-cons__list {
+  display: grid;
+  gap: 0.72rem;
+  margin: 0;
+  padding: 0;
+}
+
+.bc-product-pros-cons__item {
+  display: grid;
+  grid-template-columns: 1.9rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: start;
+  min-width: 0;
+  color: rgba(var(--bc-color-primary), 0.78);
+  font-size: 1.45rem;
+  line-height: 1.45;
+}
+
+.bc-product-pros-cons__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-top: 0.18rem;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bc-product-pros-cons__item--plus .bc-product-pros-cons__icon {
+  background: #239456;
+  color: #fff;
+}
+
+.bc-product-pros-cons__item--attention .bc-product-pros-cons__icon {
+  background: #eceff2;
+  color: rgba(var(--bc-color-primary), 0.58);
+}
+
+.bc-product-pros-cons__icon-mark {
+  display: block;
+  transform: translateY(-0.03rem);
+}
+
+.bc-product-pros-cons__text {
+  min-width: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .bc-product-pros-cons {
+    margin-top: 2rem;
+  }
+
+  .bc-product-pros-cons__inner {
+    padding: 1.4rem 0;
+  }
+
+  .bc-product-pros-cons__list {
+    gap: 0.75rem;
+  }
+
+  .bc-product-pros-cons__item {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    gap: 0.75rem;
+    font-size: 1.4rem;
+  }
+
+  .bc-product-pros-cons__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .bc-product-pros-cons {
+    display: grid;
+    grid-template-columns: minmax(0, 0.52fr) minmax(40rem, 0.48fr);
+    column-gap: 2.4rem;
+  }
+
+  .bc-product-pros-cons__inner {
+    grid-column: 1;
+    max-width: 56rem;
+  }
+}

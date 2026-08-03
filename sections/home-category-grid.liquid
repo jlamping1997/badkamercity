@@ -1,0 +1,442 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .home-category-grid-{{ section.id }} {
+    --hcg-background: #f8fafc;
+    --hcg-surface: #ffffff;
+    --hcg-text: #132238;
+    --hcg-border: rgba(19, 34, 56, 0.12);
+    --hcg-border-strong: rgba(19, 34, 56, 0.24);
+    --hcg-icon-bg: rgba(143, 212, 239, 0.14);
+    --hcg-icon-color: #1f6685;
+    --hcg-hover-bg: #f2f7fb;
+    --hcg-columns-mobile: {{ section.settings.columns_mobile | default: 2 }};
+    --hcg-columns-desktop: {{ section.settings.columns_desktop | default: 4 }};
+  }
+
+  .home-category-grid-{{ section.id }} {
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0));
+  }
+
+  .home-category-grid-{{ section.id }} .page-width {
+    max-width: min(100%, 144rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__title {
+    margin: 0;
+    color: var(--hcg-text);
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__title-accent {
+    color: #8fd4ef;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__items {
+    display: grid;
+    grid-template-columns: repeat(var(--hcg-columns-mobile), minmax(0, 1fr));
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__item {
+    min-width: 0;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    min-height: 8rem;
+    padding: 1.6rem 1.8rem;
+    border: 1px solid var(--hcg-border);
+    border-radius: 1.6rem;
+    background: var(--hcg-surface);
+    color: var(--hcg-text);
+    text-decoration: none;
+    transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.18s ease;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile:hover,
+  .home-category-grid-{{ section.id }} .home-category-grid__tile:focus-visible {
+    border-color: var(--hcg-border-strong);
+    background: var(--hcg-hover-bg);
+    transform: translateY(-0.1rem);
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile:focus-visible {
+    outline: 0.2rem solid rgba(31, 102, 133, 0.25);
+    outline-offset: 0.2rem;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile[aria-disabled='true'] {
+    cursor: default;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__icon {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    background: var(--hcg-icon-bg);
+    color: var(--hcg-icon-color);
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__icon svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__icon:empty {
+    display: none;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__label {
+    min-width: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .home-category-grid-{{ section.id }} .page-width {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__header {
+      margin-bottom: 2.6rem;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      gap: 1.4rem;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .home-category-grid-{{ section.id }} .page-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__item--hide-desktop {
+      display: none;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      grid-template-columns: repeat(var(--hcg-columns-desktop), minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__tile {
+      min-height: 8.8rem;
+      padding: 1.8rem 2rem;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__item--hide-mobile {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      gap: {% if section.settings.columns_mobile >= 4 %}0.7rem{% elsif section.settings.columns_mobile == 3 %}0.8rem{% else %}0.9rem{% endif %};
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__tile {
+      gap: {% if section.settings.columns_mobile >= 4 %}0.55rem{% elsif section.settings.columns_mobile == 3 %}0.75rem{% else %}1rem{% endif %};
+      min-height: {% if section.settings.columns_mobile >= 4 %}4.8rem{% elsif section.settings.columns_mobile == 3 %}5.4rem{% else %}6.2rem{% endif %};
+      padding: {% if section.settings.columns_mobile >= 4 %}0.7rem 0.55rem{% elsif section.settings.columns_mobile == 3 %}0.9rem 0.85rem{% else %}1.1rem 1.3rem{% endif %};
+      border-radius: {% if section.settings.columns_mobile >= 4 %}0.8rem{% elsif section.settings.columns_mobile == 3 %}0.9rem{% else %}1rem{% endif %};
+      flex-direction: {% if section.settings.columns_mobile >= 5 %}column{% else %}row{% endif %};
+      justify-content: {% if section.settings.columns_mobile >= 5 %}center{% else %}flex-start{% endif %};
+      align-items: center;
+      text-align: {% if section.settings.columns_mobile >= 5 %}center{% else %}left{% endif %};
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__icon {
+      width: {% if section.settings.columns_mobile >= 5 %}2.6rem{% elsif section.settings.columns_mobile == 4 %}3rem{% elsif section.settings.columns_mobile == 3 %}3.4rem{% else %}3.8rem{% endif %};
+      height: {% if section.settings.columns_mobile >= 5 %}2.6rem{% elsif section.settings.columns_mobile == 4 %}3rem{% elsif section.settings.columns_mobile == 3 %}3.4rem{% else %}3.8rem{% endif %};
+      border-radius: {% if section.settings.columns_mobile >= 5 %}0.7rem{% elsif section.settings.columns_mobile == 4 %}0.75rem{% elsif section.settings.columns_mobile == 3 %}0.85rem{% else %}0.9rem{% endif %};
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__icon svg {
+      width: {% if section.settings.columns_mobile >= 5 %}1.35rem{% elsif section.settings.columns_mobile == 4 %}1.6rem{% elsif section.settings.columns_mobile == 3 %}1.8rem{% else %}2rem{% endif %};
+      height: {% if section.settings.columns_mobile >= 5 %}1.35rem{% elsif section.settings.columns_mobile == 4 %}1.6rem{% elsif section.settings.columns_mobile == 3 %}1.8rem{% else %}2rem{% endif %};
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__label {
+      font-size: {% if section.settings.columns_mobile >= 5 %}1rem{% elsif section.settings.columns_mobile == 4 %}1.15rem{% elsif section.settings.columns_mobile == 3 %}1.3rem{% else %}1.5rem{% endif %};
+      line-height: 1.2;
+      word-break: break-word;
+      text-wrap: balance;
+    }
+  }
+{%- endstyle -%}
+
+<section class="home-category-grid home-category-grid-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <div class="home-category-grid__header">
+        <h2 class="home-category-grid__title">
+          {{ section.settings.title }}
+          <span class="home-category-grid__title-accent" aria-hidden="true">.</span>
+        </h2>
+      </div>
+    {%- endif -%}
+
+    <ul class="home-category-grid__items" role="list">
+      {%- if section.settings.source_mode == 'menu' and section.settings.menu != blank and section.settings.menu.links.size > 0 -%}
+        {%- for link in section.settings.menu.links -%}
+          {%- liquid
+            assign menu_title = link.title | strip
+            assign icon_handle = ''
+            assign title_handle = menu_title | handleize
+            if link.object and link.object.handle
+              assign icon_handle = link.object.handle
+            elsif link.handle != blank
+              assign icon_handle = link.handle
+            else
+              assign icon_handle = title_handle
+            endif
+
+            capture category_icon
+              render 'bc-category-icon', handle: icon_handle
+            endcapture
+            if category_icon == blank and title_handle != blank and title_handle != icon_handle
+              capture category_icon
+                render 'bc-category-icon', handle: title_handle
+              endcapture
+            endif
+          -%}
+
+          <li class="home-category-grid__item">
+            <a href="{{ link.url }}" class="home-category-grid__tile">
+              {%- if category_icon != blank -%}
+                <span class="home-category-grid__icon" aria-hidden="true">
+                  {{ category_icon }}
+                </span>
+              {%- endif -%}
+              <span class="home-category-grid__label">{{ menu_title | escape }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign block_collection = block.settings.collection
+            assign block_title = block.settings.custom_title | strip
+            if block_title == blank and block_collection != blank
+              assign block_title = block_collection.title
+            endif
+            if block_title == blank
+              assign block_title = 'Categorie'
+            endif
+
+            assign icon_handle = ''
+            assign title_handle = block_title | handleize
+            if block_collection != blank
+              assign icon_handle = block_collection.handle
+            endif
+            if icon_handle == blank
+              assign icon_handle = title_handle
+            endif
+
+            assign tile_url = ''
+            if block_collection != blank
+              assign tile_url = block_collection.url
+            endif
+
+            assign item_class = 'home-category-grid__item'
+            unless block.settings.show_on_desktop
+              assign item_class = item_class | append: ' home-category-grid__item--hide-desktop'
+            endunless
+            unless block.settings.show_on_mobile
+              assign item_class = item_class | append: ' home-category-grid__item--hide-mobile'
+            endunless
+
+            capture category_icon
+              render 'bc-category-icon', handle: icon_handle
+            endcapture
+            if category_icon == blank and title_handle != blank and title_handle != icon_handle
+              capture category_icon
+                render 'bc-category-icon', handle: title_handle
+              endcapture
+            endif
+          -%}
+
+          <li class="{{ item_class }}" {{ block.shopify_attributes }}>
+            <a
+              {% if tile_url != blank %}
+                href="{{ tile_url }}"
+              {% else %}
+                role="link" aria-disabled="true"
+              {% endif %}
+              class="home-category-grid__tile"
+            >
+              {%- if category_icon != blank -%}
+                <span class="home-category-grid__icon" aria-hidden="true">
+                  {{ category_icon }}
+                </span>
+              {%- endif -%}
+              <span class="home-category-grid__label">{{ block_title | escape }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home category grid",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 16,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section title",
+      "default": "Alles voor je badkamer, overzichtelijk per categorie"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Category menu",
+      "default": "main-menu",
+      "info": "Top-level links from this menu will be shown as category tiles."
+    },
+    {
+      "type": "select",
+      "id": "source_mode",
+      "label": "Category source",
+      "default": "menu",
+      "options": [
+        {
+          "value": "menu",
+          "label": "Use menu"
+        },
+        {
+          "value": "manual",
+          "label": "Use manual category blocks"
+        }
+      ],
+      "info": "Use manual blocks if you want to choose different categories for desktop and mobile."
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Items per row on desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Items per row on mobile",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_item",
+      "name": "Category item",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom title",
+          "info": "Optional. Falls back to the selected collection title."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_desktop",
+          "label": "Show on desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_mobile",
+          "label": "Show on mobile",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home category grid",
+      "blocks": [
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

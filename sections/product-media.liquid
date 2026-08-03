@@ -1,0 +1,17 @@
+{% comment %} Product media gallery sectie {% endcomment %}
+<section class="bc-product-media-section">
+  {% render 'product-media-gallery', variant_images: variant_images %}
+</section>
+
+{% schema %}
+{
+  "name": "Product Media",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Product Media"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,62 @@
+{% comment %} Uitgebreide specificaties sectie {% endcomment %}
+<section class="bc-product-specs-section" id="bc-full-specs">
+  <div class="bc-product-specs__container">
+    <h2 class="bc-product-specs__title">Alle specificaties</h2>
+    <table class="bc-product-specs__table">
+      <tbody>
+        {% render 'bc-product-spec-header', title: 'Product' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.artikelnummer, label: 'Artikelnummer' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.fabrikantnummer, label: 'Fabrikantnummer' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.ean, label: 'EAN-code' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.vendor, label: 'Merk' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.serie, label: 'Serie' %}
+        {% render 'bc-product-spec-header', title: 'Algemene kenmerken' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.vormgeving_stijlgroep, label: 'Vormgeving / stijlgroep' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.kleurgroep, label: 'Kleurgroep' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.basiskleur, label: 'Basiskleur' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.glansgraad, label: 'Glansgraad', uitleg_url: '#' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.materiaal_kraan, label: 'Materiaal kraan' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.montagewijze, label: 'Montagewijze' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.afwerking_greep, label: 'Afwerking greep', uitleg_url: '#' %}
+        {% render 'bc-product-spec-header', title: 'Douche & Thermostaat' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.belgaqua_keurmerk, label: 'Belgaqua keurmerk' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_hoofddouche, label: 'Met hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.breedte_diameter_hoofddouche, label: 'Breedte/diameter hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.dikte_hoofddouche, label: 'Dikte hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_straalsoorten_hoofddouche, label: 'Aantal straalsoorten hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.type_bevestiging_hoofddouche, label: 'Type bevestiging hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.lengte_douchearm, label: 'Lengte douchearm' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_handdouche, label: 'Met handdouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.type_handdouche, label: 'Type handdouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.breedte_diameter_douchekop, label: 'Breedte/diameter douchekop' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_straalsoorten_handdouche, label: 'Aantal straalsoorten handdouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_glijstang, label: 'Met glijstang' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_doucheslang, label: 'Met doucheslang' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.lengte_doucheslang, label: 'Lengte doucheslang' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.vorm_thermostaat, label: 'Vorm thermostaat' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.thermostatisch, label: 'Thermostatisch' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_inbouwdeel, label: 'Met inbouwdeel' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_uitgangen_tegelijk_bedienbaar, label: 'Aantal uitgangen tegelijk bedienbaar' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.bediening_voor_aan_uit, label: 'Bediening voor aan/uit' %}
+        {% render 'bc-product-spec-header', title: 'Hotbath Systemen' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_ecoair_system, label: 'Hotbath EcoAir System' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_shower_power_system, label: 'Hotbath Shower Power System' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_fluhs, label: 'Hotbath Fluhs' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_plumber_friendly, label: 'Hotbath Plumber Friendly' %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Specs",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Product Specs"
+    }
+  ]
+}
+{% endschema %}

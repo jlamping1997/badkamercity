@@ -1,0 +1,939 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .home-hero-{{ section.id }} {
+    --hh-surface: #ffffff;
+    --hh-text: #132238;
+    --hh-accent: #8fd4ef;
+    --hh-accent-deep: #1f6685;
+    --hh-border: rgba(19, 34, 56, 0.08);
+    --hh-shadow: 0 1.6rem 4rem rgba(15, 31, 68, 0.08);
+  }
+
+  .home-hero-{{ section.id }} .page-width {
+    max-width: min(100%, 144rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__shell {
+    display: grid;
+    gap: 1.8rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero,
+  .home-hero-{{ section.id }} .home-hero__banner {
+    position: relative;
+    overflow: hidden;
+    background: #e9eef3;
+    border: 1px solid var(--hh-border);
+    box-shadow: var(--hh-shadow);
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero {
+    min-height: 46rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__title--free,
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__subtitle--free,
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__actions--free {
+    pointer-events: auto;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__secondary {
+    display: grid;
+    gap: 1.8rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(19, 34, 56, 0.6) 0%, rgba(19, 34, 56, 0.3) 38%, rgba(19, 34, 56, 0.08) 78%),
+      linear-gradient(180deg, rgba(19, 34, 56, 0.12), rgba(19, 34, 56, 0.3));
+  }
+
+  .home-hero-{{ section.id }} .home-hero__banner .home-hero__media::after {
+    background:
+      linear-gradient(90deg, rgba(19, 34, 56, 0.48) 0%, rgba(19, 34, 56, 0.18) 58%, rgba(19, 34, 56, 0.08) 100%),
+      linear-gradient(180deg, rgba(19, 34, 56, 0.06), rgba(19, 34, 56, 0.2));
+  }
+
+  .home-hero-{{ section.id }} .home-hero__media img,
+  .home-hero-{{ section.id }} .home-hero__media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__media .placeholder-svg {
+    background: linear-gradient(135deg, #dfe6ec, #cdd7e0);
+    color: rgba(19, 34, 56, 0.2);
+  }
+
+  .home-hero-{{ section.id }} .home-hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    min-height: inherit;
+    padding: 2.4rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__content-inner {
+    display: grid;
+    gap: 1.2rem;
+    max-width: 54rem;
+    color: #ffffff;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__banner .home-hero__content-inner {
+    max-width: 32rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(3rem, 5vw, 5.8rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__banner .home-hero__title {
+    font-size: clamp(2.3rem, 3vw, 3.2rem);
+    line-height: 1.08;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__subtitle {
+    margin: 0;
+    max-width: 48rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.55rem;
+    line-height: 1.55;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__banner .home-hero__subtitle {
+    font-size: 1.45rem;
+    line-height: 1.5;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__title--free,
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__subtitle--free {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    max-width: min(calc(100% - 4rem), 54rem);
+    transform: translate(0, 0);
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__title--free {
+    left: {{ section.settings.hero_title_mobile_x }}%;
+    top: {{ section.settings.hero_title_mobile_y }}%;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__subtitle--free {
+    left: {{ section.settings.hero_subtitle_mobile_x }}%;
+    top: {{ section.settings.hero_subtitle_mobile_y }}%;
+    max-width: min(calc(100% - 4rem), 48rem);
+  }
+
+  .home-hero-{{ section.id }} .home-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__actions--left {
+    justify-content: flex-start;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__actions--center {
+    justify-content: center;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__actions--right {
+    justify-content: flex-end;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__actions--free {
+    position: absolute;
+    left: {{ section.settings.hero_button_mobile_x }}%;
+    top: {{ section.settings.hero_button_mobile_y }}%;
+    z-index: 2;
+    margin-top: 0;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.8rem;
+    padding: 1.2rem 2rem;
+    border: 1px solid transparent;
+    background: var(--hh-accent);
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.18s ease, transform 0.18s ease;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__button:hover,
+  .home-hero-{{ section.id }} .home-hero__button:focus-visible {
+    filter: brightness(0.92);
+    transform: translateY(-0.1rem);
+  }
+
+  .home-hero-{{ section.id }} .home-hero__button[aria-disabled='true'] {
+    opacity: 0.72;
+    pointer-events: none;
+  }
+
+  .home-hero-{{ section.id }} .home-hero__banner {
+    min-height: 25rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .home-hero-{{ section.id }} .page-width {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__content {
+      padding: 3.2rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__shell {
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+      align-items: stretch;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero {
+      min-height: 0;
+      height: 100%;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__secondary {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      align-self: stretch;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__banner {
+      min-height: 26rem;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .home-hero-{{ section.id }} .page-width {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__shell {
+      grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero {
+      min-height: 54rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__content {
+      padding: 4rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__secondary {
+      gap: 2rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__banner {
+      min-height: 0;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__actions--free {
+      left: {{ section.settings.hero_button_desktop_x }}%;
+      top: {{ section.settings.hero_button_desktop_y }}%;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__title--free {
+      left: {{ section.settings.hero_title_desktop_x }}%;
+      top: {{ section.settings.hero_title_desktop_y }}%;
+      max-width: min(calc(100% - 8rem), 54rem);
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero .home-hero__overlay .home-hero__subtitle--free {
+      left: {{ section.settings.hero_subtitle_desktop_x }}%;
+      top: {{ section.settings.hero_subtitle_desktop_y }}%;
+      max-width: min(calc(100% - 8rem), 48rem);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .home-hero-{{ section.id }} .home-hero__shell {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .home-hero-{{ section.id }} .home-hero__secondary {
+      display: none;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero {
+      min-height: 34rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__hero .home-hero__media img,
+    .home-hero-{{ section.id }} .home-hero__hero .home-hero__media svg {
+      object-position: center 32%;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__banner {
+      min-height: 24rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__content {
+      padding: 2rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__content-inner {
+      gap: 1rem;
+    }
+
+    .home-hero-{{ section.id }} .home-hero__subtitle {
+      font-size: 1.45rem;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign hero_fetch_priority = 'auto'
+  if section.index == 1
+    assign hero_fetch_priority = 'high'
+  endif
+-%}
+
+<section class="home-hero home-hero-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="home-hero__shell">
+      <article class="home-hero__hero">
+        <div class="home-hero__media">
+          {%- if section.settings.hero_image != blank -%}
+            {{
+              section.settings.hero_image
+              | image_url: width: 2200
+              | image_tag:
+                widths: '750, 1100, 1500, 1780, 2200',
+                sizes: '(min-width: 990px) 1200px, 100vw',
+                loading: 'eager',
+                fetchpriority: hero_fetch_priority,
+                alt: section.settings.hero_image.alt | default: section.settings.hero_title | escape
+            }}
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+
+        <div class="home-hero__content">
+          <div class="home-hero__content-inner">
+            {%- if section.settings.hero_title != blank and section.settings.hero_title_position_mode != 'free' -%}
+              <h2 class="home-hero__title" style="color: {{ section.settings.hero_title_color }};">
+                {{ section.settings.hero_title | escape }}
+              </h2>
+            {%- endif -%}
+            {%- if section.settings.hero_subtitle != blank and section.settings.hero_subtitle_position_mode != 'free' -%}
+              <p class="home-hero__subtitle" style="color: {{ section.settings.hero_subtitle_color }};">
+                {{ section.settings.hero_subtitle | escape }}
+              </p>
+            {%- endif -%}
+          </div>
+          {%- if section.settings.hero_button_text != blank and section.settings.hero_button_position_mode != 'free' -%}
+            <div class="home-hero__actions home-hero__actions--{{ section.settings.hero_button_alignment }}">
+              <a
+                {% if section.settings.hero_button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.hero_button_link }}"
+                {% endif %}
+                class="home-hero__button"
+                style="background: {{ section.settings.hero_button_background_color }}; color: {{ section.settings.hero_button_text_color }};"
+              >
+                {{ section.settings.hero_button_text | escape }}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.hero_title_position_mode == 'free'
+          or section.settings.hero_subtitle_position_mode == 'free'
+          or section.settings.hero_button_position_mode == 'free'
+        -%}
+          <div class="home-hero__overlay">
+            {%- if section.settings.hero_title != blank and section.settings.hero_title_position_mode == 'free' -%}
+              <h2 class="home-hero__title home-hero__title--free" style="color: {{ section.settings.hero_title_color }};">
+                {{ section.settings.hero_title | escape }}
+              </h2>
+            {%- endif -%}
+            {%- if section.settings.hero_subtitle != blank and section.settings.hero_subtitle_position_mode == 'free' -%}
+              <p class="home-hero__subtitle home-hero__subtitle--free" style="color: {{ section.settings.hero_subtitle_color }};">
+                {{ section.settings.hero_subtitle | escape }}
+              </p>
+            {%- endif -%}
+            {%- if section.settings.hero_button_text != blank and section.settings.hero_button_position_mode == 'free' -%}
+              <div class="home-hero__actions home-hero__actions--free">
+                <a
+                  {% if section.settings.hero_button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ section.settings.hero_button_link }}"
+                  {% endif %}
+                  class="home-hero__button"
+                  style="background: {{ section.settings.hero_button_background_color }}; color: {{ section.settings.hero_button_text_color }};"
+                >
+                  {{ section.settings.hero_button_text | escape }}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </article>
+
+      <div class="home-hero__secondary">
+        {%- for index in (1..2) -%}
+          {%- liquid
+            assign title_key = 'banner_' | append: index | append: '_title'
+            assign subtitle_key = 'banner_' | append: index | append: '_subtitle'
+            assign button_key = 'banner_' | append: index | append: '_button'
+            assign link_key = 'banner_' | append: index | append: '_link'
+            assign image_key = 'banner_' | append: index | append: '_image'
+            assign title_color_key = 'banner_' | append: index | append: '_title_color'
+            assign subtitle_color_key = 'banner_' | append: index | append: '_subtitle_color'
+            assign button_text_color_key = 'banner_' | append: index | append: '_button_text_color'
+            assign button_background_color_key = 'banner_' | append: index | append: '_button_background_color'
+            assign button_alignment_key = 'banner_' | append: index | append: '_button_alignment'
+            assign banner_title = section.settings[title_key]
+            assign banner_subtitle = section.settings[subtitle_key]
+            assign banner_button = section.settings[button_key]
+            assign banner_link = section.settings[link_key]
+            assign banner_image = section.settings[image_key]
+            assign banner_title_color = section.settings[title_color_key]
+            assign banner_subtitle_color = section.settings[subtitle_color_key]
+            assign banner_button_text_color = section.settings[button_text_color_key]
+            assign banner_button_background_color = section.settings[button_background_color_key]
+            assign banner_button_alignment = section.settings[button_alignment_key]
+          -%}
+          <article class="home-hero__banner">
+            <div class="home-hero__media">
+              {%- if banner_image != blank -%}
+                {{
+                  banner_image
+                  | image_url: width: 1400
+                  | image_tag:
+                    widths: '550, 750, 990, 1200, 1400',
+                    sizes: '(min-width: 750px) 50vw, 100vw',
+                    loading: 'lazy',
+                    alt: banner_image.alt | default: banner_title | escape
+                }}
+              {%- else -%}
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+
+            <div class="home-hero__content">
+              <div class="home-hero__content-inner">
+                {%- if banner_title != blank -%}
+                  <h3 class="home-hero__title" style="color: {{ banner_title_color }};">
+                    {{ banner_title | escape }}
+                  </h3>
+                {%- endif -%}
+                {%- if banner_subtitle != blank -%}
+                  <p class="home-hero__subtitle" style="color: {{ banner_subtitle_color }};">
+                    {{ banner_subtitle | escape }}
+                  </p>
+                {%- endif -%}
+                {%- if banner_button != blank -%}
+                  <div class="home-hero__actions home-hero__actions--{{ banner_button_alignment }}">
+                    <a
+                      {% if banner_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ banner_link }}"
+                      {% endif %}
+                      class="home-hero__button"
+                      style="background: {{ banner_button_background_color }}; color: {{ banner_button_text_color }};"
+                    >
+                      {{ banner_button | escape }}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title",
+      "default": "Jouw badkamer begint hier"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero subtitle",
+      "default": "Ontdek ons assortiment, laat je inspireren en stel moeiteloos jouw ideale badkamer samen."
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Hero button text",
+      "default": "Bekijk assortiment"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Hero button link"
+    },
+    {
+      "type": "color",
+      "id": "hero_title_color",
+      "label": "Hero title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hero_subtitle_color",
+      "label": "Hero subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "hero_title_position_mode",
+      "label": "Hero title placement mode",
+      "default": "inline",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline"
+        },
+        {
+          "value": "free",
+          "label": "Free position"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "hero_title_mobile_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero title mobile horizontal position",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "hero_title_mobile_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero title mobile vertical position",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "hero_title_desktop_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero title desktop horizontal position",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "hero_title_desktop_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero title desktop vertical position",
+      "default": 56
+    },
+    {
+      "type": "select",
+      "id": "hero_subtitle_position_mode",
+      "label": "Hero subtitle placement mode",
+      "default": "inline",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline"
+        },
+        {
+          "value": "free",
+          "label": "Free position"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "hero_subtitle_mobile_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero subtitle mobile horizontal position",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "hero_subtitle_mobile_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero subtitle mobile vertical position",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "hero_subtitle_desktop_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero subtitle desktop horizontal position",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "hero_subtitle_desktop_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero subtitle desktop vertical position",
+      "default": 72
+    },
+    {
+      "type": "color",
+      "id": "hero_button_text_color",
+      "label": "Hero button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hero_button_background_color",
+      "label": "Hero button background color",
+      "default": "#8fd4ef"
+    },
+    {
+      "type": "select",
+      "id": "hero_button_alignment",
+      "label": "Hero button position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "hero_button_position_mode",
+      "label": "Hero button placement mode",
+      "default": "inline",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline"
+        },
+        {
+          "value": "free",
+          "label": "Free position"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "hero_button_mobile_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero button mobile horizontal position",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "hero_button_mobile_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero button mobile vertical position",
+      "default": 82
+    },
+    {
+      "type": "range",
+      "id": "hero_button_desktop_x",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero button desktop horizontal position",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "hero_button_desktop_y",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Hero button desktop vertical position",
+      "default": 84
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "header",
+      "content": "Banner 2"
+    },
+    {
+      "type": "text",
+      "id": "banner_1_title",
+      "label": "Banner 2 title",
+      "default": "Advies voor jouw project"
+    },
+    {
+      "type": "text",
+      "id": "banner_1_subtitle",
+      "label": "Banner 2 subtitle",
+      "default": "Praktische tips en slimme keuzes voor een badkamer die klopt tot in detail."
+    },
+    {
+      "type": "text",
+      "id": "banner_1_button",
+      "label": "Banner 2 button text",
+      "default": "Ontdek advies"
+    },
+    {
+      "type": "url",
+      "id": "banner_1_link",
+      "label": "Banner 2 link"
+    },
+    {
+      "type": "color",
+      "id": "banner_1_title_color",
+      "label": "Banner 2 title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_1_subtitle_color",
+      "label": "Banner 2 subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_1_button_text_color",
+      "label": "Banner 2 button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_1_button_background_color",
+      "label": "Banner 2 button background color",
+      "default": "#8fd4ef"
+    },
+    {
+      "type": "select",
+      "id": "banner_1_button_alignment",
+      "label": "Banner 2 button position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_1_image",
+      "label": "Banner 2 image"
+    },
+    {
+      "type": "header",
+      "content": "Banner 3"
+    },
+    {
+      "type": "text",
+      "id": "banner_2_title",
+      "label": "Banner 3 title",
+      "default": "Inspiratie voor elke stijl"
+    },
+    {
+      "type": "text",
+      "id": "banner_2_subtitle",
+      "label": "Banner 3 subtitle",
+      "default": "Van rustige spa-sferen tot uitgesproken statements: vind de stijl die bij je past."
+    },
+    {
+      "type": "text",
+      "id": "banner_2_button",
+      "label": "Banner 3 button text",
+      "default": "Bekijk inspiratie"
+    },
+    {
+      "type": "url",
+      "id": "banner_2_link",
+      "label": "Banner 3 link"
+    },
+    {
+      "type": "color",
+      "id": "banner_2_title_color",
+      "label": "Banner 3 title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_2_subtitle_color",
+      "label": "Banner 3 subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_2_button_text_color",
+      "label": "Banner 3 button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_2_button_background_color",
+      "label": "Banner 3 button background color",
+      "default": "#8fd4ef"
+    },
+    {
+      "type": "select",
+      "id": "banner_2_button_alignment",
+      "label": "Banner 3 button position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_2_image",
+      "label": "Banner 3 image"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Hero"
+    }
+  ]
+}
+{% endschema %}

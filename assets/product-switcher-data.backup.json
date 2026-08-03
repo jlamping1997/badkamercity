@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-06T12:30:00Z",
+  "groups": [
+    {
+      "id": "testgroep-001",
+      "label": "Testgroep 001 - fictieve fixture",
+      "menus": [
+        {
+          "key": "kleur",
+          "label": "Kleur",
+          "order": 1,
+          "display_type": "auto",
+          "hide_if_single_value": false
+        },
+        {
+          "key": "type_handdouche",
+          "label": "Type handdouche",
+          "order": 2,
+          "display_type": "auto",
+          "hide_if_single_value": false
+        },
+        {
+          "key": "met_glijstang",
+          "label": "Met glijstang",
+          "order": 3,
+          "display_type": "buttons",
+          "hide_if_single_value": false
+        }
+      ],
+      "products": [
+        {
+          "handle": "voorbeeld-doucheset-chroom-staafhanddouche-met-glijstang",
+          "url": "/products/voorbeeld-doucheset-chroom-staafhanddouche-met-glijstang",
+          "title": "Voorbeeld doucheset chroom staafhanddouche met glijstang",
+          "available": true,
+          "sort_order": 10,
+          "options": {
+            "kleur": "Chroom",
+            "type_handdouche": "Staafhanddouche",
+            "met_glijstang": "Ja"
+          }
+        },
+        {
+          "handle": "voorbeeld-doucheset-chroom-staafhanddouche-zonder-glijstang",
+          "url": "/products/voorbeeld-doucheset-chroom-staafhanddouche-zonder-glijstang",
+          "title": "Voorbeeld doucheset chroom staafhanddouche zonder glijstang",
+          "available": true,
+          "sort_order": 20,
+          "options": {
+            "kleur": "Chroom",
+            "type_handdouche": "Staafhanddouche",
+            "met_glijstang": "Nee"
+          }
+        },
+        {
+          "handle": "voorbeeld-doucheset-mat-zwart-staafhanddouche-met-glijstang",
+          "url": "/products/voorbeeld-doucheset-mat-zwart-staafhanddouche-met-glijstang",
+          "title": "Voorbeeld doucheset mat zwart staafhanddouche met glijstang",
+          "available": true,
+          "sort_order": 30,
+          "options": {
+            "kleur": "Mat zwart",
+            "type_handdouche": "Staafhanddouche",
+            "met_glijstang": "Ja"
+          }
+        },
+        {
+          "handle": "voorbeeld-doucheset-mat-zwart-staafhanddouche-zonder-glijstang",
+          "url": "/products/voorbeeld-doucheset-mat-zwart-staafhanddouche-zonder-glijstang",
+          "title": "Voorbeeld doucheset mat zwart staafhanddouche zonder glijstang",
+          "available": true,
+          "sort_order": 40,
+          "options": {
+            "kleur": "Mat zwart",
+            "type_handdouche": "Staafhanddouche",
+            "met_glijstang": "Nee"
+          }
+        },
+        {
+          "handle": "voorbeeld-doucheset-geborsteld-nikkel-regendouche-met-glijstang",
+          "url": "/products/voorbeeld-doucheset-geborsteld-nikkel-regendouche-met-glijstang",
+          "title": "Voorbeeld doucheset geborsteld nikkel regendouche met glijstang",
+          "available": true,
+          "sort_order": 50,
+          "options": {
+            "kleur": "Geborsteld nikkel",
+            "type_handdouche": "Regendouche",
+            "met_glijstang": "Ja"
+          }
+        },
+        {
+          "handle": "voorbeeld-doucheset-geborsteld-nikkel-regendouche-zonder-glijstang",
+          "url": "/products/voorbeeld-doucheset-geborsteld-nikkel-regendouche-zonder-glijstang",
+          "title": "Voorbeeld doucheset geborsteld nikkel regendouche zonder glijstang",
+          "available": false,
+          "sort_order": 60,
+          "options": {
+            "kleur": "Geborsteld nikkel",
+            "type_handdouche": "Regendouche",
+            "met_glijstang": "Nee"
+          }
+        }
+      ]
+    }
+  ]
+}

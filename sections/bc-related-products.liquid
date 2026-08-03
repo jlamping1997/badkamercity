@@ -1,0 +1,20 @@
+{% comment %} Gerelateerde producten als aparte sectie {% endcomment %}
+<section class="bc-related-products-section" id="bc-related-products">
+  <div class="bc-related-products__container">
+    <h2 class="bc-related-products__title">Gerelateerde producten</h2>
+    {% section 'related-products' %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Related Products",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Related Products"
+    }
+  ]
+}
+{% endschema %}

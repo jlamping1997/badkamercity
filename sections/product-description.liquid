@@ -1,0 +1,22 @@
+{% comment %} Productbeschrijving als aparte sectie {% endcomment %}
+<section class="bc-product-description-section" id="bc-product-description">
+  <div class="bc-product-description__container">
+    <h2 class="bc-product-description__title">Beschrijving</h2>
+    <div class="bc-product-description__content">
+      {{ product.description }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Description",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Product Description"
+    }
+  ]
+}
+{% endschema %}
