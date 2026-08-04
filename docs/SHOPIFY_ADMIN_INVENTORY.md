@@ -3,325 +3,745 @@
 Onderzoeksdatum: 2026-08-04
 Taak: `BC-ADM-001`
 Store: `fpa9hu-i3.myshopify.com`
-Uitkomst: `BLOCKED` door ontbrekende Shopify Admin API-readtoegang
-Scope: uitsluitend read-only onderzoek; geen klanten- of orderinhoud opgevraagd
+Uitkomst: `REVIEW`
+Scope: uitsluitend read-only Shopify Admin-onderzoek; geen klanten-, order- of persoonsdata opgevraagd
 
 ## 1. Managementsamenvatting
 
-De bestaande Shopify CLI-sessie kan de theme-omgeving van de juiste store lezen. Op 2026-08-04 bevestigde `shopify theme list` opnieuw dat `Categoriepagina_v1.0` (`189463068938`) live staat en dat `BadkamerCity Development` (`192770375946`) unpublished is.
+De projecteigenaar heeft de officiële Shopify CLI `store auth`-route aangewezen en dertien read-scopes goedgekeurd. Shopify CLI `4.6.0` heeft deze scopes verleend. Alle uitgevoerde store-operaties waren GraphQL-query's via `shopify store execute`, zonder `--allow-mutations`.
 
-Er is in deze repository echter geen Shopify-appconfiguratie, geen zichtbare Admin API-tokenvariabele en geen beschikbare Shopify Admin-connector. Een minimale read-only Admin GraphQL-query via `shopify app execute` kon daardoor niet worden uitgevoerd: de CLI stopte omdat `shopify.app.toml` ontbreekt. Er is geen app aangemaakt of gekoppeld, er zijn geen rechten of scopes aangevraagd en er is geen alternatieve toegang geconstrueerd.
+De kerninventaris is nu uitvoerbaar en afgerond binnen de verleende bronnen. De store bevat 7.827 actieve producten, 7.827 varianten, 201 collecties, 117 pagina's, vijf menu's, één productmetafielddefinitie, één metaobjectdefinitie, één actieve markt, één gepubliceerde taal, één locatie en één delivery profile. Er zijn vier themes, waaronder het live theme en drie unpublished themes.
 
-Daarom zijn de werkelijke Admin-aantallen, definities, waarden, toewijzingen en instellingen niet verantwoord vast te stellen. De taak blijft `BLOCKED`. De tijdgebonden live-theme-snapshot levert wel bruikbaar ondersteunend bewijs over verwachte metafields, templatebestanden, menu-handles en afwezigheid van geconfigureerde app-block-URL's, maar bewijst niet dat de bijbehorende Admin-objecten bestaan of actief zijn.
+De belangrijkste datakwaliteitsbevindingen zijn:
+
+- 17 varianten hebben geen SKU en 72 niet-lege SKU-waarden komen in meer dan één SKU-groep voor;
+- alle producten hebben precies één variant en alle producten staan `ACTIVE`;
+- er zijn 649 verschillende producttypewaarden, waaronder 69 keer letterlijk `undefined` en meerdere waarden die op producttitels lijken;
+- 199 van de 201 collecties zijn leeg;
+- alleen `custom.switch_group` heeft een definitie en meetbare productdekking: 3.658 van 7.827 producten (46,74%);
+- `custom.switch_options`, de legacygroep/menuvelden, pluspunten en aandachtspunten hebben geen definitie en kwamen op geen enkel product voor;
+- één metaobjectdefinitie `homepage_banner` bestaat, maar heeft nul entries;
+- slechts 259 van 7.827 inventory items hebben tracking ingeschakeld;
+- het live theme bevat in de actieve JSON-configuratie geen aantoonbare app blocks of app embeds;
+- een volledige lijst van geïnstalleerde apps blijft met de verleende scopes **NIET TOEGANKELIJK**.
+
+Deze uitkomst verwijdert de oude algemene Admin-toegangsblokkade, maar is geen implementatie-, datawijzigings-, theme- of publicatietoestemming. `BC-ADM-001` staat op `REVIEW`; `BC-DISC-001` blijft `NOT_STARTED` tot expliciete menselijke goedkeuring.
 
 ## 2. Statuslabels
 
-- **BEWEZEN:** rechtstreeks vastgesteld met een genoemde bron en datum.
-- **NIET TOEGANKELIJK:** de benodigde read-only Admin-bron was in deze uitvoeringscontext niet beschikbaar.
-- **NOG ONDERZOEKEN:** kan pas na geldige read-only toegang of aanvullend bewijs worden vastgesteld.
+- **BEWEZEN:** rechtstreeks vastgesteld met een genoemde read-only bron op 2026-08-04.
+- **NIET TOEGANKELIJK:** niet beschikbaar via de verleende scopes of de gebruikte Shopify-route.
+- **NOG ONDERZOEKEN:** aanvullende bronvalidatie, inhoudelijke beoordeling of menselijk eigenaarschap ontbreekt.
 - **OPEN BESLISSING:** vereist een expliciete keuze van de projecteigenaar of bevoegde beheerder.
 
-Afwezigheid in theme-code of CLI-uitvoer wordt nergens als afwezigheid in Shopify Admin geïnterpreteerd.
+Afwezigheid in theme-code of een beperkte query wordt niet als algemene afwezigheid in Shopify geïnterpreteerd.
 
-## 3. Randvoorwaarden en uitgevoerde controles
-
-### 3.1 Randvoorwaarden
+## 3. Randvoorwaarden en integriteit
 
 Tijdens dit onderzoek is:
 
+- geen GraphQL-mutatie uitgevoerd;
+- `--allow-mutations` nooit gebruikt;
 - geen Shopify Admin-data gewijzigd;
 - geen theme-code gewijzigd;
 - geen theme gepusht, gepulld, gepubliceerd, hernoemd of verwijderd;
-- geen app geïnstalleerd, aangemaakt, gekoppeld of geconfigureerd;
-- geen recht of scope aangevraagd;
+- geen aanvullende scope aangevraagd buiten de expliciet goedgekeurde lijst;
 - geen credential, token of configuratiewaarde getoond;
-- geen klant- of orderinhoud opgevraagd;
+- geen klant-, order- of persoonsdata opgevraagd;
+- geen volledige productdump opgeslagen;
 - geen commit gemaakt en niets naar GitHub gepusht.
 
-### 3.2 Bronnen en methoden
+De repository was schoon vóór het onderzoek. Alleen dit rapport en `docs/MASTERPLAN.md` worden als taakdocumentatie gewijzigd.
 
-| Bron of controle | Datum | Resultaat | Beperking |
-| --- | --- | --- | --- |
-| `git status --short --branch` | 2026-08-04 | **BEWEZEN:** startstatus was schoon op `main`, gelijk aan `origin/main` | Alleen Git-werkboom |
-| `shopify version` | 2026-08-04 | **BEWEZEN:** Shopify CLI `3.92.1` | Geen bewijs van Admin-scopes |
-| `shopify theme info --store fpa9hu-i3.myshopify.com` | 2026-08-04 | **BEWEZEN:** storecontext leesbaar; Development Theme ID niet lokaal ingesteld | Theme-context, geen Admin-inventaris |
-| `shopify theme list --store fpa9hu-i3.myshopify.com` | 2026-08-04 | **BEWEZEN:** drie themes en hun rollen leesbaar | Alleen themes en rollen |
-| Werkruimtecontrole op `.env*`, `shopify*.toml` en Shopify-configbestanden | 2026-08-04 | **BEWEZEN:** geen toepasselijke bestanden gevonden | Zegt niets over handmatige Admin-toegang van personen |
-| Controle van uitsluitend omgevingsvariabelnamen | 2026-08-04 | **BEWEZEN:** geen namen gevonden voor Shopify/Admin/Storefront access tokens | Waarden zijn bewust niet gelezen of getoond |
-| `shopify app info --path . --json --no-color` | 2026-08-04 | **BEWEZEN:** faalt omdat de repository geen app-TOML bevat | Geen app gekoppeld om dit te omzeilen |
-| Minimale query `shop { id name }` via `shopify app execute --path .` | 2026-08-04 | **BEWEZEN:** vóór uitvoering gestopt wegens ontbrekende app-TOML | Er is geen Admin-data teruggekomen |
-| `docs/LIVE_THEME_COMPARISON.md` | 2026-08-03 | **BEWEZEN:** 396 lokale/live themebestanden waren hashgelijk | Tijdgebonden; geen Admin-data |
-| Lokale parsing van JSON-themeconfiguratie en statische bronverwijzingen | 2026-08-04 | **BEWEZEN:** hieronder vermelde template-, menu- en metafieldverwachtingen | Bewijst gebruik in de snapshot, niet bestaan/dekking in Admin |
-| Officiële Shopify GraphQL Admin API-documentatie | geraadpleegd 2026-08-04 | **BEWEZEN:** benodigde queryfamilies en scopes hieronder | Documentatie bewijst geen verleende storetoegang |
+## 4. Toegang en tooling
 
-## 4. Beschikbare en ontbrekende toegang
+### 4.1 Shopify CLI
 
-| Domein | Status | Vaststelling |
-| --- | --- | --- |
-| Shopify CLI theme-identiteit en rollen | **BEWEZEN** | Store en themelijst zijn read-only opvraagbaar |
-| Lokale live-theme-snapshot van 2026-08-03 | **BEWEZEN** | Zeven theme-mappen waren toen gelijk aan live theme `189463068938` |
-| GraphQL Admin API | **NIET TOEGANKELIJK** | Geen bruikbare Admin-appcontext of zichtbare Admin-tokenvariabele; testquery stopte vóór uitvoering |
-| Shopify Admin in een geauthenticeerde browser | **NIET TOEGANKELIJK** | Geen browser-/Admin-connector beschikbaar in deze uitvoeringscontext |
-| Producten en collecties | **NIET TOEGANKELIJK** | Geen Admin-query of Admin-export beschikbaar |
-| Metafield- en metaobjectdefinities/waarden | **NIET TOEGANKELIJK** | Theme-referenties zijn geen definities of dekkingsbewijs |
-| Menu-objecten en linkvaliditeit | **NIET TOEGANKELIJK** | Alleen gebruikte handles zijn lokaal zichtbaar |
-| Geïnstalleerde apps, pixels en externe appconfiguratie | **NIET TOEGANKELIJK** | Theme-snapshot kan verborgen Admin-/appafhankelijkheden niet uitsluiten |
-| Actieve object-to-template-toewijzingen | **NIET TOEGANKELIJK** | Templatebestanden zijn zichtbaar; toewijzingen aan producten/collecties/pagina's niet |
-| Markets, talen, accounts, locaties, voorraad en verzending | **NIET TOEGANKELIJK** | Geen geschikte Admin-readbron aanwezig |
-
-## 5. Bewezen Shopify-omgeving
-
-De actuele read-only themelijst op 2026-08-04 is:
-
-| Theme | ID | Rol |
-| --- | ---: | --- |
-| `Categoriepagina_v1.0` | `189463068938` | `live` |
-| `BadkamerCity V1.0` | `189117628682` | `unpublished` |
-| `BadkamerCity Development` | `192770375946` | `unpublished` |
-
-**BEWEZEN:** de repository is gekoppeld aan `fpa9hu-i3.myshopify.com`; deze opdracht heeft live theme `189463068938` niet gewijzigd en de role bleef `live`.
-**NOG ONDERZOEKEN:** of iemand na de hashvergelijking van 2026-08-03 via Shopify Admin theme-instellingen of bestanden heeft aangepast. Er is in deze opdracht bewust geen theme-pull of nieuwe parity-check uitgevoerd.
-
-## 6. Producten
-
-**NIET TOEGANKELIJK:** de volgende gevraagde gegevens konden niet uit Shopify Admin worden gelezen:
-
-- totaal aantal producten;
-- aantallen per status `ACTIVE`, `DRAFT` en `ARCHIVED`;
-- vendors, producttypes en verdeling daarvan;
-- gebruikte productsjablonen en aantallen per template suffix;
-- aantal producten met alleen de technische standaardvariant versus meerdere varianten;
-- totaal aantal varianten en SKU-dekking;
-- representatieve productsteekproeven;
-- publicatie-/verkoopkanaalstatus;
-- dekking van de switcher- en specificatiemetafields.
-
-**BEWEZEN uit het theme, niet uit Admin:** er bestaat alleen `templates/product.json`; er is lokaal geen alternatief `product.*.json`-template. Dit bewijst niet hoeveel producten dit template werkelijk gebruiken.
-
-**BEWEZEN uit bestaand repositoryonderzoek:** `assets/product-switcher-data.json` bevatte op 2026-08-03 433 groepen, 3.383 productrecords en 560 menudefinities. Deze asset is geen Shopify-productexport en mag niet worden gebruikt als Admin-producttelling of dekkingsbewijs.
-
-## 7. Collecties
-
-**NIET TOEGANKELIJK:** niet vastgesteld zijn:
-
-- totaal aantal collecties;
-- verdeling handmatig versus geautomatiseerd;
-- regels en voorwaarden van geautomatiseerde collecties;
-- aantallen producten per collectie;
-- publicatiestatus;
-- werkelijk toegewezen collectie-template suffixes;
-- lege, tijdelijke of overlappende collecties.
-
-**BEWEZEN uit het theme, niet uit Admin:** beschikbaar zijn `collection.json` en alternatief `collection.category-landing.json`. Werkelijk gebruik van het alternatieve template is **NOG ONDERZOEKEN**.
-
-## 8. Metafields
-
-### 8.1 Definities, typen, validaties en dekking
-
-**NIET TOEGANKELIJK:** geen enkele Admin-metafielddefinitie, eigenaar, type, validatie, waarde of productdekking kon worden opgevraagd. Daardoor kan niet worden bevestigd of een theme-referentie:
-
-- als definitie bestaat;
-- het door de code verwachte type heeft;
-- verplicht of optioneel is;
-- geldige validaties heeft;
-- op nul, enkele of alle relevante producten is gevuld;
-- door een app, medewerker, import of ander systeem wordt beheerd.
-
-### 8.2 Bewezen theme-referenties
-
-De live-theme-snapshot bevat 61 unieke statische `namespace.key`-referenties: 58 onder `custom`, één onder `descriptors` en twee onder `reviews`.
-
-Switcher en productrelaties:
-
-- `custom.switch_group`
-- `custom.group` (legacy fallback)
-- `custom.switch_key`
-- `custom.menu_1` tot en met `custom.menu_5`
-- `custom.afmeting`, `custom.afwerking`, `custom.basiskleur`, `custom.frame`, `custom.handdouche`, `custom.hoofddouche`, `custom.hoogte`, `custom.led`, `custom.lengte`, `custom.met_glijstang`, `custom.montage`, `custom.plaatsing`, `custom.type`, `custom.type_bevestiging_hoofddouche`, `custom.type_handdouche` en `custom.vorm`
-
-Productidentiteit en specificaties:
-
-- `custom.artikelnummer`, `custom.fabrikantnummer`, `custom.ean`, `custom.serie`
-- `custom.vormgeving_stijlgroep`, `custom.kleurgroep`, `custom.glansgraad`, `custom.materiaal_kraan`, `custom.montagewijze`, `custom.afwerking_greep`
-- `custom.belgaqua_keurmerk`, `custom.met_hoofddouche`, `custom.breedte_diameter_hoofddouche`, `custom.dikte_hoofddouche`, `custom.aantal_straalsoorten_hoofddouche`, `custom.lengte_douchearm`
-- `custom.met_handdouche`, `custom.breedte_diameter_douchekop`, `custom.aantal_straalsoorten_handdouche`, `custom.met_doucheslang`, `custom.lengte_doucheslang`
-- `custom.vorm_thermostaat`, `custom.thermostatisch`, `custom.met_inbouwdeel`, `custom.aantal_uitgangen_tegelijk_bedienbaar`, `custom.bediening_voor_aan_uit`
-- `custom.hotbath_ecoair_system`, `custom.hotbath_shower_power_system`, `custom.hotbath_fluhs`, `custom.hotbath_plumber_friendly`
-
-Kaarten, inhoud en standaarden:
-
-- `custom.search_card_spec_1`, `custom.search_card_spec_2`
-- `custom.pluspunten`, `custom.aandachtspunten`
-- `descriptors.subtitle`
-- `reviews.rating`, `reviews.rating_count`
-
-Daarnaast geeft `product.metafields.vendor` in de theme-code alleen een namespace zonder key door als merkveld. Dit is het bestaande risico `BC-R-015`; zonder Admin-data kan niet worden vastgesteld wat hier werkelijk wordt gerenderd.
-
-### 8.3 Specifieke gevraagde velden
-
-| Veld | Theme-snapshot | Admin-definitie/type/dekking |
-| --- | --- | --- |
-| `custom.switch_group` | **BEWEZEN:** actieve referentie voor de V2-switcher | **NIET TOEGANKELIJK** |
-| `custom.switch_options` | **BEWEZEN:** geen statische referentie aangetroffen in de zeven theme-mappen | **NIET TOEGANKELIJK:** bestaan in Admin kan niet worden uitgesloten |
-| `custom.group` | **BEWEZEN:** legacy fallbackreferentie | **NIET TOEGANKELIJK** |
-| `custom.menu_1` tot en met `custom.menu_5` | **BEWEZEN:** legacy menu-/keuzevelden | **NIET TOEGANKELIJK** |
-| overige 51 statische `custom.*`-velden | **BEWEZEN:** theme-referenties zoals hierboven | **NIET TOEGANKELIJK** |
-
-## 9. Metaobjects
-
-**NIET TOEGANKELIJK:** niet vastgesteld zijn:
-
-- aantal metaobjectdefinities;
-- definitienamen, types, velden, validaties en capabilities;
-- aantallen entries per definitie;
-- draft/active of publishable status;
-- referenties vanuit producten, collecties, pagina's, menu's of theme-instellingen;
-- eigenaarschap door apps of medewerkers.
-
-De afwezigheid van duidelijke statische metaobjectreferenties in het theme is geen bewijs dat metaobjects niet bestaan of niet indirect worden gebruikt.
-
-## 10. Navigatiemenu's
-
-**BEWEZEN uit de live-theme-snapshot:** de configuratie verwijst naar:
-
-- `main-menu` in `sections/header-group.json`;
-- `main-menu` in `templates/index.json` voor de homepage-categoriegrid;
-- `footer` in twee footerblokken van `sections/footer-group.json`.
-
-**NIET TOEGANKELIJK:** menu-ID's, titels, volledige boomstructuur, diepte, linktypen, resource targets, redirects, tijdelijke URL's, `#`-links en ongeldige doelen konden niet worden gecontroleerd. Het bestaan en de inhoud van de genoemde handles blijven **NOG ONDERZOEKEN**.
-
-## 11. Apps en appafhankelijkheden
-
-**BEWEZEN uit de snapshot van 2026-08-03:** er zijn geen `shopify://apps/...`-referenties gevonden in `assets`, `config`, `layout`, `locales`, `sections`, `snippets` en `templates`. De 15 JSON-templates en beide section groups bevatten geen geconfigureerde app-block-URL.
-
-**BEWEZEN:** acht sections ondersteunen wel `@app`-blokken, waaronder header, footer, product, featured product, article, cart footer en newsletter. `layout/theme.liquid` rendert `content_for_header`, waardoor Shopify of apps scripts kunnen injecteren zonder statische `shopify://apps/...`-referentie.
-
-**NIET TOEGANKELIJK:** een volledige lijst van geïnstalleerde apps, sales channels, app embeds, web pixels, script tags, theme app extensions, abonnementen en externe storefrontafhankelijkheden. Er wordt daarom nadrukkelijk niet geconcludeerd dat er geen apps actief zijn.
-
-De `reviews.*`-metafieldreferenties kunnen op een reviewintegratie wijzen, maar dat is zonder Admin-bewijs slechts **NOG ONDERZOEKEN**.
-
-## 12. Templates en Theme Editor-configuratie
-
-### 12.1 Beschikbare templatebestanden
-
-**BEWEZEN:** de snapshot bevat 16 templatebestanden: 15 JSON-templates en `gift_card.liquid`.
-
-| Templategroep | Beschikbare bestanden |
+| Onderdeel | Resultaat |
 | --- | --- |
-| Product | `product.json` |
-| Collectie | `collection.json`, `collection.category-landing.json` |
-| Pagina | `page.json`, `page.contact.json`, `page.begrip.json`, `page.begrippenlijst.json` |
-| Overig | `404.json`, `article.json`, `blog.json`, `cart.json`, `index.json`, `list-collections.json`, `password.json`, `search.json`, `gift_card.liquid` |
+| Shopify CLI | `4.6.0` |
+| Autorisatieroute | `shopify store auth` |
+| Store | `fpa9hu-i3.myshopify.com` |
+| Uitvoering | `shopify store execute` met `--json` |
+| Mutatietoestemming | Niet verleend en niet gebruikt |
 
-Alle sections in de 15 JSON-templates staan in de snapshot enabled; er zijn geen `disabled: true`-sections aangetroffen. Dit zegt niets over objecttoewijzingen of runtimezichtbaarheid.
+### 4.2 Toegekende scopes
 
-### 12.2 Werkelijk gebruik
+De query `currentAppInstallation { accessScopes { handle } }` bewees exact deze read-scopes:
 
-**NIET TOEGANKELIJK:** niet vastgesteld zijn:
+- `read_products`
+- `read_metaobject_definitions`
+- `read_metaobjects`
+- `read_online_store_navigation`
+- `read_online_store_pages`
+- `read_content`
+- `read_themes`
+- `read_markets`
+- `read_locales`
+- `read_locations`
+- `read_inventory`
+- `read_shipping`
+- `read_checkout_and_accounts_configurations`
 
-- hoeveel producten, collecties en pagina's ieder template gebruiken;
-- of `collection.category-landing`, `page.contact`, `page.begrip` en `page.begrippenlijst` werkelijk aan objecten zijn toegewezen;
-- welke sections of blocks via Admin-content zichtbaar/gevuld zijn;
-- of app embeds na 2026-08-03 zijn geactiveerd;
-- of actuele Theme Editor-instellingen na de live-pariteitssnapshot zijn gewijzigd.
+**BEWEZEN:** er stond geen write-scope in `currentAppInstallation.accessScopes`.
 
-## 13. Markets, talen, accounts, locaties, voorraad, verzending en shopinstellingen
+### 4.3 Gebruikte queryfamilies
 
-| Onderdeel | Status | Beperking |
+| Domein | Queryfamilie | Paginatie/gebruik |
 | --- | --- | --- |
-| Markets en domeinen | **NIET TOEGANKELIJK** | Geen marketnamen, statussen, regio's, valuta of web presences bekend |
-| Actieve talen | **NIET TOEGANKELIJK** | Het theme bevat 31 vertaalbestanden, maar dat bewijst geen gepubliceerde shoplocales |
-| Klantaccounts/checkoutconfiguratie | **NIET TOEGANKELIJK** | Accountmodel en gepubliceerde configuratie onbekend |
-| Locaties | **NIET TOEGANKELIJK** | Aantallen, typen, fulfilmentrol en adressen niet opgevraagd |
-| Voorraad | **NIET TOEGANKELIJK** | Inventory items, tracking en niveaus per locatie onbekend |
-| Verzending | **NIET TOEGANKELIJK** | Delivery profiles, zones, tarieven, pickup/local delivery en carrier services onbekend |
-| Algemene shopinstellingen | **NIET TOEGANKELIJK** | Alleen de myshopify-storecontext is bewezen; relevante configuratie niet |
+| Scopes | `currentAppInstallation` | Eenmalige scopecontrole |
+| Producten | `products` | 32 pagina's van maximaal 250 |
+| Varianten/SKU | `productVariants` | 32 pagina's van maximaal 250 |
+| Collecties | `collections` | Eén volledige pagina |
+| Metafielddefinities | `metafieldDefinitions` | `PRODUCT`, `PRODUCTVARIANT`, `COLLECTION`, `PAGE`, `SHOP` |
+| Metafielddekking | `products` plus gerichte `metafield`-velden | 87 pagina's van maximaal 90; exact over alle producten |
+| Specificatiesteekproef | `products` plus `metafields(namespace: "custom")` | 40 unieke producten via vijf sorteerassen en beide richtingen |
+| Metaobjects | `metaobjectDefinitions`, `metaobjects` | Alle definities en entries per type |
+| Navigatie | `menus` | Alle menu's en items tot de volledige aanwezige diepte |
+| Pagina's | `pages` | Eén volledige pagina |
+| Themes/configuratie | `themes`, `theme.files` | Alle themes; 396 live bestanden in twee pagina's; gerichte JSON-inhoud |
+| Markets/talen | `markets`, `shopLocales` | Volledig binnen de aanwezige aantallen |
+| Accounts | `shop.customerAccountsV2`, `checkoutAndAccountsConfigurations` | Actief model en gepubliceerde configuratie |
+| Locaties/voorraad | `locations`, `inventoryItems`, `inventoryLevels` | Exacte itemtelling plus niveausteekproef |
+| Verzending | `deliveryProfiles`, `carrierServices` | Alle profiles, zones, methoden en carrier services |
 
-Geen klant-, order- of persoonsdata is nodig of opgevraagd voor deze inventaris.
+De Shopify-plugin is gebruikt om de queryfamilies tegen het Admin GraphQL-schema te zoeken en te valideren. Een te ruime delivery-profilequery werd vóór datalezing afgewezen op querykost 2.609; dezelfde read-only query is daarna met kleinere pagina's uitgevoerd. Tijdelijke lege CLI-fouten tijdens lange paginaties zijn uitsluitend met dezelfde query, vertraging en beperkte retries herhaald.
 
-## 14. Benodigde read-only toegang
+## 5. Producten en varianten
 
-De veilige vervolgstap gebruikt uitsluitend een al bestaande, door de projecteigenaar goedgekeurde read-only route. Tijdens deze taak mag geen app worden gemaakt, geïnstalleerd of uitgebreid.
+### 5.1 Totalen en status
 
-### 14.1 Voorkeursroute
+| Kenmerk | Aantal |
+| --- | ---: |
+| Producten | 7.827 |
+| `ACTIVE` | 7.827 |
+| `DRAFT` | 0 |
+| `ARCHIVED` | 0 |
+| Varianten | 7.827 |
+| Producten met precies één variant | 7.827 |
+| Producten met meer dan één variant | 0 |
+| Producten met default/leeg template suffix | 7.827 |
 
-**OPEN BESLISSING:** de projecteigenaar kiest één van deze bestaande routes:
+**BEWEZEN:** de actuele data volgt voor alle bestaande producten het gekozen zelfstandig-productmodel met één technische variant.
 
-1. een reeds geïnstalleerde Shopify-app met een Admin API-token en alleen de benodigde read-scopes; of
-2. begeleide read-only Shopify Admin-toegang voor de relevante beheeronderdelen; of
-3. door een bevoegde beheerder gemaakte Admin-exports en schermafbeeldingen met datum, filters en totalen.
+### 5.2 Vendors
 
-Credentials horen nooit in Git, documentatie, chatuitvoer of commandologs. Bij API-toegang moet eerst met `currentAppInstallation { accessScopes { handle } }` worden bewezen welke scopes al zijn verleend.
+| Vendor | Producten |
+| --- | ---: |
+| `Hotbath` | 7.550 |
+| `THE MOSAIC FACTORY` | 277 |
 
-### 14.2 Minimale queryfamilies en scopes
+Er zijn geen lege vendorwaarden aangetroffen.
 
-| Onderzoek | GraphQL-queryfamilie of Admin-onderdeel | Benodigde read-toegang |
-| --- | --- | --- |
-| Producten, varianten, SKU's, vendors, types, statussen, collectieleden en template suffixes | `products`, product/variant connections, `collections` | `read_products` |
-| Product-/variant-/collectiemetafielddefinities en waarden | `metafieldDefinitions`, resource-metafields | Scope van het owner type; voor deze kernobjecten minimaal `read_products` |
-| Metaobjectdefinities | `metaobjectDefinitions` | `read_metaobject_definitions` |
-| Metaobjectentries en referenties | `metaobjects` en resource references | `read_metaobjects`, plus scope van verwijzende owner types |
-| Navigatiemenu's | `menus` met geneste items en targets | `read_online_store_navigation` |
-| Pagina-/blogtargets vanuit navigatie | pages, blogs en articles | `read_online_store_pages` en waar nodig `read_content` |
-| Themes, actuele settings en theme app blocks | online store themes/theme files of Admin Theme Editor | `read_themes` of gelijkwaardige read-only Admin-toegang |
-| Markets | `markets` | `read_markets` |
-| Gepubliceerde talen | `shopLocales` | `read_locales` |
-| Locaties | `locations` | `read_locations`; voor volledige inventarisgegevens ook `read_inventory` |
-| Voorraad | inventory items en levels | `read_inventory` en `read_locations` |
-| Carrier services | shipping/carrier resources | `read_shipping` |
-| Delivery profiles, zones en methoden | `deliveryProfiles` plus geneste zones/methoden | geauthenticeerde Admin GraphQL-toegang; benodigde nested resource- en staffrechten eerst met read-only query valideren |
-| Checkout- en accountconfiguratie | `checkoutAndAccountsConfigurations` | `read_checkout_and_accounts_configurations` en vereiste staff permission `manage_checkout_settings` |
-| Apps, app extensions, embeds en pixels | Admin Apps/sales channels plus relevante installatie-/theme-/pixeloverzichten | expliciete read-only Admin-toegang; zonder zo'n bron geen volledige app-lijst claimen |
+### 5.3 Producttypes
 
-Officiële referenties:
+Er zijn 649 verschillende niet-lege producttypewaarden. De grootste groepen zijn:
 
-- [Shopify API access scopes](https://shopify.dev/docs/api/usage/access-scopes)
-- [Productenquery](https://shopify.dev/docs/api/admin-graphql/latest/queries/products)
-- [Metafielddefinities](https://shopify.dev/docs/api/admin-graphql/latest/queries/metafieldDefinitions)
-- [Metaobjectdefinitie](https://shopify.dev/docs/api/admin-graphql/latest/queries/metaobjectDefinition)
-- [Navigatiemenu's](https://shopify.dev/docs/api/admin-graphql/latest/queries/menus)
-- [Markets](https://shopify.dev/docs/api/admin-graphql/latest/queries/markets)
-- [Shoplocales](https://shopify.dev/docs/api/admin-graphql/latest/queries/shopLocales)
-- [Locaties](https://shopify.dev/docs/api/admin-graphql/latest/queries/locations)
-- [Delivery profiles](https://shopify.dev/docs/api/admin-graphql/latest/queries/deliveryProfiles)
-- [Checkout- en accountconfiguratie](https://shopify.dev/docs/api/admin-graphql/latest/objects/CheckoutAndAccountsConfiguration)
+| Producttype | Producten |
+| --- | ---: |
+| `Inbouw douchesets` | 2.783 |
+| `Kraanonderdelen` | 774 |
+| `Inbouw badkranen` | 449 |
+| `Mozaiektegel` | 277 |
+| `Inbouwdoucheset` | 259 |
+| `Opbouw wastafelkranen` | 254 |
+| `Hoofddouches` | 219 |
+| `Badkamerspiegels` | 189 |
+| `Inbouw wastafelkranen` | 169 |
+| `Inbouw/opbouw nissen` | 154 |
+| `Stortdouches` | 150 |
+| `Handdouches` | 115 |
 
-## 15. Gevolgen voor het masterplan
+**BEWEZEN:** `undefined` komt 69 keer voor. Daarnaast komen producttitelachtige waarden slechts één keer voor. Dit wijst op een niet-genormaliseerde producttypetaxonomie en vereist vervolgvalidatie in `BC-DATA-001` en `BC-IA-001`.
 
-- `BC-ADM-001` blijft actief maar krijgt eindstatus `BLOCKED`; essentiële Admin-bronnen ontbreken.
-- `BC-DISC-001` wordt niet geactiveerd en blijft `NOT_STARTED` tot menselijke beoordeling en hervatting/afronding van `BC-ADM-001`.
-- `BC-DISC-002` blijft daarna de derde taak in de vaste volgorde.
-- `BC-DATA-001` en `BC-SWITCH-001` kunnen metafieldtypes, dekking en migratie niet veilig besluiten.
-- `BC-IA-001` kan de werkelijke collectie- en navigatiestructuur niet valideren.
-- `BC-LOG-001` en `BC-LOG-002` missen locaties, voorraad en delivery profiles.
-- `BC-ACC-001`, `BC-SEC-001` en `BC-ANA-001` missen account-, app-, pixel- en consentconfiguratie.
-- `BC-R-008` is nu bewezen geblokkeerd door ontbrekende read-only Admin-toegang, in plaats van alleen algemeen onbekend.
+### 5.4 SKU-dekking
 
-## 16. Open vragen en onzekerheden
+| Kenmerk | Aantal |
+| --- | ---: |
+| Varianten met niet-lege SKU | 7.810 |
+| Varianten zonder SKU | 17 |
+| SKU-dekking | 99,78% |
+| Groepen met een dubbele niet-lege SKU | 72 |
 
-1. **OPEN BESLISSING:** welke bestaande read-only route stelt de projecteigenaar beschikbaar?
-2. **NOG ONDERZOEKEN:** bestaat er al een geïnstalleerde app met de vereiste scopes die zonder rechtenwijziging mag worden gebruikt?
-3. **NOG ONDERZOEKEN:** wie is bevoegd om Admin-totalen, exports en instellingen als leidend te bevestigen?
-4. **NOG ONDERZOEKEN:** zijn live theme-instellingen sinds de parity-snapshot van 2026-08-03 gewijzigd?
-5. **NOG ONDERZOEKEN:** bestaat `custom.switch_options` in Admin ondanks afwezigheid van een theme-referentie?
+De 72 dubbele groepen zijn een telling van gegroepeerde SKU-waarden, niet van alle betrokken varianten. De betrokken producten en herstelregels zijn `[NOG ONDERZOEKEN]`; deze read-only taak wijzigt geen SKU.
+
+### 5.5 Representatieve voorbeelden
+
+| Product | Handle | Vendor | Producttype | Varianten |
+| --- | --- | --- | --- | ---: |
+| Hotbath Cobber IBS70 inbouw regendoucheset, geborsteld messing, 25 cm, wandarm, geen glijstang | `hotbath-cobber-ibs70-inbouw-doucheset-geborsteld-messing-staafmodel-25cm-wandarm-glijstang-nee` | Hotbath | Inbouwdoucheset | 1 |
+| Hotbath SPOM357 HB Schroefje perlator F004/3c F7 | `hotbath-spom357-hb-schroefje-perlator-f004-3c-f7` | Hotbath | Kraanonderdelen | 1 |
+| Hotbath Archie SDS32 opbouw regendouche RVS 316 | `hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-koper-pvd` | Hotbath | Stortdouches | 1 |
+| The Mosaic Factory Venice Pennyround Red Glossy | `the-mosaic-factory-venice-pennyround-red-glossy-mozaiektegel-vkn010` | THE MOSAIC FACTORY | Mozaiektegel | 1 |
+
+Dit is een beperkte steekproef; er is geen volledige productdump in Git opgeslagen.
+
+## 6. Collecties
+
+| Kenmerk | Aantal |
+| --- | ---: |
+| Collecties totaal | 201 |
+| Handmatig | 200 |
+| Automatisch | 1 |
+| Leeg | 199 |
+| Default/leeg template suffix | 188 |
+| `category-landing` suffix | 13 |
+
+De twee niet-lege collecties zijn:
+
+| Collectie | Type | Producten | Voorwaarde |
+| --- | --- | ---: | --- |
+| `IBS70 cobber doucheset` (`ibs70-cobber-doucheset`) | Automatisch | 259 | `ANY`; `TAG EQUALS ibs70-cobber-doucheset` |
+| `Hotbath Ace AC003 wastafelkraan` (`hotbath-ace-ac003-wastafelkraan`) | Handmatig | 12 | N.v.t. |
+
+**BEWEZEN:** 99,00% van de collecties is leeg. De 13 category-landingcollecties bestaan en zijn toegewezen, maar hun assortimentdekking is grotendeels nul.
+
+Meerdere titel/handlecombinaties zijn semantisch opvallend, bijvoorbeeld `Baden` met handle `douche`, `Accessoires` met handle `spiegels` en `Verwarming` met handle `badkamerverlichting`. De technische targets bestaan; de bedoelde commerciële betekenis is `[NOG ONDERZOEKEN]`.
+
+## 7. Metafields
+
+### 7.1 Definities
+
+De definitiequery's leverden op:
+
+| Owner type | Definities | `custom` |
+| --- | ---: | ---: |
+| `PRODUCT` | 1 | 1 |
+| `PRODUCTVARIANT` | 0 | 0 |
+| `COLLECTION` | 0 | 0 |
+| `PAGE` | 0 | 0 |
+| `SHOP` | 0 | 0 |
+
+De enige definitie is:
+
+| Namespace | Key | Naam | Type | Validaties |
+| --- | --- | --- | --- | --- |
+| `custom` | `switch_group` | `switch_group` | `single_line_text_field` | Geen |
+
+Er zijn geen metafielddefinities gevonden die naar metaobjects verwijzen.
+
+### 7.2 Exacte dekking van prioriteitsvelden
+
+De volgende dekking is exact gemeten over alle 7.827 producten:
+
+| Veld | Gevuld | Leeg/afwezig | Dekking | Waargenomen type |
+| --- | ---: | ---: | ---: | --- |
+| `custom.switch_group` | 3.658 | 4.169 | 46,74% | `single_line_text_field` |
+| `custom.switch_options` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.group` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.menu_1` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.menu_2` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.menu_3` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.menu_4` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.menu_5` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.pluspunten` | 0 | 7.827 | 0% | N.v.t. |
+| `custom.aandachtspunten` | 0 | 7.827 | 0% | N.v.t. |
+
+**BEWEZEN:** de V2-trigger wordt gebruikt; de onderzochte legacyvelden en contentvelden hebben geen actuele productwaarden. Dit bewijst niet dat gelijknamige velden op een ander owner type of in een externe bron bestaan.
+
+### 7.3 Specificaties
+
+De theme-snapshot bevat de eerder vastgelegde statische specificatiereferenties, maar Shopify Admin bevat daarvoor geen definities. De 32 onderzochte `custom`-keys zijn:
+
+- `afmeting`, `afwerking`, `basiskleur`, `frame`, `handdouche`, `hoofddouche`, `hoogte`, `led`, `lengte`, `met_glijstang`, `montage`, `plaatsing`, `type`, `type_bevestiging_hoofddouche`, `type_handdouche`, `vorm`;
+- `artikelnummer`, `fabrikantnummer`, `ean`, `serie`;
+- `vormgeving_stijlgroep`, `kleurgroep`, `glansgraad`, `materiaal_kraan`, `montagewijze`, `afwerking_greep`;
+- `belgaqua_keurmerk`, `met_hoofddouche`, `breedte_diameter_hoofddouche`, `dikte_hoofddouche`, `aantal_straalsoorten_hoofddouche`, `lengte_douchearm`.
+
+Een deterministische steekproef van 40 unieke producten is samengesteld via `ID`, `TITLE`, `PRODUCT_TYPE`, `CREATED_AT` en `UPDATED_AT`, telkens oplopend en aflopend. Geen van deze 32 keys kwam in de steekproef voor; alleen `custom.switch_group` werd aangetroffen, op 24 van de 40 producten.
+
+**Beperking:** dit is geen exact dekkingsbewijs voor alle specificatiekeys over alle 7.827 producten. Een exacte meting via gewone gepagineerde query's zou een bredere aparte 32-veldenrun vereisen; Shopify Bulk Operations starten via een mutatie en waren expliciet verboden. Die bredere run is niet uitgevoerd. De conclusie blijft daarom:
+
+- definities voor de specificatiekeys: **BEWEZEN afwezig** voor de onderzochte owner types;
+- waarden in de 40-productsteekproef: **BEWEZEN niet aangetroffen**;
+- volledige waardedekking buiten de steekproef: **NOG ONDERZOEKEN**.
+
+Het bestaande risico rond `product.metafields.vendor` is aangescherpt: `product.vendor` is op alle producten gevuld, maar er bestaat geen productmetafielddefinitie `vendor`.
+
+## 8. Metaobjects
+
+Er bestaat één metaobjectdefinitie:
+
+| Type | Velden | Entries | Capabilities |
+| --- | --- | ---: | --- |
+| `homepage_banner` | `title` (single line), `subtitle` (multi line), `image` (file reference), `button_text` (single line), `button_link` (single line), `position` (single line; lege choices-validatie) | 0 | Publishable en translatable aan; renderable en online store uit |
+
+Alle velden zijn optioneel. Er zijn geen entries en geen metafielddefinities die naar dit type verwijzen. Eventuele indirecte app- of externe referenties zijn `[NOG ONDERZOEKEN]`.
+
+## 9. Navigatie
+
+### 9.1 Menu's en structuur
+
+| Handle | Titel | Items inclusief afstammelingen |
+| --- | --- | ---: |
+| `main-menu` | Hoofdmenu | 234 |
+| `footer` | Voettekstmenu | 1 |
+| `customer-account-main-menu` | Hoofdmenu klantaccount | 2 |
+| `assortiment` | Assortiment | 9 |
+| `badkamermeubels-b` | Badkamermeubels - B | 1 |
+
+Totaal zijn 247 menu-items aangetroffen met maximaal drie niveaus. De typen zijn 243 `COLLECTION`, twee `CUSTOMER_ACCOUNT_PAGE`, één `CATALOG` en één `SEARCH`.
+
+#### Volledige structuur en linkdoelen
+
+Notatie: `label` → `TYPE` `URL`. Inspringing toont het Shopify-parent/childniveau. De resource-ID-validatie staat in paragraaf 9.2.
+
+**Hoofdmenu (`main-menu`)**
+
+- `Badkamermeubels` → `COLLECTION` `/collections/badkamermeubels`
+  - `Badmeubel sets` → `COLLECTION` `/collections/badmeubel-sets`
+    - `Badmeubel met wastafel` → `COLLECTION` `/collections/badmeubel-met-wastafel-1`
+    - `Badmeubel met waskom` → `COLLECTION` `/collections/badmeubel-met-wastafel`
+    - `Badmeubel zonder spiegel` → `COLLECTION` `/collections/badmeubel-zonder-spiegel`
+    - `Badmeubel met spiegel` → `COLLECTION` `/collections/badmeubel-met-spiegel`
+    - `Badmeubel met spiegelkast` → `COLLECTION` `/collections/badmeubel-met-spiegelkast`
+  - `Toiletmeubels` → `COLLECTION` `/collections/toiletmeubels`
+  - `Kolom & Zijkasten` → `COLLECTION` `/collections/kolom-zijkasten`
+    - `Hoge kasten` → `COLLECTION` `/collections/hoge-kasten`
+    - `Halfhoge kasten` → `COLLECTION` `/collections/halfhoge-kasten`
+  - `Losse onderkasten` → `COLLECTION` `/collections/losse-onderkasten`
+  - `Wastafelbladen` → `COLLECTION` `/collections/wastafelbladen`
+  - `Spiegels` → `COLLECTION` `/collections/spiegels-2`
+    - `Badkamerspiegels` → `COLLECTION` `/collections/badkamerspiegels`
+    - `Spiegelkasten` → `COLLECTION` `/collections/spiegelkasten`
+  - `Toebehoren` → `COLLECTION` `/collections/toebehoren`
+    - `Wastafelkranen` → `COLLECTION` `/collections/wastafelkranen`
+    - `Sifons` → `COLLECTION` `/collections/sifons`
+    - `Afvoerpluggen` → `COLLECTION` `/collections/afvoerpluggen`
+- `Kranen` → `COLLECTION` `/collections/kranen`
+  - `Douchekranen` → `COLLECTION` `/collections/douchekranen`
+    - `Douchesets` → `COLLECTION` `/collections/douchesets`
+    - `Douche thermostaatkranen` → `COLLECTION` `/collections/douche-thermostaatkranen`
+    - `Inbouw douchekranen` → `COLLECTION` `/collections/inbouw-douchekranen`
+    - `Handdouches` → `COLLECTION` `/collections/handdouches`
+    - `Hoofddouches` → `COLLECTION` `/collections/hoofddouches`
+  - `Badkranen` → `COLLECTION` `/collections/badkranen`
+    - `Bad thermostaatkranen` → `COLLECTION` `/collections/bad-thermostaatkranen`
+    - `Inbouw badkranen` → `COLLECTION` `/collections/inbouw-badkranen`
+    - `Vrijstaande badkranen` → `COLLECTION` `/collections/vrijstaande-badkranen`
+    - `Badrandkranen` → `COLLECTION` `/collections/badrandkranen`
+    - `Badsets` → `COLLECTION` `/collections/badsets`
+  - `Wastafelkranen` → `COLLECTION` `/collections/wastafelkranen`
+    - `Opbouw wastafelkranen` → `COLLECTION` `/collections/opbouw-wastafelkranen`
+    - `Inbouw wastafelkranen` → `COLLECTION` `/collections/inbouw-wastafelkranen`
+  - `Fonteinkranen` → `COLLECTION` `/collections/fonteinkranen`
+    - `Opbouw fonteinkranen` → `COLLECTION` `/collections/opbouw-fonteinkranen`
+    - `Inbouw fonteinkranen` → `COLLECTION` `/collections/inbouw-fonteinkranen`
+  - `Keukenkranen` → `COLLECTION` `/collections/keukenkranen`
+  - `Bidetkranen` → `COLLECTION` `/collections/bidetkranen`
+  - `Urinoirspoelers` → `COLLECTION` `/collections/urinoirspoelers`
+  - `Buitendouches` → `COLLECTION` `/collections/buitendouches`
+  - `Toebehoren` → `COLLECTION` `/collections/toebehoren`
+    - `Universele uitlopen` → `COLLECTION` `/collections/universele-uitlopen`
+    - `Hoekstopkranen` → `COLLECTION` `/collections/hoekstopkranen`
+    - `Doucheslangen` → `COLLECTION` `/collections/doucheslangen`
+    - `Handdouchehouders` → `COLLECTION` `/collections/handdouchehouders`
+    - `Hoofddouchehouders` → `COLLECTION` `/collections/hoofddouchehouders`
+- `Toiletten` → `COLLECTION` `/collections/toiletten`
+  - `Complete toiletsets` → `COLLECTION` `/collections/complete-toiletsets`
+  - `Hangtoiletten` → `COLLECTION` `/collections/hangtoiletten`
+    - `Toilet zonder spoelrand` → `COLLECTION` `/collections/toilet-zonder-spoelrand`
+    - `Compacte toiletten` → `COLLECTION` `/collections/compacte-toiletten`
+  - `Staande toiletten` → `COLLECTION` `/collections/staande-toiletten`
+    - `Duoblok toilet` → `COLLECTION` `/collections/duoblok-toilet`
+    - `Toilet met losse stortbak` → `COLLECTION` `/collections/toilet-met-losse-stortbak`
+  - `Douche wc's` → `COLLECTION` `/collections/douche-wcs`
+  - `Bidetten` → `COLLECTION` `/collections/bidetten`
+  - `Urinoirs` → `COLLECTION` `/collections/urinoirs`
+  - `Fonteinen` → `COLLECTION` `/collections/fonteinen`
+    - `Losse fonteinen` → `COLLECTION` `/collections/losse-fonteinen`
+    - `Fonteinsets` → `COLLECTION` `/collections/fonteinsets`
+    - `Fonteinmeubels` → `COLLECTION` `/collections/fonteinmeubels`
+  - `Reservoirs` → `COLLECTION` `/collections/reservoirs`
+    - `Inbouwreservoirs` → `COLLECTION` `/collections/inbouwreservoirs`
+    - `Hangende reservoirs` → `COLLECTION` `/collections/hangende-reservoirs`
+  - `Toilet accessoires` → `COLLECTION` `/collections/toilet-accessoires`
+    - `Accessoires sets` → `COLLECTION` `/collections/toilet-accessoires-sets`
+    - `Toiletborstels` → `COLLECTION` `/collections/toiletborstels`
+    - `Toiletrolhouders` → `COLLECTION` `/collections/toiletrolhouders`
+  - `Toebehoren & Overig` → `COLLECTION` `/collections/toebehoren-overig`
+    - `Bedieningspanelen` → `COLLECTION` `/collections/bedieningspanelen`
+    - `Toiletzittingen` → `COLLECTION` `/collections/toiletzittingen`
+    - `Toiletblokhouder` → `COLLECTION` `/collections/toiletblokhouder`
+- `Wastafels` → `COLLECTION` `/collections/wastafels`
+  - `Vrijhangende wastafels` → `COLLECTION` `/collections/vrijhangende-wastafels`
+  - `Meubelwastafels` → `COLLECTION` `/collections/meubelwastafels`
+  - `Opzetwastafels` → `COLLECTION` `/collections/opzetwastafels`
+  - `Fonteinen` → `COLLECTION` `/collections/fonteinen`
+    - `Fonteinsets` → `COLLECTION` `/collections/fonteinsets`
+    - `Fonteinmeubels` → `COLLECTION` `/collections/fonteinmeubels`
+    - `Standaard fonteinen` → `COLLECTION` `/collections/standaard-fonteinen`
+    - `Hoekfonteinen` → `COLLECTION` `/collections/hoekfonteinen`
+    - `Opzetfonteinen` → `COLLECTION` `/collections/opzetfonteinen`
+  - `Gootstenen` → `COLLECTION` `/collections/gootstenen`
+  - `Wastafelkranen` → `COLLECTION` `/collections/wastafelkranen`
+    - `Inbouw` → `COLLECTION` `/collections/inbouw-wastafelkranen`
+    - `Opbouw` → `COLLECTION` `/collections/opbouw-wastafelkranen`
+  - `Wastafel accessoires` → `COLLECTION` `/collections/zeep-accessoires`
+    - `Planchetten` → `COLLECTION` `/collections/planchetten`
+    - `Handdoekhouders` → `COLLECTION` `/collections/handdoekhouders`
+    - `Zeep accessoires` → `COLLECTION` `/collections/zeep-accessoires-1`
+  - `Toebehoren` → `COLLECTION` `/collections/toebehoren`
+    - `Sifons` → `COLLECTION` `/collections/sifons`
+    - `Wastafelpluggen` → `COLLECTION` `/collections/afvoerpluggen`
+    - `Overloopringen` → `COLLECTION` `/collections/overloopringen`
+- `Douche` → `COLLECTION` `/collections/douche-1`
+  - `Douchecabines` → `COLLECTION` `/collections/douchecabines`
+    - `Vierkant` → `COLLECTION` `/collections/vierkant`
+    - `Rechthoek` → `COLLECTION` `/collections/rechthoek`
+    - `Kwartrond` → `COLLECTION` `/collections/kwartrond`
+    - `Vijfhoek` → `COLLECTION` `/collections/vijfhoek`
+  - `Douchewanden` → `COLLECTION` `/collections/douchewanden`
+    - `Inloopdouches` → `COLLECTION` `/collections/inloopdouches`
+    - `Badwanden` → `COLLECTION` `/collections/badwanden`
+  - `Douchedeuren` → `COLLECTION` `/collections/douchedeuren`
+    - `Draaideuren` → `COLLECTION` `/collections/draaideuren`
+    - `Schuifdeuren` → `COLLECTION` `/collections/schuifdeuren`
+    - `Pendeldeuren` → `COLLECTION` `/collections/pendeldeuren`
+    - `Vouwdeuren` → `COLLECTION` `/collections/vouwdeuren`
+  - `Douchebakken` → `COLLECTION` `/collections/douchebakken`
+  - `Douchegoten` → `COLLECTION` `/collections/douchegoten`
+  - `Doucheputten` → `COLLECTION` `/collections/doucheputten`
+  - `Douchekranen` → `COLLECTION` `/collections/douchekranen`
+    - `Douchesets` → `COLLECTION` `/collections/douchesets`
+    - `Douche thermostaatkranen` → `COLLECTION` `/collections/douche-thermostaatkranen`
+    - `Inbouw douchekranen` → `COLLECTION` `/collections/inbouw-douchekranen`
+    - `Handdouches` → `COLLECTION` `/collections/handdouches`
+    - `Hoofddouches` → `COLLECTION` `/collections/hoofddouches`
+  - `Sunshower` → `COLLECTION` `/collections/sunshower`
+  - `Douche accessoires` → `COLLECTION` `/collections/douche-accessoires`
+    - `Wissers` → `COLLECTION` `/collections/wissers`
+    - `Doucherekken` → `COLLECTION` `/collections/doucherekken`
+    - `Douchezitjes` → `COLLECTION` `/collections/douchezitjes`
+- `Baden` → `COLLECTION` `/collections/douche`
+  - `Inbouwbaden` → `COLLECTION` `/collections/inbouwbaden`
+  - `Halfvrijstaande baden` → `COLLECTION` `/collections/halfvrijstaande-baden`
+  - `Vrijstaande baden` → `COLLECTION` `/collections/vrijstaande-baden`
+  - `Whirlpool baden` → `COLLECTION` `/collections/whirlpool-baden`
+  - `Badkranen` → `COLLECTION` `/collections/badkranen`
+    - `Bad thermostaatkranen` → `COLLECTION` `/collections/bad-thermostaatkranen`
+    - `Inbouw badkranen` → `COLLECTION` `/collections/inbouw-badkranen`
+    - `Vrijstaande badkranen` → `COLLECTION` `/collections/vrijstaande-badkranen`
+    - `Badrandkranen` → `COLLECTION` `/collections/badrandkranen`
+    - `Badsets` → `COLLECTION` `/collections/badsets`
+  - `Badafvoeren & vulsystemen` → `COLLECTION` `/collections/badafvoeren-vulsystemen`
+  - `Badwanden` → `COLLECTION` `/collections/badwanden`
+    - `1-Delig` → `COLLECTION` `/collections/1-delig`
+    - `2-Delig` → `COLLECTION` `/collections/2-delig`
+  - `Bad accessoires` → `COLLECTION` `/collections/bad-accessoires`
+    - `Badbruggen & badplanken` → `COLLECTION` `/collections/badbruggen-badplanken`
+    - `Badkrukjes` → `COLLECTION` `/collections/badkrukjes`
+    - `Badgrepen` → `COLLECTION` `/collections/badgrepen`
+- `Spiegels` → `COLLECTION` `/collections/spiegels-1`
+  - `Badkamerspiegels` → `COLLECTION` `/collections/badkamerspiegels`
+    - `Rechthoekige spiegels` → `COLLECTION` `/collections/rechthoekige-spiegels`
+    - `Ronde spiegels` → `COLLECTION` `/collections/ronde-spiegels`
+    - `Toiletspiegels` → `COLLECTION` `/collections/toiletspiegels`
+    - `Spiegels met verlichting` → `COLLECTION` `/collections/spiegels-met-verlichting`
+    - `Spiegels zonder verlichting` → `COLLECTION` `/collections/spiegels-zonder-verlichting`
+    - `Spiegels met verwarming` → `COLLECTION` `/collections/spiegels-met-verwarming`
+  - `Spiegelkasten` → `COLLECTION` `/collections/spiegelkasten`
+    - `Spiegelkast met verlichting` → `COLLECTION` `/collections/spiegelkast-met-verlichting`
+    - `Spiegelkast zonder verlichting` → `COLLECTION` `/collections/spiegelkast-zonder-verlichting`
+  - `Spiegelverlichting` → `COLLECTION` `/collections/spiegelverlichting`
+  - `Scheer / make-up spiegels` → `COLLECTION` `/collections/scheer-make-up-spiegels`
+  - `Spiegelbevestiging` → `COLLECTION` `/collections/spiegelbevestiging`
+- `Accessoires` → `COLLECTION` `/collections/spiegels`
+  - `Decoratie & Vintage` → `COLLECTION` `/collections/decoratie-vintage`
+  - `Toilet accessoires` → `COLLECTION` `/collections/toilet-accessoires`
+    - `Toilet accessoires sets` → `COLLECTION` `/collections/toilet-accessoires-sets`
+    - `Toiletrolhouders` → `COLLECTION` `/collections/toiletrolhouders`
+    - `Toiletborstelhouders` → `COLLECTION` `/collections/toiletborstelhouders`
+    - `Reserverolhouders` → `COLLECTION` `/collections/reserverolhouders`
+  - `Inbouw/opbouw nissen` → `COLLECTION` `/collections/inbouw-opbouw-nissen`
+  - `Handdoekhouders` → `COLLECTION` `/collections/handdoekhouders`
+    - `Handdoekstangen` → `COLLECTION` `/collections/handdoekstangen`
+    - `Handdoekrekken` → `COLLECTION` `/collections/handdoekrekken`
+    - `Handdoekhaken` → `COLLECTION` `/collections/handdoekhaken`
+    - `Handdoekringen` → `COLLECTION` `/collections/handdoekringen`
+  - `Zeep accessoires` → `COLLECTION` `/collections/zeep-accessoires-1`
+    - `Zeepdispensers` → `COLLECTION` `/collections/zeepdispensers`
+    - `Zeephouders` → `COLLECTION` `/collections/zeephouders`
+  - `Wastafel accessoires` → `COLLECTION` `/collections/zeep-accessoires`
+    - `Planchetten` → `COLLECTION` `/collections/planchetten`
+  - `Bad accessoires` → `COLLECTION` `/collections/bad-accessoires`
+    - `Badbruggen & badplanken` → `COLLECTION` `/collections/glashouders`
+    - `Badkrukjes` → `COLLECTION` `/collections/badkrukjes`
+    - `Badgrepen` → `COLLECTION` `/collections/badgrepen`
+  - `Textiel` → `COLLECTION` `/collections/textiel`
+  - `Stoelen & krukjes` → `COLLECTION` `/collections/stoelen-krukjes`
+  - `Afvalemmers` → `COLLECTION` `/collections/afvalemmers`
+  - `Sanitaire veiligheid` → `COLLECTION` `/collections/sanitaire-veiligheid`
+  - `Onderhouds- en schoonmaakmiddelen` → `COLLECTION` `/collections/onderhouds-en-schoonmaakmiddelen`
+- `Tegels` → `COLLECTION` `/collections/tegels`
+  - `Vloertegels` → `COLLECTION` `/collections/vloertegels`
+  - `Wandtegels` → `COLLECTION` `/collections/wandtegels`
+  - `Decortegels` → `COLLECTION` `/collections/decortegels`
+  - `Tegelstroken` → `COLLECTION` `/collections/tegelstroken`
+  - `Mozaïek tegels` → `COLLECTION` `/collections/mozaiek-tegels`
+  - `Keramisch parket` → `COLLECTION` `/collections/keramisch-parket`
+  - `Populair` → `COLLECTION` `/collections/populair`
+    - `Betonlook tegels` → `COLLECTION` `/collections/betonlook-tegels`
+    - `Stonelook tegels` → `COLLECTION` `/collections/stonelook-tegels`
+    - `Marmerlook tegels` → `COLLECTION` `/collections/marmerlook-tegels`
+    - `Houtlook tegels` → `COLLECTION` `/collections/houtlook-tegels`
+    - `Metaallook tegels` → `COLLECTION` `/collections/metaallook-tegels`
+    - `Terrazzo tegels` → `COLLECTION` `/collections/terrazzo-tegels`
+  - `Toebehoren` → `COLLECTION` `/collections/toebehoren`
+    - `Tegellijm` → `COLLECTION` `/collections/tegellijm`
+    - `Voorstrijkmiddel` → `COLLECTION` `/collections/voorstrijkmiddel`
+    - `Voegmortel` → `COLLECTION` `/collections/voegmortel`
+    - `Silicone kit` → `COLLECTION` `/collections/silicone-kit`
+    - `Leveling systeem` → `COLLECTION` `/collections/leveling-systeem`
+- `Badkamerverlichting` → `COLLECTION` `/collections/spiegels-1`
+  - `Spots` → `COLLECTION` `/collections/spots`
+    - `Inbouwspots` → `COLLECTION` `/collections/inbouwspots`
+    - `Opbouwspots` → `COLLECTION` `/collections/opbouwspots`
+  - `Hanglampen` → `COLLECTION` `/collections/hanglampen`
+  - `Wandlampen` → `COLLECTION` `/collections/wandlampen`
+  - `Plafondlampen` → `COLLECTION` `/collections/plafondlampen`
+  - `Spiegellampen` → `COLLECTION` `/collections/spiegellampen`
+- `Verwarming` → `COLLECTION` `/collections/badkamerverlichting`
+  - `Radiatoren` → `COLLECTION` `/collections/radiatoren`
+    - `Handdoekradiatoren` → `COLLECTION` `/collections/handdoekradiatoren`
+    - `Designradiatoren` → `COLLECTION` `/collections/designradiatoren`
+    - `Elektrische radiatoren` → `COLLECTION` `/collections/elektrische-radiatoren`
+    - `Paneelradiatoren` → `COLLECTION` `/collections/paneelradiatoren`
+    - `Lage temperatuur radiatoren` → `COLLECTION` `/collections/lage-temperatuur-radiatoren`
+  - `Handdoekwarmers` → `COLLECTION` `/collections/handdoekwarmers`
+  - `Elektrische vloerverwarming` → `COLLECTION` `/collections/elektrische-vloerverwarming`
+  - `Spiegelverwarming` → `COLLECTION` `/collections/spiegelverwarming`
+  - `Radiator aansluitmateriaal` → `COLLECTION` `/collections/radiator-aansluitmateriaal`
+    - `Onderblokken` → `COLLECTION` `/collections/onderblokken`
+    - `Radiatorkranen` → `COLLECTION` `/collections/radiatorkranen`
+    - `Voetventielen` → `COLLECTION` `/collections/voetventielen`
+    - `Thermostaatknoppen` → `COLLECTION` `/collections/thermostaatknoppen`
+    - `Knelsets` → `COLLECTION` `/collections/knelsets`
+- `Meer` → `COLLECTION` `/collections/meer`
+  - `Waterontharders` → `COLLECTION` `/collections/waterontharders`
+  - `Schakelmateriaal` → `COLLECTION` `/collections/schakelmateriaal`
+  - `Badkamerventilatie` → `COLLECTION` `/collections/badkamerventilatie`
+- `Outlet` → `COLLECTION` `/collections/outlet`
+
+**Voettekstmenu (`footer`)**
+
+- `Zoeken` → `SEARCH` `/search`
+
+**Hoofdmenu klantaccount (`customer-account-main-menu`)**
+
+- `Bestellingen` → `CUSTOMER_ACCOUNT_PAGE` `https://shopify.com/94179590410/account/orders`
+- `Profiel` → `CUSTOMER_ACCOUNT_PAGE` `https://shopify.com/94179590410/account/profile`
+
+**Assortiment (`assortiment`)**
+
+- `Accessoires` → `COLLECTION` `/collections/spiegels`
+- `Baden` → `COLLECTION` `/collections/douche`
+- `Badkamermeubels` → `COLLECTION` `/collections/badkamermeubels`
+- `Homepage` → `COLLECTION` `/collections/kranen`
+- `Meer` → `COLLECTION` `/collections/meer`
+- `Tegels` → `COLLECTION` `/collections/tegels`
+- `Toiletten` → `COLLECTION` `/collections/toiletten`
+- `Verwarming` → `COLLECTION` `/collections/badkamerverlichting`
+- `Wastafels` → `COLLECTION` `/collections/wastafels`
+
+**Badkamermeubels - B (`badkamermeubels-b`)**
+
+- `Alle producten` → `CATALOG` `/collections/all`
+
+### 9.2 Targets en afwijkingen
+
+**BEWEZEN:** geen item heeft een lege titel, lege URL of `#`-URL. Alle 243 collection-items hebben een Shopify collection resource-ID. De account-, catalogus- en searchlinks hebben geldige Shopify-URL-vormen voor hun type.
+
+De volgende zichtbare titel/targetcombinaties zijn inhoudelijk opvallend:
+
+- `Baden` → `/collections/douche`;
+- `Accessoires` → `/collections/spiegels`;
+- `Badkamerverlichting` → `/collections/spiegels-1`;
+- `Verwarming` → `/collections/badkamerverlichting`;
+- `Homepage` in menu `assortiment` → `/collections/kranen`.
+
+De targets bestaan technisch; of labels en doelen bewust zo zijn gekoppeld is `[NOG ONDERZOEKEN]` en hoort bij `BC-DISC-001`/`BC-IA-001`.
+
+## 10. Templates en actieve themeconfiguratie
+
+### 10.1 Objecttoewijzingen
+
+| Objecttype | Toewijzing |
+| --- | --- |
+| Producten | Alle 7.827 hebben een leeg/default suffix en gebruiken de default producttemplate |
+| Collecties | 188 default/leeg; 13 `category-landing` |
+| Pagina's | 109 `begrip`; 6 `page`; 1 `contact`; 1 `begrippenlijst` |
+
+Van de 117 pagina's zijn 116 gepubliceerd en één ongepubliceerd (`Merken`). De live themebestanden bevatten `page.json`, `page.contact.json`, `page.begrip.json` en `page.begrippenlijst.json`, maar geen `page.page.json`. Zes pagina's rapporteren toch suffix `page`; de runtimefallback en bedoelde toewijzing zijn `[NOG ONDERZOEKEN]`.
+
+### 10.2 Themes
+
+| Theme | ID | Rol | Status van doel/eigenaarschap |
+| --- | ---: | --- | --- |
+| `Categoriepagina_v1.0` | `189463068938` | `MAIN` | Live theme; wijzigen verboden zonder afzonderlijke toestemming |
+| `BadkamerCity V1.0` | `189117628682` | `UNPUBLISHED` | Bestaande oudere unpublished omgeving |
+| `BadkamerCity Development` | `192770375946` | `UNPUBLISHED` | Goedgekeurde previewomgeving voor latere expliciete taken |
+| `badkamercity-phase-c-paris-rectangle-test-v2` | `192796786954` | `UNPUBLISHED` | **BEWEZEN bestaand**; eigenaar, exact doel en ontstaansreden `[NOG ONDERZOEKEN]`; niet wijzigen, verwijderen, publiceren, pushen of pullen |
+
+Het live theme bevat 396 bestanden, gelijk aan de 396 lokale bestanden. Een aanvankelijke afwijking tussen Shopify's `checksumMd5` en de lokale MD5 voor `config/settings_data.json` bleek geen inhoudsverschil: API-body en lokaal bestand zijn bytegelijk en hebben dezelfde SHA-256.
+
+### 10.3 Actieve JSON-configuratie en apps
+
+De 15 JSON-templates, twee section groups en `config/settings_data.json` zijn live read-only opgehaald en succesvol geparseerd. Daarin staan:
+
+- 26 sections;
+- 157 blocks;
+- nul disabled sections;
+- nul disabled blocks;
+- nul `shopify://apps/...`-referenties;
+- nul app embeds in `settings_data.json`.
+
+**BEWEZEN:** de actieve live JSON-configuratie bevat geen geconfigureerd theme app block of app embed. **Niet bewezen:** dat er geen apps, pixels, scripts of buiten deze JSON-configuratie werkende integraties bestaan.
+
+## 11. Markets, talen en accounts
+
+### 11.1 Markets en talen
+
+| Onderdeel | Resultaat |
+| --- | --- |
+| Markets | Eén actieve markt: `Nederland`, handle `nl` |
+| Talen | Eén taal: `nl` / Nederlands; primair en gepubliceerd |
+
+### 11.2 Klantaccounts en checkoutconfiguratie
+
+| Instelling | Resultaat |
+| --- | --- |
+| Accountmodel | `NEW_CUSTOMER_ACCOUNTS` |
+| Loginlinks zichtbaar op storefront en checkout | Ja |
+| Login verplicht bij checkout | Nee |
+| Checkout/accounts configuraties | Eén |
+| Configuratienaam | `Mijn winkel-configuratie` |
+| Gepubliceerd | Ja |
+| Laatst bijgewerkt/bewerkt | 2026-06-04 16:34:56 UTC |
+
+Er zijn geen klantaccounts, klanten of orders gelezen.
+
+## 12. Locaties en voorraadstructuur
+
+### 12.1 Locaties
+
+Er is één locatie:
+
+| Naam | Actief | Fulfilment online orders | Land | Plaats/provincie |
+| --- | --- | --- | --- | --- |
+| `Winkellocatie` | Ja | Ja | NL | Niet ingevuld |
+
+### 12.2 Inventory items
+
+| Kenmerk | Aantal |
+| --- | ---: |
+| Inventory items | 7.827 |
+| Tracking aan | 259 |
+| Tracking uit | 7.568 |
+| SKU gevuld | 7.810 |
+| SKU leeg | 17 |
+
+Een beperkte steekproef van tien getrackte inventory items had ieder één inventory level op `Winkellocatie`, zonder geneste paginatie. In die steekproef stonden `available` en `on_hand` beide op 10 en `committed`/`incoming` op 0. Dit is **geen** volledige voorraadniveaudump en mag niet als algemene voorraadbelofte worden gebruikt.
+
+**NOG ONDERZOEKEN:** operationele betekenis, actualiteit, bronhouder en leverancierrelatie van tracking en hoeveelheden.
+
+## 13. Shipping en delivery profiles
+
+Er is één default delivery profile `Algemeen profiel`:
+
+- één originlocatie: `Winkellocatie`;
+- nul locaties zonder rates;
+- vier actieve merchant-defined methoden;
+- nul participant-defined methoden;
+- productvarianttelling `AT_LEAST 500`; de query geeft geen exact totaal boven deze drempel;
+- geen carrier services.
+
+| Zone | Landen | Actieve methoden |
+| --- | ---: | --- |
+| `Domestic` | NL | Twee methoden met naam `Standaard` |
+| `EU (Europeese Unie)` | 26 EU-landen | Eén methode `Standard` |
+| `International` | 14 landen | Eén methode `Standard` |
+
+De exacte tarieven, voorwaarden, gewichts-/prijsgrenzen en operationele geschiktheid zijn `[NOG ONDERZOEKEN]`. Dat er een rate bestaat bewijst niet dat de lanceringsregels uit `BC-LOG-001` en `BC-LOG-002` zijn vastgesteld.
+
+## 14. Apps en resterende toegangsgrenzen
+
+### 14.1 Bewezen
+
+- De huidige Shopify CLI-installatie en exact verleende read-scopes zijn via `currentAppInstallation` aantoonbaar.
+- Live JSON-templates, section groups en settings bevatten geen app blocks of app embeds.
+- `content_for_header` blijft in theme-code aanwezig en kan runtime-inhoud injecteren.
+- De `reviews.*`-themeverwijzingen bestaan statisch, maar er is geen bewijs welke app of welk proces ze beheert.
+
+### 14.2 Niet toegankelijk
+
+**NIET TOEGANKELIJK:** een volledige lijst van geïnstalleerde apps, sales channels, web pixels, script tags, app-abonnementen, externe dashboards en niet-themegebonden appconfiguratie. De verleende scopes bevatten geen algemene app-inventarisscope en er wordt geen aanvullende scope aangevraagd.
+
+Daarom wordt niet geconcludeerd dat er geen apps actief zijn.
+
+## 15. Volledigheid en beperkingen
+
+### Volledig onderzocht binnen de toegestane route
+
+- exacte product-, variant-, status-, vendor-, producttype-, template- en SKU-totalen;
+- exacte collectieaantallen, typen, regels, suffixes en productaantallen;
+- metafielddefinities voor vijf relevante owner types;
+- exacte dekking van tien prioriteitsmetafields;
+- alle metaobjectdefinities en entrytotalen;
+- alle menu's, items, diepte, URL's en resource-ID's;
+- product-, collectie- en paginatemplate suffixes;
+- alle themes en de actieve live JSON-configuratie;
+- markets, talen, customer-accountmodel, checkoutconfiguratie, locaties en inventory-itemstructuur;
+- delivery profiles, zones, methoden en carrier services.
+
+### Niet volledig onderzocht of niet toegankelijk
+
+- volledige waarden/dekking van alle specificatiemetafields buiten de 40-productsteekproef: **NOG ONDERZOEKEN**;
+- inhoudelijke juistheid van alle 247 navigatielabels tegenover hun targets: **NOG ONDERZOEKEN**;
+- exacte productvarianttoewijzing aan het delivery profile boven de `AT_LEAST 500`-grens: **NOG ONDERZOEKEN**;
+- tarieven en operationele verzendregels: **NOG ONDERZOEKEN**;
+- volledige app-, pixel-, script- en externe integratielijst: **NIET TOEGANKELIJK**;
+- eigenaar, exact doel en ontstaansreden van theme `192796786954`: **NOG ONDERZOEKEN**;
+- leverancierbronnen, importbestanden en data-eigenaarschap: **NOG ONDERZOEKEN**.
+
+## 16. Gevolgen voor vervolgtaken
+
+- `BC-ADM-001` gaat naar `REVIEW`; de projecteigenaar beoordeelt de volledigheid en conclusies.
+- `BC-DISC-001` blijft `NOT_STARTED` totdat die menselijke beoordeling expliciet is vastgelegd.
+- `BC-DISC-001` kan daarna de 247 menukoppelingen, zes `page`-suffixes, themegebruik, niet-JSON appinjectie en het vierde testtheme nader duiden.
+- `BC-DATA-001` krijgt harde input over één bestaande productmetafielddefinitie, ontbrekende specificatiedefinities, 17 lege SKU's, 72 dubbele SKU-groepen en 649 producttypen.
+- `BC-SWITCH-001` krijgt exact bewijs dat `custom.switch_group` op 46,74% staat en de legacygroep/menuvelden op 0%.
+- `BC-IA-001` krijgt bewijs dat 199 collecties leeg zijn en dat enkele titels, handles en menu-targets semantisch niet aansluiten.
+- `BC-LOG-001` en `BC-LOG-002` krijgen één locatie, 259 getrackte items, één profile en drie brede verzendzones als actuele basis; operationele regels blijven open.
+- `BC-ACC-001` kan uitgaan van nieuwe customer accounts en niet-verplichte login bij checkout, onder voorbehoud van functionele validatie.
+- `BC-SEC-001` en `BC-ANA-001` blijven beperkt door de ontbrekende volledige app-/pixelinventaris.
+
+## 17. Open vragen en beslissingen
+
+1. **NOG ONDERZOEKEN:** wie beheert productdata en normaliseert SKU's, producttypen en metafields?
+2. **NOG ONDERZOEKEN:** waarom zijn 199 collecties leeg en welke zijn bedoeld voor lancering?
+3. **NOG ONDERZOEKEN:** zijn de opvallende collectiehandles en menu-targets bewust gekoppeld?
+4. **NOG ONDERZOEKEN:** hoe moeten de zes pagina's met suffix `page` zich gedragen zonder `page.page.json`?
+5. **NOG ONDERZOEKEN:** welke bron vult specificaties, pluspunten en aandachtspunten?
 6. **NOG ONDERZOEKEN:** welke app of welk proces beheert eventuele `reviews.*`-velden?
-7. **NOG ONDERZOEKEN:** welke alternate templates zijn werkelijk toegewezen?
-8. **NOG ONDERZOEKEN:** bestaan en werken de menu-handles `main-menu` en `footer` met geldige doelen?
+7. **NOG ONDERZOEKEN:** eigenaar, exact doel en ontstaansreden van theme `192796786954`.
+8. **OPEN BESLISSING:** welke bevoegde read-only bron mag later de volledige app-/pixel-/scriptinventaris leveren?
+9. **OPEN BESLISSING:** keurt de projecteigenaar deze inventaris goed zodat `BC-ADM-001` `DONE` en `BC-DISC-001` actief kan worden?
 
-## 17. Veilige vervolgstap
+## 18. Aanbevolen vervolgstap
 
-1. Laat de projecteigenaar dit blokkaderapport beoordelen.
-2. Laat een bevoegde Shopify-beheerder een reeds bestaande read-only route aanwijzen; maak in deze stap geen app en breid geen scopes uit.
-3. Bewijs bij API-gebruik eerst de reeds verleende scopes zonder tokens te tonen.
-4. Hervat `BC-ADM-001` met gepagineerde tellingen, definities, representatieve niet-persoonsgebonden samples en een domein-voor-domein querylog.
-5. Laat de projecteigenaar de volledige inventaris beoordelen voordat `BC-DISC-001` actief wordt.
+1. De projecteigenaar beoordeelt dit rapport en de nieuwe datakwaliteitsrisico's.
+2. Leg expliciet vast of `BC-ADM-001` is goedgekeurd; tot die tijd blijft de taak `REVIEW`.
+3. Activeer pas daarna `BC-DISC-001` voor de gebruiksmatrix van templates, themeonderdelen, appafhankelijkheden en opvallende navigatiekoppelingen.
+4. Wijzig geen product-, collectie-, metafield-, menu-, shipping- of themegegevens binnen deze review.
 
-## 18. Eindconclusie
+## 19. Eindconclusie
 
-- **BEWEZEN:** de theme-CLI-context werkt voor de juiste store; deze opdracht heeft het live theme niet gewijzigd en de role bleef `live`.
-- **BEWEZEN:** de tijdgebonden theme-snapshot toont verwachte metafields, templates en menu-handles, maar geen Admin-dekking of toewijzingen.
-- **NIET TOEGANKELIJK:** de essentiële Shopify Admin API- en browsergegevens voor alle gevraagde Admin-domeinen.
-- **NOG ONDERZOEKEN:** alle werkelijke aantallen, definities, waarden, apps, objecttoewijzingen en instellingen.
-- **OPEN BESLISSING:** welke bestaande read-only toegangsroute de projecteigenaar veilig beschikbaar stelt.
+- **BEWEZEN:** de kern van Shopify Admin is binnen de dertien read-scopes geïnventariseerd met gepagineerde queries.
+- **BEWEZEN:** het live theme is niet gewijzigd; de live inhoud van `config/settings_data.json` is gelijk aan de lokale inhoud.
+- **BEWEZEN:** theme `192796786954` bestaat als unpublished testtheme; doel en eigenaarschap zijn niet bevestigd.
+- **BEWEZEN:** er zijn geen write-scopes, mutaties of Shopify-wijzigingen gebruikt.
+- **NIET TOEGANKELIJK:** de volledige geïnstalleerde-app-, pixel- en externe-integratielijst.
+- **NOG ONDERZOEKEN:** datakwaliteitsherstel, operationele regels, app-eigenaarschap en inhoudelijke validatie van opvallende koppelingen.
 
-Daarom is `BC-ADM-001` `BLOCKED`. Er zijn tijdens het onderzoek geen Shopify-data, theme-code, themes, apps, rechten of publicatiestatussen gewijzigd.
+Daarom is `BC-ADM-001` gereed voor menselijke `REVIEW`, niet voor implementatie of publicatie.
