@@ -1,6 +1,6 @@
 # BadkamerCity Masterplan
 
-> **Versie 0.4 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** De projecteigenaar heeft `BC-ADM-001` op 2026-08-04 goedgekeurd als afgeronde read-only Shopify Admin-inventarisatie. `BC-DISC-001` is de actieve taak en staat `READY`, maar is nog niet gestart. Dit is geen toestemming voor theme-code, Shopify Admin-wijzigingen, aanvullende scopes, theme-pushes of -pulls, publicatie of implementatiewerk. Implementatie blijft geblokkeerd totdat de benodigde onderzoeken, beslissingen en afzonderlijke goedkeuringen zijn afgerond.
+> **Versie 0.6 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** De projecteigenaar heeft `BC-DISC-001` op 2026-08-05 goedgekeurd als afgerond read-only onderzoek. `BC-DISC-002` is de actieve volgende taak en staat `READY`, maar is niet inhoudelijk gestart. Dit is geen toestemming voor theme-code, Shopify Admin-wijzigingen, aanvullende scopes, theme-pushes of -pulls, publicatie of implementatiewerk. Implementatie blijft geblokkeerd totdat de benodigde onderzoeken, beslissingen en afzonderlijke goedkeuringen zijn afgerond.
 
 Markeringen in dit document:
 
@@ -13,9 +13,9 @@ Markeringen in dit document:
 | Veld | Waarde |
 | --- | --- |
 | Documentnaam | `docs/MASTERPLAN.md` |
-| Versie | `0.4` |
+| Versie | `0.6` |
 | Status | `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED` |
-| Datum laatste wijziging | 2026-08-04 |
+| Datum laatste wijziging | 2026-08-05 |
 | Eigenaar | BadkamerCity-projecteigenaar; naam en formele rol `[NOG ONDERZOEKEN]` |
 | Centrale bron van waarheid | Dit bestand op GitHub-branch `main`, naast de bewijsdocumenten in `docs/` |
 | Huidige Git-branch | `main` |
@@ -31,23 +31,23 @@ De status activeert alleen het vastgelegde read-only onderzoekswerk. Theme-imple
 | --- | --- |
 | Algemene projectstatus | Discovery is menselijk goedgekeurd en actief; implementatie en lancering blijven geblokkeerd |
 | Huidige fase | Fase 1 - volledige inventarisatie |
-| Actieve taak-ID | `BC-DISC-001` |
-| Actieve taak | `BC-DISC-001` - Actieve templates, sections, snippets, app-embeds en contentkoppelingen in kaart brengen; status `READY` |
-| Eerstvolgende actie | Start `BC-DISC-001` alleen na een afzonderlijke expliciete read-only uitvoeringsopdracht; wijzig geen Shopify-data, theme-code of scopes |
-| Belangrijkste blokkades | Geen gevalideerd productdatamodel, geen vastgestelde categorieboom, geen leverancierregels, geen volledige app-/pixelbron en meerdere open architectuurbesluiten |
-| Laatste afgeronde taak | `BC-ADM-001` - read-only Shopify Admin-inventarisatie op 2026-08-04 menselijk goedgekeurd |
-| Laatste menselijke goedkeuring | 2026-08-04 - `BC-ADM-001` naar `DONE` en `BC-DISC-001` naar `READY`; geen implementatie- of Shopify-wijzigingstoestemming |
-| Laatste relevante commit | Deze documentatiecommit: `docs: approve Shopify Admin inventory` |
+| Actieve taak-ID | `BC-DISC-002` |
+| Actieve taak | `BC-DISC-002` - BadkamerXXL, Sanitairwinkel en Sanitairkamer diepgaand onderzoeken; status `READY`, niet inhoudelijk gestart |
+| Eerstvolgende actie | Start `BC-DISC-002` uitsluitend na een afzonderlijke expliciete read-only uitvoeringsopdracht; voer binnen deze goedkeuringsopdracht geen concurrentie- of SEO-onderzoek uit |
+| Belangrijkste blokkades | Geen volledige app-/pixelbron, geen runtimevalidatie van kandidaatbestanden/switchers, geen gevalideerd productdatamodel, geen vastgestelde categorieboom, geen leverancierregels en meerdere open architectuurbesluiten |
+| Laatste afgeronde taak | `BC-DISC-001` - actief theme- en appgebruik op 2026-08-05 menselijk goedgekeurd als afgerond read-only onderzoek |
+| Laatste menselijke goedkeuring | 2026-08-05 - `BC-DISC-001` naar `DONE` en `BC-DISC-002` als actieve taak naar `READY`; classificaties blijven onderzoeksbevindingen zonder verwijder- of implementatietoestemming |
+| Laatste relevante commit | Deze documentatiecommit: `docs: approve active theme usage inventory` |
 | Previewstatus | `BadkamerCity Development` is unpublished; preview- en Theme Editor-links zijn vastgelegd; geen nieuwe theme-code is geüpload sinds de aanmaak |
 | Productdoel voor lancering | Ongeveer 20.000 volledig ingerichte, gekoppelde, gecategoriseerde, doorzoekbare en filterbare producten |
-| Voorlopige taken | 37 totaal: 6 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 1 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
+| Voorlopige taken | 37 totaal: 7 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
 
 ### Actuele route
 
-- **Waar we nu zijn:** Fase 1 - volledige inventarisatie; masterplan versie 0.4 is `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`. `BC-ADM-001` is menselijk goedgekeurd en `DONE`; `BC-DISC-001` is de actieve taak en staat `READY`.
-- **Wat is vastgelegd:** `docs/SHOPIFY_ADMIN_INVENTORY.md` is als afgeronde read-only Admin-inventarisatie goedgekeurd. De beperkingen, datakwaliteitsrisico's en open vragen blijven gelden; er is niets in Shopify of theme-code gewijzigd.
-- **Welke input nodig is:** Voor uitvoering van `BC-DISC-001` is een afzonderlijke expliciete read-only startopdracht nodig. De taak gebruikt alleen reeds toegestane bronnen en mag ontbrekende app-/pixeltoegang niet met extra scopes of mutaties omzeilen.
-- **Welke taken daarna komen:** Eerst `BC-DISC-001`; na afronding en menselijke beoordeling volgt `BC-DISC-002`, dat `NOT_STARTED` blijft. Implementatietaken blijven geblokkeerd.
+- **Waar we nu zijn:** Fase 1 - volledige inventarisatie; masterplan versie 0.6 is `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`. `BC-ADM-001` en `BC-DISC-001` zijn `DONE`; `BC-DISC-002` is de actieve taak op `READY` en nog niet inhoudelijk gestart.
+- **Wat is vastgelegd:** De projecteigenaar heeft `docs/ACTIVE_THEME_USAGE.md` en masterplan versie 0.5 beoordeeld en goedgekeurd binnen de read-only bewijsgrenzen. Classificaties blijven onderzoeksbevindingen; geen kandidaat of backup mag worden gewijzigd of verwijderd.
+- **Welke input nodig is:** Een afzonderlijke expliciete read-only startopdracht voor `BC-DISC-002`. De bestaande runtime-, app-, pixel-, switcherdata- en theme `192796786954`-beperkingen blijven open.
+- **Welke taken daarna komen:** Eerst alleen `BC-DISC-002` na afzonderlijke starttoestemming. Geen implementatietaak, Shopify-wijziging, themehandeling of opruimtaak is geactiveerd.
 
 ## 3. Hoe dit masterplan gebruikt moet worden
 
@@ -66,7 +66,7 @@ Statusbeheer:
 - Een technische implementatie mag pas `REVIEW` worden nadat de vastgelegde technische controles slagen.
 - Visueel of functioneel werk mag alleen `DONE` worden na expliciete menselijke goedkeuring.
 - Voorbereidend read-only of documentatiewerk mag `DONE` zijn als bestaand bewijs uitvoering en resultaat aantoont.
-- Geen enkel lanceringsonderdeel is in versie 0.4 `DONE`; de zes `DONE`-taken zijn governance- of read-only onderzoekstaken.
+- Geen enkel lanceringsonderdeel is in versie 0.6 `DONE`; de zeven `DONE`-taken zijn governance- of read-only onderzoekstaken.
 
 Bewijs en onderhoud:
 
@@ -542,7 +542,7 @@ Bevestigde risico's:
 
 Mobiel, desktop en toetsenbordbediening zijn expliciete eisen. De productpagina, switchers/configurators, calculator, navigatie, formulieren, modals, cart, search en content moeten toegankelijk worden getest.
 
-`[NOG ONDERZOEKEN]` Huidige audit, doelstandaard, ondersteunde assistieve technologie en acceptatiedrempels. Geen toegankelijkheidsconformiteit wordt in versie 0.4 geclaimd.
+`[NOG ONDERZOEKEN]` Huidige audit, doelstandaard, ondersteunde assistieve technologie en acceptatiedrempels. Geen toegankelijkheidsconformiteit wordt in versie 0.6 geclaimd.
 
 ## 46. Technische SEO
 
@@ -703,10 +703,10 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 
 | Status | Aantal |
 | --- | ---: |
-| `DONE` | 6 |
+| `DONE` | 7 |
 | `READY` | 1 |
 | `IN_PROGRESS` | 0 |
-| `NOT_STARTED` | 1 |
+| `NOT_STARTED` | 0 |
 | `BLOCKED` | 26 |
 | `REVIEW` | 0 |
 | `DEFERRED` | 3 |
@@ -828,7 +828,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Technische controles:** Structuur-, telling-, marker-, duplicaat-, status-, route-, instructie-, scope- en Git-diffcontrole.
 - **Menselijke controle:** De projecteigenaar heeft versie 0.1 op 2026-08-04 expliciet goedgekeurd als basis voor verder onderzoekswerk, niet voor implementatie.
 - **Bewijs van voltooiing:** `docs/MASTERPLAN.md`; fundamentcommit `302a42a` (`docs: add BadkamerCity masterplan foundation`); governancecommit `d22e3e32d04fc472996064cc14cff922396c2d05` (`docs: activate discovery workflow and add Codex guidance`); menselijke onderzoeksgoedkeuring van 2026-08-04.
-- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.4 blokkeert implementatie daarom expliciet.
+- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.6 blokkeert implementatie daarom expliciet.
 - **Rollback of herstelwijze:** Corrigeer of revert uitsluitend via een afzonderlijke beoordeelde documentatiecommit.
 - **Laatst bijgewerkt:** 2026-08-04.
 
@@ -844,7 +844,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Aanleiding:** Producten, collecties, metafields, metaobjects, menu's, apps, instellingen en actieve templates waren buiten de lokale theme-snapshot onvoldoende bewezen.
 - **Scope:** Read-only inventaris met bron, datum, aantallen/structuur waar beschikbaar, actieve koppelingen en onzekerheden.
 - **Buiten scope:** Ieder type Admin-, product-, data-, theme- of appwijziging.
-- **Afhankelijkheden:** `BC-GOV-005` is `DONE`; de projecteigenaar heeft de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.4 staat alleen read-only discovery toe en blokkeert implementatie.
+- **Afhankelijkheden:** `BC-GOV-005` is `DONE`; de projecteigenaar heeft de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.6 staat alleen read-only discovery toe en blokkeert implementatie.
 - **Benodigde input:** Volledig ontvangen en gebruikt: Shopify CLI `4.6.0`, store `fpa9hu-i3.myshopify.com`, uitsluitend de verleende read-scopes en expliciete menselijke beoordeling van rapport, beperkingen en onzekerheden.
 - **Verwachte bestanden/systemen:** Shopify Admin read-only, `docs/SHOPIFY_ADMIN_INVENTORY.md` en dit masterplan.
 - **Uitvoer:** Volledig bijgewerkt `docs/SHOPIFY_ADMIN_INVENTORY.md` met aantallen, structuren, representatieve steekproeven, queryfamilies, scopes, statuslabels, beperkingen, gevolgen en aanbevolen vervolgstap.
@@ -863,23 +863,23 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Titel:** Actieve templates, sections, snippets, app-embeds en contentkoppelingen in kaart brengen
 - **Fase:** Fase 1 - volledige inventarisatie
 - **Werkstroom:** Onderzoek / Shopify Admin
-- **Status:** `READY`
+- **Status:** `DONE`
 - **Prioriteit:** `P0`
 - **Doel:** Onderscheiden welke huidige code actief, legacy, experimenteel of ongebruikt is.
 - **Aanleiding:** De audit vond losse oude productsecties, backupbestanden en mogelijke defecten. `BC-ADM-001` bewees de actieve JSON-configuratie, maar nog niet de volledige runtimegebruiksmatrix of alle app-/pixelafhankelijkheden.
-- **Scope:** Read-only mapping tussen templates/configuratie, sections, snippets, assets en apps.
+- **Scope:** Read-only mapping tussen templates/configuratie, sections, snippets, assets en aantoonbare app-/dynamische injectiepunten, inclusief de auditverdachten en beide switcherpaden.
 - **Buiten scope:** Bestanden verwijderen, templates wijzigen, apps configureren of code herstellen.
-- **Afhankelijkheden:** `BC-ADM-001` is na menselijke review `DONE`; de projecteigenaar heeft `BC-DISC-001` als eerstvolgende read-only taak `READY` en actief verklaard.
-- **Benodigde input:** Beschikbaar: goedgekeurd Admin-inventarisrapport, actieve template-/configuratiegegevens, lokale repository en de bestaande read-only beperkingen. De volledige app-/pixelbron blijft niet toegankelijk en mag niet via aanvullende scopes worden verkregen.
-- **Verwachte bestanden/systemen:** Repository read-only, Shopify Admin read-only, nader te bepalen bewijsrapport.
-- **Uitvoer:** Actief-gebruikmatrix en kandidaten voor behoud, onderzoek of latere verwijdering.
-- **Acceptatiecriteria:** Elk door de audit verdacht bestand heeft een aantoonbare gebruiksstatus of `[NOG ONDERZOEKEN]` met reden.
-- **Technische controles:** Statische referentieanalyse plus vergelijking met actieve Shopify-configuratie; geen codewijziging.
-- **Menselijke controle:** De eigenaar heeft alleen de read-only taakstatus `READY` goedgekeurd. Zakelijke relevantie moet later worden bevestigd voordat iets wordt verwijderd, vervangen of geïmplementeerd.
-- **Bewijs van voltooiing:** Gebruiksmatrix, bronnen en masterplanupdate `[NOG ONDERZOEKEN]`.
-- **Risico:** Dynamische Theme Editor- of appreferenties kunnen statisch worden gemist; beperkingen moeten expliciet blijven en mogen niet als afwezigheidsbewijs worden gepresenteerd.
+- **Afhankelijkheden:** `BC-ADM-001` is `DONE`; de projecteigenaar heeft op 2026-08-04 een expliciete read-only startopdracht voor `BC-DISC-001` gegeven met verbod op Shopify-/theme-/scope-/app-/repositorycodewijzigingen.
+- **Benodigde input:** Gebruikt: goedgekeurd Admin-inventarisrapport, live/local bytegelijke JSON-configuratie, lokale repository, Shopify CLI `4.6.0` en uitsluitend reeds verleende read-scopes. De volledige app-/pixelbron bleef niet toegankelijk.
+- **Verwachte bestanden/systemen:** Repository read-only, Shopify Admin read-only, `docs/ACTIVE_THEME_USAGE.md` en dit masterplan.
+- **Uitvoer:** `docs/ACTIVE_THEME_USAGE.md` met classificaties voor alle 396 bestanden, actieve template-/sectionmatrix, auditverdachten, beide switchers, backup/debug, appinjectie, contentkoppelingen, beperkingen, risico's en veilige vervolgstappen.
+- **Acceptatiecriteria:** Gehaald: ieder auditverdacht bestand heeft een onderbouwde status; de volledige repositoryscope is sluitend geclassificeerd; dynamische/ontoegankelijke delen zijn begrensd; niets in Shopify of theme-code is gewijzigd; de projecteigenaar heeft het rapport op 2026-08-05 binnen deze grenzen goedgekeurd.
+- **Technische controles:** Vooraf schoon `main` en `HEAD == origin/main`; live/local bodyvergelijking van 18 JSON-configuratiebestanden en acht overige templates; JSON-parsing; volledige statische referentieanalyse van 396 bestanden; gerichte JavaScript-sectionroutes, hashes, instellingen, switcherdata en appinjectiepunten; geen mutaties, `--allow-mutations`, theme-pull/push of codewijziging.
+- **Menselijke controle:** De projecteigenaar heeft `docs/ACTIVE_THEME_USAGE.md` en masterplan versie 0.5 op 2026-08-05 goedgekeurd als afgerond read-only onderzoek. De classificaties zijn geen verwijdertoestemming; alle runtime-, app-, pixel- en switcherdatabeperkingen blijven bestaan.
+- **Bewijs van voltooiing:** `docs/ACTIVE_THEME_USAGE.md`, dit masterplan, de read-only Shopify CLI-/repositorycontroles van 2026-08-04, menselijke goedkeuring van 2026-08-05 en documentatiecommit `docs: approve active theme usage inventory`.
+- **Risico:** Statische afwezigheid is geen verwijderbewijs; dynamische Theme Editor-, section-rendering-, app-, pixel- of runtimepaden kunnen gemist zijn. De volledige app-/pixelbron bleef **NIET TOEGANKELIJK** en runtimevolledigheid van de switcherdataset blijft `[NOG ONDERZOEKEN]`.
 - **Rollback of herstelwijze:** Read-only; fouten corrigeren in rapport, nooit code verwijderen binnen deze taak.
-- **Laatst bijgewerkt:** 2026-08-04.
+- **Laatst bijgewerkt:** 2026-08-05.
 
 ### BC-DISC-002 - Concurrentie- en SEO-structuuranalyse
 
@@ -887,23 +887,23 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Titel:** BadkamerXXL, Sanitairwinkel en Sanitairkamer diepgaand onderzoeken
 - **Fase:** Fase 1 - volledige inventarisatie
 - **Werkstroom:** Onderzoek / SEO
-- **Status:** `NOT_STARTED`
+- **Status:** `READY`
 - **Prioriteit:** `P0`
 - **Doel:** Feitelijk bewijs verzamelen voor categorie-, zoek-, filter-, PDP-, content- en SEO-besluiten.
 - **Aanleiding:** De sites zijn referenties, maar mogen niet blind worden gekopieerd en zijn nog niet diepgaand geanalyseerd.
 - **Scope:** De vragen uit hoofdstuk 23, met mobiele en desktopwaarnemingen en bronverwijzingen.
 - **Buiten scope:** Kopiëren van beschermde inhoud/ontwerp of automatisch overnemen van structuur.
-- **Afhankelijkheden:** `BC-ADM-001` en daarna `BC-DISC-001`; dit onderzoek is de derde taak in de vastgelegde onderzoeksvolgorde.
-- **Benodigde input:** Eigen assortiment-/Adminbeeld en actuele publieke referenties.
+- **Afhankelijkheden:** `BC-ADM-001` en `BC-DISC-001` zijn menselijk goedgekeurd en `DONE`. Dit onderzoek is de derde taak in de vastgelegde onderzoeksvolgorde.
+- **Benodigde input:** Beschikbaar als onderzoeksbasis: eigen assortiment-/Adminbeeld en de goedgekeurde actieve-themegebruiksmatrix. Actuele publieke referenties worden pas na een afzonderlijke read-only startopdracht onderzocht.
 - **Verwachte bestanden/systemen:** Publieke websites read-only; apart onderzoeksrapport `[OPEN BESLISSING]`.
 - **Uitvoer:** Vergelijkingsmatrix, kansen, anti-patronen en vragen voor menselijke besluitvorming.
 - **Acceptatiecriteria:** Alle drie referenties en alle vragen uit hoofdstuk 23 zijn onderbouwd behandeld; feiten en aanbevelingen zijn gescheiden.
 - **Technische controles:** Datum, URL-bronnen, representatieve pagina's, mobiel/desktop en herhaalbare observaties vastleggen.
-- **Menselijke controle:** Eigenaar kiest welke patronen passen bij BadkamerCity.
+- **Menselijke controle:** De eigenaar heeft op 2026-08-05 alleen de status `READY` en activering als volgende read-only taak goedgekeurd. Inhoudelijke uitvoering en latere patroonkeuzes vereisen afzonderlijke opdrachten/beoordeling.
 - **Bewijs van voltooiing:** Onderzoeksrapport en beslisvoorstellen `[NOG ONDERZOEKEN]`.
 - **Risico:** Concurrentiesites veranderen; bevindingen zijn tijdgebonden en geen bewijs van eigen resultaat.
 - **Rollback of herstelwijze:** Niet van toepassing op read-only onderzoek; onjuiste conclusies corrigeren met bronbewijs.
-- **Laatst bijgewerkt:** 2026-08-04.
+- **Laatst bijgewerkt:** 2026-08-05.
 
 ### BC-DATA-001 - Productdatamodel en metafieldcatalogus
 
@@ -1624,6 +1624,8 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-DEC-015` | 2026-08-04 | De officiële Shopify CLI `store auth`-route voor `fpa9hu-i3.myshopify.com` en dertien benoemde read-scopes zijn uitsluitend voor `BC-ADM-001` goedgekeurd | Maakt begrensd Admin-bewijs mogelijk zonder write-scopes, mutaties of implementatietoestemming | Expliciete menselijke opdrachten en `currentAppInstallation.accessScopes` |
 | `BC-DEC-016` | 2026-08-04 | Theme `192796786954` mag alleen als bestaand unpublished theme read-only worden geregistreerd | Eigenaarschap, exact doel en ontstaansreden blijven onbekend; aanpassen, verwijderen, publiceren, pushen en pullen zijn verboden | Expliciete menselijke opdracht van de projecteigenaar |
 | `BC-DEC-017` | 2026-08-04 | `BC-ADM-001` is menselijk goedgekeurd als afgeronde read-only inventarisatie en gaat naar `DONE`; `BC-DISC-001` wordt de actieve taak met status `READY` | De inventaris voldoet binnen de vastgelegde grenzen; beperkingen en open vragen blijven bestaan | Expliciete menselijke goedkeuring van de projecteigenaar; geen toestemming voor Shopify-/theme-/scope-/implementatiewijzigingen |
+| `BC-DEC-018` | 2026-08-04 | `BC-DISC-001` mag uitsluitend read-only worden uitgevoerd; repositorydocumentatie mag na onderzoek worden bijgewerkt, maar Shopify, themes, theme-code, apps en scopes mogen niet wijzigen | Maakt een begrensde actieve-themegebruiksmatrix mogelijk zonder implementatie- of publicatietoestemming | Expliciete menselijke startopdracht van de projecteigenaar; `BC-DISC-002` mag niet worden geactiveerd |
+| `BC-DEC-019` | 2026-08-05 | `BC-DISC-001` is als afgerond read-only onderzoek goedgekeurd en gaat naar `DONE`; `BC-DISC-002` wordt de actieve volgende taak op `READY`, zonder inhoudelijke uitvoering | De gebruiksmatrix voldoet binnen de vastgelegde bewijsgrenzen; classificaties zijn geen verwijdertoestemming en alle beperkingen blijven bestaan | Expliciete menselijke goedkeuring van de projecteigenaar; buiten deze twee projectadministratiedocumenten geen Shopify-, theme-, app-, scope-, bestands- of implementatietoestemming |
 
 ## 59. Open vragenregister
 
@@ -1631,10 +1633,10 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | --- | --- | --- | --- | --- | --- |
 | `BC-Q-001` | Wie is de formele projecteigenaar en wie vervangt deze bij afwezigheid? | Goedkeuring en escalatie vereisen eigenaarschap | Alle taken | BadkamerCity-eigenaar | `[NOG ONDERZOEKEN]` |
 | `BC-Q-002` | Welke exacte showroomtekst en locatiegegevens mogen openbaar? | Voorkomt misleiding en operationele onduidelijkheid | `BC-SHOW-001` | Eigenaar en relevante inhoud/juridische verantwoordelijke | `[OPEN BESLISSING]` |
-| `BC-Q-003` | Wat staat werkelijk actief in producten, collecties, metafields, metaobjects, menu's, apps en templates? | Externe data bepaalt vrijwel alle implementatie | `BC-ADM-001` en vervolg | Eigenaar/Shopify-beheerder `[NOG ONDERZOEKEN]` | Kernobjecten en live JSON-configuratie zijn bewezen; volledige app-/pixelbron blijft **NIET TOEGANKELIJK** |
+| `BC-Q-003` | Wat staat werkelijk actief in producten, collecties, metafields, metaobjects, menu's, apps en templates? | Externe data bepaalt vrijwel alle implementatie | `BC-ADM-001` en vervolg | Eigenaar/Shopify-beheerder `[NOG ONDERZOEKEN]` | Kernobjecten, live JSON en statische themegebruiksmatrix zijn bewezen; runtimepaden en volledige app-/pixelbron blijven onvolledig respectievelijk **NIET TOEGANKELIJK** |
 | `BC-Q-004` | Welke metafields bestaan, met welke types, validaties en eigenaars? | Nodig voor datamodel, PDP en switcher | `BC-DATA-001`, `BC-SWITCH-001` | Productdata-eigenaar `[NOG ONDERZOEKEN]` | Definities voor onderzochte owner types en prioriteitsdekking bewezen; business-eigenaarschap en volledige specificatiedekking `[NOG ONDERZOEKEN]` |
-| `BC-Q-005` | Wie beheert/genereert `product-switcher-data.json` en wat is de bron van waarheid? | Data en metafields moeten exact synchroon zijn | `BC-SWITCH-001` | Technisch/productdata-eigenaar `[NOG ONDERZOEKEN]` | `[NOG ONDERZOEKEN]` |
-| `BC-Q-006` | Blijft de legacy `custom.group`-fallback bestaan of wordt deze gemigreerd? | Dubbele codepaden verhogen regressierisico | `BC-SWITCH-001` | Eigenaar plus technisch verantwoordelijke | `[OPEN BESLISSING]` |
+| `BC-Q-005` | Wie beheert/genereert `product-switcher-data.json` en wat is de bron van waarheid? | Data en metafields moeten exact synchroon zijn | `BC-SWITCH-001` | Technisch/productdata-eigenaar `[NOG ONDERZOEKEN]` | Asset bevat 433 groepen en 3.383 unieke handles tegenover 3.658 Admin-producten met trigger; bronhouder en volledige setvergelijking `[NOG ONDERZOEKEN]` |
+| `BC-Q-006` | Blijft de legacy `custom.group`-fallback bestaan of wordt deze gemigreerd? | Dubbele codepaden verhogen regressierisico | `BC-SWITCH-001` | Eigenaar plus technisch verantwoordelijke | `[OPEN BESLISSING]`; code is actief bereikbaar, maar huidige Admin-dekking van `custom.group` is 0/7.827 |
 | `BC-Q-007` | Wat wordt de definitieve categorieboom, URL-structuur en navigatie? | Bepaalt assortiment, UX en SEO | `BC-IA-001` | Eigenaar na onderzoek | `[OPEN BESLISSING]` |
 | `BC-Q-008` | Welke leveranciers, regels, bestanden en updatefrequenties gelden? | Nodig voor actuele voorraad/levertijd en imports | `BC-LOG-001`, `BC-PROD-001` | Operationele/productdata-eigenaar `[NOG ONDERZOEKEN]` | `[NOG ONDERZOEKEN]` |
 | `BC-Q-009` | Hoe wordt elke multi-leveranciersbestelling gerouteerd en gecommuniceerd? | Bepaalt checkout, kosten en klantbelofte | `BC-LOG-002` | Operationele eigenaar | `[OPEN BESLISSING]` |
@@ -1649,27 +1651,28 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-018` | Welke analytics-, consent- en marketingtools zijn actief en gewenst? | Nodig voor betrouwbaar en toegestaan meetplan | `BC-ANA-001`, `BC-SEC-001` | Eigenaar/privacy/marketing `[NOG ONDERZOEKEN]` | Live JSON bevat geen app blocks/embeds; volledige app-/pixelconfiguratie **NIET TOEGANKELIJK** |
 | `BC-Q-019` | Welke browsers, apparaten en assistieve technologie worden formeel ondersteund? | Nodig voor meetbare QA en DoD | `BC-QA-001` | Eigenaar na analytics/UX-advies | `[OPEN BESLISSING]` |
 | `BC-Q-020` | Welke performancebudgetten gelden per kernpagina? | Zonder grens is verbetering niet toetsbaar | `BC-QA-001`, performancewerk | Technisch verantwoordelijke/eigenaar | `[OPEN BESLISSING]` |
-| `BC-Q-021` | Welke apps zijn afhankelijk van theme-markup of app-embeds? | Wijzigingen kunnen verborgen integraties breken | `BC-DISC-001`, alle implementatie | Shopify-beheerder `[NOG ONDERZOEKEN]` | Geen referenties in actieve JSON bewezen; injectie buiten JSON en volledige applijst **NIET TOEGANKELIJK** |
+| `BC-Q-021` | Welke apps zijn afhankelijk van theme-markup of app-embeds? | Wijzigingen kunnen verborgen integraties breken | `BC-DISC-001`, alle implementatie | Shopify-beheerder `[NOG ONDERZOEKEN]` | Nul actieve JSON-appblocks/embeds bewezen; acht sections ondersteunen `@app` en dynamische injectiepunten bestaan; volledige applijst **NIET TOEGANKELIJK** |
 | `BC-Q-022` | Wat is het exacte branch-, PR-, release- en rollbackproces? | Nodig vóór veilige implementatie/publicatie | `BC-TECH-001`, `BC-REL-001` | Eigenaar en technisch verantwoordelijke | `[OPEN BESLISSING]` |
 | `BC-Q-023` | Welke andere productgroepen krijgen een calculator/configurator? | Beïnvloedt datamodel en fase 7-scope | Toekomstige `BC-CONF-*` | Eigenaar na assortimentonderzoek | `[NOG ONDERZOEKEN]` |
 | `BC-Q-024` | Hoe werkt een toekomstige complete-badkamerconfigurator? | Moet later mogelijk zijn zonder huidige scope te verstoren | `BC-CONF-003` | Eigenaar | `[OPEN BESLISSING]` |
 | `BC-Q-026` | Wie is eigenaar van theme `192796786954`, wat was het exacte doel en waarom is het ontstaan? | Voorkomt onbedoelde wijziging of verwijdering van een bestaande testomgeving | `BC-DISC-001`, alle themetaken | Projecteigenaar/technisch eigenaar | `[NOG ONDERZOEKEN]` |
 | `BC-Q-027` | Welke bevoegde read-only bron mag de volledige app-, pixel-, script- en externe-integratielijst leveren? | De huidige scopes bewijzen alleen de huidige CLI-installatie en actieve JSON-referenties | `BC-DISC-001`, `BC-SEC-001`, `BC-ANA-001` | Projecteigenaar/Shopify-beheerder | `[OPEN BESLISSING]` |
+| `BC-Q-028` | Welke kandidaat-legacy-, orphan- en backup/debugbestanden mogen na runtimevalidatie behouden of in een aparte taak verwijderd worden? | Geen inkomende statische referentie is geen verwijderbewijs en sommige kandidaten bevatten bekende defectrisico's | `BC-TECH-001`, `BC-SWITCH-001` | Projecteigenaar plus technisch verantwoordelijke | `[OPEN BESLISSING]`; onderzoeksclassificaties op 2026-08-05 goedgekeurd, maar geen verwijdering of wijziging toegestaan |
 
-De goedkeuring van `BC-ADM-001` sluit geen van deze resterende vragen; zij bevestigt dat het onderzoek binnen de toegestane bronnen compleet en correct begrensd is.
+De goedkeuring van `BC-ADM-001` en uitvoering van `BC-DISC-001` sluiten deze resterende vragen niet; zij bevestigen en begrenzen het beschikbare read-only bewijs.
 
 ## 60. Risicoregister
 
 | ID | Risico en bewijs | Impact | Beheersing / taak | Status |
 | --- | --- | --- | --- | --- |
-| `BC-R-001` | V2- en legacyproduct-switcher bestaan naast elkaar | Verkeerde/afwijkende productnavigatie | Admin/data-inventaris, architectuurbesluit en volledige combinatietests in `BC-SWITCH-001` | `[GEBLOKKEERD]` |
-| `BC-R-002` | Switcherdataset is circa 1,85 MB en meerdere grote backups staan in `assets` | Performance en theme-beheer | Payloadmeting, bronkeuze en gecontroleerde backup/legacytaak | `[NOG ONDERZOEKEN]` |
+| `BC-R-001` | V2- en legacyproduct-switcher bestaan naast elkaar; V2 is door 3.658 producten getriggerd, legacycode is globaal aanwezig maar `custom.group` staat op 0/7.827 | Verkeerde/afwijkende productnavigatie | Volledige Admin/asset-setvergelijking, architectuurbesluit en combinatietests in `BC-SWITCH-001` | `[GEBLOKKEERD]` |
+| `BC-R-002` | Primaire switcherdataset is 1.894.030 bytes; acht backup/debugassets staan live en V2 schrijft informatieve debugregels naar de console | Performance, ruis en theme-beheer | Payloadmeting, bronkeuze en afzonderlijk goedgekeurde backup/legacytaak na runtimebewijs | `[NOG ONDERZOEKEN]` |
 | `BC-R-003` | `main-product.liquid` is circa 143 KB met inline CSS/JS en veel verantwoordelijkheden | Hoog regressie- en onderhoudsrisico | Kleine stabilisatie- en PDP-taken met previewbewijs | `[GEBLOKKEERD]` |
-| `BC-R-004` | Header-, homepage-, categorie- en uitleglinks/content bevatten placeholders | Dode routes, onvolledige UX en SEO-schade | Actieve inventaris, IA/contentbesluit en checklist vóór launch | Open |
-| `BC-R-005` | Losse productsecties kunnen defect/legacy zijn; section-nesting en contextproblemen zijn vermoed | Theme Editor kan defecte onderdelen activeren | `BC-DISC-001` en gereproduceerde fixes in `BC-TECH-001` | `[NOG ONDERZOEKEN]` |
+| `BC-R-004` | Actief bewijs toont zes hardcoded `#`-headerlinks, twee productuitleg-`#`-links, 17 lege homepage-linkvelden, 14 lege collectievelden en vier placeholderbeschrijvingen | Dode routes, onvolledige UX en SEO-schade | IA/contentbesluit en checklist vóór launch; niets herstellen binnen discovery | `[GEBLOKKEERD]` |
+| `BC-R-005` | Zes losse product-/collectiesections en zes snippets zijn orphan/legacykandidaat; productmedia mist context en `bc-related-products` nest een section | Theme Editor of onzorgvuldige opruiming kan defect gedrag veroorzaken | Classificatie is menselijk goedgekeurd als onderzoek; wijziging/verwijdering blijft geblokkeerd tot runtimebewijs en een aparte `BC-TECH-001`-subtaak | `[GEBLOKKEERD]` |
 | `BC-R-006` | Theme Check vond 1 error en 11 warnings; CLI eindigde met Windows assertion failure | Echte issues en toolingissues kunnen door elkaar lopen | Herhaalbare tooling, classificatie en expliciete uitzonderingen | `[GEBLOKKEERD]` |
 | `BC-R-007` | Geen zichtbare tests, CI, lintconfig of volledige releasehandleiding | Regressies en inconsistente kwaliteit | Teststrategie, checks en releaseproces vóór implementatie | `[GEBLOKKEERD]` |
-| `BC-R-008` | De goedgekeurde Admin-kerninventaris is beschikbaar, maar de volledige app-, pixel-, script- en externe-integratielijst bleef niet toegankelijk | Verborgen afhankelijkheden kunnen bij implementatie worden gemist | `BC-DISC-001` read-only uitvoeren met expliciete bronbegrenzing; bevoegde aanvullende bewijsbron afzonderlijk besluiten | `[NOG ONDERZOEKEN]` |
+| `BC-R-008` | Admin- en themegebruiksmatrix zijn beschikbaar en actieve JSON bevat nul appblocks/embeds, maar acht sections ondersteunen `@app`, dynamische injectiepunten bestaan en de volledige app-/pixel-/scriptlijst bleef niet toegankelijk | Verborgen afhankelijkheden kunnen bij implementatie worden gemist | Bevoegde aanvullende bewijsbron afzonderlijk besluiten; afwezigheid nooit claimen | `[NOG ONDERZOEKEN]` |
 | `BC-R-009` | Circa 20.000 producten vergroten ieder mapping-/kwaliteitsprobleem | Grootschalige commerciële/datafouten | Datamodel, pilots, batchvalidatie en rollback in `BC-PROD-001` | `[GEBLOKKEERD]` |
 | `BC-R-010` | Leverancierregels verschillen en circa 90% loopt via dropshipping | Verkeerde voorraad, levertijd, kosten of levering | `BC-LOG-001` en `BC-LOG-002` met scenario-/bronbewijs | `[GEBLOKKEERD]` |
 | `BC-R-011` | Showroomrelatie kan onjuist worden gecommuniceerd | Vertrouwens-, operationeel en mogelijk juridisch risico | Alleen goedgekeurde formulering via `BC-SHOW-001` | `[GEBLOKKEERD]` |
@@ -1682,6 +1685,7 @@ De goedkeuring van `BC-ADM-001` sluit geen van deze resterende vragen; zij beves
 | `BC-R-018` | 199 van 201 collecties zijn leeg en meerdere collectie-/menulabels wijzen semantisch naar opvallende targets | Lege categorieën, verkeerde navigatie en SEO-schade | Bedoeling valideren in `BC-DISC-001` en doelmodel in `BC-IA-001` | `[GEBLOKKEERD]` |
 | `BC-R-019` | Theme `192796786954` bestaat unpublished, maar eigenaar, doel en ontstaansreden zijn onbekend | Onbedoelde wijziging, verwijdering of verwarring tussen testomgevingen | Alleen read-only registreren; expliciet eigenaarschap vaststellen vóór enige themetaak | `[NOG ONDERZOEKEN]` |
 | `BC-R-020` | Slechts 259 van 7.827 inventory items zijn getrackt; één delivery profile bevat brede nationale, EU- en internationale zones | Voorraad- en verzendbelofte kan operationeel onjuist zijn | Bronhouders, tarieven en leverregels vastleggen in `BC-LOG-001`/`BC-LOG-002` | `[GEBLOKKEERD]` |
+| `BC-R-021` | De statische graaf vindt geen inkomende referentie voor meerdere kandidaten, maar dynamische Liquid-, section-rendering-, Theme Editor- en apppaden kunnen buiten letterlijke referenties vallen | Onterechte verwijdering kan verborgen functionaliteit breken | Geen verwijdering zonder runtimebewijs, eigenaar, aparte taak en herstelplan | `[GEBLOKKEERD]` |
 
 ## 61. Afhankelijkhedenregister
 
@@ -1689,8 +1693,8 @@ De goedkeuring van `BC-ADM-001` sluit geen van deze resterende vragen; zij beves
 | --- | --- | --- | --- | --- |
 | `BC-DEP-001` | Scheiding tussen onderzoeksgoedkeuring en implementatietoestemming | Alle implementatietaken | Versie 0.1 is als onderzoeksbasis goedgekeurd; iedere implementatietaak vereist later afzonderlijke expliciete toestemming na benodigde onderzoeken en besluiten | Discovery actief; implementatie `[GEBLOKKEERD]` |
 | `BC-DEP-002` | Shopify Admin-inventaris | Data, apps, actieve templates en vrijwel alle functies | Menselijk goedgekeurd read-only bewijs met expliciete beperkingen | `BC-ADM-001`; `DONE` op 2026-08-04, volledige appbron blijft niet toegankelijk |
-| `BC-DEP-003` | Actief theme-/appgebruik | Stabilisatie en verwijderbesluiten | Gebruiksmatrix | `BC-DISC-001`; actieve taak en `READY`, uitvoering alleen na afzonderlijke read-only startopdracht |
-| `BC-DEP-004` | Concurrentie-/SEO-onderzoek na Admin- en actief-gebruiksonderzoek | IA, SEO, categorieën en UX-besluiten | Onderbouwde vergelijkingsmatrix na `BC-ADM-001` en `BC-DISC-001` | `BC-DISC-002`; `NOT_STARTED` |
+| `BC-DEP-003` | Actief theme-/appgebruik | Stabilisatie en verwijderbesluiten | Menselijk goedgekeurde gebruiksmatrix met blijvende kandidaat- en bewijsgrenzen | `BC-DISC-001`; `DONE` op 2026-08-05; geeft geen verwijder- of implementatietoestemming |
+| `BC-DEP-004` | Concurrentie-/SEO-onderzoek na Admin- en actief-gebruiksonderzoek | IA, SEO, categorieën en UX-besluiten | Onderbouwde vergelijkingsmatrix na afzonderlijk gestarte read-only uitvoering | `BC-DISC-002`; actieve taak `READY`, nog niet inhoudelijk gestart |
 | `BC-DEP-005` | Productdatamodel | PDP, filters, switchers, imports en feeds | Goedgekeurde catalogus/validaties | `BC-DATA-001`; `[GEBLOKKEERD]` |
 | `BC-DEP-006` | Categorie-/navigatiemodel | Globale navigatie, collectieplatform en SEO | Goedgekeurde IA en URL-principes | `BC-IA-001`; `[GEBLOKKEERD]` |
 | `BC-DEP-007` | Leveranciers- en logistieke regels | Voorraad, levertijd, checkout, samples en PDP | Beslis-/bronnenmatrix | `BC-LOG-*`; `[GEBLOKKEERD]` |
@@ -1709,12 +1713,15 @@ De goedkeuring van `BC-ADM-001` sluit geen van deze resterende vragen; zij beves
 | `BC-EV-003` | [`docs/LIVE_THEME_COMPARISON.md`](LIVE_THEME_COMPARISON.md) | Gelijkheid van 396 lokale/live bestanden in zeven theme-mappen | 2026-08-03; `badd5cf` | Geen externe Shopify-data; tijdgebonden snapshot |
 | `BC-EV-004` | [`docs/DEVELOPMENT_THEME.md`](DEVELOPMENT_THEME.md) | Nieuw unpublished `BadkamerCity Development` (`192770375946`), links en live theme onveranderd | 2026-08-03; `3e0b4ec` | Bewijst geen functionele acceptatie van preview |
 | `BC-EV-005` | Bijgevoegde projectdefinitie bij opdracht voor masterplan | Visie, scope, productmodel, processen, governance en verplichte masterplanstructuur | 2026-08-03; duurzaam bronbestand in repository `[NOG ONDERZOEKEN]` | Niet als afzonderlijk repositorydocument aanwezig |
-| `BC-EV-006` | Dit masterplan | Versie 0.1 legde de centrale basis vast; versie 0.2 activeerde discovery; versie 0.3 zette de Admin-inventaris op `REVIEW`; versie 0.4 legt menselijke goedkeuring en de volgende read-only taak vast | Fundament: 2026-08-03, commit `302a42a`; governance: 2026-08-04, commit `d22e3e32d04fc472996064cc14cff922396c2d05`; v0.4 in commit `docs: approve Shopify Admin inventory` | Geen theme-, Admin-, scope-, publicatie- of implementatietoestemming |
+| `BC-EV-006` | Dit masterplan | Versie 0.1 legde de centrale basis vast; versie 0.2 activeerde discovery; versie 0.3 zette Admin-inventaris op `REVIEW`; versie 0.4 legde Admin-goedkeuring vast; versie 0.5 legde de actieve-themegebruiksmatrix vast; versie 0.6 legt menselijke goedkeuring en `BC-DISC-002` als actieve `READY`-taak vast | Fundament: 2026-08-03, commit `302a42a`; governance: 2026-08-04, commit `d22e3e32d04fc472996064cc14cff922396c2d05`; v0.4 in commit `docs: approve Shopify Admin inventory`; v0.6 in commit `docs: approve active theme usage inventory` | Geen theme-, Admin-, scope-, publicatie- of implementatietoestemming |
 | `BC-EV-007` | [`AGENTS.md`](../AGENTS.md) | Permanente Codex-guardrails en verplichte raadpleging van dit masterplan | 2026-08-04; commit `d22e3e32d04fc472996064cc14cff922396c2d05` | `docs/MASTERPLAN.md` blijft de centrale bron van waarheid |
 | `BC-EV-008` | [`docs/SHOPIFY_ADMIN_INVENTORY.md`](SHOPIFY_ADMIN_INVENTORY.md) | Shopify CLI `4.6.0`, dertien read-scopes en gepagineerd bewijs voor producten, collecties, metafields, metaobjects, navigatie, pagina's, themes, actieve JSON-configuratie, markets, talen, accounts, locaties, inventory en shipping | 2026-08-04; commit `docs: approve Shopify Admin inventory` | Volledige app-/pixel-/scriptbron niet toegankelijk; specificatiewaarden buiten de steekproef en inhoudelijk eigenaarschap blijven open; taak menselijk goedgekeurd en `DONE` |
 | `BC-EV-009` | Expliciete menselijke goedkeuring van de projecteigenaar | `BC-ADM-001` mag naar `DONE`; `BC-DISC-001` mag als actieve eerstvolgende read-only taak naar `READY`; alle beperkingen en open vragen blijven bestaan | 2026-08-04; vastgelegd in masterplan v0.4 en commit `docs: approve Shopify Admin inventory` | Geeft geen toestemming voor Shopify-data, theme-code, push/pull, publicatie, themebeheer, aanvullende scopes of implementatie |
+| `BC-EV-010` | [`docs/ACTIVE_THEME_USAGE.md`](ACTIVE_THEME_USAGE.md) | Live/local gelijkheid van 18 JSON-configuratiebestanden; sluitende classificatie van 396 bestanden; actieve sections/blocks, conditionele routes, auditverdachten, beide switchers, backup/debug, appinjectie en contentkoppelingen | Onderzoek 2026-08-04; menselijk goedgekeurd 2026-08-05; commit `docs: approve active theme usage inventory` | Statisch/read-only onderzoek; runtimegedrag en volledige app-/pixelbron blijven beperkt; classificaties geven geen verwijdertoestemming |
+| `BC-EV-011` | Expliciete menselijke startopdracht van de projecteigenaar | `BC-DISC-001` mocht uitsluitend read-only starten; alleen rapport/masterplan mochten wijzigen; `BC-DISC-002` mocht niet worden geactiveerd | 2026-08-04; vastgelegd in masterplan v0.5 | Geen toestemming voor Shopify-, theme-, app-, scope-, implementatie-, commit- of pushhandelingen |
+| `BC-EV-012` | Expliciete menselijke goedkeuring van de projecteigenaar | `BC-DISC-001` mag naar `DONE`; `BC-DISC-002` mag als actieve volgende read-only taak naar `READY`; alle runtime-, app-, pixel-, switcherdata-, kandidaat- en backuplimieten blijven bestaan | 2026-08-05; vastgelegd in masterplan v0.6 en commit `docs: approve active theme usage inventory` | Buiten deze twee projectadministratiedocumenten geen toestemming voor Shopify-data, theme-code, bestanden, themebeheer, aanvullende scopes, apps of implementatie; `BC-DISC-002` is niet inhoudelijk gestart |
 
-Chronologie voorkomt een schijnbare tegenspraak: `BC-EV-002` meldde nog geen development theme; `BC-EV-004` bewijst de latere aanmaak van een afzonderlijk unpublished development theme. `BC-EV-008` bewijst daarnaast het bestaan van unpublished theme `192796786954`, zonder eigenaarschap, doel of wijziging te claimen.
+Chronologie voorkomt een schijnbare tegenspraak: `BC-EV-002` meldde nog geen development theme; `BC-EV-004` bewijst de latere aanmaak van een afzonderlijk unpublished development theme. `BC-EV-008` bewijst daarnaast het bestaan van unpublished theme `192796786954`, zonder eigenaarschap, doel of wijziging te claimen. `BC-EV-010` bouwt uitsluitend read-only voort op die omgeving en verandert geen theme; `BC-EV-012` keurt alleen het onderzoeksresultaat goed.
 
 ## 63. Controlechecklists
 
@@ -1839,14 +1846,14 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 
 ### Actuele route
 
-- **Waar we nu zijn:** Fase 1 - volledige inventarisatie; masterplan versie 0.4 is `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`. `BC-ADM-001` is `DONE`; `BC-DISC-001` is de actieve taak en staat `READY`, niet `IN_PROGRESS`.
-- **Wat is vastgelegd:** De projecteigenaar heeft `docs/SHOPIFY_ADMIN_INVENTORY.md` en masterplan versie 0.3 menselijk beoordeeld en de read-only Admin-inventarisatie goedgekeurd. De beperkingen, open vragen en implementatieblokkade blijven volledig bestaan.
-- **Welke input nodig is:** Een afzonderlijke expliciete startopdracht voor uitsluitend read-only uitvoering van `BC-DISC-001`. Geen aanvullende scopes, Shopify-datawijzigingen, theme-codewijzigingen, push, pull, themebeheer of publicatie zijn toegestaan.
-- **Welke taken daarna komen:** Eerst `BC-DISC-001`. Na uitvoering en menselijke beoordeling volgt `BC-DISC-002`, dat `NOT_STARTED` blijft. Geen implementatietaak is geactiveerd.
+- **Waar we nu zijn:** Fase 1 - volledige inventarisatie; masterplan versie 0.6 is `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`. `BC-ADM-001` en `BC-DISC-001` zijn `DONE`; `BC-DISC-002` is de actieve taak op `READY` en nog niet inhoudelijk gestart.
+- **Wat is vastgelegd:** De projecteigenaar heeft `docs/ACTIVE_THEME_USAGE.md` en masterplan versie 0.5 op 2026-08-05 goedgekeurd. Classificaties zijn uitsluitend onderzoeksbevindingen; kandidaat- en backupbestanden mogen niet worden gewijzigd of verwijderd en alle beperkingen blijven bestaan.
+- **Welke input nodig is:** Een afzonderlijke expliciete startopdracht voor uitsluitend read-only uitvoering van `BC-DISC-002`. Geen aanvullende scopes, Shopify-datawijzigingen, theme-codewijzigingen, appwijzigingen, push, pull, themebeheer of publicatie zijn toegestaan.
+- **Welke taken daarna komen:** Eerst `BC-DISC-002` na afzonderlijke starttoestemming. Geen implementatie- of opruimtaak is geactiveerd.
 
-Aanbevolen eerstvolgende prompt:
+Aanbevolen eerstvolgende startprompt:
 
-> Start `BC-DISC-001` volgens masterplan versie 0.4 als uitsluitend read-only onderzoek. Gebruik alleen vooraf toegestane lokale en Shopify-bronnen, leg niet-toegankelijke app-/pixelafhankelijkheden eerlijk vast en wijzig geen Shopify-data, theme-code, themes, scopes of publicatiestatus.
+> Start `BC-DISC-002` volgens masterplan versie 0.6 uitsluitend als read-only concurrentie- en SEO-structuuronderzoek. Leg bronnen, datum, mobiel/desktop en feiten versus aanbevelingen vast; wijzig geen Shopify-data, themes, theme-code, apps of scopes.
 
 ## 65. Wijzigingslog
 
@@ -1857,15 +1864,17 @@ Aanbevolen eerstvolgende prompt:
 | 2026-08-04 | 0.2 | `BC-ADM-001` | Read-only toegang onderzocht, theme-context en tijdgebonden configuratiebewijs vastgelegd, alle ontoegankelijke Admin-domeinen en benodigde leesrechten gedocumenteerd en taak op `BLOCKED` gezet | Er is geen bestaande uitvoerbare Admin API-/browser-readcontext; afwezigheid mag niet uit theme-code worden afgeleid | Niet gecommit; opdracht verbiedt commit en push |
 | 2026-08-04 | 0.3 | `BC-ADM-001` | De door de eigenaar geautoriseerde Shopify CLI-route en dertien read-scopes gebruikt voor de gepagineerde Admin-inventaris; rapport, dashboard, taakrecord, besluiten, vragen, risico's, afhankelijkheden, bewijs en route bijgewerkt; taak op `REVIEW` gezet | De kernobjecten en instellingen zijn nu read-only bewezen; beperkingen en menselijke beoordeling blijven expliciet | Niet gecommit; opdracht verbiedt commit en push |
 | 2026-08-04 | 0.4 | `BC-ADM-001`, `BC-DISC-001` | Menselijke goedkeuring van de Admin-inventaris vastgelegd; `BC-ADM-001` naar `DONE`; `BC-DISC-001` als actieve taak naar `READY`; dashboard, tellingen, route, taakrecords, besluiten, bewijs en beperkingen bijgewerkt | Goedgekeurd read-only onderzoek afsluiten en het volgende read-only onderzoek bestuurbaar klaarzetten zonder implementatietoestemming | Deze commit: `docs: approve Shopify Admin inventory` |
+| 2026-08-04 | 0.5 | `BC-DISC-001` | Live JSON read-only herbevestigd; statische en conditionele gebruiksmatrix voor 396 bestanden gemaakt; auditverdachten, beide switchers, backups/debug, appinjectie en contentkoppelingen vastgelegd; taak op `REVIEW`; dashboard, tellingen, route, taakrecord, besluiten, vragen, risico's, afhankelijkheden en bewijs bijgewerkt | Actief, beschikbaar, kandidaat-legacy en dynamisch onbewezen themegebruik scheiden zonder Shopify- of themewijziging | Niet gecommit; opdracht verbiedt commit en push |
+| 2026-08-05 | 0.6 | `BC-DISC-001`, `BC-DISC-002` | Menselijke goedkeuring van de actieve-themegebruiksmatrix vastgelegd; `BC-DISC-001` naar `DONE`; `BC-DISC-002` als actieve volgende taak naar `READY`; dashboard, tellingen, route, taakrecords, besluiten, vragen, risico's, afhankelijkheden en bewijs bijgewerkt | Goedgekeurd read-only onderzoek afsluiten en de volgende read-only taak bestuurbaar klaarzetten zonder inhoudelijke uitvoering of implementatietoestemming | Deze commit: `docs: approve active theme usage inventory` |
 
-### Zelfcontrole versie 0.4
+### Zelfcontrole versie 0.6
 
 - **Tegenstrijdigheden:** De tijdlijn van omgevingscontrole en latere development-theme-aanmaak is expliciet verklaard; geen inhoudelijke tegenspraak gevonden.
 - **Dubbele taken:** Geen dubbele taak-ID of bewust dubbel werk gevonden; raakvlakken zijn via afhankelijkheden gekoppeld.
 - **Ontbrekende hoofdonderdelen:** Alle 65 verplichte hoofdstukken zijn opgenomen.
-- **Onbewezen aannames:** Onbekende techniek, data, eigenaars, beleid en criteria zijn gemarkeerd met `[NOG ONDERZOEKEN]`, `[OPEN BESLISSING]`, `[GEBLOKKEERD]` of **NIET TOEGANKELIJK**.
+- **Onbewezen aannames:** Onbekende runtime, apps/pixels, data-eigenaars, kandidaatbestanden en besluiten zijn gemarkeerd met `[NOG ONDERZOEKEN]`, `[OPEN BESLISSING]`, `[GEBLOKKEERD]`, **NIET TOEGANKELIJK** of `DYNAMIC_OR_NOT_PROVEN`.
 - **Statusduidelijkheid:** Alleen de zeven toegestane taakstatussen zijn gebruikt; tellingen staan in dashboard en taakregister.
-- **Onderzoeksstatus:** `BC-ADM-001` is consequent `DONE`; `BC-DISC-001` is de actieve taak en `READY`; `BC-DISC-002` blijft `NOT_STARTED`.
+- **Onderzoeksstatus:** `BC-ADM-001` en `BC-DISC-001` zijn consequent `DONE`; `BC-DISC-002` is de actieve taak en `READY`, maar niet `IN_PROGRESS` en niet inhoudelijk gestart.
 - **Acceptatiecriteria en afhankelijkheden:** Iedere voorlopige taak bevat beide velden.
 - **Te grote taken:** `BC-TECH-001`, `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-SEO-001`, `BC-PROD-001` en `BC-QA-001` zijn expliciet als brede werkpakketten benoemd en moeten vóór `READY` worden opgesplitst.
-- **Ontwikkeltoestemming:** Niet verleend; versie 0.4 is uitsluitend actief voor discovery en houdt implementatie expliciet geblokkeerd.
+- **Ontwikkeltoestemming:** Niet verleend; versie 0.6 is uitsluitend actief voor discovery en houdt implementatie expliciet geblokkeerd.
