@@ -1,6 +1,6 @@
 # BadkamerCity Masterplan
 
-> **Versie 0.10 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** `BC-DATA-002` is op 2026-08-10 menselijk goedgekeurd en `DONE`. `BC-DATA-003` is de actieve brononafhankelijke documentatietaak op `READY`, maar **NIET INHOUDELIJK GESTART**. Dit is geen toestemming voor imports, mappings, Shopify-opslagbesluiten, bronwijzigingen, theme-code, Shopify Admin, aanvullende scopes, theme-pushes of -pulls, publicatie, ontwerp- of implementatiewerk.
+> **Versie 0.12 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** `BC-DATA-003` is op 2026-08-10 menselijk goedgekeurd en `DONE`; productinformatiecontract v0.1 is een bestuurde conceptuele werkbasis, geen definitieve Shopify- of leveranciermapping en geen bewijs van beschikbare data. `BC-TECH-002` is uitsluitend als read-only planningsopdracht actief `READY` en **NIET INHOUDELIJK GESTART**. Implementatie, Shopify-, theme-, bron- en datamutaties blijven geblokkeerd.
 
 Markeringen in dit document:
 
@@ -13,7 +13,7 @@ Markeringen in dit document:
 | Veld | Waarde |
 | --- | --- |
 | Documentnaam | `docs/MASTERPLAN.md` |
-| Versie | `0.10` |
+| Versie | `0.12` |
 | Status | `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED` |
 | Datum laatste wijziging | 2026-08-10 |
 | Eigenaar | BadkamerCity-projecteigenaar; naam en formele rol `[NOG ONDERZOEKEN]` |
@@ -30,24 +30,24 @@ De status activeert alleen het vastgelegde read-only onderzoekswerk. Theme-imple
 | Onderdeel | Actuele stand |
 | --- | --- |
 | Algemene projectstatus | Discovery is menselijk goedgekeurd en actief; implementatie en lancering blijven geblokkeerd |
-| Huidige fase | Fase 2 - informatiearchitectuur en datamodel; status `READY` voor uitsluitend het brononafhankelijke productinformatiecontract |
-| Actieve taak-ID | `BC-DATA-003` (`READY`; **NIET INHOUDELIJK GESTART**) |
-| Actieve taak | `BC-DATA-003` - Brononafhankelijk productinformatiecontract v0.1 vaststellen |
-| Eerstvolgende actie | Voer na de afzonderlijke fase-A-documentatiecommit uitsluitend `BC-DATA-003` read-only uit en zet het concept daarna op `REVIEW` |
+| Huidige fase | Fase 3 - technische stabilisatie; status `READY` uitsluitend voor read-only decompositie en nulmeting |
+| Actieve taak-ID | `BC-TECH-002` - `READY`; **NIET INHOUDELIJK GESTART** |
+| Actieve taak | Technische stabilisatie opdelen en uitvoeringsvolgorde vaststellen |
+| Eerstvolgende actie | `BC-TECH-002` afzonderlijk read-only uitvoeren en een bewijsbaar stabilisatieplan ter menselijke review opleveren; geen defect oplossen |
 | Belangrijkste blokkades | Nul oorspronkelijke lokale leveranciersbestanden, nul import-/generatiescripts, onbekende bronhouders en ontbrekende prijs-, voorraad-/levertijd-, media- en tegeleenheidsbronnen; daarnaast ontbreken volledige app-/pixelbron, runtimevalidatie, gevalideerd productdatamodel, categorieboom, leverancierregels en meerdere architectuurbesluiten |
-| Laatste technisch afgeronde taak | `BC-DATA-002` - volledige lokale read-only leveranciersbron-, data-, script- en veldinventaris, menselijk goedgekeurd op 2026-08-10 |
-| Laatste menselijke goedkeuring | 2026-08-10 - `BC-DATA-002` naar `DONE`; nul oorspronkelijke lokale bronnen is een geaccepteerde bevinding, externe bronnen volgen later afzonderlijk |
-| Laatste relevante commit | Deze documentatiecommit: `docs: approve supplier inventory and prepare product contract` |
+| Laatste technisch afgeronde taak | `BC-DATA-003` - bestuurde conceptuele werkbasis v0.1 met 190 unieke conceptkeys in 15 domeinen; `DONE` |
+| Laatste menselijke goedkeuring | 2026-08-10 - `BC-DATA-003` binnen zijn brononafhankelijke documentatiescope naar `DONE`; alle individuele veld-, gate-, bron-, eigenaar- en opslagkeuzes blijven open |
+| Laatste relevante commit | Deze versie wordt vastgelegd met `docs: approve product contract and prepare technical stabilization` |
 | Previewstatus | `BadkamerCity Development` is unpublished; preview- en Theme Editor-links zijn vastgelegd; geen nieuwe theme-code is geüpload sinds de aanmaak |
 | Productdoel voor lancering | Ongeveer 20.000 volledig ingerichte, gekoppelde, gecategoriseerde, doorzoekbare en filterbare producten |
-| Voorlopige taken | 39 totaal: 9 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
+| Voorlopige taken | 40 totaal: 10 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
 
 ### Actuele route
 
-- **Waar we nu zijn:** Fase 1 en `BC-DATA-002` zijn `DONE`. Fase 2 en de actieve taak `BC-DATA-003` staan `READY`; `BC-DATA-003` is **NIET INHOUDELIJK GESTART**. Masterplan versie 0.10 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`; `BC-DATA-001` blijft `BLOCKED`.
+- **Waar we nu zijn:** Fase 1, `BC-DATA-002` en `BC-DATA-003` zijn `DONE`. Fase 2 is `BLOCKED` voor haar resterende definitieve data- en informatiearchitectuurwerk. Masterplan versie 0.12 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`; `BC-TECH-002` is de enige actieve taak op `READY` en **NIET INHOUDELIJK GESTART**.
 - **Wat is vastgelegd:** de volledige lokale set van 405 bestanden bij taakstart en de bereikbare Git-padgeschiedenis bevatten nul oorspronkelijke leveranciersbestanden en nul import-/generatiescripts. Deze lokale nulbevinding is menselijk geaccepteerd. Externe bronnen kunnen bestaan en worden later per leverancier afzonderlijk aangeleverd en beoordeeld.
-- **Welke input nodig is:** `BC-DATA-003` gebruikt alleen bestaande projectdocumentatie, bewezen huidige velden, projectvisie en bevestigde producttype-eisen. Oorspronkelijke leveranciersbestanden zijn niet nodig voor dit brononafhankelijke concept, maar blijven verplicht voor definitieve leveranciermappings, Shopify-opslagkeuzes, logistieke regels en imports.
-- **Welke taken daarna komen:** uitsluitend `BC-DATA-003` is administratief `READY`. `BC-DATA-001` en alle categorie-, URL-, filter-, PDP-, design-, SEO-, Shopify-, theme-, data- en implementatietaken blijven geblokkeerd; na het concept volgt eerst menselijke review.
+- **Welke input nodig is:** oorspronkelijke leveranciersbestanden blijven verplicht voor definitieve leveranciermappings, Shopify-opslagkeuzes, logistieke regels en imports. Voor technische implementatie is eerst het afzonderlijk te beoordelen stabilisatieplan en daarna expliciete menselijke toestemming nodig.
+- **Welke taken daarna komen:** uitsluitend `BC-TECH-002` mag later als read-only planningsopdracht starten. `BC-TECH-001`, `BC-DATA-001`, `BC-IA-001` en alle code- of implementatietaken blijven geblokkeerd.
 
 ## 3. Hoe dit masterplan gebruikt moet worden
 
@@ -66,7 +66,7 @@ Statusbeheer:
 - Een technische implementatie mag pas `REVIEW` worden nadat de vastgelegde technische controles slagen.
 - Visueel of functioneel werk mag alleen `DONE` worden na expliciete menselijke goedkeuring.
 - Voorbereidend read-only of documentatiewerk mag `DONE` zijn als bestaand bewijs uitvoering en resultaat aantoont.
-- Geen enkel lanceringsonderdeel is in versie 0.10 `DONE`; de negen `DONE`-taken zijn governance- of read-only onderzoekstaken.
+- Geen enkel lanceringsonderdeel is in versie 0.12 `DONE`; de tien `DONE`-taken zijn governance-, read-only onderzoeks- of conceptuele documentatietaken.
 
 Bewijs en onderhoud:
 
@@ -264,7 +264,7 @@ Bevestigd doelmodel:
 
 Benodigde datadomeinen omvatten identiteit, merk, commerciële tekst, prijs/adviesprijs, media, specificaties, voorraad, levertijd, documenten, garantie, levering, retouren, SEO, relaties, switchergroepen en producttype-specifieke eenheden. Dit is een eisenlijst, geen bevestiging dat deze velden al bestaan.
 
-`[GEBLOKKEERD]` De exacte Shopify-objecten, metafieldnamen, opslagtypen, definitieve verplichtheid, bronhouders en importmapping worden pas besloten na aanlevering van de ontbrekende oorspronkelijke bronnen en menselijke beoordeling. De 58 statische custom-metafieldreferenties in theme-code en 30 optiekeys in de afgeleide V2-asset zijn geen definitief datamodel. Het ontbreken van bronbestanden blokkeert niet het opstellen van het brononafhankelijke logische productinformatiecontract in `BC-DATA-003`; dat contract kiest geen definitieve Shopify-opslag of leveranciermapping.
+`docs/PRODUCT_DATA_CONTRACT.md` legt als bestuurde conceptuele werkbasis v0.1 190 unieke conceptkeys in 15 logische domeinen vast, met type, cardinaliteit, toepasselijkheid, voorgesteld vereisteniveau, broncategorie, gebruik, validatie, leegstaat en eigenaarsrol. `BC-DATA-003` is binnen die brononafhankelijke documentatiescope menselijk goedgekeurd en `DONE`; dit bewijst niet dat waarden beschikbaar zijn en keurt individuele keys, niveaus, gates of opslagkeuzes niet definitief goed. `[GEBLOKKEERD]` De definitieve veldcatalogus, Shopify-objecten, metafieldnamen, opslagtypen, leveranciermapping, producttypecatalogus, categorieboom en filterdekking wachten op oorspronkelijke bronnen en afzonderlijke menselijke beoordeling. De 58 statische custom-metafieldreferenties en 30 afgeleide V2-optiekeys zijn geen definitief datamodel.
 
 ## 16. Product-switcher en configuratorarchitectuur
 
@@ -524,7 +524,7 @@ Productpagina's moeten waar relevant retour-, garantie- en service-informatie to
 
 De projectdefinitie verwacht leveranciersbestanden met prijzen, afbeeldingen, teksten en specificaties. `BC-DATA-002` heeft echter in de volledige lokale repository nul oorspronkelijke leveranciersbestanden, nul afgeleide Shopify-importbestanden en nul import-/generatiescripts gevonden. Alleen zes afgeleide switcherdata-assets en vijf direct relevante storefront-JavaScriptbestanden bestaan. De lokale nulmeting is menselijk goedgekeurd en wordt niet verlengd met zoekwerk buiten `CITY_MASTER`. Productonboarding voor circa 20.000 producten vereist later aanvullende oorspronkelijke bronnen en vervolgens een herhaalbaar proces voor mapping, validatie, fouten, duplicaten, media, relaties, categorieën, filters en SEO.
 
-`[GEBLOKKEERD]` Importontwerp en `BC-DATA-001` wachten op oorspronkelijke Hotbath- en The Mosaic Factory-bronnen, eventuele overige leveranciersbronnen, bronhouders en waar bestaand generator-/mapping-/importbewijs. Definitieve leveranciermappings en Shopify-metafieldnamen/opslagkeuzes wachten eveneens op die bronnen en menselijke beoordeling. Aanvullende leveranciersbestanden mogen later per leverancier in een eigen taak worden behandeld. Alleen het brononafhankelijke logische contract van `BC-DATA-003` mag zonder die bestanden verder; geen productdata wordt in deze fase gewijzigd.
+`BC-DATA-003` heeft zonder leveranciersbestanden uitsluitend de bestuurde conceptuele werkbasis v0.1 opgeleverd en is `DONE`. `[GEBLOKKEERD]` Importontwerp en `BC-DATA-001` wachten nog op oorspronkelijke Hotbath- en The Mosaic Factory-bronnen, eventuele overige leveranciersbronnen, bronhouders en waar bestaand generator-/mapping-/importbewijs. Definitieve leveranciermappings en Shopify-metafieldnamen/opslagkeuzes volgen pas na bronaanlevering en afzonderlijke menselijke beoordeling. Aanvullende leveranciersbestanden mogen later per leverancier in een eigen taak worden behandeld; het ontbreken ervan blokkeert niet de technische planningsopdracht `BC-TECH-002`, maar er wordt geen productdata gewijzigd.
 
 ## 43. Toekomstige API-koppelingen
 
@@ -548,7 +548,7 @@ Bevestigde risico's:
 
 Mobiel, desktop en toetsenbordbediening zijn expliciete eisen. De productpagina, switchers/configurators, calculator, navigatie, formulieren, modals, cart, search en content moeten toegankelijk worden getest.
 
-`[NOG ONDERZOEKEN]` Huidige audit, doelstandaard, ondersteunde assistieve technologie en acceptatiedrempels. Geen toegankelijkheidsconformiteit wordt in versie 0.10 geclaimd.
+`[NOG ONDERZOEKEN]` Huidige audit, doelstandaard, ondersteunde assistieve technologie en acceptatiedrempels. Geen toegankelijkheidsconformiteit wordt in versie 0.12 geclaimd.
 
 ## 46. Technische SEO
 
@@ -662,8 +662,8 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | ---: | --- | --- | --- | --- |
 | 0 | Fundament en projectbesturing | `DONE` | Centrale basis, omgevingsbewijs, masterplan en governance | Versie 0.1 op 2026-08-04 als onderzoeksbasis goedgekeurd; implementatie niet goedgekeurd |
 | 1 | Volledige inventarisatie | `DONE` | Shopify Admin-, actieve theme-, app-, data- en concurrentieonderzoeken | Op 2026-08-05 menselijk afgerond; bewijsgrenzen en open besluiten blijven bestaan |
-| 2 | Informatiearchitectuur en datamodel | `READY` | Lokale leveranciersnulmeting menselijk goedgekeurd; brononafhankelijk productinformatiecontract v0.1 voorbereid | `BC-DATA-003` read-only uitvoeren en menselijk beoordelen; definitieve mappings/opslag blijven wachten op bronnen |
-| 3 | Technische stabilisatie | `BLOCKED` | Bekende defects, tooling, legacy/backups en switcherrisico's beheerst | Stabiele en controleerbare technische basis |
+| 2 | Informatiearchitectuur en datamodel | `BLOCKED` | Leveranciersnulmeting en brononafhankelijk productinformatiecontract v0.1 `DONE`; definitieve data-/IA-uitvoer geblokkeerd | Oorspronkelijke bronnen plus afzonderlijke besluiten over veldcatalogus, Shopify-opslag, producttypen, categorieboom en filters |
+| 3 | Technische stabilisatie | `READY` | Uitsluitend `BC-TECH-002`: read-only nulmeting, decompositie en veilige uitvoeringsvolgorde | Menselijke review van het plan; iedere implementatietaak vereist daarna aparte toestemming |
 | 4 | Design system en globale websiteonderdelen | `BLOCKED` | UX-richting, componentregels, homepage, header en footer | Menselijke visuele goedkeuring en componentbewijs |
 | 5 | Categorieën, zoeken en filters | `BLOCKED` | Categorieplatform, productkaarten, zoeken, filters en merchandising | Kernreizen en SEO-routes goedgekeurd |
 | 6 | Productpaginaplatform | `BLOCKED` | Productpaginastandaard en producttypebasis | Data-, functionele en visuele acceptatie gehaald |
@@ -676,7 +676,7 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | 13 | Launch readiness en productiepublicatie | `BLOCKED` | Go/no-go, release, rollback en productiecontrole | Expliciete menselijke publicatiegoedkeuring |
 | 14 | Monitoring, optimalisatie en toekomstige API's | `DEFERRED` | Monitoring, optimalisaties en afzonderlijke feedintegraties | Prioriteit na lancering `[OPEN BESLISSING]` |
 
-Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. Fase 1 is afgerond in de volgorde `BC-ADM-001` -> `BC-DISC-001` -> `BC-DISC-002`. Het lokale read-only onderzoek `BC-DATA-002` is menselijk goedgekeurd en `DONE`. `BC-DATA-003` is de actieve brononafhankelijke documentatietaak op `READY`, maar **NIET INHOUDELIJK GESTART**.
+Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. Fase 1, `BC-DATA-002` en `BC-DATA-003` zijn menselijk goedgekeurd en `DONE`. Fase 2 is voor resterende definitieve data-/IA-uitvoer `BLOCKED`. Fase 3 is uitsluitend `READY` voor de actieve read-only planningsopdracht `BC-TECH-002`, die **NIET INHOUDELIJK GESTART** is; `BC-TECH-001` blijft geblokkeerd.
 
 ## 56. Werkstromen
 
@@ -693,7 +693,7 @@ Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afha
 | SEO | Structuur, techniek, indexatie en concurrentieonderzoek | `BC-SEO-001`, `BC-DISC-002` |
 | Categorieën | Informatiearchitectuur, collectieplatform en navigatie | `BC-IA-001`, `BC-CAT-001` |
 | UX/design | Design system, globale onderdelen en kernreizen | `BC-UX-001` |
-| Development | Stabilisatie en gecontroleerde implementatie | `BC-TECH-001` en implementatietaken |
+| Development / QA / onderzoek | Read-only stabilisatieplanning, technische nulmeting en later afzonderlijk gecontroleerde implementatie | `BC-TECH-002`, `BC-TECH-001` en latere implementatietaken |
 | Performance | Budget, meting en optimalisatie | `BC-QA-001` |
 | Accessibility | Toetsenbord en toegankelijke componenten/reizen | `BC-QA-001` |
 | Logistiek | Voorraad, levertijd, dropshipping en verzending | `BC-LOG-*` |
@@ -709,14 +709,14 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 
 | Status | Aantal |
 | --- | ---: |
-| `DONE` | 9 |
+| `DONE` | 10 |
 | `READY` | 1 |
 | `IN_PROGRESS` | 0 |
 | `NOT_STARTED` | 0 |
 | `BLOCKED` | 26 |
 | `REVIEW` | 0 |
 | `DEFERRED` | 3 |
-| **Totaal** | **39** |
+| **Totaal** | **40** |
 
 ### BC-GOV-001 - Repository-audit
 
@@ -834,7 +834,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Technische controles:** Structuur-, telling-, marker-, duplicaat-, status-, route-, instructie-, scope- en Git-diffcontrole.
 - **Menselijke controle:** De projecteigenaar heeft versie 0.1 op 2026-08-04 expliciet goedgekeurd als basis voor verder onderzoekswerk, niet voor implementatie.
 - **Bewijs van voltooiing:** `docs/MASTERPLAN.md`; fundamentcommit `302a42a` (`docs: add BadkamerCity masterplan foundation`); governancecommit `d22e3e32d04fc472996064cc14cff922396c2d05` (`docs: activate discovery workflow and add Codex guidance`); menselijke onderzoeksgoedkeuring van 2026-08-04.
-- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.10 blokkeert implementatie daarom expliciet.
+- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.12 blokkeert implementatie daarom expliciet.
 - **Rollback of herstelwijze:** Corrigeer of revert uitsluitend via een afzonderlijke beoordeelde documentatiecommit.
 - **Laatst bijgewerkt:** 2026-08-04.
 
@@ -850,7 +850,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Aanleiding:** Producten, collecties, metafields, metaobjects, menu's, apps, instellingen en actieve templates waren buiten de lokale theme-snapshot onvoldoende bewezen.
 - **Scope:** Read-only inventaris met bron, datum, aantallen/structuur waar beschikbaar, actieve koppelingen en onzekerheden.
 - **Buiten scope:** Ieder type Admin-, product-, data-, theme- of appwijziging.
-- **Afhankelijkheden:** `BC-GOV-005` is `DONE`; de projecteigenaar heeft de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.10 staat alleen read-only discovery toe en blokkeert implementatie.
+- **Afhankelijkheden:** `BC-GOV-005` is `DONE`; de projecteigenaar heeft de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.12 staat alleen de vastgelegde read-only discovery toe en blokkeert implementatie.
 - **Benodigde input:** Volledig ontvangen en gebruikt: Shopify CLI `4.6.0`, store `fpa9hu-i3.myshopify.com`, uitsluitend de verleende read-scopes en expliciete menselijke beoordeling van rapport, beperkingen en onzekerheden.
 - **Verwachte bestanden/systemen:** Shopify Admin read-only, `docs/SHOPIFY_ADMIN_INVENTORY.md` en dit masterplan.
 - **Uitvoer:** Volledig bijgewerkt `docs/SHOPIFY_ADMIN_INVENTORY.md` met aantallen, structuren, representatieve steekproeven, queryfamilies, scopes, statuslabels, beperkingen, gevolgen en aanbevolen vervolgstap.
@@ -923,8 +923,8 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Aanleiding:** De doelprincipes zijn bekend, maar huidige Admin-velden, typen, bronnen en kwaliteit niet.
 - **Scope:** Conceptueel model, Shopify-mapping, metafield/metaobjectcatalogus, validaties, eigenaarschap en feedgereedheid.
 - **Buiten scope:** Producten of metafields aanmaken/wijzigen en API-integraties bouwen.
-- **Afhankelijkheden:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` zijn `DONE`; `BC-DATA-003` moet eerst menselijk worden beoordeeld; ontbrekende oorspronkelijke bronnen en relevante bedrijfsregels uit `BC-LOG-001` blijven nodig voor definitieve mappings en opslagkeuzes.
-- **Benodigde input:** Admin-inventaris, goedgekeurde `docs/SUPPLIER_DATA_INVENTORY.md`, een later menselijk beoordeeld logisch productinformatiecontract, oorspronkelijke Hotbath- en The Mosaic Factory-bronnen, eventuele overige leveranciersbronnen, producttype-eisen en bronhouders `[NOG ONDERZOEKEN]`.
+- **Afhankelijkheden:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` zijn `DONE`; ontbrekende oorspronkelijke bronnen en relevante bedrijfsregels uit `BC-LOG-001` blijven nodig voor definitieve mappings en opslagkeuzes.
+- **Benodigde input:** Admin-inventaris, goedgekeurde `docs/SUPPLIER_DATA_INVENTORY.md`, bestuurde conceptuele werkbasis `docs/PRODUCT_DATA_CONTRACT.md`, oorspronkelijke Hotbath- en The Mosaic Factory-bronnen, eventuele overige leveranciersbronnen, producttype-eisen en bronhouders `[NOG ONDERZOEKEN]`.
 - **Verwachte bestanden/systemen:** Documentatie en Shopify Admin read-only; exacte toekomstige schema-/codebestanden `[NOG ONDERZOEKEN]`.
 - **Uitvoer:** Goedgekeurd datamodel, veldcatalogus, validatieregels en migratievragen.
 - **Acceptatiecriteria:** Elk vereist PDP-, filter-, switcher-, logistiek- en SEO-veld heeft type, bron, verplichtheid, validatie en eigenaar.
@@ -965,7 +965,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Titel:** Brononafhankelijk productinformatiecontract v0.1 vaststellen
 - **Fase:** Fase 2 - informatiearchitectuur en datamodel
 - **Werkstroom:** Datamodel / producten / architectuur
-- **Status:** `READY`
+- **Status:** `DONE`
 - **Prioriteit:** `P0`
 - **Doel:** Vastleggen welke productinformatie BadkamerCity functioneel nodig heeft, onafhankelijk van het formaat van toekomstige leveranciersbestanden en zonder al een definitieve Shopify-opslag- of importmapping te kiezen.
 - **Aanleiding:** De leveranciersinventaris bewijst dat oorspronkelijke bronbestanden nog ontbreken. Toch moeten productpagina's, kaarten, filters, zoeken, switchers, calculators, logistiek, SEO en kwaliteitscontroles later allemaal op een duidelijk logisch informatiecontract kunnen aansluiten.
@@ -974,16 +974,16 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Afhankelijkheden:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` zijn `DONE`.
 - **Benodigde input:** Bestaande projectdocumentatie, huidige Admin-inventaris, actieve-themegebruiksmatrix, leveranciernulmeting, projectvisie en bevestigde producttype-eisen.
 - **Verwachte bestanden/systemen:** Uitsluitend documentatie en repositorycode read-only.
-- **Uitvoer:** `docs/PRODUCT_DATA_CONTRACT.md`.
+- **Uitvoer:** `docs/PRODUCT_DATA_CONTRACT.md` met 190 unieke conceptuele contractkeys in 15 domeinen, producttypematrix, leegstaatbeleid, validaties, kwaliteitsgates, abstracte opslagcategorieën en een leeg leveranciersmappingtemplate.
 - **Acceptatiecriteria:** Het contract behandelt minimaal identiteit, commercie, content, media, documenten, specificaties, logistiek, SEO, relaties, switchers, configurators, tegels, publicatiekwaliteit en eigenaarschap. Feitelijke bestaande velden, doelcontractvelden, leverancierafhankelijke input en open beslissingen zijn duidelijk gescheiden. Er is geen definitieve Shopify- of leveranciermapping gekozen.
-- **Technische controles:** Unieke contractkeys, consistente datatypes, vereisteniveaus, toepasselijkheidsmatrix, leegstaatregels, validatieregels, eigenaarsrollen en kruisverwijzingen naar afhankelijke functies.
-- **Menselijke controle:** De projecteigenaar beoordeelt later welke contractvelden en kwaliteitsgates worden goedgekeurd. Status blijft `REVIEW` tot die beoordeling.
-- **Bewijs van voltooiing:** Nog niet beschikbaar; taak wordt na de eerste documentatiecommit inhoudelijk uitgevoerd.
+- **Technische controles:** Gehaald voor het concept: 190 unieke lowercase contractkeys, nul `custom.*`-keys, 19 gevulde matrixkolommen per rij, consistente vereisteniveaus/broncategorieën/leegstaatcodes/eigenaarsrollen, vijf producttypeklassen en kruisverwijzingen naar afhankelijke functies.
+- **Menselijke controle:** De projecteigenaar heeft `BC-DATA-003` op 2026-08-10 binnen de brononafhankelijke documentatiescope goedgekeurd als bestuurde conceptuele werkbasis v0.1. Alle individuele keys, niveaus, gates, eigenaars-, bron- en opslagkeuzes blijven afzonderlijke voorstellen/open beslissingen.
+- **Bewijs van voltooiing:** `docs/PRODUCT_DATA_CONTRACT.md` v0.1, masterplan v0.12 en expliciete menselijke goedkeuring van 2026-08-10; uitsluitend lokale read-only bewijsbronnen, geen Shopify-, theme-, product-, bron- of scriptmutatie.
 - **Risico:** Het contract kan ten onrechte als definitieve Shopify-mapping of als bewijs van beschikbare leveranciersdata worden gelezen.
 - **Rollback of herstelwijze:** Documentatietaak; corrigeren via een afzonderlijke beoordeelde documentatiecommit.
 - **Laatst bijgewerkt:** 2026-08-10.
 
-**Startstatus:** `BC-DATA-003` is de actieve taak op `READY`, maar **NIET INHOUDELIJK GESTART**.
+**Goedgekeurd resultaat:** `BC-DATA-003` is uitsluitend brononafhankelijk/read-only uitgevoerd en op 2026-08-10 `DONE` verklaard als bestuurde conceptuele werkbasis v0.1. Het contract is geen definitieve Shopify-mapping, geen leveranciermapping en geen bewijs dat data beschikbaar is.
 
 ### BC-IA-001 - Categorie- en navigatiemodel
 
@@ -1021,7 +1021,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Aanleiding:** Audit vond mogelijke defects, Theme Check-meldingen, grote inline code, backups/debugassets en ontbrekende test/CI-inrichting.
 - **Scope:** Na opsplitsing: defects reproduceren, Theme Check/tooling vastleggen, legacygebruik bepalen, backups buiten publiceerbare assets behandelen en regressietests toevoegen.
 - **Buiten scope:** Onbewezen refactors, functioneel herontwerp en directe livewijziging.
-- **Afhankelijkheden:** Afzonderlijke expliciete implementatietoestemming, `BC-DISC-001` en relevante delen van `BC-ADM-001`.
+- **Afhankelijkheden:** `BC-TECH-002` moet de epic eerst read-only opdelen en ter menselijke review aanbieden; daarna blijven afzonderlijke expliciete implementatietoestemming, `BC-DISC-001` en relevante delen van `BC-ADM-001` vereist.
 - **Benodigde input:** Actief-gebruikmatrix, browsermatrix, testbasis en besluit over legacy/backups.
 - **Verwachte bestanden/systemen:** Theme-code en documentatie `[NOG ONDERZOEKEN]`; preview-theme uitsluitend na expliciete taaktoestemming.
 - **Uitvoer:** Kleine afzonderlijke stabilisatietaken met fixes, tests en bewijs.
@@ -1031,7 +1031,31 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Bewijs van voltooiing:** Commits, testuitvoer en previewbewijs per deeltaak `[NOG ONDERZOEKEN]`.
 - **Risico:** Dit werkpakket is te breed; verplichte opsplitsing vóór `READY` en speciale regressiezorg voor productpagina/switcher.
 - **Rollback of herstelwijze:** Kleine commits, afzonderlijke preview en vooraf vastgelegde herstelcommit/themeprocedure.
-- **Laatst bijgewerkt:** 2026-08-03.
+- **Laatst bijgewerkt:** 2026-08-10.
+
+### BC-TECH-002 - Technische stabilisatie opdelen en nulmeting vastleggen
+
+- **ID:** `BC-TECH-002`
+- **Titel:** Technische stabilisatie opdelen en uitvoeringsvolgorde vaststellen
+- **Fase:** Fase 3 - technische stabilisatie
+- **Werkstroom:** Development / QA / onderzoek
+- **Status:** `READY`
+- **Prioriteit:** `P0`
+- **Doel:** De brede technische stabilisatie-epic `BC-TECH-001` omzetten in een bewijsbaar, veilig en geprioriteerd plan van kleine vervolgopdrachten, zonder binnen deze taak theme-code of Shopify te wijzigen.
+- **Aanleiding:** De repository-audit en actieve-themegebruiksmatrix bevatten meerdere mogelijke defects, actieve klant- en regressierisico's, dubbele switcherlogica, grote kernbestanden, backup-/debugassets, Theme Check-meldingen en ontbrekende test- en release-inrichting. `BC-TECH-001` is te breed om direct `READY` te worden.
+- **Scope:** Read-only analyse van de bestaande repository en bewijsdocumenten; gerichte herbevestiging van bekende technische bevindingen; classificatie op actieve bereikbaarheid, zekerheid, impact en afhankelijkheid; lokale read-only Theme Check-controle; opstellen van kleine kandidaatvervolgtaken met exacte bestanden, acceptatiecriteria, tests, preview, afhankelijkheden en rollback.
+- **Buiten scope:** Defects oplossen, code refactoren, bestanden verwijderen of verplaatsen, backupassets opruimen, switchers wijzigen, klantteksten aanpassen, tests/configuratie toevoegen, packages installeren, Shopify benaderen, themes pushen/pullen/publiceren of enige implementatie uitvoeren.
+- **Afhankelijkheden:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` zijn `DONE`. `BC-TECH-001` blijft de geblokkeerde bovenliggende epic.
+- **Benodigde input:** Repository, projectdocumentatie, actieve-themegebruiksmatrix, Admin-inventaris, productcontract, leveranciernulmeting en huidige lokale tooling uitsluitend read-only.
+- **Verwachte bestanden/systemen:** Repository en lokale tooling read-only; `docs/TECHNICAL_STABILIZATION_PLAN.md`; `docs/MASTERPLAN.md`.
+- **Uitvoer:** Een technisch stabilisatieplan met issue-register, bewijsclassificatie, afhankelijkheden, kandidaatdeeltaken, voorgestelde uitvoeringsvolgorde, minimale regressiematrix, preview-/rollbackvereisten en een aanbeveling voor de eerste afzonderlijk goed te keuren implementatietaak.
+- **Acceptatiecriteria:** Alle bekende technische P0- en P1-bevindingen uit bestaande bewijsdocumenten zijn herleidbaar opgenomen of gemotiveerd uitgesloten. Iedere kandidaatdeeltaak heeft een klein doel, exacte scope, bestanden, afhankelijkheden, tests, previewvereisten, rollback en menselijke beslissing. Er is duidelijk onderscheid tussen direct uitvoerbaar, geblokkeerd door data/IA/bedrijfsregels en alleen nader te reproduceren. Geen code of Shopify-data is gewijzigd.
+- **Technische controles:** Git-basis, bestandsreferenties, actieve bereikbaarheid, gerichte bronregels, JSON-parsing waar relevant, lokale Theme Check-uitvoer, bestandsgroottes, known-riskcontrole, diffcontrole en een mechanische controle dat alleen toegestane documentatie is gewijzigd.
+- **Menselijke controle:** De projecteigenaar beoordeelt later het stabilisatieplan en kiest afzonderlijk welke eerste kandidaatdeeltaak officieel wordt aangemaakt en of die implementatietoestemming krijgt.
+- **Bewijs van voltooiing:** Nog niet beschikbaar; taak is `READY` en **NIET INHOUDELIJK GESTART**.
+- **Risico:** Een onderzoeksclassificatie kan ten onrechte als defectbewijs, verwijdertoestemming of implementatiebesluit worden gelezen. Geen kandidaatbestand of kandidaatoplossing mag zonder aparte taak worden gewijzigd.
+- **Rollback of herstelwijze:** Documentatietaak; fouten uitsluitend via een aparte beoordeelde documentatiecorrectie herstellen.
+- **Laatst bijgewerkt:** 2026-08-10.
 
 ### BC-UX-001 - Design system en globale onderdelen
 
@@ -1686,6 +1710,8 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-DEC-021` | 2026-08-05 | `BC-DISC-002` en fase 1 zijn `DONE`; `BC-DATA-002` wordt als actieve kleine read-only voorbereidingstaak `READY` aangemaakt maar niet inhoudelijk gestart; `BC-DATA-001` blijft `BLOCKED` | Rondt de goedgekeurde inventarisatiefase af en maakt uitsluitend bronbewijs voor het latere datamodel bestuurbaar klaar | Expliciete menselijke goedkeuring/opdracht van de projecteigenaar; geen patroon-, ontwerp-, SEO-, Shopify-, theme-, data- of implementatietoestemming |
 | `BC-DEC-022` | 2026-08-10 | `BC-DATA-002` mag uitsluitend als lokale read-only repositoryinventarisatie worden uitgevoerd, gaat bij technische afronding naar `REVIEW` en activeert geen volgende taak | Maakt volledig lokaal bron-, script-, veld- en ontbrekende-inputbewijs mogelijk zonder imports, Shopify- of codewijziging | Expliciete menselijke startopdracht van de projecteigenaar; alleen `docs/SUPPLIER_DATA_INVENTORY.md` en dit masterplan mogen wijzigen, geen commit of push |
 | `BC-DEC-023` | 2026-08-10 | `BC-DATA-002` is binnen de lokale scope compleet en `DONE`; nul oorspronkelijke lokale bronnen is een geaccepteerde bevinding. Externe bronnen volgen later per leverancier. `BC-DATA-003` wordt actief `READY`, maar is nog niet inhoudelijk gestart | Voorkomt nutteloos zoekwerk buiten `CITY_MASTER` en maakt een logisch brononafhankelijk contract mogelijk zonder definitieve mapping of opslagkeuze | Expliciete menselijke goedkeuring/opdracht van de projecteigenaar; alleen documentatie, geen Shopify-, bron-, theme-, data- of implementatietoestemming |
+| `BC-DEC-024` | 2026-08-10 | `BC-DATA-003` mag na de gepushte fase-A-commit uitsluitend als brononafhankelijke read-only documentatietaak worden uitgevoerd en gaat technisch afgerond naar `REVIEW`; er wordt geen volgende taak geactiveerd | Legt functionele informatiebehoefte en kwaliteitsprincipes vast zonder te wachten op bronnen of een Shopify-/leveranciermapping te verzinnen | Expliciete tweefasenopdracht van de projecteigenaar; geen Shopify-, theme-, bron-, import-, categorie-, URL-, SEO-, design- of implementatietoestemming |
+| `BC-DEC-025` | 2026-08-10 | `BC-DATA-003` is binnen zijn brononafhankelijke documentatiescope `DONE`; productinformatiecontract v0.1 is een bestuurde conceptuele werkbasis. `BC-TECH-002` wordt uitsluitend als read-only planningsopdracht actief `READY` en blijft **NIET INHOUDELIJK GESTART** | Sluit de conceptuele contracttaak bestuurbaar af en splitst de brede technische epic eerst op zonder implementatie | Expliciete beperkte menselijke goedkeuring/opdracht; individuele contractkeuzes, Shopify-/leveranciermapping en alle technische wijzigingen blijven onbevoegd |
 
 ## 59. Open vragenregister
 
@@ -1721,9 +1747,10 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-029` | Welke onderzochte IA-, filter-, kaart-, PDP-, content- en servicepatronen passen na eigen assortiment-/klantbewijs werkelijk bij BadkamerCity? | Concurrentieobservaties zijn geen eigen ontwerp- of SEO-besluit | `BC-IA-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-SEO-001` | Projecteigenaar na data- en zoekintentieonderzoek | `[OPEN BESLISSING]`; `BC-DISC-002` levert alleen onderzoeksinput |
 | `BC-Q-030` | Welke toegestane tooling, viewports en criteria gelden voor een latere echte mobiele, desktop-, zoek- en toetsenbordtest? | HTML alleen bewijst geen visueel of interactief gedrag | `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-QA-001` | Projecteigenaar en technisch/UX-verantwoordelijke | `[OPEN BESLISSING]` |
 | `BC-Q-031` | Welke leveranciers-/importbestanden en scripts zijn lokaal werkelijk aanwezig, welke ontbreken en wie is bronhouder per veld? | Zonder bron-, veld- en eigenaarschapbewijs kan `BC-DATA-001` een verkeerde definitieve mapping vastleggen | Latere taken per leverancier, daarna `BC-DATA-001`, `BC-LOG-001`, `BC-PROD-001` | Projecteigenaar en productdata-/operationele eigenaar `[NOG ONDERZOEKEN]` | Lokaal **BEWEZEN en goedgekeurd**: nul oorspronkelijke bronnen, nul importbestanden, nul import-/generatiescripts, zes afgeleide switcherdata-assets en vijf relevante storefront-JavaScriptbestanden. Externe bestanden, veldbronhouders en eigenaarschap blijven `[NOG ONDERZOEKEN]`; geen verder lokaal zoekwerk binnen `BC-DATA-002` |
-| `BC-Q-032` | Welke logische contractvelden, vereisteniveaus, leegstaatregels, kwaliteitsgates en eigenaarsrollen worden na review goedgekeurd? | Het concept mag niet stil als definitieve Shopify-mapping of bedrijfsregel worden gebruikt | `BC-DATA-003`, daarna `BC-DATA-001` en functionele taken | Projecteigenaar plus bevoegde domeineigenaars | `[OPEN BESLISSING]`; `BC-DATA-003` moet eerst het brononafhankelijke voorstel leveren |
+| `BC-Q-032` | Welke van de 190 logische contractkeys, vereisteniveaus, leegstaatregels, kwaliteitsgates en eigenaarsrollen worden veld- en typegewijs definitief goedgekeurd? | De bestuurde werkbasis mag niet stil als definitieve Shopify-mapping of bedrijfsregel worden gebruikt | `BC-DATA-001` en functionele taken | Projecteigenaar plus bevoegde domeineigenaars | `[OPEN BESLISSING]`; v0.1 is als conceptuele werkbasis goedgekeurd, individuele keuzes niet |
+| `BC-Q-033` | Welke kleine kandidaatdeeltaak uit `BC-TECH-002` krijgt als eerste afzonderlijke uitvoeringstoestemming? | De brede epic mag niet direct starten en technische classificatie is geen implementatiebesluit | `BC-TECH-002`, daarna eventueel een `BC-TECH-001`-deeltaak | Projecteigenaar plus technisch verantwoordelijke | `[OPEN BESLISSING]`; stabilisatieplan is nog niet inhoudelijk opgesteld |
 
-De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` sluit deze resterende vragen niet; zij bevestigt en begrenst het beschikbare read-only bewijs. `BC-DATA-002` is `DONE`, maar neemt geen bronacceptatie-, data-, ontwerp- of implementatiebesluit. `BC-DATA-003` mag alleen een brononafhankelijk logisch contract voorstellen.
+De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` sluit deze resterende vragen niet; zij bevestigt en begrenst het beschikbare read-only bewijs en de conceptuele werkbasis. Geen van deze goedkeuringen neemt een bronacceptatie-, individueel veld-, data-, ontwerp-, Shopify-, theme- of implementatiebesluit.
 
 ## 60. Risicoregister
 
@@ -1756,7 +1783,8 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` s
 | `BC-R-025` | De actieve productsectie toont vaste levertijdtekst `8 - 9 weken`, terwijl lokaal geen leverancier-/productlevertijdbron bestaat en de switcherasset alleen `available=true` bevat | Onjuiste klantbelofte en operationele/servicefouten | Bronsemantiek en regels in `BC-LOG-001` besluiten vóór enige wijziging; huidige bevinding niet als betrouwbare levertijd behandelen | `[GEBLOKKEERD]` |
 | `BC-R-026` | De V2-asset heeft 3.383 unieke handles tegenover 3.658 Admin-triggerproducten; oorspronkelijke bron, generator, mapping en volledige setvergelijking ontbreken | Stille switchergaten of verkeerde productnavigatie | Externe generator/input aanleveren en in afzonderlijke read-only taak volledig vergelijken vóór `BC-SWITCH-001` | `[GEBLOKKEERD]` |
 | `BC-R-027` | Voor 277 gedocumenteerde The Mosaic Factory-producten ontbreekt lokaal iedere tegel-, eenheids-, verpakking- en palletbron | Verkeerde berekening, bestelhoeveelheid, prijs of logistiek | Oorspronkelijke tegelbron en bedrijfsregels verplicht vóór `BC-TILE-001` | `[GEBLOKKEERD]` |
-| `BC-R-028` | Een brononafhankelijk logisch contract kan ten onrechte als definitieve Shopify-mapping, beschikbare leveranciersdata of goedgekeurde bedrijfsregel worden gelezen | Voortijdige veldcreatie, onjuiste mapping of onbewezen klantbeloften | `BC-DATA-003` gebruikt bewijs-/contractlabels, abstracte opslagcategorieën en blijft `REVIEW` tot expliciete menselijke goedkeuring | Actief |
+| `BC-R-028` | Het goedgekeurde v0.1-werkkader met 190 conceptkeys, 34 voorgestelde publication blockers en 42 type blockers kan ten onrechte als definitieve Shopify-mapping, beschikbare leveranciersdata of goedgekeurde bedrijfsregel worden gelezen | Voortijdige veldcreatie, te strenge gates, onjuiste mapping of onbewezen klantbeloften | Bewijs-/contractlabels, abstracte opslagcategorieën en latere veldgewijze review; `BC-DATA-003 = DONE` keurt de individuele voorstellen niet definitief goed | Actief |
+| `BC-R-029` | Een classificatie of kandidaatdeeltaak uit `BC-TECH-002` kan ten onrechte als bevestigd defect, verwijdertoestemming of implementatieopdracht worden gelezen | Ongecontroleerde theme-wijziging, regressie of verlies van mogelijk dynamisch gebruikte bestanden | Per bevinding bereikbaarheid, zekerheid en bewijs vastleggen; iedere uitvoering vereist een aparte officiële taak en expliciete menselijke toestemming | Actief |
 
 ## 61. Afhankelijkhedenregister
 
@@ -1766,15 +1794,16 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` s
 | `BC-DEP-002` | Shopify Admin-inventaris | Data, apps, actieve templates en vrijwel alle functies | Menselijk goedgekeurd read-only bewijs met expliciete beperkingen | `BC-ADM-001`; `DONE` op 2026-08-04, volledige appbron blijft niet toegankelijk |
 | `BC-DEP-003` | Actief theme-/appgebruik | Stabilisatie en verwijderbesluiten | Menselijk goedgekeurde gebruiksmatrix met blijvende kandidaat- en bewijsgrenzen | `BC-DISC-001`; `DONE` op 2026-08-05; geeft geen verwijder- of implementatietoestemming |
 | `BC-DEP-004` | Concurrentie-/SEO-onderzoek na Admin- en actief-gebruiksonderzoek | IA, SEO, categorieën en UX-besluiten | Menselijk goedgekeurde vergelijkingsmatrix met blijvende bewijsgrenzen; patroonbesluiten blijven afzonderlijk | `BC-DISC-002`; `DONE` op 2026-08-05, geen ontwerp-/SEO-besluit |
-| `BC-DEP-005` | Productdatamodel en definitieve Shopify-opslag | PDP, filters, switchers, imports en feeds | Eerst menselijk beoordeeld logisch contract; voor definitieve mappings daarnaast oorspronkelijke bronnen en bronhouders | `BC-DATA-001`; `[GEBLOKKEERD]`. `BC-DATA-002` is `DONE`; `BC-DATA-003` is `READY`; bronnen ontbreken |
+| `BC-DEP-005` | Productdatamodel en definitieve Shopify-opslag | PDP, filters, switchers, imports en feeds | De bestuurde conceptuele werkbasis is aanwezig; voor definitieve mappings blijven oorspronkelijke bronnen, bronhouders en veldgewijze besluiten nodig | `BC-DATA-001`; `[GEBLOKKEERD]`. `BC-DATA-002` en `BC-DATA-003` zijn `DONE`; bronnen ontbreken |
 | `BC-DEP-006` | Categorie-/navigatiemodel | Globale navigatie, collectieplatform en SEO | Goedgekeurde IA en URL-principes | `BC-IA-001`; `[GEBLOKKEERD]` |
 | `BC-DEP-007` | Leveranciers- en logistieke regels | Voorraad, levertijd, checkout, samples en PDP | Beslis-/bronnenmatrix | `BC-LOG-*`; `[GEBLOKKEERD]` |
 | `BC-DEP-008` | Privacy-/securitybesluiten | Uploads, accounts, chat, afspraken en analytics | Goedgekeurde datastromen/controles | `BC-SEC-001`; `[GEBLOKKEERD]` |
 | `BC-DEP-009` | Browser-, performance- en toegankelijkheidscriteria | DoR/DoD en integrale QA | Goedgekeurde meetbare matrix | `BC-QA-001`; `[OPEN BESLISSING]` |
 | `BC-DEP-010` | Menselijke visuele/functionele goedkeuring | `DONE` voor zichtbaar/functioneel werk | Expliciet vastgelegd akkoord | Eigenaar; doorlopend |
 | `BC-DEP-011` | Release-/rollbackbesluit | Productiepublicatie | Getest plan, rollen en expliciet go/no-go | `BC-REL-001`; `[GEBLOKKEERD]` |
-| `BC-DEP-012` | Leveranciersbestanden/API-specificaties | Definitieve `BC-DATA-001`-mapping, productonboarding, logistieke regels en latere feeds | Oorspronkelijke bronnen, velddekking en eigenaarschap per leverancier; mappingbesluiten volgen later | Lokale inventaris `BC-DATA-002` `DONE`; externe bronnen en bronhouders `[NOG ONDERZOEKEN]`; blokkeert `BC-DATA-003` niet |
-| `BC-DEP-013` | Brononafhankelijk productinformatiecontract | Definitieve datamodelreview en samenhang tussen PDP, kaarten, zoeken, filters, relaties, logistiek, SEO en typefuncties | Menselijk beoordeeld logisch contract met betekenis, vereisteniveau, validatie, leegstaat en eigenaar zonder definitieve opslagmapping | `BC-DATA-003`; `READY`, **NIET INHOUDELIJK GESTART** |
+| `BC-DEP-012` | Leveranciersbestanden/API-specificaties | Definitieve `BC-DATA-001`-mapping, productonboarding, logistieke regels en latere feeds | Oorspronkelijke bronnen, velddekking en eigenaarschap per leverancier; mappingbesluiten volgen later | Lokale inventaris `BC-DATA-002` `DONE`; externe bronnen en bronhouders `[NOG ONDERZOEKEN]`; blokkeerden het brononafhankelijke v0.1-contract niet |
+| `BC-DEP-013` | Brononafhankelijk productinformatiecontract | Definitieve datamodelreview en samenhang tussen PDP, kaarten, zoeken, filters, relaties, logistiek, SEO en typefuncties | Menselijk goedgekeurde conceptuele werkbasis met betekenis, voorgesteld vereisteniveau, validatie, leegstaat en eigenaar zonder definitieve opslagmapping | `BC-DATA-003`; `DONE` op 2026-08-10; individuele veldbesluiten blijven open |
+| `BC-DEP-014` | Read-only technische decompositie en nulmeting | Veilige opsplitsing van de brede `BC-TECH-001`-epic | Issue-register, kleine kandidaatdeeltaken, regressiebasis, uitvoeringsvolgorde en expliciete blokkades zonder codewijziging | `BC-TECH-002`; `READY`, **NIET INHOUDELIJK GESTART**; implementatie blijft geblokkeerd |
 
 ## 62. Bewijs- en referentieregister
 
@@ -1785,7 +1814,7 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` s
 | `BC-EV-003` | [`docs/LIVE_THEME_COMPARISON.md`](LIVE_THEME_COMPARISON.md) | Gelijkheid van 396 lokale/live bestanden in zeven theme-mappen | 2026-08-03; `badd5cf` | Geen externe Shopify-data; tijdgebonden snapshot |
 | `BC-EV-004` | [`docs/DEVELOPMENT_THEME.md`](DEVELOPMENT_THEME.md) | Nieuw unpublished `BadkamerCity Development` (`192770375946`), links en live theme onveranderd | 2026-08-03; `3e0b4ec` | Bewijst geen functionele acceptatie van preview |
 | `BC-EV-005` | Bijgevoegde projectdefinitie bij opdracht voor masterplan | Visie, scope, productmodel, processen, governance en verplichte masterplanstructuur | 2026-08-03; duurzaam bronbestand in repository `[NOG ONDERZOEKEN]` | Niet als afzonderlijk repositorydocument aanwezig |
-| `BC-EV-006` | Dit masterplan | Versies 0.1-0.9 legden fundament, discovery en vier read-only inventarisaties vast; versie 0.10 legt de goedkeuring van `BC-DATA-002` en de nog niet inhoudelijk gestarte voorbereiding van `BC-DATA-003` vast | Fundament: 2026-08-03, commit `302a42a`; governance: 2026-08-04, commit `d22e3e32d04fc472996064cc14cff922396c2d05`; v0.4, v0.6 en v0.8 in de vastgelegde documentatiecommits; v0.10 in deze documentatiecommit | Geen bronacceptatie-, mapping-, data-, ontwerp-, SEO-, theme-, Admin-, scope-, publicatie- of implementatietoestemming |
+| `BC-EV-006` | Dit masterplan | Versies 0.1-0.11 legden fundament, discovery, vier read-only inventarisaties en het conceptuele productcontract vast; versie 0.12 legt de beperkte goedkeuring van `BC-DATA-003` en de nog niet gestarte read-only voorbereiding `BC-TECH-002` vast | Fundament: 2026-08-03, commit `302a42a`; governance: 2026-08-04, commit `d22e3e32d04fc472996064cc14cff922396c2d05`; v0.10: commit `8f4c5ddbdaf229d996042446825614b028dc1d37`; v0.12: deze documentatiecommit | Geen bronacceptatie-, definitieve mapping-, data-, ontwerp-, SEO-, theme-, Admin-, scope-, publicatie- of implementatietoestemming |
 | `BC-EV-007` | [`AGENTS.md`](../AGENTS.md) | Permanente Codex-guardrails en verplichte raadpleging van dit masterplan | 2026-08-04; commit `d22e3e32d04fc472996064cc14cff922396c2d05` | `docs/MASTERPLAN.md` blijft de centrale bron van waarheid |
 | `BC-EV-008` | [`docs/SHOPIFY_ADMIN_INVENTORY.md`](SHOPIFY_ADMIN_INVENTORY.md) | Shopify CLI `4.6.0`, dertien read-scopes en gepagineerd bewijs voor producten, collecties, metafields, metaobjects, navigatie, pagina's, themes, actieve JSON-configuratie, markets, talen, accounts, locaties, inventory en shipping | 2026-08-04; commit `docs: approve Shopify Admin inventory` | Volledige app-/pixel-/scriptbron niet toegankelijk; specificatiewaarden buiten de steekproef en inhoudelijk eigenaarschap blijven open; taak menselijk goedgekeurd en `DONE` |
 | `BC-EV-009` | Expliciete menselijke goedkeuring van de projecteigenaar | `BC-ADM-001` mag naar `DONE`; `BC-DISC-001` mag als actieve eerstvolgende read-only taak naar `READY`; alle beperkingen en open vragen blijven bestaan | 2026-08-04; vastgelegd in masterplan v0.4 en commit `docs: approve Shopify Admin inventory` | Geeft geen toestemming voor Shopify-data, theme-code, push/pull, publicatie, themebeheer, aanvullende scopes of implementatie |
@@ -1798,8 +1827,10 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` s
 | `BC-EV-016` | Expliciete menselijke startopdracht van de projecteigenaar | `BC-DATA-002` mag uitsluitend de huidige repository, documentatie, lokale bestanden en Git-metadata read-only onderzoeken; alleen rapport en masterplan mogen wijzigen | 2026-08-10; vastgelegd in masterplan v0.9 | Geen Shopify, bestanden buiten `CITY_MASTER`, imports, scripts uitvoeren, bron-/theme-code wijzigen, mappings besluiten, commit of push |
 | `BC-EV-017` | [`docs/SUPPLIER_DATA_INVENTORY.md`](SUPPLIER_DATA_INVENTORY.md) | Volledige scan van 405 lokale/tracked paden bij taakstart; nul oorspronkelijke leveranciersbronnen, nul importbestanden en nul import-/generatiescripts; zes afgeleide switcherdata-assets, vijf relevante storefront-JavaScriptbestanden, feitelijke velden/identifiers, datakwaliteit en ontbrekende input | Onderzoek en menselijke goedkeuring 2026-08-10; deze documentatiecommit; `BC-DATA-002` `DONE` | Alleen lokale repository/Git-bewijsroute; externe bestanden, generatoren en bronhouders blijven onbekend; geen mapping- of implementatiebesluit |
 | `BC-EV-018` | Expliciete menselijke goedkeuring en tweefasenopdracht van de projecteigenaar | `BC-DATA-002` mag naar `DONE`; nul oorspronkelijke lokale bronnen is geaccepteerd; externe bronnen volgen later per leverancier; `BC-DATA-003` wordt actief `READY` maar blijft vóór de fase-A-commit **NIET INHOUDELIJK GESTART** | 2026-08-10; vastgelegd in masterplan v0.10 en commit `docs: approve supplier inventory and prepare product contract` | Alleen documentatie; geen Shopify-, bron-, mapping-, theme-, code-, import- of implementatietoestemming |
+| `BC-EV-019` | [`docs/PRODUCT_DATA_CONTRACT.md`](PRODUCT_DATA_CONTRACT.md) | Bestuurde brononafhankelijke conceptuele werkbasis v0.1 met 190 unieke contractkeys in 15 domeinen, vijf producttypeklassen, leegstaatbeleid, validaties, tien kwaliteitsgates, abstracte opslagcategorieën en leeg mappingtemplate | Onderzoek en beperkte menselijke goedkeuring 2026-08-10; `BC-DATA-003` `DONE`; deze documentatiecommit | Geen definitieve Shopify-/leveranciermapping en geen bewijs van beschikbare data; individuele keys/niveaus/gates, leveranciersbronnen en veldbesluiten blijven open |
+| `BC-EV-020` | Expliciete beperkte menselijke goedkeuring en tweefasenopdracht van de projecteigenaar | `BC-DATA-003` mag naar `DONE`; contract v0.1 wordt conceptuele werkbasis; `BC-TECH-002` wordt actief `READY` maar blijft vóór de fase-A-commit **NIET INHOUDELIJK GESTART** | 2026-08-10; vastgelegd in masterplan v0.12 en commit `docs: approve product contract and prepare technical stabilization` | Geen definitieve contract-, Shopify-, leverancier-, data-, theme- of implementatiekeuze; fase B blijft read-only planning |
 
-Chronologie voorkomt een schijnbare tegenspraak: `BC-EV-002` meldde nog geen development theme; `BC-EV-004` bewijst de latere aanmaak van een afzonderlijk unpublished development theme. `BC-EV-008` bewijst daarnaast het bestaan van unpublished theme `192796786954`, zonder eigenaarschap, doel of wijziging te claimen. `BC-EV-010` bouwt uitsluitend read-only voort op die omgeving en verandert geen theme; `BC-EV-012` keurt alleen dat onderzoeksresultaat goed. `BC-EV-014` gebruikt uitsluitend openbare concurrentbronnen; `BC-EV-015` zette `BC-DATA-002` alleen klaar. De latere starttoestemming `BC-EV-016` begrensde het werk tot lokale read-only analyse; `BC-EV-017` is met `BC-EV-018` menselijk goedgekeurd. Alleen het brononafhankelijke contract van `BC-DATA-003` is nu voorbereid; externe bronvragen blijven open.
+Chronologie voorkomt een schijnbare tegenspraak: `BC-EV-002` meldde nog geen development theme; `BC-EV-004` bewijst de latere aanmaak van een afzonderlijk unpublished development theme. `BC-EV-008` bewijst daarnaast het bestaan van unpublished theme `192796786954`, zonder eigenaarschap, doel of wijziging te claimen. `BC-EV-010` bouwt uitsluitend read-only voort op die omgeving en verandert geen theme; `BC-EV-012` keurt alleen dat onderzoeksresultaat goed. `BC-EV-014` gebruikt uitsluitend openbare concurrentbronnen; `BC-EV-015` zette `BC-DATA-002` alleen klaar. De latere starttoestemming `BC-EV-016` begrensde het werk tot lokale read-only analyse; `BC-EV-017` is met `BC-EV-018` menselijk goedgekeurd. `BC-EV-019` is met `BC-EV-020` uitsluitend als conceptuele werkbasis goedgekeurd; externe bronvragen, individuele contractkeuzes en definitieve mappings blijven open.
 
 ## 63. Controlechecklists
 
@@ -1829,14 +1860,24 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 ### Productinformatiecontract (`BC-DATA-003`)
 
 - [x] Volledig taakrecord, brononafhankelijke scope, buiten-scope, acceptatie en risico zijn vastgelegd.
-- [x] Taak is actief `READY` en vóór de fase-A-commit **NIET INHOUDELIJK GESTART**.
-- [ ] Bestaande bewijsbasis na de fase-A-commit opnieuw volledig gelezen en Git-basis gecontroleerd.
-- [ ] Contractkeys zijn uniek, lowercase, underscoregescheiden en geen enkele key begint met `custom.`.
-- [ ] Centrale veldmatrix bevat per rij betekenis, type, vereisteniveau, broncategorie, gebruik, validatie, leegstaat en eigenaar.
-- [ ] Feit, voorstel, leverancierafhankelijkheid en open beslissing zijn zichtbaar gescheiden.
-- [ ] Producttypematrix, leegstaatbeleid, validaties, kwaliteitsgates, abstracte opslagcategorieën en leeg mappingtemplate zijn compleet.
-- [ ] Alleen `docs/PRODUCT_DATA_CONTRACT.md` en dit masterplan zijn na de fase-A-commit gewijzigd; geen bron-, Shopify- of theme-mutatie.
-- [ ] Technisch afgerond resultaat staat `REVIEW` en geen volgende taak is geactiveerd.
+- [x] Taak was vóór de fase-A-commit `READY` en **NIET INHOUDELIJK GESTART**; de fase-A-commit is gepusht en de werkboom was daarna schoon.
+- [x] Bestaande bewijsbasis is na de fase-A-commit opnieuw volledig gelezen en de Git-basis is gecontroleerd.
+- [x] Alle 190 contractkeys zijn uniek, lowercase, underscoregescheiden en geen enkele key begint met `custom.`.
+- [x] Iedere centrale veldmatrixrij bevat betekenis, type, vereisteniveau, broncategorie, gebruik, validatie, leegstaat en eigenaar.
+- [x] Feit, voorstel, leverancierafhankelijkheid en open beslissing zijn zichtbaar gescheiden.
+- [x] Producttypematrix, leegstaatbeleid, validaties, tien kwaliteitsgates, abstracte opslagcategorieën en leeg mappingtemplate zijn compleet.
+- [x] Alleen `docs/PRODUCT_DATA_CONTRACT.md` en dit masterplan zijn na de fase-A-commit gewijzigd; geen bron-, Shopify- of theme-mutatie.
+- [x] De projecteigenaar heeft het resultaat op 2026-08-10 als bestuurde conceptuele werkbasis goedgekeurd; `BC-DATA-003` staat `DONE` zonder individuele veld- of mappingbesluiten te impliceren.
+
+### Technische stabilisatieplanning (`BC-TECH-002`)
+
+- [x] Volledig taakrecord, read-only scope, buiten-scope, acceptatie, risico en herstelwijze zijn vastgelegd.
+- [x] `BC-TECH-001` blijft de geblokkeerde brede epic; `BC-TECH-002` is alleen een decompositie- en nulmetingstaak.
+- [x] Taak staat `READY`, is actief en **NIET INHOUDELIJK GESTART**.
+- [x] Fase 3 staat alleen voor deze read-only planningsopdracht `READY`; geen code- of implementatietaak is geactiveerd.
+- [ ] Bestaande bewijsdocumenten en technische risicoclusters zijn gericht read-only herbevestigd.
+- [ ] Lokale Theme Check-uitvoer is gescheiden in codebevindingen en toolingbeperkingen.
+- [ ] Kleine kandidaatdeeltaken, volgorde, regressiematrix, preview en rollback zijn ter menselijke review vastgelegd.
 
 ### Codewijziging
 
@@ -1948,12 +1989,12 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 
 ### Actuele route
 
-- **Waar we nu zijn:** Fase 1 en `BC-DATA-002` zijn `DONE`. Fase 2 en de actieve taak `BC-DATA-003` staan `READY`; `BC-DATA-003` is **NIET INHOUDELIJK GESTART**. Masterplan versie 0.10 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`; `BC-DATA-001` blijft `BLOCKED`.
+- **Waar we nu zijn:** Fase 1, `BC-DATA-002` en `BC-DATA-003` zijn `DONE`. Productcontract v0.1 is een bestuurde conceptuele werkbasis. Fase 2 blijft voor definitieve data-/IA-uitvoer `BLOCKED`. Masterplan versie 0.12 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`; `BC-TECH-002` is actief `READY` en **NIET INHOUDELIJK GESTART**.
 - **Wat is vastgelegd:** `docs/SUPPLIER_DATA_INVENTORY.md` bewijst en de projecteigenaar accepteert voor de lokale repository nul oorspronkelijke leveranciersbronnen, nul importbestanden en nul import-/generatiescripts. Externe bronnen kunnen bestaan en volgen later afzonderlijk per leverancier.
-- **Welke input nodig is:** voor `BC-DATA-003` alleen bestaande projectdocumentatie, huidige bewijsvelden, projectvisie en bevestigde producttype-eisen. Voor definitieve mappings, Shopify-metafieldnamen/opslagkeuzes, imports en bronacceptatie blijven oorspronkelijke bronnen, bronhouders en snapshotbewijs nodig.
-- **Welke taken daarna komen:** voer uitsluitend `BC-DATA-003` read-only uit na deze afzonderlijke documentatiecommit. Daarna volgt menselijke review; geen implementatie- of ontwerptaak wordt automatisch geactiveerd.
+- **Welke input nodig is:** voor definitieve mappings, Shopify-metafieldnamen/opslagkeuzes, imports en bronacceptatie blijven oorspronkelijke bronnen, bronhouders, snapshotbewijs en individuele menselijke veldbesluiten nodig. Voor technische uitvoering is eerst een beoordeeld decompositieplan nodig.
+- **Welke taken daarna komen:** alleen `BC-TECH-002` mag als read-only planningsopdracht starten. Kandidaatwerk wordt pas na menselijke review eventueel als afzonderlijke officiële taak aangemaakt; geen implementatie- of ontwerptaak is geactiveerd.
 
-Aanbevolen eerstvolgende handeling: commit en push uitsluitend de goedkeuring van `BC-DATA-002` en de administratieve voorbereiding van `BC-DATA-003`; voer daarna in een schone werkboom het brononafhankelijke contract read-only uit. Leveranciersbronnen worden niet binnen deze taak gezocht.
+Aanbevolen eerstvolgende handeling: voer `BC-TECH-002` uitsluitend read-only uit, leg bewijs, kleine kandidaatdeeltaken en een veilige volgorde vast en bied het resultaat daarna voor menselijke review aan.
 
 ## 65. Wijzigingslog
 
@@ -1970,16 +2011,19 @@ Aanbevolen eerstvolgende handeling: commit en push uitsluitend de goedkeuring va
 | 2026-08-05 | 0.8 | `BC-DISC-002`, `BC-DATA-002` | Menselijke goedkeuring van het concurrentie-/SEO-onderzoek vastgelegd; `BC-DISC-002` en fase 1 naar `DONE`; nieuwe kleine read-only leveranciersbron-/veldeninventaris `BC-DATA-002` als actieve taak naar `READY` maar niet gestart; `BC-DATA-001` `BLOCKED`; dashboard, fasen, werkstromen, tellingen, route, taakrecords, besluiten, vragen, risico's, afhankelijkheden, bewijs en checklists bijgewerkt | Goedgekeurd fase-1-onderzoek afsluiten en alleen de benodigde bronvoorbereiding voor het latere datamodel klaarzetten zonder ontwerp- of implementatietoestemming | Deze commit: `docs: approve competitor research and prepare data inventory` |
 | 2026-08-10 | 0.9 | `BC-DATA-002` | Taak tijdens uitvoering op `IN_PROGRESS` en na technische afronding op `REVIEW`; volledige lokale set van 405 bestanden bij taakstart en Git-padgeschiedenis onderzocht; nul oorspronkelijke leveranciersbronnen, nul importbestanden, nul import-/generatiescripts, zes afgeleide switcherdata-assets en vijf relevante storefrontscripts vastgelegd; veld-, identifier-, keten-, kwaliteits-, ontbrekende-input- en eigenaarschapsanalyse gedocumenteerd; dashboard, fase, tellingen, route, taakrecords, besluiten, vragen, risico's, afhankelijkheden, bewijs en checklists bijgewerkt | Feitelijke lokale basis en ontbrekende externe input vastleggen vóór enig datamodel of importontwerp, zonder Shopify-, bron-, theme- of codewijziging | Niet gecommit; opdracht verbiedt commit en push |
 | 2026-08-10 | 0.10 | `BC-DATA-002`, `BC-DATA-003` | Menselijke goedkeuring van de lokale leveranciersnulmeting vastgelegd; `BC-DATA-002` naar `DONE`; externe bronnen blijven latere leveranciersafhankelijkheden; `BC-DATA-003` als actieve brononafhankelijke documentatietaak naar `READY` maar niet inhoudelijk gestart; dashboard, fase, werkstroom, taakregister, route, besluiten, vragen, risico's, afhankelijkheden, bewijs en checklists bijgewerkt | Goedgekeurd lokaal onderzoek afsluiten en een logisch informatiecontract mogelijk maken zonder bronmapping, Shopify-opslagbesluit of implementatie | Deze commit: `docs: approve supplier inventory and prepare product contract` |
+| 2026-08-10 | 0.11 | `BC-DATA-003` | Brononafhankelijk productinformatiecontract v0.1 met 190 unieke conceptkeys in 15 domeinen opgesteld; vijf producttypeklassen, leegstaatbeleid, validaties, tien kwaliteitsgates, abstracte opslagcategorieën en leeg leveranciersmappingtemplate vastgelegd; fase en taak naar `REVIEW`; dashboard, route, taakrecord, besluiten, vragen, risico's, afhankelijkheden, bewijs en checklists bijgewerkt | Functionele productinformatiebehoefte bestuurbaar maken zonder beschikbare leveranciersdata, definitieve Shopify-/leveranciermapping, mutatie of implementatie te claimen | Niet gecommit of gepusht; fase-B-opdracht verbiedt tweede commit en push |
+| 2026-08-10 | 0.12 | `BC-DATA-003`, `BC-TECH-002` | Beperkte menselijke goedkeuring van het productcontract vastgelegd; `BC-DATA-003` naar `DONE`; fase 2 voor resterend definitief data-/IA-werk naar `BLOCKED`; nieuwe read-only technische decompositietaak `BC-TECH-002` actief `READY` maar niet inhoudelijk gestart; dashboard, fasen, werkstromen, taakregister, route, besluiten, vragen, risico's, afhankelijkheden, bewijs en checklists bijgewerkt | Het contract als bestuurde conceptuele werkbasis afsluiten en technische stabilisatie eerst veilig opdelen zonder implementatie | Deze commit: `docs: approve product contract and prepare technical stabilization` |
 
-### Zelfcontrole versie 0.10
+### Zelfcontrole versie 0.12
 
 - **Tegenstrijdigheden:** De tijdlijn van omgevingscontrole en latere development-theme-aanmaak is expliciet verklaard; geen inhoudelijke tegenspraak gevonden.
 - **Dubbele taken:** Geen dubbele taak-ID of bewust dubbel werk gevonden; raakvlakken zijn via afhankelijkheden gekoppeld.
 - **Ontbrekende hoofdonderdelen:** Alle 65 verplichte hoofdstukken zijn opgenomen.
 - **Onbewezen aannames:** Onbekende runtime, apps/pixels, externe leveranciersbronnen, data-eigenaars, kandidaatbestanden en besluiten zijn gemarkeerd met `[NOG ONDERZOEKEN]`, `[OPEN BESLISSING]`, `[GEBLOKKEERD]`, **ONTBREEKT**, **NIET TOEGANKELIJK** of `DYNAMIC_OR_NOT_PROVEN`.
 - **Statusduidelijkheid:** Alleen de zeven toegestane taakstatussen zijn gebruikt; tellingen staan in dashboard en taakregister.
-- **Onderzoeksstatus:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002` en `BC-DATA-002` zijn consequent `DONE`; fase 1 is `DONE`; fase 2 en `BC-DATA-003` staan `READY`; `BC-DATA-003` is **NIET INHOUDELIJK GESTART** en `BC-DATA-001` blijft `BLOCKED`.
+- **Onderzoeksstatus:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` zijn consequent `DONE`; fase 1 is `DONE`; fase 2, `BC-DATA-001` en `BC-IA-001` zijn `BLOCKED`; fase 3 en `BC-TECH-002` staan uitsluitend voor read-only planning `READY`.
 - **Acceptatiecriteria en afhankelijkheden:** Iedere voorlopige taak bevat beide velden.
-- **Te grote taken:** `BC-TECH-001`, `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-SEO-001`, `BC-PROD-001` en `BC-QA-001` zijn expliciet als brede werkpakketten benoemd en moeten vóór `READY` worden opgesplitst.
-- **Taaktelling:** 39 taakrecords: 9 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
-- **Ontwikkeltoestemming:** Niet verleend; versie 0.10 is uitsluitend actief voor discovery en houdt bronacceptatie, definitieve mapping/opslag, ontwerp, Shopify-/theme-/datawijzigingen en implementatie expliciet geblokkeerd.
+- **Te grote taken:** `BC-TECH-001`, `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-SEO-001`, `BC-PROD-001` en `BC-QA-001` blijven brede werkpakketten; alleen `BC-TECH-002` mag de technische epic read-only opdelen.
+- **Taaktelling:** 40 unieke taakrecords: 10 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
+- **Contractcontrole:** 190 unieke contractkeys in 15 domeinen; nul `custom.*`-keys; iedere matrixrij heeft 19 gevulde gegevenskolommen; labels, bronnen, eigenaars, validatie en leegstaat zijn structureel gecontroleerd.
+- **Ontwikkeltoestemming:** Niet verleend; versie 0.12 staat uitsluitend de actieve read-only planningstaak `BC-TECH-002` toe en houdt bronacceptatie, definitieve mapping/opslag, ontwerp, Shopify-/theme-/datawijzigingen en implementatie expliciet geblokkeerd.
