@@ -268,7 +268,11 @@ scripts/codex-run-finalize.ps1 maakt:
 
 De ZIP bevat alle run- en raw-bestanden zoals zij direct voor bundelvorming
 bestonden, plus REVIEW_FILES_MANIFEST.md en review_files met de geselecteerde
-repositorysnapshots, nooit de ZIP zelf. De finalizer opent eerst de
+repositorysnapshots, nooit de ZIP zelf. Op Windows/OneDrive leest de
+finalizer ieder runbestand eerst als een stabiele byte-snapshot en schrijft
+die met ingebouwde `System.IO.Compression`/`ZipArchive` naar de tijdelijke
+ZIP; hierdoor is hij niet afhankelijk van `Compress-Archive`-file-lockgedrag.
+De finalizer opent vervolgens de
 `.building.zip` read-only, controleert entries en reviewhashes en berekent
 na promotie de SHA-256. De lokale manifest- en logaanvulling met die
 ZIP-hash is noodzakelijkerwijs nieuwer dan hun pre-bundle kopie in de ZIP;

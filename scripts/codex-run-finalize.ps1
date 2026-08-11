@@ -329,6 +329,80 @@ function Get-ZipEntrySha256 {
     }
 }
 
+function New-ZipSnapshot {
+    param(
+        [Parameter(Mandatory = $true)][string]$SourceDirectory,
+        [Parameter(Mandatory = $true)][string]$DestinationPath
+    )
+
+    if (Test-Path -LiteralPath $DestinationPath) {
+        throw "Tijdelijke ZIP bestaat al: $DestinationPath"
+    }
+
+    $snapshots = New-Object System.Collections.Generic.List[object]
+    foreach ($file in @(Get-ChildItem -LiteralPath $SourceDirectory -Recurse -File)) {
+        $bytes = $null
+        $stable = $false
+        for ($attempt = 1; $attempt -le 5; $attempt++) {
+            try {
+                $before = Get-Item -LiteralPath $file.FullName
+                $bytes = [IO.File]::ReadAllBytes($file.FullName)
+                $after = Get-Item -LiteralPath $file.FullName
+                $stable = $before.Length -eq $bytes.Length -and
+                    $after.Length -eq $bytes.Length -and
+                    $before.LastWriteTimeUtc.Ticks -eq $after.LastWriteTimeUtc.Ticks
+                if ($stable) { break }
+            }
+            catch {
+                if ($attempt -eq 5) { throw }
+            }
+            Start-Sleep -Milliseconds 250
+        }
+        if (-not $stable) {
+            throw "Runbestand kon niet stabiel worden gesnapshot: $($file.FullName)"
+        }
+
+        $snapshots.Add([pscustomobject]@{
+            Relative = Get-RelativePath -BasePath $SourceDirectory -TargetPath $file.FullName
+            Bytes = $bytes
+        })
+    }
+
+    $zipStream = $null
+    $archive = $null
+    try {
+        $zipStream = [IO.File]::Open(
+            $DestinationPath,
+            [IO.FileMode]::CreateNew,
+            [IO.FileAccess]::ReadWrite,
+            [IO.FileShare]::None
+        )
+        $archive = New-Object IO.Compression.ZipArchive(
+            $zipStream,
+            [IO.Compression.ZipArchiveMode]::Create,
+            $false
+        )
+        foreach ($snapshot in $snapshots) {
+            $entry = $archive.CreateEntry(
+                $snapshot.Relative.Replace('\', '/'),
+                [IO.Compression.CompressionLevel]::Optimal
+            )
+            $entryStream = $null
+            try {
+                $entryStream = $entry.Open()
+                $entryStream.Write($snapshot.Bytes, 0, $snapshot.Bytes.Length)
+            }
+            finally {
+                if ($null -ne $entryStream) { $entryStream.Dispose() }
+            }
+        }
+    }
+    finally {
+        if ($null -ne $archive) { $archive.Dispose() }
+        if ($null -ne $zipStream) { $zipStream.Dispose() }
+    }
+}
+
 $runFull = [IO.Path]::GetFullPath($RunDirectory)
 if (-not (Test-Path -LiteralPath $runFull -PathType Container)) {
     throw "RunDirectory does not exist: $runFull"
@@ -669,6 +743,7 @@ $preBundleLog = @"
 "@
 Append-Utf8NoBom -Path $logPath -Content $preBundleLog
 
+Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $expectedArchiveEntries = @(Get-ChildItem -LiteralPath $runFull -Recurse -File |
     ForEach-Object {
@@ -679,8 +754,7 @@ $entryNames = @()
 $archiveValidated = $false
 
 try {
-    Compress-Archive -Path (Join-Path $runFull '*') `
-        -DestinationPath $buildingZipPath -CompressionLevel Optimal
+    New-ZipSnapshot -SourceDirectory $runFull -DestinationPath $buildingZipPath
 
     $archive = $null
     try {
