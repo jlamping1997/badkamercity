@@ -428,10 +428,15 @@ else {
 
 $reviewRoot = Join-Path $runFull 'review_files'
 $reviewManifestPath = Join-Path $runFull 'REVIEW_FILES_MANIFEST.md'
-if ((Test-Path -LiteralPath $reviewRoot) -or
-    (Test-Path -LiteralPath $reviewManifestPath)) {
-    throw 'review_files of REVIEW_FILES_MANIFEST.md bestaat al; finalizer overschrijft geen reviewbewijs.'
+$reviewRootExists = Test-Path -LiteralPath $reviewRoot
+$reviewManifestExists = Test-Path -LiteralPath $reviewManifestPath
+if ($reviewRootExists -or $reviewManifestExists) {
+    if (-not (Test-Path -LiteralPath $reviewRoot -PathType Container) -or
+        -not (Test-Path -LiteralPath $reviewManifestPath -PathType Leaf)) {
+        throw 'Bestaand reviewbewijs is incompleet of heeft een ongeldig bestandstype.'
+    }
 }
+$reuseReviewEvidence = $reviewRootExists -and $reviewManifestExists
 
 $uniquePaths = New-Object System.Collections.Generic.List[string]
 $reviewCandidates = New-Object System.Collections.Generic.List[object]
@@ -482,7 +487,9 @@ if ($reviewCandidates.Count -eq 0) {
     throw 'Geen repositorybestanden geselecteerd voor review_files.'
 }
 
-New-Item -ItemType Directory -Path $reviewRoot | Out-Null
+if (-not $reuseReviewEvidence) {
+    New-Item -ItemType Directory -Path $reviewRoot | Out-Null
+}
 $reviewRecords = New-Object System.Collections.Generic.List[object]
 foreach ($candidate in $reviewCandidates) {
     $copyPath = Join-Path $reviewRoot $candidate.Relative
@@ -490,11 +497,21 @@ foreach ($candidate in $reviewCandidates) {
     if (-not (Test-IsPathWithin -ParentPath $reviewRoot -CandidatePath $copyFull)) {
         throw "Reviewkopie valt buiten review_files: $($candidate.Relative)"
     }
-    $copyParent = Split-Path -Parent $copyFull
-    if (-not (Test-Path -LiteralPath $copyParent -PathType Container)) {
-        New-Item -ItemType Directory -Path $copyParent -Force | Out-Null
+    if ($reuseReviewEvidence) {
+        if (-not (Test-Path -LiteralPath $copyFull -PathType Leaf)) {
+            throw "Bestaande reviewkopie ontbreekt: $($candidate.Relative)"
+        }
+        if ((Get-Item -LiteralPath $copyFull).Length -ne $candidate.Bytes) {
+            throw "Bestaande reviewkopiebytes wijken af: $($candidate.Relative)"
+        }
     }
-    Copy-Item -LiteralPath $candidate.SourceFull -Destination $copyFull
+    else {
+        $copyParent = Split-Path -Parent $copyFull
+        if (-not (Test-Path -LiteralPath $copyParent -PathType Container)) {
+            New-Item -ItemType Directory -Path $copyParent -Force | Out-Null
+        }
+        Copy-Item -LiteralPath $candidate.SourceFull -Destination $copyFull
+    }
     $copyHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $copyFull).Hash
     if ($copyHash -ne $candidate.SourceHash) {
         throw "Reviewkopiehash wijkt af: $($candidate.Relative)"
@@ -508,6 +525,16 @@ foreach ($candidate in $reviewCandidates) {
         ReviewRelative = ('review_files/' + $candidate.Relative)
         CopyHash = $copyHash
     })
+}
+
+if ($reuseReviewEvidence) {
+    $expectedCopyPaths = @($reviewRecords | ForEach-Object { $_.CopyFull } | Sort-Object)
+    $actualCopyPaths = @(Get-ChildItem -LiteralPath $reviewRoot -Recurse -File |
+        ForEach-Object { $_.FullName } | Sort-Object)
+    if (($actualCopyPaths -join [Environment]::NewLine) -ne
+        ($expectedCopyPaths -join [Environment]::NewLine)) {
+        throw 'Bestaand review_files bevat ontbrekende of extra bestanden.'
+    }
 }
 
 $reviewRows = @($reviewRecords | ForEach-Object {
@@ -525,7 +552,14 @@ $($reviewRows -join [Environment]::NewLine)
 - Alle bron-/kopiehashes gelijk: ja
 - Bronnen gewijzigd door finalisatie: nee
 "@
-Write-Utf8NoBom -Path $reviewManifestPath -Content $reviewManifest
+if ($reuseReviewEvidence) {
+    if ([IO.File]::ReadAllText($reviewManifestPath) -ne $reviewManifest) {
+        throw 'Bestaand REVIEW_FILES_MANIFEST.md wijkt af van de opnieuw gevalideerde reviewbestanden.'
+    }
+}
+else {
+    Write-Utf8NoBom -Path $reviewManifestPath -Content $reviewManifest
+}
 
 foreach ($path in @($manifestPath, $reviewManifestPath)) {
     if ($seen.Add($path)) {

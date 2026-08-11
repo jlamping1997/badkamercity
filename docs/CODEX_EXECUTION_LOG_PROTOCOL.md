@@ -277,6 +277,13 @@ deze snapshotgrens wordt expliciet vermeld.
 De tijdelijke ZIP wordt pas na validatie van alle runbestanden, raw
 evidence, reviewbestanden en reviewhashes naar `<RUN_ID>_BUNDLE.zip`
 verplaatst. Bij een fout wordt uitsluitend de tijdelijke ZIP verwijderd.
+Reeds gemaakte `review_files/` en `REVIEW_FILES_MANIFEST.md` blijven als
+bewijs staan. Een retry mag dit bewijs alleen ongewijzigd hergebruiken
+wanneer map en manifest beide volledig bestaan, de actuele bronbestanden,
+bytes en SHA-256-hashes opnieuw overeenkomen, geen extra of ontbrekende
+reviewkopie bestaat en het manifest exact gelijk is aan de opnieuw
+opgebouwde verwachting. Iedere afwijking stopt de retry; de finalizer
+overschrijft of verwijdert bestaand reviewbewijs niet.
 De normale menselijke ChatGPT-overdracht bestaat hierdoor uit een finale
 bundle; losse MASTERPLAN-, AGENTS-, protocol- of scriptuploads zijn niet
 nodig.
