@@ -195,7 +195,7 @@ function Assert-RawEvidence {
         }
 
         try {
-            $meta = Get-Content -LiteralPath $metaFile.FullName -Raw |
+            $meta = Get-Content -LiteralPath $metaFile.FullName -Raw -Encoding UTF8 |
                 ConvertFrom-Json
         }
         catch {
