@@ -1,6 +1,6 @@
 # BadkamerCity Masterplan
 
-> **Versie 0.19 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** `BC-TECH-003` en de reproduceerbare Theme Check-basis zijn op 2026-08-12 menselijk goedgekeurd en `DONE`. `PROPOSED-TECH-10` is officieel gemaakt als `BC-TECH-004`; uitsluitend deze lokale governance-/documentatietaak en fase 3 staan `READY` en **NIET INHOUDELIJK GESTART**. De vastgelegde branch-, preview-, merge- en rollbackkeuzes geven nu geen toestemming voor een branch, push, merge, preview, Shopify-toegang of theme-codewijziging.
+> **Versie 0.21 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** De projecteigenaar heeft `BC-TECH-004` op 2026-08-16 binnen de documentatiescope goedgekeurd; het 42-delige change-runbook en `BC-DEP-017` staan `DONE`. `PROPOSED-TECH-02` is officieel gemaakt als `BC-TECH-005` en staat als enige taak met fase 3 `READY`, maar is **NIET INHOUDELIJK GESTART**. Er is geen branch, preview, Shopify-toegang of theme-codewijziging uitgevoerd.
 
 Markeringen in dit document:
 
@@ -13,9 +13,9 @@ Markeringen in dit document:
 | Veld | Waarde |
 | --- | --- |
 | Documentnaam | `docs/MASTERPLAN.md` |
-| Versie | `0.19` |
+| Versie | `0.21` |
 | Status | `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED` |
-| Datum laatste wijziging | 2026-08-12 |
+| Datum laatste wijziging | 2026-08-16 |
 | Eigenaar | BadkamerCity-projecteigenaar; naam en formele rol `[NOG ONDERZOEKEN]` |
 | Centrale bron van waarheid | Dit bestand op GitHub-branch `main`, naast de bewijsdocumenten in `docs/` |
 | Huidige Git-branch | `main` |
@@ -30,24 +30,25 @@ De status activeert alleen het vastgelegde read-only onderzoekswerk. Theme-imple
 | Onderdeel | Actuele stand |
 | --- | --- |
 | Algemene projectstatus | Discovery is menselijk goedgekeurd en actief; implementatie en lancering blijven geblokkeerd |
-| Huidige fase | Fase 3 - technische stabilisatie; uitsluitend `BC-TECH-004` staat `READY` als lokale governance-/documentatietaak en is **NIET INHOUDELIJK GESTART** |
-| Actieve taak-ID | `BC-TECH-004` - uitsluitend administratief `READY` |
-| Actieve taak | Technische wijzigings-, preview- en rollbackwerkwijze vastleggen |
-| Eerstvolgende actie | Commit en push de vier goedgekeurde `BC-TECH-003`-baselinebestanden; voer daarna uitsluitend `BC-TECH-004` lokaal als documentatietaak uit |
+| Huidige fase | Fase 3 - technische stabilisatie; uitsluitend `BC-TECH-005` staat `READY` als lokale read-only analyse-/documentatietaak en is **NIET INHOUDELIJK GESTART** |
+| Actieve taak-ID | `BC-TECH-005` - `READY`, **NIET INHOUDELIJK GESTART** |
+| Actieve taak | Minimale smoke- en regressiebasis vastleggen |
+| Eerstvolgende actie | Voer `BC-TECH-005` uitsluitend lokaal/read-only uit na de fase-A-commit; geen browser, preview, Shopify, theme-code of runtime |
 | Belangrijkste blokkades | Nul oorspronkelijke lokale leveranciersbestanden, nul import-/generatiescripts, onbekende bronhouders en ontbrekende prijs-, voorraad-/levertijd-, media- en tegeleenheidsbronnen; daarnaast ontbreken volledige app-/pixelbron, runtimevalidatie, gevalideerd productdatamodel, categorieboom, leverancierregels en meerdere architectuurbesluiten |
 | Laatste technisch uitgevoerde basis | `BC-TECH-003` - CLI `4.6.1`, aanbevolen config zonder suppressies, veilige wrapper en twee reproduceerbare runs met 19 offenses/15 bestanden/3 errors/16 warnings; menselijk goedgekeurd en `DONE` |
-| Laatste menselijke goedkeuring | 2026-08-12 - `BC-TECH-003`-config, wrapper, twee-run-baseline, 19 fingerprints en regressie-/rebaselinebeleid zijn goedgekeurd; `PROPOSED-TECH-10` is als `BC-TECH-004` toegestaan met afzonderlijke toekomstige gates A-G |
-| Laatste relevante commit | Basiscommit `be0d48c27b55b348a0a3d0e69fcfb51f0346831c` staat op `main` en `origin/main`; versie 0.19 en de vier baselinebestanden vormen de afzonderlijk toegestane fase-A-commit |
+| Laatste technisch uitgevoerde governance | `BC-TECH-004` - 42-delig menselijk goedgekeurd change-runbook met branchregex, gates A-G, 15 state-machineovergangen, 13 scenario's, 14 verboden acties en rollback A-D; status `DONE` |
+| Laatste menselijke goedkeuring | 2026-08-16 - `BC-TECH-004`, branchmodel/-regex, gates A-G, previewtargetgrenzen, Theme Check-gates, mergebeleid, rollback A-D en FINAL_REPORT-volgorde zijn binnen de documentatiescope goedgekeurd |
+| Laatste relevante commit | Fase-A-commit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` (`chore: approve theme check baseline and prepare change workflow`) staat op `main` en `origin/main`; fase B wordt niet gecommit of gepusht |
 | Previewstatus | `BadkamerCity Development` is unpublished; preview- en Theme Editor-links zijn vastgelegd; geen nieuwe theme-code is geüpload sinds de aanmaak |
 | Productdoel voor lancering | Ongeveer 20.000 volledig ingerichte, gekoppelde, gecategoriseerde, doorzoekbare en filterbare producten |
-| Voorlopige taken | 43 totaal: 13 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
+| Voorlopige taken | 44 totaal: 14 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
 
 ### Actuele route
 
-- **Waar we nu zijn:** basiscommit `be0d48c27b55b348a0a3d0e69fcfb51f0346831c` staat op `main` en `origin/main`. `BC-TECH-003` is met zijn twee reproduceerbare runs menselijk goedgekeurd en `DONE`. `BC-TECH-004` en uitsluitend dit deel van fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART**. `BC-TECH-001`, fase 2 en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.19 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
+- **Waar we nu zijn:** fase-A-basiscommit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` staat op `main` en `origin/main`. `BC-TECH-003` en het op 2026-08-16 menselijk goedgekeurde `BC-TECH-004` zijn `DONE`. `BC-TECH-005` en uitsluitend dit deel van fase 3 staan `READY` en **NIET INHOUDELIJK GESTART**. `BC-TECH-001`, fase 2 en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.21 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
 - **Wat is vastgelegd:** de volledige lokale set van 405 bestanden bij taakstart en de bereikbare Git-padgeschiedenis bevatten nul oorspronkelijke leveranciersbestanden en nul import-/generatiescripts. Deze lokale nulbevinding is menselijk geaccepteerd. Externe bronnen kunnen bestaan en worden later per leverancier afzonderlijk aangeleverd en beoordeeld.
-- **Welke input nodig is:** voor `BC-TECH-004` zijn Git-basis, bestaand development-themebewijs, de goedgekeurde Theme Check-baseline, het stabilisatieplan en de menselijke governancekeuzes beschikbaar. Retentietermijn en eigenaar van lokale runbundles blijven een `[OPEN BESLISSING]`; de vaste levertijdweergave en definitieve data-/IA-uitvoer blijven afzonderlijk geblokkeerd.
-- **Welke taken daarna komen:** na de afzonderlijke fase-A-commit mag uitsluitend `BC-TECH-004` lokaal als governance-/documentatietaak starten. De overige tien `PROPOSED-TECH-*`-kandidaten blijven niet-officieel; `BC-TECH-001`, `BC-DATA-001`, `BC-IA-001` en alle theme-/Shopify-implementatietaken blijven geblokkeerd.
+- **Welke input nodig is:** voor `BC-TECH-005` zijn de actieve-themegebruiksmatrix, repository-audit, Theme Check-baseline, het goedgekeurde technical change workflow en lokale theme-code uitsluitend read-only beschikbaar. Runtime-toolkeuze, definitieve browsermatrix, fixturehervalidatie en artefactretentie blijven afzonderlijke open beslissingen.
+- **Welke taken daarna komen:** voer na de fase-A-commit uitsluitend `BC-TECH-005` lokaal/read-only uit. De overige negen niet-officiële kandidaten, waaronder het afzonderlijke `PROPOSED-TECH-12`, blijven voorstellen en worden niet geactiveerd. `BC-TECH-001`, `BC-DATA-001`, `BC-IA-001` en alle theme-/Shopify-implementatietaken blijven geblokkeerd.
 
 ## 3. Hoe dit masterplan gebruikt moet worden
 
@@ -66,7 +67,7 @@ Statusbeheer:
 - Een technische implementatie mag pas `REVIEW` worden nadat de vastgelegde technische controles slagen.
 - Visueel of functioneel werk mag alleen `DONE` worden na expliciete menselijke goedkeuring.
 - Voorbereidend read-only of documentatiewerk mag `DONE` zijn als bestaand bewijs uitvoering en resultaat aantoont.
-- Geen enkel lanceringsonderdeel is in versie 0.19 `DONE`; de dertien `DONE`-taken zijn governance-, read-only onderzoeks-, conceptuele documentatie- of lokale toolingbasistaken.
+- Geen enkel lanceringsonderdeel is in versie 0.21 `DONE`; de veertien `DONE`-taken zijn governance-, read-only onderzoeks-, conceptuele documentatie- of lokale toolingbasistaken.
 
 Bewijs en onderhoud:
 
@@ -602,7 +603,7 @@ Bevestigde regels:
 - Menselijke goedkeuring bepaalt wanneer zichtbaar/functioneel werk `DONE` wordt.
 - Shopify-publicatie staat los van Git-commit en vereist expliciete menselijke toestemming.
 
-`[OPEN BESLISSING]` Branchnaamconventie, pull-requestproces, reviewers, mergewijze, verplichte checks, commitgranulariteit en hotfixproces. Deze moeten vóór de eerste implementatietaak worden vastgelegd.
+`BC-TECH-004` heeft op 2026-08-16 het branchmodel, de branchregex, basiscommitcontrole, kleine commitgranulariteit, afzonderlijke gates A-G, niet-destructieve geschiedenis, afzonderlijke menselijke mergegoedkeuring en `--no-ff`-voorkeur menselijk goedgekeurd. Een formele GitHub Pull Request is nu niet verplicht. Reviewers en een eventueel afzonderlijk hotfixproces blijven per toekomstige taak of later governancebesluit vast te leggen; geen van deze procesregels geeft actuele implementatietoestemming.
 
 ## 52. Shopify preview-, release- en rollbackproces
 
@@ -620,7 +621,7 @@ Minimale gates:
 5. Codex neemt nooit zelfstandig aan dat preview naar productie mag;
 6. releasebewijs en post-releasecontrole worden vastgelegd.
 
-`[OPEN BESLISSING]` Exacte pushscope, releasevenster, backup, rollbacktheme/-commit, verantwoordelijkheden en noodprocedure. Tot dit is vastgesteld, is productiepublicatie `[GEBLOKKEERD]`.
+Het menselijk goedgekeurde `docs/TECHNICAL_CHANGE_WORKFLOW.md` bepaalt dat iedere remote branch push, development-previewpush, previewacceptatie, merge en live release een afzonderlijke menselijke gate vereist; targetidentiteit en livegrens worden direct vóór een toekomstige previewactie opnieuw read-only gecontroleerd. Exacte taakspecifieke pushscope, releasevenster, productiebackup/-rollbackbewijs, verantwoordelijkheden en noodprocedure blijven vóór de betreffende taak `[OPEN BESLISSING]`. Productiepublicatie blijft `[GEBLOKKEERD]`.
 
 ## 53. Definition of Ready
 
@@ -663,7 +664,7 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | 0 | Fundament en projectbesturing | `DONE` | Menselijk goedgekeurd permanent protocol, `AGENTS.md`-guardrails, Git-ignore, vier PowerShell-scripts en one-bundle reviewflow met raw completeness en `review_files/` | Onafhankelijke taak `BC-TECH-003` heeft het protocol gebruikt; implementatie blijft niet goedgekeurd |
 | 1 | Volledige inventarisatie | `DONE` | Shopify Admin-, actieve theme-, app-, data- en concurrentieonderzoeken | Op 2026-08-05 menselijk afgerond; bewijsgrenzen en open besluiten blijven bestaan |
 | 2 | Informatiearchitectuur en datamodel | `BLOCKED` | Leveranciersnulmeting en brononafhankelijk productinformatiecontract v0.1 `DONE`; definitieve data-/IA-uitvoer geblokkeerd | Oorspronkelijke bronnen plus afzonderlijke besluiten over veldcatalogus, Shopify-opslag, producttypen, categorieboom en filters |
-| 3 | Technische stabilisatie | `READY` | `BC-TECH-003` is `DONE`; uitsluitend governance-/documentatietaak `BC-TECH-004` is `READY` en niet gestart; `BC-TECH-001` blijft `BLOCKED` | Na fase-A-commit alleen het change-/preview-/merge-/rollbackrunbook lokaal uitwerken en menselijk laten beoordelen |
+| 3 | Technische stabilisatie | `READY` | `BC-TECH-003` en het menselijk goedgekeurde `BC-TECH-004` zijn `DONE`; uitsluitend lokale read-only ontwerp-/documentatietaak `BC-TECH-005` is `READY` en **NIET INHOUDELIJK GESTART**; `BC-TECH-001` blijft `BLOCKED` | Technische uitvoering van `BC-TECH-005` naar `REVIEW`, daarna menselijke beoordeling van matrix, fixtures, viewports, testlagen en runtimegrenzen |
 | 4 | Design system en globale websiteonderdelen | `BLOCKED` | UX-richting, componentregels, homepage, header en footer | Menselijke visuele goedkeuring en componentbewijs |
 | 5 | Categorieën, zoeken en filters | `BLOCKED` | Categorieplatform, productkaarten, zoeken, filters en merchandising | Kernreizen en SEO-routes goedgekeurd |
 | 6 | Productpaginaplatform | `BLOCKED` | Productpaginastandaard en producttypebasis | Data-, functionele en visuele acceptatie gehaald |
@@ -676,7 +677,7 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | 13 | Launch readiness en productiepublicatie | `BLOCKED` | Go/no-go, release, rollback en productiecontrole | Expliciete menselijke publicatiegoedkeuring |
 | 14 | Monitoring, optimalisatie en toekomstige API's | `DEFERRED` | Monitoring, optimalisaties en afzonderlijke feedintegraties | Prioriteit na lancering `[OPEN BESLISSING]` |
 
-Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003` en fase 0 zijn menselijk goedgekeurd en `DONE`; fase 3 staat uitsluitend voor de begrensde lokale governance-/documentatietaak `BC-TECH-004` op `READY` en **NIET INHOUDELIJK GESTART**. Fase 2 blijft voor definitieve data-/IA-uitvoer `BLOCKED`; geen branch, preview, Shopify-, theme- of technische implementatie is actief.
+Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004` en fase 0 zijn menselijk goedgekeurd en `DONE`; fase 3 staat uitsluitend voor de begrensde lokale read-only ontwerp-/documentatietaak `BC-TECH-005` op `READY` en **NIET INHOUDELIJK GESTART**. Fase 2 blijft voor definitieve data-/IA-uitvoer `BLOCKED`; geen branch, preview, Shopify-, theme- of technische implementatie is actief.
 
 ## 56. Werkstromen
 
@@ -693,7 +694,7 @@ Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afha
 | SEO | Structuur, techniek, indexatie en concurrentieonderzoek | `BC-SEO-001`, `BC-DISC-002` |
 | Categorieën | Informatiearchitectuur, collectieplatform en navigatie | `BC-IA-001`, `BC-CAT-001` |
 | UX/design | Design system, globale onderdelen en kernreizen | `BC-UX-001` |
-| Development / QA / release governance | Read-only stabilisatieplanning, reproduceerbare kwaliteitsbasis, change-/preview-/merge-/rollbackrunbook en later afzonderlijk gecontroleerde implementatie | `BC-TECH-002`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-001` en latere implementatietaken |
+| Development / QA / testontwerp / release governance | Read-only stabilisatieplanning, reproduceerbare kwaliteitsbasis, change-/preview-/merge-/rollbackrunbook, minimale smoke-/regressieontwerpbasis en later afzonderlijk gecontroleerde implementatie | `BC-TECH-002`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005`, `BC-TECH-001` en latere implementatietaken |
 | Performance | Budget, meting en optimalisatie | `BC-QA-001` |
 | Accessibility | Toetsenbord en toegankelijke componenten/reizen | `BC-QA-001` |
 | Logistiek | Voorraad, levertijd, dropshipping en verzending | `BC-LOG-*` |
@@ -709,14 +710,14 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 
 | Status | Aantal |
 | --- | ---: |
-| `DONE` | 13 |
+| `DONE` | 14 |
 | `READY` | 1 |
 | `IN_PROGRESS` | 0 |
 | `NOT_STARTED` | 0 |
 | `BLOCKED` | 26 |
 | `REVIEW` | 0 |
 | `DEFERRED` | 3 |
-| **Totaal** | **43** |
+| **Totaal** | **44** |
 
 ### BC-GOV-001 - Repository-audit
 
@@ -834,7 +835,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Technische controles:** Structuur-, telling-, marker-, duplicaat-, status-, route-, instructie-, scope- en Git-diffcontrole.
 - **Menselijke controle:** De projecteigenaar heeft versie 0.1 op 2026-08-04 expliciet goedgekeurd als basis voor verder onderzoekswerk, niet voor implementatie.
 - **Bewijs van voltooiing:** `docs/MASTERPLAN.md`; fundamentcommit `302a42a` (`docs: add BadkamerCity masterplan foundation`); governancecommit `d22e3e32d04fc472996064cc14cff922396c2d05` (`docs: activate discovery workflow and add Codex guidance`); menselijke onderzoeksgoedkeuring van 2026-08-04.
-- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.19 blokkeert alle niet afzonderlijk toegestane implementatie daarom expliciet.
+- **Risico:** Onderzoeksgoedkeuring kan ten onrechte als implementatietoestemming worden gelezen; versie 0.20 blokkeert alle niet afzonderlijk toegestane implementatie daarom expliciet.
 - **Rollback of herstelwijze:** Corrigeer of revert uitsluitend via een afzonderlijke beoordeelde documentatiecommit.
 - **Laatst bijgewerkt:** 2026-08-04.
 
@@ -875,7 +876,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Aanleiding:** Producten, collecties, metafields, metaobjects, menu's, apps, instellingen en actieve templates waren buiten de lokale theme-snapshot onvoldoende bewezen.
 - **Scope:** Read-only inventaris met bron, datum, aantallen/structuur waar beschikbaar, actieve koppelingen en onzekerheden.
 - **Buiten scope:** Ieder type Admin-, product-, data-, theme- of appwijziging.
-- **Afhankelijkheden:** `BC-GOV-005` en `BC-GOV-006` zijn `DONE`; de projecteigenaar heeft historisch de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.19 activeert geen Shopify-taak en blokkeert nieuwe Shopify-benadering; uitsluitend de lokale governance-/documentatietaak `BC-TECH-004` is `READY`.
+- **Afhankelijkheden:** `BC-GOV-005` en `BC-GOV-006` zijn `DONE`; de projecteigenaar heeft historisch de officiële Shopify CLI `store auth`-route, de store en dertien read-scopes expliciet goedgekeurd. Versie 0.20 activeert geen Shopify-taak en blokkeert nieuwe Shopify-benadering; `BC-TECH-004` wacht uitsluitend als lokale governance-/documentatietaak op menselijke `REVIEW`.
 - **Benodigde input:** Volledig ontvangen en gebruikt: Shopify CLI `4.6.0`, store `fpa9hu-i3.myshopify.com`, uitsluitend de verleende read-scopes en expliciete menselijke beoordeling van rapport, beperkingen en onzekerheden.
 - **Verwachte bestanden/systemen:** Shopify Admin read-only, `docs/SHOPIFY_ADMIN_INVENTORY.md` en dit masterplan.
 - **Uitvoer:** Volledig bijgewerkt `docs/SHOPIFY_ADMIN_INVENTORY.md` met aantallen, structuren, representatieve steekproeven, queryfamilies, scopes, statuslabels, beperkingen, gevolgen en aanbevolen vervolgstap.
@@ -1082,7 +1083,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Rollback of herstelwijze:** Documentatietaak; fouten uitsluitend via een aparte beoordeelde documentatiecorrectie herstellen.
 - **Laatst bijgewerkt:** 2026-08-11.
 
-**Goedgekeurd onderzoeksresultaat:** 21 bevindingen (2 P0, 15 P1, 4 P2), twaalf kandidaatdeeltaken en een minimale regressie-/preview-/rollbackbasis. `PROPOSED-TECH-01` is als `BC-TECH-003` uitgevoerd, menselijk goedgekeurd en `DONE`. `PROPOSED-TECH-10` is nu officieel `BC-TECH-004`, staat `READY` en is **NIET INHOUDELIJK GESTART**. De overige tien kandidaten blijven uitsluitend voorstellen. De vaste onbewezen levertijdtekst is het hoogste actieve klant-/bedrijfsrisico en blijft voor een oplossing afhankelijk van een menselijke bedrijfsregelbeslissing. Geen defect is opgelost; classificatie geeft geen wijzigings- of verwijdertoestemming.
+**Goedgekeurd onderzoeksresultaat:** 21 bevindingen (2 P0, 15 P1, 4 P2), twaalf kandidaatdeeltaken en een minimale regressie-/preview-/rollbackbasis. `PROPOSED-TECH-01` is als `BC-TECH-003` uitgevoerd, menselijk goedgekeurd en `DONE`. `PROPOSED-TECH-10` is officieel `BC-TECH-004`, technisch als governance-/documentatietaak uitgevoerd en staat `REVIEW`. De overige tien kandidaten blijven uitsluitend voorstellen. De vaste onbewezen levertijdtekst is het hoogste actieve klant-/bedrijfsrisico en blijft voor een oplossing afhankelijk van een menselijke bedrijfsregelbeslissing. Geen defect is opgelost; classificatie geeft geen wijzigings- of verwijdertoestemming.
 
 ### BC-TECH-003 - Reproduceerbare Theme Check- en kwaliteitsbasis
 
@@ -1115,7 +1116,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Titel:** Technische wijzigings-, preview- en rollbackwerkwijze vastleggen
 - **Fase:** Fase 3 - technische stabilisatie
 - **Werkstroom:** Development / QA / release governance
-- **Status:** `READY` - **NIET INHOUDELIJK GESTART**
+- **Status:** `DONE`
 - **Prioriteit:** `P0`
 - **Herkomst:** `PROPOSED-TECH-10` uit `docs/TECHNICAL_STABILIZATION_PLAN.md`.
 - **Doel:** Een vaste, controleerbare workflow vastleggen voor toekomstige theme-codewijzigingen vanaf taakgoedkeuring tot branch, technische validatie, development-preview, menselijke review, merge en rollback, zonder binnen `BC-TECH-004` zelf een branch, preview of codewijziging uit te voeren.
@@ -1125,14 +1126,41 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Afhankelijkheden:** `BC-GOV-006`, `BC-TECH-002` en `BC-TECH-003` zijn `DONE`.
 - **Benodigde input:** Git-basis, development-themebewijs, Theme Check-baseline, stabilisatieplan en menselijke governancekeuzes uit deze opdracht.
 - **Verwachte bestanden/systemen:** `docs/TECHNICAL_CHANGE_WORKFLOW.md`; `docs/MASTERPLAN.md`; Git alleen read-only; Shopify uitsluitend als bestaande documentatiebron.
-- **Uitvoer:** Een bestuurbaar runbook waarmee iedere toekomstige technische codewijziging in kleine, terugdraaibare stappen kan verlopen.
+- **Uitvoer:** `docs/TECHNICAL_CHANGE_WORKFLOW.md` met 42 hoofdstukken, exacte branchregex, gates A-G, Theme Check-/fingerprintbeleid, 15 state-machineovergangen, 13 scenario's, 14 verboden acties, rollbackscenario's A-D, de operationele FINAL_REPORT-volgorde en menselijke goedkeuring.
 - **Acceptatiecriteria:** Branchbasis en naamgeving zijn exact; directe code-implementatie op `main` is verboden; merge vereist expliciete menselijke goedkeuring; preview vereist afzonderlijke toestemming en targetcontrole; livepublicatie is altijd een aparte taak; rollbackscenario's zijn uitgewerkt; Theme Check-baseline is verplichte pre-/postgate; bewijsvolgorde is vastgelegd; geen Git/Shopify/theme-mutatie wordt binnen deze taak uitgevoerd.
 - **Technische controles:** Git-status/HEAD; branchnaamregex; documentstructuur; state-machineconsistentie; verboden-actiematrix; Theme Check-gateverwijzing; rollbackmatrix; geen theme-codewijziging; `git diff --check`; one-bundle-finalisatie.
-- **Menselijke controle:** Projecteigenaar beoordeelt de workflow voordat `BC-TECH-004` `DONE` wordt en voordat de eerste daadwerkelijke technische codebranch mag starten.
-- **Bewijs van voltooiing:** Nog niet beschikbaar; taak wordt na de fase-A-commit inhoudelijk als documentatietaak uitgevoerd.
+- **Menselijke controle:** De projecteigenaar heeft de workflow, branchregels/-regex, gates A-G, previewtargetgrenzen, Theme Check-gates, mergebeleid, rollback A-D en FINAL_REPORT-volgorde op 2026-08-16 binnen de documentatiescope goedgekeurd. Iedere latere implementatie-, preview-, merge- of releasegate blijft afzonderlijk.
+- **Menselijk goedgekeurd:** 2026-08-16.
+- **Bewijs van voltooiing:** Fase-A-commit `10254b5ca652ebbc88b2dc33b134dc74b324fba6`; one-bundle-run `BC-TECH-004_20260812-164925`; `docs/TECHNICAL_CHANGE_WORKFLOW.md`; string-only branchregexzelftest met drie geldige en zes ongeldige voorbeelden zonder refwijziging; mechanische 41-hoofdstukken-, gates-, state-machine-, scenario-, verboden-matrix- en veiligheidsvalidatie; hoofdstuk 42 met expliciete menselijke goedkeuring. Geen branch, Shopify- of theme-codewijziging; de reviewuitvoering zelf is niet gecommit of gepusht.
 - **Risico:** Een workflowdocument kan ten onrechte als permanente algemene implementatietoestemming worden gelezen. Daarom blijft iedere technische taak een aparte menselijke toestemming vereisen.
 - **Rollback of herstelwijze:** Documentatietaak; herstel uitsluitend via een beoordeelde documentatiecommit. Er wordt binnen `BC-TECH-004` geen branch, theme of code gewijzigd.
-- **Laatst bijgewerkt:** 2026-08-12.
+- **Laatst bijgewerkt:** 2026-08-16.
+
+### BC-TECH-005 - Minimale smoke- en regressiebasis vastleggen
+
+- **ID:** `BC-TECH-005`
+- **Titel:** Minimale smoke- en regressiebasis vastleggen
+- **Fase:** Fase 3 - technische stabilisatie
+- **Werkstroom:** Development / QA / testontwerp
+- **Status:** `READY`
+- **Prioriteit:** `P0`
+- **Herkomst:** `PROPOSED-TECH-02` uit `docs/TECHNICAL_STABILIZATION_PLAN.md`.
+- **Doel:** Een kleine maar voldoende brede, herhaalbare en privacyveilige smoke-/regressiematrix ontwerpen waarmee toekomstige technische wijzigingen aantoonbaar kunnen worden beoordeeld vóór preview, merge en release.
+- **Aanleiding:** `BC-TECH-002` bewees dat geen formele smoke-, browser-, fixture- of regressiebasis bestaat. `BC-TECH-003` levert de statische Theme Check-basis. `BC-TECH-004` levert de technische wijzigings- en rollbackworkflow. Voor daadwerkelijke theme-codewijzigingen ontbreekt nu nog de minimale functionele regressiedefinitie.
+- **Scope:** Read-only analyse van bestaande actieve theme-paden, bestaande bewijsdocumenten, lokale responsive breakpoints en huidige routeklassen; ontwerpen van testcases, fixtureklassen, precondities, stappen, verwacht resultaat, stopvoorwaarden, bewijsvelden, prioriteitslagen en change-impactmatrix.
+- **Buiten scope:** Browsertests werkelijk uitvoeren, Shopify benaderen, preview gebruiken, cartmutaties uitvoeren, accountdata lezen, bestellingen plaatsen, formulieren versturen, screenshots maken, Playwright/Cypress installeren, CI toevoegen, theme-code wijzigen of defects oplossen.
+- **Afhankelijkheden:** `BC-GOV-006`, `BC-TECH-002`, `BC-TECH-003` en `BC-TECH-004` zijn `DONE`.
+- **Benodigde input:** Actieve-themegebruiksmatrix, repository-audit, Theme Check-baseline, technical change workflow en lokale theme-code uitsluitend read-only.
+- **Verwachte bestanden/systemen:** `docs/SMOKE_REGRESSION_BASELINE.md`; `docs/MASTERPLAN.md`; theme-code uitsluitend read-only.
+- **Uitvoer:** Menselijk te beoordelen smoke-/regressiebaseline met test-ID's, route-/componentdekking, fixture-eisen, testlagen, referentieviewports, toetsenborddekking, structured-data- en performance-basiseisen, bewijsformaten en stopvoorwaarden.
+- **Acceptatiecriteria:** Alle kritieke huidige kernreizen zijn opgenomen of gemotiveerd uitgesloten; iedere testcase heeft een unieke ID, preconditie, stappen, verwacht resultaat, bewijsbehoefte en failureclassificatie; fixturekeuzes verzinnen geen productdata; V2 en legacy zijn correct gescheiden; account-/checkouttests lezen geen persoonsgegevens; responsive keuzes zijn herleidbaar naar bestaande theme-breakpoints; binnen deze taak vindt geen browser- of Shopify-uitvoering plaats.
+- **Technische controles:** Theme-/template-/sectionreferenties; read-only breakpointinventaris; actieve routeclassificatie; test-ID-uniciteit; verplichte kolommen; kernreizenscope; fixtureclassificatie; privacy-/mutatiecontrole; structuurvalidator; Git-whitelist; `git diff --check`; one-bundle-finalisatie.
+- **Menselijke controle:** Projecteigenaar beoordeelt later matrix, fixturekeuze, referentieviewports, testlagen en toekomstige uitvoeringsgrenzen voordat `BC-TECH-005` `DONE` wordt.
+- **Risico:** Een documentatiematrix kan ten onrechte worden gelezen als bewijs dat de journeys daadwerkelijk werken. Iedere testcase blijft `UNEXECUTED` totdat een latere taak expliciet runtime-uitvoering toestaat.
+- **Rollback of herstelwijze:** Documentatietaak; herstel via beoordeelde documentatiecommit. Geen theme-/Shopifyrollback nodig.
+- **Laatst bijgewerkt:** 2026-08-16.
+
+**Startgrens:** `BC-TECH-005` staat `READY` en is **NIET INHOUDELIJK GESTART**. `PROPOSED-TECH-12` blijft afzonderlijk en niet-officieel; deze taak kiest geen definitieve opslagarchitectuur of retentie voor grote testartefacten.
 
 ### BC-UX-001 - Design system en globale onderdelen
 
@@ -1802,6 +1830,8 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 
 **Aanvullende beslisregel `BC-DEC-032` (2026-08-12):** `PROPOSED-TECH-10` wordt officiële taak `BC-TECH-004`. `main` blijft de enige integratie-/bron-van-waarheidbranch; toekomstige technische implementatie gebruikt pas na officiële taak, exacte scope en afzonderlijke menselijke toestemming een task branch volgens `^task/bc-[a-z]+-[0-9]{3}-[a-z0-9]+(?:-[a-z0-9]+)*$`. Remote branch push, development-preview, previewacceptatie, merge en live release hebben afzonderlijke menselijke gates; merge gebruikt later bij voorkeur niet-destructief `--no-ff`; geen automatische branchopruiming. Alleen `BadkamerCity Development` (`192770375946`) is een potentieel previewtarget na nieuwe toestemming en actuele targetcontrole; `192796786954` is verboden en live `189463068938` is nooit developmenttarget. Deze keuzes definiëren alleen toekomstig proces en geven nu geen toestemming voor branch, push, merge, preview, Shopify-toegang of theme-codewijziging.
 
+**Aanvullende beslisregel `BC-DEC-033` (2026-08-16):** de projecteigenaar keurt `BC-TECH-004` binnen de governance-/documentatiescope definitief goed. `main` blijft de integratie- en bron-van-waarheidbranch; theme-code wordt niet rechtstreeks op `main` geïmplementeerd; task branches volgen de goedgekeurde regex en exacte basiscommit; gates A-G blijven afzonderlijk; `192770375946` is alleen na nieuwe toestemming en actuele targetcontrole een potentieel previewtarget; `192796786954` blijft verboden; live `189463068938` is nooit developmenttarget; Theme Check pre/post, geen stille suppressie/rebaseline, kleine commits, geen history rewrite, afzonderlijke GATE F, `--no-ff`-voorkeur en rollback A-D zijn bindend. De FINAL_REPORT-volgorde is goedgekeurd. `PROPOSED-TECH-02` wordt officiële taak `BC-TECH-005`, als enige taak `READY` en **NIET INHOUDELIJK GESTART**; deze beslissing geeft geen branch-, preview-, Shopify-, theme-code-, merge- of releasetoestemming.
+
 ## 59. Open vragenregister
 
 | ID | Open vraag | Waarom belangrijk | Afhankelijke taak | Beslisser | Status |
@@ -1827,7 +1857,7 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-019` | Welke browsers, apparaten en assistieve technologie worden formeel ondersteund? | Nodig voor meetbare QA en DoD | `BC-QA-001` | Eigenaar na analytics/UX-advies | `[OPEN BESLISSING]` |
 | `BC-Q-020` | Welke performancebudgetten gelden per kernpagina? | Zonder grens is verbetering niet toetsbaar | `BC-QA-001`, performancewerk | Technisch verantwoordelijke/eigenaar | `[OPEN BESLISSING]` |
 | `BC-Q-021` | Welke apps zijn afhankelijk van theme-markup of app-embeds? | Wijzigingen kunnen verborgen integraties breken | `BC-DISC-001`, alle implementatie | Shopify-beheerder `[NOG ONDERZOEKEN]` | Nul actieve JSON-appblocks/embeds bewezen; acht sections ondersteunen `@app` en dynamische injectiepunten bestaan; volledige applijst **NIET TOEGANKELIJK** |
-| `BC-Q-022` | Wat is het exacte branch-, PR-, release- en rollbackproces? | Nodig vóór veilige implementatie/publicatie | `BC-TECH-004`, `BC-TECH-001`, `BC-REL-001` | Eigenaar en technisch verantwoordelijke | **BESLOTEN 2026-08-12 voor technische change-governance:** `main` is integratiebasis; technische codewijzigingen gebruiken na aparte toestemming een gevalideerde task branch, afzonderlijke gates A-G, optionele gecontroleerde development-preview, menselijke mergegoedkeuring, niet-destructieve geschiedenis en scenarioafhankelijke rollback. `BC-TECH-004` documenteert dit runbook; live release blijft een aparte taak |
+| `BC-Q-022` | Wat is het exacte branch-, PR-, release- en rollbackproces? | Nodig vóór veilige implementatie/publicatie | `BC-TECH-004`, `BC-TECH-001`, `BC-REL-001` | Eigenaar en technisch verantwoordelijke | **BESLOTEN EN MENSELIJK GOEDGEKEURD 2026-08-16:** `docs/TECHNICAL_CHANGE_WORKFLOW.md` legt `main` als integratiebasis, gevalideerde task branch, gates A-G, optionele gecontroleerde development-preview, menselijke mergegoedkeuring, niet-destructieve geschiedenis, bewijsvolgorde en rollback A-D vast. `BC-TECH-004` staat `DONE`; een formele PR blijft nu niet verplicht en live release blijft een aparte taak/gate |
 | `BC-Q-023` | Welke andere productgroepen krijgen een calculator/configurator? | Beïnvloedt datamodel en fase 7-scope | Toekomstige `BC-CONF-*` | Eigenaar na assortimentonderzoek | `[NOG ONDERZOEKEN]` |
 | `BC-Q-024` | Hoe werkt een toekomstige complete-badkamerconfigurator? | Moet later mogelijk zijn zonder huidige scope te verstoren | `BC-CONF-003` | Eigenaar | `[OPEN BESLISSING]` |
 | `BC-Q-026` | Wie is eigenaar van theme `192796786954`, wat was het exacte doel en waarom is het ontstaan? | Voorkomt onbedoelde wijziging of verwijdering van een bestaande testomgeving | `BC-DISC-001`, alle themetaken | Projecteigenaar/technisch eigenaar | `[NOG ONDERZOEKEN]` |
@@ -1837,7 +1867,7 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-030` | Welke toegestane tooling, viewports en criteria gelden voor een latere echte mobiele, desktop-, zoek- en toetsenbordtest? | HTML alleen bewijst geen visueel of interactief gedrag | `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-QA-001` | Projecteigenaar en technisch/UX-verantwoordelijke | `[OPEN BESLISSING]` |
 | `BC-Q-031` | Welke leveranciers-/importbestanden en scripts zijn lokaal werkelijk aanwezig, welke ontbreken en wie is bronhouder per veld? | Zonder bron-, veld- en eigenaarschapbewijs kan `BC-DATA-001` een verkeerde definitieve mapping vastleggen | Latere taken per leverancier, daarna `BC-DATA-001`, `BC-LOG-001`, `BC-PROD-001` | Projecteigenaar en productdata-/operationele eigenaar `[NOG ONDERZOEKEN]` | Lokaal **BEWEZEN en goedgekeurd**: nul oorspronkelijke bronnen, nul importbestanden, nul import-/generatiescripts, zes afgeleide switcherdata-assets en vijf relevante storefront-JavaScriptbestanden. Externe bestanden, veldbronhouders en eigenaarschap blijven `[NOG ONDERZOEKEN]`; geen verder lokaal zoekwerk binnen `BC-DATA-002` |
 | `BC-Q-032` | Welke van de 190 logische contractkeys, vereisteniveaus, leegstaatregels, kwaliteitsgates en eigenaarsrollen worden veld- en typegewijs definitief goedgekeurd? | De bestuurde werkbasis mag niet stil als definitieve Shopify-mapping of bedrijfsregel worden gebruikt | `BC-DATA-001` en functionele taken | Projecteigenaar plus bevoegde domeineigenaars | `[OPEN BESLISSING]`; v0.1 is als conceptuele werkbasis goedgekeurd, individuele keuzes niet |
-| `BC-Q-033` | Welke kleine kandidaatdeeltaak uit `BC-TECH-002` krijgt als eerste afzonderlijke uitvoeringstoestemming? | De brede epic mag niet direct starten en technische classificatie is geen implementatiebesluit | `BC-TECH-002`, `BC-TECH-003`, `BC-TECH-004` | Projecteigenaar plus technisch verantwoordelijke | **BESLOTEN 2026-08-12:** `PROPOSED-TECH-01` is als `BC-TECH-003` uitgevoerd, goedgekeurd en `DONE`; daarna is alleen `PROPOSED-TECH-10` officieel gemaakt als documentatietaak `BC-TECH-004` en `READY`. De overige tien kandidaten blijven niet-officieel |
+| `BC-Q-033` | Welke kleine kandidaatdeeltaak uit `BC-TECH-002` krijgt als eerste afzonderlijke uitvoeringstoestemming? | De brede epic mag niet direct starten en technische classificatie is geen implementatiebesluit | `BC-TECH-002`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005` | Projecteigenaar plus technisch verantwoordelijke | **BESLOTEN 2026-08-16:** `PROPOSED-TECH-01` is `BC-TECH-003` en `DONE`; `PROPOSED-TECH-10` is `BC-TECH-004` en `DONE`; `PROPOSED-TECH-02` is officieel `BC-TECH-005`, als enige taak `READY` en **NIET INHOUDELIJK GESTART**. De overige negen kandidaten blijven niet-officieel |
 | `BC-Q-034` | Wat mag een klant zien wanneer geen actuele, brongebonden levertijd is bewezen? | De actieve PDP toont nu vaste tekst `Verwachte levertijd: 8 - 9 weken` zonder bewezen databron | Afzonderlijke toekomstige technische taak, `BC-LOG-001` | Projecteigenaar plus commercieel en operationeel/logistiek eigenaar | `[OPEN BESLISSING]`; kies verbergen of een exact goedgekeurde fallback, bron, actualiteitsgrens en eigenaar; geen vervangende tekst is vastgesteld |
 | `BC-Q-035` | Welke Shopify CLI-/Theme Check-versie, configuratie en updateprocedure gelden als reproduceerbare kwaliteitsbasis? | De volledige run is bewijsbaar, maar configuratie ontbrak, een externe schemafout is instabiel en de CLI dreef tijdens eerder onderzoek van 4.6.0 naar 4.6.1 | `BC-TECH-003` | Projecteigenaar plus technisch eigenaar | **BESLOTEN 2026-08-12:** projectbaseline CLI `4.6.1`; uitsluitend `shopify version`; geen gewone installatie/update; aanbevolen regelset via `extends: theme-check:recommended` zonder suppressies; goedgekeurde wrapper; twee identieke runs met 19 offenses/15 bestanden/3 errors/16 warnings/19 fingerprints. Suppressie, CLI-/regelset-/fingerprint-/beleidswijziging vereist afzonderlijke rebaseline |
 | `BC-Q-036` | Welke definitieve retentietermijn en eigenaar gelden voor lokale Codex-runbundles na menselijke review? | Volledige logs en reviewbestanden verbeteren controleerbaarheid maar kunnen onnodig lang lokaal blijven | Alle toekomstige taken | Projecteigenaar plus technisch en privacyverantwoordelijke | `[OPEN BESLISSING]`; protocol en one-bundle-uploadselectie zijn menselijk goedgekeurd en `DONE`, maar retentietermijn, lokale opschoning en eigenaar blijven afzonderlijk te besluiten |
@@ -1880,7 +1910,8 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en 
 | `BC-R-030` | Theme Check was niet gepind of geconfigureerd; de als versieprobe bedoelde opdracht `shopify theme check -v` activeerde eerder een globale CLI-self-update buiten de repository van 4.6.0 naar 4.6.1 | Niet-reproduceerbare kwaliteitsgate en onverwachte lokale toolingwijziging | `BC-TECH-003` valideerde exact CLI `4.6.1` via `shopify version`, aanbevolen config zonder suppressies, veilige wrapper en twee identieke runs; geen installatie/update | Beheerst en menselijk goedgekeurd; `BC-TECH-003` `DONE`; CLI-/regelsetwijziging vereist expliciete rebaseline |
 | `BC-R-031` | Een onvolledig uitvoeringslog kan fouten of herstelacties verliezen; een te ruim log kan credentials, klant-/orderdata of persoonsgegevens vastleggen | Oncontroleerbaar bewijs of ernstig privacy-/securityrisico | Menselijk goedgekeurde one-bundle-flow met raw-quartetcompleteness, unieke step-ID's, gescheiden streams, hashes, foutbehoud, verboden reviewbestandklassen, Sensitive-redactie, secret-/privacyscan en genegeerde runmap; eerste onafhankelijke praktijktest en terughoudende commandokeuze blijven vereist | Beheerst na menselijke review, maar niet absoluut uitgesloten; retentie en menselijk upload-/privacytoezicht blijven `[OPEN BESLISSING]` |
 | `BC-R-032` | Een geregistreerde Theme Check-baseline kan ten onrechte als acceptatie van bestaande offenses worden gelezen | Technische schuld kan worden genormaliseerd en nieuwe regressies kunnen worden gemist | Baseline betekent uitsluitend "bestond vóór de wijziging"; offensefixes vereisen aparte taken; nieuwe, uitgebreidere of ernstigere offenses zijn regressies; suppressies en rebaseline vereisen expliciete menselijke goedkeuring | Beheerst beleid is menselijk goedgekeurd; risico blijft doorlopend bij iedere technische taak |
-| `BC-R-033` | Een toekomstige wijziging kan op de verkeerde branch starten, naar een onjuist/ongeverifieerd previewtheme gaan of zonder afzonderlijke menselijke mergegate op `main` belanden | Verlies van wijzigingsisolatie, beschadigd previewtarget, onbedoelde integratie of live-impact | `BC-TECH-004` legt exact branchregex, basiscommitbewijs, gates A-G, targetcontrole, verboden targets, niet-destructief mergebeleid, bewijsvolgorde en vier rollbackposities vast | Actief; runbooktaak `READY`, geen branch/preview/merge nu toegestaan |
+| `BC-R-033` | Een toekomstige wijziging kan op de verkeerde branch starten, naar een onjuist/ongeverifieerd previewtheme gaan of zonder afzonderlijke menselijke mergegate op `main` belanden | Verlies van wijzigingsisolatie, beschadigd previewtarget, onbedoelde integratie of live-impact | Het menselijk goedgekeurde `docs/TECHNICAL_CHANGE_WORKFLOW.md` legt exact branchregex, basiscommitbewijs, gates A-G, targetcontrole, verboden targets, niet-destructief mergebeleid, bewijsvolgorde, state machine en vier rollbackposities vast | Procesbasis `DONE`; geen branch/preview/merge nu toegestaan; risico blijft per toekomstige taak actief |
+| `BC-R-034` | Een ontworpen smoke-/regressiematrix kan ten onrechte als bewijs van werkende storefrontjourneys of volledige browserdekking worden gelezen | Ongeteste regressies kunnen als PASS worden behandeld of een releasegate omzeilen | `BC-TECH-005` labelt alle runtimecases `UNEXECUTED`/`NOT_RUN`, scheidt codebewijs van runtimebewijs en vereist latere expliciete fixture-, tool-, preview- en menselijke gates | Actief; ontwerp staat `READY` en is **NIET INHOUDELIJK GESTART** |
 
 ## 61. Afhankelijkhedenregister
 
@@ -1902,7 +1933,8 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en 
 | `BC-DEP-014` | Read-only technische decompositie en nulmeting | Veilige opsplitsing van de brede `BC-TECH-001`-epic | 21 bevindingen, twaalf kandidaatdeeltaken, regressiebasis, uitvoeringsvolgorde en expliciete blokkades zonder codewijziging | `BC-TECH-002`; `DONE` op 2026-08-11; kandidaten zijn niet actief en implementatie blijft geblokkeerd |
 | `BC-DEP-015` | Permanent lokaal Codex-uitvoeringslogboek | Controleerbaarheid van alle toekomstige Codex-taken | Menselijk goedgekeurde genegeerde runmap, commandologging, note/diffregistratie, raw completeness, hashgecontroleerde reviewbestanden en zelfstandige one-bundle-handoff | `DONE` via `BC-GOV-006` op 2026-08-11; `BC-TECH-003` heeft de eerste onafhankelijke praktijktest afgerond |
 | `BC-DEP-016` | Reproduceerbare lokale Theme Check-basis | Betrouwbare statische vergelijking in latere technische taken | Exacte CLI-guard `4.6.1`, aanbevolen config zonder suppressies, veilige wrapper, twee identieke runs, 19 fingerprints en expliciet baseline-/rebaselinebeleid | `DONE` via `BC-TECH-003` en menselijke goedkeuring op 2026-08-12; rebaseline vereist afzonderlijk besluit |
-| `BC-DEP-017` | Technische change-, preview-, merge- en rollbackwerkwijze | Iedere toekomstige theme-codeimplementatie en latere merge-/releasevoorbereiding | Menselijk beoordeeld runbook met branchbasis/-regex, gates A-G, Theme Check pre-/postgate, previewtargetcontrole, bewijsvolgorde, state machine en rollbackscenario's | `BC-TECH-004`; `READY` en **NIET INHOUDELIJK GESTART**; technische implementatie blijft geblokkeerd |
+| `BC-DEP-017` | Technische change-, preview-, merge- en rollbackwerkwijze | Iedere toekomstige theme-codeimplementatie en latere merge-/releasevoorbereiding | Menselijk beoordeeld runbook met branchbasis/-regex, gates A-G, Theme Check pre-/postgate, previewtargetcontrole, bewijsvolgorde, state machine en rollbackscenario's | `DONE` via `BC-TECH-004` en menselijke goedkeuring op 2026-08-16; iedere concrete gate blijft afzonderlijk en technische implementatie blijft geblokkeerd |
+| `BC-DEP-018` | Minimale functionele smoke-/regressieontwerpbasis | Toetsbare toekomstige preview-, merge- en releasebeoordeling naast Theme Check | Menselijk beoordeelde route-, fixture-, testlaag-, breakpoint-, testcase-, bewijs-, failure-, privacy- en change-impactmatrix zonder runtimeclaim | `BC-TECH-005`; `READY` en **NIET INHOUDELIJK GESTART**; uitvoering uitsluitend lokaal/read-only |
 
 ## 62. Bewijs- en referentieregister
 
@@ -1955,6 +1987,10 @@ De loggingbewijzen `BC-EV-024` tot en met `BC-EV-029` activeren geen technische 
 **`BC-EV-032` - Reproduceerbare Theme Check-baseline (2026-08-12):** `.theme-check.yml`, `scripts/run-theme-check.ps1`, `docs/THEME_CHECK_BASELINE.md` en run `docs/_codex_runs/BC-TECH-003_20260812-132647/` bewijzen CLI `4.6.1`, aanbevolen config zonder suppressies, een niet-mutatieve wrapper en twee volledige runs met elk exitcode `1`, 19 offenses in 15 bestanden, 3 errors, 16 warnings, raw JSON SHA-256 `e124b30dd16f97c9dcfed6a60901e65997f23d79801d4922e1369f8700da10ec` en fingerprintset SHA-256 `79b76ec4226df18c7cc68aca755ade5878a0b4bfab767f376b53d265794fe959`. Achttien offenses zijn lokale bestaande codebaseline en één actuele `ValidJSON`-offense is concreet remote-schema-/toolingafhankelijk. Geen offense of themebestand is gewijzigd; fase B is niet gecommit of gepusht.
 
 **`BC-EV-033` - Menselijke BC-TECH-003-review en operationele les (2026-08-12):** de projecteigenaar keurt de one-bundle `BC-TECH-003_20260812-132647`, CLI-baseline `4.6.1`, config zonder suppressies, wrapper, twee identieke baseline-runs, 19 offenses/15 bestanden/3 errors/16 warnings/19 fingerprints en de 18+1-classificatie binnen de toolingbaseline-scope goed. Bestaande offenses blijven geen kwaliteitsacceptatie en iedere fix of rebaseline vereist een aparte taak/besluit. `FULL_EXECUTION_LOG.md`, raw evidence en ERROR-/RECOVERY-notes bevatten alle late finalisatiepogingen; dat het eerder geschreven `FINAL_REPORT.md` niet iedere latere retry samenvatte is een niet-blokkerende workflowles. Voortaan volgt definitieve FINAL_REPORT-refresh pas na de laatste normale preflight en direct vóór finalisatie. Geen raw bewijs, Shopify- of theme-codewijziging is verloren of uitgevoerd.
+
+**`BC-EV-034` - Technische change-workflowrun (2026-08-12):** fase-A-commit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` bevat exact de vier goedgekeurde baseline-/masterplanbestanden en staat op `main` en `origin/main`. `docs/TECHNICAL_CHANGE_WORKFLOW.md` en run `docs/_codex_runs/BC-TECH-004_20260812-164925/` bewijzen een 41-delig lokaal runbook met branchregex, drie geldige en zes ongeldige stringcases, ongewijzigde Git-refs, gates A-G, 15 state-machineovergangen, 13 scenario's, 14 verboden acties, Theme Check pre-/postgate, target-ID-grenzen, rollback A-D en de FINAL_REPORT-volgordeles. Geen branch, remote branch push, merge, preview, Shopify- of theme-codehandeling is uitgevoerd; alleen dit document en masterplan 0.20 zijn fase-B-wijzigingen en blijven ongecommit voor menselijke review.
+
+**`BC-EV-035` - Menselijke BC-TECH-004-goedkeuring en workflowbewijs (2026-08-16):** de projecteigenaar keurt `BC-TECH-004` en `docs/TECHNICAL_CHANGE_WORKFLOW.md` binnen de documentatiescope goed. One-bundle-run `BC-TECH-004_20260812-164925` bewijst de 41 technische hoofdstukken, string-only validatie van de branchregex met drie geldige en zes ongeldige voorbeelden, gates A-G, state machine, scenario-/verboden-actiematrix, Theme Check pre-/postgate, previewtargetgrenzen, rollback A-D, FINAL_REPORT-volgorde en ongewijzigde Git-refs. Hoofdstuk 42 legt de menselijke goedkeuring vast. Er is geen branch gemaakt, Shopify niet benaderd en geen theme-code gewijzigd. Dit bewijs geeft geen algemene implementatie-, preview-, merge- of releasetoestemming.
 
 ## 63. Controlechecklists
 
@@ -2041,10 +2077,22 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 - [x] `PROPOSED-TECH-10` is door de projecteigenaar officieel als `BC-TECH-004` toegestaan.
 - [x] Volledig taakrecord, afhankelijkheden, toegestane documentatie, acceptatie, technische controles, risico en rollback zijn vastgelegd.
 - [x] `main`, task-branchregex, afzonderlijke gates A-G, niet-destructief mergebeleid, previewtargetgrenzen, Theme Check-gates en vier rollbackposities zijn als governancekeuzes vastgelegd.
-- [x] `BC-TECH-004` en uitsluitend het relevante deel van fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART**.
-- [ ] Na de fase-A-commit uitsluitend `docs/TECHNICAL_CHANGE_WORKFLOW.md` en dit masterplan wijzigen; geen branch, Shopify-, theme- of technische implementatie uitvoeren.
-- [ ] Documentstructuur, branchregex, state machine, scenario's, verboden-actiematrix, gates, rollbackmatrix, Git-scope en one-bundlebewijs technisch valideren.
-- [ ] Taak na technische uitvoering op `REVIEW` zetten en geen volgende kandidaat activeren; fase B niet committen of pushen.
+- [x] `BC-TECH-004` en uitsluitend het relevante deel van fase 3 stonden vóór fase-A-commit administratief `READY` en **NIET INHOUDELIJK GESTART**.
+- [x] Na fase-A-commit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` zijn uitsluitend `docs/TECHNICAL_CHANGE_WORKFLOW.md` en dit masterplan gewijzigd; geen branch, Shopify-, theme- of technische implementatie uitgevoerd.
+- [x] Branchregex is met drie geldige en zes ongeldige strings gevalideerd zonder Git-refwijziging; 41 hoofdstukken, state machine, 13 scenario's, 14 verboden acties, gates A-G en rollback A-D zijn mechanisch compleet.
+- [x] Theme Check-baseline `4.6.1`/19 fingerprints/3 errors/16 warnings/15 bestanden is als verplichte toekomstige pre-/postgate verwezen zonder suppressie of rebaseline.
+- [x] FINAL_REPORT-volgordeles is vastgelegd: normale checks en preflight eerst, definitieve rapportrefresh daarna, direct finalizer, en bij finalizerfailure opnieuw loggen/herstellen/rapport verversen/finaliseren.
+- [x] Taak en `BC-DEP-017` zijn na expliciete menselijke goedkeuring op 2026-08-16 `DONE`; het workflowdocument bevat hoofdstuk 42 en blijft geen algemene implementatietoestemming.
+
+### Minimale smoke-/regressiebasis (`BC-TECH-005`)
+
+- [x] `PROPOSED-TECH-02` is door de projecteigenaar officieel gemaakt als `BC-TECH-005`.
+- [x] Volledig taakrecord, lokale read-only scope, buiten-scope, toegestane documentatie, acceptatie, technische controles, menselijke review, risico en rollback zijn vastgelegd.
+- [x] `BC-GOV-006`, `BC-TECH-002`, `BC-TECH-003` en `BC-TECH-004` zijn `DONE`.
+- [x] Alleen `BC-TECH-005` en uitsluitend het relevante deel van fase 3 staan `READY`; de taak is **NIET INHOUDELIJK GESTART**.
+- [x] Browser, preview, Shopify, cart-/account-/productruntime, packages, CI en theme-codewijzigingen zijn voor deze taak verboden.
+- [ ] Na de fase-A-commit wordt de lokale read-only analyse uitgevoerd en blijft iedere runtimecase `UNEXECUTED`/`NOT_RUN`.
+- [ ] `docs/SMOKE_REGRESSION_BASELINE.md` wordt met exact 43 hoofdstukken, unieke fixtures/testcases en alle verplichte matrices ter menselijke review opgeleverd.
 
 ### Codewijziging
 
@@ -2156,12 +2204,12 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 
 ### Actuele route
 
-- **Waar we nu zijn:** `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003` en fase 0 zijn `DONE`; basiscommit `be0d48c27b55b348a0a3d0e69fcfb51f0346831c` staat remote. `BC-TECH-004` en uitsluitend dit deel van fase 3 staan `READY` en **NIET INHOUDELIJK GESTART**. Fase 2, `BC-TECH-001` en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.19 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
+- **Waar we nu zijn:** `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003`, het op 2026-08-16 goedgekeurde `BC-TECH-004`, `BC-DEP-017` en fase 0 zijn `DONE`; basiscommit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` staat remote. `BC-TECH-005` en uitsluitend dit deel van fase 3 staan `READY` en **NIET INHOUDELIJK GESTART**. Fase 2, `BC-TECH-001` en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.21 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
 - **Wat is vastgelegd:** `docs/SUPPLIER_DATA_INVENTORY.md` bewijst en de projecteigenaar accepteert voor de lokale repository nul oorspronkelijke leveranciersbronnen, nul importbestanden en nul import-/generatiescripts. Externe bronnen kunnen bestaan en volgen later afzonderlijk per leverancier.
-- **Welke input nodig is:** de bewijsbasis en menselijke governancekeuzes voor `BC-TECH-004` zijn beschikbaar. Retentietermijn/eigenaar van runbundles, de levertijd-bedrijfsregel en definitieve data-/IA-besluiten blijven open.
-- **Welke taken daarna komen:** na de afzonderlijk toegestane fase-A-commit wordt alleen `BC-TECH-004` lokaal als documentatietaak uitgevoerd. De overige tien `PROPOSED-TECH-*`-kandidaten blijven uitsluitend voorstellen; geen technische implementatietaak is actief.
+- **Welke input nodig is:** voor `BC-TECH-005` zijn de actieve-themegebruiksmatrix, repository-audit, Theme Check-baseline, het goedgekeurde workflowdocument en lokale theme-code read-only beschikbaar. Exacte runtime-tool, formele browsermatrix, fixturehervalidatie en artefactretentie blijven open voor latere menselijke besluiten.
+- **Welke taken daarna komen:** na de fase-A-commit wordt uitsluitend `BC-TECH-005` lokaal/read-only uitgevoerd. `PROPOSED-TECH-12` en de overige acht kandidaten blijven niet-officieel. Geen technische implementatietaak wordt geactiveerd.
 
-Aanbevolen eerstvolgende handeling: commit en push de vier menselijk goedgekeurde baselinebestanden, controleer de schone nieuwe basis en voer daarna uitsluitend het `BC-TECH-004`-runbook lokaal uit. De vaste levertijdtekst blijft afzonderlijk geblokkeerd op een commercieel/operationeel besluit en heeft geen goedgekeurde vervangende tekst.
+Aanbevolen eerstvolgende handeling: commit en push uitsluitend de goedgekeurde fase-A-documentatie en voer daarna `BC-TECH-005` lokaal/read-only uit als ontwerpbaseline. Start geen browser, preview, Shopify, offensefix, branch of theme-implementatie. De vaste levertijdtekst blijft afzonderlijk geblokkeerd op een commercieel/operationeel besluit en heeft geen goedgekeurde vervangende tekst.
 
 ## 65. Wijzigingslog
 
@@ -2193,22 +2241,27 @@ Aanbevolen eerstvolgende handeling: commit en push de vier menselijk goedgekeurd
 
 **Wijzigingslog 2026-08-12, versie 0.19, `BC-TECH-003` en `BC-TECH-004`:** de projecteigenaar heeft config, wrapper, CLI-baseline `4.6.1`, twee reproduceerbare runs, 19 fingerprints, 18+1-classificatie en regressie-/rebaselinebeleid goedgekeurd; `docs/THEME_CHECK_BASELINE.md`, `BC-TECH-003` en `BC-DEP-016` staan `DONE`. De niet-blokkerende `FINAL_REPORT.md`-samenvattingsles is vastgelegd zonder raw bewijsverlies. `PROPOSED-TECH-10` is als `BC-TECH-004` officieel gemaakt en met alleen governance-/documentatiescope `READY` maar **NIET INHOUDELIJK GESTART**; branch-/preview-/merge-/rollbackkeuzes en gates A-G geven geen actuele implementatietoestemming. Commit: deze afzonderlijke fase-A-commit `chore: approve theme check baseline and prepare change workflow`; fase B volgt zonder tweede commit of push.
 
-### Zelfcontrole versie 0.19
+**Wijzigingslog 2026-08-12, versie 0.20, `BC-TECH-004`:** na fase-A-commit `10254b5ca652ebbc88b2dc33b134dc74b324fba6` uitsluitend het lokale governance-/documentatierunbook uitgevoerd. `docs/TECHNICAL_CHANGE_WORKFLOW.md` bevat 41 hoofdstukken, exacte task-branchregex, basiscommit-/diff-/commitbeleid, gates A-G, Theme Check pre-/postgate, 15 state-machineovergangen, 13 scenario's, 14 verboden acties, targetgrenzen, rollback A-D en de aangescherpte FINAL_REPORT-volgorde. Stringtests en structuurvalidators slaagden zonder Git-refwijziging. Taak en fase 3 naar `REVIEW`; geen volgende taak, branch, remote push, merge, preview, Shopify- of theme-codehandeling. Fase B niet gecommit of gepusht.
+
+**Wijzigingslog 2026-08-16, versie 0.21, `BC-TECH-004` en `BC-TECH-005`:** de projecteigenaar heeft het technische change-runbook, branchmodel/-regex, gates A-G, previewtargetgrenzen, Theme Check-gates, mergebeleid, rollback A-D en FINAL_REPORT-volgorde binnen de documentatiescope goedgekeurd. `docs/TECHNICAL_CHANGE_WORKFLOW.md`, `BC-TECH-004` en `BC-DEP-017` staan `DONE`. `PROPOSED-TECH-02` is als `BC-TECH-005` officieel gemaakt; taak, `BC-DEP-018` en uitsluitend het relevante deel van fase 3 staan `READY` en **NIET INHOUDELIJK GESTART**. Geen branch, preview, Shopify- of theme-codehandeling. Commit: deze afzonderlijke fase-A-commit `docs: approve technical change workflow and prepare smoke baseline`; fase B volgt zonder tweede commit of push.
+
+### Zelfcontrole versie 0.21
 
 - **Tegenstrijdigheden:** De tijdlijn van omgevingscontrole en latere development-theme-aanmaak is expliciet verklaard; geen inhoudelijke tegenspraak gevonden.
 - **Dubbele taken:** Geen dubbele taak-ID of bewust dubbel werk gevonden; raakvlakken zijn via afhankelijkheden gekoppeld.
 - **Ontbrekende hoofdonderdelen:** Alle 65 verplichte hoofdstukken zijn opgenomen.
 - **Onbewezen aannames:** Onbekende runtime, apps/pixels, externe leveranciersbronnen, data-eigenaars, kandidaatbestanden en besluiten zijn gemarkeerd met `[NOG ONDERZOEKEN]`, `[OPEN BESLISSING]`, `[GEBLOKKEERD]`, **ONTBREEKT**, **NIET TOEGANKELIJK**, `DYNAMIC_OR_NOT_PROVEN` of een expliciete lagere zekerheid.
-- **Statusduidelijkheid:** Alleen de zeven toegestane taakstatussen zijn gebruikt; tellingen staan in dashboard en taakregister. Uitsluitend `BC-TECH-004` is `READY` en **NIET INHOUDELIJK GESTART**; geen taak is `REVIEW` of `IN_PROGRESS`.
-- **Onderzoeksstatus:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002`, `BC-DATA-003`, `BC-TECH-002`, `BC-GOV-006` en `BC-TECH-003` zijn consequent `DONE`; fase 0 is `DONE`; fase 2, `BC-DATA-001`, `BC-IA-001` en `BC-TECH-001` zijn `BLOCKED`; fase 3 staat uitsluitend voor `BC-TECH-004` op `READY`.
+- **Statusduidelijkheid:** Alleen de zeven toegestane taakstatussen zijn gebruikt; tellingen staan in dashboard en taakregister. Uitsluitend `BC-TECH-005` is `READY` en **NIET INHOUDELIJK GESTART**; geen taak is `REVIEW` of `IN_PROGRESS`.
+- **Onderzoeksstatus:** `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002`, `BC-DATA-003`, `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003` en `BC-TECH-004` zijn consequent `DONE`; fase 0 is `DONE`; fase 2, `BC-DATA-001`, `BC-IA-001` en `BC-TECH-001` zijn `BLOCKED`; fase 3 staat uitsluitend voor `BC-TECH-005` op `READY`.
 - **Acceptatiecriteria en afhankelijkheden:** Iedere voorlopige taak bevat beide velden.
 - **Te grote taken:** `BC-TECH-001`, `BC-UX-001`, `BC-CAT-001`, `BC-PDP-001`, `BC-SEO-001`, `BC-PROD-001` en `BC-QA-001` blijven brede werkpakketten. De twaalf kandidaatdeeltaken staan alleen in het goedgekeurde stabilisatieplan en zijn geen officiele taakrecords.
-- **Taaktelling:** 43 unieke taakrecords: 13 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
+- **Taaktelling:** 43 unieke taakrecords: 13 `DONE`, 0 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 1 `REVIEW` en 3 `DEFERRED`.
 - **Contractcontrole:** 190 unieke contractkeys in 15 domeinen; nul `custom.*`-keys; iedere matrixrij heeft 19 gevulde gegevenskolommen; labels, bronnen, eigenaars, validatie en leegstaat zijn structureel gecontroleerd.
 - **Technisch plan:** 21 bevindingen hebben impact, bereikbaarheid, zekerheid, bewijs en blokkade; twaalf kandidaten hebben bestanden, scope, afhankelijkheden, acceptatie, tests, preview en rollback. Alleen `PROPOSED-TECH-01` en `PROPOSED-TECH-10` zijn na expliciete menselijke besluiten als `BC-TECH-003` en `BC-TECH-004` in het centrale taakregister opgenomen; de overige tien kandidaten blijven niet-officieel.
 - **Loggingtaak:** `BC-GOV-006` heeft een volledig taakrecord en staat na menselijke review `DONE`; de drie reviewfixes, expliciete UTF-8-commandmetadatavalidatie, strikt reviewbewijshergebruik, stabiele .NET ZIP-snapshot, raw completeness, reviewhashes, atomische bundle en negatieve weigeringstests zijn lokaal bewezen. De acht protocolbestanden staan via de primaire commit op `main`; toegestane finalizer- en bewijsfollow-ups leggen UTF-8-, retry- en Windows/OneDrive-hardening vast. De finale one-bundle-run bevat alle actuele reviewbestanden.
 - **Theme Check-taak:** `BC-TECH-003` bevat volledig doel, scope, buiten-scope, afhankelijkheden, bestanden, acceptatie, technische controles, menselijke review, risico en rollback. CLI `4.6.1`, geen update, aanbevolen config zonder suppressies, wrapper, twee volledige runs, 19 fingerprints, code/toolingclassificatie en rebaselinebeleid zijn technisch gevalideerd, menselijk goedgekeurd en `DONE`.
-- **Change-workflowtaak:** `BC-TECH-004` bevat volledig doel, scope, buiten-scope, afhankelijkheden, bestanden, acceptatie, technische controles, menselijke review, risico en rollback; taak en fase 3 zijn uitsluitend administratief `READY` en geen branch, preview, push, merge, Shopify- of themewijziging is toegestaan.
+- **Change-workflowtaak:** `BC-TECH-004` bevat volledig doel, scope, buiten-scope, afhankelijkheden, bestanden, acceptatie, technische controles, menselijke review, risico en rollback. Het 42-delige runbook, regexzelftest, gates A-G, 15 transities, 13 scenario's, 14 verboden acties, Theme Check-gates en rollback A-D zijn technisch gevalideerd, op 2026-08-16 menselijk goedgekeurd en `DONE`.
+- **Smoke-/regressietaak:** `BC-TECH-005` bevat volledig doel, read-only scope, buiten-scope, afhankelijkheden, bestanden, acceptatie, technische controles, menselijke review, risico en rollback. `PROPOSED-TECH-02` is officieel; `PROPOSED-TECH-12` blijft afzonderlijk en niet-officieel. De taak staat als enige `READY` en is **NIET INHOUDELIJK GESTART**.
 - **Reproduceerbaarheid:** run 1 en run 2 hadden beide exitcode `1`, 19 offenses, 15 bestanden, 3 errors, 16 warnings, 0 info, dezelfde fingerprintset SHA-256 en dezelfde raw JSON SHA-256; run 3 was niet nodig.
-- **Tellingcontrole:** 43 unieke taakrecords; 13 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
-- **Ontwikkeltoestemming:** Uitsluitend de lokale governance-/documentatietaak `BC-TECH-004` mag na de fase-A-commit worden uitgevoerd; versie 0.19 houdt branchaanmaak, push, merge, preview, Shopify-/theme-/datawijzigingen, offensefixes, verwijdering en alle technische implementatie expliciet geblokkeerd.
+- **Tellingcontrole:** 44 unieke taakrecords; 14 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
+- **Ontwikkeltoestemming:** Versie 0.21 houdt branchaanmaak, remote task-branch push, merge, preview, Shopify-/theme-/datawijzigingen, offensefixes, verwijdering en alle technische implementatie expliciet geblokkeerd. Alleen `BC-TECH-005` mag na de fase-A-commit lokaal/read-only inhoudelijk starten; dit geeft geen runtime- of browsertesttoestemming.
