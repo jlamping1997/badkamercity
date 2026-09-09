@@ -1,6 +1,6 @@
 # BadkamerCity Masterplan
 
-> **Versie 0.25 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** `BC-TECH-006`, de 45-delige menselijk goedgekeurde test- en bewijsstandaard en `BC-DEP-019` zijn `DONE`. `BC-TECH-007` is officieel gemaakt als eerste kleine publieke read-only storefront-runtimepilot en staat met `BC-DEP-020` uitsluitend administratief `READY` en **NIET INHOUDELIJK GESTART**. Er is tot deze versie geen functionele test, browser-, preview-, Shopify-, storefrontruntime- of theme-codehandeling uitgevoerd.
+> **Versie 0.25.3 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** De projecteigenaar heeft BC-LOCAL-001 inclusief de aanvullende Git-identiteit op 2026-09-09 goedgekeurd na beoordeling van beide reviewbundels. Het onderhoud staat `DONE`; `BC-Q-038` is gesloten en `BC-Q-039` blijft opgelost. Uitsluitend dit masterplan en het onderhoudsrapport worden in fase A gecommit en naar origin/main gepusht. Daarna is BC-TECH-007 expliciet toegestaan voor de vijf vastgelegde publieke read-only cases; de pilot staat tot die grens `READY` en is nog niet inhoudelijk gestart.
 
 Markeringen in dit document:
 
@@ -13,9 +13,9 @@ Markeringen in dit document:
 | Veld | Waarde |
 | --- | --- |
 | Documentnaam | `docs/MASTERPLAN.md` |
-| Versie | `0.25` |
+| Versie | `0.25.3` |
 | Status | `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED` |
-| Datum laatste wijziging | 2026-08-16 |
+| Datum laatste wijziging | 2026-09-09 |
 | Eigenaar | BadkamerCity-projecteigenaar; naam en formele rol `[NOG ONDERZOEKEN]` |
 | Centrale bron van waarheid | Dit bestand op GitHub-branch `main`, naast de bewijsdocumenten in `docs/` |
 | Huidige Git-branch | `main` |
@@ -32,22 +32,23 @@ De status activeert alleen het vastgelegde read-only onderzoekswerk. Theme-imple
 | Algemene projectstatus | Discovery is menselijk goedgekeurd en actief; implementatie en lancering blijven geblokkeerd |
 | Huidige fase | Fase 3 - technische stabilisatie; uitsluitend `BC-TECH-007` staat administratief `READY` en is niet inhoudelijk gestart |
 | Actieve taak-ID | `BC-TECH-007` - `READY` |
-| Actieve taak | Publieke read-only storefront-runtimepilot; niet inhoudelijk gestart vóór de afzonderlijke fase-A-commit en geslaagde push |
-| Eerstvolgende actie | Commit en push uitsluitend masterplan 0.25 en de goedgekeurde evidence-standaard; voer daarna binnen dezelfde opdracht exact vijf geautoriseerde publieke/anonieme read-only cases uit |
+| Actieve taak | Publieke read-only storefront-runtimepilot; voorbereidende commit/push bewezen aanwezig, pilot nog niet inhoudelijk gestart |
+| Lokaal computeronderhoud | `BC-LOCAL-001` - `DONE`; beide reviewbundels inclusief repository-local Git-identiteit menselijk goedgekeurd op 2026-09-09 |
+| Eerstvolgende actie | Fase A: uitsluitend MASTERPLAN en LOCAL_DEVELOPMENT_SETUP committen/pushen; daarna geautoriseerde BC-TECH-007-pilot met actuele tooling-, target-, fixture- en evidencegates |
 | Belangrijkste blokkades | Nul oorspronkelijke lokale leveranciersbestanden, nul import-/generatiescripts, onbekende bronhouders en ontbrekende prijs-, voorraad-/levertijd-, media- en tegeleenheidsbronnen; daarnaast ontbreken volledige app-/pixelbron, runtimevalidatie, gevalideerd productdatamodel, categorieboom, leverancierregels en meerdere architectuurbesluiten |
 | Laatste technisch uitgevoerde basis | `BC-TECH-005` - 43-delige technische `UNEXECUTED DESIGN BASELINE` plus goedkeuringshoofdstuk 44 met 16 routeklassen, 7 codebreakpoints, 3 voorgestelde viewportklassen, 12 fixtureklassen en 53 testcases; nul functionele tests; status `DONE` |
 | Laatste technisch uitgevoerde governance | `BC-TECH-006` - 45-delige menselijk goedgekeurde test- en bewijsstandaard met forbidden-evidenceverwijdering en verplichte pre-bundle evidence gate; nul runtime; status `DONE` |
-| Laatste menselijke goedkeuring | 2026-08-16 - `BC-TECH-006`, directorymodel, resultaatrecords, manifest, privacy-/mutatieclassificaties, hashing, reviewerstatus, interimretentie en one-bundle-integratie zijn goedgekeurd onder twee bindende reviewfixes; nul runtime |
-| Laatste relevante commit | Fase-A-commit `d0b43c016fe2168802843ef21a8c3bb21ad68eeb` (`docs: approve smoke regression baseline and prepare evidence standard`) staat op `main` en `origin/main`; fase B blijft lokaal, ongecommit en ongepusht |
+| Laatste menselijke goedkeuring | 2026-09-09 - BC-LOCAL-001 inclusief Git-identiteitsaanvulling goedgekeurd op basis van beide reviewbundels; BC-Q-038 gesloten |
+| Laatste relevante commit | `3bd1cfd4f2ba5c463e49ac122c800af2c9148379`; HEAD en remote main gelijk bij voorcontrole. De goedkeuringsregistratie wordt hierna uitsluitend met het onderhoudsrapport gecommit/gepusht; nieuwe hash volgt in het uitvoeringslog en de pilotdocumentatie |
 | Previewstatus | `BadkamerCity Development` is unpublished; preview- en Theme Editor-links zijn vastgelegd; geen nieuwe theme-code is geüpload sinds de aanmaak |
 | Productdoel voor lancering | Ongeveer 20.000 volledig ingerichte, gekoppelde, gecategoriseerde, doorzoekbare en filterbare producten |
-| Voorlopige taken | 46 totaal: 16 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
+| Voorlopige taken | 47 totaal: 17 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
 
 ### Actuele route
 
-- **Waar we nu zijn:** fase-A-basiscommit `d0b43c016fe2168802843ef21a8c3bb21ad68eeb` staat bij het opstellen van versie 0.25 op `main` en `origin/main`. `docs/TEST_EVIDENCE_STANDARD.md`, `BC-TECH-006` en `BC-DEP-019` zijn na menselijke goedkeuring `DONE`. `BC-TECH-007`, `BC-DEP-020` en uitsluitend het relevante deel van fase 3 staan administratief `READY` en zijn **NIET INHOUDELIJK GESTART**. `BC-TECH-001`, fase 2 en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.25 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
+- **Waar we nu zijn:** BC-LOCAL-001 is menselijk goedgekeurd en DONE; beide lokale bewijsbundels blijven behouden. BC-TECH-007 en BC-DEP-020 blijven READY tot de nieuwe beperkte fase-A-push. De vijf-case pilot is nu expliciet toegestaan; BC-TECH-001, fase 2 en alle theme-/Shopify-implementatie blijven BLOCKED.
 - **Wat is vastgelegd:** de volledige lokale set van 405 bestanden bij taakstart en de bereikbare Git-padgeschiedenis bevatten nul oorspronkelijke leveranciersbestanden en nul import-/generatiescripts. Deze lokale nulbevinding is menselijk geaccepteerd. Externe bronnen kunnen bestaan en worden later per leverancier afzonderlijk aangeleverd en beoordeeld.
-- **Welke input nodig is:** fase-A-commit/push, lokale Node/npm-compatibiliteit, een launchbare lokale Chrome Stable of Edge Stable, offline browser-selftest en veilige publieke storefrontbereikbaarheid. Definitieve browsermatrix en langdurige artefactretentie blijven open; deze pilot claimt die niet.
+- **Welke input nodig is:** fase-A-commit/push, Node/npm-compatibiliteit en een launchbare Chrome Stable met offline selftest zijn voor deze computer bewezen. De pilot vereist nog actuele hervalidatie binnen de eigen run, veilige publieke storefrontbereikbaarheid, fixturecontrole en evidencegates. Definitieve browsermatrix en langdurige artefactretentie blijven open. Tijdelijke browsertooling is na de lokale probe verwijderd.
 - **Welke taken daarna komen:** uitsluitend `BC-TECH-007` is officieel `READY` voor de begrensde vijf-case pilot na de fase-A-push. De overige acht niet-officiële kandidaten blijven voorstellen. `BC-TECH-001`, `BC-DATA-001`, `BC-IA-001` en alle theme-/Shopify-implementatietaken blijven geblokkeerd.
 
 ## 3. Hoe dit masterplan gebruikt moet worden
@@ -67,7 +68,7 @@ Statusbeheer:
 - Een technische implementatie mag pas `REVIEW` worden nadat de vastgelegde technische controles slagen.
 - Visueel of functioneel werk mag alleen `DONE` worden na expliciete menselijke goedkeuring.
 - Voorbereidend read-only of documentatiewerk mag `DONE` zijn als bestaand bewijs uitvoering en resultaat aantoont.
-- Geen enkel lanceringsonderdeel is in versie 0.25 `DONE`; de zestien `DONE`-taken zijn governance-, read-only onderzoeks-, conceptuele documentatie- of lokale toolingbasistaken.
+- Geen enkel lanceringsonderdeel is in versie 0.25.3 `DONE`; de zeventien `DONE`-taken zijn governance, read-only onderzoek, conceptuele documentatie en goedgekeurde lokale tooling/onderhoud.
 
 Bewijs en onderhoud:
 
@@ -710,14 +711,38 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 
 | Status | Aantal |
 | --- | ---: |
-| `DONE` | 16 |
+| `DONE` | 17 |
 | `READY` | 1 |
 | `IN_PROGRESS` | 0 |
 | `NOT_STARTED` | 0 |
 | `BLOCKED` | 26 |
 | `REVIEW` | 0 |
 | `DEFERRED` | 3 |
-| **Totaal** | **46** |
+| **Totaal** | **47** |
+
+### BC-LOCAL-001 - Lokale ontwikkelomgeving op nieuwe computer
+
+- **ID:** `BC-LOCAL-001`
+- **Titel:** Lokale ontwikkelomgeving controleren en herstellen na computerwissel
+- **Fase:** Lokaal onderhoud ter ondersteuning van fase 3
+- **Werkstroom:** Governance / tooling
+- **Status:** `DONE`
+- **Prioriteit:** `P0`
+- **Doel:** De bestaande projecttools bruikbaar maken op de nieuwe computer zonder de goedgekeurde kwaliteitsbasis te vervangen.
+- **Aanleiding:** Expliciete menselijke opdracht van 2026-09-09 met zelfstandige installatie- en hersteltoestemming, inclusief esbuild-installatiescripts.
+- **Scope:** Git, Node.js, npm, Shopify CLI, PowerShell, projecthelpers, esbuild, lokale Theme Check en geïsoleerde offline browserprobe; noodzakelijke lokale software-/instellingswijzigingen en documentatie.
+- **Buiten scope:** Storefrontpilot, theme-code, Shopify Admin, preview, publicatie, commit, push en rebaseline.
+- **Afhankelijkheden:** Bestaande logginghelpers en goedgekeurde CLI-baseline `4.6.1`; nieuwe lokale herstelopdracht neemt eerdere taakspecifieke installatieverboden voor dit onderhoud weg.
+- **Benodigde input:** Lokale repository en software; publieke npm-packagegegevens; oorspronkelijke instructiebestanden volledig gelezen. Git-auteursnaam en e-mailadres zijn door de gebruiker aangeleverd en uitsluitend repository-local ingesteld; geen waarden verzonnen of in bewijs gelogd.
+- **Verwachte bestanden/systemen:** `docs/LOCAL_DEVELOPMENT_SETUP.md`, dit masterplan, lokale gebruikerssoftware/-instellingen en genegeerde run `BC-LOCAL-001_20260909-203405`.
+- **Uitvoer:** Git `2.55.0.windows.3`, Node `24.19.0`, npm `11.17.0` gecontroleerd; CLI `4.8.0` teruggebracht naar `4.6.1`; auto-upgrade uit; PowerShell `CurrentUser = RemoteSigned`; esbuild `0.28.1` postinstall en native tests geslaagd; Chrome offline getest.
+- **Acceptatiecriteria:** Vereiste tools werken; afwijkende CLI-versie hersteld; esbuild-scriptstatus en werking bewezen; projectbaseline blijft intact; fouten en herstel bewaard; tijdelijke browsertooling/profile op gecontroleerde paden verwijderd; normale reviewbundle beschikbaar.
+- **Technische controles:** Vijf PowerShell-parsers, Git-connectiviteit/status/remote tip, package-engines, versieguard, daadwerkelijke installatie, esbuild-transform/bundle, één volledige Theme Check-run, exacte fingerprintvergelijking, Chrome/offline/toetsenbord/twee viewports, diff/whitelist en bundlevalidatie.
+- **Menselijke controle:** Expliciet goedgekeurd op 2026-09-09 op basis van beide reviewbundels, inclusief Git-identiteitsaanvulling. Geen storefront- of implementatiegoedkeuring hieruit afgeleid.
+- **Bewijs van voltooiing:** `docs/LOCAL_DEVELOPMENT_SETUP.md` en lokale run. Theme Check: 18 bekende fingerprints in 14 bestanden, 2 errors, 16 warnings, 0 nieuwe fingerprints; alleen de eerdere externe schemafout ontbreekt. Offline Chrome-probe: PASS, 0 paginarequests, geen SMK-case.
+- **Risico:** Automatische CLI-upgrade kan de projectguard opnieuw breken; uitgeschakeld en herinstallatie opnieuw bewezen. Historische externe schemafout blijft tijdgebonden; geen rebaseline.
+- **Rollback of herstelwijze:** Alleen beoordeeld lokaal software-/documentatieherstel; eerdere gebruikerspolicy was `Undefined`. Runbewijs blijft behouden tot een gebruikersbesluit.
+- **Laatst bijgewerkt:** 2026-09-09; menselijke goedkeuring geregistreerd, BC-Q-038 gesloten; BC-Q-039 opgelost. BC-EV-042. Afzonderlijke vervolgopdracht staat uitsluitend commit/push van dit masterplan en LOCAL_DEVELOPMENT_SETUP toe; oude bewijsbundels blijven intact.
 
 ### BC-GOV-001 - Repository-audit
 
@@ -1891,6 +1916,12 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 
 **Aanvullende beslisregel `BC-DEC-035` (2026-08-16):** de projecteigenaar keurt `BC-TECH-006`, run `BC-TECH-006_20260816-130109` en `docs/TEST_EVIDENCE_STANDARD.md` inhoudelijk goed onder twee bindende kleine correcties. Verboden of secretbevattend bewijs is nooit geldig of pending bewijs, wordt niet normaal gehasht, naar `review_files/` gekopieerd of gebundeld en wordt veilig verwijderd met uitsluitend een veilige redaction-note; onzekerheid stopt finalisatie. Iedere toekomstige run met `evidence/` vereist vóór finalisatie een mechanische pre-bundle evidence gate. Binnen `BC-TECH-006` bleef runtime nul. `BC-TECH-006` en `BC-DEP-019` gaan naar `DONE`; `BC-TECH-007` wordt als eerste kleine publieke read-only storefront-runtimepilot officieel en staat met `BC-DEP-020` uitsluitend administratief `READY` en **NIET INHOUDELIJK GESTART**. Alleen de afzonderlijk gespecificeerde fase-B-opdracht verleent na geslaagde fase-A-push toestemming voor exact vijf publieke/anonieme read-only cases; geen preview-, Shopify-, theme-, product-, cart-, formulier-, account- of checkoutmutatie.
 
+**Aanvullende beslisregel `BC-DEC-036` (2026-09-09):** de projecteigenaar autoriseert zelfstandig lokaal computeronderhoud, benodigde software-installatie en noodzakelijke bestandsaanpassingen zonder herbevestiging. Deze afzonderlijke onderhoudstaak `BC-LOCAL-001` herstelt de bestaande CLI-baseline `4.6.1`, schakelt auto-upgrade uit en valideert esbuild en een offline browserprobe. Geen toestemming voor storefrontuitvoering, Shopify, theme-code, preview, commit, push of rebaseline wordt hieruit afgeleid. Git-bewijs actualiseert de historische tipverwijzing: de aangekondigde fase-A-commit `3bd1cfd4f2ba5c463e49ac122c800af2c9148379` is al aanwezig en gepusht; er is geen onverwachte werkboomwijziging bij taakstart.
+
+**Aanvullende beslisregel `BC-DEC-037` (2026-09-09):** de gebruiker heeft de Git-auteursnaam en het e-mailadres expliciet aangeleverd met opdracht deze uitsluitend voor deze repository in te stellen en vervolgens de bestaande `BC-LOCAL-001_20260909-203405_BUNDLE.zip` in Verkenner te selecteren. Beide handelingen zijn toegestaan; dit keurt geen andere onderhoudsuitkomst goed en geeft geen commit-/push-/Shopifytoestemming. Persoonswaarden staan alleen in de lokale Git-configuratie; bewijs bevat geredigeerde handelingen en verificatieresultaten.
+
+**Aanvullende beslisregel `BC-DEC-038` (2026-09-09):** de projecteigenaar keurt beide BC-LOCAL-001-reviewbundels inclusief Git-identiteit goed; taak DONE en Q-038 gesloten. Alleen MASTERPLAN en LOCAL_DEVELOPMENT_SETUP mogen nu na lokale/remote controle worden gecommit en normaal naar origin/main gepusht. Daarna mogen exact SMK-HOME-001, SMK-HEADER-001, SMK-HEADER-002, SMK-CART-001 en SMK-CONTENT-004 publiek/anoniem read-only worden uitgevoerd. Geen reparaties of Shopify-publicatie. Fase-B-resultaten blijven REVIEW en ongecommit; normale reviewbundle en Verkennerselectie zijn gevraagd.
+
 ## 59. Open vragenregister
 
 | ID | Open vraag | Waarom belangrijk | Afhankelijke taak | Beslisser | Status |
@@ -1931,6 +1962,10 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-035` | Welke Shopify CLI-/Theme Check-versie, configuratie en updateprocedure gelden als reproduceerbare kwaliteitsbasis? | De volledige run is bewijsbaar, maar configuratie ontbrak, een externe schemafout is instabiel en de CLI dreef tijdens eerder onderzoek van 4.6.0 naar 4.6.1 | `BC-TECH-003` | Projecteigenaar plus technisch eigenaar | **BESLOTEN 2026-08-12:** projectbaseline CLI `4.6.1`; uitsluitend `shopify version`; geen gewone installatie/update; aanbevolen regelset via `extends: theme-check:recommended` zonder suppressies; goedgekeurde wrapper; twee identieke runs met 19 offenses/15 bestanden/3 errors/16 warnings/19 fingerprints. Suppressie, CLI-/regelset-/fingerprint-/beleidswijziging vereist afzonderlijke rebaseline |
 | `BC-Q-036` | Welke definitieve retentietermijn en eigenaar gelden voor lokale Codex-runbundles en toekomstig testbewijs na menselijke review? | Volledige logs, reviewbestanden en testartefacten verbeteren controleerbaarheid maar kunnen onnodig lang lokaal blijven | `BC-TECH-006` en alle toekomstige runtime-/testtaken | Projecteigenaar plus technisch en privacyverantwoordelijke | `[OPEN BESLISSING]`; `BC-TECH-006` stelt als interimbeleid lokaal/ignored bewaren tot menselijke review, geen automatische verwijdering en verwijdering uitsluitend door gebruikersbesluit vast. Permanente termijn, eigenaar en eventuele cloud-/CI-opslag blijven afzonderlijk te besluiten |
 | `BC-Q-037` | Welke uitkomsten van de vijf-case runtimepilot worden na screenshot- en evidencebeoordeling menselijk geaccepteerd en welke vereisen een afzonderlijke vervolgtaak? | Technische pilotresultaten en `UNREVIEWED` screenshots mogen niet automatisch als storefrontgoedkeuring of defectfixtoestemming gelden | `BC-TECH-007` en eventuele latere afzonderlijke QA-/fixtaken | Projecteigenaar/ChatGPT | `[OPEN BESLISSING]`; pas na fase-B-bundle en menselijke review, geen automatische volgende taak |
+| `BC-Q-038` | Is de lokale computerinrichting met vastgelegde herstelstappen en beperkingen menselijk beoordeeld? | Technische toolingtests vereisen menselijke acceptatie | `BC-LOCAL-001` | Projecteigenaar | **GESLOTEN / GOEDGEKEURD 2026-09-09**; beide reviewbundels inclusief Git-identiteit beoordeeld en expliciet geaccepteerd; taak DONE |
+| `BC-Q-039` | Welke Git-auteursnaam en welk e-mailadres moeten voor toekomstige commits worden ingesteld? | Commits vereisen de bedoelde auteursidentiteit | `BC-LOCAL-001` en toekomstige commits | Gebruiker/projecteigenaar | **BESLOTEN EN INGESTELD 2026-09-09**; expliciet aangeleverde waarden alleen repository-local ingesteld en exact geverifieerd; globale/systeemidentiteit ongewijzigd, persoonsgegevens niet in bewijs gelogd |
+
+Actualisatie `BC-Q-035` op 2026-09-09: CLI `4.6.1` is op de nieuwe computer hersteld en auto-upgrade staat uit. De bestaande config, wrapper, 19-offensebaseline en rebaselinevoorwaarden blijven ongewijzigd. De actuele meting bevat dezelfde 18 lokale codefingerprints; de historische externe schemafout is niet gereproduceerd.
 
 De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` sluit deze resterende vragen niet; zij bevestigt en begrenst het beschikbare read-only bewijs en de conceptuele werkbasis. Geen van deze goedkeuringen neemt een bronacceptatie-, individueel veld-, data-, ontwerp-, Shopify-, theme- of implementatiebesluit.
 
@@ -1975,6 +2010,12 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en 
 | `BC-R-035` | Toekomstige testbewijsartefacten kunnen gevoelige data, grote binaries of verouderde runtime-output bevatten en ten onrechte worden gecommit of als actuele waarheid worden gelezen | Privacy-/credentiallek, repositorygroei of foutieve acceptatie van oud bewijs | De goedgekeurde `BC-TECH-006`-standaard verplicht minimale opslag, classificatie, hashes, ignored runartefacten, forbidden-evidenceverwijdering en een mechanische pre-bundle gate | Beheersing `DONE`; risico blijft actief per runtime-/testtaak en onzekere classificatie blokkeert finalisatie |
 | `BC-R-036` | Een publieke anonieme browserruntime kan externe resources of telemetrie laden en onverwacht write-methodes of gevoelige artefacten produceren | Onbedoelde storefrontstate, privacy-/securityrisico of verboden bundelinhoud | Geïsoleerd tijdelijk profiel, request interception vóór navigatie, uitsluitend GET/HEAD, minimale veilige metadata, screenshotprivacygate, forbidden-evidenceverwijdering en mechanische pre-bundle gate in `BC-TECH-007` | Actief voor de pilot; iedere afwijking blokkeert de betreffende case of finalisatie |
 
+Actualisatie risico's op 2026-09-09: `BC-R-006` en `BC-R-032` blijven van kracht; één lokale run vindt 18 bekende codeoffenses in 14 bestanden, 2 errors/16 warnings en 0 nieuwe fingerprints. De externe `ValidJSON`-offense is afwezig zonder codefix of rebaseline. `BC-R-030` is op deze computer daadwerkelijk gereproduceerd door een automatische CLI-upgrade; auto-upgrade is daarna uitgeschakeld, CLI `4.6.1` opnieuw geïnstalleerd en de wrapper werkt. `BC-R-034` blijft van kracht: een synthetische offline browserselftest is geen storefrontbewijs. Bewijs: `BC-EV-040`.
+
+Risicoactualisatie 2026-09-09 (`BC-R-031`): de aanvullende auteursidentiteit is uitsluitend met `git config --local` ingesteld; geen globale/systeemwijziging. De volledige wijzigings-/vergelijkingsstap is als Sensitive gelogd, zodat persoonsgegevens buiten raw bewijs en reviewbestanden blijven. De bestaande reviewbundel is vooraf en na Verkennerselectie hashgelijk bewezen.
+
+Risicoactualisatie goedkeuring 2026-09-09: menselijke toolingreview en auteursinput zijn afgerond; CLI-versieguard, privacy-/runtimegates en bestaande technische risico's blijven gelden. De goedkeuring heft geen implementatieblokkade op.
+
 ## 61. Afhankelijkhedenregister
 
 | ID | Afhankelijkheid | Blokkeert | Benodigde uitkomst | Eigenaar/status |
@@ -1999,6 +2040,8 @@ De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en 
 | `BC-DEP-018` | Minimale functionele smoke-/regressieontwerpbasis | Toetsbare toekomstige preview-, merge- en releasebeoordeling naast Theme Check | Menselijk beoordeelde route-, fixture-, testlaag-, breakpoint-, testcase-, bewijs-, failure-, privacy- en change-impactmatrix zonder runtimeclaim | `DONE` via `BC-TECH-005` en menselijke goedkeuring op 2026-08-16; nul functionele runtime; concrete fixtures en tools vereisen latere hervalidatie/toestemming |
 | `BC-DEP-019` | Vaste test- en bewijsstandaard | Toekomstige runtime-, browser-, preview- en regressietaken | Privacyveilige evidence-layout, resultaatrecords, manifest, naamgeving, hashes, reviewerstatus, retentiegrens, forbidden-evidenceverwijdering, pre-bundle gate en one-bundle-relatie zonder runtimeclaim | `DONE` via `BC-TECH-006` en menselijke goedkeuring op 2026-08-16; nul runtime binnen de standaardtaak |
 | `BC-DEP-020` | Eerste publieke read-only storefront-runtimepilot | Praktische validatie van smoke-baseline, evidence-standaard en one-bundle-overdracht voordat breder runtimewerk wordt overwogen | Exact vijf publieke/anonieme cases, GET/HEAD-only browsernetwork, privacyveilige screenshots/minimale logs, resultaatrecords, sluitend manifest, cleanup en menselijke review | `BC-TECH-007`; `READY` en niet inhoudelijk gestart vóór fase-A-commit/push |
+
+Actualisatie op 2026-09-09: fase-A-commit/push is bewezen met `3bd1cfd4f2ba5c463e49ac122c800af2c9148379`; lokale toolcompatibiliteit en een offline Chrome-selftest zijn in `BC-LOCAL-001` aangetoond. `BC-DEP-020` blijft `READY`: de vijf storefrontcases, target-/fixturecontrole en menselijke runtimebeoordeling zijn niet uitgevoerd. De lokale probe vervangt geen pilotrun.
 
 ## 62. Bewijs- en referentieregister
 
@@ -2063,6 +2106,12 @@ De loggingbewijzen `BC-EV-024` tot en met `BC-EV-029` activeren geen technische 
 **`BC-EV-038` - BC-TECH-006 test- en bewijsstandaard (2026-08-16):** fase-A-commit `d0b43c016fe2168802843ef21a8c3bb21ad68eeb` bevat exact `docs/MASTERPLAN.md` 0.23 en de goedgekeurde `docs/SMOKE_REGRESSION_BASELINE.md`, staat op `main` en `origin/main` en ging aantoonbaar aan fase B vooraf. `docs/TEST_EVIDENCE_STANDARD.md` en run `BC-TECH-006_20260816-130109` bewijzen een 44-delige lokale governancebasis voor `evidence/`, Markdown-resultaatrecords, `TEST_EVIDENCE_MANIFEST.md`, naamgeving, resultaat-/oorzaak-/reviewstatus, screenshot-/log-/network-/metricsgrenzen, privacy-/mutatieclassificatie, SHA-256, Git versus ignored runartefact, L0/L1/L2, interimretentie en one-bundle-overdracht. Read-only finalizeranalyse bewijst recursieve opname van de volledige runmap, zodat geen scriptwijziging nodig was. Geen evidence-directory, screenshot, log, metric, runtime, browser, Shopify, branch of theme-codewijziging; fase B blijft ongecommit en ongepusht.
 
 **`BC-EV-039` - Menselijke BC-TECH-006-goedkeuring en voorbereiding runtimepilot (2026-08-16):** de projecteigenaar keurt run `BC-TECH-006_20260816-130109`, de evidence-standaard, directorymodel, resultaatrecords, manifest, privacy-/mutatieclassificaties, hashing, reviewerstatus, interimretentie en one-bundle-integratie goed. Twee verplichte reviewfixes zijn in `docs/TEST_EVIDENCE_STANDARD.md` verwerkt: forbidden/secret evidence mag nooit als pending artefact blijven staan of normaal worden gehasht, gekopieerd of gebundeld en vereist veilige verwijdering/redaction-note; iedere toekomstige evidence-run vereist een mechanische pre-bundle evidence gate die finalisatie bij iedere afwijking blokkeert. Hoofdstuk 45 legt de goedkeuring vast. Binnen `BC-TECH-006` bleef runtime nul. `BC-TECH-006` en `BC-DEP-019` staan `DONE`; masterplan 0.25 maakt `BC-TECH-007` en `BC-DEP-020` uitsluitend `READY` en niet inhoudelijk gestart vóór de afzonderlijke fase-A-commit/push.
+
+**`BC-EV-040` - Lokale computerinrichting (2026-09-09):** `docs/LOCAL_DEVELOPMENT_SETUP.md` en run `BC-LOCAL-001_20260909-203405` leggen de expliciete lokale opdracht, schone Git-startbasis en remote tip `3bd1cfd4f2ba5c463e49ac122c800af2c9148379`, Git/Node/npm-versies, PowerShell-herstel, CLI-versieguard, onverwachte auto-upgrade en herstel naar `4.6.1` met auto-upgrade uit vast. esbuild `0.28.1` postinstall is met een eenmalige gerichte allowlist uitgevoerd; native transform/bundle zijn geslaagd. Vijf projectscripts parsen; één Theme Check-run vindt 18 exact bekende fingerprints/14 bestanden/2 errors/16 warnings/0 nieuwe fingerprints; externe schemafout niet gereproduceerd. Tijdelijk `puppeteer-core@25.4.0` en Chrome `152.0.7977.83` slaagden op een synthetische offline toets met twee viewports, Enter en 0 paginarequests; tooling/profile zijn verwijderd. Geen storefrontcase, Shopify-, preview-, theme-code-, commit- of pushhandeling. Normale one-bundle-review; onderhoudsstatus `REVIEW`.
+
+**`BC-EV-041` - Git-identiteit en Verkennerselectie (2026-09-09):** aanvullende lokale run `BC-LOCAL-001-IDENTITY_20260909-205144`, stap `002`, bewijst via exitcode 0 dat de aangeleverde Git-auteursnaam/e-mail exact repository-local zijn ingesteld, `git var GIT_AUTHOR_IDENT` slaagt en globale/systeemwaarden niet wijzigen. Opdracht en uitvoer zijn Sensitive-geredigeerd; `.git/config` wordt niet als reviewbestand opgenomen. Stap `003` bevestigt de Windows Shell-selectie van de door de gebruiker opgegeven bestaande `BC-LOCAL-001_20260909-203405_BUNDLE.zip`; diens SHA-256 blijft `CE8A345F447F1422C5F3EE37921A21758E5DE2F6368AC66AAA7BC905FE3E32DD`. Geen commit, push, Shopify- of themehandeling; bestaande bundel niet vervangen.
+
+**`BC-EV-042` - Onderhoudsgoedkeuring en beperkte overdracht (2026-09-09):** expliciete menselijke goedkeuring van beide lokale reviewbundels, inclusief identiteit; BC-LOCAL-001 DONE, Q-038 gesloten. Run `BC-TECH-007_20260909-205903` bewaart lokale/remote voorcontrole, goedkeuring en de uitsluitend twee documenten omvattende fase-A-commit/push. De nieuwe commit is pas na uitvoering bewijsbaar en wordt in het runlog en de pilotrapportage vastgelegd. Geen geschiedenis of oude bewijsbundel wordt vervangen.
 
 ## 63. Controlechecklists
 
@@ -2182,7 +2231,7 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 - [x] `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005`, `BC-TECH-006`, `BC-DEP-018`, `BC-DEP-019` zijn `DONE`.
 - [x] Exact vijf bestaande cases, twee viewports, publieke basis-URL, GET/HEAD-only interception, verboden states/mutaties, evidence-layout, privacygate en tempcleanup zijn vooraf afgebakend.
 - [x] Taak, `BC-DEP-020` en uitsluitend het relevante deel van fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART** vóór de afzonderlijke fase-A-commit en push.
-- [ ] Lokale Node/npm, package-engine, Chromium Stable en offline selftest zijn pas na de fase-A-push te controleren.
+- [x] Fase-A-push is op 2026-09-09 read-only bevestigd; Node/npm, package-engines, Chrome Stable en offline selftest zijn binnen afzonderlijk toegestaan lokaal computeronderhoud gecontroleerd. Bij de pilot opnieuw binnen de actuele taakcontext hervalideren.
 - [ ] Storefrontruntime, vijf resultaatrecords, screenshots, minimale logs, manifest en pre-bundle gate volgen uitsluitend in de geautoriseerde fase B.
 
 ### Codewijziging
@@ -2293,14 +2342,9 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 
 ## 64. Huidige eerstvolgende stappen
 
-### Actuele route
-
-- **Waar we nu zijn:** `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005`, `BC-TECH-006`, `BC-DEP-017`, `BC-DEP-018`, `BC-DEP-019` en fase 0 zijn `DONE`; fase-A-basiscommit `d0b43c016fe2168802843ef21a8c3bb21ad68eeb` staat bij het opstellen van deze versie op `main` en `origin/main`. `BC-TECH-007`, `BC-DEP-020` en uitsluitend dit deel van fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART**. Fase 2, `BC-TECH-001` en alle theme-/Shopify-implementatie blijven `BLOCKED`. Masterplan versie 0.25 blijft `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED`.
-- **Wat is vastgelegd:** `docs/SUPPLIER_DATA_INVENTORY.md` bewijst en de projecteigenaar accepteert voor de lokale repository nul oorspronkelijke leveranciersbronnen, nul importbestanden en nul import-/generatiescripts. Externe bronnen kunnen bestaan en volgen later afzonderlijk per leverancier.
-- **Welke input nodig is:** geslaagde fase-A-commit/push; daarna lokale Node/npm- en pinned package-enginecontrole, Chrome/Edge Stable-inventaris, offline selftest, publieke storefronttargetcontrole en actuele runtimefixturecontrole. Formele browsermatrix en langdurige retentie blijven open.
-- **Welke taken daarna komen:** uitsluitend `BC-TECH-007` mag na de fase-A-push binnen de expliciete vijf-case read-only grens starten. De overige acht kandidaten blijven niet-officieel. Geen preview- of technische implementatietaak is geactiveerd.
-
-Aanbevolen eerstvolgende handeling: commit en push uitsluitend `docs/MASTERPLAN.md` 0.25 en de goedgekeurde `docs/TEST_EVIDENCE_STANDARD.md`. Start daarna alleen de expliciet geautoriseerde `BC-TECH-007`-pilot; stop bij tooling-, target-, privacy- of evidencegatefailure. De vaste levertijdtekst blijft afzonderlijk geblokkeerd op een commercieel/operationeel besluit en heeft geen goedgekeurde vervangende tekst.
+1. Registreer de goedgekeurde BC-LOCAL-001-uitkomst met uitsluitend MASTERPLAN en LOCAL_DEVELOPMENT_SETUP in een normale commit naar origin/main; controleer de twee bestanden, remote basis en behoud van geschiedenis/bewijs.
+2. Start daarna uitsluitend de expliciet toegestane BC-TECH-007-pilot: vijf publieke read-only cases, tijdelijke pinned browsertooling, offline selftest, GET/HEAD-only, twee viewports en privacy-/evidencegates.
+3. Leg resultaten en problemen zonder reparaties vast; laat de pilot REVIEW, maak de normale bundle en selecteer die in Verkenner. BC-Q-037 blijft de menselijke reviewvraag; geen automatische volgende taak.
 
 ## 65. Wijzigingslog
 
@@ -2344,7 +2388,7 @@ Aanbevolen eerstvolgende handeling: commit en push uitsluitend `docs/MASTERPLAN.
 
 **Wijzigingslog 2026-08-16, versie 0.25, `BC-TECH-006` en `BC-TECH-007`:** de projecteigenaar heeft `BC-TECH-006`, run `BC-TECH-006_20260816-130109` en de bewijsstandaard goedgekeurd onder twee bindende reviewfixes. `docs/TEST_EVIDENCE_STANDARD.md` staat `DONE`, bevat hoofdstuk 45, verbiedt pending/gehashte/gekopieerde/gebundelde forbidden evidence en verplicht een mechanische pre-bundle evidence gate. `BC-TECH-006` en `BC-DEP-019` staan `DONE`; nul runtime vond binnen die taak plaats. `BC-TECH-007` is als eerste kleine publieke read-only storefront-runtimepilot officieel gemaakt; taak, `BC-DEP-020` en uitsluitend fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART**. De stale statusbeheerzin verwijst nu naar versie 0.25. Commit: deze afzonderlijke fase-A-commit `docs: approve evidence standard and prepare runtime pilot`; fase B volgt alleen na geslaagde push en wordt niet gecommit of gepusht.
 
-### Zelfcontrole versie 0.25
+### Zelfcontrole versie 0.25 (historisch)
 
 - **Tegenstrijdigheden:** De tijdlijn van omgevingscontrole en latere development-theme-aanmaak is expliciet verklaard; geen inhoudelijke tegenspraak gevonden.
 - **Dubbele taken:** Geen dubbele taak-ID of bewust dubbel werk gevonden; raakvlakken zijn via afhankelijkheden gekoppeld.
@@ -2366,3 +2410,18 @@ Aanbevolen eerstvolgende handeling: commit en push uitsluitend `docs/MASTERPLAN.
 - **Reproduceerbaarheid:** run 1 en run 2 hadden beide exitcode `1`, 19 offenses, 15 bestanden, 3 errors, 16 warnings, 0 info, dezelfde fingerprintset SHA-256 en dezelfde raw JSON SHA-256; run 3 was niet nodig.
 - **Tellingcontrole:** 46 unieke taakrecords; 16 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW` en 3 `DEFERRED`.
 - **Ontwikkeltoestemming:** Versie 0.25 houdt branchaanmaak, remote task-branch push, merge, preview, Shopify-/theme-/datawijzigingen, offensefixes, verwijdering en alle technische implementatie expliciet geblokkeerd. Alleen de afzonderlijke fase-B-opdracht mag na geslaagde fase-A-push exact vijf publieke/anonieme read-only runtimecases uitvoeren.
+
+**Wijzigingslog 2026-09-09, versie 0.25.1, `BC-LOCAL-001`:** expliciet geautoriseerd onderhoud na computerwissel uitgevoerd. Git/Node/npm en vijf projectparsers gecontroleerd, PowerShell-gebruikerspolicy hersteld, Shopify CLI naar goedgekeurd `4.6.1` teruggebracht en auto-upgrade uitgeschakeld na een bewaarde onverwachte upgrade. esbuild-installatiescript gericht uitgevoerd en native transform/bundle getest; één Theme Check-run vergeleken met alle 19 historische fingerprints: 18 exacte lokale matches, 0 nieuwe fingerprints, externe schemafout niet gereproduceerd. Synthetische offline Chrome-probe geslaagd; tijdelijke tooling/profile verwijderd. Dashboard, onderhoudstaak, route, besluit, open vraag, risicoactualisaties, afhankelijkheden, bewijs en readiness bijgewerkt; fase-A-tip gecorrigeerd met lokaal en remote Git-bewijs. Geen storefrontcase, Shopify, preview, theme-code, rebaseline, commit of push. Alleen onderhoudsrapport en masterplan lokaal gewijzigd; status `REVIEW`.
+
+### Onderhoudscontrole versie 0.25.1 (historisch)
+
+- **Taaktelling:** 47 unieke taakrecords: 16 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 1 `REVIEW`, 3 `DEFERRED`.
+- **Scope:** alleen `BC-LOCAL-001` uitgevoerd; `BC-TECH-007` blijft de volgende projecttaak en is niet inhoudelijk gestart. Historische zelfcontrole 0.25 hierboven is behouden als tijdgebonden bewijs.
+- **Documenten:** alle 65 hoofdstukken blijven aanwezig. Alleen `docs/LOCAL_DEVELOPMENT_SETUP.md` en dit masterplan zijn lokale reviewwijzigingen.
+- **Kwaliteitsbasis:** ongewijzigde CLI-guard, regelset en historische offensebaseline; actuele externe variatie afzonderlijk vastgelegd. Geen offense opgelost.
+- **Bewijs:** failures en herstel blijven in de lokale run; finale bundelcontrole bewijst raw-quartetten en bron-/kopiehashes. Menselijke beoordeling blijft open.
+- **Resterende lokale input:** de eindcontrole vond ontbrekende Git-auteursnaam/e-mail. `BC-Q-039` is open; dit is nodig vóór toekomstige commits en verhindert geen lokale toolingtest.
+
+**Wijzigingslog 2026-09-09, versie 0.25.2, aanvulling `BC-LOCAL-001`:** aangeleverde Git-identiteit alleen repository-local ingesteld, exacte waarden en ongewijzigde globale/systeemscope geverifieerd. Verkenner met de expliciet gekozen bestaande bundle geopend en selectie gecontroleerd; bundlehash ongewijzigd. `BC-Q-039` opgelost; dashboard, taakinput/-statusuitleg, route, risico, besluit en bewijs bijgewerkt zonder persoonsgegevens. Aanvullende run behoudt eerder bewijs; geen commit, push, Shopify of themehandeling. Taak blijft `REVIEW`; telling blijft 47 en `BC-TECH-007` blijft `READY` en niet gestart.
+
+**Wijzigingslog 2026-09-09, versie 0.25.3:** beide BC-LOCAL-001-bundels menselijk goedgekeurd inclusief Git-identiteit. Onderhoud DONE; Q-038 gesloten; dashboard, taak, route, risicoactualisatie, besluit en bewijs bijgewerkt. Telling 47: 17 DONE, 1 READY, 26 BLOCKED, 3 DEFERRED. Nieuwe expliciete tweefasenopdracht: alleen masterplan/onderhoudsrapport committen en pushen, daarna exact vijf publieke read-only pilotcases, zonder fix of publicatie. Pilotresultaten blijven later REVIEW.
