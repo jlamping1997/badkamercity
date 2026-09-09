@@ -1,6 +1,6 @@
 # BadkamerCity Masterplan
 
-> **Versie 0.25.3 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** De projecteigenaar heeft BC-LOCAL-001 inclusief de aanvullende Git-identiteit op 2026-09-09 goedgekeurd na beoordeling van beide reviewbundels. Het onderhoud staat `DONE`; `BC-Q-038` is gesloten en `BC-Q-039` blijft opgelost. Uitsluitend dit masterplan en het onderhoudsrapport worden in fase A gecommit en naar origin/main gepusht. Daarna is BC-TECH-007 expliciet toegestaan voor de vijf vastgelegde publieke read-only cases; de pilot staat tot die grens `READY` en is nog niet inhoudelijk gestart.
+> **Versie 0.26.3 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** Dagafsluiting: uitsluitend MASTERPLAN en RUNTIME_SMOKE_PILOT worden met expliciete toestemming als documentatietussenstand op GitHub opgeslagen. BC-TECH-007 blijft REVIEW; tests zijn niet geslaagd. Volgende sessie zijn een echte bezoekerspreviewlink en herstel van de Shopify-toegang nodig. Beide oorspronkelijke BLOCKED-sets, de niet-uitgevoerde previewcases en onvolledige cleanup blijven ongewijzigd.
 
 Markeringen in dit document:
 
@@ -13,7 +13,7 @@ Markeringen in dit document:
 | Veld | Waarde |
 | --- | --- |
 | Documentnaam | `docs/MASTERPLAN.md` |
-| Versie | `0.25.3` |
+| Versie | `0.26.3` |
 | Status | `ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED` |
 | Datum laatste wijziging | 2026-09-09 |
 | Eigenaar | BadkamerCity-projecteigenaar; naam en formele rol `[NOG ONDERZOEKEN]` |
@@ -30,26 +30,26 @@ De status activeert alleen het vastgelegde read-only onderzoekswerk. Theme-imple
 | Onderdeel | Actuele stand |
 | --- | --- |
 | Algemene projectstatus | Discovery is menselijk goedgekeurd en actief; implementatie en lancering blijven geblokkeerd |
-| Huidige fase | Fase 3 - technische stabilisatie; uitsluitend `BC-TECH-007` staat administratief `READY` en is niet inhoudelijk gestart |
-| Actieve taak-ID | `BC-TECH-007` - `READY` |
-| Actieve taak | Publieke read-only storefront-runtimepilot; voorbereidende commit/push bewezen aanwezig, pilot nog niet inhoudelijk gestart |
+| Huidige fase | Fase 3: BC-TECH-007 REVIEW; previewtoegang niet bewezen en cleanup onvolledig |
+| Actieve taak-ID | `BC-TECH-007` - `REVIEW` |
+| Actieve taak | BC-TECH-007 REVIEW; sessie afgesloten met uitsluitend opslag van voortgangsdocumentatie |
 | Lokaal computeronderhoud | `BC-LOCAL-001` - `DONE`; beide reviewbundels inclusief repository-local Git-identiteit menselijk goedgekeurd op 2026-09-09 |
-| Eerstvolgende actie | Fase A: uitsluitend MASTERPLAN en LOCAL_DEVELOPMENT_SETUP committen/pushen; daarna geautoriseerde BC-TECH-007-pilot met actuele tooling-, target-, fixture- en evidencegates |
+| Eerstvolgende actie | Volgende sessie: echte bezoekerspreviewlink verkrijgen en Shopify-toegang herstellen; daarna eerst homepage/winkel/thema verifiëren vóór de vijf cases |
 | Belangrijkste blokkades | Nul oorspronkelijke lokale leveranciersbestanden, nul import-/generatiescripts, onbekende bronhouders en ontbrekende prijs-, voorraad-/levertijd-, media- en tegeleenheidsbronnen; daarnaast ontbreken volledige app-/pixelbron, runtimevalidatie, gevalideerd productdatamodel, categorieboom, leverancierregels en meerdere architectuurbesluiten |
-| Laatste technisch uitgevoerde basis | `BC-TECH-005` - 43-delige technische `UNEXECUTED DESIGN BASELINE` plus goedkeuringshoofdstuk 44 met 16 routeklassen, 7 codebreakpoints, 3 voorgestelde viewportklassen, 12 fixtureklassen en 53 testcases; nul functionele tests; status `DONE` |
+| Laatste technisch uitgevoerde basis | PREVIEW-run: CLI 4.6.1 bevestigd, bestaande thema-inventarisatie niet bruikbaar; geen browsernavigatie of testcaseherhaling. Twee eerdere publieke runs hebben ieder vijf BLOCKED-resultaten |
 | Laatste technisch uitgevoerde governance | `BC-TECH-006` - 45-delige menselijk goedgekeurde test- en bewijsstandaard met forbidden-evidenceverwijdering en verplichte pre-bundle evidence gate; nul runtime; status `DONE` |
 | Laatste menselijke goedkeuring | 2026-09-09 - BC-LOCAL-001 inclusief Git-identiteitsaanvulling goedgekeurd op basis van beide reviewbundels; BC-Q-038 gesloten |
-| Laatste relevante commit | `3bd1cfd4f2ba5c463e49ac122c800af2c9148379`; HEAD en remote main gelijk bij voorcontrole. De goedkeuringsregistratie wordt hierna uitsluitend met het onderhoudsrapport gecommit/gepusht; nieuwe hash volgt in het uitvoeringslog en de pilotdocumentatie |
-| Previewstatus | `BadkamerCity Development` is unpublished; preview- en Theme Editor-links zijn vastgelegd; geen nieuwe theme-code is geüpload sinds de aanmaak |
+| Laatste relevante commit | Deze documentatietussenstand omvat uitsluitend MASTERPLAN en RUNTIME_SMOKE_PILOT; voorganger 9b71f2cab82bdf43f2b80f01ca22a6677154f947 behouden. Commitcode en daadwerkelijke remotecontrole staan in SAVE-run BC-TECH-007-SAVE_20260909-215128; geen testgoedkeuring |
+| Previewstatus | Bezoekerspreview van BadkamerCity Development 192770375946 toegestaan; actuele homepage/thema-identiteit niet bewezen. Geen volledige bezoekerslink ontvangen of opgeslagen |
 | Productdoel voor lancering | Ongeveer 20.000 volledig ingerichte, gekoppelde, gecategoriseerde, doorzoekbare en filterbare producten |
-| Voorlopige taken | 47 totaal: 17 `DONE`, 1 `READY`, 0 `IN_PROGRESS`, 0 `NOT_STARTED`, 26 `BLOCKED`, 0 `REVIEW`, 3 `DEFERRED` |
+| Voorlopige taken | 47 totaal: 17 DONE, 0 READY, 0 IN_PROGRESS, 0 NOT_STARTED, 26 BLOCKED, 1 REVIEW, 3 DEFERRED |
 
 ### Actuele route
 
-- **Waar we nu zijn:** BC-LOCAL-001 is menselijk goedgekeurd en DONE; beide lokale bewijsbundels blijven behouden. BC-TECH-007 en BC-DEP-020 blijven READY tot de nieuwe beperkte fase-A-push. De vijf-case pilot is nu expliciet toegestaan; BC-TECH-001, fase 2 en alle theme-/Shopify-implementatie blijven BLOCKED.
+- **Waar we nu zijn:** sessie voor vandaag afgesloten. BC-LOCAL-001 DONE; BC-TECH-007/DEP-020 REVIEW, tests niet geslaagd. Vijf previewcases NOT_RUN; twee oorspronkelijke vijf-case BLOCKED-sets behouden. Alleen de twee voortgangsdocumenten zijn voor deze tussenstandcommit/push toegestaan; lokale testlogs en ZIPs blijven buiten Git.
 - **Wat is vastgelegd:** de volledige lokale set van 405 bestanden bij taakstart en de bereikbare Git-padgeschiedenis bevatten nul oorspronkelijke leveranciersbestanden en nul import-/generatiescripts. Deze lokale nulbevinding is menselijk geaccepteerd. Externe bronnen kunnen bestaan en worden later per leverancier afzonderlijk aangeleverd en beoordeeld.
-- **Welke input nodig is:** fase-A-commit/push, Node/npm-compatibiliteit en een launchbare Chrome Stable met offline selftest zijn voor deze computer bewezen. De pilot vereist nog actuele hervalidatie binnen de eigen run, veilige publieke storefrontbereikbaarheid, fixturecontrole en evidencegates. Definitieve browsermatrix en langdurige artefactretentie blijven open. Tijdelijke browsertooling is na de lokale probe verwijderd.
-- **Welke taken daarna komen:** uitsluitend `BC-TECH-007` is officieel `READY` voor de begrensde vijf-case pilot na de fase-A-push. De overige acht niet-officiële kandidaten blijven voorstellen. `BC-TECH-001`, `BC-DATA-001`, `BC-IA-001` en alle theme-/Shopify-implementatietaken blijven geblokkeerd.
+- **Welke input nodig is:** volgende sessie een echte bezoekerspreviewlink en herstel van de Shopify-toegang. Daarna eerst homepage, winkel en theme 192770375946 read-only verifiëren; de gegeven scope voor vijf cases blijft staan. BC-Q-037 review en de Windows-cleanupbeperking blijven open.
+- **Welke taken daarna komen:** binnen de al toegestane BC-TECH-007-scope eerst homepage/themagate en daarna exact vijf previewcases met contextbewaking. Geen automatische reparatie of nieuwe taak. BC-TECH-001, BC-DATA-001, BC-IA-001 en alle theme-/Shopify-implementatie blijven geblokkeerd.
 
 ## 3. Hoe dit masterplan gebruikt moet worden
 
@@ -68,7 +68,7 @@ Statusbeheer:
 - Een technische implementatie mag pas `REVIEW` worden nadat de vastgelegde technische controles slagen.
 - Visueel of functioneel werk mag alleen `DONE` worden na expliciete menselijke goedkeuring.
 - Voorbereidend read-only of documentatiewerk mag `DONE` zijn als bestaand bewijs uitvoering en resultaat aantoont.
-- Geen enkel lanceringsonderdeel is in versie 0.25.3 `DONE`; de zeventien `DONE`-taken zijn governance, read-only onderzoek, conceptuele documentatie en goedgekeurde lokale tooling/onderhoud.
+- Geen enkel lanceringsonderdeel is in versie 0.26.3 `DONE`; de zeventien `DONE`-taken zijn governance, read-only onderzoek, conceptuele documentatie en goedgekeurde lokale tooling/onderhoud.
 
 Bewijs en onderhoud:
 
@@ -665,7 +665,7 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | 0 | Fundament en projectbesturing | `DONE` | Menselijk goedgekeurd permanent protocol, `AGENTS.md`-guardrails, Git-ignore, vier PowerShell-scripts en one-bundle reviewflow met raw completeness en `review_files/` | Onafhankelijke taak `BC-TECH-003` heeft het protocol gebruikt; implementatie blijft niet goedgekeurd |
 | 1 | Volledige inventarisatie | `DONE` | Shopify Admin-, actieve theme-, app-, data- en concurrentieonderzoeken | Op 2026-08-05 menselijk afgerond; bewijsgrenzen en open besluiten blijven bestaan |
 | 2 | Informatiearchitectuur en datamodel | `BLOCKED` | Leveranciersnulmeting en brononafhankelijk productinformatiecontract v0.1 `DONE`; definitieve data-/IA-uitvoer geblokkeerd | Oorspronkelijke bronnen plus afzonderlijke besluiten over veldcatalogus, Shopify-opslag, producttypen, categorieboom en filters |
-| 3 | Technische stabilisatie | `READY` | `BC-TECH-003` t/m `BC-TECH-006` zijn `DONE`; uitsluitend de eerste kleine publieke read-only storefront-runtimepilot `BC-TECH-007` staat administratief `READY`; `BC-TECH-001` blijft `BLOCKED` | Geslaagde fase-A-push, lokale tooling-/browserselftest en begrensde uitvoering van exact vijf publieke/anonieme read-only cases |
+| 3 | Technische stabilisatie | `REVIEW` | BC-TECH-003 t/m 006 DONE; BC-TECH-007 preview toegestaan maar toegang niet bewezen, vijf cases niet herhaald, cleanup onvolledig | Menselijke pilotreview en echte previewlink; implementatie blijft geblokkeerd |
 | 4 | Design system en globale websiteonderdelen | `BLOCKED` | UX-richting, componentregels, homepage, header en footer | Menselijke visuele goedkeuring en componentbewijs |
 | 5 | Categorieën, zoeken en filters | `BLOCKED` | Categorieplatform, productkaarten, zoeken, filters en merchandising | Kernreizen en SEO-routes goedgekeurd |
 | 6 | Productpaginaplatform | `BLOCKED` | Productpaginastandaard en producttypebasis | Data-, functionele en visuele acceptatie gehaald |
@@ -678,7 +678,7 @@ Een technische implementatie zonder menselijke zichtbare/functionele goedkeuring
 | 13 | Launch readiness en productiepublicatie | `BLOCKED` | Go/no-go, release, rollback en productiecontrole | Expliciete menselijke publicatiegoedkeuring |
 | 14 | Monitoring, optimalisatie en toekomstige API's | `DEFERRED` | Monitoring, optimalisaties en afzonderlijke feedintegraties | Prioriteit na lancering `[OPEN BESLISSING]` |
 
-Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. `BC-TECH-002`, `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005`, `BC-TECH-006` en fase 0 zijn menselijk goedgekeurd en `DONE`; fase 3 staat uitsluitend vanwege de nog niet inhoudelijk gestarte `BC-TECH-007` op `READY`. Fase 2 blijft voor definitieve data-/IA-uitvoer `BLOCKED`; geen branch, preview, Shopify-, theme- of technische implementatie is actief.
+Fasen mogen iteratief overlappen voor onderzoek, maar implementatiegates en afhankelijkheden mogen niet worden omzeild. BC-TECH-002, BC-GOV-006, BC-TECH-003 t/m BC-TECH-006 en fase 0 zijn menselijk goedgekeurd DONE. Fase 3 staat uitsluitend vanwege BC-TECH-007 op REVIEW. De expliciet toegestane previewherhaling wacht op een echte bezoekerslink en bewezen homepage/thema. Fase 2 blijft voor definitieve data-/IA-uitvoer BLOCKED; geen theme- of Shopify-implementatie is actief.
 
 ## 56. Werkstromen
 
@@ -712,11 +712,11 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 | Status | Aantal |
 | --- | ---: |
 | `DONE` | 17 |
-| `READY` | 1 |
+| `READY` | 0 |
 | `IN_PROGRESS` | 0 |
 | `NOT_STARTED` | 0 |
 | `BLOCKED` | 26 |
-| `REVIEW` | 0 |
+| `REVIEW` | 1 |
 | `DEFERRED` | 3 |
 | **Totaal** | **47** |
 
@@ -1187,7 +1187,7 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Rollback of herstelwijze:** Documentatietaak; herstel via beoordeelde documentatiecommit. Geen theme-/Shopifyrollback nodig.
 - **Laatst bijgewerkt:** 2026-08-16.
 
-**Uitvoeringsgrens:** `BC-TECH-005` staat `DONE` als goedgekeurde ontwerpbaseline. Nul functionele smoke tests zijn uitgevoerd en alle eerdere runtimecases bleven `UNEXECUTED`. Breakpoints zijn uitsluitend lokaal/read-only geïnventariseerd; exacte runtime-tool en fixturehervalidatie blijven open. `PROPOSED-TECH-12` is uitsluitend door het afzonderlijke menselijke besluit van deze opdracht als `BC-TECH-006` officieel gemaakt; dat geeft nog geen runtime- of browsertesttoestemming.
+**Uitvoeringsgrens:** eerste run en nieuwe expliciet gevraagde herhaling zijn afzonderlijk bewaard. Nieuwe accountcontrole 006, remotecontrole 007 en vijf-case uitvoering 014 in AUTH-run. Geen wachtwoord-/previewbypass, functionele PASS/FAIL, sitefix, Shopify-publicatie of nieuwe commit.
 
 ### BC-TECH-006 - Test- en bewijsopslag standaardiseren
 
@@ -1223,24 +1223,24 @@ Dit zijn voorlopige werkpakketten. Een breed werkpakket moet vóór status `READ
 - **Titel:** Publieke read-only storefront-runtimepilot
 - **Fase:** Fase 3 - technische stabilisatie
 - **Werkstroom:** QA / runtime / browserpilot
-- **Status:** `READY`
+- **Status:** `REVIEW`
 - **Prioriteit:** `P0`
 - **Doel:** Voor het eerst een zeer kleine echte browserruntime tegen uitsluitend publieke/anonieme storefrontstates uitvoeren en daarmee tegelijk de goedgekeurde smoke-baseline, evidence-standaard en one-bundle-overdracht praktisch valideren.
-- **Aanleiding:** `BC-TECH-005` heeft 53 cases ontworpen. `BC-TECH-006` heeft de bewijsstandaard ontworpen. Geen functionele/browsercase is tot nu toe werkelijk uitgevoerd.
-- **Scope:** Browseromgeving lokaal vaststellen; tijdelijke geïsoleerde browserautomation gebruiken; uitsluitend publieke/anonieme storefront; vijf bestaande read-only smoke-cases; GET/HEAD-netwerk toestaan en andere HTTP-methodes via browserautomation blokkeren; screenshots; veilige minimale console-/networkmetadata; testcase-resultaatrecords; `TEST_EVIDENCE_MANIFEST.md`; geen codewijziging.
-- **Buiten scope:** Previewtheme wijzigen; development-theme push; productmutatie; add-to-cart; cartwijziging; searchformulier wanneer daarvoor interactie nodig is; login; account; contactsubmit; checkout; order; klantdata; performancebudget; volledige browsermatrix; volledige 53-case-suite; defectfix; theme-codewijziging.
+- **Aanleiding:** De goedgekeurde smoke- en bewijsstandaard zijn in twee publieke runs tot de toegangseis beproefd; ieder leverde vijf BLOCKED-resultaten door /password op. De gebruiker staat nu dezelfde cases in de development-bezoekerspreview toe.
+- **Scope:** Vanaf de expliciete vervolgopdracht: read-only bezoekerspreview van uitsluitend BadkamerCity Development 192770375946 op fpa9hu-i3.myshopify.com. Bestaande Shopify-aanmelding alleen voor read-only store/themacontrole. Eerst echte homepage en juiste themecontext bewijzen; pas daarna de vijf bestaande cases/viewports met bewaking van previewcontinuïteit. GET/HEAD-only, minimale veilige logs/captures/records/manifest; twee bekende tijdelijke runtimeprofielen gericht opruimen.
+- **Buiten scope:** Theme wijzigen/uploaden/publiceren; Shopify-instellingen/Admin-data; storefrontlogin; product-/cartmutatie; add-to-cart; searchformulier; account; contactsubmit; checkout/order/klantdata; performancebudget; volledige browsermatrix/53-case-suite; defectfix. Uitsluitend de twee voortgangsdocumenten mogen nu als tussenstand worden gecommit/gepusht; nu geen tests, cleanup of Shopify-handelingen.
 - **Afhankelijkheden:** `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005` en `BC-TECH-006` zijn `DONE`.
-- **Benodigde input:** Geslaagde fase-A-commit/push, compatibele lokale Node/npm, exact tijdelijk `puppeteer-core@25.4.0`, reeds lokaal geïnstalleerde Chrome Stable of Edge Stable, offline browser-selftest en publiek bereikbare anonieme storefront.
+- **Benodigde input:** Volgende sessie een echte bezoekerspreviewlink en herstel van de Shopify-toegang. Daarna eerst echte homepage/winkel/thema read-only bewijzen en pas dan de vijf afgesproken cases/viewports. Volledige previewlink/tokens/cookies blijven buiten logs/bundle.
 - **Verwachte bestanden/systemen:** `docs/RUNTIME_SMOKE_PILOT.md`; dit masterplan; ignored bewijs onder `docs/_codex_runs/<RUN_ID>/evidence/`; tijdelijke tooling en browserprofile uitsluitend buiten de repository.
-- **Uitvoer:** Eén kleine bewijsset voor exact `SMK-HOME-001`, `SMK-HEADER-001`, `SMK-HEADER-002`, `SMK-CART-001` en `SMK-CONTENT-004`, plus runtimepilotdocument, masterplan 0.26 en normale one-bundle-overdracht.
-- **Acceptatiecriteria:** Maximaal en exact vijf toegestane cases; uitsluitend publieke/anonieme states; request interception vóór eerste storefrontnavigation; alleen GET/HEAD toegestaan; geen product-/cart-/formulier-/account-/checkout-/Admin-/thememutatie; per case één resultaatrecord; sluitend manifest; screenshots door privacygate; tijdelijke tooling/profile verwijderd; technische uitkomst blijft `REVIEW`.
+- **Uitvoer:** Huidige PREVIEW-run levert voorcontrole-/cleanupbewijs en documentatie, geen nieuwe testcase-records of browsercaptures. De vijf previewcases SMK-HOME-001, SMK-HEADER-001, SMK-HEADER-002, SMK-CART-001 en SMK-CONTENT-004 blijven NOT_RUN tot de gate slaagt. Normale reviewbundle; historische BLOCKED-evidence intact.
+- **Acceptatiecriteria:** Eerst echte homepage en theme 192770375946 op de vastgelegde store bewijzen. Pas daarna exact vijf bestaande cases en viewports, previewcontext bij navigatie bewaken, GET/HEAD-interception vóór eerste navigatie, geen mutaties, per uitgevoerde case eigen resultaatrecord en sluitend manifest/privacygate; tijdelijke profielen verwijderen. Technische acceptatie momenteel NIET GEHAALD: gate ontbreekt en cleanup onvolledig. Taak blijft REVIEW.
 - **Technische controles:** Node/npm- en package-enginecontrole; browserinventaris en exacte versie; offline selftest; basiscommit/branch/target/redirectcontrole; viewport `375 × 812` en `1280 × 900`; veilige console-/networkmetadata; evidencehashes/bytes; verplichte pre-bundle evidence gate; projectwhitelist, privacy-/secretscan, `git diff --check` en one-bundle-finalisatie.
 - **Menselijke controle:** Projecteigenaar/ChatGPT beoordeelt na uitvoering de evidencebundle en screenshots voordat `BC-TECH-007` `DONE` mag worden.
 - **Risico:** Zelfs een anonieme browser kan externe resources/telemetrie laden. Daarom wordt browsernetwork interception gebruikt, zijn alleen GET/HEAD toegestaan en worden geen request bodies, cookies of tokens opgeslagen.
-- **Rollback of herstelwijze:** Geen project-/Shopifymutatie. Tijdelijke browsertooling/profile wordt buiten repository gebruikt en verwijderd. Fase-B-documentatie blijft ongecommit tot review.
-- **Laatst bijgewerkt:** 2026-08-16.
+- **Rollback of herstelwijze:** Geen theme-/Shopifymutatie in de pilot of deze dagafsluiting. Documentatietussenstand mag expliciet naar GitHub; bestaande commits/geschiedenis en lokale bewijsbundels behouden. Geen cleanup tijdens deze opslagopdracht.
+- **Laatst bijgewerkt:** 2026-09-09, dagafsluiting BC-TECH-007-SAVE_20260909-215128; uitsluitend twee voortgangsdocumenten als tussenstand voor GitHub. BC-TECH-007 blijft REVIEW, geen geslaagde tests. Volgende keer echte bezoekerspreviewlink en Shopify-toegangsherstel; huidige BLOCKED/NOT_RUN-resultaten en cleanupbeperking ongewijzigd. BC-EV-046.
 
-**Uitvoeringsgrens:** `BC-TECH-007` staat uitsluitend administratief `READY` en is **NIET INHOUDELIJK GESTART**. Runtime mag pas na de afzonderlijke fase-A-commit en geslaagde push starten en blijft exact binnen de vijf benoemde publieke/anonieme read-only cases.
+**Uitvoeringsgrens:** huidige dagafsluiting uitsluitend documentatie en Git-overdracht volgens DEC-041; geen tests, cleanup of Shopify-handelingen. Historische BLOCKED/NOT_RUN-resultaten blijven behouden. Eerstvolgende runtime wacht op echte bezoekerspreviewlink en Shopify-toegangsherstel.
 
 ### BC-UX-001 - Design system en globale onderdelen
 
@@ -1922,6 +1922,12 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 
 **Aanvullende beslisregel `BC-DEC-038` (2026-09-09):** de projecteigenaar keurt beide BC-LOCAL-001-reviewbundels inclusief Git-identiteit goed; taak DONE en Q-038 gesloten. Alleen MASTERPLAN en LOCAL_DEVELOPMENT_SETUP mogen nu na lokale/remote controle worden gecommit en normaal naar origin/main gepusht. Daarna mogen exact SMK-HOME-001, SMK-HEADER-001, SMK-HEADER-002, SMK-CART-001 en SMK-CONTENT-004 publiek/anoniem read-only worden uitgevoerd. Geen reparaties of Shopify-publicatie. Fase-B-resultaten blijven REVIEW en ongecommit; normale reviewbundle en Verkennerselectie zijn gevraagd.
 
+**Aanvullende beslisregel `BC-DEC-039` (2026-09-09):** de gebruiker vraagt expliciet repository-local GitHub-gebruikerskeuze, geforceerde browserlogin voor het aangeleverde account, Sensitive-identiteitscontrole, behoud van bestaande commit/projectwijzigingen en daarna opnieuw exact vijf publieke read-only cases. Werkelijke credentialidentiteit is geverifieerd; de bestaande commit staat reeds op origin/main, zodat volgens de laatste opdracht geen aanvullende push nodig is. Git-auteursvelden ongewijzigd; geen toestemming voor Shopify-toegangsbypass, sitefix of publicatie.
+
+**Aanvullende beslisregel `BC-DEC-040` (2026-09-09):** uitsluitend bezoekerspreview van BadkamerCity Development 192770375946 op fpa9hu-i3.myshopify.com is expliciet toegestaan voor dezelfde vijf read-only SMK-cases. Eerst echte homepage en juiste thema-identiteit aantonen; bij verdere navigatie previewcontext bewaken. Bestaande Shopify-sessie uitsluitend voor read-only winkel/themacontrole. Volledige previewlink, tokens en cookies niet loggen/bundelen. Twee benoemde tijdelijke profielrestanten gericht verwijderen; geen persoonlijke profielen, uploads, publicatie, instellingen, cart/checkout, commit of push. Het linkveld bevat nog een placeholder en verleent geen fictief toegangsbewijs.
+
+**Aanvullende beslisregel `BC-DEC-041` (2026-09-09):** gebruiker stopt voor vandaag en staat expliciet uitsluitend docs/MASTERPLAN.md en docs/RUNTIME_SMOKE_PILOT.md toe als tussenstandcommit plus normale push naar origin/main. Bestaande geschiedenis, lokale testlogs en ZIPs behouden. BC-TECH-007 blijft REVIEW; tests niet geslaagd. Nu geen tests, cleanup of Shopify-wijzigingen; volgende sessie echte bezoekerspreviewlink en Shopify-toegangsherstel nodig. Remote-tip en schone werkmap moeten na push worden gecontroleerd; bij fout lokaal behouden en ontbrekende GitHub-opslag melden.
+
 ## 59. Open vragenregister
 
 | ID | Open vraag | Waarom belangrijk | Afhankelijke taak | Beslisser | Status |
@@ -1961,13 +1967,15 @@ Alleen expliciet bevestigde keuzes staan hieronder. Een ontbrekende keuze hoort 
 | `BC-Q-034` | Wat mag een klant zien wanneer geen actuele, brongebonden levertijd is bewezen? | De actieve PDP toont nu vaste tekst `Verwachte levertijd: 8 - 9 weken` zonder bewezen databron | Afzonderlijke toekomstige technische taak, `BC-LOG-001` | Projecteigenaar plus commercieel en operationeel/logistiek eigenaar | `[OPEN BESLISSING]`; kies verbergen of een exact goedgekeurde fallback, bron, actualiteitsgrens en eigenaar; geen vervangende tekst is vastgesteld |
 | `BC-Q-035` | Welke Shopify CLI-/Theme Check-versie, configuratie en updateprocedure gelden als reproduceerbare kwaliteitsbasis? | De volledige run is bewijsbaar, maar configuratie ontbrak, een externe schemafout is instabiel en de CLI dreef tijdens eerder onderzoek van 4.6.0 naar 4.6.1 | `BC-TECH-003` | Projecteigenaar plus technisch eigenaar | **BESLOTEN 2026-08-12:** projectbaseline CLI `4.6.1`; uitsluitend `shopify version`; geen gewone installatie/update; aanbevolen regelset via `extends: theme-check:recommended` zonder suppressies; goedgekeurde wrapper; twee identieke runs met 19 offenses/15 bestanden/3 errors/16 warnings/19 fingerprints. Suppressie, CLI-/regelset-/fingerprint-/beleidswijziging vereist afzonderlijke rebaseline |
 | `BC-Q-036` | Welke definitieve retentietermijn en eigenaar gelden voor lokale Codex-runbundles en toekomstig testbewijs na menselijke review? | Volledige logs, reviewbestanden en testartefacten verbeteren controleerbaarheid maar kunnen onnodig lang lokaal blijven | `BC-TECH-006` en alle toekomstige runtime-/testtaken | Projecteigenaar plus technisch en privacyverantwoordelijke | `[OPEN BESLISSING]`; `BC-TECH-006` stelt als interimbeleid lokaal/ignored bewaren tot menselijke review, geen automatische verwijdering en verwijdering uitsluitend door gebruikersbesluit vast. Permanente termijn, eigenaar en eventuele cloud-/CI-opslag blijven afzonderlijk te besluiten |
-| `BC-Q-037` | Welke uitkomsten van de vijf-case runtimepilot worden na screenshot- en evidencebeoordeling menselijk geaccepteerd en welke vereisen een afzonderlijke vervolgtaak? | Technische pilotresultaten en `UNREVIEWED` screenshots mogen niet automatisch als storefrontgoedkeuring of defectfixtoestemming gelden | `BC-TECH-007` en eventuele latere afzonderlijke QA-/fixtaken | Projecteigenaar/ChatGPT | `[OPEN BESLISSING]`; pas na fase-B-bundle en menselijke review, geen automatische volgende taak |
+| `BC-Q-037` | Welke pilotuitkomsten en beperkingen worden na bewijsbeoordeling geaccepteerd? | Tussenstand opslaan is geen goedkeuring van tests; BLOCKED/NOT_RUN en cleanupbeperking blijven | BC-TECH-007 | Projecteigenaar/ChatGPT | [OPEN BESLISSING]; BC-TECH-007 blijft REVIEW, geen geslaagde functionele previewresultaten |
 | `BC-Q-038` | Is de lokale computerinrichting met vastgelegde herstelstappen en beperkingen menselijk beoordeeld? | Technische toolingtests vereisen menselijke acceptatie | `BC-LOCAL-001` | Projecteigenaar | **GESLOTEN / GOEDGEKEURD 2026-09-09**; beide reviewbundels inclusief Git-identiteit beoordeeld en expliciet geaccepteerd; taak DONE |
 | `BC-Q-039` | Welke Git-auteursnaam en welk e-mailadres moeten voor toekomstige commits worden ingesteld? | Commits vereisen de bedoelde auteursidentiteit | `BC-LOCAL-001` en toekomstige commits | Gebruiker/projecteigenaar | **BESLOTEN EN INGESTELD 2026-09-09**; expliciet aangeleverde waarden alleen repository-local ingesteld en exact geverifieerd; globale/systeemidentiteit ongewijzigd, persoonsgegevens niet in bewijs gelogd |
 
 Actualisatie `BC-Q-035` op 2026-09-09: CLI `4.6.1` is op de nieuwe computer hersteld en auto-upgrade staat uit. De bestaande config, wrapper, 19-offensebaseline en rebaselinevoorwaarden blijven ongewijzigd. De actuele meting bevat dezelfde 18 lokale codefingerprints; de historische externe schemafout is niet gereproduceerd.
 
 De goedkeuring van `BC-ADM-001`, `BC-DISC-001`, `BC-DISC-002`, `BC-DATA-002` en `BC-DATA-003` sluit deze resterende vragen niet; zij bevestigt en begrenst het beschikbare read-only bewijs en de conceptuele werkbasis. Geen van deze goedkeuringen neemt een bronacceptatie-, individueel veld-, data-, ontwerp-, Shopify-, theme- of implementatiebesluit.
+
+| `BC-Q-040` | Welke toegestane omgeving en toegang gelden voor de vijf pilotcases? | Echte bezoekerspreviewlink en herstel Shopify-toegang nodig bij hervatting | BC-TECH-007 | Projecteigenaar | **OMGEVINGSKEUZE BESLOTEN 2026-09-09:** bezoekerspreview BadkamerCity Development 192770375946 op fpa9hu-i3.myshopify.com. **[GEBLOKKEERD] TOEGANG NIET BEWEZEN:** link ontbreekt, bestaande CLI-sessie niet bruikbaar. Volgende sessie toegang herstellen; daarna eerst echte homepage/exact thema, dan vijf cases met previewbewaking. Volledige link/tokens/cookies blijven buiten bewijs |
 
 ## 60. Risicoregister
 
@@ -2016,6 +2024,14 @@ Risicoactualisatie 2026-09-09 (`BC-R-031`): de aanvullende auteursidentiteit is 
 
 Risicoactualisatie goedkeuring 2026-09-09: menselijke toolingreview en auteursinput zijn afgerond; CLI-versieguard, privacy-/runtimegates en bestaande technische risico's blijven gelden. De goedkeuring heft geen implementatieblokkade op.
 
+Aanvullende pilotrisico's (2026-09-09):
+
+| ID | Risico | Impact | Beheersing | Status / bewijs |
+| --- | --- | --- | --- | --- |
+| `BC-R-037` | Publieke storefront afgeschermd door /password | Vijf pilotcases BLOCKED; geen functionele dekking | Eerst menselijk toegestaan bereikbaar target; daarna afzonderlijke nieuwe run | OPEN; PILOT-001 / BC-EV-043 |
+| `BC-R-038` | Twee tijdelijke runtimeprofielen blijven gedeeltelijk aanwezig door Windows-toegangsweigering | Cleanupcriterium niet behaald; per profiel nog 156 geweigerde bestanden volgens laatste PREVIEW-meting | Geen nieuwe cleanup of profielinspectie in deze dagafsluiting; eerdere gegevens en beperkingen behouden | OPEN; ongewijzigd, PREVIEW-stappen 012/013/015/017 en BC-EV-045 |
+| `BC-R-039` | Eerdere melding van twee lege captures blijkt onjuist | Onjuiste bewijsclassificatie; geen werkelijk lege beelden aangetoond | Bytegelijkheid met zichtbare HOME-captures bewezen in AUTH-stap 015; oude bewijsbestanden behouden en correctie expliciet vastgelegd | GECORRIGEERD; BC-EV-044 |
+
 ## 61. Afhankelijkhedenregister
 
 | ID | Afhankelijkheid | Blokkeert | Benodigde uitkomst | Eigenaar/status |
@@ -2039,9 +2055,9 @@ Risicoactualisatie goedkeuring 2026-09-09: menselijke toolingreview en auteursin
 | `BC-DEP-017` | Technische change-, preview-, merge- en rollbackwerkwijze | Iedere toekomstige theme-codeimplementatie en latere merge-/releasevoorbereiding | Menselijk beoordeeld runbook met branchbasis/-regex, gates A-G, Theme Check pre-/postgate, previewtargetcontrole, bewijsvolgorde, state machine en rollbackscenario's | `DONE` via `BC-TECH-004` en menselijke goedkeuring op 2026-08-16; iedere concrete gate blijft afzonderlijk en technische implementatie blijft geblokkeerd |
 | `BC-DEP-018` | Minimale functionele smoke-/regressieontwerpbasis | Toetsbare toekomstige preview-, merge- en releasebeoordeling naast Theme Check | Menselijk beoordeelde route-, fixture-, testlaag-, breakpoint-, testcase-, bewijs-, failure-, privacy- en change-impactmatrix zonder runtimeclaim | `DONE` via `BC-TECH-005` en menselijke goedkeuring op 2026-08-16; nul functionele runtime; concrete fixtures en tools vereisen latere hervalidatie/toestemming |
 | `BC-DEP-019` | Vaste test- en bewijsstandaard | Toekomstige runtime-, browser-, preview- en regressietaken | Privacyveilige evidence-layout, resultaatrecords, manifest, naamgeving, hashes, reviewerstatus, retentiegrens, forbidden-evidenceverwijdering, pre-bundle gate en one-bundle-relatie zonder runtimeclaim | `DONE` via `BC-TECH-006` en menselijke goedkeuring op 2026-08-16; nul runtime binnen de standaardtaak |
-| `BC-DEP-020` | Eerste publieke read-only storefront-runtimepilot | Praktische validatie van smoke-baseline, evidence-standaard en one-bundle-overdracht voordat breder runtimewerk wordt overwogen | Exact vijf publieke/anonieme cases, GET/HEAD-only browsernetwork, privacyveilige screenshots/minimale logs, resultaatrecords, sluitend manifest, cleanup en menselijke review | `BC-TECH-007`; `READY` en niet inhoudelijk gestart vóór fase-A-commit/push |
+| `BC-DEP-020` | Read-only storefrontpilot en expliciet toegestane bezoekerspreview | Praktische beoordeling smoke-/evidenceproces | Twee historische vijf-case BLOCKED-sets; previewgate niet uitgevoerd door ontbrekende link, vijf previewcases NOT_RUN; cleanup onvolledig | BC-TECH-007 REVIEW; geen functionele dekking of volledige technische acceptatie |
 
-Actualisatie op 2026-09-09: fase-A-commit/push is bewezen met `3bd1cfd4f2ba5c463e49ac122c800af2c9148379`; lokale toolcompatibiliteit en een offline Chrome-selftest zijn in `BC-LOCAL-001` aangetoond. `BC-DEP-020` blijft `READY`: de vijf storefrontcases, target-/fixturecontrole en menselijke runtimebeoordeling zijn niet uitgevoerd. De lokale probe vervangt geen pilotrun.
+Actuele afhankelijkheidsstand 2026-09-09: voorganger 9b71f2cab82bdf43f2b80f01ca22a6677154f947 en geschiedenis blijven behouden. Uitsluitend twee voortgangsdocumenten krijgen de expliciet toegestane tussenstandcommit/push; feitelijke uitkomst in SAVE-run. BC-DEP-020 REVIEW: echte bezoekerslink en herstel Shopify-toegang nodig bij hervatting; tests niet geslaagd, cleanup onvolledig.
 
 ## 62. Bewijs- en referentieregister
 
@@ -2112,6 +2128,14 @@ De loggingbewijzen `BC-EV-024` tot en met `BC-EV-029` activeren geen technische 
 **`BC-EV-041` - Git-identiteit en Verkennerselectie (2026-09-09):** aanvullende lokale run `BC-LOCAL-001-IDENTITY_20260909-205144`, stap `002`, bewijst via exitcode 0 dat de aangeleverde Git-auteursnaam/e-mail exact repository-local zijn ingesteld, `git var GIT_AUTHOR_IDENT` slaagt en globale/systeemwaarden niet wijzigen. Opdracht en uitvoer zijn Sensitive-geredigeerd; `.git/config` wordt niet als reviewbestand opgenomen. Stap `003` bevestigt de Windows Shell-selectie van de door de gebruiker opgegeven bestaande `BC-LOCAL-001_20260909-203405_BUNDLE.zip`; diens SHA-256 blijft `CE8A345F447F1422C5F3EE37921A21758E5DE2F6368AC66AAA7BC905FE3E32DD`. Geen commit, push, Shopify- of themehandeling; bestaande bundel niet vervangen.
 
 **`BC-EV-042` - Onderhoudsgoedkeuring en beperkte overdracht (2026-09-09):** expliciete menselijke goedkeuring van beide lokale reviewbundels, inclusief identiteit; BC-LOCAL-001 DONE, Q-038 gesloten. Run `BC-TECH-007_20260909-205903` bewaart lokale/remote voorcontrole, goedkeuring en de uitsluitend twee documenten omvattende fase-A-commit/push. De nieuwe commit is pas na uitvoering bewijsbaar en wordt in het runlog en de pilotrapportage vastgelegd. Geen geschiedenis of oude bewijsbundel wordt vervangen.
+
+**`BC-EV-043` - Publieke pilot met toegangsblokkade (2026-09-09):** run BC-TECH-007_20260909-205903 en docs/RUNTIME_SMOKE_PILOT.md. Stap 022 bewijst fase-A-commit/push 9b71f2cab82bdf43f2b80f01ca22a6677154f947; 026 offline Chrome-selftest en HEAD-redirect; 028 exact vijf cases/acht viewportvoorwaarden, alle 302 naar /password 200; 029 screenshotprivacy/capturebeperkingen; 030 netwerkmetadata. Vijf BLOCKED/ENVIRONMENT_MISMATCH-records, acht PNGs (twee leeg), vijf logs en manifest met 18 gehashte artefacten. 363 GET/HEAD toegestaan; 64 POST, 26 OPTIONS en 8 GET-targets geblokkeerd; nul toegestane writes. Tooling/offline-profiel verwijderd; runtimeprofielcleanup krijgt EPERM, precieze oorzaak niet vastgesteld. Geen herstel van site, Shopify-publicatie of fase-B-commit. Taak en afhankelijkheid REVIEW; mechanische evidencegate stap 054 geslaagd voor 18 artefacten; centrale finalizercontrole volgt in het uitvoeringslog.
+
+**`BC-EV-044` - Accountverificatie en expliciete pilot-herhaling (2026-09-09):** run BC-TECH-007-AUTH_20260909-211753. Sensitive 003/005/006 bewijzen repository-local gebruikerskeuze, forced browserlogin en Git-credentialidentiteit via GitHub /user. Stap 007: commit 9b71f2cab82bdf43f2b80f01ca22a6677154f947 reeds op remote main; geen nieuwe commit/push. 012 offline selftest; 014 vijf nieuwe casevoorwaarden/acht viewports, alle 302 naar /password 200; 015 bytebewijs voor alle PNGs en correctie van eerdere lege-captureclaim; 017 veilige logs/netwerk: 362 GET/HEAD toegestaan, 64 POST/25 OPTIONS/8 GET-targets geblokkeerd, 0 toegestane writes. Acht geldige captures, vijf logs/records en eigen manifest; nieuwe cleanup 018 verwijdert tooling/offline-profiel maar runtimeprofiel krijgt EPERM. Evidencegate 024 geslaagd voor 18 artefacten en nul concrete credentialtreffers. Oude bewijsbestanden en projectwijzigingen behouden; masterplan/rapport alleen lokaal aangevuld; REVIEW.
+
+**`BC-EV-045` - Bezoekerspreviewvoorcontrole en gerichte cleanup (2026-09-09):** run BC-TECH-007-PREVIEW_20260909-213542. Q-040/DEC-040 leggen de expliciete previewomgeving en gate vast. Echte link ontbreekt; Sensitive 003 mislukt, 005 CLI 4.6.1, 006 veilige categorie bestaande CLI-aanmelding niet bruikbaar. Geen homepage/thema bewezen, geen browsernavigatie of testcaseherhaling; vijf geplande previewcases NOT_RUN. Stappen 012/013/015/017: uitsluitend twee benoemde TEMP-profielen; Shell-toegangsweigering, metadata/rechtencontrole en beperkte cleanup. Nog 29 bestanden/12 mappen verwijderd, twee restanten met ieder 156 geweigerde bestanden. Geen profielinhoud of volledige previewlink opgeslagen; eerdere bewijssets behouden. Alleen MASTERPLAN/RUNTIME_SMOKE_PILOT aangevuld, REVIEW. Technische acceptatie onvolledig; normale raw/privacy/reviewkopie/ZIP-validatie in huidige run.
+
+**`BC-EV-046` - Dagafsluiting en beperkte voortgangsopslag (2026-09-09):** run BC-TECH-007-SAVE_20260909-215128 bewaart expliciete toestemming, Git-voorcontrole en het hervatpunt. Alleen MASTERPLAN en RUNTIME_SMOKE_PILOT worden voor de tussenstand geselecteerd; normale commit/push en remote-/werkmapcontrole volgen in dezelfde run met feitelijke hash/uitkomst in FINAL_REPORT. Geen nieuwe testcase, cleanup of Shopify-handeling. Bestaande BLOCKED/NOT_RUN-gegevens en bewijsbundels behouden; REVIEW blijft staan.
 
 ## 63. Controlechecklists
 
@@ -2225,14 +2249,14 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 - [x] Geen evidence-directory, runtime, browser, screenshot, log, metric, Shopify, branch, package of theme-codehandeling uitgevoerd.
 - [x] De projecteigenaar heeft `BC-TECH-006` op 2026-08-16 onder twee bindende reviewfixes goedgekeurd; taak en `BC-DEP-019` staan `DONE` en runtime binnen deze taak bleef nul.
 
-### Publieke read-only storefront-runtimepilot (`BC-TECH-007`) — readiness
+### Publieke read-only storefront-runtimepilot (`BC-TECH-007`) — historische readiness en actuele review
 
 - [x] `BC-TECH-007` is als eerste kleine publieke read-only storefront-runtimepilot officieel gemaakt met volledig doel, scope, buiten-scope, afhankelijkheden, acceptatie, technische controles, menselijke review, risico en rollback.
 - [x] `BC-GOV-006`, `BC-TECH-003`, `BC-TECH-004`, `BC-TECH-005`, `BC-TECH-006`, `BC-DEP-018`, `BC-DEP-019` zijn `DONE`.
 - [x] Exact vijf bestaande cases, twee viewports, publieke basis-URL, GET/HEAD-only interception, verboden states/mutaties, evidence-layout, privacygate en tempcleanup zijn vooraf afgebakend.
 - [x] Taak, `BC-DEP-020` en uitsluitend het relevante deel van fase 3 staan administratief `READY` en **NIET INHOUDELIJK GESTART** vóór de afzonderlijke fase-A-commit en push.
 - [x] Fase-A-push is op 2026-09-09 read-only bevestigd; Node/npm, package-engines, Chrome Stable en offline selftest zijn binnen afzonderlijk toegestaan lokaal computeronderhoud gecontroleerd. Bij de pilot opnieuw binnen de actuele taakcontext hervalideren.
-- [ ] Storefrontruntime, vijf resultaatrecords, screenshots, minimale logs, manifest en pre-bundle gate volgen uitsluitend in de geautoriseerde fase B.
+- [x] Vijf casevoorwaarden in fase B gecontroleerd; vijf BLOCKED-records, acht captures en vijf logs geregistreerd. Geen functionele journey uitgevoerd; twee lege captures en onvoltooide profielcleanup beperken acceptatie. REVIEW, geen volgende taak.
 
 ### Codewijziging
 
@@ -2342,9 +2366,9 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 
 ## 64. Huidige eerstvolgende stappen
 
-1. Registreer de goedgekeurde BC-LOCAL-001-uitkomst met uitsluitend MASTERPLAN en LOCAL_DEVELOPMENT_SETUP in een normale commit naar origin/main; controleer de twee bestanden, remote basis en behoud van geschiedenis/bewijs.
-2. Start daarna uitsluitend de expliciet toegestane BC-TECH-007-pilot: vijf publieke read-only cases, tijdelijke pinned browsertooling, offline selftest, GET/HEAD-only, twee viewports en privacy-/evidencegates.
-3. Leg resultaten en problemen zonder reparaties vast; laat de pilot REVIEW, maak de normale bundle en selecteer die in Verkenner. BC-Q-037 blijft de menselijke reviewvraag; geen automatische volgende taak.
+1. Sessie afgesloten met uitsluitend de geautoriseerde tussenstandopslag van MASTERPLAN en RUNTIME_SMOKE_PILOT. BC-TECH-007 blijft REVIEW; tests zijn niet geslaagd. Deze toestemming is geen functionele acceptatie.
+2. Volgende sessie een echte bezoekerspreviewlink verkrijgen en de Shopify-toegang herstellen. Daarna eerst echte homepage, winkel fpa9hu-i3.myshopify.com en theme 192770375946 read-only bewijzen; pas vervolgens exact de vijf eerder toegestane cases/viewports met previewbewaking.
+3. Oude BLOCKED-resultaten, de NOT_RUN-previewplanning, screenshotcorrectie en onvolledige cleanup behouden. Nu geen tests, cleanup of Shopify-handelingen; lokale logs en ZIPs blijven genegeerd en bewaard. Geen reparatie of publicatie geactiveerd.
 
 ## 65. Wijzigingslog
 
@@ -2425,3 +2449,17 @@ Een niet-relevante controle krijgt `N.v.t.` met reden en bewijs; zij wordt niet 
 **Wijzigingslog 2026-09-09, versie 0.25.2, aanvulling `BC-LOCAL-001`:** aangeleverde Git-identiteit alleen repository-local ingesteld, exacte waarden en ongewijzigde globale/systeemscope geverifieerd. Verkenner met de expliciet gekozen bestaande bundle geopend en selectie gecontroleerd; bundlehash ongewijzigd. `BC-Q-039` opgelost; dashboard, taakinput/-statusuitleg, route, risico, besluit en bewijs bijgewerkt zonder persoonsgegevens. Aanvullende run behoudt eerder bewijs; geen commit, push, Shopify of themehandeling. Taak blijft `REVIEW`; telling blijft 47 en `BC-TECH-007` blijft `READY` en niet gestart.
 
 **Wijzigingslog 2026-09-09, versie 0.25.3:** beide BC-LOCAL-001-bundels menselijk goedgekeurd inclusief Git-identiteit. Onderhoud DONE; Q-038 gesloten; dashboard, taak, route, risicoactualisatie, besluit en bewijs bijgewerkt. Telling 47: 17 DONE, 1 READY, 26 BLOCKED, 3 DEFERRED. Nieuwe expliciete tweefasenopdracht: alleen masterplan/onderhoudsrapport committen en pushen, daarna exact vijf publieke read-only pilotcases, zonder fix of publicatie. Pilotresultaten blijven later REVIEW.
+
+**Startregistratie 2026-09-09, versie 0.26:** fase A geslaagd met 9b71f2cab82bdf43f2b80f01ca22a6677154f947 (stap 022); BC-TECH-007 en relevante fase 3 IN_PROGRESS. Eerdere READY/readinesspassages beschrijven de historische voorbereiding.
+
+**Wijzigingslog 2026-09-09, versie 0.26, eindregistratie:** BC-LOCAL-001 DONE en Q-038 gesloten. Alleen de twee goedgekeurde documenten normaal gecommit/gepusht als 9b71f2cab82bdf43f2b80f01ca22a6677154f947; GitHub-browseraanmelding herstelde eerste pushfailure. BC-TECH-007 uitgevoerd op publieke voorwaarden: vijf BLOCKED door wachtwoordbarriere, nul functionele PASS/FAIL, acht viewportwaarnemingen, twee lege captures eerlijk gelabeld, vijf records en sluitend manifest. Tijdelijke tooling/offline-profiel verwijderd; runtimeprofielcleanup niet voltooid ondanks gerichte controles, als risico behouden. Pilot/dependency/fase 3 REVIEW; dashboard, taak, vragen, risico's, bewijs en route bijgewerkt. Fase B alleen masterplan en nieuw runtimeverslag ongecommit. Telling 47: 17 DONE, 26 BLOCKED, 1 REVIEW, 3 DEFERRED. Historische readiness/startregistraties hierboven beschrijven eerdere momenten.
+
+**Vervolgstart 2026-09-09, versie 0.26.1:** expliciete opdracht voor repository-local GitHub-gebruikerskeuze, Sensitive forced browserlogin en /user-identiteitscontrole. Bestaande commit 9b71f2c reeds op origin/main; niet opnieuw gemaakt of gepusht. Gebruiker vraagt vervolgens opnieuw exact vijf publieke cases in nieuwe run BC-TECH-007-AUTH_20260909-211753. Eerdere REVIEW-uitkomsten en lokale wijzigingen blijven behouden.
+
+**Wijzigingslog 2026-09-09, versie 0.26.1, eindregistratie:** repositorygebonden GitHub-accountkeuze en Sensitive forced login op gebruikersopdracht uitgevoerd; werkelijke credentialidentiteit exact gecontroleerd via /user. Bestaande commit 9b71f2c reeds op origin/main; niet opnieuw gemaakt/gepusht. Nieuwe expliciet gevraagde vijf-case pilot: opnieuw 5 BLOCKED door /password, 0 PASS/FAIL, 8 geldige captures en 5 logs/records. Eerdere lege-capturebevinding gecorrigeerd met gelijke PNG-bytes, zonder oud bewijs te wijzigen. Tijdelijke tooling/offline-profiel verwijderd; twee runtimeprofielrestanten blijven EPERM. Dashboard, taak/fase/dependency, besluit, open reviewvraag, risico's, bewijs en route geactualiseerd; alleen rapport/masterplan lokaal aangevuld. Telling ongewijzigd 47: 17 DONE, 26 BLOCKED, 1 REVIEW, 3 DEFERRED.
+
+**Startregistratie 2026-09-09, versie 0.26.2:** nieuwe expliciete previewomgeving bij Q-040/BC-TECH-007 geregistreerd. Toegangsgate nog open door ontbrekende echte link en niet-bruikbare bestaande CLI-sessie; geen volledige testcaseherhaling. Gerichte cleanup van twee bekende tijdelijke mappen wordt voortgezet; eerdere bewijsbundels/commit/projectwijzigingen behouden.
+
+**Wijzigingslog 2026-09-09, versie 0.26.2, eindregistratie:** expliciete bezoekerspreview van BadkamerCity Development 192770375946 bij Q-040/DEC-040 en BC-TECH-007 vastgelegd. Placeholder ontvangen, echte link ontbreekt; bestaande CLI-aanmelding niet bruikbaar. Echte homepage/thema niet geverifieerd, daarom nul previewnavigaties en vijf geplande cases NOT_RUN, zonder nieuwe resultaatrecords. Oude BLOCKED-sets en bundles behouden. Gerichte cleanup verwijdert in stap 017 nog 29 bestanden/12 mappen; per profiel 156 bestanden blijven AccessDenied. Dashboard, taak/fase/dependency, vragen, risico, bewijs, route en runtimeverslag geactualiseerd; BC-TECH-007 REVIEW, technische acceptatie onvolledig. Geen commit/push of Shopify-/theme-/cartmutatie. Telling 47: 17 DONE, 26 BLOCKED, 1 REVIEW, 3 DEFERRED.
+
+**Wijzigingslog 2026-09-09, versie 0.26.3:** gebruiker sluit de dag af en staat uitsluitend MASTERPLAN/RUNTIME_SMOKE_PILOT toe als tussenstandcommit/push. Hervatpunt vastgelegd: echte bezoekerspreviewlink en herstel Shopify-toegang; eerst homepage/thema bewijzen, daarna pas de bestaande vijf cases. Dashboard, taak, besluit DEC-041, vragen, risicoactualisatie, bewijs EV-046 en route bijgewerkt. BC-TECH-007/fase 3/DEP-020 blijven REVIEW, tests niet geslaagd. Geen nieuwe test, cleanup of Shopify-handeling; oude resultaten/logs/bundles behouden. Git-uitkomst en commitcode in SAVE-run; telling blijft 47: 17 DONE, 26 BLOCKED, 1 REVIEW, 3 DEFERRED.
