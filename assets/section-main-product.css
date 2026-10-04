@@ -2346,6 +2346,32 @@ a.product__text {
 
 /* Product-thumbnail snippet */
 
+/* Reserve the normal PDP image frame independently of source dimensions. */
+product-info[id^='MainProduct-'] media-gallery .product-media-container.media-type-image {
+  width: 100%;
+  max-width: 100%;
+}
+
+product-info[id^='MainProduct-'] media-gallery .media-type-image .product__media {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  padding-top: 0;
+  background: #fff;
+}
+
+product-info[id^='MainProduct-'] media-gallery .media-type-image .product__media img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+product-info[id^='MainProduct-'] media-gallery .thumbnail img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .product-media-container {
   --aspect-ratio: var(--preview-ratio);
   --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);

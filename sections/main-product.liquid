@@ -74,6 +74,7 @@
         display: grid;
         grid-template-columns: minmax(0, 0.52fr) minmax(40rem, 0.48fr);
         align-items: start;
+        container-type: inline-size;
       }
 
       #MainProduct-{{ section.id }} .product__media-wrapper {
@@ -110,7 +111,7 @@
         width: 100%;
       }
 
-      #MainProduct-{{ section.id }} .product__media-item img,
+    /* Image frames use the responsive square gallery rules. */
       #MainProduct-{{ section.id }} .product__media-item video,
       #MainProduct-{{ section.id }} .product__media-item model-viewer {
         aspect-ratio: 5 / 6;
@@ -127,7 +128,10 @@
       #MainProduct-{{ section.id }} .product__info-container {
         position: sticky;
         top: 2.4rem;
+        display: flex;
+        flex-direction: column;
       }
+
     }
 
     #MainProduct-{{ section.id }} .product__media-wrapper {
@@ -144,13 +148,112 @@
     }
 
     #MainProduct-{{ section.id }} .product__info-container {
-      padding: 2.4rem;
+      --bc-buybox-padding: 2.4rem;
+      padding: var(--bc-buybox-padding);
       border: 1px solid rgba(15, 39, 64, 0.1);
       background: #fff;
+      display: flex;
+      flex-direction: column;
     }
 
     #MainProduct-{{ section.id }} .product__info-container > * + * {
       margin: 0;
+    }
+
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--price,
+    #MainProduct-{{ section.id }} .bc-buybox__section--actions .product-form {
+      margin: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__pricing-layout {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__price-current {
+      font-size: clamp(3.2rem, 2.8vw, 4rem);
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__price-compare {
+      color: #b44848;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__savings {
+      color: #0b6b38;
+      font-size: 1.4rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__delivery-card {
+      padding: 1.2rem 1.4rem;
+      border-radius: 0.8rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__delivery-meta {
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__delivery-title {
+      font-size: 1.35rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__delivery-copy {
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--quantity,
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--actions {
+      margin-top: 1.6rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__quantity-row {
+      align-items: center;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-form__wishlist {
+      width: 6rem;
+      min-width: 6rem;
+      max-width: 6rem;
+      height: 6rem;
+    }
+
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--usps {
+      margin: 2rem calc(-1 * var(--bc-buybox-padding)) calc(-1 * var(--bc-buybox-padding));
+      padding: 1.6rem var(--bc-buybox-padding);
+      background: #f5f8fa;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__usp-list {
+      gap: 0.8rem 1.2rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__usp-item {
+      font-size: 1.35rem;
+      line-height: 1.4;
+    }
+
+    @media screen and (max-width: 989px) {
+      #MainProduct-{{ section.id }} .bc-buybox__pricing-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      #MainProduct-{{ section.id }} .bc-product-form__wishlist {
+        width: 5.6rem;
+        min-width: 5.6rem;
+        max-width: 5.6rem;
+        height: 5.6rem;
+      }
+
+      #MainProduct-{{ section.id }} .product-form__submit.button {
+        padding-inline: 1rem;
+      }
+
+      #MainProduct-{{ section.id }} .bc-product-form__submit-content {
+        font-size: 1.5rem;
+        gap: 0.6rem;
+      }
     }
 
     #MainProduct-{{ section.id }} .product-media-modal__dialog {
@@ -195,13 +298,6 @@
 
     #MainProduct-{{ section.id }} .bc-product__summary-inner {
       max-width: 82rem;
-    }
-
-    #MainProduct-{{ section.id }} .bc-product__summary-title {
-      margin: 0 0 1.8rem;
-      font-size: clamp(2.2rem, 2.1vw, 3rem);
-      line-height: 1.2;
-      color: rgb(var(--bc-color-primary));
     }
 
     #MainProduct-{{ section.id }} .bc-product__summary-content {
@@ -273,6 +369,83 @@
 
     #MainProduct-{{ section.id }} .bc-product__summary.is-short .bc-product__summary-toggle {
       display: none;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs {
+      min-width: 0;
+      margin-top: 2.4rem;
+      padding: 2.4rem;
+      border: 0.1rem solid rgba(15, 39, 64, 0.1);
+      border-radius: 1.2rem;
+      background: #fff;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__title {
+      margin: 0 0 0.6rem;
+      color: rgb(var(--bc-color-primary));
+      font-size: 2.2rem;
+      line-height: 1.3;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__note {
+      margin: 0 0 1.2rem;
+      color: rgba(var(--bc-color-primary), 0.65);
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__group-title {
+      margin: 1.8rem 0 0.6rem;
+      color: rgb(var(--bc-color-primary));
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__list {
+      margin: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__row {
+      display: grid;
+      grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
+      gap: 1.2rem;
+      padding: 0.9rem 1.2rem;
+      border-bottom: 0.1rem solid rgba(15, 39, 64, 0.04);
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: rgb(var(--bc-color-primary));
+      overflow-wrap: anywhere;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__row:last-child {
+      border-bottom: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__row--shaded {
+      background: #f0f4f8;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__row dt {
+      font-weight: 600;
+    }
+
+    #MainProduct-{{ section.id }} .bc-test-specs__row dd {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 479px) {
+      #MainProduct-{{ section.id }} .bc-test-specs__row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.2rem;
+      }
+    }
+
+    @media screen and (min-width: 990px) {
+      #MainProduct-{{ section.id }} .bc-test-specs {
+        grid-column: 2;
+        margin-top: 0;
+      }
     }
 
     #MainProduct-{{ section.id }} .bc-product-specs {
@@ -380,7 +553,7 @@
       }
 
       #MainProduct-{{ section.id }} .product__info-container {
-        padding: 2.8rem;
+        --bc-buybox-padding: 2.8rem;
       }
     }
 
@@ -468,7 +641,6 @@
       }
 
       #MainProduct-{{ section.id }} .product__info-container {
-        padding: 1.8rem;
         margin-top: 2rem;
       }
     }
@@ -1429,7 +1601,6 @@
     {%- if product.description != blank -%}
       <div class="bc-product__summary" data-product-summary>
         <div class="bc-product__summary-inner">
-          <h2 class="bc-product__summary-title">In het kort</h2>
           <div
             id="ProductSummary-{{ section.id }}"
             class="bc-product__summary-content rte"
@@ -1451,6 +1622,33 @@
             <span class="bc-product__summary-toggle-text bc-product__summary-toggle-text--less">Toon minder</span>
           </button>
         </div>
+        {%- if product.handle == 'testproduct-badkamercity-productpagina' -%}
+          <aside class="bc-test-specs" aria-labelledby="TestSpecs-{{ section.id }}">
+            <h2 class="bc-test-specs__title" id="TestSpecs-{{ section.id }}">Specificaties</h2>
+            <p class="bc-test-specs__note">Fictieve testgegevens voor deze layouttest.</p>
+            <h3 class="bc-test-specs__group-title">Product</h3>
+            <dl class="bc-test-specs__list">
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Merk</dt><dd>BadkamerCity Test</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Serie</dt><dd>Premium Line</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Kleur</dt><dd>Geborsteld staal</dd></div>
+            </dl>
+            <h3 class="bc-test-specs__group-title">Afmetingen</h3>
+            <dl class="bc-test-specs__list">
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Hoogte</dt><dd>31 cm</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Uitloophoogte</dt><dd>21 cm</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Uitlooplengte</dt><dd>16 cm</dd></div>
+            </dl>
+            <h3 class="bc-test-specs__group-title">Algemeen</h3>
+            <dl class="bc-test-specs__list">
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Materiaal</dt><dd>Messing</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Aansluiting</dt><dd>1/2&quot;</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Bediening</dt><dd>Eengreeps</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Montage</dt><dd>Opbouw</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Garantie</dt><dd>5 jaar</dd></div>
+              <div class="bc-test-specs__row{% cycle 'bc-test-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>Levertijd</dt><dd>Op aanvraag</dd></div>
+            </dl>
+          </aside>
+        {%- endif -%}
       </div>
     {%- endif -%}
 
