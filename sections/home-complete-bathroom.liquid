@@ -1,0 +1,476 @@
+{%- style -%}
+  .home-complete-bathroom-{{ section.id }} {
+    --hcb-navy: #0f2740;
+    --hcb-blue: #176b9b;
+    --hcb-yellow: #f4cd45;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    background: #ffffff;
+    color: var(--hcb-navy);
+  }
+
+  .home-complete-bathroom-{{ section.id }} .page-width {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid rgba(15, 39, 64, 0.1);
+    border-radius: 10px;
+    background: #f2f7fa;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__media {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #e2edf2;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b1c7d2;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__placeholder-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 24px;
+    background: var(--hcb-navy);
+    color: #ffffff;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__heading {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__body {
+    margin: 0;
+    color: #e5edf3;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__workflow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    min-width: 0;
+    padding: 24px;
+    background: #f2f7fa;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__steps {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--hcb-blue);
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step-copy {
+    min-width: 0;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step-title {
+    margin: 0;
+    color: var(--hcb-navy);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step-text {
+    margin: 4px 0 0;
+    color: #4c6071;
+    font-size: 1.6rem;
+    line-height: 1.45;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    background: var(--hcb-yellow);
+    color: var(--hcb-navy);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta-label {
+    min-width: 0;
+  }
+
+  .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta-arrow {
+    flex: 0 0 auto;
+  }
+
+  .home-complete-bathroom-{{ section.id }} a.home-complete-bathroom__cta:focus-visible {
+    outline: 3px solid var(--hcb-blue);
+    outline-offset: 3px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .home-complete-bathroom-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .page-width {
+      padding-inline: 24px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__card {
+      grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__media {
+      aspect-ratio: auto;
+      min-height: 220px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__workflow {
+      grid-column: 1 / -1;
+      gap: 20px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step {
+      display: block;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__number {
+      margin-bottom: 8px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta {
+      width: auto;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__card {
+      grid-template-columns: minmax(0, 26fr) minmax(0, 27fr) minmax(0, 47fr);
+      min-height: 180px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__media {
+      min-height: 180px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__intro {
+      gap: 10px;
+      padding: 16px 20px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__heading {
+      font-size: clamp(2.2rem, 1.8vw, 2.6rem);
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__body {
+      font-size: 1.4rem;
+      line-height: 1.45;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__workflow {
+      grid-column: auto;
+      gap: 12px;
+      padding: 16px 24px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__steps {
+      gap: 12px;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__number {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 6px;
+      font-size: 1.4rem;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step-title {
+      font-size: 1.45rem;
+      line-height: 1.25;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__step-text {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+
+    .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta {
+      min-height: 44px;
+      padding: 10px 16px;
+      font-size: 1.45rem;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .home-complete-bathroom-{{ section.id }} a.home-complete-bathroom__cta:hover {
+      background: #e9c039;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="home-complete-bathroom home-complete-bathroom-{{ section.id }}"
+  {% if section.settings.heading != blank %}aria-labelledby="CompleteBathroomHeading-{{ section.id }}"{% endif %}
+>
+  <div class="page-width">
+    <div class="home-complete-bathroom__card">
+      <div class="home-complete-bathroom__media">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag:
+            widths: '320, 480, 640, 800, 960, 1200',
+            sizes: '(min-width: 1440px) 362px, (min-width: 1200px) calc(26vw - 13px), (min-width: 750px) calc(42vw - 21px), calc(100vw - 32px)',
+            class: 'home-complete-bathroom__image',
+            loading: 'lazy'
+          }}
+        {%- else -%}
+          <div class="home-complete-bathroom__placeholder" aria-hidden="true">{{ 'lifestyle-1' | placeholder_svg_tag: 'home-complete-bathroom__placeholder-svg' }}</div>
+        {%- endif -%}
+      </div>
+
+      <div class="home-complete-bathroom__intro">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="home-complete-bathroom__heading" id="CompleteBathroomHeading-{{ section.id }}">{{ section.settings.heading | escape | newline_to_br }}</h2>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <p class="home-complete-bathroom__body">{{ section.settings.body | escape | newline_to_br }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="home-complete-bathroom__workflow">
+        <ol class="home-complete-bathroom__steps" role="list">
+          {%- for step_number in (1..3) -%}
+            {%- liquid
+              assign step_title_id = 'step_' | append: step_number | append: '_title'
+              assign step_text_id = 'step_' | append: step_number | append: '_text'
+              assign step_title = section.settings[step_title_id]
+              assign step_text = section.settings[step_text_id]
+            -%}
+            {%- if step_title != blank or step_text != blank -%}
+              <li class="home-complete-bathroom__step" value="{{ step_number }}">
+                <span class="home-complete-bathroom__number" aria-hidden="true">{{ step_number }}</span>
+                <div class="home-complete-bathroom__step-copy">
+                  {%- if step_title != blank -%}
+                    <h3 class="home-complete-bathroom__step-title">{{ step_title | escape }}</h3>
+                  {%- endif -%}
+                  {%- if step_text != blank -%}
+                    <p class="home-complete-bathroom__step-text">{{ step_text | escape | newline_to_br }}</p>
+                  {%- endif -%}
+                </div>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ol>
+
+        {%- if section.settings.cta_label != blank -%}
+          {%- if section.settings.cta_link != blank -%}
+            <a href="{{ section.settings.cta_link }}" class="home-complete-bathroom__cta">
+              <span class="home-complete-bathroom__cta-label">{{ section.settings.cta_label | escape }}</span>
+              <span class="home-complete-bathroom__cta-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          {%- else -%}
+            <span class="home-complete-bathroom__cta">
+              <span class="home-complete-bathroom__cta-label">{{ section.settings.cta_label | escape }}</span>
+              <span class="home-complete-bathroom__cta-arrow" aria-hidden="true">&rarr;</span>
+            </span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Complete badkamer advies",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["index"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Badkamerfoto"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Van idee naar\ncomplete badkamer"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Introductie",
+      "default": "Wij helpen je van inspiratie tot realisatie.\nMet persoonlijk advies, een 3D ontwerp\nen alles onder één dak."
+    },
+    {
+      "type": "header",
+      "content": "Drie stappen"
+    },
+    {
+      "type": "text",
+      "id": "step_1_title",
+      "label": "Stap 1: titel",
+      "default": "Inspiratie"
+    },
+    {
+      "type": "textarea",
+      "id": "step_1_text",
+      "label": "Stap 1: tekst",
+      "default": "Samen ontdekken\nwat bij jou past"
+    },
+    {
+      "type": "text",
+      "id": "step_2_title",
+      "label": "Stap 2: titel",
+      "default": "Persoonlijk ontwerp"
+    },
+    {
+      "type": "textarea",
+      "id": "step_2_text",
+      "label": "Stap 2: tekst",
+      "default": "Jouw badkamer in 3D,\nhelemaal op maat"
+    },
+    {
+      "type": "text",
+      "id": "step_3_title",
+      "label": "Stap 3: titel",
+      "default": "Alles geregeld"
+    },
+    {
+      "type": "textarea",
+      "id": "step_3_text",
+      "label": "Stap 3: tekst",
+      "default": "Van producten tot\nvakkundige montage"
+    },
+    {
+      "type": "header",
+      "content": "Adviesgesprek"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Knoptekst",
+      "default": "Plan een gratis adviesgesprek"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Link adviesgesprek",
+      "info": "Kies een bestaande afspraak- of adviespagina. Zonder link wordt alleen het label getoond."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "label": "Ruimte boven",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "label": "Ruimte onder",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Complete badkamer advies"
+    }
+  ]
+}
+{% endschema %}
