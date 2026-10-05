@@ -9,6 +9,8 @@
   }
 {%- endstyle -%}
 
+{{ 'component-bc-category-navigation.css' | asset_url | stylesheet_tag }}
+<div class="page-width bc-category-path-wrap">{% render 'bc-category-breadcrumbs', current_collection: collection, navigation_menu: section.settings.navigation_menu %}</div>
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
@@ -20,6 +22,7 @@
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
+      {% render 'bc-category-children', current_collection: collection, navigation_menu: section.settings.navigation_menu, display_mode: 'compact' %}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
@@ -46,32 +49,5 @@
 </div>
 
 {% schema %}
-{
-  "name": "t:sections.main-collection-banner.name",
-  "class": "section",
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "t:sections.main-collection-banner.settings.paragraph.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collection_description",
-      "default": true,
-      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collection_image",
-      "default": false,
-      "label": "t:sections.main-collection-banner.settings.show_collection_image.label"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    }
-  ]
-}
+{"name":"t:sections.main-collection-banner.name","class":"section","settings":[{"type":"link_list","id":"navigation_menu","label":"Menu voor de categorieboom","default":"main-menu"},{"type":"paragraph","content":"t:sections.main-collection-banner.settings.paragraph.content"},{"type":"checkbox","id":"show_collection_description","default":true,"label":"t:sections.main-collection-banner.settings.show_collection_description.label"},{"type":"checkbox","id":"show_collection_image","default":false,"label":"t:sections.main-collection-banner.settings.show_collection_image.label"},{"type":"color_scheme","id":"color_scheme","label":"t:sections.all.colors.label","default":"scheme-1"}]}
 {% endschema %}

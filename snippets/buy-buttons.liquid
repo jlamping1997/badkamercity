@@ -5,6 +5,7 @@
   - block: {Object} passing the block information.
   - product_form_id: {String} product form id.
   - section_id: {String} id of section to which this snippet belongs.
+  - button_label: {String} Optional label for the primary action.
   - show_pickup_availability: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
 
   Usage:
@@ -96,7 +97,7 @@
                 <span class="svg-wrapper">
                   {{- 'icon-cart-bc.svg' | inline_asset_content -}}
                 </span>
-                <span class="bc-product-form__submit-text">{{ 'products.product.add_to_cart' | t }}</span>
+                <span class="bc-product-form__submit-text">{% if button_label != blank %}{{ button_label | escape }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}</span>
               </span>
               <span class="bc-product-form__submit-state{% unless button_unavailable %} hidden{% endunless %}" data-submit-state>
                 {{ button_state_text }}

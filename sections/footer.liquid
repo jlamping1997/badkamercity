@@ -1,685 +1,194 @@
-{% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'section-footer.css' | asset_url | stylesheet_tag }}
-{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  .footer {
-    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
-  }
-
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .footer {
-      margin-top: {{ section.settings.margin_top }}px;
-    }
-
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  {%- liquid
-    assign has_social_icons = true
-    if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
-      assign has_social_icons = false
-    endif
-  -%}
-
-  <div class="bc-footer">
-    <div class="bc-footer__trust page-width">
-      {%- if section.settings.trust_title_1 != blank -%}
-        <div class="bc-footer__trust-item">
-          <span class="bc-footer__trust-icon svg-wrapper">{{ 'icon-truck.svg' | inline_asset_content }}</span>
-          <div>
-            <p>{{ section.settings.trust_title_1 }}</p>
-            {%- if section.settings.trust_text_1 != blank -%}
-              <span>{{ section.settings.trust_text_1 }}</span>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endif -%}
-      {%- if section.settings.trust_title_2 != blank -%}
-        <div class="bc-footer__trust-item">
-          <span class="bc-footer__trust-icon svg-wrapper">{{ 'icon-return.svg' | inline_asset_content }}</span>
-          <div>
-            <p>{{ section.settings.trust_title_2 }}</p>
-            {%- if section.settings.trust_text_2 != blank -%}
-              <span>{{ section.settings.trust_text_2 }}</span>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endif -%}
-      {%- if section.settings.trust_title_3 != blank -%}
-        <div class="bc-footer__trust-item">
-          <span class="bc-footer__trust-icon svg-wrapper">{{ 'icon-success.svg' | inline_asset_content }}</span>
-          <div>
-            <p>{{ section.settings.trust_title_3 }}</p>
-            {%- if section.settings.trust_text_3 != blank -%}
-              <span>{{ section.settings.trust_text_3 }}</span>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endif -%}
-      {%- if section.settings.trust_title_4 != blank -%}
-        <div class="bc-footer__trust-item">
-          <span class="bc-footer__trust-icon svg-wrapper">{{ 'icon-star.svg' | inline_asset_content }}</span>
-          <div>
-            <p>{{ section.settings.trust_title_4 }}</p>
-            {%- if section.settings.trust_text_4 != blank -%}
-              <span>{{ section.settings.trust_text_4 }}</span>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endif -%}
-    </div>
-
-    <div class="bc-footer__main page-width">
-      <div class="bc-footer__columns">
-        {%- for block in section.blocks -%}
-          <div class="bc-footer__column footer-block" {{ block.shopify_attributes }}>
-            {%- if block.settings.heading != blank -%}
-              <h2 class="bc-footer__heading inline-richtext">{{ block.settings.heading }}</h2>
-            {%- endif -%}
-
-            {%- case block.type -%}
-              {%- when '@app' -%}
-                {% render block %}
-              {%- when 'text' -%}
-                <div class="bc-footer__text rte">
-                  {{ block.settings.subtext }}
-                </div>
-              {%- when 'link_list' -%}
-                {%- if block.settings.menu != blank -%}
-                  <ul class="bc-footer__menu list-unstyled" role="list">
-                    {%- for link in block.settings.menu.links -%}
-                      <li>
-                        <a
-                          href="{{ link.url }}"
-                          class="bc-footer__link link link--text{% if link.active %} list-menu__item--active{% endif %}"
-                        >
-                          {{ link.title | escape }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                {%- endif -%}
-              {%- when 'brand_information' -%}
-                <div class="bc-footer__text">
-                  {%- if settings.brand_image != blank -%}
-                    {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
-                    <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ settings.brand_image_width }}px);">
-                      {{
-                        settings.brand_image
-                        | image_url: width: 1100
-                        | image_tag:
-                          loading: 'lazy',
-                          widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                          height: brand_image_height,
-                          width: settings.brand_image_width
-                      }}
-                    </div>
-                  {%- endif -%}
-                  {%- if settings.brand_headline != blank -%}
-                    <p class="bc-footer__brand-title">{{ settings.brand_headline }}</p>
-                  {%- endif -%}
-                  {%- if settings.brand_description != blank -%}
-                    <div class="rte">{{ settings.brand_description }}</div>
-                  {%- endif -%}
-                </div>
-              {%- when 'image' -%}
-                <div class="footer-block-image {{ block.settings.alignment }}">
-                  {%- if block.settings.image != blank -%}
-                    {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                    <div class="footer-block__image-wrapper" style="max-width: min(100%, {{ block.settings.image_width }}px);">
-                      <img
-                        srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
-                        src="{{ block.settings.image | image_url: width: 760 }}"
-                        alt="{{ block.settings.image.alt | escape }}"
-                        loading="lazy"
-                        width="{{ block.settings.image.width }}"
-                        height="{{ block.settings.image.height }}"
-                      >
-                    </div>
-                  {%- endif -%}
-                </div>
-            {%- endcase -%}
-          </div>
-        {%- endfor -%}
-
-        <div class="bc-footer__column bc-footer__column--contact">
-          <h2 class="bc-footer__heading">{{ section.settings.contact_heading }}</h2>
-          <ul class="bc-footer__contact list-unstyled" role="list">
-            {%- if section.settings.contact_phone != blank -%}
-              <li>
-                <a href="tel:{{ section.settings.contact_phone | replace: ' ', '' }}" class="bc-footer__link">
-                  {{ section.settings.contact_phone }}
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if section.settings.contact_email != blank -%}
-              <li>
-                <a href="mailto:{{ section.settings.contact_email }}" class="bc-footer__link">
-                  {{ section.settings.contact_email }}
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if section.settings.contact_address != blank -%}
-              <li class="bc-footer__address">{{ section.settings.contact_address | newline_to_br }}</li>
-            {%- endif -%}
-          </ul>
-        </div>
-      </div>
-
-      {%- if section.settings.newsletter_enable or has_social_icons -%}
-        <div class="bc-footer__engagement">
-          {%- if section.settings.newsletter_enable -%}
-            <div class="bc-footer__newsletter">
-              {%- liquid
-                assign newsletter_heading_text = section.settings.newsletter_heading | strip
-                if newsletter_heading_text == blank or newsletter_heading_text == 'Subscribe to our emails'
-                  assign newsletter_heading_text = 'Schrijf je in op de nieuwsbrief en ontvang €10,- korting op je eerste bestelling'
-                endif
-              -%}
-              <h2 class="bc-footer__heading inline-richtext">{{ newsletter_heading_text }}</h2>
-              {%- if section.settings.newsletter_subheading != blank -%}
-                <div class="bc-footer__newsletter-subheading rte">
-                  {{ section.settings.newsletter_subheading }}
-                </div>
-              {%- endif -%}
-              {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-                <input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="newsletter-form__field-wrapper">
-                  <div class="field">
-                    <input
-                      id="NewsletterForm--{{ section.id }}"
-                      type="email"
-                      name="contact[email]"
-                      class="field__input"
-                      value="{{ form.email }}"
-                      aria-required="true"
-                      autocorrect="off"
-                      autocapitalize="off"
-                      autocomplete="email"
-                      {% if form.errors %}
-                        autofocus
-                        aria-invalid="true"
-                        aria-describedby="ContactFooter-error"
-                      {% elsif form.posted_successfully? %}
-                        aria-describedby="ContactFooter-success"
-                      {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}"
-                      required
-                    >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
-                    </label>
-                    <button
-                      type="submit"
-                      class="newsletter-form__button field__button"
-                      name="commit"
-                      id="Subscribe"
-                      aria-label="{{ 'newsletter.button_label' | t }}"
-                    >
-                      <span class="bc-footer__newsletter-button-text">
-                        {{ section.settings.newsletter_button_text | default: 'Inschrijven' }}
-                      </span>
-                    </button>
-                  </div>
-                  {%- if form.errors -%}
-                    <small class="newsletter-form__message form__message" id="ContactFooter-error">
-                      <span class="svg-wrapper">
-                        {{- 'icon-error.svg' | inline_asset_content -}}
-                      </span>
-                      {{- form.errors.translated_fields.email | capitalize }}
-                      {{ form.errors.messages.email -}}
-                    </small>
-                  {%- endif -%}
-                </div>
-                {%- if form.posted_successfully? -%}
-                  <h3
-                    class="newsletter-form__message newsletter-form__message--success form__message"
-                    id="ContactFooter-success"
-                    tabindex="-1"
-                    autofocus
-                  >
-                    <span class="svg-wrapper">
-                      {{- 'icon-success.svg' | inline_asset_content -}}
-                    </span>
-                    {{- 'newsletter.success' | t }}
-                  </h3>
-                {%- endif -%}
-              {%- endform -%}
-              {%- if section.settings.newsletter_disclaimer != blank -%}
-                <p class="bc-footer__newsletter-disclaimer">{{ section.settings.newsletter_disclaimer }}</p>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
-
-          {%- if has_social_icons -%}
-            <div class="bc-footer__social">
-              <p>{{ section.settings.social_heading }}</p>
-              {%- render 'social-icons', class: 'footer__list-social' -%}
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-
-      {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-        <div class="footer__follow-on-shop">
-          {{ shop | login_button: action: 'follow' }}
-        </div>
-      {%- endif -%}
-    </div>
-
-    <div class="bc-footer__bottom page-width">
-      <div class="bc-footer__bottom-main">
-        <div class="bc-footer__brand">
-          <p>{{ shop.name }}</p>
-          <small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ section.settings.bottom_text }}</small>
-        </div>
-
-        {%- if section.settings.payment_enable -%}
-          <div class="bc-footer__payment">
-            <p>{{ section.settings.payment_heading }}</p>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-      </div>
-
-      <div class="bc-footer__bottom-links">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form>
-            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="caption-large text-body" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'FooterCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form>
-            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="caption-large text-body" id="FooterLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-
-        {%- if section.settings.show_policy -%}
-          <ul class="policies list-unstyled" role="list">
-            {%- for policy in shop.policies -%}
-              {%- if policy != blank -%}
+{% liquid
+  assign trust_icons = 'grid,headset,sparkles,shield' | split: ','
+  assign social_names = 'facebook,instagram,pinterest,youtube,linkedin' | split: ','
+  assign groups = 'service,category' | split: ','
+  assign payment_types = shop.enabled_payment_types
+  if section.settings.payment_examples
+    assign payment_types = 'ideal,visa,master,paypal,klarna' | split: ','
+  endif
+%}
+<footer class="bcf-v2" id="bcf-{{ section.id }}" aria-label="{{ section.settings.footer_label | escape }}">
+<svg class="bcf-sprite" width="0" height="0" aria-hidden="true" hidden><defs>
+<symbol id="bcf-grid-{{ section.id }}" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="bcf-headset-{{ section.id }}" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="2" y="12" width="4" height="7" rx="2"/><rect x="18" y="12" width="4" height="7" rx="2"/><path d="M18 19c0 2-2 3-6 3"/></symbol>
+<symbol id="bcf-sparkles-{{ section.id }}" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3ZM20 2v4M18 4h4"/></symbol>
+<symbol id="bcf-shield-{{ section.id }}" viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="bcf-pin-{{ section.id }}" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="bcf-phone-{{ section.id }}" viewBox="0 0 24 24"><path d="m7 3 3 5-3 3a16 16 0 0 0 6 6l3-3 5 3-1 4C10 23 1 14 3 4l4-1Z"/></symbol>
+<symbol id="bcf-mail-{{ section.id }}" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="bcf-arrow-{{ section.id }}" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></symbol>
+</defs></svg>
+  <div class="bcf-trust">
+    <ul class="bcf-shell bcf-trust-grid" role="list">
+      {% for icon_name in trust_icons %}
+        {% assign title_key = 'trust_title_' | append: forloop.index %}
+        {% assign text_key = 'trust_text_' | append: forloop.index %}
+        <li class="bcf-trust-item">
+          <svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-{{ icon_name }}-{{ section.id }}"></use></svg>
+          <div><strong>{{ section.settings[title_key] | escape }}</strong><small>{{ section.settings[text_key] | escape }}</small></div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="bcf-main">
+    <div class="bcf-shell bcf-grid">
+      <div class="bcf-brand">
+        <a class="bcf-wordmark" href="{{ routes.root_url }}" aria-label="BadkamerCity">Badkamer<span>City</span></a>
+        <p class="bcf-tagline">{{ section.settings.brand_tagline | escape }}</p>
+        <div class="bcf-intro">{{ section.settings.brand_text }}</div>
+        {% if section.settings.show_social %}
+          <ul class="bcf-socials" role="list">
+            {% for social_name in social_names %}
+              {% assign social_key = 'social_' | append: social_name | append: '_link' %}
+              {% assign social_url = settings[social_key] %}
+              {% if social_url != blank or section.settings.placeholder_mode %}
                 <li>
-                  <a href="{{ policy.url }}" class="bc-footer__link">{{ policy.title | escape }}</a>
+                  {% if social_url != blank %}<a class="bcf-social" href="{{ social_url | escape }}" aria-label="{{ social_name | capitalize }}" target="_blank" rel="noopener noreferrer">{% else %}<span class="bcf-social" role="img" aria-label="{{ social_name | capitalize }} — voorbeeld" title="Voorbeeld — nog niet gekoppeld">{% endif %}
+                  {% case social_name %}{% when 'facebook' %}<svg class="icon icon-facebook" viewBox="0 0 20 20"><path fill="currentColor" d="M18 10.049C18 5.603 14.419 2 10 2s-8 3.603-8 8.049C2 14.067 4.925 17.396 8.75 18v-5.624H6.719v-2.328h2.03V8.275c0-2.017 1.195-3.132 3.023-3.132.874 0 1.79.158 1.79.158v1.98h-1.009c-.994 0-1.303.621-1.303 1.258v1.51h2.219l-.355 2.326H11.25V18c3.825-.604 6.75-3.933 6.75-7.951"/></svg>
+{% when 'instagram' %}<svg class="icon icon-instagram" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M13.23 3.492c-.84-.037-1.096-.046-3.23-.046-2.144 0-2.39.01-3.238.055-.776.027-1.195.164-1.487.273a2.4 2.4 0 0 0-.912.593 2.5 2.5 0 0 0-.602.922c-.11.282-.238.702-.274 1.486-.046.84-.046 1.095-.046 3.23s.01 2.39.046 3.229c.004.51.097 1.016.274 1.495.145.365.319.639.602.913.282.282.538.456.92.602.474.176.974.268 1.479.273.848.046 1.103.046 3.238.046s2.39-.01 3.23-.046c.784-.036 1.203-.164 1.486-.273.374-.146.648-.329.921-.602.283-.283.447-.548.602-.922.177-.476.27-.979.274-1.486.037-.84.046-1.095.046-3.23s-.01-2.39-.055-3.229c-.027-.784-.164-1.204-.274-1.495a2.4 2.4 0 0 0-.593-.913 2.6 2.6 0 0 0-.92-.602c-.284-.11-.703-.237-1.488-.273ZM6.697 2.05c.857-.036 1.131-.045 3.302-.045a63 63 0 0 1 3.302.045c.664.014 1.321.14 1.943.374a4 4 0 0 1 1.414.922c.41.397.728.88.93 1.414.23.622.354 1.279.365 1.942C18 7.56 18 7.824 18 10.005c0 2.17-.01 2.444-.046 3.292-.036.858-.173 1.442-.374 1.943-.2.53-.474.976-.92 1.423a3.9 3.9 0 0 1-1.415.922c-.51.191-1.095.337-1.943.374-.857.036-1.122.045-3.302.045-2.171 0-2.445-.009-3.302-.055-.849-.027-1.432-.164-1.943-.364a4.15 4.15 0 0 1-1.414-.922 4.1 4.1 0 0 1-.93-1.423c-.183-.51-.329-1.085-.365-1.943C2.009 12.45 2 12.167 2 10.004c0-2.161 0-2.435.055-3.302.027-.848.164-1.432.365-1.942a4.4 4.4 0 0 1 .92-1.414 4.2 4.2 0 0 1 1.415-.93c.51-.183 1.094-.33 1.943-.366Zm.427 4.806a4.105 4.105 0 1 1 5.805 5.805 4.105 4.105 0 0 1-5.805-5.805m1.882 5.371a2.668 2.668 0 1 0 2.042-4.93 2.668 2.668 0 0 0-2.042 4.93m5.922-5.942a.958.958 0 1 1-1.355-1.355.958.958 0 0 1 1.355 1.355" clip-rule="evenodd"/></svg>
+{% when 'pinterest' %}<svg class="icon icon-pinterest" viewBox="0 0 20 20"><path fill="currentColor" d="M10 2.01a8.1 8.1 0 0 1 5.666 2.353 8.09 8.09 0 0 1 1.277 9.68A7.95 7.95 0 0 1 10 18.04a8.2 8.2 0 0 1-2.276-.307c.403-.653.672-1.24.816-1.729l.567-2.2c.134.27.393.5.768.702.384.192.768.297 1.19.297q1.254 0 2.248-.72a4.7 4.7 0 0 0 1.537-1.969c.37-.89.554-1.848.537-2.813 0-1.249-.48-2.315-1.43-3.227a5.06 5.06 0 0 0-3.65-1.374c-.893 0-1.729.154-2.478.461a5.02 5.02 0 0 0-3.236 4.552c0 .72.134 1.355.413 1.902.269.538.672.922 1.22 1.152.096.039.182.039.25 0 .066-.028.114-.096.143-.192l.173-.653c.048-.144.02-.288-.105-.432a2.26 2.26 0 0 1-.548-1.565 3.803 3.803 0 0 1 3.976-3.861c1.047 0 1.863.288 2.44.855.585.576.883 1.315.883 2.228a6.8 6.8 0 0 1-.317 2.122 3.8 3.8 0 0 1-.893 1.556c-.384.384-.836.576-1.345.576-.413 0-.749-.144-1.018-.451-.259-.307-.345-.672-.25-1.085q.22-.77.452-1.537l.173-.701c.057-.25.086-.451.086-.624 0-.346-.096-.634-.269-.855-.192-.22-.451-.336-.797-.336-.432 0-.797.192-1.085.595-.288.394-.442.893-.442 1.499.005.374.063.746.173 1.104l.058.144c-.576 2.478-.913 3.938-1.037 4.36-.116.528-.154 1.153-.125 1.863A8.07 8.07 0 0 1 2 10.03c0-2.208.778-4.11 2.343-5.666A7.72 7.72 0 0 1 10 2.001z"/></svg>
+{% when 'youtube' %}<svg class="icon icon-youtube" viewBox="0 0 20 20"><path fill="currentColor" d="M18.16 5.87c.34 1.309.34 4.08.34 4.08s0 2.771-.34 4.08a2.13 2.13 0 0 1-1.53 1.53c-1.309.34-6.63.34-6.63.34s-5.321 0-6.63-.34a2.13 2.13 0 0 1-1.53-1.53c-.34-1.309-.34-4.08-.34-4.08s0-2.771.34-4.08a2.17 2.17 0 0 1 1.53-1.53C4.679 4 10 4 10 4s5.321 0 6.63.34a2.17 2.17 0 0 1 1.53 1.53M8.3 12.5l4.42-2.55L8.3 7.4z"/></svg>
+{% when 'linkedin' %}<svg viewBox="0 0 24 24"><path d="M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 9h4v12H3V9Zm6 0h4v2c1-3 8-3 8 3v7h-4v-7c0-3-4-3-4 0v7H9V9Z"/></svg>{% endcase %}
+                  {% if social_url != blank %}</a>{% else %}</span>{% endif %}
                 </li>
-              {%- endif -%}
-            {%- endfor -%}
+              {% endif %}
+            {% endfor %}
           </ul>
-        {%- endif -%}
+        {% endif %}
+      </div>
+      {% for group in groups %}
+        {% assign heading_key = group | append: '_heading' %}
+        <details class="bcf-nav bcf-{{ group }}" open>
+          <summary class="bcf-heading bcf-nav-summary">{{ section.settings[heading_key] | escape }}<span class="bcf-plus" aria-hidden="true"></span></summary>
+          <ul class="bcf-links" role="list">
+            {% for block in section.blocks %}
+              {% if block.type == group %}
+                <li {{ block.shopify_attributes }}>
+                  {% if block.settings.url != blank %}<a href="{{ block.settings.url | escape }}">{{ block.settings.label | escape }}</a>{% else %}<span title="Voorbeeld — pagina nog niet gekoppeld">{{ block.settings.label | escape }}</span>{% endif %}
+                </li>
+              {% endif %}
+            {% endfor %}
+            {% if group == 'category' %}<li><a class="bcf-all" href="{{ routes.all_products_collection_url }}">{{ section.settings.all_label | escape }}<svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-arrow-{{ section.id }}"></use></svg></a></li>{% endif %}
+          </ul>
+        </details>
+      {% endfor %}
+      <div class="bcf-contact">
+        <h2 class="bcf-heading bcf-contact-title">{{ section.settings.contact_heading | escape }}{% if section.settings.placeholder_mode %}<span class="bcf-example">{{ section.settings.example_label | escape }}</span>{% endif %}</h2>
+        <div class="bcf-contact-list">
+          <div class="bcf-contact-row"><svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-pin-{{ section.id }}"></use></svg><address>{{ section.settings.contact_address | escape | newline_to_br }}</address></div>
+          <div class="bcf-contact-row"><svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-phone-{{ section.id }}"></use></svg><div>{% if section.settings.placeholder_mode %}<span>{{ section.settings.contact_phone | escape }}</span>{% else %}<a href="tel:{{ section.settings.contact_phone | remove: ' ' | escape }}">{{ section.settings.contact_phone | escape }}</a>{% endif %}<small>{{ section.settings.opening_hours | escape }}</small></div></div>
+          <div class="bcf-contact-row"><svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-mail-{{ section.id }}"></use></svg>{% if section.settings.placeholder_mode %}<span>{{ section.settings.contact_email | escape }}</span>{% else %}<a href="mailto:{{ section.settings.contact_email | escape }}">{{ section.settings.contact_email | escape }}</a>{% endif %}</div>
+        </div>
+        {% if section.settings.contact_button_link != blank %}<a class="bcf-cta" href="{{ section.settings.contact_button_link | escape }}"><span>{{ section.settings.contact_button_text | escape }}</span><svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-arrow-{{ section.id }}"></use></svg></a>{% endif %}
       </div>
     </div>
   </div>
+  <div class="bcf-bottom">
+    <div class="bcf-shell bcf-bottom-row">
+      <small class="bcf-copyright">&copy; {{ 'now' | date: '%Y' }} BadkamerCity. {{ section.settings.bottom_text | escape }}</small>
+      {% if section.settings.show_policy %}<ul class="bcf-legal" role="list">{% for policy in shop.policies %}{% if policy != blank %}<li><a href="{{ policy.url | escape }}">{{ policy.title | escape }}</a></li>{% endif %}{% endfor %}</ul>{% endif %}
+      {% if section.settings.payment_enable %}<ul class="bcf-payments" role="list" aria-label="{{ section.settings.payment_label | escape }}">{% if section.settings.payment_examples %}<li><span class="bcf-example">{{ section.settings.example_label | escape }}</span></li>{% endif %}{% for type in payment_types %}<li>{{ type | payment_type_svg_tag: class: 'bcf-payment-icon' }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </div>
 </footer>
+{% stylesheet %}
 
+.bcf-v2{--bcf-bg:#151e24;--bcf-text:#d5dce0;--bcf-muted:#aebbc4;--bcf-accent:rgb(var(--bc-color-secondary,96,165,250));display:block;margin:0;padding:0;border:0;color:var(--bcf-text);background:var(--bcf-bg);font-family:var(--font-body-family,Arial,sans-serif);font-style:normal;font-size:14px;line-height:1.55;letter-spacing:0;text-align:left}
+.bcf-v2 *,.bcf-v2 *::before,.bcf-v2 *::after{box-sizing:border-box}
+.bcf-v2 [hidden]{display:none!important}
+.bcf-v2 .bcf-shell{width:calc(100% - 80px);max-width:1280px;margin:0 auto;padding:0}
+.bcf-v2 :is(p,h2,h3,ul,li,address,details,summary){margin:0;padding:0}
+.bcf-v2 :is(ul,li){list-style:none}
+.bcf-v2 a{color:inherit;text-decoration:none}
+.bcf-v2 a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.bcf-v2 :is(a,button,summary):focus-visible{outline:2px solid var(--bcf-accent);outline-offset:5px;box-shadow:none}
+.bcf-v2 .bcf-icon{display:block;flex:none;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.bcf-v2 .bcf-trust{margin:0;padding:20px 0;background:#f6f8f9;color:#182b3c;border-block:1px solid #e3e8eb}
+.bcf-v2 .bcf-trust-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center}
+.bcf-v2 .bcf-trust-item{display:flex;align-items:center;gap:13px;min-width:0;padding:0 24px;border-left:1px solid #dce3e8}
+.bcf-v2 .bcf-trust-item:first-child{padding-left:0;border-left:0}
+.bcf-v2 .bcf-trust-item:last-child{padding-right:0}
+.bcf-v2 .bcf-trust-item .bcf-icon{width:30px;height:30px}
+.bcf-v2 .bcf-trust-item strong{display:block;font-size:14px;line-height:1.35;font-weight:700;letter-spacing:0}
+.bcf-v2 .bcf-trust-item small{display:block;margin-top:3px;color:#5b6c79;font-size:11.5px;line-height:1.4}
+.bcf-v2 .bcf-main{padding:46px 0 42px;background:linear-gradient(120deg,#162129,#192228 60%,#141d23)}
+.bcf-v2 .bcf-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.88fr) minmax(0,.9fr) minmax(0,1.02fr);gap:48px;align-items:start}
+.bcf-v2 .bcf-grid>*{min-width:0}
+.bcf-v2 .bcf-wordmark{display:inline-flex;align-items:baseline;color:#fff;font-family:var(--font-heading-family,Arial,sans-serif);font-size:32px;line-height:1.1;font-weight:750;letter-spacing:-1.1px;white-space:nowrap}
+.bcf-v2 .bcf-wordmark:hover{text-decoration:none}
+.bcf-v2 .bcf-wordmark span{font-weight:350}
+.bcf-v2 .bcf-tagline{margin-top:9px;color:#b7c6d0;font-size:10px;line-height:1.4;letter-spacing:2px;text-transform:uppercase}
+.bcf-v2 .bcf-intro{max-width:285px;margin-top:24px;color:var(--bcf-text);font-size:14px;line-height:1.65}
+.bcf-v2 .bcf-socials{display:flex;gap:9px;margin-top:23px;flex-wrap:wrap}
+.bcf-v2 .bcf-social{display:grid;place-items:center;flex:none;width:36px;height:36px;border:1px solid #ffffff0a;border-radius:50%;background:#ffffff10;color:#eef3f6;transition:background .16s ease,transform .16s ease}
+.bcf-v2 a.bcf-social:hover{background:#ffffff22;transform:translateY(-2px);text-decoration:none}
+.bcf-v2 .bcf-social svg{width:17px;height:17px;fill:currentColor;stroke:none}
+.bcf-v2 .bcf-heading{display:block;margin:0 0 18px;color:#fff;font-family:inherit;font-size:15px;line-height:22px;font-weight:700;letter-spacing:0}
+.bcf-v2 .bcf-nav-summary{list-style:none;cursor:default}
+.bcf-v2 .bcf-nav-summary::-webkit-details-marker{display:none}
+.bcf-v2 .bcf-plus{display:none}
+.bcf-v2 .bcf-links{display:grid;gap:4px;margin:0;padding:0}
+.bcf-v2 .bcf-links :is(a,span){display:inline-block;max-width:100%;padding:3px 0;font-size:14px;line-height:20px;overflow-wrap:anywhere}
+.bcf-v2 .bcf-links .bcf-all{display:inline-flex;align-items:center;gap:8px;margin-top:2px;color:#e9f1f6;font-weight:600}
+.bcf-v2 .bcf-all .bcf-icon{width:17px;height:17px}
+.bcf-v2 .bcf-contact-title{display:flex;align-items:center;gap:8px}
+.bcf-v2 .bcf-example{display:inline-block;padding:2px 5px;border:1px solid #ffffff26;border-radius:3px;color:#b6c2ca;font-size:9px;line-height:12px;font-weight:400;letter-spacing:0;white-space:nowrap}
+.bcf-v2 .bcf-contact-list{display:grid;gap:15px}
+.bcf-v2 .bcf-contact-row{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start;font-size:14px;line-height:22px}
+.bcf-v2 .bcf-contact-row .bcf-icon{margin-top:1px;color:#e8eef2}
+.bcf-v2 .bcf-contact-row address{font-style:normal;line-height:22px}
+.bcf-v2 .bcf-contact-row small{display:block;margin-top:1px;font-size:11.5px;line-height:18px;color:var(--bcf-muted)}
+.bcf-v2 .bcf-contact-row :is(a,span){overflow-wrap:anywhere}
+.bcf-v2 .bcf-cta{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:44px;margin-top:23px;padding:10px 15px;border:1px solid #c1ccd4;border-radius:4px;background:transparent;color:#f6f9fb;font-size:13px;line-height:20px;font-weight:600;transition:background .16s ease,color .16s ease}
+.bcf-v2 .bcf-cta .bcf-icon{width:18px;height:18px}
+.bcf-v2 a.bcf-cta:hover{background:#f3f7fa;color:#152532;text-decoration:none}
+.bcf-v2 .bcf-bottom{margin:0;padding:17px 0;background:#111a20;border-top:1px solid #ffffff20}
+.bcf-v2 .bcf-bottom-row{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;min-height:28px}
+.bcf-v2 .bcf-copyright{font-size:11px;line-height:18px;color:#bbc6ce}
+.bcf-v2 .bcf-legal{display:flex;align-items:center;flex-wrap:wrap;gap:6px 18px;margin:0;padding:0;font-size:11px;line-height:18px}
+.bcf-v2 .bcf-payments{display:flex;align-items:center;gap:7px;margin:0;padding:0;flex-shrink:0;flex-wrap:wrap}
+.bcf-v2 .bcf-payments li{display:flex;align-items:center}
+.bcf-v2 .bcf-payments svg{display:block;width:37px;height:24px}
+.bcf-v2 .bcf-payments .bcf-example{border:0;padding:0;margin-right:2px;font-size:9px}
+@media(min-width:750px){.bcf-v2 .bcf-nav:not([open])>.bcf-links{display:grid!important}.bcf-v2 .bcf-nav{content-visibility:visible}.bcf-v2 .bcf-nav::details-content{content-visibility:visible;height:auto}}
+@media(max-width:1199px) and (min-width:990px){.bcf-v2 .bcf-shell{width:calc(100% - 56px)}.bcf-v2 .bcf-grid{gap:26px;grid-template-columns:1.08fr .88fr .88fr 1.08fr}.bcf-v2 .bcf-wordmark{font-size:28px}.bcf-v2 .bcf-trust-item{padding:0 16px;gap:10px}.bcf-v2 .bcf-trust-item strong{font-size:13px}.bcf-v2 .bcf-bottom-row{flex-wrap:wrap}.bcf-v2 .bcf-legal{margin-left:auto}.bcf-v2 .bcf-contact-title{flex-wrap:wrap;gap:3px 8px}}
+@media(max-width:989px){.bcf-v2 .bcf-shell{width:calc(100% - 48px)}.bcf-v2 .bcf-trust{padding:0}.bcf-v2 .bcf-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bcf-v2 .bcf-trust-item,.bcf-v2 .bcf-trust-item:first-child,.bcf-v2 .bcf-trust-item:last-child{padding:17px 20px;border-left:0}.bcf-v2 .bcf-trust-item:nth-child(odd){padding-left:0;border-right:1px solid #dce3e8}.bcf-v2 .bcf-trust-item:nth-child(-n+2){border-bottom:1px solid #dce3e8}.bcf-v2 .bcf-grid{grid-template-columns:1fr 1fr;gap:34px 50px}.bcf-v2 .bcf-brand{grid-area:1/1}.bcf-v2 .bcf-contact{grid-area:1/2}.bcf-v2 .bcf-service{grid-area:2/1}.bcf-v2 .bcf-category{grid-area:2/2}.bcf-v2 .bcf-intro{max-width:310px}.bcf-v2 .bcf-bottom-row{flex-wrap:wrap;gap:12px 24px}.bcf-v2 .bcf-legal{margin-left:auto}.bcf-v2 .bcf-payments{margin-left:auto}}
+@media(max-width:749px){.bcf-v2 .bcf-shell{width:calc(100% - 40px)}.bcf-v2 .bcf-trust-item,.bcf-v2 .bcf-trust-item:first-child,.bcf-v2 .bcf-trust-item:last-child{gap:9px;padding:12px 0 12px 14px;min-height:56px}.bcf-v2 .bcf-trust-item:nth-child(odd){padding-left:0;padding-right:12px}.bcf-v2 .bcf-trust-item .bcf-icon{width:24px;height:24px}.bcf-v2 .bcf-trust-item strong{font-size:11.5px;line-height:15px}.bcf-v2 .bcf-trust-item small{display:none}.bcf-v2 .bcf-main{padding:24px 0}.bcf-v2 .bcf-grid{display:flex;flex-direction:column;gap:0}.bcf-v2 .bcf-grid>*{width:100%}.bcf-v2 .bcf-wordmark{font-size:29px}.bcf-v2 .bcf-intro{margin-top:16px;max-width:100%;font-size:14px}.bcf-v2 .bcf-socials{margin-top:16px;margin-bottom:20px}.bcf-v2 .bcf-social{width:38px;height:38px}.bcf-v2 .bcf-service{order:1}.bcf-v2 .bcf-category{order:2}.bcf-v2 .bcf-contact{order:3;margin-top:22px}.bcf-v2 .bcf-nav{border-block-start:1px solid #ffffff22}.bcf-v2 .bcf-category{border-block-end:1px solid #ffffff22}.bcf-v2 .bcf-nav-summary{display:flex;justify-content:space-between;align-items:center;min-height:44px;margin:0;cursor:pointer;font-size:14px}.bcf-v2 .bcf-plus{display:block;width:16px;height:16px;position:relative}.bcf-v2 .bcf-plus:before,.bcf-v2 .bcf-plus:after{content:'';position:absolute;background:currentColor;left:2px;top:7px;width:12px;height:1px}.bcf-v2 .bcf-plus:after{transform:rotate(90deg)}.bcf-v2 .bcf-nav[open] .bcf-plus:after{transform:none}.bcf-v2 .bcf-links{padding-bottom:15px;gap:2px}.bcf-v2 .bcf-links :is(a,span){padding:8px 0}.bcf-v2 .bcf-contact-list{grid-template-columns:1fr 1fr;gap:12px 16px}.bcf-v2 .bcf-contact-row{grid-template-columns:18px minmax(0,1fr);gap:8px;font-size:13px}.bcf-v2 .bcf-contact-row:first-child{grid-row:span 2}.bcf-v2 .bcf-contact-row .bcf-icon{width:18px;height:18px}.bcf-v2 .bcf-contact-row small{font-size:10px;line-height:16px}.bcf-v2 .bcf-cta{margin-top:19px;min-height:46px}.bcf-v2 .bcf-bottom{padding:16px 0}.bcf-v2 .bcf-bottom-row{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.bcf-v2 .bcf-legal,.bcf-v2 .bcf-payments{margin-left:0}.bcf-v2 .bcf-legal{gap:8px 17px}.bcf-v2 .bcf-payments{gap:8px}}
+@media(prefers-reduced-motion:reduce){.bcf-v2 *{transition:none!important}}
+{% endstylesheet %}
+{% javascript %}
+
+(() => {
+  const init = root => {
+    if (root.dataset.bcfReady) return;
+    root.dataset.bcfReady = 'true';
+    const mobile = window.matchMedia('(max-width: 749px)');
+    const panels = [...root.querySelectorAll('.bcf-nav')];
+    const sync = () => panels.forEach(panel => {
+      panel.open = !mobile.matches;
+      const summary = panel.querySelector('summary');
+      if (mobile.matches) summary.removeAttribute('tabindex');
+      else summary.setAttribute('tabindex', '-1');
+    });
+    const onClick = event => {
+      if (!mobile.matches && event.target.closest('.bcf-nav-summary')) event.preventDefault();
+    };
+    sync();
+    mobile.addEventListener('change', sync);
+    root.addEventListener('click', onClick);
+    root.bcfCleanup = () => { mobile.removeEventListener('change', sync); root.removeEventListener('click', onClick); };
+  };
+  const scan = scope => {
+    if (scope.matches && scope.matches('.bcf-v2')) init(scope);
+    scope.querySelectorAll('.bcf-v2').forEach(init);
+  };
+  scan(document);
+  document.addEventListener('shopify:section:load', event => scan(event.target));
+  document.addEventListener('shopify:section:unload', event => {
+    event.target.querySelectorAll('.bcf-v2').forEach(root => root.bcfCleanup && root.bcfCleanup());
+  });
+})();
+{% endjavascript %}
 {% schema %}
-{
-  "name": "t:sections.footer.name",
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "link_list",
-      "name": "t:sections.footer.blocks.link_list.name",
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "heading",
-          "default": "t:sections.footer.blocks.link_list.settings.heading.default",
-          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
-        },
-        {
-          "type": "link_list",
-          "id": "menu",
-          "default": "footer",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label"
-        }
-      ]
-    },
-    {
-      "type": "brand_information",
-      "name": "t:sections.footer.blocks.brand_information.name",
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_social",
-          "default": true,
-          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
-          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "heading",
-          "default": "t:sections.footer.blocks.text.settings.heading.default",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "default": "t:sections.footer.blocks.text.settings.subtext.default",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "name": "Image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 550,
-          "step": 5,
-          "unit": "px",
-          "label": "Width",
-          "default": 100
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "Alignment",
-          "options": [
-            {
-              "value": "",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
-        }
-      ]
-    }
-  ],
-  "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__1.content",
-      "info": "t:sections.footer.settings.header__1.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "newsletter_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.newsletter_enable.label"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "newsletter_heading",
-      "default": "Schrijf je in op de nieuwsbrief en ontvang €10,- korting op je eerste bestelling",
-      "label": "t:sections.footer.settings.newsletter_heading.label"
-    },
-    {
-      "type": "richtext",
-      "id": "newsletter_subheading",
-      "label": "Newsletter subheading",
-      "default": "<p>Korting op je volgende aankoop vanaf €100.</p><p>Ontvang net als ruim 300.000 anderen inspiratie, handige tips en aanbiedingen rechtstreeks in je inbox.</p>"
-    },
-    {
-      "type": "text",
-      "id": "newsletter_button_text",
-      "label": "Newsletter button text",
-      "default": "Claim jouw korting"
-    },
-    {
-      "type": "text",
-      "id": "newsletter_disclaimer",
-      "label": "Newsletter disclaimer",
-      "default": "Je kunt je op elk moment afmelden"
-    },
-    {
-      "type": "header",
-      "content": "Trust bar"
-    },
-    {
-      "type": "text",
-      "id": "trust_title_1",
-      "label": "Trust title 1",
-      "default": "Gratis bezorgd"
-    },
-    {
-      "type": "text",
-      "id": "trust_text_1",
-      "label": "Trust text 1",
-      "default": "Vanaf €100"
-    },
-    {
-      "type": "text",
-      "id": "trust_title_2",
-      "label": "Trust title 2",
-      "default": "30 dagen retour"
-    },
-    {
-      "type": "text",
-      "id": "trust_text_2",
-      "label": "Trust text 2",
-      "default": "Gratis retourneren"
-    },
-    {
-      "type": "text",
-      "id": "trust_title_3",
-      "label": "Trust title 3",
-      "default": "5 jaar garantie"
-    },
-    {
-      "type": "text",
-      "id": "trust_text_3",
-      "label": "Trust text 3",
-      "default": "Op alle producten"
-    },
-    {
-      "type": "text",
-      "id": "trust_title_4",
-      "label": "Trust title 4",
-      "default": "25.000+ klanten"
-    },
-    {
-      "type": "text",
-      "id": "trust_text_4",
-      "label": "Trust text 4",
-      "default": "Waardering: 9/10"
-    },
-    {
-      "type": "header",
-      "content": "Contact"
-    },
-    {
-      "type": "text",
-      "id": "contact_heading",
-      "label": "Contact heading",
-      "default": "Contact"
-    },
-    {
-      "type": "text",
-      "id": "contact_phone",
-      "label": "Phone",
-      "default": "0800-1234567"
-    },
-    {
-      "type": "text",
-      "id": "contact_email",
-      "label": "Email",
-      "default": "info@badkamercity.nl"
-    },
-    {
-      "type": "textarea",
-      "id": "contact_address",
-      "label": "Address",
-      "default": "Badkamerlaan 1\n1234 AB Amsterdam"
-    },
-    {
-      "type": "text",
-      "id": "social_heading",
-      "label": "Social heading",
-      "default": "Volg ons"
-    },
-    {
-      "type": "header",
-      "content": "Bottom bar"
-    },
-    {
-      "type": "text",
-      "id": "payment_heading",
-      "label": "Payment heading",
-      "default": "Betaalmethodes"
-    },
-    {
-      "type": "text",
-      "id": "bottom_text",
-      "label": "Bottom text",
-      "default": "Alle rechten voorbehouden."
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__9.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_follow_on_shop",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_follow_on_shop.label",
-      "info": "t:sections.footer.settings.enable_follow_on_shop.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social",
-      "default": true,
-      "label": "t:sections.footer.settings.show_social.label",
-      "info": "t:sections.footer.settings.show_social.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_country_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_country_selector.label",
-      "info": "t:sections.footer.settings.enable_country_selector.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_language_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_language_selector.label",
-      "info": "t:sections.footer.settings.enable_language_selector.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_policy",
-      "default": true,
-      "label": "t:sections.footer.settings.show_policy.label",
-      "info": "t:sections.footer.settings.show_policy.info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.spacing"
-    },
-    {
-      "type": "range",
-      "id": "margin_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.footer.settings.margin_top.label",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "text"
-      }
-    ]
-  }
-}
+{"name":"Footer compact","settings":[{"type":"header","content":"Inhoud en voorbeeldgegevens"},{"type":"checkbox","id":"placeholder_mode","label":"Voorbeeldcontact en social iconen tonen","default":true},{"type":"checkbox","id":"payment_examples","label":"Voorbeeldbetaaliconen tonen (niet activeren)","default":true},{"type":"paragraph","content":"Voorbeeldcontact is niet klikbaar. Betaaliconen met Voorbeeld activeren geen betaalmethoden. Zet de voorbeeldopties uit voordat de winkel echt opent."},{"type":"text","id":"footer_label","label":"Toegankelijke naam","default":"BadkamerCity — informatie en contact"},{"type":"text","id":"example_label","label":"Voorbeeldlabel","default":"Voorbeeld"},{"type":"header","content":"USP-balk"},{"type":"text","id":"trust_title_1","label":"USP 1 titel","default":"Alles voor je badkamer"},{"type":"text","id":"trust_text_1","label":"USP 1 tekst","default":"Van kraan tot complete inrichting"},{"type":"text","id":"trust_title_2","label":"USP 2 titel","default":"Persoonlijk advies"},{"type":"text","id":"trust_text_2","label":"USP 2 tekst","default":"We denken graag met je mee"},{"type":"text","id":"trust_title_3","label":"USP 3 titel","default":"Zorgvuldig geselecteerd"},{"type":"text","id":"trust_text_3","label":"USP 3 tekst","default":"Sanitair van bekende merken"},{"type":"text","id":"trust_title_4","label":"USP 4 titel","default":"Service bij je bestelling"},{"type":"text","id":"trust_text_4","label":"USP 4 tekst","default":"Ook na je aankoop"},{"type":"header","content":"Merk en navigatie"},{"type":"text","id":"brand_tagline","label":"Tagline","default":"Alles voor jouw badkamer"},{"type":"richtext","id":"brand_text","label":"Introductie","default":"<p>Alles voor jouw badkamer, op één plek. Ontdek mooi sanitair, stijlvolle meubels en de details die het afmaken.</p>"},{"type":"checkbox","id":"show_social","label":"Social iconen tonen","default":true},{"type":"text","id":"service_heading","label":"Kop service","default":"Klantenservice"},{"type":"text","id":"category_heading","label":"Kop assortiment","default":"Ons assortiment"},{"type":"text","id":"all_label","label":"Link volledig assortiment","default":"Bekijk alles"},{"type":"header","content":"Showroom en contact"},{"type":"text","id":"contact_heading","label":"Contactkop","default":"Showroom & contact"},{"type":"textarea","id":"contact_address","label":"Adres","default":"Voorbeeldstraat 123\n1234 AB Plaats"},{"type":"text","id":"contact_phone","label":"Telefoon","default":"010-1234567"},{"type":"text","id":"opening_hours","label":"Openingstijden","default":"Ma – vr 09:00 – 17:00"},{"type":"text","id":"contact_email","label":"E-mail","default":"info@example.com"},{"type":"text","id":"contact_button_text","label":"Knoptekst","default":"Bezoek onze showroom"},{"type":"url","id":"contact_button_link","label":"Knoplink"},{"type":"header","content":"Onderste balk"},{"type":"checkbox","id":"payment_enable","label":"Betaaliconen tonen","default":true},{"type":"checkbox","id":"show_policy","label":"Beleidslinks tonen","default":true},{"type":"text","id":"payment_label","label":"Toegankelijke naam betaaliconen","default":"Betaalmethoden"},{"type":"text","id":"bottom_text","label":"Copyrighttekst","default":"Alle rechten voorbehouden."}],"max_blocks":12,"blocks":[{"type":"service","name":"Servicelink","limit":6,"settings":[{"type":"text","id":"label","label":"Linktekst","default":"Servicelink"},{"type":"url","id":"url","label":"Link (leeg = voorbeeld)"}]},{"type":"category","name":"Categorielink","limit":6,"settings":[{"type":"text","id":"label","label":"Linktekst","default":"Categorielink"},{"type":"url","id":"url","label":"Link (leeg = voorbeeld)"}]}]}
 {% endschema %}

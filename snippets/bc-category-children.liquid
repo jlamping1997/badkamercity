@@ -1,0 +1,104 @@
+{%- comment -%}
+  Real child-category links from main navigation, not a shared hard-coded card list.
+  Merge children of deliberate cross-links (for example Fonteinen) and deduplicate by ID.
+  Existing image overrides remain usable when their destination matches a menu item.
+{%- endcomment -%}
+{%- liquid
+  assign tree_menu = navigation_menu | default: linklists['main-menu']
+  assign current_category = current_collection | default: collection
+  assign category_children = '' | split: ','
+  for root_link in tree_menu.links
+    if root_link.type == 'collection_link' and root_link.object.id == current_category.id
+      assign category_children = category_children | concat: root_link.links
+    endif
+  endfor
+  for root_link in tree_menu.links
+    for middle_link in root_link.links
+      if middle_link.type == 'collection_link' and middle_link.object.id == current_category.id
+        assign category_children = category_children | concat: middle_link.links
+      endif
+    endfor
+  endfor
+  assign seen_children = ''
+-%}
+{%- if current_category.id == 570058113290 and category_children.size > 0 -%}
+  {%- comment -%}The legacy Toebehoren collection is shared. Keep each department explicit; do not link unpublished replacement collections.{%- endcomment -%}
+  <nav class="bc-category-groups" aria-label="Toebehoren per categorie">
+    {%- for root_link in tree_menu.links -%}
+      {%- for middle_link in root_link.links -%}
+        {%- if middle_link.type == 'collection_link' and middle_link.object.id == current_category.id and middle_link.links.size > 0 -%}
+          <section class="bc-category-groups__group">
+            <h2 class="bc-category-groups__title"><a href="{{ root_link.url | escape }}">{{ root_link.title | escape }}</a></h2>
+            <ul class="bc-category-groups__list" role="list">
+              {%- for child_link in middle_link.links -%}
+                <li><a href="{{ child_link.url | escape }}"><span>{{ child_link.title | escape }}</span><span aria-hidden="true">›</span></a></li>
+              {%- endfor -%}
+            </ul>
+          </section>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </nav>
+{%- elsif category_children.size > 0 -%}
+  <nav class="bc-category-children bc-category-children--{{ display_mode | default: 'compact' }}" aria-label="Subcategorieën van {{ current_category.title | escape }}">
+    <ul class="{% if display_mode == 'cards' %}collection-category-landing__grid {% endif %}bc-category-children__list" role="list">
+      {%- for child_link in category_children -%}
+        {%- liquid
+          assign child_key = child_link.object.id | default: child_link.url | prepend: '|' | append: '|'
+          if seen_children contains child_key
+            continue
+          endif
+          if child_link.type == 'collection_link' and child_link.object.id == current_category.id
+            continue
+          endif
+          assign seen_children = seen_children | append: child_key
+          assign child_url = child_link.url
+          assign child_image = child_link.object.image
+          assign override_block = nil
+          for candidate_block in image_blocks
+            if candidate_block.type != 'subcategory'
+              continue
+            endif
+            assign override_url = candidate_block.settings.block_link | replace: 'shopify://collections/', '/collections/' | remove: request.origin
+            if override_url == child_url
+              assign override_block = candidate_block
+              if candidate_block.settings.block_image != blank
+                assign child_image = candidate_block.settings.block_image
+              endif
+              break
+            endif
+          endfor
+          assign ratio_percent = 100
+          case image_ratio
+            when 'portrait'
+              assign ratio_percent = 125
+            when 'landscape'
+              assign ratio_percent = 66.6667
+            when 'adapt'
+              if child_image != blank and child_image.aspect_ratio
+                assign ratio_percent = 1 | divided_by: child_image.aspect_ratio | times: 100
+              endif
+          endcase
+        -%}
+        <li class="{% if display_mode == 'cards' %}collection-category-landing__grid-item {% endif %}bc-category-children__item"{% if override_block != blank %} {{ override_block.shopify_attributes }}{% endif %}>
+          <a class="{% if display_mode == 'cards' %}collection-category-landing__card {% endif %}bc-category-children__link" href="{{ child_url | escape }}"{% if display_mode == 'cards' %} style="--subcategory-ratio-percent: {{ ratio_percent }}%;"{% endif %}>
+            {%- if display_mode == 'cards' -%}
+              <div class="collection-category-landing__card-media">
+                {%- if child_image != blank -%}
+                  {{ child_image | image_url: width: 640 | image_tag: class: 'collection-category-landing__card-image', widths: '160, 320, 480, 640', sizes: '(min-width: 750px) 148px, 112px', loading: 'lazy', alt: child_link.title }}
+                {%- else -%}
+                  <span class="collection-category-landing__card-placeholder bc-category-children__placeholder" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8m-4-4 4 4-4 4"/></svg>
+                  </span>
+                {%- endif -%}
+              </div>
+              <div class="collection-category-landing__card-body"><h3 class="collection-category-landing__card-title">{{ child_link.title | escape }}</h3></div>
+            {%- else -%}
+              <span>{{ child_link.title | escape }}</span><span class="bc-category-children__arrow" aria-hidden="true">›</span>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+{%- endif -%}

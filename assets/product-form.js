@@ -21,11 +21,21 @@ if (!customElements.get('product-form')) {
 
       onSubmitHandler(evt) {
         evt.preventDefault();
-        if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
+        if (this.submitButton.disabled || this.submitButton.getAttribute('aria-disabled') === 'true' ||
+            this.closest('product-info')?.dataset.bcNavigating === 'true') return;
+
+        const quantity = this.form.elements.namedItem('quantity');
+        if (quantity && (!quantity.value.trim() || !quantity.checkValidity())) {
+          this.handleErrorMessage('Vul een geldig aantal in.');
+          quantity.focus();
+          quantity.reportValidity();
+          return;
+        }
 
         this.handleErrorMessage();
 
         this.submitButton.setAttribute('aria-disabled', true);
+        this.submitButton.setAttribute('aria-busy', 'true');
         this.submitButton.classList.add('loading');
         this.querySelector('.loading__spinner').classList.remove('hidden');
 
@@ -100,9 +110,11 @@ if (!customElements.get('product-form')) {
           })
           .catch((e) => {
             console.error(e);
+            this.handleErrorMessage('Toevoegen kon niet worden bevestigd. Controleer je winkelwagen en probeer zo nodig opnieuw.');
           })
           .finally(() => {
             this.submitButton.classList.remove('loading');
+            this.submitButton.removeAttribute('aria-busy');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
