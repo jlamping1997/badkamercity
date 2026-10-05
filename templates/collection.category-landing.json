@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-category-landing",
+      "blocks": {
+        "subcategory_9rbmHq": {
+          "type": "subcategory",
+          "settings": {
+            "block_title": "Badmeubel sets",
+            "block_image": "shopify://shop_images/COO_bb3a2cc9-db64-455e-b027-29eaa6e7cf6d.jpg",
+            "block_link": "shopify://collections/badmeubel-sets",
+            "block_description": "Voeg hier een korte omschrijving toe zodat bezoekers sneller de juiste richting kiezen."
+          }
+        },
+        "subcategory_JERgMT": {
+          "type": "subcategory",
+          "settings": {
+            "block_title": "Losse onderkasten",
+            "block_image": "shopify://shop_images/Hotbath_Kranen.jpg",
+            "block_link": "shopify://collections/losse-onderkasten",
+            "block_description": "Voeg hier een korte omschrijving toe zodat bezoekers sneller de juiste richting kiezen."
+          }
+        },
+        "subcategory_CKVgVd": {
+          "type": "subcategory",
+          "settings": {
+            "block_title": "Toebehoren",
+            "block_link": "shopify://collections/toebehoren",
+            "block_description": "Voeg hier een korte omschrijving toe zodat bezoekers sneller de juiste richting kiezen."
+          }
+        },
+        "subcategory_DnH43M": {
+          "type": "subcategory",
+          "settings": {
+            "block_title": "Toiletmeubels",
+            "block_image": "shopify://shop_images/maak-een-foto-van-een-toiletmeubel-gewoon-simpel-en-basic.png",
+            "block_link": "shopify://collections/toiletmeubels",
+            "block_description": "Voeg hier een korte omschrijving toe zodat bezoekers sneller de juiste richting kiezen."
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_9rbmHq",
+        "subcategory_JERgMT",
+        "subcategory_CKVgVd",
+        "subcategory_DnH43M"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_extra_content": false,
+        "extra_text_title": "Lees meer",
+        "extra_text_content": "<p>Gebruik dit blok voor extra uitleg, advies of aanvullende content over deze hoofdcategorie.</p>",
+        "show_subcategory_grid": true,
+        "subcategory_grid_heading": "Kies een subcategorie",
+        "subcategory_grid_columns_desktop": 4,
+        "subcategory_image_ratio": "square",
+        "show_product_grid": false,
+        "product_grid_heading": "Producten in deze collectie",
+        "product_grid_intro": "<p>Gebruik dit productoverzicht optioneel als bezoekers na het kiezen direct willen verder winkelen.</p>",
+        "max_products": 8,
+        "product_grid_columns_desktop": 4,
+        "product_image_ratio": "adapt",
+        "padding_top": 40,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

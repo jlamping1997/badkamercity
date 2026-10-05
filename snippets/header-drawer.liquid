@@ -1,0 +1,283 @@
+{% liquid
+  assign afspraak_page = pages['afspraak-maken']
+%}
+
+<div class="bc-mobile-drawer" data-bc-mobile-drawer>
+  <button
+    type="button"
+    class="header__icon header__icon--menu header__icon--summary link focus-inset bc-mobile-drawer__trigger"
+    aria-label="{{ 'sections.header.menu' | t }}"
+    aria-expanded="false"
+    aria-controls="BcMobileDrawerPanel-{{ section.id }}"
+    data-bc-mobile-trigger
+  >
+    <span>
+      {{- 'icon-hamburger.svg' | inline_asset_content -}}
+      {{- 'icon-close.svg' | inline_asset_content -}}
+    </span>
+    <span>{{ 'sections.header.menu' | t }}</span>
+  </button>
+
+  <button
+    type="button"
+    class="bc-mobile-drawer__overlay"
+    aria-label="{{ 'accessibility.close' | t | default: 'Close menu' }}"
+    hidden
+    data-bc-mobile-overlay
+  ></button>
+
+  <aside
+    id="BcMobileDrawerPanel-{{ section.id }}"
+    class="bc-mobile-drawer__panel color-{{ section.settings.menu_color_scheme }}"
+    aria-hidden="true"
+    tabindex="-1"
+    data-bc-mobile-panel
+  >
+    <div class="bc-mobile-drawer__body">
+      <div class="bc-mobile-drawer__viewport" data-bc-mobile-viewport>
+        <div
+          class="bc-mobile-drawer__menu-panel is-active"
+          data-bc-mobile-menu-panel
+          data-bc-mobile-panel-id="root"
+        >
+          {%- if shop.customer_accounts_enabled or afspraak_page != blank -%}
+            <div class="bc-mobile-drawer__cta-list">
+              {%- if shop.customer_accounts_enabled -%}
+                <a
+                  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                  class="bc-mobile-drawer__cta link focus-inset"
+                  rel="nofollow"
+                >
+                  <span class="bc-mobile-drawer__cta-label">Mijn account</span>
+                  <span class="bc-mobile-drawer__cta-arrow" aria-hidden="true"></span>
+                </a>
+              {%- endif -%}
+
+              {%- if afspraak_page != blank -%}
+                <a href="{{ afspraak_page.url }}" class="bc-mobile-drawer__cta link focus-inset">
+                  <span class="bc-mobile-drawer__cta-label">{{ afspraak_page.title | default: 'Afspraak maken' }}</span>
+                  <span class="bc-mobile-drawer__cta-arrow" aria-hidden="true"></span>
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          <nav class="bc-mobile-drawer__navigation" aria-label="{{ 'sections.header.menu' | t }}">
+            <ul class="bc-mobile-drawer__menu list-menu" role="list">
+              {%- for link in section.settings.menu.links -%}
+                {%- liquid
+                  assign bc_mobile_category_handle = ''
+                  assign bc_mobile_category_title = link.title | strip
+                  assign bc_mobile_category_title_formatted = bc_mobile_category_title | slice: 0, 1 | upcase | append: bc_mobile_category_title | slice: 1, 200
+                  assign bc_mobile_category_title_handle = link.title | handleize
+                  if link.object and link.object.handle
+                    assign bc_mobile_category_handle = link.object.handle
+                  elsif link.handle != blank
+                    assign bc_mobile_category_handle = link.handle
+                  else
+                    assign bc_mobile_category_handle = bc_mobile_category_title_handle
+                  endif
+                  capture bc_mobile_category_icon
+                    render 'bc-category-icon', handle: bc_mobile_category_handle
+                  endcapture
+                  if bc_mobile_category_icon == blank and bc_mobile_category_title_handle != bc_mobile_category_handle
+                    capture bc_mobile_category_icon
+                      render 'bc-category-icon', handle: bc_mobile_category_title_handle
+                    endcapture
+                  endif
+                -%}
+                <li class="bc-mobile-drawer__item">
+                  {%- if link.links != blank -%}
+                    <button
+                      type="button"
+                      class="bc-mobile-drawer__row bc-mobile-drawer__row--primary localization-selector"
+                      data-bc-mobile-next="BcMobileDrawerPrimary-{{ section.id }}-{{ forloop.index }}"
+                    >
+                      <span class="bc-mobile-drawer__row-icon" aria-hidden="true">
+                        {{ bc_mobile_category_icon }}
+                      </span>
+                      <span class="bc-mobile-drawer__row-label">{{ bc_mobile_category_title_formatted | escape }}</span>
+                      <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                    </button>
+                  {%- else -%}
+                    <a
+                      href="{{ link.url }}"
+                      class="bc-mobile-drawer__link bc-mobile-drawer__link--primary link focus-inset{% if link.current %} bc-mobile-drawer__link--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      <span class="bc-mobile-drawer__row-icon" aria-hidden="true">
+                        {{ bc_mobile_category_icon }}
+                      </span>
+                      <span class="bc-mobile-drawer__row-label">{{ bc_mobile_category_title_formatted | escape }}</span>
+                      <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+
+          {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+            <div class="bc-mobile-drawer__footer">
+              {%- if localization.available_countries.size > 1 -%}
+                <localization-form>
+                  {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+                    <div>
+                      <h2 class="visually-hidden" id="HeaderCountryMobileLabel">{{ 'localization.country_label' | t }}</h2>
+                      {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
+              {%- endif -%}
+
+              {%- if localization.available_languages.size > 1 -%}
+                <localization-form>
+                  {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                    <div>
+                      <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">{{ 'localization.language_label' | t }}</h2>
+                      {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- for link in section.settings.menu.links -%}
+          {%- if link.links != blank -%}
+            <div
+              class="bc-mobile-drawer__menu-panel"
+              data-bc-mobile-menu-panel
+              data-bc-mobile-panel-id="BcMobileDrawerPrimary-{{ section.id }}-{{ forloop.index }}"
+            >
+              <div class="bc-mobile-drawer__panel-head">
+                <button
+                  type="button"
+                  class="bc-mobile-drawer__back link focus-inset"
+                  data-bc-mobile-back
+                >
+                  <span class="bc-mobile-drawer__back-arrow" aria-hidden="true"></span>
+                  <span>Terug</span>
+                </button>
+                <p class="bc-mobile-drawer__panel-title">{{ link.title | strip | slice: 0, 1 | upcase | append: link.title | strip | slice: 1, 200 | escape }}</p>
+              </div>
+
+              <a href="{{ link.url }}" class="bc-mobile-drawer__view-all link focus-inset">
+                Bekijk alles in {{ link.title | strip | slice: 0, 1 | upcase | append: link.title | strip | slice: 1, 200 | escape }}
+              </a>
+
+              <ul class="bc-mobile-drawer__menu list-menu" role="list">
+                {%- for childlink in link.links -%}
+                  {%- liquid
+                    assign bc_mobile_child_handle = ''
+                    assign bc_mobile_child_title = childlink.title | strip
+                    assign bc_mobile_child_title_formatted = bc_mobile_child_title | slice: 0, 1 | upcase | append: bc_mobile_child_title | slice: 1, 200
+                    assign bc_mobile_child_title_handle = childlink.title | handleize
+                    if childlink.object and childlink.object.handle
+                      assign bc_mobile_child_handle = childlink.object.handle
+                    elsif childlink.handle != blank
+                      assign bc_mobile_child_handle = childlink.handle
+                    else
+                      assign bc_mobile_child_handle = bc_mobile_child_title_handle
+                    endif
+                    capture bc_mobile_child_icon
+                      render 'bc-category-icon', handle: bc_mobile_child_handle
+                    endcapture
+                    if bc_mobile_child_icon == blank and bc_mobile_child_title_handle != bc_mobile_child_handle
+                      capture bc_mobile_child_icon
+                        render 'bc-category-icon', handle: bc_mobile_child_title_handle
+                      endcapture
+                    endif
+                  -%}
+                  <li class="bc-mobile-drawer__item">
+                    {%- if childlink.links != blank -%}
+                      <button
+                        type="button"
+                        class="bc-mobile-drawer__row bc-mobile-drawer__row--secondary localization-selector{% if bc_mobile_child_icon != blank %} bc-mobile-drawer__row--with-icon{% endif %}"
+                        data-bc-mobile-next="BcMobileDrawerChild-{{ section.id }}-{{ forloop.parentloop.index }}-{{ forloop.index }}"
+                      >
+                        {%- if bc_mobile_child_icon != blank -%}
+                          <span class="bc-mobile-drawer__row-icon bc-mobile-drawer__row-icon--secondary" aria-hidden="true">
+                            {{ bc_mobile_child_icon }}
+                          </span>
+                        {%- endif -%}
+                        <span class="bc-mobile-drawer__row-label">{{ bc_mobile_child_title_formatted | escape }}</span>
+                        <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                      </button>
+                    {%- else -%}
+                      <a
+                        href="{{ childlink.url }}"
+                        class="bc-mobile-drawer__link bc-mobile-drawer__link--secondary link focus-inset{% if bc_mobile_child_icon != blank %} bc-mobile-drawer__link--with-icon{% endif %}{% if childlink.current %} bc-mobile-drawer__link--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {%- if bc_mobile_child_icon != blank -%}
+                          <span class="bc-mobile-drawer__row-icon bc-mobile-drawer__row-icon--secondary" aria-hidden="true">
+                            {{ bc_mobile_child_icon }}
+                          </span>
+                        {%- endif -%}
+                        <span class="bc-mobile-drawer__row-label">{{ bc_mobile_child_title_formatted | escape }}</span>
+                        <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                      </a>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+
+            {%- for childlink in link.links -%}
+              {%- if childlink.links != blank -%}
+                <div
+                  class="bc-mobile-drawer__menu-panel"
+                  data-bc-mobile-menu-panel
+                  data-bc-mobile-panel-id="BcMobileDrawerChild-{{ section.id }}-{{ forloop.parentloop.index }}-{{ forloop.index }}"
+                >
+                  <div class="bc-mobile-drawer__panel-head">
+                    <button
+                      type="button"
+                      class="bc-mobile-drawer__back link focus-inset"
+                      data-bc-mobile-back
+                    >
+                      <span class="bc-mobile-drawer__back-arrow" aria-hidden="true"></span>
+                      <span>Terug</span>
+                    </button>
+                    <p class="bc-mobile-drawer__panel-title">{{ childlink.title | strip | slice: 0, 1 | upcase | append: childlink.title | strip | slice: 1, 200 | escape }}</p>
+                  </div>
+
+                  <a href="{{ childlink.url }}" class="bc-mobile-drawer__view-all link focus-inset">
+                    Bekijk alles in {{ childlink.title | strip | slice: 0, 1 | upcase | append: childlink.title | strip | slice: 1, 200 | escape }}
+                  </a>
+
+                  <ul class="bc-mobile-drawer__menu list-menu" role="list">
+                    {%- for grandchildlink in childlink.links -%}
+                      {%- liquid
+                        assign bc_mobile_grandchild_title = grandchildlink.title | strip
+                        assign bc_mobile_grandchild_title_formatted = bc_mobile_grandchild_title | slice: 0, 1 | upcase | append: bc_mobile_grandchild_title | slice: 1, 200
+                      -%}
+                      <li class="bc-mobile-drawer__item">
+                        <a
+                          href="{{ grandchildlink.url }}"
+                          class="bc-mobile-drawer__link bc-mobile-drawer__link--tertiary link focus-inset{% if grandchildlink.current %} bc-mobile-drawer__link--active{% endif %}"
+                          {% if grandchildlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          <span class="bc-mobile-drawer__row-label">{{ bc_mobile_grandchild_title_formatted | escape }}</span>
+                          <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,338 @@
+{{ 'section-main-glossary.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign letters = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z' | split: ','
+  assign section_heading = section.settings.heading | default: page.title
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="bc-glossary color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+  data-glossary-section
+>
+  <div class="page-width">
+    <div class="bc-glossary__inner">
+      <header class="bc-glossary__header">
+        <h1 class="bc-glossary__title">{{ section_heading | escape }}</h1>
+        {%- if section.settings.intro != blank -%}
+          <div class="bc-glossary__intro rte">
+            {{ section.settings.intro }}
+          </div>
+        {%- endif -%}
+      </header>
+
+      {%- if section.settings.enable_search -%}
+        <div class="bc-glossary__tools">
+          <div class="bc-glossary__search-field">
+            <label class="bc-glossary__search-label" for="GlossarySearch-{{ section.id }}">
+              {{ section.settings.search_label | escape }}
+            </label>
+            <input
+              class="bc-glossary__search"
+              id="GlossarySearch-{{ section.id }}"
+              type="search"
+              autocomplete="off"
+              placeholder="{{ section.settings.search_placeholder | escape }}"
+              data-glossary-search
+            >
+          </div>
+        </div>
+      {%- endif -%}
+
+      <nav class="bc-glossary__az-wrap" aria-label="Begrippen per letter">
+        <ul class="bc-glossary__az" role="list" data-glossary-az>
+          {%- for letter in letters -%}
+            {%- liquid
+              assign has_letter = false
+              for block in section.blocks
+                assign block_letter = block.settings.letter | upcase | strip
+                if block.type == 'term' and block_letter == letter
+                  assign has_letter = true
+                endif
+              endfor
+            -%}
+            <li>
+              {%- if has_letter -%}
+                <a class="bc-glossary__az-link" href="#GlossaryLetter-{{ section.id }}-{{ letter }}" data-glossary-az-link data-letter="{{ letter }}">
+                  {{ letter }}
+                </a>
+              {%- else -%}
+                <span class="bc-glossary__az-link" aria-disabled="true" data-glossary-az-link data-letter="{{ letter }}">
+                  {{ letter }}
+                </span>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+
+      {%- if section.settings.enable_search -%}
+        <p class="bc-glossary__status" data-glossary-status aria-live="polite"></p>
+      {%- endif -%}
+
+      <div class="bc-glossary__groups" data-glossary-groups>
+        {%- for letter in letters -%}
+          {%- liquid
+            assign has_letter = false
+            for block in section.blocks
+              assign block_letter = block.settings.letter | upcase | strip
+              if block.type == 'term' and block_letter == letter
+                assign has_letter = true
+              endif
+            endfor
+          -%}
+
+          {%- if has_letter -%}
+            <section
+              class="bc-glossary__group"
+              id="GlossaryLetter-{{ section.id }}-{{ letter }}"
+              data-glossary-group
+              data-letter="{{ letter }}"
+              aria-labelledby="GlossaryHeading-{{ section.id }}-{{ letter }}"
+            >
+              <h2 class="bc-glossary__letter-heading" id="GlossaryHeading-{{ section.id }}-{{ letter }}">
+                {{ letter }}
+              </h2>
+
+              <div class="bc-glossary__grid">
+                {%- for block in section.blocks -%}
+                  {%- liquid
+                    assign block_letter = block.settings.letter | upcase | strip
+                    assign term_text = block.settings.term | strip
+                    assign keywords_text = block.settings.keywords | strip
+                    assign term_handle = term_text | handleize
+                    assign term_url = '/begrippenlijst/' | append: term_handle
+                  -%}
+
+                  {%- if block.type == 'term' and block_letter == letter and term_text != blank -%}
+                    <a
+                      class="bc-glossary__tile"
+                      href="{{ term_url }}"
+                      data-glossary-term
+                      data-term="{{ term_text | downcase | escape }}"
+                      data-keywords="{{ keywords_text | downcase | escape }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      <span class="bc-glossary__tile-label">{{ term_text | escape }}</span>
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </section>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.enable_search -%}
+        <div class="bc-glossary__empty" data-glossary-empty hidden>
+          {{ section.settings.empty_text }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{%- if section.settings.enable_search -%}
+  <script>
+    (() => {
+      const section = document.currentScript.previousElementSibling;
+      if (!section || !section.matches('[data-glossary-section]')) return;
+
+      const search = section.querySelector('[data-glossary-search]');
+      const terms = Array.from(section.querySelectorAll('[data-glossary-term]'));
+      const groups = Array.from(section.querySelectorAll('[data-glossary-group]'));
+      const azLinks = Array.from(section.querySelectorAll('[data-glossary-az-link]'));
+      const status = section.querySelector('[data-glossary-status]');
+      const empty = section.querySelector('[data-glossary-empty]');
+
+      if (!search) return;
+
+      const normalize = (value) => (value || '').toLocaleLowerCase('nl-NL').trim();
+
+      const update = () => {
+        const query = normalize(search.value);
+        let visibleCount = 0;
+
+        terms.forEach((term) => {
+          const haystack = [term.dataset.term, term.dataset.keywords].join(' ');
+          const visible = !query || normalize(haystack).includes(query);
+          term.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        groups.forEach((group) => {
+          const hasVisibleTerms = Array.from(group.querySelectorAll('[data-glossary-term]')).some((term) => !term.hidden);
+          group.hidden = !hasVisibleTerms;
+
+          const link = azLinks.find((item) => item.dataset.letter === group.dataset.letter);
+          if (link) {
+            link.setAttribute('aria-disabled', hasVisibleTerms ? 'false' : 'true');
+          }
+        });
+
+        if (status) {
+          if (!query) {
+            status.textContent = `${terms.length} begrippen beschikbaar.`;
+          } else if (visibleCount === 1) {
+            status.textContent = '1 begrip gevonden.';
+          } else {
+            status.textContent = `${visibleCount} begrippen gevonden.`;
+          }
+        }
+
+        if (empty) {
+          empty.hidden = visibleCount !== 0;
+        }
+      };
+
+      search.addEventListener('input', update);
+      update();
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Begrippenlijst",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Begrippenlijst badkamer sanitair"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Vind snel uitleg bij veelgebruikte badkamer- en sanitairtermen. Gebruik de zoekfunctie of spring direct naar een letter.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "Zoekfunctie tonen",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_label",
+      "label": "Zoekveld label",
+      "default": "Zoek een begrip"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Zoekveld placeholder",
+      "default": "Bijvoorbeeld: afvoer, kraan of toilet"
+    },
+    {
+      "type": "richtext",
+      "id": "empty_text",
+      "label": "Tekst zonder resultaten",
+      "default": "<p>Geen begrippen gevonden. Probeer een andere zoekterm of kies een letter.</p>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Kleurenschema",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Afstand"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bovenruimte",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Onderruimte",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "term",
+      "name": "Begrip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "term",
+          "label": "Begrip"
+        },
+        {
+          "type": "select",
+          "id": "letter",
+          "label": "Letter",
+          "options": [
+            { "value": "A", "label": "A" },
+            { "value": "B", "label": "B" },
+            { "value": "C", "label": "C" },
+            { "value": "D", "label": "D" },
+            { "value": "E", "label": "E" },
+            { "value": "F", "label": "F" },
+            { "value": "G", "label": "G" },
+            { "value": "H", "label": "H" },
+            { "value": "I", "label": "I" },
+            { "value": "J", "label": "J" },
+            { "value": "K", "label": "K" },
+            { "value": "L", "label": "L" },
+            { "value": "M", "label": "M" },
+            { "value": "N", "label": "N" },
+            { "value": "O", "label": "O" },
+            { "value": "P", "label": "P" },
+            { "value": "Q", "label": "Q" },
+            { "value": "R", "label": "R" },
+            { "value": "S", "label": "S" },
+            { "value": "T", "label": "T" },
+            { "value": "U", "label": "U" },
+            { "value": "V", "label": "V" },
+            { "value": "W", "label": "W" },
+            { "value": "X", "label": "X" },
+            { "value": "Y", "label": "Y" },
+            { "value": "Z", "label": "Z" }
+          ],
+          "default": "A"
+        },
+        {
+          "type": "text",
+          "id": "keywords",
+          "label": "Zoekwoorden"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Begrippenlijst"
+    }
+  ]
+}
+{% endschema %}

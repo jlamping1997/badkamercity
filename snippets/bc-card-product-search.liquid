@@ -1,0 +1,145 @@
+{% liquid
+  assign featured_media = card_product.featured_media
+  assign secondary_media = nil
+
+  if show_secondary_image and card_product.media.size > 1
+    for media in card_product.media
+      if media.id != featured_media.id
+        assign secondary_media = media
+        break
+      endif
+    endfor
+  endif
+
+  assign is_on_sale = false
+  if card_product.compare_at_price > card_product.price
+    assign is_on_sale = true
+  endif
+
+  assign display_price = card_product.price | money_without_currency
+  assign display_compare_at_price = card_product.compare_at_price | money_without_currency
+
+  assign spec_1 = card_product.metafields.custom.search_card_spec_1.value | default: card_product.metafields.custom.search_card_spec_1
+  assign spec_2 = card_product.metafields.custom.search_card_spec_2.value | default: card_product.metafields.custom.search_card_spec_2
+
+  assign has_specs = false
+  if spec_1 != blank or spec_2 != blank
+    assign has_specs = true
+  endif
+
+  assign media_loading = 'lazy'
+  if lazy_load == false
+    assign media_loading = 'eager'
+  endif
+%}
+
+<article class="bc-search-card">
+  <a href="{{ card_product.url }}" class="bc-search-card__link full-unstyled-link">
+    <div class="bc-search-card__media-wrapper">
+      {% if is_on_sale %}
+        <span class="bc-search-card__badge badge">
+          {{ 'products.product.on_sale' | t }}
+        </span>
+      {% endif %}
+
+      <div class="bc-search-card__media">
+        {% if featured_media %}
+          <img
+            srcset="
+              {%- if featured_media.width >= 180 -%}{{ featured_media | image_url: width: 180 }} 180w,{%- endif -%}
+              {%- if featured_media.width >= 240 -%}{{ featured_media | image_url: width: 240 }} 240w,{%- endif -%}
+              {%- if featured_media.width >= 320 -%}{{ featured_media | image_url: width: 320 }} 320w,{%- endif -%}
+              {%- if featured_media.width >= 420 -%}{{ featured_media | image_url: width: 420 }} 420w,{%- endif -%}
+              {%- if featured_media.width >= 540 -%}{{ featured_media | image_url: width: 540 }} 540w,{%- endif -%}
+              {%- if featured_media.width >= 720 -%}{{ featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+              {{ featured_media | image_url }} {{ featured_media.width }}w
+            "
+            src="{{ featured_media | image_url: width: 420 }}"
+            sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
+            alt="{{ featured_media.alt | escape }}"
+            class="bc-search-card__image bc-search-card__image--primary"
+            loading="{{ media_loading }}"
+            width="{{ featured_media.width }}"
+            height="{{ featured_media.height }}"
+          >
+
+          {% if secondary_media %}
+            <img
+              srcset="
+                {%- if secondary_media.width >= 180 -%}{{ secondary_media | image_url: width: 180 }} 180w,{%- endif -%}
+                {%- if secondary_media.width >= 240 -%}{{ secondary_media | image_url: width: 240 }} 240w,{%- endif -%}
+                {%- if secondary_media.width >= 320 -%}{{ secondary_media | image_url: width: 320 }} 320w,{%- endif -%}
+                {%- if secondary_media.width >= 420 -%}{{ secondary_media | image_url: width: 420 }} 420w,{%- endif -%}
+                {%- if secondary_media.width >= 540 -%}{{ secondary_media | image_url: width: 540 }} 540w,{%- endif -%}
+                {%- if secondary_media.width >= 720 -%}{{ secondary_media | image_url: width: 720 }} 720w,{%- endif -%}
+                {{ secondary_media | image_url }} {{ secondary_media.width }}w
+              "
+              src="{{ secondary_media | image_url: width: 420 }}"
+              sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
+              alt="{{ secondary_media.alt | default: featured_media.alt | escape }}"
+              class="bc-search-card__image bc-search-card__image--secondary"
+              loading="lazy"
+              width="{{ secondary_media.width }}"
+              height="{{ secondary_media.height }}"
+            >
+          {% endif %}
+        {% else %}
+          {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg bc-search-card__image-placeholder' }}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="bc-search-card__content">
+      <div class="bc-search-card__title-wrap">
+        <h3 class="bc-search-card__title h4">{{ card_product.title | escape }}</h3>
+      </div>
+
+      {% if has_specs %}
+        <ul
+          class="bc-search-card__specs"
+          style="margin: -0.4rem 0 0; padding: 0; list-style: none; color: rgba(var(--color-foreground), 0.72); font-size: 1.25rem; line-height: 1.45;"
+        >
+          {% if spec_1 != blank %}
+            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+              <span aria-hidden="true">&#8226;</span>
+              <span>{{ spec_1 | escape }}</span>
+            </li>
+          {% endif %}
+          {% if spec_2 != blank %}
+            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+              <span aria-hidden="true">&#8226;</span>
+              <span>{{ spec_2 | escape }}</span>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+
+      <div class="bc-search-card__price-wrap">
+        <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
+          <div class="price__container">
+            <div class="price__regular">
+              <span class="price-item price-item--regular">
+                {{ display_price }}
+              </span>
+            </div>
+
+            {% if is_on_sale %}
+              <div class="price__sale">
+                <span class="price-item price-item--sale price-item--last">
+                  {{ display_price }}
+                </span>
+                <span>
+                  <s class="price-item price-item--regular">
+                    {{ display_compare_at_price }}
+                  </s>
+                </span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <div class="bc-search-card__meta" aria-hidden="true"></div>
+    </div>
+  </a>
+</article>

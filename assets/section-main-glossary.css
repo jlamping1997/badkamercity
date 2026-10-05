@@ -1,0 +1,195 @@
+.bc-glossary {
+  color: rgb(var(--bc-color-text));
+}
+
+.bc-glossary__inner {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+.bc-glossary__header {
+  max-width: 82rem;
+  margin-bottom: 3.2rem;
+}
+
+.bc-glossary__title {
+  margin: 0;
+  color: rgb(var(--bc-color-primary));
+  font-size: clamp(3.2rem, 4vw, 4.8rem);
+  line-height: 1.08;
+}
+
+.bc-glossary__intro {
+  margin-top: 1.6rem;
+  color: rgba(var(--bc-color-text), 0.78);
+}
+
+.bc-glossary__tools {
+  margin-bottom: 2.4rem;
+}
+
+.bc-glossary__search-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: rgb(var(--bc-color-primary));
+  font-weight: 700;
+}
+
+.bc-glossary__search-field {
+  max-width: 54rem;
+}
+
+.bc-glossary__search {
+  width: 100%;
+  min-height: 5rem;
+  padding: 1.2rem 1.6rem;
+  border: 0.1rem solid rgba(var(--bc-color-border), 1);
+  border-radius: var(--bc-radius-sm);
+  background: rgb(var(--color-background));
+  color: rgb(var(--bc-color-text));
+  font: inherit;
+}
+
+.bc-glossary__search:focus {
+  outline: 0.2rem solid rgba(var(--bc-color-secondary), 0.55);
+  outline-offset: 0.2rem;
+}
+
+.bc-glossary__az-wrap {
+  margin-bottom: 2.4rem;
+}
+
+.bc-glossary__az {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bc-glossary__az-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.6rem;
+  min-height: 3.6rem;
+  padding: 0.7rem 0.9rem;
+  border: 0.1rem solid rgba(var(--bc-color-border), 1);
+  border-radius: 0.4rem;
+  background: rgb(var(--color-background));
+  color: rgb(var(--bc-color-primary));
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.bc-glossary__az-link:hover,
+.bc-glossary__az-link:focus-visible {
+  border-color: rgb(var(--bc-color-primary));
+  background: rgb(var(--bc-color-primary));
+  color: rgb(var(--bc-color-primary-foreground));
+}
+
+.bc-glossary__az-link[aria-disabled='true'] {
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.bc-glossary__status {
+  min-height: 2.2rem;
+  margin: 0 0 2rem;
+  color: rgba(var(--bc-color-text), 0.72);
+  font-size: 1.4rem;
+}
+
+.bc-glossary__groups {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.bc-glossary__group {
+  scroll-margin-top: 9rem;
+}
+
+.bc-glossary__group[hidden],
+.bc-glossary__tile[hidden],
+.bc-glossary__empty[hidden] {
+  display: none;
+}
+
+.bc-glossary__letter-heading {
+  margin: 0 0 1.2rem;
+  padding: 1.1rem 1.6rem;
+  border: 0.1rem solid rgba(var(--bc-color-border), 1);
+  border-radius: 0.4rem;
+  background: rgba(var(--bc-color-muted), 0.9);
+  color: rgb(var(--bc-color-primary));
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bc-glossary__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.bc-glossary__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.2rem;
+  padding: 1.2rem;
+  border: 0.1rem solid rgba(var(--bc-color-border), 1);
+  border-radius: 0.4rem;
+  background: rgb(var(--color-background));
+  color: rgb(var(--bc-color-text));
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.bc-glossary__tile:hover,
+.bc-glossary__tile:focus-visible {
+  border-color: rgb(var(--bc-color-primary));
+  box-shadow: 0 0.8rem 2.4rem rgba(var(--bc-color-primary), 0.08);
+  transform: translateY(-0.1rem);
+}
+
+.bc-glossary__tile:focus-visible {
+  outline: 0.2rem solid rgba(var(--bc-color-secondary), 0.65);
+  outline-offset: 0.2rem;
+}
+
+.bc-glossary__tile-label {
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.bc-glossary__empty {
+  margin-top: 2.4rem;
+  padding: 2rem;
+  border: 0.1rem solid rgba(var(--bc-color-border), 1);
+  border-radius: var(--bc-radius-sm);
+  background: rgba(var(--bc-color-muted), 0.7);
+  color: rgba(var(--bc-color-text), 0.78);
+}
+
+@media screen and (min-width: 750px) {
+  .bc-glossary__tools {
+    margin-bottom: 3.2rem;
+  }
+
+  .bc-glossary__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .bc-glossary__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

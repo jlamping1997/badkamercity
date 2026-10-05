@@ -1,0 +1,385 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "home_hero_gDkwi8": {
+      "type": "home-hero",
+      "name": "Home Hero",
+      "settings": {
+        "hero_title": "",
+        "hero_subtitle": "",
+        "hero_button_text": "",
+        "hero_button_link": "",
+        "hero_title_color": "#ffffff",
+        "hero_subtitle_color": "#ffffff",
+        "hero_title_position_mode": "inline",
+        "hero_title_mobile_x": 5,
+        "hero_title_mobile_y": 52,
+        "hero_title_desktop_x": 6,
+        "hero_title_desktop_y": 56,
+        "hero_subtitle_position_mode": "inline",
+        "hero_subtitle_mobile_x": 5,
+        "hero_subtitle_mobile_y": 70,
+        "hero_subtitle_desktop_x": 6,
+        "hero_subtitle_desktop_y": 72,
+        "hero_button_text_color": "#ffffff",
+        "hero_button_background_color": "#8fd4ef",
+        "hero_button_alignment": "left",
+        "hero_button_position_mode": "inline",
+        "hero_button_mobile_x": 9,
+        "hero_button_mobile_y": 82,
+        "hero_button_desktop_x": 16,
+        "hero_button_desktop_y": 84,
+        "hero_image": "shopify://shop_images/kortingbanner.png",
+        "banner_1_title": "",
+        "banner_1_subtitle": "",
+        "banner_1_button": "",
+        "banner_1_link": "",
+        "banner_1_title_color": "#ffffff",
+        "banner_1_subtitle_color": "#ffffff",
+        "banner_1_button_text_color": "#ffffff",
+        "banner_1_button_background_color": "#8fd4ef",
+        "banner_1_button_alignment": "left",
+        "banner_1_image": "shopify://shop_images/Banner2.png",
+        "banner_2_title": "",
+        "banner_2_subtitle": "",
+        "banner_2_button": "",
+        "banner_2_link": "",
+        "banner_2_title_color": "#ffffff",
+        "banner_2_subtitle_color": "#ffffff",
+        "banner_2_button_text_color": "#ffffff",
+        "banner_2_button_background_color": "#8fd4ef",
+        "banner_2_button_alignment": "left",
+        "banner_2_image": "shopify://shop_images/Banner3.png",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_category_grid_FgNMtn": {
+      "type": "home-category-grid",
+      "blocks": {
+        "category_item_VLPgRw": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_CDtK36": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_phWPKU": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_8qRGna": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_HUgzqq": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_yxtaab": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_rGkPHd": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        },
+        "category_item_pg9Fzq": {
+          "type": "category_item",
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "show_on_desktop": true,
+            "show_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "category_item_VLPgRw",
+        "category_item_CDtK36",
+        "category_item_phWPKU",
+        "category_item_8qRGna",
+        "category_item_HUgzqq",
+        "category_item_yxtaab",
+        "category_item_rGkPHd",
+        "category_item_pg9Fzq"
+      ],
+      "name": "Home category grid",
+      "settings": {
+        "title": "Shop per categorie",
+        "menu": "main-menu",
+        "source_mode": "menu",
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_shop_by_style_BK9a6q": {
+      "type": "home-shop-by-style",
+      "blocks": {
+        "style_card_QyKHfL": {
+          "type": "style_card",
+          "settings": {
+            "featured": true,
+            "image": "shopify://shop_images/Hotel_Chique_Banner.png",
+            "kicker": "Warm & luxe",
+            "secondary_kicker": "Populaire stijl",
+            "title": "Hotel chic",
+            "text": "Donkere accenten, rijke materialen en sfeervolle verlichting voor een luxe badkamergevoel.",
+            "link_label": "Ontdek deze stijl",
+            "link": ""
+          }
+        },
+        "style_card_qRJMQR": {
+          "type": "style_card",
+          "settings": {
+            "featured": false,
+            "image": "shopify://shop_images/Japandi_Banner.png",
+            "kicker": "Licht & rustig",
+            "secondary_kicker": "",
+            "title": "Japandi",
+            "text": "Zachte kleuren, natuurlijke materialen en minimalistische rust met veel balans.",
+            "link_label": "Ontdek deze stijl",
+            "link": ""
+          }
+        },
+        "style_card_zkCRii": {
+          "type": "style_card",
+          "settings": {
+            "featured": false,
+            "image": "shopify://shop_images/Moderne_Badkamer_Banner.png",
+            "kicker": "Strak & tijdloos",
+            "secondary_kicker": "",
+            "title": "Modern",
+            "text": "Heldere lijnen, slimme opbergruimte en een cleane uitstraling die lang mooi blijft.",
+            "link_label": "Ontdek deze stijl",
+            "link": ""
+          }
+        },
+        "style_card_eT449J": {
+          "type": "style_card",
+          "settings": {
+            "featured": false,
+            "image": "shopify://shop_images/Landelijke_Badkamer_Banner.png",
+            "kicker": "Warm & karaktervol",
+            "secondary_kicker": "",
+            "title": "Landelijk",
+            "text": "Houttinten, zachte vormen en een uitnodigende sfeer met een huiselijk gevoel.",
+            "link_label": "Ontdek deze stijl",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "style_card_QyKHfL",
+        "style_card_qRJMQR",
+        "style_card_zkCRii",
+        "style_card_eT449J"
+      ],
+      "name": "Home shop by style",
+      "settings": {
+        "eyebrow": "Shop op stijl",
+        "title": "Vind de badkamerstijl die bij jouw huis past",
+        "intro": "<p>Van warm hotel chic tot strak modern: ontdek stijlen, materialen en sfeerpagina’s die je helpen om sneller de juiste keuzes te maken.</p>",
+        "primary_button_label": "Bekijk alle stijlen",
+        "primary_button_link": "",
+        "secondary_button_label": "Inspiratie bekijken",
+        "secondary_button_link": "",
+        "support_title_1": "",
+        "support_text_1": "",
+        "support_title_2": "",
+        "support_text_2": "",
+        "support_title_3": "",
+        "support_text_3": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_mijn_badkamercity_3wELah": {
+      "type": "home-mijn-badkamercity",
+      "blocks": {
+        "post_DDi9mB": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Landelijke_Badkamer_Banner.png",
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        },
+        "post_rYJY7b": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Moderne_Badkamer_Banner.png",
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        },
+        "post_WpNLAG": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Hotel_Chique_Banner.png",
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        },
+        "post_EB9FLc": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Japandi_Banner.png",
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        },
+        "post_eGmzXM": {
+          "type": "post",
+          "settings": {
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        },
+        "post_aKFxxn": {
+          "type": "post",
+          "settings": {
+            "caption": "MijnBadkamercity",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_DDi9mB",
+        "post_rYJY7b",
+        "post_WpNLAG",
+        "post_EB9FLc",
+        "post_eGmzXM",
+        "post_aKFxxn"
+      ],
+      "name": "Home MijnBadkamercity",
+      "settings": {
+        "title": "#MijnBadkamercity",
+        "intro": "<p>Deel jouw badkamer op Instagram met <strong>#MijnBadkamercity</strong> en tag <strong>@badkamercity</strong>. Zo bouwen we samen aan een inspirerende omgeving vol echte badkamers, slimme oplossingen en mooie stijlen.</p>",
+        "hashtag_label": "MijnBadkamercity",
+        "button_label": "Meer inspiratie op #MijnBadkamercity",
+        "button_link": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_brand_rail_aUrAmK": {
+      "type": "home-brand-rail",
+      "blocks": {
+        "brand_JBaMhE": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "brand_84x3qT": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "brand_AnL7GR": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "brand_PN7t86": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "brand_aPUkce": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        },
+        "brand_NQgeQ6": {
+          "type": "brand",
+          "settings": {
+            "collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_JBaMhE",
+        "brand_84x3qT",
+        "brand_AnL7GR",
+        "brand_PN7t86",
+        "brand_aPUkce",
+        "brand_NQgeQ6"
+      ],
+      "name": "Home brand rail",
+      "settings": {
+        "title": "Onze merken",
+        "intro": "Kies uit bekende merken en ontdek collecties die passen bij jouw stijl, budget en badkamerwensen.",
+        "show_all_brands_link": true,
+        "all_brands_label": "Alle merken",
+        "all_brands_link": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "home_hero_gDkwi8",
+    "home_category_grid_FgNMtn",
+    "home_shop_by_style_BK9a6q",
+    "home_mijn_badkamercity_3wELah",
+    "home_brand_rail_aUrAmK"
+  ]
+}

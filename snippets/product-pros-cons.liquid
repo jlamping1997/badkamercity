@@ -1,0 +1,46 @@
+{%- liquid
+  assign plus_items = product.metafields.custom.pluspunten.value
+  assign attention_items = product.metafields.custom.aandachtspunten.value
+-%}
+
+{%- capture pros_cons_items -%}
+  {%- for item in plus_items -%}
+    {%- assign item_text = item | strip -%}
+    {%- if item_text != blank -%}
+      <li class="bc-product-pros-cons__item bc-product-pros-cons__item--plus">
+        <span class="bc-product-pros-cons__icon" aria-hidden="true">
+          <span class="bc-product-pros-cons__icon-mark">&#10003;</span>
+        </span>
+        <span class="bc-product-pros-cons__text">{{ item_text }}</span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- for item in attention_items -%}
+    {%- assign item_text = item | strip -%}
+    {%- if item_text != blank -%}
+      <li class="bc-product-pros-cons__item bc-product-pros-cons__item--attention">
+        <span class="bc-product-pros-cons__icon" aria-hidden="true">
+          <span class="bc-product-pros-cons__icon-mark">-</span>
+        </span>
+        <span class="bc-product-pros-cons__text">{{ item_text }}</span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- assign pros_cons_items = pros_cons_items | strip -%}
+
+{%- if pros_cons_items != blank -%}
+  <section class="bc-product-pros-cons" aria-labelledby="ProductProsConsTitle-{{ section_id }}">
+    <div class="bc-product-pros-cons__inner">
+      <h2 id="ProductProsConsTitle-{{ section_id }}" class="bc-product-pros-cons__title">
+        Plus- en aandachtspunten
+      </h2>
+
+      <ul class="bc-product-pros-cons__list list-unstyled" role="list">
+        {{ pros_cons_items }}
+      </ul>
+    </div>
+  </section>
+{%- endif -%}

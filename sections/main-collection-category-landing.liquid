@@ -1,0 +1,657 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .collection-category-landing-{{ section.id }} {
+    --landing-card-radius: 2rem;
+    --landing-card-border: rgba(15, 39, 64, 0.08);
+    --landing-card-shadow: 0 1.8rem 4rem rgba(15, 39, 64, 0.08);
+    --landing-muted: rgba(15, 39, 64, 0.7);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__hero {
+    max-width: 86rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__eyebrow {
+    margin: 0 0 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(var(--bc-color-secondary), 1);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__title {
+    margin: 0;
+    font-size: clamp(3.2rem, 4vw, 5.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: rgb(var(--bc-color-primary));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__description,
+  .collection-category-landing-{{ section.id }} .collection-category-landing__intro,
+  .collection-category-landing-{{ section.id }} .collection-category-landing__extra-body {
+    color: var(--landing-muted);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__description {
+    margin-top: 2rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__intro {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.7;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__extra {
+    max-width: 92rem;
+    margin: 3rem auto 0;
+    padding: 2.4rem 2.6rem;
+    border: 1px solid var(--landing-card-border);
+    border-radius: var(--landing-card-radius);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--landing-card-shadow);
+    text-align: left;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__extra-title {
+    margin: 0 0 1.2rem;
+    font-size: 2.1rem;
+    color: rgb(var(--bc-color-primary));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__subcategories {
+    margin-top: 4.8rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__section-heading {
+    margin: 0 0 2.4rem;
+    font-size: clamp(2.4rem, 2.8vw, 3.4rem);
+    line-height: 1.15;
+    color: rgb(var(--bc-color-primary));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__grid {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--landing-card-border);
+    border-radius: var(--landing-card-radius);
+    background: rgb(var(--color-background));
+    box-shadow: var(--landing-card-shadow);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card:hover {
+    transform: translateY(-0.3rem);
+    border-color: rgba(var(--bc-color-secondary), 0.34);
+    box-shadow: 0 2.2rem 4.8rem rgba(15, 39, 64, 0.12);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-media {
+    position: relative;
+    overflow: hidden;
+    background: rgba(15, 39, 64, 0.04);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-media::before {
+    content: '';
+    display: block;
+    padding-bottom: var(--subcategory-ratio-percent, 100%);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-image,
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-image {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card:hover .collection-category-landing__card-image {
+    transform: scale(1.03);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(15, 39, 64, 0.22);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-body {
+    display: grid;
+    gap: 0.9rem;
+    padding: 2rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-title-row {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: rgb(var(--bc-color-primary));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-title-row .icon-wrap {
+    flex-shrink: 0;
+    color: rgb(var(--bc-color-primary));
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__card-description {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.65;
+    color: var(--landing-muted);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__products {
+    margin-top: 5.6rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__products-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__products-intro {
+    max-width: 68rem;
+    color: var(--landing-muted);
+  }
+
+  .collection-category-landing-{{ section.id }} .collection-category-landing__empty {
+    padding: 2.4rem;
+    border: 1px dashed rgba(15, 39, 64, 0.18);
+    border-radius: var(--landing-card-radius);
+    color: var(--landing-muted);
+    background: rgba(15, 39, 64, 0.02);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .collection-category-landing-{{ section.id }} .collection-category-landing__grid {
+      grid-template-columns: repeat({{ section.settings.subcategory_grid_columns_desktop }}, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .collection-category-landing-{{ section.id }} .collection-category-landing__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .collection-category-landing-{{ section.id }} .collection-category-landing__extra {
+      padding: 2rem;
+    }
+
+    .collection-category-landing-{{ section.id }} .collection-category-landing__card-body {
+      padding: 1.7rem;
+    }
+
+    .collection-category-landing-{{ section.id }} .collection-category-landing__card-title {
+      font-size: 1.8rem;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign show_hero = false
+  assign show_extra_block = false
+  if section.settings.show_collection_title or section.settings.show_collection_description or section.settings.show_intro_text or section.settings.show_extra_content
+    assign show_hero = true
+  endif
+  if section.settings.show_extra_content
+    if section.settings.extra_text_title != blank or section.settings.extra_text_content != blank
+      assign show_extra_block = true
+    endif
+  endif
+-%}
+
+<section class="collection-category-landing-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if show_hero -%}
+      <header class="collection-category-landing__hero">
+        <p class="collection-category-landing__eyebrow">Hoofdcategorie</p>
+
+        {%- if section.settings.show_collection_title -%}
+          <h1 class="collection-category-landing__title">{{ collection.title | escape }}</h1>
+        {%- endif -%}
+
+        {%- if section.settings.show_collection_description and collection.description != blank -%}
+          <div class="collection-category-landing__description rte">
+            {{ collection.description }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_intro_text and section.settings.intro_text != blank -%}
+          <div class="collection-category-landing__intro rte">
+            {{ section.settings.intro_text }}
+          </div>
+        {%- endif -%}
+
+        {%- if show_extra_block -%}
+          <div class="collection-category-landing__extra">
+            {%- if section.settings.extra_text_title != blank -%}
+              <h2 class="collection-category-landing__extra-title">{{ section.settings.extra_text_title | escape }}</h2>
+            {%- endif -%}
+            {%- if section.settings.extra_text_content != blank -%}
+              <div class="collection-category-landing__extra-body rte">
+                {{ section.settings.extra_text_content }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    {%- if section.settings.show_subcategory_grid -%}
+      <section class="collection-category-landing__subcategories" aria-labelledby="subcategory-grid-heading-{{ section.id }}">
+        {%- if section.settings.subcategory_grid_heading != blank -%}
+          <h2 id="subcategory-grid-heading-{{ section.id }}" class="collection-category-landing__section-heading">
+            {{ section.settings.subcategory_grid_heading | escape }}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="collection-category-landing__grid">
+            {%- for block in section.blocks -%}
+              {%- liquid
+                assign card_ratio_percent = 100
+                assign card_sizes = '(min-width: 990px) calc((100vw - 160px) / 4), (min-width: 750px) calc((100vw - 80px) / 2), calc(100vw - 48px)'
+                assign card_alt = block.settings.block_image.alt | escape
+                case section.settings.subcategory_image_ratio
+                  when 'portrait'
+                    assign card_ratio_percent = 125
+                  when 'landscape'
+                    assign card_ratio_percent = 66.6667
+                  when 'adapt'
+                    if block.settings.block_image != blank and block.settings.block_image.aspect_ratio
+                      assign card_ratio_percent = 1 | divided_by: block.settings.block_image.aspect_ratio | times: 100
+                    endif
+                endcase
+                assign card_sizes = '(min-width: 990px) calc((100vw - 160px) / ' | append: section.settings.subcategory_grid_columns_desktop | append: '), (min-width: 750px) calc((100vw - 80px) / 2), calc(100vw - 48px)'
+              -%}
+
+              <article class="collection-category-landing__grid-item" {{ block.shopify_attributes }}>
+                <a
+                  class="collection-category-landing__card"
+                  href="{{ block.settings.block_link | default: '#' }}"
+                  style="--subcategory-ratio-percent: {{ card_ratio_percent }}%;"
+                >
+                  <div class="collection-category-landing__card-media">
+                    {%- if block.settings.block_image != blank -%}
+                      {{
+                        block.settings.block_image
+                        | image_url: width: 1200
+                        | image_tag:
+                          class: 'collection-category-landing__card-image',
+                          widths: '360, 535, 750, 940, 1200',
+                          sizes: card_sizes,
+                          alt: card_alt,
+                          loading: 'lazy'
+                      }}
+                    {%- else -%}
+                      <div class="collection-category-landing__card-placeholder">
+                        {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+
+                  <div class="collection-category-landing__card-body">
+                    <div class="collection-category-landing__card-title-row">
+                      <h3 class="collection-category-landing__card-title">
+                        {{ block.settings.block_title | default: 'Subcategorie' | escape }}
+                      </h3>
+                      <span class="icon-wrap">
+                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      </span>
+                    </div>
+
+                    {%- if block.settings.block_description != blank -%}
+                      <p class="collection-category-landing__card-description">
+                        {{ block.settings.block_description | escape }}
+                      </p>
+                    {%- endif -%}
+                  </div>
+                </a>
+              </article>
+            {%- endfor -%}
+          </div>
+        {%- else -%}
+          <div class="collection-category-landing__empty">
+            Voeg in de Theme Editor subcategorieblokken toe om hier een overzicht te tonen.
+          </div>
+        {%- endif -%}
+      </section>
+    {%- endif -%}
+
+    {%- if section.settings.show_product_grid -%}
+      <section class="collection-category-landing__products" aria-labelledby="product-grid-heading-{{ section.id }}">
+        <div class="collection-category-landing__products-header">
+          <div>
+            <h2 id="product-grid-heading-{{ section.id }}" class="collection-category-landing__section-heading">
+              {{ section.settings.product_grid_heading | escape }}
+            </h2>
+            {%- if section.settings.product_grid_intro != blank -%}
+              <div class="collection-category-landing__products-intro rte">
+                {{ section.settings.product_grid_intro }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        {%- if collection.products.size > 0 -%}
+          <div class="collection">
+            <ul class="grid product-grid grid--2-col-tablet-down grid--{{ section.settings.product_grid_columns_desktop }}-col-desktop" role="list">
+              {% assign skip_card_product_styles = false %}
+              {%- for product in collection.products limit: section.settings.max_products -%}
+                <li class="grid__item">
+                  {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.product_image_ratio,
+                    image_shape: 'default',
+                    show_secondary_image: false,
+                    show_vendor: false,
+                    show_rating: false,
+                    lazy_load: true,
+                    skip_styles: skip_card_product_styles,
+                    quick_add: 'none',
+                    section_id: section.id
+                  %}
+                </li>
+                {% assign skip_card_product_styles = true %}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- else -%}
+          <div class="collection-category-landing__empty">
+            Er zijn nog geen producten gekoppeld aan deze collectie. Zodra je producten toevoegt, kunnen ze hier automatisch verschijnen.
+          </div>
+        {%- endif -%}
+      </section>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Landing",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Kleurschema",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Bovenste content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_title",
+      "label": "Toon collectietitel",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "label": "Toon collectieomschrijving",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro_text",
+      "label": "Toon introtekst",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "intro_text",
+      "label": "Introtekst",
+      "default": "<p>Help bezoekers eerst kiezen binnen deze hoofdcategorie met een helder overzicht van relevante subcategorieën.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_extra_content",
+      "label": "Toon extra contentblok",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "extra_text_title",
+      "label": "Titel extra content",
+      "default": "Lees meer"
+    },
+    {
+      "type": "richtext",
+      "id": "extra_text_content",
+      "label": "Extra content",
+      "default": "<p>Gebruik dit blok voor extra uitleg, advies of aanvullende content over deze hoofdcategorie.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Subcategorie-overzicht"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_subcategory_grid",
+      "label": "Toon subcategorie-overzicht",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "subcategory_grid_heading",
+      "label": "Titel subcategorie-overzicht",
+      "default": "Kies een subcategorie"
+    },
+    {
+      "type": "range",
+      "id": "subcategory_grid_columns_desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "Kolommen desktop"
+    },
+    {
+      "type": "select",
+      "id": "subcategory_image_ratio",
+      "label": "Beeldverhouding subcategorie-afbeelding",
+      "default": "square",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Aangepast aan afbeelding"
+        },
+        {
+          "value": "square",
+          "label": "Vierkant"
+        },
+        {
+          "value": "landscape",
+          "label": "Liggend"
+        },
+        {
+          "value": "portrait",
+          "label": "Staand"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Productgrid"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_grid",
+      "label": "Toon productgrid onder subcategorieën",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "product_grid_heading",
+      "label": "Titel productgrid",
+      "default": "Producten in deze collectie"
+    },
+    {
+      "type": "richtext",
+      "id": "product_grid_intro",
+      "label": "Intro productgrid",
+      "default": "<p>Gebruik dit productoverzicht optioneel als bezoekers na het kiezen direct willen verder winkelen.</p>"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "default": 8,
+      "label": "Maximaal aantal producten"
+    },
+    {
+      "type": "range",
+      "id": "product_grid_columns_desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "Kolommen productgrid desktop"
+    },
+    {
+      "type": "select",
+      "id": "product_image_ratio",
+      "label": "Beeldverhouding productafbeelding",
+      "default": "adapt",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Aangepast aan afbeelding"
+        },
+        {
+          "value": "square",
+          "label": "Vierkant"
+        },
+        {
+          "value": "portrait",
+          "label": "Staand"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding boven",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding onder",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory",
+      "name": "Subcategorie",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Titel",
+          "default": "Badmeubel sets"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Afbeelding"
+        },
+        {
+          "type": "url",
+          "id": "block_link",
+          "label": "Link"
+        },
+        {
+          "type": "textarea",
+          "id": "block_description",
+          "label": "Korte omschrijving",
+          "default": "Voeg hier een korte omschrijving toe zodat bezoekers sneller de juiste richting kiezen."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 24,
+  "presets": [
+    {
+      "name": "Category Landing",
+      "blocks": [
+        {
+          "type": "subcategory"
+        },
+        {
+          "type": "subcategory"
+        },
+        {
+          "type": "subcategory"
+        },
+        {
+          "type": "subcategory"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
