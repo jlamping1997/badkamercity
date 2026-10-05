@@ -159,6 +159,20 @@
         "padding_bottom": 24
       }
     },
+    "home_popular_products": {
+      "type": "home-popular-products",
+      "name": "Populair op dit moment",
+      "settings": {
+        "heading": "Populair op dit moment",
+        "collection": "",
+        "product_count": 4,
+        "view_all_label": "Bekijk alle producten",
+        "view_all_link": "",
+        "add_to_cart_label": "In winkelwagen",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "home_shop_by_style_BK9a6q": {
       "type": "home-shop-by-style",
       "blocks": {
@@ -378,6 +392,7 @@
   "order": [
     "home_hero_gDkwi8",
     "home_category_grid_FgNMtn",
+    "home_popular_products",
     "home_shop_by_style_BK9a6q",
     "home_mijn_badkamercity_3wELah",
     "home_brand_rail_aUrAmK"
