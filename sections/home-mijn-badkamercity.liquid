@@ -8,8 +8,8 @@
     --hi-text: #0f2740;
     --hi-muted: #516273;
     --hi-gap: 12px;
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     background: #ffffff;
     color: var(--hi-text);
   }
@@ -23,7 +23,7 @@
 
   .home-inspiration-{{ section.id }} .home-inspiration__shell {
     display: grid;
-    gap: 16px;
+    gap: 12px;
   }
 
   .home-inspiration-{{ section.id }} .home-inspiration__header {
@@ -38,7 +38,7 @@
     min-width: 0;
     margin: 0;
     color: var(--hi-text);
-    font-size: clamp(2.4rem, 2.5vw, 3.2rem);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -51,7 +51,7 @@
     gap: 8px;
     min-height: 44px;
     max-width: 100%;
-    color: var(--hi-text);
+    color: #176b9b;
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
@@ -150,8 +150,8 @@
     flex: 1 0 auto;
     align-items: center;
     min-width: 0;
-    min-height: 48px;
-    padding: 10px 12px;
+    min-height: 44px;
+    padding: 8px 12px;
     background: #ffffff;
   }
 
@@ -224,8 +224,12 @@
   @media screen and (min-width: 750px) {
     .home-inspiration-{{ section.id }} {
       --hi-gap: 16px;
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .home-inspiration-{{ section.id }} .home-inspiration__view-all {
+      min-height: 32px;
     }
 
     .home-inspiration-{{ section.id }} .page-width {
@@ -233,7 +237,7 @@
     }
 
     .home-inspiration-{{ section.id }} .home-inspiration__shell {
-      gap: 20px;
+      gap: 12px;
     }
 
     .home-inspiration-{{ section.id }} .home-inspiration__track {
@@ -283,7 +287,7 @@
         {%- endif -%}
       </div>
 
-      {%- if section.settings.intro != blank -%}
+      {%- if section.settings.show_intro and section.settings.intro != blank -%}
         <div class="home-inspiration__intro rte">{{ section.settings.intro }}</div>
       {%- endif -%}
 
@@ -356,6 +360,12 @@
       "id": "title",
       "label": "Titel",
       "default": "Badkamerinspiratie"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro",
+      "label": "Toon introductietekst",
+      "default": false
     },
     {
       "type": "richtext",

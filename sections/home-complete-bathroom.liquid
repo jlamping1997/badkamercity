@@ -3,8 +3,8 @@
     --hcb-navy: #0f2740;
     --hcb-blue: #176b9b;
     --hcb-yellow: #f4cd45;
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     background: #ffffff;
     color: var(--hcb-navy);
   }
@@ -65,7 +65,7 @@
     justify-content: center;
     gap: 12px;
     min-width: 0;
-    padding: 24px;
+    padding: 20px;
     background: var(--hcb-navy);
     color: #ffffff;
   }
@@ -95,14 +95,14 @@
     justify-content: center;
     gap: 24px;
     min-width: 0;
-    padding: 24px;
+    padding: 20px;
     background: #f2f7fa;
   }
 
   .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__steps {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: 16px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -190,8 +190,8 @@
 
   @media screen and (min-width: 750px) {
     .home-complete-bathroom-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     }
 
     .home-complete-bathroom-{{ section.id }} .page-width {

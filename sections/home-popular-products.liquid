@@ -12,8 +12,8 @@
       --hpp-text: #0f2740;
       --hpp-blue: #176b9b;
       --hpp-gap: 12px;
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
       background: #ffffff;
       color: var(--hpp-text);
     }
@@ -31,14 +31,14 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px 24px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .home-popular-products-{{ section.id }} .home-popular-products__heading {
       min-width: 0;
       margin: 0;
       color: var(--hpp-text);
-      font-size: clamp(2.4rem, 2.5vw, 3.2rem);
+      font-size: clamp(2.2rem, 2vw, 2.8rem);
       font-weight: 700;
       line-height: 1.2;
       letter-spacing: -0.02em;
@@ -51,7 +51,7 @@
       gap: 8px;
       min-height: 44px;
       max-width: 100%;
-      color: var(--hpp-text);
+      color: #176b9b;
       font-size: 1.4rem;
       font-weight: 600;
       line-height: 1.4;
@@ -105,16 +105,16 @@
 
     .home-popular-products-{{ section.id }} .home-popular-products__media {
       position: relative;
-      aspect-ratio: 1;
+      aspect-ratio: 1.8;
       overflow: hidden;
     }
 
     .home-popular-products-{{ section.id }} .home-popular-products__image {
       position: absolute;
-      inset: 20px;
+      inset: 12px;
       display: block;
-      width: calc(100% - 40px);
-      height: calc(100% - 40px);
+      width: calc(100% - 24px);
+      height: calc(100% - 24px);
       object-fit: contain;
       object-position: center;
     }
@@ -151,9 +151,9 @@
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
       min-width: 0;
-      padding: 0 16px;
+      padding: 0 12px;
     }
 
     .home-popular-products-{{ section.id }} .home-popular-products__vendor {
@@ -189,7 +189,7 @@
 
     .home-popular-products-{{ section.id }} .home-popular-products__price {
       color: var(--hpp-text);
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 700;
       line-height: 1.2;
       overflow-wrap: anywhere;
@@ -210,7 +210,7 @@
     }
 
     .home-popular-products-{{ section.id }} .home-popular-products__actions {
-      padding: 16px;
+      padding: 12px;
     }
 
     .home-popular-products-{{ section.id }} product-form {
@@ -310,8 +310,12 @@
     @media screen and (min-width: 750px) {
       .home-popular-products-{{ section.id }} {
         --hpp-gap: 16px;
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+      }
+
+      .home-popular-products-{{ section.id }} .home-popular-products__view-all {
+        min-height: 32px;
       }
 
       .home-popular-products-{{ section.id }} .page-width {
@@ -319,7 +323,11 @@
       }
 
       .home-popular-products-{{ section.id }} .home-popular-products__header {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
+      }
+
+      .home-popular-products-{{ section.id }} .home-popular-products__media {
+        aspect-ratio: 2;
       }
 
       .home-popular-products-{{ section.id }} .home-popular-products__rail {
@@ -389,7 +397,7 @@
                   {%- if card_image != blank -%}
                     {{ card_image | image_url: width: 750 | image_tag:
                       widths: '180, 300, 450, 600, 750',
-                      sizes: '(min-width: 1440px) 296px, (min-width: 990px) calc(25vw - 64px), (min-width: 750px) calc(33.33vw - 67px), min(280px, calc(82vw - 66px))',
+                      sizes: '(min-width: 1440px) 310px, (min-width: 990px) calc(25vw - 50px), (min-width: 750px) calc(33.3333vw - 52.667px), min(294px, calc(82vw - 52.24px))',
                       class: 'home-popular-products__image',
                       loading: 'lazy',
                       alt: ''

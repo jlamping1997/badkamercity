@@ -3,8 +3,8 @@
     --hbr-text: #0f2740;
     --hbr-muted: #516273;
     --hbr-border: rgba(15, 39, 64, 0.12);
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     background: #ffffff;
     color: var(--hbr-text);
   }
@@ -18,7 +18,7 @@
 
   .home-brand-rail-{{ section.id }} .home-brand-rail__shell {
     display: grid;
-    gap: 16px;
+    gap: 12px;
   }
 
   .home-brand-rail-{{ section.id }} .home-brand-rail__header {
@@ -33,7 +33,7 @@
     min-width: 0;
     margin: 0;
     color: var(--hbr-text);
-    font-size: clamp(2.4rem, 2.5vw, 3.2rem);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -46,7 +46,7 @@
     gap: 8px;
     min-height: 44px;
     max-width: 100%;
-    color: var(--hbr-text);
+    color: #176b9b;
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4;
@@ -83,7 +83,7 @@
     justify-content: center;
     height: 100%;
     min-width: 0;
-    min-height: 76px;
+    min-height: 72px;
     padding: 12px;
     border: 1px solid var(--hbr-border);
     border-radius: 8px;
@@ -99,7 +99,7 @@
     justify-content: center;
     width: 100%;
     max-width: 180px;
-    height: 48px;
+    height: 40px;
   }
 
   .home-brand-rail-{{ section.id }} .home-brand-rail__image {
@@ -136,8 +136,12 @@
 
   @media screen and (min-width: 750px) {
     .home-brand-rail-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .home-brand-rail-{{ section.id }} .home-brand-rail__all {
+      min-height: 32px;
     }
 
     .home-brand-rail-{{ section.id }} .page-width {
@@ -145,7 +149,7 @@
     }
 
     .home-brand-rail-{{ section.id }} .home-brand-rail__shell {
-      gap: 20px;
+      gap: 12px;
     }
 
     .home-brand-rail-{{ section.id }} .home-brand-rail__track {
@@ -153,8 +157,8 @@
     }
 
     .home-brand-rail-{{ section.id }} .home-brand-rail__card {
-      min-height: 84px;
-      padding: 16px;
+      min-height: 72px;
+      padding: 12px;
     }
 
     .home-brand-rail-{{ section.id }} .home-brand-rail__label {
@@ -202,7 +206,7 @@
         {%- endif -%}
       </div>
 
-      {%- if section.settings.intro != blank -%}
+      {%- if section.settings.show_intro and section.settings.intro != blank -%}
         <p class="home-brand-rail__intro">{{ section.settings.intro | escape }}</p>
       {%- endif -%}
 
@@ -272,6 +276,12 @@
       "id": "title",
       "label": "Titel",
       "default": "Topmerken"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro",
+      "label": "Toon introductietekst",
+      "default": false
     },
     {
       "type": "text",

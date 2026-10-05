@@ -20,9 +20,9 @@
   .home-help-cta-{{ section.id }} {
     --hhc-navy: #0f2740;
     --hhc-yellow: #f4cd45;
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    background: #ffffff;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    background: var(--hhc-navy);
   }
 
   .home-help-cta-{{ section.id }} .page-width {
@@ -37,8 +37,8 @@
     flex-direction: column;
     gap: 16px;
     min-width: 0;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 12px 0;
+    border-radius: 0;
     background: var(--hhc-navy);
     color: #ffffff;
   }
@@ -52,7 +52,7 @@
   .home-help-cta-{{ section.id }} .home-help-cta__heading {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(2.4rem, 2.2vw, 2.8rem);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -154,8 +154,8 @@
 
   @media screen and (min-width: 750px) {
     .home-help-cta-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     }
 
     .home-help-cta-{{ section.id }} .page-width {
@@ -167,7 +167,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 24px;
-      padding: 28px;
+      padding: 12px 0;
     }
 
     .home-help-cta-{{ section.id }} .home-help-cta__intro,
@@ -201,8 +201,8 @@
   @media screen and (min-width: 1100px) {
     .home-help-cta-{{ section.id }} .home-help-cta__card {
       flex-wrap: nowrap;
-      min-height: 156px;
-      padding: 28px 32px;
+      min-height: 108px;
+      padding: 12px 0;
     }
 
     .home-help-cta-{{ section.id }} .home-help-cta__intro,

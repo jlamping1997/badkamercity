@@ -1,0 +1,720 @@
+{
+  "task": "11/12 — Visuele pixel-pass BadkamerCity",
+  "captured_at_utc": "2026-10-05T03:46:39.899898+00:00",
+  "reference": {
+    "desktop": "Door gebruiker bijgevoegde desktopreferentie in de conversatie",
+    "requested_desktop_file_present": false,
+    "requested_mobile_file_present": false,
+    "notes": [
+      "Bestaande header en footer hebben voorrang en zijn ongewijzigd.",
+      "Bestaande grafische hero-afbeeldingen behouden; geen kopie van de referentiefoto gemaakt.",
+      "Verschillen door ontbrekende echte instellingen zijn hieronder als NOG DATA NODIG vastgelegd."
+    ]
+  },
+  "preview": {
+    "source": "Actual Shopify theme dev preview",
+    "url": "http://127.0.0.1:9292/",
+    "developmentThemeId": "194817294602",
+    "cookieConsent": "Rejected only in disposable QA browser profile",
+    "widths": [
+      320,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "sectionOrder": [
+      {
+        "id": "home_hero_gDkwi8",
+        "type": "home-hero"
+      },
+      {
+        "id": "home_category_grid_FgNMtn",
+        "type": "home-category-grid"
+      },
+      {
+        "id": "home_popular_products",
+        "type": "home-popular-products"
+      },
+      {
+        "id": "home_complete_bathroom",
+        "type": "home-complete-bathroom"
+      },
+      {
+        "id": "home_shop_by_style_BK9a6q",
+        "type": "home-shop-by-style"
+      },
+      {
+        "id": "home_brand_rail_aUrAmK",
+        "type": "home-brand-rail"
+      },
+      {
+        "id": "home_mijn_badkamercity_3wELah",
+        "type": "home-mijn-badkamercity"
+      },
+      {
+        "id": "home_help_cta",
+        "type": "home-help-cta"
+      }
+    ],
+    "notes": [
+      "No fixtures: native Shopify Liquid/resource data, protected header/footer and actual fonts.",
+      "Only existing cookie consent reject button clicked in disposable QA profile; no cart, newsletter or booking clicks or form submissions.",
+      "Chrome native scrollbars hidden for screenshot/DOM coherence.",
+      "Full-page screenshots may crop a few final fractional pixels; measured viewport layout remains native."
+    ],
+    "store": "fpa9hu-i3.myshopify.com",
+    "verified_theme_role": "development",
+    "remote_preview_url": "https://fpa9hu-i3.myshopify.com/?preview_theme_id=194817294602",
+    "live_theme_pushed_or_published": false
+  },
+  "changes": [
+    "Compactere hero en categorie-, product-, stijl- en merkkaarten.",
+    "Consistente koppen, blauwe overzichtlinks en kleinere sectieafstanden.",
+    "Tablet: stijlkaarten 2 x 2 bij 1024px.",
+    "Desktop-bannercrop bewaart grafische teksten en ingestelde Shopify-focal points.",
+    "Introductieteksten blijven bewaard en zijn optioneel via Toon introductietekst.",
+    "Onderste CTA sluit als navy strip aan op de bestaande footer.",
+    "Categorietitel past bij 320px zonder losse eindletters."
+  ],
+  "audit": {
+    "branch": "homepage-redesign-top3",
+    "baseline_for_this_pass": "fe36347467b59f7a7c07c5bdc5a6109a958e1fab",
+    "homepage_sections_changed": [
+      "sections/home-hero.liquid",
+      "sections/home-category-grid.liquid",
+      "sections/home-popular-products.liquid",
+      "sections/home-complete-bathroom.liquid",
+      "sections/home-shop-by-style.liquid",
+      "sections/home-brand-rail.liquid",
+      "sections/home-mijn-badkamercity.liquid",
+      "sections/home-help-cta.liquid"
+    ],
+    "protected_files_sha256_and_original_zip_bytes": {
+      "result": "PASS",
+      "count": 46
+    },
+    "original_non_homepage_files_byte_identical": {
+      "result": "PASS",
+      "count": 390
+    },
+    "homepage_index_settings_and_block_ids": "Unchanged byte-for-byte for this pass",
+    "section_order": [
+      "home-hero",
+      "home-category-grid",
+      "home-popular-products",
+      "home-complete-bathroom",
+      "home-shop-by-style",
+      "home-brand-rail",
+      "home-mijn-badkamercity",
+      "home-help-cta"
+    ],
+    "json_validation": {
+      "result": "PASS",
+      "theme_json_files": 80,
+      "homepage_schemas": 8
+    },
+    "theme_check": {
+      "new_offenses": 0,
+      "existing_errors": 2,
+      "existing_warnings": 19,
+      "exit_code": 1,
+      "baseline_messages_identical": true,
+      "existing_errors_location": "sections/featured-product.liquid",
+      "existing_homepage_warning": "home-hero: 47 existing settings (ExcessiveSettingsCount)"
+    },
+    "actual_shopify_browser": {
+      "result": "PASS",
+      "viewports": 9,
+      "failures": 0
+    },
+    "editor_fixture_browser": {
+      "result": "PASS",
+      "responsive_cases": 72,
+      "keyboard_cases": 2,
+      "note": "Separate local test fixtures only; never production settings or prices"
+    },
+    "cart_fixture_browser": {
+      "cases": 112,
+      "failures": 0,
+      "image_size_measurements": 433,
+      "max_image_size_delta_css_px": 0.02,
+      "source_sha256": "7e1ff108284db91c8e047d589c157aeda3a0084655534fbaffcf97d68275da68"
+    },
+    "source_sha256": {
+      "sections/home-hero.liquid": "9b1aaa89ad91aff6154bff34e12a25f4b2cc9f23489d2cf1b612757c84d5deb6",
+      "sections/home-category-grid.liquid": "366caeffc96954a422789aaf526e89f0ae57f07a6d00c16da1db191d256da3ea",
+      "sections/home-popular-products.liquid": "7e1ff108284db91c8e047d589c157aeda3a0084655534fbaffcf97d68275da68",
+      "sections/home-complete-bathroom.liquid": "c6d9ba70c9ed13c6bab0cb30ebaecfd589cb67d35dd54f97e5cc53bc1b52cdf8",
+      "sections/home-shop-by-style.liquid": "fd595c0e671bf3cf2ce9b0395aaab319c746b0d7135ca769b2d0c4d7308c2ee7",
+      "sections/home-brand-rail.liquid": "c2ed6a5771163cfd0a21b60ece9808f8bfe5f4322e262873a4b3200d48b60694",
+      "sections/home-mijn-badkamercity.liquid": "e86cc3d59cf2144e88d2ca2e2315808132e15512740d85128adbbd89f429ee55",
+      "sections/home-help-cta.liquid": "77c6e4ea1b8b20e3dba6c13a381733ccd50b5b2b671a1ea346c36aa6be73996b"
+    }
+  },
+  "actual_viewport_results": [
+    {
+      "width": 320,
+      "page_height": 5256,
+      "page_scroll_width": 320,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 375,
+      "page_height": 5423,
+      "page_scroll_width": 375,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 390,
+      "page_height": 5429,
+      "page_scroll_width": 390,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 430,
+      "page_height": 5559,
+      "page_scroll_width": 430,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 768,
+      "page_height": 4817,
+      "page_scroll_width": 768,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 1024,
+      "page_height": 3583,
+      "page_scroll_width": 1024,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 1280,
+      "page_height": 3025,
+      "page_scroll_width": 1280,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 1440,
+      "page_height": 3174,
+      "page_scroll_width": 1440,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    },
+    {
+      "width": 1920,
+      "page_height": 3180,
+      "page_scroll_width": 1920,
+      "font_status": "loaded",
+      "font_family": "Assistant, sans-serif",
+      "homepage_section_wrappers": 8,
+      "section_types": [
+        "home-hero",
+        "home-category-grid",
+        "home-popular-products",
+        "home-complete-bathroom",
+        "home-shop-by-style",
+        "home-brand-rail",
+        "home-mijn-badkamercity",
+        "home-help-cta"
+      ],
+      "actual_category_photos": 8,
+      "actual_inspiration_photos": 4,
+      "inspiration_placeholders": 2,
+      "popular_products_rendered": false,
+      "header_present": true,
+      "footer_present": true,
+      "homepage_text_overflow": [],
+      "window_errors": [],
+      "failures": []
+    }
+  ],
+  "cta_footer_pixel_check": [
+    {
+      "width": 320,
+      "rows": 46,
+      "pixels": 14720,
+      "white_pixels": 0,
+      "navy_pixels": 14720,
+      "all_navy": true
+    },
+    {
+      "width": 375,
+      "rows": 46,
+      "pixels": 17250,
+      "white_pixels": 0,
+      "navy_pixels": 17250,
+      "all_navy": true
+    },
+    {
+      "width": 390,
+      "rows": 46,
+      "pixels": 17940,
+      "white_pixels": 0,
+      "navy_pixels": 17940,
+      "all_navy": true
+    },
+    {
+      "width": 430,
+      "rows": 46,
+      "pixels": 19780,
+      "white_pixels": 0,
+      "navy_pixels": 19780,
+      "all_navy": true
+    },
+    {
+      "width": 768,
+      "rows": 58,
+      "pixels": 44544,
+      "white_pixels": 0,
+      "navy_pixels": 44544,
+      "all_navy": true
+    },
+    {
+      "width": 1024,
+      "rows": 59,
+      "pixels": 60416,
+      "white_pixels": 0,
+      "navy_pixels": 60416,
+      "all_navy": true
+    },
+    {
+      "width": 1280,
+      "rows": 58,
+      "pixels": 74240,
+      "white_pixels": 0,
+      "navy_pixels": 74240,
+      "all_navy": true
+    },
+    {
+      "width": 1440,
+      "rows": 58,
+      "pixels": 83520,
+      "white_pixels": 0,
+      "navy_pixels": 83520,
+      "all_navy": true
+    },
+    {
+      "width": 1920,
+      "rows": 58,
+      "pixels": 111360,
+      "white_pixels": 0,
+      "navy_pixels": 111360,
+      "all_navy": true
+    }
+  ],
+  "native_caption_measurements": [
+    {
+      "name": "native",
+      "font": "600 13px Assistant, sans-serif",
+      "fontSize": "13px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 107.15885925292969,
+      "singleLineDom": 107.171875,
+      "labelWidth": 107.171875,
+      "labelHeight": 16.890625,
+      "lineHeight": "16.9px",
+      "lines": [
+        {
+          "top": 943.9375,
+          "width": 107.171875
+        }
+      ],
+      "tileWidth": 138,
+      "captionHeight": 44,
+      "captionPadding": "8px 6px",
+      "captionGap": "4px",
+      "gridColumns": "138px 138px"
+    },
+    {
+      "name": "padding6-gap4-font14",
+      "font": "600 14px Assistant, sans-serif",
+      "fontSize": "14px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 115.40190124511719,
+      "singleLineDom": 115.40625,
+      "labelWidth": 111,
+      "labelHeight": 36.375,
+      "lineHeight": "18.2px",
+      "lines": [
+        {
+          "top": 939.390625,
+          "width": 109.265625
+        },
+        {
+          "top": 957.578125,
+          "width": 6.15625
+        }
+      ],
+      "tileWidth": 138,
+      "captionHeight": 52.375,
+      "captionPadding": "8px 6px",
+      "captionGap": "4px",
+      "gridColumns": "138px 138px"
+    },
+    {
+      "name": "padding6-gap4-font13",
+      "font": "600 13px Assistant, sans-serif",
+      "fontSize": "13px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 107.15885925292969,
+      "singleLineDom": 107.171875,
+      "labelWidth": 107.171875,
+      "labelHeight": 16.890625,
+      "lineHeight": "16.9px",
+      "lines": [
+        {
+          "top": 943.9375,
+          "width": 107.171875
+        }
+      ],
+      "tileWidth": 138,
+      "captionHeight": 44,
+      "captionPadding": "8px 6px",
+      "captionGap": "4px",
+      "gridColumns": "138px 138px"
+    },
+    {
+      "name": "padding6-gap4-font14-spacing0",
+      "font": "600 14px Assistant, sans-serif",
+      "fontSize": "14px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 115.40190124511719,
+      "singleLineDom": 115.40625,
+      "labelWidth": 111,
+      "labelHeight": 36.375,
+      "lineHeight": "18.2px",
+      "lines": [
+        {
+          "top": 939.390625,
+          "width": 109.265625
+        },
+        {
+          "top": 957.578125,
+          "width": 6.15625
+        }
+      ],
+      "tileWidth": 138,
+      "captionHeight": 52.375,
+      "captionPadding": "8px 6px",
+      "captionGap": "4px",
+      "gridColumns": "138px 138px"
+    },
+    {
+      "name": "original-padding8-gap8-font13",
+      "font": "600 13px Assistant, sans-serif",
+      "fontSize": "13px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 107.15885925292969,
+      "singleLineDom": 107.171875,
+      "labelWidth": 103,
+      "labelHeight": 33.78125,
+      "lineHeight": "16.9px",
+      "lines": [
+        {
+          "top": 938.390625,
+          "width": 101.453125
+        },
+        {
+          "top": 955.28125,
+          "width": 5.71875
+        }
+      ],
+      "tileWidth": 138,
+      "captionHeight": 49.78125,
+      "captionPadding": "8px",
+      "captionGap": "8px",
+      "gridColumns": "138px 138px"
+    },
+    {
+      "name": "three-columns-padding6-gap4-font13",
+      "font": "600 13px Assistant, sans-serif",
+      "fontSize": "13px",
+      "letterSpacing": "normal",
+      "singleLineCanvas": 107.15885925292969,
+      "singleLineDom": 107.171875,
+      "labelWidth": 61,
+      "labelHeight": 33.78125,
+      "lineHeight": "16.9px",
+      "lines": [
+        {
+          "top": 913.390625,
+          "width": 58.59375
+        },
+        {
+          "top": 930.28125,
+          "width": 48.578125
+        }
+      ],
+      "tileWidth": 88,
+      "captionHeight": 49.78125,
+      "captionPadding": "8px 6px",
+      "captionGap": "4px",
+      "gridColumns": "88px 88px 88px"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/homepage-qa/homepage-320.png",
+      "width": 320,
+      "height": 5256,
+      "sha256": "81bd30f8e0ddc0071b149acd015d800b800530eb5afe58cdca4d238d393ffcce"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-375.png",
+      "width": 375,
+      "height": 5423,
+      "sha256": "c6c53c0ce3d21675c84baeb7938d1d3bbf34942182d96a816a21bde111efa795"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-390.png",
+      "width": 390,
+      "height": 5429,
+      "sha256": "5d094ea81fbe5d5ac03ecb77efeb46be064dce76f31bf2ac346752274bd941ed"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-430.png",
+      "width": 430,
+      "height": 5559,
+      "sha256": "68c60641d42826b5d16edd444df428edce3d1ba0d2de951ef7da8ec093259c44"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-768.png",
+      "width": 768,
+      "height": 4817,
+      "sha256": "df1ac5aec95c21433aa0e9bb819123dfd1be3131cc33496d9eac6de9375c01a1"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-1024.png",
+      "width": 1024,
+      "height": 3583,
+      "sha256": "333d26c23509a80de52cd4d8503b6320bbdf631cb1939d45eb6f894eeeef7e3c"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-1280.png",
+      "width": 1280,
+      "height": 3025,
+      "sha256": "94d97e820b72be62df8a580d3e77f5c16bcceac5736a9bf05c7d94463b42d4e1"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-1440.png",
+      "width": 1440,
+      "height": 3174,
+      "sha256": "cdcca3ce7e6f34eb45bb5e2f1d988bf5d864b707acb705dbf90d795af6c20b46"
+    },
+    {
+      "file": "docs/homepage-qa/homepage-1920.png",
+      "width": 1920,
+      "height": 3180,
+      "sha256": "7a5dbcf59dad1eac8469f4c470673010d277236799499013aca96525fee32001"
+    }
+  ],
+  "NOG DATA NODIG": [
+    {
+      "section": "home-popular-products",
+      "needed": "Selecteer een echte Shopify-collectie. De sectie is nu verborgen; geen verzonnen producten of prijzen."
+    },
+    {
+      "section": "home-complete-bathroom",
+      "needed": "Kies een badkamerfoto en een geldige adviesgesprek-link."
+    },
+    {
+      "section": "home-shop-by-style",
+      "needed": "Stel stijlkaart-URLs en Bekijk alle stijlen-link in. Alle vier bestaande foto’s zijn behouden."
+    },
+    {
+      "section": "home-brand-rail",
+      "needed": "Echte logo-bestanden indien gewenst, merkkaart-URLs en Bekijk alle merken-link. De zes tekstlabels werken al."
+    },
+    {
+      "section": "home-mijn-badkamercity",
+      "needed": "Foto’s voor Vrijstaande baden en Inloopdouche, kaart-URLs en Bekijk alle inspiratie-link. De vier ingestelde foto’s zijn behouden."
+    },
+    {
+      "section": "home-hero",
+      "needed": "Bannerlinks als de bestaande banners klikbaar moeten zijn; alle drie huidige beelden blijven ongewijzigd."
+    },
+    {
+      "section": "home-help-cta",
+      "needed": "Stel Plan een afspraak-link in. Neem contact op werkt in de huidige winkel via de bestaande /pages/contact-route."
+    }
+  ],
+  "limitations": [
+    "Populaire producten getest met lokale testfixtures; de echte winkelpreview toont momenteel geen producten omdat de collectie-instelling leeg is.",
+    "Geen wijzigingen via Shopify Admin, geen nieuwsbrief- of winkelwagenhandelingen in de echte preview.",
+    "Alleen de bestaande cookiebanner afgewezen in het tijdelijke QA-browserprofiel.",
+    "Alle screenshots tonen de daadwerkelijk bestaande header en footer."
+  ]
+}
