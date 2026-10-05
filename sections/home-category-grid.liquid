@@ -19,7 +19,7 @@
 
   .home-category-grid-{{ section.id }} .home-category-grid__header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px 24px;
@@ -257,7 +257,15 @@
   assign rendered_category_keys = '|'
   assign view_all_label = section.settings.view_all_label | default: 'Bekijk alle categorieën'
   assign view_all_link = section.settings.view_all_link | default: routes.collections_url
+  assign desktop_columns = section.settings.columns_desktop | default: 4
+  assign mobile_columns = section.settings.columns_mobile | default: 2
+  assign desktop_gaps = desktop_columns | minus: 1 | times: 16
+  assign mobile_gaps = mobile_columns | minus: 1 | times: 12
 -%}
+
+{%- capture category_image_sizes -%}
+  (min-width: 1440px) calc((1392px - {{ desktop_gaps }}px) / {{ desktop_columns }}), (min-width: 990px) calc((100vw - 48px - {{ desktop_gaps }}px) / {{ desktop_columns }}), (min-width: 900px) calc((100vw - 80px) / 3), (min-width: 750px) calc((100vw - 64px) / 2), calc((100vw - 32px - {{ mobile_gaps }}px) / {{ mobile_columns }})
+{%- endcapture -%}
 
 <section class="home-category-grid home-category-grid-{{ section.id }} section-{{ section.id }}-padding">
   <div class="page-width">
@@ -265,7 +273,7 @@
       {%- if section.settings.title != blank -%}
         <h2 class="home-category-grid__title">{{ section.settings.title }}</h2>
       {%- endif -%}
-      <a href="{{ view_all_link }}" class="home-category-grid__view-all">
+      <a href="{{ view_all_link | escape }}" class="home-category-grid__view-all">
         {{ view_all_label | escape }} <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
@@ -332,12 +340,12 @@
           -%}
 
           <li class="home-category-grid__item">
-            <a href="{{ link.url }}" class="home-category-grid__tile">
+            <a href="{{ link.url | escape }}" class="home-category-grid__tile">
               <span class="home-category-grid__media">
                 {%- if category_image != blank -%}
-                  {{ category_image | image_url: width: 900 | image_tag:
-                    widths: '180, 280, 360, 540, 720, 900',
-                    sizes: '(min-width: 1440px) 336px, (min-width: 990px) calc(25vw - 24px), (min-width: 900px) calc(33.33vw - 27px), (min-width: 750px) calc(50vw - 32px), calc(50vw - 22px)',
+                  {{ category_image | image_url: width: 1600 | image_tag:
+                    widths: '180, 280, 360, 540, 720, 900, 1200, 1440, 1600',
+                    sizes: category_image_sizes,
                     class: 'home-category-grid__image',
                     loading: 'lazy',
                     alt: ''
@@ -395,14 +403,14 @@
 
           <li class="{{ item_class }}" {{ block.shopify_attributes }}>
             <a
-              {% if tile_url != blank %}href="{{ tile_url }}"{% else %}role="link" aria-disabled="true"{% endif %}
+              {% if tile_url != blank %}href="{{ tile_url | escape }}"{% else %}role="link" aria-disabled="true"{% endif %}
               class="home-category-grid__tile"
             >
               <span class="home-category-grid__media">
                 {%- if category_image != blank -%}
-                  {{ category_image | image_url: width: 900 | image_tag:
-                    widths: '180, 280, 360, 540, 720, 900',
-                    sizes: '(min-width: 1440px) 336px, (min-width: 990px) calc(25vw - 24px), (min-width: 900px) calc(33.33vw - 27px), (min-width: 750px) calc(50vw - 32px), calc(50vw - 22px)',
+                  {{ category_image | image_url: width: 1600 | image_tag:
+                    widths: '180, 280, 360, 540, 720, 900, 1200, 1440, 1600',
+                    sizes: category_image_sizes,
                     class: 'home-category-grid__image',
                     loading: 'lazy',
                     alt: ''

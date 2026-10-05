@@ -163,11 +163,11 @@
     max-width: 100%;
     min-height: 48px;
     padding: 12px 16px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--hcb-yellow);
     color: var(--hcb-navy);
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.35;
     letter-spacing: 0;
     text-align: center;
@@ -282,7 +282,7 @@
     }
 
     .home-complete-bathroom-{{ section.id }} .home-complete-bathroom__cta {
-      min-height: 44px;
+      min-height: 48px;
       padding: 10px 16px;
       font-size: 1.45rem;
     }
@@ -350,7 +350,7 @@
 
         {%- if section.settings.cta_label != blank -%}
           {%- if section.settings.cta_link != blank -%}
-            <a href="{{ section.settings.cta_link }}" class="home-complete-bathroom__cta">
+            <a href="{{ section.settings.cta_link | escape }}" class="home-complete-bathroom__cta">
               <span class="home-complete-bathroom__cta-label">{{ section.settings.cta_label | escape }}</span>
               <span class="home-complete-bathroom__cta-arrow" aria-hidden="true">&rarr;</span>
             </a>

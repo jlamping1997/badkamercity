@@ -28,7 +28,7 @@
 
   .home-shop-style-{{ section.id }} .home-shop-style__header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px 24px;
@@ -279,6 +279,16 @@
     border-radius: 7px;
   }
 
+  .home-shop-style-{{ section.id }} a.home-shop-style__tile:focus-visible::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    inset: 3px;
+    border: 2px solid var(--hss-text);
+    border-radius: 5px;
+    pointer-events: none;
+  }
+
   .home-shop-style-{{ section.id }} a.home-shop-style__view-all:focus-visible,
   .home-shop-style-{{ section.id }} a.home-shop-style__secondary-link:focus-visible,
   .home-shop-style-{{ section.id }} .home-shop-style__grid:focus-visible {
@@ -366,7 +376,7 @@
         <h2 class="home-shop-style__title" id="ShopStyleHeading-{{ section.id }}">{{ section_heading | escape }}</h2>
         {%- if section.settings.primary_button_label != blank -%}
           {%- if section.settings.primary_button_link != blank -%}
-            <a href="{{ section.settings.primary_button_link }}" class="home-shop-style__view-all">{{ section.settings.primary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+            <a href="{{ section.settings.primary_button_link | escape }}" class="home-shop-style__view-all">{{ section.settings.primary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
           {%- else -%}
             <span class="home-shop-style__view-all">{{ section.settings.primary_button_label | escape }} <span aria-hidden="true">&rarr;</span></span>
           {%- endif -%}
@@ -399,7 +409,7 @@
           <li class="home-shop-style__item">
             <article class="home-shop-style__card{% if block.settings.featured %} home-shop-style__card--featured{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.link != blank -%}
-                <a href="{{ block.settings.link }}" class="home-shop-style__tile" aria-label="{{ card_label | escape }}"{% if show_extended_content and block.settings.text != blank %} aria-describedby="{{ card_description_id }}"{% endif %}>
+                <a href="{{ block.settings.link | escape }}" class="home-shop-style__tile" aria-label="{{ card_label | escape }}"{% if show_extended_content and block.settings.text != blank %} aria-describedby="{{ card_description_id }}"{% endif %}>
               {%- else -%}
                 <div class="home-shop-style__tile">
               {%- endif -%}
@@ -448,7 +458,7 @@
         {%- if section.settings.secondary_button_link != blank or show_extended_content -%}
           <div class="home-shop-style__secondary">
             {%- if section.settings.secondary_button_link != blank -%}
-              <a href="{{ section.settings.secondary_button_link }}" class="home-shop-style__secondary-link">{{ section.settings.secondary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+              <a href="{{ section.settings.secondary_button_link | escape }}" class="home-shop-style__secondary-link">{{ section.settings.secondary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
             {%- else -%}
               <span class="home-shop-style__secondary-link">{{ section.settings.secondary_button_label | escape }}</span>
             {%- endif -%}

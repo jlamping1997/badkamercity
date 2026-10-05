@@ -2,7 +2,7 @@
   .home-hero-{{ section.id }} {
     --hh-gap: 14px;
     --hh-text: #0f2740;
-    --hh-accent: #8fd4ef;
+    --hh-accent: #f4cd45;
     --hh-focus: #f4cd45;
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -96,6 +96,7 @@
   .home-hero-{{ section.id }} .home-hero__card-link:focus-visible {
     outline: 3px solid var(--hh-focus);
     outline-offset: -5px;
+    box-shadow: inset 0 0 0 6px var(--hh-text);
   }
 
   .home-hero-{{ section.id }} .home-hero__content {
@@ -172,13 +173,13 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    min-height: 44px;
+    min-height: 48px;
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--hh-accent);
     color: var(--hh-text);
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     text-align: center;
     overflow-wrap: anywhere;
@@ -332,7 +333,7 @@
         </div>
 
         {%- if section.settings.hero_button_link != blank -%}
-          <a href="{{ section.settings.hero_button_link }}" class="home-hero__card-link" aria-label="{{ hero_link_label | escape }}"></a>
+          <a href="{{ section.settings.hero_button_link | escape }}" class="home-hero__card-link" aria-label="{{ hero_link_label | escape }}"></a>
         {%- endif -%}
 
         {%- if hero_has_inline_content -%}
@@ -436,7 +437,7 @@
             </div>
 
             {%- if banner_link != blank -%}
-              <a href="{{ banner_link }}" class="home-hero__card-link" aria-label="{{ banner_link_label | escape }}"></a>
+              <a href="{{ banner_link | escape }}" class="home-hero__card-link" aria-label="{{ banner_link_label | escape }}"></a>
             {%- endif -%}
 
             {%- if banner_title != blank or banner_subtitle != blank or banner_button != blank -%}
@@ -637,13 +638,13 @@
       "type": "color",
       "id": "hero_button_text_color",
       "label": "Hero button text color",
-      "default": "#ffffff"
+      "default": "#0f2740"
     },
     {
       "type": "color",
       "id": "hero_button_background_color",
       "label": "Hero button background color",
-      "default": "#8fd4ef"
+      "default": "#f4cd45"
     },
     {
       "type": "select",
@@ -769,13 +770,13 @@
       "type": "color",
       "id": "banner_1_button_text_color",
       "label": "Banner 2 button text color",
-      "default": "#ffffff"
+      "default": "#0f2740"
     },
     {
       "type": "color",
       "id": "banner_1_button_background_color",
       "label": "Banner 2 button background color",
-      "default": "#8fd4ef"
+      "default": "#f4cd45"
     },
     {
       "type": "select",
@@ -845,13 +846,13 @@
       "type": "color",
       "id": "banner_2_button_text_color",
       "label": "Banner 3 button text color",
-      "default": "#ffffff"
+      "default": "#0f2740"
     },
     {
       "type": "color",
       "id": "banner_2_button_background_color",
       "label": "Banner 3 button background color",
-      "default": "#8fd4ef"
+      "default": "#f4cd45"
     },
     {
       "type": "select",

@@ -27,7 +27,7 @@
 
     .home-popular-products-{{ section.id }} .home-popular-products__header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px 24px;
@@ -227,7 +227,7 @@
       min-height: 48px;
       padding: 12px;
       border: 0;
-      border-radius: 6px;
+      border-radius: 8px;
       background: var(--hpp-blue);
       color: #ffffff;
       box-shadow: none;
@@ -250,7 +250,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-width: 0;
+      max-width: 100%;
       gap: 8px;
+      overflow-wrap: anywhere;
     }
 
     .home-popular-products-{{ section.id }} .home-popular-products__button-content svg {
@@ -348,7 +351,7 @@
       <div class="home-popular-products__header">
         <h2 class="home-popular-products__heading" id="PopularHeading-{{ section.id }}">{{ section_heading | escape }}</h2>
         {%- if section.settings.view_all_label != blank -%}
-          <a href="{{ view_all_link }}" class="home-popular-products__view-all">
+          <a href="{{ view_all_link | escape }}" class="home-popular-products__view-all">
             {{ section.settings.view_all_label | escape }} <span aria-hidden="true">&rarr;</span>
           </a>
         {%- endif -%}
@@ -381,7 +384,7 @@
 
           <li class="home-popular-products__item">
             <article class="home-popular-products__card">
-              <a href="{{ product_link }}" class="home-popular-products__product-link" aria-labelledby="{{ product_title_id }}">
+              <a href="{{ product_link | escape }}" class="home-popular-products__product-link" aria-labelledby="{{ product_title_id }}">
                 <div class="home-popular-products__media">
                   {%- if card_image != blank -%}
                     {{ card_image | image_url: width: 750 | image_tag:
@@ -422,7 +425,7 @@
                 {%- if card_variant == nil or card_variant.available == false -%}
                   <button class="home-popular-products__button button" type="button" disabled>{{ 'products.product.sold_out' | t }}</button>
                 {%- elsif requires_options -%}
-                  <a href="{{ product_link }}" class="home-popular-products__button button" aria-describedby="{{ product_title_id }}">{{ 'products.product.choose_options' | t }}</a>
+                  <a href="{{ product_link | escape }}" class="home-popular-products__button button" aria-describedby="{{ product_title_id }}">{{ 'products.product.choose_options' | t }}</a>
                 {%- else -%}
                   <product-form data-section-id="{{ section.id }}">
                     <div class="product-form__error-message-wrapper" role="alert" hidden><span class="product-form__error-message"></span></div>
