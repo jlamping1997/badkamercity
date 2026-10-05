@@ -405,6 +405,23 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "home_help_cta": {
+      "type": "home-help-cta",
+      "name": "Hulp nodig bij je badkamer?",
+      "settings": {
+        "heading": "Hulp nodig bij je badkamer?",
+        "text": "Onze adviseurs staan voor je klaar.\nVan eerste idee tot complete realisatie.",
+        "primary_button_label": "Plan een afspraak",
+        "primary_button_link": "",
+        "secondary_button_label": "Neem contact op",
+        "secondary_button_link": "",
+        "service_1_label": "Persoonlijk\nadvies",
+        "service_2_label": "Complete\nbadkamer",
+        "service_3_label": "Vrijblijvend\nontwerp",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
@@ -414,6 +431,7 @@
     "home_complete_bathroom",
     "home_shop_by_style_BK9a6q",
     "home_brand_rail_aUrAmK",
-    "home_mijn_badkamercity_3wELah"
+    "home_mijn_badkamercity_3wELah",
+    "home_help_cta"
   ]
 }
