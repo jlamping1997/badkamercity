@@ -2,6 +2,12 @@
 
 Deze Git-repository bevat de **theme-code** van BadkamerCity (Liquid, JSON-templates, CSS, JavaScript), plus een gecontroleerde technische overdracht. **De complete Shopify-catalogus, menu's, Admin-productwaarden en externe VPS/backend zitten niet in de Git-theme-code.**
 
+## Nieuw: klantreisverbeteringen van 7 oktober
+
+Lees **[CUSTOMER_JOURNEY_2026-10-07.md](docs/CUSTOMER_JOURNEY_2026-10-07.md)** voor de werkelijk uitgevoerde 43 product-/129 categoriekoppelingen, vier titelverduidelijkingen, browser- en winkelwagentests, conceptwijziging en terugzetbestanden. PR #3 bevat deze aparte werkronde; issue #4 is het nog open zoek-/filtertraject.
+
+**Deze branch is geen volledige snapshot van het bestaande Hotbath-concept.** Alleen `templates/cart.json` is door deze werkronde naar draft `194924904714` geschreven. Een volledige theme-push vanaf deze branch kan eerdere conceptverbeteringen overschrijven. MAIN is niet gepubliceerd of omgewisseld; synchroniseer de hele basis pas na een gecontroleerde publicatie door de eigenaar.
+
 ## Neem je het project over? Begin hier.
 
 **[HANDOVER_START_HERE.md](docs/HANDOVER_START_HERE.md)** — in 15 minuten begrijpen wat live staat en waar je veilig kunt beginnen.
@@ -36,7 +42,7 @@ Gemeten op **7 oktober 2026**:
 - Eén speciale `bc-meubelhub`-collectie: Badkamermeubels. De mobiel goedgekeurde weergave gebruikt óók drie inline CSS-patches in de Shopify-collectieomschrijving. Een nieuwe Git-clone alléén kan dat verborgen Admin-aspect niet veranderen.
 - Externe filters zijn een **opt-in-proef** op `wastafelkranen?bcfilters=1`, niet de standaard filterervaring.
 
-Dit zijn gedateerde feiten, **geen permanente garantie**; begin elk werk met live Theme-role/Git-status opnieuw lezen.
+Dit zijn gedateerde feiten, **geen permanente garantie**; begin elk werk met live Theme-role/Git-status opnieuw lezen. Voor de latere categorisatie-, titel- en draftwijzigingen en browserbewijzen op dezelfde dag geldt ook het hierboven gelinkte CJ-01-uitvoeringsrapport.
 
 ## Projectveiligheid
 
