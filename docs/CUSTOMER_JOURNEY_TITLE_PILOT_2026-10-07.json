@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-07",
+  "scope": "Four source-backed title clarifications; not a catalog-wide search fix",
+  "source": "Fresh Shopify bc_data.source_category_path (list.single_line_text_field) exactly Kranen > Wastafelkranen > Opbouw wastafelkranen for each product",
+  "status": "APPLIED_AND_ADMIN_READBACK_VERIFIED",
+  "unchanged_verified": ["handles", "variant SKU", "variant price", "ACTIVE status", "three category memberships", "existing series collection"],
+  "untouched": ["productType", "tags", "description", "media", "inventory", "lead times", "SEO overrides", "metafields"],
+  "browser_search_effect": "See final customer-journey report; do not infer a search-ranking improvement from these updates alone.",
+  "items": [
+    {
+      "id": "gid://shopify/Product/10534562365706",
+      "sku": "AC003BCP",
+      "price_before_after": "301.00",
+      "handle": "hotbath-ace-ac003-wastafelkraan-laag-zonder-waste-geborsteld-koper-pvd",
+      "title_before": "Hotbath Ace AC003 wastafelkraan – geborsteld koper pvd – AC003BCP",
+      "title_after": "Hotbath Ace AC003 opbouw wastafelkraan – geborsteld koper pvd – AC003BCP"
+    },
+    {
+      "id": "gid://shopify/Product/10534241141002",
+      "sku": "AR033BCP",
+      "price_before_after": "1326.00",
+      "handle": "hotbath-archie-ar033-wastafelkraan-3-gats-rvs-316-geborsteld-koper-pvd",
+      "title_before": "Hotbath Archie AR033 wastafelkraan RVS 316 – Geborsteld Koper PVD – AR033BCP",
+      "title_after": "Hotbath Archie AR033 opbouw wastafelkraan RVS 316 – Geborsteld Koper PVD – AR033BCP"
+    },
+    {
+      "id": "gid://shopify/Product/10534574194954",
+      "sku": "B103BCP",
+      "price_before_after": "310.00",
+      "handle": "hotbath-buddy-b103-wastafelkraan-laag-geborsteld-koper-pvd",
+      "title_before": "Hotbath Buddy B103 wastafelkraan laag model – Geborsteld koper PVD – B103BCP",
+      "title_after": "Hotbath Buddy B103 opbouw wastafelkraan laag model – Geborsteld koper PVD – B103BCP"
+    },
+    {
+      "id": "gid://shopify/Product/10534695207178",
+      "sku": "CB003CBCP",
+      "price_before_after": "407.00",
+      "handle": "hotbath-cobber-cb003c-wastafelkraan-laag-geborsteld-koper-pvd",
+      "title_before": "Hotbath Cobber CB003C wastafelkraan – geborsteld koper PVD – CB003CBCP",
+      "title_after": "Hotbath Cobber CB003C opbouw wastafelkraan – geborsteld koper PVD – CB003CBCP"
+    }
+  ],
+  "rollback": "Re-read title/handle first and reject concurrent drift. Restore only title_before with the same current handle for these four IDs. Do not remove the separate CJ-01 category repairs."
+}
