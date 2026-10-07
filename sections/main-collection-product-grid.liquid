@@ -36,10 +36,26 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  {%- paginate collection.products by section.settings.products_per_page -%}
+{{ 'bc-collection.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign has_collection_filters = false
+  assign has_active_filters = false
+  if section.settings.enable_filtering and collection.filters.size > 0
+    assign has_collection_filters = true
+  endif
+  for filter in collection.filters
+    if filter.active_values.size > 0 or filter.min_value.value != nil or filter.max_value.value != nil
+      assign has_active_filters = true
+    endif
+  endfor
+-%}
+<div class="bc-collection{% if has_collection_filters %} bc-collection--with-filters{% endif %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+    {% if collection.handle == 'wastafelkranen' %}
+    {% render 'bc-external-filters', collection_handle: collection.handle, section_id: section.id %}
+  {% endif %}
+{%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-    {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
+    {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and collection.all_products_count > 0 -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
@@ -100,21 +116,23 @@
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+      {%- if collection.all_products_count > 0 -%}
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
-          aria-labelledby="verticalTitle"
+          aria-label="{{ 'bc_collection.filters_and_sorting' | t }}"
           class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
           {% render 'facets',
             results: collection,
-            enable_filtering: section.settings.enable_filtering,
+            enable_filtering: has_collection_filters,
             enable_sorting: section.settings.enable_sorting,
             filter_type: section.settings.filter_type,
             paginate: paginate
           %}
         </aside>
+      {%- endif -%}
       {%- endif -%}
 
       <div
@@ -124,18 +142,22 @@
           data-cascade
         {% endif %}
       >
+        {% render 'bc-collection-active-filters', results: collection %}
         {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+          <div class="collection collection--empty bc-collection-empty" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
-              <h2 class="title title--primary">
-                {{ 'sections.collection_template.empty' | t -}}
-                <br>
-                {{
-                  'sections.collection_template.use_fewer_filters_html'
-                  | t: link: collection.url, class: 'underlined-link link'
-                }}
-              </h2>
+              {%- if has_active_filters -%}
+                <h2>{{ 'sections.collection_template.empty' | t }}</h2>
+                <p>{{ 'bc_collection.empty.filtered' | t }}</p>
+                <facet-remove><a class="bc-collection-button js-facet-remove" href="{{ collection.url }}">{{ 'products.facets.clear_all' | t }}</a></facet-remove>
+              {%- else -%}
+                <h2>{{ 'bc_collection.empty.title' | t }}</h2>
+                <p>{{ 'bc_collection.empty.body' | t: category: collection.title }}</p>
+                {%- if pages['contact'] != blank -%}
+                  <a class="bc-collection-button" href="{{ pages['contact'].url }}">{{ 'bc_collection.contact' | t }}<span aria-hidden="true">→</span></a>
+                {%- endif -%}
+              {%- endif -%}
             </div>
           </div>
         {%- else -%}

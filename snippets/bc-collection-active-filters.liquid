@@ -1,0 +1,35 @@
+{% doc %}
+Renders removable selected filters above the collection's product grid.
+@param {collection} results - The filtered collection
+{% enddoc %}
+{%- capture selected_filters -%}
+  {%- for filter in results.filters -%}
+    {%- for value in filter.active_values -%}
+      <facet-remove>
+        <a href="{{ value.url_to_remove }}" class="bc-selected-filters__pill js-facet-remove">
+          {{ filter.label | escape }}: {{ value.label | escape }}
+          <span class="svg-wrapper" aria-hidden="true">{{ 'icon-close-small.svg' | inline_asset_content }}</span>
+          <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+        </a>
+      </facet-remove>
+    {%- endfor -%}
+    {%- if filter.type == 'price_range' -%}
+      {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+        <facet-remove>
+          <a href="{{ filter.url_to_remove }}" class="bc-selected-filters__pill js-facet-remove">
+            {{ filter.min_value.value | default: 0 | money }} – {{ filter.max_value.value | default: filter.range_max | money }}
+            <span class="svg-wrapper" aria-hidden="true">{{ 'icon-close-small.svg' | inline_asset_content }}</span>
+            <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+          </a>
+        </facet-remove>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign selected_filters = selected_filters | strip -%}
+{%- if selected_filters != blank -%}
+  <div class="bc-selected-filters" aria-label="{{ 'bc_collection.selected_filters' | t }}">
+    {{ selected_filters }}
+    <facet-remove><a href="{{ results.url }}" class="bc-selected-filters__reset js-facet-remove">{{ 'products.facets.clear_all' | t }}</a></facet-remove>
+  </div>
+{%- endif -%}

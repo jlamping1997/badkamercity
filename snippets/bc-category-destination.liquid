@@ -1,0 +1,21 @@
+{% doc %}
+Resolves a category link, including a future collection that now exists.
+@param {link} category_link - The navigation link
+{% enddoc %}
+{%- liquid
+  assign destination = category_link.url
+  if category_link.type == 'collection_link'
+    assign destination = category_link.object.url | default: category_link.url
+  elsif destination contains '/search?'
+    assign future_handle = category_link.title | handleize
+    assign future_collection = collections[future_handle]
+    if future_collection and future_collection.id
+      assign destination = future_collection.url
+    endif
+  endif
+  if destination == blank or destination == '#'
+    assign search_term = category_link.title | url_encode
+    assign destination = routes.search_url | append: '?type=product&q=' | append: search_term
+  endif
+  echo destination
+-%}

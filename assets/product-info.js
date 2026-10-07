@@ -64,6 +64,8 @@ if (!customElements.get('product-info')) {
         if (!this.contains(event.target)) return;
 
         this.resetProductFormState();
+        this.updateSetComponents();
+        this.updateAccessories();
 
         const productUrl = target.dataset.productUrl || this.pendingRequestUrl || this.dataset.url;
         this.pendingRequestUrl = productUrl;
@@ -169,6 +171,8 @@ if (!customElements.get('product-info')) {
           this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);
+          this.updateSetComponents(variant ? html : null);
+          this.updateAccessories(variant ? html : null);
 
           if (!variant) {
             this.setUnavailable();
@@ -209,6 +213,28 @@ if (!customElements.get('product-info')) {
             },
           });
         };
+      }
+
+      updateSetComponents(html = null) {
+        const target = this.querySelector(`#ProductSet-${this.dataset.section}`);
+        if (!target) return;
+        const source = html?.getElementById(`ProductSet-${this.sectionId}`);
+        const visible = !!source && !source.hidden && !!source.querySelector('[data-set-sku]');
+        target.innerHTML = visible ? source.innerHTML : '';
+        target.hidden = !visible;
+        const link = this.querySelector(`#ProductSetLink-${this.dataset.section}`);
+        if (link) link.hidden = !visible;
+      }
+
+      updateAccessories(html = null) {
+        const target = this.querySelector(`#ProductAccessories-${this.dataset.section}`);
+        if (!target) return;
+        const source = html?.getElementById(`ProductAccessories-${this.sectionId}`);
+        const visible = !!source && !source.hidden && !!source.querySelector('bc-product-accessories');
+        target.innerHTML = visible ? source.innerHTML : '';
+        target.hidden = !visible;
+        const link = this.querySelector(`#ProductAccessoriesLink-${this.dataset.section}`);
+        if (link) link.hidden = !visible;
       }
 
       updateVariantInputs(variantId) {

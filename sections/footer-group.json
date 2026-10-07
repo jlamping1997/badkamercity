@@ -8,51 +8,182 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "t:sections.footer.name",
+  "name": "Footer",
   "type": "footer",
   "sections": {
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "service_1": {
+          "type": "service",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "label": "Contact",
+            "url": "/pages/contact"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "service_2": {
+          "type": "service",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "label": "Veelgestelde vragen"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "service_3": {
+          "type": "service",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "label": "Bezorgen & afhalen"
+          }
+        },
+        "service_4": {
+          "type": "service",
+          "settings": {
+            "label": "Retourneren"
+          }
+        },
+        "service_5": {
+          "type": "service",
+          "settings": {
+            "label": "Garantie & service"
+          }
+        },
+        "service_6": {
+          "type": "service",
+          "settings": {
+            "label": "Zoeken",
+            "url": "/search"
+          }
+        },
+        "category_1": {
+          "type": "category",
+          "settings": {
+            "label": "Badkamermeubels",
+            "url": "/collections/badkamermeubels"
+          }
+        },
+        "category_2": {
+          "type": "category",
+          "settings": {
+            "label": "Kranen",
+            "url": "/collections/kranen"
+          }
+        },
+        "category_3": {
+          "type": "category",
+          "settings": {
+            "label": "Douches",
+            "url": "/collections/douches"
+          }
+        },
+        "category_4": {
+          "type": "category",
+          "settings": {
+            "label": "Toiletten",
+            "url": "/collections/toiletten"
+          }
+        },
+        "category_5": {
+          "type": "category",
+          "settings": {
+            "label": "Wastafels",
+            "url": "/collections/wastafels"
+          }
+        },
+        "category_6": {
+          "type": "category",
+          "settings": {
+            "label": "Tegels",
+            "url": "/collections/tegels"
+          }
+        },
+        "info_1": {
+          "type": "info",
+          "settings": {
+            "label": "Over ons"
+          }
+        },
+        "info_2": {
+          "type": "info",
+          "settings": {
+            "label": "Badkamerinspiratie"
+          }
+        },
+        "info_3": {
+          "type": "info",
+          "settings": {
+            "label": "Badkameradvies"
+          }
+        },
+        "info_4": {
+          "type": "info",
+          "settings": {
+            "label": "Onze merken"
+          }
+        },
+        "info_5": {
+          "type": "info",
+          "settings": {
+            "label": "Showroom"
+          }
+        },
+        "info_6": {
+          "type": "info",
+          "settings": {
+            "label": "Zakelijk"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "service_1",
+        "service_2",
+        "service_3",
+        "service_4",
+        "service_5",
+        "service_6",
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4",
+        "category_5",
+        "category_6",
+        "info_1",
+        "info_2",
+        "info_3",
+        "info_4",
+        "info_5",
+        "info_6"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "placeholder_mode": false,
+        "payment_examples": false,
+        "footer_label": "BadkamerCity — informatie en contact",
+        "example_label": "Voorbeeld",
+        "trust_title_1": "Alles voor je badkamer",
+        "trust_text_1": "Van kraan tot complete inrichting",
+        "trust_title_2": "Persoonlijk advies",
+        "trust_text_2": "We denken graag met je mee",
+        "trust_title_3": "Zorgvuldig geselecteerd",
+        "trust_text_3": "Sanitair van bekende merken",
+        "trust_title_4": "Service bij je bestelling",
+        "trust_text_4": "Ook na je aankoop",
+        "brand_tagline": "Alles voor jouw badkamer",
+        "brand_text": "<p>Alles voor jouw badkamer, op één plek. Ontdek sanitair, meubels en tegels die bij jouw stijl passen.</p>",
         "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "service_heading": "Klantenservice",
+        "category_heading": "Ons assortiment",
+        "all_label": "Bekijk alles",
+        "contact_heading": "We helpen je graag",
+        "contact_address": "",
+        "contact_phone": "",
+        "opening_hours": "",
+        "contact_email": "info@badkamercity.nl",
+        "contact_button_text": "Neem contact op",
         "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "show_policy": true,
+        "payment_label": "Betaalmethoden",
+        "bottom_text": "Alle rechten voorbehouden.",
+        "contact_button_link": "/pages/contact",
+        "info_heading": "BadkamerCity",
+        "contact_subtitle": "Een vraag over je badkamer of bestelling?",
+        "showroom_link_label": "Bekijk de showroom"
       }
     }
   },

@@ -26,6 +26,22 @@
   {%- endif -%}
 
   {%- style -%}
+
+    /* PDP visual tokens: shared by the main controls, details and sticky bar. */
+    #MainProduct-{{ section.id }} {
+      --bc-pdp-ink: #0f2740;
+      --bc-pdp-body: #344b5d;
+      --bc-pdp-muted: #526574;
+      --bc-pdp-green: #087f3d;
+      --bc-pdp-green-hover: #066532;
+      --bc-pdp-green-soft: #f0f8f3;
+      --bc-pdp-surface: #f4f7f9;
+      --bc-pdp-line: #dbe3e8;
+      --bc-pdp-control-border: #7b8d99;
+      --bc-pdp-radius: .8rem;
+      color: var(--bc-pdp-ink);
+    }
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -40,26 +56,27 @@
       margin: 0 0 0.8rem;
       font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(var(--bc-color-primary), 0.55);
+      color: var(--bc-pdp-muted);
     }
 
     #MainProduct-{{ section.id }} .bc-product__title {
       max-width: none;
       width: 100%;
       margin: 0;
-      font-size: clamp(2rem, 1.95vw, 3.1rem);
+      font-size: clamp(2.8rem, 2.2vw, 3.2rem);
       font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      color: rgb(var(--bc-color-primary));
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      overflow-wrap: anywhere;
+      color: var(--bc-pdp-ink);
     }
 
     #MainProduct-{{ section.id }} .bc-product__sku {
       margin: 1rem 0 0;
-      font-size: 1.35rem;
-      color: rgba(var(--bc-color-primary), 0.7);
+      font-size: 1.4rem;
+      color: var(--bc-pdp-muted);
     }
 
     #MainProduct-{{ section.id }} .product {
@@ -150,7 +167,8 @@
     #MainProduct-{{ section.id }} .product__info-container {
       --bc-buybox-padding: 2.4rem;
       padding: var(--bc-buybox-padding);
-      border: 1px solid rgba(15, 39, 64, 0.1);
+      border: 1px solid var(--bc-pdp-line);
+      border-radius: var(--bc-pdp-radius);
       background: #fff;
       display: flex;
       flex-direction: column;
@@ -174,14 +192,45 @@
     }
 
     #MainProduct-{{ section.id }} .bc-buybox__price-compare {
-      color: #b44848;
-      font-size: 2rem;
-      font-weight: 600;
+      color: var(--bc-pdp-muted);
+      font-size: 1.6rem;
+      font-weight: 500;
     }
 
     #MainProduct-{{ section.id }} .bc-buybox__savings {
-      color: #0b6b38;
+      color: var(--bc-pdp-green-hover);
       font-size: 1.4rem;
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      background: var(--bc-pdp-green-soft);
+    }
+
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--options {
+      margin: 0 0 2.4rem;
+      padding: 0;
+      border: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__options-title {
+      margin: 0 0 1.6rem;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--bc-pdp-ink);
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__section--actions .product-form__submit.button {
+      min-height: 5.6rem;
+      border-radius: 4rem;
+      --buttons-radius: 40px;
+      --buttons-radius-outset: 40px;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__section--actions .product-form__submit.button:focus-visible {
+      outline: 2px solid rgb(var(--bc-color-primary));
+      outline-offset: 4px;
     }
 
     #MainProduct-{{ section.id }} .bc-buybox__delivery-card {
@@ -213,16 +262,17 @@
     }
 
     #MainProduct-{{ section.id }} .bc-product-form__wishlist {
-      width: 6rem;
-      min-width: 6rem;
-      max-width: 6rem;
-      height: 6rem;
+      width: 5.6rem;
+      min-width: 5.6rem;
+      max-width: 5.6rem;
+      height: 5.6rem;
     }
 
     #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__section--usps {
       margin: 2rem calc(-1 * var(--bc-buybox-padding)) calc(-1 * var(--bc-buybox-padding));
       padding: 1.6rem var(--bc-buybox-padding);
-      background: #f5f8fa;
+      background: var(--bc-pdp-surface);
+      border-radius: 0 0 var(--bc-pdp-radius) var(--bc-pdp-radius);
     }
 
     #MainProduct-{{ section.id }} .bc-buybox__usp-list {
@@ -230,8 +280,8 @@
     }
 
     #MainProduct-{{ section.id }} .bc-buybox__usp-item {
-      font-size: 1.35rem;
-      line-height: 1.4;
+      font-size: 1.4rem;
+      line-height: 1.5;
     }
 
     @media screen and (max-width: 989px) {
@@ -251,8 +301,8 @@
       }
 
       #MainProduct-{{ section.id }} .bc-product-form__submit-content {
-        font-size: 1.5rem;
-        gap: 0.6rem;
+        font-size: 1.6rem;
+        gap: 0.8rem;
       }
     }
 
@@ -288,7 +338,7 @@
     #MainProduct-{{ section.id }} .product__description {
       font-size: 1.6rem;
       line-height: 1.75;
-      color: rgba(var(--bc-color-primary), 0.82);
+      color: var(--bc-pdp-body);
     }
 
     #MainProduct-{{ section.id }} .bc-product__summary {
@@ -300,13 +350,62 @@
       max-width: 82rem;
     }
 
+    #MainProduct-{{ section.id }} .bc-product__detail-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 2.4rem;
+      max-width: 124rem;
+      margin: 3.2rem auto 0;
+      padding: 0.8rem 0;
+      border-top: 1px solid rgba(15, 39, 64, 0.12);
+      border-bottom: 1px solid rgba(15, 39, 64, 0.12);
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__detail-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 4.4rem;
+      padding: 0.4rem 0;
+      color: var(--bc-pdp-ink);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-color: transparent;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__detail-nav a:hover,
+    #MainProduct-{{ section.id }} .bc-product__detail-nav a:focus-visible {
+      text-decoration-color: currentColor;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__detail-nav a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary-title {
+      margin: 0 0 1.6rem;
+      font-size: clamp(2.2rem, 2.1vw, 3rem);
+      line-height: 1.2;
+      color: var(--bc-pdp-ink);
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary,
+    #MainProduct-{{ section.id }} .bc-product__pros-cons-anchor,
+    #MainProduct-{{ section.id }} .bc-product-specs,
+    #MainProduct-{{ section.id }} .bc-test-specs__title {
+      scroll-margin-top: 12rem;
+    }
+
     #MainProduct-{{ section.id }} .bc-product__summary-content {
       position: relative;
       max-height: var(--summary-collapsed-height, calc(1.75em * 10));
       overflow: hidden;
       font-size: 1.6rem;
       line-height: 1.75;
-      color: rgba(var(--bc-color-primary), 0.82);
+      color: var(--bc-pdp-body);
       transition: max-height 0.32s ease;
       will-change: max-height;
     }
@@ -333,7 +432,11 @@
       padding: 0;
       border: 0;
       background: transparent;
-      color: #4767ff;
+      color: var(--bc-pdp-ink);
+      font-family: inherit;
+      min-height: 4.4rem;
+      text-decoration: underline;
+      text-underline-offset: .4rem;
       font-size: 1.5rem;
       font-weight: 600;
       display: inline-flex;
@@ -382,21 +485,21 @@
 
     #MainProduct-{{ section.id }} .bc-test-specs__title {
       margin: 0 0 0.6rem;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
       font-size: 2.2rem;
       line-height: 1.3;
     }
 
     #MainProduct-{{ section.id }} .bc-test-specs__note {
       margin: 0 0 1.2rem;
-      color: rgba(var(--bc-color-primary), 0.65);
-      font-size: 1.2rem;
+      color: var(--bc-pdp-muted);
+      font-size: 1.4rem;
       line-height: 1.5;
     }
 
     #MainProduct-{{ section.id }} .bc-test-specs__group-title {
       margin: 1.8rem 0 0.6rem;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 1.4;
@@ -414,7 +517,7 @@
       border-bottom: 0.1rem solid rgba(15, 39, 64, 0.04);
       font-size: 1.4rem;
       line-height: 1.5;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
       overflow-wrap: anywhere;
     }
 
@@ -465,7 +568,7 @@
       margin: 0 0 2rem;
       font-size: clamp(2.2rem, 2.1vw, 3rem);
       line-height: 1.2;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
     }
 
     #MainProduct-{{ section.id }} .bc-product-specs__table {
@@ -482,7 +585,7 @@
       font-size: 1.75rem;
       font-weight: 800;
       line-height: 1.3;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
       letter-spacing: -0.01em;
     }
 
@@ -504,14 +607,14 @@
     #MainProduct-{{ section.id }} .bc-product-specs__label {
       width: 42%;
       font-weight: 600;
-      color: rgb(var(--bc-color-primary));
+      color: var(--bc-pdp-ink);
       padding-left: 0;
       padding-right: 2rem;
     }
 
     #MainProduct-{{ section.id }} .bc-product-specs__value {
       padding-right: 0;
-      color: rgba(var(--bc-color-primary), 0.84);
+      color: var(--bc-pdp-body);
     }
 
     #MainProduct-{{ section.id }} .bc-product-specs__row:nth-child(even) th,
@@ -536,7 +639,7 @@
       display: inline-flex;
       align-items: center;
       margin-left: 0.9rem;
-      color: #0a8f45;
+      color: var(--bc-pdp-ink);
       font-size: 1.25rem;
       font-weight: 600;
       text-decoration: none;
@@ -637,17 +740,198 @@
       }
 
       #MainProduct-{{ section.id }} .bc-product__title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
       }
 
       #MainProduct-{{ section.id }} .product__info-container {
         margin-top: 2rem;
       }
     }
+    /* Productinformatie: links voordelen en tekst, rechts specificaties. */
+    #MainProduct-{{ section.id }} .bc-product__details {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3.2rem;
+      max-width: 124rem;
+      margin: 3.2rem auto 0;
+      align-items: start;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details-copy,
+    #MainProduct-{{ section.id }} .bc-product__details-specs {
+      min-width: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product__summary,
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product-specs,
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product-pros-cons {
+      display: block;
+      max-width: none;
+      margin: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__pros-cons-anchor + .bc-product__summary {
+      margin-top: 3.2rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product__summary-inner,
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product-pros-cons__inner,
+    #MainProduct-{{ section.id }} .bc-product__details .bc-product-specs__inner,
+    #MainProduct-{{ section.id }} .bc-product__details .bc-test-specs {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details h2 {
+      margin: 0 0 1.8rem;
+      font-size: clamp(2.2rem, 2vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__list {
+      gap: 1rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__item {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 1rem;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__icon {
+      width: 1.9rem;
+      height: 1.9rem;
+      margin-top: 0.35rem;
+      font-size: 1.5rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__item--plus .bc-product-pros-cons__icon {
+      background: var(--bc-pdp-green);
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__item--attention .bc-product-pros-cons__icon {
+      color: #fff;
+      background: #c83d45;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary.is-expanded .bc-product__summary-content {
+      max-height: none;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary-content :is(h1, h2, h3) {
+      margin: 2.4rem 0 1.2rem;
+      font-size: 2.2rem;
+      line-height: 1.3;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary-content > :first-child {
+      margin-top: 0;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary-content p {
+      margin: 0 0 1.8rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details .bc-test-specs__row {
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      padding: 1rem 1.2rem;
+      font-size: 1.5rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__details .bc-test-specs__row dt {
+      font-weight: 400;
+    }
+
+    #MainProduct-{{ section.id }} .bc-buybox__config-select,
+    #MainProduct-{{ section.id }} .bc-buybox__config-button {
+      min-height: 4.4rem;
+      font-size: 1.6rem;
+      border-radius: var(--bc-pdp-radius);
+    }
+
+    @media screen and (min-width: 990px) {
+      #MainProduct-{{ section.id }} .bc-product__details {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 4.8rem;
+        margin-top: 4rem;
+      }
+
+      #MainProduct-{{ section.id }} .bc-product__details--text-only,
+      #MainProduct-{{ section.id }} .bc-product__details--specs-only {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 82rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    #MainProduct-{{ section.id }} .product__info-container > .bc-buybox__purchase-row {
+      margin-top: 1.6rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-form__submit-content {
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary-toggle:focus-visible {
+      outline: 2px solid var(--bc-pdp-ink);
+      outline-offset: 3px;
+      border-radius: .2rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #MainProduct-{{ section.id }} .bc-product__summary-content,
+      #MainProduct-{{ section.id }} .bc-product__summary-content::after,
+      #MainProduct-{{ section.id }} .bc-product__summary-toggle .svg-wrapper {
+        transition: none;
+      }
+    }
+
+    #MainProduct-{{ section.id }} .bc-product__summary.is-expanded .bc-product__summary-content {
+      max-height: none;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-specs__table {
+      table-layout: fixed;
+    }
+    @media screen and (max-width: 749px) {
+      #MainProduct-{{ section.id }} .bc-product-specs__row {
+        display: table-row;
+      }
+      #MainProduct-{{ section.id }} .bc-product-specs__row th,
+      #MainProduct-{{ section.id }} .bc-product-specs__row td {
+        display: table-cell;
+        width: auto;
+        min-width: 0;
+        padding: 1rem 1.2rem;
+        vertical-align: top;
+      }
+    }
+
+
+    #MainProduct-{{ section.id }} .bc-product-specs__table tbody + tbody .bc-product-specs__header-row th {
+      padding-top: 2.4rem;
+    }
+
+    #MainProduct-{{ section.id }} .bc-product-specs__label,
+    #MainProduct-{{ section.id }} .bc-product-specs__value,
+    #MainProduct-{{ section.id }} .bc-product-pros-cons__text {
+      overflow-wrap: anywhere;
+    }
+
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'bc-product-accessories.js' | asset_url }}" defer="defer"></script>
+  {{ 'component-product-accessories.css' | asset_url | stylesheet_tag }}
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -880,10 +1164,6 @@
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
-          {%- assign bc_warranty_copy = '5 jaar productgarantie' -%}
-          {%- if product.vendor and product.vendor contains 'Hotbath' -%}
-            {%- assign bc_warranty_copy = '5 jaar garantie op Hotbath' -%}
-          {%- endif -%}
           {%- assign bc_buybox_options_markup = '' -%}
           {%- assign bc_buybox_price_markup = '' -%}
           {%- assign bc_buybox_quantity_markup = '' -%}
@@ -921,20 +1201,47 @@
                         <div id="price-{{ section.id }}" class="bc-buybox__price-wrap" role="status">
                           <div class="bc-buybox__price-display{% if savings_amount > 0 %} is-on-sale{% endif %}">
                             <div class="bc-buybox__price-main-row">
+                              <span class="visually-hidden">{% if savings_amount > 0 %}{{ 'products.product.price.sale_price' | t }}{% else %}{{ 'products.product.price.regular_price' | t }}{% endif %}</span>
                               <span class="bc-buybox__price-current">{{ money_price }}</span>
                               {%- if savings_amount > 0 -%}
+                                <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                 <s class="bc-buybox__price-compare">{{ money_compare_at_price }}</s>
                               {%- endif -%}
                             </div>
                             {%- if savings_amount > 0 -%}
                               <p class="bc-buybox__savings">
-                                Je bespaart:
+                                Je bespaart
                                 <span>{{ savings_amount | money }}</span>
                               </p>
                             {%- endif -%}
                           </div>
                         </div>
                       </div>
+                      {%- assign bc_delivery_vendor = product.vendor | strip | downcase -%}
+                      {%- if bc_delivery_vendor == 'wiesbaden' -%}
+                        {%- liquid
+                          assign bc_supplier_stock = product.metafields.custom.leverancier_voorraad.value
+                          assign bc_supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
+                        -%}
+                        <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}">
+                          <div class="bc-buybox__delivery-meta">
+                            <span class="bc-buybox__delivery-title">
+                              {%- if bc_supplier_stock == true -%}
+                                {{- 'bc_delivery.supplier_in_stock' | t -}}
+                              {%- elsif bc_supplier_stock == false and bc_supplier_date != blank -%}
+                                {%- assign bc_supplier_date_formatted = bc_supplier_date | date: '%d-%m-%Y' -%}
+                                {{- 'bc_delivery.supplier_expected_from' | t: date: bc_supplier_date_formatted -}}
+                              {%- else -%}
+                                {{- 'bc_delivery.lead_time_on_request' | t -}}
+                              {%- endif -%}
+                            </span>
+                            <span class="bc-buybox__delivery-icon" aria-hidden="true">i</span>
+                          </div>
+                          {%- if bc_supplier_stock == true -%}
+                            <p class="bc-buybox__delivery-copy">{{ 'bc_delivery.contact_current_lead_time' | t }}</p>
+                          {%- endif -%}
+                        </aside>
+                      {%- else -%}
                       <aside class="bc-buybox__delivery-card" aria-label="Levertijd en bezorginformatie">
                         <div class="bc-buybox__delivery-meta">
                           <span class="bc-buybox__delivery-title">Verwachte levertijd: 8 - 9 weken</span>
@@ -942,6 +1249,7 @@
                         </div>
                         <p class="bc-buybox__delivery-copy">Of kies je bezorgmoment zelf uit</p>
                       </aside>
+                      {%- endif -%}
                     </div>
                   </div>
                 {%- endcapture -%}
@@ -1077,6 +1385,7 @@
                         class="quantity__input"
                         type="number"
                         name="quantity"
+                        required
                         id="Quantity-{{ section.id }}"
                         data-cart-quantity="{{ cart_qty }}"
                         data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
@@ -1281,6 +1590,7 @@
               {%- when 'variant_picker' -%}
                 {%- capture bc_buybox_options_markup -%}
                   <div class="bc-buybox__section bc-buybox__section--options">
+                    <h2 class="bc-buybox__options-title">Kies je uitvoering</h2>
                     {%- if current_switch_group != blank -%}
                       {% render 'bc-product-switcher', product: product, section: section %}
                     {%- elsif current_group != blank -%}
@@ -1385,6 +1695,7 @@
                       block: block,
                       product: product,
                       product_form_id: product_form_id,
+                      button_label: 'In winkelwagen',
                       section_id: section.id,
                       show_pickup_availability: false
                     -%}
@@ -1581,38 +1892,49 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
-          {{ bc_buybox_options_markup }}
+          {%- if current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}
+            {{ bc_buybox_options_markup }}
+          {%- endif -%}
           {{ bc_buybox_price_markup }}
-          {{ bc_buybox_quantity_markup }}
-          {{ bc_buybox_actions_markup }}
+          <div class="bc-buybox__purchase-row{% if product.quantity_price_breaks_configured? %} bc-buybox__purchase-row--volume{% endif %}">
+            {{ bc_buybox_quantity_markup }}
+            {{ bc_buybox_actions_markup }}
+          </div>
           <div class="bc-buybox__section bc-buybox__section--usps" aria-label="Voordelen van Badkamercity">
             <ul class="bc-buybox__usp-list list-unstyled" role="list">
-              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Gratis bezorgd</span></li>
-              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>30 dagen bedenktijd</span></li>
-              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>{{ bc_warranty_copy }}</span></li>
-              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>25.000+ klanten gingen je voor</span></li>
-              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Een 9 op onze klantenservice</span></li>
+              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Persoonlijk advies van specialisten</span></li>
+              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Vertrouwde badkamermerken</span></li>
+              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Hulp bij passende onderdelen</span></li>
+              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Duidelijke prijzen, inclusief btw</span></li>
+              <li class="bc-buybox__usp-item"><span class="bc-buybox__usp-icon" aria-hidden="true">&#10003;</span><span>Service, ook na je aankoop</span></li>
             </ul>
           </div>
         </section>
       </div>
     </div>
 
+    {%- capture bc_description_markup -%}
     {%- if product.description != blank -%}
-      <div class="bc-product__summary" data-product-summary>
+      <div class="bc-product__summary is-expanded" id="ProductDescription-{{ section.id }}" data-product-summary>
         <div class="bc-product__summary-inner">
+          <h2 class="bc-product__summary-title">Omschrijving</h2>
           <div
             id="ProductSummary-{{ section.id }}"
             class="bc-product__summary-content rte"
             data-product-summary-content
           >
-            {{ product.description }}
+            {{ product.description
+              | replace: '<h1', '<h3' | replace: '</h1>', '</h3>'
+              | replace: '<H1', '<h3' | replace: '</H1>', '</h3>'
+              | replace: '<h2', '<h3' | replace: '</h2>', '</h3>'
+              | replace: '<H2', '<h3' | replace: '</H2>', '</h3>'
+            }}
           </div>
           <button
             type="button"
             class="bc-product__summary-toggle"
             data-product-summary-toggle
-            aria-expanded="false"
+            aria-expanded="true"
             aria-controls="ProductSummary-{{ section.id }}"
           >
             <span class="svg-wrapper">
@@ -1622,6 +1944,11 @@
             <span class="bc-product__summary-toggle-text bc-product__summary-toggle-text--less">Toon minder</span>
           </button>
         </div>
+      </div>
+    {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture bc_test_specs_markup -%}
         {%- if product.handle == 'testproduct-badkamercity-productpagina' -%}
           <aside class="bc-test-specs" aria-labelledby="TestSpecs-{{ section.id }}">
             <h2 class="bc-test-specs__title" id="TestSpecs-{{ section.id }}">Specificaties</h2>
@@ -1649,130 +1976,122 @@
             </dl>
           </aside>
         {%- endif -%}
-      </div>
+    {%- endcapture -%}
+
+    {%- capture bc_specs_markup -%}
+      {%- render 'bc-product-detail-specs', product: product, section_id: section.id -%}
+    {%- endcapture -%}
+    {%- assign bc_specs_markup = bc_specs_markup | strip -%}
+    {%- if product.handle == 'testproduct-badkamercity-productpagina' -%}
+      {%- assign bc_specs_markup = bc_test_specs_markup | strip -%}
     {%- endif -%}
 
+    {%- capture bc_pros_cons_markup -%}
+      {%- render 'product-pros-cons', product: product, section_id: section.id -%}
+    {%- endcapture -%}
+    {{ 'component-product-set.css' | asset_url | stylesheet_tag }}
+    {%- capture bc_set_markup -%}
+      {%- render 'bc-product-set-components', product: product, section_id: section.id -%}
+    {%- endcapture -%}
+    {%- capture bc_accessories_markup -%}
+      {%- render 'bc-product-accessories', product: product, section_id: section.id -%}
+    {%- endcapture -%}
     {%- liquid
-      assign has_specs = false
-      if product.metafields.custom.artikelnummer != blank
-        assign has_specs = true
-      elsif product.metafields.custom.ean != blank
-        assign has_specs = true
-      elsif product.metafields.custom.serie != blank
-        assign has_specs = true
-      elsif product.metafields.custom.kleurgroep != blank
-        assign has_specs = true
-      elsif product.metafields.custom.basiskleur != blank
-        assign has_specs = true
-      elsif product.metafields.custom.glansgraad != blank
-        assign has_specs = true
-      elsif product.metafields.custom.materiaal_kraan != blank
-        assign has_specs = true
-      elsif product.metafields.custom.montagewijze != blank
-        assign has_specs = true
-      elsif product.metafields.custom.afwerking_greep != blank
-        assign has_specs = true
-      elsif product.metafields.custom.belgaqua_keurmerk != blank
-        assign has_specs = true
-      elsif product.metafields.custom.met_hoofddouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.breedte_diameter_hoofddouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.dikte_hoofddouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.aantal_straalsoorten_hoofddouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.type_bevestiging_hoofddouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.lengte_douchearm != blank
-        assign has_specs = true
-      elsif product.metafields.custom.met_handdouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.type_handdouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.breedte_diameter_douchekop != blank
-        assign has_specs = true
-      elsif product.metafields.custom.aantal_straalsoorten_handdouche != blank
-        assign has_specs = true
-      elsif product.metafields.custom.met_glijstang != blank
-        assign has_specs = true
-      elsif product.metafields.custom.met_doucheslang != blank
-        assign has_specs = true
-      elsif product.metafields.custom.lengte_doucheslang != blank
-        assign has_specs = true
-      elsif product.metafields.custom.vorm_thermostaat != blank
-        assign has_specs = true
-      elsif product.metafields.custom.thermostatisch != blank
-        assign has_specs = true
-      elsif product.metafields.custom.met_inbouwdeel != blank
-        assign has_specs = true
-      elsif product.metafields.custom.aantal_uitgangen_tegelijk_bedienbaar != blank
-        assign has_specs = true
-      elsif product.metafields.custom.bediening_voor_aan_uit != blank
-        assign has_specs = true
-      elsif product.metafields.custom.hotbath_ecoair_system != blank
-        assign has_specs = true
-      elsif product.metafields.custom.hotbath_shower_power_system != blank
-        assign has_specs = true
-      elsif product.metafields.custom.hotbath_fluhs != blank
-        assign has_specs = true
-      elsif product.metafields.custom.hotbath_plumber_friendly != blank
-        assign has_specs = true
+      assign bc_accessories_markup = bc_accessories_markup | strip
+      assign bc_set_markup = bc_set_markup | strip
+      assign bc_pros_cons_markup = bc_pros_cons_markup | strip
+      assign bc_detail_count = 0
+      assign bc_specs_anchor = ''
+      if product.description != blank
+        assign bc_detail_count = bc_detail_count | plus: 1
+      endif
+      if bc_specs_markup != blank
+        assign bc_specs_anchor = 'ProductSpecs-' | append: section.id
+        if product.handle == 'testproduct-badkamercity-productpagina'
+          assign bc_specs_anchor = 'TestSpecs-' | append: section.id
+        endif
+      endif
+      if bc_specs_anchor != blank
+        assign bc_detail_count = bc_detail_count | plus: 1
+      endif
+      if bc_pros_cons_markup != blank
+        assign bc_detail_count = bc_detail_count | plus: 1
+      endif
+      if bc_set_markup != blank
+        assign bc_detail_count = bc_detail_count | plus: 1
+      endif
+      if bc_accessories_markup != blank
+        assign bc_detail_count = bc_detail_count | plus: 1
       endif
     -%}
 
-    {%- if has_specs -%}
-      <div class="bc-product-specs" id="bc-full-specs">
-        <div class="bc-product-specs__inner">
-          <h2 class="bc-product-specs__title">Specificaties</h2>
-          <table class="bc-product-specs__table" role="table">
-            <tbody>
-              {% render 'bc-product-spec-header', title: 'Product' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.artikelnummer, label: 'Artikelnummer' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.fabrikantnummer, label: 'Fabrikantnummer' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.ean, label: 'EAN-code' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.vendor, label: 'Merk' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.serie, label: 'Serie' %}
+    {%- if bc_detail_count > 1 -%}
+      <nav class="bc-product__detail-nav" aria-label="Productinformatie">
+        {%- if bc_pros_cons_markup != blank -%}
+          <a href="#ProductProsCons-{{ section.id }}">Plus- en aandachtspunten</a>
+        {%- endif -%}
+        {%- if product.description != blank -%}
+          <a href="#ProductDescription-{{ section.id }}">Omschrijving</a>
+        {%- endif -%}
+        {%- if bc_specs_anchor != blank -%}
+          <a href="#{{ bc_specs_anchor }}">Specificaties</a>
+        {%- endif -%}
+        <a id="ProductSetLink-{{ section.id }}" href="#ProductSet-{{ section.id }}"{% if bc_set_markup == blank %} hidden{% endif %}>Setonderdelen</a>
+        <a id="ProductAccessoriesLink-{{ section.id }}" href="#ProductAccessories-{{ section.id }}"{% if bc_accessories_markup == blank %} hidden{% endif %}>Accessoires</a>
+      </nav>
+    {%- endif -%}
 
-              {% render 'bc-product-spec-header', title: 'Algemene kenmerken' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.vormgeving_stijlgroep, label: 'Vormgeving / stijlgroep' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.kleurgroep, label: 'Kleurgroep' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.basiskleur, label: 'Basiskleur' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.glansgraad, label: 'Glansgraad', uitleg_url: '#' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.materiaal_kraan, label: 'Materiaal kraan' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.montagewijze, label: 'Montagewijze' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.afwerking_greep, label: 'Afwerking greep', uitleg_url: '#' %}
+    {%- if bc_detail_count > 0 -%}
+    <div class="bc-product__details{% if bc_specs_anchor == blank and bc_set_markup == blank %} bc-product__details--text-only{% elsif product.description == blank and bc_pros_cons_markup == blank %} bc-product__details--specs-only{% endif %}">
+      {%- if product.description != blank or bc_pros_cons_markup != blank -%}
+      <div class="bc-product__details-copy">
+    {%- if bc_pros_cons_markup != blank -%}
+      {{ 'component-product-pros-cons.css' | asset_url | stylesheet_tag }}
+      <div class="bc-product__pros-cons-anchor" id="ProductProsCons-{{ section.id }}">
+        {{ bc_pros_cons_markup }}
+      </div>
+    {%- endif -%}
+        {{ bc_description_markup }}
+      </div>
+      {%- endif -%}
 
-              {% render 'bc-product-spec-header', title: 'Douche & Thermostaat' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.belgaqua_keurmerk, label: 'Belgaqua keurmerk' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_hoofddouche, label: 'Met hoofddouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.breedte_diameter_hoofddouche, label: 'Breedte/diameter hoofddouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.dikte_hoofddouche, label: 'Dikte hoofddouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_straalsoorten_hoofddouche, label: 'Aantal straalsoorten hoofddouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.type_bevestiging_hoofddouche, label: 'Type bevestiging hoofddouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.lengte_douchearm, label: 'Lengte douchearm' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_handdouche, label: 'Met handdouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.type_handdouche, label: 'Type handdouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.breedte_diameter_douchekop, label: 'Breedte/diameter douchekop' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_straalsoorten_handdouche, label: 'Aantal straalsoorten handdouche' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_glijstang, label: 'Met glijstang' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_doucheslang, label: 'Met doucheslang' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.lengte_doucheslang, label: 'Lengte doucheslang' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.vorm_thermostaat, label: 'Vorm thermostaat' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.thermostatisch, label: 'Thermostatisch' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.met_inbouwdeel, label: 'Met inbouwdeel' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_uitgangen_tegelijk_bedienbaar, label: 'Aantal uitgangen tegelijk bedienbaar' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.bediening_voor_aan_uit, label: 'Bediening voor aan/uit' %}
-
-              {% render 'bc-product-spec-header', title: 'Hotbath Systemen' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_ecoair_system, label: 'Hotbath EcoAir System' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_shower_power_system, label: 'Hotbath Shower Power System' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_fluhs, label: 'Hotbath Fluhs' %}
-              {% render 'bc-product-spec-row', metafield: product.metafields.custom.hotbath_plumber_friendly, label: 'Hotbath Plumber Friendly' %}
-            </tbody>
-          </table>
+      {%- if bc_specs_anchor != blank or bc_set_markup != blank -%}
+      <div class="bc-product__details-specs">
+        {{ bc_specs_markup }}
+        <div id="ProductSet-{{ section.id }}" class="bc-product-set-anchor"{% if bc_set_markup == blank %} hidden{% endif %}>
+          {{ bc_set_markup }}
         </div>
       </div>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <div id="ProductAccessories-{{ section.id }}" class="bc-accessories-anchor"{% if bc_accessories_markup == blank %} hidden{% endif %}>{{ bc_accessories_markup }}</div>
+
+    {%- if bc_buybox_actions_markup != blank and product.gift_card? == false -%}
+      <bc-product-sticky class="bc-product-sticky" data-section="{{ section.id }}" hidden>
+        <div class="bc-product-sticky__inner">
+          {%- if product.featured_image -%}
+            {{ product.featured_image | image_url: width: 120 | image_tag: class: 'bc-product-sticky__image', widths: '60, 120', sizes: '60px', loading: 'lazy', alt: '' }}
+          {%- endif -%}
+          <div class="bc-product-sticky__identity">
+            <a href="#ProductInfo-{{ section.id }}" class="bc-product-sticky__title">{{ product.title | escape }}</a>
+            <span class="bc-product-sticky__subtitle">{{ product.vendor | escape }}</span>
+          </div>
+          <strong class="bc-product-sticky__price" data-sticky-price>{{ product.selected_or_first_available_variant.price | money }}</strong>
+          <div class="bc-product-sticky__quantity" role="group" aria-label="Aantal">
+            <button type="button" data-sticky-minus aria-label="Aantal verlagen">−</button>
+            <input type="number" data-sticky-quantity aria-label="Aantal producten" value="{{ product.selected_or_first_available_variant.quantity_rule.min }}" min="{{ product.selected_or_first_available_variant.quantity_rule.min }}">
+            <button type="button" data-sticky-plus aria-label="Aantal verhogen">+</button>
+          </div>
+          <button type="button" class="bc-product-sticky__submit" data-sticky-submit disabled>
+            <span class="svg-wrapper" aria-hidden="true">{{ 'icon-cart-bc.svg' | inline_asset_content }}</span>
+            <span data-sticky-label>In winkelwagen</span>
+          </button>
+          <p class="bc-product-sticky__error" data-sticky-error role="alert" hidden></p>
+        </div>
+      </bc-product-sticky>
+      <script src="{{ 'bc-product-sticky.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
     {% render 'product-media-modal', variant_images: variant_images %}
@@ -1838,46 +2157,26 @@
 
           if (!summary || !content || !toggle) return;
 
-          const collapsedHeight = parseFloat(getComputedStyle(content).lineHeight) * 10;
-          content.style.setProperty('--summary-collapsed-height', `${collapsedHeight}px`);
-
           const updateSummaryState = () => {
+            const lineHeight = parseFloat(getComputedStyle(content).lineHeight) || 28;
+            const collapsedHeight = lineHeight * 10;
+            const isShort = content.scrollHeight <= collapsedHeight + 4;
+            if (isShort) summary.classList.add('is-expanded');
             const expanded = summary.classList.contains('is-expanded');
-            const fullHeight = content.scrollHeight;
-            const isShort = fullHeight <= collapsedHeight + 4;
 
-            if (!expanded) {
-              content.style.maxHeight = `${collapsedHeight}px`;
-              summary.classList.toggle('is-short', isShort);
-              toggle.hidden = isShort;
-            } else {
-              summary.classList.remove('is-short');
-              toggle.hidden = false;
-              content.style.maxHeight = `${fullHeight}px`;
-            }
+            content.style.setProperty('--summary-collapsed-height', collapsedHeight + 'px');
+            content.style.maxHeight = expanded ? 'none' : collapsedHeight + 'px';
+            summary.classList.toggle('is-short', isShort);
+            toggle.hidden = isShort;
+            toggle.setAttribute('aria-expanded', String(expanded));
           };
 
           requestAnimationFrame(updateSummaryState);
           window.addEventListener('resize', updateSummaryState);
-
+          content.addEventListener('load', updateSummaryState, true);
           toggle.addEventListener('click', () => {
-            const expanding = !summary.classList.contains('is-expanded');
-
-            if (expanding) {
-              const fullHeight = content.scrollHeight;
-              summary.classList.add('is-expanded');
-              content.style.maxHeight = `${fullHeight}px`;
-              toggle.setAttribute('aria-expanded', 'true');
-            } else {
-              content.style.maxHeight = `${content.scrollHeight}px`;
-              requestAnimationFrame(() => {
-                summary.classList.remove('is-expanded');
-                content.style.maxHeight = `${collapsedHeight}px`;
-              });
-              toggle.setAttribute('aria-expanded', 'false');
-            }
-
-            requestAnimationFrame(updateSummaryState);
+            summary.classList.toggle('is-expanded');
+            updateSummaryState();
           });
         };
 

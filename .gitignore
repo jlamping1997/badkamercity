@@ -1,2 +1,33 @@
-# Local Codex execution evidence - never commit
+# Local Codex execution evidence — do not commit
 docs/_codex_runs/
+
+# Local credentials and environment values
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Local tools/cache/build
+.shopify/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.cache/
+.cache-*/
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Ephemeral exports and archives; committed existing theme backup files remain tracked
+*.zip
+*.tmp
+*.log

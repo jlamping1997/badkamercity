@@ -1,0 +1,16 @@
+{% comment %}
+  BadkamerCity externe filters - JEE-O test
+{% endcomment %}
+
+<!-- BC_EXTERNAL_FILTERS_V1 -->
+
+{{ 'bc-external-filters.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-external-filters.js' | asset_url }}" defer="defer"></script>
+
+<div
+  id="BcExternalFilters"
+  data-api-base="https://vps-7ffd625d.vps.ovh.net/v3"
+  data-collection="{{ collection_handle | escape }}"
+  data-section-id="{{ section_id | escape }}"
+  hidden
+></div>
