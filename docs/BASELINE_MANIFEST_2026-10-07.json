@@ -1,0 +1,2668 @@
+{
+  "schemaVersion": "1.0",
+  "observedOn": "2026-10-07",
+  "store": "fpa9hu-i3.myshopify.com",
+  "liveTheme": {
+    "id": "gid://shopify/OnlineStoreTheme/194864677130",
+    "name": "BadkamerCity - SEO categoriehub",
+    "role": "MAIN",
+    "updatedAt": "2026-10-06T21:14:23Z"
+  },
+  "gitBaselineBranch": "sync/live-shopify-2026-10-07",
+  "verification": {
+    "totalThemeFiles": 441,
+    "textAndBinaryFilesMatchedByGitBlobSHA1": 437,
+    "largeJSONFilesValidatedUsingMD5AfterCRLFNormalization": 4,
+    "missingPaths": 0,
+    "unmatchedFileContents": 0,
+    "important": "Line endings may differ between Git (LF) and Shopify (CRLF). Compare normalized content or Shopify MD5 rather than raw file bytes on Windows."
+  },
+  "files": [
+    {
+      "path": "assets/animations.js",
+      "sizeBytes": 3759,
+      "md5": "fc03e9c13ba52e29e2c69d2998ca0e49",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/base.css",
+      "sizeBytes": 95319,
+      "md5": "06d9f32480e25d4e75899f5a67784dc3",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/bc-category-directory.css",
+      "sizeBytes": 5846,
+      "md5": "8371f4c0004a8474eddf33d3ecdb90ae",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/bc-collection.css",
+      "sizeBytes": 18706,
+      "md5": "2c5c050ecfd1c412490cd4068a7268d4",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/bc-external-filters.css",
+      "sizeBytes": 7610,
+      "md5": "6b17fc764030b75afb9ad469336ca803",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "sizeBytes": 18626,
+      "md5": "e9571c618a0988e600da65b4866cd247",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-meubelhub.css",
+      "sizeBytes": 12741,
+      "md5": "6e8884c447e0a28c80793f4ce8cb22fc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/bc-meubelhub.js",
+      "sizeBytes": 1609,
+      "md5": "99e4f69419e2cb466e77830f27b5c53d",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-product-accessories.js",
+      "sizeBytes": 5155,
+      "md5": "302ea7cdcb2a0c889b515024ed0572a2",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-product-sticky.js",
+      "sizeBytes": 5399,
+      "md5": "e27c880c13dfa3fce0fd20b593728ccc",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-product-switcher.backup-debug.js",
+      "sizeBytes": 10345,
+      "md5": "5edad2a62e09dc8ac23f1d223c931400",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "sizeBytes": 14989,
+      "md5": "af9092a6e6a9a5408b4910857eeecc9c",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/bc-product-switcher.js.backup-qa-round-1-20260706-214223",
+      "sizeBytes": 12101,
+      "md5": "19ff8233dcd1dfb691d52bb887004c0c",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "assets/bc-product-switcher.js.backup-qa-round-1-rerun-20260707-110751",
+      "sizeBytes": 12264,
+      "md5": "d38bc3dcceeaf20640d269a080a264e4",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "assets/cart-drawer.js",
+      "sizeBytes": 4358,
+      "md5": "c51ccf9528b72985b020dcac64db90c3",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "sizeBytes": 2367,
+      "md5": "e0ff5c1146bf15ac16a9dd28a50e8362",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/cart.js",
+      "sizeBytes": 11232,
+      "md5": "248881e04631165bf75b910593c5cd74",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/collage.css",
+      "sizeBytes": 5436,
+      "md5": "7b2b8eca0c92bc596e31f96e5dfa361a",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/collapsible-content.css",
+      "sizeBytes": 3075,
+      "md5": "4764fa919cb1b04c22a3d6087b536c89",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-accordion.css",
+      "sizeBytes": 1203,
+      "md5": "397ace39c968c7ed384a40a990f162e6",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-article-card.css",
+      "sizeBytes": 2512,
+      "md5": "a3be7cb901d013b0646d857222de032a",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-bc-category-navigation.css",
+      "sizeBytes": 3673,
+      "md5": "699c6f5bca6256b4435f391d8c279b81",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-card.css",
+      "sizeBytes": 16114,
+      "md5": "8a99eaf7267fc9a5d142416949968447",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-cart-drawer.css",
+      "sizeBytes": 7983,
+      "md5": "8d31edf1c47e144f52dcf0ae6dcd4c49",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-cart-items.css",
+      "sizeBytes": 6432,
+      "md5": "f15460c4d4c7b4b207cb6c8344e9c0ab",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-cart-notification.css",
+      "sizeBytes": 3092,
+      "md5": "43f04fc9376348a7e71f827628af4c9d",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-cart.css",
+      "sizeBytes": 3561,
+      "md5": "6d8f6851439358de31cc79832cd05e9c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-collection-hero.css",
+      "sizeBytes": 2287,
+      "md5": "1e2d260d49f9e8d2e872d7c0c50e74aa",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-complementary-products.css",
+      "sizeBytes": 4463,
+      "md5": "aa1e9eb04ec4b89f8fb79e21e4133abc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-deferred-media.css",
+      "sizeBytes": 2657,
+      "md5": "1bd02c749df00290c2c3838c0a68d6cb",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-discounts.css",
+      "sizeBytes": 592,
+      "md5": "863225c0563e26621b2ff8de452d16a4",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-facets.css",
+      "sizeBytes": 26951,
+      "md5": "ef6bf497a78e4866d078b6ebfb25ada0",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-image-with-text.css",
+      "sizeBytes": 11959,
+      "md5": "52fb743f81b2c7013d5a2dd10362a05b",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-list-menu.css",
+      "sizeBytes": 546,
+      "md5": "91147c211f6b86cafc693657d8e58887",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-list-payment.css",
+      "sizeBytes": 384,
+      "md5": "43e30685d959d930f051678bcad8568f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-list-social.css",
+      "sizeBytes": 536,
+      "md5": "545b4d678b02b94236221c29804908a3",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-localization-form.css",
+      "sizeBytes": 10209,
+      "md5": "3402ed13f057ae96e63f07e48fe97181",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-mega-menu.css",
+      "sizeBytes": 1768,
+      "md5": "198a322c612173b7c7fef58d00cfc3be",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-menu-drawer.css",
+      "sizeBytes": 5654,
+      "md5": "36c780b3d4eb66f2fd12e0b0a90e1813",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-modal-video.css",
+      "sizeBytes": 1910,
+      "md5": "cc8d087c660db002ee64650eb876cd9c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-model-viewer-ui.css",
+      "sizeBytes": 1542,
+      "md5": "3acf20253f4ba50318a31295fe9c382b",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-newsletter.css",
+      "sizeBytes": 1479,
+      "md5": "3fed1fd7c472500d917605d9cf757e53",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-pagination.css",
+      "sizeBytes": 1467,
+      "md5": "b298d5b85668fea93accb0040b207638",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-pickup-availability.css",
+      "sizeBytes": 3686,
+      "md5": "fea0c6003fbacec5dc0cd406f5de80cf",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-predictive-search.css",
+      "sizeBytes": 9019,
+      "md5": "88730f2f525026a0d22fcdc31cc2198d",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-price.css",
+      "sizeBytes": 1910,
+      "md5": "6649c70ca5f5ced57c509b7f5a40e8fc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-product-accessories.css",
+      "sizeBytes": 6750,
+      "md5": "2ed8d118994e4bcf8a9c024af2c2ff2f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-product-model.css",
+      "sizeBytes": 882,
+      "md5": "fa2e8992d97dc0122e2acbf4849a7bbc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-product-pros-cons.css",
+      "sizeBytes": 2069,
+      "md5": "ce98baeba2a53aea40ca1beb7be81db2",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-product-set.css",
+      "sizeBytes": 1917,
+      "md5": "77f62104a79b6d240dac346877a56725",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-product-variant-picker.css",
+      "sizeBytes": 4771,
+      "md5": "63ee358233ac776a6c472b1f607f36a5",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-progress-bar.css",
+      "sizeBytes": 623,
+      "md5": "dde0a02cbc2e70178a40ac64848a965c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-rating.css",
+      "sizeBytes": 1260,
+      "md5": "9278ff18cfff99c51789ae6b75c62207",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-search.css",
+      "sizeBytes": 3597,
+      "md5": "b4bb392f5a7f7f7bcc5ae5b1348a655a",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-show-more.css",
+      "sizeBytes": 172,
+      "md5": "80b1c21d6ffe7d4c39f41de3e6e9f6ea",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-slider.css",
+      "sizeBytes": 9783,
+      "md5": "e2231598446cf160392747d3d1edceae",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-slideshow.css",
+      "sizeBytes": 4423,
+      "md5": "558eb9f7c56abfd829e4875d313ed66f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-swatch-input.css",
+      "sizeBytes": 3171,
+      "md5": "c09b4b741f39ac7fd2925dfd38ef06bd",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-swatch.css",
+      "sizeBytes": 803,
+      "md5": "a76a8bef54a5d0e711886afd918fdad2",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-totals.css",
+      "sizeBytes": 541,
+      "md5": "65c4a9f69b36aa0547885162609126dc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/component-volume-pricing.css",
+      "sizeBytes": 1278,
+      "md5": "56d1888ca32012b5adb470684c78b1d7",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/constants.js",
+      "sizeBytes": 267,
+      "md5": "7ad1b8e2173604151ea8ab2ed9aff17a",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/customer.css",
+      "sizeBytes": 13956,
+      "md5": "c8d1bed9cf6a53c150714ea21c2eb10e",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/customer.js",
+      "sizeBytes": 3063,
+      "md5": "c295bf92df291f9325cccba64721fda8",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/details-disclosure.js",
+      "sizeBytes": 1668,
+      "md5": "3375b10ba492a2bd88c1de8ce986be80",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/details-modal.js",
+      "sizeBytes": 1730,
+      "md5": "b805d120c28c82b43f6a8ae3490b9751",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/email-signup-banner-background-mobile.svg",
+      "sizeBytes": 2927,
+      "md5": "b9dde383e1db2589a506197c479bf5e0",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/email-signup-banner-background.svg",
+      "sizeBytes": 4299,
+      "md5": "8b62262fd1ea722a678885415e28582c",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/facets.js",
+      "sizeBytes": 14293,
+      "md5": "5c4c1b43e6a69788c6488f263f5228be",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/global.js",
+      "sizeBytes": 63019,
+      "md5": "08121b6a62a561415810b8d2c27edf22",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/icon-3d-model.svg",
+      "sizeBytes": 533,
+      "md5": "41c96bee98d59cbd70b207ec361e767a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-account-bc.svg",
+      "sizeBytes": 376,
+      "md5": "74c148109e70f5001b84a59623ad7f31",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-account.svg",
+      "sizeBytes": 478,
+      "md5": "512073e5d091bbc1b2f75e662afb6dbd",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-apple.svg",
+      "sizeBytes": 1786,
+      "md5": "6274034c5a7e3507cc2d9a7b1842baa1",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-arrow.svg",
+      "sizeBytes": 323,
+      "md5": "e3e6e2cda39714982dfbc87f33be3f40",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-banana.svg",
+      "sizeBytes": 1790,
+      "md5": "916ec3706fc905be671710df00c6010f",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-bottle.svg",
+      "sizeBytes": 4511,
+      "md5": "517c3938f3abc916698ae69f8efec8c1",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-box.svg",
+      "sizeBytes": 479,
+      "md5": "4ec2ba95e81aedf34296f6013ba2989b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-caret.svg",
+      "sizeBytes": 238,
+      "md5": "918bdcdcdce92c38affb451fac4413d4",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-carrot.svg",
+      "sizeBytes": 1737,
+      "md5": "e036f90d5510babe31845605effa90b6",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-cart-bc.svg",
+      "sizeBytes": 1056,
+      "md5": "db368fff2ac00348b6e41e268dfcf4f7",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-cart-empty.svg",
+      "sizeBytes": 389,
+      "md5": "64b4c949182f5bd335133e8f78bf3f9a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-cart.svg",
+      "sizeBytes": 486,
+      "md5": "edf8194479d9bd12d1f2fcaeaa665cb9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-chat-bubble.svg",
+      "sizeBytes": 768,
+      "md5": "ec1f78fb1c5a063fb8d73ceef79934fb",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-check-mark.svg",
+      "sizeBytes": 389,
+      "md5": "69117e01820754e0775b52d62ee56c93",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-checkmark.svg",
+      "sizeBytes": 318,
+      "md5": "013071a352b4df77a9d965f3db3bddcc",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-clipboard.svg",
+      "sizeBytes": 746,
+      "md5": "4f125047462f209877f648ec15b5fa78",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-close-small.svg",
+      "sizeBytes": 236,
+      "md5": "b70da7bfd6e23ba57b4d08a3de4f30e4",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-close.svg",
+      "sizeBytes": 335,
+      "md5": "b03a1ba0f46959283e45840a137f6dca",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-copy.svg",
+      "sizeBytes": 399,
+      "md5": "1ab2a9521ccf20880b1cfcececc87203",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-dairy-free.svg",
+      "sizeBytes": 864,
+      "md5": "fc6f0453e5bc65050ec6f3fc4ece7648",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-dairy.svg",
+      "sizeBytes": 549,
+      "md5": "d57e229c046398df80744f3b0d175a1d",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-discount.svg",
+      "sizeBytes": 261,
+      "md5": "7a57902d53ae5e72d3f7378d1da278dd",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-dryer.svg",
+      "sizeBytes": 450,
+      "md5": "795ecbea36d748f125c889a2d51d42ab",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-error.svg",
+      "sizeBytes": 594,
+      "md5": "e2c5f5f798e9993ab3f42640f3aa0310",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-eye.svg",
+      "sizeBytes": 760,
+      "md5": "9814db6d876d1186c83b149d8014270a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-facebook.svg",
+      "sizeBytes": 366,
+      "md5": "a967e9e3a3385ff161047a4f6773c94f",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-false.svg",
+      "sizeBytes": 247,
+      "md5": "70a9a7f3da6d88b3359f2ee94b564745",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-filter.svg",
+      "sizeBytes": 498,
+      "md5": "6dc9160d596b6eccc4a6ff6ee8b57a1d",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-fire.svg",
+      "sizeBytes": 1367,
+      "md5": "676a037a903963dc888d0e254aa3031f",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-gluten-free.svg",
+      "sizeBytes": 1932,
+      "md5": "6898b0871dbc1fcc30bfced18db07d13",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-hamburger.svg",
+      "sizeBytes": 304,
+      "md5": "2ea85b9fb3694f837b5f476e9e4d98c2",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-heart.svg",
+      "sizeBytes": 462,
+      "md5": "61627486122a531920c4b22208e74177",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-info.svg",
+      "sizeBytes": 628,
+      "md5": "a37163ec8a8b8757000b3eea8a836c30",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-instagram.svg",
+      "sizeBytes": 1647,
+      "md5": "9a5c6a93358a0649a845f194d806c1d9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-inventory-status.svg",
+      "sizeBytes": 170,
+      "md5": "c12461a709a33cbc6f2f7a31cc5396b7",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-iron.svg",
+      "sizeBytes": 913,
+      "md5": "f29f0f1b76fe84f9593dfe93f7679224",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-leaf.svg",
+      "sizeBytes": 1179,
+      "md5": "2886faf49041f34d8e87bb95150feba3",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-leather.svg",
+      "sizeBytes": 3210,
+      "md5": "4d9bcc354ac26182f37b5eb008f8efa8",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-lightning-bolt.svg",
+      "sizeBytes": 415,
+      "md5": "be15c4f2b2de27c1d5e09c495e984cd9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-lipstick.svg",
+      "sizeBytes": 658,
+      "md5": "b14c8a7b511359d426df6d6fa8ee65d9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-lock.svg",
+      "sizeBytes": 555,
+      "md5": "9e05ec71bbfef2d3c883aaa1f2345e66",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-map-pin.svg",
+      "sizeBytes": 571,
+      "md5": "ac7454ead937c5789747cea03b851c2b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-minus.svg",
+      "sizeBytes": 229,
+      "md5": "bba862ac7946c7f7147d9dafac3e41b7",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-nut-free.svg",
+      "sizeBytes": 1350,
+      "md5": "9f1c4557234927b784c35b171f59361e",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-padlock.svg",
+      "sizeBytes": 535,
+      "md5": "27547abe9431e8521d39674893acbf89",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-pants.svg",
+      "sizeBytes": 948,
+      "md5": "34ce5c6dbea3227dcc1ed75f8138a53e",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-pause.svg",
+      "sizeBytes": 332,
+      "md5": "aa901f1a60f34272509a74fb6b55da81",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-paw-print.svg",
+      "sizeBytes": 2216,
+      "md5": "0fa189b508b564cefee3fd4ba25f5ec9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-pepper.svg",
+      "sizeBytes": 1904,
+      "md5": "2d6b5d6dd1c2f865a58da07da9564473",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-perfume.svg",
+      "sizeBytes": 7872,
+      "md5": "39076c7ad5162dff11e19023344e207a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-pinterest.svg",
+      "sizeBytes": 1207,
+      "md5": "3bbd6bdfac6be0d5a4743ce14273517b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-plane.svg",
+      "sizeBytes": 1878,
+      "md5": "3ac5af865b8170c48db46db339c93a25",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-plant.svg",
+      "sizeBytes": 1219,
+      "md5": "18a7a0233c94f33d262252afef5ad16a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-play.svg",
+      "sizeBytes": 261,
+      "md5": "eeb1ddd8f7f93b40f11bc7af7a3789d0",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-plus.svg",
+      "sizeBytes": 297,
+      "md5": "a34f76bcb0c3bd7fc14e3e1c51414df5",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-price-tag.svg",
+      "sizeBytes": 712,
+      "md5": "b2373128a38fad1f98141833362ff884",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-question-mark.svg",
+      "sizeBytes": 882,
+      "md5": "475c9bc908697fc9189520856f41e6b9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-recycle.svg",
+      "sizeBytes": 2261,
+      "md5": "22ab2196acb3b47683caf1896ffe436b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-remove.svg",
+      "sizeBytes": 572,
+      "md5": "bd48f434b91af35c1a2bdbee29e2755d",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-reset.svg",
+      "sizeBytes": 248,
+      "md5": "b5fa94d4064f305f8aab8970b773cb7b",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-return.svg",
+      "sizeBytes": 584,
+      "md5": "58e6b21742e9b32077c32ee6177af901",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-ruler.svg",
+      "sizeBytes": 754,
+      "md5": "4e690cc21a4ecd007f1662298bfc99cf",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-search.svg",
+      "sizeBytes": 267,
+      "md5": "1ada2e07ddc463f1690df7b8ee49498d",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-serving-dish.svg",
+      "sizeBytes": 659,
+      "md5": "0aa010c1ed06d84d5f35b361e89c1748",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-share.svg",
+      "sizeBytes": 593,
+      "md5": "a44644fa90674a0687916b6670e96708",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-shirt.svg",
+      "sizeBytes": 1229,
+      "md5": "8032422310eb8173661a5ce31b127327",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-shoe.svg",
+      "sizeBytes": 901,
+      "md5": "048201f782cc5f26f6563f871f57649c",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-shopify.svg",
+      "sizeBytes": 2657,
+      "md5": "f3a1e7f60fad73639a0f1fee8f3d42f3",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-silhouette.svg",
+      "sizeBytes": 548,
+      "md5": "c211989d7d0ef4c9b16464d2cb056732",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-snapchat.svg",
+      "sizeBytes": 2932,
+      "md5": "fe6ed679bfb5744de55159121a09208d",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-snowflake.svg",
+      "sizeBytes": 1485,
+      "md5": "78b14f02c9629d9ddc16a8bd6ba6abb0",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-star.svg",
+      "sizeBytes": 714,
+      "md5": "7e67953e44041c18f4111a674f3ea345",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-stopwatch.svg",
+      "sizeBytes": 725,
+      "md5": "52b7f7233da1d428b687e3ff02779b1a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-success.svg",
+      "sizeBytes": 248,
+      "md5": "76b3b32d9443180c2280ab29c10683bd",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-tick.svg",
+      "sizeBytes": 311,
+      "md5": "07134d40f9194e6a970ca84c57d1b42e",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-tiktok.svg",
+      "sizeBytes": 242,
+      "md5": "6b3b6b660ce8b344d0461a31560c9647",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-truck.svg",
+      "sizeBytes": 901,
+      "md5": "d93aa53fb1381e6aec312847bec81bb9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-true.svg",
+      "sizeBytes": 268,
+      "md5": "f738be5eab2caf30e750ea802ef94f26",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-tumblr.svg",
+      "sizeBytes": 291,
+      "md5": "4d78d9ccc99bbfe03bbd4ef1420243ba",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-twitter.svg",
+      "sizeBytes": 294,
+      "md5": "74f276c9b2e6cdb79501cc420086c104",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-unavailable.svg",
+      "sizeBytes": 372,
+      "md5": "2ffbc644277a5f53b8c830924c22f962",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-vimeo.svg",
+      "sizeBytes": 598,
+      "md5": "4353a0ef0fb27f97c67b586da30a0f05",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-washing.svg",
+      "sizeBytes": 1342,
+      "md5": "6aea78c9f7a8bfab9317dbcf90120a01",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-wishlist-bc.svg",
+      "sizeBytes": 818,
+      "md5": "1d5d1a931b3d98f0d015cec6d4a200a9",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-youtube.svg",
+      "sizeBytes": 400,
+      "md5": "11b7d9dac4a99b2cef0656f11f2a7c22",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/icon-zoom.svg",
+      "sizeBytes": 693,
+      "md5": "ec66401a327b713496ee127a49341d6a",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/loading-spinner.svg",
+      "sizeBytes": 158,
+      "md5": "c9313784f07314c395e3a64ba41edf2c",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/localization-form.js",
+      "sizeBytes": 8069,
+      "md5": "2fd79ff62c762064c4d62f9c65cff16b",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/magnify.js",
+      "sizeBytes": 2195,
+      "md5": "ff9ccb32d7d89e01600b2b2e8648ebc5",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/main-search.js",
+      "sizeBytes": 1287,
+      "md5": "a925d7cf5fa664850a9cf3eca9953eb3",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/mask-arch.svg",
+      "sizeBytes": 328,
+      "md5": "49c4372cc62ef791cc658d58a0a913ed",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/mask-blobs.css",
+      "sizeBytes": 12097,
+      "md5": "9cac5292eefac16d44671b12af56d19f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/media-gallery.js",
+      "sizeBytes": 7283,
+      "md5": "93eda3a7f3c450c1e59b0c9ff678dc6b",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/newsletter-section.css",
+      "sizeBytes": 928,
+      "md5": "9279b76fdc4bda6bfc7057a8ab39a600",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/password-modal.js",
+      "sizeBytes": 259,
+      "md5": "4ea127962e6eb5cab51f8343711cd28e",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/pickup-availability.js",
+      "sizeBytes": 4330,
+      "md5": "4677aab295c97d1a382150a714dc01f4",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/predictive-search.js",
+      "sizeBytes": 8995,
+      "md5": "0a23e91fa72ca52f1997e1cde63e20dd",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/price-per-item.js",
+      "sizeBytes": 4519,
+      "md5": "e9d97f88061e40960946163bdd9c251b",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/product-form.js",
+      "sizeBytes": 7131,
+      "md5": "b74d795feb9131f50120f4b7cb5f47c4",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/product-info.js",
+      "sizeBytes": 18557,
+      "md5": "a8b1364ce8b67e42283a7a03067036ce",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/product-modal.js",
+      "sizeBytes": 6776,
+      "md5": "23761e5d27074c39d32ef9f0a1e21c7b",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/product-model.js",
+      "sizeBytes": 1415,
+      "md5": "142638263868c7dc420337bf3117ebc0",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/product-switcher-data.backup-before-production.json",
+      "sizeBytes": 7049,
+      "md5": "4290a59392d024c7ad6b3e6769dfd10a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "assets/product-switcher-data.backup.json",
+      "sizeBytes": 3838,
+      "md5": "5c26a0c3556aa132cbe78e7f1392df41",
+      "contentType": "application/json"
+    },
+    {
+      "path": "assets/product-switcher-data.json",
+      "sizeBytes": 1941637,
+      "md5": "4d75f574881b74b4929da3fd9a018d78",
+      "contentType": "application/json"
+    },
+    {
+      "path": "assets/product-switcher-data.json.backup-qa-round-1-20260706-214223",
+      "sizeBytes": 1851304,
+      "md5": "cb1765da629986b7d106af6730761d15",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "assets/product-switcher-data.json.backup-qa-round-1-rerun-20260707-110751",
+      "sizeBytes": 1941677,
+      "md5": "25ba71492e05988e36ce8af83c969659",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "assets/product-switcher-data.json.backup-qa-round-2-20260707-111611",
+      "sizeBytes": 1941677,
+      "md5": "0452123ba3eabe7b04f64c1d475dd689",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "assets/pubsub.js",
+      "sizeBytes": 623,
+      "md5": "7985cbe794e5d51f66ec66fcae2da7cd",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/quantity-popover.css",
+      "sizeBytes": 3548,
+      "md5": "bcc474d9c9d005d46c53a512da4c6336",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/quantity-popover.js",
+      "sizeBytes": 3638,
+      "md5": "8d6ff4b3d3a5211b3ea9dc1f9e669e8e",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/quick-add-bulk.js",
+      "sizeBytes": 6785,
+      "md5": "a7ad7a7bdee2942b13063d86c02dbdb3",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/quick-add.css",
+      "sizeBytes": 9093,
+      "md5": "9f84f9e10f32f8619f91c54bd28c83ad",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/quick-add.js",
+      "sizeBytes": 4921,
+      "md5": "40d8b5229e7eab8e03450f6c615a5870",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/quick-order-list.css",
+      "sizeBytes": 12711,
+      "md5": "8b811b27a8c8e61332cedfc9c32a4a6c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/quick-order-list.js",
+      "sizeBytes": 18028,
+      "md5": "901fe5cd3e70848af18cca4daf068ad3",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/recipient-form.js",
+      "sizeBytes": 6669,
+      "md5": "504d8e9b6967b903c6769d85baf3bc23",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/search-form.js",
+      "sizeBytes": 1397,
+      "md5": "071b75ac5d831e6cf17d23e13545f38f",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/section-blog-post.css",
+      "sizeBytes": 3349,
+      "md5": "177b9e97db01996c75d7239ea9f90099",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-collection-list.css",
+      "sizeBytes": 1177,
+      "md5": "2f91d040984a3fc7d945fde0b21b8786",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-contact-form.css",
+      "sizeBytes": 605,
+      "md5": "8d95446b79e329a4648eb340b52dddd6",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-email-signup-banner.css",
+      "sizeBytes": 2696,
+      "md5": "58427f7fcb2ef1b1f28822bca46a34fc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-featured-blog.css",
+      "sizeBytes": 1140,
+      "md5": "1815f09759f84123d8182bd54fe6c97e",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-featured-product.css",
+      "sizeBytes": 1566,
+      "md5": "29222c7fee37a60c5427f68a8269c06c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-footer.css",
+      "sizeBytes": 9982,
+      "md5": "7366e36d9165e77ab35b0ce38b8150d2",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-image-banner.css",
+      "sizeBytes": 10741,
+      "md5": "918e7f165ed5a86262ee239a4faf597a",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-main-blog.css",
+      "sizeBytes": 2219,
+      "md5": "debd204005026adf41ca1c9d573c0b29",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-main-glossary-page.css",
+      "sizeBytes": 14344,
+      "md5": "c952423d460b202642e782c04cfdcf8c",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-main-glossary.css",
+      "sizeBytes": 4361,
+      "md5": "1f43fd0df8741372e0140bc0a758158f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-main-page.css",
+      "sizeBytes": 328,
+      "md5": "85726451023bbaa241d55c7768087d4f",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "sizeBytes": 64394,
+      "md5": "ae64b5374992a025a2c754034fd61d93",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-multicolumn.css",
+      "sizeBytes": 4938,
+      "md5": "b5fc56e366b3b26a7ff2dce028ece917",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-password.css",
+      "sizeBytes": 5917,
+      "md5": "73de96446befa988592bdcc15027f5ba",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-related-products.css",
+      "sizeBytes": 99,
+      "md5": "2501b9d0b60e8403b8e6541584706b48",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/section-rich-text.css",
+      "sizeBytes": 1466,
+      "md5": "56a7fcfaf8f0249e4bd56823d1a63c11",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/share.js",
+      "sizeBytes": 2228,
+      "md5": "7752fb288184934230de4f4b26105b45",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/show-more.js",
+      "sizeBytes": 1235,
+      "md5": "c961839212016e1ed4e84cc4d1af1dcd",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/sparkle.gif",
+      "sizeBytes": 179349,
+      "md5": "7adcd48a3cc215a81fabd9dafb919507",
+      "contentType": "image/gif"
+    },
+    {
+      "path": "assets/square.svg",
+      "sizeBytes": 124,
+      "md5": "563e9edecc6136bbd66a77169e2fa94c",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "assets/template-collection.css",
+      "sizeBytes": 1817,
+      "md5": "3cc85bbc770ad419e739df7350492ffc",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/template-giftcard.css",
+      "sizeBytes": 6975,
+      "md5": "ade8eedae9ec29dbb1f8618672d6d6fe",
+      "contentType": "text/css"
+    },
+    {
+      "path": "assets/theme-editor.js",
+      "sizeBytes": 2138,
+      "md5": "f2e634218d4fd7ce5dd08225e716989f",
+      "contentType": "application/javascript"
+    },
+    {
+      "path": "assets/video-section.css",
+      "sizeBytes": 1245,
+      "md5": "12ea2154cde2fb5f4809c5e8b2d826d6",
+      "contentType": "text/css"
+    },
+    {
+      "path": "config/settings_data.json",
+      "sizeBytes": 8991,
+      "md5": "de417d6a8b595e4ce51671055e3a4229",
+      "contentType": "application/json"
+    },
+    {
+      "path": "config/settings_schema.json",
+      "sizeBytes": 41735,
+      "md5": "70b4665da3569296af1ffd3cbbb04514",
+      "contentType": "application/json"
+    },
+    {
+      "path": "layout/password.liquid",
+      "sizeBytes": 14503,
+      "md5": "d0363efebbcea90effb6c1f752b1ee71",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "layout/theme.liquid",
+      "sizeBytes": 22029,
+      "md5": "977c26f5055dcae22c7a3e4adefe4e0d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "locales/bg.json",
+      "sizeBytes": 28269,
+      "md5": "7b7792c0decb99b74dfefc5e8afc73a9",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/cs.json",
+      "sizeBytes": 23267,
+      "md5": "042e429bea29d203b2b1534e778d8e83",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/cs.schema.json",
+      "sizeBytes": 96342,
+      "md5": "8bd8a82ad2ab39b696c52859d4b62c90",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/da.json",
+      "sizeBytes": 21006,
+      "md5": "2f08873440b42527837cd97f2901d2bf",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/da.schema.json",
+      "sizeBytes": 94030,
+      "md5": "c1b2e5abc83fc4822ffe7cc2b2aac066",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/de.json",
+      "sizeBytes": 21864,
+      "md5": "4df6713413a584e2eb89bfed101a3e9f",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/de.schema.json",
+      "sizeBytes": 94963,
+      "md5": "1d8455103a4f02fa0f0ced3724aac9ed",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/el.json",
+      "sizeBytes": 29897,
+      "md5": "1bb5b3e63c3e97eb997bf7d9592cd5d8",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/en.default.json",
+      "sizeBytes": 24440,
+      "md5": "89398207fd99bcd3f5e60bebfe45fd84",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/en.default.schema.json",
+      "sizeBytes": 91946,
+      "md5": "dba2892e7fa59ac71d3912a0e8c4f129",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/es.json",
+      "sizeBytes": 22898,
+      "md5": "1b7e4473c759513de90fa40e91269683",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/es.schema.json",
+      "sizeBytes": 97234,
+      "md5": "01d8f2843bb04796a55401bfa44c61dc",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/fi.json",
+      "sizeBytes": 21200,
+      "md5": "8a0954ee302ebd62a85706f93ccfe0b5",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/fi.schema.json",
+      "sizeBytes": 94641,
+      "md5": "2cd9d17e5c2c38eefa267ca5b3ab94d1",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/fr.json",
+      "sizeBytes": 23144,
+      "md5": "09e8ea01a12681bf8abecd2919d4342a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/fr.schema.json",
+      "sizeBytes": 96802,
+      "md5": "21b37d29cec28d86abb5c5ee81f9cfdc",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/hr.json",
+      "sizeBytes": 22703,
+      "md5": "2f9ad2ac9df6edb5a04fc165425e97e9",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/hu.json",
+      "sizeBytes": 22741,
+      "md5": "33df0ff421cfef9b32d84ea398479c64",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/id.json",
+      "sizeBytes": 20717,
+      "md5": "e884b46a7dcadd420ec982b9a6b87833",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/it.json",
+      "sizeBytes": 22336,
+      "md5": "efc4ce3e58930d645d1f2d048abce65d",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/it.schema.json",
+      "sizeBytes": 96587,
+      "md5": "2a2adc7fd24751e41e45a5c00e4f66ea",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ja.json",
+      "sizeBytes": 23999,
+      "md5": "fc8fc128e7cf8dcd97d76b506c771ad4",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ja.schema.json",
+      "sizeBytes": 99096,
+      "md5": "395214a48c9715115d9b09e689f4ccfd",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ko.json",
+      "sizeBytes": 21976,
+      "md5": "a36f595fc27c080628f61f14e3d332c8",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ko.schema.json",
+      "sizeBytes": 96136,
+      "md5": "a67c4fc880c20f975e0b1b7fc625f301",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/lt.json",
+      "sizeBytes": 23834,
+      "md5": "91dc1b926faf807edd259da2bb622cce",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/nb.json",
+      "sizeBytes": 20805,
+      "md5": "52934c5950c50c86646ea551c405ed76",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/nb.schema.json",
+      "sizeBytes": 93843,
+      "md5": "8a6a263a53240eaa2d806eca322e065d",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/nl.json",
+      "sizeBytes": 26356,
+      "md5": "87af5298408611ab465a9ec559088394",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/nl.schema.json",
+      "sizeBytes": 95050,
+      "md5": "e9957d7f78088ae9120e0f90c08b772f",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pl.json",
+      "sizeBytes": 22836,
+      "md5": "477f892351c2ceb2cec390d461b15b4c",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pl.schema.json",
+      "sizeBytes": 96393,
+      "md5": "d3099d72ee291739d7f26d24d16498fc",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pt-BR.json",
+      "sizeBytes": 22188,
+      "md5": "260d5c0de28455f0c0cf9cb764bf3be8",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pt-BR.schema.json",
+      "sizeBytes": 96394,
+      "md5": "34aecb403d67f049358f8a0469b15c25",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pt-PT.json",
+      "sizeBytes": 22594,
+      "md5": "4ff7771ceb6234aacaa842d2d7b8f643",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/pt-PT.schema.json",
+      "sizeBytes": 96772,
+      "md5": "c07a390b998333dffc289bccf355571d",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ro.json",
+      "sizeBytes": 22796,
+      "md5": "c96d14225ad85c86b4a0dfa982b69fff",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/ru.json",
+      "sizeBytes": 29750,
+      "md5": "426b25e004549a29ad251e69bea824ec",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/sk.json",
+      "sizeBytes": 23330,
+      "md5": "bedb5ae4b5ac37e79ae378da010eb61c",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/sl.json",
+      "sizeBytes": 23129,
+      "md5": "a5761049abf8896ac4ca3d65673a9a66",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/sv.json",
+      "sizeBytes": 21232,
+      "md5": "a6c43d9f7561160f1f97b25b90dc1474",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/sv.schema.json",
+      "sizeBytes": 93722,
+      "md5": "a15cdd8874d9e2b6f830461fd929a75b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/th.json",
+      "sizeBytes": 33295,
+      "md5": "c3cbcce84b600d59646266c27415387b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/th.schema.json",
+      "sizeBytes": 121389,
+      "md5": "dc636852e7e418de24f3ec560bf2e7ab",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/tr.json",
+      "sizeBytes": 21801,
+      "md5": "53435d9234bec87adf214473f1f7670f",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/tr.schema.json",
+      "sizeBytes": 95245,
+      "md5": "dfc4d04a006b2ce5dfdf281b025cf4c8",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/vi.json",
+      "sizeBytes": 23456,
+      "md5": "2426a2df278cc5bcd79c6c26d23c2c78",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/zh-CN.json",
+      "sizeBytes": 20267,
+      "md5": "e080af7995e21ea3e137b6ec1e9ab724",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/zh-CN.schema.json",
+      "sizeBytes": 91534,
+      "md5": "5b0a1506a55c3d6d207913da37af7a1a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/zh-TW.json",
+      "sizeBytes": 20435,
+      "md5": "a30f6a19ea490083c2ab39076ba17670",
+      "contentType": "application/json"
+    },
+    {
+      "path": "locales/zh-TW.schema.json",
+      "sizeBytes": 92211,
+      "md5": "95da54d4f94b82a1c01c15df2c6ef04f",
+      "contentType": "application/json"
+    },
+    {
+      "path": "sections/announcement-bar.liquid",
+      "sizeBytes": 10542,
+      "md5": "dee6cbf3bedaf143456f22f5b15b263c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/apps.liquid",
+      "sizeBytes": 697,
+      "md5": "586a8e94ed4d73c3e6a1ba71bc46a106",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/bc-collection-advice.liquid",
+      "sizeBytes": 3583,
+      "md5": "970168c6c8b1523494cbb83c8e2fb142",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/bc-meubelhub.liquid",
+      "sizeBytes": 18292,
+      "md5": "14da46a033b2aa043ec5a002c72bf179",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/bc-related-products.liquid",
+      "sizeBytes": 508,
+      "md5": "f4fef3e8a86c34a6932da0bf5443717d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/bulk-quick-order-list.liquid",
+      "sizeBytes": 398,
+      "md5": "4d8554dce5a721204f31aab353cb36ba",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/cart-drawer.liquid",
+      "sizeBytes": 30,
+      "md5": "8e99ac087013c23498bd7277a2b06783",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/cart-icon-bubble.liquid",
+      "sizeBytes": 30,
+      "md5": "dfe9c0b0bc3fc29bb795431ec22ba24f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/cart-live-region-text.liquid",
+      "sizeBytes": 93,
+      "md5": "2c803078f4da06fe04d4db7b8ebb2ae1",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/cart-notification-button.liquid",
+      "sizeBytes": 55,
+      "md5": "b777aa012f4fd7e77104de40168a8fa7",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/cart-notification-product.liquid",
+      "sizeBytes": 2160,
+      "md5": "c599bea71fa571323f3f104343a948b2",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/collage.liquid",
+      "sizeBytes": 17764,
+      "md5": "18ed6af990c83324a2ee78a1b04549ee",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/collapsible-content.liquid",
+      "sizeBytes": 20167,
+      "md5": "3198888e5386925d0e0220f8032248da",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/collection-list.liquid",
+      "sizeBytes": 10952,
+      "md5": "873a2ec62ba01ea5182f4b78abfd3fa9",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/contact-form.liquid",
+      "sizeBytes": 7619,
+      "md5": "5361d6ce5ea578b634cd6d0998ee350c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/custom-liquid.liquid",
+      "sizeBytes": 1767,
+      "md5": "65fff0159b217d0bc62607b66ea45f87",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/email-signup-banner.liquid",
+      "sizeBytes": 16110,
+      "md5": "77e6954dd2867039da8cb7cf7408d761",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/featured-blog.liquid",
+      "sizeBytes": 12995,
+      "md5": "f876df7dfe36e14804495173924aca85",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/featured-collection.liquid",
+      "sizeBytes": 19505,
+      "md5": "e4607646c9c34a1c790cb1d6fdd4c78a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/featured-product.liquid",
+      "sizeBytes": 65367,
+      "md5": "d0dce2a0b6fc8dc1158e2e7c86b835f8",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/footer-group.json",
+      "sizeBytes": 4862,
+      "md5": "e6671e2add5218d1ae89822ffd49e0c9",
+      "contentType": "application/json"
+    },
+    {
+      "path": "sections/footer.liquid",
+      "sizeBytes": 33376,
+      "md5": "b5264e2d9313a36942e24053721c63f2",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/header-group.json",
+      "sizeBytes": 1156,
+      "md5": "13e606ac7b86f74e4e6a4e1aa15aa83a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "sections/header.liquid",
+      "sizeBytes": 63825,
+      "md5": "a9cbbdeb4b2aca2af0b71659735461ff",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-brand-rail.liquid",
+      "sizeBytes": 11973,
+      "md5": "331bcbbdce1908aa7f7302144f5276b3",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-category-grid.liquid",
+      "sizeBytes": 19468,
+      "md5": "328f926917fb09bff78dc055a549d6ee",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-complete-bathroom.liquid",
+      "sizeBytes": 14231,
+      "md5": "464d44ea3502dcccbf12f1fc750761f8",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-help-cta.liquid",
+      "sizeBytes": 12649,
+      "md5": "accdf253489c82073c2af80cb5ff7feb",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-hero.liquid",
+      "sizeBytes": 29311,
+      "md5": "cfed1385c87abd9f4bb293ad1af826d6",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-mijn-badkamercity.liquid",
+      "sizeBytes": 14313,
+      "md5": "d1f9369fcf7b4eb3f15e15f44385e6a2",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-popular-products.liquid",
+      "sizeBytes": 19963,
+      "md5": "a31833fab9e9cd6e5b967feeb243e3ad",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/home-shop-by-style.liquid",
+      "sizeBytes": 22828,
+      "md5": "63aa2e8e5b2077df61f364ccd4141df4",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/image-banner.liquid",
+      "sizeBytes": 18874,
+      "md5": "9d8535019fd032c5086ed6f624bc9e8f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/image-with-text.liquid",
+      "sizeBytes": 18399,
+      "md5": "9a955eba4c089512748550b6967bc63a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-404.liquid",
+      "sizeBytes": 517,
+      "md5": "d57dc337478218973f9ff62681001d8b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-account.liquid",
+      "sizeBytes": 6761,
+      "md5": "88cf0e163175f4aa5e8044247c7f6767",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-activate-account.liquid",
+      "sizeBytes": 4250,
+      "md5": "dfbce41b6df9885973ee456327acd47f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-addresses.liquid",
+      "sizeBytes": 16304,
+      "md5": "bd6469371d228061ec792ee9bf3a4913",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-article.liquid",
+      "sizeBytes": 15450,
+      "md5": "7ed14f50e89cf9439f7a10dc375516f5",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-blog.liquid",
+      "sizeBytes": 4336,
+      "md5": "4ce5b3b4bc20402d2a2abc15c041d548",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-cart-footer.liquid",
+      "sizeBytes": 7130,
+      "md5": "9c183aa3c9abd8de4c1e43c5ad5f54f8",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-cart-items.liquid",
+      "sizeBytes": 25457,
+      "md5": "e2d42bc2c8d6b533b5ce27bbc05acaf9",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-category-landing.liquid",
+      "sizeBytes": 32060,
+      "md5": "a409577303daff87262676ec76b8e4e4",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-collection-banner.liquid",
+      "sizeBytes": 3973,
+      "md5": "fb8d2bf6bf95e569788b210cb496eb1c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-collection-category-landing.liquid",
+      "sizeBytes": 22053,
+      "md5": "4e73d75939f849f6c637781e581611f9",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-collection-product-grid.liquid",
+      "sizeBytes": 16131,
+      "md5": "930af9b8afb4edd38914b6a987b9525c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-glossary-page.liquid",
+      "sizeBytes": 8708,
+      "md5": "d13713e8b5c55551d9555ec3ed51acea",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-glossary.liquid",
+      "sizeBytes": 11357,
+      "md5": "28291f4aea8fafa0f62dbb9a067fe031",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-list-collections.liquid",
+      "sizeBytes": 4702,
+      "md5": "f4c0f66f21702c411783b7a9a7d54d3b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-login.liquid",
+      "sizeBytes": 6010,
+      "md5": "e73c9e9c6fc4aa2e57abc211ececedb0",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-order.liquid",
+      "sizeBytes": 15576,
+      "md5": "0727f2e1d910d3069fbfa9385089b493",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-page.liquid",
+      "sizeBytes": 1623,
+      "md5": "9db217ea3549219c68ee71580e295892",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-password-footer.liquid",
+      "sizeBytes": 5036,
+      "md5": "4ee5e1a6f4a46e17ef9eb56a803c2c05",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-password-header.liquid",
+      "sizeBytes": 4682,
+      "md5": "8e0ae31a6b6bf02f20542b264ed22d9c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "sizeBytes": 163680,
+      "md5": "6c898b03f78a86bdfcf625022fbae5d1",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-register.liquid",
+      "sizeBytes": 5038,
+      "md5": "7fd4d5d4e9a5c87752b2a730476b1b0b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-reset-password.liquid",
+      "sizeBytes": 4233,
+      "md5": "6778ebd61646ee437b8bd3da1ddb8a88",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "sizeBytes": 30066,
+      "md5": "1750adcabb6d4f2b82c2a99d724a3d38",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/multicolumn.liquid",
+      "sizeBytes": 17023,
+      "md5": "d5050d5af6e2238b4b0bddfee355870b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/multirow.liquid",
+      "sizeBytes": 14650,
+      "md5": "d887024ac27211efddec4389b86a7716",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/newsletter.liquid",
+      "sizeBytes": 8717,
+      "md5": "5c081e6d071b75f0e44d39ed01833672",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/page.liquid",
+      "sizeBytes": 3306,
+      "md5": "40477c089e0b1a17029f153541b4ee12",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/pickup-availability.liquid",
+      "sizeBytes": 4320,
+      "md5": "be91f17ccb57ad3f808bb800cb3ad105",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/predictive-search.liquid",
+      "sizeBytes": 3842,
+      "md5": "7dc10c70722da42a0f6765b59a258933",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/product-description.liquid",
+      "sizeBytes": 571,
+      "md5": "50c9ef69a162b7763abdcdc098bffa66",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/product-info.liquid",
+      "sizeBytes": 757,
+      "md5": "6b4b3c905caa2e23d534021099e47613",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/product-media.liquid",
+      "sizeBytes": 366,
+      "md5": "be68ea18f6592dc70475bc405945d4e5",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/product-specs.liquid",
+      "sizeBytes": 5356,
+      "md5": "7663844db218524c7cdb9c757aa37415",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/quick-order-list.liquid",
+      "sizeBytes": 2544,
+      "md5": "eaefef5ba4a5d193a74051696b9c246e",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/related-products.liquid",
+      "sizeBytes": 7953,
+      "md5": "5c10db12eb10e2b1ad77413628989612",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/rich-text.liquid",
+      "sizeBytes": 12636,
+      "md5": "0938dd95d9ac0546387095374571468a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/short-specs.liquid",
+      "sizeBytes": 1529,
+      "md5": "cc85cd497e4ba922afa43be513b9a22d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/slideshow.liquid",
+      "sizeBytes": 22716,
+      "md5": "ea8dccc63338a977de7318be8f6bcbd1",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/usps.liquid",
+      "sizeBytes": 519,
+      "md5": "97653ca97a0a18999ee57b114558be97",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "sections/video.liquid",
+      "sizeBytes": 8321,
+      "md5": "97e2d830991b901bc2222878fab7a55f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/article-card.liquid",
+      "sizeBytes": 8185,
+      "md5": "cf4b098e08c95e7096d744ebc23dbef2",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-before-pilot-set.liquid",
+      "sizeBytes": 3929,
+      "md5": "25d12cc7bcd82b4273e091af50cbdf5d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-before-pilot-specs.liquid",
+      "sizeBytes": 6694,
+      "md5": "889c5b55f7334a98b162dee2723486d8",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "sizeBytes": 6301,
+      "md5": "7d61b7c81c81551cc882a34aa030e6a5",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-breadcrumbs.liquid",
+      "sizeBytes": 3559,
+      "md5": "1071bb6de6cf257f5a5a307190600a5d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-children.liquid",
+      "sizeBytes": 6995,
+      "md5": "760dab924cd48c8238b3de3015891820",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-destination.liquid",
+      "sizeBytes": 827,
+      "md5": "b4b446ba00aa7f31be9822afeac7dbb4",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-icon.liquid",
+      "sizeBytes": 15370,
+      "md5": "82a2b23262d1253bc88fa5a1435296a1",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-index-entry.liquid",
+      "sizeBytes": 568,
+      "md5": "c12ff9380f2b397c1575f853c487f5dd",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-category-link-index.liquid",
+      "sizeBytes": 6808,
+      "md5": "640189debc96ea2bc4e8422c1e3b77ab",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-collection-active-filters.liquid",
+      "sizeBytes": 1793,
+      "md5": "6e1998af26043449f65ff84dbaa79c41",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-collection-intro.liquid",
+      "sizeBytes": 1213,
+      "md5": "1323e0e43790e9b40696dee8e66b6c01",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "sizeBytes": 451,
+      "md5": "fad5cfeb42bb2186f5f7e6f2ffe413d2",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-header-cart.liquid",
+      "sizeBytes": 800,
+      "md5": "a5e88094f88cf19db7c03fad28c64c0a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-controls.liquid",
+      "sizeBytes": 1269,
+      "md5": "a86c337b335b0568c09a807970f75116",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-set.liquid",
+      "sizeBytes": 2920,
+      "md5": "df64d7dbc5133316767cb42273827bb1",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-specs.liquid",
+      "sizeBytes": 1755,
+      "md5": "c434bd5ae2096a784a9308a0ad95691c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-hotbath-pilot-controls.liquid",
+      "sizeBytes": 2341,
+      "md5": "f36fcd75b3f99e73911fe9f64b44c890",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-hotbath-pilot-specs.liquid",
+      "sizeBytes": 1474,
+      "md5": "fcda1ffa65450847bd5a42fd4da47622",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-meubelhub-icon.liquid",
+      "sizeBytes": 1453,
+      "md5": "a6c68f98845d0ade180805529da648f0",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-accessories-data.liquid",
+      "sizeBytes": 1140,
+      "md5": "b6d2f26bd6d2d96db0d1375b2335a5a3",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-accessories.liquid",
+      "sizeBytes": 4143,
+      "md5": "5e9b7abab0df9c2e6f378f756743ef0c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-accessory-item.liquid",
+      "sizeBytes": 2521,
+      "md5": "24f94bdcbf17d1d8eee01f1f438ba719",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-detail-row.liquid",
+      "sizeBytes": 1304,
+      "md5": "08bc0835e74ddaaee7db7f4dc7cd0947",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-detail-specs.liquid",
+      "sizeBytes": 6694,
+      "md5": "889c5b55f7334a98b162dee2723486d8",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-set-components.liquid",
+      "sizeBytes": 3929,
+      "md5": "25d12cc7bcd82b4273e091af50cbdf5d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-set-data.liquid",
+      "sizeBytes": 16617,
+      "md5": "2728c9f7e8cbede07647cc090a8c7e40",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-set-item.liquid",
+      "sizeBytes": 1583,
+      "md5": "bcb96242fb924fbf884de3264e9af9f0",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-set-product-handle.liquid",
+      "sizeBytes": 8817,
+      "md5": "3d861d81eb6c86d60714cd757d70b81f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-short-specs.liquid",
+      "sizeBytes": 39,
+      "md5": "290e6f134beb633b108498ceeacc33ba",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-spec-header.liquid",
+      "sizeBytes": 268,
+      "md5": "d3177f8b59addc7cb905add0c0abe92f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-spec-row.liquid",
+      "sizeBytes": 1717,
+      "md5": "cfaa01090316fde963ce6fad691a3280",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-product-switcher.liquid",
+      "sizeBytes": 668,
+      "md5": "3ad9ff83226b687e41397532483cce1b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "sizeBytes": 915,
+      "md5": "c636940c8566257ae7dc05ee1084cfc0",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/buy-buttons.liquid",
+      "sizeBytes": 7454,
+      "md5": "57351eb3ed0a2664cc1e84f38f15406b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/card-collection.liquid",
+      "sizeBytes": 7838,
+      "md5": "5f983b03a98bae11180f7035297ccb7c",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "sizeBytes": 34825,
+      "md5": "8b6529ea25480655af5df5feadeb577a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/cart-drawer.liquid",
+      "sizeBytes": 30174,
+      "md5": "436f8cc133f293b85bf908c380c40c06",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/cart-notification.liquid",
+      "sizeBytes": 2191,
+      "md5": "20b2e77a0e5cc272b516156dd3c90ced",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/country-localization.liquid",
+      "sizeBytes": 6100,
+      "md5": "1e9764febb99cc4cefe66aa5a1246aad",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/facets.liquid",
+      "sizeBytes": 49042,
+      "md5": "0f7277d8a48b03be2edc3c376c18f36e",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/gift-card-recipient-form.liquid",
+      "sizeBytes": 8218,
+      "md5": "678236a09026c5827a7eb51cdd380906",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/header-drawer.liquid",
+      "sizeBytes": 14885,
+      "md5": "e3ecb88307d880ba4c3290d65c717313",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/header-dropdown-menu.liquid",
+      "sizeBytes": 4515,
+      "md5": "ae31f7100a3adf0ee1d7e762522ae87d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/header-mega-menu.liquid",
+      "sizeBytes": 3776,
+      "md5": "9161c311bf9d589dd33e26b79f5bb331",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/header-search.liquid",
+      "sizeBytes": 4402,
+      "md5": "1b16e730671221c91a48f8186ec52155",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/icon-accordion.liquid",
+      "sizeBytes": 198,
+      "md5": "721e2a6b5e7ae9af9123f36f80df811b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/icon-with-text.liquid",
+      "sizeBytes": 3400,
+      "md5": "504d4e4443b502c68e1c4ad85ab38248",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/language-localization.liquid",
+      "sizeBytes": 1848,
+      "md5": "a4fe81ed3c1487b2d80474552d4d20dc",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/loading-spinner.liquid",
+      "sizeBytes": 342,
+      "md5": "1b8d646e10a09e973225b0d6dd33c070",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "sizeBytes": 1743,
+      "md5": "ecc6351e747bad1e4cba6be6fe05d72e",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/pagination.liquid",
+      "sizeBytes": 2847,
+      "md5": "f0c43be0a8dc1790eca4b539d5134eb9",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/price-facet.liquid",
+      "sizeBytes": 1457,
+      "md5": "2975862981949a31a95785ca2501cc8a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/price.liquid",
+      "sizeBytes": 5591,
+      "md5": "684e13e879286da0630b7b5c0e88af26",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-media-gallery.liquid",
+      "sizeBytes": 15102,
+      "md5": "bd78934f76753c8786a93badcc787cee",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-media-modal.liquid",
+      "sizeBytes": 3449,
+      "md5": "b9d89ec4641fa8d50c1e5fb96a0ed330",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-media.liquid",
+      "sizeBytes": 5500,
+      "md5": "7be6c5f57c127e4cba0cfbcb808eae97",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-pros-cons.liquid",
+      "sizeBytes": 2051,
+      "md5": "b2e41907f4f4e89d2ca1da24342b1fd4",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-thumbnail.liquid",
+      "sizeBytes": 6885,
+      "md5": "bcfec1bc3ec849609f435f102e9ab50b",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-variant-options.liquid",
+      "sizeBytes": 3658,
+      "md5": "dde064eb216a8e1d8b58522f423bad59",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/product-variant-picker.liquid",
+      "sizeBytes": 8189,
+      "md5": "06e5b016c79ed31dd258d2fc7901a756",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/progress-bar.liquid",
+      "sizeBytes": 137,
+      "md5": "bf38a7aaa463b856f1eebe40794f820f",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/quantity-input.liquid",
+      "sizeBytes": 1830,
+      "md5": "169edd7e44f65769861d1a1e7d71c628",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/quick-order-list-row.liquid",
+      "sizeBytes": 19183,
+      "md5": "c18dc03c8449efd3bb047e941260515d",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/quick-order-list.liquid",
+      "sizeBytes": 13302,
+      "md5": "3eb0d69d1a05a0c5ba2f3f162c3f15fb",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/quick-order-product-row.liquid",
+      "sizeBytes": 1231,
+      "md5": "5ac3305318d2fcdc8b00893c6d90ff2e",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/share-button.liquid",
+      "sizeBytes": 2083,
+      "md5": "f16f3fcf3b3ff47d1611734c0d9e10f6",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/social-icons.liquid",
+      "sizeBytes": 4035,
+      "md5": "2ae64e5b1a0dcf880edeeb33d9256ccc",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/swatch-input.liquid",
+      "sizeBytes": 1712,
+      "md5": "e62d5c68b1d4add61c7f94398e47e965",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/swatch.liquid",
+      "sizeBytes": 1026,
+      "md5": "a2e48d5e6a456d18d145655736d2b8ca",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "snippets/unit-price.liquid",
+      "sizeBytes": 889,
+      "md5": "0ce59b935545051c1f9ebf904371846a",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "templates/404.json",
+      "sizeBytes": 503,
+      "md5": "2958a86d8443fcc58374c1fce568853a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/article.json",
+      "sizeBytes": 1202,
+      "md5": "08387360daf9e9f880eecaba69fe4c5c",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/blog.json",
+      "sizeBytes": 714,
+      "md5": "6f7d54ba794e3155e6746b731632b821",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/cart.json",
+      "sizeBytes": 1608,
+      "md5": "adeaf28e1f9ff452bd460ccb100ec66b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/collection.bc-meubelhub.json",
+      "sizeBytes": 5115,
+      "md5": "83eaa98c94cdf66f748ac47520a0f4e2",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/collection.category-landing.json",
+      "sizeBytes": 2131,
+      "md5": "1ec2e5ccda98f509e2d2947d0b39fe63",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/collection.json",
+      "sizeBytes": 1003,
+      "md5": "e9759e134bfd44a76848b2b01d254b20",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/account.json",
+      "sizeBytes": 507,
+      "md5": "bd9d07ae7b991fec497d857e3121423b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/activate_account.json",
+      "sizeBytes": 516,
+      "md5": "102f72d2ba4cb054931a1442842340d0",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/addresses.json",
+      "sizeBytes": 509,
+      "md5": "aaa692f4a5f50a4da14b6e930cf3d4cf",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/login.json",
+      "sizeBytes": 505,
+      "md5": "4c31096e5c09a7330c94ad42727485c9",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/order.json",
+      "sizeBytes": 505,
+      "md5": "cefbd0bb5f9697c4ba00d03af720c32a",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/register.json",
+      "sizeBytes": 508,
+      "md5": "d17af2433fe0930468c2d89685734a73",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/customers/reset_password.json",
+      "sizeBytes": 514,
+      "md5": "385c7bde34c5bcc4913457360a0baaa8",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/gift_card.liquid",
+      "sizeBytes": 10515,
+      "md5": "cbc4a5b0a2296bc909144d7fb1d51c25",
+      "contentType": "application/x-liquid"
+    },
+    {
+      "path": "templates/index.json",
+      "sizeBytes": 9218,
+      "md5": "66de08d12d0a464a01403e74a09c4b95",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/list-collections.json",
+      "sizeBytes": 614,
+      "md5": "6b413cec7d1b483d06291e2ea16708bf",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/page.begrip.json",
+      "sizeBytes": 1116,
+      "md5": "f538641cf4916ca5fc52cd2ceb30550b",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/page.begrippenlijst.json",
+      "sizeBytes": 27265,
+      "md5": "4f03db64160ec25cbea394cd7e3994d3",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/page.contact.json",
+      "sizeBytes": 808,
+      "md5": "06faae72a3e339f530e7f09d75ba0f63",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/page.json",
+      "sizeBytes": 561,
+      "md5": "96b5d9c8238f35a844a4637f1920d56c",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/password.json",
+      "sizeBytes": 1516,
+      "md5": "d73ebfcb31c74150fe41f5a76a9385ba",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/product.bc-hotbath-data.json",
+      "sizeBytes": 1045,
+      "md5": "6234ccd99fa28f07c349d9a790aaa54f",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/product.bc-hotbath-pilot.json",
+      "sizeBytes": 1048,
+      "md5": "4cab7a03b0a7c9570106a84e69377542",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/product.json",
+      "sizeBytes": 2699,
+      "md5": "6df211000bbfbb24bb5009fea736b2aa",
+      "contentType": "application/json"
+    },
+    {
+      "path": "templates/search.json",
+      "sizeBytes": 937,
+      "md5": "2095d7adf49dd4a2d9b94ecc4a25b761",
+      "contentType": "application/json"
+    }
+  ]
+}

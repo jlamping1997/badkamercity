@@ -1,5 +1,8 @@
 # Codex-projectinstructies
 
+> **ACTUELE STAND 2026-10-07:** lees vóór elke taak `docs/AI_HANDOFF_CURRENT.md` en het manifest `docs/BASELINE_MANIFEST_2026-10-07.json`. De geverifieerde live-snapshot heeft theme-ID `194864677130`; verifieer de rol `MAIN` opnieuw in Shopify. De hieronder vermelde oude theme-ID's, status “implementation blocked” en taaknummers zijn historische context. **Behouden blijven**: geen ongeautoriseerde live-publicatie, geen ongecontroleerde Shopify Admin-mutatie, geen geheime data loggen/committen, reviewer/gebruikersgoedkeuring en geen destructieve Git-clean. Lees ook het historische masterplan voor oorspronkelijke besluiten.
+
+
 `AGENTS.md` is alleen een permanente instructie voor Codex. `docs/MASTERPLAN.md` blijft de centrale bron van waarheid.
 
 - Lees voor iedere taak eerst volledig `docs/MASTERPLAN.md`.
