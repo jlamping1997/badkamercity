@@ -1,5 +1,19 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **UITGEBREIDE OVERDRACHT (2026-10-07):** Begin als nieuwe AI/ontwikkelaar bij **[HANDOVER_START_HERE.md](HANDOVER_START_HERE.md)**. Dit document blijft de volledige functionele basis. De volgende aanvullende documenten maken de overdracht operationeel en controleerbaar:
+>
+> - [Live-status en volgende prioriteiten](LIVE_STATUS_AND_NEXT_STEPS.md)
+> - [Alle theme-componenten/instellingen](THEME_COMPONENT_REFERENCE.md)
+> - [Machineleesbare code-/dependencykaart van 441 files](THEME_CODE_MAP_2026-10-07.json)
+> - [Shopify Admin-structuur: 204 collecties, 9 menu's, metafields](SHOPIFY_ADMIN_STRUCTURE_2026-10-07.json)
+> - [Metafield-audit code versus Shopify](PRODUCT_METAFIELD_MAPPING_AUDIT.md)
+> - [Operationeel runbook](OPERATIONAL_RUNBOOK.md), [storingsgids](TROUBLESHOOTING.md), [release & QA](RELEASE_AND_QA.md)
+> - [Praktijkvoorbeelden en overnametest](WORKED_EXAMPLES_AND_HANDOFF_TEST.md)
+> - [Systemen, ontbrekende overdrachtsstukken en toegang](SYSTEM_OWNERSHIP_AND_GAPS.md)
+>
+> **Extra geverifieerde Admin-data:** 11.053 producten (11.051 ACTIVE, 1 DRAFT, 1 UNLISTED), 204 collecties (191 default, 12 `category-landing`, 1 `bc-meubelhub`), 9 menu's, 174 PRODUCT-metafielddefinities. Dit zijn read-only snapshots, geen bewezen publicatie-/kwaliteitsdekking. Onbekende externe VPS-, checkout- en leverancierscomponenten worden niet als “af” voorgesteld.
+
+
 **Momentopname:** 7 oktober 2026  
 **Doel:** Een volgende ChatGPT/Codex/andere AI of ontwikkelaar moet de huidige code, schermen, datastromen, afhankelijkheden, beperkingen en veilige werkwijze begrijpen zonder opnieuw te beginnen.
 
