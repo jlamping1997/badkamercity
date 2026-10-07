@@ -6,6 +6,10 @@ on:
     paths:
       - '.github/workflows/customer-journey.yml'
       - 'scripts/customer_journey_browser.py'
+      - 'scripts/customer_journey_followup.py'
+      - 'scripts/cj_collection_plan.py'
+      - 'tests/test_cj_collection_plan.py'
+      - 'templates/cart.json'
   workflow_dispatch:
 
 permissions:
@@ -23,12 +27,17 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
           persist-credentials: false
+      - name: Category planner unit tests
+        run: python -m unittest discover -s tests -v
       - name: Install pinned browser tooling
         run: |
           python -m pip install playwright==1.57.0
           python -m playwright install --with-deps chromium
-      - name: Anonymous desktop and mobile customer journey
-        run: python scripts/customer_journey_browser.py --cart
+      - name: Read-only desktop and mobile customer journey
+        run: python scripts/customer_journey_browser.py
+      - name: Verify draft cart and product specifications
+        if: always()
+        run: python scripts/customer_journey_followup.py
       - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4
         if: always()
         with:
