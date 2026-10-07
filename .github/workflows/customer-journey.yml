@@ -1,0 +1,47 @@
+name: Customer journey check
+
+on:
+  push:
+    branches: ['fix/customer-journey-2026-10-07']
+    paths:
+      - '.github/workflows/customer-journey.yml'
+      - 'scripts/customer_journey_browser.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  storefront:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Check anonymous storefront access
+        run: |
+          mkdir -p test-results/customer-journey
+          python - <<'PY'
+          import json, re, urllib.request
+          from pathlib import Path
+          from urllib.parse import urlsplit, urlunsplit
+          result = {'scope': 'Anonymous GET only; no login, cart or checkout writes.'}
+          try:
+              request = urllib.request.Request('https://fpa9hu-i3.myshopify.com/', headers={'User-Agent': 'BadkamerCity-CustomerJourney-QA/1.0'})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  url = urlsplit(response.url)
+                  text = response.read(2000000).decode('utf-8', errors='replace')
+                  title = re.search(r'<title[^>]*>(.*?)</title>', text, re.S | re.I)
+                  result.update(http_status=response.status, url=urlunsplit((url.scheme,url.netloc,url.path,'','')), title=title.group(1).strip() if title else None, password_page='/password' in url.path)
+          except Exception as exc:
+              result.update(status='BLOCKED', error=str(exc)[:400])
+          Path('test-results/customer-journey/connectivity.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
+          print(json.dumps(result, indent=2))
+          PY
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: customer-journey-evidence
+          path: test-results/customer-journey/
+          retention-days: 7
