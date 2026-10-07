@@ -1,55 +1,47 @@
-{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
-    }
-  }
-{%- endstyle -%}
-
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
-
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
-    </div>
-
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
-        <img
-          srcset="
-            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
-            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ collection.image | image_url }} {{ collection.image.width }}w
-          "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt="{{ collection.image.alt | escape }}"
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
-        >
+{{ 'component-bc-category-navigation.css' | asset_url | stylesheet_tag }}
+{{ 'bc-collection.css' | asset_url | stylesheet_tag }}
+{{ 'bc-category-directory.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign category_cards_menu = nil
+  assign category_links_menu = section.settings.related_links_menu
+  for menu_block in section.blocks
+    if menu_block.settings.source_collection.id == collection.id
+      assign category_cards_menu = menu_block.settings.cards_menu
+      assign category_links_menu = menu_block.settings.links_menu
+      break
+    endif
+  endfor
+-%}
+<div class="bc-collection-hero bc-directory color-{{ section.settings.color_scheme }}">
+  <div class="page-width">{% render 'bc-category-breadcrumbs', current_collection: collection, navigation_menu: section.settings.navigation_menu %}</div>
+  <div class="collection-hero">
+    <div class="collection-hero__inner page-width">
+      <div class="collection-hero__text-wrapper">
+        <h1 class="collection-hero__title">{{ collection.title | escape }}</h1>
+        {%- if section.settings.show_collection_description -%}
+          <div class="collection-hero__description rte">{% render 'bc-collection-intro', current_collection: collection %}</div>
+        {%- endif -%}
+        {% render 'bc-category-children', current_collection: collection, navigation_menu: section.settings.navigation_menu, display_mode: 'cards', children_menu: category_cards_menu %}
+        {%- if section.settings.show_related_links and category_links_menu != blank -%}
+          {%- assign category_index_heading = 'bc-category-index-title-' | append: section.id -%}
+          {% render 'bc-category-link-index', current_collection: collection, navigation_menu: section.settings.navigation_menu, links_menu: category_links_menu, heading_id: category_index_heading %}
+        {%- endif -%}
       </div>
-    {%- endif -%}
+    </div>
   </div>
 </div>
-
 {% schema %}
 {
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
   "settings": [
+    {
+      "type": "link_list",
+      "id": "navigation_menu",
+      "label": "Menu voor de categorieboom",
+      "default": "main-menu"
+    },
     {
       "type": "paragraph",
       "content": "t:sections.main-collection-banner.settings.paragraph.content"
@@ -71,7 +63,46 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_related_links",
+      "label": "Toon alfabetische links",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "related_links_menu",
+      "label": "Menu voor alfabetische links"
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "category_menu",
+      "name": "Categoriepagina-menu's",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "source_collection",
+          "label": "Voor welke collectie?"
+        },
+        {
+          "type": "link_list",
+          "id": "cards_menu",
+          "label": "Menu voor de categorieplaatjes"
+        },
+        {
+          "type": "link_list",
+          "id": "links_menu",
+          "label": "Menu voor de alfabetische links"
+        },
+        {
+          "type": "paragraph",
+          "content": "Deze menu’s worden alleen gebruikt voor de geselecteerde collectie. Maak de links aan via Inhoud > Menu’s. Een link naar zoeken wordt automatisch vervangen door een collectie met dezelfde naam zodra die beschikbaar is."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
 }
 {% endschema %}

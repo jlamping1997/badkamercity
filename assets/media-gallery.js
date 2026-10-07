@@ -12,7 +12,17 @@ if (!customElements.get('media-gallery')) {
         this.mql = window.matchMedia('(min-width: 750px)');
         if (!this.elements.thumbnails) return;
 
-        this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));
+        // These arrows select media, including when every thumbnail fits in the strip.
+        this.elements.thumbnails.enableSliderLooping = true;
+        this.elements.thumbnails.querySelectorAll(':scope > .slider-button').forEach((button) => {
+          button.disabled = this.elements.thumbnails.querySelectorAll('[data-target]').length < 2;
+          button.setAttribute('aria-label', button.name === 'next' ? 'Volgende productfoto' : 'Vorige productfoto');
+          button.setAttribute('aria-controls', this.elements.viewer.id);
+          button.classList.remove('small-hide', 'medium-hide', 'large-up-hide');
+        });
+        this.elements.thumbnails.addEventListener('click', this.onThumbnailNavigation.bind(this), true);
+
+        this.elements.viewer.addEventListener('slideChanged', this.onSlideChanged.bind(this));
         this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
           mediaToSwitch
             .querySelector('button')
@@ -22,10 +32,35 @@ if (!customElements.get('media-gallery')) {
       }
 
       onSlideChanged(event) {
+        // Desktop shows one active item; hidden slides do not have reliable scroll offsets.
+        if (this.mql.matches && this.dataset.desktopLayout.includes('thumbnail')) return;
+        const currentElement = event.detail.currentElement;
+        if (!currentElement) return;
+        this.elements.viewer.querySelectorAll('[data-media-id]').forEach((item) => {
+          item.classList.toggle('is-active', item === currentElement);
+        });
         const thumbnail = this.elements.thumbnails.querySelector(
-          `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
+          `[data-target="${currentElement.dataset.mediaId}"]`
         );
         this.setActiveThumbnail(thumbnail);
+      }
+
+      onThumbnailNavigation(event) {
+        const button = event.target.closest('.slider-button');
+        if (!button || button.parentElement !== this.elements.thumbnails) return;
+        event.preventDefault();
+        // Do not also invoke SliderComponent's thumbnail-strip scrolling handler.
+        event.stopImmediatePropagation();
+        const thumbnails = Array.from(this.elements.thumbnails.querySelectorAll('[data-target]')).filter(
+          (item) => getComputedStyle(item).display !== 'none' &&
+            this.elements.viewer.querySelector(`[data-media-id="${item.dataset.target}"]`)
+        );
+        if (thumbnails.length < 2) return;
+        const activeId = this.elements.viewer.querySelector('[data-media-id].is-active')?.dataset.mediaId;
+        const current = thumbnails.findIndex((item) => item.dataset.target === activeId);
+        const step = button.name === 'next' ? 1 : -1;
+        const index = (current + step + thumbnails.length) % thumbnails.length;
+        this.setActiveMedia(thumbnails[index].dataset.target, false);
       }
 
       setActiveMedia(mediaId, prepend) {

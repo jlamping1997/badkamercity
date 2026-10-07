@@ -1,0 +1,39 @@
+{%- liquid
+  assign row_id = section_id | append: '-' | append: accessory_variant.id
+  assign accessory_image = accessory_variant.featured_image
+  if accessory_image == blank and accessory_product.variants.size == 1
+    assign accessory_image = accessory_product.featured_image
+  endif
+  assign purchasable = accessory_variant.available
+  if accessory_product.requires_selling_plan
+    assign purchasable = false
+  endif
+-%}
+<li class="bc-accessories__item" data-accessory-row data-variant-id="{{ accessory_variant.id }}" data-price="{{ accessory_variant.price }}">
+  <a href="{{ accessory_variant.url }}" class="bc-accessories__product">
+    <span class="bc-accessories__image" aria-hidden="true">
+      {%- if accessory_image -%}
+        {{ accessory_image | image_url: width: 160 | image_tag: widths: '80, 160', sizes: '80px', loading: 'lazy', alt: '' }}
+      {%- else -%}
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 9 12-6 12 6v14l-12 6-12-6V9Zm0 0 12 6 12-6M16 15v14M10 6l12 6"/></svg>
+      {%- endif -%}
+    </span>
+    <span><span class="bc-accessories__name">{{ accessory_product.title | escape }}</span><span class="bc-accessories__sku">Artikelnummer: {{ accessory_variant.sku | escape }}</span></span>
+  </a>
+  <p class="bc-accessories__reason">{{ explanation | escape }}</p>
+  <div class="bc-accessories__choice">
+    <strong class="bc-accessories__price">{{ accessory_variant.price | money }} <span>per stuk</span></strong>
+    {%- if purchasable -%}
+      <label class="bc-accessories__select" for="AccessorySelect-{{ row_id }}">
+        <input id="AccessorySelect-{{ row_id }}" type="checkbox" data-accessory-select aria-label="Selecteer {{ accessory_product.title | escape }}" disabled>
+        <span>Toevoegen</span>
+      </label>
+      <label class="bc-accessories__quantity" for="AccessoryQuantity-{{ row_id }}">
+        <span>Aantal</span>
+        <input id="AccessoryQuantity-{{ row_id }}" type="number" data-accessory-quantity inputmode="numeric" value="{{ accessory_variant.quantity_rule.min }}" min="{{ accessory_variant.quantity_rule.min }}" step="{{ accessory_variant.quantity_rule.increment }}"{% if accessory_variant.quantity_rule.max != null %} max="{{ accessory_variant.quantity_rule.max }}"{% endif %} required disabled aria-label="Aantal {{ accessory_product.title | escape }}">
+      </label>
+    {%- else -%}
+      <span class="bc-accessories__unavailable">Niet beschikbaar om toe te voegen</span>
+    {%- endif -%}
+  </div>
+</li>

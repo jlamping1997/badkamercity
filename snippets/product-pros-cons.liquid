@@ -1,6 +1,6 @@
 {%- liquid
-  assign plus_items = product.metafields.custom.pluspunten.value
-  assign attention_items = product.metafields.custom.aandachtspunten.value
+  assign plus_items = product.metafields.custom.pluspunten.value | uniq
+  assign attention_items = product.metafields.custom.aandachtspunten.value | uniq
 -%}
 
 {%- capture pros_cons_items -%}
@@ -9,9 +9,9 @@
     {%- if item_text != blank -%}
       <li class="bc-product-pros-cons__item bc-product-pros-cons__item--plus">
         <span class="bc-product-pros-cons__icon" aria-hidden="true">
-          <span class="bc-product-pros-cons__icon-mark">&#10003;</span>
+          <svg class="bc-product-pros-cons__icon-mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 8 3 3 5-6"/></svg>
         </span>
-        <span class="bc-product-pros-cons__text">{{ item_text }}</span>
+        <span class="bc-product-pros-cons__text"><span class="visually-hidden">Pluspunt: </span>{{ item_text | escape }}</span>
       </li>
     {%- endif -%}
   {%- endfor -%}
@@ -21,9 +21,9 @@
     {%- if item_text != blank -%}
       <li class="bc-product-pros-cons__item bc-product-pros-cons__item--attention">
         <span class="bc-product-pros-cons__icon" aria-hidden="true">
-          <span class="bc-product-pros-cons__icon-mark">-</span>
+          <svg class="bc-product-pros-cons__icon-mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 5 6 6m0-6-6 6"/></svg>
         </span>
-        <span class="bc-product-pros-cons__text">{{ item_text }}</span>
+        <span class="bc-product-pros-cons__text"><span class="visually-hidden">Aandachtspunt: </span>{{ item_text | escape }}</span>
       </li>
     {%- endif -%}
   {%- endfor -%}

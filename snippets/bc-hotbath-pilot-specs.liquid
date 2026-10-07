@@ -1,0 +1,28 @@
+{% doc %}
+  Renders the approved pilot projection without inferring technical facts.
+  @param {product} product - Draft pilot product.
+  @param {string} section_id - Product section ID.
+{% enddoc %}
+{%- assign presentation = product.metafields.bc_pilot.presentation.value -%}
+{%- if presentation.specification_groups != blank -%}
+  <section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+    <div class="bc-product-specs__inner">
+      <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">Specificaties</h2>
+      <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+        {%- for group in presentation.specification_groups -%}
+          {%- if group.rows != blank -%}
+            <tbody>
+              <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group.title | escape }}</th></tr>
+              {%- for row in group.rows -%}
+                <tr class="bc-product-specs__row">
+                  <th class="bc-product-specs__label" scope="row">{{ row.label | replace: ' (bronlabel: Lengte douchearm)', '' | escape }}</th>
+                  <td class="bc-product-specs__value">{{ row.value | escape }}</td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          {%- endif -%}
+        {%- endfor -%}
+      </table>
+    </div>
+  </section>
+{%- endif -%}

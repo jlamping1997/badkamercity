@@ -91,9 +91,10 @@
   }
 
   function findExactMatch(products, menus, state) {
-    return products.find((product) =>
+    const matches = products.filter((product) =>
       menus.every((menu) => getProductOption(product, menu.key) === normalize(state[menu.key]))
     );
+    return matches.length === 1 ? matches[0] : undefined;
   }
 
   function getDisplayType(menu, values) {
@@ -129,6 +130,8 @@
       this.products = getProducts(this.group);
       this.currentProduct = this.findCurrentProduct();
       this.state = {};
+      this.productRoot = root.closest('product-info');
+      this.isNavigating = false;
 
       debug('container found', {
         currentHandle: this.productHandle,
@@ -179,6 +182,18 @@
       this.syncControls();
       this.root.hidden = false;
       this.root.dataset.bcProductSwitcherV2Initialized = 'true';
+      this.onPageShow = () => {
+        if (!this.root.isConnected) {
+          window.removeEventListener('pageshow', this.onPageShow);
+          return;
+        }
+        if (!this.isNavigating) return;
+        this.setNavigating(false);
+        this.state = this.buildInitialState();
+        this.syncControls();
+        this.status.textContent = '';
+      };
+      window.addEventListener('pageshow', this.onPageShow);
 
       debug('rendered', {
         currentHandle: this.productHandle,
@@ -240,13 +255,18 @@
       });
 
       this.root.innerHTML = '';
-      this.root.append(fragment);
+      this.status = document.createElement('p');
+      this.status.className = 'bc-buybox__switch-status';
+      this.status.setAttribute('role', 'status');
+      this.status.setAttribute('aria-live', 'polite');
+      this.status.setAttribute('aria-atomic', 'true');
+      this.root.append(fragment, this.status);
     }
 
     renderButtons(menu, values) {
       const buttonList = document.createElement('div');
       buttonList.className = 'bc-buybox__config-buttons';
-      buttonList.setAttribute('role', 'list');
+      buttonList.setAttribute('role', 'group');
       buttonList.setAttribute('aria-label', normalize(menu.label) || menu.key);
 
       values.forEach((value) => {
@@ -295,13 +315,15 @@
 
         button.classList.toggle('is-active', isActive);
         button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        button.disabled = !isEnabled;
-        button.setAttribute('aria-disabled', isEnabled ? 'false' : 'true');
+        button.disabled = this.isNavigating || !isEnabled;
+        button.title = isEnabled ? '' : 'Niet mogelijk met de overige keuzes.';
+        button.setAttribute('aria-disabled', String(button.disabled));
       });
 
       this.root.querySelectorAll('select[data-switch-field]').forEach((select) => {
         const field = select.dataset.switchField;
         const currentValue = normalize(this.state[field]);
+        select.disabled = this.isNavigating;
 
         Array.from(select.options).forEach((option) => {
           option.disabled = !hasPartialMatch(this.products, { ...this.state, [field]: normalize(option.value) });
@@ -311,16 +333,64 @@
       });
     }
 
+    setNavigating(navigating) {
+      this.isNavigating = navigating;
+      this.root.setAttribute('aria-busy', String(navigating));
+      if (!this.productRoot) return;
+      if (navigating) {
+        this.productRoot.dataset.bcNavigating = 'true';
+        this.lockedButtons = Array.from(this.productRoot.querySelectorAll('.product-form__submit'))
+          .map((button) => ({ button, disabled: button.disabled }));
+        this.lockedButtons.forEach(({ button }) => { button.disabled = true; });
+      } else {
+        delete this.productRoot.dataset.bcNavigating;
+        this.lockedButtons?.forEach(({ button, disabled }) => { button.disabled = disabled; });
+        this.lockedButtons = [];
+      }
+    }
+
     updateSelection(field, value) {
+      if (this.isNavigating) return;
+      const submit = this.productRoot?.querySelector('.product-form__submit');
+      if (submit?.getAttribute('aria-busy') === 'true' || submit?.classList.contains('loading')) {
+        this.syncControls();
+        this.status.textContent = 'Wacht tot het toevoegen aan de winkelwagen klaar is.';
+        return;
+      }
       const nextState = { ...this.state, [field]: normalize(value) };
-      this.state = nextState;
-      this.syncControls();
-
-      const matchedProduct = findExactMatch(this.products, this.menus, this.state);
+      const matchedProduct = findExactMatch(this.products, this.menus, nextState);
       const matchedUrl = normalize(matchedProduct?.url);
-      if (!matchedUrl || matchedUrl === this.productUrl) return;
+      let destination;
+      try {
+        destination = new URL(matchedUrl, window.location.origin);
+      } catch (_) {
+        destination = null;
+      }
+      if (!matchedUrl || !destination || destination.origin !== window.location.origin ||
+          !destination.pathname.includes('/products/') ||
+          destination.pathname.split('/').pop() !== normalize(matchedProduct?.handle)) {
+        this.syncControls();
+        this.status.textContent = 'Deze combinatie kan niet worden geopend. Kies een andere uitvoering.';
+        return;
+      }
+      if (normalize(matchedProduct.handle) === this.productHandle) {
+        this.syncControls();
+        this.status.textContent = '';
+        return;
+      }
 
-      window.location.href = matchedUrl;
+      this.state = nextState;
+      this.setNavigating(true);
+      this.syncControls();
+      this.status.textContent = 'De gekozen uitvoering wordt geopend…';
+      try {
+        window.location.assign(destination.href);
+      } catch (_) {
+        this.setNavigating(false);
+        this.state = this.buildInitialState();
+        this.syncControls();
+        this.status.textContent = 'Openen is niet gelukt. Probeer de uitvoering opnieuw te kiezen.';
+      }
     }
   }
 

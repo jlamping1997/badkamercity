@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "bc-meubelhub",
+      "settings": {
+        "heading": "Badkamermeubels",
+        "eyebrow": "Stijlvol en praktisch",
+        "intro": "<p>Een badkamermeubel bepaalt de uitstraling en de functionaliteit van je badkamer. Ontdek badmeubels, onderkasten, wastafelbladen, kolomkasten en meer. Kies de stijl, maat en indeling die bij jouw badkamer passen.</p>",
+        "hero_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-badkamermeubels-hero.webp?v=1791311945",
+        "hero_alt": "Sfeerbeeld van een houten badkamermeubel met twee waskommen en een verlichte spiegel",
+        "hero_usp_1": "Badmeubels en bijpassende toebehoren",
+        "hero_usp_2": "Zelf je combinatie samenstellen",
+        "hero_usp_3": "Persoonlijk advies",
+        "shop_heading": "Vind het perfecte badkamermeubel",
+        "show_pending": true,
+        "show_brands": true,
+        "brands_heading": "Merken ontdekken",
+        "brands_intro": "Vind de producten van jouw merk",
+        "inspiration_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-inspiratie.webp?v=1791312040",
+        "service_title_1": "Levering & beschikbaarheid",
+        "service_text_1": "Bekijk de productinformatie",
+        "service_title_2": "Veilig bestellen",
+        "service_text_2": "Via onze Shopify-checkout",
+        "service_title_3": "Persoonlijk advies",
+        "service_text_3": "Hulp bij jouw keuze",
+        "service_title_4": "Zelf samenstellen",
+        "service_text_4": "Meubels en toebehoren combineren",
+        "advice_fallback": "<p>Vergelijk de beschikbare ruimte, de indeling en welke onderdelen bij jouw gekozen meubel zijn inbegrepen. Neem bij twijfel contact op voor advies.</p>"
+      },
+      "blocks": {
+        "sets": {
+          "type": "category",
+          "settings": {
+            "category": "badmeubel-sets",
+            "label": "Badmeubel sets",
+            "caption": "Complete meubels met wastafel",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-badmeubel-sets.webp?v=1791311962",
+            "photo_alt": "Sfeerbeeld ter illustratie van badmeubel sets",
+            "allow_empty": false
+          }
+        },
+        "toilet": {
+          "type": "category",
+          "settings": {
+            "category": "toiletmeubels",
+            "label": "Toiletmeubels",
+            "caption": "Compact en stijlvol",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-toiletmeubels.webp?v=1791311971",
+            "photo_alt": "Sfeerbeeld ter illustratie van toiletmeubels",
+            "allow_empty": false
+          }
+        },
+        "onderkasten": {
+          "type": "category",
+          "settings": {
+            "category": "losse-onderkasten",
+            "label": "Losse onderkasten",
+            "caption": "Stel zelf je meubel samen",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-losse-onderkasten.webp?v=1791311984",
+            "photo_alt": "Sfeerbeeld ter illustratie van losse onderkasten",
+            "allow_empty": false
+          }
+        },
+        "kasten": {
+          "type": "category",
+          "settings": {
+            "category": "kolom-zijkasten",
+            "label": "Kolom & Zijkasten",
+            "caption": "Extra opbergruimte",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-kolom-zijkasten.webp?v=1791312001",
+            "photo_alt": "Sfeerbeeld ter illustratie van kolom & zijkasten",
+            "allow_empty": false
+          }
+        },
+        "bladen": {
+          "type": "category",
+          "settings": {
+            "category": "wastafelbladen",
+            "label": "Wastafelbladen",
+            "caption": "In diverse materialen en kleuren",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-wastafelbladen.webp?v=1791312015",
+            "photo_alt": "Sfeerbeeld ter illustratie van wastafelbladen",
+            "allow_empty": false
+          }
+        },
+        "spiegels": {
+          "type": "category",
+          "settings": {
+            "category": "spiegels-en-spiegelkasten",
+            "label": "Spiegels",
+            "caption": "Rond, rechthoekig of met verlichting",
+            "photo_url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/bc-hub-spiegels.webp?v=1791312029",
+            "photo_alt": "Sfeerbeeld ter illustratie van spiegels",
+            "allow_empty": false
+          }
+        }
+      },
+      "block_order": [
+        "sets",
+        "toilet",
+        "onderkasten",
+        "kasten",
+        "bladen",
+        "spiegels"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

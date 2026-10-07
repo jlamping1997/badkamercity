@@ -1,0 +1,26 @@
+{%- liquid
+  assign component_image = component_variant.featured_image
+  if component_image == blank and component_product.variants.size == 1
+    assign component_image = component_product.featured_image
+  endif
+-%}
+{%- capture item_content -%}
+  <span class="bc-product-set__media" aria-hidden="true">
+    {%- if component_image != blank -%}
+      {{ component_image | image_url: width: 160 | image_tag: widths: '80, 160', sizes: '80px', loading: 'lazy', alt: '', class: 'bc-product-set__image' }}
+    {%- else -%}
+      <svg class="bc-product-set__placeholder" width="32" height="32" viewBox="0 0 32 32" fill="none" focusable="false"><path d="m16 3 12 6.5v13L16 29 4 22.5v-13L16 3Z M4 9.5 16 16l12-6.5M16 16v13M10 6.3l12 6.4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    {%- endif -%}
+  </span>
+  <span class="bc-product-set__detail">
+    <span class="bc-product-set__name">{{ name | escape }}</span>
+    <span class="bc-product-set__sku"><span class="visually-hidden">Aantal: </span>{{ quantity }}<span aria-hidden="true"> × </span>{% if sku != blank %}<span class="visually-hidden">Artikelcode: </span>{{ sku | escape }}{% else %}<span class="visually-hidden">stuk</span>{% endif %}</span>
+  </span>
+{%- endcapture -%}
+<li class="bc-product-set__item">
+  {%- if component_product != blank and component_variant != blank -%}
+    <a class="bc-product-set__row bc-product-set__link" href="{{ component_variant.url | escape }}">{{ item_content }}</a>
+  {%- else -%}
+    <div class="bc-product-set__row">{{ item_content }}</div>
+  {%- endif -%}
+</li>

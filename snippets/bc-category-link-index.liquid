@@ -1,0 +1,151 @@
+{% doc %}
+Renders an alphabetical category directory from letter-grouped menus or the category tree.
+@param {collection} current_collection - The current collection
+@param {linklist} [navigation_menu] - The category navigation menu
+@param {linklist} [links_menu] - An optional menu containing letter groups
+@param {number} [columns] - Number of desktop columns
+@param {string} [heading_id] - A unique accessible heading ID
+{% enddoc %}
+{%- liquid
+  assign tree_menu = navigation_menu | default: linklists['main-menu']
+  assign index_links = '' | split: ','
+  assign nested_menu = false
+  assign custom_menu = false
+  if links_menu and links_menu.links.size > 0
+    assign custom_menu = true
+    assign index_links = links_menu.links | sort_natural: 'title'
+    for group in index_links
+      if group.links.size > 0
+        assign nested_menu = true
+        break
+      endif
+    endfor
+  else
+    for root_link in tree_menu.links
+      if root_link.type == 'collection_link' and root_link.object.id == current_collection.id
+        assign index_links = index_links | concat: root_link.links
+        for child_link in root_link.links
+          assign index_links = index_links | concat: child_link.links
+        endfor
+      endif
+      for middle_link in root_link.links
+        if middle_link.type == 'collection_link' and middle_link.object.id == current_collection.id
+          assign index_links = index_links | concat: middle_link.links
+        endif
+      endfor
+    endfor
+    assign index_links = index_links | sort_natural: 'title'
+  endif
+-%}
+{%- if index_links.size > 0 -%}
+  <nav class="bc-category-index" aria-labelledby="{{ heading_id | default: 'bc-category-index-title' | escape }}">
+    <h2 id="{{ heading_id | default: 'bc-category-index-title' | escape }}" class="visually-hidden">{{ 'bc_collection.directory_heading' | t: category: current_collection.title }}</h2>
+    <div class="bc-category-index__columns">
+      {%- capture directory_groups -%}
+      {%- if nested_menu -%}
+        {%- for group in index_links -%}
+          {%- if group.links.size > 0 -%}
+            <section class="bc-category-index__group">
+              <h3 class="bc-category-index__letter">{{ group.title | escape }}</h3>
+              <ul role="list">
+                {%- assign group_links = group.links | sort_natural: 'title' -%}
+                {%- for category_link in group_links -%}
+                  {% render 'bc-category-index-entry', category_link: category_link %}
+                {%- endfor -%}
+              </ul>
+            </section>__BC_DIRECTORY_GROUP__
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- liquid
+          assign alphabet = '0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,#' | split: ','
+          assign last_batch = index_links.size | divided_by: 50
+          assign use_collection_title = false
+          if custom_menu == false
+            assign use_collection_title = true
+          endif
+        -%}
+        {%- for letter in alphabet -%}
+          {%- assign seen_links = '' -%}
+          {%- capture letter_entries -%}
+            {%- for batch in (0..last_batch) -%}
+              {%- assign batch_offset = batch | times: 50 -%}
+              {%- for category_link in index_links offset: batch_offset limit: 50 -%}
+                {%- liquid
+                  assign link_key = category_link.url | prepend: '|' | append: '|'
+                  if seen_links contains link_key
+                    continue
+                  endif
+                  if category_link.type == 'collection_link' and category_link.object.id == current_collection.id
+                    continue
+                  endif
+                  assign link_label = category_link.title
+                  if use_collection_title and category_link.type == 'collection_link'
+                    assign link_label = category_link.object.title | default: link_label
+                  endif
+                  assign current_letter = link_label | handleize | slice: 0 | upcase
+                  if current_letter == blank
+                    assign current_letter = '#'
+                  endif
+                  if current_letter != letter
+                    continue
+                  endif
+                  assign seen_links = seen_links | append: link_key
+                -%}
+                {% render 'bc-category-index-entry', category_link: category_link, use_collection_title: use_collection_title %}
+              {%- endfor -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+          {%- assign letter_entries = letter_entries | strip -%}
+          {%- if letter_entries != blank -%}
+            <section class="bc-category-index__group">
+              <h3 class="bc-category-index__letter">{{ letter | escape }}</h3>
+              <ul role="list">{{ letter_entries }}</ul>
+            </section>__BC_DIRECTORY_GROUP__
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      {%- endcapture -%}
+      {%- liquid
+        assign directory_groups = directory_groups | split: '__BC_DIRECTORY_GROUP__'
+        assign directory_columns = columns | default: 4
+        assign total_entries = 0
+        for group_html in directory_groups
+          assign group_entries = group_html | split: '<li>' | size | minus: 1
+          assign total_entries = total_entries | plus: group_entries
+        endfor
+        assign entries_per_column = total_entries | divided_by: directory_columns | at_least: 1
+      -%}
+      {%- for wanted_column in (1..directory_columns) -%}
+        {%- capture column_content -%}
+          {%- liquid
+            assign current_column = 1
+            assign column_entries = 0
+          -%}
+          {%- for group_html in directory_groups -%}
+            {%- liquid
+              assign group_html = group_html | strip
+              if group_html == blank
+                continue
+              endif
+              assign group_entries = group_html | split: '<li>' | size | minus: 1
+              assign next_entries = column_entries | plus: group_entries
+              if column_entries > 0 and next_entries > entries_per_column and current_column < directory_columns
+                assign current_column = current_column | plus: 1
+                assign column_entries = 0
+              endif
+              if current_column == wanted_column
+                echo group_html
+              endif
+              assign column_entries = column_entries | plus: group_entries
+            -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- assign column_content = column_content | strip -%}
+        {%- if column_content != blank -%}
+          <div class="bc-category-index__column">{{ column_content }}</div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </nav>
+{%- endif -%}

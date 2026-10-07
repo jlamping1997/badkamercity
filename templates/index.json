@@ -29,35 +29,35 @@
         "hero_subtitle_mobile_y": 70,
         "hero_subtitle_desktop_x": 6,
         "hero_subtitle_desktop_y": 72,
-        "hero_button_text_color": "#ffffff",
-        "hero_button_background_color": "#8fd4ef",
+        "hero_button_text_color": "#0f2740",
+        "hero_button_background_color": "#f4cd45",
         "hero_button_alignment": "left",
         "hero_button_position_mode": "inline",
         "hero_button_mobile_x": 9,
         "hero_button_mobile_y": 82,
         "hero_button_desktop_x": 16,
         "hero_button_desktop_y": 84,
-        "hero_image": "shopify://shop_images/kortingbanner.png",
+        "hero_image": "shopify://shop_images/1.png",
         "banner_1_title": "",
         "banner_1_subtitle": "",
         "banner_1_button": "",
         "banner_1_link": "",
         "banner_1_title_color": "#ffffff",
         "banner_1_subtitle_color": "#ffffff",
-        "banner_1_button_text_color": "#ffffff",
-        "banner_1_button_background_color": "#8fd4ef",
+        "banner_1_button_text_color": "#0f2740",
+        "banner_1_button_background_color": "#f4cd45",
         "banner_1_button_alignment": "left",
-        "banner_1_image": "shopify://shop_images/Banner2.png",
+        "banner_1_image": "shopify://shop_images/2.png",
         "banner_2_title": "",
         "banner_2_subtitle": "",
         "banner_2_button": "",
         "banner_2_link": "",
         "banner_2_title_color": "#ffffff",
         "banner_2_subtitle_color": "#ffffff",
-        "banner_2_button_text_color": "#ffffff",
-        "banner_2_button_background_color": "#8fd4ef",
+        "banner_2_button_text_color": "#0f2740",
+        "banner_2_button_background_color": "#f4cd45",
         "banner_2_button_alignment": "left",
-        "banner_2_image": "shopify://shop_images/Banner3.png",
+        "banner_2_image": "shopify://shop_images/3.png",
         "padding_top": 24,
         "padding_bottom": 24
       }
@@ -151,10 +151,44 @@
       "name": "Home category grid",
       "settings": {
         "title": "Shop per categorie",
+        "view_all_label": "Bekijk alle categorieën",
+        "view_all_link": "",
         "menu": "main-menu",
         "source_mode": "menu",
         "columns_desktop": 4,
         "columns_mobile": 2,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_popular_products": {
+      "type": "home-popular-products",
+      "name": "Populair op dit moment",
+      "settings": {
+        "heading": "Populair op dit moment",
+        "collection": "",
+        "product_count": 4,
+        "view_all_label": "Bekijk alle producten",
+        "view_all_link": "",
+        "add_to_cart_label": "In winkelwagen",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_complete_bathroom": {
+      "type": "home-complete-bathroom",
+      "name": "Van idee naar complete badkamer",
+      "settings": {
+        "heading": "Van idee naar\ncomplete badkamer",
+        "body": "Wij helpen je van inspiratie tot realisatie.\nMet persoonlijk advies, een 3D ontwerp\nen alles onder één dak.",
+        "step_1_title": "Inspiratie",
+        "step_1_text": "Samen ontdekken\nwat bij jou past",
+        "step_2_title": "Persoonlijk ontwerp",
+        "step_2_text": "Jouw badkamer in 3D,\nhelemaal op maat",
+        "step_3_title": "Alles geregeld",
+        "step_3_text": "Van producten tot\nvakkundige montage",
+        "cta_label": "Plan een gratis adviesgesprek",
+        "cta_link": "",
         "padding_top": 24,
         "padding_bottom": 24
       }
@@ -223,6 +257,8 @@
       ],
       "name": "Home shop by style",
       "settings": {
+        "show_extended_content": false,
+        "card_cta_label": "Bekijk stijl",
         "eyebrow": "Shop op stijl",
         "title": "Vind de badkamerstijl die bij jouw huis past",
         "intro": "<p>Van warm hotel chic tot strak modern: ontdek stijlen, materialen en sfeerpagina’s die je helpen om sneller de juiste keuzes te maken.</p>",
@@ -240,75 +276,6 @@
         "padding_bottom": 24
       }
     },
-    "home_mijn_badkamercity_3wELah": {
-      "type": "home-mijn-badkamercity",
-      "blocks": {
-        "post_DDi9mB": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Landelijke_Badkamer_Banner.png",
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        },
-        "post_rYJY7b": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Moderne_Badkamer_Banner.png",
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        },
-        "post_WpNLAG": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Hotel_Chique_Banner.png",
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        },
-        "post_EB9FLc": {
-          "type": "post",
-          "settings": {
-            "image": "shopify://shop_images/Japandi_Banner.png",
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        },
-        "post_eGmzXM": {
-          "type": "post",
-          "settings": {
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        },
-        "post_aKFxxn": {
-          "type": "post",
-          "settings": {
-            "caption": "MijnBadkamercity",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "post_DDi9mB",
-        "post_rYJY7b",
-        "post_WpNLAG",
-        "post_EB9FLc",
-        "post_eGmzXM",
-        "post_aKFxxn"
-      ],
-      "name": "Home MijnBadkamercity",
-      "settings": {
-        "title": "#MijnBadkamercity",
-        "intro": "<p>Deel jouw badkamer op Instagram met <strong>#MijnBadkamercity</strong> en tag <strong>@badkamercity</strong>. Zo bouwen we samen aan een inspirerende omgeving vol echte badkamers, slimme oplossingen en mooie stijlen.</p>",
-        "hashtag_label": "MijnBadkamercity",
-        "button_label": "Meer inspiratie op #MijnBadkamercity",
-        "button_link": "",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
     "home_brand_rail_aUrAmK": {
       "type": "home-brand-rail",
       "blocks": {
@@ -316,42 +283,48 @@
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "Hotbath",
+            "custom_link": ""
           }
         },
         "brand_84x3qT": {
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "Geberit",
+            "custom_link": ""
           }
         },
         "brand_AnL7GR": {
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "IVY",
+            "custom_link": ""
           }
         },
         "brand_PN7t86": {
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "INK",
+            "custom_link": ""
           }
         },
         "brand_aPUkce": {
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "JEE-O",
+            "custom_link": ""
           }
         },
         "brand_NQgeQ6": {
           "type": "brand",
           "settings": {
             "collection": "",
-            "custom_title": ""
+            "custom_title": "Quooker",
+            "custom_link": ""
           }
         }
       },
@@ -365,21 +338,112 @@
       ],
       "name": "Home brand rail",
       "settings": {
-        "title": "Onze merken",
+        "title": "Topmerken",
+        "show_intro": false,
         "intro": "Kies uit bekende merken en ontdek collecties die passen bij jouw stijl, budget en badkamerwensen.",
         "show_all_brands_link": true,
-        "all_brands_label": "Alle merken",
+        "all_brands_label": "Bekijk alle merken",
         "all_brands_link": "",
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "home_mijn_badkamercity_3wELah": {
+      "type": "home-mijn-badkamercity",
+      "blocks": {
+        "post_DDi9mB": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Landelijke_Badkamer_Banner.png",
+            "caption": "Modern & licht",
+            "link": ""
+          }
+        },
+        "post_rYJY7b": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Moderne_Badkamer_Banner.png",
+            "caption": "Kleine badkamer",
+            "link": ""
+          }
+        },
+        "post_WpNLAG": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Hotel_Chique_Banner.png",
+            "caption": "Hotel chic",
+            "link": ""
+          }
+        },
+        "post_EB9FLc": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Japandi_Banner.png",
+            "caption": "Japandi",
+            "link": ""
+          }
+        },
+        "post_eGmzXM": {
+          "type": "post",
+          "settings": {
+            "caption": "Vrijstaande baden",
+            "link": ""
+          }
+        },
+        "post_aKFxxn": {
+          "type": "post",
+          "settings": {
+            "caption": "Inloopdouche",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_DDi9mB",
+        "post_rYJY7b",
+        "post_WpNLAG",
+        "post_EB9FLc",
+        "post_eGmzXM",
+        "post_aKFxxn"
+      ],
+      "name": "Badkamerinspiratie",
+      "settings": {
+        "title": "Badkamerinspiratie",
+        "show_intro": false,
+        "intro": "<p>Ontdek stijlen, indelingen en details voor jouw badkamer.</p>",
+        "hashtag_label": "Badkamerinspiratie",
+        "button_label": "Bekijk alle inspiratie",
+        "button_link": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "home_help_cta": {
+      "type": "home-help-cta",
+      "name": "Hulp nodig bij je badkamer?",
+      "settings": {
+        "heading": "Hulp nodig bij je badkamer?",
+        "text": "Onze adviseurs staan voor je klaar.\nVan eerste idee tot complete realisatie.",
+        "primary_button_label": "Plan een afspraak",
+        "primary_button_link": "",
+        "secondary_button_label": "Neem contact op",
+        "secondary_button_link": "",
+        "service_1_label": "Persoonlijk\nadvies",
+        "service_2_label": "Complete\nbadkamer",
+        "service_3_label": "Vrijblijvend\nontwerp",
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     }
   },
   "order": [
     "home_hero_gDkwi8",
     "home_category_grid_FgNMtn",
+    "home_popular_products",
+    "home_complete_bathroom",
     "home_shop_by_style_BK9a6q",
+    "home_brand_rail_aUrAmK",
     "home_mijn_badkamercity_3wELah",
-    "home_brand_rail_aUrAmK"
+    "home_help_cta"
   ]
 }

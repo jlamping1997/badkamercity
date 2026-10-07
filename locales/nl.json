@@ -535,5 +535,65 @@
       "expanded": "Formulier voor ontvanger cadeaubon uitgevouwen",
       "collapsed": "Formulier voor ontvanger cadeaubon ingeklapt"
     }
+  },
+  "bc_collection": {
+    "intro": {
+      "kranen": "Een kraan bepaalt de uitstraling én het dagelijks comfort van je badkamer. Kies hieronder waarvoor je een kraan zoekt en ontdek de modellen, kleuren en afwerkingen die daarbij passen.",
+      "wastafelkranen": "Vind een wastafelkraan die past bij jouw wastafel en badkamerstijl. Kies voor opbouw of inbouw en verfijn het assortiment op de kenmerken die voor jou belangrijk zijn.",
+      "opbouw": "Een opbouw wastafelkraan plaats je op de wastafel of het wastafelblad. Let bij je keuze op de hoogte, de lengte van de uitloop en de ruimte rond je wastafel.",
+      "inbouw": "Met een inbouw wastafelkraan komen de uitloop en bediening uit de wand. Controleer de uitlooplengte, de montagepositie en welk inbouwdeel bij het gekozen model hoort.",
+      "badkranen": "Kies een badkraan die past bij je bad en de beschikbare aansluitingen. Ontdek opbouw-, inbouw- en vrijstaande modellen en kies de afwerking die jouw badkamer compleet maakt.",
+      "douchekranen": "Kies de bediening en montage die bij jouw douche passen. Vergelijk opbouw- en inbouwkranen en controleer welke aansluitingen en onderdelen je nodig hebt.",
+      "general": "Ontdek {{ category }} voor jouw badkamer. Kies een passende uitvoering en let op de afmetingen, de montage en de afwerking."
+    },
+    "selected_filters": "Geselecteerde filters",
+    "filters_and_sorting": "Filteren en sorteren",
+    "empty": {
+      "title": "Op zoek naar een passend product?",
+      "body": "Er staan op dit moment geen producten in {{ category }}. Neem contact met ons op voor hulp bij het vinden van een passend artikel.",
+      "filtered": "Er zijn geen producten die bij deze combinatie van filters passen. Verwijder een filter of wis je selectie om verder te kijken."
+    },
+    "choice_help": "Hulp bij kiezen",
+    "faq_title": "Veelgestelde vragen over {{ category }}",
+    "help_title": "Twijfel je over je keuze?",
+    "help_body": "We denken graag mee over een product dat bij jouw badkamer past.",
+    "contact": "Vraag ons advies",
+    "faucets": {
+      "heading": "De juiste kraan begint bij drie keuzes.",
+      "intro": "Kijk eerst naar de montage en de plek waar je de kraan gebruikt. Kies daarna de afwerking die past bij de rest van je badkamer.",
+      "title_1": "Kies de montage",
+      "body_1": "Bij opbouw blijft de kraan zichtbaar op de wastafel of tegen de wand. Bij inbouw zit een deel in de wand. Controleer vooraf of je aansluitingen en beschikbare ruimte passen.",
+      "title_2": "Let op hoogte en uitloop",
+      "body_2": "De uitloop moet prettig boven de wastafel of het bad uitkomen. Meet de beschikbare ruimte en houd rekening met de hoogte van een eventuele opzetwastafel.",
+      "title_3": "Stem de afwerking af",
+      "body_3": "Combineer de kraan met je douche, accessoires en overige sanitair. Controleer de exacte kleurnaam en afwerking: vergelijkbare kleuren kunnen per merk verschillen."
+    },
+    "general": {
+      "heading": "Kies wat past bij jouw badkamer.",
+      "intro": "Met deze drie aandachtspunten vind je een uitvoering die past bij je ruimte en je wensen.",
+      "title_1": "Meet je ruimte",
+      "body_1": "Controleer de afmetingen en houd rekening met de ruimte die nodig is om het product te gebruiken en te onderhouden.",
+      "title_2": "Controleer de montage",
+      "body_2": "Bekijk de aansluitingen, de manier van bevestigen en de onderdelen die bij het product horen. Zo weet je wat je nodig hebt voor de installatie.",
+      "title_3": "Maak er één geheel van",
+      "body_3": "Stem kleur, materiaal en afwerking af op de rest van je badkamer. Bekijk daarvoor de specificaties en afbeeldingen van de gekozen uitvoering."
+    },
+    "faq": {
+      "question_1": "Wat is het verschil tussen een opbouw- en inbouwkraan?",
+      "answer_1": "Bij een opbouwkraan is de kraan zelf zichtbaar op de wastafel of aan de wand. Bij een inbouwkraan zit het kraanmechanisme in de wand en blijven de uitloop en bediening zichtbaar. Controleer bij inbouw altijd welk inbouwdeel nodig is en of dit wordt meegeleverd.",
+      "question_2": "Welke kraan past bij een opzetwastafel?",
+      "answer_2": "Bij een opzetwastafel heb je voldoende hoogte en bereik nodig tussen de uitloop en de waskom. Een verhoogde opbouwkraan of een passend geplaatste inbouwkraan kan een optie zijn. Vergelijk de maten van de kraan met de hoogte en positie van je wastafel.",
+      "question_3": "Zijn het inbouwdeel en andere onderdelen inbegrepen?",
+      "answer_3": "Dat verschilt per product. Een afbouwdeel is niet automatisch een complete kraan. Controleer de productomschrijving en de meegeleverde onderdelen. Twijfel je of je alles hebt voor de installatie, vraag ons dan om advies."
+    },
+    "directory_heading": "Verder zoeken binnen {{ category }}",
+    "read_advice": "Lees meer informatie en advies over {{ category }}"
+  },
+  "bc_delivery": {
+    "information": "Levertijd en bezorginformatie",
+    "supplier_in_stock": "Op voorraad bij leverancier",
+    "contact_current_lead_time": "Neem contact op voor de actuele levertijd",
+    "supplier_expected_from": "Verwacht bij leverancier vanaf {{ date }}",
+    "lead_time_on_request": "Levertijd op aanvraag"
   }
 }

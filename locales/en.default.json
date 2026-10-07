@@ -283,7 +283,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -536,5 +535,65 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "bc_collection": {
+    "intro": {
+      "kranen": "A tap shapes the style and everyday comfort of your bathroom. Choose where you need a tap and explore the matching models and finishes.",
+      "wastafelkranen": "Find a basin tap that suits your basin and bathroom style. Choose a deck-mounted or concealed model and refine the range by the features that matter to you.",
+      "opbouw": "A deck-mounted basin tap sits on your basin or countertop. Check its height, spout reach and the space around your basin.",
+      "inbouw": "A concealed basin tap has its spout and controls mounted on the wall. Check the spout reach, mounting position and required concealed body.",
+      "badkranen": "Choose a bath tap that suits your bath and connections. Explore exposed, concealed and freestanding models and choose a matching finish.",
+      "douchekranen": "Choose the controls and mounting that suit your shower. Compare exposed and concealed taps and check the connections and parts you need.",
+      "general": "Explore {{ category }} for your bathroom. Check the dimensions, mounting and finish to find a suitable model."
+    },
+    "selected_filters": "Selected filters",
+    "filters_and_sorting": "Filter and sort",
+    "empty": {
+      "title": "Looking for a suitable product?",
+      "body": "There are currently no products in {{ category }}. Contact us for help finding a suitable item.",
+      "filtered": "No products match this combination of filters. Remove a filter or clear your selection to continue browsing."
+    },
+    "choice_help": "Help choosing",
+    "faq_title": "Frequently asked questions about {{ category }}",
+    "help_title": "Need help choosing?",
+    "help_body": "We are happy to help you find a product that suits your bathroom.",
+    "contact": "Ask for advice",
+    "faucets": {
+      "heading": "The right tap starts with three choices.",
+      "intro": "Start with the mounting and where the tap will be used. Then choose a finish that suits the rest of your bathroom.",
+      "title_1": "Choose the mounting",
+      "body_1": "Exposed taps sit on the basin or wall. Concealed taps have a body inside the wall. Check the connections and available space first.",
+      "title_2": "Check the height and reach",
+      "body_2": "The spout should reach comfortably over the basin or bath. Measure the available space and allow for the height of any countertop basin.",
+      "title_3": "Match the finish",
+      "body_3": "Coordinate the tap with your shower, accessories and sanitaryware. Check the exact colour and finish: similar colours can differ between brands."
+    },
+    "general": {
+      "heading": "Choose what fits your bathroom.",
+      "intro": "These three checks help you find a model that suits your space and preferences.",
+      "title_1": "Measure your space",
+      "body_1": "Check the dimensions and allow enough room to use and maintain the product.",
+      "title_2": "Check the mounting",
+      "body_2": "Review the connections, mounting method and included components to see what you need for installation.",
+      "title_3": "Coordinate the details",
+      "body_3": "Match colour, material and finish to the rest of your bathroom. Review the specifications and images for your chosen model."
+    },
+    "faq": {
+      "question_1": "What is the difference between an exposed and a concealed tap?",
+      "answer_1": "An exposed tap is visible on the basin or wall. A concealed tap has its mechanism inside the wall, with the spout and controls visible. Always check which concealed body is required and whether it is included.",
+      "question_2": "Which tap suits a countertop basin?",
+      "answer_2": "A countertop basin needs enough height and reach between the spout and the bowl. A tall deck-mounted tap or a correctly positioned wall-mounted tap may suit it. Compare the tap dimensions with the height and position of your basin.",
+      "question_3": "Are the concealed body and other parts included?",
+      "answer_3": "This varies by product. A trim set is not automatically a complete tap. Check the product description and included components. Contact us if you are unsure whether you have everything needed for installation."
+    },
+    "directory_heading": "Explore more {{ category }}",
+    "read_advice": "Read more information and advice about {{ category }}"
+  },
+  "bc_delivery": {
+    "information": "Lead time and delivery information",
+    "supplier_in_stock": "In stock at supplier",
+    "contact_current_lead_time": "Contact us for the current lead time",
+    "supplier_expected_from": "Expected at supplier from {{ date }}",
+    "lead_time_on_request": "Lead time on request"
   }
 }

@@ -1,0 +1,65 @@
+{%- capture relation_data -%}{%- render 'bc-product-accessories-data', product: product -%}{%- endcapture -%}
+{%- liquid
+  assign relation_rows = relation_data | strip | split: '~'
+  assign groups = 'required,optional' | split: ','
+  assign is_demo = false
+  if product.handle == 'testproduct-badkamercity-productpagina'
+    assign is_demo = true
+  endif
+  assign seen_variants = '|'
+-%}
+{%- capture group_markup -%}
+  {%- for group in groups -%}
+    {%- capture row_markup -%}
+      {%- for row in relation_rows limit: 6 -%}
+        {%- assign fields = row | strip | split: '|' -%}
+        {%- if fields[0] != group -%}{%- continue -%}{%- endif -%}
+        {%- liquid
+          assign accessory_product = all_products[fields[2]]
+          assign accessory_variant = nil
+          if accessory_product != blank and accessory_product.vendor == 'Hotbath' and accessory_product.id != product.id
+            for candidate in accessory_product.variants
+              if candidate.sku == fields[1]
+                assign accessory_variant = candidate
+                break
+              endif
+            endfor
+          endif
+          assign variant_key = '|' | append: accessory_variant.id | append: '|'
+        -%}
+        {%- if accessory_variant != blank -%}
+          {%- unless seen_variants contains variant_key -%}
+            {%- assign seen_variants = seen_variants | append: variant_key -%}
+            {%- render 'bc-product-accessory-item', accessory_product: accessory_product, accessory_variant: accessory_variant, explanation: fields[3], section_id: section_id -%}
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign row_markup = row_markup | strip -%}
+    {%- if row_markup != blank -%}
+      <div class="bc-accessories__group">
+        <h3>{% if group == 'required' %}Apart nodig{% else %}Optionele extra’s{% endif %}{% if is_demo %} <span>(voorbeeld)</span>{% endif %}</h3>
+        <p>{% if group == 'required' %}Niet inbegrepen. Kies zelf wat je nog nodig hebt.{% else %}Voeg naar wens iets extra’s toe aan je bestelling.{% endif %}</p>
+        <ul class="bc-accessories__list" role="list">{{ row_markup }}</ul>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign group_markup = group_markup | strip -%}
+{%- if group_markup != blank -%}
+  <bc-product-accessories class="bc-accessories" data-currency="{{ cart.currency.iso_code | escape }}" data-parent-variant="{{ product.selected_or_first_available_variant.id }}" data-cart-url="{{ routes.cart_url }}" data-add-url="{{ routes.cart_add_url }}.js" aria-labelledby="AccessoriesTitle-{{ section_id }}">
+    <span class="bc-accessories__eyebrow">Handig om mee te bestellen</span>
+    <h2 id="AccessoriesTitle-{{ section_id }}">Maak je bestelling compleet</h2>
+    <p class="bc-accessories__intro">Kies de accessoires die je wilt meebestellen. De prijzen komen boven op de productprijs.</p>
+    {%- if is_demo -%}<p class="bc-accessories__demo"><strong>Testproduct</strong> · Dit zijn voorbeeldaccessoires; controleer bij een echt product welke onderdelen passen.</p>{%- endif -%}
+    {{ group_markup }}
+    <noscript><p>Open een accessoire via de productnaam om het aan je winkelwagen toe te voegen.</p></noscript>
+    <div class="bc-accessories__summary" data-accessory-controls hidden>
+      <div class="bc-accessories__total" aria-live="polite" aria-atomic="true"><span data-accessory-count>Geen accessoires geselecteerd</span><strong data-accessory-total>{{ 0 | money }}</strong><small>Totaal accessoires{% if cart.taxes_included %} · inclusief btw{% endif %}</small></div>
+      <button type="button" class="bc-accessories__submit" data-accessory-submit disabled>Geselecteerde accessoires toevoegen</button>
+      <p class="bc-accessories__hint">Je voegt hiermee alleen de geselecteerde accessoires toe.</p>
+    </div>
+    <p class="bc-accessories__error" data-accessory-error role="alert" tabindex="-1" hidden></p>
+    <a href="{{ routes.cart_url }}" class="bc-accessories__cart-link" data-accessory-cart-link hidden>Bekijk je winkelwagen</a>
+  </bc-product-accessories>
+{%- endif -%}

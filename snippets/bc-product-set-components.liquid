@@ -1,0 +1,73 @@
+{%- liquid
+  assign is_demo = false
+  if product.handle == 'testproduct-badkamercity-productpagina'
+    assign is_demo = true
+  endif
+-%}
+{%- capture set_data -%}{%- render 'bc-product-set-data', product: product -%}{%- endcapture -%}
+{%- assign set_data = set_data | strip -%}
+{%- if is_demo or set_data != blank -%}
+  {%- assign rows = set_data | split: '~' -%}
+  <section class="bc-product-set" aria-labelledby="ProductSetTitle-{{ section_id }}" data-set-sku="{{ product.selected_or_first_available_variant.sku | escape }}">
+    <h2 id="ProductSetTitle-{{ section_id }}">Deze set bestaat uit</h2>
+    {%- if is_demo -%}
+      <p class="bc-product-set__demo-note">Voorbeeldonderdelen bij dit testproduct.</p>
+      {%- assign demo_skus = 'CB7067EXTBB,M354CR,M105BB,CB452BB,M311BB,M015BB,M517BB' | split: ',' -%}
+      <ul class="bc-product-set__list" role="list">
+        {%- for demo_sku in demo_skus -%}
+          {%- capture demo_handle -%}{%- render 'bc-product-set-product-handle', sku: demo_sku -%}{%- endcapture -%}
+          {%- assign demo_handle = demo_handle | strip -%}
+          {%- if demo_handle != blank -%}
+            {%- assign demo_product = all_products[demo_handle] -%}
+            {%- if demo_product != blank -%}
+              {%- assign demo_variant = demo_product.selected_or_first_available_variant -%}
+              {%- render 'bc-product-set-item', component_product: demo_product, component_variant: demo_variant, quantity: 1, name: demo_product.title, sku: demo_variant.sku -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      {%- assign statuses = 'included,required,optional' | split: ',' -%}
+      {%- for status in statuses -%}
+        {%- capture group_rows -%}
+          {%- for row in rows -%}
+            {%- assign fields = row | strip | split: '|' -%}
+            {%- assign quantity = fields[1] | plus: 0 -%}
+            {%- if fields[0] == status and fields[3] != blank and quantity > 0 -%}
+              {%- assign component_product = nil -%}
+              {%- assign component_variant = nil -%}
+              {%- capture component_handle -%}{%- render 'bc-product-set-product-handle', sku: fields[2] -%}{%- endcapture -%}
+              {%- assign component_handle = component_handle | strip -%}
+              {%- if component_handle != blank -%}
+                {%- assign candidate_product = all_products[component_handle] -%}
+                {%- if candidate_product.vendor == product.vendor -%}
+                  {%- for candidate_variant in candidate_product.variants -%}
+                    {%- if candidate_variant.sku == fields[2] -%}
+                      {%- assign component_product = candidate_product -%}
+                      {%- assign component_variant = candidate_variant -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- render 'bc-product-set-item', component_product: component_product, component_variant: component_variant, quantity: quantity, name: fields[3], sku: fields[2] -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- assign group_rows = group_rows | strip -%}
+        {%- if group_rows != blank -%}
+          <div class="bc-product-set__group">
+            <h3 class="bc-product-set__status{% if status == 'included' %} visually-hidden{% endif %}">
+              {%- case status -%}
+                {%- when 'included' -%}Inbegrepen in deze set
+                {%- when 'required' -%}Apart nodig — niet inbegrepen
+                {%- when 'optional' -%}Optioneel — niet inbegrepen
+              {%- endcase -%}
+            </h3>
+            <ul class="bc-product-set__list" role="list">{{ group_rows }}</ul>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </section>
+{%- endif -%}
