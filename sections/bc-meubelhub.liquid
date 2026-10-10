@@ -66,10 +66,14 @@ Unconfigured SEO selections are not linked to invented destinations.
             assign card_title = block.settings.label | default: destination.title
             assign card_url = destination.url
             assign card_src = block.settings.photo_url
-            if block.settings.photo != blank
-              assign card_src = block.settings.photo | image_url: width: 1000
-            elsif card_src == blank and destination.image != blank
+            assign card_alt = block.settings.photo_alt | default: card_title
+            assign card_image_is_collection = false
+            if destination.image != blank
               assign card_src = destination.image | image_url: width: 1000
+              assign card_alt = destination.image.alt | default: card_title
+              assign card_image_is_collection = true
+            elsif block.settings.photo != blank
+              assign card_src = block.settings.photo | image_url: width: 1000
             endif
             assign can_link = false
             if destination != blank
@@ -79,7 +83,7 @@ Unconfigured SEO selections are not linked to invented destinations.
             endif
           -%}
           {% if can_link %}<a class="bcm-card" href="{{ card_url }}" {{ block.shopify_attributes }}>{% else %}<div class="bcm-card bcm-card--pending" {{ block.shopify_attributes }}>{% endif %}
-            <div class="bcm-card__image">{% if card_src != blank %}<img src="{{ card_src | escape }}" alt="{{ block.settings.photo_alt | default: card_title | escape }}" width="800" height="302" loading="lazy" decoding="async">{% endif %}</div>
+            <div class="bcm-card__image{% if card_image_is_collection %} bcm-card__image--collection{% endif %}">{% if card_src != blank %}<img src="{{ card_src | escape }}" alt="{{ card_alt | escape }}" width="800" height="302" loading="lazy" decoding="async">{% endif %}</div>
             <div class="bcm-card__caption"><div><h3>{{ card_title | escape }}</h3><p>{{ block.settings.caption | escape }}</p>{% unless can_link %}<small class="bcm-card__pending">Assortiment wordt aangevuld</small>{% endunless %}</div><span class="bcm-arrow">{% render 'bc-meubelhub-icon', icon: 'arrow' %}</span></div>
           {% if can_link %}</a>{% else %}</div>{% endif %}
         {%- endfor -%}

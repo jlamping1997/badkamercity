@@ -1217,6 +1217,8 @@
                           </div>
                         </div>
                       </div>
+                      {%- capture bc_hotbath_article_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
+                      {%- assign bc_hotbath_article_scope = bc_hotbath_article_scope | strip -%}
                       {%- assign bc_delivery_vendor = product.vendor | strip | downcase -%}
                       {%- if bc_delivery_vendor == 'wiesbaden' -%}
                         {%- liquid
@@ -1241,7 +1243,7 @@
                             <p class="bc-buybox__delivery-copy">{{ 'bc_delivery.contact_current_lead_time' | t }}</p>
                           {%- endif -%}
                         </aside>
-                      {%- else -%}
+                      {%- elsif bc_hotbath_article_scope != 'ready' -%}
                       <aside class="bc-buybox__delivery-card" aria-label="Levertijd en bezorginformatie">
                         <div class="bc-buybox__delivery-meta">
                           <span class="bc-buybox__delivery-title">Verwachte levertijd: 8 - 9 weken</span>
