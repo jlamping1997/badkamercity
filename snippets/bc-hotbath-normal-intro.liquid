@@ -1,0 +1,39 @@
+{% doc %}
+  Adds the existing short introduction and a cautious lead-time message to the normal template.
+  The main product section omits the older delivery card for this exact eligible scope.
+  Does not change native prices, inventory, options, cart forms, media or other vendors.
+  @param {product} product - Current product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- capture bc_normal_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
+{%- assign bc_normal_scope = bc_normal_scope | strip -%}
+{%- if bc_normal_scope == 'ready' -%}
+  {%- assign bc_intro = product.metafields.custom.korte_omschrijving.value | strip -%}
+  <div class="bc-hotbath-normal-intro" data-bc-normal-article="{{ product.selected_or_first_available_variant.sku | escape }}">
+    {%- if bc_intro != blank -%}
+      <p class="bc-hotbath-normal-intro__copy">{{ bc_intro | escape | newline_to_br }}</p>
+    {%- endif -%}
+    <p class="bc-hotbath-normal-intro__delivery">{{ 'bc_delivery.lead_time_on_request' | t }}</p>
+  </div>
+  {% style %}
+    #MainProduct-{{ section_id }} .product__info-container > .bc-hotbath-normal-intro {
+      margin: 0 0 1.8rem;
+      color: var(--bc-pdp-ink);
+    }
+    #MainProduct-{{ section_id }} .bc-hotbath-normal-intro__copy {
+      margin: 0 0 1.2rem;
+      font-size: 1.6rem;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+    #MainProduct-{{ section_id }} .bc-hotbath-normal-intro__delivery {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: var(--bc-pdp-muted);
+    }
+    #MainProduct-{{ section_id }} .bc-buybox__pricing-layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  {% endstyle %}
+{%- endif -%}

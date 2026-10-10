@@ -1,0 +1,78 @@
+{
+  "capturedAt": "2026-10-10",
+  "sourceTheme": {
+    "id": "gid://shopify/OnlineStoreTheme/194981003530",
+    "name": "BadkamerCity - Collectiebeelden correctie 8 okt",
+    "role": "MAIN",
+    "updatedAt": "2026-10-08T22:34:53Z"
+  },
+  "targetTheme": {
+    "id": "gid://shopify/OnlineStoreTheme/195038216458",
+    "name": "BadkamerCity - Afronding basis 10 okt",
+    "role": "UNPUBLISHED"
+  },
+  "copyVerified": {
+    "files": 441,
+    "unexpectedHashes": 0
+  },
+  "readbackVerified": {
+    "files": 445,
+    "changedFiles": 11,
+    "unchangedFiles": 434,
+    "unexpectedHashes": 0
+  },
+  "files": [
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "e2242a543401c97e985f9fee11b79415"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "0ae24586486fe61f81c40348c9f4b4f8"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "d1736fb620e439227b838260fae340fa"
+    },
+    {
+      "filename": "snippets/bc-category-children.liquid",
+      "checksumMd5": "5d148e5aeffb639c8e0c0a8e2169625f"
+    },
+    {
+      "filename": "snippets/bc-product-detail-specs.liquid",
+      "checksumMd5": "1d1f14bf71f19a4e8192381da2959bf8"
+    },
+    {
+      "filename": "snippets/bc-product-detail-specs-legacy.liquid",
+      "checksumMd5": "fe2cbb259184ca0a47952333da4d9b53"
+    },
+    {
+      "filename": "snippets/bc-hotbath-normal-intro.liquid",
+      "checksumMd5": "26a482329e97959a12390fa72c5d1a3d"
+    },
+    {
+      "filename": "snippets/bc-hotbath-normal-scope.liquid",
+      "checksumMd5": "8affc82ef126f3f4623f6fe13d3f5913"
+    },
+    {
+      "filename": "snippets/bc-hotbath-public-specs.liquid",
+      "checksumMd5": "197413e04f977451cb070786e2534ab2"
+    },
+    {
+      "filename": "templates/cart.json",
+      "checksumMd5": "fee400789cb31fe5a1d5a44a081e169d"
+    },
+    {
+      "filename": "templates/product.json",
+      "checksumMd5": "741ac2a6d0e579cd24a91f410714406c"
+    }
+  ],
+  "status": "UNPUBLISHED_REVIEW",
+  "tests": {
+    "liquid": "passed, 11 files",
+    "localRender": "passed, 12 groups, 17 real Hotbath articles",
+    "browserDesktop": "passed for sampled Hotbath, cart and Toebehoren; legacy Wiesbaden/Mosaic display retained",
+    "mobile": "NOT_TESTED",
+    "publication": "NOT_PERFORMED"
+  }
+}
