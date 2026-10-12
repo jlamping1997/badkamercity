@@ -1,6 +1,8 @@
-{% comment %}
-  BadkamerCity externe filters - JEE-O test
-{% endcomment %}
+{% doc %}
+  Provides the endpoint and collection context for the optional external filters.
+  @param {string} collection_handle - The current collection handle.
+  @param {string} section_id - The product grid section identifier.
+{% enddoc %}
 
 <!-- BC_EXTERNAL_FILTERS_V1 -->
 
@@ -11,6 +13,7 @@
   id="BcExternalFilters"
   data-api-base="https://vps-7ffd625d.vps.ovh.net/v3"
   data-collection="{{ collection_handle | escape }}"
+  data-products-count="{{ collection.all_products_count }}"
   data-section-id="{{ section_id | escape }}"
   hidden
 ></div>

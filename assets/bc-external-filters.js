@@ -36,16 +36,16 @@
       return;
     }
 
-    document.documentElement.classList.add('bc-external-filters-active');
-
     const nativeAside = sectionRoot.querySelector('#main-collection-filters');
-    if (nativeAside) nativeAside.style.display = 'none';
-
     const nativeSort = sectionRoot.querySelector('facet-filters-form.facets-vertical-sort');
-    if (nativeSort) nativeSort.style.display = 'none';
-
     const nativePagination = productContainer.querySelector('.pagination-wrapper');
-    if (nativePagination) nativePagination.style.display = 'none';
+    const nativeNodes = [nativeAside, nativeSort, nativePagination].filter(Boolean);
+    const nativeDisplays = new Map(nativeNodes.map((node) => [node, node.style.display]));
+    const nativeGridNodes = [...productGrid.childNodes];
+    const expectedCount = Number(root.dataset.productsCount);
+    let externalActive = false;
+    let requestId = 0;
+    let requestController;
 
     const state = {
       filters: {},
@@ -130,6 +130,9 @@
     toolbar.querySelector('[data-bc-open-filters]').addEventListener('click', openDrawer);
     sidebar.querySelector('.bc-filter-panel__close').addEventListener('click', closeDrawer);
     overlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeDrawer();
+    });
 
     sortSelect.addEventListener('change', () => {
       state.sort = sortSelect.value;
@@ -145,6 +148,7 @@
       runSearch();
     });
 
+    setExternalMode(false);
     runSearch();
 
     function resetState() {
@@ -219,10 +223,32 @@
       if (state.sort !== 'relevance') next.searchParams.set('bcsort', state.sort);
       if (state.page > 1) next.searchParams.set('bcpage', String(state.page));
 
-      history.replaceState({}, '', next);
+      if (next.href !== window.location.href) history.pushState({}, '', next);
+    }
+
+    function setExternalMode(active) {
+      document.documentElement.classList.toggle('bc-external-filters-active', active);
+      nativeNodes.forEach((node) => {
+        node.style.display = active ? 'none' : nativeDisplays.get(node);
+      });
+      [sidebar, toolbar, activeFilters, pagination, overlay].forEach((node) => {
+        node.hidden = !active;
+        node.style.display = active ? '' : 'none';
+      });
+      if (!active) {
+        closeDrawer();
+        if (externalActive) productGrid.replaceChildren(...nativeGridNodes);
+        state.lastData = null;
+      }
+      externalActive = active;
     }
 
     async function runSearch() {
+      const currentRequest = ++requestId;
+      requestController?.abort();
+      const controller = new AbortController();
+      requestController = controller;
+      const timeout = setTimeout(() => controller.abort(), 12000);
       setLoading(true);
       errorBox.hidden = true;
 
@@ -231,9 +257,8 @@
           method: 'POST',
           mode: 'cors',
           credentials: 'omit',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          signal: controller.signal,
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             collection: collectionHandle,
             page: state.page,
@@ -243,26 +268,35 @@
             ranges: state.ranges
           })
         });
-
-        if (!response.ok) {
-          throw new Error(`API antwoordde met ${response.status}`);
-        }
-
+        if (!response.ok) throw new Error(`API antwoordde met ${response.status}`);
         const data = await response.json();
+        if (currentRequest !== requestId) return;
+        if (!Array.isArray(data.products) || !Array.isArray(data.facets) ||
+            !Number.isInteger(data.found) || data.found < 0) {
+          throw new Error('Ongeldig filterantwoord');
+        }
+        if (Number.isFinite(expectedCount) &&
+            (!Number.isInteger(data.collection?.profile_products) ||
+             data.collection.profile_products !== expectedCount)) {
+          throw new Error('Filterindex en collectie komen niet overeen');
+        }
+        renderFilters(data.facets);
+        renderActiveFilters(data.facets);
+        renderProducts(data.products);
+        renderCount(data.found);
+        renderPagination(data.found);
         state.lastData = data;
-
-        renderFilters(data.facets || []);
-        renderActiveFilters(data.facets || []);
-        renderProducts(data.products || []);
-        renderCount(data.found || 0);
-        renderPagination(data.found || 0);
+        setExternalMode(true);
       } catch (error) {
+        if (currentRequest !== requestId) return;
         console.error('[BadkamerCity filters]', error);
+        setExternalMode(false);
         errorBox.textContent =
-          'De filters konden niet worden geladen. De normale productweergave blijft beschikbaar.';
+          'De uitgebreide filters zijn tijdelijk niet beschikbaar. Je kunt de gewone filters en productlijst blijven gebruiken.';
         errorBox.hidden = false;
       } finally {
-        setLoading(false);
+        clearTimeout(timeout);
+        if (currentRequest === requestId) setLoading(false);
       }
     }
 
