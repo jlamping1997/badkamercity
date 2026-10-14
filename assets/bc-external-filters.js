@@ -449,6 +449,11 @@
     function renderProducts(products) {
       productGrid.innerHTML = products.map((product) => {
         const href = productPath(product);
+        const title = String(product.title || '').trim();
+        const vendor = String(product.vendor || '').trim();
+        const remainder = vendor && title.toLowerCase().startsWith(`${vendor.toLowerCase()} `)
+          ? title.slice(vendor.length).trim() : title;
+        const cardTitle = remainder || title;
         const image = product.image_url
           ? `<img src="${attr(product.image_url)}" alt="${attr(product.image_alt || product.title || '')}" loading="lazy" width="600" height="600">`
           : '';
@@ -462,7 +467,7 @@
               <div class="bc-filter-card__info">
                 ${product.vendor ? `<p class="bc-filter-card__vendor">${escapeHtml(product.vendor)}</p>` : ''}
                 <h3 class="bc-filter-card__title">
-                  <a href="${attr(href)}">${escapeHtml(product.title || '')}</a>
+                  <a href="${attr(href)}" title="${attr(title)}">${escapeHtml(cardTitle)}</a>
                 </h3>
                 <dl class="bc-card-specs">
                   ${product.product_type ? `<div><dt>${escapeHtml(root.dataset.cardType || 'Productsoort')}:</dt><dd>${escapeHtml(product.product_type)}</dd></div>` : ''}

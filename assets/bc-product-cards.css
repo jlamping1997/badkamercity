@@ -151,10 +151,13 @@
 .bc-card-specs > div { display: flex; flex-wrap: wrap; column-gap: 5px; }
 .bc-card-specs dt, .bc-card-specs dd { margin: 0; }
 .bc-card-tax { display: block; font-size: 11px; color: #728091; font-weight: 400; }
-.bc-card-view { display: flex; align-items: center; gap: 12px; margin-top: 8px; color: #285e86; font-size: 14px; font-weight: 500; text-decoration: none; position: relative; z-index: 2; }
+.bc-card-view { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 32px; margin-top: 8px; color: #285e86; font-size: 14px; font-weight: 600; text-decoration: none; position: relative; z-index: 2; }
 .bc-card-view:hover { text-decoration: underline; text-underline-offset: 3px; }
 .bc-card-vendor { margin: 0 0 8px; color: #607184; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .bc-standard-card.card-wrapper { border: 1px solid #e1e7ed; border-radius: 12px; overflow: hidden; background: #fff; padding: 0; height: 100%; }
+.bc-standard-card.card-wrapper:hover { border-color: #8bb8d7; box-shadow: 0 5px 18px #0f27400c; }
+.bc-standard-card .card__heading a:focus-visible, .bc-card-view:focus-visible { outline: 2px solid #285e86; outline-offset: 3px; border-radius: 3px; }
+.bc-standard-card .card .card__inner.ratio::before { padding-bottom: 100%; }
 .bc-standard-card .card { background: #fff; height: 100%; }
 .bc-standard-card .card .card__inner { background: #fff; border-radius: 0; --ratio-percent: 100%; }
 .bc-standard-card .card .card__media { margin: 0; width: 100%; }
@@ -169,6 +172,7 @@
 .template-search .bc-search-card__content { gap: 8px; }
 .template-search .bc-search-card__price-wrap { margin-top: auto; }
 @media (max-width: 749px) {
+  .bc-card-view { min-height: 44px; }
   .bc-card-specs { font-size: 12px; }
   .bc-standard-card .card > .card__content > .card__information { padding: 12px; }
   .bc-standard-card .card > .card__content .card__heading { font-size: 14px; min-height: 59px; }

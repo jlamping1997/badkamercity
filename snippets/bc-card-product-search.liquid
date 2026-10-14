@@ -100,7 +100,7 @@
         <p class="bc-search-card__vendor">{{ card_product.vendor | escape }}</p>
       {% endif %}
       <div class="bc-search-card__title-wrap">
-        <h3 class="bc-search-card__title h4">{{ card_product.title | escape }}</h3>
+        <h3 class="bc-search-card__title h4" title="{{ card_product.title | escape }}">{% render 'bc-card-title', product: card_product %}</h3>
       </div>
 
       {% render 'bc-card-specs', product: card_product %}

@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **PRODUCTKAARTEN VERFIJND:** bij laatste read is `195213656330` MAIN. De verdere presentatieverfijning staat in kopie `195216048394` (Productkaarten verfijnd); zie [kaartstatus](PRODUCT_CARDS_2026-10-14.md). Geen header-/productdatamutatie. Tien kaart-rendercontroles en tien filtertests geslaagd. Visuele eindcontrole en merchant-publicatie blijven open; connector kan geen MAIN schrijven of publiceren.
+
 > **GOEDGEKEURDE PRODUCTKAARTEN:** MAIN is bij de laatste read `195211919626`. Het goedgekeurde ontwerp met productkenmerken en ‘Bekijk product’ staat volledig in kopie `195213656330` (Goedgekeurde productkaarten); zie [actuele kaartstatus](PRODUCT_CARDS_2026-10-14.md). Merchant heeft live toepassing geautoriseerd, maar de connector kan MAIN niet schrijven/publiceren. Alleen merchant-publicatie en visuele eindcontrole blijven nodig voor deze release. Header behouden; oudere thema-status hieronder is historisch.
 
 > **NIEUW ONTWERPCONCEPT 14 OKTOBER:** een verse Admin-read toont `195038216458` als MAIN. Productkaartwijzigingen staan daarom in nieuwe UNPUBLISHED kopie `195211919626` (Productkaarten 14 okt). Zie [productkaarten](PRODUCT_CARDS_2026-10-14.md). Browserpreview geblokkeerd; visuele desktop/mobiele review open. Oudere aanwijzingen hieronder dat Afronding basis nog concept is, zijn historisch.
