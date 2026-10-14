@@ -50,9 +50,7 @@
   endfor
 -%}
 <div class="bc-collection{% if has_collection_filters %} bc-collection--with-filters{% endif %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-    {% if collection.handle == 'wastafelkranen' %}
     {% render 'bc-external-filters', collection_handle: collection.handle, section_id: section.id %}
-  {% endif %}
 {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and collection.all_products_count > 0 -%}

@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **ACTUELE AANVULLING 14 OKTOBER 2026:** lees eerst [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md). De merchant heeft index-, API- en HTTPS/CORS-proeven op de VPS succesvol uitgevoerd. Concept `195038216458` gebruikt de nieuwe route opt-in via `bcfilters=1`; desktopcontroles en 10 regressietests zijn geslaagd. Mobiele visuele controle, verdere familiecontrole en standaard activering/publicatie staan open. MAIN blijft `194981003530`.
+
 > **ACTUELE AANVULLING 10 OKTOBER 2026:** lees eerst [Afronding basis 10 oktober](AFRONDING_BASIS_2026-10-10.md). MAIN is nu `194981003530`; het samengebrachte concept `195038216458` is ongepubliceerd en staat op REVIEW. De onderstaande architectuur en aantallen beschrijven de historische momentopname van 7 oktober. Nieuwe previewtests en open mobiele controle staan in de aanvulling.
 
 > **UITGEBREIDE OVERDRACHT (2026-10-07):** Begin als nieuwe AI/ontwikkelaar bij **[HANDOVER_START_HERE.md](HANDOVER_START_HERE.md)**. Dit document blijft de volledige functionele basis. De volgende aanvullende documenten maken de overdracht operationeel en controleerbaar:

@@ -1,5 +1,7 @@
 # BadkamerCity — bewezen live-status en volgende werkroute
 
+> **Aanvulling 14 oktober 2026:** [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md) legt de geslaagde VPS-index/API/HTTPS-proeven en desktopbediening in concept `195038216458` vast. Opt-in blijft verplicht; mobiele controle, andere productfamilies, indexonderhoud en publicatie zijn nog open. MAIN `194981003530` is ongewijzigd. Oudere tabellen hieronder blijven historische snapshots.
+
 > **Aanvulling 10 oktober 2026:** MAIN is `194981003530` (Collectiebeelden correctie 8 okt). Hotbath-productweergave, rustiger cart en Toebehoren-afbeeldingen staan samen in ongepubliceerde draft `195038216458`, met geslaagde scoped desktopcontroles. Mobiele eindcontrole en publicatie staan open. Zie [actuele oplevering en vervolg](AFRONDING_BASIS_2026-10-10.md). De tabellen hieronder blijven de historische stand van 7 oktober.
 
 **Meetdatum:** 7 oktober 2026. Dit overzicht scheidt wat bestaat van wat daadwerkelijk is getest of expliciet goedgekeurd. Nieuwe AI's mogen deze status niet stil upgraden; ze moeten nieuwe controles met datum en bron toevoegen.
