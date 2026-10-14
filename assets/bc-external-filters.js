@@ -13,12 +13,6 @@
     const root = document.getElementById('BcExternalFilters');
     if (!root) return;
 
-    const url = new URL(window.location.href);
-
-    // Veilig testen op het live theme:
-    // zonder ?bcfilters=1 verandert er helemaal niets.
-    if (url.searchParams.get('bcfilters') !== '1') return;
-
     const apiBase = root.dataset.apiBase;
     const collectionHandle = root.dataset.collection;
     const sectionRoot = root.closest('.bc-collection');

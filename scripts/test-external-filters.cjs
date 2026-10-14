@@ -19,7 +19,7 @@ test('Quick edits to both range bounds preserve both values', async () => {
   } finally { f.dom.window.close(); }
 });
 async function fixture() {
-  const dom = new JSDOM(`<div class="bc-collection"><div id="BcExternalFilters" data-api-base="https://example.test/verified" data-collection="wastafelkranen" data-products-count="1"></div><div class="facets-vertical"><aside id="main-collection-filters">Native filters</aside><facet-filters-form class="facets-vertical-sort"></facet-filters-form><div id="ProductGridContainer"><ul id="product-grid"><li id="native-product">Native product</li></ul><div class="pagination-wrapper">Native pages</div></div></div></div>`, { url: 'https://example.test/collections/wastafelkranen?bcfilters=1', runScripts: 'outside-only' });
+  const dom = new JSDOM(`<div class="bc-collection"><div id="BcExternalFilters" data-api-base="https://example.test/verified" data-collection="wastafelkranen" data-products-count="1"></div><div class="facets-vertical"><aside id="main-collection-filters">Native filters</aside><facet-filters-form class="facets-vertical-sort"></facet-filters-form><div id="ProductGridContainer"><ul id="product-grid"><li id="native-product">Native product</li></ul><div class="pagination-wrapper">Native pages</div></div></div></div>`, { url: 'https://example.test/collections/wastafelkranen', runScripts: 'outside-only' });
   const w = dom.window;
   const calls = [];
   let fail = false;

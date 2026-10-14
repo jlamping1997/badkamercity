@@ -1,5 +1,7 @@
 # Gecontroleerde filters — conceptcontrole 14 oktober 2026
 
+> **Aanvulling na merchantfeedback:** de verplichte `bcfilters=1`-schakelaar is verwijderd uit concept `195038216458`, omdat de merchant bij gewone conceptnavigatie geen filters zag. De filters laden nu standaard in de conceptcollecties. Wastafelkranen is zonder queryparameter in de browser gecontroleerd: externe bediening actief, 454 producten. Alle 10 regressietests draaien nu zonder proefparameter en slagen; themevalidatie revisie 7 en exacte Shopify-readback zijn geslaagd. MAIN blijft `194981003530`; deze standaardactivering geldt niet voor de gepubliceerde site. De opt-inbeschrijving hieronder is de eerdere stand van deze dag. Herstel via de vorige concept-JS brengt de opt-in terug; alleen verwijderen van de URL-parameter schakelt deze nieuwe conceptcode niet meer uit.
+
 ## Actuele stand
 
 MAIN blijft `194981003530`. Alleen ongepubliceerd concept `195038216458` (Afronding basis 10 okt) is bijgewerkt. De opt-in `?bcfilters=1` blijft verplicht; gewone bezoekers zijn niet omgeschakeld. Het externe snippet staat nu in standaard collectieproductlijsten, met native terugval voor ontbrekende profielen, API-fouten en afwijkende productaantallen.
