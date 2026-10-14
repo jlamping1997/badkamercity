@@ -54,12 +54,19 @@
         "description": {
           "type": "description",
           "settings": {}
+        },
+        "hotbath_normal_intro": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'bc-hotbath-normal-intro', product: product, section_id: section.id %}"
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "caption",
+        "hotbath_normal_intro",
         "price",
         "variant_picker",
         "quantity_selector",

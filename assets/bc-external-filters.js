@@ -13,12 +13,6 @@
     const root = document.getElementById('BcExternalFilters');
     if (!root) return;
 
-    const url = new URL(window.location.href);
-
-    // Veilig testen op het live theme:
-    // zonder ?bcfilters=1 verandert er helemaal niets.
-    if (url.searchParams.get('bcfilters') !== '1') return;
-
     const apiBase = root.dataset.apiBase;
     const collectionHandle = root.dataset.collection;
     const sectionRoot = root.closest('.bc-collection');
@@ -36,16 +30,18 @@
       return;
     }
 
-    document.documentElement.classList.add('bc-external-filters-active');
-
     const nativeAside = sectionRoot.querySelector('#main-collection-filters');
-    if (nativeAside) nativeAside.style.display = 'none';
-
     const nativeSort = sectionRoot.querySelector('facet-filters-form.facets-vertical-sort');
-    if (nativeSort) nativeSort.style.display = 'none';
-
     const nativePagination = productContainer.querySelector('.pagination-wrapper');
-    if (nativePagination) nativePagination.style.display = 'none';
+    const nativeNodes = [nativeAside, nativeSort, nativePagination].filter(Boolean);
+    const nativeDisplays = new Map(nativeNodes.map((node) => [node, node.style.display]));
+    const nativeGridNodes = [...productGrid.childNodes];
+    const expectedCount = Number(root.dataset.productsCount);
+    let externalActive = false;
+    let requestId = 0;
+    let requestController;
+    let filtersRendered = false;
+    let rangeTimer;
 
     const state = {
       filters: {},
@@ -123,6 +119,7 @@
     sortSelect.value = state.sort;
 
     sidebar.addEventListener('change', onFilterChange);
+    sidebar.addEventListener('input', onRangeInput);
     sidebar.addEventListener('click', onSidebarClick);
     activeFilters.addEventListener('click', onChipClick);
     pagination.addEventListener('click', onPaginationClick);
@@ -130,6 +127,9 @@
     toolbar.querySelector('[data-bc-open-filters]').addEventListener('click', openDrawer);
     sidebar.querySelector('.bc-filter-panel__close').addEventListener('click', closeDrawer);
     overlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeDrawer();
+    });
 
     sortSelect.addEventListener('change', () => {
       state.sort = sortSelect.value;
@@ -138,16 +138,19 @@
       runSearch();
     });
 
-    window.addEventListener('popstate', () => {
+    window.addEventListener('popstate', (event) => {
+      if (externalActive) event.stopImmediatePropagation();
       resetState();
       parseStateFromUrl();
       sortSelect.value = state.sort;
       runSearch();
-    });
+    }, { capture: true });
 
+    setExternalMode(false);
     runSearch();
 
     function resetState() {
+      clearTimeout(rangeTimer);
       state.filters = {};
       state.ranges = {};
       state.sort = 'relevance';
@@ -219,10 +222,32 @@
       if (state.sort !== 'relevance') next.searchParams.set('bcsort', state.sort);
       if (state.page > 1) next.searchParams.set('bcpage', String(state.page));
 
-      history.replaceState({}, '', next);
+      if (next.href !== window.location.href) history.pushState({}, '', next);
+    }
+
+    function setExternalMode(active) {
+      document.documentElement.classList.toggle('bc-external-filters-active', active);
+      nativeNodes.forEach((node) => {
+        node.style.display = active ? 'none' : nativeDisplays.get(node);
+      });
+      [sidebar, toolbar, activeFilters, pagination, overlay].forEach((node) => {
+        node.hidden = !active;
+        node.style.display = active ? '' : 'none';
+      });
+      if (!active) {
+        closeDrawer();
+        if (externalActive) productGrid.replaceChildren(...nativeGridNodes);
+        state.lastData = null;
+      }
+      externalActive = active;
     }
 
     async function runSearch() {
+      const currentRequest = ++requestId;
+      requestController?.abort();
+      const controller = new AbortController();
+      requestController = controller;
+      const timeout = setTimeout(() => controller.abort(), 12000);
       setLoading(true);
       errorBox.hidden = true;
 
@@ -231,9 +256,8 @@
           method: 'POST',
           mode: 'cors',
           credentials: 'omit',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          signal: controller.signal,
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             collection: collectionHandle,
             page: state.page,
@@ -243,67 +267,94 @@
             ranges: state.ranges
           })
         });
-
-        if (!response.ok) {
-          throw new Error(`API antwoordde met ${response.status}`);
-        }
-
+        if (!response.ok) throw new Error(`API antwoordde met ${response.status}`);
         const data = await response.json();
+        if (currentRequest !== requestId) return;
+        if (!Array.isArray(data.products) || !Array.isArray(data.facets) ||
+            !Number.isInteger(data.found) || data.found < 0) {
+          throw new Error('Ongeldig filterantwoord');
+        }
+        if (Number.isFinite(expectedCount) &&
+            (!Number.isInteger(data.collection?.profile_products) ||
+             data.collection.profile_products !== expectedCount)) {
+          throw new Error('Filterindex en collectie komen niet overeen');
+        }
+        renderFilters(data.facets);
+        renderActiveFilters(data.facets);
+        renderProducts(data.products);
+        renderCount(data.found);
+        renderPagination(data.found);
         state.lastData = data;
-
-        renderFilters(data.facets || []);
-        renderActiveFilters(data.facets || []);
-        renderProducts(data.products || []);
-        renderCount(data.found || 0);
-        renderPagination(data.found || 0);
+        setExternalMode(true);
       } catch (error) {
+        if (currentRequest !== requestId) return;
         console.error('[BadkamerCity filters]', error);
+        setExternalMode(false);
         errorBox.textContent =
-          'De filters konden niet worden geladen. De normale productweergave blijft beschikbaar.';
+          'De uitgebreide filters zijn tijdelijk niet beschikbaar. Je kunt de gewone filters en productlijst blijven gebruiken.';
         errorBox.hidden = false;
       } finally {
-        setLoading(false);
+        clearTimeout(timeout);
+        if (currentRequest === requestId) setLoading(false);
       }
     }
 
     function renderFilters(facets) {
       const groups = sidebar.querySelector('[data-bc-filter-groups]');
+      const openFields = new Set([...groups.querySelectorAll('details[open]')].map((group) => group.dataset.filterGroup));
+      const focused = document.activeElement;
+      const editing = groups.contains(focused) && focused.dataset.rangeField
+        ? { field: focused.dataset.rangeField, kind: focused.dataset.rangeKind, value: focused.value }
+        : null;
 
       groups.innerHTML = facets.map((facet, index) => {
         const field = facet.field;
         const selected = state.filters[field] || [];
         const range = state.ranges[field] || {};
         const isNumeric = ['number_integer', 'number_decimal'].includes(facet.type);
+        const isOpen = filtersRendered ? openFields.has(field) : index < 5;
 
         if (isNumeric) {
-          const min = facet.min ?? facet.stats?.min ?? '';
-          const max = facet.max ?? facet.stats?.max ?? '';
+          const scale = field === 'price_cents' ? 100 : 1;
+          const rawMin = facet.min ?? facet.stats?.min;
+          const rawMax = facet.max ?? facet.stats?.max;
+          const min = rawMin == null ? '' : rawMin / scale;
+          const max = rawMax == null ? '' : rawMax / scale;
+          const unit = field === 'price_cents' ? '€' : facet.unit;
+          const unitSuffix = unit && !String(facet.label).trim().endsWith(`(${unit})`)
+            ? ` (${escapeHtml(unit)})` : '';
+          const step = field === 'price_cents' ? '0.01' :
+            (['int32', 'int64'].includes(facet.data_type) ? '1' : 'any');
 
           return `
-            <details class="bc-filter-group" ${index < 5 ? 'open' : ''}>
-              <summary>${escapeHtml(facet.label)}${facet.unit ? ` (${escapeHtml(facet.unit)})` : ''}</summary>
+            <details class="bc-filter-group" data-filter-group="${attr(field)}" ${isOpen ? 'open' : ''}>
+              <summary>${escapeHtml(facet.label)}${unitSuffix}</summary>
               <div class="bc-filter-group__body">
                 <div class="bc-filter-range">
                   <label>
                     Van
                     <input
                       type="number"
-                      step="any"
+                      min="0"
+                      step="${step}"
+                      data-range-scale="${scale}"
                       data-range-field="${attr(field)}"
                       data-range-kind="min"
                       placeholder="${attr(min)}"
-                      value="${attr(range.min ?? '')}"
+                      value="${attr(range.min == null ? '' : range.min / scale)}"
                     >
                   </label>
                   <label>
                     Tot
                     <input
                       type="number"
-                      step="any"
+                      min="0"
+                      step="${step}"
+                      data-range-scale="${scale}"
                       data-range-field="${attr(field)}"
                       data-range-kind="max"
                       placeholder="${attr(max)}"
-                      value="${attr(range.max ?? '')}"
+                      value="${attr(range.max == null ? '' : range.max / scale)}"
                     >
                   </label>
                 </div>
@@ -315,7 +366,7 @@
         const values = (facet.values || []).map((item) => {
           const rawValue = String(item.value);
           const checked = selected.includes(rawValue);
-          const label = facet.type === 'boolean'
+          const label = facet.type === 'boolean' || facet.data_type === 'bool'
             ? (rawValue === 'true' ? 'Ja' : 'Nee')
             : rawValue;
 
@@ -336,16 +387,26 @@
         if (!values) return '';
 
         return `
-          <details class="bc-filter-group" ${index < 5 ? 'open' : ''}>
+          <details class="bc-filter-group" data-filter-group="${attr(field)}" ${isOpen ? 'open' : ''}>
             <summary>${escapeHtml(facet.label)}</summary>
             <div class="bc-filter-group__body">${values}</div>
           </details>
         `;
       }).join('');
+      filtersRendered = true;
+      if (editing) {
+        const replacement = [...groups.querySelectorAll('[data-range-field]')].find((input) =>
+          input.dataset.rangeField === editing.field && input.dataset.rangeKind === editing.kind);
+        if (replacement) {
+          replacement.value = editing.value;
+          replacement.focus({ preventScroll: true });
+        }
+      }
     }
 
     function renderActiveFilters(facets) {
       const labels = new Map(facets.map((facet) => [facet.field, facet.label]));
+      const booleans = new Set(facets.filter((facet) => facet.data_type === 'bool' || facet.type === 'boolean').map((facet) => facet.field));
       const chips = [];
 
       Object.entries(state.filters).forEach(([field, values]) => {
@@ -357,7 +418,7 @@
               data-chip-field="${attr(field)}"
               data-chip-value="${attr(value)}"
             >
-              ${escapeHtml(labels.get(field) || field)}: ${escapeHtml(value)}
+              ${escapeHtml(labels.get(field) || field)}: ${escapeHtml(booleans.has(field) ? (value === 'true' ? 'Ja' : 'Nee') : value)}
             </button>
           `);
         });
@@ -366,8 +427,8 @@
       Object.entries(state.ranges).forEach(([field, range]) => {
         if (range.min !== undefined || range.max !== undefined) {
           const text = [
-            range.min !== undefined ? `vanaf ${range.min}` : '',
-            range.max !== undefined ? `t/m ${range.max}` : ''
+            range.min !== undefined ? `vanaf ${field === 'price_cents' ? formatPrice(range.min) : range.min}` : '',
+            range.max !== undefined ? `t/m ${field === 'price_cents' ? formatPrice(range.max) : range.max}` : ''
           ].filter(Boolean).join(' ');
 
           chips.push(`
@@ -454,6 +515,11 @@
       const rangeInput = event.target.closest('[data-range-field]');
 
       if (rangeInput) {
+        clearTimeout(rangeTimer);
+        if (!rangeInput.checkValidity()) {
+          rangeInput.reportValidity();
+          return;
+        }
         const field = rangeInput.dataset.rangeField;
         const kind = rangeInput.dataset.rangeKind;
         const value = rangeInput.value.trim();
@@ -461,7 +527,11 @@
         state.ranges[field] = state.ranges[field] || {};
 
         if (value === '') delete state.ranges[field][kind];
-        else state.ranges[field][kind] = Number(value);
+        else {
+          const scale = Number(rangeInput.dataset.rangeScale) || 1;
+          const numeric = Number(value) * scale;
+          state.ranges[field][kind] = field === 'price_cents' ? Math.round(numeric) : numeric;
+        }
 
         if (Object.keys(state.ranges[field]).length === 0) {
           delete state.ranges[field];
@@ -473,8 +543,30 @@
       }
     }
 
+    function onRangeInput(event) {
+      const input = event.target.closest('[data-range-field]');
+      if (!input) return;
+      clearTimeout(rangeTimer);
+      if (!input.checkValidity()) return;
+      const field = input.dataset.rangeField;
+      const kind = input.dataset.rangeKind;
+      const value = input.value.trim();
+      const scale = Number(input.dataset.rangeScale) || 1;
+      state.ranges[field] = state.ranges[field] || {};
+      if (value === '') delete state.ranges[field][kind];
+      else state.ranges[field][kind] = field === 'price_cents'
+        ? Math.round(Number(value) * scale) : Number(value) * scale;
+      if (!Object.keys(state.ranges[field]).length) delete state.ranges[field];
+      rangeTimer = setTimeout(() => {
+        state.page = 1;
+        syncUrl();
+        runSearch();
+      }, 300);
+    }
+
     function onSidebarClick(event) {
       if (event.target.closest('[data-bc-clear-all]')) {
+        clearTimeout(rangeTimer);
         state.filters = {};
         state.ranges = {};
         state.page = 1;
@@ -497,6 +589,7 @@
       }
 
       if (chip.dataset.chipRange) {
+        clearTimeout(rangeTimer);
         delete state.ranges[chip.dataset.chipRange];
       }
 

@@ -38,7 +38,25 @@ Renders child-category cards or compact image links from the store's navigation.
             <h2 class="bc-category-groups__title"><a href="{{ root_link.url | escape }}">{{ root_link.title | escape }}</a></h2>
             <ul class="bc-category-groups__list" role="list">
               {%- for child_link in middle_link.links -%}
-                <li><a href="{{ child_link.url | escape }}"><span>{{ child_link.title | escape }}</span><span aria-hidden="true">›</span></a></li>
+                {%- liquid
+                  assign group_child_category = child_link.object
+                  if child_link.type != 'collection_link'
+                    assign group_child_handle = child_link.title | handleize
+                    assign group_child_category = collections[group_child_handle]
+                  endif
+                  assign group_child_image = group_child_category.image | default: group_child_category.products.first.featured_image
+                -%}
+                <li>
+                  <a class="bc-category-groups__link" href="{{ child_link.url | escape }}">
+                    {%- if group_child_image != blank -%}
+                      {{ group_child_image | image_url: width: 128 | image_tag: class: 'bc-category-groups__image', widths: '64, 128', sizes: '64px', loading: 'lazy', alt: '' }}
+                    {%- else -%}
+                      <span class="bc-category-groups__image" aria-hidden="true"></span>
+                    {%- endif -%}
+                    <span class="bc-category-groups__label">{{ child_link.title | escape }}</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </li>
               {%- endfor -%}
             </ul>
           </section>
@@ -65,7 +83,7 @@ Renders child-category cards or compact image links from the store's navigation.
             assign future_handle = child_link.title | handleize
             assign child_category = collections[future_handle]
           endif
-          assign child_image = child_category.products.first.featured_image | default: child_category.image
+          assign child_image = child_category.image | default: child_category.products.first.featured_image
           assign override_block = nil
           for candidate_block in image_blocks
             if candidate_block.type != 'subcategory'
@@ -119,3 +137,25 @@ Renders child-category cards or compact image links from the store's navigation.
     </ul>
   </nav>
 {%- endif -%}
+
+{% stylesheet %}
+  .bc-category-groups .bc-category-groups__list .bc-category-groups__link {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr) 12px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bc-category-groups .bc-category-groups__image {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .bc-category-groups .bc-category-groups__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+{% endstylesheet %}

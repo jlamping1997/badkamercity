@@ -1,0 +1,96 @@
+{% doc %}
+  Renders stored, grouped specifications for identified Hotbath sale articles.
+  Preserves source labels, units and order; omits held/unknown values, not false or zero.
+  Both keyed imports and the early label-only import are supported.
+  @param {product} product - Current product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- capture bc_normal_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
+{%- assign bc_normal_scope = bc_normal_scope | strip -%}
+{%- liquid
+  assign bc_sku = product.selected_or_first_available_variant.sku | strip
+  assign bc_groups = product.metafields.custom.complete_specificaties.value
+  assign bc_held = product.metafields.bc_data.held_source_claims.value
+  assign bc_identity_ok = false
+  if bc_normal_scope == 'ready'
+    assign bc_identity_ok = true
+    for group in bc_groups
+      for item in group.items
+        assign bc_key = item.key | strip | downcase
+        assign bc_label_check = item.label | strip | downcase
+        assign bc_check_value = item.value | append: '' | strip
+        if bc_key == 'fabrikantnummer' or bc_label_check == 'fabrikantnummer'
+          if bc_check_value != bc_sku
+            assign bc_identity_ok = false
+          endif
+        endif
+      endfor
+    endfor
+  endif
+-%}
+{%- capture bc_spec_body -%}
+  {%- if bc_identity_ok -%}
+    {%- for group in bc_groups -%}
+      {%- capture bc_group_rows -%}
+        {%- for item in group.items -%}
+          {%- liquid
+            assign bc_skip = false
+            assign bc_key = item.key | strip | downcase
+            assign bc_label = item.label | strip
+            assign bc_label_check = bc_label | downcase
+            assign bc_value_text = item.value | append: '' | strip
+            assign bc_value_check = bc_value_text | downcase
+            if bc_label == blank or bc_value_text == blank
+              assign bc_skip = true
+            endif
+            assign bc_serialized_value = item.value | json
+            assign bc_value_prefix = bc_serialized_value | slice: 0, 1
+            if item.value == nil or item.value == empty or bc_value_prefix == '[' or bc_value_prefix == '{'
+              assign bc_skip = true
+            endif
+            if bc_value_check == 'onbekend' or bc_value_check == 'unknown' or bc_value_check == 'niet bekend' or bc_value_check == '-' or bc_value_check == '?'
+              assign bc_skip = true
+            endif
+            for held in bc_held
+              assign bc_held_key = held.key | strip | downcase
+              assign bc_held_label = held.label | strip | downcase
+              if bc_key != blank and bc_held_key == bc_key
+                assign bc_skip = true
+              elsif bc_held_label != blank and bc_held_label == bc_label_check
+                assign bc_skip = true
+              endif
+            endfor
+          -%}
+          {%- unless bc_skip -%}
+            <tr class="bc-product-specs__row">
+              <th scope="row" class="bc-product-specs__label">{{ bc_label | escape }}</th>
+              <td class="bc-product-specs__value">{% if item.value == true %}{{ 'bc_specs.yes' | t }}{% elsif item.value == false %}{{ 'bc_specs.no' | t }}{% else %}{{ bc_value_text | escape }}{% endif %}</td>
+            </tr>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      {%- assign bc_group_rows = bc_group_rows | strip -%}
+      {%- if bc_group_rows != blank -%}
+        <tbody>
+          {%- if group.group != blank -%}
+            <tr class="bc-product-specs__header-row">
+              <th colspan="2" scope="rowgroup" class="bc-product-specs__header">{{ group.group | escape }}</th>
+            </tr>
+          {%- endif -%}
+          {{ bc_group_rows }}
+        </tbody>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign bc_spec_body = bc_spec_body | strip -%}
+{%- if bc_spec_body != blank -%}
+  <section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+    <div class="bc-product-specs__inner">
+      <h2 id="ProductSpecsTitle-{{ section_id }}" class="bc-product-specs__title">{{ 'bc_specs.heading' | t }}</h2>
+      <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">{{ bc_spec_body }}</table>
+    </div>
+  </section>
+{%- elsif bc_normal_scope == 'ready' and request.design_mode -%}
+  <p role="status">{{ 'bc_specs.identity_warning' | t }}</p>
+{%- endif -%}
