@@ -36,5 +36,9 @@ function product(sku, manifestSku, values) {
     const rendered = await engine.parseAndRender(titleCode, { product: { vendor, title } });
     assert.equal(rendered.trim(), expected);
   }
-  console.log('10 card render checks passed (4 attributes, 6 titles).');
+  for (const [value, expected] of [['Korte kraantitel', 'Korte kraantitel'], ['   ', 'Cobber CB003'], ['<img onerror=alert(1)>', '&lt;img onerror=alert(1)&gt;']]) {
+    const rendered = await engine.parseAndRender(titleCode, { product: { title: 'Hotbath Cobber CB003', vendor: 'Hotbath', metafields: { custom: { card_title: { value } } } } });
+    assert.equal(rendered.trim(), expected);
+  }
+  console.log('13 card render checks passed (4 attributes, 9 titles).');
 })().catch((error) => { console.error(error); process.exitCode = 1; });

@@ -1,5 +1,5 @@
 {% doc %}
-  Displays the product title without a repeated leading vendor.
+  Displays the editable card title, with the existing product title as fallback.
   @param {product} product - The card product.
 {% enddoc %}
 {%- liquid
@@ -13,6 +13,10 @@
     if remainder != blank
       assign card_title = remainder
     endif
+  endif
+  assign short_title = product.metafields.custom.card_title.value | strip
+  if short_title != blank
+    assign card_title = short_title
   endif
 -%}
 {{- card_title | escape -}}

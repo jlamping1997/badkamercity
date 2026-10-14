@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **ZOEKFILTERS EN KORTE TITELS 14 OKTOBER:** verse MAIN `195216048394`; concept `195218047242` voegt zoekfilterprofiel `__all__` en merchantveld `custom.card_title` toe. Veld aangemaakt en nog leeg. Zie [zoek- en titelcontract](SEARCH_AND_SHORT_TITLES_2026-10-14.md). Publicatie en visuele/live zoekcontrole open; hieronder oudere release-momentopnamen.
+
 > **PRODUCTKAARTEN VERFIJND:** bij laatste read is `195213656330` MAIN. De verdere presentatieverfijning staat in kopie `195216048394` (Productkaarten verfijnd); zie [kaartstatus](PRODUCT_CARDS_2026-10-14.md). Geen header-/productdatamutatie. Tien kaart-rendercontroles en tien filtertests geslaagd. Visuele eindcontrole en merchant-publicatie blijven open; connector kan geen MAIN schrijven of publiceren.
 
 > **GOEDGEKEURDE PRODUCTKAARTEN:** MAIN is bij de laatste read `195211919626`. Het goedgekeurde ontwerp met productkenmerken en ‘Bekijk product’ staat volledig in kopie `195213656330` (Goedgekeurde productkaarten); zie [actuele kaartstatus](PRODUCT_CARDS_2026-10-14.md). Merchant heeft live toepassing geautoriseerd, maar de connector kan MAIN niet schrijven/publiceren. Alleen merchant-publicatie en visuele eindcontrole blijven nodig voor deze release. Header behouden; oudere thema-status hieronder is historisch.
