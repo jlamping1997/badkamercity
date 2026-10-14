@@ -103,25 +103,7 @@
         <h3 class="bc-search-card__title h4">{{ card_product.title | escape }}</h3>
       </div>
 
-      {% if has_specs %}
-        <ul
-          class="bc-search-card__specs"
-          style="margin: -0.4rem 0 0; padding: 0; list-style: none; color: rgba(var(--color-foreground), 0.72); font-size: 1.25rem; line-height: 1.45;"
-        >
-          {% if spec_1 != blank %}
-            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
-              <span aria-hidden="true">&#8226;</span>
-              <span>{{ spec_1 | escape }}</span>
-            </li>
-          {% endif %}
-          {% if spec_2 != blank %}
-            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
-              <span aria-hidden="true">&#8226;</span>
-              <span>{{ spec_2 | escape }}</span>
-            </li>
-          {% endif %}
-        </ul>
-      {% endif %}
+      {% render 'bc-card-specs', product: card_product %}
 
       <div class="bc-search-card__price-wrap">
         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
@@ -148,7 +130,8 @@
         </div>
       </div>
 
-      <div class="bc-search-card__meta" aria-hidden="true"></div>
+      {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}
+      <span class="bc-card-view">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></span>
     </div>
   </a>
 </article>

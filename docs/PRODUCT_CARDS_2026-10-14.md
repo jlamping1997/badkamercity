@@ -1,5 +1,11 @@
 # Productkaarten voor zoeken en categorieën — 14 oktober 2026
 
+> **Goedgekeurd ontwerp, latere stand 14 oktober:** merchant heeft de gegenereerde productkaartopbouw goedgekeurd, expliciet zonder headerwijziging, en directe toepassing op het bestaande thema gevraagd. De actuele MAIN is nu `195211919626`. De Shopify-koppeling staat alleen writes op UNPUBLISHED toe en kan niet publiceren. Daarom staat de uitvoering klaar in identieke kopie `195213656330` — **BadkamerCity - Goedgekeurde productkaarten**. Merchant hoeft die versie alleen te publiceren; dit is een connectorbeperking, geen ontbrekende gebruikersautorisatie.
+
+De gedeelde CSS wordt nu ook globaal geladen voor featured collections, category landings, collage, complementaire en gerelateerde producten die `card-product` gebruiken. Geen headersectie/markup gewijzigd. Native en zoekkaarten tonen maximaal twee eigenschappen uit het bestaande bevestigde manifest, uitsluitend bij overeenkomend SKU en formaat; anders producttype/artikelnummer. Externe API-kaarten tonen producttype en SKU, omdat die API geen materiaal/kleur per resultaat retourneert. Geen kenmerken uit titels geraden, geen nieuwe databundel of API-verzoeken per kaart. BTW-tekst verschijnt alleen wanneer `shop.taxes_included` waar is. ‘Bekijk product’ leidt naar de bestaande product-URL. Hartjes/wishlistfuncties uit de conceptafbeelding zijn niet als decoratieve werkloze knop toegevoegd.
+
+Validatie: alle negen gewijzigde themabestanden exact teruggelezen, 10 filterregressietests geslaagd, 4 Liquid-rendercontroles geslaagd (bevestigde eigenschappen, verkeerd SKU, HTML-escaping, volledig ontbrekende data). Thema revisie 2 geldig met niet-blokkerende waarschuwingen; gecorrigeerd snippet revisie 3 geldig. Testscript: `scripts/test-card-specs.cjs` met `liquidjs` 10.30.0 als tijdelijke testdependency. Visuele desktop-/mobiele eindcontrole blijft NOT_TESTED; eerdere browserpreview werd geblokkeerd. MAIN niet geschreven of gepubliceerd. De paragrafen hieronder beschrijven de eerdere ontwerpronde.
+
 ## Scope en bron
 
 De merchant vraagt duidelijkere productkaarten op zoekresultaat- en categoriepagina's, met filters links. De aangeleverde screenshot toont zoekterm `test`, lange afbeeldingsvakken, afgekorte titels en kleine grijze reguliere prijzen.

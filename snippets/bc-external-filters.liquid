@@ -15,5 +15,10 @@
   data-collection="{{ collection_handle | escape }}"
   data-products-count="{{ collection.all_products_count }}"
   data-section-id="{{ section_id | escape }}"
+  data-card-type="{{ 'products.product.card_type' | t | escape }}"
+  data-card-sku="{{ 'products.product.card_sku' | t | escape }}"
+  data-card-view="{{ 'products.product.card_view' | t | escape }}"
+  data-card-tax="{{ 'products.product.card_tax' | t | escape }}"
+  data-tax-included="{{ shop.taxes_included }}"
   hidden
 ></div>

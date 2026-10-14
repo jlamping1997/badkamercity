@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **GOEDGEKEURDE PRODUCTKAARTEN:** MAIN is bij de laatste read `195211919626`. Het goedgekeurde ontwerp met productkenmerken en ‘Bekijk product’ staat volledig in kopie `195213656330` (Goedgekeurde productkaarten); zie [actuele kaartstatus](PRODUCT_CARDS_2026-10-14.md). Merchant heeft live toepassing geautoriseerd, maar de connector kan MAIN niet schrijven/publiceren. Alleen merchant-publicatie en visuele eindcontrole blijven nodig voor deze release. Header behouden; oudere thema-status hieronder is historisch.
+
 > **NIEUW ONTWERPCONCEPT 14 OKTOBER:** een verse Admin-read toont `195038216458` als MAIN. Productkaartwijzigingen staan daarom in nieuwe UNPUBLISHED kopie `195211919626` (Productkaarten 14 okt). Zie [productkaarten](PRODUCT_CARDS_2026-10-14.md). Browserpreview geblokkeerd; visuele desktop/mobiele review open. Oudere aanwijzingen hieronder dat Afronding basis nog concept is, zijn historisch.
 
 > **LATERE UPDATE 14 OKTOBER:** op verzoek van de merchant zijn de filters in concept `195038216458` standaard zichtbaar gemaakt, zonder `bcfilters=1`. Wastafelkranen zonder parameter gecontroleerd: 454 producten en externe filters actief. Zie de aanvulling bovenaan [filterpreview](FILTER_PREVIEW_2026-10-14.md). MAIN is niet gewijzigd.

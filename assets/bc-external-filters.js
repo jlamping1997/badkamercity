@@ -464,7 +464,13 @@
                 <h3 class="bc-filter-card__title">
                   <a href="${attr(href)}">${escapeHtml(product.title || '')}</a>
                 </h3>
+                <dl class="bc-card-specs">
+                  ${product.product_type ? `<div><dt>${escapeHtml(root.dataset.cardType || 'Productsoort')}:</dt><dd>${escapeHtml(product.product_type)}</dd></div>` : ''}
+                  ${product.sku ? `<div><dt>${escapeHtml(root.dataset.cardSku || 'Artikelnummer')}:</dt><dd>${escapeHtml(product.sku)}</dd></div>` : ''}
+                </dl>
                 <div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>
+                ${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax)}</span>` : ''}
+                <a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">&rarr;</span></a>
               </div>
             </article>
           </li>
