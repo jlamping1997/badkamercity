@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **NIEUW ONTWERPCONCEPT 14 OKTOBER:** een verse Admin-read toont `195038216458` als MAIN. Productkaartwijzigingen staan daarom in nieuwe UNPUBLISHED kopie `195211919626` (Productkaarten 14 okt). Zie [productkaarten](PRODUCT_CARDS_2026-10-14.md). Browserpreview geblokkeerd; visuele desktop/mobiele review open. Oudere aanwijzingen hieronder dat Afronding basis nog concept is, zijn historisch.
+
 > **LATERE UPDATE 14 OKTOBER:** op verzoek van de merchant zijn de filters in concept `195038216458` standaard zichtbaar gemaakt, zonder `bcfilters=1`. Wastafelkranen zonder parameter gecontroleerd: 454 producten en externe filters actief. Zie de aanvulling bovenaan [filterpreview](FILTER_PREVIEW_2026-10-14.md). MAIN is niet gewijzigd.
 
 > **ACTUELE AANVULLING 14 OKTOBER 2026:** lees eerst [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md). De merchant heeft index-, API- en HTTPS/CORS-proeven op de VPS succesvol uitgevoerd. Concept `195038216458` gebruikt de nieuwe route opt-in via `bcfilters=1`; desktopcontroles en 10 regressietests zijn geslaagd. Mobiele visuele controle, verdere familiecontrole en standaard activering/publicatie staan open. MAIN blijft `194981003530`.
