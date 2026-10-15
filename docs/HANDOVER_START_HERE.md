@@ -1,5 +1,7 @@
 # BadkamerCity — START HIER bij een overdracht
 
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
+
 **Laatste geverifieerde bronstand:** 7 oktober 2026. Dit document is het **eerste dat een nieuwe AI, freelancer, ICT'er of interne medewerker leest**. Doel: binnen 15 minuten weten wat live staat; binnen een uur veilig een taak kunnen oppakken; zonder gokken over ontbrekende toegang of data.
 
 ## 1. Wat is er werkelijk opgeleverd?
@@ -34,7 +36,7 @@ Gebruik deze labels bij elke toekomstige statusrapportage. **Een Shopify-templat
 
 ## 2. De eerste 15 minuten: controleer de werkelijke omgeving
 
-1. Open de GitHub-repository `jlamping1997/badkamercity`, branch `main`.
+1. Open de centrale werkstatus op GitHub `main`; gebruik daarna de daar geregistreerde actieve codebranch. Onderstaande bronstand van 7 oktober is historisch.
 2. Lees deze pagina, daarna `AI_HANDOFF_CURRENT.md` en `AGENTS.md`.
 3. Controleer in Shopify welk thema NU rol `MAIN` heeft; vertrouw nooit blind het ID van 7 oktober.
 4. Bepaal op de Windows-computer de **juiste** Git-repository en of lokale wijzigingen bestaan.

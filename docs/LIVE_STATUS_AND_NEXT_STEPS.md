@@ -1,8 +1,124 @@
+# BadkamerCity — vaste startpagina en werkplan
+
+**Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+
+## Nu bezig: BC-00 — Git, Shopify en werkplekken gelijkzetten
+
+**Volgende handeling:** haal het actuele MAIN-thema alleen-lezen op in een aparte vergelijkmap en vergelijk de zeven themamappen met `fix/product-cards-2026-10-14`. Neem eventuele nog niet opgeslagen wijzigingen van beide werkcomputers mee vóór het samenbrengen. Download nooit over een bestaande werkmap heen.
+
+| Startgegeven | Actuele vaststelling / beperking |
+| --- | --- |
+| Projectrepository | [jlamping1997/badkamercity](https://github.com/jlamping1997/badkamercity), publiek; geen geheimen, klantgegevens of vertrouwelijke leveranciersbestanden |
+| Tijdelijke actieve codebranch | `fix/product-cards-2026-10-14`; verdergaan met deze lijn, geen nieuwe branch per chat |
+| Laatste codecommit bij controle | `03d157e53431507d7593f9e3b9f0e34295b17941`; latere commits in deze overdracht wijzigen alleen documentatie |
+| Shopify store | `fpa9hu-i3.myshopify.com` |
+| Actueel gepubliceerd thema | **BadkamerCity - Zoekfilters en korte titels**, ID **195218047242**, rol **MAIN** rechtstreeks gelezen op 15 oktober |
+| Vorige uitvoering | `195216048394` is nu UNPUBLISHED; geen automatisch gekozen nieuwe werkpreview |
+| Werkpreview | Nog te bepalen na vergelijking; het thema voor zoekfilters is inmiddels LIVE en mag niet als draft worden beschreven |
+| Git main | Codebasis dateert bij controle van 7 oktober; de recentere codebranch lag 8 commits voor. Deze documentatie-update synchroniseert geen themacode |
+| Open codeoverdracht | PR #5: afronding → main; PR #6: productkaarten/zoeken → afronding. Open PR is geen bewijs dat een Shopify-thema ongepubliceerd is |
+| Andere repository | `jlamping1997/badkamercity-shopify-theme` bestaat ook. Behandel als te vergelijken oudere bron; niet verwijderen of opnieuw als tweede werkproject gebruiken |
+| Werkcomputers | Lokale bestanden, ongepushte commits en authenticatie in deze sessie niet gecontroleerd |
+| GitHub–Shopify-koppeling | Nog niet vastgesteld welke branch rechtstreeks aan welk thema gekoppeld is |
+| Huidige uitvoerder | Deze overdracht is afgerond; geen achtergrondtaak of technische vergrendeling actief |
+| Eerstvolgende controle | Git ↔ Shopify-bestandsvergelijking plus lokale werkplekinspectie; daarna één werkpreview aanwijzen |
+
+**Gebouwd, getest en live zijn afzonderlijke statussen.** Publicatie van het genoemde thema is bewezen; de werking van alle zoekfilters en korte titels is daarmee niet opnieuw getest.
+
+[Technisch zoek- en titelcontract](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/SEARCH_AND_SHORT_TITLES_2026-10-14.md): de vorige ontwikkelsessie meldt 25 geslaagde frontend-/Liquid-controles. Visuele desktop/mobielcontrole en de actuele externe zoekroute stonden nog open. De korte-titeldefinitie was toen leeg; actuele vulling is vandaag niet opnieuw uitgelezen.
+
+## Vaste afspraken
+
+1. **Eén actieve taak, één uitvoerende sessie.** Een tweede chat mag onderzoek doen; laat niet twee sessies dezelfde werkversie of Shopify-data wijzigen. Registreer taak, uitvoerder, branch en checkpoint voordat codewerk begint. Dit is een werkafspraak, geen al ingebouwde software-lock.
+2. **Nieuwe ideeën naar de parkeerplaats hieronder.** Wissel alleen bij een aangetoond probleem dat de huidige taak blokkeert of bij een expliciete prioriteitswijziging van de eigenaar. Noteer dan waarom en waar de vorige taak moet worden hervat.
+3. **Kleine stukken afronden.** Deel werk op in ongeveer 20–45 minuten. Na ieder betekenisvol, bewaarbaar stuk: wijzigingen beoordelen, passende controle, status bijwerken, commit en push verifiëren. Wacht niet tot de hele werkdag klaar is.
+4. **Elke taak heeft een eindcriterium.** Noteer scope, betrokken bestanden/Admin-objecten, controle, open punt en exact één volgende handeling. “Klaar” zonder bewijs is geen status.
+5. **Geen nieuwe ontwerpvariant tijdens een andere taak.** Bestaande goedgekeurde onderdelen behouden; een gerichte aanpassing mag als de huidige taak die vereist.
+6. **De uitvoerende AI houdt deze pagina bij.** De gebruiker hoeft geen tweede Excel, chatlog of bord bij te houden. Bij het beëindigen van een beurt zonder schrijfrechten: geef de ontbrekende opslag expliciet aan.
+7. **Overdracht is pas geslaagd na remote opslag.** Een lokale commit of stash is niet beschikbaar op een andere pc. Bij wegvallen vóór een checkpoint kunnen de nieuwste lokale wijzigingen nog ontbreken; beloof geen automatische achtergrondopslag.
+8. **Huidige toestemming en projectregels blijven gelden.** Dit plan autoriseert geen ongevraagde publicaties, massale productmutaties, verwijderingen of destructieve Git-acties.
+
+## Beoogde technische inrichting na BC-00
+
+| Onderdeel | Werkwijze |
+| --- | --- |
+| `main` | Goedgekeurde releasecode en deze vaste startpagina. Pas na de vergelijking behandelen als actuele live-codebasis |
+| `work` | Eén vaste werkbranch vanaf de samengebrachte basis; de huidige actieve branch vervult die rol tijdelijk. Nog niet aangemaakt of gekoppeld |
+| Shopify werkpreview | Eén aangewezen UNPUBLISHED thema met vaste previewlink; alle vervolgwijzigingen cumulatief hierin |
+| Shopify live | De geteste release; nooit een oude losse categorietemplate of themakopie publiceren alsof die de hele huidige webshop bevat |
+| Dagelijkse synchronisatie | Ophalen vóór werken; code en voortgang samen committen en pushen bij checkpoints. Bestaande lokale afwijkingen eerst behouden en vergelijken |
+| Release | Complete samenhangende kandidaat controleren, huidige live-afwijkingen meenemen, vervolgens gecontroleerd vrijgeven en MAIN-ID/commit/controle vastleggen |
+
+Gebruik bij voorkeur de bestaande **Shopify GitHub-integratie** voor `work` → werkpreview, mits de vergelijking en een kleine proef in beide richtingen slagen. Een gekoppelde branch werkt het bijbehorende thema bij; ook opgeslagen editorwijzigingen gaan terug naar Git. Is een gekoppeld thema LIVE, dan kan een push direct de liveweergave veranderen. Controleer de daadwerkelijke koppeling vóór iedere release; `work` mag niet als live gekoppeld blijven staan na publicatie.
+
+De proef voor BC-00: één onschuldige wijziging in de aangewezen preview, terugzien in Git, wijziging op de andere werkplek ophalen, daarna herstellen. Geen openbare winkel wijzigen voor deze proef.
+
+**Git synchroniseert themacode, geen complete winkel.** Producten, prijzen, metafieldwaarden, menu's, collectietoewijzingen en checkout-instellingen blijven in Shopify. Imports krijgen bronversie, afgebakende batch, herstelgegevens en hervatbare voortgang. Gevoelige exports blijven in beveiligde opslag buiten deze publieke repository. De filterserver/index heeft eigen code, configuratie, publicatie- en herstelprocedure; registreer de vindplaats in het bestaande technische dossier. Terugzetten van een thema herstelt geen gewijzigde productdata.
+
+## Eén vaste volgorde tot lancering
+
+De hoofdlijn blijft staan. Bewijs en werkelijk gevonden blokkades bepalen de deeltaken; een nieuwe chat is geen reden om de planning opnieuw te maken.
+
+| Stap | Werk | Gereed wanneer | Status |
+| --- | --- | --- | --- |
+| **BC-00** | Alle bestaande code en overdracht samenbrengen; twee pc's aansluiten; vaste werkpreview en branches vastleggen | Live ↔ Git-verschillen verklaard; relevante losse wijzigingen behouden; hoofdversie compleet; ophalen, checkpoint en hervatten op tweede werkplek bewezen | **BEZIG** — documentatie gereed, technische samenvoeging en werkplekproef open |
+| **BC-01** | Bestaande zoekfilters en korte titels afronden met Wastafelkranen als proefcategorie | Mobiel/desktop: zoeken, merk/montage/kleur/prijs, sorteren, paginering, terugknop, foutfallback; ingevulde én lege korte titel op homepage/categorie/zoeken; juiste SKU/prijs tot winkelwagen gecontroleerd. Nog ontbrekende data in kleine proef herstellen | WACHT op BC-00 |
+| **BC-02** | Productdata en categorieën per merk/productfamilie afronden en aanvullen | Vastgelegde lanceringsscope gecontroleerd op SKU, prijs incl. btw, afbeeldingen, categorieën, essentiële specificaties en Online Store-publicatie; import hervatbaar; foutenlijst verklaard. Eerst kleine proef, dan dezelfde verwerking opschalen | WACHT op BC-01 |
+| **BC-03** | Zoeken, filters en navigatie over het vastgelegde assortiment controleren | Iedere productfamilie heeft bruikbare filters en goede resultaten; exacte SKU vindbaar; lege/verkeerde routes opgelost; indexverversing, bewaking en fallback bewezen | WACHT op BC-02 |
+| **BC-04** | Bestaand ontwerp consequent afronden | Homepage, header, categorieën, productkaarten, productpagina en winkelwagen werken samen op mobiel/desktop; goedgekeurde stijl consequent; geen willekeurige nieuwe redesigns | WACHT op BC-03 |
+| **BC-05** | Bestellen en bedrijfsafhandeling volledig controleren | Prijs/btw, betalen, verzendregels, communicatie, leverbeloftes en operationele afhandeling gecontroleerd met representatieve bestellingen binnen expliciet afgesproken testscope | WACHT op BC-04 |
+| **BC-06** | SEO-/snelheidscontrole en lancering | Belangrijke pagina's en links gecontroleerd, indexatie-instellingen kloppen, gemeten mobiele prestaties beoordeeld, open verkoopblokkers opgelost, herstelpad en lanceercontrole vastgelegd | WACHT op BC-05 |
+| **BC-07** | Gericht groeien | Werkelijke omzet, marge, conversie en servicekwaliteit sturen de volgende verbeteringen; nieuwe functies en verdere assortimentuitbreiding per meetbaar doel | NA lancering |
+
+Kritieke bestel- of datafouten die in BC-01 worden gevonden direct oplossen of als blokkade behandelen; niet laten liggen tot BC-05. Het definitieve lanceringsassortiment wordt expliciet vastgelegd; deze volgorde verkleint eerdere assortimentafspraken niet stilzwijgend.
+
+## Starten, pauzeren en hervatten
+
+**Start op elke pc of in een nieuwe chat:**
+- Open deze pagina op GitHub main; lees AGENTS en de relevante technische overdracht.
+- Controleer de lokale map, origin, branch, lokale wijzigingen en laatste remote stand. Bewaar afwijkingen vóór pull/switch; nooit blind overschrijven.
+- Controleer Shopify MAIN en aangewezen werkpreview. Gebruik de actieve branch uit deze pagina, niet automatisch `main` of een oude downloadmap.
+- Herhaal kort: huidige taak, laatst bewezen checkpoint, volgende handeling. Ga daarmee verder.
+
+**Checkpoint / pauze:**
+- Bewaar alleen beoordeelde projectwijzigingen, zonder secrets of klantgegevens. Onvolledig werk mag herkenbaar als werkcheckpoint worden vastgelegd, met open controles.
+- Werk het taakblok bij, commit en push. Verifieer dat de remote commit bestaat.
+- Eindig met: “Opgeslagen: [commit/link]. Nu: [taak/status]. Volgende handeling: [concrete actie].”
+- Een onderbroken import hervatten vanuit vastgelegde batchstatus, niet vanaf nul op dezelfde producten.
+
+**Vaste startopdracht voor de gebruiker:**
+
+> Ga verder met BadkamerCity. Lees de vaste startpagina op GitHub main en AGENTS, haal de actuele werkversie op, controleer de huidige Shopify-thema's en hervat de geregistreerde taak. Werk de voortgang bij en sla een checkpoint op zodra een deelstap gereed is.
+
+**Bij een klantafspraak:** “Sla een checkpoint op; ik pauzeer.” Na terugkomst: “Ga verder vanaf het laatste checkpoint.”
+
+## Parkeerplaats
+
+- Nieuwe homepagevarianten, extra keuzemenu's, vergelijkfuncties en andere nieuwe functies pas beoordelen zodra de lopende fase gereed is.
+- Nieuwe ideeën hier als één regel vastleggen met doel en reden voor later. Alleen de eigenaar verandert bewust de prioriteit.
+- Bestaande afspraken over productdata, SKU/fabrikantnummer, prijzen, verborgen technische documenten en goedgekeurde vormgeving blijven in het technische dossier gelden.
+
+## Overdracht van 15 oktober
+
+Uitgevoerd: actuele themarollen gelezen; twee repositories en actieve branches bekeken; PR #5/#6 en recente technische overdracht gelezen; verschil tussen publicatie en Git-status vastgesteld; bestaande startdocumentatie en instructies bijgewerkt.
+
+Niet uitgevoerd: lokale Windows-inspectie, volledige actuele themabestandsvergelijking, code samenvoegen naar main, nieuwe branch/themakoppeling, browser-/filtertests, productwijzigingen of publicatie. Geen achtergrondproces ingesteld.
+
+Controlebronnen: Shopify Admin-query met alle 11 thema's (geen vervolgpagina); GitHub branch/commit- en PR-reads; vergelijking main → werkbranch (8 codehistoriecommits voor bij aanvang). Historische testresultaten zijn niet opnieuw als actuele test geclaimd.
+
+Technische achtergrond: [Shopify GitHub-integratie](https://shopify.dev/docs/storefronts/themes/tools/github) en [versiebeheer voor thema's](https://shopify.dev/docs/storefronts/themes/best-practices/version-control).
+
+---
+
+## Historisch archief — geen actuele dagstart
+
+Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidige taak, publicatie en werkbranch altijd het blok bovenaan. Een oude vermelding “nog publiceren” of “alleen opt-in” is geen actuele vaststelling.
+
 # BadkamerCity — bewezen live-status en volgende werkroute
 
-> **Aanvulling 14 oktober 2026:** [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md) legt de geslaagde VPS-index/API/HTTPS-proeven en desktopbediening in concept `195038216458` vast. Opt-in blijft verplicht; mobiele controle, andere productfamilies, indexonderhoud en publicatie zijn nog open. MAIN `194981003530` is ongewijzigd. Oudere tabellen hieronder blijven historische snapshots.
+> **Aanvulling 14 oktober 2026:** [gecontroleerde filterpreview](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/FILTER_PREVIEW_2026-10-14.md) legt de geslaagde VPS-index/API/HTTPS-proeven en desktopbediening in concept `195038216458` vast. Opt-in blijft verplicht; mobiele controle, andere productfamilies, indexonderhoud en publicatie zijn nog open. MAIN `194981003530` is ongewijzigd. Oudere tabellen hieronder blijven historische snapshots.
 
-> **Aanvulling 10 oktober 2026:** MAIN is `194981003530` (Collectiebeelden correctie 8 okt). Hotbath-productweergave, rustiger cart en Toebehoren-afbeeldingen staan samen in ongepubliceerde draft `195038216458`, met geslaagde scoped desktopcontroles. Mobiele eindcontrole en publicatie staan open. Zie [actuele oplevering en vervolg](AFRONDING_BASIS_2026-10-10.md). De tabellen hieronder blijven de historische stand van 7 oktober.
+> **Aanvulling 10 oktober 2026:** MAIN is `194981003530` (Collectiebeelden correctie 8 okt). Hotbath-productweergave, rustiger cart en Toebehoren-afbeeldingen staan samen in ongepubliceerde draft `195038216458`, met geslaagde scoped desktopcontroles. Mobiele eindcontrole en publicatie staan open. Zie [actuele oplevering en vervolg](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/AFRONDING_BASIS_2026-10-10.md). De tabellen hieronder blijven de historische stand van 7 oktober.
 
 **Meetdatum:** 7 oktober 2026. Dit overzicht scheidt wat bestaat van wat daadwerkelijk is getest of expliciet goedgekeurd. Nieuwe AI's mogen deze status niet stil upgraden; ze moeten nieuwe controles met datum en bron toevoegen.
 
