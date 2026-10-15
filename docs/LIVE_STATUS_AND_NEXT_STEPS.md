@@ -10,7 +10,9 @@
 
 **Beoordeling 15 oktober, 11:06 Europe/Amsterdam:** eigenaar: ‘ziet er goed uit’. Mobiel ontwerp is **USER_APPROVED_UI**. Dit bewijst niet afzonderlijk dat alle filterhandelingen/categorieën getest zijn en is geen opdracht tot publicatie.
 
-**Volgende handeling:** controleer in Shopify Thema’s welke GitHub-branch aan welk thema gekoppeld is, en inspecteer daarna de huidige Windows-projectmap alleen-lezen. Bewaar lokale afwijkingen vóór synchronisatie. Breng vervolgens de mobiele patch en de zeven live/Git-afwijkingen samen op de bestaande werklijn; behoud werkpreview `195249799434`.
+**Publicatiestatus opnieuw gecontroleerd op 15 oktober:** screenshot en Shopify Admin API bevestigen dat `195249799434` nu **MAIN** is; `195218047242` is **UNPUBLISHED**. De publicatie is niet door deze assistent uitgevoerd. De naam ‘Vaste werkpreview’ betekent dus niet meer dat dit een concept is. Geen verdere previewwijzigingen naar dit thema sturen. Git bevat de mobiele wijziging nog als patch, niet in de themabronbestanden.
+
+**Volgende handeling:** controleer in Shopify Thema’s welke GitHub-branch aan welk thema gekoppeld is, en inspecteer daarna de huidige Windows-projectmap alleen-lezen. Bewaar lokale afwijkingen vóór synchronisatie. Breng vervolgens de mobiele patch en de zeven live/Git-afwijkingen samen op de bestaande werklijn; wijs daarna een ongepubliceerde werkpreview aan vanaf de actuele livebasis. Thema `195249799434` is inmiddels live.
 
 **BC-00 hervatten daarna:** werkplekken controleren en de live/Git-afwijkingen samenbrengen. Read-only manifest bevat 449 live-bestanden; 442 komen overeen met de werkbranch (inclusief genormaliseerde regeleinden), zeven instellingen-/templatebestanden wijken af. De werkpreview behoudt de actuele live-instellingen; die worden niet overschreven vanuit de oudere Git-versies.
 
@@ -20,9 +22,9 @@
 | Tijdelijke actieve codebranch | `fix/product-cards-2026-10-14`; verdergaan met deze lijn, geen nieuwe branch per chat |
 | Laatste codecommit bij controle | `03d157e53431507d7593f9e3b9f0e34295b17941`; latere commits in deze overdracht wijzigen alleen documentatie |
 | Shopify store | `fpa9hu-i3.myshopify.com` |
-| Actueel gepubliceerd thema | **BadkamerCity - Zoekfilters en korte titels**, ID **195218047242**, rol **MAIN** rechtstreeks gelezen op 15 oktober |
+| Actueel gepubliceerd thema | **BadkamerCity - Vaste werkpreview**, ID **195249799434**, rol **MAIN** opnieuw rechtstreeks gelezen op 15 oktober na screenshot |
 | Vorige uitvoering | `195216048394` is nu UNPUBLISHED; geen automatisch gekozen nieuwe werkpreview |
-| Werkpreview | `195249799434`, **BadkamerCity - Vaste werkpreview**, UNPUBLISHED; identieke kopie van MAIN (449/449 bestanden) vóór deze mobiele wijziging |
+| Werkpreview | Nog opnieuw aan te wijzen vanaf de huidige livebasis; `195249799434` is inmiddels MAIN. Voorgaand live-thema `195218047242` is nu UNPUBLISHED |
 | Git main | Codebasis dateert bij controle van 7 oktober; de recentere codebranch lag 8 commits voor. Deze documentatie-update synchroniseert geen themacode |
 | Open codeoverdracht | PR #5: afronding → main; PR #6: productkaarten/zoeken → afronding. Open PR is geen bewijs dat een Shopify-thema ongepubliceerd is |
 | Andere repository | `jlamping1997/badkamercity-shopify-theme` bestaat ook. Behandel als te vergelijken oudere bron; niet verwijderen of opnieuw als tweede werkproject gebruiken |
@@ -44,11 +46,11 @@
 - Tien productie-bestanden geüpload en exact teruggelezen. Vooraf 449/449 checksums van kopie gelijk aan MAIN. Zeven live/Git-verschillen betreffen `config/settings_data.json`, `sections/footer-group.json`, `templates/collection.category-landing.json`, `templates/collection.json`, `templates/index.json`, `templates/product.bc-hotbath-data.json`, `templates/product.bc-hotbath-pilot.json`; deze blijven in de preview op hun liveversie.
 - Validatie: 14 filtertests, 3 zwevende-knoptests en 13 bestaande Liquid-kaart/titelcontroles geslaagd; JS-syntax en diff-whitespace geslaagd. Theme-validator: alle tien productie-bestanden VALID met bestaande niet-blokkerende waarschuwingen; gebundelde Shopify-schemafallback gebruikt na netwerk-timeout bij manifestverversing.
 - Browser: echte desktopzoekroute `q=test` geeft 75 externe resultaten, juiste eerste Wiesbaden-producten en Levertijd op aanvraag. Previewwerkbalk bevestigt Vaste werkpreview/Draft. Mobiele visuele controle **NOT_TESTED**: geen viewportregeling in deze browser; een tijdelijk iframe-reviewvenster laadde niet. Geen telefoon-/Safari- of volledige categoriebrowsertest claimen.
-- De connector blokkeerde het verwijderen van de tijdelijke reviewtemplate. Materieel veiliger opgelost door het bestand te vervangen door uitsluitend `{% section 'main-search' %}`: dezelfde gewone zoeksectie, geen iframe, debugscript of aparte layout. Deze ongekoppelde alternatieve template bestaat alleen in de draft.
+- De connector blokkeerde het verwijderen van de tijdelijke reviewtemplate. Materieel veiliger opgelost door het bestand te vervangen door uitsluitend `{% section 'main-search' %}`: dezelfde gewone zoeksectie, geen iframe, debugscript of aparte layout. Deze ongekoppelde alternatieve template stond in de draft; dat thema is inmiddels MAIN en bevat deze template dus ook.
 
 **Git-bewaring zonder mogelijke live-sync:** de koppeling van de bestaande branch aan Shopify is nog niet bewezen. Daarom staan alle tien productie-bestanden plus beide tests als toepasbare patch in [docs/patches/BC-01M-mobile-product-listing.patch](patches/BC-01M-mobile-product-listing.patch), op de bestaande werkbranch. Er zijn geen nieuwe branches gemaakt en geen gewijzigde themapaden naar een mogelijk gekoppelde branch gepusht. De patch is gecontroleerd met reverse-apply tegen de lokale implementatie. De themabestanden op de branch zelf bevatten deze mobiele wijziging dus nog niet; niet ten onrechte als gesynchroniseerd behandelen.
 
-**Hervatten na mobiele review:** verifieer eerst de branch–themakoppeling en behoud Windows-wijzigingen. Pas de patch toe op de bestaande werkbranch (`git apply --check`, dan `git apply`) nadat vaststaat dat dit niet naar MAIN synchroniseert; daarna source-bestanden committen/pushen. Werkpreview behouden en cumulatief verder gebruiken. Geen oude themakopie publiceren. Terugzetpad voor deze wijziging: de tien gewijzigde/nieuwe productie-bestanden vergelijken met MAIN; live is ongewijzigd.
+**Hervatten na mobiele review:** verifieer eerst de branch–themakoppeling en behoud Windows-wijzigingen. Pas de patch toe op de bestaande werkbranch (`git apply --check`, dan `git apply`) nadat vaststaat dat dit niet naar MAIN synchroniseert; daarna source-bestanden committen/pushen. Een nieuwe ongepubliceerde werkpreview vanaf de actuele MAIN aanwijzen en cumulatief verder gebruiken. Geen oude themakopie publiceren. Terugzetpad voor de mobiele wijziging: de tien productie-bestanden vergelijken met de bewaarde vorige liveversie `195218047242`; niet blind een geheel ouder thema publiceren. De oorspronkelijke upload liet live ongewijzigd, maar de kandidaat is daarna gepubliceerd.
 
 ## Vaste afspraken
 
