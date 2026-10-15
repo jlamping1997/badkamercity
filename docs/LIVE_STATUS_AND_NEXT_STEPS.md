@@ -92,6 +92,26 @@ Kritieke bestel- of datafouten die in BC-01 worden gevonden direct oplossen of a
 
 **Bij een klantafspraak:** “Sla een checkpoint op; ik pauzeer.” Na terugkomst: “Ga verder vanaf het laatste checkpoint.”
 
+## Korte klantreiscontrole — 15 oktober 2026
+
+**Afgerond onderzoek, geen nieuwe actieve bouwtaak. BC-00 blijft de volgende uitvoering.** Aanleiding: eigenaar vroeg op mobiel mee te kijken zonder concreet gemeld probleem. Alleen openbare storefront bekeken; geen themacode, productdata of publicatie gewijzigd.
+
+**Bewijsgrens:** browsercontrole op desktop, viewport circa 1363 × 936. Een aanvankelijk aanwezige oude draft-preview is verlaten via “Exit preview”; onderstaande bevindingen komen van de storefront daarna. De route vanaf badkamercity.nl kwam in deze browser op fpa9hu-i3.myshopify.com uit. Mobiele viewport/telefoonweergave: **NOT_TESTED**; mobiele preview via Admin kwam op een aanmeldscherm. Geen conclusie over mobiele afstanden, knopgrootte of overloop. Geen volledige checkout- of filtersuite uitgevoerd.
+
+| Controle | Waarneming |
+| --- | --- |
+| Homepage → Kranen | Categorietegel opende /collections/kranen |
+| Zoeken op wastafelkraan | 609 resultaten in de geteste zoekroute |
+| Merkfilter JEE-O | Aangevinkt; resultaat veranderde naar 28 producten, actieve merkchip zichtbaar |
+| Product openen | JEE-O cone twee-gats hoog gun metal opende met artikelnummer 900-1776 en prijs €830, overeenkomstig de resultaatkaart |
+| Homepagebanners | Drie afbeeldingen tonen oproepen “Shop Hotbath”, “Ontdek de tegels” en “Bekijk de meubels”; DOM bevat voor deze banners geen link/bestemming |
+| Afspraakoproepen | “Plan een gratis adviesgesprek” is een span zonder link; “Plan een afspraak” is een span met aria-disabled=true |
+| Footer service | Veelgestelde vragen, Bezorgen & afhalen, Retourneren, Garantie & service zijn spans met title=Voorbeeld, zonder link |
+| Producttitels | Lange titels zichtbaar in zoekresultaten. Bestaande korte-titelfunctie/data onderzoeken binnen BC-01; actuele metafieldvulling niet uitgelezen |
+| Specificaties steekproef | Bij JEE-O artikel 900-1776 toont de specificatietabel alleen artikelnummer en merk. Databron/mapping nog niet onderzocht; geen uitspraak over alle producten |
+
+**Afgebakende kandidaat voor later:** bestaande homepagebanners en afspraakoproepen aan geverifieerde bestemmingen koppelen, daarna footerbestemmingen afmaken. Geen nieuwe homepagevariant nodig op basis van deze controle. Controleer eerst bestaande doelpagina's en afspraakroute; verzin geen servicevoorwaarden. Voor echte mobiele beoordeling: telefoonbeelden of een beschikbare mobiele preview van homepage en productlijst. Dit onderzoek wijzigt de eerstvolgende handeling van BC-00 bovenaan niet.
+
 ## Parkeerplaats
 
 - Nieuwe homepagevarianten, extra keuzemenu's, vergelijkfuncties en andere nieuwe functies pas beoordelen zodra de lopende fase gereed is.
