@@ -2,13 +2,15 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
-## Nu bezig: BC-01M — mobiele productlijsten en filterknop
+## Nu bezig: BC-00 — werkversies gelijkzetten na goedgekeurd mobiel ontwerp
 
 **Opdracht 15 oktober:** eigenaar kiest expliciet mobiele kaarten en een rustige zwevende filterknop na twee screenshots. Eén product per rij, volledige bestaande korte-titelfallback, levertijd op aanvraag zolang voorraad-/levertijddata niet betrouwbaar is. Geen live-publicatie.
 
 **Uitvoering:** ChatGPT, bestaande branch `fix/product-cards-2026-10-14`; schone tijdelijke checkout van remote `f9994ad7cdc9c4f9ec80ac1e5c38b10943b7c75a`, geen toegang tot Windows-werkplekken. Werkpreview `195249799434` (Vaste werkpreview) gekopieerd van MAIN `195218047242`.
 
-**Volgende handeling:** beoordeel de werkpreview op een echte telefoon: zoekresultaten, scrollen, zwevende Filter-knop, paneel sluiten en een categorieproductlijst. Niet publiceren vóór die controle.
+**Beoordeling 15 oktober, 11:06 Europe/Amsterdam:** eigenaar: ‘ziet er goed uit’. Mobiel ontwerp is **USER_APPROVED_UI**. Dit bewijst niet afzonderlijk dat alle filterhandelingen/categorieën getest zijn en is geen opdracht tot publicatie.
+
+**Volgende handeling:** controleer in Shopify Thema’s welke GitHub-branch aan welk thema gekoppeld is, en inspecteer daarna de huidige Windows-projectmap alleen-lezen. Bewaar lokale afwijkingen vóór synchronisatie. Breng vervolgens de mobiele patch en de zeven live/Git-afwijkingen samen op de bestaande werklijn; behoud werkpreview `195249799434`.
 
 **BC-00 hervatten daarna:** werkplekken controleren en de live/Git-afwijkingen samenbrengen. Read-only manifest bevat 449 live-bestanden; 442 komen overeen met de werkbranch (inclusief genormaliseerde regeleinden), zeven instellingen-/templatebestanden wijken af. De werkpreview behoudt de actuele live-instellingen; die worden niet overschreven vanuit de oudere Git-versies.
 
@@ -27,13 +29,13 @@
 | Werkcomputers | Lokale bestanden, ongepushte commits en authenticatie in deze sessie niet gecontroleerd |
 | GitHub–Shopify-koppeling | Nog niet vastgesteld welke branch rechtstreeks aan welk thema gekoppeld is |
 | Huidige uitvoerder | Mobiele implementatie afgerond voor review; geen achtergrondtaak of technische vergrendeling actief |
-| Eerstvolgende controle | Mobiele review BC-01M; daarna BC-00 hervatten: Windows-werkplekken en GitHub–Shopify-koppeling verifiëren |
+| Eerstvolgende controle | BC-00 hervatten: GitHub–Shopify-koppeling en Windows-werkplekken verifiëren; mobiel ontwerp door eigenaar goedgekeurd |
 
 **Gebouwd, getest en live zijn afzonderlijke statussen.** Publicatie van het genoemde thema is bewezen; de werking van alle zoekfilters en korte titels is daarmee niet opnieuw getest.
 
 [Technisch zoek- en titelcontract](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/SEARCH_AND_SHORT_TITLES_2026-10-14.md): de vorige ontwikkelsessie meldt 25 geslaagde frontend-/Liquid-controles. Visuele desktop/mobielcontrole en de actuele externe zoekroute stonden nog open. De korte-titeldefinitie was toen leeg; actuele vulling is vandaag niet opnieuw uitgelezen.
 
-## BC-01M — opgeleverd in werkpreview, mobiele eindcontrole open
+## BC-01M — ontwerp goedgekeurd, synchronisatie en functionele eindcontrole open
 
 - Eén product per rij onder 750 px, afbeelding links (34%), merk/titel/levertijd/prijs rechts. Volledige korte-titelfallback behouden; geen afkapping. Op mobiel vervallen de extra kenmerklijst en Bekijk product-regel in zoek-/categoriekaarten; desktop blijft in kolommen.
 - Kleine zwevende Filter-knop verschijnt zodra de bestaande opener boven beeld is; verdwijnt bij open paneel, na de productlijst en op desktop. Bedient bestaande externe filters of native Shopify-filters na terugval. Externe drawer heeft focusbeheer, Escape en gesloten inert-status.
