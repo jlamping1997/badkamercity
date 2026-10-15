@@ -2,9 +2,15 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
-## Nu bezig: BC-00 — Git, Shopify en werkplekken gelijkzetten
+## Nu bezig: BC-01M — mobiele productlijsten en filterknop
 
-**Volgende handeling:** haal het actuele MAIN-thema alleen-lezen op in een aparte vergelijkmap en vergelijk de zeven themamappen met `fix/product-cards-2026-10-14`. Neem eventuele nog niet opgeslagen wijzigingen van beide werkcomputers mee vóór het samenbrengen. Download nooit over een bestaande werkmap heen.
+**Opdracht 15 oktober:** eigenaar kiest expliciet mobiele kaarten en een rustige zwevende filterknop na twee screenshots. Eén product per rij, volledige bestaande korte-titelfallback, levertijd op aanvraag zolang voorraad-/levertijddata niet betrouwbaar is. Geen live-publicatie.
+
+**Uitvoering:** ChatGPT, bestaande branch `fix/product-cards-2026-10-14`; schone tijdelijke checkout van remote `f9994ad7cdc9c4f9ec80ac1e5c38b10943b7c75a`, geen toegang tot Windows-werkplekken. Werkpreview `195249799434` (Vaste werkpreview) gekopieerd van MAIN `195218047242`.
+
+**Volgende handeling:** beoordeel de werkpreview op een echte telefoon: zoekresultaten, scrollen, zwevende Filter-knop, paneel sluiten en een categorieproductlijst. Niet publiceren vóór die controle.
+
+**BC-00 hervatten daarna:** werkplekken controleren en de live/Git-afwijkingen samenbrengen. Read-only manifest bevat 449 live-bestanden; 442 komen overeen met de werkbranch (inclusief genormaliseerde regeleinden), zeven instellingen-/templatebestanden wijken af. De werkpreview behoudt de actuele live-instellingen; die worden niet overschreven vanuit de oudere Git-versies.
 
 | Startgegeven | Actuele vaststelling / beperking |
 | --- | --- |
@@ -14,18 +20,33 @@
 | Shopify store | `fpa9hu-i3.myshopify.com` |
 | Actueel gepubliceerd thema | **BadkamerCity - Zoekfilters en korte titels**, ID **195218047242**, rol **MAIN** rechtstreeks gelezen op 15 oktober |
 | Vorige uitvoering | `195216048394` is nu UNPUBLISHED; geen automatisch gekozen nieuwe werkpreview |
-| Werkpreview | Nog te bepalen na vergelijking; het thema voor zoekfilters is inmiddels LIVE en mag niet als draft worden beschreven |
+| Werkpreview | `195249799434`, **BadkamerCity - Vaste werkpreview**, UNPUBLISHED; identieke kopie van MAIN (449/449 bestanden) vóór deze mobiele wijziging |
 | Git main | Codebasis dateert bij controle van 7 oktober; de recentere codebranch lag 8 commits voor. Deze documentatie-update synchroniseert geen themacode |
 | Open codeoverdracht | PR #5: afronding → main; PR #6: productkaarten/zoeken → afronding. Open PR is geen bewijs dat een Shopify-thema ongepubliceerd is |
 | Andere repository | `jlamping1997/badkamercity-shopify-theme` bestaat ook. Behandel als te vergelijken oudere bron; niet verwijderen of opnieuw als tweede werkproject gebruiken |
 | Werkcomputers | Lokale bestanden, ongepushte commits en authenticatie in deze sessie niet gecontroleerd |
 | GitHub–Shopify-koppeling | Nog niet vastgesteld welke branch rechtstreeks aan welk thema gekoppeld is |
-| Huidige uitvoerder | Deze overdracht is afgerond; geen achtergrondtaak of technische vergrendeling actief |
-| Eerstvolgende controle | Git ↔ Shopify-bestandsvergelijking plus lokale werkplekinspectie; daarna één werkpreview aanwijzen |
+| Huidige uitvoerder | Mobiele implementatie afgerond voor review; geen achtergrondtaak of technische vergrendeling actief |
+| Eerstvolgende controle | Mobiele review BC-01M; daarna BC-00 hervatten: Windows-werkplekken en GitHub–Shopify-koppeling verifiëren |
 
 **Gebouwd, getest en live zijn afzonderlijke statussen.** Publicatie van het genoemde thema is bewezen; de werking van alle zoekfilters en korte titels is daarmee niet opnieuw getest.
 
 [Technisch zoek- en titelcontract](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/SEARCH_AND_SHORT_TITLES_2026-10-14.md): de vorige ontwikkelsessie meldt 25 geslaagde frontend-/Liquid-controles. Visuele desktop/mobielcontrole en de actuele externe zoekroute stonden nog open. De korte-titeldefinitie was toen leeg; actuele vulling is vandaag niet opnieuw uitgelezen.
+
+## BC-01M — opgeleverd in werkpreview, mobiele eindcontrole open
+
+- Eén product per rij onder 750 px, afbeelding links (34%), merk/titel/levertijd/prijs rechts. Volledige korte-titelfallback behouden; geen afkapping. Op mobiel vervallen de extra kenmerklijst en Bekijk product-regel in zoek-/categoriekaarten; desktop blijft in kolommen.
+- Kleine zwevende Filter-knop verschijnt zodra de bestaande opener boven beeld is; verdwijnt bij open paneel, na de productlijst en op desktop. Bedient bestaande externe filters of native Shopify-filters na terugval. Externe drawer heeft focusbeheer, Escape en gesloten inert-status.
+- Levertijdmelding op alle listing-kaarten: **Levertijd op aanvraag**. Gebruiker meldt onbetrouwbare voorraad. Geen voorraadgetal, groen voorraadlabel of verzonnen levertermijn afgeleid. Productdata en PDP niet gewijzigd. Toekomstige leverancierskoppeling moet eerst bron, actualiteit en product/variantidentiteit verifiëren voordat een concrete termijn deze neutrale tekst vervangt.
+- Werkpreview: `https://fpa9hu-i3.myshopify.com/search?q=test&preview_theme_id=195249799434`. MAIN `195218047242` is na upload opnieuw gecontroleerd: 449 bestandschecksums onveranderd.
+- Tien productie-bestanden geüpload en exact teruggelezen. Vooraf 449/449 checksums van kopie gelijk aan MAIN. Zeven live/Git-verschillen betreffen `config/settings_data.json`, `sections/footer-group.json`, `templates/collection.category-landing.json`, `templates/collection.json`, `templates/index.json`, `templates/product.bc-hotbath-data.json`, `templates/product.bc-hotbath-pilot.json`; deze blijven in de preview op hun liveversie.
+- Validatie: 14 filtertests, 3 zwevende-knoptests en 13 bestaande Liquid-kaart/titelcontroles geslaagd; JS-syntax en diff-whitespace geslaagd. Theme-validator: alle tien productie-bestanden VALID met bestaande niet-blokkerende waarschuwingen; gebundelde Shopify-schemafallback gebruikt na netwerk-timeout bij manifestverversing.
+- Browser: echte desktopzoekroute `q=test` geeft 75 externe resultaten, juiste eerste Wiesbaden-producten en Levertijd op aanvraag. Previewwerkbalk bevestigt Vaste werkpreview/Draft. Mobiele visuele controle **NOT_TESTED**: geen viewportregeling in deze browser; een tijdelijk iframe-reviewvenster laadde niet. Geen telefoon-/Safari- of volledige categoriebrowsertest claimen.
+- De connector blokkeerde het verwijderen van de tijdelijke reviewtemplate. Materieel veiliger opgelost door het bestand te vervangen door uitsluitend `{% section 'main-search' %}`: dezelfde gewone zoeksectie, geen iframe, debugscript of aparte layout. Deze ongekoppelde alternatieve template bestaat alleen in de draft.
+
+**Git-bewaring zonder mogelijke live-sync:** de koppeling van de bestaande branch aan Shopify is nog niet bewezen. Daarom staan alle tien productie-bestanden plus beide tests als toepasbare patch in [docs/patches/BC-01M-mobile-product-listing.patch](patches/BC-01M-mobile-product-listing.patch), op de bestaande werkbranch. Er zijn geen nieuwe branches gemaakt en geen gewijzigde themapaden naar een mogelijk gekoppelde branch gepusht. De patch is gecontroleerd met reverse-apply tegen de lokale implementatie. De themabestanden op de branch zelf bevatten deze mobiele wijziging dus nog niet; niet ten onrechte als gesynchroniseerd behandelen.
+
+**Hervatten na mobiele review:** verifieer eerst de branch–themakoppeling en behoud Windows-wijzigingen. Pas de patch toe op de bestaande werkbranch (`git apply --check`, dan `git apply`) nadat vaststaat dat dit niet naar MAIN synchroniseert; daarna source-bestanden committen/pushen. Werkpreview behouden en cumulatief verder gebruiken. Geen oude themakopie publiceren. Terugzetpad voor deze wijziging: de tien gewijzigde/nieuwe productie-bestanden vergelijken met MAIN; live is ongewijzigd.
 
 ## Vaste afspraken
 
