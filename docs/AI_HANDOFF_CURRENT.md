@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
+
 > **UITGEBREIDE OVERDRACHT (2026-10-07):** Begin als nieuwe AI/ontwikkelaar bij **[HANDOVER_START_HERE.md](HANDOVER_START_HERE.md)**. Dit document blijft de volledige functionele basis. De volgende aanvullende documenten maken de overdracht operationeel en controleerbaar:
 >
 > - [Live-status en volgende prioriteiten](LIVE_STATUS_AND_NEXT_STEPS.md)
