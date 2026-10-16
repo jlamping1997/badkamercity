@@ -2,6 +2,18 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Checkpoint 17 oktober — goedgekeurd, publicatie gemeld
+
+Eigenaar meldt: “ik heb hem live gezet hij is goed zo”. Specificaties en homepageknoppen zijn **USER_APPROVED_UI**. Publicatie is door eigenaar gemeld (**USER_REPORTED_PUBLISHED**); niet door de assistent uitgevoerd.
+
+Verse Admin-controle en afzonderlijke hercontrole met roles:[MAIN] geven nog MAIN **195313991946** (Werkpreview categoriekaarten), terwijl **195326247178** (Specificaties en homepage) als UNPUBLISHED terugkomt. Dit wijkt af van de gebruikersmelding. Publicatie daarom nog niet als VERIFIED_ADMIN markeren. Geen oorzaak zoals caching aangenomen. Thema 195326247178 uit voorzorg als mogelijk live behandelen: geen vervolgwijzigingen op dit thema totdat de actuele koppeling/rol verklaard is.
+
+Werkcode en tests blijven opgeslagen in werkbranchcheckpoint **9272a7d792431d9b5fcf503596a1280601641cc4**; main-overdracht **fb56cc36ccb97718edd93689d07518bd77fa69f3**. Geen nieuwe theme- of productmutaties in dit checkpoint.
+
+**Aanbevolen vervolg:** BC-00 hervatten: actuele publicatie en GitHub–themakoppeling vaststellen, daarna de complete livebasis en bestaande patches op de vaste werklijn samenbrengen met behoud van ongepushte Windows-wijzigingen. Vervolgens de bestaande Wiesbaden-proef van tien producten afronden: één gecontroleerde gegevensbron voor titel, korte titel, omschrijving, specificaties, SEO en alt-teksten. Service-/footerpagina's daarna afmaken. Zoeken en levertijden blijven uitgesteld volgens de expliciete gebruikerskeuze; geen nieuwe ontwerpvariant gestart.
+
+**Exact één volgende handeling:** actuele publicatie en branch–themakoppeling verifiëren voor BC-00. Geen uitvoering of achtergrondtaak gestart.
+
 ## Uitvoering 16 oktober — specificaties en homepageknoppen
 
 **Actuele opdracht eigenaar:** specificaties herstellen, homepageknoppen werkend maken en in Git bewaren. **Levertijden en zoeken expliciet uitgesteld; deze opdracht vervangt daarvoor de eerdere gecombineerde reparatievolgorde.** Uitvoerder: deze ChatGPT-sessie, bestaande werklijn fix/product-cards-2026-10-14. Status: **IMPLEMENTED_PREVIEW / REVIEW**, uitvoering afgerond zodra dit checkpoint remote is bevestigd; geen achtergrondtaak.
