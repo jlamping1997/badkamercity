@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "store": "fpa9hu-i3.myshopify.com",
+  "scope": "vendor:Hotbath AND status:active AND title:wastafelkraan AND tag:Koper",
+  "query_results": 46,
+  "hasNextPage": false,
+  "source_field": "bc_data.source_category_path",
+  "source_type": "list.single_line_text_field",
+  "before_all_recorded_memberships": false,
+  "after_all_recorded_memberships": true,
+  "completed_products": 43,
+  "completed_memberships": 129,
+  "method": "4-product pilot, fresh readback, then 39-product extension; additions only via Shopify connector",
+  "verification": "CustomerJourneyVerify returned all 43 required three-level memberships true; opposite leaf false. All three missing-source products remained outside the four target collections.",
+  "counts_before_after": {
+    "kranen": [739, 782],
+    "wastafelkranen": [94, 137],
+    "opbouw-wastafelkranen": [52, 83],
+    "inbouw-wastafelkranen": [42, 54]
+  },
+  "groups": [
+    {
+      "source_path": ["Kranen", "Wastafelkranen", "Opbouw wastafelkranen"],
+      "collectionIds": ["gid://shopify/Collection/569428181258", "gid://shopify/Collection/570058506506", "gid://shopify/Collection/570059522314"],
+      "productIds": [
+        "gid://shopify/Product/10534241141002", "gid://shopify/Product/10534562365706", "gid://shopify/Product/10534574194954", "gid://shopify/Product/10534667026698", "gid://shopify/Product/10534687736074", "gid://shopify/Product/10534694355210", "gid://shopify/Product/10534695207178", "gid://shopify/Product/10534695698698", "gid://shopify/Product/10534699630858", "gid://shopify/Product/10534709362954", "gid://shopify/Product/10534710935818", "gid://shopify/Product/10534711230730", "gid://shopify/Product/10534715228426", "gid://shopify/Product/10534885589258", "gid://shopify/Product/10534888669450", "gid://shopify/Product/10534891913482", "gid://shopify/Product/10534904496394", "gid://shopify/Product/10534911705354", "gid://shopify/Product/10534911934730", "gid://shopify/Product/10534912229642", "gid://shopify/Product/10534922780938", "gid://shopify/Product/10534929170698", "gid://shopify/Product/10534933365002", "gid://shopify/Product/10534934216970", "gid://shopify/Product/10534938247434", "gid://shopify/Product/10534939427082", "gid://shopify/Product/10534967083274", "gid://shopify/Product/10534968787210", "gid://shopify/Product/10534977011978", "gid://shopify/Product/10534982811914", "gid://shopify/Product/10534996082954"
+      ]
+    },
+    {
+      "source_path": ["Kranen", "Wastafelkranen", "Inbouw wastafelkranen"],
+      "collectionIds": ["gid://shopify/Collection/569428181258", "gid://shopify/Collection/570058506506", "gid://shopify/Collection/570059555082"],
+      "productIds": [
+        "gid://shopify/Product/10534568689930", "gid://shopify/Product/10534601687306", "gid://shopify/Product/10534644908298", "gid://shopify/Product/10534646448394", "gid://shopify/Product/10534654378250", "gid://shopify/Product/10534669254922", "gid://shopify/Product/10534682001674", "gid://shopify/Product/10534879068426", "gid://shopify/Product/10534892110090", "gid://shopify/Product/10534928089354", "gid://shopify/Product/10534933692682", "gid://shopify/Product/10534960136458"
+      ]
+    }
+  ],
+  "skipped_missing_source": ["gid://shopify/Product/10534361104650", "gid://shopify/Product/10534941491466", "gid://shopify/Product/10534941753610"],
+  "untouched_fields": ["prices", "titles", "productType", "description", "specifications", "stock", "lead times", "status"],
+  "existing_memberships_preserved": "All; including Hotbath Ace series collection 577160413450 for product 10534562365706",
+  "theme_changes_in_this_receipt": "NONE",
+  "rollback": "After explicit rollback authorization and a fresh drift check, remove only the Cartesian product of productIds and collectionIds in each group. Never remove products or collections, other memberships, or later legitimate assignments.",
+  "limits": "A bounded copper basin-tap cohort, not the entire Hotbath catalog. Source mapping is not a browser test or proof of search ranking. Inbouw afbouwdelen remain explicitly titled as afbouwdelen, not relabeled as complete taps."
+}

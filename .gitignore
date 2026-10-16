@@ -31,3 +31,7 @@ Thumbs.db
 *.zip
 *.tmp
 *.log
+
+# Generated browser evidence; keep in reviewed artifact bundles, not public commits
+test-results/
+playwright-report/
