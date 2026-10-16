@@ -2,7 +2,13 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
-## Nu bezig: BC-00 — werkversies gelijkzetten na goedgekeurd mobiel ontwerp
+## Actieve aanvulling 16 oktober — homepagecategorieën
+
+Expliciete prioriteitswijziging eigenaar: goedgekeurd ontwerp van Shop per categorie uitvoeren in concept. Uitvoerder: deze ChatGPT-sessie, branch `fix/product-cards-2026-10-14`. BC-00 blijft daarna open. Verse Admin-read: MAIN `195311599882` (BadkamerCity - favicon BC); de oudere IDs hieronder zijn historische stand. Concept `195313991946` (BadkamerCity - Werkpreview categoriekaarten) wordt rechtstreeks van deze actuele MAIN gekopieerd, inclusief recente Sunshower en favicon. Scope: uitsluitend `sections/home-category-grid.liquid`, bestaande categoriebeelden/links behouden. Doel: volledige beelden, ruimere kaarten, vier desktop/twee mobiel. Geen publicatie. Lokale checkout bevat oudere mobiele wijzigingen; die worden niet overschreven. Git–Shopify-koppeling en Windows blijven ongeverifieerd; bewaar code als patch onder docs zolang koppeling onbekend is.
+
+Status: **IN UITVOERING**. Eerstvolgende handeling: volledige kopie controleren, gerichte CSS-aanpassing valideren en alleen naar dit concept uploaden.
+
+## Eerdere stand 15 oktober — Nu bezig: BC-00 — werkversies gelijkzetten na goedgekeurd mobiel ontwerp
 
 **Opdracht 15 oktober:** eigenaar kiest expliciet mobiele kaarten en een rustige zwevende filterknop na twee screenshots. Eén product per rij, volledige bestaande korte-titelfallback, levertijd op aanvraag zolang voorraad-/levertijddata niet betrouwbaar is. Geen live-publicatie.
 
