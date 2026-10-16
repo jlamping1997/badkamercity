@@ -27,7 +27,7 @@ Gebruik fout-/blokkadevelden naast de status; overschrijf niet stil een eerder g
 ## Voortgang per merk
 | Merk | Stand | Proef | Volgende handeling |
 | --- | --- | --- | --- |
-| Wiesbaden | GEPLAND; actuele dekking onbekend | 10 producten, nog te selecteren | Actuele Shopify-productgegevens alleen-lezen inventariseren |
+| Wiesbaden | 2.265 identifiers geïnventariseerd; 50 omschrijvingen steekproef; 10 in detail beoordeeld | [Selectie en bevindingen](product-content/WIESBADEN_PILOT.md); [productregister](product-content/wiesbaden-register.json) | Bronnen testen op 24.3710, 32.3594 en 32.3670 |
 | Overige merken | Nog niet geïnventariseerd | Niet gestart | Na Wiesbaden-proef volgorde bepalen uit werkelijke catalogus |
 
 Merklijst en aantallen worden uit de actuele catalogus afgeleid, niet uit historische aantallen.
@@ -49,3 +49,7 @@ Uitvoerder: ChatGPT via GitHub-connector. Bestaande werklijn: fix/product-cards-
 VERIFIED_GIT: repository en bestaande overdracht gelezen; catalogus/importtools staan niet compleet in themarepository.
 NOT_TESTED: actuele Shopify-merkdekking, 10-productselectie, bronextractie, teksten en linkcontrole. Geen toegang tot Windows-werkmap gecontroleerd.
 Volgende handeling: actuele Wiesbaden-productdata alleen-lezen inventariseren en 10 proefproducten vastleggen.
+
+## Vervolgcheckpoint — inventarisatie uitgevoerd 16 oktober
+VERIFIED_ADMIN: exact 2.265 Wiesbaden-producten; volledige identifier-/variantlijst opgehaald. Tien geselecteerde SKU's elk uniek in deze merkcatalogus; omschrijving, metafields en collecties uitgelezen. Register bevat alle 2.265 producten en markeert 10 proefproducten; 2.255 teksten nog niet beoordeeld. Bevindingen: EAN in alle 10 proefomschrijvingen, maatconflict 32.3670, dunne setinformatie 32.3594 en meerdere onbruikbare meta-omschrijvingen. Zie proefrapport. MAIN nu 195313991946; nul winkelmutaties.
+NOT_TESTED: externe bronmatching, publieke linkroutes, nieuwe teksten en ranking. Volgende handeling: bronextractie testen voor 24.3710, 32.3594 en 32.3670.
