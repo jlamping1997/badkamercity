@@ -2,6 +2,12 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Aanvulling 16 oktober — productteksten per merk
+
+Opdracht eigenaar: productteksten merkgewijs voorbereiden en voortgang in Git bijhouden. [Producttekstplan](PRODUCT_CONTENT_PLAN.md) is vastgelegd als detailplan onder BC-02; dit vervangt het centrale werkplan niet. Eerste proef: Wiesbaden, 10 verschillende actuele producten. Plan bevat bronmatching op merk + fabrikantnummer, claimcontrole, eigen teksten, beperkte relevante interne links en productstatussen.
+
+Checkpoint: uitsluitend documentatie, geen Shopify-mutaties. Actuele productdekking, exacte proefselectie en scrapers zijn **NOT_TESTED**. Git bevat geen complete productdatabase. Volgende handeling voor dit contenttraject: actuele Wiesbaden-productgegevens alleen-lezen inventariseren en 10 proefproducten vastleggen. BC-00 en homepage-review blijven open; geen uitvoering van themacode gestart. Geen Windows- of actuele MAIN-controle geclaimd in deze documentatiestap.
+
 ## Actieve aanvulling 16 oktober — homepagecategorieën
 
 Expliciete prioriteitswijziging eigenaar: goedgekeurd ontwerp van Shop per categorie uitvoeren in concept. Uitvoerder: deze ChatGPT-sessie, branch `fix/product-cards-2026-10-14`. BC-00 blijft daarna open. Verse Admin-read: MAIN `195311599882` (BadkamerCity - favicon BC); de oudere IDs hieronder zijn historische stand. Concept `195313991946` (BadkamerCity - Werkpreview categoriekaarten) wordt rechtstreeks van deze actuele MAIN gekopieerd, inclusief recente Sunshower en favicon. Scope: uitsluitend `sections/home-category-grid.liquid`, bestaande categoriebeelden/links behouden. Doel: volledige beelden, ruimere kaarten, vier desktop/twee mobiel. Geen publicatie. Lokale checkout bevat oudere mobiele wijzigingen; die worden niet overschreven. Git–Shopify-koppeling en Windows blijven ongeverifieerd; bewaar code als patch onder docs zolang koppeling onbekend is.
