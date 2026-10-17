@@ -1,0 +1,58 @@
+diff --git a/snippets/bc-mobile-category-icon.liquid b/snippets/bc-mobile-category-icon.liquid
+--- a/snippets/bc-mobile-category-icon.liquid
++++ b/snippets/bc-mobile-category-icon.liquid
+@@ -20,6 +20,18 @@
+       assign mobile_icon_asset = 'bc-nav-baden.svg'
+     when 'spiegels', 'spiegels-en-spiegelkasten'
+       assign mobile_icon_asset = 'bc-nav-spiegels.svg'
++    when 'accessoires', 'badkameraccessoires', 'badkamer-accessoires'
++      assign mobile_icon_asset = 'bc-nav-accessoires.svg'
++    when 'tegels'
++      assign mobile_icon_asset = 'bc-nav-tegels.svg'
++    when 'badkamerverlichting', 'badkamer-verlichting', 'verlichting'
++      assign mobile_icon_asset = 'bc-nav-badkamerverlichting.svg'
++    when 'verwarming'
++      assign mobile_icon_asset = 'bc-nav-verwarming.svg'
++    when 'meer'
++      assign mobile_icon_asset = 'bc-nav-meer.svg'
++    when 'outlet'
++      assign mobile_icon_asset = 'bc-nav-outlet.svg'
+   endcase
+ -%}
+ {%- if mobile_icon_asset != blank -%}
+diff --git a/assets/bc-nav-accessoires.svg b/assets/bc-nav-accessoires.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-accessoires.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 9h17M5 7v4M20 7v4"/><path d="M8 9v17h10V9M8 22h10"/><path d="M23 17h5v10h-5zM25.5 17v-4h4M24 13h3"/></svg>
+diff --git a/assets/bc-nav-tegels.svg b/assets/bc-nav-tegels.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-tegels.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 8V4h21v21h-4"/><rect x="4" y="8" width="20" height="20" rx="1.5"/><path d="m7 13 3-2M18 25l3-2"/></svg>
+diff --git a/assets/bc-nav-badkamerverlichting.svg b/assets/bc-nav-badkamerverlichting.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-badkamerverlichting.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.5 22v-1.5C11.5 17 8 16 8 11a8 8 0 0 1 16 0c0 5-3.5 6-3.5 9.5V22zM12 25h8M13 28h6M13.5 22v-7l-2-2M18.5 22v-7l2-2M3 11H1M31 11h-2M6 4 4.5 2.5M26 4l1.5-1.5"/></svg>
+diff --git a/assets/bc-nav-verwarming.svg b/assets/bc-nav-verwarming.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-verwarming.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="4" width="3" height="24" rx="1.5"/><rect x="22" y="4" width="3" height="24" rx="1.5"/><path d="M10 7h12M10 12h12M10 17h12M10 22h12M10 27h12M8.5 28v2M23.5 28v2"/></svg>
+diff --git a/assets/bc-nav-meer.svg b/assets/bc-nav-meer.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-meer.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="5" width="8" height="8" rx="2"/><rect x="19" y="5" width="8" height="8" rx="2"/><rect x="5" y="19" width="8" height="8" rx="2"/><rect x="19" y="19" width="8" height="8" rx="2"/></svg>
+diff --git a/assets/bc-nav-outlet.svg b/assets/bc-nav-outlet.svg
+new file mode 100644
+--- /dev/null
++++ b/assets/bc-nav-outlet.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 4h9v9L13.5 26.5a2.1 2.1 0 0 1-3 0l-7-7a2.1 2.1 0 0 1 0-3z"/><circle cx="22.5" cy="8.5" r="1.5"/><path d="m10 17 5 5"/></svg>
