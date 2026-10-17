@@ -2,6 +2,24 @@
 
 **Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Sunshower-landingspagina en homepagebanner — 17 oktober
+
+Eigenaar geeft opdracht het goedgekeurde warme ontwerp toe te passen. Compacte bovenkant, duidelijke ONE/PLUS-keuze en een homepagebanner naar de nieuwe pagina. Wiesbaden, zoeken en levertijden blijven buiten scope.
+
+**VERIFIED_ADMIN:** huidige MAIN **195336700170 — BadkamerCity - Sunshower fotogalerij**; de galerijreparatie is dus gepubliceerd. Nieuw concept **195338076426 — BadkamerCity - Sunshower landingspagina**, UNPUBLISHED. Vóór schrijven processing=false en **487/487 checksums identiek**. Na schrijven **492 bestanden**, tien bedoelde bestanden opgeslagen; de overige **482 bestaande bestanden identiek**. Alle tien gewenste inhouden exact of JSON-semantisch gelijk (Shopify voegde zijn standaardcommentaar aan de nieuwe paginatemplate toe). MAIN blijft MAIN met alle **487/487 checksums ongewijzigd**.
+
+**IMPLEMENTED_PREVIEW / REVIEW:** warm origineel Sunshower-sfeerbeeld, korte hero (330px desktop,154px mobiel fotogedeelte), direct modelkaarten met afzonderlijke links naar ONE en PLUS, infrarood/UV-uitleg, montage/formaat, advieslink en vier native FAQ's. Geen JavaScript, vaste prijzen of levertijdbeloftes toegevoegd. Homepagebanner **230px** hoog bij1363px viewport, na Shop per categorie. Bestaande secties en volgorde behouden. NL/EN runtime- en editorvertalingen aanwezig.
+
+**Admin-mutaties:** nieuwe pagina **166120390922**, handle **sunshower**, templateSuffix **bc-sunshower**, gepubliceerd zodat de conceptbanner een echte bestemming heeft. Op het huidige live-thema toont deze nog een eenvoudige nuttige tekstversie; de nieuwe vormgeving en homepagebanner worden pas zichtbaar na publicatie van het conceptthema. Geen menu aan de livehomepage toegevoegd. Nieuwe Files-afbeelding **badkamercity-sunshower-sfeer-warm.jpg**, bron Sunshower.eu inspiratiegalerij; geen gegenereerde productfoto. SEO-title en description ingesteld via de standaard global title_tag/description_tag-velden, uitsluitend op deze nieuwe pagina.
+
+**Geslaagd:** Theme Check revisie2 voor tien bestanden, met gebundelde schemafallback na netwerk-time-out en telemetry opt-out; zeven gerichte NL/EN-render-/behoudgevallen; onafhankelijke read-only review; patch voorwaarts en omgekeerd toepasbaar. Browser1363×936: één H1, vijf landingsbeelden geladen, geen horizontale overflow, juiste ONE/PLUS-geselecteerde configuratoren na echte klik, FAQ geopend, bannerfoto geladen en bannerklik naar /pages/sunshower. Geen formulier of winkelwagen verzonden.
+
+**NOT_TESTED:** echte mobiele viewport/telefoonweergave; beschikbare cloudbrowser biedt geen viewportregeling en toetsenbordpoging veranderde1363px niet. Mobiele CSS beoordeeld bij350/390/768px, geen claim van mobiele runtimetest. Checkout, advertentietracking en conversiemeting niet getest. Windows lokaal niet gecontroleerd.
+
+Werkbranch **fix/product-cards-2026-10-14**. Productiecode bewaard als [toepasbare patch](patches/BC-sunshower-landing-2026-10-17.patch), [verificatie](sunshower-landing-verification-2026-10-17.json). Geen themabronpaden gepusht zolang GitHub–themakoppeling NOT_VERIFIED is. Dit is een previewrelease, geen volledige Git/live-synchronisatie.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Sunshower landingspagina**, controleert banner → landingspagina → ONE/PLUS en beoordeelt publicatie. Geen achtergrondtaak. Terugzetten: vóór publicatie concept niet gebruiken; na publicatie vorige thema terugzetten of uitsluitend deze tien bestanden herstellen. De nieuwe losse pagina en sfeerafbeelding zijn apart aangemaakt en blijven bestaan; pagina desgewenst ongepubliceerd zetten. Bestaande producten/configurator zijn niet gewijzigd.
+
 ## Sunshower-fotogalerij 17 oktober — hoogte per gekozen foto
 
 Opdracht eigenaar: witvlak onder de brede eerste productfoto herstellen. **VERIFIED_ADMIN:** MAIN **195335356682 — BadkamerCity - Mobiele subcategorieen**; de vorige submenu-release is nu gepubliceerd. Nieuw concept **195336700170 — BadkamerCity - Sunshower fotogalerij**, UNPUBLISHED. Vóór schrijven processing=false en **487/487 checksums identiek** aan MAIN. Daarna alleen drie bedoelde bestanden geschreven. Finale readback: **487 bestanden, drie inhouden exact, overige 484 bestanden checksum-identiek**. MAIN blijft 195335356682 met **487/487 ongewijzigde checksums**.
