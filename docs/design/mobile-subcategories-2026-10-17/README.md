@@ -25,3 +25,5 @@ Aanvullende patch: ../../patches/BC-mobile-submenus-2026-10-17.patch. Toepassen 
 Finale Theme Check revisie 3 voor beide bestanden geslaagd. Echte Shopify-DOMvergelijking vóór/na: 413 navigatie-elementen identiek na normaliseren van de thema-afhankelijke section-ID, 52/52 unieke panelen, nul onopgeloste doelen, 51 lijstgroepen, nul sub-SVG's en 13 rooticonen. ‘Bekijk alle kranen’ heeft /collections/kranen als bestemming; geen Liquid error. Zie implementation-checks.json. Dit bewijst DOM/bron bij 1348px, niet de echte mobiele bediening.
 
 Volgende handeling: eigenaarreview op telefoon van **BadkamerCity - Mobiele subcategorieen**: Kranen → Douchekranen → Terug → Terug, juiste CTA-bestemming, lange titels en doorscrollen. Uitvoering afgerond; concept niet gepubliceerd en geen achtergrondtaak. Terugzetten: uitsluitend deze patch tegen dezelfde conceptbasis omkeren; na latere wijzigingen eerst opnieuw vergelijken. De hoofdiconen blijven daardoor behouden.
+
+Codecheckpoint: d155a13bd9a04764cbbfda97d6beeae6ba1efadc op fix/product-cards-2026-10-14.
