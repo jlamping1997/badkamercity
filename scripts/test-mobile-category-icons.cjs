@@ -66,16 +66,16 @@ async function main() {
   if (baseline) {
     const before = await engineFor(baseline).parseAndRender(nav(baseline), context);
     assert.deepEqual(routing(html), routing(before), 'All root destinations and submenu panel targets must remain identical');
-    const marker = '          {%- if localization.available_countries.size > 1';
+    const marker = '\n        {%- for link in section.settings.menu.links -%}';
     const source = dir => read(path.join(dir, 'snippets/header-drawer.liquid'));
-    assert.equal(source(root).slice(source(root).indexOf(marker)), source(baseline).slice(source(baseline).indexOf(marker)), 'Submenus and navigation controls must stay unchanged');
-    for (const file of ['snippets/header-drawer.liquid', 'sections/header.liquid', 'snippets/bc-category-icon.liquid']) {
+    assert.equal(source(root).slice(0, source(root).indexOf(marker)), source(baseline).slice(0, source(baseline).indexOf(marker)), 'Root drawer and its controls must stay unchanged');
+    for (const file of ['snippets/bc-category-icon.liquid', 'snippets/bc-mobile-category-icon.liquid', 'assets/global.js']) {
       assert.deepEqual(fs.readFileSync(path.join(root, file)), fs.readFileSync(path.join(baseline, file)), file + ' must remain byte-identical');
     }
-    for (const handle of handles.slice(0, 7)) {
+    for (const handle of handles) {
       assert.deepEqual(fs.readFileSync(path.join(root, 'assets', `bc-nav-${handle}.svg`)), fs.readFileSync(path.join(baseline, 'assets', `bc-nav-${handle}.svg`)));
     }
   }
-  console.log('PASS: 13 root SVGs, aliases, future fallback, identical menu routing/Outlet link, unchanged first 7 SVGs/header/drawer/shared icons');
+  console.log('PASS: 13 root SVGs, aliases, future fallback, identical root routing/Outlet link, unchanged root drawer/shared icons/controller');
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

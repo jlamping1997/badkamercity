@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-17",
+  "scope": "mobile_submenu_panels_levels_2_and_3",
+  "baseline": {
+    "id": "195334865162",
+    "files": 487
+  },
+  "copyBeforeWrite": {
+    "id": "195335356682",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "identicalChecksums": 487
+  },
+  "readback": {
+    "theme": "gid://shopify/OnlineStoreTheme/195335356682",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "files": 487,
+    "changed": [
+      "sections/header.liquid",
+      "snippets/header-drawer.liquid"
+    ],
+    "bodyMismatches": [],
+    "unchangedExisting": 485,
+    "liveRole": "MAIN",
+    "liveFiles": 487,
+    "liveChanged": [],
+    "passed": true
+  },
+  "themeCheck": {
+    "passed": 2,
+    "total": 2,
+    "revision": 3,
+    "docsSource": "bundled fallback after partial docs download/network failure"
+  },
+  "fixtures": {
+    "submenuPanels": 51,
+    "rootItems": 13,
+    "childItems": 91,
+    "grandchildren": 152,
+    "unchangedDestinations": true,
+    "unchangedBackTargets": true,
+    "activeLinkCases": 2,
+    "noSubmenuSvg": true,
+    "escaping": true,
+    "parentLoopNote": "LiquidJS fixture-only adapter; actual Shopify IDs verified independently"
+  },
+  "browser": {
+    "width": 1348,
+    "navigationElementCount": 413,
+    "navigationContractIdentical": true,
+    "normalization": "theme-dependent section ID replaced before comparison",
+    "panelCount": 52,
+    "uniquePanels": 52,
+    "unresolvedTargets": 0,
+    "groupedLists": 51,
+    "submenuSvgCount": 0,
+    "rootIconCount": 13,
+    "kranenCta": "Bekijk alle kranen",
+    "kranenHref": "/collections/kranen",
+    "liquidErrors": false
+  },
+  "patch": {
+    "forward": "PASS --ignore-space-change",
+    "reverse": "PASS --ignore-space-change"
+  },
+  "review": "No scope/routing blockers; flex-shrink and final item border corrected",
+  "notTested": [
+    "real mobile 360px display",
+    "mobile click/back/close/reopen",
+    "mobile focus and scrolling",
+    "Windows synchronization"
+  ],
+  "publication": "Not performed; merchant review"
+}
