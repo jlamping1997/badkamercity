@@ -2,6 +2,18 @@
 
 **Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Mobiel werk 17 oktober — eerste SVG-voorstel categoriedrawer
+
+Eigenaar kiest vandaag expliciet mobiel menu als prioriteit; **Wiesbaden blijft openstaan**. Zoeken en levertijden blijven uitgesteld. Opdracht: categorieën duidelijker maken met betere SVG's en de iconen rustig uitwerken.
+
+**VERIFIED_ADMIN:** actuele MAIN is nu **195326247178**, BadkamerCity - Specificaties en homepage; eerdere MAIN 195313991946 is UNPUBLISHED. De eerdere publicatiemelding is daarmee bevestigd. Geen nieuwe werkpreview aangewezen; de liveversie wordt niet aangepast.
+
+**DESIGN_REVIEW_ONLY:** [eerste zeven SVG's en mobiele schets](design/mobile-category-icons-2026-10-17/README.md) gemaakt en bewaard op de bestaande werklijn. Originele vectorbestanden, twee SVG-overzichten en PNG-exports inbegrepen. Bronanalyse: huidige iconen zijn al SVG maar vullen het tekenvak zeer ongelijk. Voorstel: 32px-iconen, gelijke lijnvoering, 44px lichtblauw iconenvlak en circa 68px-rijen. Eerst de zeven zichtbare hoofdcategorieën; submenu's en overige categorieën volgen na review. Schets is geen live screenshot of bewezen mobiele browsertest.
+
+Actuele header/drawer/icon-snippet rechtstreeks gelezen. Het icoonbestand wordt door meerdere onderdelen gedeeld; latere implementatie afbakenen zodat homepage, desktop en submenu's niet onverwacht veranderen. Geen Shopify-mutaties of productiebronwijzigingen. GitHub–themakoppeling en Windows-synchronisatie blijven open; uitsluitend docs/design en deze status wijzigen.
+
+**Exact één volgende handeling:** eigenaar beoordeelt de zeven voorgestelde iconen en mobiele maatvoering; daarna de gewenste verfijning gericht uitwerken. Geen achtergrondtaak.
+
 ## Checkpoint 17 oktober — goedgekeurd, publicatie gemeld
 
 Eigenaar meldt: “ik heb hem live gezet hij is goed zo”. Specificaties en homepageknoppen zijn **USER_APPROVED_UI**. Publicatie is door eigenaar gemeld (**USER_REPORTED_PUBLISHED**); niet door de assistent uitgevoerd.
