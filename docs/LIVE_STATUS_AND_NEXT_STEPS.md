@@ -1,18 +1,20 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-**Bijgewerkt: 15 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+**Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
-## Mobiel werk 17 oktober — eerste SVG-voorstel categoriedrawer
+## Mobiel werk 17 oktober — zeven SVG-iconen toepassen
 
-Eigenaar kiest vandaag expliciet mobiel menu als prioriteit; **Wiesbaden blijft openstaan**. Zoeken en levertijden blijven uitgesteld. Opdracht: categorieën duidelijker maken met betere SVG's en de iconen rustig uitwerken.
+Eigenaar keurt het voorstel expliciet goed: “Oké pas deze 7 toe”. **Wiesbaden blijft openstaan; zoeken en levertijden blijven uitgesteld.** Opdracht beperkt tot de zeven hoofdcategorieën in de mobiele drawer: Badkamermeubels, Kranen, Toiletten, Wastafels, Douche, Baden en Spiegels.
 
-**VERIFIED_ADMIN:** actuele MAIN is nu **195326247178**, BadkamerCity - Specificaties en homepage; eerdere MAIN 195313991946 is UNPUBLISHED. De eerdere publicatiemelding is daarmee bevestigd. Geen nieuwe werkpreview aangewezen; de liveversie wordt niet aangepast.
+**VERIFIED_ADMIN:** huidige MAIN **195326247178**, BadkamerCity - Specificaties en homepage. Nieuwe kopie **195334668554**, BadkamerCity - Mobiel menu SVG, UNPUBLISHED. Kopie verwerkt nog; nog geen bestanden hierin geschreven. Basismanifest: 473 bestanden. Targetbron header/drawer/gedeelde iconen rechtstreeks uit MAIN gelezen. Geen livebestanden gewijzigd.
 
-**DESIGN_REVIEW_ONLY:** [eerste zeven SVG's en mobiele schets](design/mobile-category-icons-2026-10-17/README.md) gemaakt en bewaard op de bestaande werklijn. Originele vectorbestanden, twee SVG-overzichten en PNG-exports inbegrepen. Bronanalyse: huidige iconen zijn al SVG maar vullen het tekenvak zeer ongelijk. Voorstel: 32px-iconen, gelijke lijnvoering, 44px lichtblauw iconenvlak en circa 68px-rijen. Eerst de zeven zichtbare hoofdcategorieën; submenu's en overige categorieën volgen na review. Schets is geen live screenshot of bewezen mobiele browsertest.
+**USER_APPROVED_UI / IMPLEMENTED_LOCAL:** de zeven originele goedgekeurde SVG's, aparte mobiele snippet en modifiers uitsluitend voor de zeven hoofditems. Iconen 32px in 44px lichtblauwe vlakken; rijen minimaal 68px. Zowel douche/douches als spiegels/spiegels-en-spiegelkasten ondersteund. Titelhandle als terugval; andere categorieën behouden hun huidige renderer. Submenu's, navigatieattributen, links, desktop en gedeelde homepage-iconen niet veranderd.
 
-Actuele header/drawer/icon-snippet rechtstreeks gelezen. Het icoonbestand wordt door meerdere onderdelen gedeeld; latere implementatie afbakenen zodat homepage, desktop en submenu's niet onverwacht veranderen. Geen Shopify-mutaties of productiebronwijzigingen. GitHub–themakoppeling en Windows-synchronisatie blijven open; uitsluitend docs/design en deze status wijzigen.
+Werk: bestaande branch fix/product-cards-2026-10-14; [toepasbare productiepatch](patches/BC-mobile-category-icons-2026-10-17.patch), [SVG-bronnen en overdracht](design/mobile-category-icons-2026-10-17/README.md), scripts/test-mobile-category-icons.cjs. Geen themapadpush zolang GitHub–themakoppeling NOT_VERIFIED is. Patch is gebaseerd op verse MAIN-bron, niet op de oudere Git-theme-snapshot.
 
-**Exact één volgende handeling:** eigenaar beoordeelt de zeven voorgestelde iconen en mobiele maatvoering; daarna de gewenste verfijning gericht uitwerken. Geen achtergrondtaak.
+**Controles geslaagd:** Shopify Theme Check voor alle tien gewijzigde/nieuwe bestanden; gebundelde schemafallback gebruikt toen de docs-updater niet bereikbaar was. LiquidJS-fixtures: zeven assets, douche/spiegel-aliases, onbekende categorie, titelterugval, identieke link-/panelbestemmingen en ongewijzigde submenu/gedeelde iconbron. Patch voorwaarts en achterwaarts gecontroleerd met --ignore-space-change. Tweede read-only diffreview: geen blokkerende fout. Mobiele runtime, echte 360px-browser, focus, sluiten/heropenen: **NOT_TESTED**. Windows-synchronisatie niet gecontroleerd.
+
+**Exact één volgende handeling:** deze uitvoerende sessie wacht tot Shopify de kopie volledig heeft verwerkt, vergelijkt 473 checksums en zet daarna uitsluitend de tien bedoelde bestanden in het concept. Uitvoering actief; nog geen publicatie en geen externe achtergrondtaak.
 
 ## Checkpoint 17 oktober — goedgekeurd, publicatie gemeld
 
