@@ -2,6 +2,14 @@
 
 **Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Sunshower-fotogalerij 17 oktober — hoogte per gekozen foto
+
+Actieve opdracht: witvlak onder de brede eerste productfoto herstellen. Verse MAIN **195335356682 — BadkamerCity - Mobiele subcategorieen**; de vorige submenu-release is nu gepubliceerd. Nieuw concept **195336700170 — BadkamerCity - Sunshower fotogalerij**, UNPUBLISHED en nog in verwerking. Vóór schrijven wordt de complete 487-bestandenbasis vergeleken.
+
+**CODE_READY / IN_PROGRESS:** vast portretkader vervangen door natuurlijke fotohoogte; correcte afmetingen per thumbnail en voorladen met laatste-klikcontrole. Alleen configurator-CSS, gallery-JS en thumbnailmetadata in main-sunshower.liquid. Acht gerichte gedragstests, JS-syntax en patch apply/reverse-check geslaagd. Theme Check loopt nog; browser-na-controle en exacte concept-readback volgen. [Dossier](SUNSHOWER_GALLERY_2026-10-17.md), [codepatch](patches/BC-sunshower-gallery-2026-10-17.patch), scripts/test-sunshower-gallery.cjs. Geen theme-pathpush zolang de GitHub–themakoppeling NOT_VERIFIED is; Wiesbaden, zoeken en levertijden blijven geparkeerd.
+
+**Exact één volgende handeling:** na volledige verwerking 487/487 checksums van concept en MAIN vergelijken; daarna uitsluitend de drie beoordeelde bestanden in het concept schrijven. Nog niets gepubliceerd. Mobiele runtime en Windows-synchronisatie NOT_TESTED.
+
 ## Mobiele subcategorieën 17 oktober — goedgekeurd ontwerp toepassen
 
 Eigenaar keurt het submenuvoorbeeld goed met “Doe maar aanpassen”. Scope: mobiele panelen op niveau 2 en 3; compacte kop met Terug/titel, lichtblauwe ‘Bekijk alle…’-knop, één gegroepeerde lijst met zachte lijnen en zonder subcategorie-iconen. Wiesbaden, zoeken en levertijden blijven geparkeerd.
