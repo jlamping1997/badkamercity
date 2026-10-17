@@ -1,6 +1,7 @@
 {% doc %}
   Provides the endpoint and collection context for the optional external filters.
   @param {string} collection_handle - The current collection handle.
+  @param {boolean} [search_mode] - Whether this is a search results page.
   @param {string} section_id - The product grid section identifier.
 {% enddoc %}
 
@@ -13,7 +14,16 @@
   id="BcExternalFilters"
   data-api-base="https://vps-7ffd625d.vps.ovh.net/verified"
   data-collection="{{ collection_handle | escape }}"
-  data-products-count="{{ collection.all_products_count }}"
+  data-search-mode="{{ search_mode | default: false }}"
+  data-search-query="{{ search.terms | escape }}"
+  data-products-count="{% unless search_mode %}{{ collection.all_products_count }}{% endunless %}"
+  data-card-data-section="bc-card-data"
+  data-empty-label="{{ 'templates.search.no_results' | t: terms: search.terms | escape }}"
   data-section-id="{{ section_id | escape }}"
+  data-card-type="{{ 'products.product.card_type' | t | escape }}"
+  data-card-sku="{{ 'products.product.card_sku' | t | escape }}"
+  data-card-view="{{ 'products.product.card_view' | t | escape }}"
+  data-card-tax="{{ 'products.product.card_tax' | t | escape }}"
+  data-tax-included="{{ shop.taxes_included }}"
   hidden
 ></div>

@@ -1,0 +1,8 @@
+{%- if product != blank -%}
+  <script type="application/json" data-bc-card-data>
+    {"id": {{ product.id | json }}, "short_title": {{ product.metafields.custom.card_title.value | default: '' | json | replace: '<', '\u003c' }}}
+  </script>
+{%- endif -%}
+{% schema %}
+{"name":"Productkaartgegevens","settings":[]}
+{% endschema %}

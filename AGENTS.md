@@ -3,7 +3,7 @@
 ## 1. Verplichte bronvolgorde
 
 Bij **elke** taak:
-1. Lees `docs/HANDOVER_START_HERE.md` en `docs/AI_HANDOFF_CURRENT.md`.
+1. Lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), daarna `docs/HANDOVER_START_HERE.md` en de relevante `docs/AI_HANDOFF_CURRENT.md`. Volg de daar genoemde actieve codebranch; main is niet automatisch al gelijk aan Shopify live.
 2. Gebruik `docs/LIVE_STATUS_AND_NEXT_STEPS.md` voor de *gedateerde* status, `docs/THEME_COMPONENT_REFERENCE.md` / `docs/THEME_CODE_MAP_2026-10-07.json` voor bestandsafhankelijkheden, en `docs/SHOPIFY_ADMIN_STRUCTURE_2026-10-07.json` voor read-only Admin-context.
 3. Controleer in Shopify **welk thema NU MAIN is**; op 2026-10-07 was dat `194864677130`, maar na publicaties kan dat veranderen.
 4. Controleer werkelijke lokale Git-repo/origin/branch/worktree. Remote GitHub-commit bewijst **niet** dat Windows lokaal schoon is.
@@ -29,10 +29,19 @@ Bij **elke** taak:
 - Maak de vraag concreet: gebruikersdoel, beoogde URL, bestaande UX, scope, desktop/mobiel, SEO/data-impact en acceptatie.
 - Traceer de daadwerkelijke route: `templates/*.json → sections/*.liquid → snippets/*.liquid → assets/*` én Shopify Admin.
 - Scheid `VERIFIED_THEME`, `VERIFIED_ADMIN`, `USER_APPROVED_UI`, `IMPLEMENTED_TEST_ONLY`, `HISTORICAL` en `NOT_VERIFIED`.
-- Maak een kleine veilige wijziging op featurebranch/draft, doe tests en leg alleen bewezen resultaat vast.
+- Maak een kleine veilige wijziging binnen de geregistreerde actieve werkbranch/UNPUBLISHED preview. Geen nieuwe branch per chat; maximaal één actieve uitvoerende sessie. Doe passende tests en leg alleen bewezen resultaat vast.
 - Schrijf bij verandering van contract/architectuur ook de relevante actuele handoff bij.
 - Maak elke niet-uitgevoerde test zichtbaar als `NOT_TESTED/BLOCKED`; gebruik geen generieke “klaar”.
 - Controleer git status en theme ID na afloop, plus wat de volgende sessie als eerste moet doen.
+
+### Checkpoints en hervatten
+
+- Werk na iedere betekenisvolle deelstap de bestaande centrale status bij: taak, uitvoerder, branch, codecheckpoint, tests, blokkade en exact één volgende handeling.
+- Commit en push beoordeelde code plus voortgang; verifieer remote opslag. Een lokale stash/commit is geen overdracht naar een andere pc.
+- Als een nieuwe wens buiten de actieve taak valt, leg die vast in de parkeerplaats; wissel alleen na een expliciete prioriteitskeuze of een bewezen blokkade.
+- Houd de actuele status in de actieve branch en de vaste ingang op main gelijk. Updates aan main voor de dagstart mogen alleen documentatie bevatten; themacode en publicatie behouden hun bestaande release-/toestemmingsregels.
+- Een tweede sessie begint pas met schrijven nadat de vorige uitvoering is afgerond of expliciet overgedragen. Dit is een procedure, geen automatisch technisch slot.
+- Claim geen lokale Windows-controle, browsercheck, achtergrondopslag of synchronisatie die niet is uitgevoerd.
 
 ## 4. Codex lokaal: bestaand uitvoeringslogboek
 
@@ -50,7 +59,7 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 - De Badkamermeubels-mobiel/desktopweergave leunt op **drie inline style-blokken in Shopify collection descriptionHtml**. Alleen code uit Git inspecteren kan die afhankelijkheid missen.
 - De actuele `main` bevat een geverifieerde theme-snapshot, niet de volledige Shopify-productdatabase/menu-instellingen/externe VPS.
 - `custom.*` in bepaalde PDP-code komt niet altijd overeen met de actuele `specs.*`-definities; verifieer echte waarden vóór migratie.
-- Externe filters zijn opt-in bij `wastafelkranen?bcfilters=1`; niet sitebreed klaar.
+- De opt-in-filterstatus uit 7 oktober is historisch. Lees de actuele status en controleer de werkelijk gebruikte route; een publicatie bewijst niet dat alle filters opnieuw zijn getest.
 - Een Shopify `ACTIVE` productstatus is niet identiek aan aantoonbare Online Store-publicatie en voorraad.
 - GitHub is **publiek**. Verifieer privacy en rechten bij elk nieuw bestand.
 

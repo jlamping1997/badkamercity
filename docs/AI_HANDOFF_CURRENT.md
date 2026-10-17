@@ -1,5 +1,15 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
+
+> **ZOEKFILTERS EN KORTE TITELS 14 OKTOBER:** verse MAIN `195216048394`; concept `195218047242` voegt zoekfilterprofiel `__all__` en merchantveld `custom.card_title` toe. Veld aangemaakt en nog leeg. Zie [zoek- en titelcontract](SEARCH_AND_SHORT_TITLES_2026-10-14.md). Publicatie en visuele/live zoekcontrole open; hieronder oudere release-momentopnamen.
+
+> **PRODUCTKAARTEN VERFIJND:** bij laatste read is `195213656330` MAIN. De verdere presentatieverfijning staat in kopie `195216048394` (Productkaarten verfijnd); zie [kaartstatus](PRODUCT_CARDS_2026-10-14.md). Geen header-/productdatamutatie. Tien kaart-rendercontroles en tien filtertests geslaagd. Visuele eindcontrole en merchant-publicatie blijven open; connector kan geen MAIN schrijven of publiceren.
+
+> **GOEDGEKEURDE PRODUCTKAARTEN:** MAIN is bij de laatste read `195211919626`. Het goedgekeurde ontwerp met productkenmerken en ‘Bekijk product’ staat volledig in kopie `195213656330` (Goedgekeurde productkaarten); zie [actuele kaartstatus](PRODUCT_CARDS_2026-10-14.md). Merchant heeft live toepassing geautoriseerd, maar de connector kan MAIN niet schrijven/publiceren. Alleen merchant-publicatie en visuele eindcontrole blijven nodig voor deze release. Header behouden; oudere thema-status hieronder is historisch.
+
+> **NIEUW ONTWERPCONCEPT 14 OKTOBER:** een verse Admin-read toont `195038216458` als MAIN. Productkaartwijzigingen staan daarom in nieuwe UNPUBLISHED kopie `195211919626` (Productkaarten 14 okt). Zie [productkaarten](PRODUCT_CARDS_2026-10-14.md). Browserpreview geblokkeerd; visuele desktop/mobiele review open. Oudere aanwijzingen hieronder dat Afronding basis nog concept is, zijn historisch.
+
 > **LATERE UPDATE 14 OKTOBER:** op verzoek van de merchant zijn de filters in concept `195038216458` standaard zichtbaar gemaakt, zonder `bcfilters=1`. Wastafelkranen zonder parameter gecontroleerd: 454 producten en externe filters actief. Zie de aanvulling bovenaan [filterpreview](FILTER_PREVIEW_2026-10-14.md). MAIN is niet gewijzigd.
 
 > **ACTUELE AANVULLING 14 OKTOBER 2026:** lees eerst [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md). De merchant heeft index-, API- en HTTPS/CORS-proeven op de VPS succesvol uitgevoerd. Concept `195038216458` gebruikt de nieuwe route opt-in via `bcfilters=1`; desktopcontroles en 10 regressietests zijn geslaagd. Mobiele visuele controle, verdere familiecontrole en standaard activering/publicatie staan open. MAIN blijft `194981003530`.

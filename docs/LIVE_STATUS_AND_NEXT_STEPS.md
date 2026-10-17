@@ -1,8 +1,401 @@
+# BadkamerCity — vaste startpagina en werkplan
+
+**Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+
+## Sunshower-landingspagina en homepagebanner — 17 oktober
+
+Eigenaar geeft opdracht het goedgekeurde warme ontwerp toe te passen. Compacte bovenkant, duidelijke ONE/PLUS-keuze en een homepagebanner naar de nieuwe pagina. Wiesbaden, zoeken en levertijden blijven buiten scope.
+
+**VERIFIED_ADMIN:** huidige MAIN **195336700170 — BadkamerCity - Sunshower fotogalerij**; de galerijreparatie is dus gepubliceerd. Nieuw concept **195338076426 — BadkamerCity - Sunshower landingspagina**, UNPUBLISHED. Vóór schrijven processing=false en **487/487 checksums identiek**. Na schrijven **492 bestanden**, tien bedoelde bestanden opgeslagen; de overige **482 bestaande bestanden identiek**. Alle tien gewenste inhouden exact of JSON-semantisch gelijk (Shopify voegde zijn standaardcommentaar aan de nieuwe paginatemplate toe). MAIN blijft MAIN met alle **487/487 checksums ongewijzigd**.
+
+**IMPLEMENTED_PREVIEW / REVIEW:** warm origineel Sunshower-sfeerbeeld, korte hero (330px desktop,154px mobiel fotogedeelte), direct modelkaarten met afzonderlijke links naar ONE en PLUS, infrarood/UV-uitleg, montage/formaat, advieslink en vier native FAQ's. Geen JavaScript, vaste prijzen of levertijdbeloftes toegevoegd. Homepagebanner **230px** hoog bij1363px viewport, na Shop per categorie. Bestaande secties en volgorde behouden. NL/EN runtime- en editorvertalingen aanwezig.
+
+**Admin-mutaties:** nieuwe pagina **166120390922**, handle **sunshower**, templateSuffix **bc-sunshower**, gepubliceerd zodat de conceptbanner een echte bestemming heeft. Op het huidige live-thema toont deze nog een eenvoudige nuttige tekstversie; de nieuwe vormgeving en homepagebanner worden pas zichtbaar na publicatie van het conceptthema. Geen menu aan de livehomepage toegevoegd. Nieuwe Files-afbeelding **badkamercity-sunshower-sfeer-warm.jpg**, bron Sunshower.eu inspiratiegalerij; geen gegenereerde productfoto. SEO-title en description ingesteld via de standaard global title_tag/description_tag-velden, uitsluitend op deze nieuwe pagina.
+
+**Geslaagd:** Theme Check revisie2 voor tien bestanden, met gebundelde schemafallback na netwerk-time-out en telemetry opt-out; zeven gerichte NL/EN-render-/behoudgevallen; onafhankelijke read-only review; patch voorwaarts en omgekeerd toepasbaar. Browser1363×936: één H1, vijf landingsbeelden geladen, geen horizontale overflow, juiste ONE/PLUS-geselecteerde configuratoren na echte klik, FAQ geopend, bannerfoto geladen en bannerklik naar /pages/sunshower. Geen formulier of winkelwagen verzonden.
+
+**NOT_TESTED:** echte mobiele viewport/telefoonweergave; beschikbare cloudbrowser biedt geen viewportregeling en toetsenbordpoging veranderde1363px niet. Mobiele CSS beoordeeld bij350/390/768px, geen claim van mobiele runtimetest. Checkout, advertentietracking en conversiemeting niet getest. Windows lokaal niet gecontroleerd.
+
+Werkbranch **fix/product-cards-2026-10-14**. Productiecode bewaard als [toepasbare patch](patches/BC-sunshower-landing-2026-10-17.patch), [verificatie](sunshower-landing-verification-2026-10-17.json). Geen themabronpaden gepusht zolang GitHub–themakoppeling NOT_VERIFIED is. Dit is een previewrelease, geen volledige Git/live-synchronisatie.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Sunshower landingspagina**, controleert banner → landingspagina → ONE/PLUS en beoordeelt publicatie. Geen achtergrondtaak. Terugzetten: vóór publicatie concept niet gebruiken; na publicatie vorige thema terugzetten of uitsluitend deze tien bestanden herstellen. De nieuwe losse pagina en sfeerafbeelding zijn apart aangemaakt en blijven bestaan; pagina desgewenst ongepubliceerd zetten. Bestaande producten/configurator zijn niet gewijzigd.
+
+## Sunshower-fotogalerij 17 oktober — hoogte per gekozen foto
+
+Opdracht eigenaar: witvlak onder de brede eerste productfoto herstellen. **VERIFIED_ADMIN:** MAIN **195335356682 — BadkamerCity - Mobiele subcategorieen**; de vorige submenu-release is nu gepubliceerd. Nieuw concept **195336700170 — BadkamerCity - Sunshower fotogalerij**, UNPUBLISHED. Vóór schrijven processing=false en **487/487 checksums identiek** aan MAIN. Daarna alleen drie bedoelde bestanden geschreven. Finale readback: **487 bestanden, drie inhouden exact, overige 484 bestanden checksum-identiek**. MAIN blijft 195335356682 met **487/487 ongewijzigde checksums**.
+
+**IMPLEMENTED_PREVIEW / REVIEW:** vast portretkader (3/4 desktop, 4/5 mobiel) vervangen door natuurlijke fotohoogte. Lange afbeeldingen blijven volledig zichtbaar met contain en cap760px desktop/570px mobiel. Correcte thumbnailafmetingen en voorladen met laatste-klikcontrole; foto, afmetingen en selectie worden samen gewijzigd na succesvol laden. Een laadfout behoudt de vorige foto; klikken op de geselecteerde thumbnail annuleert een hangende keuze. Zoom gebruikt de gecommitteerde bron. Alleen assets/bc-sunshower-configurator.css, assets/bc-sunshower-page.js en sections/main-sunshower.liquid. Geen product-/aankoop-/menuwijzigingen; Wiesbaden, zoeken en levertijden blijven geparkeerd.
+
+**Geslaagd:** acht gedragstests op het werkelijke JS-galerijblok, node --check, patch voorwaarts/omgekeerd, onafhankelijke diffreview en Theme Check revisie1 voor alle drie bestanden (gebundelde docs/schemafallback). Echte productpagina bij **1363×936**: brede foto van kader564×752 naar **564×352,5px**, thumbnails16px eronder; staande tekening krijgt correcte attributen1104×2041 en volledig containbeeld in kader564×760. Terug naar foto1 geeft opnieuw352,5px met attributen2363×1477. Zoom toont de juiste technische tekening en sluit correct. Conceptnaam/Draft bevestigd in previewbalk; geen Liquid error. Mobiele runtime/visuele iPhone-controle **NOT_TESTED**: browser heeft geen mobiele viewportinstelling. Windows-synchronisatie niet gecontroleerd.
+
+Werkbranch fix/product-cards-2026-10-14, codecheckpoint **6ad6009fcef98847d5e037a71a61ea358d9baea3**. [Dossier](SUNSHOWER_GALLERY_2026-10-17.md), [productiepatch](patches/BC-sunshower-gallery-2026-10-17.patch), scripts/test-sunshower-gallery.cjs, browser- en manifestbewijs in docs/sunshower-gallery-*-2026-10-17.json. Geen themapadpush zolang de GitHub–themakoppeling NOT_VERIFIED is.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Sunshower fotogalerij**, controleert foto1 → foto2 → foto1 en zoom, en beoordeelt daarna publicatie. Uitvoering afgerond; niet gepubliceerd en geen achtergrondtaak. Terugzetten: uitsluitend deze drie bestanden vanuit de gecontroleerde basis herstellen of de patch na vergelijking met vervolgwijzigingen omkeren.
+
+## Mobiele subcategorieën 17 oktober — goedgekeurd ontwerp toepassen
+
+Eigenaar keurt het submenuvoorbeeld goed met “Doe maar aanpassen”. Scope: mobiele panelen op niveau 2 en 3; compacte kop met Terug/titel, lichtblauwe ‘Bekijk alle…’-knop, één gegroepeerde lijst met zachte lijnen en zonder subcategorie-iconen. Wiesbaden, zoeken en levertijden blijven geparkeerd.
+
+**VERIFIED_ADMIN:** alle dertien hoofdiconen zijn inmiddels gepubliceerd: **195334865162 — BadkamerCity - Mobiel menu alle iconen** is MAIN. Verse bron en volledig manifest van 487 bestanden gelezen. Concept **195335356682 — BadkamerCity - Mobiele subcategorieen**, UNPUBLISHED. Vóór wijziging processing=false en **487/487 checksums identiek** aan MAIN. Daarna twee bestanden geschreven. Finale readback: **487 bestanden, beide bedoelde inhouden exact, overige 485 bestanden checksum-identiek**. MAIN blijft 195334865162 met **487/487 ongewijzigde checksums**.
+
+**IMPLEMENTED_PREVIEW:** uitsluitend sections/header.liquid en snippets/header-drawer.liquid aangepast. Alle 51 subpanelen krijgen dezelfde lijststijl, 48px minimale klikrijen/CTA en een kop die lange titels laat afbreken. Subcategorie-iconen uit de childloop verwijderd; 13 hoofdiconen en rootmarkup blijven bytegelijk. ‘Bekijk alle kranen’ en overige veilige meervouden; voor Douche/Meer en andere namen blijft grammaticaal ‘Bekijk alles in…’. URL's, panel-ID's, back/next-attributen, actieve links en controller-JS behouden. Kop/CTA/lijst krimpen niet bij lange menu's; focusranden worden niet afgeknipt door een nieuwe overflowregel.
+
+**Controles geslaagd:** LiquidJS-contract over het actuele main-menu met 13 hoofditems, 91 subitems en 152 onderliggende keuzes: 51 subpanelen, identieke bestemmingen/terugknoppen, twee actieve-linkgevallen, escaping en geen sub-SVG's. Rooticontest voor alle 13 iconen/aliases/fallback; rootblok, gedeelde iconen en controller gelijk. LiquidJS mist Shopify forloop.parentloop; fixture gebruikt daarvoor een gedocumenteerde adapter. Echte Shopify-DOM vóór/na: **413 navigatie-elementen identiek** na normaliseren van de thema-afhankelijke section-ID; **52/52 unieke panelen**, nul onopgeloste verwijzingen, 51 lijstgroepen, nul sub-SVG's en 13 rooticonen. Kranen-CTA is ‘Bekijk alle kranen’ met href=/collections/kranen; geen Liquid error. Dit is DOM-bewijs bij 1348px en geen mobiele runtimetest. Theme Check revisie 3 voor beide bestanden geslaagd, met gebundelde docs/schemafallback na netwerkproblemen. Patch voorwaarts/omgekeerd gecontroleerd. Tweede read-only diffreview zonder routing/scopeblockers; flexhoogte en onderrand gericht gecorrigeerd.
+
+Werk: fix/product-cards-2026-10-14, codecheckpoint **d155a13bd9a04764cbbfda97d6beeae6ba1efadc**. [Productiepatch](patches/BC-mobile-submenus-2026-10-17.patch), [ontwerp en overdracht](design/mobile-subcategories-2026-10-17/README.md), scripts/test-mobile-submenus.cjs en bijgewerkte scripts/test-mobile-category-icons.cjs. Geen themapadpush zolang GitHub–themakoppeling NOT_VERIFIED is. Windows niet gecontroleerd.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Mobiele subcategorieen** en controleert Kranen → Douchekranen → Terug → Terug, de CTA-bestemming, lange titels en scrollen. Mobiele 360px-weergave, echte open/terug/sluit-bediening en focus zijn **NOT_TESTED**: de beschikbare browser heeft geen mobiele viewportinstelling. Uitvoering afgerond; concept niet gepubliceerd en geen achtergrondtaak. Terugzetten: uitsluitend deze patch tegen dezelfde conceptbasis omkeren; na vervolgwijzigingen eerst vergelijken.
+
+## Mobiel vervolg 17 oktober — overige zes hoofdcategorieën
+
+Eigenaar: “ze zijn goed ik heb hem ook live gezet, kunnen we nu de rest ook SVG geven?” Eerste zeven iconen **USER_APPROVED_UI** en publicatie **VERIFIED_ADMIN**: **195334668554 — BadkamerCity - Mobiel menu SVG** is nu MAIN. Wiesbaden, zoeken en levertijden blijven geparkeerd.
+
+Concept **195334865162 — BadkamerCity - Mobiel menu alle iconen**, UNPUBLISHED. Vóór wijziging processing=false en **481/481 checksums identiek** aan huidige MAIN. Daarna zeven bestanden geschreven: één mapping-snippet gewijzigd en zes assets toegevoegd. Finale readback **487 bestanden, zeven gewenste inhouden exact, overige 480 bestaande bestanden checksum-identiek**. MAIN blijft 195334668554 met **481/481 ongewijzigde checksums**. Verse MAIN-bron en volledig manifest van 481 bestanden gelezen; header gebruikt main-menu. Actueel Admin-menu heeft 13 hoofditems: eerste zeven plus **Accessoires, Tegels, Badkamerverlichting, Verwarming, Meer, Outlet**. Twaalf items openen een submenu; Outlet is een directe link.
+
+**IMPLEMENTED_PREVIEW:** zes eigen SVG-assets in exact dezelfde 32×32/currentColor/stroke1.65-stijl en uitbreiding van uitsluitend bc-mobile-category-icon.liquid. De bestaande 44px-vlakken en 68px-rijen worden automatisch hergebruikt. Accessoires=handdoekrail/zeeppomp, Tegels=overlappende tegels, Verlichting=lamp, Verwarming=ladderradiator, Meer=raster, Outlet=prijslabel. Geen percentage of nieuwe kortingsclaim. Eerste zeven assets, header-CSS, drawer, gedeelde iconsnippet en alle submenu's blijven byte-identiek.
+
+Codecheckpoint **0bc285d30709851a4db0f5cbd3e12a737c087c52**, bestaande werklijn fix/product-cards-2026-10-14 als [aanvullende patch](patches/BC-mobile-category-icons-rest-2026-10-17.patch) tegen de verse MAIN. Geen themapadpush zolang GitHub–themakoppeling NOT_VERIFIED is. SVG-bronnen en [overzicht](design/mobile-category-icons-2026-10-17/remaining-icons-overview.png) staan bij de bestaande ontwerpdocumentatie; overzicht is een render van de SVG's, geen Shopify-screenshot.
+
+**Geslaagd:** alle zes SVG's XML/safe-inline gecontroleerd en visueel bekeken; LiquidJS-fixtures voor 13 hoofdiconen, douche/spiegel/verlichting/accessoiresaliases, toekomstige onbekende categorie, titelterugval, identieke navigatie en Outlet als directe/current-link. Eerste zeven assets en header/drawer/gedeelde iconbron bytegelijk vergeleken. Patch voorwaarts/achterwaarts gecontroleerd. Theme Check voor alle zeven gewijzigde/nieuwe bestanden geslaagd met gebundelde schemafallback; tweede read-only code/beeldreview vond geen blokkerende fout. Echte conceptpagina bij 1348px geopend: alle 13 root-items met 32×32-SVG en juiste knop/linktype, Outlet=/collections/outlet, conceptnaam in previewbalk bevestigd, geen Liquid error. Dit is alleen DOM/desktopbewijs. Echte mobiele runtime/360px, scrollen tot Outlet, submenu heen/terug en close/reopen **NOT_TESTED**; beschikbare browser heeft geen mobiele viewportinstelling. Windows niet gecontroleerd.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Mobiel menu alle iconen**, controleert vooral label Badkamerverlichting en scrollen/aantikken van laatste item Outlet, en beoordeelt daarna publicatie. Uitvoering afgerond; concept niet gepubliceerd en geen achtergrondtaak. Terugzetten: uitsluitend aanvullende patch omkeren tegen deze basis, zodat de eerste zeven gepubliceerde iconen behouden blijven; na vervolgwijzigingen eerst vergelijken.
+
+## Mobiel werk 17 oktober — zeven SVG-iconen toepassen
+
+Eigenaar keurt het voorstel expliciet goed: “Oké pas deze 7 toe”. **Wiesbaden blijft openstaan; zoeken en levertijden blijven uitgesteld.** Opdracht beperkt tot de zeven hoofdcategorieën in de mobiele drawer: Badkamermeubels, Kranen, Toiletten, Wastafels, Douche, Baden en Spiegels.
+
+**VERIFIED_ADMIN:** huidige MAIN **195326247178**, BadkamerCity - Specificaties en homepage. Concept **195334668554**, BadkamerCity - Mobiel menu SVG, UNPUBLISHED. Vóór wijziging volledig verwerkt en **473/473 checksums identiek** aan MAIN. Daarna uitsluitend de tien bedoelde bestanden geschreven: twee aangepast en acht toegevoegd. Finale readback: **481 bestanden, alle tien gewenste inhouden exact, overige 471 bestaande bestanden checksum-identiek**. MAIN blijft 195326247178; **473/473 livechecksums ongewijzigd**. Targetbron rechtstreeks uit MAIN gelezen.
+
+**USER_APPROVED_UI / IMPLEMENTED_PREVIEW:** de zeven originele goedgekeurde SVG's, aparte mobiele snippet en modifiers uitsluitend voor de zeven hoofditems. Iconen 32px in 44px lichtblauwe vlakken; rijen minimaal 68px. Zowel douche/douches als spiegels/spiegels-en-spiegelkasten ondersteund. Titelhandle als terugval; andere categorieën behouden hun huidige renderer. Submenu's, navigatieattributen, links, desktop en gedeelde homepage-iconen niet veranderd.
+
+Werk: bestaande branch fix/product-cards-2026-10-14; codecheckpoint **4a71dfdf926f17107ac23ba7067971d6f7c13aea**; [toepasbare productiepatch](patches/BC-mobile-category-icons-2026-10-17.patch), [SVG-bronnen en overdracht](design/mobile-category-icons-2026-10-17/README.md), scripts/test-mobile-category-icons.cjs. Geen themapadpush zolang GitHub–themakoppeling NOT_VERIFIED is. Patch is gebaseerd op verse MAIN-bron, niet op de oudere Git-theme-snapshot.
+
+**Controles geslaagd:** Shopify Theme Check voor alle tien gewijzigde/nieuwe bestanden; gebundelde schemafallback gebruikt toen de docs-updater niet bereikbaar was. LiquidJS-fixtures: zeven assets, douche/spiegel-aliases, onbekende categorie, titelterugval, identieke link-/panelbestemmingen en ongewijzigde submenu/gedeelde iconbron. Patch voorwaarts en achterwaarts gecontroleerd met --ignore-space-change. Tweede read-only diffreview: geen blokkerende fout. Browser op 1348px: conceptnaam in Shopify-previewbalk bevestigd, alle zeven echte root-items hebben de juiste 32×32-SVG en bestaande paneldoelen; geen Liquid error op de pagina. Mobiele runtime, echte 360px-browser, focus, sluiten/heropenen: **NOT_TESTED**. De browser heeft geen ondersteunde mobiele viewportinstelling. Windows-synchronisatie niet gecontroleerd.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview van **BadkamerCity - Mobiel menu SVG** in Shopify en beoordeelt de zeven hoofdiconen, labels/chevrons, scrollen, één submenu heen/terug en sluiten/heropenen. Uitvoering afgerond; concept niet gepubliceerd en geen achtergrondtaak. Terugzetten: de patch tegen dezelfde conceptbasis omkeren; na vervolgwijzigingen eerst vergelijken. Overige categorieën pas na deze beoordeling uitwerken.
+
+## Checkpoint 17 oktober — goedgekeurd, publicatie gemeld
+
+Eigenaar meldt: “ik heb hem live gezet hij is goed zo”. Specificaties en homepageknoppen zijn **USER_APPROVED_UI**. Publicatie is door eigenaar gemeld (**USER_REPORTED_PUBLISHED**); niet door de assistent uitgevoerd.
+
+Verse Admin-controle en afzonderlijke hercontrole met roles:[MAIN] geven nog MAIN **195313991946** (Werkpreview categoriekaarten), terwijl **195326247178** (Specificaties en homepage) als UNPUBLISHED terugkomt. Dit wijkt af van de gebruikersmelding. Publicatie daarom nog niet als VERIFIED_ADMIN markeren. Geen oorzaak zoals caching aangenomen. Thema 195326247178 uit voorzorg als mogelijk live behandelen: geen vervolgwijzigingen op dit thema totdat de actuele koppeling/rol verklaard is.
+
+Werkcode en tests blijven opgeslagen in werkbranchcheckpoint **9272a7d792431d9b5fcf503596a1280601641cc4**; main-overdracht **fb56cc36ccb97718edd93689d07518bd77fa69f3**. Geen nieuwe theme- of productmutaties in dit checkpoint.
+
+**Aanbevolen vervolg:** BC-00 hervatten: actuele publicatie en GitHub–themakoppeling vaststellen, daarna de complete livebasis en bestaande patches op de vaste werklijn samenbrengen met behoud van ongepushte Windows-wijzigingen. Vervolgens de bestaande Wiesbaden-proef van tien producten afronden: één gecontroleerde gegevensbron voor titel, korte titel, omschrijving, specificaties, SEO en alt-teksten. Service-/footerpagina's daarna afmaken. Zoeken en levertijden blijven uitgesteld volgens de expliciete gebruikerskeuze; geen nieuwe ontwerpvariant gestart.
+
+**Exact één volgende handeling:** actuele publicatie en branch–themakoppeling verifiëren voor BC-00. Geen uitvoering of achtergrondtaak gestart.
+
+## Uitvoering 16 oktober — specificaties en homepageknoppen
+
+**Actuele opdracht eigenaar:** specificaties herstellen, homepageknoppen werkend maken en in Git bewaren. **Levertijden en zoeken expliciet uitgesteld; deze opdracht vervangt daarvoor de eerdere gecombineerde reparatievolgorde.** Uitvoerder: deze ChatGPT-sessie, bestaande werklijn fix/product-cards-2026-10-14. Status: **IMPLEMENTED_PREVIEW / REVIEW**, uitvoering afgerond zodra dit checkpoint remote is bevestigd; geen achtergrondtaak.
+
+- MAIN bij aanvang en nacontrole: **195313991946**. Nieuw concept **195326247178**, **BadkamerCity - Specificaties en homepage**, UNPUBLISHED. Kopie vóór wijziging: **468/468 bestanden checksum-identiek** aan MAIN.
+- Gewijzigd: elf themabestanden; kandidaat bevat 473 bestanden (vijf nieuwe). Overige 462 bestaande bestanden checksum-identiek aan de baseline. Finale readback: alle elf gewenste inhouden correct; Shopify voegde aan de nieuwe merken-JSON alleen zijn standaardcommentaar/opmaak toe. Live: **468/468 checksums ongewijzigd**, nog MAIN.
+- Specificaties: Wiesbaden leest custom.*, JEE-O specs.*. Getypeerde weergave voor booleans, nul, decimalen en bestaande tekst-/maatvelden. Geen technische waarden uit titels afgeleid. Identiteit gebruikt native variant-SKU en vendor. Geen EAN in de nieuwe tabel. Bestaande Hotbath-router en Sunshower-specificaties behouden.
+- Dubbele Wiesbaden-tabel: alleen de herkenbare geïmporteerde tabel uit de zichtbare omschrijving weglaten als artikelidentiteit en iedere ondersteunde rij met het huidige metafield overeenkomen. Onbekende of afwijkende rij: originele HTML behouden. EAN-rij mag vervallen. Product-descriptionHtml in Admin blijft onaangeroerd; overige omschrijving en documenten worden behouden.
+- Homepage: drie bannerlinks, categorie-/productoverzicht, advies-CTA's, stijlkaarten, inspiratiekaarten en merklinks ingevuld. Stijl- en adviesknoppen verwijzen eerlijk naar Contact; geen verzonnen boekingsflow. Nieuw theme-only merkenoverzicht via /collections?view=merken, met de vijf daadwerkelijk beschikbare merken. Geen ongepubliceerde Merken-pagina gepubliceerd.
+- Tegelbanner leidt naar het bestaande gepubliceerde mozaïekassortiment van THE MOSAIC FACTORY (277 producten); Tegels/subcollecties zijn nog leeg. Vier lege merken uit de rail vervangen door actueel aanbod. Bestaande kortingsafbeeldingen behouden; kortingsclaims in die beelden zijn niet opnieuw geverifieerd.
+- Nieuwe optionele banner-linklabels maken Hotbath, mozaïektegels en meubels ook toegankelijk herkenbaar. Bestaande zichtbare bannerbeelden en overlays behouden.
+
+**Bewijs:** 45 geslaagde render-/bewaarcontroles: 15 gedragsgevallen plus 10 actuele Wiesbaden- en 20 JEE-O-producten. Testscript: scripts/test-product-detail-specs.cjs; leest optioneel een afgeschermde Admin-snapshot via BC_SPEC_SNAPSHOT (ruwe omschrijvingen niet in publieke Git). Shopify-themevalidator: alle elf productie-bestanden VALID, met uitsluitend bestaande niet-blokkerende main-product-waarschuwingen. Verse docs waar bereikbaar en gebundelde schemafallback bij netwerk-time-outs. Oorspronkelijke skill-runtime miste dependencies; ongewijzigde validators met hun gepinde officiële dependencies in tijdelijke tooling uitgevoerd.
+
+**Browser, desktop circa 1348×926:** JEE-O 900-1776 toont 19 relevante spec-rijen, waaronder RVS 304, Gun Metal, uitloophoogte 250 mm en Nee voor plug/sifon; Wiesbaden 24.3710 toont negen rijen en nul tabellen binnen de omschrijving. Geen Liquid errors. Sunshower Medium Hoek Black opent met eigen specificaties. Homepage bevat werkende links en geen disabled placeholderknoppen binnen main. Merkenoverzicht opent via echte homepageklik en toont vijf merken; Hotbath en THE MOSAIC FACTORY openen met passend productaanbod. Contact rendert het bestaande formulier; niets verzonden. Mobiele browsercontrole, volledige cataloguscontrole, alle bestemmingen doorlopen, Hotbath-pilot-runtime, bestellen/checkout en kortingsvalidatie: **NOT_TESTED**. Geen zoekfunctiecontrole of -wijziging uitgevoerd.
+
+**Git-bewaring:** [toepasbare codepatch](patches/BC-specifications-home-links-2026-10-16.patch) en bovengenoemd testscript op de bestaande werkbranch; centrale status ook op main. Themabronpaden in Git niet rechtstreeks vervangen zolang de GitHub–Shopify-koppeling niet bewezen is, om een mogelijke live-sync te vermijden. Dit is dezelfde bewaarmethode als de bestaande mobiele/categoriepatches. Zowel apply-check tegen de livebasis als reverse-check tegen de kandidaat geslaagd met --ignore-space-change wegens bestaande CRLF/LF-verschillen. De patch hoort op de actuele livebasis, niet blind op een verouderde complete checkout.
+
+**Review:** https://badkamercity.nl/?preview_theme_id=195326247178 — controleer dat de previewbalk Specificaties en homepage / Draft vermeldt. Niet gepubliceerd door deze assistent. Voor terugzetten alleen de zes gewijzigde bestaande bestanden uit MAIN herstellen en vijf nieuwe bestanden verwijderen; geen Admin-dataherstel nodig. Voor toepassing op de werklijn eerst de branch–themakoppeling en actuele basis controleren, daarna git apply --check --ignore-space-change en git apply --ignore-space-change op de samengebrachte bronversie.
+
+**Exact één volgende handeling:** eigenaar beoordeelt dit concept op telefoon en desktop; daarna publicatie als afzonderlijke release. BC-00-synchronisatie blijft open. Zoeken en levertijden blijven geparkeerd volgens de nieuwste opdracht.
+
+## Verdieping 16 oktober — herstel en schaalbare productbasis
+
+**Status: ONDERZOCHT / OPLOSSING UITGEWERKT, nog niet geïmplementeerd.** Opdracht eigenaar: eerder gevonden problemen diep analyseren en een sterke oplossing uitwerken. Dit is een aanvulling op BC-00 t/m BC-06, geen nieuw masterplan of opdracht tot publicatie. Onderzoek uitgevoerd via Shopify/Git-connectors en een geïsoleerde Linux-checkout; geen Windows-controle. Geen thema-, product-, collectie- of voorraadmutaties.
+
+### Bewijs en diagnose
+
+Verse Admin-read op 16 oktober: MAIN **195313991946**, naam BadkamerCity - Werkpreview categoriekaarten, updatedAt 15:11:43Z. De naam is geen indicatie van een conceptstatus. Werkbranch bij controle **4f0ff022d7a139825768f985a5c874f5d419a180**; main **c9c897ec163a943a2f868defca001c691a05a887**. Dit actualiseert de oudere rollen en aantallen hieronder.
+
+| Onderdeel | Vaststelling | Oorzaak / betekenis |
+| --- | --- | --- |
+| Live versus Git-werkbranch | Van 468 livebestanden: 427 gelijk inclusief normalisatie regeleinden, 22 andere checksum, 19 ontbreken als bronbestand | Mobiele/categorieverbeteringen deels alleen als patch in Git; Sunshower-bron ontbreekt op deze branch. De 22 checksumverschillen zijn niet allemaal afzonderlijk als inhoudelijke wijziging geclassificeerd. Een oude volledige Git-upload is geen veilige release |
+| Specificaties JEE-O 900-1776 | Default producttemplate; 17 echte technische metafields in specs.*, waaronder materiaal_kraan=RVS 304, hoogte_uitloop_mm=250, kleur=Gun Metal en serie=Cone | De legacy-renderer leest custom.*. De data ontbreekt dus niet volledig: de productpagina leest voor deze gegevens de verkeerde bron |
+| Specificaties Wiesbaden 24.3710 | Default producttemplate; custom.materiaal=RVS, custom.kleur=Geborsteld RVS, custom.afwerking=Geborsteld en custom.coldstart=true aanwezig | Legacy verwacht onder andere materiaal_kraan en toont slechts een deel. De omschrijving bevat daarnaast een eigen tabel; twee weergaven onderhouden dezelfde feiten verschillend |
+| Voorraad Wiesbaden 24.3710 | custom.leverancier_voorraad=true, metafield updatedAt 5 oktober 15:11:29Z | Productpagina gebruikt de boolean zonder bronactualiteit te controleren. updatedAt bewijst de laatste veldwijziging, niet wanneer de leverancier voor het laatst is gecontroleerd. Geen betrouwbare leverbelofte uit afleiden |
+| Levertijd over pagina's | Kaarten tonen neutraal Levertijd op aanvraag; standaardproductsectie bevat buiten Wiesbaden/Sunshower/goedgekeurde Hotbath-scope nog vaste 8–9 weken | Verschillende codepaden bepalen dezelfde klantinformatie. Het JEE-O-voorbeeld valt statisch in de vaste-termijnroute; die tekst in deze verdieping niet opnieuw in browser gecontroleerd |
+| Homepage | Hero- en bannerlinks, complete-badkamer CTA, hulp-CTA, stijlkaarten en merklinks zijn in live index.json leeg | Het schema ondersteunt links al. Groot deel vraagt configuratie en echte bestemmingen; een redesign repareert dit niet |
+| Bestemmingen | Contact is gepubliceerd; contacttemplate bevat contact-form. Merken bestaat maar is ongepubliceerd. Gerichte paginazoekopdracht op afspraak/advies/bezorgen/retourneren/garantie/veelgestelde vond geen aanvullende pagina's | Geen bewezen afspraakroute. Deze zoekopdracht sluit anders genoemde pagina's, policies of externe boekingsdiensten niet uit |
+| Badkamermeubels | Actuele collection descriptionHtml bevat nog drie style-blokken | Vormgeving zit ook in Admin-content. Alleen het thema terugzetten of beschrijvingen vervangen kan de categorie beschadigen |
+| Zoekresultaten | Live JS toont prijs uit externe index; extra Shopify-sectionrequests vullen uitsluitend korte titels aan, maximaal vier tegelijk | Een gelijk productaantal bewijst geen actuele prijzen of juiste producten. Per kaart kan een extra request nodig zijn; impact is nog niet gemeten |
+| Bestaande beveiliging tegen filteruitval | Live JS heeft request-annulering, antwoordcontrole, 12-seconden-timeout en terugval naar native lijst | Behouden. Runtime bij serveruitval, verouderde index en browser-terugknop moet nog worden bewezen |
+
+Bronbestanden: sections/main-product.liquid; sections/main-sunshower.liquid; snippets/bc-product-detail-specs.liquid; snippets/bc-product-detail-specs-legacy.liquid; snippets/bc-product-detail-row.liquid; snippets/bc-hotbath-normal-scope.liquid; snippets/bc-card-delivery.liquid; assets/bc-external-filters.js; templates/index.json; sections/footer-group.json. Voor ongewijzigde Git-snippets bevestigt het manifest de overeenkomst met live.
+
+### 1. BC-00 afronden: één reproduceerbare basis
+
+1. Leg in Shopify vast welke branch werkelijk aan welk thema gekoppeld is; dit is nog **NOT_VERIFIED** en niet uit een themanaam of repositorynaam af te leiden. Bewaar ongepushte Windows-wijzigingen vóór samenvoegen. Geen theme-pathpush zolang een livekoppeling mogelijk is.
+2. Exporteer de dan actuele MAIN naar een geïsoleerde vergelijkmap. Bewaar tijdstip, theme-ID, volledig manifest en bestaande Git-commits. Hercontroleer MAIN/manifest na het lezen; een tussentijdse wijziging betekent opnieuw vergelijken.
+3. Maak een driewegvergelijking met de gezamenlijke Git-basis, de werkbranch en live. Neem huidige editorinstellingen en live Sunshower-functionaliteit mee, behoud niet-gepubliceerd werk. Controleer beide bestaande patches op reeds aanwezige wijzigingen; niet blind opnieuw toepassen.
+4. Voeg de 19 ontbrekende bestanden en de verklaarde verschillen samen in de bestaande werklijn. Inspecteer ook Git-only bestanden; ontbreken op live is geen verwijderopdracht. Geen volledige oude map over live heen uploaden.
+5. Wijs één UNPUBLISHED werkpreview vanaf de samengebrachte basis aan. Controleer dat deze actuele mobiele kaarten, categoriekaarten, favicon, Sunshower en instellingen bevat. Koppel pas daarna de bewezen werkbranch.
+6. Releasebewijs bestaat uit commit + kandidaat-theme-ID + manifest + gecontroleerde routes. Publicatie door eigenaar; na publicatie rollen en koppelingen opnieuw lezen. Terugzetten gebeurt per releaseverschil; een oude themakopie kan latere verbeteringen verliezen. Admin-data heeft een afzonderlijk herstelpad.
+
+**Geslaagd:** ieder live/Git-verschil heeft een bestemming/reden, er is één complete bronversie en één ongepubliceerde kandidaat, en de Git-koppeling kan geen onbedoelde live-update veroorzaken. Windows-overdracht blijft apart te bewijzen.
+
+### 2. Eerste reparatie in de preview: betrouwbare productinformatie
+
+Voer dit uit als afgebakende klantinformatiefix aansluitend op BC-00/BC-01. Geen grote opsplitsing van main-product in dezelfde wijziging.
+
+**Levertijd:** laat kaart, standaardproduct en Sunshower dezelfde bestaande vertaaltekst gebruiken zolang geen gecontroleerde actuele bron beschikbaar is: Levertijd op aanvraag. Verwijder in de kandidaat de onbewezen 8–9 weken en voorkom een groene leveranciersvoorraadbelofte zonder actualiteitsbewijs. Houd bestelbaarheid en Shopify inventory policy afzonderlijk: een neutrale tekst mag een product niet stil beschikbaar of onbeschikbaar maken.
+
+Voor later gecontroleerde feeds geldt één beslisregel:
+- Geen bron, ontbrekend controletijdstip, te oude bron of conflicterende identiteit: neutrale melding.
+- Recente leveranciersvoorraad: alleen leverancierstatus tonen wanneer de operationele betekenis is bevestigd; geen bezorgdatum uit voorraad afleiden.
+- Levertijd alleen tonen met een afzonderlijk gevalideerde termijn, datum, bron en betekenis van werkdagen/kalenderdagen.
+- Actualiteitsdrempel per leverancier op afgesproken verversingsritme; geen universeel verzonnen aantal uren. Een ongewijzigde voorraadwaarde moet toch een nieuw checked_at kunnen krijgen.
+
+**Specificaties:** behoud de bestaande router voor goedgekeurde Hotbath-data en Sunshower. Voeg een begrensde mapping voor de geteste standaardproductfamilies toe; geen globale namespace-vervanging.
+- JEE-O-kraan: lees de bewezen specs.*-velden; onder andere materiaal, kleur, serie, gaten, grepen, uitloophoogte en voorsprong.
+- Wiesbaden-kraan: lees de aanwezige custom.materiaal/kleur/afwerking/coldstart-velden. Maak onderscheid tussen basiskleur, verkoopkleur en afwerking.
+- Gebruik bc-product-detail-row voor getypeerde uitvoer. false betekent Nee, nul blijft geldig, ontbrekend blijft leeg. Millimeters en centimeters expliciet normaliseren; opbouwhoogte is niet hetzelfde als uitloophoogte.
+- Bij twee verschillende gevulde bronnen: conflict registreren; geen stil overschrijven en geen meerderheid van webshops als bewijsregel.
+- Uiteindelijk één zichtbare specificatietabel. Verwijder bestaande tabellen uit omschrijvingen pas in een afgebakende contentbatch nadat de vervangende tabel alle goedgekeurde feiten toont. Geen algemene regex over alle productbeschrijvingen.
+- EAN-presentatie en documentzichtbaarheid volgen bestaande productafspraken; Sunshower-documentatie behouden. Geen globale verwijdering van barcodes of technische bestanden.
+
+**Eerste acceptatieproef:** Wiesbaden 24.3710, JEE-O 900-1776, één vers geselecteerd goedgekeurd Hotbath-artikel, één Hotbath-pilot en Sunshower Medium Hoek Black. Bewijs: juiste SKU/prijs, relevante specs, false/lege waarden, geen dubbele tabel na contentmigratie en één consistente levertijdmelding. Deze correctie kan bestaan uit themacode zonder de bestaande metafieldwaarden te migreren.
+
+### 3. BC-03/04: bestaande homepage en service daadwerkelijk bruikbaar maken
+
+| Element | Concrete oplossing | Gereed wanneer |
+| --- | --- | --- |
+| Drie promotiebanners | Bestaande hero_button_link/banner_1_link/banner_2_link invullen met inhoudelijk passende gepubliceerde collecties. Badkamermeubels en Tegels bestaan; inhoudelijke matching, productaanbod en bereikbaarheid controleren. Hotbath-bestemming nog verifiëren | Afbeelding én zichtbare CTA openen hetzelfde doel; kortingstekst klopt met werkelijk aanbod |
+| Advies-CTA | Voorstel eerste versie: Vraag persoonlijk advies aan → /pages/contact. Pas Plan een afspraak gebruiken bij een werkende boekings- of aanvraagflow met duidelijke opvolging | Contactformulier rendert en gekozen afhandeling is getest; een formulierverzending is een aparte expliciete test |
+| Merken en stijlkaarten | Alleen actieve passende bestemmingen koppelen. Eerst inhoud/assortiment voor ongepubliceerde Merken afronden. Geen links naar conceptpagina's of willekeurige zoekresultaten als stijlselectie | Iedere getoonde navigatiekaart heeft een relevante openbare bestemming |
+| Footer service | Bestaande policies/menu's inventariseren; ontbrekende bezorg-, retour- en service-inhoud door eigenaar laten vaststellen, dan koppelen | Geen Voorbeeld-spans; informatie beschrijft werkelijke bedrijfsafhandeling |
+| Lege link in een sectie | Geen ogenschijnlijk klikbare knop renderen. In Theme Editor een duidelijke melding tonen dat een bestemming nodig is | Geen dode knoppen op openbare pagina; beheerder ziet wat ontbreekt |
+| Complete-badkamerbeeld | Relevante badkamerfoto in plaats van lifestyle-placeholder, in bestaande stijl | Beeld klopt met het aanbod en behoudt mobiel leesbare tekst/CTA |
+
+Publieke routecheck moet naast HTTP-status ook de verwachte pagina en inhoud controleren; een 200-respons kan een lege of verkeerde bestemming bevatten. Inspecteer toetsenbordfocus en klikvlakken op desktop en telefoon.
+
+### 4. BC-02: gedeelde productbasis, met passende templates
+
+Meerdere templates blijven toegestaan. Drie huidige producttemplates gebruiken al main-product; Sunshower gebruikt main-sunshower. Maak een nieuwe template bij een andere koophandeling, niet bij ieder nieuw merk. Een tegelcalculator of samenstelbaar meubel is pas werk zodra de betreffende data en verkoopregels concreet zijn.
+
+| Laag | Verantwoordelijkheid | Behouden / aanpassen |
+| --- | --- | --- |
+| Shopify product/variant | Identiteit, actuele verkoopprijs, bestelbare variant | Native ID, SKU, vendor en variantprijs blijven leidend voor bestellen |
+| Bronmapping | Merk-/familiespecifieke velden naar eenduidige betekenis vertalen | Bestaande namespaces eerst ondersteunen; geen risicovolle totale datamigratie |
+| Gedeelde onderdelen | Prijsweergave, levertijdtekst, spec-rijen, service, foutmeldingen | Eerst levertijd en specs; daarna koopfuncties alleen waar gedrag werkelijk gelijk is |
+| Paginalayout | Indeling, media, keuzehulp, uitleg | Sunshower-keuzehulp, setonderdelen, montagehulp en documentatie behouden |
+| Zoekindex | Zoeken, facetten, sortering, kaartgegevens | Afgeleide data met versie/actualiteit; nooit zelfstandig bron voor bestelprijs |
+
+Neem de mapping op in het bestaande PRODUCT_DATA_CONTRACT.md zodra de proef is goedgekeurd: veldbetekenis, Shopify-type, bron, eenheid, fallback, conflictregel en zichtbaarheid. Voor nieuwe velden eerst bestaande definities inventariseren, ontbrekende definities met juiste eigendom vastleggen, daarna waarden schrijven en teruglezen. Bestaande merchant-owned velden moeten door de betrokken importprocessen bruikbaar blijven; geen app-owned migratie als standaardkeuze.
+
+**Leveranciersverwerking:** bron → unieke match op merk + fabrikantnummer → normalisatie → validatie/conflictenlijst → wijzigingsvoorstel → afgebakende batch → Shopify-readback → indexverversing. Sla bronversie, checked_at, batchstatus en vorige waarden op. Beveilig ruwe feeds/inkoopinformatie buiten publieke Git. Een hervatte batch verwerkt goedgekeurde ongewijzigde records niet dubbel. Voorraad- of prijsupdates mogen handmatig beoordeelde productteksten niet overschrijven.
+
+Sluit aan op de bestaande Wiesbaden-proef met 10 producten; geen tweede parallelle contentlijst. Dossier 24.3710 blijft concept totdat het Grant/304-naamsverschil en de gekozen velden beoordeeld zijn. Nieuw merk gereed wanneer een representatieve proef met bestaande templates kan werken, niet zodra een import alleen technisch is geslaagd.
+
+### 5. BC-01/03: zoekindex en prestaties beheersbaar maken
+
+- Behoud native Shopify-fallback en bestaande request-annulering. Test API-timeout, foutantwoord, verkeerde collectie, verouderde response, lege resultaten, pagination en terug/vooruit.
+- Leg eigenaar, broncode, build/deploy, indexversie, laatste succesvolle verversing en herstelprocedure van de externe filterdienst vast in SYSTEM_OWNERSHIP_AND_GAPS.md. Die backend is met dit themaonderzoek niet geïnspecteerd.
+- Controleer in de proef dezelfde variantprijs/SKU op kaart, productpagina en winkelwagen. Huidige frontendcontrole op productaantal detecteert geen prijswijziging met gelijkblijvend aantal.
+- Neem korte titels op in het indexcontract zodra de backend dit betrouwbaar levert. Laat de bestaande Shopify-aanvulling tijdelijk als compatibiliteitsroute bestaan; schakel haar pas uit na vergelijking. Dit voorkomt uiteindelijk een aanvullend request per productkaart.
+- Meet eerst netwerklast en mobiele interactie op de bestaande routes. De V2-switcherasset is 1.894.030 bytes ongecomprimeerd; dit is geen gemeten downloadgrootte of bewezen vertraging. Alleen bij gemeten hinder de dataset per groep opdelen en het navigatiegedrag behouden.
+- Verplaats de drie Admin-styleblokken van Badkamermeubels pas naar afgebakende theme-CSS nadat desktop/mobiel visueel gelijk zijn en een contentbackup bestaat. De toekomstige contentimport mag deze CSS niet onbedoeld wissen.
+
+### Uitvoering, bewijs en eerstvolgende handeling
+
+Volgorde: **BC-00 compleet maken → productinformatiefix en bestaande zoekproef → ontbrekende bestemmingen afmaken → Wiesbaden-proef op gedeelde gegevens → gecontroleerd uitbreiden.** Een bewezen klantblokker hoeft niet tot de laatste cosmetische fase te wachten. Grote herbouw, nieuw platform of generieke configurator is voor deze gevonden problemen niet onderbouwd.
+
+Per wijziging één kleine reviewbare diff en passend bewijs. Testmatrix voor de eerste release: genoemde vijf productgevallen, één zoekroute op exacte SKU, één categorie met filtering, homepage-CTA's en cartselectie. UI-controle op desktop en echte mobiele viewport/telefoon. Bij Sunshower ook wisselen van maat/plaatsing, setidentiteit, optionele accessoires, hoeveelheid en totaal; bij gewone producten variant/SKU en foutmelding. Checkout/betaling blijft een afzonderlijk afgebakende test, zonder ongevraagde bestelling.
+
+**Nog niet uitgevoerd:** live/Git-samenvoeging, volledige template-toewijzingsinventaris, Windows-werkplekcontrole, GitHub–themakoppeling, codewijzigingen, runtime-uitvaltest van filters, actuele mobiele performance, add-to-cart-/checkoutproef, volledige linkinventaris en bronvalidatie voor alle producten. Bestaande desktopwaarnemingen zijn geen mobiele of volledige regressietest.
+
+**Exact één volgende handeling:** bevestig de actuele GitHub-branch–Shopify-themakoppeling voor BC-00 en leg die hier vast, voordat themabronbestanden worden gesynchroniseerd. Geen achtergrondtaak actief.
+
+Technische referenties: [Shopify JSON-templates en secties](https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates), [GitHub-integratie](https://shopify.dev/docs/storefronts/themes/tools/github), [performance-richtlijnen](https://shopify.dev/docs/storefronts/themes/best-practices/performance). Referenties ondersteunen de platformkeuzes; concrete winkelbevindingen komen uit bovengenoemde Admin-/bronreads.
+
+## Aanvulling 16 oktober — productteksten per merk
+
+Opdracht eigenaar: productteksten merkgewijs voorbereiden en voortgang in Git bijhouden. [Producttekstplan](PRODUCT_CONTENT_PLAN.md) is vastgelegd als detailplan onder BC-02; dit vervangt het centrale werkplan niet. Eerste proef: Wiesbaden, 10 verschillende actuele producten. Plan bevat bronmatching op merk + fabrikantnummer, claimcontrole, eigen teksten, beperkte relevante interne links en productstatussen.
+
+Checkpoint: uitsluitend documentatie, geen Shopify-mutaties. Actuele productdekking, exacte proefselectie en scrapers zijn **NOT_TESTED**. Git bevat geen complete productdatabase. Volgende handeling voor dit contenttraject: actuele Wiesbaden-productgegevens alleen-lezen inventariseren en 10 proefproducten vastleggen. BC-00 en homepage-review blijven open; geen uitvoering van themacode gestart. Geen Windows- of actuele MAIN-controle geclaimd in deze documentatiestap.
+
+**Vervolgcheckpoint productteksten:** VERIFIED_ADMIN: 2.265 Wiesbaden-producten exact geteld; volledige identifierlijst en alle varianten gelezen. 50 omschrijvingen als steekproef; 10 producten in detail beoordeeld en SKU-uniciteit binnen merk bevestigd. [Proefrapport](product-content/WIESBADEN_PILOT.md) en [register van alle 2.265 producten](product-content/wiesbaden-register.json) bewaard. Externe bronnen en tekstproductie nog niet uitgevoerd. Volgende handeling voor content: fabrikant-/leverancierbron plus één aanvullende webshop testen op 24.3710, 32.3594 en 32.3670. Nul Shopify-mutaties. Verse MAIN: 195313991946, Werkpreview categoriekaarten; dit is inmiddels live. Dit overschrijft oudere themarollen hieronder, zonder te claimen wie publiceerde. Uitvoering van deze inventarisatie beëindigd; geen achtergrondtaak.
+
+**Laatste contentcheckpoint — 24.3710:** drie aangeleverde retailer-HTML's en actuele Shopify-data samengevoegd; leverancierstekening en twee media visueel gecontroleerd. [Concreet titel-/tekst-/SEO-/altvoorstel](product-content/wiesbaden/24.3710.md) en [45-velden-dossier](product-content/wiesbaden/24.3710.json) opgeslagen. Hoogte 183,5 mm bevestigd; Warmteservice 1835 mm afgewezen. Grant als voorgestelde klantnaam, officiële serie tegenover bestaande 304 nog open. Registerstatus concept, geen productmutaties. Eén categorielink getest (HTTP 200, passende H1). Volgende handeling: eigenaar beoordeelt dit concrete voorstel; daarna gekozen velden binnen expliciete scope toepassen. Overige negen proefproducten nog open. Geen achtergrondtaak.
+
+## Actieve aanvulling 16 oktober — homepagecategorieën
+
+Expliciete prioriteitswijziging eigenaar: goedgekeurd ontwerp van Shop per categorie uitvoeren in concept. Uitvoerder: deze ChatGPT-sessie, branch `fix/product-cards-2026-10-14`. BC-00 blijft daarna open. Verse Admin-read: MAIN `195311599882` (BadkamerCity - favicon BC); de oudere IDs hieronder zijn historische stand. Concept `195313991946` (BadkamerCity - Werkpreview categoriekaarten) wordt rechtstreeks van deze actuele MAIN gekopieerd, inclusief recente Sunshower en favicon. Scope: uitsluitend `sections/home-category-grid.liquid`, bestaande categoriebeelden/links behouden. Doel: volledige beelden, ruimere kaarten, vier desktop/twee mobiel. Geen publicatie. Lokale checkout bevat oudere mobiele wijzigingen; die worden niet overschreven. Git–Shopify-koppeling en Windows blijven ongeverifieerd; bewaar code als patch onder docs zolang koppeling onbekend is.
+
+Status: **IMPLEMENTED_PREVIEW / REVIEW**. De kopie was vóór aanpassing 468/468 bestanden checksum-identiek aan MAIN. Alleen `sections/home-category-grid.liquid` gewijzigd en exact teruggelezen (MD5 `0ef64df1a20e06f9b6b3f597e615f085`). Desktop beeldvak 1.5:1, mobiel 1:1; `object-fit: contain`, 8px binnenruimte, sterkere titelregel en geen hover-zoom die opnieuw afsnijdt. Bestaande categoriebeelden, links, menuvolgorde en vier/twee kolommen behouden. Shopify-validator revision 2 VALID (na toevoegen ontbrekende validatiecontext; gebundelde schemafallback wegens netwerk-time-out). Patch reverse-apply check geslaagd. Desktopbrowser 1363×936: acht geladen beelden, alle `contain`, vier kolommen, beeldvakken 311×207px; screenshot visueel beoordeeld. Previewbalk bevestigt juiste themanaam en Draft. Mobiele CSS ingesteld, maar echte mobiele browser/telefooncontrole **NOT_TESTED**: beschikbare browser biedt geen viewportregeling. Na upload MAIN opnieuw gelezen: alle 468 checksums onveranderd.
+
+Code bewaard in [categorie-layoutpatch](patches/BC-home-category-grid-2026-10-16.patch) op main én bestaande werkbranch; checkpoint werkbranch `20b48e21974706fd6f74d1fa6ff785c0e15df662`. Themabronbestanden in Git nog niet bijgewerkt vanwege onbekende branch–themakoppeling. Preview: `https://badkamercity.nl/?preview_theme_id=195313991946`. Terugzetpad: herstel uitsluitend deze sectie uit de ongewijzigde MAIN-baseline; patch is omkeerbaar. Geen product-/collectiegegevens gewijzigd, geen publicatie. Uitvoering beëindigd, geen achtergrondtaak. Eerstvolgende handeling: eigenaar beoordeelt dit concept op desktop en telefoon; daarna BC-00 hervatten met deze actuele live-/draftbasis en de bewaarde patches.
+
+## Eerdere stand 15 oktober — Nu bezig: BC-00 — werkversies gelijkzetten na goedgekeurd mobiel ontwerp
+
+**Opdracht 15 oktober:** eigenaar kiest expliciet mobiele kaarten en een rustige zwevende filterknop na twee screenshots. Eén product per rij, volledige bestaande korte-titelfallback, levertijd op aanvraag zolang voorraad-/levertijddata niet betrouwbaar is. Geen live-publicatie.
+
+**Uitvoering:** ChatGPT, bestaande branch `fix/product-cards-2026-10-14`; schone tijdelijke checkout van remote `f9994ad7cdc9c4f9ec80ac1e5c38b10943b7c75a`, geen toegang tot Windows-werkplekken. Werkpreview `195249799434` (Vaste werkpreview) gekopieerd van MAIN `195218047242`.
+
+**Beoordeling 15 oktober, 11:06 Europe/Amsterdam:** eigenaar: ‘ziet er goed uit’. Mobiel ontwerp is **USER_APPROVED_UI**. Dit bewijst niet afzonderlijk dat alle filterhandelingen/categorieën getest zijn en is geen opdracht tot publicatie.
+
+**Publicatiestatus opnieuw gecontroleerd op 15 oktober:** screenshot en Shopify Admin API bevestigen dat `195249799434` nu **MAIN** is; `195218047242` is **UNPUBLISHED**. De publicatie is niet door deze assistent uitgevoerd. De naam ‘Vaste werkpreview’ betekent dus niet meer dat dit een concept is. Geen verdere previewwijzigingen naar dit thema sturen. Git bevat de mobiele wijziging nog als patch, niet in de themabronbestanden.
+
+**Volgende handeling:** controleer in Shopify Thema’s welke GitHub-branch aan welk thema gekoppeld is, en inspecteer daarna de huidige Windows-projectmap alleen-lezen. Bewaar lokale afwijkingen vóór synchronisatie. Breng vervolgens de mobiele patch en de zeven live/Git-afwijkingen samen op de bestaande werklijn; wijs daarna een ongepubliceerde werkpreview aan vanaf de actuele livebasis. Thema `195249799434` is inmiddels live.
+
+**BC-00 hervatten daarna:** werkplekken controleren en de live/Git-afwijkingen samenbrengen. Read-only manifest bevat 449 live-bestanden; 442 komen overeen met de werkbranch (inclusief genormaliseerde regeleinden), zeven instellingen-/templatebestanden wijken af. De werkpreview behoudt de actuele live-instellingen; die worden niet overschreven vanuit de oudere Git-versies.
+
+| Startgegeven | Actuele vaststelling / beperking |
+| --- | --- |
+| Projectrepository | [jlamping1997/badkamercity](https://github.com/jlamping1997/badkamercity), publiek; geen geheimen, klantgegevens of vertrouwelijke leveranciersbestanden |
+| Tijdelijke actieve codebranch | `fix/product-cards-2026-10-14`; verdergaan met deze lijn, geen nieuwe branch per chat |
+| Laatste codecommit bij controle | `03d157e53431507d7593f9e3b9f0e34295b17941`; latere commits in deze overdracht wijzigen alleen documentatie |
+| Shopify store | `fpa9hu-i3.myshopify.com` |
+| Actueel gepubliceerd thema | **BadkamerCity - Vaste werkpreview**, ID **195249799434**, rol **MAIN** opnieuw rechtstreeks gelezen op 15 oktober na screenshot |
+| Vorige uitvoering | `195216048394` is nu UNPUBLISHED; geen automatisch gekozen nieuwe werkpreview |
+| Werkpreview | Nog opnieuw aan te wijzen vanaf de huidige livebasis; `195249799434` is inmiddels MAIN. Voorgaand live-thema `195218047242` is nu UNPUBLISHED |
+| Git main | Codebasis dateert bij controle van 7 oktober; de recentere codebranch lag 8 commits voor. Deze documentatie-update synchroniseert geen themacode |
+| Open codeoverdracht | PR #5: afronding → main; PR #6: productkaarten/zoeken → afronding. Open PR is geen bewijs dat een Shopify-thema ongepubliceerd is |
+| Andere repository | `jlamping1997/badkamercity-shopify-theme` bestaat ook. Behandel als te vergelijken oudere bron; niet verwijderen of opnieuw als tweede werkproject gebruiken |
+| Werkcomputers | Lokale bestanden, ongepushte commits en authenticatie in deze sessie niet gecontroleerd |
+| GitHub–Shopify-koppeling | Nog niet vastgesteld welke branch rechtstreeks aan welk thema gekoppeld is |
+| Huidige uitvoerder | Mobiele implementatie afgerond voor review; geen achtergrondtaak of technische vergrendeling actief |
+| Eerstvolgende controle | BC-00 hervatten: GitHub–Shopify-koppeling en Windows-werkplekken verifiëren; mobiel ontwerp door eigenaar goedgekeurd |
+
+**Gebouwd, getest en live zijn afzonderlijke statussen.** Publicatie van het genoemde thema is bewezen; de werking van alle zoekfilters en korte titels is daarmee niet opnieuw getest.
+
+[Technisch zoek- en titelcontract](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/SEARCH_AND_SHORT_TITLES_2026-10-14.md): de vorige ontwikkelsessie meldt 25 geslaagde frontend-/Liquid-controles. Visuele desktop/mobielcontrole en de actuele externe zoekroute stonden nog open. De korte-titeldefinitie was toen leeg; actuele vulling is vandaag niet opnieuw uitgelezen.
+
+## BC-01M — ontwerp goedgekeurd, synchronisatie en functionele eindcontrole open
+
+- Eén product per rij onder 750 px, afbeelding links (34%), merk/titel/levertijd/prijs rechts. Volledige korte-titelfallback behouden; geen afkapping. Op mobiel vervallen de extra kenmerklijst en Bekijk product-regel in zoek-/categoriekaarten; desktop blijft in kolommen.
+- Kleine zwevende Filter-knop verschijnt zodra de bestaande opener boven beeld is; verdwijnt bij open paneel, na de productlijst en op desktop. Bedient bestaande externe filters of native Shopify-filters na terugval. Externe drawer heeft focusbeheer, Escape en gesloten inert-status.
+- Levertijdmelding op alle listing-kaarten: **Levertijd op aanvraag**. Gebruiker meldt onbetrouwbare voorraad. Geen voorraadgetal, groen voorraadlabel of verzonnen levertermijn afgeleid. Productdata en PDP niet gewijzigd. Toekomstige leverancierskoppeling moet eerst bron, actualiteit en product/variantidentiteit verifiëren voordat een concrete termijn deze neutrale tekst vervangt.
+- Werkpreview: `https://fpa9hu-i3.myshopify.com/search?q=test&preview_theme_id=195249799434`. MAIN `195218047242` is na upload opnieuw gecontroleerd: 449 bestandschecksums onveranderd.
+- Tien productie-bestanden geüpload en exact teruggelezen. Vooraf 449/449 checksums van kopie gelijk aan MAIN. Zeven live/Git-verschillen betreffen `config/settings_data.json`, `sections/footer-group.json`, `templates/collection.category-landing.json`, `templates/collection.json`, `templates/index.json`, `templates/product.bc-hotbath-data.json`, `templates/product.bc-hotbath-pilot.json`; deze blijven in de preview op hun liveversie.
+- Validatie: 14 filtertests, 3 zwevende-knoptests en 13 bestaande Liquid-kaart/titelcontroles geslaagd; JS-syntax en diff-whitespace geslaagd. Theme-validator: alle tien productie-bestanden VALID met bestaande niet-blokkerende waarschuwingen; gebundelde Shopify-schemafallback gebruikt na netwerk-timeout bij manifestverversing.
+- Browser: echte desktopzoekroute `q=test` geeft 75 externe resultaten, juiste eerste Wiesbaden-producten en Levertijd op aanvraag. Previewwerkbalk bevestigt Vaste werkpreview/Draft. Mobiele visuele controle **NOT_TESTED**: geen viewportregeling in deze browser; een tijdelijk iframe-reviewvenster laadde niet. Geen telefoon-/Safari- of volledige categoriebrowsertest claimen.
+- De connector blokkeerde het verwijderen van de tijdelijke reviewtemplate. Materieel veiliger opgelost door het bestand te vervangen door uitsluitend `{% section 'main-search' %}`: dezelfde gewone zoeksectie, geen iframe, debugscript of aparte layout. Deze ongekoppelde alternatieve template stond in de draft; dat thema is inmiddels MAIN en bevat deze template dus ook.
+
+**Git-bewaring zonder mogelijke live-sync:** de koppeling van de bestaande branch aan Shopify is nog niet bewezen. Daarom staan alle tien productie-bestanden plus beide tests als toepasbare patch in [docs/patches/BC-01M-mobile-product-listing.patch](patches/BC-01M-mobile-product-listing.patch), op de bestaande werkbranch. Er zijn geen nieuwe branches gemaakt en geen gewijzigde themapaden naar een mogelijk gekoppelde branch gepusht. De patch is gecontroleerd met reverse-apply tegen de lokale implementatie. De themabestanden op de branch zelf bevatten deze mobiele wijziging dus nog niet; niet ten onrechte als gesynchroniseerd behandelen.
+
+**Hervatten na mobiele review:** verifieer eerst de branch–themakoppeling en behoud Windows-wijzigingen. Pas de patch toe op de bestaande werkbranch (`git apply --check`, dan `git apply`) nadat vaststaat dat dit niet naar MAIN synchroniseert; daarna source-bestanden committen/pushen. Een nieuwe ongepubliceerde werkpreview vanaf de actuele MAIN aanwijzen en cumulatief verder gebruiken. Geen oude themakopie publiceren. Terugzetpad voor de mobiele wijziging: de tien productie-bestanden vergelijken met de bewaarde vorige liveversie `195218047242`; niet blind een geheel ouder thema publiceren. De oorspronkelijke upload liet live ongewijzigd, maar de kandidaat is daarna gepubliceerd.
+
+## Vaste afspraken
+
+1. **Eén actieve taak, één uitvoerende sessie.** Een tweede chat mag onderzoek doen; laat niet twee sessies dezelfde werkversie of Shopify-data wijzigen. Registreer taak, uitvoerder, branch en checkpoint voordat codewerk begint. Dit is een werkafspraak, geen al ingebouwde software-lock.
+2. **Nieuwe ideeën naar de parkeerplaats hieronder.** Wissel alleen bij een aangetoond probleem dat de huidige taak blokkeert of bij een expliciete prioriteitswijziging van de eigenaar. Noteer dan waarom en waar de vorige taak moet worden hervat.
+3. **Kleine stukken afronden.** Deel werk op in ongeveer 20–45 minuten. Na ieder betekenisvol, bewaarbaar stuk: wijzigingen beoordelen, passende controle, status bijwerken, commit en push verifiëren. Wacht niet tot de hele werkdag klaar is.
+4. **Elke taak heeft een eindcriterium.** Noteer scope, betrokken bestanden/Admin-objecten, controle, open punt en exact één volgende handeling. “Klaar” zonder bewijs is geen status.
+5. **Geen nieuwe ontwerpvariant tijdens een andere taak.** Bestaande goedgekeurde onderdelen behouden; een gerichte aanpassing mag als de huidige taak die vereist.
+6. **De uitvoerende AI houdt deze pagina bij.** De gebruiker hoeft geen tweede Excel, chatlog of bord bij te houden. Bij het beëindigen van een beurt zonder schrijfrechten: geef de ontbrekende opslag expliciet aan.
+7. **Overdracht is pas geslaagd na remote opslag.** Een lokale commit of stash is niet beschikbaar op een andere pc. Bij wegvallen vóór een checkpoint kunnen de nieuwste lokale wijzigingen nog ontbreken; beloof geen automatische achtergrondopslag.
+8. **Huidige toestemming en projectregels blijven gelden.** Dit plan autoriseert geen ongevraagde publicaties, massale productmutaties, verwijderingen of destructieve Git-acties.
+
+## Beoogde technische inrichting na BC-00
+
+| Onderdeel | Werkwijze |
+| --- | --- |
+| `main` | Goedgekeurde releasecode en deze vaste startpagina. Pas na de vergelijking behandelen als actuele live-codebasis |
+| `work` | Eén vaste werkbranch vanaf de samengebrachte basis; de huidige actieve branch vervult die rol tijdelijk. Nog niet aangemaakt of gekoppeld |
+| Shopify werkpreview | Eén aangewezen UNPUBLISHED thema met vaste previewlink; alle vervolgwijzigingen cumulatief hierin |
+| Shopify live | De geteste release; nooit een oude losse categorietemplate of themakopie publiceren alsof die de hele huidige webshop bevat |
+| Dagelijkse synchronisatie | Ophalen vóór werken; code en voortgang samen committen en pushen bij checkpoints. Bestaande lokale afwijkingen eerst behouden en vergelijken |
+| Release | Complete samenhangende kandidaat controleren, huidige live-afwijkingen meenemen, vervolgens gecontroleerd vrijgeven en MAIN-ID/commit/controle vastleggen |
+
+Gebruik bij voorkeur de bestaande **Shopify GitHub-integratie** voor `work` → werkpreview, mits de vergelijking en een kleine proef in beide richtingen slagen. Een gekoppelde branch werkt het bijbehorende thema bij; ook opgeslagen editorwijzigingen gaan terug naar Git. Is een gekoppeld thema LIVE, dan kan een push direct de liveweergave veranderen. Controleer de daadwerkelijke koppeling vóór iedere release; `work` mag niet als live gekoppeld blijven staan na publicatie.
+
+De proef voor BC-00: één onschuldige wijziging in de aangewezen preview, terugzien in Git, wijziging op de andere werkplek ophalen, daarna herstellen. Geen openbare winkel wijzigen voor deze proef.
+
+**Git synchroniseert themacode, geen complete winkel.** Producten, prijzen, metafieldwaarden, menu's, collectietoewijzingen en checkout-instellingen blijven in Shopify. Imports krijgen bronversie, afgebakende batch, herstelgegevens en hervatbare voortgang. Gevoelige exports blijven in beveiligde opslag buiten deze publieke repository. De filterserver/index heeft eigen code, configuratie, publicatie- en herstelprocedure; registreer de vindplaats in het bestaande technische dossier. Terugzetten van een thema herstelt geen gewijzigde productdata.
+
+## Eén vaste volgorde tot lancering
+
+De hoofdlijn blijft staan. Bewijs en werkelijk gevonden blokkades bepalen de deeltaken; een nieuwe chat is geen reden om de planning opnieuw te maken.
+
+| Stap | Werk | Gereed wanneer | Status |
+| --- | --- | --- | --- |
+| **BC-00** | Alle bestaande code en overdracht samenbrengen; twee pc's aansluiten; vaste werkpreview en branches vastleggen | Live ↔ Git-verschillen verklaard; relevante losse wijzigingen behouden; hoofdversie compleet; ophalen, checkpoint en hervatten op tweede werkplek bewezen | **BEZIG** — documentatie gereed, technische samenvoeging en werkplekproef open |
+| **BC-01** | Bestaande zoekfilters en korte titels afronden met Wastafelkranen als proefcategorie | Mobiel/desktop: zoeken, merk/montage/kleur/prijs, sorteren, paginering, terugknop, foutfallback; ingevulde én lege korte titel op homepage/categorie/zoeken; juiste SKU/prijs tot winkelwagen gecontroleerd. Nog ontbrekende data in kleine proef herstellen | WACHT op BC-00 |
+| **BC-02** | Productdata en categorieën per merk/productfamilie afronden en aanvullen | Vastgelegde lanceringsscope gecontroleerd op SKU, prijs incl. btw, afbeeldingen, categorieën, essentiële specificaties en Online Store-publicatie; import hervatbaar; foutenlijst verklaard. Eerst kleine proef, dan dezelfde verwerking opschalen | WACHT op BC-01 |
+| **BC-03** | Zoeken, filters en navigatie over het vastgelegde assortiment controleren | Iedere productfamilie heeft bruikbare filters en goede resultaten; exacte SKU vindbaar; lege/verkeerde routes opgelost; indexverversing, bewaking en fallback bewezen | WACHT op BC-02 |
+| **BC-04** | Bestaand ontwerp consequent afronden | Homepage, header, categorieën, productkaarten, productpagina en winkelwagen werken samen op mobiel/desktop; goedgekeurde stijl consequent; geen willekeurige nieuwe redesigns | WACHT op BC-03 |
+| **BC-05** | Bestellen en bedrijfsafhandeling volledig controleren | Prijs/btw, betalen, verzendregels, communicatie, leverbeloftes en operationele afhandeling gecontroleerd met representatieve bestellingen binnen expliciet afgesproken testscope | WACHT op BC-04 |
+| **BC-06** | SEO-/snelheidscontrole en lancering | Belangrijke pagina's en links gecontroleerd, indexatie-instellingen kloppen, gemeten mobiele prestaties beoordeeld, open verkoopblokkers opgelost, herstelpad en lanceercontrole vastgelegd | WACHT op BC-05 |
+| **BC-07** | Gericht groeien | Werkelijke omzet, marge, conversie en servicekwaliteit sturen de volgende verbeteringen; nieuwe functies en verdere assortimentuitbreiding per meetbaar doel | NA lancering |
+
+Kritieke bestel- of datafouten die in BC-01 worden gevonden direct oplossen of als blokkade behandelen; niet laten liggen tot BC-05. Het definitieve lanceringsassortiment wordt expliciet vastgelegd; deze volgorde verkleint eerdere assortimentafspraken niet stilzwijgend.
+
+## Starten, pauzeren en hervatten
+
+**Start op elke pc of in een nieuwe chat:**
+- Open deze pagina op GitHub main; lees AGENTS en de relevante technische overdracht.
+- Controleer de lokale map, origin, branch, lokale wijzigingen en laatste remote stand. Bewaar afwijkingen vóór pull/switch; nooit blind overschrijven.
+- Controleer Shopify MAIN en aangewezen werkpreview. Gebruik de actieve branch uit deze pagina, niet automatisch `main` of een oude downloadmap.
+- Herhaal kort: huidige taak, laatst bewezen checkpoint, volgende handeling. Ga daarmee verder.
+
+**Checkpoint / pauze:**
+- Bewaar alleen beoordeelde projectwijzigingen, zonder secrets of klantgegevens. Onvolledig werk mag herkenbaar als werkcheckpoint worden vastgelegd, met open controles.
+- Werk het taakblok bij, commit en push. Verifieer dat de remote commit bestaat.
+- Eindig met: “Opgeslagen: [commit/link]. Nu: [taak/status]. Volgende handeling: [concrete actie].”
+- Een onderbroken import hervatten vanuit vastgelegde batchstatus, niet vanaf nul op dezelfde producten.
+
+**Vaste startopdracht voor de gebruiker:**
+
+> Ga verder met BadkamerCity. Lees de vaste startpagina op GitHub main en AGENTS, haal de actuele werkversie op, controleer de huidige Shopify-thema's en hervat de geregistreerde taak. Werk de voortgang bij en sla een checkpoint op zodra een deelstap gereed is.
+
+**Bij een klantafspraak:** “Sla een checkpoint op; ik pauzeer.” Na terugkomst: “Ga verder vanaf het laatste checkpoint.”
+
+## Korte klantreiscontrole — 15 oktober 2026
+
+**Afgerond onderzoek, geen nieuwe actieve bouwtaak. BC-00 blijft de volgende uitvoering.** Aanleiding: eigenaar vroeg op mobiel mee te kijken zonder concreet gemeld probleem. Alleen openbare storefront bekeken; geen themacode, productdata of publicatie gewijzigd.
+
+**Bewijsgrens:** browsercontrole op desktop, viewport circa 1363 × 936. Een aanvankelijk aanwezige oude draft-preview is verlaten via “Exit preview”; onderstaande bevindingen komen van de storefront daarna. De route vanaf badkamercity.nl kwam in deze browser op fpa9hu-i3.myshopify.com uit. Mobiele viewport/telefoonweergave: **NOT_TESTED**; mobiele preview via Admin kwam op een aanmeldscherm. Geen conclusie over mobiele afstanden, knopgrootte of overloop. Geen volledige checkout- of filtersuite uitgevoerd.
+
+| Controle | Waarneming |
+| --- | --- |
+| Homepage → Kranen | Categorietegel opende /collections/kranen |
+| Zoeken op wastafelkraan | 609 resultaten in de geteste zoekroute |
+| Merkfilter JEE-O | Aangevinkt; resultaat veranderde naar 28 producten, actieve merkchip zichtbaar |
+| Product openen | JEE-O cone twee-gats hoog gun metal opende met artikelnummer 900-1776 en prijs €830, overeenkomstig de resultaatkaart |
+| Homepagebanners | Drie afbeeldingen tonen oproepen “Shop Hotbath”, “Ontdek de tegels” en “Bekijk de meubels”; DOM bevat voor deze banners geen link/bestemming |
+| Afspraakoproepen | “Plan een gratis adviesgesprek” is een span zonder link; “Plan een afspraak” is een span met aria-disabled=true |
+| Footer service | Veelgestelde vragen, Bezorgen & afhalen, Retourneren, Garantie & service zijn spans met title=Voorbeeld, zonder link |
+| Producttitels | Lange titels zichtbaar in zoekresultaten. Bestaande korte-titelfunctie/data onderzoeken binnen BC-01; actuele metafieldvulling niet uitgelezen |
+| Specificaties steekproef | Bij JEE-O artikel 900-1776 toont de specificatietabel alleen artikelnummer en merk. Databron/mapping nog niet onderzocht; geen uitspraak over alle producten |
+
+**Afgebakende kandidaat voor later:** bestaande homepagebanners en afspraakoproepen aan geverifieerde bestemmingen koppelen, daarna footerbestemmingen afmaken. Geen nieuwe homepagevariant nodig op basis van deze controle. Controleer eerst bestaande doelpagina's en afspraakroute; verzin geen servicevoorwaarden. Voor echte mobiele beoordeling: telefoonbeelden of een beschikbare mobiele preview van homepage en productlijst. Dit onderzoek wijzigt de eerstvolgende handeling van BC-00 bovenaan niet.
+
+## Parkeerplaats
+
+- Nieuwe homepagevarianten, extra keuzemenu's, vergelijkfuncties en andere nieuwe functies pas beoordelen zodra de lopende fase gereed is.
+- Nieuwe ideeën hier als één regel vastleggen met doel en reden voor later. Alleen de eigenaar verandert bewust de prioriteit.
+- Bestaande afspraken over productdata, SKU/fabrikantnummer, prijzen, verborgen technische documenten en goedgekeurde vormgeving blijven in het technische dossier gelden.
+
+## Overdracht van 15 oktober
+
+Uitgevoerd: actuele themarollen gelezen; twee repositories en actieve branches bekeken; PR #5/#6 en recente technische overdracht gelezen; verschil tussen publicatie en Git-status vastgesteld; bestaande startdocumentatie en instructies bijgewerkt.
+
+Niet uitgevoerd: lokale Windows-inspectie, volledige actuele themabestandsvergelijking, code samenvoegen naar main, nieuwe branch/themakoppeling, browser-/filtertests, productwijzigingen of publicatie. Geen achtergrondproces ingesteld.
+
+Controlebronnen: Shopify Admin-query met alle 11 thema's (geen vervolgpagina); GitHub branch/commit- en PR-reads; vergelijking main → werkbranch (8 codehistoriecommits voor bij aanvang). Historische testresultaten zijn niet opnieuw als actuele test geclaimd.
+
+Technische achtergrond: [Shopify GitHub-integratie](https://shopify.dev/docs/storefronts/themes/tools/github) en [versiebeheer voor thema's](https://shopify.dev/docs/storefronts/themes/best-practices/version-control).
+
+---
+
+## Historisch archief — geen actuele dagstart
+
+Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidige taak, publicatie en werkbranch altijd het blok bovenaan. Een oude vermelding “nog publiceren” of “alleen opt-in” is geen actuele vaststelling.
+
 # BadkamerCity — bewezen live-status en volgende werkroute
 
-> **Aanvulling 14 oktober 2026:** [gecontroleerde filterpreview](FILTER_PREVIEW_2026-10-14.md) legt de geslaagde VPS-index/API/HTTPS-proeven en desktopbediening in concept `195038216458` vast. Opt-in blijft verplicht; mobiele controle, andere productfamilies, indexonderhoud en publicatie zijn nog open. MAIN `194981003530` is ongewijzigd. Oudere tabellen hieronder blijven historische snapshots.
+> **Aanvulling 14 oktober 2026:** [gecontroleerde filterpreview](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/FILTER_PREVIEW_2026-10-14.md) legt de geslaagde VPS-index/API/HTTPS-proeven en desktopbediening in concept `195038216458` vast. Opt-in blijft verplicht; mobiele controle, andere productfamilies, indexonderhoud en publicatie zijn nog open. MAIN `194981003530` is ongewijzigd. Oudere tabellen hieronder blijven historische snapshots.
 
-> **Aanvulling 10 oktober 2026:** MAIN is `194981003530` (Collectiebeelden correctie 8 okt). Hotbath-productweergave, rustiger cart en Toebehoren-afbeeldingen staan samen in ongepubliceerde draft `195038216458`, met geslaagde scoped desktopcontroles. Mobiele eindcontrole en publicatie staan open. Zie [actuele oplevering en vervolg](AFRONDING_BASIS_2026-10-10.md). De tabellen hieronder blijven de historische stand van 7 oktober.
+> **Aanvulling 10 oktober 2026:** MAIN is `194981003530` (Collectiebeelden correctie 8 okt). Hotbath-productweergave, rustiger cart en Toebehoren-afbeeldingen staan samen in ongepubliceerde draft `195038216458`, met geslaagde scoped desktopcontroles. Mobiele eindcontrole en publicatie staan open. Zie [actuele oplevering en vervolg](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/AFRONDING_BASIS_2026-10-10.md). De tabellen hieronder blijven de historische stand van 7 oktober.
 
 **Meetdatum:** 7 oktober 2026. Dit overzicht scheidt wat bestaat van wat daadwerkelijk is getest of expliciet goedgekeurd. Nieuwe AI's mogen deze status niet stil upgraden; ze moeten nieuwe controles met datum en bron toevoegen.
 

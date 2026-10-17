@@ -1,6 +1,26 @@
 # BadkamerCity — productmetafield schema- en code-audit
 > **Snapshot 7 oktober 2026, alleen lezen.** Definities via Shopify Admin GraphQL, vaste metafieldverwijzingen uit live-thema #194864677130. **Geen productwaarden of dekking gecontroleerd.** Ontbrekende definities zijn niet automatisch bewijs van een defect: legacy-/unstructured metafields kunnen bestaan, veel code is niet actief, en dynamische Liquid-verwijzingen vallen buiten deze tekstscan.
 
+## Actuele reparatie 16 oktober 2026 — concept 195326247178
+
+De historische mapping hieronder is uitgebreid met een afgebakende renderer voor Wiesbaden en JEE-O. Uitvoering en bewijs staan bovenaan LIVE_STATUS_AND_NEXT_STEPS.md. Geen metafielddefinities of -waarden gemigreerd; geen productdatamutaties.
+
+| Publiek gegeven | Wiesbaden | JEE-O | Weergaveregel |
+| --- | --- | --- | --- |
+| Artikelnummer / merk | Native variant.sku / product.vendor | Idem | Geen EAN of intern bronnummer als vervanging |
+| Serie / kleur / materiaal | custom.serie / kleur / materiaal | specs.serie / kleur / materiaal, anders materiaal_kraan | Merkgebonden namespace; geen ongeteste cross-namespacevoorrang |
+| Montage | custom.montage | specs.montagewijze | Alleen bestaand veld |
+| Coldstart | custom.coldstart | specs.met_koude_start | Typed true=Ja, false=Nee, ontbrekend geen rij |
+| Maten | custom.*_mm en afmetingen_original | specs.*_mm plus bronvelden met eigen eenheid | Millimetervelden expliciet gelabeld; totale hoogte en uitloophoogte afzonderlijk |
+| Overige eigenschappen | Geteste allowlist voor glas, meubels, spiegels, radiator en sanitair | Geteste allowlist voor kranen, wastafels, douche, bad en accessoires | Alleen getypeerde ondersteunde waarden; geen vrije dump van alle metafields |
+| Voorraad / levertijd / interne brondata | Niet in specificatietabel | Niet in specificatietabel | Bestaande levertijdcode niet gewijzigd |
+
+Nieuwe bestanden: bc-product-detail-specs-mapped.liquid, bc-product-mapped-spec-row.liquid en bc-product-description.liquid. Router bc-product-detail-specs.liquid behoudt Sunshower en goedgekeurde Hotbath vóór de nieuwe merkpaden. Bestaande legacy-route blijft voor overige producten.
+
+Wiesbaden-descriptionadapter verwijdert uitsluitend de exact herkenbare geïmporteerde tabel uit de gerenderde omschrijving na controle van SKU en alle rijen tegen metafields. Een niet-herkende rij, ontbrekend veld, ongeldige waarde of conflict behoudt de hele oorspronkelijke tabel. EAN wordt in de herkende tabel niet overgenomen. Andere tekst/tabellen en documenten blijven bestaan; Admin-descriptionHtml wordt niet herschreven. Dit is geen algemene HTML-parser of contentmigratie.
+
+45 rendercontroles geslaagd, waaronder tien actuele Wiesbaden- en twintig JEE-O-producten. De 30 producten bewijzen geen volledige dekking van de gehele catalogus. Aangetroffen inhoudelijke bronconflicten zoals Wiesbaden 32.3670 (45/46 cm) blijven in het contenttraject; deze codewijziging kiest daar geen nieuwe productwaarheid. Runtime JEE-O 900-1776 en Wiesbaden 24.3710 bevestigd. Broncode bewaard als patch zolang branch–Shopify-koppeling onbekend is.
+
 ## Samenvatting
 
 | Onderdeel | Feitelijke meting |

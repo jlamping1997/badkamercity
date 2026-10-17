@@ -1,0 +1,22 @@
+{% doc %}
+  Displays the editable card title, with the existing product title as fallback.
+  @param {product} product - The card product.
+{% enddoc %}
+{%- liquid
+  assign card_title = product.title | strip
+  assign vendor = product.vendor | strip
+  assign prefix_length = vendor.size | plus: 1
+  assign expected_prefix = vendor | append: ' ' | downcase
+  assign actual_prefix = card_title | slice: 0, prefix_length | downcase
+  if vendor != blank and actual_prefix == expected_prefix
+    assign remainder = card_title | slice: prefix_length, card_title.size | strip
+    if remainder != blank
+      assign card_title = remainder
+    endif
+  endif
+  assign short_title = product.metafields.custom.card_title.value | strip
+  if short_title != blank
+    assign card_title = short_title
+  endif
+-%}
+{{- card_title | escape -}}
