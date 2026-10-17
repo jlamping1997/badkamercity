@@ -1,6 +1,6 @@
 # Mobiele categorie-iconen — eerste ontwerp
 
-Status: USER_APPROVED_UI / IMPLEMENTED_PREVIEW. 17 oktober 2026, Europe/Amsterdam. Eigenaar werkt vandaag vanaf mobiel; Wiesbaden blijft openstaan. Eerste zeven hoofdcategorieën uit de aangeleverde schermafbeelding. Eigenaar heeft op 17 oktober de toepassing van deze zeven iconen goedgekeurd.
+Status: eerste zeven gepubliceerd en USER_APPROVED_UI; overige zes IMPLEMENTED_LOCAL. 17 oktober 2026, Europe/Amsterdam. Eigenaar werkt vandaag vanaf mobiel; Wiesbaden blijft openstaan. Eerste zeven hoofdcategorieën uit de aangeleverde schermafbeelding. Eigenaar heeft op 17 oktober de toepassing van deze zeven iconen goedgekeurd.
 
 ## Bestanden
 
@@ -36,3 +36,13 @@ Testopdracht: NODE_PATH naar de liquidjs-installatie, BC_THEME_PATH naar de gepa
 Browsercontrole: echte conceptpagina geopend; previewbalk toont de conceptnaam. Bij 1348px zijn alle zeven root-items met 32×32-SVG en bestaande paneldoelen in de DOM aangetroffen; geen Liquid error. Dit bewijst geen mobiele rendering. Mobiele Shopify-runtime en echte 360px-browser zijn **NOT_TESTED**: de beschikbare browser biedt geen mobiele viewportinstelling. Zie implementation-checks.json voor controlebereik.
 
 Volgende handeling: eigenaar opent in Shopify op telefoon de preview van **BadkamerCity - Mobiel menu SVG**. Controleer labels/chevrons, scrollen, submenu heen/terug en sluiten/heropenen. Publicatie blijft bij eigenaar. Terugzetten in het concept: patch omkeren tegen dezelfde basis, acht toegevoegde bestanden verwijderen; na latere wijzigingen eerst opnieuw vergelijken. De GitHub–themakoppeling en Windows-synchronisatie zijn nog NOT_VERIFIED; daarom is de productiecode als patch bewaard en zijn geen themapaden gepusht.
+
+## Vervolg — overige zes hoofdcategorieën
+
+Eigenaar keurt eerste zeven goed, publiceert en vraagt op 17 oktober de rest in dezelfde stijl toe te voegen. Actuele MAIN 195334668554 heeft 481 bestanden. Nieuw concept 195334865162 — BadkamerCity - Mobiel menu alle iconen — verwerkt nog; er is nog niet in geschreven. Main-menu via Admin gelezen, dertien hoofditems bevestigd. Bronbestand root-menu-snapshot.json bevat publieke labels/URL's en submenu-indicatie voor regressietests.
+
+Zes nieuwe eigen bc-nav-*.svg-assets: accessoires (handdoekrail+zeeppomp), tegels (overlappende tegels), badkamerverlichting (lamp), verwarming (ladderradiator), meer (raster), outlet (prijslabel zonder kortingspercentage). Zelfde viewBox 32×32/stroke1.65/currentColor. Overzicht remaining-icons-overview.svg/png is een SVG-render, geen screenshot van de webshop. Zeven te schrijven themabestanden: zes assets en alleen de mapping-snippet. Geen header-/drawer-/CSS-wijziging nodig; bestaande modifier past 44px-cel en 68px-rij toe.
+
+Aanvullende patch ../../patches/BC-mobile-category-icons-rest-2026-10-17.patch geldt bovenop de reeds gepubliceerde eerste zeven. De oorspronkelijke patch blijft historische eerste release. Eerst de nieuwe basis vergelijken; niet beide patches blind over huidige MAIN toepassen.
+
+LiquidJS 13 hoofditems/aliases/fallback/navigatie geslaagd. Eerste zeven SVG's/header/drawer/gedeelde iconen bytegelijk aan nieuwe basis. Outlet blijft directe link met behoud van aria-current. Patch voorwaarts/omgekeerd geslaagd. Theme Check 7/7 geslaagd met gebundelde schemafallback; tweede read-only diff/beeldreview zonder blokkerende fouten. Concept-readback volgt. Echte mobiele 360px-runtime, lange label Badkamerverlichting, scrollen tot Outlet en submenu heen/terug nog NOT_TESTED.

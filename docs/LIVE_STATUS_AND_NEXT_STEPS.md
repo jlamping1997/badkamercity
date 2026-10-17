@@ -2,6 +2,20 @@
 
 **Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
+## Mobiel vervolg 17 oktober — overige zes hoofdcategorieën
+
+Eigenaar: “ze zijn goed ik heb hem ook live gezet, kunnen we nu de rest ook SVG geven?” Eerste zeven iconen **USER_APPROVED_UI** en publicatie **VERIFIED_ADMIN**: **195334668554 — BadkamerCity - Mobiel menu SVG** is nu MAIN. Wiesbaden, zoeken en levertijden blijven geparkeerd.
+
+Nieuwe conceptkopie **195334865162 — BadkamerCity - Mobiel menu alle iconen**, UNPUBLISHED, verwerkt nog. Verse MAIN-bron en volledig manifest van 481 bestanden gelezen; header gebruikt main-menu. Actueel Admin-menu heeft 13 hoofditems: eerste zeven plus **Accessoires, Tegels, Badkamerverlichting, Verwarming, Meer, Outlet**. Twaalf items openen een submenu; Outlet is een directe link.
+
+**IMPLEMENTED_LOCAL:** zes eigen SVG-assets in exact dezelfde 32×32/currentColor/stroke1.65-stijl en uitbreiding van uitsluitend bc-mobile-category-icon.liquid. De bestaande 44px-vlakken en 68px-rijen worden automatisch hergebruikt. Accessoires=handdoekrail/zeeppomp, Tegels=overlappende tegels, Verlichting=lamp, Verwarming=ladderradiator, Meer=raster, Outlet=prijslabel. Geen percentage of nieuwe kortingsclaim. Eerste zeven assets, header-CSS, drawer, gedeelde iconsnippet en alle submenu's blijven byte-identiek.
+
+Code wordt bewaard in de bestaande werklijn fix/product-cards-2026-10-14 als [aanvullende patch](patches/BC-mobile-category-icons-rest-2026-10-17.patch) tegen de verse MAIN. Geen themapadpush zolang GitHub–themakoppeling NOT_VERIFIED is. SVG-bronnen en [overzicht](design/mobile-category-icons-2026-10-17/remaining-icons-overview.png) staan bij de bestaande ontwerpdocumentatie; overzicht is een render van de SVG's, geen Shopify-screenshot.
+
+**Geslaagd:** alle zes SVG's XML/safe-inline gecontroleerd en visueel bekeken; LiquidJS-fixtures voor 13 hoofdiconen, douche/spiegel/verlichting/accessoiresaliases, toekomstige onbekende categorie, titelterugval, identieke navigatie en Outlet als directe/current-link. Eerste zeven assets en header/drawer/gedeelde iconbron bytegelijk vergeleken. Patch voorwaarts/achterwaarts gecontroleerd. Theme Check voor alle zeven gewijzigde/nieuwe bestanden geslaagd met gebundelde schemafallback; tweede read-only code/beeldreview vond geen blokkerende fout. Echte mobiele runtime/360px, scrollen tot Outlet, submenu heen/terug en close/reopen **NOT_TESTED**; Windows niet gecontroleerd.
+
+**Exact één volgende handeling:** actieve uitvoering vergelijkt na het voltooien van de kopie 481 checksums en schrijft daarna uitsluitend de zeven bedoelde bestanden naar concept 195334865162. Niet publiceren; daarna readback en telefoonreview door eigenaar.
+
 ## Mobiel werk 17 oktober — zeven SVG-iconen toepassen
 
 Eigenaar keurt het voorstel expliciet goed: “Oké pas deze 7 toe”. **Wiesbaden blijft openstaan; zoeken en levertijden blijven uitgesteld.** Opdracht beperkt tot de zeven hoofdcategorieën in de mobiele drawer: Badkamermeubels, Kranen, Toiletten, Wastafels, Douche, Baden en Spiegels.
