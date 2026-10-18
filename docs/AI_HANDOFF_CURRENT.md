@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **SUNSHOWER DIRECT EN SNELLER 18 OKTOBER:** IR/UV-fotokaarten zijn native directe ONE/PLUS-links naar #sunshower-configurator. Tussenpanelen/detailstatus verwijderd; oude detailhash mag kaarten niet verbergen. Beeldbron is nu regioncrop 0,9×hoogte met hetzelfde focalpunt. sizes volgt coverbreedte op basis van kaarthoogte (261px/77,4vw/360px); vervang dit niet simpelweg door 50vw. Accessoire- en aankoopcode ongewijzigd. Actuele rollen, bewijs en beperkingen: LIVE_STATUS_AND_NEXT_STEPS.md en sunshower-direct-speed-verification-2026-10-18.json.
+
 > **SUNSHOWER DIRECT SHOPPEN 18 OKTOBER:** actuele rollen/testgrenzen staan eerst in LIVE_STATUS_AND_NEXT_STEPS.md. Landingaccessoires gebruiken nu eigen snippet bc-sunshower-shop-card en bc-sunshower-shop.js: afzonderlijke kleurproducten leveren servervariant/prijs/foto/beschikbaarheid, native links/forms fallback. Huidige notification-modus bevestigt inline en ververst alleen cart-icon-bubble; native popup zou de pagina naar boven trekken. Per-kaart lock+gedeelde mutatiewachtrij; nooit automatisch opnieuw POSTen na onzekere reactie. Zie sunshower-quickshop-verification-2026-10-18.json en de productiepatch. SunSwipe heeft alleen een eerlijk gelabeld kleurenoverzicht, geen afzonderlijke kleurfoto’s.
 
 

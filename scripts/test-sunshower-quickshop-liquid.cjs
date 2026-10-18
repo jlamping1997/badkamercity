@@ -77,11 +77,11 @@ async function main(){
   const formIds=[...cs,...cards((await render(locale,f,'second')).html)].map(c=>c.formAttrs.id);assert.equal(new Set(formIds).size,6);assert(formIds.every(id=>/^bcsse-shop-(fixture|second)-(cleaning|sunseat|sunswipe)$/.test(id)));
   checks.push(locale+': JS selectors and translated dataset labels match Liquid; 3 cards, 8 native colour links, 1+4+4 choices, variant IDs/prices/availability, selected override, six unique forms, accessible statuses and native form fallback');
   assert.equal((html.match(/<h1\b/g)||[]).length,1);
-  for(const kind of ['infrared','uv']){assert(html.includes('id="bcsse-light-'+kind+'-fixture"'));assert(html.includes('href="#bcsse-light-'+kind+'-fixture"'));assert(html.includes('data-bcsse-light-panel="'+kind+'"'));}
+  for(const kind of ['infrared','uv'])assert(html.includes('class="bcsse-light-card bcsse-light-card--'+kind+'"'));assert(!html.includes('data-bcsse-light-panel'));assert(!html.includes('data-bcsse-light-link'));
   for(const p of ['one','plus'])assert(html.includes('href="/products/'+p+'#sunshower-configurator"'));
   assert(html.includes('data-bcsse-model-disclosure open'));assert(!/<section class="bcsse-light-detail[^>]*\bhidden\b/.test(html));assert(html.includes('data-bcsse-accessory-shelf'));
   for(const script of ['mobile','shop'])assert(html.includes('src="/assets/bc-sunshower-'+script+'.js"'));
-  checks.push(locale+': IR/UV panels, model disclosure, configurator routes, shelf and readable no-JS details remain present');
+  checks.push(locale+': Direct IR/UV cards, model disclosure, configurator routes and shelf remain present without intermediate panels');
   const bad=fixture();bad.cleaning.title='Set </script><script>alert("bad")</script> & "clean"';const badHtml=(await render(locale,bad)).html,badCard=cards(badHtml)[0];
   assert.equal(badCard.data.choices[0].title,bad.cleaning.title);assert.equal(badCard.data.choices[0].image.alt,bad.cleaning.title);assert(!badCard.rawData.includes('<'));assert(badCard.rawData.includes('\\u003c/script>'));assert(!badHtml.includes('<script>alert('));
   checks.push(locale+': malicious closing-script title stays escaped and JSON round trips');
