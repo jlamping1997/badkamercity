@@ -3,6 +3,29 @@
 **Bijgewerkt: 18 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
 
+
+## Sunshower mobiel — infrarood en UV — 18 oktober
+
+Eigenaar keurt het tweede mobiele voorstel goed: eerst infrarood en UV als grote fotokaarten; modellen later, configureren altijd bereikbaar, accessoires als handmatig veegbare fotokaarten.
+
+**VERIFIED_ADMIN:** vorige preview is gepubliceerd: MAIN **195382739210 — BadkamerCity - Sunshower beleving en accessoires**. Nieuw concept **195384312074 — BadkamerCity - Sunshower mobiel infrarood en UV**, UNPUBLISHED. Vóór schrijven processing=false en **492/492 bestanden identiek**. Finale readback **494 bestanden: vijf bestaande gewijzigd, twee nieuwe, alle zeven gewenste inhouden exact; overige 487 bestaande bestanden identiek**. MAIN blijft MAIN met **492/492 checksums ongewijzigd**. Niet gepubliceerd.
+
+**IMPLEMENTED_PREVIEW:** alleen telefoons t/m749px krijgen de fotokaarten Infrarood/UV, inline detailfoto/uitleg, functieschakelaar, Terug en een vaste generieke configuratorknop. UV routeert naar PLUS; accessoires/modellen bezoeken behoudt de gekozen functie. Overzicht herstelt de oorspronkelijke configuratorroute. Modellen native uitklapbaar, één H1. Sunseat en douchewisser staan in een handmatig scrollbare rij; reinigingsset eronder; acht kleurlinks en echte Shopify-prijzen behouden. Nieuwe mobiele kop ‘Maak je moment compleet’. Zonder JS blijven beide uitlegblokken met eigen juiste productlinks bruikbaar. Desktop behoudt zijn hero/model-/accessoireopbouw; homepage, header, configurator en aankoopcode niet gewijzigd.
+
+**Beelden:** grotere responsive bronmaten voor de sterke uitsneden. Originele Sunseat-fabrikantfoto 2500×2500 als **bc-sunshower-sunseat-sand-white-highres.jpg**, Files-media **51340052988170**, uitsluitend via image_override in concepttemplate. Geen product-/prijs-/voorraad-/menu- of pagina-Adminwijzigingen.
+
+**Geslaagd:** Theme Check oorspronkelijke zeven bestanden en laatste revisies6/3/7, node-syntax, tien gegroepeerde render-/logica-asserties (NL/EN, lege data, prijzen, acht kleurlinks, functie/route, hash/terug/focus, resize, meerdere instanties, herinitialisatie en editor-unload). Onafhankelijke review: focus bij Terug en viewportwissel hersteld. Patch voorwaarts/omgekeerd exact toepasbaar.
+
+**Browserbewijs:** echte conceptpagina desktop1363×936, één H1, mobiele UI verborgen, modellen open, geen horizontale overflow. Echte PLUS-klik opent juiste productpagina en configuratoranker bij top≈0. Mobiele **componenttest op320/390/430px** gebruikt de servergerenderde main-HTML met de echte gedeployde CSS/JS in srcdoc; rechtstreekse framing van de winkelpagina werd geblokkeerd. Alle drie: één H1, geen horizontale paginascroll, juiste foto geladen, acht kleurlinks, prijzen40/325,01/29, sticky CTA65px. IR/UV/overzicht, native modeluitklapper, UV-context bij accessoires en resize1024→390 gecontroleerd. Accessoirerij scrollt met toetsenbord (415px breed,670px inhoud,255px scroll). Dit is component-runtimemeting, geen echte telefoon- of volledige mobiele-headercontrole.
+
+**Controleweergave:** verwijderen van het nieuw toegevoegde testtemplate via themeFilesDelete werd door de connector geblokkeerd als destructieve thema-actie; niets verwijderd. Veilig afgerond door **templates/page.bc-mobile-qa.liquid** te vervangen door een kleine noindex-doorverwijzing naar de gewone pagina. Geen gekopieerde paginacode/testscript achtergebleven. Inhoud exact teruggelezen, redirect /pages/sunshower in browser bevestigd. Het bestand hoort bij de zeven vastgelegde releasebestanden en is geen openbare navigatiebestemming.
+
+**NOT_TESTED:** echte iOS/Android-telefoon en volledige mobiele header/menu-integratie, checkout, tracking/conversies en Windows lokaal. Geen formulier of winkelwagen verzonden.
+
+Werkbranch **fix/product-cards-2026-10-14**. [Productiepatch](patches/BC-sunshower-mobile-light-2026-10-18.patch), [verificatie](sunshower-mobile-light-verification-2026-10-18.json), scripts/test-sunshower-mobile-light.cjs. Test met geïnstalleerde liquidjs en BC_THEME_PATH naar de verse export met toegepaste patch. Geen themabronpaden gepusht zolang GitHub–Shopify-koppeling NOT_VERIFIED is.
+
+**Exact één volgende handeling:** eigenaar opent op telefoon de preview **BadkamerCity - Sunshower mobiel infrarood en UV**, controleert infrarood → UV → Terug en accessoires/configurator, en beoordeelt publicatie. Geen achtergrondtaak. Terugzetten: concept niet gebruiken; na publicatie vijf bestaande bestanden herstellen en twee nieuwe bestanden zo nodig via Shopify Admin verwijderen, of het vorige thema terugzetten als geen vervolgwijzigingen zijn gedaan. Nieuwe losse Sunseat-afbeelding blijft bestaan; productmedia zijn niet gewijzigd.
+
 ## Sunshower-beleving en accessoires — 18 oktober
 
 Eigenaar keurt de nieuwe warme vormgeving goed: blauw UV-licht, rood/oranje infrarood, een hoofdbanner op de homepage, directe configurator en shopbare accessoires.
