@@ -1,6 +1,25 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-**Bijgewerkt: 17 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+**Bijgewerkt: 18 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+
+
+## Sunshower-beleving en accessoires — 18 oktober
+
+Eigenaar keurt de nieuwe warme vormgeving goed: blauw UV-licht, rood/oranje infrarood, een hoofdbanner op de homepage, directe configurator en shopbare accessoires.
+
+**VERIFIED_ADMIN:** MAIN is nu **195338076426 — BadkamerCity - Sunshower landingspagina**; de vorige release is gepubliceerd. Nieuw concept **195382739210 — BadkamerCity - Sunshower beleving en accessoires**, UNPUBLISHED. Vóór schrijven processing=false en **492/492 bestanden checksum-identiek** aan MAIN. Finale readback: **492 bestanden, elf bedoelde bestanden exact opgeslagen, overige 481 bestaande bestanden checksum-identiek**. MAIN blijft MAIN met **492/492 checksums ongewijzigd**. Niet gepubliceerd.
+
+**IMPLEMENTED_PREVIEW / REVIEW:** nieuwe Sunshower is de eerste homepagebanner. De vorige hero blijft bewaard maar staat uit; de dubbele Sunshower-promopositie vervalt. Hero met travertijn, navy verloop en cyan knop; landingspagina met directe ONE/PLUS-configuratorroutes, modelkaarten, drie accessoirekaarten, installatieadvies, drie native FAQ's en vaste mobiele configuratorknop. Reinigingsset, Sunseat en SunSwipe gebruiken echte producten en actuele Shopify-prijzen; acht kleurlinks openen de afzonderlijke kleurproducten. NL/EN runtime- en editorvertalingen. Geen nieuwe JavaScript. De configuratorsectie krijgt uitsluitend een vaste anker-id; bestaande kooplogica behouden.
+
+**Beelden en Admin-data:** twee gegenereerde sfeerbeelden met fysieke productreferenties opgeslagen als bc-sunshower-beleving-uv-hero-v2.png en bc-sunshower-beleving-infrarood-v2.png. Accessoires gebruiken echte productfoto's. Sunseat gebruikt een CSS-uitsnede van de bestaande echte Sand White-foto. Vier SunSwipe-producten Q1201/Q1202/Q1203/Q1206 hadden geen media; elk heeft nu één echte kleurenoverzichtfoto met alttekst die de gekozen uitvoering noemt. Deze vier productmedia zijn al winkelbreed zichtbaar, onafhankelijk van themapublicatie. Productprijzen, SKU's, teksten, voorraad, publicaties en bestaande productfoto's niet gewijzigd. Geen pagina/menu gewijzigd in deze release.
+
+**Geslaagd:** Theme Check elf bestanden revisie1, laatste CSS revisie3 en sectie revisie4; gebundelde schemafallback na docs-time-out, telemetry opt-out. Zes gerichte NL/EN-rendergevallen; onafhankelijke review (mobiele footer-overlap verholpen). Patch voorwaarts/omgekeerd toepasbaar. Browser **1363×936**: homepagebanner eerste sectie, foto geladen, klik naar pagina; één H1, zeven foto's geladen, geen horizontale overflow, prijzen €40,00/€325,01/€29,00; acht juiste kleurlinks. Sunseat Black opent Q1302 en SunSwipe Organic Grey opent Q1203 met foto. Primaire knop en ONE/PLUS springen naar juiste productconfigurator, anker bovenaan zichtbaar; PLUS-opties correct actief. FAQ geopend. Geen formulier, winkelwagen of bestelling verzonden.
+
+**NOT_TESTED:** echte mobiele viewport/telefoonweergave (cloudbrowser heeft geen viewportregeling); mobiele CSS en 44px kleurlinks statisch beoordeeld. Checkout, tracking/conversies en Windows lokaal niet getest.
+
+Werkbranch **fix/product-cards-2026-10-14**. Productiecode als [toepasbare patch](patches/BC-sunshower-experience-2026-10-18.patch), met [verificatie en media-ID's](sunshower-experience-verification-2026-10-18.json). Geen themabronpaden gepusht zolang GitHub–Shopify-koppeling NOT_VERIFIED is.
+
+**Exact één volgende handeling:** eigenaar opent de preview van **BadkamerCity - Sunshower beleving en accessoires** op telefoon, controleert banner → pagina → configurator/accessoires en beoordeelt publicatie. Geen achtergrondtaak. Terugzetten: concept vóór publicatie niet gebruiken; na publicatie uitsluitend deze elf bestanden herstellen of vorige thema terugzetten als er geen latere wijzigingen zijn. Vier nieuw toegevoegde SunSwipe-media kunnen afzonderlijk verwijderd worden via de vastgelegde media-ID's; tevoren waren die producten fotoloos. Losse nieuwe Files-afbeeldingen blijven bestaan. Bestaande pagina 166120390922 met suffix bc-sunshower behouden.
 
 ## Sunshower-landingspagina en homepagebanner — 17 oktober
 
