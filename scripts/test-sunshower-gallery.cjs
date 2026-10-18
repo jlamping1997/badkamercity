@@ -18,6 +18,8 @@ class Element {
     this.listeners = new Map();
     this.dataset = {};
     this.isConnected = true;
+    this.bounds = { left: 0, right: 100 };
+    this.scrollCalls = [];
     this.classList = {
       toggle: (name, enabled) => {
         const names = new Set((this.getAttribute('class') || '').split(/\s+/).filter(Boolean));
@@ -35,11 +37,18 @@ class Element {
     listeners.push(listener);
     this.listeners.set(name, listeners);
   }
-  emit(name, event = {}) { for (const listener of this.listeners.get(name) || []) listener({ target: this, ...event }); }
+  emit(name, event = {}) {
+    const dispatched = { target: this, preventDefault() { this.defaultPrevented = true; }, stopPropagation() { this.propagationStopped = true; }, ...event };
+    for (const listener of this.listeners.get(name) || []) listener(dispatched);
+    return dispatched;
+  }
   setAttribute(name, value) { this.attributeMap.set(name, String(value)); }
   getAttribute(name) { return this.attributeMap.get(name) ?? null; }
   removeAttribute(name) { this.attributeMap.delete(name); }
-  click(target = this) { this.emit('click', { target }); }
+  click(target = this, detail = 1) { return this.emit('click', { target, detail }); }
+  getBoundingClientRect() { return this.bounds; }
+  scrollBy(options) { this.scrollCalls.push(options); }
+  setPointerCapture(id) { this.capturedPointer = id; }
   replaceWith(photo) { this.replaceNode(photo); this.isConnected = false; }
 }
 
@@ -76,11 +85,13 @@ function fixture({ hasPhoto = true, metadata = true, decode = true, initialShown
   lightbox.close = () => { lightbox.open = false; };
   const openButton = new Element();
   const closeButton = new Element();
+  const photoStrip = new Element();
   const elements = {
     '.ss-gallery__photo': hasPhoto ? initialPhoto : null,
     '[data-ss-lightbox]': lightbox,
     '[data-ss-open-image]': openButton,
     '[data-ss-close-image]': closeButton,
+    '.ss-gallery__thumbs': photoStrip,
   };
   const install = photo => {
     elements['.ss-gallery__photo'] = photo;
@@ -120,13 +131,23 @@ function fixture({ hasPhoto = true, metadata = true, decode = true, initialShown
     fail() { this.onerror?.(); }
   }
   const window = new Element();
-  gallery.runInNewContext({ page, Image, window, URL, location: { href: 'https://badkamercity.nl/products/sunshower' } });
+  const document = new Element();
+  gallery.runInNewContext({ page, Image, window, document, URL, location: { href: 'https://badkamercity.nl/products/sunshower' } });
   const selected = index => buttons.forEach((button, actual) => {
     assert.equal(button.getAttribute('aria-pressed'), String(actual === index));
     assert.equal(button.classList.contains('is-selected'), actual === index);
   });
   const finish = async index => { pending[index].load(); pending[index].finishDecode?.(); await flush(); };
-  return { get mainPhoto() { return elements['.ss-gallery__photo']; }, initialPhoto, buttons, pending, selected, finish, page, window, lightbox, lightboxPhoto, openButton, closeButton };
+  const pointer = (name, { target = openButton, pointerType = 'touch', pointerId = 1, isPrimary = true, button = 0, clientX = 200, clientY = 100 } = {}) => {
+    const event = { target, pointerType, pointerId, isPrimary, button, clientX, clientY };
+    document.emit(name,event);
+    return target.emit(name,event);
+  };
+  const swipe = (direction = 'left', options = {}) => {
+    pointer('pointerdown',options);
+    pointer('pointerup',{ ...options, clientX: direction === 'left' ? 100 : 300 });
+  };
+  return { get mainPhoto() { return elements['.ss-gallery__photo']; }, initialPhoto, buttons, pending, selected, finish, pointer, swipe, page, window, document, lightbox, lightboxPhoto, openButton, closeButton, photoStrip };
 }
 
 const cases = {
@@ -334,6 +355,208 @@ const cases = {
     f.initialPhoto.currentSrc = imageUrl('detail', 1000);
     f.window.emit('pageshow', { persisted: true });
     f.selected(0);
+  },
+  'left and right touch swipes load adjacent images and preserve atomic selection': async () => {
+    const f = fixture();
+    f.swipe('left');
+    assert.equal(f.pending.length, 1);
+    assert.equal(f.pending[0].src, imageUrl('drawing'));
+    f.selected(0);
+    await f.finish(0);
+    f.selected(1);
+    f.swipe('right');
+    assert.equal(f.pending[1].src, imageUrl('landscape'));
+    await f.finish(1);
+    f.selected(0);
+  },
+  'rapid swipes advance from the latest requested image and late results cannot win': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.pending[0].load();
+    f.swipe('left');
+    assert.equal(f.pending[1].src, imageUrl('detail'));
+    await f.finish(1);
+    f.pending[0].finishDecode();
+    await flush();
+    f.selected(2);
+    assert.equal(f.mainPhoto, f.pending[1]);
+  },
+  'reversing a pending swipe to the visible photo cancels that pending choice': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.pending[0].load();
+    f.swipe('right');
+    f.pending[0].finishDecode();
+    await flush();
+    assert.equal(f.pending.length, 1);
+    assert.equal(f.mainPhoto, f.initialPhoto);
+    f.selected(0);
+  },
+  'latest load or decode failure resets the next swipe to the visible image': async () => {
+    for (const failure of ['load', 'decode']) {
+      const f = fixture();
+      f.swipe('left');
+      f.swipe('left');
+      if (failure === 'load') f.pending[1].fail();
+      else { f.pending[1].load(); f.pending[1].rejectDecode(); await flush(); }
+      f.swipe('left');
+      assert.equal(f.pending[2].src, imageUrl('drawing'));
+      await f.finish(2);
+      f.selected(1);
+    }
+  },
+  'an outdated failure cannot reset the latest requested swipe cursor': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.swipe('left');
+    f.pending[0].fail();
+    f.swipe('right');
+    assert.equal(f.pending[2].src, imageUrl('drawing'));
+    await f.finish(2);
+    f.selected(1);
+  },
+  'swipe bounds clamp without wrapping or accidentally opening zoom': async () => {
+    for (const [initialShown, direction] of [[0, 'right'], [2, 'left']]) {
+      const f = fixture({ initialShown });
+      f.swipe(direction);
+      assert.equal(f.pending.length, 0);
+      const click = f.openButton.click();
+      assert.equal(click.defaultPrevented, true);
+      assert.notEqual(f.lightbox.open, true);
+      f.selected(initialShown);
+    }
+  },
+  'one gesture advances at most one photo regardless of distance': async () => {
+    const f = fixture();
+    f.pointer('pointerdown', { clientX: 1000 });
+    f.pointer('pointermove', { clientX: 500 });
+    f.pointer('pointerup', { clientX: -1000 });
+    f.pointer('pointerup', { clientX: -1200 });
+    assert.equal(f.pending.length, 1);
+    assert.equal(f.pending[0].src, imageUrl('drawing'));
+  },
+  'vertical and diagonal movements keep the photo while a small tap opens zoom': async () => {
+    const f = fixture();
+    f.pointer('pointerdown');
+    f.pointer('pointerup', { clientX: 150, clientY: 300 });
+    f.openButton.click();
+    assert.notEqual(f.lightbox.open, true, 'vertical drag must not become a zoom tap');
+    f.pointer('pointerdown');
+    f.pointer('pointerup', { clientX: 140, clientY: 150 });
+    assert.equal(f.pending.length, 0, 'diagonal 60/50 must not satisfy the horizontal ratio');
+    f.openButton.click();
+    assert.notEqual(f.lightbox.open, true, 'diagonal drag must not become a zoom tap');
+    f.pointer('pointerdown');
+    f.pointer('pointerup', { clientX: 190, clientY: 102 });
+    f.openButton.click();
+    assert.equal(f.lightbox.open, true);
+  },
+  'pointer cancellation and lost capture do not navigate or zoom': async () => {
+    for (const name of ['pointercancel', 'lostpointercapture']) {
+      const f = fixture();
+      f.pointer('pointerdown');
+      f.pointer(name);
+      f.pointer('pointerup', { clientX: 100 });
+      assert.equal(f.pending.length, 0);
+      f.openButton.click();
+      assert.notEqual(f.lightbox.open, true);
+    }
+  },
+  'a second touch outside the photo cancels the whole gesture and permits the next single touch': async () => {
+    const f = fixture();
+    const outside = new Element();
+    f.pointer('pointerdown');
+    f.pointer('pointerdown', { target: outside, pointerId: 2, isPrimary: false });
+    f.pointer('pointerup', { clientX: 100 });
+    f.pointer('pointerup', { target: outside, pointerId: 2, isPrimary: false });
+    assert.equal(f.pending.length, 0);
+    f.openButton.click();
+    assert.notEqual(f.lightbox.open, true);
+    f.swipe('left');
+    await f.finish(0);
+    f.selected(1);
+  },
+  'a gesture starting with a non-primary touch never navigates': async () => {
+    const f = fixture();
+    f.swipe('left', { isPrimary: false });
+    assert.equal(f.pending.length, 0);
+  },
+  'primary mouse and pen drags work while right mouse drags do not': async () => {
+    for (const pointerType of ['mouse', 'pen']) {
+      const f = fixture();
+      f.swipe('left', { pointerType });
+      await f.finish(0);
+      f.selected(1);
+    }
+    const f = fixture();
+    f.swipe('left', { pointerType: 'mouse', button: 2 });
+    assert.equal(f.pending.length, 0);
+  },
+  'a swipe suppresses its synthetic click but the next deliberate tap immediately zooms': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.openButton.click();
+    assert.notEqual(f.lightbox.open, true);
+    f.swipe('right');
+    // A browser may omit the synthetic click; the next actual tap must still work.
+    f.pointer('pointerdown');
+    f.pointer('pointerup');
+    f.openButton.click();
+    assert.equal(f.lightbox.open, true);
+  },
+  'keyboard zoom remains available immediately after a swipe': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.openButton.click(f.openButton, 0);
+    assert.equal(f.lightbox.open, true);
+  },
+  'swipe selection reveals only the horizontal thumbnail strip after the image commits': async () => {
+    const f = fixture();
+    f.photoStrip.bounds = { left: 20, right: 180 };
+    f.buttons[1].bounds = { left: 160, right: 240 };
+    f.swipe('left');
+    assert.equal(f.photoStrip.scrollCalls.length, 0);
+    await f.finish(0);
+    assert.equal(f.photoStrip.scrollCalls.length, 1);
+    assert.equal(f.photoStrip.scrollCalls[0].left, 60);
+    assert.equal('top' in f.photoStrip.scrollCalls[0], false);
+    assert.equal(f.photoStrip.scrollCalls[0].behavior, 'auto');
+  },
+  'swipes follow a thumbnail click and the displayed responsive source': async () => {
+    const f = fixture({ initialShown: 2 });
+    f.swipe('right');
+    assert.equal(f.pending[0].src, imageUrl('drawing'));
+    f.buttons[0].click();
+    f.swipe('left');
+    assert.equal(f.pending[2].src, imageUrl('drawing'));
+    await f.finish(2);
+    f.selected(1);
+  },
+  'initial image load while a swipe is pending does not reset the requested cursor': async () => {
+    const f = fixture({ initialComplete: false });
+    f.swipe('left');
+    f.initialPhoto.complete = true;
+    f.initialPhoto.naturalWidth = 1200;
+    f.initialPhoto.emit('load');
+    f.swipe('left');
+    assert.equal(f.pending[1].src, imageUrl('detail'));
+  },
+  'persisted page restoration cancels an unfinished gesture and restores the swipe cursor': async () => {
+    const f = fixture();
+    f.swipe('left');
+    f.pointer('pointerdown');
+    f.window.emit('pageshow', { persisted: true });
+    f.pointer('pointerup', { clientX: 100 });
+    assert.equal(f.pending.length, 1);
+    f.swipe('left');
+    assert.equal(f.pending[1].src, imageUrl('drawing'));
+  },
+  'native image dragging is prevented while a missing image cannot swipe': async () => {
+    const f = fixture();
+    assert.equal(f.openButton.emit('dragstart').defaultPrevented, true);
+    const missing = fixture({ hasPhoto: false });
+    missing.swipe('left');
+    assert.equal(missing.pending.length, 0);
   },
 };
 
