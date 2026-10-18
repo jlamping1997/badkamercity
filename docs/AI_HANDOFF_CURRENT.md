@@ -1,5 +1,8 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **SUNSHOWER DIRECT SHOPPEN 18 OKTOBER:** actuele rollen/testgrenzen staan eerst in LIVE_STATUS_AND_NEXT_STEPS.md. Landingaccessoires gebruiken nu eigen snippet bc-sunshower-shop-card en bc-sunshower-shop.js: afzonderlijke kleurproducten leveren servervariant/prijs/foto/beschikbaarheid, native links/forms fallback. Huidige notification-modus bevestigt inline en ververst alleen cart-icon-bubble; native popup zou de pagina naar boven trekken. Per-kaart lock+gedeelde mutatiewachtrij; nooit automatisch opnieuw POSTen na onzekere reactie. Zie sunshower-quickshop-verification-2026-10-18.json en de productiepatch. SunSwipe heeft alleen een eerlijk gelabeld kleurenoverzicht, geen afzonderlijke kleurfoto’s.
+
+
 > **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
 
 > **ZOEKFILTERS EN KORTE TITELS 14 OKTOBER:** verse MAIN `195216048394`; concept `195218047242` voegt zoekfilterprofiel `__all__` en merchantveld `custom.card_title` toe. Veld aangemaakt en nog leeg. Zie [zoek- en titelcontract](SEARCH_AND_SHORT_TITLES_2026-10-14.md). Publicatie en visuele/live zoekcontrole open; hieronder oudere release-momentopnamen.
