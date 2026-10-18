@@ -4,6 +4,22 @@
 
 
 
+## Duidelijkere typografie op de hele site — 18 oktober
+
+Opdracht eigenaar: “Kun je nu het lettertype wat duidelijker maken op de hele site”. **VERIFIED_ADMIN:** mobiele Sunshower-release is gepubliceerd: MAIN **195384312074 — BadkamerCity - Sunshower mobiel infrarood en UV**. Nieuw concept **195385753866 — BadkamerCity - Duidelijkere typografie**, UNPUBLISHED. Vóór schrijven processing=false en **494/494 checksums identiek**. Finale readback: **495 bestanden, twee bestaande gewijzigd en één nieuw; alle drie inhouden exact; overige 492 bestaande bestanden identiek**. MAIN blijft MAIN met alle **494/494 checksums ongewijzigd**. Niet gepubliceerd.
+
+**IMPLEMENTED_PREVIEW:** Assistant vervangen door Shopify-systeemlettertype (body400, koppen700), met expliciete system-ui-uitvoer voor Shopify's geciteerde system_ui-family. Body16px en regelafstand1,6; rem-basis10px en beide schalen100 behouden. Formulieren volgen de familie; kleine labels/knoppen/FAQ-/productteksten gericht vergroot. Sunshower modelknoppen mobiel14px, configuratorknop15px, FAQ16px; bestaande desktopgroottes behouden. Geen nieuwe fontscripts, JavaScript of Admin-data gewijzigd. Fontinstellingen gelden ook voor afzonderlijke password/gift-card-layouts; hun browserweergave niet getest.
+
+**Geslaagd:** Theme Check laatste revisie5 op alle drie gewijzigde bestanden; bestaande niet-blokkerende scheme_classes-waarschuwing behouden, gebundelde schemafallback. Eerste contextfouten opgelost met aanwezige dependencies en verse en.default.json. Alleen twee huidige fontselecties in settings gewijzigd; overige settings/presets en schalen exact behouden. Onafhankelijke review; kleinere desktoptekst en footer-specificiteit gecorrigeerd. Productiepatch voorwaarts en omgekeerd byte-exact toepasbaar.
+
+**Browserbewijs:** 1363×936: berekende system-ui, root10px en body25,6px regelhoogte. Homepage, Sunshower, PLUS-configurator, Wastafelkranen-productlijst (24 kaarten), standaard Reinigingsset-PDP, Badkamermeubels, contact en lege winkelwagen tonen nieuwe familie zonder horizontale pagina-overflow. Reinigingsset één H1, bezorgtekst14px; contact-e-mailveld16px. Het bredere lettertype gebruikt op desktop de bestaande horizontaal scrollbare categorieënrail met pijlen; navigatiecode ongewijzigd. Mobiele **componentcontrole** met servergerenderde main-HTML en echte CSS op320/390/430px: Sunshower en configurator zonder pagina-overflow/afgeknipte knoppen. Modeluitklapper op320px geopend, beide knoppen14px; prijsrij247px inhoud bij247px breedte. Dit is geen echte telefoon-/volledige mobiele-headercontrole. Tijdelijk bestaand QA-template na controle byte-exact hersteld; doorverwijzing naar /pages/sunshower in browser bevestigd.
+
+**NOT_TESTED:** echte iOS/Android, volledige mobiele header/menu-integratie, checkout/betaling, account/gift-card/password-runtime, alle afzonderlijke content-/cataloguspagina's, prestatiemeting en Windows lokaal. Geen formulier/winkelwagen/bestelling verzonden.
+
+Werkbranch **fix/product-cards-2026-10-14**, vorige checkpoint94937bc. [Productiepatch](patches/BC-site-typography-2026-10-18.patch), [verificatie](site-typography-verification-2026-10-18.json). Alleen layout/theme.liquid, config/settings_data.json en nieuw assets/bc-typography.css. Geen themabronpaden gepusht zolang GitHub–Shopify-koppeling NOT_VERIFIED is.
+
+**Exact één volgende handeling:** eigenaar beoordeelt de preview **BadkamerCity - Duidelijkere typografie** op telefoon en beslist over publicatie. Geen achtergrondtaak. Terugzetten: concept niet gebruiken; na publicatie uitsluitend de twee bestaande bestanden herstellen en nieuwe CSS verwijderen als ongebruikt, of vorige thema terugzetten als geen latere wijzigingen zijn gedaan.
+
 ## Sunshower mobiel — infrarood en UV — 18 oktober
 
 Eigenaar keurt het tweede mobiele voorstel goed: eerst infrarood en UV als grote fotokaarten; modellen later, configureren altijd bereikbaar, accessoires als handmatig veegbare fotokaarten.
