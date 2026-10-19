@@ -28,7 +28,7 @@ from urllib.request import Request, urlopen
 from lxml import html
 
 BASE = "https://www.wiesbaden.nl/"
-VERSION = "2026-10-19.2"
+VERSION = "2026-10-19.3"
 UA = "BadkamerCity-productdata-audit/1.0"
 PRODUCT_FIELDS = """__typename uid sku name url_key url_suffix canonical_url status visibility
 description{html} short_description{html} meta_title meta_description
@@ -340,6 +340,10 @@ def price_proposal(record, current_price, shop_taxes_included):
         "status": "PRICE_BASIS_REVIEW_NOT_APPLIED"}
     if raw is None or Decimal(raw) <= 0:
         proposal["status"] = "ZERO_OR_MISSING_SOURCE_PRICE_REVIEW"
+        return proposal
+    if any(issue in record.get("issues", []) for issue in
+           ("PAGE_SKU_MISSING_OR_MISMATCH", "HTML_API_ADVICE_PRICE_CONFLICT")):
+        proposal["status"] = "SOURCE_IDENTITY_OR_PRICE_CONFLICT_REVIEW"
         return proposal
     if not shop_taxes_included:
         return proposal
