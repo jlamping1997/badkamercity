@@ -4,6 +4,12 @@
 
 
 
+## Wiesbaden volledige bronrun — 19 oktober 2026
+
+**Actuele opdracht eigenaar: eerst volledige fabrikantdata verzamelen en vergelijken. IN_PROGRESS.** Bestaande werkbranch `fix/product-cards-2026-10-14`; uitvoerder ChatGPT. [Bronrun en hervatinstructies](product-content/WIESBADEN_SOURCE_RUN_2026-10-19.md). Fabrikant-API volledig: 2.841 producten/173 categorieën; HTML-aanvulling loopt. Verse Shopify-read: 2.265 Wiesbaden-producten plus volledige 11.157-varianten-SKU-index. Vergelijking: 2.240 bestaande, 601 nieuwe kandidaten, 25 bestaande zonder fabrikantmatch. Geen publicatieklaarverklaring en nul winkelmutaties. Negen parser-/identiteitstests en echte extractie op de tien bestaande proefproducten geslaagd. Prijsverschil 24.3710: 252,89 winkel versus 209,00 fabrikant; prijscontrole vereist vóór verwerking. Ruwe bronnen blijven afgeschermd buiten publieke Git. Verse MAIN-read: 195392143626 — Winkelwagen helder; oudere previewnotities hieronder zijn gedateerd. Windows lokaal NOT_VERIFIED.
+
+**Exact één volgende handeling:** volledige HTML-aanvulling afronden en datakwaliteit/afwijkingen rapporteren. Content-/categorie-/filter-/prijsverwerking volgt op gecontroleerde brondata; geen impliciete nieuwe thema- of zoekrelease.
+
 ## Winkelwagen helder — 19 oktober 2026
 
 **PUBLICATIE GOEDGEKEURD — 19 oktober, 12:02 CEST:** eigenaar vraagt de getoonde winkelwagen door te voeren. Dit is toestemming voor publicatie van het concrete concept; niet opnieuw om akkoord vragen. Verse read-only controle: MAIN blijft **195388080394**; **195392143626 — BadkamerCity - Winkelwagen helder** blijft UNPUBLISHED, processing=false, 502 bestanden, alle zeven goedgekeurde checksums exact. De Shopify-connector beschrijft themapublicatie expliciet als geblokkeerde handeling. Geen publicatiemutatie geprobeerd en geen alternatieve route gebruikt om die grens te omzeilen. **Laatste stap:** eigenaar publiceert dit bestaande concept in Shopify Admin; daarna MAIN en de storefront opnieuw controleren.
