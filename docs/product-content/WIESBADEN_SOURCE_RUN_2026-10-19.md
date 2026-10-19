@@ -25,15 +25,27 @@ Status: **IN_PROGRESS — volledige HTML-aanvulling loopt**. Bestaande werkbranc
 - Geen automatische verwijdering, archivering of nieuwe publicatie. Nieuwe kandidaat is nog geen publicatieklaar product. Exacte bronmerkidentiteit, ontbrekende feiten en set-/onderdeelstatus blijven controles.
 - Actuele structuur gelezen: **221** collecties, **9** menu's en **246** productmetafielddefinities. De verschillende `custom`, `specs`, `bc_filters` en overige namespaces mogen niet stil samengevoegd worden.
 
-## Prijscontrole
+## Prijscontrole — aangevulde btw-context
 
-Voor 24.3710: actuele winkelprijs **252,89 EUR**; fabrikant-API en gelabelde HTML-adviesprijs beide **209,00 EUR**. Exacte factor 1,21 is een aangetoond verschil, nog geen bewijs dat ieder prijsverschil een btw-fout is. Bewaar bronprijs, actuele verkoopprijs, bronmoment en verschil apart. BTW-/verkoopprijsbeleid vóór prijsverwerking expliciet verifiëren; geen onbedoelde verhoging, korting of dubbele btw.
+Voor 24.3710: actuele winkelprijs **252,89 EUR**; fabrikant-API en gelabelde HTML-adviesprijs beide **209,00 EUR**. Aanvullende inspectie toont dat de actieve fabrikantprijscomponent `regularPriceExclTaxKey` en `finalPriceExclTaxKey` selecteert bij `initialFinalPrice: 209`. Dit is expliciete technische broncontext: de weergegeven fabrikantprijs gebruikt de exclusief-btw-prijscomponent. Shopify `shop.taxesIncluded` is vers als **true** teruggelezen. Bij de bestaande winkelconventie van factor 1,21 sluiten de twee bedragen aan. Het ruwe verschil mag dus niet als bewezen prijsfout of korting worden behandeld.
+
+De btw-component wordt over alle bronpagina's gecontroleerd en bij de bronhash opgeslagen. De uitvoer krijgt naast de ruwe vergelijking een afzonderlijk btw-genormaliseerd prijsvoorstel, met factor 1,21 expliciet als waargenomen bestaande winkelconventie. Geen factuur-/inkoopprijsverificatie geclaimd en geen verkoopprijzen gewijzigd. Alle **36** bronartikelen met nulprijs ontbreken in de winkel en krijgen een reviewblokkade; geen gratis producten aanmaken.
+
+## Doelkoppeling — alleen voorstel
+
+De verse momentopname van alle 2.265 Wiesbaden-productmetafields bevestigt dat Wiesbaden de **custom**-namespace gebruikt. `specs` behoort tot de andere merkmapping. Er zijn 49 bestaande custom-definities en 62 bc_filters-definities. De scriptvoorstellen gebruiken bestaande veldtypen en collection-ID's; geen honderden nieuwe definities aanmaken.
+
+- `scripts/wiesbaden-import-plan.py` koppelt bronpaden en expliciete productnamen aan bestaande collecties en echte menupaden. Voor 24.3710: Kranen → Wastafelkranen → Opbouw wastafelkranen, met lidmaatschap van alle drie collecties. Afbouwdelen, inbouwdelen, fonteinsets en andere sets krijgen afzonderlijke regels; one-pack is geen synoniem voor fonteinset.
+- Bronproducten zonder categorie, onduidelijke toepassingen en ontbrekende doelcollecties blijven expliciet in review. De bron kent 978 artikelen zonder categorie; alleen een globale navigatieboom is dus onvoldoende voor classificatie.
+- Voorstel voor alle tabelwaarden in het reeds gedefinieerde `custom.complete_specificaties` JSON-formaat. De actuele Wiesbaden-renderer leest dit volledige JSON-veld nog niet; route eerst in concept valideren. De bestaande Hotbath-afscherming niet verruimen om dit te forceren.
+- Losse custom-veldvoorstellen en filterveldvoorstellen behouden bronwaarde, huidige waarde, voorgesteld type en wijzigingsstatus. Nee blijft false; nul blijft nul; een ontbrekende maat of eenheid wordt niet ingevuld. Generieke waarden zoals Overig vervangen geen specifiek bestaand materiaal.
+- `bc_data.filter_manifest` en de externe VPS-index vereisen een gecontroleerde contract-/indexstap. Alleen een metafield vullen bewijst niet dat zoeken/filteren is bijgewerkt. Geen indexverversing of live filtertest geclaimd.
 
 ## Extractieproef en tests
 
 - Bestaande tien proefartikelen 20.3755, 20.3756, 32.3411, 32.3594, 32.2510, 32.3670, 38.4125, 41.3540, 24.3710 en 29.8007 alle gevonden en uit echte fabrikant-HTML geëxtraheerd.
 - Exacte paginatype/SKU-controle, specificaties, afbeeldingen en aanwezige documenten gelezen; nul extractiefouten in deze proef. Dit is geen inhoudelijke goedkeuring van alle feiten: 32.3594 heeft bijvoorbeeld slechts drie tabelvelden.
-- Negen uitvoerbare regressietests geslaagd: SKU-mismatch, behoud leading zeroes/punctuatie, EAN uitsluiten uit doelspecificaties, leeg versus Nee, breadcrumbvolgorde, afbeeldingen versus tekeningen, prijsconflict, bronhost/HTTPS en onvolledige winkelinventaris.
+- **28 uitvoerbare regressietests geslaagd:** 13 bron-/prijs-/identiteitstests en 15 doelmappingtests. Inclusief SKU-mismatch, behoud leading zeroes/punctuatie, EAN uitsluiten, leeg versus Nee, breadcrumbs, mediaklassen, bronhost, onvolledige inventaris, daadwerkelijke btw-component versus generieke tax-helper, geen dubbele btw, nulprijsblokkade, onderdelen/sets, hoofdproduct versus meegeleverd product, expliciete eenheden, conflicterende filteraliassen en behoud van huidige waarden.
 - Bekende UTF-8/euro-extractiefout in de eerste synthetische proef gecorrigeerd; tests daarna geslaagd. Actuele parserversie `2026-10-19.2`.
 
 ## Uitvoering en opslag

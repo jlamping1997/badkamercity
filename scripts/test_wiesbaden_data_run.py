@@ -89,6 +89,29 @@ class SourceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Incomplete Shopify snapshot"):
                 m.build(root)
 
+    def test_generic_tax_functions_do_not_prove_selected_price_mode(self):
+        mode, evidence = m.price_tax_basis("const finalPriceExclTaxKey='basePrice';", "209.00")
+        self.assertEqual(mode, "NOT_VERIFIED")
+        self.assertIsNone(evidence)
+
+    def test_selected_price_component_and_amount_must_match(self):
+        config = ('regularPriceKey: regularPriceExclTaxKey, finalPriceKey: finalPriceExclTaxKey, '
+                  'activeProductsPriceData: false, initialFinalPrice: 209, calculatedFinalPrice: false')
+        self.assertTrue(m.price_tax_basis(config, "209.00")[0].startswith("EXCL_TAX"))
+        self.assertEqual(m.price_tax_basis(config, "252.89")[0], "NOT_VERIFIED")
+
+    def test_tax_comparison_does_not_treat_exclusive_price_as_discount(self):
+        record = {"advice_price_displayed_eur":"209.00", "price_tax_status":"EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"}
+        proposal = m.price_proposal(record, "252.89", True)
+        self.assertEqual(proposal["status"], "MATCHES_CURRENT_STORE_PRICE")
+        self.assertEqual(proposal["proposed_advice_incl_eur"], "252.89")
+        record["advice_price_displayed_eur"] = "0.00"
+        self.assertIsNone(m.price_proposal(record, None, True)["proposed_advice_incl_eur"])
+
+    def test_inclusive_price_is_not_taxed_twice(self):
+        record = {"advice_price_displayed_eur":"252.89", "price_tax_status":"INCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"}
+        self.assertEqual(m.price_proposal(record, "252.89", True)["status"], "MATCHES_CURRENT_STORE_PRICE")
+
 
 if __name__ == "__main__":
     unittest.main()

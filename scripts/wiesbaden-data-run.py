@@ -19,7 +19,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urljoin, urlparse
@@ -201,6 +201,23 @@ def image_records(raw):
     return result
 
 
+def price_tax_basis(raw_text, displayed_price):
+    # Inspect selected keys in the main product-price configuration, not the
+    # presence of generic tax helper functions elsewhere in HTML.
+    config = re.search(r"regularPriceKey:\s*(\w+)\s*,\s*finalPriceKey:\s*(\w+)\s*,\s*"
+                       r"activeProductsPriceData:\s*false\s*,\s*initialFinalPrice:\s*([\d.]+)", raw_text)
+    if not config or displayed_price is None or Decimal(config[3]) != Decimal(displayed_price):
+        return "NOT_VERIFIED", None
+    pair = (config[1], config[2])
+    if pair == ("regularPriceExclTaxKey", "finalPriceExclTaxKey"):
+        mode = "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    elif pair == ("regularPriceInclTaxKey", "finalPriceInclTaxKey"):
+        mode = "INCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    else:
+        return "NOT_VERIFIED", None
+    return mode, {"regular_price_key": config[1], "final_price_key": config[2], "initial_price": config[3]}
+
+
 def parse_page(raw, api, provenance):
     raw_text = raw.decode("utf-8", errors="replace") if isinstance(raw, bytes) else raw
     doc = html.fromstring(raw_text)
@@ -235,6 +252,7 @@ def parse_page(raw, api, provenance):
     prices = re.findall(r"Adviesprijs\s*:?\s*€\s*([\d.,]+)", main_text)
     price = prices[0].replace(".", "").replace(",", ".") if prices else None
     api_price = str(api["price_range"]["minimum_price"]["regular_price"]["value"])
+    tax_status, tax_evidence = price_tax_basis(raw_text, price)
     if price and Decimal(price) != Decimal(api_price):
         issues.append("HTML_API_ADVICE_PRICE_CONFLICT")
     if not images:
@@ -255,7 +273,7 @@ def parse_page(raw, api, provenance):
             "specifications": [s for s in specs if not re.search(r"\bean\b|barcode|gtin", s["label"], re.I)],
             "description_html_source": description_html, "description_text_source": description_text,
             "advice_price_displayed_eur": price, "advice_price_api_eur": api_price,
-            "price_tax_status": "NOT_EXPLICITLY_STATED_IN_PRODUCT_HTML",
+            "price_tax_status": tax_status, "price_tax_evidence": tax_evidence,
             "images": images, "documents": list({d["url"]: d for d in docs}.values()),
             "issues": issues, "editorial_status": "SOURCE_DATA_ONLY_NOT_REWRITTEN"}
 
@@ -276,6 +294,7 @@ def pages(root, workers=6, limit=0):
         raw, meta = source.fetch(source_url(api), "html")
         result = parse_page(raw, api, meta)
         write_json(product_path(root, api), result)
+        (Path(root)/"errors"/(key(api["uid"])[:24]+".json")).unlink(missing_ok=True)
         return result
     print(f"HTML product pages: {len(items)} total, {len(pending)} pending, {workers} workers", flush=True)
     start = time.monotonic()
@@ -310,6 +329,34 @@ def write_csv(path, rows, columns):
                              for k, v in row.items() if k in columns})
 
 
+def price_proposal(record, current_price, shop_taxes_included):
+    mode = record.get("price_tax_status", "NOT_VERIFIED")
+    raw = record.get("advice_price_displayed_eur")
+    proposal = {"manufacturer_displayed_eur": raw, "manufacturer_tax_basis": mode,
+        "price_component_evidence": record.get("price_tax_evidence"),
+        "shop_prices_include_tax": shop_taxes_included,
+        "tax_multiplier_if_excl": "1.21", "multiplier_basis": "OBSERVED_EXISTING_STORE_CONVENTION",
+        "current_price_eur": current_price, "proposed_advice_incl_eur": None,
+        "status": "PRICE_BASIS_REVIEW_NOT_APPLIED"}
+    if raw is None or Decimal(raw) <= 0:
+        proposal["status"] = "ZERO_OR_MISSING_SOURCE_PRICE_REVIEW"
+        return proposal
+    if not shop_taxes_included:
+        return proposal
+    if mode == "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT":
+        price = Decimal(raw)*Decimal("1.21")
+    elif mode == "INCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT":
+        price = Decimal(raw)
+    else:
+        return proposal
+    price = price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    proposal["proposed_advice_incl_eur"] = str(price)
+    proposal["status"] = ("MATCHES_CURRENT_STORE_PRICE" if current_price is not None and Decimal(current_price) == price
+                           else "EXISTING_PRICE_DIFFERENCE_REVIEW" if current_price is not None
+                           else "NEW_PRODUCT_PRICE_PROPOSAL_REVIEW")
+    return proposal
+
+
 def build(root):
     root = Path(root)
     manifest = load_json(root / "shopify/snapshot-manifest.json")
@@ -330,7 +377,12 @@ def build(root):
     for p in api:
         source_by_sku[sku_key(p["sku"])].append(p)
     records_by_uid = {r["source_uid"]: r for r in source_records}
-    rows, price_rows = [], []
+    notes_path = root/"review-notes.json"
+    review_notes = load_json(notes_path) if notes_path.exists() else {}
+    price_basis_path = root/"shopify/price-basis.json"
+    price_basis = load_json(price_basis_path) if price_basis_path.exists() else {}
+    taxes_included = price_basis.get("shop", {}).get("taxesIncluded") is True
+    rows, price_rows, price_proposals = [], [], []
     for p in api:
         s = sku_key(p["sku"])
         existing, global_matches = current_by_sku[s], all_by_sku[s]
@@ -344,11 +396,34 @@ def build(root):
         else:
             state = "NEW_CANDIDATE"
         issues = list(record["issues"]) if record else ["PRODUCT_PAGE_NOT_COLLECTED"]
+        issues.extend(review_notes.get(p["sku"], {}).get("issues", []))
         if record and record.get("source_brand") and record["source_brand"].casefold() != "wiesbaden":
             issues.append("SOURCE_BRAND_REVIEW")
+        if not p["categories"]:
+            issues.append("SOURCE_CATEGORY_MISSING")
+        if Decimal(str(p["price_range"]["minimum_price"]["regular_price"]["value"])) <= 0:
+            issues.append("ZERO_OR_NEGATIVE_SOURCE_PRICE_REVIEW")
+        if "bestaande uit" in p["name"].casefold():
+            issues.append("SET_COMPONENTS_REQUIRE_REVIEW")
+        if record:
+            non_identity = [s for s in record["specifications"]
+                            if slug(s["label"]) not in ("sku", "merk", "serie") and s["value"]]
+            if len(non_identity) < 3:
+                issues.append("SPARSE_SPECIFICATIONS_REVIEW")
+            if not record.get("description_text_source"):
+                issues.append("SOURCE_DESCRIPTION_MISSING")
+            if not any(i["kind"] == "image" for i in record["images"]):
+                issues.append("NO_PRODUCT_PHOTO_FOUND")
         row = {"sku": p["sku"], "name": p["name"], "comparison_status": state,
+               "source_brand": record.get("source_brand") if record else None,
                "source_url": source_url(p), "source_categories": [c["url_path"] for c in p["categories"]],
                "product_id": existing[0][0]["id"] if len(existing) == 1 else None,
+               "variant_id": existing[0][1]["id"] if len(existing) == 1 else None,
+               "current_title": existing[0][0]["title"] if len(existing) == 1 else None,
+               "current_vendor": existing[0][0]["vendor"] if len(existing) == 1 else None,
+               "current_price_eur": existing[0][1]["price"] if len(existing) == 1 else None,
+               "current_status": existing[0][0]["status"] if len(existing) == 1 else None,
+               "current_online_store_url": existing[0][0]["onlineStoreUrl"] if len(existing) == 1 else None,
                "current_product_type": existing[0][0]["productType"] if len(existing) == 1 else None,
                "current_collections": [c["handle"] for c in existing[0][0]["collections"]["nodes"]] if len(existing) == 1 else [],
                "specification_count": len(record["specifications"]) if record else 0,
@@ -356,9 +431,14 @@ def build(root):
                "drawing_count": sum(x["kind"] == "line_drawings" for x in record["images"]) if record else 0,
                "document_count": len(record["documents"]) if record else 0,
                "source_advice_eur": record.get("advice_price_displayed_eur") if record else None,
+               "source_price_tax_basis": record.get("price_tax_status") if record else None,
+               "review_notes": review_notes.get(p["sku"], {}).get("notes", []),
                "issues": issues, "shopify_mutation_status": "NOT_APPLIED",
                "import_status": "NEEDS_TARGET_MAPPING_AND_CONTENT_REVIEW"}
         rows.append(row)
+        if record:
+            price_proposals.append({"sku": p["sku"], "name": p["name"],
+                "comparison_status": state, **price_proposal(record, row["current_price_eur"], taxes_included)})
         if len(existing) == 1 and record and record.get("advice_price_displayed_eur"):
             v = existing[0][1]
             try:
@@ -368,7 +448,7 @@ def build(root):
                         "manufacturer_advice_eur": str(source_price), "difference_eur": str(old-source_price),
                         "ratio": str(round(old/source_price, 6)) if source_price else None,
                         "near_121_percent": bool(source_price and abs(old-source_price*Decimal("1.21")) <= Decimal("0.02")),
-                        "status": "REVIEW_TAX_AND_SALES_POLICY_NO_AUTOMATIC_PRICE_CHANGE"})
+                        "status": "RAW_SOURCE_VS_STORE_COMPARISON_SEE_TAX_NORMALIZED_PRICE_PROPOSAL"})
             except InvalidOperation:
                 issues.append("INVALID_PRICE")
     missing = [{"sku": v.get("sku"), "product_id": p["id"], "name": p["title"],
@@ -377,14 +457,22 @@ def build(root):
     categories = {c["uid"]: c for p in api for c in p["categories"]}
     attribute_counts = Counter(s["label"] for r in source_records for s in r["specifications"])
     summary = {"schema_version": 1, "collector_version": VERSION, "built_at": now(),
+        "stage": "SOURCE_COLLECTION_COMPLETE" if len(source_records) == len(api) else "SOURCE_COLLECTION_IN_PROGRESS",
         "manufacturer_products": len(api), "source_pagination_complete": catalogue_snapshot["pagination_complete"],
         "product_pages_collected": len(source_records), "product_pages_missing": len(api)-len(source_records),
         "shopify_wiesbaden_products": len(current), "global_sku_index_variants": len(load_json(root/"shopify/all-store-skus.json")),
         "comparison_counts": dict(Counter(x["comparison_status"] for x in rows)),
+        "new_candidate_brands": dict(Counter(x["source_brand"] or "NOT_YET_COLLECTED" for x in rows if x["comparison_status"] == "NEW_CANDIDATE")),
         "existing_not_found_at_manufacturer": len(missing), "manufacturer_categories": len(categories),
         "specification_labels": len(attribute_counts), "total_specification_values": sum(attribute_counts.values()),
+        "source_brands": dict(Counter(r.get("source_brand") or "UNKNOWN" for r in source_records)),
+        "products_with_photos": sum(any(i["kind"] == "image" for i in r["images"]) for r in source_records),
+        "products_with_drawings": sum(any(i["kind"] == "line_drawings" for i in r["images"]) for r in source_records),
+        "products_with_documents": sum(bool(r["documents"]) for r in source_records),
         "price_differences": len(price_rows), "near_121_percent_price_differences": sum(x["near_121_percent"] for x in price_rows),
         "issues": dict(Counter(issue for r in rows for issue in r["issues"])),
+        "source_price_tax_modes": dict(Counter(r.get("price_tax_status", "NOT_VERIFIED") for r in source_records)),
+        "tax_normalized_price_status": dict(Counter(r["status"] for r in price_proposals)),
         "store_mutations": 0, "import_ready": False,
         "remaining": ["Review source/target category mapping and parts vs complete sets",
                       "Verify real Shopify field definitions and filter/index mapping",
@@ -396,13 +484,40 @@ def build(root):
     write_json(out/"comparison.json", rows)
     write_json(out/"manufacturer-categories.json", list(categories.values()))
     write_json(out/"specification-field-frequency.json", dict(attribute_counts.most_common()))
+    # Compact import-source table without the API's raw HTML or barcode row.
+    # Original descriptions and unmodified snapshots remain available separately.
+    with (out/"product-master.jsonl").open("w", encoding="utf-8") as stream:
+        for record in source_records:
+            row = next(r for r in rows if r["sku"] == record["manufacturer_number"])
+            master = {**row, "source_brand": record["source_brand"],
+                "source_uid": record["source_uid"], "source_evidence": record["source"],
+                "source_breadcrumb_paths": record["source_breadcrumb_paths"],
+                "specifications": record["specifications"], "images": record["images"],
+                "documents": record["documents"],
+                "price_tax_status": record["price_tax_status"],
+                "description_status": record["editorial_status"]}
+            stream.write(json.dumps(master, ensure_ascii=False)+"\n")
+    assets = []
+    for record in source_records:
+        for item in record["images"]:
+            assets.append({"sku": record["manufacturer_number"], "kind": item["kind"],
+                           "url": item["url"], "label": item["label"], "status": "LINK_COLLECTED_BINARY_NOT_DOWNLOADED"})
+        for item in record["documents"]:
+            assets.append({"sku": record["manufacturer_number"], "kind": "document",
+                           "url": item["url"], "label": item["label"], "status": "LINK_COLLECTED_BINARY_NOT_DOWNLOADED"})
+    write_csv(out/"asset-links.csv", assets, ["sku", "kind", "url", "label", "status"])
     cols = list(rows[0]) if rows else []
     write_csv(out/"all-products.csv", rows, cols)
     write_csv(out/"new-products.csv", [r for r in rows if r["comparison_status"] == "NEW_CANDIDATE"], cols)
+    write_csv(out/"new-wiesbaden-products.csv", [r for r in rows if r["comparison_status"] == "NEW_CANDIDATE" and r["source_brand"] == "Wiesbaden"], cols)
+    write_csv(out/"other-brands-review.csv", [r for r in rows if r["source_brand"] and r["source_brand"] != "Wiesbaden"], cols)
     write_csv(out/"existing-products.csv", [r for r in rows if r["comparison_status"] == "EXISTING_WIESBADEN"], cols)
+    write_csv(out/"source-quality-review.csv", [r for r in rows if r["issues"]], cols)
     write_csv(out/"existing-not-found.csv", missing, ["sku", "product_id", "name", "status"])
     write_csv(out/"price-differences.csv", price_rows, ["sku","name","current_price_eur","manufacturer_advice_eur","difference_eur","ratio","near_121_percent","status"])
     write_json(out/"price-differences.json", price_rows)
+    write_json(out/"price-import-proposal.json", price_proposals)
+    write_csv(out/"price-import-proposal.csv", price_proposals, list(price_proposals[0]) if price_proposals else [])
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
     return summary
 
