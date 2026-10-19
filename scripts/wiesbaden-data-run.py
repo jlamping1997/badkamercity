@@ -403,6 +403,8 @@ def build(root):
         issues.extend(review_notes.get(p["sku"], {}).get("issues", []))
         if record and record.get("source_brand") and record["source_brand"].casefold() != "wiesbaden":
             issues.append("SOURCE_BRAND_REVIEW")
+        if record and not record.get("source_brand"):
+            issues.append("SOURCE_BRAND_MISSING_REVIEW")
         if not p["categories"]:
             issues.append("SOURCE_CATEGORY_MISSING")
         if Decimal(str(p["price_range"]["minimum_price"]["regular_price"]["value"])) <= 0:
@@ -466,7 +468,7 @@ def build(root):
         "product_pages_collected": len(source_records), "product_pages_missing": len(api)-len(source_records),
         "shopify_wiesbaden_products": len(current), "global_sku_index_variants": len(load_json(root/"shopify/all-store-skus.json")),
         "comparison_counts": dict(Counter(x["comparison_status"] for x in rows)),
-        "new_candidate_brands": dict(Counter(x["source_brand"] or "NOT_YET_COLLECTED" for x in rows if x["comparison_status"] == "NEW_CANDIDATE")),
+        "new_candidate_brands": dict(Counter(x["source_brand"] or ("NOT_YET_COLLECTED" if "PRODUCT_PAGE_NOT_COLLECTED" in x["issues"] else "UNKNOWN_SOURCE_BRAND") for x in rows if x["comparison_status"] == "NEW_CANDIDATE")),
         "existing_not_found_at_manufacturer": len(missing), "manufacturer_categories": len(categories),
         "specification_labels": len(attribute_counts), "total_specification_values": sum(attribute_counts.values()),
         "source_brands": dict(Counter(r.get("source_brand") or "UNKNOWN" for r in source_records)),
@@ -480,7 +482,7 @@ def build(root):
         "store_mutations": 0, "import_ready": False,
         "remaining": ["Review source/target category mapping and parts vs complete sets",
                       "Verify real Shopify field definitions and filter/index mapping",
-                      "Verify VAT and sales-price policy against observed price differences",
+                      "Review new-product price proposals and resolve zero-source-price candidates",
                       "Write/review own product content and image alt text",
                       "Validate new-product media, exact brand and publication readiness"]}
     out = root/"output"
@@ -515,6 +517,7 @@ def build(root):
     write_csv(out/"new-products.csv", [r for r in rows if r["comparison_status"] == "NEW_CANDIDATE"], cols)
     write_csv(out/"new-wiesbaden-products.csv", [r for r in rows if r["comparison_status"] == "NEW_CANDIDATE" and r["source_brand"] == "Wiesbaden"], cols)
     write_csv(out/"other-brands-review.csv", [r for r in rows if r["source_brand"] and r["source_brand"] != "Wiesbaden"], cols)
+    write_csv(out/"unknown-brand-review.csv", [r for r in rows if not r["source_brand"]], cols)
     write_csv(out/"existing-products.csv", [r for r in rows if r["comparison_status"] == "EXISTING_WIESBADEN"], cols)
     write_csv(out/"source-quality-review.csv", [r for r in rows if r["issues"]], cols)
     write_csv(out/"existing-not-found.csv", missing, ["sku", "product_id", "name", "status"])
