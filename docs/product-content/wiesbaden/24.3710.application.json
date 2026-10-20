@@ -262,5 +262,42 @@
     "server_diagnostic_executed": false,
     "product_or_index_writes_this_follow_up": false,
     "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-unblock/"
+  },
+  "latest_acceptance_recheck": {
+    "time": "2026-10-20T16:14:08.535Z",
+    "sku": "24.3710",
+    "specifications": {
+      "rows": 8,
+      "theme": 195449651466,
+      "categoryLinks": 0,
+      "url": "https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+      "status": "BLOCKED"
+    },
+    "oneTapHole": {
+      "http": 200,
+      "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcr_f_aantal_kraangaten_min=1&bcr_f_aantal_kraangaten_max=1",
+      "found": 0,
+      "request": {
+        "collection": "opbouw-wastafelkranen",
+        "q": "*",
+        "page": 1,
+        "per_page": 24,
+        "sort": "relevance",
+        "filters": {
+          "f_serie": [
+            "304"
+          ]
+        },
+        "ranges": {
+          "f_aantal_kraangaten": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      },
+      "skuInResponse": false,
+      "productLinkVisible": false,
+      "status": "BLOCKED"
+    }
   }
 }
