@@ -1,5 +1,25 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden 24.3710 — gecontroleerde toepassing, 20 oktober 2026
+
+**PARTIALLY_APPLIED_BLOCKED.** Eigenaar heeft inhoud/uiterlijk en toepassing voor uitsluitend SKU **24.3710**, serie **304**, expliciet goedgekeurd. Uitvoerder Codex op Windows, bestaande branch `fix/product-cards-2026-10-14`, start `90637e4`, startworktree schoon. [Dossier](product-content/wiesbaden/24.3710.md) en [toepassingsbewijs](product-content/wiesbaden/24.3710.application.json). Geen nieuwe scrape of andere productmutaties.
+
+**Code-/bewijscheckpoint:** `ccf5439d0df388d86afca5efa34f477ebce02412`, gepusht op de bestaande werkbranch en remote-ref exact geverifieerd. Vijf documentatiebestanden; geen root-themacode. Centrale ingang op main krijgt uitsluitend dezelfde documentatie.
+
+**VERIFIED_ADMIN:** titel, korte titel, eigen omschrijving, SEO, twee altteksten, volledige 33-rijen-JSON en categoriepad toegepast en exact teruggelezen. Onbevestigde vijfjaarsgarantie voor dit product verwijderd. Drie gewenste collectielidmaatschappen al aanwezig en behouden; extra Wastafels conform voorstel behouden. Prijs/voorraad/URL/varianten/publicatiestatus/technische-documentmetafield exact gelijk. Geen EAN in nieuwe klanttekst. Concrete herstelpayloads en originele product-/media-/metafield-/publicatiebackups vóór schrijven opgeslagen, met hashes, besloten onder `docs/_codex_runs/BC-WIESBADEN-243710_20261020-apply/`.
+
+**VERIFIED_THEME / blokkade:** MAIN vóór/na **195449651466 — Verlanglijst preview 20 okt**. Elf verse relevante bestanden vóór/na byte-exact, inclusief verlanglijst. De connector verbiedt themabestanden naar MAIN schrijven; geen omweg gebruikt en geen ander thema gepubliceerd. Bestaande vierbestandspatch opnieuw tegen verse MAIN gecontroleerd, 14 Liquid-testgroepen PASS, alleen kandidaat. Live PDP toont daarom **8 bestaande bevestigde regels**, niet de volledige 33 en geen nieuwe drie categorielinks. De opgeslagen JSON alleen geldt niet als voltooide specificatieweergave.
+
+**Filters / blokkade:** manifest/index niet gewijzigd. Bestaande indexpakketten aangetroffen; SSH naar de bestaande VPS weigert authenticatie. Werkelijk hashcontract niet beschikbaar; gewone JSON-hashvarianten reproduceren bestaande digest niet. API én echte browser: serie304/RVS vindt dit product; één-kraangatbereik vindt **0**. De toepassing is daarom nadrukkelijk niet af.
+
+**Echte browsercontroles:** Edge 1440/390px, eigen tekst/altteksten zichtbaar, geen overloop of documentsectie; goedgekeurde maattekening blijft galerijmedia. Verlanglijst toevoegen/verwijderen PASS op beide breedtes. Korte titel zichtbaar op collectiekaart. Kranen/Wastafelkranen echte browser HTTP200; Opbouw wastafelkranen toont product met bestaande filters. Drie andere producten (Wiesbaden/JEE-O/Hotbath), beide breedtes: titel en specificaties gelijk aan nulmeting. Direct HTTP-probe gaf eenmalig429; browsercontrole geslaagd. Een response-race in test hersteld met exact requestcriterium. **NOT_TESTED/BLOCKED:** native volledige33-rijenrender, indexverversing, fysieke telefoon, checkout; geen winkelbrede acceptatieclaim.
+
+**Herstel:** besloten `rollback.json`, eerst actuele waarden teruglezen en alleen deze velden/media/metafields herstellen; geen voorraad/prijzen/publicaties terugzetten. Theme/index niet veranderd. Geen secrets, bronexports of herstelkopieën in publieke Git.
+
+**Exact één volgende handeling:** pas de bestaande gereviewde vierbestandspatch via Shopify Admin toe op de actuele MAIN na checksumcontrole, zonder een ander thema te publiceren. Deze scope is al door eigenaar goedgekeurd; de connectorbeperking vereist Admin-uitvoering.
+
+Onderstaande lokale review is historisch; bovenstaande toepassingstoestemming en gemeten gedeeltelijke stand zijn leidend.
+
 ## Wiesbaden 24.3710 — lokale voorbeeldproef, 20 oktober 2026
 
 **IN_REVIEW / IMPLEMENTED_TEST_ONLY.** Uitvoerder Codex op Windows; bestaande branch `fix/product-cards-2026-10-14`, startcheckpoint `435e0f4`. Expliciete scope: uitsluitend SKU **24.3710**, officiële serie **304**; Grant niet goedgekeurd. Bestaande datarun hergebruikt, geen scrape. Startworktree schoon. [Dossier](product-content/wiesbaden/24.3710.md), [lokaal HTML-voorbeeld](product-content/wiesbaden/24.3710.preview.html), [data](product-content/wiesbaden/24.3710.json), [lokale patch](patches/BC-wiesbaden-24.3710-review-2026-10-20.patch).
