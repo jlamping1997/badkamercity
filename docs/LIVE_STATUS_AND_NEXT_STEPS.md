@@ -6,6 +6,8 @@
 
 **Uitvoerder/checkpoint:** Codex op Windows, bestaande branch `fix/product-cards-2026-10-14`, schone start op `72617416d1cc4e55a8a85396dbcfb32b59b7dc0e`. [Uitvoerbaar stappenplan, herstel en bewijsgrenzen](product-content/wiesbaden/24.3710-filter-correction.md). Nieuwe scripts staan alleen op de actieve branch; main ontvangt uitsluitend documentatie.
 
+**Opgeslagen codecheckpoint:** `059cbea95cb2e2c73db5d7ddb9730dce124f3510`, gepusht en remote-ref exact geverifieerd. Zeven gereviewde bestanden; geen root-themabestanden. Script-SHA-256: `2fc3ee38f737267a59f7720e0599aacedb76616149792d6b8e67ac933a0568e4`. De twee PowerShell-blokken zijn met de Windows PowerShell-parser gevalideerd.
+
 **VERIFIED_ADMIN/API:** MAIN blijft **195449651466**, verlanglijstthema. Verse productread bevestigt vier handmatige collecties, inclusief **Wastafels** (`ruleSet: null`); de indexspiegeling daarvan blijft behouden. Bestaand schema en actueel openbaar profiel: `f_aantal_kraangaten` is optioneel `int32`; API gebruikt een bereik met min=max=1. Publieke health bevestigt de exacte index. Baseline exact SKU vindt1; één kraangat vindt0; twee kraangaten vindt0. Geen Shopify-/thema-/indexwrite in deze ronde.
 
 **IMPLEMENTED_TEST_ONLY:** gericht standaardbibliotheekscript met vaste index/document-ID, live schema-/API-voorcontrole, volledige private back-up vóór PATCH, alleen `f_aantal_kraangaten: 1`, volledig documentvergelijking, lokale én openbare inclusie-/uitsluitingscontrole, veilige rollback en conflictweigering. **17 offline tests PASS.** De onbekende Shopify-manifesthash is niet nodig voor deze directe typed-documentcorrectie; manifest/hash blijven ongewijzigd. Toekomstige volledige indexopbouw moet deze bevestigde waarde in de bron meenemen om terugval te voorkomen.
