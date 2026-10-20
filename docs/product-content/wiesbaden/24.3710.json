@@ -2,7 +2,7 @@
   "schema_version": 2,
   "brand": "Wiesbaden",
   "manufacturer_number": "24.3710",
-  "state": "LOCAL_REVIEW_NOT_APPLIED",
+  "state": "PARTIALLY_APPLIED_BLOCKED",
   "reviewed_date": "2026-10-20",
   "product_id": "gid://shopify/Product/10657256210698",
   "variant_id": "gid://shopify/ProductVariant/53859735175434",
@@ -1077,7 +1077,7 @@
         },
         "format": "verified-product-filters-v1"
       },
-      "status": "REVIEW_NOT_DEPLOYABLE_UNTIL_SERVER_CANONICALIZATION_VERIFIED",
+      "status": "BLOCKED_NOT_APPLIED: SSH authentication denied; actual manifest hash contract not verified",
       "keep_normalized_values": {
         "materiaal": "RVS",
         "kleurgroep": "RVS",
@@ -1126,26 +1126,28 @@
     }
   },
   "deployment": {
-    "performed": false,
-    "status": "LOCAL_REVIEW_ONLY",
-    "reviewer": "BadkamerCity-eigenaar",
+    "performed": true,
+    "complete": false,
+    "status": "PARTIALLY_APPLIED_BLOCKED",
+    "approved_by": "BadkamerCity-eigenaar",
+    "approved_scope": "Only SKU24.3710; content and minimal current-theme changes; no other theme publication",
     "main_observed": "195449651466",
-    "product_updated_at": "2026-10-12T15:49:11Z",
+    "product_updated_at": "2026-10-20T14:58:30Z",
     "prohibited_changes": [
       "price",
       "inventory",
       "handle",
       "status",
       "publications",
-      "live_theme"
+      "other_products",
+      "theme_publication"
     ],
-    "required_before_write": [
-      "Concrete product- en themamutaties laten goedkeuren",
-      "Nieuwe MAIN en productversie lezen; afgesproken velden besloten back-uppen",
-      "Exacte patch op bewezen identiek UNPUBLISHED concept testen",
-      "Native Shopify-render, mobiel en filterindex na goedgekeurde een-SKU-write controleren"
+    "verification_report": "24.3710.application.json",
+    "blocked": [
+      "full_specification_rendering_and_category_links",
+      "filter_manifest_contract_and_single_product_index_refresh"
     ],
-    "rollback": "Lokaal: patch omkeren en voorstel niet toepassen. Later: uitsluitend goedgekeurde velden uit verse besloten backup herstellen en index opnieuw controleren."
+    "rollback": "Use private rollback.json and originals. Fresh-read before restoring only the changed product fields/media/metafields; CAS with current digest. Remove newly created metafields only if still equal to this run. No theme/index rollback needed: neither changed."
   },
   "missing_or_conflicting": [
     {
@@ -1259,6 +1261,7 @@
       1440,
       390
     ],
-    "external_filter_fallback": "Network abort in local browser restores 24 native cards and native controls"
+    "external_filter_fallback": "Network abort in local browser restores 24 native cards and native controls",
+    "application_report": "24.3710.application.json"
   }
 }
