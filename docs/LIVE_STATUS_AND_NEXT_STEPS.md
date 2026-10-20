@@ -1,5 +1,13 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Productpagina — breadcrumbs bovenaan en bijlagen klaar in concept, 20 oktober 2026
+
+**IMPLEMENTED_PREVIEW / eigenaar beoordeelt en publiceert.** Het bestaande concept **195488317706 — BadkamerCity - Productpagina smal desktop** is aangevuld voor Wiesbaden **24.3710**. Eén breadcrumb staat boven de titel; de oude categorieparagraaf is uit de 33 specificaties verwijderd. Een Bijlagen-link opent de lijntekening en handleiding in dezelfde rijvormgeving als de actuele Sunshower-pagina. De nieuwste eigenaarinstructie staat beschikbare tekeningen/PDF’s toe en vervangt de eerdere keuze om documenten te verbergen. De eerdere correctie voor 750–989 px blijft behouden; geen uitrol naar het assortiment.
+
+**Bewezen:** [verslag](PDP_BREADCRUMB_DOCUMENTS_2026-10-20.md) en [verificatie/backup](pdp-breadcrumb-documents-2026-10-20-verification.json). Concept: 509 → 511 bestanden, vijf bestaande gewijzigd, twee snippets nieuw, overige 504 gelijk. MAIN **195486253322** blijft 508/508 exact gelijk. Alleen de bestaande `custom.technische_documenten` voor 24.3710 is van één naar twee geverifieerde URL’s aangevuld, met compareDigest, readback en nul userErrors. Theme Check: zeven bestanden zonder errors, drie niet-blokkerende bevindingen in main-product. Negen conditionele renders PASS. Normale browser bij 1363 px: breadcrumb vóór H1, 33 rijen, twee bijlagen, werkende anchor, geen overloop. Nieuwe mobiele/smalle visuele test **NOT_TESTED**: de data-URL-proef is door het browserprotocolbeleid geblokkeerd; geen omweg geprobeerd. Eerdere narrow-desktopmetingen blijven afzonderlijk gedateerd. [Bovenaanzicht](design/pdp-breadcrumb-top-20261020.jpg), [bijlagen](design/pdp-bijlagen-20261020.jpg).
+
+**Volgende handeling:** eigenaar opent **Onlinewinkel → Thema’s → BadkamerCity - Productpagina smal desktop → Voorbeeld**, bekijkt 24.3710 en publiceert indien akkoord. De connector kan niet publiceren. Vóór publicatie de actuele MAIN vergelijken; daarna live verifiëren. De onderstaande eerdere narrow-desktopstatus is door deze uitbreiding aangevuld.
+
 ## Productpagina — halve desktopbreedte hersteld in concept, 20 oktober 2026
 
 **IMPLEMENTED_PREVIEW / eigenaar publiceert.** Screenshot van eigenaar toont rond950px een schermbrede foto en een maximaal600px breed koopblok eronder. Verse kopie van MAIN **195486253322** naar **195488317706 — BadkamerCity - Productpagina smal desktop**: vóór508/508 exact. Gerichte CSS alleen750–989px geeft passende kolommen45/55%, krimpbare griditems en koopblokbreedte100%. <750px en≥990px behouden de bestaande regels. Inhoud/33specificaties/verlanglijst behouden.
