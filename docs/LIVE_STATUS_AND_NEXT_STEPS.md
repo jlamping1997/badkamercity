@@ -2,6 +2,8 @@
 
 ## Wiesbaden 24.3710 — blokkades exact vastgesteld, 20 oktober 2026
 
+**Hercontrole 20 oktober, 18:14 CEST:** de herhaalde opdracht is zonder import opgepakt. Verse connector-/scoperead bevestigt dezelfde MAIN-writeblokkade en aanwezige read_themes/write_themes. MAIN blijft195449651466. Beide open criteria opnieuw daadwerkelijk in de browser gecontroleerd:8/33 specificaties; HTTP200 maar0 resultaten bij één kraangat. Geen nieuwe geauthenticeerde VPS-toegang of uitgevoerde Admin-stap ontvangen; bestaande code-/hashdiagnose en uitvoerinstructie blijven leidend. Geen productie-mutaties. Bewijs in besloten recheck-run; bestaande volgende handeling ongewijzigd.
+
 **BLOCKED op beide eindcontroles; diagnose afgerond.** Bestaande toestemming blijft geldig. Alleen SKU24.3710; geen productimport, Shopify-write, indexwrite of themapublicatie in deze vervolgronde. Codex/Windows, branch `fix/product-cards-2026-10-14`, start `fa13872`, schone start. [Exacte instructies voor eigenaar](product-content/wiesbaden/24.3710.unblock.md), [bewijs](product-content/wiesbaden/24.3710.application.json).
 
 **Code-/bewijscheckpoint:** `a8ff8828ec1645bd70582333ffdce94f48324bd8`, gepusht en remote-ref exact geverifieerd. Negen bestanden: zeven documentatie-/reviewbestanden en twee lokale diagnose-/testscripts. Alleen de zeven docs worden naar main gesynchroniseerd; scripts staan op de actieve branch.
