@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden — proefgroep gepubliceerd; ontwerp voor bulkverwerking vastgelegd, 20 oktober 2026
+
+**VERIFIED_ADMIN_PUBLICATION / BULK_DESIGN_READY — ChatGPT, branch `fix/product-cards-2026-10-14`.** Eigenaar zegt dat het er goed uitziet en vraagt om schaalbare verwerking met sterke inhoud/SEO, complete specificaties/filters en gedeelde breadcrumbs. Verse Shopify-read bevestigt **195491168522 — BadkamerCity - Wiesbaden proefgroep 2 als MAIN**,512/512 bestandschecksums exact gelijk aan het eerder geteste concept. Voorganger195488317706 is nu UNPUBLISHED. De eerdere “concept nog publiceren”-instructies hieronder zijn daarmee ingehaald. Geen nieuwe fysieke telefoontest door de agent; de eigenaar geeft algemene UI-goedkeuring.
+
+[Bulkontwerp en acceptatie](product-content/WIESBADEN_BULK_WORKFLOW_2026-10-20.md) en [verificatie van publicatie/ontwerpscope](product-content/wiesbaden/bulk-design-20261020.json). Hergebruik broncache, bestaande collector/mapping, getypeerde feiten en de nu live gedeelde snippets. category_handles zijn productgegevens, geen productgebonden Liquid. Eén centrale type-/categoriemapping moet specs, eigen inhoud, echte collectieleden, breadcrumbpad/structureddata en filters/index voeden. Alleen noodzakelijke algemene code toevoegen; geen code perSKU of nieuwPIM/app voor deze uitrol.
+
+**Bulkverwerker is nog NIET geïmplementeerd.** Ontwerp: alle artikelen krijgen vaste feiten-/identiteits-/claim-/categoriecontroles en na writes onafhankelijke Admin/HTML/indexverificatie. Eerste50kranen volledig inhoudelijk nalopen; daarna in principe250per cohort met risicogestuurde steekproef en alle uitzonderingen apart. Een AI-score bewijst geen juistheid. Ontbrekende essentiële maat/compatibiliteits/setfeiten blokkeren; optionele ontbrekende bijlagen worden niet verzonnen. Bronrun19oktober:2.240 exact gekoppelde bestaande Wiesbaden-artikelen,25 zonder bronmatch,217 nieuwe Wiesbaden-kandidaten apart. Geen nieuwe inventarisatie van alle2kproducten geclaimd.
+
+**Openstaande indexroute blijft een voorwaarde vóór bulktoepassing.** Themapublicatie bewijst geen VPS-sync. Vorige zeven-title-only script is voorbereid; actuele serveruitvoering deze ronde niet vastgesteld. Twee kernconflicten29.8007/41.3540 en historische onbevestigde FSC-filterwaarde blijven open. Deze ronde wijzigt geen producten/prijzen/voorraad/media/collecties/themabestanden/index; alleen docs.
+
+**Exact één volgende implementatiestap:** bouw op de bestaande voorstelverwerker een alleen-lezen bulkproef voor50kranen met typeprofiel, feitenherkomst, content-/claimcontrole, categorie-/filtervoorstellen en gereed/reviewrapport. Geen2k-livewrites of nieuwe productaanmaak op basis van alleen dit ontwerp. Bewijs de volledige externe indexroute vóór de eerste echte nieuwe bulktoepassing.
+
 ## Wiesbaden proefgroep 2 — zeven producten toegepast, concept klaar; zoekindex nog synchroniseren, 20 oktober 2026
 
 **APPLIED_ADMIN_VERIFIED / PREVIEW_READY / SEARCH_SYNC_BLOCKED — ChatGPT, branch `fix/product-cards-2026-10-14`.** Eigenaar keurt proefkraan **24.3710** op mobiel goed en geeft opdracht door te gaan. Dat is USER_APPROVED_UI voor die referentie. Geen claim dat de nieuwe zeven producten al mobiel door de eigenaar zijn beoordeeld.
