@@ -4,6 +4,8 @@
 
 **IN_REVIEW / IMPLEMENTED_TEST_ONLY.** Uitvoerder Codex op Windows; bestaande branch `fix/product-cards-2026-10-14`, startcheckpoint `435e0f4`. Expliciete scope: uitsluitend SKU **24.3710**, officiële serie **304**; Grant niet goedgekeurd. Bestaande datarun hergebruikt, geen scrape. Startworktree schoon. [Dossier](product-content/wiesbaden/24.3710.md), [lokaal HTML-voorbeeld](product-content/wiesbaden/24.3710.preview.html), [data](product-content/wiesbaden/24.3710.json), [lokale patch](patches/BC-wiesbaden-24.3710-review-2026-10-20.patch).
 
+**Codecheckpoint:** `56c70a801a0141bea5ce922a652a2eeb47c3eb3c`, op bestaande werkbranch gepusht en remote-ref geverifieerd. Alleen reviewdocumenten, productiepatch en testscript; geen root-themefiles. Deze opslag keurt geen Shopify-/indexmutatie goed.
+
 **VERIFIED_ADMIN/THEME:** verse MAIN **195449651466 — BadkamerCity - Verlanglijst preview 20 okt**; de hieronder genoemde `195392143626` is nu UNPUBLISHED. Product `10657256210698`, default producttemplate, updatedAt `2026-10-12T15:49:11Z`. 27 relevante themebestanden read-only opgehaald en byte-exact aan Shopify-MD5 getoetst. Oudere lokale root-themebestanden niet overschreven.
 
 **Voorstel:** eigen tekst, korte titel, SEO/beeldteksten, **33 bevestigde specificaties**, categorie Kranen > Wastafelkranen > Opbouw wastafelkranen en zichtbare onzekerheden. De drie collectielidmaatschappen bestaan al; extra Wastafels blijft voor review behouden. De live PDP toont negen specificaties. De lokale patch rendert het bestaande complete-specificatiesformaat uitsluitend voor deze SKU en voegt categorie-links toe; andere producten behouden hun route.
