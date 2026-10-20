@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden proefgroep 2 — uitvoering gestart na mobiele goedkeuring, 20 oktober 2026
+
+**IN_PROGRESS — ChatGPT, branch `fix/product-cards-2026-10-14`.** Eigenaar keurt de gepubliceerde proefkraan24.3710 op mobiel goed en geeft opdracht door te gaan. Die mobiele beoordeling is USER_APPROVED_UI; geen nieuwe agenttest van een fysieke telefoon. Verse MAIN **195488317706**; nieuw concept **195491168522 — BadkamerCity - Wiesbaden proefgroep 2**, vóór wijzigingen511/511 exact gelijk. Geen MAIN-write of publicatie door de agent.
+
+Bestaande bronrun en verse Shopify-gegevens van de negen volgende pilots zijn gelezen. Alle negen huidige prijzen passen exact bij de bronadviesprijs ×1,21; prijzen blijven staan.28 asset-URL’s opgehaald:17 unieke geldige JPG/PDF-bestanden. Een private herstelkopie van de negen oorspronkelijke Admin-records is duurzaam opgeslagen. Bestaande product- en variantidentiteit, collecties, voorraad en filtermanifesten blijven behouden.
+
+**Geselecteerd voor verrijking:**20.3755,20.3756,32.3411,32.3594,32.2510,32.3670,38.4125. Voorbereid: eigen teksten, titels/SEO, gegroepeerde specificaties, categoriepad en geverifieerde documentlinks. Onderkast: nominale60cmmaat versus werkelijke590×450×580mm kast onderscheiden; bron van oude46cmdiepte vervalt. Algemene garantie/FSC-claim/oud energielabel niet blind overnemen. Fonteinset: exacte maten ontbreken nog in de leverancierdata; setinhoud en ontbrekende aansluitslang zijn wel bevestigd.
+
+**Apart voor bronbevestiging, geen productmutatie:**29.8007 heeft verkeerde kleur/type in de fabrikantentabel en twee tegenstrijdige rozetmaten;41.3540 heeft elektrische specificaties bij een CV-radiator en tegenstrijdige vermogensopgaven. Geen daarvan gokken of automatisch overrulen.
+
+Bestaande metafielddefinities worden hergebruikt; één nieuwe merchant-owned JSON-definitie `bc_data.content_review` maakt alleen expliciet gecontroleerde producten beschikbaar voor de gedeelde weergave. Definitie435276939530 aangemaakt; nog geen productwaarden geschreven op dit checkpoint. **Volgende handeling:** rendering en Theme Check afronden, daarna alleen de zeven voorbereide producten toepassen met conflictcontrole/readback en het concept controleren. De negen andere pilots of het volledige merk niet als afgerond claimen.
+
 ## Productpagina — door eigenaar gepubliceerd, mobiele beoordeling volgt, 20 oktober 2026
 
 **VERIFIED_ADMIN + VERIFIED_LIVE_HTML.** Eigenaar meldt publicatie en ziet de kraan goed op desktop. Verse Shopify-read bevestigt **195488317706 — BadkamerCity - Productpagina smal desktop** als MAIN; voorganger 195486253322 is UNPUBLISHED. De openbare product-URL van **Wiesbaden 24.3710**, zonder previewparameter/cookie, geeft HTTP 200 en identificeert hetzelfde MAIN-ID. Gecontroleerd: één breadcrumb vóór H1, nul oude categorieparagrafen bij specificaties, 33 specificatieregels, één Bijlagen-blok met de lijntekening en handleiding, werkende interne anchor in de HTML en geen Liquid-fouten. Geen nieuwe Shopify-, product- of indexwrite in deze verificatieronde.
