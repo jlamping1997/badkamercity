@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden 24.3710 — 33 specificaties gereed in Shopify-concept, 20 oktober 2026
+
+**IMPLEMENTED_PREVIEW / wacht op eigenaarspublicatie.** Eigenaar vraagt de vier voorbereide bestanden zelf door de agent in Shopify te laten aanmaken. ChatGPT/Shopify-connectors hebben een verse kopie van MAIN **195449651466 — BadkamerCity - Verlanglijst preview 20 okt** gemaakt: **195486253322 — BadkamerCity - Wiesbaden 33 specs 20 okt**, rol UNPUBLISHED. Geen publicatie of MAIN-bestandswrite; de connector verbiedt beide handelingen. Dit concept bevat de bestaande verlanglijst en winkelwagen.
+
+**Bewezen:** vóór wijziging **507/507 bestanden checksum-identiek** aan MAIN. Na wijziging **508 bestanden**, uitsluitend drie bestaande bestanden gewijzigd en één nieuwe snippet, alle vier inhouden exact teruggelezen; overige **504 bestanden identiek**. MAIN blijft **507/507 ongewijzigd**. Vier bestanden Theme Check R2 SUCCESS. Native Shopify-HTML: pilot live8/concept33 specificatieregels, drie categorielinks en geen Liquid-/vertalingsfouten. Drie andere producten (Wiesbaden20.3755, Hotbath SPOM357, JEE-O500-1750) behouden exact hun titel en specificatieregels. Dit was een server-HTML-controle, **geen nieuwe visuele mobiel/desktopbrowsercontrole**; browserdownload mislukte. Geen productdata/prijzen/voorraad/URL/collecties gewijzigd.
+
+**Filtercorrectie afzonderlijk:** eigenaar leverde geschoonde VPS-uitvoer van 20 oktober16:37UTC: APPLIED_VERIFIED en VERIFIED, uitsluitend f_aantal_kraangaten=1, back-up op de VPS. Lokale én publieke API: baseline1, één kraangat1, twee kraangaten0. Dit is ontvangen uitvoer van de eigenaar, geen door deze connectorronde uitgevoerde SSH-run. Toekomstige indexopbouw moet de bevestigde waarde meenemen.
+
+**Volgende handeling:** eigenaar bekijkt [dit concept](https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710?preview_theme_id=195486253322) en zet het desgewenst via Shopify Admin live; de agent publiceert geen thema. Controleer vóór publicatie opnieuw dat MAIN niet ondertussen is gewijzigd. Daarna verse MAIN-read en productpagina-/filtercontrole. Wie de eerdere instructie “geen ander thema publiceren” wil behouden, laat dit concept ongepubliceerd en gebruikt de reeds voorbereide minimale Admin-patch op het bestaande MAIN. Zie [bewijs en beperkingen](product-content/wiesbaden/24.3710-shopify-preview-20261020.json).
+
+De oudere blokken hieronder zijn gedateerde voorgeschiedenis.
+
 ## Wiesbaden 24.3710 — gerichte filtercorrectie voorbereid, 20 oktober 2026
 
 **PREPARED / NOT_EXECUTED_ON_SERVER.** Actieve scope is uitsluitend de filterindex voor SKU **24.3710**. Eigenaar bevestigt dat interactieve SSH, sudo en indexuitlezing werken. De eerdere BatchMode-authenticatiefout is daarmee geen algemene toegangsblokkade meer; Codex heeft geen nieuwe serverwrite uitgevoerd. De genoemde geschoonde diagnose-JSON ontbrak in het bericht. Index en document zijn wel expliciet opgegeven: `bc_verified_full_20261013_874e415c15` / `10657256210698`.
