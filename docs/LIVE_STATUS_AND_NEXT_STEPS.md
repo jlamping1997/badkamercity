@@ -1,5 +1,13 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Productpagina — door eigenaar gepubliceerd, mobiele beoordeling volgt, 20 oktober 2026
+
+**VERIFIED_ADMIN + VERIFIED_LIVE_HTML.** Eigenaar meldt publicatie en ziet de kraan goed op desktop. Verse Shopify-read bevestigt **195488317706 — BadkamerCity - Productpagina smal desktop** als MAIN; voorganger 195486253322 is UNPUBLISHED. De openbare product-URL van **Wiesbaden 24.3710**, zonder previewparameter/cookie, geeft HTTP 200 en identificeert hetzelfde MAIN-ID. Gecontroleerd: één breadcrumb vóór H1, nul oude categorieparagrafen bij specificaties, 33 specificatieregels, één Bijlagen-blok met de lijntekening en handleiding, werkende interne anchor in de HTML en geen Liquid-fouten. Geen nieuwe Shopify-, product- of indexwrite in deze verificatieronde.
+
+**Scope blijft beperkt:** de volledige verrijking en het nieuwe breadcrumb-/bijlagenblok zijn voor proefproduct 24.3710 geïmplementeerd. De eerdere responsive CSS werkt op de gewone producttemplate, maar publicatie vult niet automatisch de overige Wiesbaden-productdata aan. Het volledige merk is nog niet op dit kwaliteitsniveau afgerond. Bestaande import-/filterdata voor andere artikelen wordt hiermee niet als opnieuw gevalideerd beschouwd.
+
+**Volgende handeling:** eigenaar zoekt op mobiel vanaf de homepage **24.3710** en beoordeelt breadcrumbs/navigatie, foto/koopblok zonder horizontale overloop, leesbare specificaties, beide bijlagen en hartje/winkelwagen; ook de vindbaarheid bij één kraangat en uitsluiting bij twee controleren. Mobiele visuele/actiecontrole blijft USER_REVIEW_PENDING; deze servercontrole vervangt die niet. Na goedkeuring representatieve andere Wiesbaden-producttypen verrijken en in gecontroleerde batches toepassen. De oudere conceptnotities hieronder zijn voorgeschiedenis; niet opnieuw publiceren op grond daarvan.
+
 ## Productpagina — breadcrumbs bovenaan en bijlagen klaar in concept, 20 oktober 2026
 
 **IMPLEMENTED_PREVIEW / eigenaar beoordeelt en publiceert.** Het bestaande concept **195488317706 — BadkamerCity - Productpagina smal desktop** is aangevuld voor Wiesbaden **24.3710**. Eén breadcrumb staat boven de titel; de oude categorieparagraaf is uit de 33 specificaties verwijderd. Een Bijlagen-link opent de lijntekening en handleiding in dezelfde rijvormgeving als de actuele Sunshower-pagina. De nieuwste eigenaarinstructie staat beschikbare tekeningen/PDF’s toe en vervangt de eerdere keuze om documenten te verbergen. De eerdere correctie voor 750–989 px blijft behouden; geen uitrol naar het assortiment.
