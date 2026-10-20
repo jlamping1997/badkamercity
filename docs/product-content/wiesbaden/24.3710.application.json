@@ -177,8 +177,8 @@
     },
     {
       "component": "Filter index",
-      "reason": "Existing VPS workflow found in local index packages, but SSH authentication denied. No usable SSH identity or relevant connected plugin found. Existing values_sha256 could not be reproduced from ordinary JSON canonicalizations; actual importer/hash contract not available.",
-      "consequence": "No manifest, typed filter field or index writes. Existing series/material/mount filters find SKU; one-tap-hole range finds zero, including actual browser request."
+      "reason": "Owner now confirms interactive SSH, sudo and index reads work. Targeted correction script is prepared and has 17 passing offline tests; server execution awaits the owner. The unknown Shopify manifest hash is not required for a direct single-document Typesense PATCH.",
+      "consequence": "No index write performed by Codex. Fresh public API baseline finds target; one-hole range still finds zero. Both post-correction inclusion and incompatible-selection exclusion remain unverified until the prepared script runs. See 24.3710-filter-correction.md."
     }
   ],
   "test_limitations": [
@@ -193,7 +193,7 @@
   "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-apply/",
   "backup_manifest_sha256": "f4d453da9b6852b73a83df869193a0133306915481aecd3d487212e2658e6914",
   "rollback": "Use private rollback.json and originals. Fresh-read before restoring only the changed product fields/media/metafields; CAS with current digest. Remove newly created metafields only if still equal to this run. No theme/index rollback needed: neither changed.",
-  "next_action": "Apply only the four reviewed files to current MAIN through Shopify Admin after rechecking original checksums; do not publish another theme. Application permission already granted.",
+  "next_action": "Owner runs the PowerShell transfer/inspect/apply/verify block in 24.3710-filter-correction.md and shares sanitized result JSON. Current scope is only the index correction for SKU 24.3710. Theme rendering remains a separate parked item; no product import.",
   "follow_up_diagnosis": {
     "date": "2026-10-20",
     "instructions": "24.3710.unblock.md",
