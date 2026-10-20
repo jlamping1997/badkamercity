@@ -1,0 +1,26 @@
+{% doc %}
+  Routes product specifications to the matching data source.
+  @param {product} product - Current product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- assign specs_vendor = product.vendor | strip | downcase -%}
+{%- if product.metafields.bc_sunshower.specifications.value != blank -%}
+  {%- render 'bc-sunshower-panel', product: product, section_id: section_id, mode: 'specifications' -%}
+{%- else -%}
+  {%- capture bc_normal_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
+  {%- assign bc_normal_scope = bc_normal_scope | strip -%}
+  {%- if bc_normal_scope == 'ready' -%}
+    {%- render 'bc-hotbath-public-specs', product: product, section_id: section_id -%}
+  {%- elsif specs_vendor == 'wiesbaden' or specs_vendor == 'jee-o' -%}
+    {%- capture reviewed_specs -%}{%- render 'bc-wiesbaden-reviewed-specs', product: product, section_id: section_id -%}{%- endcapture -%}
+    {%- assign reviewed_specs = reviewed_specs | strip -%}
+    {%- if reviewed_specs != blank -%}
+      {{ reviewed_specs }}
+    {%- else -%}
+      {%- render 'bc-product-detail-specs-mapped', product: product, section_id: section_id -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- render 'bc-product-detail-specs-legacy', product: product, section_id: section_id -%}
+  {%- endif -%}
+{%- endif -%}
+

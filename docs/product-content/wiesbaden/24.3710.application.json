@@ -193,5 +193,74 @@
   "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-apply/",
   "backup_manifest_sha256": "f4d453da9b6852b73a83df869193a0133306915481aecd3d487212e2658e6914",
   "rollback": "Use private rollback.json and originals. Fresh-read before restoring only the changed product fields/media/metafields; CAS with current digest. Remove newly created metafields only if still equal to this run. No theme/index rollback needed: neither changed.",
-  "next_action": "Apply only the four reviewed files to current MAIN through Shopify Admin after rechecking original checksums; do not publish another theme. Application permission already granted."
+  "next_action": "Apply only the four reviewed files to current MAIN through Shopify Admin after rechecking original checksums; do not publish another theme. Application permission already granted.",
+  "follow_up_diagnosis": {
+    "date": "2026-10-20",
+    "instructions": "24.3710.unblock.md",
+    "acceptance": {
+      "time": "2026-10-20T15:45:38.881Z",
+      "sku": "24.3710",
+      "specifications": {
+        "rows": 8,
+        "theme": 195449651466,
+        "categoryLinks": 0,
+        "url": "https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+        "status": "BLOCKED"
+      },
+      "oneTapHole": {
+        "http": 200,
+        "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcr_f_aantal_kraangaten_min=1&bcr_f_aantal_kraangaten_max=1",
+        "found": 0,
+        "request": {
+          "collection": "opbouw-wastafelkranen",
+          "q": "*",
+          "page": 1,
+          "per_page": 24,
+          "sort": "relevance",
+          "filters": {
+            "f_serie": [
+              "304"
+            ]
+          },
+          "ranges": {
+            "f_aantal_kraangaten": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        },
+        "skuInResponse": false,
+        "productLinkVisible": false,
+        "status": "BLOCKED"
+      }
+    },
+    "shopify_scopes_verified": [
+      "read_themes",
+      "write_themes"
+    ],
+    "connector_policy_quote": "Theme file writes (themeFilesCopy, themeFilesUpsert) are allowed on unpublished themes only — writes that target the live/MAIN theme are blocked.",
+    "shopify_write_error": null,
+    "forbidden_mutation_attempted": false,
+    "project_approval": "Still valid for this product and minimal current-theme files; not a blocker",
+    "ssh_actual_error": "ubuntu@57.129.175.195: Permission denied (publickey,password).",
+    "ssh_exit_code": 255,
+    "ssh_failure_stage": "AUTHENTICATION",
+    "ssh_password_tested": false,
+    "ssh_batch_mode": true,
+    "ssh_agent_service": "Stopped",
+    "server_docker_sudo_permissions": "NOT_VERIFIED: no authenticated shell",
+    "local_archives_inspected": 33,
+    "local_sync_code": "Static 11050-document index import and read-only API; no one-SKU Shopify sync or values_sha256 calculation found",
+    "index_payload_sha256_verified": "874e415c150dd7a4750c6e1042a0f871a540e0a674b8b2380a68464369f368c9",
+    "manifest_sha256": "a3289b4d3f8d9c353e7b104572bb2f982a89f39ef72ca7324a70b29ae81b2c2e",
+    "ordinary_canonical_values_sha256": "a65a21230973f2e7dbba2cff488f9695919faed261572407bba091daf22f567c",
+    "serialization_variants_checked": 216,
+    "manifest_hash_contract": "NOT_VERIFIED; do not infer hash corruption or replace it",
+    "source_values_equal_current_manifest": true,
+    "fresh_theme_files_unchanged": 11,
+    "prepared": "Two byte-identical reviewed snippet files plus exact locale insertion instructions; read-only VPS diagnostic with five offline safety tests",
+    "server_diagnostic_executed": false,
+    "product_or_index_writes_this_follow_up": false,
+    "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-unblock/"
+  }
 }

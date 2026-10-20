@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden 24.3710 — blokkades exact vastgesteld, 20 oktober 2026
+
+**BLOCKED op beide eindcontroles; diagnose afgerond.** Bestaande toestemming blijft geldig. Alleen SKU24.3710; geen productimport, Shopify-write, indexwrite of themapublicatie in deze vervolgronde. Codex/Windows, branch `fix/product-cards-2026-10-14`, start `fa13872`, schone start. [Exacte instructies voor eigenaar](product-content/wiesbaden/24.3710.unblock.md), [bewijs](product-content/wiesbaden/24.3710.application.json).
+
+**Specificaties:** actuele Shopify-app heeft **read_themes én write_themes**. Concrete blokkade is connectorbeleid: “Theme file writes (themeFilesCopy, themeFilesUpsert) are allowed on unpublished themes only — writes that target the live/MAIN theme are blocked.” Geen Shopify-writefout en geen approval-rejection: verboden call niet geprobeerd. AGENTS verbiedt zonder aparte toestemming; die toestemming is gegeven. Geen omweg. MAIN195449651466 en elf bestanden opnieuw gelijk aan back-up. Laatste native browsercontrole: **8/33 rijen**, dus BLOCKED.
+
+**Filterindex:** bestaande log exact `ubuntu@57.129.175.195: Permission denied (publickey,password).`, exit255. Verbinding bereikte SSH-server; **authenticatie** geweigerd. `BatchMode=yes` vroeg geen wachtwoord; server-/sudo-/Dockerrechten niet getest. Lokale ssh-agent gestopt.33 relevante archieven onderzocht: vaste11050-productexport en zoek-API gevonden, geen actuele één-SKU-sync of manifest-hashfunctie. Exportpayloadhash klopt; andere hash dan `values_sha256`.216 gebruikelijke serialisaties geven geen match, geen bewijs van corrupte hash. Manifest/index behouden. Laatste echte browser met één-kraangatbereik: HTTP200, **0 resultaten**, SKU ontbreekt, dus BLOCKED.
+
+**Lokaal opgelost:** twee exacte eerder gereviewde snippets met bytevergelijking en minimale instructies voor beide locale-invoegingen klaargezet onder docs. Geen oude volledige locale of wishlist overschrijven. Read-only VPS-uitleesscript op actieve branch; vijf offline veiligheidsproeven PASS. Script nog **NOT_EXECUTED_ON_SERVER**. Eerdere33-rijen-Liquidtests en overige regressies hergebruikt; alleen twee open acceptatiepunten opnieuw live getoetst. Besloten bewijs in nieuwe unblock-run, oude backups/bundels intact.
+
+**Exact één volgende handeling:** eigenaar voert de concrete Shopify Admin-/VPS-stappen uit de gekoppelde uitvoerinstructie uit en meldt opgeslagen themabestanden plus geschoonde VPS-uitvoer; daarna beide eindcontroles en gerichte indexverversing vervolgen. Geen extra productgoedkeuring nodig; geen secrets delen.
+
+Onderstaande toepassing beschrijft de eerder uitgevoerde productwrites; de diagnose hierboven is actueel.
+
 ## Wiesbaden 24.3710 — gecontroleerde toepassing, 20 oktober 2026
 
 **PARTIALLY_APPLIED_BLOCKED.** Eigenaar heeft inhoud/uiterlijk en toepassing voor uitsluitend SKU **24.3710**, serie **304**, expliciet goedgekeurd. Uitvoerder Codex op Windows, bestaande branch `fix/product-cards-2026-10-14`, start `90637e4`, startworktree schoon. [Dossier](product-content/wiesbaden/24.3710.md) en [toepassingsbewijs](product-content/wiesbaden/24.3710.application.json). Geen nieuwe scrape of andere productmutaties.
