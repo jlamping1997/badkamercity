@@ -1,5 +1,15 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Productpagina — halve desktopbreedte hersteld in concept, 20 oktober 2026
+
+**IMPLEMENTED_PREVIEW / eigenaar publiceert.** Screenshot van eigenaar toont rond950px een schermbrede foto en een maximaal600px breed koopblok eronder. Verse kopie van MAIN **195486253322** naar **195488317706 — BadkamerCity - Productpagina smal desktop**: vóór508/508 exact. Gerichte CSS alleen750–989px geeft passende kolommen45/55%, krimpbare griditems en koopblokbreedte100%. <750px en≥990px behouden de bestaande regels. Inhoud/33specificaties/verlanglijst behouden.
+
+**Bewijs:** [verslag en beperkingen](PDP_RESPONSIVE_2026-10-20.md), [950px-beeld](design/pdp-responsive-950px-20261020.jpg). Actuele Shopify-markup met echte stylesheet in geïsoleerde browserframes getest op320/390/750/950/989/990px: geen paginaoverloop,33rijen. Op950px foto893→389,94px hoog, koopblok naast foto; telefoon en990px posities gelijk aan nulmeting. Scripts uit in die frames; normale interactieve pagina ook bij1363px gelezen, geen cart-/wishlistwrite en geen fysieke telefoontest. ThemeCheckSUCCESS.
+
+**Opruiming:** connector blokkeerde verwijderen van de eigen tijdelijke QA-template. Die inhoud is via toegestane niet-destructieve update vervangen door een gevalideerde noindex-doorverwijzing; geen testweergave blijft actief. Eindconcept509files: éénCSSwijziging/éénongebruikte neutrale template, overige507 gelijk. MAIN508/508 ongewijzigd; beide inhouden exact teruggelezen. Geen live-/productwrite.
+
+**Volgende handeling:** eigenaar bekijkt en publiceert desgewenst dit bestaande concept in Shopify. Vóór publicatie nogmaals actuele MAIN vergelijken. De agent publiceert niet; daarna live verificatie en Wiesbaden-proef hervatten. De gepubliceerde33-specificatiescope hieronder blijft geldig.
+
 ## Wiesbaden 24.3710 — door eigenaar gepubliceerd en live bevestigd, 20 oktober 2026
 
 **VERIFIED_LIVE_HTML / eigenaar bekijkt het product.** Eigenaar meldt publicatie van het voorbereide thema. Verse Shopify-read bevestigt **195486253322 — BadkamerCity - Wiesbaden 33 specs 20 okt** als MAIN. De openbare productpagina zonder previewparameter geeft HTTP200, gebruikt hetzelfde MAIN-ID, toont **33 specificatieregels**, de drie categorielinks Kranen → Wastafelkranen → Opbouw wastafelkranen en geen Liquid-fouten. Er is in deze controle geen thema-, product- of indexmutatie uitgevoerd. Dit bevestigt de serverweergave; geen nieuwe visuele mobiele browsercontrole geclaimd.
