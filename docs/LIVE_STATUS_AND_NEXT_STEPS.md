@@ -1,5 +1,21 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden 24.3710 — gerichte filtercorrectie voorbereid, 20 oktober 2026
+
+**PREPARED / NOT_EXECUTED_ON_SERVER.** Actieve scope is uitsluitend de filterindex voor SKU **24.3710**. Eigenaar bevestigt dat interactieve SSH, sudo en indexuitlezing werken. De eerdere BatchMode-authenticatiefout is daarmee geen algemene toegangsblokkade meer; Codex heeft geen nieuwe serverwrite uitgevoerd. De genoemde geschoonde diagnose-JSON ontbrak in het bericht. Index en document zijn wel expliciet opgegeven: `bc_verified_full_20261013_874e415c15` / `10657256210698`.
+
+**Uitvoerder/checkpoint:** Codex op Windows, bestaande branch `fix/product-cards-2026-10-14`, schone start op `72617416d1cc4e55a8a85396dbcfb32b59b7dc0e`. [Uitvoerbaar stappenplan, herstel en bewijsgrenzen](product-content/wiesbaden/24.3710-filter-correction.md). Nieuwe scripts staan alleen op de actieve branch; main ontvangt uitsluitend documentatie.
+
+**VERIFIED_ADMIN/API:** MAIN blijft **195449651466**, verlanglijstthema. Verse productread bevestigt vier handmatige collecties, inclusief **Wastafels** (`ruleSet: null`); de indexspiegeling daarvan blijft behouden. Bestaand schema en actueel openbaar profiel: `f_aantal_kraangaten` is optioneel `int32`; API gebruikt een bereik met min=max=1. Publieke health bevestigt de exacte index. Baseline exact SKU vindt1; één kraangat vindt0; twee kraangaten vindt0. Geen Shopify-/thema-/indexwrite in deze ronde.
+
+**IMPLEMENTED_TEST_ONLY:** gericht standaardbibliotheekscript met vaste index/document-ID, live schema-/API-voorcontrole, volledige private back-up vóór PATCH, alleen `f_aantal_kraangaten: 1`, volledig documentvergelijking, lokale én openbare inclusie-/uitsluitingscontrole, veilige rollback en conflictweigering. **17 offline tests PASS.** De onbekende Shopify-manifesthash is niet nodig voor deze directe typed-documentcorrectie; manifest/hash blijven ongewijzigd. Toekomstige volledige indexopbouw moet deze bevestigde waarde in de bron meenemen om terugval te voorkomen.
+
+**Eindcontroles:** vindbaar bij één kraangat **GEBLOKKEERD / uitvoering door eigenaar wacht**; uitsluiting bij twee kraangaten na correctie **GEBLOKKEERD / nog geen post-correctiebewijs**. Echte storefrontcontrole na correctie nog NOT_TESTED. De 33-specificatieweergave blijft het afzonderlijke eerdere open punt, buiten deze filteropdracht.
+
+**Exact één volgende handeling:** eigenaar voert het PowerShell-blok uit het gekoppelde stappenplan uit (`scp`, `inspect`, `apply`, `verify`) en deelt de geschoonde JSON-status/controles. Daarna daadwerkelijke storefrontverificatie en eindregistratie; geen herimport of andere producten.
+
+De onderstaande blokkade-/toepassingsnotities zijn gedateerde voorgeschiedenis. Bovenstaande scope en handeling zijn leidend.
+
 ## Wiesbaden 24.3710 — blokkades exact vastgesteld, 20 oktober 2026
 
 **Hercontrole 20 oktober, 18:14 CEST:** de herhaalde opdracht is zonder import opgepakt. Verse connector-/scoperead bevestigt dezelfde MAIN-writeblokkade en aanwezige read_themes/write_themes. MAIN blijft195449651466. Beide open criteria opnieuw daadwerkelijk in de browser gecontroleerd:8/33 specificaties; HTTP200 maar0 resultaten bij één kraangat. Geen nieuwe geauthenticeerde VPS-toegang of uitgevoerde Admin-stap ontvangen; bestaande code-/hashdiagnose en uitvoerinstructie blijven leidend. Geen productie-mutaties. Bewijs in besloten recheck-run; bestaande volgende handeling ongewijzigd.
