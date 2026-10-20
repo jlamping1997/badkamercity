@@ -8,7 +8,7 @@
 
 **Bewezen:** 13 lokale regressietests op de stand-alone Pythonverwerker met de frozen ZIP PASS; eerste run 50 nieuwe SKU-dossiers, tweede run 0 opnieuw en 50 hergebruikt. GitHub-commit plus readback van werkbranchcode bevestigd. **Niet bewezen:** separate run van committed code op Windows, verse volledige Admin/HTML-/mobiele controle en externe Typesense-index-write/readback. Geen prijs, voorraad, product, handle, media, publicatiestatus, collectie, theme of VPS gewijzigd. De bestaande proefgroep van acht producten blijft intact.
 
-**Eén volgende handeling:** beoordeel alle 50 outputvoorstellen inhoudelijk en herstel de 18 geblokkeerde gevallen per foutsoort. Plan pas daarna afgebakende livewrites als de externe VPS-indexroute inclusief herstel/readback getest is. [Volledig dossier](product-content/WIESBADEN_BULK_PILOT_2026-10-20.md) (op actieve branch, niet noodzakelijk al in main).
+**Eén volgende handeling:** beoordeel alle 50 outputvoorstellen inhoudelijk en herstel de 18 geblokkeerde gevallen per foutsoort. Plan pas daarna afgebakende livewrites als de externe VPS-indexroute inclusief herstel/readback getest is. [Volledig dossier](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/product-content/WIESBADEN_BULK_PILOT_2026-10-20.md) (op actieve branch).
 
 ## Wiesbaden — proefgroep gepubliceerd; ontwerp voor bulkverwerking vastgelegd, 20 oktober 2026
 
