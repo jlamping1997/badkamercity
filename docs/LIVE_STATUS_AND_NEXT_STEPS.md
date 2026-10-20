@@ -1,6 +1,20 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-**Bijgewerkt: 19 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
+## Wiesbaden 24.3710 — lokale voorbeeldproef, 20 oktober 2026
+
+**IN_REVIEW / IMPLEMENTED_TEST_ONLY.** Uitvoerder Codex op Windows; bestaande branch `fix/product-cards-2026-10-14`, startcheckpoint `435e0f4`. Expliciete scope: uitsluitend SKU **24.3710**, officiële serie **304**; Grant niet goedgekeurd. Bestaande datarun hergebruikt, geen scrape. Startworktree schoon. [Dossier](product-content/wiesbaden/24.3710.md), [lokaal HTML-voorbeeld](product-content/wiesbaden/24.3710.preview.html), [data](product-content/wiesbaden/24.3710.json), [lokale patch](patches/BC-wiesbaden-24.3710-review-2026-10-20.patch).
+
+**VERIFIED_ADMIN/THEME:** verse MAIN **195449651466 — BadkamerCity - Verlanglijst preview 20 okt**; de hieronder genoemde `195392143626` is nu UNPUBLISHED. Product `10657256210698`, default producttemplate, updatedAt `2026-10-12T15:49:11Z`. 27 relevante themebestanden read-only opgehaald en byte-exact aan Shopify-MD5 getoetst. Oudere lokale root-themebestanden niet overschreven.
+
+**Voorstel:** eigen tekst, korte titel, SEO/beeldteksten, **33 bevestigde specificaties**, categorie Kranen > Wastafelkranen > Opbouw wastafelkranen en zichtbare onzekerheden. De drie collectielidmaatschappen bestaan al; extra Wastafels blijft voor review behouden. De live PDP toont negen specificaties. De lokale patch rendert het bestaande complete-specificatiesformaat uitsluitend voor deze SKU en voegt categorie-links toe; andere producten behouden hun route.
+
+**Filters:** live API vindt dit product in drie profielen. Huidig contract is `bc_data.filter_manifest`; `bc_filters.*` alleen vullen ververst de externe index niet. Aantal kraangaten=1 is bevestigd maar ontbreekt in de index. Manifest-hashcontract en gerichte indexverversing blijven open. Coldstart staat in het manifest, maar ontbreekt als facet in de geteste profielen.
+
+**Eindtests:** bronbestandhash PASS; 14 Liquid-testgroepen PASS; Theme Check R3 vier SUCCESS, geen warnings. Patch forward/reverse byte- en bestandsset-exact. Lokale review 1440/390/320px: 33 rijen, beelden geladen, geen horizontale overloop. Echte collectie 1440/390px: serie 304 + RVS activeert filters en toont doelproduct. API passende selectie → 1, onjuiste serie → 0; bereik één kraangat → 0 bevestigt ontbrekend indexveld. Netwerkabort → 24 native kaarten en native controls. Drie metafielddefinities PUBLIC_READ vers bevestigd. [Bewijs](product-content/wiesbaden/24.3710.verification.json). **NOT_TESTED:** Shopify-write/read-after-write, native Shopify-render van kandidaatdata, indexverversing, fysieke telefoon en checkout. Geen producten, prijzen, voorraad, URL's, publicaties, thema's of VPS-index gewijzigd.
+
+**Exact één volgende handeling:** eigenaar beoordeelt het lokale voorbeeld van SKU 24.3710 vóór een afzonderlijk afgebakende Shopify-/indexproef. Geen toepassing of publicatie goedgekeurd. Terugzetten: lokale patch niet toepassen; latere Admin-/indexwrites vereisen verse besloten backup. Overige proefproducten blijven geparkeerd.
+
+**Bijgewerkt: 20 oktober 2026 (Europe/Amsterdam).** Dit is de centrale werkstatus. Begin iedere sessie bij de [versie op main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), ook als je code op een andere branch staat. Wijzig dit document verder; maak geen nieuw masterplan per chat.
 
 
 
