@@ -1,5 +1,15 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden — uitvoerbare 50-SKU bulkverwerker gebouwd en proef gedraaid, 20 oktober 2026
+
+**VERIFIED_GITHUB_CODE + LOCAL_OFFLINE_PILOT; GEEN NIEUWE LIVE WRITES.** Actieve branch fix/product-cards-2026-10-14 bevat nu scripts/wiesbaden-bulk-preview.py en scripts/test_wiesbaden_bulk_preview.py plus docs/product-content/WIESBADEN_BULK_PILOT_2026-10-20.md. Source is de reeds bestaande private Wiesbaden datarun ZIP van 19 oktober, zonder hercrawl; runner schrijft alleen lokale review-JSON/CSV.
+
+**Resultaat 50 bestaande Wiesbaden-SKU's verdeeld over negen kraan-/onderdeeltypen:** 31 inhoudelijke redactieconcepten (niet automatisch goedgekeurd), 18 door feiten/categorie/compatibiliteit geblokkeerd, 1 eerder goedgekeurde 24.3710 bewust beschermd. Gecontroleerde broncache bevat bij deze 50 736 getypeerde bronfeiten en 193 voorgestelde getypeerde filters. Hoofdblokkades zijn tien verkeerde/blokkerende hoofdcategorieën, acht onbewezen onderdeelmatches, drie breadcrumb-identiteitsissues en twee niet-bewezen sets; issues kunnen samen voorkomen. 29.8007 blijft geblokkeerd. Exacte resultaten, alle 50 dossiers, zoekbaar offline HTML-reviewoverzicht en CSV staan in een private, aan de eigenaar overdraagbare proefbundel; geen ruwe leveranciers-/Admincontent in publieke Git.
+
+**Bewezen:** 13 lokale regressietests op de stand-alone Pythonverwerker met de frozen ZIP PASS; eerste run 50 nieuwe SKU-dossiers, tweede run 0 opnieuw en 50 hergebruikt. GitHub-commit plus readback van werkbranchcode bevestigd. **Niet bewezen:** separate run van committed code op Windows, verse volledige Admin/HTML-/mobiele controle en externe Typesense-index-write/readback. Geen prijs, voorraad, product, handle, media, publicatiestatus, collectie, theme of VPS gewijzigd. De bestaande proefgroep van acht producten blijft intact.
+
+**Eén volgende handeling:** beoordeel alle 50 outputvoorstellen inhoudelijk en herstel de 18 geblokkeerde gevallen per foutsoort. Plan pas daarna afgebakende livewrites als de externe VPS-indexroute inclusief herstel/readback getest is. [Volledig dossier](product-content/WIESBADEN_BULK_PILOT_2026-10-20.md) (op actieve branch, niet noodzakelijk al in main).
+
 ## Wiesbaden — proefgroep gepubliceerd; ontwerp voor bulkverwerking vastgelegd, 20 oktober 2026
 
 **VERIFIED_ADMIN_PUBLICATION / BULK_DESIGN_READY — ChatGPT, branch `fix/product-cards-2026-10-14`.** Eigenaar zegt dat het er goed uitziet en vraagt om schaalbare verwerking met sterke inhoud/SEO, complete specificaties/filters en gedeelde breadcrumbs. Verse Shopify-read bevestigt **195491168522 — BadkamerCity - Wiesbaden proefgroep 2 als MAIN**,512/512 bestandschecksums exact gelijk aan het eerder geteste concept. Voorganger195488317706 is nu UNPUBLISHED. De eerdere “concept nog publiceren”-instructies hieronder zijn daarmee ingehaald. Geen nieuwe fysieke telefoontest door de agent; de eigenaar geeft algemene UI-goedkeuring.
