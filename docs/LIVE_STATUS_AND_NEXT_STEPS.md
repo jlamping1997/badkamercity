@@ -1,5 +1,13 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden 24.3710 — door eigenaar gepubliceerd en live bevestigd, 20 oktober 2026
+
+**VERIFIED_LIVE_HTML / eigenaar bekijkt het product.** Eigenaar meldt publicatie van het voorbereide thema. Verse Shopify-read bevestigt **195486253322 — BadkamerCity - Wiesbaden 33 specs 20 okt** als MAIN. De openbare productpagina zonder previewparameter geeft HTTP200, gebruikt hetzelfde MAIN-ID, toont **33 specificatieregels**, de drie categorielinks Kranen → Wastafelkranen → Opbouw wastafelkranen en geen Liquid-fouten. Er is in deze controle geen thema-, product- of indexmutatie uitgevoerd. Dit bevestigt de serverweergave; geen nieuwe visuele mobiele browsercontrole geclaimd.
+
+[Open het live product](https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710). Eigenaar beoordeelt nu leesbaarheid van titel/omschrijving en overzicht van de gegroepeerde specificaties. Inhoud en eerdere lokale preview waren al goedgekeurd; geen nieuwe technische toestemming vereist. Daarna representatieve volgende proefproducten voorbereiden met dezelfde werkwijze, nog geen ongevraagde massamutatie.
+
+De filtercorrectie is al ontvangen als **APPLIED_VERIFIED / VERIFIED** uit de geschoonde PowerShell-uitvoer: lokaal/publiek gevonden bij één kraangat en uitgesloten bij twee. Het eerder genoemde ongepubliceerde concept en de MAIN-writeblokkade hieronder zijn voorgeschiedenis: de eigenaar heeft zelf gepubliceerd. Historische testgrenzen en herstelgegevens blijven geldig.
+
 ## Wiesbaden 24.3710 — 33 specificaties gereed in Shopify-concept, 20 oktober 2026
 
 **IMPLEMENTED_PREVIEW / wacht op eigenaarspublicatie.** Eigenaar vraagt de vier voorbereide bestanden zelf door de agent in Shopify te laten aanmaken. ChatGPT/Shopify-connectors hebben een verse kopie van MAIN **195449651466 — BadkamerCity - Verlanglijst preview 20 okt** gemaakt: **195486253322 — BadkamerCity - Wiesbaden 33 specs 20 okt**, rol UNPUBLISHED. Geen publicatie of MAIN-bestandswrite; de connector verbiedt beide handelingen. Dit concept bevat de bestaande verlanglijst en winkelwagen.
