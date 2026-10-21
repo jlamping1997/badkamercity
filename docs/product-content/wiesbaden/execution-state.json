@@ -1,0 +1,115 @@
+{
+  "schema": "wiesbaden-execution-state-v1",
+  "updated_at": "2026-10-21T21:06:17Z",
+  "plan": "docs/product-content/WIESBADEN_EXECUTION_PLAN.md",
+  "active_branch": "fix/product-cards-2026-10-14",
+  "phase": "PLAN_RECORDED_EXECUTION_WAITING_FOR_PRIOR_RUN",
+  "execution_owner": "This chat prepares the plan; prior writer still observed. Do not start a second Shopify writer.",
+  "source_checkpoint_commit": "880fbd29779d0741e8b69c9b435350301c604b1d",
+  "source_checkpoint": {
+    "original_missing_skus": 217,
+    "published": 111,
+    "priced_queue": 78,
+    "missing_positive_price": 28,
+    "recorded_active_count": 2376,
+    "kind": "GIT_CHECKPOINT_NOT_CURRENT_REMAINDER",
+    "queue": "docs/product-content/wiesbaden/ONLINE_FIRST_165_TO_PUBLISH_2026-10-21.json"
+  },
+  "verified_live_baseline": {
+    "at": "2026-10-21T20:59:43Z",
+    "source": "Shopify Admin GraphQL read-only",
+    "active_wiesbaden": 2388,
+    "online_store_published_active_wiesbaden": 2388,
+    "count_precision": "EXACT",
+    "currency": "EUR",
+    "taxes_included": true,
+    "main_theme_id": "195491168522",
+    "limitation": "Subsequent new product creations observed. Counts are a timestamped baseline, not a frozen final total."
+  },
+  "concurrent_writer_observed": {
+    "status": "YES",
+    "created_at_utc_from": "2026-10-21T20:59:59Z",
+    "created_at_utc_through": "2026-10-21T21:00:41Z",
+    "example_skus": [
+      "29.2050",
+      "29.2051",
+      "29.2052",
+      "29.2053",
+      "29.2054",
+      "29.2055",
+      "29.2080",
+      "29.2081",
+      "29.2082",
+      "29.2083",
+      "29.2084",
+      "29.2085"
+    ],
+    "action": "Finish prior run before acquiring writer ownership; freshly reconcile SKU identity and publication stages.",
+    "reconciliation_at": "2026-10-21T21:01:52Z",
+    "matches_in_old_78_queue": 24,
+    "observed_published": 12,
+    "observed_created_not_yet_published": 12,
+    "price_validation": "Only positive amounts observed; supplier match and new whole-euro rounding were not applied or verified."
+  },
+  "private_supplier_input": {
+    "filename": "1186(2).csv",
+    "sha256": "80d2d72aea47073fbd185f94a46e23f6fbb3b8812889131717dfbc438090dc2e",
+    "all_brand_rows": 4048,
+    "wiesbaden_rows": 2411,
+    "wiesbaden_positive_advert_price_rows": 2410,
+    "storage": "Private attachment; do not commit raw supplier feed or purchase costs.",
+    "prior_cache": "BadkamerCity_Wiesbaden_datarun_20261019.zip"
+  },
+  "price_policy": {
+    "version": "consumer-advice-v1-2026-10-21",
+    "target": "recommended_consumer_sale_price_including_vat",
+    "currency": "EUR",
+    "vat_rate_if_source_exclusive": "0.21",
+    "source_tax_basis_required": true,
+    "inclusive_source_action": "use_without_extra_vat",
+    "exclusive_source_action": "multiply_exact_decimal_by_1.21_once",
+    "threshold_exact_inclusive_amount": "100.00",
+    "rounding_above_threshold": "nearest_whole_euro_HALF_UP",
+    "rounding_at_or_below_threshold": "nearest_cent_HALF_UP",
+    "intermediate_rounding": false,
+    "purchase_cost_affects_consumer_price": false,
+    "purchase_cost_storage": "optional_private_Shopify_cost_only",
+    "csv_price_field": "advertentieprijs (excl. btw)",
+    "csv_tax_basis": "CONFLICT_REQUIRES_SINGLE_SOURCE_MAPPING_CALIBRATION_IN_PILOT",
+    "manufacturer_advice_price_basis": "inclusive_per_prior_verified_consumer_price_contract",
+    "prohibited": "Do not apply blanket VAT based solely on CSV header; never use cost or gross price as fallback consumer advice price.",
+    "invalid_price_action": "preserve_existing_valid_price_or_hold_only_new_SKU"
+  },
+  "sample": {
+    "maximum_products": 20,
+    "repeat_for_each_chunk": false,
+    "selection": "Mixed product types, new and existing products, below and above EUR100, sparse source fields and set/part meaning.",
+    "human_review": "Optional owner review of same sample; no recurring per-batch sign-off.",
+    "pass": "No critical identity, price, tax, media, publication or lost-existing-content defect; verify only corrected rule if a defect is found."
+  },
+  "known_exceptions": {
+    "prior_connector_blocked_creates": [
+      "20.3447",
+      "41.3676",
+      "41.3523"
+    ],
+    "blocked_create_action": "Do not retry via another route to bypass safety review; retain original reason and ordinary release path.",
+    "zero_advert_price_sku": "41.3563",
+    "existing_review_items_remain_online": 106,
+    "prior_review_register": "docs/product-content/wiesbaden/quarantine-register-2026-10-21.json"
+  },
+  "verification_this_turn": {
+    "supplier_analysis": "COMPLETE_READ_ONLY",
+    "git_checkpoint_read": "COMPLETE",
+    "shop_count_tax_theme_baseline": "VERIFIED_ADMIN",
+    "rounding_examples": "PASS_11_EXACT_DECIMAL_EXAMPLES",
+    "live_20_product_pilot": "NOT_RUN",
+    "shopify_mutations": 0,
+    "unattended_runner_started": false,
+    "local_windows_checkout": "NOT_ACCESSIBLE",
+    "local_scratch_git_checkout": "NOT_A_GIT_REPOSITORY",
+    "storefront_render_or_checkout_test": "NOT_RUN",
+    "external_search_index": "NOT_VERIFIED"
+  },
+  "next_action": "After the prior writer has finished, perform one fresh exact-SKU reconciliation and build the 20-product pilot payload under this plan."
+}
