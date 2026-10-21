@@ -1,5 +1,12 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Wiesbaden — cohort 2 en 3 verwerkt, 21 oktober 2026
+
+**VERIFIED_ADMIN_PARTIAL_APPLY / QUARANTINE_93 / VPS_INDEX_NOT_SYNCED.** Van de eerste 150 cohortposities: **56** producten in Shopify bijgewerkt, **93** unieke SKU's in verwerkingsquarantaine, **1** eerdere referentie 24.3710 beschermd. Cohort 2:23 toegepast/27 quarantaine. Cohort 3:27 toegepast/23 quarantaine. Voor de 47 nieuwe updates zijn via actuele fabrikantpagina's SKU/kleur/type en via Shopify productidentiteit en variant gecontroleerd; HTML-omschrijving, afzonderlijke SEO-metavelden, gegroepeerde `custom.complete_specificaties`, `custom.card_title` en `bc_data.content_review` bijgewerkt. Vooraf is per nieuw product een privé `bc_rollback.pre_content_v1` snapshot in Admin gemaakt en na writes zijn Admin-readbacks uitgevoerd. Vier publieke PDP's zijn steekproefsgewijs opnieuw tekstueel gelezen. Oudere negen productwrites hadden niet al deze velden. Productprijzen, voorraad, status, URL-handles, afbeeldingen en bestaande documenten bij de nieuwe updates behouden; **geen** VPS/Typesense-index-update, collectiewrites, volledige mobiele browse-test of checkout. Niet claimen dat heel Wiesbaden klaar is.
+
+Machineleesbare uitsluitingen: `docs/product-content/wiesbaden/quarantine-register-2026-10-21.json` op de actieve codebranch; 93 SKU's pas in de eindreview. [Volledige overdracht](product-content/WIESBADEN_COHORT_2_3_VERWERKING_2026-10-21.md) (actieve branch). **Eén volgende actie:** cohort 4 met 50 nog niet behandelde bestaande SKU's uit de bevroren bronrun halen, reeds toegepaste 56 en 93 quarantaine + 24.3710 uitsluiten; na fabrikant- en Admin-controle kleine veilige updates, twijfelgevallen toevoegen aan hetzelfde quarantainebestand. Voor grote schaal eerst VPS/index-sync en facet/zoek-readback sluiten.
+
+
 ## Wiesbaden — uitvoerbare 50-SKU bulkverwerker gebouwd en proef gedraaid, 20 oktober 2026
 
 **VERIFIED_GITHUB_CODE + LOCAL_OFFLINE_PILOT; GEEN NIEUWE LIVE WRITES.** Actieve branch fix/product-cards-2026-10-14 bevat nu scripts/wiesbaden-bulk-preview.py en scripts/test_wiesbaden_bulk_preview.py plus docs/product-content/WIESBADEN_BULK_PILOT_2026-10-20.md. Source is de reeds bestaande private Wiesbaden datarun ZIP van 19 oktober, zonder hercrawl; runner schrijft alleen lokale review-JSON/CSV.
