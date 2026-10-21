@@ -1,5 +1,7 @@
 # BadkamerCity — START HIER bij een overdracht
 
+> **Wiesbaden — vaste uitvoering, 21 oktober 2026:** volg [het uitvoeringsplan](product-content/WIESBADEN_EXECUTION_PLAN.md) en [de actuele fase](product-content/wiesbaden/execution-state.json). De eigenaar heeft één proef van maximaal 20 producten en daarna doorlopende verwerking gevraagd, met consumentenadviesprijzen inclusief btw en hele euro's boven €100. De eerdere import maakte tijdens de overname nog producten aan; start pas na afronding daarvan één schrijver met een verse SKU-vergelijking. Oudere vervolgstappen en 50-productrondes hieronder zijn historische checkpoints.
+
 > **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
 
 **Laatste geverifieerde bronstand:** 7 oktober 2026. Dit document is het **eerste dat een nieuwe AI, freelancer, ICT'er of interne medewerker leest**. Doel: binnen 15 minuten weten wat live staat; binnen een uur veilig een taak kunnen oppakken; zonder gokken over ontbrekende toegang of data.

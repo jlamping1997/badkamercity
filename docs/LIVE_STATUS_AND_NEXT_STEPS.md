@@ -1,6 +1,26 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-## Wiesbaden: 37 extra artikelen gepubliceerd — 21 oktober 2026 (nieuwste checkpoint)
+## Wiesbaden — vast plan en overname, 21 oktober 2026
+
+**PLAN VASTGELEGD / LIVE UITVOERING WACHT OP AFRONDING VORIGE RUN.** De eigenaar vraagt één vaste uitvoering voor Wiesbaden: bestaande data hergebruiken, één proef van maximaal 20 uiteenlopende producten en daarna de volledige geschikte werklijst automatisch afwerken. Geen nieuwe opdracht of toestemming per technische batch van 50.
+
+**Vaste ingang:** [WIESBADEN_EXECUTION_PLAN.md](product-content/WIESBADEN_EXECUTION_PLAN.md) en [execution-state.json](product-content/wiesbaden/execution-state.json). Actieve werkbranch blijft `fix/product-cards-2026-10-14`. Dezelfde plan-/statusdocumentatie staat op main; er is geen themacode naar main verplaatst.
+
+**Prijscontract:** consumentenadviesprijs inclusief btw. Alleen aantoonbaar exclusieve bronprijzen eenmaal ×1,21; boven €100 direct normaal afronden op hele euro's, halve euro naar boven. Tot en met €100 centen behouden. Inkoopprijs alleen optioneel intern. De CSV-kop “advertentieprijs (excl. btw)” botst bij gecontroleerde voorbeelden met inclusieve consumentenprijzen: bronmapping eenmaal in dezelfde proef vaststellen, geen blinde algemene btw-verhoging. De afronding is offline op 11 voorbeelden gecontroleerd, inclusief grensgevallen en het vermijden van dubbele afronding.
+
+**Bron en checkpoint:** de privé aangeleverde CSV bevat 2.411 Wiesbaden-artikelen. Laatste gelezen Git-queue `880fbd2`: 217 oorspronkelijk ontbrekend = **111 gepubliceerd / 78 positief geprijsd in queue / 28 zonder positieve prijs**. Dit is een historisch overdrachtscheckpoint, geen actuele resterende lijst. De oudere 61/128 hieronder is achterhaald.
+
+**VERIFIED_ADMIN, 20:59:43 UTC:** **2.388 ACTIVE en 2.388 Online Store-gepubliceerde Wiesbaden-producten**, EUR, `taxesIncluded=true`, MAIN `195491168522`. De beperkte vergelijking van de oude 78-queue om 21:01:52 UTC vond al 24 bestaande SKU's: twaalf gepubliceerd en twaalf op dat moment nog ongepubliceerd. De laatste twaalf zijn 20:59:59–21:00:41 UTC aangemaakt. Er was dus tijdens de overname nog een andere schrijver actief. Geen definitieve resterende count uit deze bewegende momentopname afleiden.
+
+**Deze overname:** bron-/Git-onderzoek, prijscontract, beperkte read-only Shopify-controle en documentatie. Geen Shopify-mutaties, liveproef, thema-/indexwijzigingen of gestarte achtergrondverwerker. Lokale Windows-checkout en storefront/checkout niet getest; uitvoering via connectors, geen lokale Git-checkout.
+
+**Exact volgende handeling:** nadat de eerdere schrijver klaar is, één verse exacte SKU-vergelijking uitvoeren en de proefpayload voor 20 producten volgens het vaste plan samenstellen. Bestaande producten hervatten bij hun ontbrekende stap; niet opnieuw creëren. Eerder geblokkeerde aanmaakacties 20.3447 / 41.3676 / 41.3523 en geblokkeerde oudercollectietoevoegingen niet via een alternatieve route omzeilen.
+
+## Historische checkpoints
+
+Onderstaande notities beschrijven eerdere meetmomenten. Hun toenmalige “volgende actie” of “nieuwste checkpoint” vervangt het actuele plan hierboven niet.
+
+## Wiesbaden: 37 extra artikelen gepubliceerd — 21 oktober 2026 (historisch checkpoint)
 
 **VERIFIED_ADMIN + VERIFIED_PUBLIC_HTML (5/5) / ONLINE_FIRST.** In Shopify zaten 35 nieuwe ACTIVE Wiesbaden-artikelen met een READY-afbeelding en juiste consumentenprijs **nog niet gepubliceerd op Online Store**. In deze sessie zijn alle 35 expliciet gepubliceerd en 35/35 in Admin geverifieerd. Daarnaast zijn **41.3686** (Elara Smart WiFi radiator, €415) en **41.3524** (Elara bevestigingsset mat zwart, €29,95) nieuw aangemaakt, van officiële fabrikantafbeelding voorzien, Online Store gepubliceerd en teruggelezen. Totaal **37 nieuwe publiek toegankelijke producten sinds de vorige 24**. Actieve Wiesbaden-count is exact **2.326** (= eerdere 2.265 + 24 + 35 + 2). Alle 37 hebben een positieve fabrikant-consumentenprijs incl. btw, uniek artikelnummer, minstens één READY-afbeelding, een primaire collectie en `resourcePublications.isPublished=true`; vijf publieke PDP's bevestigd op foto, prijs en inhoud.
 

@@ -1,5 +1,7 @@
 # Wiesbaden bulkverrijking — ontwerp en acceptatie, 20 oktober 2026
 
+> **Historisch ontwerp.** Voor de uitvoering vanaf 21 oktober 2026 geldt [WIESBADEN_EXECUTION_PLAN.md](WIESBADEN_EXECUTION_PLAN.md): één proef van maximaal 20 producten en daarna doorlopende verwerking, met het nieuwste prijscontract en gerichte uitzonderingen. De onderstaande oorspronkelijke ontwerpstatus en batchstappen zijn achtergrond; herstart de al uitgevoerde cohorten niet.
+
 **DESIGN_READY / NIET GEÏMPLEMENTEERD ALS BULKVERWERKER.** Eigenaar vraagt na goedkeuring van de proefgroep om schaalbare verrijking met behoud van inhoudelijke kwaliteit, sterke SEO, filters en gedeelde breadcrumbs. Deze ronde onderzoekt en documenteert het ontwerp; geen nieuwe product-, index- of themamutaties.
 
 ## Bewezen uitgangspunt en afbakening
