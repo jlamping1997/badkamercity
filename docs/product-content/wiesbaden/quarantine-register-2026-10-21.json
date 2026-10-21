@@ -2,7 +2,7 @@
   "schema": "bc-wiesbaden-quarantine-v1",
   "updated_at": "2026-10-21",
   "scope": "verwerkingsquarantaine: Shopify status blijft ongewijzigd",
-  "total": 62,
+  "total": 70,
   "groups": {
     "deferred_39": {
       "reason": "Eerste 50 basis gecontroleerd maar door gebruiker expliciet uitgesteld tot eindcontrole; niet automatisch verwerken, ook niet na succesvolle categorieclassificatie",
@@ -101,6 +101,29 @@
         "29.8005": "PART_COMPATIBILITY_NOT_VERIFIED",
         "29.2513": "PART_COMPATIBILITY_NOT_VERIFIED"
       }
+    },
+    "cohort2_additional_8": {
+      "reason": "After fresh manufacturer page review, essential product set identity, hole count or color/category ambiguity; skip automatically until final quarantine session",
+      "skus": [
+        "29.5330",
+        "29.5331",
+        "29.5332",
+        "29.5333",
+        "29.1613",
+        "29.1618",
+        "22.2760",
+        "29.1721"
+      ],
+      "blocking_reasons": {
+        "29.5330": "Official model=afbouwdeel although title calls inbouw complete; verify inbouwset inclusion/components.",
+        "29.5331": "Official model=afbouwdeel although title says inbouw complete; exact component scope not confirmed.",
+        "29.5332": "Official model=afbouwdeel although title says inbouw complete; exact component scope not confirmed.",
+        "29.5333": "Official model=afbouwdeel although title says inbouw complete; exact component scope not confirmed.",
+        "29.1613": "Manufacturer says 2-gats for opbouw single lever; drawing and installation must resolve before displaying hole count.",
+        "29.1618": "Manufacturer classifies model as Afbouwdeel but merchant classifies as opbouw faucet; verify completeness.",
+        "22.2760": "Wall-mounted Sophia faucet assigned to inbouw-fonteinkranen; confirm category and exact cut-down dimensions.",
+        "29.1721": "Official product title/color table say geborsteld staal, description says geborsteld koper: important color conflict."
+      }
     }
   },
   "protected_skus": [
@@ -115,9 +138,29 @@
     "29.1510",
     "29.1610",
     "29.1611",
-    "29.1620"
+    "29.1620",
+    "29.3930",
+    "22.2720",
+    "22.2721",
+    "22.2724",
+    "22.3701",
+    "29.1622",
+    "29.1701",
+    "29.1703",
+    "29.1704",
+    "29.1720",
+    "29.2931",
+    "29.2932",
+    "29.3933",
+    "29.7913",
+    "29.5350",
+    "29.5352",
+    "29.5930",
+    "29.6930",
+    "29.7932",
+    "29.4115"
   ],
-  "release_policy": "These 62 quarantine SKUs must be skipped by ALL future product-write cohorts, including resumes. Shopify ACTIVE status, price, inventory, collections and publication remain unchanged. Release individual SKU only after explicit end-of-run review; this is a data-processing hold, not a Shopify archival action.",
+  "release_policy": "Quarantined SKUs must be excluded by future Shopify writes, including cohort reruns. This is only a data-processing hold; no Shopify product status changes. Release only after owner's end-of-run review.",
   "canonical_register": true,
   "notes": "43 entries from cohort 1 plus 19 blocked cohort-2 candidates. Cohort-2 remaining 28 are not yet confirmed for write. Previously approved 24.3710 remains protected; nine product title/description writes across cohorts were individually read back."
 }
