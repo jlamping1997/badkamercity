@@ -1,20 +1,25 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-## Wiesbaden — vast plan en overname, 21 oktober 2026
+## Wiesbaden — uitvoering, 21 oktober 2026
 
-**PLAN VASTGELEGD / LIVE UITVOERING WACHT OP AFRONDING VORIGE RUN.** De eigenaar vraagt één vaste uitvoering voor Wiesbaden: bestaande data hergebruiken, één proef van maximaal 20 uiteenlopende producten en daarna de volledige geschikte werklijst automatisch afwerken. Geen nieuwe opdracht of toestemming per technische batch van 50.
+**`SHOPIFY_COMPLETE_INDEX_BLOCKED` — de Shopify-uitvoering en eindverificatie zijn afgerond.** Er is geen Shopify-schrijver of achtergrondworker meer actief. Actieve werkbranch: `fix/product-cards-2026-10-14`. Naar `main` gaat alleen documentatie, geen themacode. Vaste ingang: [uitvoeringsplan](product-content/WIESBADEN_EXECUTION_PLAN.md), [machineleesbare status](product-content/wiesbaden/execution-state.json) en [uitvoeringsresultaten](product-content/WIESBADEN_EXECUTION_RESULTS_2026-10-21.md).
 
-**Vaste ingang:** [WIESBADEN_EXECUTION_PLAN.md](product-content/WIESBADEN_EXECUTION_PLAN.md) en [execution-state.json](product-content/wiesbaden/execution-state.json). Actieve werkbranch blijft `fix/product-cards-2026-10-14`. Dezelfde plan-/statusdocumentatie staat op main; er is geen themacode naar main verplaatst.
+| Onderdeel | Bevestigde stand of resterend werk |
+| --- | --- |
+| Prijzen | **2.299 prijswijzigingen geschreven en onafhankelijk teruggelezen.** Consumentenadviesprijs inclusief btw; geen algemene extra 21%. Boven €100 direct op hele euro's afronden volgens het vaste HALF_UP-contract. |
+| Nieuwe publicaties | **33.6000 en 75.3510 ACTIVE én Online Store-gepubliceerd**, met readback. |
+| Oorspronkelijke queue van 217 | **186 online / 28 zonder positieve prijs / 3 historische safetyblocks.** De drie geblokkeerde creates zijn niet opnieuw geprobeerd. Er is geen onbelemmerde createqueue meer. |
+| Bronverrijking | **COMPLETE / READBACK_VERIFIED** — 2.273 producten, 12.259 metafields, 33.186 specfeiten, 6.345 filterwaarden en 1.368 documentlijsten; **0 uitzonderingen**. |
+| Zichtbare inhoud en SEO | **COMPLETE / READBACK_VERIFIED** — 187 unieke producten: 3 gerichte correcties en 184 eerder lege SEO-records; **0 uitzonderingen**. |
+| Hoofdcategorieën | **COMPLETE / READBACK_VERIFIED** — 87 toevoegingen aan 5 bevestigde handmatige collecties via `productUpdate.collectionsToJoin`; alle bestaande lidmaatschappen behouden. 46 gevallen zonder voldoende bron niet gewijzigd. |
+| SEO-normalisatie en openbare controle | Shopify normaliseert 14 identieke SEO-titels naar `null`; effectieve producttitel en exacte SEO-description teruggelezen. **18184 openbare headcheck PASS**. |
+| Finale winkeltelling | **READBACK_VERIFIED / EXACT** — 2.451 Wiesbaden-producten totaal, 2.451 ACTIVE en 2.451 Online Store-gepubliceerd. |
+| Winkelinstellingen en thema | **EUR**, `taxesIncluded=true`; **MAIN 195491168522 ongewijzigd**. |
+| Externe zoek-/filterindex | **BLOCKED_NO_EXISTING_SESSION_AUTH**; geen synchronisatie uitgevoerd of geclaimd. |
 
-**Prijscontract:** consumentenadviesprijs inclusief btw. Alleen aantoonbaar exclusieve bronprijzen eenmaal ×1,21; boven €100 direct normaal afronden op hele euro's, halve euro naar boven. Tot en met €100 centen behouden. Inkoopprijs alleen optioneel intern. De CSV-kop “advertentieprijs (excl. btw)” botst bij gecontroleerde voorbeelden met inclusieve consumentenprijzen: bronmapping eenmaal in dezelfde proef vaststellen, geen blinde algemene btw-verhoging. De afronding is offline op 11 voorbeelden gecontroleerd, inclusief grensgevallen en het vermijden van dubbele afronding.
+**Behoud en bewijsgrens:** 151 eerder gecontroleerde contentproducten zijn beschermd; 25 bestaande producten zonder fabrikantbron blijven behouden. Geen volledige galerijdekking bewezen. `content_review.ready` bindt toegestane specs, documentenroute en categoriepad aan de juiste SKU/product-ID; bestaande body, titel en SEO worden daarmee niet automatisch goedgekeurd.
 
-**Bron en checkpoint:** de privé aangeleverde CSV bevat 2.411 Wiesbaden-artikelen. Laatste gelezen Git-queue `880fbd2`: 217 oorspronkelijk ontbrekend = **111 gepubliceerd / 78 positief geprijsd in queue / 28 zonder positieve prijs**. Dit is een historisch overdrachtscheckpoint, geen actuele resterende lijst. De oudere 61/128 hieronder is achterhaald.
-
-**VERIFIED_ADMIN, 20:59:43 UTC:** **2.388 ACTIVE en 2.388 Online Store-gepubliceerde Wiesbaden-producten**, EUR, `taxesIncluded=true`, MAIN `195491168522`. De beperkte vergelijking van de oude 78-queue om 21:01:52 UTC vond al 24 bestaande SKU's: twaalf gepubliceerd en twaalf op dat moment nog ongepubliceerd. De laatste twaalf zijn 20:59:59–21:00:41 UTC aangemaakt. Er was dus tijdens de overname nog een andere schrijver actief. Geen definitieve resterende count uit deze bewegende momentopname afleiden.
-
-**Deze overname:** bron-/Git-onderzoek, prijscontract, beperkte read-only Shopify-controle en documentatie. Geen Shopify-mutaties, liveproef, thema-/indexwijzigingen of gestarte achtergrondverwerker. Lokale Windows-checkout en storefront/checkout niet getest; uitvoering via connectors, geen lokale Git-checkout.
-
-**Exact volgende handeling:** nadat de eerdere schrijver klaar is, één verse exacte SKU-vergelijking uitvoeren en de proefpayload voor 20 producten volgens het vaste plan samenstellen. Bestaande producten hervatten bij hun ontbrekende stap; niet opnieuw creëren. Eerder geblokkeerde aanmaakacties 20.3447 / 41.3676 / 41.3523 en geblokkeerde oudercollectietoevoegingen niet via een alternatieve route omzeilen.
+**Exact volgende handeling:** bestaande SSH-authenticatie voor de externe zoek-/filterindex beschikbaar maken en daarna de index synchroniseren en controleren. De 28 prijsuitzonderingen en 3 historische veiligheidsblokkades blijven behouden. De afgeronde Shopify-wijzigingen worden niet opnieuw uitgevoerd; er loopt geen achtergrondworker na afronding. Oudere vervolgacties hieronder zijn historische checkpoints.
 
 ## Historische checkpoints
 

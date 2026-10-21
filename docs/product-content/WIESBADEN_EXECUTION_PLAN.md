@@ -15,13 +15,13 @@ De eigenaar hanteert de **adviesverkoopprijs inclusief btw**. Inkoopprijzen bepa
 
 ## 2. Vertrekpunt en overdracht
 
-De laatste gelezen Git-queue, commit `880fbd29779d0741e8b69c9b435350301c604b1d`, vermeldt **217 oorspronkelijk ontbrekende SKU's: 111 gepubliceerd, 78 positief geprijsd in de queue, 28 zonder bruikbare positieve prijs**. Dat is een overdrachtscheckpoint, geen actuele aftelling.
+**De Shopify-uitvoering is voltooid: `SHOPIFY_COMPLETE_INDEX_BLOCKED`.** De overname en de uitvoering met één Shopify-schrijver zijn afgerond; er is geen Shopify-schrijver of achtergrondworker meer actief. De volledige uitgangssnapshot van 21 oktober 2026, 21:46:12 UTC bevat 2.449 Wiesbaden-producten. De eerdere waarnemingen van een gelijktijdige schrijver en de telling 2.388 om 20:59:43 UTC zijn historische overdrachtsbewijzen, geen resterende startvoorwaarde.
 
-Een nieuwe Shopify-read op **21 oktober 2026, 20:59:43 UTC** bevestigt **2.388 ACTIVE en 2.388 op Online Store gepubliceerde Wiesbaden-producten**, EUR en `taxesIncluded=true`. MAIN is `195491168522`; er zijn geen themamutaties uitgevoerd.
+De oorspronkelijke bronqueue van 217 ontbrekende SKU's is nu verantwoord als **186 Online Store-gepubliceerd, 28 zonder positieve geverifieerde prijs en 3 historische platformveiligheidsblokkades**. De laatste twee nieuwe artikelen, **33.6000 en 75.3510**, zijn ACTIVE én expliciet op Online Store gepubliceerd en teruggelezen. De drie geblokkeerde creates zijn niet opnieuw geprobeerd. De historische queuenaam blijft behouden; de inhoud van de [actuele queue](wiesbaden/ONLINE_FIRST_165_TO_PUBLISH_2026-10-21.json) bepaalt de stand.
 
-Tijdens deze overname werden nog producten aangemaakt. Een begrensde read-only vergelijking van de 78 oude queue-SKU's om **21:01:52 UTC** vond 24 bestaande artikelen: twaalf gepubliceerd en twaalf op dat moment nog niet gepubliceerd. De laatste twaalf zijn tussen 20:59:59 en 21:00:41 UTC aangemaakt. De oude uitvoering liep dus nog uit. **Start geen tweede Shopify-schrijver.** De eerste uitvoerstap is na afronding van die run één verse vergelijking op SKU; reeds aangemaakte producten hervatten bij hun ontbrekende stap.
+**2.299 geautoriseerde prijsverschillen zijn geschreven en onafhankelijk teruggelezen.** De verrijking is volledig uitgevoerd en teruggelezen: 2.166 reguliere kandidaten plus 107 expliciet vrijgegeven bestaande reviewartikelen, samen **2.273 producten en 12.259 metafields**, met **0 uitvoeringsuitzonderingen**. De 151 reeds gecontroleerde contentproducten blijven beschermd; 25 bestaande producten zonder exacte fabrikantbron behouden hun bestaande gegevens. De definitieve Admin-tellingen zijn **2.451 totaal, 2.451 ACTIVE en 2.451 Online Store-gepubliceerd**, alle met precisie `EXACT`.
 
-De oude telling 61 gepubliceerd / 128 over is achterhaald. Ook 111 / 78 is geen bevroren eindstand. Trek aantallen uit verschillende verzamelingen niet van elkaar af om ontbrekende artikelen te schatten.
+De historische tellingen 61/128, 111/78 en 184/5 zijn geen actuele werklijsten. Het private geverifieerde journal sluit de Shopify-uitvoering af; reeds gemaakte producten en reeds teruggelezen wijzigingen worden niet herhaald. De volgende concrete stap is bestaande SSH-authenticatie voor de externe zoek-/filterindex beschikbaar maken en daarna die index synchroniseren en controleren.
 
 ## 3. Eén prijsregel
 
@@ -38,9 +38,9 @@ De oude telling 61 gepubliceerd / 128 over is achterhaald. Ook 111 / 78 is geen 
 
 Gebruik exacte decimalen. Voorbeelden: €80,00 excl. wordt €96,80; €120,00 excl. wordt €145; €149,49 incl. wordt €149; €149,50 incl. wordt €150. €100,41 excl. wordt direct €121, omdat het exacte bedrag €121,4961 is. Eerst afronden naar €121,50 en vervolgens €122 zou fout zijn.
 
-**Bronbetekenis eenmalig vastleggen.** De CSV noemt het relevante veld `advertentieprijs (excl. btw)`, maar bij gecontroleerde artikelen zijn de bedragen gelijk aan bekende consumentenadviesprijzen inclusief btw. Bijvoorbeeld SKU 24.3710: CSV €209, fabrikantadvies €209 en een retailer vermeldt €209 inclusief btw. De kolomkop alleen is daarom geen grond voor een algemene verhoging van 21%.
+**Bronbetekenis vastgesteld voor deze bronversie.** De CSV-kop `advertentieprijs (excl. btw)` wordt voor het vastgelegde Wiesbaden-bestand expliciet overruled: de bedragen zijn fabrikantconsumentenadvies **inclusief btw**, factor 1,00. Dezelfde binding geldt voor `source_advice_eur` uit de gekoppelde fabrikantcache; het oude exclusieve cachelabel is achterhaald. De [prijsbronkalibratie](wiesbaden/PRICE_SOURCE_CONTRACT_2026-10-21.md) legt de bronhashes, 20 officiële prijsvoorbeelden en de exacte overeenkomst van alle 2.411 CSV-bedragen met de cache vast.
 
-Gebruik voor reeds onderbouwde fabrikantconsumentenprijzen het bestaande inclusieve prijscontract. Leg tijdens dezelfde proef van 20 producten de betekenis van het CSV-prijsveld vast, met bron en datum. Een duidelijke inclusieve of exclusieve mapping geldt vervolgens voor de betreffende bron/veldversie; niet opnieuw per artikel op internet onderzoeken. Een afwijkend bedrag of onopgeloste bronbetekenis krijgt een gerichte uitzondering, zonder de overige verwerking stil te zetten. Gebruik nooit de bruto- of inkoopprijs als stilzwijgende vervanging van de adviesprijs.
+Deze bronbinding geldt niet automatisch voor een ander merk of een toekomstige feedversie. Een aantoonbaar exclusieve adviesprijs krijgt eenmaal 21% btw. Gebruik nooit bruto- of inkoopprijs als stilzwijgende vervanging van de consumentenadviesprijs. De 2.299 uitgevoerde prijsverschillen zijn afzonderlijk teruggelezen; de bronnotitie alleen is geen uitvoerbewijs.
 
 De nieuwe afrondregel geldt ook voor bestaande Wiesbaden-producten. Maak daarvoor eenmaal een volledige prijsvergelijking en schrijf alleen verschillen. Behoud bestaande inhoudelijke bescherming bij tekst-/specificatievelden; die bescherming verhindert een geautoriseerde prijsaanpassing niet. Shopify kan gehele eurobedragen intern als `145.00` opslaan; het bedrag bevat dan geen centen. Een wijziging van de algemene prijsweergave van het thema is geen onderdeel van deze prijsrun.
 
@@ -91,13 +91,14 @@ De uitvoerder bewaart privé per artikel de bronversie, geplande verschillen, Sh
 
 Een terugzetactie herstelt alleen de door deze run gewijzigde velden uit de private back-up en overschrijft geen latere wijziging van iemand anders. Nieuw aangemaakte producten worden bij een ernstige fout uit de verkoop gehaald voor correctie; niet automatisch verwijderd.
 
-Bekende uitzonderingen blijven zichtbaar:
+Bekende uitzonderingen en behoud blijven zichtbaar:
 
-- De 28 eerder ongeprijsde nieuwe kandidaten opnieuw tegen de nieuwe CSV vergelijken; hun oude blokkade is geen permanente uitsluiting.
-- SKU 41.3563 heeft in deze CSV geen positieve advertentieprijs.
-- De 106 bestaande reviewartikelen blijven online. Eerdere inhoudelijke bronconflicten blijven gerichte uitzonderingen.
-- Productaanmaak voor 20.3447, 41.3676 en 41.3523 was eerder door connectorveiligheidscontrole geblokkeerd. Bewaar die reden; niet via een andere route omzeilen. Reeds geblokkeerde toevoegingen aan oudercollecties blijven eveneens apart.
-- De externe zoek-/filterindex krijgt een eigen geverifieerde status. Een ontbrekende indexsync mag niet als geslaagd worden afgevinkt en houdt correcte basispublicaties niet tegen.
+- De 28 historische nieuwe kandidaten zonder positieve prijs zijn opnieuw met CSV/cache vergeleken: 27 ontbreken in de CSV; de ene match `41.3563` heeft eveneens nulprijs. Er is voor geen van de 28 een positieve geverifieerde prijs. Zij blijven afzonderlijke prijsuitzonderingen.
+- Productaanmaak voor `20.3447`, `41.3523` en `41.3676` was eerder door connectorveiligheidscontrole geblokkeerd. Die acties zijn niet opnieuw geprobeerd en worden niet via een alternatieve route omzeild.
+- De 107 bestaande eerdere holds hebben gerichte identiteit- en veldreviews gekregen. Alleen bevestigde feiten komen in de afzonderlijke verrijkingspayload; onbekende compatibiliteit, setinhoud en concrete bronconflicten blijven op veldniveau weggelaten. Dit verandert hun publicatiestatus niet.
+- De 151 eerdere gecontroleerde contentproducten blijven beschermd. De 25 bestaande producten zonder exacte fabrikantbron worden niet verwijderd, gearchiveerd of op basis van een prijsaanname aangepast.
+- De externe zoek-/filterindex staat op **BLOCKED_NO_EXISTING_SESSION_AUTH**. Er is geen geslaagde indexsync geclaimd. Dit houdt correcte Shopify-productwijzigingen niet tegen.
+- Voor de volledige galerijen is geen sluitend bewijs beschikbaar. Alleen een bevestigde foto of een begrensde mediaconnectie bewijst geen complete galerij.
 
 **Afgerond betekent:** alle artikelen uit de vastgelegde scope zijn verantwoord als gepubliceerd/bijgewerkt, al correct, of concreet geblokkeerd. Elk nieuw gepubliceerd artikel heeft een unieke identiteit, correcte positieve consumentenprijs, bruikbaar beeld, passende categorie en geverifieerde Online Store-publicatie. Bestaande inhoudelijke verbeteringen zijn behouden. Er blijft één korte uitzonderingenlijst over, met reden en benodigde oplossing.
 
@@ -105,9 +106,30 @@ Dit is ook het patroon voor een groter assortiment: dezelfde regels en uitvoerro
 
 ## 8. Huidige uitvoerstatus
 
-In deze overname zijn brononderzoek, prijsbeleid, Git-overdracht en een beperkte Shopify-baseline uitgevoerd. **Er is vanuit deze chat nog geen product gewijzigd, geen liveproef uitgevoerd en geen achtergrondverwerker gestart.** De waargenomen eerdere uitvoering moet eerst eindigen.
+**`SHOPIFY_COMPLETE_INDEX_BLOCKED` — de Shopify-uitvoering en eindverificatie zijn afgerond.** De externe zoek-/filterindex is nog niet gesynchroniseerd omdat bestaande sessie-authenticatie ontbreekt.
 
-**Exact volgende handeling:** zodra de eerdere schrijver klaar is, één verse SKU-vergelijking uitvoeren en de proefpayload voor 20 producten volgens dit plan samenstellen.
+| Onderdeel | Actuele stand |
+| --- | --- |
+| Prijsverschillen | **READBACK_VERIFIED — 2.299** |
+| Laatste nieuwe artikelen | **READBACK_VERIFIED — 33.6000 en 75.3510, ACTIVE én Online Store** |
+| Oorspronkelijke bronqueue | **186 online / 28 prijsuitzonderingen / 3 historische safetyblocks niet herprobeerd** |
+| Proefgroep | **20 producten uitgevoerd en teruggelezen** |
+| Bronverrijking | **COMPLETE / READBACK_VERIFIED** — 2.273 producten, 12.259 metafields, 33.186 specfeiten, 6.345 filters en 1.368 documentlijsten; **0 uitzonderingen** |
+| Zichtbare inhoud en SEO | **COMPLETE / READBACK_VERIFIED** — 187 unieke producten: 3 gerichte correcties en 184 eerder lege SEO-records; **0 uitzonderingen** |
+| Hoofdcategorieën | **COMPLETE / READBACK_VERIFIED** — 87 toevoegingen aan 5 bevestigde handmatige collecties; bestaande lidmaatschappen behouden. 46 gevallen zonder voldoende bron niet gewijzigd |
+| SEO-normalisatie en openbare controle | 14 identieke SEO-titels door Shopify genormaliseerd naar `null`; effectieve producttitel en exacte SEO-description teruggelezen. **18184 openbare headcheck PASS** |
+| Winkeltellingen | **READBACK_VERIFIED / EXACT** — 2.451 totaal, 2.451 ACTIVE en 2.451 Online Store-gepubliceerd |
+| Winkelinstellingen en thema | **EUR**, `taxesIncluded=true`; **MAIN 195491168522 ongewijzigd** |
+| Uitvoeringsbewijs | Afgesloten tellingen en behoudregels staan in de [machineleesbare status](wiesbaden/execution-state.json) en het [uitvoeringsresultaat](WIESBADEN_EXECUTION_RESULTS_2026-10-21.md); volledige payloads en readbackjournal blijven privé |
+| Externe index | **BLOCKED_NO_EXISTING_SESSION_AUTH**, niet gesynchroniseerd |
+
+De actuele bronregels zijn `2026-10-21.4`. Concreet conflicterende IP-/materiaalvelden en negatieve seteigenschappen zijn uit de betreffende specs, filters en markerkeys verwijderd; overige betrouwbare feiten blijven behouden. De reviewmarker verklaart uitsluitend de toegestane specificaties, documentenroute en gecontroleerde categoriecontext. Hij keurt bestaande titel, body of SEO niet automatisch goed.
+
+De 87 hoofdcategorietoevoegingen zijn met dezelfde `productUpdate`-uitvoering via `collectionsToJoin` verwerkt, nadat de 5 doelcollecties als handmatig waren bevestigd. Alle bestaande collectielidmaatschappen zijn behouden. De 28 prijsuitzonderingen en 3 historische veiligheidsblokkades blijven open; de drie geblokkeerde creates zijn niet opnieuw geprobeerd.
+
+**Exact volgende handeling:** bestaande SSH-authenticatie voor de externe zoek-/filterindex beschikbaar maken en daarna de index synchroniseren en controleren. Shopify-metafieldreadback bewijst geen externe indexsync. De afgeronde Shopify-wijzigingen worden niet opnieuw uitgevoerd.
+
+Er is na afronding geen Shopify-schrijver of achtergrondworker actief. Volledige galerijdekking is niet bewezen. Brondata, volledige payloads, before-snapshots en journals blijven privé. Actieve werkbranch blijft `fix/product-cards-2026-10-14`; `main` ontvangt alleen documentatie.
 
 ### Onderbouwing
 
