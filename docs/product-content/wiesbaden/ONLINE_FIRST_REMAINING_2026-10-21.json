@@ -16,7 +16,10 @@
   "quarantine_register": "docs/product-content/wiesbaden/quarantine-register-2026-10-21.json",
   "new_publishing_policy": "Live immediately if manufacturer SKU/title/positive price/picture, Shopify duplicate check and Online Store publication; leave cosmetic/optional data in review queue.",
   "publication_required_gid": "gid://shopify/Publication/283427864842",
-  "prices_policy": "source advice × 1.21 per existing store rule, separate basis/market-price QA",
+  "prices_policy": "Shopify taxesIncluded=true. Manufacturer's public Adviesprijs is the consumer retail price incl. VAT. Previous source price ×1.21 has been corrected on all 24 new items, with Shopify readback 24/24. For remaining 165, use source price directly, pending SKU-level checks. Old 2265 existing prices untouched.",
   "image_noted": "33.4422 technical drawing temporary, manufacturer's product image >25MP FAILED",
-  "external_index_sync_done": false
+  "external_index_sync_done": false,
+  "new_24_price_correction_admin_verified": true,
+  "new_24_price_correction_count": 24,
+  "new_24_price_policy_corrected_at": "2026-10-21"
 }
