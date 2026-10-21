@@ -2,7 +2,7 @@
   "schema": "bc-wiesbaden-quarantine-v1",
   "updated_at": "2026-10-21",
   "scope": "verwerkingsquarantaine: Shopify status blijft ongewijzigd",
-  "total": 100,
+  "total": 106,
   "groups": {
     "deferred_39": {
       "reason": "Eerste 50 basis gecontroleerd maar door gebruiker expliciet uitgesteld tot eindcontrole; niet automatisch verwerken, ook niet na succesvolle categorieclassificatie",
@@ -205,6 +205,25 @@
         "29.5884": "Manufacturer technical attributes do not confirm thread size; verify 1/2-inch compatibility.",
         "29.5885": "Manufacturer technical attributes do not confirm thread size; verify 1/2-inch compatibility."
       }
+    },
+    "cohort5_blocked_6": {
+      "reason": "Six SKU held by verified manufacturer essential hardware data quality gate. No Shopify changes to these products; defer until end-of-brand review.",
+      "skus": [
+        "29.3848",
+        "29.7821",
+        "29.7825",
+        "24.3800",
+        "29.3873",
+        "29.6831"
+      ],
+      "blocking_reasons": {
+        "29.3848": "ESSENTIAL_THREAD_SIZE_UNCONFIRMED: fabricant noemt 30 cm ronde hoofddouche, maar 1/2-inch aansluitmaat ontbreekt.",
+        "29.7821": "BEAM_MUURBEVESTIGING_AANSLUITMAAT_ONBEKEND: fabrikant vermeldt geen schroefdraadaansluiting voor matzwarte Beam wandhoofddouche.",
+        "29.7825": "BEAM_MUURBEVESTIGING_AANSLUITMAAT_ONBEKEND: fabrikant vermeldt geen aansluitmaat voor brons-koper Beam wandhoofddouche.",
+        "24.3800": "MATERIAL_ESSENTIAL_MISSING_FOR_HANDSHOWER: fabrikant specificeert 'Materiaal: Overig', geen materiaalclaim als RVS doen.",
+        "29.3873": "MATERIAL_ESSENTIAL_MISSING_FOR_HANDSHOWER: fabrikantgegevens voor de staafhanddouche missen materiaal en toebehorenbewijs.",
+        "29.6831": "SPARSE_MATERIAL_REQUIRES_REVIEW: fabrikant geeft geen exact materiaal voor staafhanddouche geborsteld brons koper PVD."
+      }
     }
   },
   "protected_skus": [
@@ -309,21 +328,83 @@
     "29.5860",
     "29.5861",
     "29.5880",
-    "29.5881"
+    "29.5881",
+    "24.3726",
+    "24.3803",
+    "29.2813",
+    "29.2815",
+    "29.2816",
+    "29.2829",
+    "29.2913",
+    "29.3815",
+    "29.3816",
+    "29.3834",
+    "29.4913",
+    "29.5815",
+    "29.5816",
+    "29.5913",
+    "29.6815",
+    "29.7815",
+    "29.7816",
+    "29.7912",
+    "29.7820",
+    "29.7822",
+    "29.7823",
+    "29.7824",
+    "29.7840",
+    "29.7841",
+    "29.7842",
+    "29.7843",
+    "29.7844",
+    "29.7845",
+    "24.3802",
+    "29.2830",
+    "29.2916",
+    "29.3830",
+    "29.3916",
+    "29.3917",
+    "29.5830",
+    "29.5916",
+    "29.6830",
+    "29.6900",
+    "29.6901",
+    "29.6902",
+    "29.6903",
+    "29.6904",
+    "29.6948",
+    "29.6949"
   ],
-  "release_policy": "All quarantine SKUs must be excluded by next cohort selection and any merchant live write until explicit final review. Does not alter Shopify product status; no automatic archival.",
+  "release_policy": "Only reopen quarantined SKU after explicit end-of-brand review. Future selectors must exclude quarantined, applied and protected SKU; do not archive products in Shopify.",
   "canonical_register": true,
   "notes": "43 entries from cohort 1 plus 19 blocked cohort-2 candidates. Cohort-2 remaining 28 are not yet confirmed for write. Previously approved 24.3710 remains protected; nine product title/description writes across cohorts were individually read back.",
   "latest_cohort": {
-    "name": "cohort4",
-    "checked": 50,
-    "applied": 43,
-    "quarantined": 7,
+    "name": "cohort5",
     "as_of": "2026-10-21",
-    "source_archive": "BadkamerCity_Wiesbaden_datarun_20261019.zip",
-    "source_age_policy": "Manufacturer archive HTTP 200 on 2026-10-19; live source probe on 2026-10-21 returned HTTP 503. Essential stable hardware facts verified using frozen official manufacturer data + fresh exact Shopify identities.",
-    "admin_fields": "descriptionHtml,seo,custom.complete_specificaties,custom.card_title,bc_data.content_review",
-    "backup_namespace_key": "bc_rollback.pre_content_v1",
-    "vps_index_synced": false
+    "product_type_quotas": {
+      "Hoofddouche": 31,
+      "Handdouche": 19
+    },
+    "checked": 50,
+    "source_checks_exact_official_pages": 50,
+    "applied": 44,
+    "quarantined": 6,
+    "applied_overhead_showerheads": 28,
+    "applied_handshowers": 16,
+    "verified_specification_rows": 540,
+    "admin_independent_readbacks": 44,
+    "public_storefront_html_checks": 8,
+    "price_inventory_status_handles_media_docs_preserved": true,
+    "rollback_metafield": "bc_rollback.pre_content_v1",
+    "written_fields": [
+      "descriptionHtml",
+      "seo.title",
+      "seo.description",
+      "custom.complete_specificaties",
+      "custom.card_title",
+      "bc_data.content_review"
+    ],
+    "vps_index_synced": false,
+    "source": "Live www.wiesbaden.nl manufacturer webpages, 2026-10-21; current Shopify product and variant identity",
+    "status": "VERIFIED_ADMIN_WITH_STOREFRONT_SAMPLE"
   }
 }
