@@ -2,7 +2,7 @@
   "schema": "bc-wiesbaden-quarantine-v1",
   "updated_at": "2026-10-21",
   "scope": "verwerkingsquarantaine: Shopify status blijft ongewijzigd",
-  "total": 70,
+  "total": 89,
   "groups": {
     "deferred_39": {
       "reason": "Eerste 50 basis gecontroleerd maar door gebruiker expliciet uitgesteld tot eindcontrole; niet automatisch verwerken, ook niet na succesvolle categorieclassificatie",
@@ -123,6 +123,51 @@
         "29.1618": "Manufacturer classifies model as Afbouwdeel but merchant classifies as opbouw faucet; verify completeness.",
         "22.2760": "Wall-mounted Sophia faucet assigned to inbouw-fonteinkranen; confirm category and exact cut-down dimensions.",
         "29.1721": "Official product title/color table say geborsteld staal, description says geborsteld koper: important color conflict."
+      }
+    },
+    "cohort3_blocked_19": {
+      "reason": "Third-cohort frozen official-source pilot blocked on unclear part compatibility, contradictory category or scant essential specs; hold until final merchant review",
+      "skus": [
+        "29.1624",
+        "29.2515",
+        "29.2517",
+        "29.2518",
+        "29.2115",
+        "29.2519",
+        "29.2522",
+        "29.2523",
+        "29.6921",
+        "29.2533",
+        "29.2534",
+        "29.2537",
+        "22.3776",
+        "29.2538",
+        "29.2539",
+        "29.2540",
+        "29.2542",
+        "22.6750",
+        "29.5510"
+      ],
+      "blocking_reasons": {
+        "29.1624": "CATEGORY_INCOMPATIBLE_WITH_PRODUCT_TYPE",
+        "29.2515": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2517": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2518": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2115": "CATEGORY_INCOMPATIBLE_WITH_PRODUCT_TYPE",
+        "29.2519": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2522": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2523": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.6921": "ESSENTIAL_SPECS_TOO_SPARSE",
+        "29.2533": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2534": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2537": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "22.3776": "CATEGORY_INCOMPATIBLE_WITH_PRODUCT_TYPE",
+        "29.2538": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2539": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2540": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "29.2542": "PART_COMPATIBILITY_NOT_VERIFIED",
+        "22.6750": "CATEGORY_INCOMPATIBLE_WITH_PRODUCT_TYPE",
+        "29.5510": "PART_TYPE_CONFLICT_MODEL_INBOUW; PART_COMPATIBILITY_NOT_VERIFIED"
       }
     }
   },
