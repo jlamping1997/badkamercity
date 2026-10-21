@@ -3,10 +3,10 @@
   "date": "2026-10-21",
   "source_date": "2026-10-19",
   "starting_vendor_active": 2265,
-  "current_vendor_active": 2289,
+  "current_vendor_active": 2449,
   "source_only": 217,
-  "new_online": 24,
-  "remaining_priced": 165,
+  "new_online": 184,
+  "remaining_priced": 5,
   "awaiting_valid_price": 28,
   "already_processed_in_enrichment": 250,
   "already_enrichment_applied": 143,
@@ -21,5 +21,20 @@
   "external_index_sync_done": false,
   "new_24_price_correction_admin_verified": true,
   "new_24_price_correction_count": 24,
-  "new_24_price_policy_corrected_at": "2026-10-21"
+  "new_24_price_policy_corrected_at": "2026-10-21",
+  "remaining_priced_unblocked": 0,
+  "pending_platform_or_retail_price_review": 5,
+  "original_source_only_candidates": 217,
+  "confirmed_online_store_publications": 184,
+  "total_current_new_source_only_unpublished": 33,
+  "source_only_5_hold_skus": [
+    "20.3447",
+    "33.6000",
+    "41.3523",
+    "41.3676",
+    "75.3510"
+  ],
+  "latest_checkpoint": "docs/product-content/WIESBADEN_ONLINE_FIRST_184_2026-10-21.md",
+  "batch3_manifest": "docs/product-content/wiesbaden/ONLINE_FIRST_PUBLISHED_BATCH3_123_2026-10-21.json",
+  "note": "200 newly imported target not yet met: original 217 include 28 no price and five on hold. 184 are actually Online Store published with READY manufacturer photo, positive price and correct SKU. Do not count 143 previously enriched pre-existing products as new."
 }
