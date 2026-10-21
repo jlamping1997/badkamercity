@@ -1,0 +1,22 @@
+{
+  "schema": "wiesbaden-online-first-remaining-v1",
+  "date": "2026-10-21",
+  "source_date": "2026-10-19",
+  "starting_vendor_active": 2265,
+  "current_vendor_active": 2289,
+  "source_only": 217,
+  "new_online": 24,
+  "remaining_priced": 165,
+  "awaiting_valid_price": 28,
+  "already_processed_in_enrichment": 250,
+  "already_enrichment_applied": 143,
+  "existing_review_later_only": 106,
+  "existing_reference_protected": 1,
+  "applied_ids_register": "docs/product-content/wiesbaden/ONLINE_FIRST_PUBLISHED_2026-10-21.json",
+  "quarantine_register": "docs/product-content/wiesbaden/quarantine-register-2026-10-21.json",
+  "new_publishing_policy": "Live immediately if manufacturer SKU/title/positive price/picture, Shopify duplicate check and Online Store publication; leave cosmetic/optional data in review queue.",
+  "publication_required_gid": "gid://shopify/Publication/283427864842",
+  "prices_policy": "source advice × 1.21 per existing store rule, separate basis/market-price QA",
+  "image_noted": "33.4422 technical drawing temporary, manufacturer's product image >25MP FAILED",
+  "external_index_sync_done": false
+}
