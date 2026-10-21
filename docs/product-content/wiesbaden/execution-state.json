@@ -1,10 +1,10 @@
 {
   "schema": "wiesbaden-execution-state-v1",
-  "updated_at": "2026-10-21T21:06:17Z",
+  "updated_at": "2026-10-21T22:39:56Z",
   "plan": "docs/product-content/WIESBADEN_EXECUTION_PLAN.md",
   "active_branch": "fix/product-cards-2026-10-14",
-  "phase": "PLAN_RECORDED_EXECUTION_WAITING_FOR_PRIOR_RUN",
-  "execution_owner": "This chat prepares the plan; prior writer still observed. Do not start a second Shopify writer.",
+  "phase": "SHOPIFY_COMPLETE_INDEX_BLOCKED",
+  "execution_owner": "The single-writer Shopify execution is complete. No Shopify writer or background worker remains active; do not repeat readback-verified journal operations.",
   "source_checkpoint_commit": "880fbd29779d0741e8b69c9b435350301c604b1d",
   "source_checkpoint": {
     "original_missing_skus": 217,
@@ -12,7 +12,7 @@
     "priced_queue": 78,
     "missing_positive_price": 28,
     "recorded_active_count": 2376,
-    "kind": "GIT_CHECKPOINT_NOT_CURRENT_REMAINDER",
+    "kind": "HISTORICAL_GIT_CHECKPOINT_SUPERSEDED_BY_CURRENT_QUEUE",
     "queue": "docs/product-content/wiesbaden/ONLINE_FIRST_165_TO_PUBLISH_2026-10-21.json"
   },
   "verified_live_baseline": {
@@ -25,31 +25,6 @@
     "taxes_included": true,
     "main_theme_id": "195491168522",
     "limitation": "Subsequent new product creations observed. Counts are a timestamped baseline, not a frozen final total."
-  },
-  "concurrent_writer_observed": {
-    "status": "YES",
-    "created_at_utc_from": "2026-10-21T20:59:59Z",
-    "created_at_utc_through": "2026-10-21T21:00:41Z",
-    "example_skus": [
-      "29.2050",
-      "29.2051",
-      "29.2052",
-      "29.2053",
-      "29.2054",
-      "29.2055",
-      "29.2080",
-      "29.2081",
-      "29.2082",
-      "29.2083",
-      "29.2084",
-      "29.2085"
-    ],
-    "action": "Finish prior run before acquiring writer ownership; freshly reconcile SKU identity and publication stages.",
-    "reconciliation_at": "2026-10-21T21:01:52Z",
-    "matches_in_old_78_queue": 24,
-    "observed_published": 12,
-    "observed_created_not_yet_published": 12,
-    "price_validation": "Only positive amounts observed; supplier match and new whole-euro rounding were not applied or verified."
   },
   "private_supplier_input": {
     "filename": "1186(2).csv",
@@ -75,17 +50,19 @@
     "purchase_cost_affects_consumer_price": false,
     "purchase_cost_storage": "optional_private_Shopify_cost_only",
     "csv_price_field": "advertentieprijs (excl. btw)",
-    "csv_tax_basis": "CONFLICT_REQUIRES_SINGLE_SOURCE_MAPPING_CALIBRATION_IN_PILOT",
+    "csv_tax_basis": "INCLUSIVE_VERIFIED_FOR_SOURCE_SHA256",
     "manufacturer_advice_price_basis": "inclusive_per_prior_verified_consumer_price_contract",
     "prohibited": "Do not apply blanket VAT based solely on CSV header; never use cost or gross price as fallback consumer advice price.",
-    "invalid_price_action": "preserve_existing_valid_price_or_hold_only_new_SKU"
+    "invalid_price_action": "preserve_existing_valid_price_or_hold_only_new_SKU",
+    "source_contract": "docs/product-content/wiesbaden/PRICE_SOURCE_CONTRACT_2026-10-21.md"
   },
   "sample": {
     "maximum_products": 20,
     "repeat_for_each_chunk": false,
     "selection": "Mixed product types, new and existing products, below and above EUR100, sparse source fields and set/part meaning.",
     "human_review": "Optional owner review of same sample; no recurring per-batch sign-off.",
-    "pass": "No critical identity, price, tax, media, publication or lost-existing-content defect; verify only corrected rule if a defect is found."
+    "pass": "No critical identity, price, tax, media, publication or lost-existing-content defect; verify only corrected rule if a defect is found.",
+    "live_status": "20_PRODUCT_PILOT_READBACK_VERIFIED"
   },
   "known_exceptions": {
     "prior_connector_blocked_creates": [
@@ -93,12 +70,48 @@
       "41.3676",
       "41.3523"
     ],
-    "blocked_create_action": "Do not retry via another route to bypass safety review; retain original reason and ordinary release path.",
+    "blocked_create_action": "NOT_RETRIED. Preserve original safety blocks and ordinary release path; never bypass via another route.",
     "zero_advert_price_sku": "41.3563",
-    "existing_review_items_remain_online": 106,
-    "prior_review_register": "docs/product-content/wiesbaden/quarantine-register-2026-10-21.json"
+    "existing_review_items_remain_online": 107,
+    "prior_review_register": "docs/product-content/wiesbaden/quarantine-register-2026-10-21.json",
+    "existing_review_items_status": "107 prior existing holds received explicit identity-bound field allowlists; included in the completed and readback-verified 2273-product enrichment total without inventing omitted facts.",
+    "protected_content_products": 151,
+    "existing_without_manufacturer_source_retained": 25,
+    "missing_positive_price_not_created": 28,
+    "parent_collection_cases_without_sufficient_source_unchanged": 46
   },
-  "verification_this_turn": {
+  "next_action": "Make the existing SSH authentication for the external search/filter index available, then synchronize and verify that index. Preserve the 28 price exceptions and three historical safety blocks. Do not repeat completed Shopify writes.",
+  "current_checkpoint_kind": "FINAL_SHOPIFY_READBACK_VERIFIED_INDEX_BLOCKED",
+  "branch_policy": {
+    "active_code_branch": "fix/product-cards-2026-10-14",
+    "main": "DOCUMENTATION_ONLY_NO_THEME_CODE_MERGE"
+  },
+  "historical_takeover_observation": {
+    "status": "HISTORICAL_PRIOR_WRITER_FINISHED_HANDOVER_COMPLETED",
+    "created_at_utc_from": "2026-10-21T20:59:59Z",
+    "created_at_utc_through": "2026-10-21T21:00:41Z",
+    "example_skus": [
+      "29.2050",
+      "29.2051",
+      "29.2052",
+      "29.2053",
+      "29.2054",
+      "29.2055",
+      "29.2080",
+      "29.2081",
+      "29.2082",
+      "29.2083",
+      "29.2084",
+      "29.2085"
+    ],
+    "action": "Historical observation retained as evidence. Current execution has taken over; do not repeat the takeover wait.",
+    "reconciliation_at": "2026-10-21T21:01:52Z",
+    "matches_in_old_78_queue": 24,
+    "observed_published": 12,
+    "observed_created_not_yet_published": 12,
+    "price_validation": "Only positive amounts observed; supplier match and new whole-euro rounding were not applied or verified."
+  },
+  "historical_takeover_verification": {
     "supplier_analysis": "COMPLETE_READ_ONLY",
     "git_checkpoint_read": "COMPLETE",
     "shop_count_tax_theme_baseline": "VERIFIED_ADMIN",
@@ -111,5 +124,145 @@
     "storefront_render_or_checkout_test": "NOT_RUN",
     "external_search_index": "NOT_VERIFIED"
   },
-  "next_action": "After the prior writer has finished, perform one fresh exact-SKU reconciliation and build the 20-product pilot payload under this plan."
+  "confirmed_execution": {
+    "price_updates": {
+      "status": "READBACK_VERIFIED",
+      "products": 2299,
+      "basis": "Consumer advice including VAT; no blanket 21% addition",
+      "price_source_contract": "docs/product-content/wiesbaden/PRICE_SOURCE_CONTRACT_2026-10-21.md"
+    },
+    "new_products": {
+      "status": "ACTIVE_AND_ONLINE_STORE_PUBLISHED_READBACK_VERIFIED",
+      "count": 2,
+      "skus": [
+        "33.6000",
+        "75.3510"
+      ]
+    },
+    "source_queue": {
+      "status": "RECONCILED",
+      "original_missing": 217,
+      "online_published": 186,
+      "without_positive_price": 28,
+      "historical_safety_blocks_not_retried": 3,
+      "actionable_create_queue": 0
+    },
+    "pilot": {
+      "status": "READBACK_VERIFIED",
+      "products": 20
+    },
+    "content_protection": {
+      "protected_reviewed": 151,
+      "existing_without_source_retained": 25
+    }
+  },
+  "enrichment": {
+    "status": "COMPLETE_READBACK_VERIFIED",
+    "execution_state_at_checkpoint": "COMPLETE",
+    "target_products": 2273,
+    "target_metafield_writes": 12259,
+    "target_specification_facts": 33186,
+    "target_new_filter_values": 6345,
+    "target_document_list_updates": 1368,
+    "final_verified_products": 2273,
+    "final_verified_metafield_writes": 12259,
+    "final_verified_specification_facts": 33186,
+    "final_verified_filter_values": 6345,
+    "final_verified_document_lists": 1368,
+    "execution_exceptions": 0,
+    "rules_version": "2026-10-21.4",
+    "ready_marker_scope": "Whitelisted source specifications, technical-document route and verified collection breadcrumb membership; does not certify existing title/body/SEO.",
+    "write_mode": "Minimal compareDigest updates plus independent readback; skip already verified journal operations.",
+    "main_manifest_sha256": "cc5f5f87f90cc264f0387ff6a43a13c6ecf11ba6d052f03ff6f8014d5000fab2",
+    "extra_manifest_sha256": "7de1dc4703eea86c42690503d6900a4a82a87b0404a2f039f5bdf8fa741d6ccc",
+    "raw_payloads_and_journal": "PRIVATE_NOT_IN_PUBLIC_GIT"
+  },
+  "follow_up_updates": {
+    "status": "COMPLETE_READBACK_VERIFIED",
+    "visible_finishing_unique_products": 187,
+    "execution_exceptions": 0,
+    "visible_product_corrections": {
+      "status": "COMPLETE_READBACK_VERIFIED",
+      "target_products": 3,
+      "verified_products": 3
+    },
+    "fill_previously_empty_seo": {
+      "status": "COMPLETE_READBACK_VERIFIED",
+      "target_products": 184,
+      "verified_products": 184,
+      "identical_seo_titles_normalized_to_null": 13,
+      "normalization_verification": "Effective product title and exact SEO description independently read back.",
+      "policy": "Preserve non-empty existing SEO; source-backed values only."
+    },
+    "native_parent_collection_additions": {
+      "status": "COMPLETE_READBACK_VERIFIED",
+      "target_additions": 87,
+      "verified_additions": 87,
+      "confirmed_manual_target_collections": 5,
+      "mutation": "productUpdate.collectionsToJoin in the same visible-finishing execution",
+      "existing_memberships_preserved": true,
+      "without_sufficient_source_unchanged": 46,
+      "policy": "Add approved memberships only; preserve all existing memberships and historical blocked actions."
+    },
+    "public_head_check": {
+      "sku": "18184",
+      "status": "PASS"
+    },
+    "seo_title_fallbacks_across_all_187_updates": 14
+  },
+  "final_shop_counts": {
+    "status": "READBACK_VERIFIED",
+    "expected_total_wiesbaden": 2451,
+    "verified_total": 2451,
+    "verified_active": 2451,
+    "verified_online_store_published": 2451,
+    "total_precision": "EXACT",
+    "active_precision": "EXACT",
+    "online_store_published_precision": "EXACT",
+    "currency": "EUR",
+    "taxes_included": true,
+    "main_theme_id": "195491168522",
+    "main_theme_changed": false,
+    "note": "Closing Shopify Admin counts confirmed after the completed and readback-verified execution.",
+    "observed_at": "2026-10-21T22:37:46.105Z"
+  },
+  "external_search_index": {
+    "status": "BLOCKED_NO_EXISTING_SESSION_AUTH",
+    "synced": false,
+    "next_step": "Make existing SSH authentication available, then synchronize and verify the external search/filter index.",
+    "note": "No authenticated existing index route available in the execution session; Shopify metafield writes do not prove external index synchronization."
+  },
+  "media_verification": {
+    "status": "NO_COMPLETE_GALLERY_EVIDENCE",
+    "complete_gallery_verified": false,
+    "note": "Do not claim all original galleries or image ALT fields are complete from the available connection evidence."
+  },
+  "runtime_claim": {
+    "execution_checkpoint_only": false,
+    "shopify_execution_complete": true,
+    "shopify_writer_active": false,
+    "background_worker_active": false,
+    "background_worker_started_claimed": false,
+    "after_turn_continuation": "No Shopify writer or background worker remains active after completion. The external index requires a separate authenticated synchronization."
+  },
+  "pending_finalization": [],
+  "remaining_follow_up": [
+    "EXTERNAL_INDEX_BLOCKED_NO_EXISTING_SESSION_AUTH",
+    "28_PRICE_EXCEPTIONS_PRESERVED",
+    "3_HISTORICAL_SAFETY_BLOCKS_NOT_RETRIED",
+    "46_PARENT_COLLECTION_CASES_UNCHANGED_WITHOUT_SUFFICIENT_SOURCE"
+  ],
+  "results_document": "docs/product-content/WIESBADEN_EXECUTION_RESULTS_2026-10-21.md",
+  "external_index_prepared_input": {
+    "status": "READY_OFFLINE_NOT_SYNCED",
+    "existing_products": 2422,
+    "confirmed_price_and_filter_fields": 7207,
+    "price_changes": 2299,
+    "mapped_filter_values": 4908,
+    "unmapped_filter_values": 1437,
+    "unmapped_filter_keys": 8,
+    "pending_enrichment_products": 0,
+    "private_resume": "private-run/index-sync/RESUME.md",
+    "private_manifest": "private-run/index-sync/manifest.json"
+  }
 }

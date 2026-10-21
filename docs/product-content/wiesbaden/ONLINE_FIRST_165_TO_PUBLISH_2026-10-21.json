@@ -2,22 +2,48 @@
   "schema": "wiesbaden-online-first-source-only-queue-v1",
   "date": "2026-10-21",
   "original_source_candidates": 217,
-  "already_online_published": 184,
-  "queued_with_positive_manufacturer_price": 5,
+  "already_online_published": 186,
+  "queued_with_positive_manufacturer_price": 3,
   "pending_without_positive_price_in_shared_quarantine": 28,
-  "status": "5_SOURCE_ONLY_CANDIDATES_NEED_REVIEW",
+  "status": "SOURCE_QUEUE_RECONCILED_BLOCKED_EXCEPTIONS_ONLY",
   "source_required": "private BadkamerCity_Wiesbaden_datarun_20261019.zip",
-  "live_prerequisite": "Verify product SKU absent in current Shopify, then upload real source image, create with positive price and collection, explicitly publish to Online Store and read back.",
+  "live_prerequisite": "No automatic creates remain in this reconciled queue. Preserve the 28 price exceptions and three historical safety blocks; do not retry blocked creates via an alternative route.",
   "quarantine_is_checklist_not_product_status": true,
   "sku_list": [
     "20.3447",
-    "33.6000",
     "41.3523",
-    "41.3676",
+    "41.3676"
+  ],
+  "last_verified": "2026-10-21T22:37:46.105Z",
+  "latest_checkpoint": "Original 217 source-only candidates = 186 online published + 28 without a positive verified price + 3 historical platform safety blocks. The last two publications are 33.6000 and 75.3510.",
+  "current_verified_shopify_active": 2451,
+  "current_verified_shopify_total": 2451,
+  "current_verified_online_store_published": 2451,
+  "final_count_precision": {
+    "total": "EXACT",
+    "active": "EXACT",
+    "online_store_published": "EXACT"
+  },
+  "note": "Historical filename retained. Counts 111/78, 61/128 and 184/5 describe prior checkpoints; do not reuse them as the current work queue. Closing Shopify Admin readback confirms 2451 total, ACTIVE and Online Store-published Wiesbaden products, all with EXACT precision.",
+  "actionable_create_queue": 0,
+  "historical_safety_blocked_creates": 3,
+  "actionable_sku_list": [],
+  "platform_safety_blocked_skus": [
+    "20.3447",
+    "41.3523",
+    "41.3676"
+  ],
+  "newly_published_in_current_execution": [
+    "33.6000",
     "75.3510"
   ],
-  "last_verified": "2026-10-21",
-  "latest_checkpoint": "184 newly published of 217 source-only manufacturer SKUs; 28 original without positive price, 5 priced but held for policy / current official price/source or platform safety.",
-  "current_verified_shopify_active": 2449,
-  "note": "Originally 217 missing: 111 published, 78 priced pending, 28 without positive price in quarantine; 200 cannot be reached with only the originally 189 priced SKUs."
+  "current_execution_new_products_verification": "ACTIVE_AND_ONLINE_STORE_PUBLISHED_READBACK_VERIFIED",
+  "prior_verified_shopify_active": 2449,
+  "expected_total_after_last_two_creates": 2451,
+  "final_shop_counts_status": "READBACK_VERIFIED_ALL_EXACT",
+  "execution_phase": "SHOPIFY_COMPLETE_INDEX_BLOCKED",
+  "next_action": "Make existing SSH authentication available, then synchronize and verify the external index. Keep the 28 price exceptions and three historical safety blocks; no actionable Shopify create queue remains.",
+  "shopify_writer_active": false,
+  "background_worker_active": false,
+  "historical_safety_block_action": "NOT_RETRIED_PRESERVE_ORIGINAL_BLOCK"
 }
