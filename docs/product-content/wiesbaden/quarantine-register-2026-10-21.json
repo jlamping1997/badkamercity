@@ -2,7 +2,7 @@
   "schema": "bc-wiesbaden-quarantine-v1",
   "updated_at": "2026-10-21",
   "scope": "verwerkingsquarantaine: Shopify status blijft ongewijzigd",
-  "total": 134,
+  "total": 139,
   "groups": {
     "deferred_39": {
       "reason": "Eerste 50 basis gecontroleerd maar door gebruiker expliciet uitgesteld tot eindcontrole; niet automatisch verwerken, ook niet na succesvolle categorieclassificatie",
@@ -260,6 +260,24 @@
       "scope": "NEW_UNCREATED_CANDIDATES_NOT_IN_SHOPIFY_2026_10_19",
       "status": "HOLD_ONLY_MISSING_PRICE",
       "does_not_change_existing_shopify_products": true
+    },
+    "source_only_with_price_pending_5": {
+      "reason": "Historical source-only new articles with positive cached advice price, not published. 3 blocked by action safety controls; 2 require current retail-price and sale-eligibility review. Never bypass platform safeguards or list at zero.",
+      "skus": [
+        "20.3447",
+        "33.6000",
+        "41.3523",
+        "41.3676",
+        "75.3510"
+      ],
+      "blocking_reasons": {
+        "20.3447": "Product source-only, manufacturer positive €264 but three attempts were safety-blocked by connector. Not created; merchant platform review before retry.",
+        "33.6000": "UniMatch clickmechanisme source cache has €6.89 but current public manufacturer page has no displayed retail price. Hold for price confirmation.",
+        "41.3523": "Elara glans wit bevestigingsset source cache price €24.95, but product create action was safety-blocked. Not created.",
+        "41.3676": "Elara 181.7×60 brushed steel electric radiator source cache price €639, but product create action was safety-blocked. Not created.",
+        "75.3510": "Displaydoos met onderhoudsartikelen gevuld: possible B2B display item; current public manufacturer page shows no consumer price. Verify suitability/price before consumer publication."
+      },
+      "status": "NOT_CREATED_NOT_ONLINE"
     }
   },
   "protected_skus": [
@@ -410,7 +428,7 @@
     "29.6948",
     "29.6949"
   ],
-  "release_policy": "Old Shopify products remain online while tagged for review. Newly identified 28 missing-price source-only candidates have never been created in Shopify. No automatic 0 EUR products. All quarantine checked in one final owner review.",
+  "release_policy": "Existing Shopify quarantine articles remain published and active. The 28 missing-price and 5 pending newly sourced articles are NOT online; release after positive price, merchant/platform clearance, and original SKU confirmation.",
   "canonical_register": true,
   "notes": "43 entries from cohort 1 plus 19 blocked cohort-2 candidates. Cohort-2 remaining 28 are not yet confirmed for write. Previously approved 24.3710 remains protected; nine product title/description writes across cohorts were individually read back.",
   "latest_cohort": {
@@ -445,14 +463,14 @@
   },
   "latest_online_first": {
     "date": "2026-10-21",
-    "candidates_from_source_2026_10_19": 217,
-    "created_new_online_published_verified": 24,
-    "remaining_ready_for_basic_publishing": 165,
-    "source_only_price_missing": 28,
-    "active_shopify_wiesbaden_before": 2265,
-    "active_shopify_wiesbaden_after": 2289,
-    "stored_separately_from_applied_enrichment": true,
-    "quality_scope": "online catalog baseline (SKU, title, primary image, manufacturer data, price +21% policy, proper category and online publication). SEO/filter/refinements later.",
-    "important": "Old 106 quarantine still online; new 28 have no safe price, so cannot list as sellable yet."
+    "source_only_original": 217,
+    "confirmed_online_store_published": 184,
+    "missing_reliable_price_original": 28,
+    "other_pending_review": 5,
+    "existing_old_online_content_review": 106,
+    "shopify_active_wiesbaden": 2449,
+    "quarantine_is_checklist": true,
+    "all_184_newly_published_with_positive_consumer_price_and_ready_media": true,
+    "external_index_sync_done": false
   }
 }
