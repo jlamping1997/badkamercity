@@ -1,0 +1,73 @@
+{
+  "schema": "bc-wiesbaden-quarantine-v1",
+  "updated_at": "2026-10-21",
+  "scope": "verwerkingsquarantaine: Shopify status blijft ongewijzigd",
+  "total": 43,
+  "groups": {
+    "deferred_39": {
+      "reason": "Eerste 50 basis gecontroleerd maar door gebruiker expliciet uitgesteld tot eindcontrole; niet automatisch verwerken, ook niet na succesvolle categorieclassificatie",
+      "skus": [
+        "22.2701",
+        "22.2723",
+        "22.2730",
+        "22.2770",
+        "22.3719",
+        "22.3730",
+        "22.3760",
+        "22.3771",
+        "22.3775",
+        "22.5730",
+        "24.1600",
+        "24.7101",
+        "29.1612",
+        "29.1621",
+        "29.1625",
+        "29.1630",
+        "29.1631",
+        "29.1632",
+        "29.1700",
+        "29.2070",
+        "29.2114",
+        "29.2500",
+        "29.2514",
+        "29.2532",
+        "29.2541",
+        "29.2600",
+        "29.2930",
+        "29.3931",
+        "29.3932",
+        "29.4102",
+        "29.4124",
+        "29.4930",
+        "29.5301",
+        "29.5304",
+        "29.5312",
+        "29.5351",
+        "29.5353",
+        "29.5362",
+        "29.5932"
+      ]
+    },
+    "technical_4": {
+      "reason": "onopgeloste technische specificatie/set/maat-conflicten, controleren bij eindbehandeling",
+      "skus": [
+        "29.8007",
+        "29.1634",
+        "29.1635",
+        "29.2502"
+      ]
+    }
+  },
+  "protected_skus": [
+    "24.3710"
+  ],
+  "applied_2026_10_21": [
+    "22.3734",
+    "22.3737",
+    "29.1617",
+    "29.1705",
+    "29.6929",
+    "29.1510"
+  ],
+  "release_policy": "quarantained SKUs uitsluiten van alle volgende runs, ook bij herstart; handmatige expliciete vrijgave pas na einde merkronde"
+}
