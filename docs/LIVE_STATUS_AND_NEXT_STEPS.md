@@ -1,5 +1,11 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Git-opschoning werkbranch — 22 oktober 2026 (VERIFIED_GITHUB_REMOTE)
+
+De bestaande uitvoerbranch `fix/product-cards-2026-10-14` is via een **normale merge-commit** met `main` bijgewerkt, zonder force-push, reset of verlies van de eigen werkcode (mergecheckpoint `9f1cebaa`). Vervolgens zijn precies **acht verouderde productswitcher-QA-/debug-back-ups uit juli** (samen 5.640.789 bytes) uit de actuele Git-branch verwijderd (cleanupcheckpoint `de00b457`), en `.gitignore` sluit nieuwe back-upkopieën uit. De echte `assets/bc-product-switcher.js`, `assets/product-switcher-data.json` en `scripts/filter-sync/index_sync.py` blijven bestaan. GitHub-readback bevestigde acht verwijderingen en **0 commits achter op main** na die cleanup. De werkbranch heeft bewust nog eigen niet-gemergede themacode en index-synchronisatiewerk; dat is geen rommel.
+
+**Grenzen:** uitsluitend GitHub gewijzigd; geen live Shopify- of VPS-update, geen lokale Windows-`git status` en geen nieuwe storefront-/runtime-test. De verwijderde kopieën blijven terugvindbaar in de Git-geschiedenis. Andere oude ontwikkelbranches, audits en bewijsdocumenten zijn bewust behouden wegens niet bewezen veilige verwijderbaarheid. `main` krijgt in deze ronde alleen deze documentatienotitie; het thema wordt niet naar `main` gemerged of gepubliceerd.
+
 ## Externe filters / Wiesbaden-index — 22 oktober 2026 (GIT_PREPARED_NOT_DEPLOYED)
 
 **Gebruiker bevestigde werkende interactieve SSH-login** op de VPS. Vijf bestaande Docker-containers draaien; Caddy routeert `/verified/*` naar `badkamercity-filter-api-verified-candidate`, en het actuele Shopify MAIN-thema gebruikt deze route. Op de VPS is uitsluitend voor de collectie `inloopdouches` een back-up gemaakt en `profiles.json` aangepast: `f_breedte_mm`, `f_glasdikte_mm` en `f_glaskleur` aangezet (8 → 11). Daarna slaagde een publieke API-test op 294 geïndexeerde producten; een volledige browser- en mobiele winkeltest is **NIET BEWEZEN**.
