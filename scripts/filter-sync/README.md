@@ -29,7 +29,7 @@ Prijzen worden als exacte decimalen naar centen geconverteerd; **geen extra 21% 
 
 ## Uitvoering op een geautoriseerde VPS-sessie (nog niet uitgevoerd)
 
-De code hoort op de **actieve branch** `fix/product-cards-2026-10-14`, in `scripts/filter-sync/`. Gebruik de bestaande productie-back-ups. Bewaar privé-snapshots **buiten** de publieke repo, bijv. onder `/home/ubuntu/bc_sync_private_20261022/`. Controleer eerst of de actuele 13-oktober-indexbestanden, de live `profiles.json` met de drie nieuwe douchefilters en de Shopify-authenticatie beschikbaar zijn.
+De code inclusief `shopify_auth.py` hoort op de **actieve branch** `fix/product-cards-2026-10-14`, in `scripts/filter-sync/`. Gebruik de bestaande productie-back-ups. Bewaar privé-snapshots **buiten** de publieke repo, bijv. onder `/home/ubuntu/bc_sync_private_20261022/`. Controleer eerst of de actuele 13-oktober-indexbestanden, de live `profiles.json` met de drie nieuwe douchefilters en de Shopify-authenticatie beschikbaar zijn.
 
 ```bash
 # Eerst alleen de offline tests; voert geen netwerkmutaties uit.
@@ -54,7 +54,7 @@ python3 scripts/filter-sync/index_sync.py stage \
   --folder /home/ubuntu/bc_sync_private_20261022/candidate
 ```
 
-De capture vereist `SHOPIFY_ADMIN_ACCESS_TOKEN` in de procesomgeving; alleen de vaste toegestane Shopify-host wordt benaderd. De stage vereist `TYPESENSE_API_KEY`, gebruikt alleen de lokale `127.0.0.1:8108`-poort, en vraagt geen Shopify-write-scopes. Configureer sleutels op de VPS volgens bestaand geheimenbeheer met root-only rechten; voer geen sleutels als CLI-argument in en plaats ze niet in commandologs. **Het laatste doorgegeven commando toonde geen werkelijke uitvoer**, dus het is nog onbekend of zulke variabelen al bestaan.
+De capture accepteert óf een bestaande `SHOPIFY_ADMIN_ACCESS_TOKEN`, óf `SHOPIFY_CLIENT_ID` plus `SHOPIFY_CLIENT_SECRET` van een op deze winkel geïnstalleerde app uit de Shopify Dev Dashboard. In het tweede geval vraagt het script vóór iedere capture zelf een token aan dat circa 24 uur geldig is. Er wordt uitsluitend naar de vaste Shopify-host geauthenticeerd; het secret en het access token worden niet geprint of opgeslagen. De stage vereist `TYPESENSE_API_KEY`, gebruikt alleen de lokale `127.0.0.1:8108`-poort, en vraagt geen Shopify-write-scopes. Configureer sleutels op de VPS volgens bestaand geheimenbeheer met root-only rechten; voer geen sleutels als CLI-argument in en plaats ze niet in commandologs. **Nieuwe VPS-controle 22 oktober 2026:** in de gecontroleerde `/opt/badkamercity/.env` en de drie filter-API-Dockeromgevingen zijn geen Shopify-variabelen gevonden. Dit sluit andere, niet-gecontroleerde locaties niet uit. De synchronisatie is nog niet op de VPS uitgevoerd.
 
 ## Handmatige preflight, acceptatie en omschakeling
 

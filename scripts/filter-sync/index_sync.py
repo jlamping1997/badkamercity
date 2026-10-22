@@ -19,6 +19,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from shopify_auth import get_shopify_token
+
 SHOP = "fpa9hu-i3.myshopify.com"
 GRAPHQL = f"https://{SHOP}/admin/api/2026-10/graphql.json"
 TYPESENSE = "http://127.0.0.1:8108"
@@ -89,9 +91,7 @@ def request_json(url, *, method="GET", key=None, body=None, content_type="applic
 
 
 def capture(output):
-    token = os.environ.get("SHOPIFY_ADMIN_ACCESS_TOKEN", "").strip()
-    if not token:
-        raise ValueError("SHOPIFY_ADMIN_ACCESS_TOKEN is not configured; no capture")
+    token = get_shopify_token(SHOP)
     rows, cursor, seen = [], None, set()
     while True:
         response = request_json(GRAPHQL, method="POST", key=token,
