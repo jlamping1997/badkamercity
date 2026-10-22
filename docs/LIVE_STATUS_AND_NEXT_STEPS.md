@@ -1,5 +1,13 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Filterindex — Shopify-auth voorbereid, 22 oktober 2026 (GIT_ONLY)
+
+**VPS-check uit interactieve gebruikerssessie:** er zijn **geen Shopify-variabelen** aangetroffen in `/opt/badkamercity/.env` of de omgevingen van de drie filter-API-containers. Hiermee is niet bewezen dat Shopify-inloggegevens nergens anders bestaan. Geen geheime waarden in chat/GitHub gedeeld of van de ChatGPT-connector naar de VPS gekopieerd.
+
+**GitHub-implementatie:** `scripts/filter-sync/index_sync.py` op de bestaande werkbranch `fix/product-cards-2026-10-14` gebruikt voortaan `shopify_auth.py`: eerst bestaande `SHOPIFY_ADMIN_ACCESS_TOKEN` indien aanwezig, anders `SHOPIFY_CLIENT_ID` en `SHOPIFY_CLIENT_SECRET` voor een Shopify Dev Dashboard **client_credentials** token, met vaste Shopify-host, geen redirects en geredigeerde foutmeldingen. Er zijn **8 synthetische auth-tests lokaal PASS**; de eerdere **10 index-synctests** zijn niet in deze codewijziging integraal opnieuw uitgevoerd. De Shopify CLI Connector App staat al geïnstalleerd met `read_products` en `read_publications`, maar de toegangssleutels daarvan zijn **niet beschikbaar** voor de VPS en deze app heeft ook schrijfrechten. Een eigen least-privilege read-only app is daarom een voorkeur, geen bewezen vereiste.
+
+**Indexstatus blijft onveranderd:** geen actuele Shopify-snapshot op VPS, geen Typesense-stage, geen live-API-switch, geen automatische synchronisatie of storefronttest uitgevoerd. Exact volgende handeling is een geautoriseerde read-only Shopify API-credential via de bestaande app of een aparte Dev Dashboard app **lokaal op de VPS** te configureren (niet in chat/GitHub), daarna code op VPS ophalen, authenticatie zonder geheimen controleren, `capture` read-only uitvoeren en de index veilig reconciliëren. Alle afgesproken uitsluitingen/uitzonderingen blijven behouden.
+
 ## Git-opschoning werkbranch — 22 oktober 2026 (VERIFIED_GITHUB_REMOTE)
 
 De bestaande uitvoerbranch `fix/product-cards-2026-10-14` is via een **normale merge-commit** met `main` bijgewerkt, zonder force-push, reset of verlies van de eigen werkcode (mergecheckpoint `9f1cebaa`). Vervolgens zijn precies **acht verouderde productswitcher-QA-/debug-back-ups uit juli** (samen 5.640.789 bytes) uit de actuele Git-branch verwijderd (cleanupcheckpoint `de00b457`), en `.gitignore` sluit nieuwe back-upkopieën uit. De echte `assets/bc-product-switcher.js`, `assets/product-switcher-data.json` en `scripts/filter-sync/index_sync.py` blijven bestaan. GitHub-readback bevestigde acht verwijderingen en **0 commits achter op main** na die cleanup. De werkbranch heeft bewust nog eigen niet-gemergede themacode en index-synchronisatiewerk; dat is geen rommel.
