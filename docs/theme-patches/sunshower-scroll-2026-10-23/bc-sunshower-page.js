@@ -31,52 +31,75 @@
         help.addEventListener('close',() => button.focus({preventScroll:true}));
       });
       const choiceScrollKey = 'bc-sunshower-choice-scroll';
-      const rememberChoicePosition = (url,button) => {
+      const choiceRoute = value => {
+        const url = new URL(value,location.origin);
+        url.searchParams.delete('preview_theme_id');
+        url.searchParams.sort();
+        return url.pathname + url.search;
+      };
+      const captureChoicePosition = button => {
         const field = button.closest('[data-ss-field]');
-        const target = new URL(url);
+        return {field:field.dataset.ssField,top:field.getBoundingClientRect().top,y:window.scrollY};
+      };
+      const rememberChoicePosition = (url,position) => {
         try {
           sessionStorage.setItem(choiceScrollKey,JSON.stringify({
-            target:target.pathname + target.search,field:field.dataset.ssField,
-            top:field.getBoundingClientRect().top,y:window.scrollY,time:Date.now()
+            ...position,target:choiceRoute(url),time:Date.now()
           }));
         } catch {}
       };
       const restoreChoicePosition = () => {
         let saved;
+        let targetRoute;
         try {
           saved = JSON.parse(sessionStorage.getItem(choiceScrollKey));
           sessionStorage.removeItem(choiceScrollKey);
+          if (typeof saved?.target === 'string') targetRoute = choiceRoute(saved.target);
         } catch { return; }
-        if (!saved || saved.target !== location.pathname + location.search || !Number.isFinite(saved.time) || Date.now() - saved.time < 0 || Date.now() - saved.time > 30000 || !Number.isFinite(saved.y) || !Number.isFinite(saved.top)) return;
+        if (!saved || targetRoute !== choiceRoute(location.href) || !Number.isFinite(saved.time) || Date.now() - saved.time < 0 || Date.now() - saved.time > 30000 || !Number.isFinite(saved.y) || !Number.isFinite(saved.top)) return;
         const field = [...page.querySelectorAll('[data-ss-field]')].find(item => item.dataset.ssField === saved.field);
+        const previousRestoration = history.scrollRestoration;
+        history.scrollRestoration = 'manual';
         let stopped = false;
         let frame;
+        let settleTimer;
         const restore = () => {
           if (stopped || !page.isConnected) return;
           const y = field ? window.scrollY + field.getBoundingClientRect().top - saved.top : saved.y;
           window.scrollTo({top:Math.max(0,y),left:window.scrollX,behavior:'instant'});
         };
         const schedule = () => {
+          if (stopped) return;
           cancelAnimationFrame(frame);
           frame = requestAnimationFrame(restore);
         };
         const stop = () => {
           stopped = true;
           cancelAnimationFrame(frame);
+          clearTimeout(settleTimer);
+          clearTimeout(maxTimer);
+          history.scrollRestoration = previousRestoration;
           observer.disconnect();
-          window.removeEventListener('load',schedule);
+          window.removeEventListener('load',loaded);
           window.removeEventListener('pageshow',schedule);
           for (const event of ['pointerdown','touchstart','wheel','keydown','pagehide']) window.removeEventListener(event,stop);
         };
+        const loaded = () => {
+          if (stopped) return;
+          schedule();
+          clearTimeout(settleTimer);
+          settleTimer = setTimeout(stop,2000);
+        };
         const observer = new ResizeObserver(schedule);
         observer.observe(page);
-        window.addEventListener('load',schedule,{once:true});
+        window.addEventListener('load',loaded,{once:true});
         window.addEventListener('pageshow',schedule,{once:true});
         for (const event of ['pointerdown','touchstart','wheel','keydown','pagehide']) window.addEventListener(event,stop,{passive:true});
         document.fonts?.ready.then(schedule);
+        const maxTimer = setTimeout(stop,15000);
         restore();
         schedule();
-        setTimeout(stop,2000);
+        if (document.readyState === 'complete') loaded();
       };
       restoreChoicePosition();
       let navigating = false;
@@ -84,6 +107,7 @@
       const options = [...page.querySelectorAll('[data-ss-option]')];
       options.forEach(button => button.addEventListener('click', async () => {
         if (navigating || button.getAttribute('aria-pressed') === 'true') return;
+        const position = captureChoicePosition(button);
         navigating = true;
         const status = page.querySelector('[data-ss-choice-status]');
         const selection = Object.fromEntries([...page.querySelectorAll('[data-ss-field]')].map(field => [field.dataset.ssField,field.querySelector('[aria-pressed="true"]').dataset.ssOption]));
@@ -97,9 +121,10 @@
           catalog ||= await fetch(page.dataset.catalog).then(response => { if (!response.ok) throw new Error('catalog'); return response.json(); });
           const match = catalog.products.find(item => Object.entries(selection).every(([key,value]) => item.selection[key] === value));
           if (!match) throw new Error('configuration');
-          const url = destination(match);
-          rememberChoicePosition(url,button);
-          location.assign(url);
+          const url = new URL(destination(match));
+          url.hash = 'sunshower-configurator';
+          rememberChoicePosition(url,position);
+          location.assign(url.href);
         } catch {
           navigating = false;
           options.forEach(option => { option.disabled = false; });
