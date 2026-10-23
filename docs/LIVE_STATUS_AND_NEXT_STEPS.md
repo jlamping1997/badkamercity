@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Sunshower-blog — nieuw ontwerp, 23 oktober 2026 (PREVIEW_READY / DESKTOP_VERIFIED)
+
+De bestaande Sunshower-blog heeft nu een verzorgde BadkamerCity-opmaak in **UNPUBLISHED 195611197706 — BadkamerCity - Sunshower eerste wissel 23 okt**: navy/turquoise, de bestaande ONE/PLUS-beelden, duidelijke vergelijking, zes ankerlinks en rustige leesblokken. De gepubliceerde brontekst en bronnen zijn exact behouden. Default article.json gebruikt de nieuwe bc-advice-article-sectie; er is nu één artikel. De Sunshower-bloglink en eerdere productswitch-scrollcorrectie blijven behouden.
+
+**Broncheckpoint:** [f7e3fee7](https://github.com/jlamping1997/badkamercity/commit/f7e3fee7f078a5ae239174a5fed87fc6835a8986) op vaste branch `fix/product-cards-2026-10-14`; [bron, back-ups, verificatie en terugzetpad](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/content/sunshower/2026-10-23/design). Alleen scoped patch/bewijs/docs opgeslagen, geen root-theme-push. MAIN blijft **195611492618 — BadkamerCity - Sunshower blog 23 okt**, **512/512 ongewijzigd**. Concept nu 514 bestanden: nieuwe sectie + één ongebruikt alternatief, alleen article.json en twee locale-JSON's gewijzigd; overige 509 bestanden gelijk aan de start van deze ontwerptaak.
+
+**Controles:** Theme Check revisie3 vier bestanden SUCCESS met officiële gebundelde schemafallback; veilige alias revisie2 SUCCESS. Exacte Admin-readbacks. Echte desktopbrowser **1363×936**: nieuwe opmaak/beelden zichtbaar, geen horizontale artikeloverflow, vergelijkingknop getest en alle zes secties/bronnen zichtbaar in de artikelstructuur. Preview-HTTP met cookiebehoud: thema195611197706, HTTP200, één H1, zes secties, geen Liquid-/vertaalfout. Openbare pagina blijft oude opmaak op MAIN, HTTP200.
+
+**Grens:** fysieke mobiel en smalle viewport **NOT_TESTED**. Shopify weigerde de tijdelijke 320/390 iframe-test; het verwijderen van dat testbestand werd door connectorbeleid geblokkeerd. Het bestand is veilig vervangen door uitsluitend `{% section 'bc-advice-article' %}`, is niet toegewezen en beïnvloedt de gewone route niet. Optioneel later via Admin verwijderen. Geen checkout/CWV/rankings gemeten en geen live write/publicatie.
+
+**Exact volgende handeling:** eigenaar beoordeelt de blog in de voorvertoning van thema195611197706, controleert de telefoonweergave en publiceert het concept bij akkoord volgens AGENTS.md. Daarna rollen en openbare blog opnieuw lezen. Eerdere blog-/scrollnotities hieronder zijn gedateerde voorgeschiedenis.
+
 ## Sunshower-blog — 23 oktober 2026 (BLOG_LIVE / LINK_PREVIEW_READY)
 
 Op expliciete opdracht van de eigenaar is de basisblog **[Sunshower: alleen infrarood of ook uv?](https://badkamercity.nl/blogs/nieuws/sunshower-infrarood-of-uv)** gepubliceerd in bestaand blog `nieuws` (article `629505622282`). Eigen tekst, vergelijking ONE/PLUS, bronverwijzingen en links naar Sunshower/configurators/contact; geen nieuw ontwerp of productmutaties. Admin-readback bevestigt publicatie en volledige inhoud (Shopify normaliseert alleen witruimte). Openbare HTTP200, correcte canonical, één H1 en geen Liquid-fout geverifieerd.
