@@ -1,5 +1,15 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Sunshower productwissel — 23 oktober 2026 (PREVIEW_READY / DESKTOP_VERIFIED)
+
+Eigenaar geeft prioriteit aan de Sunshower-scrollcorrectie. Actieve branch blijft `fix/product-cards-2026-10-14`; ander filter-/productwerk niet opnieuw uitgevoerd. Verse bron: MAIN `195491168522`. Concept `195610116362 — BadkamerCity - Sunshower scrollpositie 23 okt` was vóór wijzigen **512/512 checksum-identiek** en is na de ene assetwrite **512 bestanden, uitsluitend `assets/bc-sunshower-page.js` gewijzigd, overige 511 gelijk**. JavaScript exact teruggelezen. MAIN opnieuw gecontroleerd: **512/512 ongewijzigd en nog MAIN**.
+
+Bij configuratie-navigatie wordt de schermoffset van het gewijzigde veld eenmalig op de juiste doelroute hersteld. Korte layoutcorrectie stopt bij eigen scroll/touch/keyboardinput. Browser **1363×936**: Organic grey→Sand White **387,828→387,828 px**; Large→Medium **532,625→532,625 px**; Hoek→Inbouw **668,875→668,875 px**; ONE→PLUS **247,828→247,828 px**. Alle vier behouden scrollY195 en de juiste nieuwe producttitel/route. Bronprobleem gereproduceerd: vóór fix Black→Organic grey scrollY421→0. Native klikken gebruikt voor de vergelijkingen; locator-auto-scroll is geen productgedrag.
+
+**Checks/beperkingen:** Node syntax en geïsoleerde JS-gevallen PASS (anker, layout, input-cancel, eenmalig, route/TTL, ontbrekend veld, geblokkeerde opslag, previewquery). Toolkit Theme Check kon niet starten wegens ontbrekend pakket `@shopify/theme-check-common`; geen Theme Check-PASS geclaimd. Fysieke mobiel, smalle viewport, trage mobiele verbinding en checkout **NOT_TESTED**. Alleen deze JS-asset gewijzigd; geen product-/prijs-/indexmutaties. Geen livewrite of publicatie. Geen Windows-lokale Gitcontrole of root-theme-push; Shopify-Git-integratie niet bewezen.
+
+[Code, originele asset, terugzetpad en testgrenzen](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/theme-patches/sunshower-scroll-2026-10-23). **Volgende handeling:** eigenaar opent dit concept, controleert op mobiel enkele keuzes en publiceert alleen dit actuele concept indien goed. Daarna MAIN en openbare storefront opnieuw lezen.
+
 ## Filterindex — Shopify-auth voorbereid, 22 oktober 2026 (GIT_ONLY)
 
 **VPS-check uit interactieve gebruikerssessie:** er zijn **geen Shopify-variabelen** aangetroffen in `/opt/badkamercity/.env` of de omgevingen van de drie filter-API-containers. Hiermee is niet bewezen dat Shopify-inloggegevens nergens anders bestaan. Geen geheime waarden in chat/GitHub gedeeld of van de ChatGPT-connector naar de VPS gekopieerd.
