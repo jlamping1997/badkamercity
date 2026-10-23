@@ -33,21 +33,45 @@
     "publicHttp200": true,
     "oneH1": true,
     "canonicalMatches": true,
-    "liquidError": false
+    "liquidError": false,
+    "visualBrowser": "NOT_TESTED: local Playwright could not start because Chromium is not installed."
   },
   "landingLink": {
-    "status": "PREPARING_UNPUBLISHED_COPY",
+    "status": "PREVIEW_READY_UNPUBLISHED",
     "landing": "https://badkamercity.nl/pages/sunshower",
-    "sourceTheme": "195610116362",
-    "previewTheme": "195611492618",
-    "filename": "locales/nl.json",
-    "key": "ss_experience.faq.difference_answer",
-    "before": "Round ONE geeft infraroodwarmte. Round PLUS heeft infrarood én UV; je kiest welke functie je gebruikt. In de configurator bekijk je de uitvoeringen en mogelijkheden.",
-    "after": "Round ONE geeft infraroodwarmte. Round PLUS heeft infrarood én UV; je kiest welke functie je gebruikt. In de configurator bekijk je de uitvoeringen en mogelijkheden. Lees meer in onze <a href=\"/blogs/nieuws/sunshower-infrarood-of-uv\">keuzehulp over infrarood en uv</a>."
+    "preview": "https://badkamercity.nl/pages/sunshower?preview_theme_id=195611197706",
+    "liveTheme": "195611492618",
+    "previewTheme": "195611197706",
+    "previewName": "BadkamerCity - Sunshower eerste wissel 23 okt",
+    "filename": "templates/page.bc-sunshower.json",
+    "sectionId": "sunshower_advice",
+    "heading": "Infrarood of ook uv?",
+    "button": "Lees de keuzehulp",
+    "verification": {
+      "http200": true,
+      "previewThemeConfirmed": true,
+      "oneRealBlogAnchor": true,
+      "oneH1": true,
+      "liquidError": false,
+      "templateExact": true,
+      "onlyTemplateChangedSinceScrollPreview": true,
+      "existingScrollAssetPreserved": true
+    },
+    "nextAction": "Merchant previews and publishes the combined scroll-correction and blog-link theme."
   },
   "boundaries": {
     "newDesign": false,
     "productDataChanged": false,
     "themePublishedByAgent": false
+  },
+  "themeSafety": {
+    "currentMain": "195611492618",
+    "liveThemeFileChanges": 0,
+    "liveFileCount": 512,
+    "previewFileCount": 512,
+    "themePublishedByAgent": false,
+    "blockedWrite": "An initial file write was rejected after its target had become MAIN. A different verified UNPUBLISHED target was used.",
+    "restoredPreviousLocale": true,
+    "finalLocaleChanges": 0
   }
 }

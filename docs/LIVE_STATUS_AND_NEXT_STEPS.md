@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Sunshower-blog — 23 oktober 2026 (BLOG_LIVE / LINK_PREVIEW_READY)
+
+Op expliciete opdracht van de eigenaar is de basisblog **[Sunshower: alleen infrarood of ook uv?](https://badkamercity.nl/blogs/nieuws/sunshower-infrarood-of-uv)** gepubliceerd in bestaand blog `nieuws` (article `629505622282`). Eigen tekst, vergelijking ONE/PLUS, bronverwijzingen en links naar Sunshower/configurators/contact; geen nieuw ontwerp of productmutaties. Admin-readback bevestigt publicatie en volledige inhoud (Shopify normaliseert alleen witruimte). Openbare HTTP200, correcte canonical, één H1 en geen Liquid-fout geverifieerd.
+
+**Themarollen vers gelezen:** MAIN is nu **195611492618 — BadkamerCity - Sunshower blog 23 okt**. De kopie is tijdens deze sessie MAIN geworden; deze uitvoerder heeft **geen themePublish** aangeroepen. Een daarop gerichte bestandswrite is door de automatische Shopify-controle geblokkeerd en niet via ander transport herhaald. Actuele live-bestanden **512/512 ongewijzigd** tijdens de blogkoppeling.
+
+De nieuwe leeslink is veilig gecombineerd met de al voorbereide eerste-wisselcorrectie in **UNPUBLISHED 195611197706 — BadkamerCity - Sunshower eerste wissel 23 okt**. Alleen **`templates/page.bc-sunshower.json`** gewijzigd ten opzichte van die scrollpreview; alle overige 511 bestanden, inclusief de verbeterde `assets/bc-sunshower-page.js`, behouden. Onderaan de Sunshower-pagina staat een native rich-text-blok **Infrarood of ook uv? → Lees de keuzehulp**. Exacte template-readback en echte preview-HTTP200 bevestigen thema195611197706, één echte bloglink, één H1 en geen Liquid-fout. Taalbestanden zijn uiteindelijk ongewijzigd; een tijdelijke taalwijziging in het vorige concept is teruggezet.
+
+**Grenzen:** geen live themabestand geschreven, geen agentpublicatie, geen nieuwe visuele/fysieke mobiele browsercheck; lokale Playwright startte niet wegens ontbrekend Chromium. De eerdere scrolltests zijn niet opnieuw uitgevoerd en blijven de afzonderlijk gedocumenteerde tests van die correctie. Geen Google-indexering/rankings of volledige SEO-optimalisatie geclaimd. Actieve branch `fix/product-cards-2026-10-14`; uitsluitend content/patch/bewijs/docs in Git, geen root-theme-push.
+
+[Brontekst, templatepatch, terugzetpad en verificatie](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/content/sunshower/2026-10-23). **Exact volgende handeling:** eigenaar beoordeelt [het gecombineerde concept](https://badkamercity.nl/pages/sunshower?preview_theme_id=195611197706) en publiceert **195611197706** om zowel de nieuwe scrollcorrectie als het blogblok zichtbaar te maken. De blog zelf is al live. Lees vóór publiceren opnieuw MAIN/previewrollen bij verder tussentijds themawerk.
+
 ## Sunshower eerste wissel — 23 oktober 2026 (PREVIEW_READY / DESKTOP_VERIFIED)
 
 Eigenaar meldt dat de eerste wissel nog terugspringt. Het eerdere concept is door de eigenaar gepubliceerd: verse MAIN **195610116362 — BadkamerCity - Sunshower scrollpositie 23 okt**. De nieuwe herstelversie staat uitsluitend in **UNPUBLISHED 195611197706 — BadkamerCity - Sunshower eerste wissel 23 okt**. Vooraf **512/512 checksum-identiek**; finale readback **512 bestanden, alleen `assets/bc-sunshower-page.js` gewijzigd**, overige 511 gelijk. MAIN nog MAIN en **512/512 ongewijzigd**.
