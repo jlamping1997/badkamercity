@@ -1,0 +1,60 @@
+{
+  "schema": "hotbath-colour-groups-v1",
+  "basis_snapshot": "2026-10-24",
+  "contains_existing_groups": true,
+  "exclusive_config_models": [
+    "IBS1",
+    "IBS12",
+    "IBS12A",
+    "IBS1A",
+    "IBS20",
+    "IBS20A",
+    "IBS70",
+    "IBS7009"
+  ],
+  "spom_excluded": true,
+  "counts": {
+    "baseline_groups": 433,
+    "original_records_preserved": 3383,
+    "base_groups_after_pilot_overlay": 435,
+    "new_colour_or_book_groups": 113,
+    "new_title_config_groups": 9,
+    "total_output_groups": 582,
+    "fixed_config_colour_only_groups": 25,
+    "fixed_config_colour_only_models": 7,
+    "fixed_config_colour_only_records": 72,
+    "total_output_records": 4903,
+    "new_records_vs_original": 1520,
+    "augmented_existing_groups": 52,
+    "appended_records_vs_pilot": 139,
+    "excluded_spom_catalogue": 697,
+    "old_records_with_additive_colour_option": 7,
+    "excluded_existing_records": 0,
+    "review_entries": 53
+  },
+  "title_config_models": [
+    "Hotbath IBS2 doucheset",
+    "Hotbath IBS21 doucheset",
+    "Hotbath IBS22 doucheset",
+    "Hotbath IBS23 doucheset",
+    "Hotbath IBS24 doucheset",
+    "Hotbath IBS5 doucheset",
+    "Hotbath IBS5A doucheset",
+    "Hotbath IBSX70 doucheset",
+    "Hotbath M538 doucheset"
+  ],
+  "fixed_config_colour_only_models": [
+    "IBS25",
+    "IBS26",
+    "IBS34",
+    "IBS40",
+    "IBS40A",
+    "IBS7",
+    "IBS73"
+  ],
+  "limits": [
+    "No manufacturer inventory claim.",
+    "Unresolved family/title contradictions remain excluded from new groups.",
+    "Only literal title fields or explicit book member mappings create dimensions."
+  ]
+}
