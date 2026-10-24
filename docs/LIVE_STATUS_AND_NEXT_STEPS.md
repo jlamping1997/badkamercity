@@ -1,5 +1,15 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath keuzemenu's — 24 oktober 2026 (AUDIT_VERIFIED / PREVIEW_IN_PROGRESS)
+
+Nieuwe expliciete eigenaarprioriteit: bestaand Hotbath-menusysteem behouden, ontbrekende kleur- en samenstellingskeuzes inventariseren en gecontroleerd uitbreiden. Volledige verse read van **8.237 Hotbath-artikelen**; **433 bestaande groepen / 3.383 gekoppelde handles**, nul stale handles. **4.156 echte niet-serviceartikelen zonder groep**; **3.445 kandidaten**, waarvan 2.490 met sterk catalogusbewijs en 955 REVIEW. Dit is voorstelstatus, geen volledige boek- of uitrolgoedkeuring. 35 bestaande groepen / 81 ongekoppelde siblings zijn sterke aanvullingskandidaten.
+
+[Werkplan, boekregels, audit en onafhankelijke review](product-switcher/hotbath/2026-10-24/PLAN.md). Actieve branch blijft **fix/product-cards-2026-10-14**. Geen Windows-worktreecontrole geclaimd. Geen product-, prijs-, voorraad- of publicatiemutaties.
+
+Eerste proef staat uitsluitend in **UNPUBLISHED 195649929482 — BadkamerCity - Hotbath keuzemenus 24 okt**. Vooraf 514/514 identiek aan laatste Sunshower-concept195611197706, zodat lopende correcties behouden blijven. Vier groepen / 395 productpagina's / 387 nieuwe koppelingen: IBS70, BAA03(8→12), BAA09 en BAA10. Bestaande centrale dataset blijft behouden; kleine groepsassets en exacte handle-allowlist. MAIN blijft195611492618. Elf mapping/regressietests PASS, zeven analysecontroles PASS, Liquid zonder errors (drie bestaande waarschuwingstypen), exacte Admin-checksums. Desktopkleur/configuratie/cart voor proefgroepen bevestigd; CB003-regressie bevestigd. De specificatieheading is in het concept hersteld met één NL/EN-localealias.
+
+**Nog lopend:** de browser toonde een scrollsprong; een strikt opt-in correctie voor uitsluitend vier proefgroepen wordt gebouwd en moet opnieuw in de browser worden getoetst. Fysieke mobiel, CWV en publicatie niet uitgevoerd. De oorspronkelijke Sunshower-draft en MAIN blijven behouden. **Exact volgende handeling:** opt-in scrollcorrectie testen en teruglezen in ditzelfde concept; daarna concrete eigenaarreview en volgende batch van 35 bestaande aanvullingen voorbereiden. De onderstaande Sunshower-/filterstatus blijft gedateerde voorgeschiedenis en is niet stil opgelost.
+
 ## Sunshower-blog — nieuw ontwerp, 23 oktober 2026 (PREVIEW_READY / DESKTOP_VERIFIED)
 
 De bestaande Sunshower-blog heeft nu een verzorgde BadkamerCity-opmaak in **UNPUBLISHED 195611197706 — BadkamerCity - Sunshower eerste wissel 23 okt**: navy/turquoise, de bestaande ONE/PLUS-beelden, duidelijke vergelijking, zes ankerlinks en rustige leesblokken. De gepubliceerde brontekst en bronnen zijn exact behouden. Default article.json gebruikt de nieuwe bc-advice-article-sectie; er is nu één artikel. De Sunshower-bloglink en eerdere productswitch-scrollcorrectie blijven behouden.
