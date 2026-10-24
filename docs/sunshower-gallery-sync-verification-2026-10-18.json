@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-18",
+  "task": "Sunshower main photo and selected thumbnail diverge on iPhone screenshot",
+  "baseline": {
+    "id": "gid://shopify/OnlineStoreTheme/195388080394",
+    "name": "BadkamerCity - Sunshower direct en sneller",
+    "role": "MAIN",
+    "files": 497
+  },
+  "preview": {
+    "id": "gid://shopify/OnlineStoreTheme/195392143626",
+    "name": "BadkamerCity - Sunshower fotoselectie hersteld",
+    "role": "UNPUBLISHED"
+  },
+  "identityBeforeWrite": {
+    "processing": false,
+    "files": 497,
+    "identicalChecksums": 497
+  },
+  "final": {
+    "draft": "gid://shopify/OnlineStoreTheme/195392143626",
+    "role": "UNPUBLISHED",
+    "total": 497,
+    "changes": [
+      "assets/bc-sunshower-page.js"
+    ],
+    "untouched": 496,
+    "jsExact": true,
+    "qaRestored": true,
+    "mainRole": "MAIN",
+    "mainUnchanged": true
+  },
+  "scope": {
+    "productionFiles": [
+      "assets/bc-sunshower-page.js"
+    ],
+    "onlyGalleryBlockChanged": true,
+    "purchaseAndConfiguratorCodeByteUnchanged": true,
+    "noAdminProductMediaChanges": true
+  },
+  "implementation": {
+    "commit": "Insert the actual loaded and decoded Image node, then update selected class and aria-pressed in the same task. Current image reference follows replacements for zoom and further selections.",
+    "raceGuard": "Monotonic intent checked before and after decode; clicking selected cancels pending; detached nodes/pages cannot commit.",
+    "fallbacks": "Load/decode failure preserves current image/selection; no-decode browsers use loaded node; original presentation attributes retained except old src/srcset/sizes/dimensions.",
+    "restore": "Initial loaded responsive source, initial load and persisted pageshow reconcile thumbnail to visible currentSrc via origin+pathname, without network. Persisted pageshow invalidates pending load/decode."
+  },
+  "tests": {
+    "syntax": "node --check PASS",
+    "behavior": "20 dependency-free tests PASS. Same suite fails first decode regression against fresh baseline.",
+    "themeCheck": "Production JS revision1 VALID. Internal QA revision2 pass with non-error CDN warnings for actual CDN photo URLs; bundled schema fallback.",
+    "patch": {
+      "status": "passed",
+      "scope": {
+        "existing_changed": [
+          "assets/bc-sunshower-page.js"
+        ],
+        "new": [],
+        "total": 1
+      },
+      "patch": {
+        "path": "/workspace/scratch/87a9ff83233e/gallery-fix-git/docs/patches/BC-sunshower-gallery-sync-2026-10-18.patch",
+        "bytes": 3583,
+        "sha256": "66ce0394c4edb97c2a2468a0f50da81ddee04eb1a52e0556670d8871cd8447f1",
+        "md5": "f57557d38612f55373f6e72a3c00c48b"
+      },
+      "checks": {
+        "isolated_temporary_git_repository": true,
+        "git_diff_check": true,
+        "forward_apply_check": true,
+        "forward_apply_exact_bytes_and_file_set": true,
+        "reverse_apply_check": true,
+        "reverse_apply_exact_bytes_and_file_set": true
+      },
+      "baseline": {
+        "assets/bc-sunshower-page.js": {
+          "bytes": 12025,
+          "sha256": "3c0d935eb3dd915e1361bc4369f60569379643a832420842f637ed5456c41b9e",
+          "md5": "04c2dc58d211f9248b2ae8ec7253da68"
+        }
+      },
+      "desired": {
+        "assets/bc-sunshower-page.js": {
+          "bytes": 13480,
+          "sha256": "6d295830db35c1137a14d3d8c5512054c97a5d2fd15c5182352d7681b03f1610",
+          "md5": "001e9760f23767f0b6006fc9b6d6c9fd"
+        }
+      },
+      "limits": "This verifies a one-file source patch against the supplied one-file baseline. It does not verify Shopify theme roles, deployment, browser behavior, remote Git storage, cart persistence or checkout."
+    },
+    "desktop": {
+      "method": "Actual Shopify preview product page",
+      "viewport": [
+        1363,
+        936
+      ],
+      "photoOrder": [
+        3,
+        1,
+        5,
+        2,
+        4
+      ],
+      "allImageSourcesMatchSingleSelectedThumbnail": true,
+      "rapidSequence": [
+        3,
+        5,
+        2
+      ],
+      "rapidFinal": 2,
+      "zoomCurrentPhoto": 2,
+      "zoomOpenAndClose": true
+    },
+    "mobile": {
+      "method": "Componentfixture with actual gallery code block extracted from final production JS, five real photo URLs and production CSS. No full mobile header/productpage/device.",
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "allShowPhoto3WithThumbnail3": true,
+      "allLoaded": true,
+      "singleSelection": true,
+      "horizontalOverflow": false,
+      "rapid390": [
+        5,
+        1
+      ],
+      "rapid390Match": true,
+      "returnTo3": true
+    },
+    "temporaryQa": "existing page.bc-mobile-qa.liquid restored exact"
+  },
+  "safariRootCause": "User screenshot establishes mismatch. Chrome baseline showed loading delay, not exact persistent Safari paint mismatch. Exact iPhone cause remains unverified; decode/atomic swap/restored state paths addressed.",
+  "notTested": [
+    "Physical iOS/Safari",
+    "Complete mobile header/footer/product page",
+    "Real iOS BFCache navigation",
+    "Real server failure",
+    "Cart/checkout/payment",
+    "Windows local sync"
+  ],
+  "screenshot": "docs/sunshower-gallery-sync-mobile-2026-10-18.jpg",
+  "rollback": "Do not publish preview; after publication restore only baseline assets/bc-sunshower-page.js, or previous theme if no later changes."
+}

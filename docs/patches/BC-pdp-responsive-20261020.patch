@@ -1,0 +1,35 @@
+--- a/assets/section-main-product.css
++++ b/assets/section-main-product.css
+@@ -2857,3 +2857,32 @@
+   }
+ }
+ 
++@media screen and (min-width: 750px) and (max-width: 989px) {
++  product-info[id^='MainProduct-'] .product.grid {
++    display: grid;
++    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
++    align-items: start;
++  }
++
++  product-info[id^='MainProduct-'] .product.grid > .product__media-wrapper,
++  product-info[id^='MainProduct-'] .product.grid > .product__info-wrapper {
++    width: 100%;
++    max-width: none;
++    min-width: 0;
++  }
++
++  product-info[id^='MainProduct-'] .product__media-wrapper media-gallery {
++    display: block;
++    width: 100%;
++    max-width: 100%;
++  }
++
++  product-info[id^='MainProduct-'] .product__media-wrapper .product__column-sticky,
++  product-info[id^='MainProduct-'] .product__info-container {
++    position: static;
++    top: auto;
++    width: 100%;
++    max-width: none;
++  }
++}
++

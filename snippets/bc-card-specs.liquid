@@ -1,0 +1,40 @@
+{% doc %}
+  Renders up to two confirmed product attributes with an article fallback.
+  @param {product} product - The card product.
+{% enddoc %}
+{%- liquid
+  assign manifest = product.metafields.bc_data.filter_manifest.value
+  assign sku = product.variants.first.sku | strip
+  assign expected_sku = sku | upcase
+  assign manifest_sku = manifest.sku | strip | upcase
+  assign value_1 = ''
+  assign value_2 = ''
+  assign label_1 = 'products.product.card_type' | t
+  assign label_2 = 'products.product.card_sku' | t
+  if manifest.format == 'verified-product-filters-v1' and manifest_sku == expected_sku and expected_sku != blank
+    assign values = manifest.values
+    if values.kraanmontage != blank
+      assign value_1 = values.kraanmontage
+      assign label_1 = 'products.product.card_mounting' | t
+    elsif values.materiaal != blank
+      assign value_1 = values.materiaal
+      assign label_1 = 'products.product.card_material' | t
+    endif
+    if values.kleur != blank
+      assign value_2 = values.kleur
+      assign label_2 = 'products.product.card_colour' | t
+    endif
+  endif
+  if value_1 == blank
+    assign value_1 = product.type
+  endif
+  if value_2 == blank
+    assign value_2 = sku
+  endif
+-%}
+{%- if value_1 != blank or value_2 != blank -%}
+  <dl class="bc-card-specs">
+    {%- if value_1 != blank -%}<div><dt>{{ label_1 | escape }}:</dt><dd>{{ value_1 | escape }}</dd></div>{%- endif -%}
+    {%- if value_2 != blank -%}<div><dt>{{ label_2 | escape }}:</dt><dd>{{ value_2 | escape }}</dd></div>{%- endif -%}
+  </dl>
+{%- endif -%}

@@ -1,3 +1,9 @@
+{% doc %}
+  Renders a product card for search results.
+  @param {product} card_product - The product to display.
+  @param {boolean} [show_secondary_image] - Show a second image on hover.
+  @param {boolean} [lazy_load] - Load the primary image lazily.
+{% enddoc %}
 {% liquid
   assign featured_media = card_product.featured_media
   assign secondary_media = nil
@@ -16,8 +22,8 @@
     assign is_on_sale = true
   endif
 
-  assign display_price = card_product.price | money_without_currency
-  assign display_compare_at_price = card_product.compare_at_price | money_without_currency
+  assign display_price = card_product.price | money
+  assign display_compare_at_price = card_product.compare_at_price | money
 
   assign spec_1 = card_product.metafields.custom.search_card_spec_1.value | default: card_product.metafields.custom.search_card_spec_1
   assign spec_2 = card_product.metafields.custom.search_card_spec_2.value | default: card_product.metafields.custom.search_card_spec_2
@@ -56,7 +62,7 @@
             "
             src="{{ featured_media | image_url: width: 420 }}"
             sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
-            alt="{{ featured_media.alt | escape }}"
+            alt="{{ featured_media.alt | default: card_product.title | escape }}"
             class="bc-search-card__image bc-search-card__image--primary"
             loading="{{ media_loading }}"
             width="{{ featured_media.width }}"
@@ -76,7 +82,7 @@
               "
               src="{{ secondary_media | image_url: width: 420 }}"
               sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
-              alt="{{ secondary_media.alt | default: featured_media.alt | escape }}"
+              alt="{{ secondary_media.alt | default: featured_media.alt | default: card_product.title | escape }}"
               class="bc-search-card__image bc-search-card__image--secondary"
               loading="lazy"
               width="{{ secondary_media.width }}"
@@ -90,29 +96,14 @@
     </div>
 
     <div class="bc-search-card__content">
+      {% if card_product.vendor != blank %}
+        <p class="bc-search-card__vendor">{{ card_product.vendor | escape }}</p>
+      {% endif %}
       <div class="bc-search-card__title-wrap">
-        <h3 class="bc-search-card__title h4">{{ card_product.title | escape }}</h3>
+        <h3 class="bc-search-card__title h4" title="{{ card_product.title | escape }}">{% render 'bc-card-title', product: card_product %}</h3>
       </div>
 
-      {% if has_specs %}
-        <ul
-          class="bc-search-card__specs"
-          style="margin: -0.4rem 0 0; padding: 0; list-style: none; color: rgba(var(--color-foreground), 0.72); font-size: 1.25rem; line-height: 1.45;"
-        >
-          {% if spec_1 != blank %}
-            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
-              <span aria-hidden="true">&#8226;</span>
-              <span>{{ spec_1 | escape }}</span>
-            </li>
-          {% endif %}
-          {% if spec_2 != blank %}
-            <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
-              <span aria-hidden="true">&#8226;</span>
-              <span>{{ spec_2 | escape }}</span>
-            </li>
-          {% endif %}
-        </ul>
-      {% endif %}
+      {% render 'bc-card-specs', product: card_product %}
 
       <div class="bc-search-card__price-wrap">
         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
@@ -139,7 +130,8 @@
         </div>
       </div>
 
-      <div class="bc-search-card__meta" aria-hidden="true"></div>
+      {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}
+      <span class="bc-card-view">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></span>
     </div>
   </a>
 </article>

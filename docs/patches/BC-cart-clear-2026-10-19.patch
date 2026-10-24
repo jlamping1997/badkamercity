@@ -1,0 +1,1819 @@
+diff --git a/assets/bc-cart-page.css b/assets/bc-cart-page.css
+index 32cea9ef7e2fa8559955de0d099e8eebb2f9f582..e498a138ed4711dadc4704a45af5fb3a7d2b4f98 100644
+--- a/assets/bc-cart-page.css
++++ b/assets/bc-cart-page.css
+@@ -1,14 +1,14 @@
+ #MainContent:has(.bc-cart-items) {
+   --bc-cart-ink: #103246;
+   --bc-cart-muted: #526a78;
+-  --bc-cart-cyan: #32cce1;
++  --bc-cart-green: #137744;
+   --bc-cart-line: #dce6eb;
+   display: grid;
+   grid-template-columns: minmax(0, 1fr);
+   align-content: start;
+   gap: 2rem;
+-  padding: 3rem max(1.6rem, calc((100vw - 124rem) / 2)) 5rem;
+-  background: linear-gradient(150deg, #edf9fc 0, #f5f8fa 36rem, #f5f8fa 100%);
++  padding: 2.6rem max(1.6rem, calc((100vw - 96rem) / 2)) 5rem;
++  background: linear-gradient(180deg, #edf8fb 0, #f6f9fa 24rem, #f6f9fa 100%);
+   color: var(--bc-cart-ink);
+ }
+ 
+@@ -16,10 +16,6 @@
+   min-width: 0;
+ }
+ 
+-#MainContent:has(.bc-cart-items) > .shopify-section:not(:has(.bc-cart-items, .bc-cart-summary)) {
+-  grid-column: 1 / -1;
+-}
+-
+ .bc-cart-items,
+ .bc-cart-summary {
+   color: var(--bc-cart-ink);
+@@ -38,39 +34,42 @@ cart-items.bc-cart-items {
+   padding: 0;
+ }
+ 
++.bc-cart-icon {
++  display: inline-block;
++  flex: 0 0 2rem;
++  width: 2rem;
++  height: 2rem;
++  vertical-align: middle;
++}
++
++.bc-cart-icon > svg {
++  display: block;
++  width: 100%;
++  height: 100%;
++}
++
+ .bc-cart-items .bc-cart-heading {
+   display: flex;
+   flex-wrap: wrap;
+-  align-items: flex-end;
++  align-items: center;
+   justify-content: space-between;
+-  gap: 1.6rem;
+-  margin: 0 0 2.6rem;
+-}
+-
+-.bc-cart-eyebrow {
+-  margin: 0 0 0.8rem;
+-  color: var(--bc-cart-muted);
+-  font-size: 1.2rem;
+-  font-weight: 650;
+-  line-height: 1.4;
+-  letter-spacing: 0.07em;
+-  text-transform: uppercase;
++  gap: 1.2rem 2rem;
++  margin: 0 0 2.4rem;
+ }
+ 
+ .bc-cart-items .bc-cart-heading .title {
+   margin: 0;
+   color: var(--bc-cart-ink);
+-  font-size: clamp(3rem, 3vw, 4rem);
++  font-size: clamp(2.8rem, 3vw, 3.6rem);
+   font-weight: 750;
+-  line-height: 1.12;
+-  letter-spacing: -0.035em;
++  line-height: 1.18;
++  letter-spacing: -0.03em;
+ }
+ 
+ .bc-cart-intro {
+-  max-width: 42rem;
+-  margin: 1rem 0 0;
++  margin: 0.8rem 0 0;
+   color: var(--bc-cart-muted);
+-  font-size: 1.5rem;
++  font-size: 1.4rem;
+   line-height: 1.5;
+ }
+ 
+@@ -80,16 +79,12 @@ cart-items.bc-cart-items {
+   gap: 0.7rem;
+   min-height: 4.4rem;
+   color: var(--bc-cart-ink);
+-  font-size: 1.4rem;
++  font-size: 1.3rem;
+   font-weight: 600;
+   text-decoration-thickness: 0.1rem;
+   text-underline-offset: 0.35rem;
+ }
+ 
+-.bc-cart-back > span {
+-  font-size: 1.8rem;
+-}
+-
+ .bc-cart-items .cart__items {
+   padding: 0;
+   border: 0;
+@@ -106,7 +101,7 @@ cart-items.bc-cart-items {
+ .bc-cart-list-heading h2 {
+   margin: 0;
+   color: var(--bc-cart-ink);
+-  font-size: 1.7rem;
++  font-size: 1.6rem;
+   font-weight: 700;
+   line-height: 1.4;
+   letter-spacing: -0.01em;
+@@ -141,18 +136,18 @@ cart-items.bc-cart-items {
+ .bc-cart-items .cart-items tbody {
+   display: grid;
+   width: 100%;
+-  gap: 1.2rem;
++  gap: 1rem;
+ }
+ 
+ .bc-cart-items .cart-item {
+   display: grid;
+-  grid-template-columns: 8rem minmax(0, 1fr);
++  grid-template-columns: 7rem minmax(0, 1fr);
+   grid-template-rows: auto auto;
+-  gap: 1.8rem 1.4rem;
++  gap: 1.4rem 1.2rem;
+   margin: 0;
+-  padding: 1.6rem;
++  padding: 1.4rem;
+   border: 1px solid var(--bc-cart-line);
+-  border-radius: 1.6rem;
++  border-radius: 1.2rem;
+   background: #fff;
+ }
+ 
+@@ -168,7 +163,7 @@ cart-items.bc-cart-items {
+   grid-row: 1;
+   align-self: start;
+   overflow: hidden;
+-  border-radius: 1rem;
++  border-radius: 0.7rem;
+   background: #f5f7f8;
+ }
+ 
+@@ -178,7 +173,7 @@ cart-items.bc-cart-items {
+   justify-content: center;
+   width: 100%;
+   min-width: 0;
+-  height: 9.2rem;
++  height: 8.4rem;
+   border: 0;
+   border-radius: 0;
+   background: #f5f7f8;
+@@ -208,27 +203,46 @@ cart-items.bc-cart-items {
+ 
+ .bc-cart-items .cart-item__name {
+   color: var(--bc-cart-ink);
+-  font-size: 1.6rem;
++  font-size: 1.5rem;
+   font-weight: 700;
+-  line-height: 1.35;
+-  letter-spacing: -0.015em;
++  line-height: 1.4;
++  letter-spacing: -0.01em;
+   overflow-wrap: anywhere;
+ }
+ 
+ .bc-cart-items .product-option,
+ .bc-cart-items .cart-item__details .caption-with-letter-spacing {
+   color: var(--bc-cart-muted);
+-  font-size: 1.3rem;
++  font-size: 1.25rem;
+   line-height: 1.5;
+ }
+ 
+-.bc-cart-items .cart-item__details > .product-option,
++.bc-cart-items .bc-cart-unit-price,
+ .bc-cart-items .cart-item__final-price {
+   color: var(--bc-cart-ink);
+ }
+ 
++.bc-cart-unit-label {
++  margin-left: 0.3rem;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  font-weight: 400;
++}
++
+ .bc-cart-items .cart-item__details dl {
+-  margin-top: 0.6rem;
++  margin-top: 0.5rem;
++}
++
++.bc-cart-items .cart-item__details .discounts:empty {
++  display: none;
++}
++
++.bc-cart-items .cart-item__details .discounts__discount {
++  flex-wrap: wrap;
++  gap: 0.4rem;
++  color: var(--bc-cart-green);
++  font-size: 1.2rem;
++  line-height: 1.45;
+ }
+ 
+ .bc-cart-items .cart-item__quantity {
+@@ -251,8 +265,8 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-items .quantity::after {
+-  border: 1px solid #bcced8;
+-  border-radius: 0.8rem;
++  border: 1px solid #b8cbd5;
++  border-radius: 0.7rem;
+   box-shadow: none;
+ }
+ 
+@@ -267,11 +281,11 @@ cart-items.bc-cart-items {
+ 
+ .bc-cart-items .quantity__input {
+   padding: 0 0.2rem;
+-  font-size: 1.4rem;
++  font-size: 1.6rem;
+ }
+ 
+ .bc-cart-items .cart-item cart-remove-button {
+-  margin-left: 0.4rem;
++  margin-left: 0.3rem;
+ }
+ 
+ .bc-cart-items cart-remove-button .button {
+@@ -285,7 +299,7 @@ cart-items.bc-cart-items {
+ .bc-cart-items cart-remove-button .button:hover {
+   color: var(--bc-cart-ink);
+   background: #edf7f9;
+-  border-radius: 0.8rem;
++  border-radius: 0.7rem;
+ }
+ 
+ .bc-cart-items .cart-item__totals {
+@@ -332,22 +346,21 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-items .cart-item__nested-line {
+-  margin-left: 1.6rem;
+-  border-left: 3px solid #a9e6ef;
++  margin-left: 1.4rem;
++  border-left: 3px solid #b7dce5;
+ }
+ 
+ .bc-cart-summary .cart__footer,
+ .cart__footer-wrapper:last-child .bc-cart-summary .cart__footer {
+   display: flex;
+   flex-direction: column;
+-  gap: 2.4rem;
++  gap: 2rem;
+   margin: 0;
+-  padding: 2.4rem;
+-  border: 1px solid #cddfe8;
+-  border-top: 4px solid var(--bc-cart-cyan);
+-  border-radius: 1.6rem;
++  padding: 2rem;
++  border: 1px solid var(--bc-cart-line);
++  border-radius: 1.2rem;
+   background: #fff;
+-  box-shadow: 0 1rem 3rem #10324608;
++  box-shadow: 0 0.4rem 1.8rem #10324604;
+ }
+ 
+ .bc-cart-summary .cart__footer > * {
+@@ -356,52 +369,235 @@ cart-items.bc-cart-items {
+   margin: 0;
+ }
+ 
+-.bc-cart-summary .cart__blocks > * + * {
++.bc-cart-summary .cart__blocks > .js-contents > * + * {
+   margin-top: 1.6rem;
+ }
+ 
+ .bc-cart-summary__heading {
+-  margin-bottom: 2.4rem;
++  display: flex;
++  align-items: center;
++  gap: 1rem;
++  margin-bottom: 2rem;
+ }
+ 
+-.bc-cart-summary__heading .bc-cart-eyebrow {
+-  font-size: 1.1rem;
++.bc-cart-summary__icon {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  flex: 0 0 3.6rem;
++  width: 3.6rem;
++  height: 3.6rem;
++  border-radius: 0.8rem;
++  background: #ecf7fa;
++  color: var(--bc-cart-ink);
+ }
+ 
+ .bc-cart-summary__heading h2 {
+   margin: 0;
+   color: var(--bc-cart-ink);
+-  font-size: 2.5rem;
++  font-size: 2rem;
+   font-weight: 750;
+-  line-height: 1.2;
++  line-height: 1.3;
+   letter-spacing: -0.025em;
+ }
+ 
+-.bc-cart-summary__subtotal {
++bc-cart-discount {
++  display: block;
++  padding-bottom: 2rem;
++  border-bottom: 1px solid var(--bc-cart-line);
++}
++
++.bc-cart-summary [hidden],
++bc-cart-discount[hidden],
++bc-cart-discount:not(:defined) {
++  display: none;
++}
++
++.bc-cart-discount__label {
++  display: flex;
++  align-items: center;
++  gap: 0.7rem;
++  margin-bottom: 0.9rem;
++  color: var(--bc-cart-ink);
++  font-size: 1.35rem;
++  font-weight: 650;
++  line-height: 1.5;
++}
++
++.bc-cart-discount__label .bc-cart-icon {
++  flex-basis: 1.7rem;
++  width: 1.7rem;
++  height: 1.7rem;
++}
++
++.bc-cart-discount__entry {
++  display: flex;
++  align-items: stretch;
++  gap: 0.8rem;
++}
++
++.bc-cart-discount__entry input {
++  flex: 1 1 0;
++  min-width: 0;
++  min-height: 4.6rem;
++  padding: 1rem 1.2rem;
++  border: 1px solid #b8cbd5;
++  border-radius: 0.7rem;
++  background: #fff;
++  color: var(--bc-cart-ink);
++  font: inherit;
++  font-size: 1.6rem;
++  letter-spacing: 0;
++}
++
++.bc-cart-discount__entry input::placeholder {
++  color: var(--bc-cart-muted);
++  opacity: 1;
++}
++
++.bc-cart-discount__entry button {
++  flex: 0 0 auto;
++  min-height: 4.6rem;
++  padding: 1rem 1.3rem;
++  border: 1px solid #b8cbd5;
++  border-radius: 0.7rem;
++  background: #f2f7f9;
++  color: var(--bc-cart-ink);
++  font: inherit;
++  font-size: 1.3rem;
++  font-weight: 650;
++  line-height: 1.4;
++  cursor: pointer;
++}
++
++.bc-cart-discount__entry button:not(:disabled):hover {
++  border-color: var(--bc-cart-ink);
++  background: #e8f2f6;
++}
++
++.bc-cart-discount__entry button:disabled,
++.bc-cart-discount__entry input:disabled {
++  cursor: wait;
++  opacity: 0.65;
++}
++
++.bc-cart-discount__codes {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 0.7rem;
++  margin: 0;
++  padding: 0;
++}
++
++.bc-cart-discount__codes:not(:empty) {
++  margin-top: 1rem;
++}
++
++.bc-cart-discount__codes li {
++  display: flex;
++  align-items: center;
++  min-width: 0;
++  max-width: 100%;
++  padding-left: 1rem;
++  border: 1px solid #cce2d5;
++  border-radius: 0.7rem;
++  background: #f1f8f4;
++  color: #14613a;
++  font-size: 1.2rem;
++  line-height: 1.45;
++}
++
++.bc-cart-discount__codes li > span {
++  min-width: 0;
++  overflow-wrap: anywhere;
++}
++
++.bc-cart-discount__codes button {
++  flex: 0 0 4.4rem;
++  width: 4.4rem;
++  min-height: 4.4rem;
++  padding: 0.6rem;
++  border: 0;
++  border-radius: 0.6rem;
++  background: transparent;
++  color: inherit;
++  font: inherit;
++  font-size: 1.8rem;
++  line-height: 1;
++  cursor: pointer;
++}
++
++.bc-cart-discount__codes button:not(:disabled):hover {
++  background: #e4f1e9;
++}
++
++.bc-cart-discount__status,
++.bc-cart-discount__fallback {
++  margin: 0.9rem 0 0;
++  color: var(--bc-cart-muted);
++  font-size: 1.25rem;
++  line-height: 1.5;
++}
++
++.bc-cart-discount__status:empty {
++  display: none;
++}
++
++.bc-cart-discount__status[data-state="error"] {
++  color: #ab2e26;
++}
++
++.bc-cart-discount__status[data-state="success"] {
++  color: #14613a;
++}
++
++.bc-cart-costs {
++  display: grid;
++  gap: 1.1rem;
++  margin: 2rem 0;
++}
++
++.bc-cart-costs__row {
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+   gap: 1.6rem;
+-  margin-bottom: 1.6rem;
+   color: var(--bc-cart-muted);
+   font-size: 1.4rem;
+   line-height: 1.5;
+ }
+ 
+-.bc-cart-summary__subtotal > :last-child {
++.bc-cart-costs__row dt,
++.bc-cart-costs__row dd {
++  margin: 0;
++}
++
++.bc-cart-costs__row dd {
+   flex-shrink: 0;
++  max-width: 62%;
++  overflow-wrap: anywhere;
+   color: var(--bc-cart-ink);
++  font-weight: 550;
+   font-variant-numeric: tabular-nums;
++  text-align: right;
++}
++
++.bc-cart-costs__row--discount dt,
++.bc-cart-costs__row--discount dd,
++.bc-cart-costs__row .bc-cart-costs__free {
++  color: var(--bc-cart-green);
+ }
+ 
+-.bc-cart-summary .discounts {
+-  margin: 0 0 1.6rem;
++.bc-cart-summary .bc-cart-order-discounts {
++  margin: -0.6rem 0 1.8rem;
+ }
+ 
+ .bc-cart-summary .discounts__discount--position {
+   justify-content: flex-start;
+-  color: #20664e;
+-  font-size: 1.3rem;
++  flex-wrap: wrap;
++  gap: 0.5rem;
++  color: var(--bc-cart-green);
++  font-size: 1.2rem;
+   line-height: 1.5;
+ }
+ 
+@@ -409,9 +605,8 @@ cart-items.bc-cart-items {
+   justify-content: space-between;
+   align-items: baseline;
+   flex-wrap: wrap;
+-  gap: 1.6rem;
+-  row-gap: 0.6rem;
+-  padding-top: 1.8rem;
++  gap: 0.6rem 1.6rem;
++  padding-top: 1.7rem;
+   border-top: 1px solid var(--bc-cart-line);
+ }
+ 
+@@ -422,7 +617,7 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-summary .totals .totals__total {
+-  font-size: 1.6rem;
++  font-size: 1.5rem;
+   font-weight: 650;
+ }
+ 
+@@ -431,23 +626,35 @@ cart-items.bc-cart-items {
+   max-width: 100%;
+   margin-left: auto;
+   overflow-wrap: anywhere;
+-  font-size: 2.2rem;
++  font-size: 2.4rem;
+   font-weight: 750;
+   letter-spacing: -0.025em;
+   font-variant-numeric: tabular-nums;
+ }
+ 
+ .bc-cart-summary .tax-note {
+-  margin: 1rem 0 0;
++  margin: 0.8rem 0 0;
+   color: var(--bc-cart-muted);
+   font-size: 1.2rem;
+   line-height: 1.6;
+   text-align: left;
+ }
+ 
+-.bc-cart-summary .tax-note a {
+-  color: inherit;
+-  text-underline-offset: 0.25rem;
++.bc-cart-shipping-note {
++  display: flex;
++  align-items: flex-start;
++  gap: 0.8rem;
++  margin: 1.6rem 0 0;
++  padding: 1.1rem 1.2rem;
++  border-radius: 0.7rem;
++  background: #eff7fa;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  line-height: 1.5;
++}
++
++.bc-cart-shipping-note .bc-cart-icon {
++  margin-top: 0.1rem;
+ }
+ 
+ .bc-cart-summary .cart__ctas {
+@@ -463,14 +670,14 @@ cart-items.bc-cart-items {
+   min-height: 5.6rem;
+   width: 100%;
+   max-width: none;
+-  padding: 1.4rem 1.8rem;
++  padding: 1.4rem 1.6rem;
+   border: 0;
+   border-radius: 0.8rem;
+-  color: var(--bc-cart-ink);
+-  background: var(--bc-cart-cyan);
+-  font-size: 1.6rem;
+-  font-weight: 750;
+-  line-height: 1.35;
++  color: #fff;
++  background: var(--bc-cart-green);
++  font-size: 1.5rem;
++  font-weight: 700;
++  line-height: 1.4;
+   letter-spacing: 0;
+   box-shadow: none;
+   text-align: left;
+@@ -483,38 +690,35 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-summary .cart__checkout-button:not([disabled]):hover {
+-  background: #62dcea;
++  background: #0c6035;
+ }
+ 
+-.bc-cart-checkout-arrow {
+-  flex-shrink: 0;
+-  font-size: 2.5rem;
+-  font-weight: 400;
+-  line-height: 1;
++.bc-cart-summary .cart__checkout-button:disabled {
++  opacity: 0.65;
++  cursor: wait;
++}
++
++.bc-cart-summary .bc-cart-checkout-arrow {
++  flex-basis: 2.4rem;
++  width: 2.4rem;
++  height: 2.4rem;
+ }
+ 
+ .bc-cart-summary .bc-cart-secure {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+-  gap: 0.7rem;
++  gap: 0.6rem;
+   margin: 1rem 0 0;
+   color: var(--bc-cart-muted);
+   font-size: 1.2rem;
+-  line-height: 1.6;
+-}
+-
+-.bc-cart-secure::before {
+-  content: "";
+-  display: block;
+-  width: 0.75rem;
+-  height: 0.75rem;
+-  border-radius: 50%;
+-  background: #289780;
++  line-height: 1.5;
+ }
+ 
+-.bc-cart-summary .cart__dynamic-checkout-buttons {
+-  max-width: none;
++.bc-cart-secure .bc-cart-icon {
++  flex-basis: 1.6rem;
++  width: 1.6rem;
++  height: 1.6rem;
+ }
+ 
+ .bc-cart-summary .cart__note {
+@@ -552,6 +756,7 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-summary #cart-errors {
++  color: #ab2e26;
+   font-size: 1.3rem;
+   line-height: 1.5;
+ }
+@@ -585,49 +790,29 @@ cart-items.bc-cart-items {
+   display: none;
+ }
+ 
+-#MainContent:has(.bc-cart-items.is-empty) > .shopify-section:has(.bc-cart-items) {
+-  grid-column: 1 / -1;
+-}
+-
+ .bc-cart-items.is-empty .bc-cart-empty {
+   max-width: 68rem;
+   margin: 1rem auto;
+-  padding: 5rem 2.4rem;
++  padding: 4rem 2rem;
+   border: 1px solid var(--bc-cart-line);
+-  border-radius: 2rem;
++  border-radius: 1.2rem;
+   background: #fff;
+ }
+ 
+ .bc-cart-empty__bag {
+-  position: relative;
+   display: block;
+-  width: 5rem;
+-  height: 5.2rem;
+-  margin: 1rem auto 2.8rem;
+-  border: 2px solid var(--bc-cart-ink);
+-  border-radius: 0.8rem 0.8rem 1.4rem 1.4rem;
+-  background: #e8f9fc;
+-  transform: rotate(-6deg);
+-}
+-
+-.bc-cart-empty__bag::before {
+-  content: "";
+-  position: absolute;
+-  top: -1.2rem;
+-  left: 1.2rem;
+-  width: 2.2rem;
+-  height: 2rem;
+-  border: 2px solid var(--bc-cart-ink);
+-  border-bottom: 0;
+-  border-radius: 2rem 2rem 0 0;
++  width: 6.4rem;
++  height: 6.4rem;
++  margin: 0 auto 2rem;
++  color: var(--bc-cart-ink);
+ }
+ 
+ .bc-cart-empty .cart__empty-text {
+   margin: 0.8rem 0 1.2rem;
+   color: var(--bc-cart-ink);
+-  font-size: clamp(2.8rem, 3vw, 3.8rem);
++  font-size: clamp(2.6rem, 3vw, 3.4rem);
+   font-weight: 750;
+-  line-height: 1.15;
++  line-height: 1.2;
+   letter-spacing: -0.03em;
+ }
+ 
+@@ -635,15 +820,15 @@ cart-items.bc-cart-items {
+   max-width: 38rem;
+   margin: 0 auto 2.4rem;
+   color: var(--bc-cart-muted);
+-  font-size: 1.5rem;
++  font-size: 1.4rem;
+   line-height: 1.6;
+ }
+ 
+ .bc-cart-empty > .button {
+   min-height: 5.2rem;
+   border-radius: 0.8rem;
+-  color: var(--bc-cart-ink);
+-  background: var(--bc-cart-cyan);
++  color: #fff;
++  background: var(--bc-cart-green);
+   font-size: 1.5rem;
+   font-weight: 700;
+   letter-spacing: 0;
+@@ -655,14 +840,14 @@ cart-items.bc-cart-items {
+ }
+ 
+ .bc-cart-empty .cart__login-title {
+-  margin-top: 3.2rem;
++  margin-top: 3rem;
+   color: var(--bc-cart-ink);
+-  font-size: 1.8rem;
++  font-size: 1.7rem;
+ }
+ 
+ .bc-cart-empty .cart__login-paragraph {
+   color: var(--bc-cart-muted);
+-  font-size: 1.4rem;
++  font-size: 1.3rem;
+   line-height: 1.6;
+ }
+ 
+@@ -670,7 +855,8 @@ cart-items.bc-cart-items {
+ .bc-cart-items button:focus-visible,
+ .bc-cart-items input:focus-visible,
+ .bc-cart-summary a:focus-visible,
+-.bc-cart-summary button:focus-visible {
++.bc-cart-summary button:focus-visible,
++.bc-cart-summary input:focus-visible {
+   outline: 2px solid var(--bc-cart-ink);
+   outline-offset: 3px;
+   box-shadow: none;
+@@ -678,86 +864,54 @@ cart-items.bc-cart-items {
+ 
+ @media screen and (min-width: 750px) {
+   #MainContent:has(.bc-cart-items) {
+-    padding-top: 4rem;
+-    padding-right: max(3.2rem, calc((100vw - 124rem) / 2));
+-    padding-left: max(3.2rem, calc((100vw - 124rem) / 2));
++    gap: 2.4rem;
++    padding-top: 3.6rem;
++    padding-right: max(3.2rem, calc((100vw - 96rem) / 2));
++    padding-left: max(3.2rem, calc((100vw - 96rem) / 2));
++    padding-bottom: 6rem;
+   }
+ 
+   .bc-cart-items .cart-item {
+-    grid-template-columns: 10rem minmax(0, 1fr) auto;
+-    gap: 1.6rem 2rem;
+-    padding: 2rem;
++    grid-template-columns: 8.4rem minmax(0, 1fr) 15.3rem 10rem;
++    grid-template-rows: auto;
++    align-items: center;
++    gap: 2rem;
++    padding: 1.8rem;
+   }
+ 
+   .bc-cart-items .cart-item__media {
+-    grid-row: 1 / 3;
++    grid-row: 1;
+   }
+ 
+   .bc-cart-items .cart-item__image-container {
+-    height: 12rem;
++    height: 10rem;
+   }
+ 
+   .bc-cart-items .cart-item__name {
+-    font-size: 1.7rem;
++    font-size: 1.55rem;
+   }
+ 
+   .bc-cart-items .cart-item__quantity {
+-    grid-column: 2;
+-    grid-row: 2;
++    grid-column: 3;
++    grid-row: 1;
++    justify-self: end;
+   }
+ 
+   .bc-cart-items .cart-item__totals {
+     display: flex;
+-    grid-column: 3;
+-    grid-row: 1 / 3;
+-    align-self: start;
++    grid-column: 4;
++    grid-row: 1;
++    align-self: center;
+     min-height: 0;
+-    padding-top: 0.2rem;
+-  }
+-
+-  .bc-cart-summary .cart__footer {
+-    padding: 2.8rem;
+   }
+ 
++  .bc-cart-summary .cart__footer,
+   .cart__footer-wrapper:last-child .bc-cart-summary .cart__footer {
+-    padding-bottom: 2.8rem;
+-  }
+-}
+-
+-@media screen and (min-width: 1100px) {
+-  #MainContent:has(.bc-cart-items) {
+-    grid-template-columns: minmax(0, 1fr) 39rem;
+-    align-items: start;
+-    gap: 3.2rem;
+-    padding-bottom: 7rem;
+-  }
+-
+-  #MainContent:has(.bc-cart-items) > .cart__footer-wrapper {
+-    position: sticky;
+-    top: 2.4rem;
+-  }
+-
+-  .bc-cart-items .bc-cart-heading {
+-    margin-bottom: 3.2rem;
+-  }
+-
+-  .bc-cart-items .cart-item {
+-    grid-template-columns: 10rem minmax(0, 1fr);
+-  }
+-
+-  .bc-cart-items .cart-item__media {
+-    grid-row: 1;
+-  }
+-
+-  .bc-cart-items .cart-item__quantity {
+-    grid-column: 1 / -1;
+-    grid-row: 2;
++    padding: 2.6rem 3rem;
+   }
+ 
+-  .bc-cart-items .cart-item__totals {
+-    grid-column: 2;
+-    grid-row: 2;
+-    align-self: center;
++  .bc-cart-discount__entry {
++    max-width: 46rem;
+   }
+ }
+ 
+@@ -774,6 +928,21 @@ cart-items.bc-cart-items {
+     max-width: 100%;
+     overflow-wrap: anywhere;
+   }
++
++  .bc-cart-summary .cart__footer,
++  .cart__footer-wrapper:last-child .bc-cart-summary .cart__footer {
++    padding: 1.6rem;
++  }
++
++  .bc-cart-costs__row {
++    gap: 1rem;
++    font-size: 1.3rem;
++  }
++
++  .bc-cart-discount__entry button {
++    padding-right: 1rem;
++    padding-left: 1rem;
++  }
+ }
+ 
+ @media (prefers-reduced-motion: reduce) {
+diff --git a/assets/bc-cart-page.js b/assets/bc-cart-page.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..a5b4262f9905436ba21eaa1c5b5d9e6e6286147b
+--- /dev/null
++++ b/assets/bc-cart-page.js
+@@ -0,0 +1,334 @@
++(() => {
++  if (window.BCCartPage) return;
++
++  class CartPage {
++    busy = false;
++    cart = null;
++    stateKnown = false;
++    locked = new Map();
++    summaryValues = new WeakMap();
++    message = '';
++    messageType = '';
++    quantityResult = null;
++    initializing = null;
++    refreshRequested = false;
++    mustReload = false;
++
++    isActive(cartItems) {
++      return Boolean(document.querySelector('bc-cart-discount') && (!cartItems || cartItems.tagName === 'CART-ITEMS'));
++    }
++
++    mount(component) {
++      component.hidden = false;
++      this.render();
++      this.lockControls();
++      if (!this.cart && !this.initializing) {
++        this.initializing = this.readCart()
++          .then((cart) => this.acceptCart(cart))
++          .catch(() => this.setMessage('error', 'error'))
++          .finally(() => { this.initializing = null; });
++      }
++    }
++
++    component() {
++      return document.querySelector('bc-cart-discount');
++    }
++
++    text(name) {
++      return this.component()?.dataset[`message${name.charAt(0).toUpperCase()}${name.slice(1)}`] || '';
++    }
++
++    codes() {
++      return (this.cart?.discount_codes || []).filter((code) => code.applicable === true);
++    }
++
++    acceptCart(cart) {
++      if (!cart || !Array.isArray(cart.items) || !Number.isFinite(cart.total_price)) throw new Error('cart');
++      this.cart = cart;
++      this.stateKnown = Array.isArray(cart.discount_codes);
++      this.render();
++    }
++
++    async readCart() {
++      const url = this.component()?.dataset.cartUrl || window.routes?.cart_url;
++      const response = await fetch(`${url.replace(/\/$/, '')}.js`, { headers: { Accept: 'application/json' }, cache: 'no-store' });
++      if (!response.ok) throw new Error('cart');
++      return response.json();
++    }
++
++    sections() {
++      return document.querySelector('cart-items')?.getSectionsToRender() || [];
++    }
++
++    renderSections(data, cart) {
++      const parts = this.sections().map((section) => {
++        const targetRoot = document.getElementById(section.id);
++        const html = data?.[section.section];
++        if (!targetRoot || typeof html !== 'string') throw new Error('section');
++        const source = new DOMParser().parseFromString(html, 'text/html').querySelector(section.selector);
++        const target = targetRoot.querySelector(section.selector) || targetRoot;
++        if (!source) throw new Error('section');
++        return { source, target };
++      });
++      if (parts.length !== 4) throw new Error('section');
++      parts.forEach(({ target, source }) => { target.innerHTML = source.innerHTML; });
++      document.querySelector('cart-items')?.classList.toggle('is-empty', cart.item_count === 0);
++      document.getElementById('main-cart-footer')?.classList.toggle('is-empty', cart.item_count === 0);
++      this.acceptCart(cart);
++      this.lockControls();
++    }
++
++    async refreshSections(cart) {
++      const url = new URL(this.component()?.dataset.cartUrl || window.routes.cart_url, window.location.origin);
++      new URLSearchParams(window.location.search).forEach((value, key) => url.searchParams.set(key, value));
++      url.searchParams.set('sections', this.sections().map((section) => section.section).join(','));
++      const response = await fetch(url.pathname + url.search, { headers: { Accept: 'application/json' }, cache: 'no-store' });
++      if (!response.ok) throw new Error('sections');
++      this.renderSections(await response.json(), cart);
++    }
++
++    publish(cart) {
++      if (typeof publish === 'function' && typeof PUB_SUB_EVENTS !== 'undefined') {
++        publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: cart });
++      }
++    }
++
++    setMessage(name, type = '') {
++      this.message = name;
++      this.messageType = type;
++      const status = this.component()?.querySelector('[data-bc-discount-status]');
++      if (status) {
++        status.textContent = this.text(name);
++        status.hidden = !name;
++        status.dataset.state = type;
++      }
++    }
++
++    monetaryCodes() {
++      const applications = [...(this.cart?.cart_level_discount_applications || [])];
++      (this.cart?.items || []).forEach((item) => {
++        (item.line_level_discount_allocations || []).forEach((allocation) => applications.push(allocation.discount_application));
++      });
++      return new Set(applications.filter((application) => application?.type === 'discount_code' && application.target_type !== 'shipping_line')
++        .map((application) => String(application.title).toLowerCase()));
++    }
++
++    render() {
++      const component = this.component();
++      if (!component) return;
++      const list = component.querySelector('[data-bc-discount-codes]');
++      const monetary = this.monetaryCodes();
++      const hasPending = this.codes().some((code) => !monetary.has(code.code.toLowerCase()));
++      if (list) {
++        list.replaceChildren();
++        this.codes().forEach(({ code }) => {
++          const item = document.createElement('li');
++          item.className = 'bc-cart-discount__code';
++          const label = document.createElement('span');
++          label.textContent = code;
++          const remove = document.createElement('button');
++          remove.type = 'button';
++          remove.dataset.bcDiscountRemove = code;
++          remove.setAttribute('aria-label', this.text('remove').replace('[code]', code));
++          remove.textContent = '×';
++          item.append(label, remove);
++          list.append(item);
++        });
++        list.hidden = list.childElementCount === 0;
++      }
++      const summary = component.closest('[data-bc-cart-summary]') || component.closest('.js-contents');
++      if (summary) {
++        const price = summary.querySelector('[data-bc-shipping-price]');
++        const total = summary.querySelector('[data-bc-order-total]');
++        const label = summary.querySelector('[data-bc-total-label]');
++        const promise = summary.querySelector('[data-bc-shipping-promise]');
++        if (!this.summaryValues.has(summary)) this.summaryValues.set(summary, {
++          price: price?.textContent, total: total?.textContent, label: label?.textContent, promiseHidden: promise?.hidden,
++        });
++        const saved = this.summaryValues.get(summary);
++        if (price) price.textContent = hasPending ? summary.dataset.bcShippingPendingLabel : saved.price;
++        if (total) total.textContent = hasPending ? summary.dataset.bcProductTotal : saved.total;
++        if (label) label.textContent = hasPending ? summary.dataset.bcTotalLabel : saved.label;
++        if (promise) promise.hidden = hasPending || saved.promiseHidden;
++      }
++      this.setMessage(this.message, this.messageType);
++    }
++
++    lockControls() {
++      if (!this.busy) return;
++      const items = document.querySelector('cart-items');
++      if (items && !this.locked.has(items)) {
++        this.locked.set(items, { inert: items.inert });
++        items.inert = true;
++        items.setAttribute('aria-busy', 'true');
++      }
++      document.querySelectorAll('#main-cart-footer button, #main-cart-footer input[name="discount"]').forEach((control) => {
++        if (this.locked.has(control)) return;
++        if (control instanceof HTMLButtonElement) {
++          this.locked.set(control, { disabled: control.disabled });
++          control.disabled = true;
++        } else {
++          this.locked.set(control, { readOnly: control.readOnly });
++          control.readOnly = true;
++        }
++      });
++      this.component()?.setAttribute('aria-busy', 'true');
++    }
++
++    unlockControls() {
++      this.locked.forEach((state, control) => {
++        if ('inert' in state) { control.inert = state.inert; control.removeAttribute('aria-busy'); }
++        if ('disabled' in state) control.disabled = state.disabled;
++        if ('readOnly' in state) control.readOnly = state.readOnly;
++      });
++      this.locked.clear();
++      this.component()?.removeAttribute('aria-busy');
++    }
++
++    reloadCart() {
++      this.mustReload = true;
++      this.stateKnown = false;
++      this.setMessage('error', 'error');
++      window.location.reload();
++    }
++
++    async run(operation, fallbackFocusId) {
++      if (this.busy) return;
++      this.busy = true;
++      const activeId = document.activeElement?.id;
++      this.lockControls();
++      try {
++        if (this.initializing) await this.initializing;
++        return await operation();
++      } finally {
++        if (this.refreshRequested) {
++          this.refreshRequested = false;
++          try { await this.refreshSections(await this.readCart()); }
++          catch { this.reloadCart(); }
++        }
++        if (this.mustReload) return;
++        this.busy = false;
++        this.unlockControls();
++        if (document.activeElement === document.body) {
++          const focus = document.getElementById(activeId) || document.getElementById(fallbackFocusId);
++          focus?.focus({ preventScroll: true });
++        }
++      }
++    }
++
++    externalUpdate() {
++      if (this.busy) { this.refreshRequested = true; return; }
++      return this.run(async () => {
++        try { await this.refreshSections(await this.readCart()); }
++        catch { this.reloadCart(); }
++      });
++    }
++
++    async quantity(cartItems, update) {
++      const focusId = document.activeElement?.closest('.cart-item')?.querySelector('input[name="updates[]"]')?.id;
++      return this.run(async () => {
++        this.quantityResult = null;
++        await update();
++        if (!this.quantityResult || (!this.quantityResult.errors && !this.stateKnown)) {
++          try {
++            const cart = await this.readCart();
++            await this.refreshSections(cart);
++            this.publish(cart);
++          } catch {
++            this.reloadCart();
++          }
++        }
++      }, focusId);
++    }
++
++    quantityUpdated(cart) {
++      this.quantityResult = cart;
++      if (!cart.errors) this.acceptCart(cart);
++      this.lockControls();
++    }
++
++    async discount(code, remove = false) {
++      if (this.busy) return;
++      const value = code.trim();
++      if (!value) { this.setMessage('empty', 'error'); return; }
++      return this.run(async () => {
++        this.setMessage('loading');
++        let cart;
++        let updated = false;
++        let mutationAttempted = false;
++        try {
++          if (!this.stateKnown) this.acceptCart(await this.readCart());
++          if (!this.stateKnown) throw new Error('codes');
++          const previous = this.codes().map(({ code: existing }) => existing);
++          const codes = previous.filter((existing) => existing.toLowerCase() !== value.toLowerCase());
++          if (!remove) codes.push(value);
++          const url = this.component().dataset.updateUrl || window.routes.cart_update_url;
++          mutationAttempted = true;
++          const response = await fetch(url, {
++            method: 'POST',
++            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
++            body: JSON.stringify({ discount: codes.join(','), sections: this.sections().map((section) => section.section), sections_url: window.location.pathname + window.location.search }),
++          });
++          cart = await response.json();
++          if (!response.ok || cart.errors || !Array.isArray(cart.items)) throw new Error('discount');
++          const renderedSections = cart.sections;
++          this.acceptCart(cart);
++          if (!this.stateKnown) { cart = await this.readCart(); this.acceptCart(cart); }
++          try { this.renderSections(renderedSections, cart); }
++          catch { await this.refreshSections(cart); }
++          updated = true;
++        } catch {
++          try {
++            cart = await this.readCart();
++            await this.refreshSections(cart);
++            updated = true;
++          } catch {
++            if (mutationAttempted) this.reloadCart();
++            else { this.stateKnown = false; this.setMessage('error', 'error'); }
++          }
++        }
++        if (!updated) return;
++        this.publish(cart);
++        const applied = cart.discount_codes?.find((entry) => entry.code.toLowerCase() === value.toLowerCase());
++        if (remove) this.setMessage(applied?.applicable ? 'error' : 'removed', applied?.applicable ? 'error' : 'success');
++        else if (applied?.applicable === false) this.setMessage('invalid', 'error');
++        else if (applied?.applicable === true) {
++          this.setMessage(this.monetaryCodes().has(value.toLowerCase()) ? 'success' : 'pending', 'success');
++          const input = this.component()?.querySelector('input[name="discount"]');
++          if (input) input.value = '';
++        } else this.setMessage('error', 'error');
++      });
++    }
++  }
++
++  const page = new CartPage();
++  window.BCCartPage = page;
++
++  document.addEventListener('submit', (event) => {
++    const form = event.target;
++    if (!(form instanceof HTMLFormElement)) return;
++    if (form.matches('[data-bc-discount-form]')) {
++      event.preventDefault();
++      page.discount(form.querySelector('input[name="discount"]')?.value || '');
++    } else if (form.id === 'cart' && page.busy) event.preventDefault();
++  }, true);
++
++  document.addEventListener('click', (event) => {
++    const target = event.target instanceof Element ? event.target : null;
++    const remove = target?.closest('[data-bc-discount-remove]');
++    if (remove) {
++      event.preventDefault();
++      page.discount(remove.dataset.bcDiscountRemove, true);
++    }
++    if (page.busy && target?.closest('#main-cart-items, button[name="checkout"], .cart__dynamic-checkout-buttons')) {
++      event.preventDefault();
++      event.stopImmediatePropagation();
++    }
++  }, true);
++
++  if (!customElements.get('bc-cart-discount')) {
++    customElements.define('bc-cart-discount', class extends HTMLElement {
++      connectedCallback() { page.mount(this); }
++    });
++  }
++})();
+diff --git a/assets/cart.js b/assets/cart.js
+index dd2776721100e9946796b1b66727e50bf391104e..bf5cd83912040bf44a23e155813db6721b810eb3 100644
+--- a/assets/cart.js
++++ b/assets/cart.js
+@@ -22,7 +22,16 @@ class CartItems extends HTMLElement {
+       this.onChange(event);
+     }, ON_CHANGE_DEBOUNCE_TIMER);
+ 
+-    this.addEventListener('change', debouncedOnChange.bind(this));
++    this.addEventListener('change', (event) => {
++      const page = this.tagName === 'CART-ITEMS' && window.BCCartPage;
++      if (page?.isActive(this)) {
++        if (page.busy) {
++          event.target.value = event.target.getAttribute('value');
++          return;
++        }
++        this.onChange(event);
++      } else debouncedOnChange(event);
++    });
+   }
+ 
+   cartUpdateUnsubscriber = undefined;
+@@ -88,6 +97,8 @@ class CartItems extends HTMLElement {
+   }
+ 
+   onCartUpdate() {
++    const page = this.tagName === 'CART-ITEMS' && window.BCCartPage;
++    if (page?.isActive(this)) return page.externalUpdate();
+     if (this.tagName === 'CART-DRAWER-ITEMS') {
+       return fetch(`${routes.cart_url}?section_id=cart-drawer`)
+         .then((response) => response.text())
+@@ -145,6 +156,15 @@ class CartItems extends HTMLElement {
+   }
+ 
+   updateQuantity(line, quantity, event, name, variantId) {
++    const page = this.tagName === 'CART-ITEMS' && window.BCCartPage;
++    if (page?.isActive(this)) {
++      const queuedEvent = { currentTarget: event.currentTarget };
++      return page.quantity(this, () => this.performQuantityUpdate(line, quantity, queuedEvent, name, variantId));
++    }
++    return this.performQuantityUpdate(line, quantity, event, name, variantId);
++  }
++
++  performQuantityUpdate(line, quantity, event, name, variantId) {
+     const eventTarget = event.currentTarget instanceof CartRemoveButton ? 'clear' : 'change';
+     const cartPerformanceUpdateMarker = CartPerformance.createStartingMarker(`${eventTarget}:user-action`);
+ 
+@@ -157,7 +177,7 @@ class CartItems extends HTMLElement {
+       sections_url: window.location.pathname,
+     });
+ 
+-    fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
++    return fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
+       .then((response) => {
+         return response.text();
+       })
+@@ -172,6 +192,7 @@ class CartItems extends HTMLElement {
+           if (parsedState.errors) {
+             quantityElement.value = quantityElement.getAttribute('value');
+             this.updateLiveRegions(line, parsedState.errors);
++            if (this.tagName === 'CART-ITEMS') window.BCCartPage?.quantityUpdated(parsedState);
+             return;
+           }
+ 
+@@ -215,6 +236,7 @@ class CartItems extends HTMLElement {
+           }
+         });
+ 
++        if (this.tagName === 'CART-ITEMS') window.BCCartPage?.quantityUpdated(parsedState);
+         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
+       })
+       .catch(() => {
+diff --git a/locales/en.default.json b/locales/en.default.json
+index edfe0a05f78bb7cc2ef772bed9743cea9cca6394..4d8c1dd50bea24cf1f6e8660caae5807c833d9e2 100644
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -10,18 +10,52 @@
+ {
+   "bc_cart_page": {
+     "eyebrow": "Your bathroom starts here",
+-    "intro": "Everything together for your new bathroom.",
++    "intro": "Check your items and see your total at a glance.",
+     "continue_shopping": "Continue shopping",
+     "items_heading": "Your items",
+     "summary_eyebrow": "A final look",
+-    "summary_heading": "Your order",
++    "summary_heading": "Your summary",
+     "items_subtotal": {
+       "one": "Items ({{ count }})",
+       "other": "Items ({{ count }})"
+     },
+     "checkout": "Continue to checkout",
+     "secure_checkout": "Secure checkout",
+-    "empty_intro": "Make room for something beautiful. Explore everything for your bathroom."
++    "empty_intro": "Make room for something beautiful. Explore everything for your bathroom.",
++    "per_item": "each",
++    "product_costs": "Products",
++    "discounts": "Discount",
++    "products_after_discounts": "Products after discounts",
++    "shipping_nl": "Shipping (Netherlands)",
++    "shipping": "Shipping",
++    "free": "Free",
++    "calculated_at_checkout": "At checkout",
++    "no_shipping": "Not required",
++    "total": "Total",
++    "estimated_total": "Total for the Netherlands",
++    "free_shipping_rule": "Free shipping when the product total after discounts is above {{ amount }}.",
++    "shipping_estimate": "For a Dutch delivery address. Your final total is shown at checkout.",
++    "shipping_destination": "Shipping is calculated when you enter your delivery address at checkout.",
++    "shipping_none": "These items do not require shipping.",
++    "taxes_included": "Including taxes.",
++    "duties_taxes_included": "Including duties and taxes.",
++    "duties_included": "Including duties. Taxes are calculated at checkout.",
++    "taxes_at_checkout": "Taxes are calculated at checkout.",
++    "discount_label": "Have a discount code?",
++    "discount_placeholder": "Enter your code",
++    "discount_apply": "Apply",
++    "discount_no_js": "You can enter your discount code at checkout.",
++    "discount_invalid": "This code does not currently give a discount. Check the code and its conditions.",
++    "discount_success": "Your discount code has been applied.",
++    "discount_shipping": "Your shipping discount is calculated at checkout.",
++    "discount_error": "Your code could not be confirmed. Refresh your cart to see the current discount.",
++    "discount_removed": "The discount code has been removed.",
++    "discount_loading": "Checking your discount code…",
++    "discount_code_label": "Discount code",
++    "discount_remove": "Remove discount code [code]",
++    "discount_pending": "Code saved; it will be checked at checkout.",
++    "discount_empty": "Enter a discount code.",
++    "product_total": "Product total"
+   },
+   "general": {
+     "password_page": {
+diff --git a/locales/nl.json b/locales/nl.json
+index 59b1ceaf0428f54cccd312df2ab72930ac32a598..5ab83830d7eb696ce5f8b58e4d474444f576dc57 100644
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -10,18 +10,52 @@
+ {
+   "bc_cart_page": {
+     "eyebrow": "Jouw badkamer begint hier",
+-    "intro": "Alles bij elkaar voor jouw nieuwe badkamer.",
++    "intro": "Controleer je artikelen en bekijk meteen je totaal.",
+     "continue_shopping": "Verder winkelen",
+     "items_heading": "Jouw artikelen",
+     "summary_eyebrow": "Nog even controleren",
+-    "summary_heading": "Jouw bestelling",
++    "summary_heading": "Jouw overzicht",
+     "items_subtotal": {
+       "one": "Artikelen ({{ count }})",
+       "other": "Artikelen ({{ count }})"
+     },
+-    "checkout": "Verder naar afrekenen",
++    "checkout": "Doorgaan naar afrekenen",
+     "secure_checkout": "Veilig afrekenen",
+-    "empty_intro": "Maak ruimte voor iets moois. Ontdek alles voor jouw badkamer."
++    "empty_intro": "Maak ruimte voor iets moois. Ontdek alles voor jouw badkamer.",
++    "per_item": "per stuk",
++    "product_costs": "Producten",
++    "discounts": "Korting",
++    "products_after_discounts": "Producten na korting",
++    "shipping_nl": "Verzending (Nederland)",
++    "shipping": "Verzending",
++    "free": "Gratis",
++    "calculated_at_checkout": "Bij afrekenen",
++    "no_shipping": "Niet nodig",
++    "total": "Totaal",
++    "estimated_total": "Totaal voor Nederland",
++    "free_shipping_rule": "Gratis verzending bij een producttotaal boven {{ amount }} na korting.",
++    "shipping_estimate": "Voor een Nederlands bezorgadres. Je definitieve totaal staat bij afrekenen.",
++    "shipping_destination": "Verzendkosten worden berekend zodra je je bezorgadres invult bij afrekenen.",
++    "shipping_none": "Deze artikelen hoeven niet te worden verzonden.",
++    "taxes_included": "Inclusief btw.",
++    "duties_taxes_included": "Inclusief belastingen en invoerrechten.",
++    "duties_included": "Inclusief invoerrechten. Belastingen worden bij afrekenen berekend.",
++    "taxes_at_checkout": "Belastingen worden bij afrekenen berekend.",
++    "discount_label": "Heb je een kortingscode?",
++    "discount_placeholder": "Vul je code in",
++    "discount_apply": "Toepassen",
++    "discount_no_js": "Je kunt je kortingscode bij afrekenen invullen.",
++    "discount_invalid": "Deze code geeft nu geen korting. Controleer de code en de voorwaarden.",
++    "discount_success": "Je kortingscode is toegepast.",
++    "discount_shipping": "Je verzendkorting wordt bij afrekenen berekend.",
++    "discount_error": "Je code kon niet worden bevestigd. Vernieuw de winkelwagen om de actuele korting te zien.",
++    "discount_removed": "De kortingscode is verwijderd.",
++    "discount_loading": "Je kortingscode wordt gecontroleerd…",
++    "discount_code_label": "Kortingscode",
++    "discount_remove": "Verwijder kortingscode [code]",
++    "discount_pending": "Code opgeslagen; wordt bij afrekenen gecontroleerd.",
++    "discount_empty": "Vul een kortingscode in.",
++    "product_total": "Producttotaal"
+   },
+   "general": {
+     "password_page": {
+diff --git a/sections/main-cart-footer.liquid b/sections/main-cart-footer.liquid
+index a7079208466e610b90b80763d68be09275177253..4e7536a3f57a8d6745fd32dd95f48a45ad468abb 100644
+--- a/sections/main-cart-footer.liquid
++++ b/sections/main-cart-footer.liquid
+@@ -2,20 +2,21 @@
+ {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+ {{ 'component-price.css' | asset_url | stylesheet_tag }}
+ {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
++<script src="{{ 'bc-cart-page.js' | asset_url }}" defer="defer"></script>
+ 
+-{%- style -%}
+-  .section-{{ section.id }}-padding {
+-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+-  }
+-
+-  @media screen and (min-width: 750px) {
+-    .section-{{ section.id }}-padding {
+-      padding-top: {{ section.settings.padding_top }}px;
+-      padding-bottom: {{ section.settings.padding_bottom }}px;
+-    }
+-  }
+-{%- endstyle -%}
++{%- liquid
++  assign bc_shipping_known = false
++  assign bc_shipping_price = 0
++  assign bc_shipping_threshold = 10000
++  if cart.requires_shipping and localization.country.iso_code == 'NL' and cart.currency.iso_code == 'EUR'
++    assign bc_shipping_known = true
++    if cart.total_price <= bc_shipping_threshold
++      assign bc_shipping_price = 695
++    endif
++  endif
++  assign bc_cart_total = cart.total_price | plus: bc_shipping_price
++  assign bc_threshold_money = bc_shipping_threshold | money
++-%}
+ 
+ <div
+   class="bc-cart-summary gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
+@@ -38,116 +39,191 @@
+       {%- endif -%}
+ 
+       <div class="cart__blocks">
+-        {% for block in section.blocks %}
+-          {%- case block.type -%}
+-            {%- when '@app' -%}
+-              {% render block %}
+-            {%- when 'subtotal' -%}
+-              <div class="js-contents" {{ block.shopify_attributes }}>
+-                <div class="bc-cart-summary__heading">
+-                  <p class="bc-cart-eyebrow">{{ 'bc_cart_page.summary_eyebrow' | t }}</p>
+-                  <h2>{{ 'bc_cart_page.summary_heading' | t }}</h2>
+-                </div>
+-                <div class="bc-cart-summary__subtotal">
+-                  <span>{{ 'bc_cart_page.items_subtotal' | t: count: cart.item_count }}</span>
+-                  <span>{{ cart.items_subtotal_price | money }}</span>
+-                </div>
+-                <div>
++        <div class="js-contents">
++          {% for block in section.blocks %}
++            {%- case block.type -%}
++              {%- when '@app' -%}
++                {% render block %}
++              {%- when 'subtotal' -%}
++                <div
++                  class="bc-cart-overview"
++                  data-bc-cart-summary
++                  data-bc-product-total="{{ cart.total_price | money | escape }}"
++                  data-bc-total-label="{{ 'bc_cart_page.product_total' | t | escape }}"
++                  data-bc-shipping-pending-label="{{ 'bc_cart_page.calculated_at_checkout' | t | escape }}"
++                  {{ block.shopify_attributes }}
++                >
++                  <div class="bc-cart-summary__heading">
++                    <span class="bc-cart-summary__icon" aria-hidden="true">
++                      <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke-linecap="round"/></svg>
++                    </span>
++                    <h2>{{ 'bc_cart_page.summary_heading' | t }}</h2>
++                  </div>
++
++                  <bc-cart-discount
++                    hidden
++                    data-section-id="{{ section.id }}"
++                    data-cart-url="{{ routes.cart_url }}"
++                    data-update-url="{{ routes.cart_update_url }}"
++                    data-message-invalid="{{ 'bc_cart_page.discount_invalid' | t | escape }}"
++                    data-message-success="{{ 'bc_cart_page.discount_success' | t | escape }}"
++                    data-message-shipping="{{ 'bc_cart_page.discount_shipping' | t | escape }}"
++                    data-message-error="{{ 'bc_cart_page.discount_error' | t | escape }}"
++                    data-message-removed="{{ 'bc_cart_page.discount_removed' | t | escape }}"
++                    data-message-loading="{{ 'bc_cart_page.discount_loading' | t | escape }}"
++                    data-message-code-label="{{ 'bc_cart_page.discount_code_label' | t | escape }}"
++                    data-message-remove="{{ 'bc_cart_page.discount_remove' | t | escape }}"
++                    data-message-pending="{{ 'bc_cart_page.discount_pending' | t | escape }}"
++                    data-message-empty="{{ 'bc_cart_page.discount_empty' | t | escape }}"
++                  >
++                    <form data-bc-discount-form>
++                      <label for="BC-Cart-Discount" class="bc-cart-discount__label">
++                        <span class="bc-cart-icon" aria-hidden="true">{{- 'icon-discount.svg' | inline_asset_content -}}</span>
++                        {{ 'bc_cart_page.discount_label' | t }}
++                      </label>
++                      <div class="bc-cart-discount__entry">
++                        <input
++                          id="BC-Cart-Discount"
++                          name="discount"
++                          type="text"
++                          autocomplete="off"
++                          autocapitalize="characters"
++                          spellcheck="false"
++                          placeholder="{{ 'bc_cart_page.discount_placeholder' | t | escape }}"
++                          aria-describedby="BC-Cart-Discount-Status"
++                        >
++                        <button type="submit">{{ 'bc_cart_page.discount_apply' | t }}</button>
++                      </div>
++                    </form>
++                    <ul class="bc-cart-discount__codes list-unstyled" data-bc-discount-codes></ul>
++                    <p class="bc-cart-discount__status" id="BC-Cart-Discount-Status" data-bc-discount-status role="status" aria-live="polite"></p>
++                  </bc-cart-discount>
++                  <noscript><p class="bc-cart-discount__fallback">{{ 'bc_cart_page.discount_no_js' | t }}</p></noscript>
++
++                  <dl class="bc-cart-costs">
++                    <div class="bc-cart-costs__row">
++                      <dt>{{ 'bc_cart_page.items_subtotal' | t: count: cart.item_count }}</dt>
++                      <dd>{{ cart.original_total_price | money }}</dd>
++                    </div>
++                    {%- if cart.total_discount > 0 -%}
++                      <div class="bc-cart-costs__row bc-cart-costs__row--discount">
++                        <dt>{{ 'bc_cart_page.discounts' | t }}</dt>
++                        <dd>−{{ cart.total_discount | money }}</dd>
++                      </div>
++                      <div class="bc-cart-costs__row">
++                        <dt>{{ 'bc_cart_page.products_after_discounts' | t }}</dt>
++                        <dd>{{ cart.total_price | money }}</dd>
++                      </div>
++                    {%- endif -%}
++                    <div class="bc-cart-costs__row">
++                      <dt>
++                        {%- if bc_shipping_known -%}
++                          {{ 'bc_cart_page.shipping_nl' | t }}
++                        {%- else -%}
++                          {{ 'bc_cart_page.shipping' | t }}
++                        {%- endif -%}
++                      </dt>
++                      <dd data-bc-shipping-price{% if bc_shipping_known and bc_shipping_price == 0 %} class="bc-cart-costs__free"{% endif %}>
++                        {%- if cart.requires_shipping == false -%}
++                          {{ 'bc_cart_page.no_shipping' | t }}
++                        {%- elsif bc_shipping_known -%}
++                          {%- if bc_shipping_price == 0 -%}
++                            {{ 'bc_cart_page.free' | t }}
++                          {%- else -%}
++                            {{ bc_shipping_price | money }}
++                          {%- endif -%}
++                        {%- else -%}
++                          {{ 'bc_cart_page.calculated_at_checkout' | t }}
++                        {%- endif -%}
++                      </dd>
++                    </div>
++                  </dl>
++
+                   {%- if cart.cart_level_discount_applications.size > 0 -%}
+-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
++                    <ul class="discounts list-unstyled bc-cart-order-discounts" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                       {%- for discount in cart.cart_level_discount_applications -%}
+                         <li class="discounts__discount discounts__discount--position">
+                           {{- 'icon-discount.svg' | inline_asset_content -}}
+                           {{ discount.title | escape }}
+-                          (-{{ discount.total_allocated_amount | money }})
++                          <span>(−{{ discount.total_allocated_amount | money }})</span>
+                         </li>
+                       {%- endfor -%}
+                     </ul>
+                   {%- endif -%}
+-                </div>
+ 
+-                <div class="totals">
+-                  <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+-                  <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+-                </div>
++                  <div class="totals">
++                    <h3 class="totals__total" data-bc-total-label>
++                      {%- if bc_shipping_known -%}
++                        {{ 'bc_cart_page.estimated_total' | t }}
++                      {%- elsif cart.requires_shipping -%}
++                        {{ 'bc_cart_page.product_total' | t }}
++                      {%- else -%}
++                        {{ 'bc_cart_page.total' | t }}
++                      {%- endif -%}
++                    </h3>
++                    <p class="totals__total-value" data-bc-order-total>{{ bc_cart_total | money }}</p>
++                  </div>
+ 
+-                <small class="tax-note caption-large rte">
+-                  {%- if cart.duties_included and cart.taxes_included -%}
+-                    {%- if shop.shipping_policy.body == blank -%}
+-                      {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
+-                    {%- else -%}
+-                      {{
+-                        'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
+-                        | t: link: shop.shipping_policy.url
+-                      }}
+-                    {%- endif -%}
+-                  {%- elsif cart.duties_included == false and cart.taxes_included -%}
+-                    {%- if shop.shipping_policy.body == blank -%}
+-                      {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
+-                    {%- else -%}
+-                      {{
+-                        'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
+-                        | t: link: shop.shipping_policy.url
+-                      }}
+-                    {%- endif -%}
+-                  {%- elsif cart.duties_included and cart.taxes_included == false -%}
+-                    {%- if shop.shipping_policy.body == blank -%}
+-                      {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
++                  <p class="tax-note caption-large">
++                    {%- if cart.duties_included and cart.taxes_included -%}
++                      {{ 'bc_cart_page.duties_taxes_included' | t }}
++                    {%- elsif cart.taxes_included -%}
++                      {{ 'bc_cart_page.taxes_included' | t }}
++                    {%- elsif cart.duties_included -%}
++                      {{ 'bc_cart_page.duties_included' | t }}
+                     {%- else -%}
+-                      {{
+-                        'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
+-                        | t: link: shop.shipping_policy.url
+-                      }}
+-                    {%- endif -%}
+-                  {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
+-                    {%- if shop.shipping_policy.body == blank -%}
+-                      {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+-                    {%- else -%}
+-                      {{
+-                        'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
+-                        | t: link: shop.shipping_policy.url
+-                      }}
++                      {{ 'bc_cart_page.taxes_at_checkout' | t }}
+                     {%- endif -%}
++                    {% if cart.requires_shipping %}
++                      {% if bc_shipping_known %}
++                        {{ 'bc_cart_page.shipping_estimate' | t }}
++                      {% else %}
++                        {{ 'bc_cart_page.shipping_destination' | t }}
++                      {% endif %}
++                    {% endif %}
++                  </p>
++                  {%- if bc_shipping_known -%}
++                    <p class="bc-cart-shipping-note" data-bc-shipping-promise>
++                      <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="M2 5h12v12H2V5Zm12 5h4l4 4v3h-8v-7Z" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
++                      <span>{{ 'bc_cart_page.free_shipping_rule' | t: amount: bc_threshold_money }}</span>
++                    </p>
+                   {%- endif -%}
+-                </small>
+-              </div>
+-            {%- else -%}
+-              <div class="cart__ctas" {{ block.shopify_attributes }}>
+-                <button
+-                  type="submit"
+-                  id="checkout"
+-                  class="cart__checkout-button button"
+-                  name="checkout"
+-                  {% if cart == empty %}
+-                    disabled
+-                  {% endif %}
+-                  form="cart"
+-                >
+-                  <span>{{ 'bc_cart_page.checkout' | t }}</span>
+-                  <span class="bc-cart-checkout-arrow" aria-hidden="true">→</span>
+-                </button>
+-              </div>
+-              <p class="bc-cart-secure">{{ 'bc_cart_page.secure_checkout' | t }}</p>
+-
+-              {%- if additional_checkout_buttons -%}
+-                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+-                  {{ content_for_additional_checkout_buttons }}
+                 </div>
+-              {%- endif -%}
+-          {%- endcase -%}
+-        {% endfor %}
++              {%- else -%}
++                <div class="cart__ctas" {{ block.shopify_attributes }}>
++                  <button
++                    type="submit"
++                    id="checkout"
++                    class="cart__checkout-button button"
++                    name="checkout"
++                    {% if cart == empty %}
++                      disabled
++                    {% endif %}
++                    form="cart"
++                  >
++                    <span>{{ 'bc_cart_page.checkout' | t }}</span>
++                    <svg class="bc-cart-icon bc-cart-checkout-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h18m-7-7 7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
++                  </button>
++                </div>
++                <p class="bc-cart-secure">
++                  <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-linecap="round"/><path d="M12 14v3" stroke-linecap="round"/></svg>
++                  {{ 'bc_cart_page.secure_checkout' | t }}
++                </p>
++            {%- endcase -%}
++          {% endfor %}
+ 
+-        <div id="cart-errors" role="alert"></div>
+-        {%- if shop.enabled_payment_types != empty -%}
+-          <div class="bc-cart-payments">
+-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+-            <ul class="bc-cart-payments__list list-unstyled" role="list">
+-              {%- for type in shop.enabled_payment_types -%}
+-                <li>{{ type | payment_type_svg_tag: class: 'bc-cart-payment-icon' }}</li>
+-              {%- endfor -%}
+-            </ul>
+-          </div>
+-        {%- endif -%}
++          <div id="cart-errors" role="alert"></div>
++          {%- if shop.enabled_payment_types != empty -%}
++            <div class="bc-cart-payments">
++              <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
++              <ul class="bc-cart-payments__list list-unstyled" role="list">
++                {%- for type in shop.enabled_payment_types -%}
++                  <li>{{ type | payment_type_svg_tag: class: 'bc-cart-payment-icon' }}</li>
++                {%- endfor -%}
++              </ul>
++            </div>
++          {%- endif -%}
++        </div>
+       </div>
+     </div>
+   </div>
+diff --git a/sections/main-cart-items.liquid b/sections/main-cart-items.liquid
+index 842ddd18a5469c1aa0791012899ab79314c4ee21..6844d5f8796e4bd56162c0d102357162713a3f19 100644
+--- a/sections/main-cart-items.liquid
++++ b/sections/main-cart-items.liquid
+@@ -30,18 +30,17 @@
+   <div class="page-width">
+     <div class="title-wrapper-with-link bc-cart-heading">
+       <div>
+-        <p class="bc-cart-eyebrow">{{ 'bc_cart_page.eyebrow' | t }}</p>
+         <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
+         <p class="bc-cart-intro">{{ 'bc_cart_page.intro' | t }}</p>
+       </div>
+       <a href="{{ routes.all_products_collection_url }}" class="bc-cart-back">
+-        <span aria-hidden="true">←</span> {{ 'bc_cart_page.continue_shopping' | t }}
++        <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="m10 5-7 7 7 7M3 12h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
++        {{ 'bc_cart_page.continue_shopping' | t }}
+       </a>
+     </div>
+ 
+     <div class="cart__warnings bc-cart-empty">
+-      <span class="bc-cart-empty__bag" aria-hidden="true"></span>
+-      <p class="bc-cart-eyebrow">{{ 'bc_cart_page.eyebrow' | t }}</p>
++      <svg class="bc-cart-empty__bag" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M15 22h34l4 33H11l4-33Z" stroke-linejoin="round"/><path d="M23 24V17a9 9 0 0 1 18 0v7" stroke-linecap="round"/></svg>
+       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+       <p class="bc-cart-empty__intro">{{ 'bc_cart_page.empty_intro' | t }}</p>
+       <a href="{{ routes.all_products_collection_url }}" class="button">
+@@ -140,10 +139,12 @@
+                           <strong class="cart-item__final-price product-option">
+                             {{ item.final_price | money }}
+                           </strong>
++                          <span class="bc-cart-unit-label">{{ 'bc_cart_page.per_item' | t }}</span>
+                         </div>
+                       {%- else -%}
+-                        <div class="product-option">
++                        <div class="product-option bc-cart-unit-price">
+                           {{ item.original_price | money }}
++                          <span class="bc-cart-unit-label">{{ 'bc_cart_page.per_item' | t }}</span>
+                         </div>
+                       {%- endif -%}
+ 
+@@ -188,6 +189,7 @@
+                           <li class="discounts__discount">
+                             {{- 'icon-discount.svg' | inline_asset_content -}}
+                             {{ discount.discount_application.title | escape }}
++                            <span>(−{{ discount.amount | money }})</span>
+                           </li>
+                         {%- endfor -%}
+                       </ul>

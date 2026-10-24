@@ -1,4 +1,6 @@
 /* BadkamerCity externe filters - v1 test */
+html.bc-external-filters-active #main-search-filters,
+html.bc-external-filters-active .template-search__toolbar,
 html.bc-external-filters-active #main-collection-filters,
 html.bc-external-filters-active facet-filters-form.facets-vertical-sort,
 html.bc-external-filters-active .bc-collection-active-filters,

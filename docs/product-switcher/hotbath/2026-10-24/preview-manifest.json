@@ -1,0 +1,141 @@
+{
+  "scope": "UNPUBLISHED_PREVIEW_ONLY",
+  "group_id": "hotbath-cobber-ibs70-inbouw-doucheset",
+  "group_count": 4,
+  "product_count": 395,
+  "newly_linked_product_count": 387,
+  "menu_count": 8,
+  "groups": [
+    {
+      "group_id": "hotbath-cobber-ibs70-inbouw-doucheset",
+      "asset": "bc-hotbath-ibs70-switcher-data.json",
+      "product_count": 359,
+      "menu_count": 5,
+      "book_source": {
+        "edition": 18,
+        "printed_page": 200,
+        "pdf_page": 202
+      }
+    },
+    {
+      "group_id": "hotbath-more-handdoekhaak-verouderd-messing-baa03ab",
+      "asset": "bc-hotbath-baa03-switcher-data.json",
+      "product_count": 12,
+      "menu_count": 1,
+      "book_source": {
+        "edition": 18,
+        "printed_page": 414,
+        "pdf_page": 416
+      }
+    },
+    {
+      "group_id": "hotbath-more-baa09-zeepdispenser-wandmodel",
+      "asset": "bc-hotbath-baa09-switcher-data.json",
+      "product_count": 12,
+      "menu_count": 1,
+      "book_source": {
+        "edition": 18,
+        "printed_page": 416,
+        "pdf_page": 418
+      }
+    },
+    {
+      "group_id": "hotbath-more-baa10-zeepdispenser-vrijstaand",
+      "asset": "bc-hotbath-baa10-switcher-data.json",
+      "product_count": 12,
+      "menu_count": 1,
+      "book_source": {
+        "edition": 18,
+        "printed_page": 416,
+        "pdf_page": 418
+      }
+    }
+  ],
+  "source_catalog_captured_at": "2026-10-24",
+  "catalog_sha256": "751a534e441ed730eb4da904887022539998ad411ae096e216dc439357ce55ce",
+  "book_source": {
+    "edition": 18,
+    "printed_page": 200,
+    "pdf_page": 202
+  },
+  "changed_files": [
+    {
+      "filename": "sections/main-product.liquid",
+      "source_sha256": "c636542aa0605088bf2d72d3fa0febca39ac5688673927bf3e763640ec3bcd8d",
+      "output_sha256": "1081c4fecee3be679728d803f5260910e8b730ee3794f714555a43114d5f55a4",
+      "size_bytes": 162612
+    },
+    {
+      "filename": "snippets/bc-product-switcher.liquid",
+      "source_sha256": "308c46c4c16a02e9f148934e02201a99efb4597cd412d722fa8bd45554ef8ae6",
+      "output_sha256": "69de521b9089940cd4daa29fead118e85b1b7716253ea473e307af149db8fe35",
+      "size_bytes": 1361
+    },
+    {
+      "filename": "assets/bc-product-switcher.js",
+      "source_sha256": "f3500b2cc1a3ebeec76a898a39f8973cbac5668739b23cd1904abc1a0b20889e",
+      "output_sha256": "875288b8019862f47ff06687fc1082d22f9d2b2f8beca7a732ed257c1d098eae",
+      "size_bytes": 21097
+    },
+    {
+      "filename": "snippets/bc-hotbath-preview-group.liquid",
+      "source_sha256": null,
+      "output_sha256": "e0f607897307be0653c6408bcb29b56927ff6a41075499fb827a1da2b9292e6a",
+      "size_bytes": 42961
+    },
+    {
+      "filename": "assets/bc-hotbath-ibs70-switcher-data.json",
+      "source_sha256": null,
+      "output_sha256": "970b77e436e9a1b16d2497158a84180308170b0d8c422db8426e36f084e17536",
+      "size_bytes": 225857
+    },
+    {
+      "filename": "assets/bc-hotbath-baa03-switcher-data.json",
+      "source_sha256": null,
+      "output_sha256": "9df37df2b6550661e0093ba69d414a2d198c8563605f0171655e40f5aa602e75",
+      "size_bytes": 3537
+    },
+    {
+      "filename": "assets/bc-hotbath-baa09-switcher-data.json",
+      "source_sha256": null,
+      "output_sha256": "f1ea29d720301d08ec831173ab1d2550d60706902e9f3dc72707e07ebaa41ac7",
+      "size_bytes": 3726
+    },
+    {
+      "filename": "assets/bc-hotbath-baa10-switcher-data.json",
+      "source_sha256": null,
+      "output_sha256": "aa08a972a30c825abecff8570455e51ecfdefbe27d47229ead8913d61f6a585f",
+      "size_bytes": 3955
+    },
+    {
+      "filename": "locales/en.default.json",
+      "source_sha256": "89cadf6b945cff25362f01f8af664a9c080961ee02df9051a6aaec89996dff8a",
+      "output_sha256": "27a2d453efc697cc5417d7089eb4edef3d969a8fd0197090b54dd7a7c6c9d236",
+      "size_bytes": 54991
+    },
+    {
+      "filename": "locales/nl.json",
+      "source_sha256": "d7e6b51024ad674bc0f0a77463d51938ac0ec727ebc0b7b353198458a4cd3195",
+      "output_sha256": "b72186126a99d714124e7901d4a25c09dd8bfa00eae72c9e2d84f7206563fd29",
+      "size_bytes": 57806
+    }
+  ],
+  "unchanged_files": [],
+  "shared_switcher_dataset_changed": false,
+  "shared_switcher_dataset_sha256": "2fb482d5b4012944c61f44453f6b0fddf1a09740ee140e6f834b3bf1bdc9aa21",
+  "shopify_product_mutations": false,
+  "scroll_preservation": {
+    "scope": "FOUR_PILOT_GROUPS_ONLY",
+    "opt_in": "data-bc-preserve-position=true",
+    "ttl_ms": 30000,
+    "max_restore_ms": 15000,
+    "settle_after_load_ms": 2000,
+    "consumption": "ONCE_BEFORE_ASYNC_FETCH"
+  },
+  "known_missing_combination": "IBS70AI4",
+  "preview_theme_id": "195649929482",
+  "source_theme_id": "195611197706",
+  "main_theme_id": "195611492618",
+  "roll_back_source": "baseline/original-exact",
+  "source_representation_note": "Generator inputs under preview-source are text-normalized; original-exact stores verified original bytes for exact rollback."
+}

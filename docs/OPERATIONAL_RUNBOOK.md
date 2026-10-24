@@ -1,5 +1,7 @@
 # BadkamerCity — operationeel runbook
 
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
+
 **Bronstand:** 7 oktober 2026. Dit is een werkhandleiding voor een nieuwe beheerder. Shopify MAIN op dit meetmoment: `BadkamerCity - SEO categoriehub`, ID `194864677130`. Controleer de actuele MAIN-ID altijd opnieuw. Git en Shopify zijn verschillende systemen. Publiceren doet alleen de bevoegde merchant.
 
 ## 1. Starten op een bestaande Windows-werkplek

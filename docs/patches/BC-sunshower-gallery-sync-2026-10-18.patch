@@ -1,0 +1,66 @@
+diff --git a/assets/bc-sunshower-page.js b/assets/bc-sunshower-page.js
+index 70f5660de287555b32df7c8bebd22e95d607f60c..e5a59ca668358cb0862fab19ce555b0460097f15 100644
+--- a/assets/bc-sunshower-page.js
++++ b/assets/bc-sunshower-page.js
+@@ -56,25 +56,53 @@
+           status.textContent = page.dataset.choiceError;
+         }
+       }));
+-      const mainPhoto = page.querySelector('.ss-gallery__photo');
++      let mainPhoto = page.querySelector('.ss-gallery__photo');
+       const photoButtons = [...page.querySelectorAll('[data-ss-photo]')];
+       let photoRequest = 0;
++      const selectPhoto = button => photoButtons.forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++      const photoKey = source => {
++        try { const url = new URL(source,location.href); return url.origin + url.pathname; }
++        catch { return source; }
++      };
++      const reconcilePhoto = () => {
++        if (!page.isConnected || !mainPhoto?.isConnected || !mainPhoto.complete || !mainPhoto.naturalWidth) return;
++        const shown = photoKey(mainPhoto.currentSrc || mainPhoto.src);
++        const button = photoButtons.find(other => photoKey(other.dataset.ssPhoto) === shown);
++        if (button) selectPhoto(button);
++      };
++      mainPhoto?.addEventListener('load',reconcilePhoto);
++      reconcilePhoto();
++      window.addEventListener('pageshow',event => {
++        if (!event.persisted || !page.isConnected) return;
++        ++photoRequest;
++        reconcilePhoto();
++      });
+       photoButtons.forEach(button => button.addEventListener('click',() => {
+         const request = ++photoRequest;
+         if (!mainPhoto || button.getAttribute('aria-pressed') === 'true') return;
+         const photo = new Image();
+-        photo.onload = () => {
+-          if (request !== photoRequest) return;
++        photo.onload = async () => {
++          if (request !== photoRequest || !page.isConnected || !mainPhoto.isConnected) return;
++          try { if (typeof photo.decode === 'function') await photo.decode(); }
++          catch { return; }
++          if (request !== photoRequest || !page.isConnected || !mainPhoto.isConnected) return;
++          // Insert the decoded node, so the visible photo and thumbnail commit together.
++          for (const {name,value} of mainPhoto.attributes) {
++            if (!['src','srcset','sizes','width','height'].includes(name)) photo.setAttribute(name,value);
++          }
+           const width = Number(button.dataset.ssPhotoWidth) > 0 ? Number(button.dataset.ssPhotoWidth) : photo.naturalWidth;
+           const height = Number(button.dataset.ssPhotoHeight) > 0 ? Number(button.dataset.ssPhotoHeight) : photo.naturalHeight;
+           if (width > 0 && height > 0) {
+-            mainPhoto.width = width;
+-            mainPhoto.height = height;
++            photo.width = width;
++            photo.height = height;
+           }
+-          mainPhoto.removeAttribute('srcset');
+-          mainPhoto.src = button.dataset.ssPhoto;
+-          photoButtons.forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++          photo.onload = null;
++          photo.onerror = null;
++          mainPhoto.replaceWith(photo);
++          mainPhoto = photo;
++          selectPhoto(button);
+         };
++        photo.onerror = () => { photo.onload = null; };
+         photo.src = button.dataset.ssPhoto;
+       }));
+       const lightbox = page.querySelector('[data-ss-lightbox]');

@@ -1,0 +1,336 @@
+diff --git a/assets/bc-sunshower-landing.css b/assets/bc-sunshower-landing.css
+index ef833e2573d873d0d2be6a339c8dd8a1ccd2e212..14f5443291bb9c61d52a34f8f73d1b865a6f4805 100644
+--- a/assets/bc-sunshower-landing.css
++++ b/assets/bc-sunshower-landing.css
+@@ -249,27 +249,6 @@ body.overflow-hidden .bcsse-mobile-cta, body.overflow-hidden-mobile .bcsse-mobil
+   .bcsse-hero a:focus-visible { outline-color: #157fa4; }
+   .bcsse-light-card:focus-visible { outline-offset: -5px !important; outline-color: #fff !important; }
+   .bcsse-light-model-link { margin-top: .8rem; font-size: 1.4rem; }
+-  .bcsse-light-detail { margin-top: 1.4rem; scroll-margin-top: 11rem; }
+-  .bcsse-light-back { margin-bottom: .6rem; font-size: 1.35rem; }
+-  .bcsse-light-detail__visual { position: relative; min-height: 35rem; aspect-ratio: 1.02; overflow: hidden; border-radius: .8rem; color: #fff; background: var(--bcsse-navy); }
+-  .bcsse-light-detail__visual::after { position: absolute; inset: 0; background: linear-gradient(135deg,rgba(3,28,46,.8),rgba(3,28,46,.04) 60%); content: ''; pointer-events: none; }
+-  .bcsse-light-detail__media, .bcsse-light-detail__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+-  .bcsse-light-detail__image { object-fit: cover; object-position: 58% center; }
+-  .bcsse-light-detail--uv .bcsse-light-detail__image { object-position: 78% center; }
+-  .bcsse-light-detail__visual h2 { position: relative; z-index: 1; max-width: 27rem; padding: 2rem 1.6rem; font-size: clamp(3.4rem,10vw,4.5rem); line-height: 1.04; scroll-margin-top: 11rem; }
+-  .bcsse-light-switch { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; margin-top: 1.1rem; }
+-  .bcsse-light-switch__link { display: flex; min-height: 5.2rem; align-items: center; justify-content: center; gap: 1rem; padding: .8rem; border: 1px solid #d8dddF; border-radius: .6rem; background: #fff; font-size: 1.4rem; text-decoration: none; }
+-  .bcsse-light-switch__link > span { flex: 0 0 auto; width: 1.7rem; height: 1.7rem; border: 1px solid rgba(11,48,73,.15); border-radius: 50%; background: #ff8570; }
+-  .bcsse-light-switch__link--uv > span { background: #168fee; }
+-  .bcsse-light-switch__link[aria-current="true"] { border: 2px solid #137ba3; background: #dcf6ff; font-weight: 650; }
+-  .bcsse-light-switch__link--infrared[aria-current="true"] { border-color: #a64231; background: #fff0e9; }
+-  .bcsse-light-detail__copy { display: flex; align-items: flex-start; flex-direction: column; gap: 1rem; padding-block: 1.5rem .7rem; font-size: 1.5rem; }
+-  .bcsse-light-detail__note { font-size: 1.3rem; line-height: 1.5; }
+-  .bcsse-light-detail__copy > .bcsse-text-link { font-weight: 650; }
+-  .bcsse-experience[data-bcsse-mobile-ready] .bcsse-light-detail__configure { display: none; }
+-  .bcsse-experience[data-bcsse-light-view="detail"] .bcsse-hero__copy { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+-  .bcsse-experience[data-bcsse-light-view="detail"] .bcsse-mobile-light { margin-top: 0; }
+-  .bcsse-experience[data-bcsse-light-view="detail"] .bcsse-light-detail { margin-top: 0; }
+   .bcsse-model-disclosure { border-bottom: 1px solid var(--bcsse-border); background: #fffdfa; }
+   .bcsse-model-disclosure__summary { display: flex; min-height: 5.4rem; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.2rem 1.8rem; font-size: 1.45rem; font-weight: 650; line-height: 1.4; list-style: none; cursor: pointer; }
+   .bcsse-model-disclosure__summary::-webkit-details-marker { display: none; }
+@@ -304,5 +283,4 @@ body.overflow-hidden .bcsse-mobile-cta, body.overflow-hidden-mobile .bcsse-mobil
+   .bcsse-light-model-link { font-size: 1.25rem; }
+   .bcsse-accessory-shelf { margin-inline: -1.4rem; padding-inline: 1.4rem; scroll-padding-inline: 1.4rem; }
+   .bcsse-accessory-shelf .bcsse-accessory { flex-basis: 86%; }
+-  .bcsse-light-detail__visual { min-height: 31rem; }
+ }
+diff --git a/assets/bc-sunshower-mobile.js b/assets/bc-sunshower-mobile.js
+index 838b2235391b9eb6e4ff3d15bbf5826e4144506a..944cb41e78a7add24bdaec830d743fd4c51b6a1f 100644
+--- a/assets/bc-sunshower-mobile.js
++++ b/assets/bc-sunshower-mobile.js
+@@ -1,4 +1,4 @@
+-/* Phone-only Sunshower exploration. Product links remain the no-script fallback. */
++/* Phone layout helpers. IR/UV cards use native links straight to the configurator. */
+ (function () {
+   'use strict';
+   if (window.BCSunshowerMobileLight) {
+@@ -10,118 +10,53 @@
+   var rootSelector = '[data-bcsse-mobile-light]';
+ 
+   function createController(root) {
+-    var sectionId = root.dataset.bcsseSectionId;
+     var media = window.matchMedia('(max-width: 749px)');
+     var overview = root.querySelector('[data-bcsse-light-overview]');
+     var mobileContent = root.querySelector('.bcsse-mobile-light');
+-    var panels = Array.from(root.querySelectorAll('[data-bcsse-light-panel]'));
+-    var links = Array.from(root.querySelectorAll('[data-bcsse-light-link]'));
+-    var configurator = root.querySelector('[data-bcsse-mobile-configurator]');
+     var modelDisclosure = root.querySelector('[data-bcsse-model-disclosure]');
++    var modelSummary = modelDisclosure && modelDisclosure.querySelector('summary');
+     var shelf = root.querySelector('[data-bcsse-accessory-shelf]');
++    var originalShelfTabIndex = shelf && shelf.getAttribute('tabindex');
+     var heroCopy = root.querySelector('.bcsse-hero__copy');
+-    var modelSummary = modelDisclosure && modelDisclosure.querySelector('summary');
+-    var title = document.getElementById('bcsse-title-' + sectionId);
+-    var modelsId = 'bcsse-models-' + sectionId;
+-    var state = 'overview';
++    var title = document.getElementById('bcsse-title-' + root.dataset.bcsseSectionId);
++    var modelsHash = '#bcsse-models-' + root.dataset.bcsseSectionId;
+     var destroyed = false;
+ 
+-    function getHashState() {
+-      if (window.location.hash === '#bcsse-light-infrared-' + sectionId) return 'infrared';
+-      if (window.location.hash === '#bcsse-light-uv-' + sectionId) return 'uv';
+-      if (!window.location.hash || window.location.hash === '#bcsse-lights-' + sectionId) return 'overview';
+-      if (window.location.hash.indexOf('#bcsse-light-') === 0 || window.location.hash.indexOf('#bcsse-lights-') === 0) return 'overview';
+-      return null;
+-    }
+-
+-    function focusState() {
+-      var target = title;
+-      if (state !== 'overview') {
+-        target = document.getElementById('bcsse-light-heading-' + state + '-' + sectionId);
+-      }
+-      if (!target) return;
+-      target.focus({ preventScroll: true });
+-      target.scrollIntoView({ block: 'start', behavior: 'auto' });
+-    }
+-
+-    function update(shouldFocus) {
++    function update() {
+       if (destroyed) return;
+-      state = media.matches ? (getHashState() || state) : 'overview';
+-      root.dataset.bcsseLightView = state === 'overview' ? 'overview' : 'detail';
+-      overview.hidden = media.matches && state !== 'overview';
+-      panels.forEach(function (panel) {
+-        panel.hidden = !media.matches || panel.dataset.bcsseLightPanel !== state;
+-      });
+-      links.forEach(function (link) {
+-        if (state !== 'overview' && link.dataset.bcsseLightLink === state) {
+-          link.setAttribute('aria-current', 'true');
+-        } else {
+-          link.removeAttribute('aria-current');
+-        }
+-      });
+-      if (configurator) {
+-        configurator.href = state === 'uv' ? root.dataset.bcsseUvUrl : root.dataset.bcsseConfiguratorUrl;
+-      }
++      // Old detail hashes must never hide these direct configurator links.
++      if (overview) overview.hidden = false;
++      delete root.dataset.bcsseLightView;
+       if (shelf) shelf.tabIndex = media.matches ? 0 : -1;
+-      if (modelDisclosure && (!media.matches || window.location.hash === '#' + modelsId)) {
++      if (modelDisclosure && (!media.matches || window.location.hash === modelsHash)) {
+         modelDisclosure.open = true;
+       }
+-      if (shouldFocus && media.matches) focusState();
+-    }
+-
+-    function navigate(nextState) {
+-      var hash = nextState === 'overview' ? '#bcsse-lights-' + sectionId : '#bcsse-light-' + nextState + '-' + sectionId;
+-      if (window.location.hash !== hash) {
+-        try {
+-          window.history.pushState(null, '', hash);
+-        } catch (error) {
+-          window.location.hash = hash;
+-        }
+-      }
+-      update(true);
+     }
+ 
+     function onClick(event) {
+       if (!media.matches || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+-      var target = event.target.closest('a');
+-      if (!target || !root.contains(target)) return;
+-      if (target.getAttribute('href') === '#' + modelsId && modelDisclosure) {
++      var target = event.target && event.target.closest && event.target.closest('a');
++      if (target && root.contains(target) && target.getAttribute('href') === modelsHash && modelDisclosure) {
+         modelDisclosure.open = true;
+-        return;
+       }
+-      var nextState = target.dataset.bcsseLightLink;
+-      if (nextState !== 'infrared' && nextState !== 'uv' && nextState !== 'overview') return;
+-      event.preventDefault();
+-      navigate(nextState);
+-    }
+-
+-    function onHashChange() {
+-      var wasDetail = state !== 'overview';
+-      var focusWasInside = root.contains(document.activeElement);
+-      var hash = window.location.hash;
+-      var ownsHash = hash === '#bcsse-lights-' + sectionId || hash === '#bcsse-light-infrared-' + sectionId || hash === '#bcsse-light-uv-' + sectionId;
+-      update(false);
+-      if (media.matches && (ownsHash || (wasDetail && focusWasInside && state === 'overview'))) focusState();
++      // In particular, do not intercept IR/UV product links or change history.
+     }
+ 
+     function onMediaChange() {
++      if (destroyed) return;
+       var active = document.activeElement;
+-      var willHideActive = !media.matches && ((mobileContent && mobileContent.contains(active)) || (modelSummary && active === modelSummary) || panels.some(function (panel) { return panel.contains(active); }));
+-      var nextState = getHashState();
+-      var willHideHeroFocus = media.matches && heroCopy && heroCopy.contains(active) && (active !== title || nextState === 'infrared' || nextState === 'uv');
+-      var willHideModelFocus = media.matches && modelDisclosure && modelDisclosure.contains(active) && active !== modelSummary && window.location.hash !== '#' + modelsId;
+-      if (modelDisclosure) {
+-        modelDisclosure.open = !media.matches || window.location.hash === '#' + modelsId;
+-      }
+-      update(false);
+-      if (willHideActive && title) title.focus({ preventScroll: true });
+-      else if (willHideHeroFocus) focusState();
++      var willHidePhoneFocus = !media.matches && ((mobileContent && mobileContent.contains(active)) || active === modelSummary || active === shelf);
++      var willHideHeroFocus = media.matches && heroCopy && heroCopy.contains(active) && active !== title;
++      var willHideModelFocus = media.matches && modelDisclosure && modelDisclosure.contains(active) && active !== modelSummary && window.location.hash !== modelsHash;
++      if (modelDisclosure) modelDisclosure.open = !media.matches || window.location.hash === modelsHash;
++      update();
++      if ((willHidePhoneFocus || willHideHeroFocus) && title) title.focus({ preventScroll: true });
+       else if (willHideModelFocus && modelSummary) modelSummary.focus({ preventScroll: true });
+     }
+ 
+     root.addEventListener('click', onClick);
+-    window.addEventListener('hashchange', onHashChange);
+-    window.addEventListener('popstate', onHashChange);
++    window.addEventListener('hashchange', update);
++    window.addEventListener('popstate', update);
+     if (media.addEventListener) media.addEventListener('change', onMediaChange);
+     else media.addListener(onMediaChange);
+     root.dataset.bcsseMobileReady = 'true';
+@@ -131,14 +66,16 @@
+       destroy: function () {
+         destroyed = true;
+         root.removeEventListener('click', onClick);
+-        window.removeEventListener('hashchange', onHashChange);
+-        window.removeEventListener('popstate', onHashChange);
++        window.removeEventListener('hashchange', update);
++        window.removeEventListener('popstate', update);
+         if (media.removeEventListener) media.removeEventListener('change', onMediaChange);
+         else media.removeListener(onMediaChange);
+-        overview.hidden = false;
+-        panels.forEach(function (panel) { panel.hidden = false; });
++        if (overview) overview.hidden = false;
+         if (modelDisclosure) modelDisclosure.open = true;
+-        if (configurator) configurator.href = root.dataset.bcsseConfiguratorUrl;
++        if (shelf) {
++          if (originalShelfTabIndex === null) shelf.removeAttribute('tabindex');
++          else shelf.setAttribute('tabindex', originalShelfTabIndex);
++        }
+         delete root.dataset.bcsseMobileReady;
+         delete root.dataset.bcsseLightView;
+       }
+diff --git a/sections/bc-sunshower-landing.liquid b/sections/bc-sunshower-landing.liquid
+index 66930e851d011cf4f4ff54099bfed1afdcb33bae..e4df087387aa8a07d48c77fe3056e9f6ff58b358 100644
+--- a/sections/bc-sunshower-landing.liquid
++++ b/sections/bc-sunshower-landing.liquid
+@@ -6,7 +6,6 @@
+   assign one_product = section.settings.one_product
+   assign plus_product = section.settings.plus_product
+   assign hero_image = section.settings.hero_image | default: plus_product.featured_image
+-  assign hero_mobile_image = section.settings.hero_mobile_image | default: hero_image
+   assign one_image = section.settings.one_image | default: one_product.featured_image
+   assign plus_image = section.settings.plus_image | default: plus_product.featured_image
+   assign installation_image = section.settings.installation_image | default: section.settings.inbouw_image
+@@ -24,6 +23,10 @@
+       assign configurator_url = models_anchor
+     endif
+   endif
++  assign mobile_ir_configurator_url = configurator_url
++  if one_product != blank
++    assign mobile_ir_configurator_url = one_configurator_url
++  endif
+   assign mobile_uv_configurator_url = configurator_url
+   if plus_product != blank
+     assign mobile_uv_configurator_url = plus_configurator_url
+@@ -68,28 +71,36 @@
+               {%- liquid
+                 assign light_image = one_image
+                 assign light_alt = one_alt
+-                assign light_sizes = '150vw'
+-                assign light_width_1 = 600
+-                assign light_width_2 = 900
+-                assign light_width_3 = 1200
+-                assign light_width_4 = 1500
++                assign light_configurator_url = mobile_ir_configurator_url
++                assign light_focal_percent = 58
+                 if light == 'uv'
+                   assign light_image = plus_image
+                   assign light_alt = plus_alt
+-                  assign light_sizes = '260vw'
+-                  assign light_width_1 = 750
+-                  assign light_width_2 = 1100
+-                  assign light_width_3 = 1500
+-                  assign light_width_4 = 1800
++                  assign light_configurator_url = mobile_uv_configurator_url
++                  assign light_focal_percent = 78
+                 endif
+                 assign light_label_key = 'ss_mobile_light.' | append: light | append: '.label'
+                 assign light_teaser_key = 'ss_mobile_light.' | append: light | append: '.teaser'
+               -%}
+-              <a class="bcsse-light-card bcsse-light-card--{{ light }}" href="#bcsse-light-{{ light }}-{{ section.id }}" data-bcsse-light-link="{{ light }}">
++              <a class="bcsse-light-card bcsse-light-card--{{ light }}" href="{{ light_configurator_url | escape }}">
+                 {%- if light_image != blank -%}
++                  {%- liquid
++                    assign light_crop_width = light_image.height | times: 0.9 | round | at_most: light_image.width
++                    assign light_crop_left = light_image.width | minus: light_crop_width | times: light_focal_percent | divided_by: 100.0 | round
++                    assign light_widths = '180,270,360,540' | split: ','
++                  -%}
++                  {%- capture light_srcset -%}
++                    {%- for candidate in light_widths -%}
++                      {%- assign candidate_width = candidate | plus: 0 -%}
++                      {%- if candidate_width < light_crop_width -%}
++                        {{- light_image | image_url: crop: 'region', crop_left: light_crop_left, crop_top: 0, crop_width: light_crop_width, crop_height: light_image.height, width: candidate_width }} {{ candidate_width }}w,
++                      {%- endif -%}
++                    {%- endfor -%}
++                    {{- light_image | image_url: crop: 'region', crop_left: light_crop_left, crop_top: 0, crop_width: light_crop_width, crop_height: light_image.height, width: light_crop_width }} {{ light_crop_width }}w
++                  {%- endcapture -%}
+                   <picture class="bcsse-light-card__media">
+-                    <source media="(max-width: 749px)" srcset="{{ light_image | image_url: width: light_width_1 }} {{ light_width_1 }}w, {{ light_image | image_url: width: light_width_2 }} {{ light_width_2 }}w, {{ light_image | image_url: width: light_width_3 }} {{ light_width_3 }}w, {{ light_image | image_url: width: light_width_4 }} {{ light_width_4 }}w" sizes="{{ light_sizes }}">
+-                    <img class="bcsse-light-card__image" src="{{ mobile_blank_image }}" width="450" height="750" loading="eager" alt="{{ light_alt | escape }}">
++                    <source media="(max-width: 749px)" srcset="{{ light_srcset | strip }}" sizes="(max-width: 337px) 261px, (max-width: 465px) 77.4vw, 360px">
++                    <img class="bcsse-light-card__image" src="{{ mobile_blank_image }}" width="450" height="750" loading="eager" fetchpriority="high" alt="{{ light_alt | escape }}">
+                   </picture>
+                 {%- endif -%}
+                 <span class="bcsse-light-card__copy"><strong>{{ light_label_key | t }}</strong><span>{{ light_teaser_key | t }}</span></span>
+@@ -98,52 +109,6 @@
+             {%- endfor -%}
+           </div>
+         </div>
+-        {%- for light in mobile_functions -%}
+-          {%- liquid
+-            assign light_image = one_image
+-            assign light_alt = one_alt
+-            assign light_configurator_url = configurator_url
+-            assign light_sizes = '160vw'
+-            assign light_width_1 = 600
+-            assign light_width_2 = 900
+-            assign light_width_3 = 1200
+-            assign light_width_4 = 1500
+-            if light == 'uv'
+-              assign light_image = plus_image
+-              assign light_alt = plus_alt
+-              assign light_configurator_url = mobile_uv_configurator_url
+-              assign light_sizes = '280vw'
+-              assign light_width_1 = 900
+-              assign light_width_2 = 1200
+-              assign light_width_3 = 1500
+-              assign light_width_4 = 1800
+-            endif
+-            assign light_heading_key = 'ss_mobile_light.' | append: light | append: '.heading'
+-            assign light_description_key = 'ss_mobile_light.' | append: light | append: '.description'
+-          -%}
+-          <section class="bcsse-light-detail bcsse-light-detail--{{ light }}" id="bcsse-light-{{ light }}-{{ section.id }}" aria-labelledby="bcsse-light-heading-{{ light }}-{{ section.id }}" data-bcsse-light-panel="{{ light }}">
+-            <a class="bcsse-text-link bcsse-light-back" href="#bcsse-lights-{{ section.id }}" data-bcsse-light-link="overview"><span aria-hidden="true">←</span> {{ 'ss_mobile_light.back' | t }}</a>
+-            <div class="bcsse-light-detail__visual">
+-              {%- if light_image != blank -%}
+-                <picture class="bcsse-light-detail__media">
+-                  <source media="(max-width: 749px)" srcset="{{ light_image | image_url: width: light_width_1 }} {{ light_width_1 }}w, {{ light_image | image_url: width: light_width_2 }} {{ light_width_2 }}w, {{ light_image | image_url: width: light_width_3 }} {{ light_width_3 }}w, {{ light_image | image_url: width: light_width_4 }} {{ light_width_4 }}w" sizes="{{ light_sizes }}">
+-                  <img class="bcsse-light-detail__image" src="{{ mobile_blank_image }}" width="750" height="750" loading="lazy" alt="{{ light_alt | escape }}">
+-                </picture>
+-              {%- endif -%}
+-              <h2 id="bcsse-light-heading-{{ light }}-{{ section.id }}" tabindex="-1">{{ light_heading_key | t }}</h2>
+-            </div>
+-            <nav class="bcsse-light-switch" aria-label="{{ 'ss_mobile_light.switch_label' | t | escape }}">
+-              <a class="bcsse-light-switch__link bcsse-light-switch__link--infrared" href="#bcsse-light-infrared-{{ section.id }}" data-bcsse-light-link="infrared"{% if light == 'infrared' %} aria-current="true"{% endif %}><span aria-hidden="true"></span>{{ 'ss_mobile_light.infrared.label' | t }}</a>
+-              <a class="bcsse-light-switch__link bcsse-light-switch__link--uv" href="#bcsse-light-uv-{{ section.id }}" data-bcsse-light-link="uv"{% if light == 'uv' %} aria-current="true"{% endif %}><span aria-hidden="true"></span>{{ 'ss_mobile_light.uv.label' | t }}</a>
+-            </nav>
+-            <div class="bcsse-light-detail__copy">
+-              <p>{{ light_description_key | t }}</p>
+-              <p class="bcsse-light-detail__note">{{ 'ss_mobile_light.function_note' | t }}</p>
+-              <a class="bcsse-button bcsse-button--navy bcsse-light-detail__configure" href="{{ light_configurator_url }}">{{ 'ss_mobile_light.configure' | t }} <span aria-hidden="true">→</span></a>
+-              {%- if has_accessories -%}<a class="bcsse-text-link" href="#bcsse-accessories-{{ section.id }}">{{ 'ss_mobile_light.accessories_link' | t }} <span aria-hidden="true">↓</span></a>{%- endif -%}
+-            </div>
+-          </section>
+-        {%- endfor -%}
+       </div>
+     </div>
+   </section>

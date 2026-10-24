@@ -1,0 +1,113 @@
+{
+  "schema": "hotbath-menu-audit-v1",
+  "captured_at": "2026-10-24",
+  "shop": "fpa9hu-i3.myshopify.com",
+  "source_sha256": "6734a0e997b39198b68073e78c480bd092d29a509431cf12eb4f6b6c05e5e288",
+  "catalog_products": 8237,
+  "active_products": 8236,
+  "published_products": 8236,
+  "excluded_test_products": 2,
+  "service_parts_separate_scope": 696,
+  "inactive_or_unpublished_excluded": 0,
+  "eligible_real_non_service_products": 7539,
+  "existing_groups": 433,
+  "existing_json_records": 3383,
+  "existing_json_unique_handles": 3383,
+  "existing_handles_in_current_hotbath_catalog": 3383,
+  "stale_json_handles": 0,
+  "coverage": {
+    "NO_GROUP": 4854,
+    "CONNECTED": 3383
+  },
+  "parsed_colour_model_products": 6928,
+  "colour_titles_checked": 6435,
+  "real_non_service_uncovered_products": 4156,
+  "uncovered_with_no_detected_colour_sibling": 134,
+  "existing_menu_title_drift_records": 2940,
+  "existing_groups_with_detected_augmentation": 64,
+  "existing_groups_without_detected_augmentation": 369,
+  "existing_augmentation_new_products": 222,
+  "high_confidence_existing_augmentation_groups": 35,
+  "high_confidence_existing_augmentation_products": 81,
+  "color_buckets_already_covered": 557,
+  "single_colour_bucket_products": 151,
+  "new_or_augmentation_proposals": 739,
+  "high_confidence_proposals": 546,
+  "review_proposals": 193,
+  "distinct_model_codes_in_proposals": 244,
+  "proposed_product_count": 3846,
+  "proposed_new_product_count": 3445,
+  "high_confidence_proposed_new_product_count": 2490,
+  "unparsed_uncovered_products": 577,
+  "review_types": {
+    "SKU_TITLE_COLOUR_CONFLICT": 2,
+    "COLOUR_GROUP_REVIEW": 193,
+    "UNPARSED_PRODUCTS_FAMILY_REVIEW": 4
+  },
+  "batches": [
+    {
+      "kind": "Douchesets",
+      "proposal_count": 525,
+      "high_confidence_proposals": 443,
+      "review_proposals": 82,
+      "products_in_proposals": 2484,
+      "new_products_in_proposals": 2467
+    },
+    {
+      "kind": "Wastafel- en fonteinkranen",
+      "proposal_count": 23,
+      "high_confidence_proposals": 14,
+      "review_proposals": 9,
+      "products_in_proposals": 128,
+      "new_products_in_proposals": 103
+    },
+    {
+      "kind": "Hoofddouches en bevestiging",
+      "proposal_count": 11,
+      "high_confidence_proposals": 3,
+      "review_proposals": 8,
+      "products_in_proposals": 51,
+      "new_products_in_proposals": 31
+    },
+    {
+      "kind": "Overige kranen",
+      "proposal_count": 14,
+      "high_confidence_proposals": 7,
+      "review_proposals": 7,
+      "products_in_proposals": 53,
+      "new_products_in_proposals": 28
+    },
+    {
+      "kind": "Afbouw- en inbouwdelen",
+      "proposal_count": 40,
+      "high_confidence_proposals": 27,
+      "review_proposals": 13,
+      "products_in_proposals": 183,
+      "new_products_in_proposals": 146
+    },
+    {
+      "kind": "Spiegels en verlichting",
+      "proposal_count": 26,
+      "high_confidence_proposals": 10,
+      "review_proposals": 16,
+      "products_in_proposals": 178,
+      "new_products_in_proposals": 126
+    },
+    {
+      "kind": "Accessoires en overige",
+      "proposal_count": 100,
+      "high_confidence_proposals": 42,
+      "review_proposals": 58,
+      "products_in_proposals": 769,
+      "new_products_in_proposals": 544
+    }
+  ],
+  "limits": [
+    "Read-only analysis; proposals are not deployed or merchant approved.",
+    "Proposal counts refer to colour/configuration buckets, not a final count of logical product families.",
+    "Current code availability flags are not supplier stock and were not used to invent stock.",
+    "Title-only inference is a proposal, not a verified technical specification.",
+    "Single-colour buckets can still be members of a wider source-confirmed size/height family; they are not declared menu-unnecessary globally.",
+    "Only IBS70 and IBS7009 cross-model option decoding is explicitly implemented here; book_rules.json may contain additional reviewed rules for subsequent batches."
+  ]
+}

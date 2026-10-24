@@ -1,0 +1,43 @@
+{
+  "schema": "wiesbaden-cohort5-verification-v1",
+  "date": "2026-10-21",
+  "sku_total": 50,
+  "source_manufacturer_fetch_ok": 50,
+  "applied_verified_shopify": 44,
+  "quarantined": 6,
+  "applied_by_product_type": {
+    "Hoofddouche": 28,
+    "Handdouche": 16
+  },
+  "specification_rows": 540,
+  "manufacturer_source_live": true,
+  "shopify_snapshot_backup_saved": 44,
+  "public_html_verified": 8,
+  "public_html_sample_skus": [
+    "24.3726",
+    "29.2816",
+    "29.7912",
+    "29.7820",
+    "29.7840",
+    "24.3802",
+    "29.2916",
+    "29.6949"
+  ],
+  "unexpected_ean_visible_in_sample": false,
+  "backend_index_synced": false,
+  "original_docs_and_filters_unchanged": true,
+  "totals": {
+    "applied": 143,
+    "quarantine": 106,
+    "protected": 1,
+    "handled": 250
+  },
+  "quarantined_skus": [
+    "29.3848",
+    "29.7821",
+    "29.7825",
+    "24.3800",
+    "29.3873",
+    "29.6831"
+  ]
+}

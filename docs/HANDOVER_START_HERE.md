@@ -1,5 +1,15 @@
 # BadkamerCity — START HIER bij een overdracht
 
+> **Wiesbaden — afgeronde Shopify-uitvoering, 21 oktober 2026: `SHOPIFY_COMPLETE_INDEX_BLOCKED`.** Volg [het vaste plan](product-content/WIESBADEN_EXECUTION_PLAN.md), [de actuele machine-status](product-content/wiesbaden/execution-state.json) en [het uitvoeringsresultaat](product-content/WIESBADEN_EXECUTION_RESULTS_2026-10-21.md). **2.299 prijswijzigingen zijn teruggelezen; 33.6000 en 75.3510 zijn ACTIVE én Online Store-gepubliceerd.** Oorspronkelijke queue: **186 online / 28 zonder positieve prijs / 3 historische safetyblocks**, niet opnieuw geprobeerd.
+>
+> **COMPLETE en teruggelezen:** verrijking van **2.273 producten / 12.259 metafields / 33.186 feiten / 6.345 filters / 1.368 documentlijsten**, met **0 uitzonderingen**. Zichtbare afwerking van **187 unieke producten: 3 gerichte correcties + 184 eerder lege SEO-records**, met **0 uitzonderingen**. **87 hoofdcategorietoevoegingen** via `productUpdate.collectionsToJoin` aan **5 bevestigde handmatige collecties**, met behoud van alle bestaande lidmaatschappen; **46 gevallen zonder voldoende bron niet gewijzigd**. Shopify normaliseert **14 identieke SEO-titels naar `null`**; effectieve producttitel en exacte SEO-description zijn teruggelezen. **18184 openbare headcheck PASS**.
+>
+> **Definitieve Admin-tellingen:** **2.451 totaal / 2.451 ACTIVE / 2.451 Online Store-gepubliceerd**, alle precisie **EXACT**; **EUR**, `taxesIncluded=true`, **MAIN 195491168522 ongewijzigd**. 151 bestaande contentreviews en 25 producten zonder bron behouden; volledige galerijen niet bewezen.
+>
+> **Exact volgende stap:** bestaande SSH-authenticatie voor de externe index beschikbaar maken, daarna synchroniseren en controleren. Indexstatus **BLOCKED_NO_EXISTING_SESSION_AUTH**; geen syncclaim. Er is geen Shopify-schrijver of achtergrondworker actief na afronding. Actieve branch `fix/product-cards-2026-10-14`; `main` alleen documentatie. Herhaal afgeronde Shopify-operaties niet. Oudere vervolgacties hieronder zijn historische checkpoints.
+
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
+
 **Laatste geverifieerde bronstand:** 7 oktober 2026. Dit document is het **eerste dat een nieuwe AI, freelancer, ICT'er of interne medewerker leest**. Doel: binnen 15 minuten weten wat live staat; binnen een uur veilig een taak kunnen oppakken; zonder gokken over ontbrekende toegang of data.
 
 ## 1. Wat is er werkelijk opgeleverd?
@@ -34,7 +44,7 @@ Gebruik deze labels bij elke toekomstige statusrapportage. **Een Shopify-templat
 
 ## 2. De eerste 15 minuten: controleer de werkelijke omgeving
 
-1. Open de GitHub-repository `jlamping1997/badkamercity`, branch `main`.
+1. Open de centrale werkstatus op GitHub `main`; gebruik daarna de daar geregistreerde actieve codebranch. Onderstaande bronstand van 7 oktober is historisch.
 2. Lees deze pagina, daarna `AI_HANDOFF_CURRENT.md` en `AGENTS.md`.
 3. Controleer in Shopify welk thema NU rol `MAIN` heeft; vertrouw nooit blind het ID van 7 oktober.
 4. Bepaal op de Windows-computer de **juiste** Git-repository en of lokale wijzigingen bestaan.

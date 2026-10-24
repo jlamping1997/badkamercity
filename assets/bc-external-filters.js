@@ -15,7 +15,10 @@
 
     const apiBase = root.dataset.apiBase;
     const collectionHandle = root.dataset.collection;
-    const sectionRoot = root.closest('.bc-collection');
+    const isSearch = root.dataset.searchMode === 'true';
+    const sectionRoot = root.closest(isSearch ? '.template-search' : '.bc-collection');
+    const searchTypes = new URL(window.location.href).searchParams.get('type');
+    if (isSearch && searchTypes && !searchTypes.split(',').includes('product')) return;
     if (!apiBase || !collectionHandle || !sectionRoot) return;
 
     const layout =
@@ -30,13 +33,14 @@
       return;
     }
 
-    const nativeAside = sectionRoot.querySelector('#main-collection-filters');
-    const nativeSort = sectionRoot.querySelector('facet-filters-form.facets-vertical-sort');
+    const nativeAside = sectionRoot.querySelector(isSearch ? '#main-search-filters' : '#main-collection-filters');
+    const nativeSort = sectionRoot.querySelector(isSearch ? 'facet-filters-form.template-search__toolbar' : 'facet-filters-form.facets-vertical-sort');
     const nativePagination = productContainer.querySelector('.pagination-wrapper');
-    const nativeNodes = [nativeAside, nativeSort, nativePagination].filter(Boolean);
+    const nativeNodes = [nativeAside, nativeSort, nativePagination, ...sectionRoot.querySelectorAll('[data-bc-native-search-status]')].filter(Boolean);
     const nativeDisplays = new Map(nativeNodes.map((node) => [node, node.style.display]));
     const nativeGridNodes = [...productGrid.childNodes];
-    const expectedCount = Number(root.dataset.productsCount);
+    const expectedCount = isSearch ? NaN : Number(root.dataset.productsCount);
+    const cardDataCache = new Map();
     let externalActive = false;
     let requestId = 0;
     let requestController;
@@ -260,6 +264,7 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             collection: collectionHandle,
+            q: isSearch ? (new URL(window.location.href).searchParams.get('q') ?? root.dataset.searchQuery ?? '*') : '*',
             page: state.page,
             per_page: state.perPage,
             sort: state.sort,
@@ -279,9 +284,13 @@
              data.collection.profile_products !== expectedCount)) {
           throw new Error('Filterindex en collectie komen niet overeen');
         }
+        if (isSearch && data.collection?.handle !== '__all__') {
+          throw new Error('Onjuiste zoekindex');
+        }
         renderFilters(data.facets);
         renderActiveFilters(data.facets);
         renderProducts(data.products);
+        hydrateCardTitles(data.products, currentRequest);
         renderCount(data.found);
         renderPagination(data.found);
         state.lastData = data;
@@ -447,8 +456,13 @@
     }
 
     function renderProducts(products) {
-      productGrid.innerHTML = products.map((product) => {
+      const cards = products.map((product) => {
         const href = productPath(product);
+        const title = String(product.title || '').trim();
+        const vendor = String(product.vendor || '').trim();
+        const remainder = vendor && title.toLowerCase().startsWith(`${vendor.toLowerCase()} `)
+          ? title.slice(vendor.length).trim() : title;
+        const cardTitle = remainder || title;
         const image = product.image_url
           ? `<img src="${attr(product.image_url)}" alt="${attr(product.image_alt || product.title || '')}" loading="lazy" width="600" height="600">`
           : '';
@@ -462,14 +476,70 @@
               <div class="bc-filter-card__info">
                 ${product.vendor ? `<p class="bc-filter-card__vendor">${escapeHtml(product.vendor)}</p>` : ''}
                 <h3 class="bc-filter-card__title">
-                  <a href="${attr(href)}">${escapeHtml(product.title || '')}</a>
+                  <a href="${attr(href)}" title="${attr(title)}">${escapeHtml(cardTitle)}</a>
                 </h3>
+                <dl class="bc-card-specs">
+                  ${product.product_type ? `<div><dt>${escapeHtml(root.dataset.cardType || 'Productsoort')}:</dt><dd>${escapeHtml(product.product_type)}</dd></div>` : ''}
+                  ${product.sku ? `<div><dt>${escapeHtml(root.dataset.cardSku || 'Artikelnummer')}:</dt><dd>${escapeHtml(product.sku)}</dd></div>` : ''}
+                </dl>
                 <div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>
+                ${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax)}</span>` : ''}
+                <a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">&rarr;</span></a>
               </div>
             </article>
           </li>
         `;
       }).join('');
+      const empty = `<li class="grid__item bc-filter-empty" role="status">${escapeHtml(root.dataset.emptyLabel || 'Geen producten gevonden.')}</li>`;
+      productGrid.innerHTML = isSearch
+        ? `<ul class="grid product-grid" role="list">${cards || empty}</ul>`
+        : cards || empty;
+    }
+
+    async function hydrateCardTitles(products, currentRequest) {
+      if (!root.dataset.cardDataSection) return;
+      const queue = [...products];
+      const worker = async () => {
+        while (queue.length && currentRequest === requestId) {
+          const product = queue.shift();
+          const href = productPath(product);
+          if (!product.handle) continue;
+          if (!cardDataCache.has(href)) {
+            if (cardDataCache.size >= 200) cardDataCache.delete(cardDataCache.keys().next().value);
+            cardDataCache.set(href, loadCardTitle(href));
+          }
+          const data = await cardDataCache.get(href);
+          if (currentRequest !== requestId || !externalActive || !data) continue;
+          if (String(data.id) !== String(product.shopify_product_id || product.id).split('/').pop()) continue;
+          const link = [...productGrid.querySelectorAll('.bc-filter-card__title a')]
+            .find((node) => node.getAttribute('href') === href);
+          if (link && typeof data.short_title === 'string' && data.short_title.trim()) {
+            link.textContent = data.short_title.trim();
+          }
+        }
+      };
+      await Promise.all(Array.from({ length: Math.min(4, queue.length) }, worker));
+    }
+
+    async function loadCardTitle(href) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      try {
+        const url = new URL(href, window.location.origin);
+        url.searchParams.set('sections', root.dataset.cardDataSection);
+        const response = await fetch(url, { signal: controller.signal, credentials: 'omit' });
+        if (!response.ok) return null;
+        const sections = await response.json();
+        const html = sections[root.dataset.cardDataSection];
+        if (typeof html !== 'string') return null;
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const data = doc.querySelector('[data-bc-card-data]');
+        return data ? JSON.parse(data.textContent) : null;
+      } catch (_) {
+        return null;
+      } finally {
+        clearTimeout(timeout);
+      }
     }
 
     function renderCount(found) {
@@ -635,7 +705,7 @@
     }
 
     function productPath(product) {
-      if (product.handle) return `/products/${encodeURIComponent(product.handle)}`;
+      if (product.handle) return `${window.Shopify?.routes?.root || '/'}products/${encodeURIComponent(product.handle)}`;
 
       if (product.product_url) {
         try {
