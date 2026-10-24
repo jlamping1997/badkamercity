@@ -1,5 +1,20 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath inbouwdeel meebestellen — 24 oktober 2026 (PREVIEW_GEBOUWD / DESKTOP_GETEST / NIET_GEPUBLICEERD)
+
+De eigenaarscorrecties zijn verwerkt: 79 artikelkoppelingen aangewezen, waarvan78 bruikbaar; B010EXTGN blijft apart omdat exact HBCB010 ontbreekt in Shopify. De70 regels met “verwijderen” zijn uitgesloten van de inbouwdeelkeuze; geen producten verwijderd/gearchiveerd/hernoemd. AR087 blijft als product ongemoeid. Samen met boekbewijs bevat het concept **715 exacte artikelkoppelingen /134 modellen /44 inbouwdelen**.
+
+**Werkconcept:** UNPUBLISHED **195664052490 — BadkamerCity - Hotbath inbouwkeuze 24 okt**. Server-side kopie vóór wijziging532/532 checksums identiek aan MAIN195649929482. Acht bestanden geüpload en exact teruggelezen: vier aangepast, vier nieuw; concept536 bestanden. HuidigeMAIN blijft195649929482 met alle532 checksums ongewijzigd. Geen product-, prijs-, voorraad-, metafield- of betaalwijzigingen.
+
+**Gedrag:** expliciete Ja/Nee zonder betaalde voorselectie, actuele bodyprijs/beschikbaarheid; Ja voegt beide echte varianten in het gekozen aantal toe en opent de winkelwagen, Nee houdt de bestaande kooproute. Kleur-/lengtewissels bewaren de keuze alleen binnen dezelfde groep en hetzelfde bodyartikel. Geen automatische retry bij onzekere cartrespons; zelfstandige winkelwagenregels, geen vaste bundel.
+
+**Bewijs:** 27carttests +9datatests PASS; onafhankelijke codecontrole zonder blocker; lokale Shopify theme-check zonder externe gegevensoverdracht geeft0 nieuwe fouten en één verwachte complexiteitswaarschuwing. Echte desktopbrowser1348×936: Ja aantal2 geeft2 CB105EXT18CR +2 HBCB105 (€778), Nee na kleur-/lengtewissel geeft1 CB105EXT25BCP (€388), verplichte keuze en nieuwe CB7071→HBCB7071-weergave PASS. CB126/IBS70/B010-held geen add-on. Eigen testwinkelwagen leeg achtergelaten. **NOT_TESTED:** fysieke mobiel/aparte mobiele viewport, betaling en alle715 pagina’s afzonderlijk; foutpaden met transportdubbels getest. Geen Windows-worktreecontrole.
+
+Dossier: [implementatie en terugzetpad](https://github.com/jlamping1997/badkamercity/blob/70e20c9f16fc3c06470a0575996a09a8f4deb29a/docs/product-switcher/hotbath/2026-10-24/inbouw/implementation/README.md). Actieve branch blijft fix/product-cards-2026-10-14; patch onder dossier, geen root-theme-sync waarvan deploywerking onbekend is. Main uitsluitend deze documentatie.
+
+**Exact volgende handeling:** eigenaar beoordeelt dit concept op zijn telefoon vóór eigen publicatie. Daarna gezamenlijke kleur-/maat-/inbouwkeuzemenu’s verder vormgeven. Open: ontbrekendHBCB010 en eerdere expliciet aangehouden bron-/kleurgevallen; geen gegokte koppelingen.
+
+
 ## Hotbath extra inbouwkoppelingen — 24 oktober 2026 (94 MODELLEN / 460 ARTIKELEN, NIET GEÏNSTALLEERD)
 
 Vervolgvraag eigenaar: meer onderbouwde afbouw→inbouwkoppelingen vinden. Volledige boekscan editie18 over drie paginaonderdelen; nieuwe tabellen en kleuren visueel gecontroleerd. **94 extra eenvoudige modelkoppelingen / 460 extra unieke webshopartikelen** bovenop de eerdere31-modelreview; geen overlap met eerdere208 artikelen. De eerdere208 bevatten vijf MHF-aliassen in review en zijn niet allemaal klaar voor automatische uitrol.
