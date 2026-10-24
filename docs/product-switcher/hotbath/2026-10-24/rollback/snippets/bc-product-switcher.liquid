@@ -1,0 +1,16 @@
+{%- liquid
+  assign bc_switch_group = product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group | strip
+-%}
+
+{%- if bc_switch_group != blank -%}
+  <div
+    class="bc-buybox__switcher-groups"
+    data-bc-product-switcher-v2
+    data-switch-group="{{ bc_switch_group | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+    data-switcher-data-url="{{ 'product-switcher-data.json' | asset_url }}"
+  ></div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

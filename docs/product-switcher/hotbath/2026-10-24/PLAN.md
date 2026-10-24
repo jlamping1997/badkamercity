@@ -47,7 +47,7 @@ Er zijn 64 bestaande groepen met 222 gedetecteerde ongekoppelde sibling-artikele
 Samen 395 productpagina’s en 387 nieuwe groepskoppelingen in het concept, zonder productmetafields te wijzigen. Gecontroleerde bronpagina’s: IBS70 gedrukt200/PDF202; BAA03 gedrukt414/PDF416; BAA09/10 gedrukt416/PDF418. IBS70AI4 ontbreekt in Shopify en wordt niet verzonnen. IBS7009 is een aparte familie met tweewegomstel; IBS70 heeft twee stopkranen.
 
 ## Batches na de proef
-1. **Bestaande kleurmenu’s aanvullen:** eerst de 35 sterke groepen / 81 artikelen. Daarna de overige gedetecteerde aanvullingen controleren.
+1. **Bestaande kleurmenu’s aanvullen:** eerst de resterende 34 sterke groepen / 77 artikelen. BAA03 (één groep / vier artikelen) zit al in de proef; baseline was 35 / 81. Daarna de overige gedetecteerde aanvullingen controleren.
 2. **Nieuwe eenvoudige kleurmenu’s:** families met identiek model en uitvoering; boek/titel/kleurcodes controleren, minimaal twee bestaande kleuren.
 3. **Kranen met maat en hoogte:** onderbouwde hoogte- en uitloopfamilies; CB003 blijft het referentievoorbeeld. EXT/TEXT en complete/inbouw-/afbouwartikelen niet ongemerkt samenvoegen.
 4. **Overige douchesets:** IBS7009, IBS20/20A, Buddy en andere families volgens hun eigen boekregels. IBS12 begint bijvoorbeeld al met een ronde handdouche; optie1 betekent daar iets anders dan bij IBS70.
@@ -66,9 +66,9 @@ Iedere batch omvat enkele volledige, verwante families. Eerst automatisch contro
 - Alleen conceptbestanden aanpassen, actuele themarollen teruglezen en een concrete terugzetroute bewaren.
 
 ## Huidige uitvoeringsstatus
-UNPUBLISHED concept **195649929482 — BadkamerCity - Hotbath keuzemenus 24 okt** is een voor wijziging bewezen identieke kopie (514/514) van het laatste Sunshower-concept 195611197706. Daarmee zijn de bestaande conceptcorrecties behouden. MAIN195611492618 is niet gewijzigd. Zeven scoped files geplaatst; de bestaande V2-JS en globale 433-groepen-dataset zijn niet gewijzigd. Admin-checksums 7/7 overeenkomend; zes tekstreadbacks exact, groot IBS70-asset via de Admin-checksum gecontroleerd.
+UNPUBLISHED concept **195649929482 — BadkamerCity - Hotbath keuzemenus 24 okt** is een voor wijziging bewezen identieke kopie (514/514) van het laatste Sunshower-concept 195611197706. Daarmee zijn de bestaande conceptcorrecties behouden. MAIN195611492618 is niet gewijzigd. Tien scoped files geplaatst: zeven menu/datafiles, de V2-JS met strikt opt-in positieherstel en twee locale-aliases. De globale 433-groepen-dataset blijft ongewijzigd; BAA03 krijgt een aparte aanvulling. Admin-checksums 10/10 exact. Het concept bevat 519 files, waarvan 509 gelijk aan de bron; MAIN512/512 ongewijzigd.
 
-Lokale keuze- en regressietests: 11/11 PASS. Catalogusanalysecontroles: 7/7 PASS. Onafhankelijke review: twaalf representatieve gevallen en alle sterke aanvullingen op bestaande groepen, geen dubbele tuples. Liquid-validatie: geen errors; main-product heeft dezelfde drie typen oude waarschuwingen als de bron (complexiteit208→214, ongebruikte seo_media en bestaand continue-object). Browseracceptatie is bij dit checkpoint nog lopend; fysieke telefoon en performance nog niet bewezen. Scrollbehoud is nog niet in de bestaande engine ingebouwd.
+Lokale keuze- en regressietests: 11/11 PASS. Catalogusanalysecontroles: 7/7 PASS. Onafhankelijke review: twaalf representatieve gevallen en alle sterke aanvullingen op bestaande groepen, geen dubbele tuples. Liquid-validatie: geen errors; main-product heeft dezelfde drie typen oude waarschuwingen als de bron (complexiteit208→214, ongebruikte seo_media en bestaand continue-object). Desktopkleur/configuratie/cart en de CB003-regressie zijn bevestigd. Opt-in scrollbehoud is toegevoegd en heeft 15/15 regressietests; de browserherproef bevestigt positiebehoud op IBS70, BAA03 en BAA09, met voorrang voor eigen scrollbewegingen. Fysieke telefoon en performance blijven niet bewezen. BAA03BGP en BAA09BGP hebben bestaande ontbrekende productfoto’s; dat is geen menuwijziging.
 
 ## Bekende uitzonderingen
 SDS32BGP en IBS33BGP4 noemen messing PVD in de huidige titel terwijl BGP gunmetal betekent. Deze voorstellen blijven REVIEW; niets automatisch gecorrigeerd. De 2.940 afwijkende titelstrings in oude menu-JSON zijn niet automatisch defecte menu’s: handles en keuzecombinaties zijn consistent.
@@ -76,4 +76,4 @@ SDS32BGP en IBS33BGP4 noemen messing PVD in de huidige titel terwijl BGP gunmeta
 ## Terugzetten en vervolgstap
 De volledige bronbestanden, manifests en gereproduceerde proefdata zijn als taakdossier bewaard. Terugzetten van de twee bestaande gewijzigde files herstelt de vorige renderroute; nieuwe, dan niet meer aangeroepen assets/helper zijn inert. De oude bestaande Sunshower-draft en MAIN zijn behouden. Publicatie is een afzonderlijke eigenaarshandeling volgens AGENTS.md.
 
-**Eerstvolgende handeling:** de vier proefgroepen in de echte conceptbrowser controleren, bevindingen oplossen en het checkpoint bijwerken. Daarna volgens dezelfde regels de 35 sterke bestaande aanvullingen voorbereiden.
+**Eerstvolgende handeling:** de vier proefgroepen op een echte telefoon beoordelen; desktopcontrole is afgerond. Daarna volgens dezelfde regels de resterende 34 sterke bestaande aanvullingen / 77 artikelen voorbereiden.
