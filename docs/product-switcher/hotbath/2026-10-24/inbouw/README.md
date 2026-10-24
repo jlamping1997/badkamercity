@@ -1,5 +1,7 @@
 # Hotbath inbouwdeel meebestellen — gecontroleerd voorstel, 24 oktober 2026
 
+> **Uitbreiding24okt:**94 extra modellen/460 extra artikelen gecontroleerd; uitzonderingen en bronpagina’s staan in [EXPANSION.md](EXPANSION.md). Nog geen Ja/Nee-functie geïnstalleerd. Hieronder blijft de eerste proef beschreven.
+
 Status: **MAPPING_VERIFIED / PILOT_NOT_IMPLEMENTED**. Dit dossier beantwoordt hoe we de afbouw-/inbouwrelatie betrouwbaar vaststellen en legt de eerste concrete koppelingen vast. De Ja/Nee-optie en gecombineerde winkelmandactie zijn nog niet gebouwd of getest. Er is in deze ronde geen Shopify-product-, prijs-, voorraad-, metafield- of themamutatie uitgevoerd.
 
 ## Gecontroleerde eerste proef

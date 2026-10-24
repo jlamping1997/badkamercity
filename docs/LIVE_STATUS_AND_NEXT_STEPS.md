@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath extra inbouwkoppelingen — 24 oktober 2026 (94 MODELLEN / 460 ARTIKELEN, NIET GEÏNSTALLEERD)
+
+Vervolgvraag eigenaar: meer onderbouwde afbouw→inbouwkoppelingen vinden. Volledige boekscan editie18 over drie paginaonderdelen; nieuwe tabellen en kleuren visueel gecontroleerd. **94 extra eenvoudige modelkoppelingen / 460 extra unieke webshopartikelen** bovenop de eerdere31-modelreview; geen overlap met eerdere208 artikelen. De eerdere208 bevatten vijf MHF-aliassen in review en zijn niet allemaal klaar voor automatische uitrol.
+
+956 exacte kandidaat-/bodyproducten vers uit Shopify gelezen. Alle460 hebben exacte unieke product/variant/body-ID's, actieve Online Store-publicatie en beschikbare verkoopvariant; geen inbegrepen=true/SPOM/IBS. Onafhankelijke gegevenscontrole plus zes visuele bronsteekproeven PASS. Prijs/voorraad bij implementatie opnieuw lezen. Geen volledige nieuwe catalogusscan voor tussentijds nieuw aangemaakte artikelen.
+
+**Apart gehouden:** CB7001EXT vereist horizontaal/verticaal (HBCB7001H/V); vijf inbouwcodes ontbreken aantoonbaar via verse exacte SKU-zoekopdracht (HBCB001, HBKHDS4, HBCB7069, HBGL7071, HBGL7072); drie GL177EXT-kleuren zeggen in Shopify inbegrepen=true; GT7072EXT boekconflict; GY011DEXT verdachte omstelrelatie. 27 Rails-modellen/264 artikelen hebben body inbegrepen in setprijs maar apart bestellen. KHDS3EXTAI opgelost door expliciete kleurregel op p176. 177 overige EXT/afbouw-/afdeksetkandidaten zonder vastgelegde exacte relatie staan als restlijst, niet als bewezen ontbrekende functies.
+
+MAIN opnieuw bevestigd als **195649929482**, geen theme-/product-/metafield-/prijs-/cartwrites. **Ja/Nee-functie nog niet gebouwd of getest.** Geen browser-/mobiel-/checkouttest in deze onderzoeksronde; geen lokale Windowscontrole, scratch is geen Gitcheckout. Actieve branch blijft fix/product-cards-2026-10-14; main alleen deze documentatie.
+
+[Volledige nieuwe lijst met bronpagina's en uitzonderingen](product-switcher/hotbath/2026-10-24/inbouw/EXPANSION.md). **Exact volgende handeling:** de reeds voorbereide40 CB105/CB105T-artikelen als Ja/Nee-proef bouwen in een bewezen identieke UNPUBLISHED-kopie van huidigeMAIN; na functionele controle dezelfde functie uitbreiden met de460 extra bewezen variantrelaties.
+
 ## Hotbath inbouwdeel meebestellen — 24 oktober 2026 (MAPPING_VERIFIED / PILOT_NOT_IMPLEMENTED)
 
 De eigenaar heeft het Hotbath-keuzemenuthema gepubliceerd. Verse Admin-read bevestigt **MAIN195649929482 — BadkamerCity - Hotbath keuzemenus24okt**, alle **532/532** bestanden checksum-identiek aan de eerder geteste preview. VorigMAIN195611492618 is UNPUBLISHED. Agent heeft geen publicatie uitgevoerd. De PREVIEW-status in de volgende gedateerde sectie is hiermee historische voorgeschiedenis.
@@ -11,6 +23,7 @@ Nieuwe vraag: bij losse afbouwdelen het bewezen passende inbouwdeel als Ja/Nee-m
 **Technische route onderzocht:** bestaande accessoirescode hergebruiken voor SKU-/variant-/prijscontrole. Die losse accessoireknop voegt alleen accessoires toe, dus gewone koopknop moet afbouw+inbouw samen toevoegen. Aantal2→2+2; bestaande body in cart niet blind overslaan; Ja/Nee bewaren alleen binnen dezelfde geverifieerde bodyrelatie. Onzekere cartrespons niet automatisch herhalen. Huidige Sunshower- en wishlistwijzigingen behouden. Cartdrawer/notification/dynamic-checkout bij bouw opnieuw controleren.
 
 **Niet uitgevoerd:** Ja/Nee-UI, gecombineerde cartactie, product-/metafield-/theme-/prijswijzigingen of nieuwe browsertests. Dit is een onderbouwd voorstel en eerste mapping, geen geïnstalleerde feature. Geen lokale Windows-worktreecontrole; deze scratchmap is geen Gitcheckout.
+Codecheckpoint [eb931d07](https://github.com/jlamping1997/badkamercity/commit/eb931d07732c29fe0be63e84cd06a1bb5a49a472).
 
 [Mapping, bronnen, technische beoordeling en exact proefbestand](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-24/inbouw). Actieve branch fix/product-cards-2026-10-14; uitsluitend scoped docs/data/generators opgeslagen. **Exact volgende handeling:** de40 bewezen CB105/CB105T-artikelen als proef bouwen in een nieuwe, identieke UNPUBLISHED-kopie van de huidigeMAIN, daarna Ja/Nee/aantal/kleur/lengte/IBS/voorraadfout/cart/mobiel controleren voordat dit breder wordt uitgerold.
 
@@ -996,5 +1009,6 @@ Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidig
 Na een goedgekeurde verandering: noteer datum, geraakte files/Admin-objecten, bron/commit, menselijk akkoord, verrichte test en eventuele prestatiecijfers. Trek een nieuwe Shopify MAIN-themasnapshot bij een themapublicatie. Actualiseer de menu-/metafield-/collectiedefinities zodra die wijzigen.
 
 **Voorkom twee strijdige waarheden:** het september-masterplan blijft een historisch besluitdocument, deze actuele status en `AI_HANDOFF_CURRENT.md` beschrijven 7 oktober. Vraag altijd live Shopify/Git opnieuw op; een toekomstige bron kan beide documentmomenten achterhalen.
+
 
 
