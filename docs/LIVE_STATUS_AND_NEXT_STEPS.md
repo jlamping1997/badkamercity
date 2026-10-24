@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath inbouwdeel meebestellen — 24 oktober 2026 (MAPPING_VERIFIED / PILOT_NOT_IMPLEMENTED)
+
+De eigenaar heeft het Hotbath-keuzemenuthema gepubliceerd. Verse Admin-read bevestigt **MAIN195649929482 — BadkamerCity - Hotbath keuzemenus24okt**, alle **532/532** bestanden checksum-identiek aan de eerder geteste preview. VorigMAIN195611492618 is UNPUBLISHED. Agent heeft geen publicatie uitgevoerd. De PREVIEW-status in de volgende gedateerde sectie is hiermee historische voorgeschiedenis.
+
+Nieuwe vraag: bij losse afbouwdelen het bewezen passende inbouwdeel als Ja/Nee-meebestelkeuze aanbieden. **EXT is een kandidaatsignaal; nooit een bodycode genereren door HB toe te voegen.** Boekbewijzen voor31 modellen/208 catalogusartikelen vastgelegd; vijf MHF-naamaliassen blijven review. Complete IBS-sets met inbegrepen body uitsluiten; prijsinclusief/apart-bestellen zoals sommige Rails apart afhandelen.
+
+**Concrete eerste proef voorbereid:**40 actuele, gepubliceerde afbouwartikelen: CB105EXT18/25→HBCB105 (boek170/PDF172), CB105TEXT18/25→HBCB105T (boek171/PDF173). Alle40 hebben specs.met_inbouwdeel=false, unieke echte verkoopvarianten; beide bodytargets uniek, actief/gepubliceerd en beschikbaar voor verkoop. Exacte40-variantrelaties met bron en hoeveelheid1 voorbereid; alle gegevenscontroles PASS. HBCB105 actuele readprijs€174, maar toekomstige UI leest altijd actuele Shopify-prijs. Geen fysieke voorraadclaim.
+
+**Technische route onderzocht:** bestaande accessoirescode hergebruiken voor SKU-/variant-/prijscontrole. Die losse accessoireknop voegt alleen accessoires toe, dus gewone koopknop moet afbouw+inbouw samen toevoegen. Aantal2→2+2; bestaande body in cart niet blind overslaan; Ja/Nee bewaren alleen binnen dezelfde geverifieerde bodyrelatie. Onzekere cartrespons niet automatisch herhalen. Huidige Sunshower- en wishlistwijzigingen behouden. Cartdrawer/notification/dynamic-checkout bij bouw opnieuw controleren.
+
+**Niet uitgevoerd:** Ja/Nee-UI, gecombineerde cartactie, product-/metafield-/theme-/prijswijzigingen of nieuwe browsertests. Dit is een onderbouwd voorstel en eerste mapping, geen geïnstalleerde feature. Geen lokale Windows-worktreecontrole; deze scratchmap is geen Gitcheckout.
+
+[Mapping, bronnen, technische beoordeling en exact proefbestand](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-24/inbouw). Actieve branch fix/product-cards-2026-10-14; uitsluitend scoped docs/data/generators opgeslagen. **Exact volgende handeling:** de40 bewezen CB105/CB105T-artikelen als proef bouwen in een nieuwe, identieke UNPUBLISHED-kopie van de huidigeMAIN, daarna Ja/Nee/aantal/kleur/lengte/IBS/voorraadfout/cart/mobiel controleren voordat dit breder wordt uitgerold.
+
 ## Hotbath keuzemenu's — brede uitrol, 24 oktober 2026 (PREVIEW_READY / DESKTOP_VERIFIED)
 
 **605 groepen / 7.165 actieve gepubliceerde productpagina's** zijn nu gekoppeld in het bestaande V2-systeem. Alle oorspronkelijke 433 groepen / 3.383 records behouden; 53 groepen aangevuld en 172 nieuwe groepen, totaal 3.782 extra koppelingen ten opzichte van de oorspronkelijke bron. Ten opzichte van de viergroepenproef zijn 3.395 extra pagina's aangesloten. Geen algemene product- of variantconversie.
@@ -15,6 +29,8 @@
 Bij de geteste Gent-, Archie- en Rails-pagina's wordt geen productfoto weergegeven; productmedia zijn niet gewijzigd. GT003IX mist de foto ook op het huidige MAIN-thema: voor dat artikel is het bestaande catalogusinhoud. Dit blijft een apart controlepunt voor livegang.
 
 **Nog open:** 373 geschikte artikelen zonder menu, waaronder vijf expliciete bronconflicten en 368 overige voor gerichte beoordeling. Niet ieder ongegroepeerd artikel heeft alternatieven. IBS33 krijgt zonder eigen bevestigde boekregels geen gegokte samenstellingen. Globale HOLD: SDS32BGP,IBS33BGP4,IBS20AGN357,IBS20BBP,IBS20BCP. De aanbieding/inbegrepen inbouwdelen en onderliggende foutieve titels zijn niet veranderd.
+
+Codecheckpoint [c0bb5a18](https://github.com/jlamping1997/badkamercity/commit/c0bb5a183e81ae716ea27d1fd9cfe467ffb4aa5d).
 
 [Definitief dossier met code, bronregels, review, rollback en Admin-bewijs](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-24/rollout). Alleen scoped patch/bewijs/docs op actieve branch **fix/product-cards-2026-10-14**; geen root-theme-push. Broncheckpoint privé bewaard. De [eerste proef](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-24/README.md) is voorgeschiedenis; het eerdere plan om alleen 34 groepen aan te vullen is door deze brede uitrol ingehaald.
 
@@ -980,4 +996,5 @@ Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidig
 Na een goedgekeurde verandering: noteer datum, geraakte files/Admin-objecten, bron/commit, menselijk akkoord, verrichte test en eventuele prestatiecijfers. Trek een nieuwe Shopify MAIN-themasnapshot bij een themapublicatie. Actualiseer de menu-/metafield-/collectiedefinities zodra die wijzigen.
 
 **Voorkom twee strijdige waarheden:** het september-masterplan blijft een historisch besluitdocument, deze actuele status en `AI_HANDOFF_CURRENT.md` beschrijven 7 oktober. Vraag altijd live Shopify/Git opnieuw op; een toekomstige bron kan beide documentmomenten achterhalen.
+
 

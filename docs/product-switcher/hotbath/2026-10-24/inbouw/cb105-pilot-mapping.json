@@ -1,0 +1,815 @@
+{
+  "schema": "hotbath-inbouw-exact-pilot-proposal-v1",
+  "generated_for_date": "2026-10-24",
+  "read_only": true,
+  "installed": false,
+  "source_hashes": {
+    "shopify-cb105-family.json": "e6fc10936823a6a9f692380b38d1dcf81d59f6ff591af4ac0e731f7c5cd8cc63",
+    "book_mapping_review.json": "1088feb3d9fefae961a4ce5fe24b8baeba1cabefb59fe15379046395bc8cc7b9"
+  },
+  "price_policy": "Read current body price from the Shopify product at render/cart time; no fixed price in mapping.",
+  "quantity_policy": "Add body quantity equal to requested trim quantity when Yes is explicitly selected; never deduplicate globally by SKU.",
+  "selection_policy": "Preserve explicit Yes/No only for a verified switch to a trim requiring the same body; otherwise ask the choice again.",
+  "records": [
+    {
+      "trim_sku": "CB105EXT18AB",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534576095498",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187983016202",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-verouderd-messing",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18AI",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534427853066",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187645473034",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-verouderd-ijzer",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18BB",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534575931658",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187982852362",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-messing",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18BBP",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534646546698",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188093116682",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-messing-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18BCP",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534646448394",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188092985610",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-koper-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18CR",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534397968650",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187556999434",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-chroom",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18GN",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534576029962",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187982917898",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-nikkel",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18MBP",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534646645002",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188093214986",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-zwart-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18PBP",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534646776074",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188093313290",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-gepolijst-zwart-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT18WH",
+      "trim_model": "CB105EXT18",
+      "trim_product_id": "gid://shopify/Product/10534400229642",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187562766602",
+      "trim_handle": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-mat-wit",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25AB",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534589169930",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188013392138",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-verouderd-messing",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25AI",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534439649546",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187715727626",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-verouderd-ijzer",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25BB",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534588809482",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188012966154",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-messing",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25BBP",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534514295050",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187864756490",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-messing-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25BCP",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534669254922",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188120969482",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-koper-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25CR",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534297534730",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187290824970",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-chroom",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25GN",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534588940554",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188013097226",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-nikkel",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25MBP",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534514360586",
+      "trim_variant_id": "gid://shopify/ProductVariant/53187864854794",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-zwart-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25PBP",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534669385994",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188121100554",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-gepolijst-zwart-pvd",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105EXT25WH",
+      "trim_model": "CB105EXT25",
+      "trim_product_id": "gid://shopify/Product/10534589038858",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188013261066",
+      "trim_handle": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-mat-wit",
+      "body_sku": "HBCB105",
+      "body_product_id": "gid://shopify/Product/10534319489290",
+      "body_variant_id": "gid://shopify/ProductVariant/53187364356362",
+      "body_handle": "hotbath-hbcb105-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 170,
+        "pdf_page": 172
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18AB",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534903349514",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188500914442",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-verouderd-messing",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18AI",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534921306378",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188548788490",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-verouderd-ijzer",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18BB",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534902956298",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188500521226",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-geborsteld-messing",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18BBP",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534928154890",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188566253834",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-geborsteld-messing-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18BCP",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534928089354",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188566188298",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-geborsteld-koper-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18CR",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534678954250",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188133945610",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-chroom",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18GN",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534903120138",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188500685066",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-geborsteld-nikkel",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18MBP",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534928220426",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188566319370",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-geborsteld-zwart-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18PBP",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534928285962",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188566384906",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-gepolijst-zwart-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT18WH",
+      "trim_model": "CB105TEXT18",
+      "trim_product_id": "gid://shopify/Product/10534903218442",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188500816138",
+      "trim_handle": "hotbath-cobber-cb105text18-afbouwdeel-3-gats-inbouw-wastafelkraan-18cm-mat-wit",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25AB",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534909214986",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188512874762",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-verouderd-messing",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25AI",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534923501834",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188553703690",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-verouderd-ijzer",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25BB",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534908821770",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188512448778",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-geborsteld-messing",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25BBP",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534933790986",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188581622026",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-geborsteld-messing-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25BCP",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534933692682",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188581425418",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-geborsteld-koper-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25CR",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534691963146",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188149739786",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-chroom",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25GN",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534908952842",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188512547082",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-geborsteld-nikkel",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25MBP",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534933856522",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188581687562",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-geborsteld-zwart-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25PBP",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534933889290",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188581720330",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-gepolijst-zwart-pvd",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    },
+    {
+      "trim_sku": "CB105TEXT25WH",
+      "trim_model": "CB105TEXT25",
+      "trim_product_id": "gid://shopify/Product/10534909083914",
+      "trim_variant_id": "gid://shopify/ProductVariant/53188512678154",
+      "trim_handle": "hotbath-cobber-cb105text25-afbouwdeel-3-gats-inbouw-wastafelkraan-25cm-mat-wit",
+      "body_sku": "HBCB105T",
+      "body_product_id": "gid://shopify/Product/10534527959306",
+      "body_variant_id": "gid://shopify/ProductVariant/53187899162890",
+      "body_handle": "hotbath-hbcb105t-inbouwdeel",
+      "body_quantity_per_trim_unit": 1,
+      "body_included_in_trim": false,
+      "source": {
+        "catalogue": "Hotbath Editie 18",
+        "printed_page": 171,
+        "pdf_page": 173
+      },
+      "compatibility_status": "VERIFIED_BOOK_AND_CURRENT_SHOPIFY",
+      "deployment_status": "PROPOSAL_NOT_INSTALLED"
+    }
+  ]
+}
