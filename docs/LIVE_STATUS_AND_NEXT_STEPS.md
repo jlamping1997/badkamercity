@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath mobiel ontwerp A — 25 oktober 2026 (UPLOADED_NOT_PUBLISHED / IN_TEST)
+
+De ontbrekende ontwerpcode is nu werkelijk geüpload naar **UNPUBLISHED 195688694026 — BadkamerCity - Hotbath mobiel A 25 okt**. Actuele MAIN is **195688890634 — WERKCONCEPT - Hotbath mobiel A - nog in test**; alle **536 MAIN-bestanden ongewijzigd** volgens de verse uitvoering. Voor de patch waren de twee thema’s 536/536 checksum-identiek. De eerdere kopieën bevatten inderdaad alleen de oude code; de eerdere melding “gebouwd” was geen uploadbevestiging.
+
+Gerichte patch: **22 permanente bestanden: zes gewijzigd, drie nieuwe JS/CSS en dertien officiële Hotbath-finish-JPG’s**. Op mobiel Hotbath: zes zichtbare kleurstalen met huidige kleur behouden, overige kleuren uitklapbaar, volledige kleurnaam, compacte maatkeuzes en actueel totaal op basis van aantal en optioneel inbouwdeel. Desktop en andere merken houden de bestaande bediening. Product-/prijs-/voorraad-/metafielddata en bestaande exacte product-/inbouwkoppelingen blijven intact; geen publicatie.
+
+**Checkpointbewijs:** totaalberekening18/18 PASS; swatch/navigatieregressies PASS; twee observer-/requestAnimationFrame-scenario’s PASS inclusief gevonden en opgeloste lus. Lokale Theme Check vóór/na heeft dezelfde ontbrekende datasetdependency in de partiële testboom, geen nieuwe errors; complexity227→229 blijft waarschuwing. Visuele previewcontrole en finale readback zijn IN_TEST; fysieke telefoon, betaling en alle pagina’s afzonderlijk NOT_TESTED. Tijdelijke iframe-QA-hulp is geen onderdeel van de22 permanente bestanden en wordt vóór oplevering opgeruimd.
+
+Code/before/after/tests/bronnen staan uitsluitend in het [gerichte dossier](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-25/mobile-a). Werkbranch blijft `fix/product-cards-2026-10-14`; geen root-theme-sync, geen merge of geforceerde synchronisatie van de uiteenlopende branches; main krijgt alleen deze documentatie. Geen lokale Windows-checkoutcontrole geclaimd.
+
+**Exact volgende handeling:** visuele preview afronden, tijdelijke QA-renderhulp opruimen en de22 permanente bestanden plus ongewijzigde MAIN opnieuw via Admin verifiëren.
+
 ## Hotbath mobiel ontwerp A — 25 oktober 2026 (IN_UITVOERING / NIET_GEPUBLICEERD)
 
 Eigenaar heeft het inbouwthema gepubliceerd: verse MAIN **195664052490 — BadkamerCity - Hotbath inbouwkeuze 24 okt**. Opdracht: mobiel ontwerp A bouwen met officiële kleurstalen, compacte keuzevelden en actuele totaalprijs inclusief optioneel inbouwdeel. Nieuwe UNPUBLISHED kopie **195688694026 — BadkamerCity - Hotbath mobiel A 25 okt** is vóór wijzigingen **536/536 checksum-identiek** aan MAIN. Actieve uitvoering ChatGPT, vaste branch fix/product-cards-2026-10-14; geen Windows-checkout aanwezig in deze connectoromgeving.
@@ -1031,5 +1043,6 @@ Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidig
 Na een goedgekeurde verandering: noteer datum, geraakte files/Admin-objecten, bron/commit, menselijk akkoord, verrichte test en eventuele prestatiecijfers. Trek een nieuwe Shopify MAIN-themasnapshot bij een themapublicatie. Actualiseer de menu-/metafield-/collectiedefinities zodra die wijzigen.
 
 **Voorkom twee strijdige waarheden:** het september-masterplan blijft een historisch besluitdocument, deze actuele status en `AI_HANDOFF_CURRENT.md` beschrijven 7 oktober. Vraag altijd live Shopify/Git opnieuw op; een toekomstige bron kan beide documentmomenten achterhalen.
+
 
 

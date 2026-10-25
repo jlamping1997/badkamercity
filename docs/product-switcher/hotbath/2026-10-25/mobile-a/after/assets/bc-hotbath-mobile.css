@@ -1,0 +1,134 @@
+@media screen and (max-width: 749px) {
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__purchase-row {
+    display: block !important;
+    margin-top: 1.6rem !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions product-form,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions form {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--quantity {
+    margin: 1.4rem 0 !important;
+    max-width: none !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__quantity-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__quantity-label {
+    margin: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .quantity {
+    min-height: 4.4rem !important;
+    width: 13.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw {
+    margin: 0 0 1.4rem !important;
+    padding: 1.4rem !important;
+    border: 1px solid var(--bc-pdp-border, #dce3e7);
+    border-radius: .8rem;
+    background: #fff;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__detail,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__hint {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: .6rem 0 1rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choices {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: .8rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice {
+    display: grid;
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    min-width: 0;
+    min-height: 4.8rem;
+    margin: 0;
+    padding: .8rem;
+    align-items: start;
+    align-content: start;
+    justify-content: flex-start;
+    gap: .6rem;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice-text {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__price {
+    grid-column: 2;
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total {
+    padding: 1.4rem 0;
+    margin: 0 0 .4rem;
+    border-top: 1px solid var(--bc-pdp-border, #dce3e7);
+    color: var(--bc-pdp-ink, #17313f);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__label {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__amount {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -.04rem;
+    white-space: nowrap;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__caption {
+    margin: .4rem 0 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--bc-pdp-muted, #526574);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active[data-mobile-total-state='ready'] .bc-buybox__price-panel,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active[data-mobile-total-state='ready'] .bc-data-controls .bc-buybox__price-wrap {
+    display: none !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total[hidden],
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total [hidden] {
+    display: none !important;
+  }
+}
