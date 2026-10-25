@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Compacte desktopkeuzes — 25 oktober 2026 (IMPLEMENTATIE_GETEST / THEMEKOPIE_IN_UITVOERING)
+
+Actieve taak op expliciete opdracht: de goedgekeurde mobiele Hotbath-stijl ook op desktop toepassen. MAIN is vers **195704357130 — rustige kleur en lengtewissel**. Nieuwe serverkopie **UNPUBLISHED 195704848650 — BadkamerCity - compacte keuzes desktop** wordt nog verwerkt; nog niets naar dit concept geschreven.
+
+Vijf assets lokaal aangepast: ronde kleuren met namen en uitklapper, compacte checkbox **Inbouwdeel toevoegen** plus meerprijs, hoeveelheid en actuele totaalprijs als één koopblok. Eén gedeelde bediening op alle schermbreedtes; bestaande merk-/volumeguards, artikelkoppelingen en cartbeveiligingen behouden. Geen product-/prijs-/voorraadmutaties. De bestaande scrollfix blijft gelijk.
+
+Codecheckpoint in `docs/product-switcher/2026-10-25/desktop-options` op `fix/product-cards-2026-10-14`. 10 positie-, 11 switcher- en 13 aankooptestgroepen PASS; vier observerproeven met sticky-component PASS. Vijf bestanden Shopify-validatie PASS via gecachte schema's na externe docs-timeout. Visuele browsercontrole is nog NIET uitgevoerd. Windows-checkout niet gecontroleerd; bestaande lokale wijzigingen ongemoeid.
+
+**Exact volgende stap:** wachten tot de Shopify-kopie klaar is; 553/553 bestanden met MAIN vergelijken vóór upload en daarna desktop/mobiel in de browser controleren. Niet publiceren; eigenaar beoordeelt en publiceert het concept.
+
+---
+
 ## Rustige kleur- en lengtewissel — LIVE bevestigd, 25 oktober 2026
 
 De meest recente Shopify-readback bevestigt **MAIN 195704357130 — BadkamerCity - rustige kleur en lengtewissel**. Alle **553/553 live bestanden zijn exact gelijk aan het geteste concept**, inclusief herstelde layout zonder QA-code. Vorig thema **195703996682 — compacte titel en kruimelpad** is nu UNPUBLISHED en blijft de terugval. Publicatie is niet door deze agent uitgevoerd; de rolwisseling is tijdens de laatste controle waargenomen.
