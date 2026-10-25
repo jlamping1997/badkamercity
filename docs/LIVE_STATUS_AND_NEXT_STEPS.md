@@ -1,12 +1,14 @@
 # BadkamerCity — vaste startpagina en werkplan
 
-## Titel boven productkeuzes verwijderen — 25 oktober 2026 (IMPLEMENTED_LOCAL / THEME_COPY_PENDING)
+## Titel boven productkeuzes verwijderen — 25 oktober 2026 (PREVIEW_READY)
 
-Eigenaar vraagt uitsluitend “Kies je uitvoering” weg te halen. Actuele MAIN **195706257674 — code opschoning en gedeelde keuzes** is inmiddels door eigenaar gepubliceerd. Nieuwe kopie **UNPUBLISHED195707371786 — BadkamerCity - zonder Kies je uitvoering** wordt door Shopify verwerkt.
+Eigenaar vraagt uitsluitend “Kies je uitvoering” weg te halen. Actuele MAIN **195706257674 — code opschoning en gedeelde keuzes** is door eigenaar gepubliceerd. Concept **UNPUBLISHED195707371786 — BadkamerCity - zonder Kies je uitvoering** is gereed; niet gepubliceerd.
 
-Exact één H2-regel in sections/main-product.liquid verwijderd; bestaande kleur-/lengte-/inbouwbediening behouden. Verse bron en 1.213 MAIN-checksums vastgelegd. Nog niets naar concept geschreven. Actieve branch fix/product-cards-2026-10-14; dossier docs/product-switcher/2026-10-25/no-choice-heading. Bestaande lokale dirty bestanden behouden, Windows niet gecontroleerd.
+Exact één H2-regel in sections/main-product.liquid verwijderd. Vóór upload alle 1.213 bestanden gelijk aan MAIN; na upload exact één gewijzigd bestand en exacte readback. MAIN blijft volledig ongewijzigd. Liquid-validatie PASS met drie bestaande waarschuwingen. Desktopbrowser: kop verdwenen, 4 kleuren compact / 10 uitgeklapt, lengtekeuzes en inbouwdeel behouden. Geen nieuwe CSS of JavaScript. Fysiek mobiel en checkout niet opnieuw getest voor deze tekstwijziging.
 
-**Volgende handeling:** na het kopiëren 1.213/1.213 bestanden vergelijken, één bestand plaatsen en browser/readback afronden. Niet publiceren.
+Actieve branch fix/product-cards-2026-10-14; dossier docs/product-switcher/2026-10-25/no-choice-heading met voor/na-bron, patch, verification.json en screenshot. Root-theme niet overschreven. Bestaande lokale dirty bestanden behouden; Windows niet gecontroleerd. Uitvoerende sessie afgerond na remote readback.
+
+**Volgende handeling:** eigenaar beoordeelt en publiceert desgewenst concept 195707371786. Volgende sessie eerst opnieuw huidige MAIN controleren.
 
 ---
 
