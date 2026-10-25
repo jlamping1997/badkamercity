@@ -1,0 +1,62 @@
+{% doc %}
+Renders the existing V2 product switcher with an optional scoped preview source.
+@param {product} product - The current product.
+@param {section} section - The containing section.
+@param {string} [switch_group] - Explicit group; defaults to the existing product field.
+@param {string} [data_url] - Explicit data URL; defaults to the existing shared asset.
+@example
+{% render 'bc-product-switcher', product: product, section: section %}
+{% enddoc %}
+{%- liquid
+  assign bc_switch_group = switch_group | default: product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group | strip
+  assign bc_switcher_default_data_url = 'product-switcher-data.json' | asset_url
+  assign bc_switcher_data_url = data_url | default: bc_switcher_default_data_url
+  assign bc_switcher_fallback_url = bc_switcher_data_url
+  assign bc_switcher_source_asset = bc_switcher_data_url | split: '/assets/' | last | split: '?' | first
+  capture bc_switcher_scoped_asset
+    render 'bc-choice-data-source', source: bc_switcher_source_asset, group: bc_switch_group
+  endcapture
+  assign bc_switcher_scoped_asset = bc_switcher_scoped_asset | strip
+  if bc_switcher_scoped_asset != blank
+    assign bc_switcher_data_url = bc_switcher_scoped_asset | asset_url
+  endif
+  assign bc_switcher_vendor = product.vendor | strip | downcase
+-%}
+
+{%- if bc_switch_group != blank -%}
+  {%- if bc_switcher_vendor == 'hotbath' -%}
+    {%- assign bc_hotbath_swatch_codes = 'cr,gn,wh,bb,ab,ai,bbp,bcp,mbp,pbp,bgp,ix,tb' | split: ',' -%}
+    {%- capture bc_hotbath_swatch_urls -%}
+      {
+        {%- for code in bc_hotbath_swatch_codes -%}
+          {%- assign bc_hotbath_swatch_asset = 'bc-hotbath-swatch-' | append: code | append: '.jpg' -%}
+          {{ code | json }}: {{ bc_hotbath_swatch_asset | asset_url | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      }
+    {%- endcapture -%}
+  {%- endif -%}
+  <div
+    class="bc-buybox__switcher-groups"
+    data-bc-product-switcher-v2
+    {% if bc_switcher_vendor == 'hotbath' %}
+      data-hotbath-mobile-a="true"
+      data-hotbath-swatch-urls="{{ bc_hotbath_swatch_urls | escape }}"
+      data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}"
+      data-label-more-colors="{{ 'bc_hotbath_mobile.more_colors' | t | escape }}"
+      data-label-more-colors-one="{{ 'bc_hotbath_mobile.more_colors_one' | t | escape }}"
+      data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}"
+    {% endif %}
+    data-switch-group="{{ bc_switch_group | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+    {% if data_url != blank %}data-bc-preserve-position="true"{% endif %}
+    data-switcher-fallback-url="{{ bc_switcher_fallback_url | escape }}"
+    data-switcher-data-url="{{ bc_switcher_data_url | escape }}"
+  ></div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+
+
+
