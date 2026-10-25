@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "One correction, no later pulling; timers, styles and history restored",
+    "Moving layout and loading fonts settle before the single correction",
+    "Touch, wheel, pointer and keyboard cancel restoration immediately",
+    "Never waits indefinitely for fonts or window load",
+    "Sticky or unreachable target cannot create a correction loop",
+    "Expired, future, wrong-target and wrong-group tokens rejected",
+    "Menu handoff requires exact source revision and destination product",
+    "Storage quota falls back to position-only; blocked storage does not throw",
+    "Failed initialization and pagehide clean up without late jumps",
+    "Changed screen orientation skips outdated coordinates"
+  ]
+}

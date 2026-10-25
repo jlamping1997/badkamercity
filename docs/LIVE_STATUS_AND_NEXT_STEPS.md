@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Rustige kleur- en lengtewissel — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+Actuele Shopify **MAIN 195703996682 — BadkamerCity - compacte titel en kruimelpad**: eigenaar heeft de vorige wijziging gepubliceerd. Nieuwe correctie staat in **UNPUBLISHED 195704357130 — BadkamerCity - rustige kleur en lengtewissel**. Dit concept is een volledige kopie van de actuele MAIN, met uitsluitend `assets/bc-product-switcher.js` gewijzigd.
+
+De herhaalde scrollcorrectie is vervangen door maximaal één herstel na een korte layoutmeting. Gebruikersinvoer stopt herstel direct. Een bewaakte, eenmalige overdracht van de reeds geladen keuzegroep voorkomt opnieuw wachten op de dataset. De mobiele ronde kleuren en uitgeklapte staat blijven behouden. Volledige productnavigatie blijft bestaan, dus een korte paginalaad is nog mogelijk.
+
+**Bewijs:** vooraf 553/553 bestanden identiek; finale readback één JS-wijziging, 552 behouden; MAIN 553/553 ongewijzigd. Upload exact teruggelezen. Syntax en Shopify-validator PASS; 10 positietests en 11 switcher-regressiegroepen PASS. Echte browserkleur- en lengtewissel: ieder één scrollcorrectie, daarna geen herhaalde terugtrekking; nieuwe productselectie/prijs juist. Tijdelijke QA-code exact verwijderd. Geen fysieke telefoontest of conversiemeting.
+
+[Scoped code, tests, readback en browserbewijs](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/2026-10-25/smooth-position). Actieve branch blijft `fix/product-cards-2026-10-14`; `main` krijgt alleen deze statusupdate. Geen root-theme-sync/merge; Windows-checkout niet gecontroleerd.
+
+**Exacte volgende stap:** eigenaar bekijkt en publiceert in Shopify → Webshop → Thema's **BadkamerCity - rustige kleur en lengtewissel**. Daarna MAIN-rol opnieuw lezen en op eigen telefoon kleur, lengte en direct handmatig scrollen nalopen. Shopify-connector kan niet publiceren. Terugval is het huidige thema 195703996682.
+
+---
+
 ## Compacte producttitel en breadcrumbs — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
 
 Eigenaar heeft de ronde kleurkeuze inmiddels gepubliceerd: actuele **MAIN195703472394 — BadkamerCity - ronde kleurkeuze A**. Vervolgwens uitgevoerd in **UNPUBLISHED195703996682 — BadkamerCity - compacte titel en kruimelpad**: Hotbath-introzin boven de keuzemenu's verwijderd; titel op mobiel22px, iets breder, desktop24–28px; breadcrumbs boven de titel. Bestaande omschrijving, productdata en koopfuncties behouden.
@@ -93,7 +107,7 @@ De eigenaarscorrecties zijn verwerkt: 79 artikelkoppelingen aangewezen, waarvan7
 
 **Bewijs:** 27carttests +9datatests PASS; onafhankelijke codecontrole zonder blocker; lokale Shopify theme-check zonder externe gegevensoverdracht geeft0 nieuwe fouten en één verwachte complexiteitswaarschuwing. Echte desktopbrowser1348×936: Ja aantal2 geeft2 CB105EXT18CR +2 HBCB105 (€778), Nee na kleur-/lengtewissel geeft1 CB105EXT25BCP (€388), verplichte keuze en nieuwe CB7071→HBCB7071-weergave PASS. CB126/IBS70/B010-held geen add-on. Eigen testwinkelwagen leeg achtergelaten. **NOT_TESTED:** fysieke mobiel/aparte mobiele viewport, betaling en alle715 pagina’s afzonderlijk; foutpaden met transportdubbels getest. Geen Windows-worktreecontrole.
 
-Dossier: [implementatie en terugzetpad](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-24/inbouw/implementation/README.md). Actieve branch blijft fix/product-cards-2026-10-14; patch onder dossier, geen root-theme-sync waarvan deploywerking onbekend is. Main uitsluitend deze documentatie.
+Dossier: [implementatie en terugzetpad](https://github.com/jlamping1997/badkamercity/blob/70e20c9f16fc3c06470a0575996a09a8f4deb29a/docs/product-switcher/hotbath/2026-10-24/inbouw/implementation/README.md). Actieve branch blijft fix/product-cards-2026-10-14; patch onder dossier, geen root-theme-sync waarvan deploywerking onbekend is. Main uitsluitend deze documentatie.
 
 **Exact volgende handeling:** eigenaar beoordeelt dit concept op zijn telefoon vóór eigen publicatie. Daarna gezamenlijke kleur-/maat-/inbouwkeuzemenu’s verder vormgeven. Open: ontbrekendHBCB010 en eerdere expliciet aangehouden bron-/kleurgevallen; geen gegokte koppelingen.
 
@@ -1107,6 +1121,5 @@ Onderstaande eerdere status blijft bewaard als geschiedenis. Gebruik voor huidig
 Na een goedgekeurde verandering: noteer datum, geraakte files/Admin-objecten, bron/commit, menselijk akkoord, verrichte test en eventuele prestatiecijfers. Trek een nieuwe Shopify MAIN-themasnapshot bij een themapublicatie. Actualiseer de menu-/metafield-/collectiedefinities zodra die wijzigen.
 
 **Voorkom twee strijdige waarheden:** het september-masterplan blijft een historisch besluitdocument, deze actuele status en `AI_HANDOFF_CURRENT.md` beschrijven 7 oktober. Vraag altijd live Shopify/Git opnieuw op; een toekomstige bron kan beide documentmomenten achterhalen.
-
 
 
