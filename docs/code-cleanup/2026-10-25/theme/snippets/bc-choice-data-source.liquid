@@ -2,10 +2,12 @@
 Resolves a product group to its generated, bounded data asset.
 @param {string} source - Original source asset filename.
 @param {string} group - Exact group identifier.
+@param {string} revision - Current source asset revision.
 {% enddoc %}
 {%- liquid
   case source
     when "bc-hotbath-menu-data-001.json"
+      if revision == "v=10709909675229066741792955616"
       case group
         when "hotbath-ace-numeric-2weg-mengkraan-inbouw-doucheset"
           echo "bc-choice-data-fc4bc2fd0ee49c6d.json"
@@ -14,7 +16,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-ace-numeric-3weg-velvet-inbouw-doucheset"
           echo "bc-choice-data-eec46a67209b5a19.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-002.json"
+      if revision == "v=43746954426413376621792955618"
       case group
         when "hotbath-andmore-planchet"
           echo "bc-choice-data-c6adcfee0368af9b.json"
@@ -45,7 +49,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-buddy-ibs12-inbouw-doucheset"
           echo "bc-choice-data-06a39ccc79666757.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-003.json"
+      if revision == "v=34817420267480753551792955619"
       case group
         when "hotbath-buddy-ibs12a-inbouw-doucheset"
           echo "bc-choice-data-019657114c8d5ce7.json"
@@ -62,7 +68,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-cobber-ibs20-inbouw-doucheset"
           echo "bc-choice-data-15b7ab3ca4797f3e.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-006.json"
+      if revision == "v=139124349816388487851792955623"
       case group
         when "hotbath-cobber-ibs7009-inbouw-doucheset"
           echo "bc-choice-data-ece599bca3a4ebe5.json"
@@ -149,7 +157,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-colour-cb127ext"
           echo "bc-choice-data-bf07e320ab82179e.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-007.json"
+      if revision == "v=28132358452749893521792955624"
       case group
         when "hotbath-colour-cb173"
           echo "bc-choice-data-e90e1980660b03c6.json"
@@ -312,7 +322,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-colour-m447"
           echo "bc-choice-data-1e9ee7074a43997b.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-008.json"
+      if revision == "v=54166652914002097331792955626"
       case group
         when "hotbath-colour-m448"
           echo "bc-choice-data-5805e7d5123bac6e.json"
@@ -453,7 +465,9 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-title-ibs2-doucheset"
           echo "bc-choice-data-ccea595c28620d93.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-009.json"
+      if revision == "v=2756290980473651361792955627"
       case group
         when "hotbath-title-ibs21-doucheset"
           echo "bc-choice-data-e34b0f359ee322bb.json"
@@ -468,14 +482,18 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-title-ibs5a-doucheset"
           echo "bc-choice-data-1ce642d3e70a3421.json"
       endcase
+      endif
     when "bc-hotbath-menu-data-010.json"
+      if revision == "v=102832564433489672871792955629"
       case group
         when "hotbath-title-ibsx70-doucheset"
           echo "bc-choice-data-26f14dd2e96e426e.json"
         when "hotbath-title-m538-doucheset"
           echo "bc-choice-data-854e75bf428192aa.json"
       endcase
+      endif
     when "product-switcher-data.json"
+      if revision == "v=59620540542018885331792955765"
       case group
         when "hotbath-ace-ac003-wastafelkraan"
           echo "bc-choice-data-dd30aa2346a1b6d1.json"
@@ -1344,5 +1362,6 @@ Resolves a product group to its generated, bounded data asset.
         when "hotbath-andmore-ventilatierooster-vierkant-schroeven"
           echo "bc-choice-data-a969b3a577ad74ed.json"
       endcase
+      endif
   endcase
 -%}

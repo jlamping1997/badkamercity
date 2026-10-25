@@ -13,8 +13,9 @@ Renders the existing V2 product switcher with an optional scoped preview source.
   assign bc_switcher_data_url = data_url | default: bc_switcher_default_data_url
   assign bc_switcher_fallback_url = bc_switcher_data_url
   assign bc_switcher_source_asset = bc_switcher_data_url | split: '/assets/' | last | split: '?' | first
+  assign bc_switcher_source_revision = bc_switcher_data_url | split: '?' | last
   capture bc_switcher_scoped_asset
-    render 'bc-choice-data-source', source: bc_switcher_source_asset, group: bc_switch_group
+    render 'bc-choice-data-source', source: bc_switcher_source_asset, group: bc_switch_group, revision: bc_switcher_source_revision
   endcapture
   assign bc_switcher_scoped_asset = bc_switcher_scoped_asset | strip
   if bc_switcher_scoped_asset != blank

@@ -46,7 +46,8 @@
           sessionStorage.setItem(choiceScrollKey,JSON.stringify({
             ...position,target:choiceRoute(url),time:Date.now()
           }));
-        } catch {}
+          return true;
+        } catch { return false; }
       };
       const restoreChoicePosition = () => {
         let saved;
@@ -83,8 +84,8 @@
           const match = catalog.products.find(item => Object.entries(selection).every(([key,value]) => item.selection[key] === value));
           if (!match) throw new Error('configuration');
           const url = new URL(destination(match));
-          url.hash = 'sunshower-configurator';
-          rememberChoicePosition(url,position);
+          // Position restoration and native anchor scrolling must not compete.
+          url.hash = rememberChoicePosition(url,position) ? '' : 'sunshower-configurator';
           location.assign(url.href);
         } catch {
           navigating = false;

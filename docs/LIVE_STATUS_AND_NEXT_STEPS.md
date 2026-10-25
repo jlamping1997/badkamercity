@@ -1,5 +1,20 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Code opschoning en gedeelde keuzes — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+De eigenaar heeft de eerdere compacte desktopkeuzes gepubliceerd: actuele **MAIN195704848650**. De gevraagde opschoning staat in **UNPUBLISHED195706257674 — BadkamerCity - code opschoning en gedeelde keuzes**. Korte producttitels en bijbehorende filteroptimalisatie blijven op verzoek geparkeerd.
+
+Hotbath en Sunshower delen één begrensde scrollfunctie; Sunshower voorkomt concurrerende hash-scroll bij bewaarde positie. Product-CSS uit het centrale Liquid-bestand gehaald met behoud van instelling/specifiteit. Prijs-/categorieopmaak eenmaal laden. Drie Badkamermeubels-styles naar het thema, zonder wijziging van gedeelde Admin-inhoud. Menudata per productgroep: CB105EXT 227.754→8.424 ongecomprimeerde bytes, met terugval op de originele bron bij een nieuwe revisie of netwerkfout. Geen algemene snelheids-/Lighthouse-scoreclaim.
+
+**Bewijs:** kopie vooraf553/553 identiek; finaal23 bestaande files gewijzigd,4 nieuwe codefiles en656 gegenereerde JSON-data-assets (geen aparte scripts).683 bestanden checksum-exact en27 codefiles inhoudelijk teruggelezen. MAIN553/553 ongewijzigd, QA-template exact hersteld, Admin-description exact gelijk. Shopify-validatie en gerichte regressies slagen; echte desktopkeuzes/totaalbedrag getest, responsive320/390/1024-frames zonder overloop,8 HTTP-paginatypen200. Geen fysieke iPhone, echte winkelwagen/checkout of CrUX/Lighthouse-meting.
+
+**Beperking:**8 niet-verwezen back-upassets behouden: themeFilesDelete is door de Shopify-veiligheidsregel geweigerd vanwege risico voor live storefront. Geen omweg gebruikt. Alle code, brondata, herstelbestanden, screenshots, checksums, onderhoudspipeline en grenzen staan in [het release-dossier](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/code-cleanup/2026-10-25). Actieve branch blijft fix/product-cards-2026-10-14; main alleen documentatie. Bestaande lokale dirty bestanden niet aangeraakt; Windows niet gecontroleerd.
+
+**Exact volgende stap:** eigenaar beoordeelt en publiceert het concept **BadkamerCity - code opschoning en gedeelde keuzes** via Shopify → Webshop → Thema's. Daarna MAIN-rol en actieve menudatabron opnieuw controleren. Terugval is het huidige MAIN195704848650. Geen schrijver of achtergrondworker actief na oplevering.
+
+---
+
+
 # Code opschonen — 25 oktober 2026
 
 IMPLEMENTED_LOCAL / PREVIEW_TEST_PENDING. Eigenaar heeft uitvoering gevraagd, behalve korte producttitels en bijbehorende filteroptimalisatie.
