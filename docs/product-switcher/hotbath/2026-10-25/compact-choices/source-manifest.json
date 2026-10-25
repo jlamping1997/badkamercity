@@ -1,11 +1,11 @@
 {
   "date": "2026-10-25",
-  "status": "CODE_READY_PREVIEW_BASELINE_VERIFYING",
+  "status": "PREVIEW_READY",
   "main_theme_id": "195688890634",
   "main_published_by": "merchant",
   "preview_theme_id": "195688694026",
   "preview_theme_name": "BadkamerCity - Hotbath compacte keuzes",
-  "uploaded": false,
+  "uploaded": true,
   "files": [
     {
       "filename": "assets/bc-hotbath-mobile.css",
@@ -66,5 +66,12 @@
   ],
   "unused_copy_theme_id": "195691184394",
   "unused_copy_theme_name": "Backup - Hotbath afwerking 25 okt",
-  "unused_copy_state": "processing; not a verified preview"
+  "unused_copy_state": "complete;553/553 baseline checksums verified",
+  "baselineWasIdentical": true,
+  "previewFiles": 553,
+  "exactDeltaFiles": 7,
+  "unchangedFiles": 546,
+  "mainUnchanged": true,
+  "qaRedirectRestored": true,
+  "backup_verified": true
 }
