@@ -1,5 +1,21 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Compacte Hotbath-keuzes op desktop — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+De mobiele stijl is op expliciete opdracht doorgetrokken naar desktop in **UNPUBLISHED 195704848650 — BadkamerCity - compacte keuzes desktop**. Actuele **MAIN blijft 195704357130 — rustige kleur en lengtewissel**. Vier kleine ronde kleuren met volledige namen, uitklapper met +aantal en blijvend uitgeklapte staat, compacte lengtes, één regel **Inbouwdeel toevoegen + meerprijs**, hoeveelheid en actuele totaalprijs. Geen zichtbare uitleg/Ja-Nee-kaarten meer bij het inbouwdeel. Standaard niet aangevinkt; nooit een betaalde voorselectie.
+
+Vijf assets gewijzigd. Vooraf concept 553/553 identiek; finaal vijf wijzigingen en 548 behouden; MAIN 553/553 ongewijzigd. Alle vijf assets exact teruggelezen. Tijdelijke mobiele QA-template exact hersteld. Bestaande scrollfix ongewijzigd. Andere merken en volumeproducten behouden hun bestaande bediening; productdata en artikelkoppelingen ongemoeid.
+
+**Bewijs:** 10 positie-, 11 switcher- en 13 aankooptestgroepen plus vier observerproeven PASS. Shopify-validator vijf assets PASS via gecachte schema's na docs-netwerktimeout. Echte desktopbrowser: checkbox +174, totaal322,01→496,01 en bij aantal2→992,02; kleurwissel behoudt 10 uitgeklapte kleuren en aangevinkt inbouwdeel; 18cm geeft486,00 incl. inbouwdeel. Mobiele/kleine desktop-iframebreedtes320/390/1024: geen horizontale overloop, 48px cirkels, uitklapper en checkbox behouden hun staat. Geen fysieke iPhone, echte winkelwagenmutatie, betaling of conversiemeting.
+
+[Dossier met screenshot, before/after, tests en readback](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/2026-10-25/desktop-options). Vaste actieve branch; main uitsluitend documentatie. Geen root-theme-sync. Windows-checkout niet gecontroleerd; bestaande lokale wijzigingen ongemoeid.
+
+**Exacte volgende stap:** eigenaar bekijkt en publiceert **BadkamerCity - compacte keuzes desktop** via Shopify → Webshop → Thema's. De connector ondersteunt geen publicatie. Huidige MAIN195704357130 blijft de terugval. Na publicatie thema-rol opnieuw controleren.
+
+De werkcheckpointmelding hieronder beschrijft de eerdere kopieerfase; die is inmiddels afgerond.
+
+---
+
 ## Compacte desktopkeuzes — 25 oktober 2026 (IMPLEMENTATIE_GETEST / THEMEKOPIE_IN_UITVOERING)
 
 Actieve taak op expliciete opdracht: de goedgekeurde mobiele Hotbath-stijl ook op desktop toepassen. MAIN is vers **195704357130 — rustige kleur en lengtewissel**. Nieuwe serverkopie **UNPUBLISHED 195704848650 — BadkamerCity - compacte keuzes desktop** wordt nog verwerkt; nog niets naar dit concept geschreven.

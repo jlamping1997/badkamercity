@@ -1,5 +1,13 @@
 # BadkamerCity — actuele technische AI-handoff
 
+## Hotbath compacte keuzes — desktop en mobiel, 25 oktober 2026
+
+PREVIEW_READY: **195704848650 — BadkamerCity - compacte keuzes desktop**; huidige MAIN195704357130 blijft ongewijzigd. [Actueel dossier en bewijs](product-switcher/2026-10-25/desktop-options/README.md). De eigenaar heeft gevraagd de bestaande mobiele bediening ook op desktop te gebruiken. De eerdere alleen-desktop verplichte Ja/Nee-keuze is voor dezelfde Hotbath-scope vervangen door de compacte checkbox **Inbouwdeel toevoegen** (uit = afbouwdeel alleen; expliciet aan = exact gekoppeld inbouwdeel). Geen betaalde voorselectie. Kleurcirkelmenu, uitklapper, bewaarde kleur-/inbouwkeuze en totaalberekening gelden nu op alle schermbreedtes. Andere merken en volumeproducten behouden hun oorspronkelijke bediening.
+
+Vijf assets: bc-product-switcher.js, bc-product-inbouw.js, bc-hotbath-mobile.js, bc-hotbath-mobile.css en bc-hotbath-swatches.css. De bestaande mobile-namen blijven om bestaande CSS/JS-koppelingen te behouden; actieve scope is nu alle breedtes. Geen nieuwe componentkopie, data-/mapping-/prijswijziging of root-theme-sync. De eerder gepubliceerde scrollfix is behouden.
+
+Vooraf553/553 gelijk; finaal5 gewijzigd/548 gelijk; MAIN553/553 ongewijzigd. Functietests en echte desktopbrowser PASS; iframe320/390/1024 gecontroleerd, tijdelijke QA-template hersteld. Cart-handler met transportstub getest; geen echte winkelwagen/checkout, fysieke iPhone of Windowscontrole. Volgende stap: eigenaar beoordeelt/publiceert dit concept, daarna actuele MAIN opnieuw controleren. Volledige grenzen en rollback staan in het dossier. Oudere desktop-contracten hieronder zijn historisch.
+
 ## Hotbath inbouwdeel meebestellen — 24 oktober 2026 (PREVIEW_GEBOUWD / DESKTOP_GETEST / NIET_GEPUBLICEERD)
 
 De eigenaarscorrecties zijn verwerkt: 79 artikelkoppelingen aangewezen, waarvan78 bruikbaar; B010EXTGN blijft apart omdat exact HBCB010 ontbreekt in Shopify. De70 regels met “verwijderen” zijn uitgesloten van de inbouwdeelkeuze; geen producten verwijderd/gearchiveerd/hernoemd. AR087 blijft als product ongemoeid. Samen met boekbewijs bevat het concept **715 exacte artikelkoppelingen /134 modellen /44 inbouwdelen**.
