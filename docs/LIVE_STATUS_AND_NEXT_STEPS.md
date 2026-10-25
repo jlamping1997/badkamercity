@@ -1,5 +1,12 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath mobiel ontwerp A — 25 oktober 2026 (IN_UITVOERING / NIET_GEPUBLICEERD)
+
+Eigenaar heeft het inbouwthema gepubliceerd: verse MAIN **195664052490 — BadkamerCity - Hotbath inbouwkeuze 24 okt**. Opdracht: mobiel ontwerp A bouwen met officiële kleurstalen, compacte keuzevelden en actuele totaalprijs inclusief optioneel inbouwdeel. Nieuwe UNPUBLISHED kopie **195688694026 — BadkamerCity - Hotbath mobiel A 25 okt** is vóór wijzigingen **536/536 checksum-identiek** aan MAIN. Actieve uitvoering ChatGPT, vaste branch fix/product-cards-2026-10-14; geen Windows-checkout aanwezig in deze connectoromgeving.
+
+Lokale implementatie en gerichte tests lopen. Geen product-/prijs-/voorraadmutaties; koppelingen blijven exact behouden. Desktop en andere merken behouden bestaande keuzebediening. **Exact volgende handeling:** gecombineerde patch valideren, uitsluitend in dit concept installeren en echte preview/mobiele kooproute controleren. Publicatie blijft eigenaarshandeling.
+
+
 ## Hotbath inbouwdeel meebestellen — 24 oktober 2026 (PREVIEW_GEBOUWD / DESKTOP_GETEST / NIET_GEPUBLICEERD)
 
 De eigenaarscorrecties zijn verwerkt: 79 artikelkoppelingen aangewezen, waarvan78 bruikbaar; B010EXTGN blijft apart omdat exact HBCB010 ontbreekt in Shopify. De70 regels met “verwijderen” zijn uitgesloten van de inbouwdeelkeuze; geen producten verwijderd/gearchiveerd/hernoemd. AR087 blijft als product ongemoeid. Samen met boekbewijs bevat het concept **715 exacte artikelkoppelingen /134 modellen /44 inbouwdelen**.
