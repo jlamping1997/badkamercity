@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-25",
+  "task": "Remove only Kies je uitvoering heading",
+  "mainTheme": "195706257674",
+  "previewTheme": "195707371786",
+  "previewName": "BadkamerCity - zonder Kies je uitvoering",
+  "status": "PREVIEW_READY",
+  "mainUnchanged": true,
+  "baselineCount": 1213,
+  "cloneCount": 1213,
+  "finalCount": 1213,
+  "changedFiles": [
+    "sections/main-product.liquid"
+  ],
+  "mainRole": "MAIN",
+  "previewRole": "UNPUBLISHED",
+  "beforeChecksum": "106f0b2ca017553765a1af81868baedb",
+  "afterChecksum": "24a65369a95a11f6407f7d7dd9a7f6eb",
+  "exactReadback": true,
+  "diff": {
+    "removedLines": 1,
+    "addedLines": 0
+  },
+  "validation": {
+    "result": "PASS",
+    "existingWarnings": [
+      "Liquid complexity 229 > 120",
+      "seo_media assigned but unused",
+      "Unknown object continue"
+    ],
+    "schemaRefresh": "Network refresh timed out; cached official schema used"
+  },
+  "browser": {
+    "url": "https://badkamercity.nl/products/hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-verouderd-messing",
+    "previewThemeConfirmedByBar": true,
+    "viewport": {
+      "width": 1348,
+      "height": 926
+    },
+    "headingCount": 0,
+    "switcherInitialized": true,
+    "collapsedColors": 4,
+    "expandedColors": 10,
+    "toggleExpandAndCollapse": "PASS",
+    "lengthOptions": [
+      "18 cm",
+      "25 cm"
+    ],
+    "inbouwdeelRetained": true,
+    "screenshot": "without-heading-final.jpg"
+  },
+  "notTested": [
+    "Physical mobile device",
+    "Checkout",
+    "Windows workspace"
+  ],
+  "rollback": "Restore before/sections/main-product.liquid in an unpublished preview. Owner publishes.",
+  "notes": [
+    "Current MAIN remained unchanged.",
+    "Only sections/main-product.liquid differs from the 1213-file baseline.",
+    "Root theme in Git was not overwritten; release files stored in scoped dossier."
+  ]
+}
