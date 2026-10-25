@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Rustige kleur- en lengtewissel — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+Actuele Shopify **MAIN 195703996682 — BadkamerCity - compacte titel en kruimelpad**: eigenaar heeft de vorige wijziging gepubliceerd. Nieuwe correctie staat in **UNPUBLISHED 195704357130 — BadkamerCity - rustige kleur en lengtewissel**. Dit concept is een volledige kopie van de actuele MAIN, met uitsluitend `assets/bc-product-switcher.js` gewijzigd.
+
+De herhaalde scrollcorrectie is vervangen door maximaal één herstel na een korte layoutmeting. Gebruikersinvoer stopt herstel direct. Een bewaakte, eenmalige overdracht van de reeds geladen keuzegroep voorkomt opnieuw wachten op de dataset. De mobiele ronde kleuren en uitgeklapte staat blijven behouden. Volledige productnavigatie blijft bestaan, dus een korte paginalaad is nog mogelijk.
+
+**Bewijs:** vooraf 553/553 bestanden identiek; finale readback één JS-wijziging, 552 behouden; MAIN 553/553 ongewijzigd. Upload exact teruggelezen. Syntax en Shopify-validator PASS; 10 positietests en 11 switcher-regressiegroepen PASS. Echte browserkleur- en lengtewissel: ieder één scrollcorrectie, daarna geen herhaalde terugtrekking; nieuwe productselectie/prijs juist. Tijdelijke QA-code exact verwijderd. Geen fysieke telefoontest of conversiemeting.
+
+[Scoped code, tests, readback en browserbewijs](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/2026-10-25/smooth-position). Actieve branch blijft `fix/product-cards-2026-10-14`; `main` krijgt alleen deze statusupdate. Geen root-theme-sync/merge; Windows-checkout niet gecontroleerd.
+
+**Exacte volgende stap:** eigenaar bekijkt en publiceert in Shopify → Webshop → Thema's **BadkamerCity - rustige kleur en lengtewissel**. Daarna MAIN-rol opnieuw lezen en op eigen telefoon kleur, lengte en direct handmatig scrollen nalopen. Shopify-connector kan niet publiceren. Terugval is het huidige thema 195703996682.
+
+---
+
 ## Compacte producttitel en breadcrumbs — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
 
 Eigenaar heeft de ronde kleurkeuze inmiddels gepubliceerd: actuele **MAIN195703472394 — BadkamerCity - ronde kleurkeuze A**. Vervolgwens uitgevoerd in **UNPUBLISHED195703996682 — BadkamerCity - compacte titel en kruimelpad**: Hotbath-introzin boven de keuzemenu's verwijderd; titel op mobiel22px, iets breder, desktop24–28px; breadcrumbs boven de titel. Bestaande omschrijving, productdata en koopfuncties behouden.
