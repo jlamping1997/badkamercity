@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath compacte keuzes — 25 oktober 2026 (IN_TEST / CODE_READY)
+
+Nieuwe eigenaarsscope: duidelijk **+N kleuren** om overige kleuren te openen en de mobiele inbouwkeuze compact in dezelfde keuzemenu-stijl. Zeven gerichte bestanden lokaal voorbereid en onafhankelijk gereviewd; bestaande exacte product-/inbouwrelaties, verplicht Ja/Nee, actuele prijs en koopactie behouden. Desktop en andere merken ongewijzigd.
+
+Actuele MAIN, door eigenaar gepubliceerd: **195688890634 — BadkamerCity - Hotbath mobiel A afwerking**. Gebruikte UNPUBLISHED preview: **195688694026 — BadkamerCity - Hotbath compacte keuzes**. De bestaande553-bestandenkopie had551 identieke bestanden; twee basisbestanden worden eerst gelijkgetrokken en gecontroleerd. **Zevenbestandenpatch nog niet geüpload op dit checkpoint**. De extra kopie195691184394 **Backup - Hotbath afwerking 25 okt** verwerkt nog en is niet als preview geverifieerd.
+
+Swatchtest PASS, inclusief +4 kleuren/+1 kleur, uit-/inklappen, aria-expanded, huidige kleur, desktopherstel, onmogelijkekeuze en drie exacte proefgroeproutes. Theme Check zes PASS plus dezelfde ontbrekende datasetdependency in lokale partiële tree; geen nieuwe codefout. Admin-readback/visuele preview PENDING; geen fysieke telefoon-/volledige cartsubmit-/betaaltest geclaimd.
+
+[Scoped before/after, test en manifest](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-25/compact-choices). Actieve uitvoering blijft deze ChatGPT-taak op `fix/product-cards-2026-10-14`; geen root-theme-sync, geen branchmerge, main alleen documentatie.
+
+**Exact volgende handeling:** de preview na bevestigde identieke basis en zevenbestandenupload valideren.
+
 ## Hotbath mobiel A — 25 oktober 2026 (LIVE_USER_PUBLISHED / AFWERKING_PREVIEW_READY)
 
 De eigenaar heeft **195688694026 — BadkamerCity - Hotbath mobiel A 25 okt** zelf gepubliceerd; verse Admin-read en ontvangen telefoonscreenshot bevestigen de nieuwe liveweergave. De laatste afwerking staat in **UNPUBLISHED 195688890634 — BadkamerCity - Hotbath mobiel A afwerking**. Uitvoerder heeft niet gepubliceerd en de live versie tijdens de afwerking ongewijzigd gelaten.
