@@ -1,51 +1,43 @@
-# Hotbath mobiel ontwerp A — uploadcheckpoint 25 oktober 2026
+# Hotbath mobiel A — gecontroleerde afwerking, 25 oktober 2026
 
-Status: **UPLOADED_NOT_PUBLISHED / IN_TEST**.
+Status: **LIVE_USER_PUBLISHED / POLISH_PREVIEW_READY**.
 
-De 22 permanente bestanden in `after/` zijn een gerichte patch voor het mobiele Hotbath-bestelblok. Zes bestaande bestanden zijn gewijzigd; zestien zijn nieuw (drie JS/CSS-bestanden en dertien officiële Hotbath-finishafbeeldingen). `before/` bewaart uitsluitend de zes vervangen bestanden. Dit is geen volledige theme-export en mag niet als volledig thema worden gepusht.
+De eigenaar heeft tijdens het werk **195688694026 — BadkamerCity - Hotbath mobiel A 25 okt** gepubliceerd. De ontvangen telefoonscreenshot toont de nieuwe live CB7072-weergave. De laatste afwerking staat afzonderlijk in **UNPUBLISHED 195688890634 — BadkamerCity - Hotbath mobiel A afwerking**. De uitvoerder heeft niet gepubliceerd en de live versie tijdens de afwerking niet gewijzigd.
 
-## Scope en publicatie
+## Patch en bewijs
 
-- Gecontroleerde basis en huidige MAIN: **195688890634 — WERKCONCEPT - Hotbath mobiel A - nog in test**.
-- Uploaddoel: **UNPUBLISHED 195688694026 — BadkamerCity - Hotbath mobiel A 25 okt**.
-- Voor de patch waren alle 536 bestanden van beide thema’s checksum-identiek.
-- Uitvoerder heeft gemeld dat de 22 permanente bestanden werkelijk zijn geüpload en alle 536 MAIN-bestanden ongewijzigd zijn. Finale Admin-checksums worden na visuele QA opnieuw vastgelegd.
-- Geen product-, prijs-, voorraad-, metafield-, bestel- of betaalinstellingen gewijzigd. Geen thema gepubliceerd.
-- Bestaande werkbranch: `fix/product-cards-2026-10-14`; geen root-theme-sync zolang de Git→Shopify-integratie onbekend is.
+Dit dossier bevat uitsluitend 23 gerichte bestanden in `after/`: zes gewijzigde bestanden, drie nieuwe JS/CSS, dertien officiële Hotbath-finishbeelden en één veilig afgevangen voormalige QA-route. `before/` bevat alleen de zes vervangen bestanden. Dit is geen volledige theme-export.
 
-## Gedrag
+Finale Shopify-readback: **23/23 MD5 exact**, **530 overige bestanden ongewijzigd**, **553 totaal**; alle manifestpagina’s volledig. Zie `source-manifest.json` en `evidence/admin-final-readback-summary.json`.
 
-Op smalle Hotbath-productpagina’s: officiële kleurstalen, aanvankelijk zes zichtbare keuzes (huidige kleur blijft zichtbaar), uitklappen van overige kleuren, leesbare volledige kleurnaam, compacte maatknoppen en een compact bestelblok. Totaalprijs volgt aantal en de bestaande expliciete inbouwdeelkeuze. De bestaande exacte productnavigatie, inbouwrelaties en winkelwagenactie blijven behouden. Andere merken en desktop behouden hun bestaande bediening.
+Mobiel Hotbath: zes zichtbare kleurstalen met huidige kleur behouden, uitklapbare overige kleuren, volledige naam, compacte maten, actuele totaalprijs op basis van aantal en optioneel inbouwdeel. Onder360px drie kleurkolommen; plusknop blijft binnen het aantalveld. Desktop en andere merken behouden de bestaande bediening. Exacte product-/inbouwrelaties en bestaande winkelwagenactie blijven behouden; geen betaalde voorselectie of nieuwe automatische POST-herhaling. Geen product-/prijs-/voorraad-/metafieldwijzigingen.
 
-De totaalberekening weigert misleidende bedragen bij ongeldige aantallen, variant-/valutamismatch, ontbrekende of onveilige prijzen, onbeschikbare geselecteerde inbouwdelen, onzekere winkelwagenstatus en niet-ondersteunde verkoopplannen. Er is geen betaalde voorselectie en geen nieuwe automatische POST-herhaling.
+## Controles
 
-## Bewijs op dit checkpoint
+- Werkelijke totaalberekening:18/18 PASS; geen misleidende bedragen bij ongeldige hoeveelheden, prijzen, variant/valutamismatch, onbeschikbaarheid of onzekere cartstatus.
+- Swatch/navigatieregressies PASS: zes zichtbaar, huidig behouden, naam, uitklappen, desktopherstel, onmogelijke opties, andere merken en drie proefgroepen.
+- Observer ready/pending-scenario’s PASS: geen renderlus bij rust, scroll, aantal, keuze of desktopwissel.
+- CB105 aantal2: Ja€778,00 / Nee€430,00; tien officiële swatches geladen.
+- CB7072 aantal2 + inbouw:€3.234,02. Aantalveld142px; plusknop eindigt331px binnen container334px.
+- IBS70 zonder add-on:€1.541,01→€3.082,02 bij aantal2.
+- Smal frame320px nominaal/305px werkelijk: geen overflow; drie swatchkolommen69px.
+- Desktop: mobiele functie inactief, geen mobiel totaal, aantal op oorspronkelijke plaats buiten formulier, oorspronkelijke dropdown.
+- Theme Check vóór/na: dezelfde ontbrekende datasetdependency in de partiële lokale tree; geen nieuwe errors. Complexity227→229 waarschuwing. Geen foutloze volledige theme-check geclaimd.
 
-- `tests/hotbath-mobile-total-test.cjs`: **18/18 PASS**, werkelijk productie-`calculate()` met geïsoleerde fixtures.
-- `tests/hotbath-swatches-test.cjs`: **PASS** voor zes zichtbare kleuren, behoud geselecteerde kleur, volledige naam, uit-/inklappen, desktopherstel, selectiestatus, onmogelijke optie, andere merken en exacte productnavigatie in drie proefgroepen.
-- `tests/hotbath-mobile-observer-test.mjs`: **2 scenario’s PASS**, ready en pending; geen observer-/requestAnimationFrame-lus bij rust, scrollen, aantal, keuze en desktopwissel.
-- Theme Check vóór/na: dezelfde ontbrekende `assets/product-switcher-data.json`-dependency in de partiële lokale testboom; **geen nieuwe errors**. Bestaande complexitywaarschuwing 227→229 en andere bestaande waarschuwingen blijven zichtbaar. Geen claim van een foutloze volledige theme-check.
-- Mobiele/desktop visuele eindcontrole en definitieve Admin-readback zijn **IN_TEST**.
-- Fysieke iPhone, betaling en alle Hotbath-productpagina’s afzonderlijk: **NOT_TESTED**.
+## QA-route en beperkingen
 
-Een tijdelijk Shopify-template met een smal iframe is uitsluitend gebruikt als renderhulp omdat de beschikbare browser geen viewport-API biedt. Het maakt geen deel uit van deze patch, is hier niet opgeslagen en wordt voor oplevering verwijderd of, als verwijderen door platformbeleid geblokkeerd is, door een veilige inactieve alias vervangen en expliciet gemeld.
+Een tijdelijke alternatieve iframe-route hielp de smalle weergave inspecteren omdat de browser geen viewport-API biedt. Die route werd meegepubliceerd toen de eigenaar het concept live zette. Verwijderen werd door connectorbeleid geblokkeerd. In het afwerkingsconcept is alleen de eigen `templates/product.bc-mobile-review.liquid` daarom vervangen door een eenvoudige noindexredirect naar de normale productpagina, zonder iframe/testcode. Validator PASS/exit0 met cached schema na docs-timeout; browserredirect naar gewone CB105 zonder view bevestigd.
 
-## Reproduceren
+De huidige live versie bevat de eerdere helper nog totdat de eigenaar de afwerking publiceert. Gewone productroutes worden door de alternatieve route niet gewijzigd.
 
-Vanuit deze map:
+De agent heeft geen fysieke iPhone bediend; de eigenaarsscreenshot bevestigt weergave. De nieuwe harness heeft geen volledige winkelwagensubmit uitgevoerd; berekeningen en DOM/formbinding wel. Checkout, betaling, bestelling en alle Hotbath-pagina’s afzonderlijk: NOT_TESTED.
 
-```sh
-npm install
-npm test
-```
+## Reproduceren, bronnen en terugzetten
 
-`happy-dom` is vastgelegd op 21.0.4. Testpaden zijn alleen aangepast voor deze dossierstructuur; de in `after/` opgeslagen productiecode is ongewijzigd overgenomen uit de uploadwerkmap.
+Vanuit deze map: `npm install`, daarna `npm test`; happy-dom21.0.4 staat vastgelegd. Testpaden zijn aangepast aan deze dossierstructuur, productiecode is exact gekopieerd. De laatste CSS-afwerking wijzigt de geteste berekeningscode niet.
 
-## Bronnen en terugzetten
+`swatch-sources.json` bevat officiële bronnen en beeldhashes. Geen screenshots of persoonlijke cartgegevens opgeslagen. Werkbranch `fix/product-cards-2026-10-14`; geen root-theme-sync vanwege onbekende deployintegratie, geen branchmerge; main alleen documentatie. Geen Windows-checkoutcontrole geclaimd.
 
-`source-manifest.json` bevat MD5/SHA-256 per gewijzigd bestand; `swatch-sources.json` bevat de officiële Hotbath-bron-URL en SHA-256 van elk finishbeeld. `evidence/` bevat lokale testresultaten.
+Functioneel herstellen: op een gecontroleerd ongepubliceerd thema de zes bestanden uit `before/` terugzetten; de nieuwe assets worden dan niet meer actief aangeroepen. Laat de veilige QA-redirect behouden.
 
-Terugzetten vóór publicatie: overschrijf alleen de zes gewijzigde bestanden vanuit `before/` op een gecontroleerd ongepubliceerd thema. De zestien nieuwe assets hebben daarna geen actieve referenties. Verwijdering is geen vereiste voor functioneel herstel. Publicatie/omwisselen blijft een afzonderlijke eigenaarshandeling.
-
-**Exact volgende handeling:** visuele preview afronden, tijdelijke QA-renderhulp opruimen en 22 permanente bestanden plus ongewijzigde MAIN opnieuw via Admin verifiëren.
-
+**Exact volgende handeling:** eigenaar beoordeelt/publiceert **BadkamerCity - Hotbath mobiel A afwerking (195688890634)**; daarna rollen, normale productpagina en aantalveld opnieuw controleren.

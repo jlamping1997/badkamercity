@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath mobiel A — 25 oktober 2026 (LIVE_USER_PUBLISHED / AFWERKING_PREVIEW_READY)
+
+De eigenaar heeft **195688694026 — BadkamerCity - Hotbath mobiel A 25 okt** zelf gepubliceerd; verse Admin-read en ontvangen telefoonscreenshot bevestigen de nieuwe liveweergave. De laatste afwerking staat in **UNPUBLISHED 195688890634 — BadkamerCity - Hotbath mobiel A afwerking**. Uitvoerder heeft niet gepubliceerd en de live versie tijdens de afwerking ongewijzigd gelaten.
+
+**Finale readback:**553 bestanden, **23 gerichte bestanden MD5-exact, 530 overige ongewijzigd**. Zes gewijzigde bestanden, drie nieuwe JS/CSS, dertien officiële finish-JPG’s en één veilig afgevangen voormalige QA-route. Mobiel Hotbath: zes kleurstalen, huidige kleur behouden, overige uitklapbaar, volledige naam, compacte maten en actueel totaal. Onder360px drie kolommen; plusknop binnen aantalveld. Desktop/andere merken en exacte inbouwrelaties behouden; geen product-/prijs-/voorraad-/metafieldwijzigingen.
+
+**Bewijs:**18/18 totaalberekeningstests, swatch/navigatie en twee observerregressies PASS. Browser: CB105 aantal2 Ja€778/Nee€430; CB7072 aantal2 Ja€3.234,02; IBS70 €1.541,01→€3.082,02. Smal320nominaal/305werkelijk geen overflow; aantalveld142px, plus binnen container; desktop oorspronkelijke bediening. Eigenaarsscreenshot bewijst live telefoonweergave. Theme Check geen nieuwe errors, dezelfde lokale ontbrekende datasetdependency; complexity227→229 waarschuwing. Geen fysieke iPhonebediening door agent of volledige nieuwe cartsubmit; berekening en DOM/formbinding wel getest. Checkout/betaling/all-pages NOT_TESTED.
+
+**QA-opruiming:** tijdelijke alternatieve iframe-route werd meegepubliceerd. Verwijderen is door connectorbeleid geblokkeerd. In de afwerking is uitsluitend de eigen template vervangen door een veilige noindexredirect naar de gewone productpagina; geen iframe/testcode. Validator en browserredirect PASS. Live bevat de helper nog totdat de eigenaar de afwerking publiceert.
+
+[Scoped code, bronnen, tests en readback](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-25/mobile-a). Werkbranch `fix/product-cards-2026-10-14`; geen root-theme-sync/branchmerge, main alleen documentatie. Oudere thema-/IN_TEST-status hieronder is historische voortgang.
+
+**Exact volgende handeling:** eigenaar beoordeelt/publiceert **195688890634 — BadkamerCity - Hotbath mobiel A afwerking**; daarna rollen, normale productpagina en aantalveld controleren.
+
 ## Hotbath mobiel ontwerp A — 25 oktober 2026 (UPLOADED_NOT_PUBLISHED / IN_TEST)
 
 De ontbrekende ontwerpcode is nu werkelijk geüpload naar **UNPUBLISHED 195688694026 — BadkamerCity - Hotbath mobiel A 25 okt**. Actuele MAIN is **195688890634 — WERKCONCEPT - Hotbath mobiel A - nog in test**; alle **536 MAIN-bestanden ongewijzigd** volgens de verse uitvoering. Voor de patch waren de twee thema’s 536/536 checksum-identiek. De eerdere kopieën bevatten inderdaad alleen de oude code; de eerdere melding “gebouwd” was geen uploadbevestiging.

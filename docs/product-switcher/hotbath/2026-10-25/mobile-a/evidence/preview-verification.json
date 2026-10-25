@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-25",
+  "basis": "Tests reported by parent executing browser agent; user supplied mobile screenshot",
+  "live_theme_id": "195688694026",
+  "live_publish_actor": "merchant",
+  "preview_theme_id": "195688890634",
+  "checks": [
+    {
+      "case": "CB105 official swatch images",
+      "result": "PASS",
+      "details": "10 official swatch assets loaded in rendered product UI"
+    },
+    {
+      "case": "CB105 quantity2 plus inbouw yes/no",
+      "result": "PASS",
+      "details": "yes EUR778.00, no EUR430.00"
+    },
+    {
+      "case": "CB7072 quantity2 with inbouw",
+      "result": "PASS",
+      "details": "EUR3234.02"
+    },
+    {
+      "case": "IBS70 without addon quantity1 to2",
+      "result": "PASS",
+      "details": "EUR1541.01 to EUR3082.02"
+    },
+    {
+      "case": "CB7072 quantity control right edge",
+      "result": "PASS",
+      "details": "142px quantity control; plus button ends331px inside container334px"
+    },
+    {
+      "case": "320px nominal frame,305px actual content",
+      "result": "PASS",
+      "details": "No horizontal overflow; 3 swatch columns with69px targets"
+    },
+    {
+      "case": "desktop restoration",
+      "result": "PASS",
+      "details": "mobile class inactive; no mobile total; quantity in original location outside form; original dropdown"
+    },
+    {
+      "case": "user mobile screenshot",
+      "result": "USER_OBSERVED",
+      "details": "CB7072 black on merchant-published theme displays swatches, inbouw yes/no and quantity."
+    },
+    {
+      "case": "retired QA route browser redirect",
+      "result": "PASS",
+      "details": "view=bc-mobile-review on fix redirects to ordinary CB105 without view; normal product page displayed."
+    }
+  ],
+  "method_limitations": [
+    "Narrow rendering used a same-origin iframe because viewport API was unavailable.",
+    "Agent did not physically operate an iPhone.",
+    "No complete new cart submission was exercised in the test harness; calculations and DOM/form binding were tested.",
+    "No order, payment, checkout or full-catalogue regression test."
+  ],
+  "qa_cleanup": {
+    "delete_operation": "Blocked by connector tool policy",
+    "safer_action": "Own template replaced in unpublished fix copy by noindex redirect to ordinary product route; no iframe/test code",
+    "redirect_template_validation": "PASS; exit0; cached schema used after remote docs timeout",
+    "live_limit": "Original live theme still contains helper until merchant publishes fix copy."
+  }
+}

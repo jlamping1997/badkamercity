@@ -130,3 +130,8 @@
     display: none;
   }
 }
+@media screen and (max-width: 359px) {
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatches {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

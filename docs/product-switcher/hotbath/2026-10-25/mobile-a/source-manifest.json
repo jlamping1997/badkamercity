@@ -1,19 +1,22 @@
 {
-  "status": "UPLOADED_NOT_PUBLISHED_IN_TEST",
+  "status": "POLISH_PREVIEW_READY_MAIN_USER_PUBLISHED",
   "date": "2026-10-25",
-  "main_theme_id": "195688890634",
-  "preview_theme_id": "195688694026",
-  "scope": "22 permanent files: 6 changed, 16 new (3 JS/CSS and 13 official finish JPGs)",
-  "baseline_main_files": 536,
-  "main_unchanged_reported_by_executor": true,
-  "final_admin_checksum_readback": "pending after final visual QA",
+  "main_theme_id": "195688694026",
+  "main_published_by": "merchant during task",
+  "preview_theme_id": "195688890634",
+  "preview_theme_name": "BadkamerCity - Hotbath mobiel A afwerking",
+  "scope": "23 scoped files: 6 changed, 17 new (3 JS/CSS, 13 official finish JPGs and retired QA-route redirect)",
+  "original_baseline_theme_id": "195688890634",
+  "original_baseline_main_files": 536,
+  "final_admin_checksum_readback": "23/23 exact MD5 matches; 530 other files unchanged; 553 total",
+  "qa_route": "Deletion blocked by connector policy; unpublished fix copy contains only noindex redirect to normal product, no iframe/test code. Published original retains QA helper until merchant publishes fix copy.",
   "files": [
     {
       "path": "assets/bc-hotbath-mobile.css",
       "status": "added",
-      "bytes": 4469,
-      "md5": "23a117588c6a68634ab3af8e8b85ee0b",
-      "sha256": "d3b7944972af70a965f46ac2aa411650f7c79a499103afcb02c022e59ac9e59e",
+      "bytes": 4699,
+      "md5": "322aa2928fc1afd023bacbad339b3f21",
+      "sha256": "e7e6cdaed37cd60e5c0a680385e50cb3e43cafbc37cfdd760577db7661320cbb",
       "before_sha256": null
     },
     {
@@ -131,9 +134,9 @@
     {
       "path": "assets/bc-hotbath-swatches.css",
       "status": "added",
-      "bytes": 3122,
-      "md5": "0c4fd35b573edc6b14f5b9868d727fdb",
-      "sha256": "ca76e6e495d3e23507206d1e18a76a975f876b991285eb6261983820b3ef8445",
+      "bytes": 3275,
+      "md5": "5cefbf7db9d4ad2ad2da6d22b99b78ac",
+      "sha256": "bfb672a8202121f3e805d36cc4d6013e40f45c2d4d63be8633e3e8bbd36833f3",
       "before_sha256": null
     },
     {
@@ -183,6 +186,16 @@
       "md5": "c9a38c8300880d6ae656580ea132fc2e",
       "sha256": "d7c878e7bb7abe4288bf129e6b1d029973aa2545199a4636dbeae91564e571ea",
       "before_sha256": "9721adc0a4eff5abea2f62987dfa0fc5fc05bfb9f75f6c3b3d8d7020b26cebba"
+    },
+    {
+      "path": "templates/product.bc-mobile-review.liquid",
+      "status": "added",
+      "bytes": 374,
+      "md5": "1a2c1b3055f6d9cbb51dc506be7d0a0b",
+      "sha256": "4805164f7eefd0aa6ce8aeb2b7567a664a40364a579e6bbb6e8eef5bcc462d17",
+      "before_sha256": null
     }
-  ]
+  ],
+  "fix_theme_files": 553,
+  "unchanged_files_vs_original": 530
 }
