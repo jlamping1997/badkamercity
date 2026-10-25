@@ -1,6 +1,6 @@
 # Rustige kleur- en lengtewissel — 25 oktober 2026
 
-Status: PREVIEW_READY, niet gepubliceerd. Bron is MAIN `195703996682` (compacte titel en kruimelpad). Concept: `195704357130` — **BadkamerCity - rustige kleur en lengtewissel**.
+Status: LIVE bevestigd in laatste Shopify-readback: thema 195704357130 is MAIN en alle 553 bestanden zijn exact gelijk aan de geteste versie. Publicatie is niet door de agent uitgevoerd. De onderstaande beschrijving legt het vooraf geteste concept vast. Bron bij aanvang was MAIN `195703996682` (compacte titel en kruimelpad). Concept: `195704357130` — **BadkamerCity - rustige kleur en lengtewissel**.
 
 ## Probleem en oplossing
 
@@ -34,3 +34,8 @@ Met Node 24: `npm install` en `npm test` in deze dossiermap. De enige testdepend
 Eigenaar opent Shopify → Webshop → Thema's en bekijkt/publiceert **BadkamerCity - rustige kleur en lengtewissel**. Publiceren is niet uitgevoerd: de Shopify-connector biedt geen theme-publicatie. Na publiceren theme-rol opnieuw controleren en op de eigen telefoon kleur, lengte en direct handmatig scrollen nalopen.
 
 Rollback: vorige thema `195703996682` opnieuw publiceren, of alleen de bewaarde `before/assets/bc-product-switcher.js` terugzetten via een gecontroleerde conceptwijziging. Geen root-theme-sync of main-code-merge uitvoeren; deze repository bevat een scoped dossier op `fix/product-cards-2026-10-14`. Lokale Windows-checkout is niet gecontroleerd.
+
+
+## Laatste live-verificatie
+
+Na oplevering van het concept bleek 195704357130 MAIN en 195703996682 UNPUBLISHED. Alle 553 live checksums zijn gelijk aan de finale geteste conceptversie. Er is geen publicatieactie meer nodig. Volgende stap is de controle door de eigenaar op een fysieke telefoon. De agent heeft geen MAIN-bestanden geschreven.

@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Rustige kleur- en lengtewissel — LIVE bevestigd, 25 oktober 2026
+
+De meest recente Shopify-readback bevestigt **MAIN 195704357130 — BadkamerCity - rustige kleur en lengtewissel**. Alle **553/553 live bestanden zijn exact gelijk aan het geteste concept**, inclusief herstelde layout zonder QA-code. Vorig thema **195703996682 — compacte titel en kruimelpad** is nu UNPUBLISHED en blijft de terugval. Publicatie is niet door deze agent uitgevoerd; de rolwisseling is tijdens de laatste controle waargenomen.
+
+De browsermetingen laten bij kleur en lengte elk één positieherstel zien en daarna vrij scrollen. Syntax, Shopify-validatie en 21 regressiegroepen slagen. Volledige productnavigatie blijft bestaan. Nog geen fysieke iPhone/Safari-test.
+
+[Code, testen en browserbewijs](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/2026-10-25/smooth-position). **Volgende stap:** eigenaar controleert op de eigen telefoon kleur, uitlooplengte en direct handmatig scrollen; bij terugkeer van de klacht exact toestel/browser en handeling vastleggen. Geen nieuwe publicatie nodig. Actieve branch ongewijzigd; main uitsluitend documentatie, geen root-theme-sync.
+
+De eerdere PREVIEW_READY-vermelding hieronder is de historische status van vóór deze laatste live-verificatie.
+
+---
+
 ## Rustige kleur- en lengtewissel — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
 
 Actuele Shopify **MAIN 195703996682 — BadkamerCity - compacte titel en kruimelpad**: eigenaar heeft de vorige wijziging gepubliceerd. Nieuwe correctie staat in **UNPUBLISHED 195704357130 — BadkamerCity - rustige kleur en lengtewissel**. Dit concept is een volledige kopie van de actuele MAIN, met uitsluitend `assets/bc-product-switcher.js` gewijzigd.
