@@ -1,5 +1,19 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Hotbath compacte keuzes — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+De duidelijke **+N kleuren**-uitklapper en compacte inbouwkeuze staan nu gecontroleerd in **UNPUBLISHED 195688694026 — BadkamerCity - Hotbath compacte keuzes**. MAIN **195688890634 — BadkamerCity - Hotbath mobiel A afwerking** blijft ongewijzigd. De eigenaar heeft deze nieuwe cosmeticadelta nog niet gepubliceerd.
+
+**Finale Admin-readback:** vooraf553/553 preview gelijk aan MAIN; na patch **553 bestanden =7 exacte wijzigingen +546 ongewijzigd**. Veilige QA-redirect na de iframecontrole exact hersteld; geen testcode op de opgeleverde alternatieve route. De extra kopie **195691184394 — Backup - Hotbath afwerking 25 okt** is volledig verwerkt en553/553 checksum-identiek aan de MAIN-basis.
+
+Kleurknop toont +4 kleuren/+1 kleur en uitgeklapt Minder kleuren. Mobiele inbouwkeuze is compacter, zonder groot kader; echte vereiste Ja/Nee-radio’s, geen betaalde voorselectie, actuele meerprijs, exacte relaties en bestaande koopactie behouden. Desktop en andere merken houden oude bediening. Geen product-/prijs-/voorraad-/metafieldwijzigingen.
+
+**Bewijs:** uitgebreide swatchtest/code-review PASS; echte Shopify-preview +4→Minder→+4 PASS. CB7072 aantal2 Ja€3.234,02/Nee€1.408,00; initialSelectionnull/requiredtrue. Frame320nominaal/305inhoud geen overflow, knoppen107,5×56,375px. Desktop mobiele functie uit, oorspronkelijke dropdown/inbouwlabels behouden. Theme Check zes bestandenPASS en dezelfde ontbrekende datasetdependency in partiële lokale tree, geen nieuwe codefout. Geen fysieke telefoonbediening, nieuwe cartsubmit, checkout of betaling uitgevoerd; iframeweergave, berekening en DOM/formbinding wel gecontroleerd.
+
+[Scoped zevenbestandenpatch, before/after, test en bewijs](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-switcher/hotbath/2026-10-25/compact-choices). Werkbranch `fix/product-cards-2026-10-14`; geen root-theme-sync/branchmerge, main alleen documentatie. Oudere IN_TEST-status hieronder is historische voortgang.
+
+**Exact volgende handeling:** eigenaar beoordeelt/publiceert **195688694026 — BadkamerCity - Hotbath compacte keuzes**; daarna rollen en kleur-/inbouwbediening op gewone productpagina controleren.
+
 ## Hotbath compacte keuzes — 25 oktober 2026 (IN_TEST / CODE_READY)
 
 Nieuwe eigenaarsscope: duidelijk **+N kleuren** om overige kleuren te openen en de mobiele inbouwkeuze compact in dezelfde keuzemenu-stijl. Zeven gerichte bestanden lokaal voorbereid en onafhankelijk gereviewd; bestaande exacte product-/inbouwrelaties, verplicht Ja/Nee, actuele prijs en koopactie behouden. Desktop en andere merken ongewijzigd.
