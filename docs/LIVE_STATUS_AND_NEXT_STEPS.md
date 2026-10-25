@@ -1,5 +1,17 @@
 # BadkamerCity — vaste startpagina en werkplan
 
+## Compacte producttitel en breadcrumbs — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
+
+Eigenaar heeft de ronde kleurkeuze inmiddels gepubliceerd: actuele **MAIN195703472394 — BadkamerCity - ronde kleurkeuze A**. Vervolgwens uitgevoerd in **UNPUBLISHED195703996682 — BadkamerCity - compacte titel en kruimelpad**: Hotbath-introzin boven de keuzemenu's verwijderd; titel op mobiel22px, iets breder, desktop24–28px; breadcrumbs boven de titel. Bestaande omschrijving, productdata en koopfuncties behouden.
+
+Breadcrumbs hergebruiken de bestaande Wiesbaden-route en gebruiken voor overige producten de werkelijke collectieleden plus de huidige hoofdmenustructuur. Bij onduidelijke dubbele paden alleen de zekere categorie, zonder gegokte ouder. VoorCB105EXT25AB is de bestaande catalogusroute **Home → Kranen → Toebehoren → Afbouwdelen voor kranen**; geen cataloguscategorieën gewijzigd. De volledige producttitel staat alleen voor schermlezers nog in het kruimelpad, zodat hij visueel niet dubbel ruimte inneemt.
+
+**Bewijs:** vooraf553/553 bestanden identiek; finale readback553 bestanden, vier wijzigingen,549 behouden; MAIN553/553 ongewijzigd. Alle vier uploads inhoudelijk exact teruggelezen. Shopify-validator: geen fouten, dezelfde drie bestaande main-product-waarschuwingen als vóór de patch. Zes echte Liquid-renderproevenPASS. Browser390px en320px iframe: intro afwezig, breadcrumbs correct, kleuruitklapper werkt, geen horizontale overloop; desktop1348px eveneens gecontroleerd. Tijdelijke QA-aanpassing exact teruggezet. Geen fysieke telefoontest, volledige winkelwagen-/checkouttest of conversiemeting uitgevoerd.
+
+[Scoped before/after, regressietest, screenshot en readback](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/docs/product-page/2026-10-25/compact-header). Actieve branch blijft `fix/product-cards-2026-10-14`; main krijgt alleen documentatie. Geen root-theme-sync/merge of lokale Windows-controle.
+
+**Exact volgende handeling:** eigenaar publiceert **195703996682 — BadkamerCity - compacte titel en kruimelpad** via Shopify → Webshop → Thema's; de connector blokkeert publiceren en MAIN-writes. Oudere preview/publicatiestatussen hieronder zijn geschiedenis.
+
 ## Hotbath ronde kleurkeuze — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
 
 Goedgekeurde richting uitgevoerd: kleine ronde finishstalen met volledige kleurnamen; aanvankelijk vier kleuren, geselecteerde kleur altijd zichtbaar. **Bekijk alle N kleuren** met **+N** opent de overige kleuren direct op dezelfde pagina; **Minder kleuren** klapt weer in. De bestaande bewaarfunctie houdt het paneel open na een kleurwissel. Vier vaste kolommen, onder360px drie; een onvolledige laatste rij blijft links uitgelijnd. De bestaande subtiele inbouwcheckbox is behouden.
