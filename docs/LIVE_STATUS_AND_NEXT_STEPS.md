@@ -1,44 +1,36 @@
 # BadkamerCity — actuele werkstatus
 
-**28 oktober 2026 · DOC-03D verlanglijst en browseropslag.** Eigenaar vraagt de volgende documentatieverdieping. Checkout blijft expliciet buiten scope. Eerdere microdossiers en bevindingen zijn behouden; dit vervolg volgt bewaren → identity → events → render/cache → gecontroleerde kooproute.
+**28 oktober 2026 · UI-01 inconsistenties en gedeelde productfotopijlen.** De eigenaar geeft expliciet voorrang aan inconsistenties en kiest bij de verduidelijking **pijlen bij de productfoto’s**. DOC-03E header/zoeksuggesties is geparkeerd. Checkout blijft buiten scope.
 
-## Ingang en resultaat
+## Ingang en stand
 
-[Architectuur](architecture/README.md) → [dekking](architecture/COVERAGE.md) → [microdossiers](architecture/components/micro/README.md). Drie nieuwe eigenaarspagina's:
+[Vergelijking, verbeterregister en implementatie](ui-consistency/2026-10-28/README.md). De bestaande [architectuur](architecture/README.md) en microdossiers blijven behouden.
 
-- [Opslag en tabbladen](architecture/components/micro/WISHLIST_STORAGE.md): schema, fouten, commitgrens, events en selectieoverschrijving.
-- [Identity en hartjes](architecture/components/micro/WISHLIST_IDENTITY.md): gedeelde callers, variantprioriteit, refresh en Sunshower-kleurcommit.
-- [Renderen en toevoegen](architecture/components/micro/WISHLIST_RENDER_AND_ADD.md): productpromise/cache, vier workers per render, late antwoorden, koopguards en cartnavigatie.
+- MAIN: **195818389770 — Smooth winkelwagen pop-up**; deze uitvoering schrijft of publiceert niet naar MAIN.
+- Concept: **195850764554 — BadkamerCity - gelijke fotopijlen**, rol UNPUBLISHED.
+- **PREVIEW_READY / DESKTOP_GETEST / MOBIEL_OPEN / NIET_GEPUBLICEERD.** Vooraf1.262/1.262 gelijk; finaal drie bedoelde bestanden gewijzigd/1.259 gelijk. Drie bodies exact teruggelezen, QA-template exact hersteld; MAIN1.262/1.262 ongewijzigd.
+- Actieve doelbranch: fix/product-cards-2026-10-14; start521c487b9c58b49f5de36fb16de210170f24d4d8. Main-start178d55292a25f93a2c2639e97cfe18680dba72e0; main uitsluitend documentatie.
 
-Geen productiecorrectie uitgevoerd. De eerdere brede naslag/private productexport blijven de bovenliggende bronnen; geen volledige thema- of productexport herhaald.
+## Wat werkelijk is gevonden
 
-## Werkelijk uitgevoerd
+**UI-F01:** Sunshower heeft pijlen op de hoofdfoto; de algemene PDP zet bestaande pijlen bij de thumbnailrail, bij een hoge afbeelding lager in beeld. De nieuwe gedeelde bediening zet44px pijlen op de foto, een teller en begrensde randen. Nul/één medium blijft zonder nieuwe bediening. Geen tweede zoom-/cartcontroller. De code staat uitsluitend in het genoemde concept.
 
-| Bron / methode | Resultaat en grens |
-| --- | --- |
-| Git-start actief | fix/product-cards-2026-10-14 op 8227eaed86c2386391b8b27a210d1490942ce2b3 |
-| Git-start main | cb685367c3ab75738a3ba2644eb5dd28d8e09ab7 |
-| MAIN aanvang/einde | 195818389770 — Smooth winkelwagen pop-up, dezelfde rol/updatedAt |
-| Gerichte broncontrole | Vijftien verse MD5/grootte-metadatareads passen bij eerder ontvangen bronbytes; eindread opnieuw gelijk. Geen nieuwe bodydownload geclaimd |
-| Uitgevoerde broncode | Volledige wishlistclosure; in WL-43 ook volledige Sunshower-shopclosure, beide vooraf SHA-256-gecontroleerd |
-| Replay | **43 cases: 34 CONTROL_PASSED, twee DEFECT_REPRODUCED, zeven BOUNDARY_CONFIRMED** |
-| Omgeving | Node 24.22.1, bestaande happy-dom 21.0.4; synthetische storage/events/transport/timers/navigatie/imagepreload; twee cases met DOMlibrary-MutationObserver |
-| Browser en bedrijfswerking | Geen nieuwe browseractie, echte bezoekersopslag, cart-/restore-/indexactie, productdatawrite of checkoutread. Geen mobiele/focus/a11y/prijs-/voorraadvrijgave |
+Drie overige desktopverschillen zijn bevestigd: **UI-C01** Lees meer/Toon meer; **UI-C02** winkelwagenknop56px/radius40 versus49px/radius8; **UI-C03** Ja/Nee-tekst versus toegankelijke vink/kruisiconen. Dit zijn nog niet aangepaste consistentie-/ontwerpkeuzes, geen automatisch bewezen verkoopbugs. UI-S01 native no-image-dubbeltitel blijft kandidaat: de settled collectie gebruikt extern. De bestaande uitgebreide Hotbath-viewer bladert en sluit met Escape.
 
-[Bewijs, exacte scenario's en reproduceerbare methode](architecture/evidence/2026-10-28-wishlist/README.md). Alleen documentatie en offline audittooling gewijzigd; ruwe bron-/winkelbodies blijven buiten publiek Git. Geen nieuwe dependency, formulier-/mailverzending, deployment of publicatie.
+## Bewijs en grenzen
 
-## Nieuwe bevindingen en bevestigde bescherming
-
-- **WISH-F01 / VERIFIED_ISOLATED / P2-kandidaat:** twee tabbladen schrijven vanuit eigen geheugen. Bij bewust vertraagde storage-eventbezorging overschrijft de tweede toevoeging de eerste. Twee echte closures/gedeelde synthetische opslag; geen native browser-timing of huidig bezoekersincident gemeten.
-- **WISH-F02 / VERIFIED_ISOLATED / P2-kandidaat:** Sunshower-shopkleur commit nieuwe handle/variant, maar hartje houdt is-saved/aria-pressed van vorige kleur. Volgende hartklik bewaart wel de juiste nieuwe identity. Imagepreload nagebootst; geen actuele visuele browserwaarneming.
-- **WISH-B01 / grenzen:** malformed/ander schema/read-denied ogen leeg; opgeslagen duplicaten blijven; unavailable favoriet mag; productcache heeft geen TTL/requesttimeout. Geen zeven extra live bugs of gegarandeerd realtime prijs-/voorraadgedrag.
-- Positief: mislukte opslag houdt oude staat en meldt geen succes-event; eigen busybutton blokkeert dubbelklik; missende variant krijgt geen koopbutton; laat productantwoord zet verwijderde kaart niet terug; synthetische add gebruikt exact toegestane variant en behoudt de favoriet.
-- Eerdere FILTER-F01/F02, CART-F01, SS-F01, FOOTER-F01, GLOSS-F01, UI-F04 en DATA-F04 blijven open. Settingspariteit, verse VPS/appbron, Google/deploy en echte browser-/bedrijfscontroles blijven afzonderlijk open.
+- 29 bestaande bronfiles opnieuw passend bij verse Shopify-metadata; volledig startmanifest1.262 paden.
+- Browser desktop1363×936: Sunshowerlanding/PDP, Wiesbaden24.3710, HotbathSDS1GN14 en Wastafelkranen. Renderer/laadstaat expliciet; geen volledige winkelbrede visuele audit.
+- 15 lokale galerijcontroles op bestaande SliderComponent en kandidaat-MediaGallery; simulatie van geometrie/media/timers/animatie. Geen native mobiele/keyboard/touchvrijgave hieruit afleiden. Afzonderlijk is echte Space-bediening op desktop wel bevestigd.
+- Statische Shopify-validatie van drie kandidaatfiles geslaagd. Alleen testhulpmiddelen in scratch geïnstalleerd; geen runtimebibliotheek aan de winkel toegevoegd.
+- Geen product-/prijs-/voorraadwrite, echte cart-/wishlistactie, account-/checkoutread of formulier-/mailverzending. Git-root-themacode wordt niet blind gesynchroniseerd.
 
 ## Exact één volgende handeling
 
-**DOC-03E — headernavigatie en predictive search als afzonderlijke controllers volgen:** desktopcategorieën, mobiele panelStack, overlay/focus/resize/section-lifecycle en nieuwste zoekintentie/cache/foutpad met synthetische markup en responses. Geen account-/bezoekersdata, formulierverzending, cartactie of checkoutread. Werkelijke browser-/mobielcontrole apart registreren.
+**Eigenaar beoordeelt het concept ‘BadkamerCity - gelijke fotopijlen’ op desktop én mobiel vóór publicatie.** Desktop-Wiesbaden/Hotbath en Space-bediening zijn bevestigd; de320/390/1024px iframepoging werd geweigerd en telt niet als mobielbewijs. De15 lokale controles blijven afzonderlijk geldig. De drie overige ontwerp-/tekstverschillen staan in het verbeterregister voor gerichte vervolgstappen.
 
-## Hervatten en Git
+## Overdracht
 
-Actieve doelbranch blijft fix/product-cards-2026-10-14; main alleen documentatie. Lees deze status → AGENTS.md → betrokken microdossier/bewijs. Controleer verse MAIN/hashes en eigen werkmap; start geen oude import-/publicatiestappen. Deze omgeving werkt op geverifieerde remote checkpoints; oudere lokale branchtips zijn behouden en niet geforceerd herschreven. Geen Windows-synchronisatieclaim. Geen schrijver of achtergrondworker blijft actief na oplevering.
+Lees deze status → AGENTS.md → het UI-01-dossier. Eerdere FILTER-F01/F02, CART-F01, SS-F01, WISH-F01/F02 en overige bevindingen blijven open. Settings-bytepariteit, VPS/appbron, Google/deploy en echte bedrijfs-/apparaatcontroles blijven apart open. Geen Windowscontrole of automatische live-uitrol claimen.
+
+Geen eigen schrijver, testserver of Shopify-kopiejob actief na oplevering. De gewone storefront-URL bevat geen blijvende previewcontext; beoordeel via het genoemde Shopify-concept of de behouden browserpreview.

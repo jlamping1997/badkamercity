@@ -87,3 +87,7 @@ Vier [nieuwe microdossiers](components/micro/README.md) volgen filterwaarden, UR
 ## Verlanglijstverdieping DOC-03D
 
 Drie [microdossiers](components/micro/README.md) volgen opslag/events, exacte identity/adapters en render/cache/koopguards. Vijftien bestanden passen bij verse Shopify-metadata; 43 lokale cases bevestigen bescherming en reproduceren twee begrensde afwijkingen. [Bewijs](evidence/2026-10-28-wishlist/README.md). Geen live correctie of echte bezoekersopslag-/cart-/checkoutactie.
+
+## Eigenaarprioriteit: visuele consistentie UI-01
+
+De brede documentatie is behouden. De eigenaar kiest nu concrete inconsistenties, met productfotopijlen als eerste correctie. [UI-01-dossier](../ui-consistency/2026-10-28/README.md) onderscheidt browserwaarnemingen, ontwerpkeuzes, kandidaatcode en de exacte concept-/teststand. DOC-03E-headeronderzoek is geparkeerd.

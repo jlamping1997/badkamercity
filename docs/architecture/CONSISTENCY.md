@@ -30,3 +30,7 @@ Footerlabels zonder URL en de lege populaire collectie zijn configuratievragen. 
 ## Reële verschillen in actieregels, nu verder gevolgd
 
 De [inbouwketen](components/micro/INBOUW_RECOVERY.md) bewaakt product-form via een consume/delegate-returnwaarde, busy/uncertain en aria-disabled. De eerder onderzochte Sunshower-sethandler heeft een andere lockgrens. Gedeelde knopstyling mag deze afzonderlijke requesteigenaars niet dubbel activeren. [Disclosure](components/micro/DISCLOSURE_MOTION.md) bevestigt reversal-/focus-/cleanupgedrag dat bij soepele gedeelde uitklappers behouden moet blijven. Uniformiteit betekent ook dezelfde betrouwbare toestanden; niet alleen dezelfde chevron.
+
+## Eerste concrete vergelijking UI-01
+
+De eigenaar heeft de pijlbedoeling nu bevestigd: productfoto’s. [Vergelijking en conceptwerk](../ui-consistency/2026-10-28/README.md) registreert de gedeelde galerijkandidaat en drie echte desktopverschillen in labels, knopvorm en Ja/Nee-presentatie. Het dossier benoemt de actuele test-/conceptstand; overige ontwerpvarianten zijn nog niet automatisch gecorrigeerd.

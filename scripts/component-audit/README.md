@@ -58,3 +58,7 @@ node scripts/component-audit/wishlist.mjs \
 ```
 
 43 cases: 34 CONTROL_PASSED, twee DEFECT_REPRODUCED, zeven BOUNDARY_CONFIRMED. Twee synthetische windows delen een Map; storage-events worden handmatig bezorgd. Product-GET/cart-POST zijn uitsluitend fetchstubs, navigatie/timers/imagepreload zijn gecontroleerd. Twee cases gebruiken de DOMlibrary-observer; geen echte browser-multitab-, CSS-, focus-, touch-, cart- of restoretest. Lees de proof-README voor bronhergebruik, guardcontrole en per-casegrenzen. Een nieuwe bronhash vraagt inhoudelijke herbeoordeling, geen uitschakelen van de hashguard.
+
+## Kandidaat-galerij UI-01
+
+`gallery.mjs` voert de bestaande hashgecontroleerde global.js/SliderComponent samen met de kandidaat-MediaGallery uit. Geef --source, --candidate, --manifest en --output; --dom-module kan dezelfde gepinde happy-dom21.0.4 gebruiken. De15 cases bewijzen selectie-/grens-/variant-/reduced-motion-/annuleringscontracten onder gecontroleerde geometrie/mediaqueries. Lees [het UI-01-dossier](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/ui-consistency/2026-10-28/README.md) voor de volledige opdracht. Native browser-/touch-/koopgedrag volgt niet uit deze replay.

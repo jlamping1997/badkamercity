@@ -73,3 +73,7 @@ De volledige clientketen is nu lokaal gevolgd, inclusief de echte native gridver
 ## Verlanglijstverdieping DOC-03D
 
 Het wishlistcontract is inhoudelijk en lokaal verder uitgewerkt, inclusief synthetische multitaboverschrijving en samenwerking van echte Sunshower-/wishlistcontrollers. WISH-F01/F02 zijn code-reproducties, geen gemeten live incidenten. Cache/timeout, duplicaten en herstel blijven expliciet begrensd. Echte browser-/account-/cartrestore-/operationele controles zijn daarmee niet gesloten. [Bron, 43 cases en grenzen](evidence/2026-10-28-wishlist/README.md).
+
+## Gerichte consistentiecorrectie UI-01
+
+[UI-01](../ui-consistency/2026-10-28/README.md) bevestigt de bedoelde fotopijlen en levert een gedeelde ongepubliceerde correctie met15 lokale controles en echte desktop-/Spacebediening. De mobiele iframeproef is geweigerd; dat blijft open. De overige drie bevestigde visuele/tekstvarianten zijn voorstellen, geen gerealiseerde harmonisatie of volledige winkelbrede vergelijking.
