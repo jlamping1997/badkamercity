@@ -65,3 +65,9 @@ python3 -m unittest discover -s scripts -p 'test_architecture_scan.py' -v
 ```
 
 De scanner is bewust geen complete parser of universele auditrobot. DOC-01/02 breiden de kaart alleen uit waar dat nodig is: dynamische verwijzingen, imports, Shopify-toewijzingen, omgekeerde afhankelijkheden en runtimebewijs. Vervang de kleine tool pas als een bestaande parser aantoonbaar betrouwbaarder en eenvoudiger onderhoudbaar is.
+
+## Componentbronnen en veldconsumenten sinds DOC-02A
+
+[build_component_reference.py op de actieve branch](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/scripts/build_component_reference.py) gebruikt de expliciete [componentregistry](component-registry.json). De tool eist hash-/grootteovereenkomst voor elk geselecteerd bestand, vergelijkt exacte Git-blobs op een expliciet broncommit en schrijft alleen bronmetadata/letterlijke consumers. Optioneel leest hij alleen typen/aantallen uit een bevoegde private SQLite-export. Dit vult de eerdere brede statische scanner aan; geen volledige parser of autonome downloader.
+
+Zie [fundament en tooling](components/FOUNDATIONS_AND_TOOLING.md) voor de reproduceerbare opdracht en [bewijs DOC-02A](evidence/2026-10-28-doc02/README.md) voor de daadwerkelijk uitgevoerde controles. 85 geselecteerde sources zijn geverifieerd, 52 letterlijke keys gevonden en 4 dynamische consumerlocaties apart gehouden. Een match bewijst geen actieve runtime-/stijl-/datacorrectheid.

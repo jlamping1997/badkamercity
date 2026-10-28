@@ -1,0 +1,34 @@
+# Componentdossiers — zo vind je de juiste bouwsteen
+
+**DOC-02A · 28 oktober 2026.** Dit is de verdiepte uitleg van de op deze datum gelezen productiecode. De [centrale werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) blijft leidend voor de actieve taak en bron. Geen nieuwe feature of UI-correctie is in deze ronde uitgevoerd.
+
+| Je wilt begrijpen of veranderen… | Eigenaar van de uitleg |
+| --- | --- |
+| Welk fundament, libraries en testgereedschap we gebruiken | [Fundament en tooling](FOUNDATIONS_AND_TOOLING.md) |
+| Welke pagina welke code gebruikt | [Routes en renderers](../ROUTE_RENDERER_MATRIX.md) |
+| Productopbouw, specificaties, omschrijving en documenten | [Productpagina's en gegevens](PRODUCT_PAGES.md) |
+| Kleur, uitvoering, lengte, inbouwdeel en navigatie na kiezen | [Productkeuzes](PRODUCT_CHOICES.md) |
+| Productkaarten, zoeken, filters en mobiele lijstbediening | [Kaarten en filters](PRODUCT_CARDS_AND_FILTERS.md) |
+| Toevoegen, bevestiging, sluiten en afwijkende kooproutes | [Winkelwagen en feedback](CART_AND_FEEDBACK.md) |
+| Header, menuboom, zoeken en lokale opslag | [Navigatie en opslag](NAVIGATION_AND_STORAGE.md) |
+| Oorspronkelijke data, generatie, revisies en terugval | [Datapijplijnen](DATA_PIPELINES.md) |
+| Bestaande stijl, beweging en harmonisatiegrenzen | [Stijl en beweging](MOTION_AND_STYLES.md) |
+| Welke afwijkingen eerst onderzocht moeten worden | [Bevindingenregister](../FINDINGS.md) |
+
+## Bronnen lezen zonder de verkeerde code te pakken
+
+Alle bronverwijzingen in deze dossiers zijn **theme-relatieve paden en regelnummers van MAIN 195818389770**, opnieuw tegen het complete manifest gecontroleerd op 28 oktober. Dit is niet automatisch het gelijknamige bestand in de Git-root. De [bronindex](../evidence/2026-10-28-doc02/source-index.json) geeft per onderzocht bestand MD5/SHA-256, aantal regels en exacte Git-kandidaten op broncommit `c8f76eea2bf8a81ab0f54196e239e0b3930fe20a`.
+
+Bij geen Git-match: lees het bestand uit de benoemde Shopify-bron en controleer de hash. Gebruik geen ouder rootbestand als vervanging. Bij gewijzigde MAIN/hash zijn de regelnummers aanwijzingen voor een eerdere versie; heropen het dossier. De settings_data.json-uitzondering uit DOC-01 blijft open. De onderzochte codebestanden vallen buiten die uitzondering; geen volledige deployvrijgave afleiden.
+
+De [bewijsingang](../evidence/2026-10-28-doc02/README.md) scheidt verse broncontrole, acht openbare HTML-responses en nog niet uitgevoerde interactieve controles. HTML aanwezigheid is **VERIFIED_HTML**: de server heeft de structuur teruggegeven. Het bewijst geen zichtbaarheid na CSS, focus, soepelheid, API-succes of koopactie. De Admin-aantallen komen uit het benoemde productexportvenster van DOC-01; ze zijn geen nieuwe realtime voorraadtelling.
+
+## Hoe diep ieder dossier gaat
+
+Ieder dossier beschrijft klantdoel, activeringsvoorwaarde, bronbestanden, input/output, relevante staten, fout/terugval, afhankelijkheden en concrete wijzigings-/controlegrenzen. De regels beschrijven eerst wat bestaat. Gewenste harmonisatie blijft PROPOSED tot functie, staat en eigenaarbesluit duidelijk zijn.
+
+Een nieuwe ontwikkelaar begint bij een gebruikersdoel, kiest één dossier en volgt van daaruit de bron- en datakoppelingen. Gedeelde code wordt eenmaal uitgelegd; merkvarianten verwijzen naar dat contract. Kopieer deze dossiers niet per leverancier of product.
+
+## Dekking die nog ontbreekt
+
+DOC-02A is een bron-/HTML-verdieping, geen volledige DOC-02/03-afronding. Nog open: alle viewport-/toetsenbord-/touchstaten, echte browserinteracties, apps/pixels, volledige CSS-cascade, Shopify Section Rendering bij fouten, alle native variantgevallen, commerciële datajuistheid en VPS/indexgezondheid. Blog-/advies-/servicepagina's en operationele checkout verdienen afzonderlijke dossiers zodra die tak aan de beurt is. De [onderzoeksboom](../DEEP_SCAN_PLAN.md) bewaakt die dekking.

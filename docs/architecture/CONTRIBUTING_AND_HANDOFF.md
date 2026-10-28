@@ -2,7 +2,7 @@
 
 ## De eerste vijftien minuten
 
-1. Lees [AGENTS.md](../../AGENTS.md), de [centrale status](../LIVE_STATUS_AND_NEXT_STEPS.md) en [deze documentatie-ingang](README.md). Gebruik de aangegeven actieve branch.
+1. Lees de [centrale status](../LIVE_STATUS_AND_NEXT_STEPS.md), daarna [AGENTS.md](../../AGENTS.md) en [deze documentatie-ingang](README.md). Gebruik de aangegeven actieve branch.
 2. Controleer repository/origin/commit, lokale wijzigingen en actuele Shopify MAIN. Een schone nieuwe cloudcheckout bewijst niets over de Windows-werkmap van de eigenaar.
 3. Open het systeemregister en het betreffende component-/releasedossier. Bepaal of rootcode, releasedossier of actuele live snapshot de juiste bron is.
 4. Herhaal de concrete taak en de volgende handeling. Een oude “volgende stap” is geen toestemming om een andere taak te hervatten.
@@ -50,3 +50,19 @@ Actieve branch blijft `fix/product-cards-2026-10-14`; maak niet per chat een nie
 Themawijzigingen via een gecontroleerde UNPUBLISHED-preview, merchant beoordeelt en publiceert volgens de bestaande regels. Een verzoek om een auditplan is geen toestemming voor live code-, catalogus-, server- of betaalmutaties.
 
 Deze uitvoering heeft geen toegang tot de Windows-pc en claimt geen uitvoering van het lokale PowerShell-bewijsprotocol. Cloud-Gitstatus, commit/readback en Shopify-read-only bronnen zijn de gebruikte bewijsmiddelen.
+
+## Concrete onderhoudsafspraak sinds DOC-02A
+
+De [componentingang](components/README.md) wijst per functie één uitleg-eigenaar aan. Update bij een contractwijziging hetzelfde dossier, de [routematrix](ROUTE_RENDERER_MATRIX.md), relevante bevinding en bronmoment. Nieuwe/verdwenen bronbestanden ook in component-registry.json zetten; bouw source-index en field-consumers opnieuw met de offline tool op de actieve branch. Lees de grenzen en invoer bij [fundament/tooling](components/FOUNDATIONS_AND_TOOLING.md).
+
+Een ongewijzigde hash rechtvaardigt hergebruik van een bronverwijzing, geen nieuwe browser-PASS. Een gewijzigde hash betekent betrokken uitleg en callers beoordelen; niet automatisch de hele winkel opnieuw testen. Gebruik de concrete acceptatiematrix uit het dossier en publiceer alleen nieuwe testresultaten die werkelijk zijn uitgevoerd. Documentatie naar main bevat geen ruwe private productwaarden of privé-datapakketlink.
+
+## Drie concrete overnameproeven
+
+| Vraag | Opvolger moet kunnen aanwijzen | Veilige eerste handeling |
+| --- | --- | --- |
+| Waarom staat bij Sunshower een pijl en bij een lijst niet? | Routematrix → kaartdossier → CTA versus galerijfunctie; mobiele hide-regel en mogelijke externe override | Dezelfde functie/viewport na JS vergelijken; pas daarna classificeren en één beperkte stijlafspraak voorstellen |
+| Waarom ontbreekt een specificatie/PDF? | Werkelijk producttemplate → specs-/documentrouter → veldtype/namespace → scopeguard → rij/linkrenderer | Bronwaarde en guard read-only controleren; geen feiten aanvullen of verborgen URL's massaal vrijgeven |
+| Waarom opent toevoegen soms geen popup? | Koopingang → exacte add-handler → notification, inline status of cartnavigatie | De bronroute en gewenst feedbackcontract bepalen; geen tweede submitlistener of echte koopactie als documentatietest |
+
+Deze routes zijn inhoudelijk uit de benoemde bron herleid. De overnameproeven zijn nog niet door een onafhankelijke nieuwe medewerker/AI uitgevoerd. Leg zo'n echte overnametest vast zodra die plaatsvindt; behandel de tabel niet als bewijs dat iedere opvolger al zonder hulp slaagt.
