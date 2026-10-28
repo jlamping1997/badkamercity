@@ -58,3 +58,7 @@ Kies één functie in twee werkelijk actieve routes, leg desktop/mobiel en dezel
 Controleer daarna herhaalde interactie, focus, touch, resize, reduced motion, ontbrekende inhoud, APIfout en browserterugkeer. Foto-, keuze- en dialogstaat moeten het laatste bedoelde resultaat volgen, zonder dubbele koopactie. Oude releasefixtures kunnen regressies ondersteunen, maar eerst hash-/contextovereenkomst vaststellen. Deze ronde heeft geen screenshotvergelijking, computed-style- of interactiemeting uitgevoerd.
 
 Verdere tokens voor spacing, radius, controlhoogte, schaduwen en lagen worden pas als één gekozen bron vastgelegd nadat de werkelijk gebruikte cascade is vergeleken. Tot die tijd is dit een herkomst-/bewegingsregister, geen toestemming om iedere hardcoded waarde te vervangen.
+
+## Disclosure, reversal en focus afzonderlijk getoetst
+
+[DISCLOSURE_MOTION](micro/DISCLOSURE_MOTION.md) verbindt 320ms-animatie aan meten, nieuwe intentie, late finished-promises, reduced motion en tabindexherstel. Vijf synthetische controles; geometrie/animatie zijn stubs en bewijzen geen werkelijk vloeiende mobiele weergave.

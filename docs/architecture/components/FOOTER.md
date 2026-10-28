@@ -39,3 +39,7 @@ Pas labels/bestemmingen aan in de **footersectie van het juiste conceptthema**; 
 Acceptatie: alle bedoelde links bereikbaar; lege URL herkenbaar/weggehaald; geen voorbeeldgegevens live; mobiel openen/sluiten via toetsenbord/touch; 749↔750px; lange labels; ontbrekend logo; geen sociale links; lege/bestaande policies; echte betaaliconen; section load/unload; reduced motion. De desktopbrowser bevestigt de drie open panelen met samenvattingen buiten de tabvolgorde en de tien niet-linklabels. Werkelijke mobiele focus-/resizecontrole blijft open.
 
 [Alle footerinstellingen en blockvelden](../reference/sections/footer.md) · [Sectiegroep](../reference/TEMPLATES.md) · [Bronhashes](../reference/source-index.json) · [Bevindingen](../FINDINGS.md).
+
+## Lifecycle verdiept
+
+[FOOTER_LIFECYCLE](micro/FOOTER_LIFECYCLE.md) beschrijft exact wat bij 749px-querywissels, repeated section load, unload en cleanup gebeurt. Twee nieuwe bronreplays bevestigen het contract; geen extra mobiele browserclaim.

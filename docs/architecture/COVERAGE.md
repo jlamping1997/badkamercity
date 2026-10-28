@@ -32,7 +32,7 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 | Alle productkaartvarianten | [Kaarten/filters](components/PRODUCT_CARDS_AND_FILTERS.md) | Renderer-/pijl-/dataketen bekend | Dezelfde functie/staat/viewport visueel vergelijken |
 | Algemene PDP en specificaties | [Productpagina's](components/PRODUCT_PAGES.md) | Actuele code + private veldregisters | Alle actieve native variant-/scopegevallen |
 | Kleuren/uitvoering/lengte | [Keuzes](components/PRODUCT_CHOICES.md) + [matching](components/micro/CHOICE_RESOLUTION.md) | Bron/replay, gegenereerde-data-evidence | Routebrede browser-/terugknopcases |
-| Inbouw, sets en accessoires | [Aantallen/identiteit](components/micro/QUANTITY_AND_IDENTITY.md) | Afzonderlijke guards getest | Volledige add/recoveryketen geïsoleerd testen |
+| Inbouw, sets en accessoires | [Aantallen/identiteit](components/micro/QUANTITY_AND_IDENTITY.md) | Volledige clientketen/guards geïsoleerd getoetst | Volledige clientketen nu geïsoleerd getoetst; echte browser/cart/voorraad apart open |
 | Sunshower landing/PDP/gallery | [Productpagina's](components/PRODUCT_PAGES.md) + [acties](components/micro/SUNSHOWER_ACTIONS.md) | Bron, 72 cataloguscombinaties, beperkte desktopactie | Pending-lockbevinding; touch/viewer/mobiel |
 | Cart en popup | [Cart](components/CART_AND_FEEDBACK.md) + [popup](components/micro/CART_NOTIFICATION.md) | Bron/replays | Missing-sectionbevinding, complete caller/browserfocus |
 | Wishlist, bewaren en herstellen | [Opslag](components/NAVIGATION_AND_STORAGE.md) | Sourcecontract bekend | Geblokkeerde opslag, oude variant, gevulde-cartrestore |
@@ -43,7 +43,7 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 | Stijl, iconen, keuzes en beweging | [Stijl](components/MOTION_AND_STYLES.md) + [eenheidskaart](CONSISTENCY.md) | Broncontracten en tokens verdeeld bekend | Computed styles, contrast/focus, smoothness/reduced-motion mobiel |
 | Productdatabase en afleidingen | [Productdata](PRODUCT_DATA.md) + [pijplijnen](components/DATA_PIPELINES.md) | Private DOC-01-export en gedateerde checks | Zakelijke datakwaliteit en latere drift; geen nieuwe volledige export |
 | Apps, embeds, consent en analytics | [Apps/privacy](components/APPS_PRIVACY_AND_EXTERNAL_SYSTEMS.md) | Zeven apps, NL-consentpolicy; platforminjectie bekend | Appbron/deploy, embedstatus, werkelijk consent/netwerkgedrag |
-| Checkout, shipping en payments | [Bestelketen](components/CHECKOUT_AND_OPERATIONS.md) | Shop/markt/rates/app metadata; checkoutread geweigerd | Bevoegde configuratieread + afgesproken end-to-end bedrijfscontrole |
+| Checkout, shipping en payments | [Bestelketen](components/CHECKOUT_AND_OPERATIONS.md) | Shop/markt/rates/app metadata; checkoutread geweigerd | Buiten deze verdieping op eigenaarsverzoek; eerdere controlegrens blijft staan |
 | Uitrol, backups, monitoring en overdracht | [Onderhoud](MAINTENANCE.md) | Git-/releasewerkwijze beschreven | Werkelijke deploykoppeling, externe backups/restore/monitoring |
 
 ## Open bronblokkades
@@ -61,3 +61,7 @@ Werk het bereikbare deel af en leg per blokkade de exacte benodigde bron vast. G
 Bron + uitleg worden voor de hele matrix onderhouden. Daarna worden open gedragstesten per gedeelde functie gebundeld: dezelfde dropdown eenmaal testen met de relevante adapters, vervolgens noodzakelijke uitzonderingen. Bevindingen krijgen één ID, impact, kleinste correctie, passende regressie en bron-/docsupdate. Bij een gewijzigde hash alleen geraakte onderdelen en consumers heropenen.
 
 De oude onderzoeksboom blijft het volledige detailplan. **DOC-03B** is niet stil geannuleerd: de geïsoleerde inbouwherstelketen blijft als open controle geregistreerd. De nieuwe brede opdracht voorkomt dat we alleen die ene tak verder uitdiepen terwijl andere winkelonderdelen ontbreken.
+
+## Verdieping DOC-03B na de brede kaart
+
+Op verzoek blijft checkout buiten de huidige verdieping; de eerdere toegangstekortkoming blijft historische/open platformcontext en wordt niet opnieuw geprobeerd. Vier methodedossiers voegen 39 geïsoleerde keten-/lifecyclecases toe, plus 715-regel-mappingcontrole en een verse structuurmeting van 109 begripspagina's. Zie [bewijs](evidence/2026-10-28-transitions/README.md). De eerdere open inbouwketen is op clientreplayniveau uitgewerkt; daadwerkelijke browser/cart-/mobiel-/bedrijfswerking is daarmee niet gesloten.

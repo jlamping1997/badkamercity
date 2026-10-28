@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "updated_on": "2026-10-28",
-  "task": "DOC-02C",
-  "status": "BROAD_DOCUMENTATION_RECORDED_WITH_OPEN_VERIFICATION",
+  "task": "DOC-03B",
+  "status": "STATE_CHAINS_DOCUMENTED_WITH_OPEN_RUNTIME_LIMITS",
   "active_branch": "fix/product-cards-2026-10-14",
-  "source_commit": "e5ca6da8b76430b881ff01bd7d4fc568b888ab4c",
-  "main_source_commit": "75d499c15db434deb3bf65f834c9b41004773e19",
+  "source_commit": "b5de803f364a597e339ed70cae9256239c178cc9",
+  "main_source_commit": "a2e28360ff90239b6aba2421601572b98f7fb296",
   "main_theme_at_capture": "195818389770",
   "audit_complete": false,
   "documentation_complete": false,
@@ -18,9 +18,9 @@
   },
   "http_routes_checked": 35,
   "public_search_reads": 4,
-  "current_browser_scope": "Desktop footer and glossary only; no mobile or cart mutation",
-  "next_task": "DOC-03B",
-  "next_action": "Isolate full inbouw add/recovery chain with hash-checked sources and local transport stubs; no actual cart mutation.",
+  "current_browser_scope": "No new browser actions this round; prior desktop proof retained separately",
+  "next_task": "DOC-03C",
+  "next_action": "Isolate full external filter URL/request/render/fallback/popstate chain with hard local stubs; no cart/index writes.",
   "open_blockers": [
     "settings_data_byte_parity",
     "checkout_configuration_access_denied",
@@ -31,5 +31,25 @@
   "background_worker_active": false,
   "glossary_links_checked": 109,
   "glossary_published_targets": 108,
-  "glossary_confirmed_404": 1
+  "glossary_confirmed_404": 1,
+  "current_targeted_source_files": 10,
+  "current_executed_source_files": 6,
+  "current_isolated_cases": 39,
+  "current_isolated_classifications": {
+    "CONTROL_PASSED": 33,
+    "BOUNDARY_CONFIRMED": 6
+  },
+  "excluded_scopes": [
+    "checkout"
+  ],
+  "mapping_structure": {
+    "rows": 715,
+    "unique_body_variants": 44
+  },
+  "glossary_body_structure": {
+    "published_pages": 109,
+    "direct_h2": 655,
+    "nested_h2_pages": 0,
+    "predicted_duplicate_id_pages": 0
+  }
 }
