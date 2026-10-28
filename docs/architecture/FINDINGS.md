@@ -48,6 +48,16 @@ Positief nieuw bewijs: vier publieke zoekreads 200; Wastafelkranen 573 en Inloop
 
 Positief bewijs: de volledige product-form/inbouwclientketen blokkeert onready/ongeldige/uncertain submits en dubbele pending submits; footerlisteners worden bij section-unload verwijderd; disclosure bewaakt oude animatiepromises en herstelt tabindex. De mapping heeft 715 unieke productcases naar 44 bodies zonder structurele conflictsignalen; 109 gepubliceerde begripspagina's hebben 655 directe H2's, zonder geneste H2's of voorspelde ID-botsing. Geen nieuwe live fix of checkoutcontrole. [39 cases en bronmetingen](evidence/2026-10-28-transitions/README.md).
 
+## Filterketen DOC-03C
+
+| ID | Status / impact | Waarneming en vervolg |
+| --- | --- | --- |
+| FILTER-F01 | VERIFIED_ISOLATED · P1-kandidaat | FX-37: na fallback loopt native popstate/gridvervanging naast een nieuwe externe read. De latere externe successafhandeling gebruikt oude losse nodes, zet active=true, maar het live grid blijft native en de toolbar ontbreekt. Eén gekozen eigenaar/teardown- of fallbackbeleid ontwerpen; echte browserregressie nog nodig. [Analyse](components/micro/FILTER_STATE_AND_FALLBACK.md) |
+| FILTER-F02 | VERIFIED_ISOLATED · conditionele P2-kandidaat | FX-22: visible_values=2 wordt na Meer/Minder zes. De twee gelezen live profielen gebruiken allebei zes, dus geen actuele fout op die twee routes aangetoond. [Controls](components/micro/FILTER_VALUES_AND_CONTROLS.md) |
+| FILTER-B01 | BOUNDARY_CONFIRMED | Gelijk count met verkeerde collectiehandle wordt geaccepteerd; native URL-parameters worden niet vertaald; omgekeerde range wordt doorgestuurd; searchable/section-metadata heeft uitzonderingen. Geen bewezen live backend-/dataprobleem. Contractkeuzes apart vastleggen |
+
+Positief: nieuwste zoek-/kleurintentie wint, een oude fout triggert geen nieuwe fallback, gewone fouten herstellen oorspronkelijke nodes/displays, afwijkend Shopify-kaart-ID activeert toevoegen niet en falende section-cache kan opnieuw worden gelezen. [41 cases en grenzen](evidence/2026-10-28-filters/README.md). Geen productiecorrectie uitgevoerd.
+
 ## Sjabloon voor iedere nieuwe bevinding
 
 Gebruik een vast ID en leg vast: bronversie/datum; klantdoel; exacte URL/paginatype/product; viewport/browser; actuele/toekomstige staat; herhaalstappen; verwacht contract; werkelijke uitkomst; betrokken bestanden/regelnummers en data-eigenaar; bewijsstatus; klantimpact; prioriteit; voorgestelde kleinste fix; afhankelijke componenten; test/rollback; eigenaar en besluit.

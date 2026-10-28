@@ -62,3 +62,7 @@ Verdere tokens voor spacing, radius, controlhoogte, schaduwen en lagen worden pa
 ## Disclosure, reversal en focus afzonderlijk getoetst
 
 [DISCLOSURE_MOTION](micro/DISCLOSURE_MOTION.md) verbindt 320ms-animatie aan meten, nieuwe intentie, late finished-promises, reduced motion en tabindexherstel. Vijf synthetische controles; geometrie/animatie zijn stubs en bewijzen geen werkelijk vloeiende mobiele weergave.
+
+## Filterdrawer en lijstscroll
+
+De [mobiele filterbediening](micro/MOBILE_LISTING_AND_DRAWER.md) gebruikt een drawertransition en paginatiescroll met smooth; de lokale reduced-motionregel in de onderzochte stylesheet richt zich op kaartbeelden. Een complete berekende reduced-motion-/focus-/touchcontrole blijft open. De breakpoint-/scrollstubs zijn geen visuele smoothnessmeting.

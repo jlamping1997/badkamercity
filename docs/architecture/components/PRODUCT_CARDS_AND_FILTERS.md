@@ -81,3 +81,7 @@ bc-mobile-listing.js voegt geen tweede filterengine toe. Hij verplaatst één zw
 Begin bij de route en vastgestelde renderer. Wijzig daarna de kleinst gedeelde helper: titel/specs/leverlabel, adapter of scoped CSS. Voor een pijlcorrectie alle native/externe/mobile/callerstaten vergelijken; voor een datacorrectie Shopify → index → verrijking → kaart → PDP volgen. Houd keyboardfocus, wishlistidentiteit en add-validatie in dezelfde regressie.
 
 Minimale matrix voor DOC-02B/03: desktop/mobiel; native/externe succes/terugval; nulresultaten; één/multi-variant; ontbrekende afbeelding; meerdere kleuren; snelle kleurwissel; navigatie versus add; dubbele klik; API-timeout; terugknop; filterdrawer met ander dialog open. Dit zijn nog te testen scenario's. Geen performance- of conversiewinst uit een statische CSS-/kaartwijziging afleiden.
+
+## Kaart-/filterketen op methodeniveau
+
+[Kaartverrijking](micro/CARD_HYDRATION_AND_COLORS.md) volgt section-ID, vier workers, vijfseconden-timeout, cache en de nieuwste kleurintentie. [Filterstate/fallback](micro/FILTER_STATE_AND_FALLBACK.md) beschrijft ook de gereproduceerde native DOM-overdrachtsrace. [Waarden/controls](micro/FILTER_VALUES_AND_CONTROLS.md) scheidt raw waarden van zichtbare eenheden en beleidsflags; [drawer/shortcut](micro/MOBILE_LISTING_AND_DRAWER.md) behandelt de aparte mobiele statecontracten. De 41 replays zijn geen echte mobiele of carttest.

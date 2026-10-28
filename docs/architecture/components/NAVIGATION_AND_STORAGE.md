@@ -60,3 +60,7 @@ Het huidige codecontract en het gewenste klantcontract bij al gevulde cart moete
 Menutitel/bestemming: lees Admin-resource/handle → sectiegroep → desktop én mobiele renderer → linkdoel. Een CSS-fix voor een subpaneel hoeft geen menudata te herschrijven. Zoekfix: bepaal predictive versus native results versus externe index vóór aanpassen. Opslagfix: behoud versie/identity of ontwerp een expliciete migratie/terugval; verander een sleutel niet om een dataprobleem te verbergen.
 
 Acceptatiematrix: nul/één/drie menuniveaus, lange labels, actieve route, root/vooruit/terug, Escape, buitenklik, 989↔990px, sticky header, tweede overlay, zoeken met toetsenbord, opslag denied/vol/ongeldige JSON, oude variant, dubbele wishlistidentiteit en restore in lege/gevulde cart. Deze scenario's staan open; alleen hun bronketen is nu gedocumenteerd.
+
+## History-eigenaarschap van de lijst
+
+De externe/native filtergeschiedenis is verdiept in [FILTER_STATE_AND_FALLBACK](micro/FILTER_STATE_AND_FALLBACK.md). Na fallback kunnen beide listeners lopen en kan native het grid vervangen terwijl de externe closure oude nodes bewaart (FILTER-F01). Normale menu-/PDP-handoff is daarmee niet hetzelfde historycontract. Geen globale popstateblokkade invoeren.

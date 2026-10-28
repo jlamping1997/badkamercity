@@ -29,3 +29,14 @@ Checkout is op verzoek buiten deze verdieping gehouden. De nieuwe ronde volgt vi
 | [Disclosure en beweging](DISCLOSURE_MOTION.md) | Meting, snelle reversal, oude promises, reduced motion en tabindexherstel | DS-01 t/m DS-05 |
 
 [Bewijs DOC-03B](../../evidence/2026-10-28-transitions/README.md): 39 extra geïsoleerde scenario's, 33 controles en zes grenzen. Tien verse bronnen bytegelijk; 715 unieke structureel passende mappingregels naar 44 bodies; 109 begripspagina's met 655 directe H2's zonder geneste H2 of voorspelde ID-botsing. Geen nieuwe browser-, cart-, checkout- of mobiele test. De eerdere twee problemen blijven open.
+
+## Filterfrontend verdiept sinds DOC-03C
+
+| Dossier | Eigenaar van de uitleg |
+| --- | --- |
+| [Filterstaat en terugval](FILTER_STATE_AND_FALLBACK.md) | URL-dialect, nieuwste request, count/schema, history en native DOM-eigenaarschap |
+| [Waarden en controls](FILTER_VALUES_AND_CONTROLS.md) | Eenheden, boolean/group/exact, draft/debounce, Meer/Minder en beleidsflags |
+| [Kaartverrijking en kleuren](CARD_HYDRATION_AND_COLORS.md) | Shopify section-identiteit/cache/timeout, nieuwe kleurintentie en beschikbaarheid |
+| [Mobiele lijstbediening](MOBILE_LISTING_AND_DRAWER.md) | Drawer versus zwevende shortcut, overlay/focus en twee breakpoints |
+
+[Bewijs](../../evidence/2026-10-28-filters/README.md): negen verse bronbestanden, 41 lokale scenario's (35 controles, twee defectreproducties, vier grenzen) en twee publieke facetmetadatareads. FILTER-F01 reproduceert het verlies van DOM-eigenaarschap na native fallback/history; FILTER-F02 de afwijkende Meer/Minder-limiet onder synthetische configuratie. Geen live correctie, echte cartactie of mobiele browserclaim.

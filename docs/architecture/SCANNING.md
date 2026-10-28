@@ -83,3 +83,7 @@ De harness [scripts/component-audit](https://github.com/jlamping1997/badkamercit
 ## Ketenreplay en inhoudsstructuur DOC-03B
 
 `transitions.mjs` in de bestaande component-audit-harness toetst samenhangende inbouw/form-, footer-, content- en disclosurestaten met dezelfde gepinde happy-dom. Zes uitgevoerde bronnen zijn vooraf gehasht; tien gericht gelezen bronnen staan in het [manifest](evidence/2026-10-28-transitions/source-provenance.json). Geen netwerk of echte cartactie. De [39 cases](evidence/2026-10-28-transitions/results.json), 715-regel-mappingcontrole en 109-page-bodystructuur zijn verschillende bewijssoorten; hun aantallen niet bij elkaar optellen als featuretests.
+
+## Filterreplay DOC-03C
+
+Dezelfde gepinde harness bevat nu `filters.mjs`: drie hashgecontroleerde JS-bronnen, 41 cases en expliciete transport-/validity-/geometry-/historygrenzen. Negen gerichte sourcebytes en twee publieke facetmetadatareads staan in [het bewijs](evidence/2026-10-28-filters/README.md). Geen nieuwe dependency of volledige themesnapshot; geen echte cart-/indexwrite.

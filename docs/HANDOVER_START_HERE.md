@@ -1,5 +1,7 @@
 # BadkamerCity — START HIER bij een overdracht
 
+**Vervolg 28 oktober 2026 — DOC-03C:** [filtermethodedossiers](architecture/components/micro/README.md), 41 lokale cases en twee begrensde defectreproducties; geen live fix. Checkout buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
+
 **Vervolg 28 oktober 2026 — DOC-03B:** [vier methodedossiers](architecture/components/micro/README.md), 39 extra geïsoleerde scenario’s en verse mapping-/contentstructuurcontrole. Checkout op eigenaarsverzoek buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
 
 **Vervolg 28 oktober 2026 — DOC-02C:** brede winkeldocumentatie met negen aanvullende dossiers en [naslag](architecture/reference/README.md) voor alle templates/secties/settings/snippets/assets. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [dekking](architecture/COVERAGE.md); 100% is niet vrijgegeven. Oudere volgende stappen hieronder zijn geschiedenis.
