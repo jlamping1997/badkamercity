@@ -55,3 +55,7 @@ Vier zoekreads beantwoorden met HTTP 200 en passende responsevorm. Wastafelkrane
 Vers servermanifest/broncommit, huidig indexschema en alle profielen, product-ID/SKU/publicatie-/prijsvergelijking, exclusions, sync/deletebeleid, foutlogs zonder klantdata, CORS-preflight, combinaties/ranges/sortering, native fallback en mobiel, backup-/herstelbewijs. De huidige verbinding heeft geen bestaande bevoegde SSH-sessie aangetoond. Dit is een concrete bronblokkade, geen toestemming om een nieuwe serverroute of index te bouwen.
 
 [Publieke meetresultaten en grenzen](../evidence/2026-10-28-complete/README.md) · [Data-pijplijnen](DATA_PIPELINES.md) · [Open dekking](../COVERAGE.md).
+
+## Volledige frontendketen sinds DOC-03C
+
+De [methodedossiers](micro/FILTER_STATE_AND_FALLBACK.md) voegen 41 lokale scenario’s toe, waaronder actuele externe/native bron samen. Gewone terugval werkt onder de gecontroleerde stimuli, maar FILTER-F01 reproduceert oude losse DOM-referenties wanneer native na fallback vervangt en extern daarna weer slaagt. Dit is een P1-kandidaat met gesimuleerde transporttiming, geen bewezen bezoekersfrequentie. [Typed controls](micro/FILTER_VALUES_AND_CONTROLS.md), [kaartverrijking](micro/CARD_HYDRATION_AND_COLORS.md), [mobiele bediening](micro/MOBILE_LISTING_AND_DRAWER.md) en [bewijs](../evidence/2026-10-28-filters/README.md).

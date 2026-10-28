@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "updated_on": "2026-10-28",
-  "task": "DOC-03B",
-  "status": "STATE_CHAINS_DOCUMENTED_WITH_OPEN_RUNTIME_LIMITS",
+  "task": "DOC-03C",
+  "status": "FILTER_CHAIN_DOCUMENTED_WITH_TWO_ISOLATED_DEFECTS",
   "active_branch": "fix/product-cards-2026-10-14",
-  "source_commit": "b5de803f364a597e339ed70cae9256239c178cc9",
-  "main_source_commit": "a2e28360ff90239b6aba2421601572b98f7fb296",
+  "source_commit": "5f0dd414f9243e46757930b7924329f4abc4fe1f",
+  "main_source_commit": "dd780e9a19d18d36da33780885489cf47dc86893",
   "main_theme_at_capture": "195818389770",
   "audit_complete": false,
   "documentation_complete": false,
@@ -18,9 +18,9 @@
   },
   "http_routes_checked": 35,
   "public_search_reads": 4,
-  "current_browser_scope": "No new browser actions this round; prior desktop proof retained separately",
-  "next_task": "DOC-03C",
-  "next_action": "Isolate full external filter URL/request/render/fallback/popstate chain with hard local stubs; no cart/index writes.",
+  "current_browser_scope": "No new browser actions; all filter UI checks are DOM simulations with explicit numeric-validity shim.",
+  "next_task": "DOC-03D",
+  "next_action": "Isolate wishlist and browser storage identity/event/error/render chain with synthetic storage and local product responses; no real visitor storage or cart mutations.",
   "open_blockers": [
     "settings_data_byte_parity",
     "checkout_configuration_access_denied",
@@ -32,12 +32,13 @@
   "glossary_links_checked": 109,
   "glossary_published_targets": 108,
   "glossary_confirmed_404": 1,
-  "current_targeted_source_files": 10,
-  "current_executed_source_files": 6,
-  "current_isolated_cases": 39,
+  "current_targeted_source_files": 9,
+  "current_executed_source_files": 3,
+  "current_isolated_cases": 41,
   "current_isolated_classifications": {
-    "CONTROL_PASSED": 33,
-    "BOUNDARY_CONFIRMED": 6
+    "CONTROL_PASSED": 35,
+    "DEFECT_REPRODUCED": 2,
+    "BOUNDARY_CONFIRMED": 4
   },
   "excluded_scopes": [
     "checkout"
@@ -51,5 +52,6 @@
     "direct_h2": 655,
     "nested_h2_pages": 0,
     "predicted_duplicate_id_pages": 0
-  }
+  },
+  "current_public_search_reads": 2
 }

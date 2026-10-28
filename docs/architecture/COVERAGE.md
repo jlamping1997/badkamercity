@@ -26,8 +26,8 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 | Footer en contactkolom | [Footer](components/FOOTER.md) | Actuele code/config + server-HTML | Tien ontbrekende bestemmingen; mobiel/resize |
 | Homepage en eigen kaarten | [Homepage](components/HOMEPAGE.md) | Template, guards en server-HTML | Responsive/cascade; expliciete inhoudskeuzes |
 | Categoriehubs en meubelhub | [Collecties](components/COLLECTIONS_AND_HUBS.md) | Alle 226 toewijzingen; alle 17 toegewezen hubs via HTTP | Mobiel, menuwijzigingen en randgevallen |
-| Native lijsten en zoeken | [Kaarten/filters](components/PRODUCT_CARDS_AND_FILTERS.md) | Native bron/HTML | Filter-/history-/nulresultaatinteractie |
-| Externe filterfrontend | [Filterketen](components/FILTER_ENGINE.md) | Actuele code; vier publieke API-reads | Combinaties/ranges, timeout/fallback, CORS-preflight, mobiel |
+| Native lijsten en zoeken | [Kaarten/filters](components/PRODUCT_CARDS_AND_FILTERS.md) | Native bron/HTML | Native DOM-overdracht met externe controller lokaal gereproduceerd; volledige native browsercyclus open |
+| Externe filterfrontend | [Filterketen](components/FILTER_ENGINE.md) | Actuele code; vier publieke API-reads | 41 lokale cases inclusief request/range/fallback/history; FILTER-F01/F02 open; echte browser/CORS-preflight/mobiel |
 | Filterbackend/index/sync | [Filterketen](components/FILTER_ENGINE.md) | Historische serverdocs + actuele publieke response | Verse bevoegde VPS-bron, index/schema/profielen/jobs/restore |
 | Alle productkaartvarianten | [Kaarten/filters](components/PRODUCT_CARDS_AND_FILTERS.md) | Renderer-/pijl-/dataketen bekend | Dezelfde functie/staat/viewport visueel vergelijken |
 | Algemene PDP en specificaties | [Productpagina's](components/PRODUCT_PAGES.md) | Actuele code + private veldregisters | Alle actieve native variant-/scopegevallen |
@@ -65,3 +65,7 @@ De oude onderzoeksboom blijft het volledige detailplan. **DOC-03B** is niet stil
 ## Verdieping DOC-03B na de brede kaart
 
 Op verzoek blijft checkout buiten de huidige verdieping; de eerdere toegangstekortkoming blijft historische/open platformcontext en wordt niet opnieuw geprobeerd. Vier methodedossiers voegen 39 geïsoleerde keten-/lifecyclecases toe, plus 715-regel-mappingcontrole en een verse structuurmeting van 109 begripspagina's. Zie [bewijs](evidence/2026-10-28-transitions/README.md). De eerdere open inbouwketen is op clientreplayniveau uitgewerkt; daadwerkelijke browser/cart-/mobiel-/bedrijfswerking is daarmee niet gesloten.
+
+## Filterverdieping DOC-03C
+
+De volledige clientketen is nu lokaal gevolgd, inclusief de echte native gridvervangingsmethode. Twee reproducties blijven open met hun eigen meetgrens. De bijbehorende backend-/browser-/mobiele controles zijn daardoor niet gesloten. Zie [filterbewijs](evidence/2026-10-28-filters/README.md).

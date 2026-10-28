@@ -79,3 +79,7 @@ Een feature is pas overdraagbaar als de actuele componentuitleg, relevante afhan
 ## Verdere methodedocumentatie DOC-03B
 
 Na de brede kaart zijn [inbouwherstel, footerlifecycle, content-DOM en disclosurebeweging](components/micro/README.md) verdiept met 39 aanvullende lokale scenario's en verse bron-/contentmetingen. Checkout is expliciet buiten deze opdracht gehouden. [Bewijs en grenzen](evidence/2026-10-28-transitions/README.md).
+
+## Filterketen DOC-03C
+
+Vier [nieuwe microdossiers](components/micro/README.md) volgen filterwaarden, URL/history/fallback, kaartverrijking/kleuren en drawer/shortcut. 41 lokale scenario’s bevestigen guards en reproduceren twee begrensde codeafwijkingen. [Bewijs](evidence/2026-10-28-filters/README.md). Checkout blijft buiten scope.

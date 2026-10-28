@@ -77,3 +77,7 @@ De publieke frontend bevat een endpointconfiguratie; dat is geen bewijs dat back
 Een theme-/routerrollback gebruikt exacte vorige assets plus router als samenhangende set. Een productdataterugzet gebruikt oorspronkelijke private waarden met conflictcontrole. Een indexrollback gebruikt de door indexbeheer bewezen bron/versie; dat proces is hier niet opnieuw gecertificeerd. Een export-zip is geen universeel herstelcommando.
 
 Prioriteit uit deze ronde: broninvoer/revisies navolgbaar maken en eerst de zichtbare gevolgen in de representatieve routes toetsen. Een bredere data-/namespace-migratie blijft buiten de documentatieopdracht.
+
+## Index versus sectiondata op de kaart
+
+[Kaartverrijking](micro/CARD_HYDRATION_AND_COLORS.md) legt de twee presentatiemomenten uit: indexkaart eerst, pas daarna actuele Shopify-sectiondata met ID-guard. Cacheduur, falende verrijking en kleurversie hebben eigen grenzen. [Typed controls](micro/FILTER_VALUES_AND_CONTROLS.md) documenteert de omzetting naar centen/raw eenheden en de niet één-op-één uitgevoerde UI-flags. Geen vervanging voor product-ID-/prijs-/publicatievergelijking op de server.
