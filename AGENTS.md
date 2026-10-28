@@ -68,3 +68,9 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 Minimaal vastleggen: taak/reden, eerdere/current MAIN, branch/commit, betrokken codefiles en Admin-objecten, aangewezen review/merchant, tests met resultaat en viewport/URL, niet-geteste onderdelen, terugzetpad en actuele documentatie. Voor praktische scenario's: `docs/WORKED_EXAMPLES_AND_HANDOFF_TEST.md`, `docs/TROUBLESHOOTING.md` en `docs/RELEASE_AND_QA.md`.
 
 **Je doel is dat een volgende ontwikkelaar de volgende veilige stap kan zetten op basis van bewijs, niet op basis van aannames.**
+
+## 7. Architectuur en documentatie sinds 28 oktober 2026
+
+Lees voor inventarisatie, consistentie en overdracht ook docs/architecture/README.md, DEEP_SCAN_PLAN.md en COMPONENT_CONTRACTS.md. De actuele status bevat exact één volgende taak. Gebruik het oude 441-bestandenoverzicht niet als volledige huidige productiekaart: de verse manifestvergelijking en 15-bestandensteekproef hebben expliciete dekkingsgrenzen.
+
+Documenteer dezelfde functie eenmaal, link alle gebruiksplaatsen en leg noodzakelijke merk-/productuitzonderingen vast. Een pijl voor fotonavigatie is niet automatisch dezelfde functie als een productlink. Een statisch signaal of ongebruikt-lijkend bestand is geen toestemming voor automatische correctie of verwijdering. Houd plan, bronmeting, runtimebewijs en eigenaargoedkeuring gescheiden.

@@ -1,5 +1,7 @@
 # BadkamerCity — Shopify Online Store 2.0
 
+> **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](docs/architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
+
 Deze Git-repository bevat de **theme-code** van BadkamerCity (Liquid, JSON-templates, CSS, JavaScript), plus een gecontroleerde technische overdracht. **De complete Shopify-catalogus, menu's, Admin-productwaarden en externe VPS/backend zitten niet in de Git-theme-code.**
 
 ## Neem je het project over? Begin hier.

@@ -1,5 +1,7 @@
 # BadkamerCity — actuele technische AI-handoff
 
+> **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
+
 ## Code opschoning en gedeelde keuzes — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)
 
 De eigenaar heeft de eerdere compacte desktopkeuzes gepubliceerd: actuele **MAIN195704848650**. De gevraagde opschoning staat in **UNPUBLISHED195706257674 — BadkamerCity - code opschoning en gedeelde keuzes**. Korte producttitels en bijbehorende filteroptimalisatie blijven op verzoek geparkeerd.
