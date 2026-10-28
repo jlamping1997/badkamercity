@@ -1,0 +1,52 @@
+# BadkamerCity — architectuur, documentatie en eenheid
+
+**Nieuwe onderzoeksbasis: 28 oktober 2026.** Eigenaar vraagt eerst een diep onderzoeks- en documentatieplan, daarna onderbouwde inconsistenties en kleine verbeteringen. Doel: verantwoord lanceren en vervolgens beheersbaar uitbreiden. Dit dossier verklaart niet dat de volledige audit al is uitgevoerd.
+
+## Beginnen of iets opzoeken
+
+| Je wilt… | Lees |
+| --- | --- |
+| Weten wat nu de taak, branch en live versie zijn | [Centrale werkstatus](../LIVE_STATUS_AND_NEXT_STEPS.md) |
+| Begrijpen wat bestaat en wat nog onbekend is | [Systeem- en bronnenregister](SYSTEMS_AND_SOURCES.md) |
+| Het volledige onderzoek uitvoeren | [Onderzoeksboom en fasering](DEEP_SCAN_PLAN.md) |
+| Dezelfde bediening en vormgeving hergebruiken | [Componentafspraken](COMPONENT_CONTRACTS.md) |
+| Bekende afwijkingen en prioriteiten bekijken | [Bevindingenregister](FINDINGS.md) |
+| Als nieuwe ontwikkelaar of AI veilig beginnen | [Werkwijze en overdracht](CONTRIBUTING_AND_HANDOFF.md) |
+| De inventaris opnieuw maken | [Scannerhandleiding](SCANNING.md) |
+| De meting van 28 oktober controleren | [Bewijs en dekkingsgrenzen](evidence/2026-10-28/README.md) |
+
+## Wat deze ronde heeft vastgesteld
+
+- De actuele Shopify MAIN is **195818389770 — BadkamerCity - Smooth winkelwagen pop-up**. De rol is opnieuw via Shopify gelezen. De eerdere conceptstatus is dus achterhaald; deze onderzoeksronde heeft niets gepubliceerd.
+- Actieve codebranch: **fix/product-cards-2026-10-14**, gecontroleerd broncommit **4a85d063b750b74fd398fe106c11bfe05b6ce277**. `main` is de vaste documentatie-ingang; geen aanname dat de root-themacode gelijk is aan productie.
+- Het volledige live bestandsmanifest telt **1.262 bestanden**. De Git-root telt **441 themabestanden**: **384 bytegelijk**, **57 afwijkend**, **821 uitsluitend live**, **0 uitsluitend in de Git-root**. Recente implementaties zijn ook onder releasedossiers in `docs/` opgeslagen; dit verschil bewijst niet dat al die code geheel uit Git ontbreekt.
+- De Git-root is statisch geïnventariseerd: **830 letterlijke Liquid-/JSON-afhankelijkheden** gevonden. Een actuele live steekproef van **15 bestanden**, elk checksumgelijk aan het live manifest, leverde **149** zulke verwijzingen op. De steekproef is geen volledige productiecodekaart.
+- Deze werkbranch bevatte bij aanvang **95 Markdown-documenten onder docs/**. De centrale status had **1.209 regels**. Die status is als archief behouden en vervangen door een korte actuele ingang.
+
+## Wat documentatie hier moet opleveren
+
+Een opvolger moet voor een concrete wijziging kunnen vinden: welke gebruikersfunctie hij raakt, wie de data beheert, waar de code begint, welke andere onderdelen meeveranderen, welke afspraken gelden, hoe hij het resultaat controleert en hoe hij teruggaat.
+
+Een bestandentelling of lang verslag alleen is daarvoor onvoldoende. We onderhouden drie lagen:
+
+1. **Actuele uitleg:** korte startpagina, systemen, routes, componentcontracten en onderhoudsinstructies.
+2. **Gegenereerde kaarten:** inventaris, hashes, afhankelijkheden, datavelden en scanrapporten. Opnieuw op te bouwen vanuit een benoemde bronversie.
+3. **Geschiedenis en bewijs:** gedateerde releases, besluiten, oude metingen en uitzonderingen. Een oud bewijs wordt niet automatisch een actuele waarheid.
+
+## Lees de status precies
+
+| Status | Betekenis |
+| --- | --- |
+| VERIFIED_SOURCE | Bestand of instelling op de opgegeven datum/versie werkelijk gelezen |
+| STATIC_CANDIDATE | Scanner of code-inspectie signaleert iets; gebruik en impact nog onderzoeken |
+| USER_REPORTED | Eigenaar meldt zichtbaar gedrag; exacte route/staat nog reproduceren |
+| VERIFIED_RUNTIME | Handeling op benoemde URL/viewport/browser werkelijk uitgevoerd |
+| PROPOSED | Richting of afspraak voorgesteld; nog geen goedgekeurd ontwerp of implementatie |
+| NOT_TESTED / BLOCKED | Controle ontbreekt, met concrete reden en vervolgactie |
+| HISTORICAL | Eerder bewijs; niet opnieuw als huidige werking gecertificeerd |
+
+De oudere labels uit [AGENTS.md](../../AGENTS.md) blijven geldig. VERIFIED_SOURCE kan bijvoorbeeld VERIFIED_THEME of VERIFIED_ADMIN onderbouwen; het is geen vervanging voor runtimebewijs.
+
+## Onderhoud
+
+Een feature is pas overdraagbaar als de actuele componentuitleg, relevante afhankelijkheden, acceptatie, bevindingenstatus en terugzetroute mee zijn bijgewerkt. Houd die wijziging bij dezelfde codewijziging. Gebruik één actuele eigenaarspagina per onderwerp en verwijs ernaar; kopieer geen hele statusgeschiedenis naar meerdere startpagina's.
