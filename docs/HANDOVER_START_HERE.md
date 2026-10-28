@@ -1,6 +1,6 @@
 # BadkamerCity — START HIER bij een overdracht
 
-**Vervolgmeting 28 oktober 2026 — DOC-02A:** de [componentdossiers](architecture/components/README.md) en [routematrix](architecture/ROUTE_RENDERER_MATRIX.md) verdiepen nu de bron-/data-/interactiecontracten. Lees eerst de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md). De private productexport blijft apart; settings-bytepariteit is OPEN en browserinteracties zijn nog niet als nieuw bewijs getest. Oudere volgende stappen hieronder zijn geschiedenis.
+**Vervolg 28 oktober 2026 — DOC-03A:** de [microdossiers](architecture/components/micro/README.md) analyseren afzonderlijke functies en overgangsstaten. Vijftien geïsoleerde cases reproduceren twee problemen en bevestigen normale guards; geen echte cartactie of productiecorrectie. Lees de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md). Desktopbewijs is beperkt; mobiel en settings-bytepariteit blijven open. Oudere volgende stappen hieronder zijn geschiedenis.
 
 
 > **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.

@@ -66,3 +66,7 @@ In DOC-02A zijn de componentindex, acht responsechecks en de 656 afgeleide-data-
 ## Uitrol en herstel
 
 Git main is de vaste documentatie-ingang, de actieve branch draagt tooling/releasewerk; geen van beide rootfolders is daarmee automatisch een complete productiebron. Snapshotbron, doelconcept, deploymentkoppeling en rollback moeten vooraf passen. De settings-pariteitsuitzondering blijft een open bronvrijgavepunt. Geen theme-root consolideren of Shopify publiceren op basis van alleen dit overzicht.
+
+## Aanvullende functiereplays sinds DOC-03A
+
+De [microanalyse](micro/README.md) gebruikt daarnaast een aparte Node/happy-dom-harness onder scripts/component-audit op de actieve branch, met gepinde dependency-lock en expliciete bronhashes. Deze Node-tool is geen van de drie Python-inventaristools hierboven. Hij bevat bewust zowel beschermingscontroles als bekende defectreproducties; de [methode](../evidence/2026-10-28-micro/README.md) voorkomt dat een geslaagde uitvoering als algemene feature-PASS wordt gelezen.

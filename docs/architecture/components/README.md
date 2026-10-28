@@ -15,6 +15,10 @@
 | Bestaande stijl, beweging en harmonisatiegrenzen | [Stijl en beweging](MOTION_AND_STYLES.md) |
 | Welke afwijkingen eerst onderzocht moeten worden | [Bevindingenregister](../FINDINGS.md) |
 
+## Afzonderlijke functies onderzoeken
+
+De [microdossiers](micro/README.md) verdiepen nu renderContents/open/close, Sunshower-actievlaggen, exacte keuzematching/fallback en aantal-/identiteitsguards. Vijftien afgesloten replays maken normale bescherming, grenzen en twee reproduceerbare foutgevallen onderscheidbaar. Drie beperkte desktopwaarnemingen zijn toegevoegd; mobiel blijft open.
+
 ## Bronnen lezen zonder de verkeerde code te pakken
 
 Alle bronverwijzingen in deze dossiers zijn **theme-relatieve paden en regelnummers van MAIN 195818389770**, opnieuw tegen het complete manifest gecontroleerd op 28 oktober. Dit is niet automatisch het gelijknamige bestand in de Git-root. De [bronindex](../evidence/2026-10-28-doc02/source-index.json) geeft per onderzocht bestand MD5/SHA-256, aantal regels en exacte Git-kandidaten op broncommit `c8f76eea2bf8a81ab0f54196e239e0b3930fe20a`.

@@ -1,5 +1,7 @@
 # Productkeuzes — varianten, productwissels en inbouwdelen
 
+**Verdieping:** zie [de match-/fallbackanalyse](micro/CHOICE_RESOLUTION.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
+
 **Doel:** de klant kiest een exacte uitvoering en behoudt overzicht, prijsidentiteit en positie. **Eigenaarrol:** storefront voor bediening; productdatahouder voor toegestane relaties. Bronstatus VERIFIED_THEME; één V2 Hotbath-pagina en de Sunshower-configurator VERIFIED_HTML. Geen klik-/koop-/mobieltest in deze ronde.
 
 ## Vier contracten die niet uitwisselbaar zijn

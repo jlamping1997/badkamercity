@@ -2,6 +2,8 @@
 
 **Doel:** herkenbare bediening en rustige, directe interacties. Dit register beschrijft bronwaarden van MAIN 195818389770; het is geen nieuw goedgekeurd design system of perceptuele snelheidsmeting. De [componentafspraken](../COMPONENT_CONTRACTS.md) blijven het voorgestelde harmonisatiekader.
 
+**Latere DOC-03A-waarneming:** de [Sunshower-microanalyse](micro/SUNSHOWER_ACTIONS.md) bevat één echte desktopgalerijstap en Maathulp/Escape/focus. Dat is geen nieuwe duur-/smoothness-/mobielmeting; onderstaande bronwaarden blijven het DOC-02A-register.
+
 ## Waar de stijl vandaan komt
 
 | Laag | Huidige bron | Gevolg voor onderhoud |

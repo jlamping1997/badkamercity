@@ -1,5 +1,7 @@
 # Toevoegen, winkelwagenbevestiging en overlays
 
+**Verdieping:** zie [de afzonderlijke inhouds-/lifecycleanalyse en CART-F01](micro/CART_NOTIFICATION.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
+
 **Klantdoel:** weten dat het juiste artikel is toegevoegd, eenvoudig verder winkelen of naar de cart gaan, en het venster voorspelbaar sluiten. **Eigenaarrol:** storefront; Shopify blijft autoriteit voor cartresultaat en prijzen. Bronstatus VERIFIED_THEME; dialogmarkup op acht routes VERIFIED_HTML. Geen add/change/update/checkout-request uitgevoerd.
 
 ## De ingang bepaalt de bevestiging
