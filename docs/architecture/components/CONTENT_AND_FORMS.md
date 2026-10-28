@@ -50,3 +50,7 @@ Sunshower-tag en ingestelde ONE/PLUS-beelden kiezen een specifieke visuele varia
 Onderhoud: algemene inhoud bij Online Store Pages/Blogs; lijstblocks en templatepresentatie in Theme Editor; redirects in Shopify redirects; vertalingen in locales; formulierontvanger/marketingbeleid in het relevante beheer. Een gerenderde bedankmelding bewijst nog geen e-mailbezorging.
 
 Acceptatie: nieuwe/lege term, accent/keywords/nulresultaat, redirectloop/ontbrekend doel, standaardtemplate-terugval, direct/genest H2, meerdere H1's, ontbrekend artikelbeeld, keyboardlinks, contactfouten en daadwerkelijke bezorging onder een afgesproken test. [Bron-/instellingenreferentie](../reference/SECTIONS.md).
+
+## Methoden en inputcontracten verdiept
+
+[CONTENT_DOM_CONTRACTS](micro/CONTENT_DOM_CONTRACTS.md) volgt lokale zoeknormalisatie, verborgen A–Z-anchors, directe H2-transformatie en TOC-ID-botsingen. Nieuwe read van 119 Pages: alle 109 gepubliceerde begripspagina’s hebben samen 655 directe H2’s, geen geneste H2’s en geen voorspelde ID-conflicten. Geen inhoudelijke factcheck of oplossing van GLOSS-F01.

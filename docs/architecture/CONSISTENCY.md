@@ -25,3 +25,7 @@ De eigenaar vindt soepele bediening belangrijk. Documenteer daarvoor meer dan du
 Kies één functie en bestaande referentievariant → toon de gebruiksplaatsen uit de dossiers → vergelijk dezelfde viewport/staat → classificeer BUG/INCONSISTENCY/INTENTIONAL_VARIANT/UNKNOWN → kleinste gedeelde stijl/adapter aanpassen in concept → relevante uitzonderingen controleren → bevinding en docs bijwerken. Alleen wanneer dezelfde functionele code werkelijk herhaald is en dezelfde foutgrenzen heeft, is samenvoegen aangewezen.
 
 Footerlabels zonder URL en de lege populaire collectie zijn configuratievragen. Ze vragen geen nieuwe dropdownlibrary of sitebrede componentherbouw. De twee geïsoleerde koopfeedbackproblemen hebben klantimpact en krijgen voorrang zodra gerichte correcties aan de beurt zijn.
+
+## Reële verschillen in actieregels, nu verder gevolgd
+
+De [inbouwketen](components/micro/INBOUW_RECOVERY.md) bewaakt product-form via een consume/delegate-returnwaarde, busy/uncertain en aria-disabled. De eerder onderzochte Sunshower-sethandler heeft een andere lockgrens. Gedeelde knopstyling mag deze afzonderlijke requesteigenaars niet dubbel activeren. [Disclosure](components/micro/DISCLOSURE_MOTION.md) bevestigt reversal-/focus-/cleanupgedrag dat bij soepele gedeelde uitklappers behouden moet blijven. Uniformiteit betekent ook dezelfde betrouwbare toestanden; niet alleen dezelfde chevron.

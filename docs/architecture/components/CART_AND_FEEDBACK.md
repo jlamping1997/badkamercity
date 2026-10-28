@@ -77,3 +77,7 @@ Opgeslagen cart gebruikt localStorage met versie/tijd/items, niet een serveracco
 Per kooproute exact product/variant, aantal, inbegrepen versus betaalde extras, succes-/fout-/onzekere staat en gewenste vervolgactie vastleggen. Voor de popup vervolgens: open → direct sluiten; snel heropenen; alle vier sluitroutes; scrollen binnen grote inhoud; achtergrondlock en herstel; bewaarde focus; mobiel/safe-area; reduced motion; ontbrekende sectiondata; tweede succes terwijl sluiten loopt. Transportstubs moeten het werkelijke sections/key-contract volgen.
 
 Deze ronde bewijst uitsluitend de beschreven bron en responsemarkup. Een toekomstige popupfix moet het bestaande concept-/review-/publicatiepad volgen en de exacte vorige bestanden bewaren. Een koopactie is geen geschikte stilzwijgende test tijdens een documentatieronde. Geen cart legen of bestaande regels overschrijven om een test te vereenvoudigen.
+
+## Inbouw als samenhangende kooproute
+
+[INBOUW_RECOVERY](micro/INBOUW_RECOVERY.md) bevestigt het returncontract naar product-form, vergrendelde herhaalsubmit en conservative uncertain-afhandeling, ook bij HTTP 422. De inbouwroute navigeert bij bevestiging; een latere popupwijziging vereist een eigen succes-/unlockcontract. Geen echte cartactie in deze verdieping.

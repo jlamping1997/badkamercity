@@ -79,3 +79,7 @@ De harness [scripts/component-audit](https://github.com/jlamping1997/badkamercit
 ## Brede naslag sinds DOC-02C
 
 `scripts/build_site_reference.py` op de actieve branch bouwt [alle templates/secties/settings/snippets/assets](reference/README.md) uit de expliciete snapshot en het manifest. Uitvoer scheidt BYTE_MATCH, BYTE_MISMATCH en MANIFEST_ONLY en bevat geen bronbody- of settingswaarden. Admin-naslag is apart bijgehouden. Rebuildopdracht en grenzen staan in [MAINTENANCE.md](MAINTENANCE.md).
+
+## Ketenreplay en inhoudsstructuur DOC-03B
+
+`transitions.mjs` in de bestaande component-audit-harness toetst samenhangende inbouw/form-, footer-, content- en disclosurestaten met dezelfde gepinde happy-dom. Zes uitgevoerde bronnen zijn vooraf gehasht; tien gericht gelezen bronnen staan in het [manifest](evidence/2026-10-28-transitions/source-provenance.json). Geen netwerk of echte cartactie. De [39 cases](evidence/2026-10-28-transitions/results.json), 715-regel-mappingcontrole en 109-page-bodystructuur zijn verschillende bewijssoorten; hun aantallen niet bij elkaar optellen als featuretests.

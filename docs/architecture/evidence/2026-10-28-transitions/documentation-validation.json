@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "relativeArchitectureLinks": 1047,
+  "brokenLinks": 0,
+  "jsonParseErrors": 0,
+  "isolatedCases": 39,
+  "classifications": {
+    "CONTROL_PASSED": 33,
+    "BOUNDARY_CONFIRMED": 6
+  },
+  "hashMismatchRefusedBeforeExecution": true,
+  "freshTenSourcesMatchPreviousBroadIndex": true,
+  "newDependenciesInstalled": false,
+  "productionCodeChanges": false,
+  "browserOrMobileTestsThisRound": false,
+  "checkoutExcludedByOwner": true,
+  "privacyScanCredentialHits": 0,
+  "limitations": "Static/docs and simulated-chain checks only; no real cart, server, native browser focus, accessibility or performance certification."
+}

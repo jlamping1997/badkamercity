@@ -16,3 +16,16 @@ Bron: 22 opnieuw opgehaalde MAIN-bestanden, alle byte-/groottegelijk aan hun act
 Desktopbrowser: externe collectiekaart met zichtbare CTA; Sunshower-maathulp opent/sluit met Escape en geeft focus terug; galerij gaat na asynchrone afhandeling van 1 naar 2. Viewport 1363×936, bestaande sessie met preview-UI. Mobiel en volledige kaartvergelijking blijven open. De nagebootste DOM heeft wel een testbreedte, maar is geen mobiele browser- of visuele vrijgave.
 
 De kleinste correcties zijn als voorstellen vastgelegd. Een volgende implementatieronde moet dezelfde tegenvoorbeelden behouden, in een geverifieerd concept werken en een echte browsercontrole toevoegen. Geen automatische bulkrefactor omdat meerdere handlers op elkaar lijken.
+
+## Volledige ketens en lifecycle sinds DOC-03B
+
+Checkout is op verzoek buiten deze verdieping gehouden. De nieuwe ronde volgt vier afzonderlijke onderdelen die verder gaan dan de eerdere guards:
+
+| Verdieping | Kern | Bewijs |
+| --- | --- | --- |
+| [Inbouw-add en herstel](INBOUW_RECOVERY.md) | Echte product-form + addon; submitoverdracht, payload, 30s-timeout, responsevalidatie, pagehide/pageshow en handoff | IBX-01 t/m IBX-25 |
+| [Footerlifecycle](FOOTER_LIFECYCLE.md) | MatchMedia, mobiele/desktopstaat, herhaalde section load en cleanup | FT-01/FT-02 |
+| [Content-DOM-contracten](CONTENT_DOM_CONTRACTS.md) | Lokale search, hidden A–Z-anchors, directe H2/TOC en ID-grenzen | GL-01/02, TOC-00 t/m TOC-04; 109 verse gepubliceerde bodies |
+| [Disclosure en beweging](DISCLOSURE_MOTION.md) | Meting, snelle reversal, oude promises, reduced motion en tabindexherstel | DS-01 t/m DS-05 |
+
+[Bewijs DOC-03B](../../evidence/2026-10-28-transitions/README.md): 39 extra geïsoleerde scenario's, 33 controles en zes grenzen. Tien verse bronnen bytegelijk; 715 unieke structureel passende mappingregels naar 44 bodies; 109 begripspagina's met 655 directe H2's zonder geneste H2 of voorspelde ID-botsing. Geen nieuwe browser-, cart-, checkout- of mobiele test. De eerdere twee problemen blijven open.

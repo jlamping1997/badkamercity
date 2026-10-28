@@ -75,3 +75,7 @@ De oudere labels uit [AGENTS.md](../../AGENTS.md) blijven geldig. VERIFIED_SOURC
 ## Onderhoud
 
 Een feature is pas overdraagbaar als de actuele componentuitleg, relevante afhankelijkheden, acceptatie, bevindingenstatus en terugzetroute mee zijn bijgewerkt. Houd die wijziging bij dezelfde codewijziging. Gebruik één actuele eigenaarspagina per onderwerp en verwijs ernaar; kopieer geen hele statusgeschiedenis naar meerdere startpagina's.
+
+## Verdere methodedocumentatie DOC-03B
+
+Na de brede kaart zijn [inbouwherstel, footerlifecycle, content-DOM en disclosurebeweging](components/micro/README.md) verdiept met 39 aanvullende lokale scenario's en verse bron-/contentmetingen. Checkout is expliciet buiten deze opdracht gehouden. [Bewijs en grenzen](evidence/2026-10-28-transitions/README.md).

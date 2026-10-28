@@ -81,3 +81,7 @@ Dit zijn aantallen **aanwezige velden**, geen aantallen zichtbare rijen, true-bo
 | Set/accessoire | Exacte relatie + inbegrepen/vereist/optioneel → beschikbaarheid → koophandler | Geen dubbel betaald onderdeel; onjuiste relatie blokkeert; totaal en aantal volgen het juiste contract |
 
 Deze scenario's zijn een acceptatiematrix, niet deze ronde uitgevoerde tests. Wijzig rendering eerst in een bewezen passend conceptthema; bewaar exacte oude bestanden en gegevens. De huidige documentatiewijziging is terug te zetten met de relevante Git-commit en heeft geen storefrontrollback nodig. Productdataherstel is een afzonderlijke operatie met oorspronkelijke private waarden en expliciete opdracht.
+
+## Beschrijving en specificaties op methodeniveau
+
+De [disclosureverdieping](micro/DISCLOSURE_MOTION.md) behandelt vier tekstregels, tien spec-rijen, querywissels, fonts/beelden, reversal en verborgen tabstops als één contract. [Inbouwherstel](micro/INBOUW_RECOVERY.md) volgt de gekoppelde aankooproute afzonderlijk.

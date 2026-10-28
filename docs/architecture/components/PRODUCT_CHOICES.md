@@ -86,3 +86,7 @@ De add-interceptor heeft 30 seconden timeout. Hij controleert HTTP/result.status
 | Reduced motion / scrollinput | Geen concurrerende scroll; gebruiker kan onmiddellijk overnemen | Browser, vooral iOS/Safari |
 
 Voor een visuele harmonisatie eerst de adapter/CSS veranderen, met behoud van productidentiteit, data-attributen, callbacks en opslagguards. Maak niet een tweede switcher omdat alleen de chevron of rand anders moet. Bestaande releasefixtures zijn terug te vinden in code-cleanup/2026-10-25 en product-switcher/2026-10-25; hun historische testresultaten zijn geen nieuwe runtimevrijgave.
+
+## Volledige inbouwketen sinds DOC-03B
+
+[INBOUW_RECOVERY](micro/INBOUW_RECOVERY.md) volgt de gewone product-form en addon gezamenlijk, inclusief Nee-delegatie, één Ja-request, response-/SKU-/aantalcontrole, uncertain, vertrek/terugkeer en keuzehandoff. De actuele mapping heeft 715 unieke productcases naar 44 bodies; dit is een structuurcontrole, geen nieuwe commerciële data-/compatibiliteitsvrijgave.

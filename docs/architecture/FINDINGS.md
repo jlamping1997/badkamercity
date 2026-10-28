@@ -38,6 +38,16 @@
 
 Positief nieuw bewijs: vier publieke zoekreads 200; Wastafelkranen 573 en Inloopdouches 305 matchen de huidige HTML-context. De eerdere precieze indexverschillen zijn historische signalen, niet blind herhaald als huidige aantallen. De begrippenzoekcyclus en één redirect/TOC zijn op desktop bevestigd. [Bewijs en grenzen](evidence/2026-10-28-complete/README.md).
 
+## Verdere methodencontrole DOC-03B
+
+| ID / onderwerp | Status | Uitkomst / onderhoud |
+| --- | --- | --- |
+| UI-F04 · gefilterde A–Z-link | VERIFIED_ISOLATED / BOUNDARY · P2-kandidaat | GL-02: een letter voor een verborgen groep houdt href; aria-disabled=true voorkomt klikken niet. Echte keyboard-/scrolluitkomst nog toetsen. [Contentcontract](components/micro/CONTENT_DOM_CONTRACTS.md) |
+| DATA-F04 · corrupte keuzehandoff | VERIFIED_ISOLATED / BOUNDARY · onderhoud | IBX-24: JSON-parsefout wordt opgevangen, maar de kapotte sessionStoragewaarde blijft staan. Geen live voorkomen/dataverlies aangetoond. [Herstelketen](components/micro/INBOUW_RECOVERY.md) |
+| INPUT-TOC-01 · mogelijke ID-botsing | SYNTHETIC_BOUNDARY, geen huidige live fout | TOC-04 maakt een botsing tussen bestaand en gegenereerd ID. Verse 109-page-structuurmeting vindt nul zulke gevallen; geen actieve contentcorrectie nodig op basis van deze fixture |
+
+Positief bewijs: de volledige product-form/inbouwclientketen blokkeert onready/ongeldige/uncertain submits en dubbele pending submits; footerlisteners worden bij section-unload verwijderd; disclosure bewaakt oude animatiepromises en herstelt tabindex. De mapping heeft 715 unieke productcases naar 44 bodies zonder structurele conflictsignalen; 109 gepubliceerde begripspagina's hebben 655 directe H2's, zonder geneste H2's of voorspelde ID-botsing. Geen nieuwe live fix of checkoutcontrole. [39 cases en bronmetingen](evidence/2026-10-28-transitions/README.md).
+
 ## Sjabloon voor iedere nieuwe bevinding
 
 Gebruik een vast ID en leg vast: bronversie/datum; klantdoel; exacte URL/paginatype/product; viewport/browser; actuele/toekomstige staat; herhaalstappen; verwacht contract; werkelijke uitkomst; betrokken bestanden/regelnummers en data-eigenaar; bewijsstatus; klantimpact; prioriteit; voorgestelde kleinste fix; afhankelijke componenten; test/rollback; eigenaar en besluit.
