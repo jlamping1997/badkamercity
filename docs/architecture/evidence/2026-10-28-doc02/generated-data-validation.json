@@ -1,0 +1,13 @@
+{
+  "sourceFiles": 9,
+  "groupsChecked": 656,
+  "byteEqual": 656,
+  "errors": [],
+  "method": "Recreate generator serialization from the actual original source JSON without writing source files; compare exact UTF-8 bytes. Revision guards assessed separately.",
+  "doesNotProve": [
+    "Original source relation correctness",
+    "Active smaller file selection on every route",
+    "Runtime fetch success",
+    "Performance or commercial data accuracy"
+  ]
+}

@@ -1,45 +1,50 @@
 # BadkamerCity — actuele werkstatus
 
-**Bijgewerkt: 28 oktober 2026, na DOC-01 / productexport.** Vaste actuele ingang. De [status van vóór het documentatieonderzoek](LIVE_STATUS_ARCHIVE_BEFORE_2026-10-28.md) blijft geschiedenis.
+**28 oktober 2026 · DOC-02A componentverdieping vastgelegd.** Vaste huidige ingang. De [lange oude status](LIVE_STATUS_ARCHIVE_BEFORE_2026-10-28.md) en oudere releasehandelingen zijn geschiedenis, geen opdracht om import/publicatie te herhalen.
 
-## Huidige opdracht en uitkomst
+## Huidige opdracht en resultaat
 
-De eigenaar vraagt diepe documentatie in Git, een graaf van systemen/code/data en later onderbouwde UI-consistentie en kleine verbeteringen. Aanvullend: databestanden met alle bereikbare gegevens per product. Geen productmutaties of brede refactor.
+De eigenaar vraagt sterke, diep doorzoekbare documentatie in Git: wat we gebruiken, hoe onderdelen zijn opgebouwd, hun code-/datakoppelingen en onderbouwde inconsistenties. Ook is een private export van bereikbare productgegevens gevraagd en geleverd. Geen live refactor, productmutatie of publicatieopdracht in deze documentatieronde.
 
-**DOC-00 vastgelegd; DOC-01 inhoudelijk CAPTURED, pariteitsvrijgave OPEN.** Begin bij [architectuur](architecture/README.md), [actuele bronkaart](architecture/DOC01_SOURCE_MAP.md) en [productdata](architecture/PRODUCT_DATA.md). Het private productpakket is apart geleverd; de publieke repo bevat alleen veilige schema's, aantallen en kaarten.
+**DOC-00:** onderzoeksboom/afspraken. **DOC-01:** volledige ontvangen bronkaart en private productexport; één settings-bytepariteitsuitzondering blijft OPEN. **DOC-02A:** nu de [routematrix](architecture/ROUTE_RENDERER_MATRIX.md) en [acht inhoudelijke componentdossiers](architecture/components/README.md): fundament/tooling, PDP-data, keuzes/inbouw, kaarten/filters, cartfeedback, navigatie/opslag, datapijplijnen en stijl/beweging. Samen negen inhoudelijke uitlegpagina's, met bronnen, staten, fouten/terugval, onderhoud en acceptatiegrenzen.
 
-## Gecontroleerde bronstand
+## Bronstand en meetgrenzen
 
-| Bron | Stand op meetmoment |
+| Bron | Waarneming |
 | --- | --- |
 | Repository | jlamping1997/badkamercity, publiek |
-| Actieve codebranch | fix/product-cards-2026-10-14 |
-| Broncommit bij aanvang | 6aacab029dcfcaec79eb425a2f7859db62f4942d |
-| main bij aanvang | 48e73f3805ef9306bf18c90b47a7b9a645e2a332; documentatie-ingang |
-| Shopify MAIN, voor/na | 195818389770 — BadkamerCity - Smooth winkelwagen pop-up |
-| Vorige MAIN | 195805085962 — Winkelwagen compact - 27 okt; UNPUBLISHED |
-| Live snapshot | Alle 1.262 bestanden ontvangen; metadata voor/na gelijk |
-| Bytecontrole | 1.261 exact; settings_data.json wijkt af van teruggegeven metadata |
-| Statische kaart | 955 refs: 952 in snapshot, 3 niet opgelost; 0 parsefouten |
-| Byteherkomst tegenover alle gevolgde bestanden | 384 root, 84 elders, 794 geen match; geen semantische herkomstclaim |
-| Admin | 226 collecties, 9 menu's, product-/collectietemplates, veld-/metaobjectdefinities gelezen |
-| Productpakket | 11.343 producten / 11.343 varianten; 241.064 metafields; 32.065 mediarecords |
-| Windows / VPS | Niet gecontroleerd; geen synchronisatie of servermutaties geclaimd |
+| Actieve branch / startcommit | fix/product-cards-2026-10-14 / c8f76eea2bf8a81ab0f54196e239e0b3930fe20a |
+| main bij aanvang | 2f87039c2774e27010860a4ef5ccb29dcc7bf886; documentatie-ingang |
+| Opnieuw gelezen MAIN | 195818389770 — BadkamerCity - Smooth winkelwagen pop-up |
+| Compleet vers manifest | 1.262 bestanden; paden/checksums gelijk aan DOC-01 |
+| DOC-01-pariteit | 1.261 exact; ontvangen settings_data.json blijft afwijkend van zijn metadata |
+| Componentbronindex | 85 geselecteerde bestanden, alle bytes/groottes passend; geen claim van 85 volledige runtimeaudits |
+| Metafieldconsumenten | 52 letterlijke keys + 4 dynamische locaties; typen/aantallen uit eerdere private export |
+| Openbare responses | 8 GET's, alle HTTP 200 en Shopify.theme.id 195818389770; HTML-structuur, geen uitgevoerde JS |
+| Afgeleide keuzedata | 656/656 groepsassets bytegelijk gereconstrueerd uit 9 werkelijke bronassets |
+| Productexport uit DOC-01 | 11.343 producten/varianten, 241.064 metafields, 32.065 mediarecords; privé geleverd, geen nieuwe realtime voorraadtelling |
+| Windows / VPS / deploymentkoppeling | Niet opnieuw vastgesteld; geen synchronisatie- of servergezondheidsclaim |
 
-Nieuwe publicatie kan rollen veranderen. De root blijft 441 themabestanden en is niet automatisch de actuele productiecode. Geen root overschreven of live code gepubliceerd.
+Zie [bewijs DOC-02A](architecture/evidence/2026-10-28-doc02/README.md), [bronkaart DOC-01](architecture/DOC01_SOURCE_MAP.md) en [productdata](architecture/PRODUCT_DATA.md). Tooling staat op de actieve branch; main krijgt alleen documentatie. Root-themacode is niet automatisch productiecode en is niet overschreven.
 
-## Controles en grenzen
+## Concrete inzichten voor vervolgonderzoek
 
-Voor-/natellingen producten/varianten zijn EXACT en sluiten aan. Geen dubbele IDs/verweesde varianten/onbehandelde geneste paginering. Variant-/media-aantallen sluiten per product aan. SQLite integrity_check ok; foreign_key_check nul fouten. Vier gerichte builderchecks en vijf scannerchecks geslaagd. De harde themepariteitscontrole faalt terecht met exitcode 2 op de ene settings-uitzondering; geen volledige bronvrijgave.
+- De gewone PDP, externe kaart, Sunshower-shopkaart, inbouw/set en wishlist gebruiken verschillende cartfeedbackpaden. De nieuwe popup wordt niet via iedere ingang aangeroepen; eerst gewenst contract bepalen, geen globale submitinterceptor toevoegen.
+- Native mobiele lijst-CSS verbergt sommige Bekijk-product-labels/pijlen. Sunshower-linkkaarten hebben een eigen pijl; externe CSS/JS kan de lijst later veranderen. Dit geeft een te onderzoeken verklaring, geen afgeronde reproductie van de gemelde inconsistentie.
+- Eén onderzochte Hotbath SDS1-response gebruikt de oorspronkelijke grote dataset wegens niet passende revisieguard. De groep bestaat en de afgeleide bytes zijn correct; geen algemene performance- of datacorruptieclaim.
+- De historische generator staat in Git maar heeft geen gevolgde datasets/-invoer op het broncommit. De huidige oorspronkelijke assets zijn beschikbaar in het private pakket/read-only thema; invoer, controle en rebuild zijn nu beschreven.
+- De huidige externe-filtercode probeert na DOM-guards automatisch runSearch, zonder bcfilters=1-guard. Oude opt-inbeschrijvingen zijn voor deze bron historisch; daadwerkelijke API-/index-/browserwerking blijft open.
 
-Productdata is privé JSONL + SQLite + ruwe responses + veldregister, met media-/document-URL's en 674 JSON-themeassets. Geen binaire media, app-private/externe leveranciers-/VPS-data, volledig markt-/B2B-prijsmodel of atomair herstelpunt. Publicatiekoppelingen zijn de ontvangen standaard APP-catalogusselectie. Zie de volledige grenzen in PRODUCT_DATA.md. Een constante telling bewijst geen ongewijzigde voorraad gedurende het exportvenster.
+## Uitgevoerd en niet uitgevoerd
 
-Geen browser-/UI-/checkout-/a11y-/performancevrijgave uitgevoerd. Het gemelde Sunshower-pijltjesverschil blijft USER_REPORTED; de functie moet in DOC-02 worden gereproduceerd. Korte titels/filteroptimalisatie blijven geparkeerd. Geen writer of achtergrondworker blijft actief na oplevering; de eenmalige read-only bulkexportjob is COMPLETED, de daadwerkelijke bestanden zijn via gewone gepagineerde reads verkregen.
+Nieuwe controles: volledige manifestvergelijking, herhaalde drie bodyreads, exacte componenthashes, Git-blobkandidaten, veldconsumentenmetadata, acht HTML-responses, 656 afleidingsvergelijkingen, document-/JSON-/bronverwijzingscontroles en de offline componentbuilder op echte brondata. De oude vier productbuilder-/vijf scannerchecks blijven eerder bewijs; geen nieuwe featuretestclaim.
+
+Geen browser-/touch-/focus-/computed-style-/performance-/checkouttest. Geen add/change/update-cart, product-/theme-/VPS-write, nieuw thema, publicatie, brede dependencyupgrade of dump van private productwaarden naar Git. De settings-body is opnieuw identiek ontvangen maar wijkt nog af van metadata; geen onafhankelijke exacte settingskopie beschikbaar in deze verbinding of gevolgde Git-bestanden. De oorzaak blijft onbekend; geen pariteitscontrole versoepeld. Na oplevering geen writer of achtergrondworker actief.
 
 ## Exact één volgende handeling
 
-**DOC-01 pariteitsuitzondering read-only afbakenen:** bij een opnieuw gecontroleerde MAIN de ontvangen config/settings_data.json vergelijken met een zelfstandig exact bronbestand uit een toegestane theme-export, zonder productie/root te wijzigen. Vastleggen of het een representatieverschil of bronverschil is; geen hashvrijgave zonder bewijs. Daarna DOC-02: de bron-/Admin-kaart tot route-/renderer-/componentmatrix verdiepen, beginnend bij algemene PDP en Sunshower.
+**DOC-02B — mobiele kaart-/pijlvergelijking read-only uitvoeren:** standaard collectie Wastafelkranen, zoekresultaten Sunshower en Sunshower-landing in dezelfde mobiele en desktopstaat bekijken; na JavaScript de werkelijke renderer, CTA-zichtbaarheid/cascade, linkfunctie en focus vastleggen. Daarna de bevinding classificeren met het bestaande componentcontract. Geen koopactie/productwijziging nodig; de settings-uitzondering blijft apart OPEN voor volledige bronvrijgave.
 
 ## Hervatten
 
-Lees deze status → AGENTS.md → architecture/DOC01_SOURCE_MAP.md → PRODUCT_DATA.md. Controleer eigen werkmap/rollen/toegang en bewaar bestaande wijzigingen. Actuele checkpoint is te vinden met git log -1 -- docs/architecture/DOC01_SOURCE_MAP.md; main bevat uitsluitend documentatie-updates, tooling staat op de actieve branch. Geen oude imports/publicaties uit archief opnieuw starten.
+Lees deze status → AGENTS.md → architecture/components/README.md → het betreffende dossier en gedateerde bronindex. Controleer eigen Gitwerkmap, actuele MAIN en hashes. Bron-/hand-offcheckpoint is vindbaar met git log -1 -- docs/architecture/components. De private productexport wordt via de eigenaar gedeeld, niet uit publieke Git gehaald. Oudere imports, previews en publicaties niet opnieuw starten op basis van historie.

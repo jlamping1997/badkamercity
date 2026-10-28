@@ -2,6 +2,8 @@
 
 **Bronmoment: 28 oktober 2026.** Dit register maakt onderscheid tussen vers gelezen code, bestandsmetadata en historische operationele beschrijvingen. Het bevat geen tokens, klantdata of privéserverconfiguratie.
 
+**Vervolg DOC-01/02A:** volledige broninventaris + private productexport zijn vastgelegd. [Componentdossiers](components/README.md), [fundament/tooling](components/FOUNDATIONS_AND_TOOLING.md) en [routematrix](ROUTE_RENDERER_MATRIX.md) geven de actuele verdieping. De vroegere nulmeting is daarmee aangevuld, niet een nieuwe volledige runtimevrijgave.
+
 ## 1. Gebruikte techniek
 
 | Onderdeel | Aangetroffen opbouw | Bewijs en grens |
@@ -11,8 +13,8 @@
 | Rendering | Liquid layout, JSON-templates, secties en snippets | Git-root volledig geïnventariseerd; actuele live layout, algemene PDP en Sunshower-template/sectie ook inhoudelijk gelezen |
 | Interactie | Gewone JavaScript-bestanden en custom elements; bestaande Dawn cart- en productcontracten plus maatwerk | Actuele switcher-, Sunshower-, filter- en cartbestanden gelezen. Geen React/Hydrogen-migratie voorgesteld |
 | Vormgeving | Globale CSS, componentassets, inline Liquid-styles, afzonderlijke merk-/functiestijlen | Huidige opbouw vraagt cascade-/laadvolgordeonderzoek. Losse stylesheets zijn niet per definitie een duplicatie |
-| Productdata | Shopify-producten/varianten, SKU's, prijzen, media, metafields; aanvullende JSON-keuzedata en exacte relaties | Datavelden in code gelezen; volledige actuele cataloguswaarden en dekking nog niet geëxporteerd |
-| Sunshower afbeeldingen | Eigen galerij/carrousel; viewer-module verwijst naar `bc-photoswipe.esm.js` | Live sectie gelezen. Historisch dossier noemt PhotoSwipe 5.4.4; de actuele vendormodule/licentieversie moet inhoudelijk worden bevestigd |
+| Productdata | Shopify-producten/varianten, SKU's, prijzen, media, metafields; aanvullende JSON-keuzedata en exacte relaties | Private DOC-01-export: 11.343 producten/varianten; schema en scope in PRODUCT_DATA.md; externe/app-private bronnen uitgesloten |
+| Sunshower afbeeldingen | Eigen galerij/carrousel; viewer-module verwijst naar `bc-photoswipe.esm.js` | Actuele moduleheader vermeldt PhotoSwipe 5.4.4; bronheader gelezen, geen volledige licentie-/kwetsbaarheidsaudit |
 | Zoeken en filters | Shopify-routes plus externe filter-/zoekfrontend met API-basis `/verified` op een OVH-host | Actuele snippet en frontend gelezen. Welke collecties/staten werkelijk extern renderen, API-health en indexactualiteit niet nu end-to-end bewezen |
 | Externe index | Typesense/VPS volgens bestaande dossiers en `scripts/filter-sync/README.md` | Historische/offline documentatie, geen nieuwe server-, synchronisatie- of schedulerclaim |
 | Ontwikkelhulpmiddelen | Python-, Node- en PowerShell-tools; tests per dossier | Geen centraal runtimepakket veronderstellen. Bestaande wrapper noemt Shopify CLI **4.6.1 als projectbaseline**; geïnstalleerde CLI niet opnieuw vastgesteld |
@@ -34,7 +36,7 @@ De data-, gallery-, configuratie- en cartlogica moeten afzonderlijk worden besch
 
 ### Productlijsten en zoekresultaten
 
-Er zijn meerdere mogelijke renderpaden: native Liquid-productkaarten, zoekkaarten, externe JavaScript-lijsten, mobiele listingcode en Sunshower shopkaarten. Een aanpassing aan `card-product.liquid` raakt dus niet aantoonbaar alle kaarten. Fase 1 maakt een volledige route-/kaartmatrix op de actuele snapshot.
+Er zijn meerdere mogelijke renderpaden: native Liquid-productkaarten, zoekkaarten, externe JavaScript-lijsten, mobiele listingcode en Sunshower shopkaarten. Een aanpassing aan `card-product.liquid` raakt dus niet aantoonbaar alle kaarten. DOC-02A koppelt de renderers in de routematrix; DOC-02B moet de werkelijk zichtbare browserstaten bevestigen.
 
 ### Keuzedata
 
@@ -67,4 +69,4 @@ Dit zijn onderzoeksingangen, geen verklaring dat al die systemen zijn aangeslote
 
 ## 5. Wat volgt uit de nulmeting?
 
-De oude 441-bestandenkaart blijft bruikbaar voor historische verbanden. Voor actuele architectuur is eerst een **volledige read-only live snapshot naast Git** nodig, met beoordeling van verschillen en releasedossiers. De root wordt nu niet overschreven en er wordt geen Shopify-Git-koppeling verondersteld. De betekenis van mogelijke automatische deployments moet eerst worden vastgesteld.
+De oude 441-bestandenkaart blijft bruikbaar voor historische verbanden. DOC-01 heeft alle 1.262 live bestanden naast Git opgehaald; 1.261 bytegelijk, één settings-uitzondering. DOC-02A verdiept de gecontroleerde bronnen en documenteert de nog ontbrekende runtime-/backenddekking. De root wordt nu niet overschreven en er wordt geen Shopify-Git-koppeling verondersteld. De betekenis van mogelijke automatische deployments moet eerst worden vastgesteld.

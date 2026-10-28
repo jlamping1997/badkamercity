@@ -1,0 +1,1510 @@
+{
+  "schemaVersion": 1,
+  "literalKeyCount": 52,
+  "sources": 85,
+  "dataCountsSource": "DOC-01 private product export, not a new live Admin read",
+  "limitations": [
+    "Literal references only; dynamic mapping and nested JSON keys not fully resolved.",
+    "Presence/type/count is not truth, visibility, consumer reachability, or permission to change data.",
+    "No values, IDs, descriptions, costs, URLs or stock rows are copied."
+  ],
+  "fields": [
+    {
+      "key": "bc_data.content_review",
+      "consumers": [
+        {
+          "source": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+          "line": 10,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+          "line": 15,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 2416
+        }
+      ]
+    },
+    {
+      "key": "bc_data.documents_visible",
+      "consumers": [
+        {
+          "source": "snippets/bc-product-documents.liquid",
+          "line": 12,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "boolean",
+          "records": 7012
+        }
+      ]
+    },
+    {
+      "key": "bc_data.filter_manifest",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 51,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/bc-card-specs.liquid",
+          "line": 6,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 11050
+        }
+      ]
+    },
+    {
+      "key": "bc_data.held_source_claims",
+      "consumers": [
+        {
+          "source": "snippets/bc-hotbath-public-specs.liquid",
+          "line": 13,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 5010
+        }
+      ]
+    },
+    {
+      "key": "bc_data.import_batch",
+      "consumers": [
+        {
+          "source": "snippets/bc-hotbath-normal-scope.liquid",
+          "line": 11,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 7003
+        }
+      ]
+    },
+    {
+      "key": "bc_data.set_components",
+      "consumers": [
+        {
+          "source": "snippets/bc-product-set-components.liquid",
+          "line": 3,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-set-components.liquid",
+          "line": 3,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 2726
+        }
+      ]
+    },
+    {
+      "key": "bc_filters.kleur",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 50,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 923
+        }
+      ]
+    },
+    {
+      "key": "bc_pilot.is_pilot",
+      "consumers": [
+        {
+          "source": "snippets/bc-hotbath-normal-scope.liquid",
+          "line": 17,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "boolean",
+          "records": 1
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.accessories",
+      "consumers": [
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 11,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 72
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.components",
+      "consumers": [
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 10,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 104
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.configuration",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 414,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 765,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 1071,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 8,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-sunshower-choices.liquid",
+          "line": 8,
+          "components": [
+            "choices"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 72
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.documents",
+      "consumers": [
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 12,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 104
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.source",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 18,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 18,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 19,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 104
+        }
+      ]
+    },
+    {
+      "key": "bc_sunshower.specifications",
+      "consumers": [
+        {
+          "source": "sections/main-sunshower.liquid",
+          "line": 9,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-accessories.liquid",
+          "line": 1,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-detail-specs.liquid",
+          "line": 7,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-set-components.liquid",
+          "line": 1,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 104
+        }
+      ]
+    },
+    {
+      "key": "custom.afmeting",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 280,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 280,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.afwerking",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 291,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 291,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 1632
+        }
+      ]
+    },
+    {
+      "key": "custom.artikelnummer",
+      "consumers": [
+        {
+          "source": "snippets/bc-hotbath-normal-scope.liquid",
+          "line": 10,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 9269
+        }
+      ]
+    },
+    {
+      "key": "custom.basiskleur",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 279,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 279,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 1817
+        }
+      ]
+    },
+    {
+      "key": "custom.breedte_diameter_hoofddouche",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 298,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 298,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.card_title",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 83,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/bc-card-title.liquid",
+          "line": 17,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 144
+        }
+      ]
+    },
+    {
+      "key": "custom.color_variants",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 78,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 767,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 1071,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-colors.liquid",
+          "line": 7,
+          "components": [
+            "choices"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-colors.liquid",
+          "line": 15,
+          "components": [
+            "choices"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "list.product_reference",
+          "records": 1150
+        }
+      ]
+    },
+    {
+      "key": "custom.complete_specificaties",
+      "consumers": [
+        {
+          "source": "snippets/bc-hotbath-normal-scope.liquid",
+          "line": 25,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-hotbath-normal-scope.liquid",
+          "line": 25,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-hotbath-public-specs.liquid",
+          "line": 12,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+          "line": 9,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+          "line": 7,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "json",
+          "records": 9420
+        }
+      ]
+    },
+    {
+      "key": "custom.frame",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 283,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 283,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.group",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 137,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 137,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 204,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 204,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 264,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 264,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 803,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 803,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.handdouche",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 288,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 288,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.hoofddouche",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 289,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 289,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.hoogte",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 281,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 281,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.kleur",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 50,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/bc-wiesbaden-colors.liquid",
+          "line": 16,
+          "components": [
+            "choices"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 7995
+        }
+      ]
+    },
+    {
+      "key": "custom.led",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 284,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 284,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.lengte",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 286,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 286,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.leverancier_verwachte_datum",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 58,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 394,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "date",
+          "records": 109
+        }
+      ]
+    },
+    {
+      "key": "custom.leverancier_voorraad",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 57,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 393,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "boolean",
+          "records": 2265
+        }
+      ]
+    },
+    {
+      "key": "custom.menu_1",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 168,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 168,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 292,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 292,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.menu_2",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 169,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 169,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 293,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 293,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.menu_3",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 170,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 170,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 294,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 294,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.menu_4",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 171,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 171,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 295,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 295,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.menu_5",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 172,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 172,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 296,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 296,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.met_glijstang",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 300,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 300,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.montage",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 287,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 287,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 350
+        }
+      ]
+    },
+    {
+      "key": "custom.plaatsing",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 290,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 290,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.search_card_spec_1",
+      "consumers": [
+        {
+          "source": "snippets/bc-card-product-search.liquid",
+          "line": 28,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/bc-card-product-search.liquid",
+          "line": 28,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.search_card_spec_2",
+      "consumers": [
+        {
+          "source": "snippets/bc-card-product-search.liquid",
+          "line": 29,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/bc-card-product-search.liquid",
+          "line": 29,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.switch_group",
+      "consumers": [
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 17,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "sections/bc-card-data.liquid",
+          "line": 17,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 103,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 103,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-switcher.liquid",
+          "line": 11,
+          "components": [
+            "choices"
+          ]
+        },
+        {
+          "source": "snippets/bc-product-switcher.liquid",
+          "line": 11,
+          "components": [
+            "choices"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 3658
+        }
+      ]
+    },
+    {
+      "key": "custom.switch_key",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 278,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 278,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.technische_documenten",
+      "consumers": [
+        {
+          "source": "snippets/bc-product-documents.liquid",
+          "line": 7,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "list.url",
+          "records": 4070
+        }
+      ]
+    },
+    {
+      "key": "custom.type",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 285,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 285,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.type_bevestiging_hoofddouche",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 299,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 299,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.type_handdouche",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 297,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 297,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "custom.vorm",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 282,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 282,
+          "components": [
+            "pdp"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "single_line_text_field",
+          "records": 293
+        }
+      ]
+    },
+    {
+      "key": "reviews.rating",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 880,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 884,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 894,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 894,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 899,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 899,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 904,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 905,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 171,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 174,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 184,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 184,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 189,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 189,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 194,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 195,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "reviews.rating_count",
+      "consumers": [
+        {
+          "source": "sections/main-product.liquid",
+          "line": 909,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "sections/main-product.liquid",
+          "line": 911,
+          "components": [
+            "pdp"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 199,
+          "components": [
+            "cards"
+          ]
+        },
+        {
+          "source": "snippets/card-product.liquid",
+          "line": 201,
+          "components": [
+            "cards"
+          ]
+        }
+      ],
+      "observedFields": []
+    },
+    {
+      "key": "specs.met_inbouwdeel",
+      "consumers": [
+        {
+          "source": "snippets/bc-product-inbouw.liquid",
+          "line": 27,
+          "components": [
+            "choices"
+          ]
+        }
+      ],
+      "observedFields": [
+        {
+          "ownerType": "PRODUCT",
+          "type": "boolean",
+          "records": 3817
+        }
+      ]
+    }
+  ],
+  "dynamicConsumerLocations": [
+    {
+      "source": "sections/main-product.liquid",
+      "line": 795,
+      "components": [
+        "pdp"
+      ]
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "line": 807,
+      "components": [
+        "pdp"
+      ]
+    },
+    {
+      "source": "snippets/bc-product-description.liquid",
+      "line": 40,
+      "components": [
+        "pdp"
+      ]
+    },
+    {
+      "source": "snippets/bc-product-mapped-spec-row.liquid",
+      "line": 8,
+      "components": [
+        "pdp"
+      ]
+    }
+  ]
+}
