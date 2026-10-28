@@ -2,6 +2,10 @@
 
 **DOC-02A · 28 oktober 2026 · VERIFIED_THEME, deels VERIFIED_HTML.** Lees de [dossieringang](components/README.md) voor bron-/bewijsregels. Thema MAIN 195818389770; het complete manifest is gelijk aan DOC-01. De open settings-bytecontrole verhindert geen uitleg van checksumgelijke code, maar verhindert wel een volledige deployvrijgave.
 
+## Aanvulling DOC-02C
+
+De [volledige templatecatalogus](reference/TEMPLATES.md) en [Admin-toewijzingen](reference/ADMIN.md) voegen footer/home, alle categoriehubs, content/glossary/blog/contact, account/systemroutes en merkenoverzicht toe. [35 nieuwe HTTP-checks](evidence/2026-10-28-complete/http-checks.json) bevestigen onder meer alle 17 toegewezen hubs; vier actuele publieke API-reads zijn vastgelegd. Onderstaande DOC-02A-metingen blijven gedateerd bewijs; de eerdere ontbrekende hub-HTML/API-read is hierdoor voor de nieuwe set aangevuld. Mobiel en volledige index-/interactiecontrole blijven open.
+
 ## De routebeslissing
 
 Een template bepaalt de eerste secties. Binnen een sectie kiezen productmetafields, merk, instellingen en JavaScript nog een renderer. De aanwezigheid van een scriptbestand of template bewijst daarom niet dat een bezoeker die bediening gebruikt.

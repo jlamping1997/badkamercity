@@ -23,6 +23,21 @@
 | DATA-F01 | HISTORICAL / NOT_TESTED · mogelijk lanceringsrelevant | Index-/Shopifyverschillen en een offline voorbereide sync zijn historisch gedocumenteerd in `scripts/filter-sync/README.md` | Verse read-only vergelijking van IDs, publicatie, prijs en filters; niet aannemen dat oud verschil nog exact bestaat |
 | OPS-F01 | NOT_TESTED · mogelijke deploy-impact | Actieve branch en main wijken af; werkende Shopify-Git-autodeploykoppeling is in deze ronde niet vastgesteld | Voor rootwijzigingen deploymentkoppeling en releasepad bewijzen |
 
+## Brede winkelcontrole DOC-02C
+
+| ID | Status / impact | Waarneming en bewijs | Volgende actie |
+| --- | --- | --- | --- |
+| FOOTER-F01 | VERIFIED_THEME / VERIFIED_HTML / beperkt VERIFIED_RUNTIME · configuratie | Tien footerblocks hebben geen URL en tonen tekst; bron, 35-route-HTTP-set en desktopwaarneming passen. [Footer](components/FOOTER.md) | Per label juiste bestaande bestemming of verwijderen kiezen; geen pagina's/bedrijfsinfo verzinnen |
+| GLOSS-F01 | VERIFIED_ADMIN / VERIFIED_HTML · P1-kandidaat | Hygro(meter) → /begrippenlijst/hygrometer → /pages/hygrometer geeft 404; 108 overige termdoelen gepubliceerd. [Bewijs](evidence/2026-10-28-complete/glossary-links.json) | Juiste bestaande inhoudsbestemming kiezen, daarna gerichte redirectcorrectie; geen automatische nieuwe Page |
+| HOME-F01 | VERIFIED_THEME / VERIFIED_HTML · configuratie, geen defect | Hero uitgeschakeld; populaire-productencollectie leeg; guard laat inhoud weg ondanks sectionwrapper. [Homepage](components/HOMEPAGE.md) | Alleen activeren/vullen wanneer dat gewenst is; geen CSS-fix voor lege datacontext |
+| CONTENT-F01 | VERIFIED_ADMIN / NOT_VERIFIED · toewijzingssignaal | Zes Pages hebben suffix page maar page.page.json ontbreekt; vijf gepubliceerd. Buffers-HTTP is 200, dus geen algemene 404-claim. [Content](components/CONTENT_AND_FORMS.md) | Effectieve template/bedoeling controleren; geen bulk-normalisatie |
+| OPS-F03 | BLOCKED_ACCESS_DENIED · bron ontbreekt | Checkout/accountconfiguratie-query expliciet geweigerd; classic thematemplates vervangen de gehoste bron niet | Bevoegde configuratiebron nodig; geen alternatieve route om rechten te omzeilen |
+| SOURCE-F01 | STATIC_CANDIDATE · P2 | Drie inline_asset_content-verwijzingen missen een exacte manifestnaam: icon-error in passwordheader; icon-3d-model tweemaal in product-media. SVG-namen bestaan wel. [Bronregels](evidence/2026-10-28-complete/reference-anomalies.json) | Passwordfout/3D-route gecontroleerd reproduceren; geen bewezen actuele klantfout of automatische verwijdering |
+| DOC-F07 | VERIFIED_SOURCE · documentatiedrift gecorrigeerd | state.json stond nog DOC-00 met 15 onderzochte bestanden terwijl centrale status DOC-03A meldde | Machine-status in DOC-02C gelijkgetrokken; handoffcheck voortaan status/bron/volgende stap vergelijken |
+| OPS-F04 | VERIFIED_ADMIN / NOT_TESTED · scopeverschil | Shop meldt alleen NL als shipsToCountries, profiel bevat 41 zonelanden; NL-rates vers gelezen | Geen internationale leverbelofte afleiden; productdekking/effectieve offerte apart beoordelen |
+
+Positief nieuw bewijs: vier publieke zoekreads 200; Wastafelkranen 573 en Inloopdouches 305 matchen de huidige HTML-context. De eerdere precieze indexverschillen zijn historische signalen, niet blind herhaald als huidige aantallen. De begrippenzoekcyclus en één redirect/TOC zijn op desktop bevestigd. [Bewijs en grenzen](evidence/2026-10-28-complete/README.md).
+
 ## Sjabloon voor iedere nieuwe bevinding
 
 Gebruik een vast ID en leg vast: bronversie/datum; klantdoel; exacte URL/paginatype/product; viewport/browser; actuele/toekomstige staat; herhaalstappen; verwacht contract; werkelijke uitkomst; betrokken bestanden/regelnummers en data-eigenaar; bewijsstatus; klantimpact; prioriteit; voorgestelde kleinste fix; afhankelijke componenten; test/rollback; eigenaar en besluit.

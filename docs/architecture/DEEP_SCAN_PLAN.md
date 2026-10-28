@@ -2,6 +2,8 @@
 
 **28 oktober 2026 · onderzoeksplan, geen volledige auditvrijgave.** Eigenaar kiest documentatie en eenheid als huidige taak. Eerdere uitvoeringsprioriteiten blijven geschiedenis of open werk; deze opdracht betekent geen toestemming voor publicatie, bulkdatawijzigingen of een herbouw van de winkel.
 
+**Brede uitbreiding DOC-02C:** de eigenaar kiest nu volledige winkeldocumentatie als actieve scope. [COVERAGE.md](COVERAGE.md) bewaakt alle takken, [reference](reference/README.md) alle bronpaden en instellingen. Ontbrekende dossiers zijn inhoudelijk toegevoegd. De eerdere ene volgende stap naar inbouw blijft open praktijkwerk; de brede opdracht heeft voorrang. DOC-04 hieronder blijft de fase voor latere kleine correcties, geen andere naam voor deze documentatieronde.
+
 ## 1. Het doel en de grens
 
 We willen drie vragen betrouwbaar beantwoorden: wat gebruiken we, hoe hangt het samen en waar wijkt dezelfde functie onnodig af? Daarna kleine bewezen verbeteringen uitvoeren die lancering en onderhoud helpen.

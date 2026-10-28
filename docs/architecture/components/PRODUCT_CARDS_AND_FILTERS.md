@@ -2,6 +2,8 @@
 
 **Klantdoel:** producten vinden, herkennen, vergelijken en de juiste uitvoering openen of toevoegen. **Eigenaarrol:** storefront voor kaart/gedrag; catalogus/indexbeheer voor data en dekking. Status VERIFIED_THEME + twee native lijst-HTML-responses; externe API, computed styles en interacties NOT_TESTED.
 
+**Aanvulling DOC-02C:** vier publieke API-reads en verse lijst-HTML zijn gecontroleerd; Wastafelkranen 573 en Inloopdouches 305 sluiten op de HTML-context aan. De beperkte eerdere desktopkaartwaarneming blijft apart. Zie [filterketen](FILTER_ENGINE.md); geen volledige index-/prijs-/browserfallback-/mobielvrijgave.
+
 ## Renderers en gedeelde delen
 
 | Renderer | Eerste gebruiksplaats | Bron / gedeelde helpers | Verschil dat behouden moet blijven |

@@ -1,15 +1,35 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated_on": "2026-10-28",
-  "task": "DOC-00",
-  "status": "PLAN_AND_BASELINE_RECORDED",
+  "task": "DOC-02C",
+  "status": "BROAD_DOCUMENTATION_RECORDED_WITH_OPEN_VERIFICATION",
   "active_branch": "fix/product-cards-2026-10-14",
-  "source_commit": "4a85d063b750b74fd398fe106c11bfe05b6ce277",
+  "source_commit": "e5ca6da8b76430b881ff01bd7d4fc568b888ab4c",
+  "main_source_commit": "75d499c15db434deb3bf65f834c9b41004773e19",
   "main_theme_at_capture": "195818389770",
   "audit_complete": false,
+  "documentation_complete": false,
   "live_manifest_files": 1262,
-  "live_contents_inspected": 15,
-  "next_task": "DOC-01",
-  "next_action": "Read-only full live snapshot with fresh manifest parity and reachable Admin route assignments; do not overwrite root theme.",
-  "background_worker_active": false
+  "current_reconstruction": {
+    "files": 557,
+    "byte_match": 556,
+    "byte_mismatch": 1,
+    "manifest_only": 705
+  },
+  "http_routes_checked": 35,
+  "public_search_reads": 4,
+  "current_browser_scope": "Desktop footer and glossary only; no mobile or cart mutation",
+  "next_task": "DOC-03B",
+  "next_action": "Isolate full inbouw add/recovery chain with hash-checked sources and local transport stubs; no actual cart mutation.",
+  "open_blockers": [
+    "settings_data_byte_parity",
+    "checkout_configuration_access_denied",
+    "fresh_authorized_vps_and_custom_app_sources",
+    "mobile_browser_and_operational_verification",
+    "google_and_deployment_state"
+  ],
+  "background_worker_active": false,
+  "glossary_links_checked": 109,
+  "glossary_published_targets": 108,
+  "glossary_confirmed_404": 1
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Curated DOC-02A component source index, not all runtime dependencies.",
+  "scope": "Curated source links extended by DOC-02C. Broad per-file source metadata is in reference/source-index.json; not a full runtime graph.",
   "components": [
     {
       "id": "pdp",
@@ -133,6 +133,86 @@
         "assets/pubsub.js",
         "assets/global.js",
         "assets/base.css"
+      ]
+    },
+    {
+      "id": "footer",
+      "document": "components/FOOTER.md",
+      "sources": [
+        "sections/footer-group.json",
+        "sections/footer.liquid"
+      ]
+    },
+    {
+      "id": "homepage",
+      "document": "components/HOMEPAGE.md",
+      "sources": [
+        "templates/index.json",
+        "sections/home-sunshower.liquid",
+        "sections/home-hero.liquid",
+        "sections/home-category-grid.liquid",
+        "sections/home-popular-products.liquid",
+        "sections/home-complete-bathroom.liquid",
+        "sections/home-shop-by-style.liquid",
+        "sections/home-brand-rail.liquid",
+        "sections/home-mijn-badkamercity.liquid",
+        "sections/home-help-cta.liquid"
+      ]
+    },
+    {
+      "id": "hubs",
+      "document": "components/COLLECTIONS_AND_HUBS.md",
+      "sources": [
+        "sections/main-category-landing.liquid",
+        "sections/bc-meubelhub.liquid",
+        "sections/bc-collection-advice.liquid",
+        "sections/bc-brand-directory.liquid",
+        "snippets/bc-category-children.liquid",
+        "snippets/bc-category-destination.liquid",
+        "snippets/bc-content-without-styles.liquid",
+        "assets/bc-meubelhub.js"
+      ]
+    },
+    {
+      "id": "content",
+      "document": "components/CONTENT_AND_FORMS.md",
+      "sources": [
+        "sections/main-glossary.liquid",
+        "sections/main-glossary-page.liquid",
+        "sections/bc-advice-article.liquid",
+        "sections/main-blog.liquid",
+        "sections/contact-form.liquid",
+        "sections/newsletter.liquid",
+        "sections/main-page.liquid"
+      ]
+    },
+    {
+      "id": "accounts",
+      "document": "components/ACCOUNTS_AND_SYSTEM_PAGES.md",
+      "sources": [
+        "sections/main-login.liquid",
+        "sections/main-register.liquid",
+        "sections/main-reset-password.liquid",
+        "sections/main-activate-account.liquid",
+        "sections/main-addresses.liquid",
+        "sections/main-account.liquid",
+        "sections/main-order.liquid",
+        "sections/main-404.liquid",
+        "sections/main-password-header.liquid",
+        "sections/main-password-footer.liquid",
+        "templates/gift_card.liquid",
+        "layout/password.liquid",
+        "assets/customer.js"
+      ]
+    },
+    {
+      "id": "seo",
+      "document": "components/SEO_AND_LOCALIZATION.md",
+      "sources": [
+        "layout/theme.liquid",
+        "snippets/meta-tags.liquid",
+        "locales/nl.json",
+        "config/settings_schema.json"
       ]
     }
   ]

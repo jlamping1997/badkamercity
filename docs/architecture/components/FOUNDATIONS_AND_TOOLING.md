@@ -70,3 +70,7 @@ Git main is de vaste documentatie-ingang, de actieve branch draagt tooling/relea
 ## Aanvullende functiereplays sinds DOC-03A
 
 De [microanalyse](micro/README.md) gebruikt daarnaast een aparte Node/happy-dom-harness onder scripts/component-audit op de actieve branch, met gepinde dependency-lock en expliciete bronhashes. Deze Node-tool is geen van de drie Python-inventaristools hierboven. Hij bevat bewust zowel beschermingscontroles als bekende defectreproducties; de [methode](../evidence/2026-10-28-micro/README.md) voorkomt dat een geslaagde uitvoering als algemene feature-PASS wordt gelezen.
+
+## Brede naslagbuilder sinds DOC-02C
+
+De offline `scripts/build_site_reference.py` gebruikt alleen de Python-standaardbibliotheek en bestaande parse-/referentiehelpers. Hij registreert alle manifestpaden, hashstatus, templates, secties/settings/blocks, snippets en assets. De [naslag](../reference/README.md) omvat 556 bytegelijke bronnen, één open mismatch en 705 metadata-only in deze reconstructie; geen nieuwe volledige inhoudsdownload of browseraudit. [Onderhoud/rebuild](../MAINTENANCE.md).
