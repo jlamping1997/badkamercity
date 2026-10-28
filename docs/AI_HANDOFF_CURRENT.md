@@ -1,5 +1,8 @@
 # BadkamerCity — actuele technische AI-handoff
 
+**Vervolgmeting 28 oktober 2026:** DOC-01-bronkaart en private productexport zijn vastgelegd; settings_data.json-pariteit blijft open. Lees de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md), [bronkaart](architecture/DOC01_SOURCE_MAP.md) en [productdata](architecture/PRODUCT_DATA.md). Oudere bron-/volgende-stapclaims hieronder blijven gedateerde geschiedenis.
+
+
 > **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
 
 ## Code opschoning en gedeelde keuzes — 25 oktober 2026 (PREVIEW_READY / NIET_GEPUBLICEERD)

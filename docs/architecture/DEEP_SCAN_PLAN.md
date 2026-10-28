@@ -160,15 +160,15 @@ Iedere rij levert een zelfstandig afvinkbaar onderzoeksresultaat op. “Scannen�
 
 | Fase / taak | Resultaat | Klaar wanneer | Huidige status |
 | --- | --- | --- | --- |
-| **DOC-00 — nulmeting en plan** | Dit dossier, bronmanifest, root-scan en actuele steekproef | Bronnen en beperkingen expliciet; in Git teruggelezen | Uitgevoerd in deze ronde; remote checkpoint volgt in centrale status |
-| **DOC-01 — volledige actuele bronkaart** | Read-only snapshot van 1.262 live bestanden plus Admin-toewijzingen binnen bereik | Manifest compleet, alle lokale hashes kloppen, rollen opnieuw gelezen; code-/data-/generated-/backupgroepen gescheiden | NEXT |
+| **DOC-00 — nulmeting en plan** | Dit dossier, bronmanifest, root-scan en actuele steekproef | Bronnen en beperkingen expliciet; in Git teruggelezen | Vastgelegd op actieve branch en main (DOC-00) |
+| **DOC-01 — volledige actuele bronkaart** | Read-only snapshot van 1.262 live bestanden plus Admin-toewijzingen binnen bereik | Manifest compleet, alle lokale hashes kloppen, rollen opnieuw gelezen; code-/data-/generated-/backupgroepen gescheiden | CAPTURED / OPEN: 1.262 ontvangen, 1.261 bytegelijk; settings_data.json-pariteit niet vrijgegeven; zie DOC01_SOURCE_MAP.md |
 | **DOC-02 — klantreis- en componentmatrix** | Iedere actieve route gekoppeld aan renderer, data en componentcontract | Algemene PDP, Sunshower, Hotbath/Wiesbaden, lijst/zoek/home/cart en mobiel aantoonbaar toegewezen | PLANNED |
 | **DOC-03 — diepe functie-audit** | Onderbouwde bevindingen met staatmatrix en ontwerpafspraak | Alle lanceringkritieke takken behandeld; ontbrekende toegang als expliciete blokkade | PLANNED |
 | **DOC-04 — kleine correcties** | Per wijziging één begrensde preview, relevante docs en regressie | Goed functionerend contract, review, rollback en exacte readback; geen ongemerkte bulkrefactor | PLANNED, pas na bevindingen/prioritering |
 | **DOC-05 — lanceringstoets** | Concreet besluit over afgesproken assortiment en bestelroute | P0's gesloten, P1's beoordeeld, merchantcontroles en herstelpad bewezen | PLANNED |
 | **DOC-06 — uitbreiden** | Kleine releases met doel en observatie | Nieuwe functie volgt componentafspraken, docs en passende test; bij scopegroei nieuwe datadekking | NA LANCERING |
 
-De volgende uitvoering begint met **DOC-01**, niet met het verwijderen van Sunshower-pijlen. Voor volledige Admin-/server-/Google-scans is mogelijk aanvullende toegang nodig. Werk dat bereikbaar is af; label ontbrekend bewijs zonder toegang te omzeilen of onbeperkt op alle externe systemen te wachten.
+DOC-01 is nu inhoudelijk vastgelegd; de volledige pariteitsvrijgave blijft open voor settings_data.json. De eerstvolgende handeling is die uitzondering read-only afbakenen. Daarna volgt DOC-02 met de route-/componentmatrix, niet het verwijderen van Sunshower-pijlen. Voor volledige Admin-/server-/Google-scans is mogelijk aanvullende toegang nodig. Werk dat bereikbaar is af; label ontbrekend bewijs zonder toegang te omzeilen of onbeperkt op alle externe systemen te wachten.
 
 ## 5. Hoe diep is voldoende?
 

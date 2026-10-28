@@ -1,0 +1,59 @@
+{
+  "productTemplates": {
+    "(default)": 11270,
+    "bc-hotbath-pilot": 1,
+    "sunshower": 72
+  },
+  "collectionTemplates": {
+    "(default)": 209,
+    "bc-meubelhub": 1,
+    "category-landing": 16
+  },
+  "menus": [
+    {
+      "handle": "main-menu",
+      "itemCountIncludingChildren": 145,
+      "isDefault": true
+    },
+    {
+      "handle": "footer",
+      "itemCountIncludingChildren": 1,
+      "isDefault": true
+    },
+    {
+      "handle": "customer-account-main-menu",
+      "itemCountIncludingChildren": 2,
+      "isDefault": true
+    },
+    {
+      "handle": "assortiment",
+      "itemCountIncludingChildren": 9,
+      "isDefault": false
+    },
+    {
+      "handle": "badkamermeubels-b",
+      "itemCountIncludingChildren": 1,
+      "isDefault": false
+    },
+    {
+      "handle": "bc-wastafels-a-z",
+      "itemCountIncludingChildren": 10,
+      "isDefault": false
+    },
+    {
+      "handle": "bc-accessoires-a-z",
+      "itemCountIncludingChildren": 20,
+      "isDefault": false
+    },
+    {
+      "handle": "bc-wastafels-categorieen",
+      "itemCountIncludingChildren": 7,
+      "isDefault": false
+    },
+    {
+      "handle": "bc-accessoires-categorieen",
+      "itemCountIncludingChildren": 20,
+      "isDefault": false
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 # BadkamerCity — START HIER bij een overdracht
 
+**Vervolgmeting 28 oktober 2026:** DOC-01-bronkaart en private productexport zijn vastgelegd; settings_data.json-pariteit blijft open. Lees de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md), [bronkaart](architecture/DOC01_SOURCE_MAP.md) en [productdata](architecture/PRODUCT_DATA.md). Oudere bron-/volgende-stapclaims hieronder blijven gedateerde geschiedenis.
+
+
 > **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
 
 > **Wiesbaden — afgeronde Shopify-uitvoering, 21 oktober 2026: `SHOPIFY_COMPLETE_INDEX_BLOCKED`.** Volg [het vaste plan](product-content/WIESBADEN_EXECUTION_PLAN.md), [de actuele machine-status](product-content/wiesbaden/execution-state.json) en [het uitvoeringsresultaat](product-content/WIESBADEN_EXECUTION_RESULTS_2026-10-21.md). **2.299 prijswijzigingen zijn teruggelezen; 33.6000 en 75.3510 zijn ACTIVE én Online Store-gepubliceerd.** Oorspronkelijke queue: **186 online / 28 zonder positieve prijs / 3 historische safetyblocks**, niet opnieuw geprobeerd.

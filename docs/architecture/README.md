@@ -13,9 +13,15 @@
 | Bekende afwijkingen en prioriteiten bekijken | [Bevindingenregister](FINDINGS.md) |
 | Als nieuwe ontwikkelaar of AI veilig beginnen | [Werkwijze en overdracht](CONTRIBUTING_AND_HANDOFF.md) |
 | De inventaris opnieuw maken | [Scannerhandleiding](SCANNING.md) |
-| De meting van 28 oktober controleren | [Bewijs en dekkingsgrenzen](evidence/2026-10-28/README.md) |
+| Actuele bronkaart en template-/menutoewijzingen | [DOC-01](DOC01_SOURCE_MAP.md) |
+| Productgegevens vinden of het model begrijpen | [Productdata](PRODUCT_DATA.md) |
+| De nulmeting van 28 oktober controleren | [Bewijs en dekkingsgrenzen](evidence/2026-10-28/README.md) |
 
-## Wat deze ronde heeft vastgesteld
+## Vervolgmeting DOC-01 en productexport
+
+Alle 1.262 themebestanden zijn ontvangen en statisch geïnventariseerd: 955 verwijzingen, 1.261 bytegelijk en één open settings-pariteitsuitzondering. Admin-toewijzingen en het private pakket met 11.343 producten zijn vastgelegd. Lees [DOC01_SOURCE_MAP.md](DOC01_SOURCE_MAP.md) en [PRODUCT_DATA.md](PRODUCT_DATA.md). Dit is de huidige bronkaart; de nulmeting hieronder blijft historisch bewijs. DOC-01 heeft nog geen volledige pariteitsvrijgave of runtime-audit.
+
+## Wat de voorafgaande nulmeting vaststelde
 
 - De actuele Shopify MAIN is **195818389770 — BadkamerCity - Smooth winkelwagen pop-up**. De rol is opnieuw via Shopify gelezen. De eerdere conceptstatus is dus achterhaald; deze onderzoeksronde heeft niets gepubliceerd.
 - Actieve codebranch: **fix/product-cards-2026-10-14**, gecontroleerd broncommit **4a85d063b750b74fd398fe106c11bfe05b6ce277**. `main` is de vaste documentatie-ingang; geen aanname dat de root-themacode gelijk is aan productie.

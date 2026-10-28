@@ -38,6 +38,10 @@ Een nieuwe scan mag een oud bewijsrapport niet stil overschrijven. Gebruik een n
 
 Bij een partiële steekproef betekent `live_only` vooral **niet in deze steekproef aanwezig**, niet dat productie afhankelijkheden mist. `in_live_manifest_only` betekent metadata-aanwezigheid zonder inhoudelijke inspectie. `not_resolved` vraagt vervolgonderzoek; dit is geen bevel om een bestand te verwijderen.
 
+## Vervolgmeting DOC-01
+
+De scanner is nu uitgevoerd op alle 1.262 ontvangen live bestanden: 955 refs, 0 parsefouten, 1.261 gelijke hashes. `--require-parity` stopt met exitcode 2 op config/settings_data.json; er is geen volledige bytevrijgave. Zie [DOC01_SOURCE_MAP.md](DOC01_SOURCE_MAP.md). De oude root-/steekproefuitvoer blijft historisch. De [productbuilder](PRODUCT_DATA.md) maakt privé JSONL/SQLite vanuit opgeslagen read-only responses en is geen downloader.
+
 ## Aanvullende scans in het plan
 
 | Hulpmiddel / methode | Toepassing | Voorwaarde |
