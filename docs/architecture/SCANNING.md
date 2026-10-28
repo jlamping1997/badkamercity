@@ -75,3 +75,7 @@ Zie [fundament en tooling](components/FOUNDATIONS_AND_TOOLING.md) voor de reprod
 ## Geïsoleerde functiereplays sinds DOC-03A
 
 De harness [scripts/component-audit](https://github.com/jlamping1997/badkamercity/tree/fix/product-cards-2026-10-14/scripts/component-audit) draait vier expliciet hashgecontroleerde bronbestanden met synthetische data en lokale request-/navigatiestubs. Geen automatische Shopify-downloader of echte kooptest. Het [bewijs](evidence/2026-10-28-micro/README.md) scheidt 10 controles, 3 defectreproducties voor twee problemen en 2 grenzen; een geslaagde harnessrun betekent niet dat alle componentcontracten correct zijn.
+
+## Brede naslag sinds DOC-02C
+
+`scripts/build_site_reference.py` op de actieve branch bouwt [alle templates/secties/settings/snippets/assets](reference/README.md) uit de expliciete snapshot en het manifest. Uitvoer scheidt BYTE_MATCH, BYTE_MISMATCH en MANIFEST_ONLY en bevat geen bronbody- of settingswaarden. Admin-naslag is apart bijgehouden. Rebuildopdracht en grenzen staan in [MAINTENANCE.md](MAINTENANCE.md).

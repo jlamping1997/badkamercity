@@ -1,6 +1,6 @@
 # Componentdossiers — zo vind je de juiste bouwsteen
 
-**DOC-02A · 28 oktober 2026.** Dit is de verdiepte uitleg van de op deze datum gelezen productiecode. De [centrale werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) blijft leidend voor de actieve taak en bron. Geen nieuwe feature of UI-correctie is in deze ronde uitgevoerd.
+**DOC-02A/02C · 28 oktober 2026.** Dit is de verdiepte uitleg van de op deze datum gelezen productiecode. De [centrale werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) blijft leidend voor de actieve taak en bron. Geen nieuwe feature of UI-correctie is in deze ronde uitgevoerd.
 
 | Je wilt begrijpen of veranderen… | Eigenaar van de uitleg |
 | --- | --- |
@@ -14,6 +14,22 @@
 | Oorspronkelijke data, generatie, revisies en terugval | [Datapijplijnen](DATA_PIPELINES.md) |
 | Bestaande stijl, beweging en harmonisatiegrenzen | [Stijl en beweging](MOTION_AND_STYLES.md) |
 | Welke afwijkingen eerst onderzocht moeten worden | [Bevindingenregister](../FINDINGS.md) |
+
+## Brede winkelonderdelen sinds DOC-02C
+
+| Onderdeel | Dossier |
+| --- | --- |
+| Footer en beheer van links/contact | [Footer](FOOTER.md) |
+| Homepage, blokvolgorde en eigen kaarten | [Homepage](HOMEPAGE.md) |
+| Collecties, meubelhub en merken | [Categoriehubs](COLLECTIONS_AND_HUBS.md) |
+| Begrippen, blog, advies en formulieren | [Content/formulieren](CONTENT_AND_FORMS.md) |
+| Accounts, 404, password, giftcard en reservebouwstenen | [Accounts/systemen](ACCOUNTS_AND_SYSTEM_PAGES.md) |
+| Canonical, structured data, redirects, taal/markt | [SEO/talen](SEO_AND_LOCALIZATION.md) |
+| Apps, consent en systemen buiten het thema | [Apps/privacy](APPS_PRIVACY_AND_EXTERNAL_SYSTEMS.md) |
+| Native/externe filterketen en index | [Filterengine](FILTER_ENGINE.md) |
+| Checkout, betaling, verzending en bedrijfsproces | [Bestelketen](CHECKOUT_AND_OPERATIONS.md) |
+
+[Alle bron-/instellingenreferenties](../reference/README.md), [dekkingsregister](../COVERAGE.md), [eenheidskaart](../CONSISTENCY.md) en [onderhoudsroute](../MAINTENANCE.md) bewaken de hele winkel. DOC-02C voegt 35 HTTP-responses, vier zoek-API-reads en beperkte desktopbegrippen-/footercontroles toe. Dit vervangt geen open mobiele, server-, account- of checkoutcontrole.
 
 ## Afzonderlijke functies onderzoeken
 
@@ -35,4 +51,4 @@ Een nieuwe ontwikkelaar begint bij een gebruikersdoel, kiest één dossier en vo
 
 ## Dekking die nog ontbreekt
 
-DOC-02A is een bron-/HTML-verdieping, geen volledige DOC-02/03-afronding. Nog open: alle viewport-/toetsenbord-/touchstaten, echte browserinteracties, apps/pixels, volledige CSS-cascade, Shopify Section Rendering bij fouten, alle native variantgevallen, commerciële datajuistheid en VPS/indexgezondheid. Blog-/advies-/servicepagina's en operationele checkout verdienen afzonderlijke dossiers zodra die tak aan de beurt is. De [onderzoeksboom](../DEEP_SCAN_PLAN.md) bewaakt die dekking.
+DOC-02A is een bron-/HTML-verdieping, geen volledige DOC-02/03-afronding. Nog open: alle viewport-/toetsenbord-/touchstaten, echte browserinteracties, apps/pixels, volledige CSS-cascade, Shopify Section Rendering bij fouten, alle native variantgevallen, commerciële datajuistheid en VPS/indexgezondheid. Blog-/advies-/servicepagina's en checkout hebben nu eigen dossiers; ontbrekende bron-/praktijk-/bedrijfscontroles staan per onderdeel in COVERAGE.md. De [onderzoeksboom](../DEEP_SCAN_PLAN.md) bewaakt die dekking.

@@ -1,0 +1,28 @@
+{
+  "status": "STATIC_CANDIDATE_NOT_RUNTIME_REPRODUCED",
+  "edges": [
+    {
+      "source": "sections/main-password-header.liquid",
+      "target": "assets/icon-error",
+      "kind": "inline_asset_content",
+      "line": 84,
+      "resolution": "UNRESOLVED"
+    },
+    {
+      "source": "snippets/product-media.liquid",
+      "target": "assets/icon-3d-model",
+      "kind": "inline_asset_content",
+      "line": 57,
+      "resolution": "UNRESOLVED"
+    },
+    {
+      "source": "snippets/product-media.liquid",
+      "target": "assets/icon-3d-model",
+      "kind": "inline_asset_content",
+      "line": 113,
+      "resolution": "UNRESOLVED"
+    }
+  ],
+  "interpretation": "Three literal inline_asset_content names are absent from the current manifest; SVG-suffixed files exist. Check password-error/3D model route before change.",
+  "officialFilterDocumentation": "https://shopify.dev/docs/api/liquid/filters/inline_asset_content"
+}

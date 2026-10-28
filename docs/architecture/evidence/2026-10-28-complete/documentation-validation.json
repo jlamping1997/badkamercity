@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "checks": {
+    "relativeArchitectureLinks": 1010,
+    "brokenLinks": 0,
+    "jsonAndSchemaParseErrors": 0,
+    "rebuildComparedFiles": 88,
+    "rebuildByteDifferences": 0,
+    "pathTraversalRejected": true,
+    "outputInsideSnapshotRejected": true,
+    "allManifestPathsRegistered": 1262,
+    "templateCount": 37,
+    "liquidSectionCount": 80,
+    "snippetCount": 108,
+    "sectionReferencePages": 80,
+    "credentialPatternHitsInChangedText": 0,
+    "gitDiffWhitespaceCheck": "PASS"
+  },
+  "limitations": [
+    "No full Theme Check, mobile, browser accessibility, performance, order or payment certification.",
+    "Rebuild checks static reference generation, not actual Shopify functionality.",
+    "Three unresolved inline_asset_content refs remain static candidates."
+  ]
+}

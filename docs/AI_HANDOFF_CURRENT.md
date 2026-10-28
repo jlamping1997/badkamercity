@@ -1,5 +1,8 @@
 # BadkamerCity — actuele technische AI-handoff
 
+**Vervolg 28 oktober 2026 — DOC-02C:** brede winkeldocumentatie met negen aanvullende dossiers en [naslag](architecture/reference/README.md) voor alle templates/secties/settings/snippets/assets. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [dekking](architecture/COVERAGE.md); 100% is niet vrijgegeven. Oudere volgende stappen hieronder zijn geschiedenis.
+
+
 **Vervolg 28 oktober 2026 — DOC-03A:** de [microdossiers](architecture/components/micro/README.md) analyseren afzonderlijke functies en overgangsstaten. Vijftien geïsoleerde cases reproduceren twee problemen en bevestigen normale guards; geen echte cartactie of productiecorrectie. Lees de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md). Desktopbewijs is beperkt; mobiel en settings-bytepariteit blijven open. Oudere volgende stappen hieronder zijn geschiedenis.
 
 

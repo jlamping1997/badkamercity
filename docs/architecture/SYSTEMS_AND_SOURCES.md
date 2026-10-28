@@ -70,3 +70,7 @@ Dit zijn onderzoeksingangen, geen verklaring dat al die systemen zijn aangeslote
 ## 5. Wat volgt uit de nulmeting?
 
 De oude 441-bestandenkaart blijft bruikbaar voor historische verbanden. DOC-01 heeft alle 1.262 live bestanden naast Git opgehaald; 1.261 bytegelijk, één settings-uitzondering. DOC-02A verdiept de gecontroleerde bronnen en documenteert de nog ontbrekende runtime-/backenddekking. De root wordt nu niet overschreven en er wordt geen Shopify-Git-koppeling verondersteld. De betekenis van mogelijke automatische deployments moet eerst worden vastgesteld.
+
+## Brede actualisering DOC-02C
+
+[Admin-naslag](reference/ADMIN.md) bevat verse 226 collecties, 119 Pages, negen menu’s, 120 redirects, zeven apps, één markt/blog/artikel, nl als gepubliceerde taal en deliverymetadata. [Filterketen](components/FILTER_ENGINE.md) bevat vier publieke API-reads. [Footer](components/FOOTER.md), [content](components/CONTENT_AND_FORMS.md) en [bestelketen](components/CHECKOUT_AND_OPERATIONS.md) sluiten eerdere uitleg-gaten. Checkoutconfiguratie is geweigerd; settingspariteit, VPS/appbron, mobiel en bedrijfsprocessen blijven open. De oudere bron-/runtimegrenzen hierboven zijn niet stil als actuele end-to-end feiten hergebruikt.

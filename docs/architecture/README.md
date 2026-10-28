@@ -2,6 +2,12 @@
 
 **Nieuwe onderzoeksbasis: 28 oktober 2026.** Eigenaar vraagt eerst een diep onderzoeks- en documentatieplan, daarna onderbouwde inconsistenties en kleine verbeteringen. Doel: verantwoord lanceren en vervolgens beheersbaar uitbreiden. Dit dossier verklaart niet dat de volledige audit al is uitgevoerd.
 
+## Actuele brede ingang: DOC-02C
+
+Begin bij [documentatiedekking](COVERAGE.md): alle onderdelen met hun bron-, uitleg-, praktijk- en bedrijfsgrenzen. De [componentdossiers](components/README.md) omvatten nu ook footer, homepage, categoriehubs, content/formulieren, accounts/systemen, SEO/talen, apps/privacy, filterengine en checkout. De [technische naslag](reference/README.md) registreert alle 1.262 paden en geeft alle templates, 80 secties met instellingen/blocktypen, snippets, assets en Admin-toewijzingen. [Onderhoud](MAINTENANCE.md) en [eenheid](CONSISTENCY.md) verbinden documentatie aan toekomstige verbeteringen.
+
+[Bekijk het nieuwe bewijs](evidence/2026-10-28-complete/README.md). Dit is een brede inhoudelijke uitbreiding, geen verklaring dat alle open systemen of praktijktesten afgerond zijn. Oudere bronmomenten hieronder behouden hun eigen meetgrenzen.
+
 ## Beginnen of iets opzoeken
 
 | Je wilt… | Lees |
