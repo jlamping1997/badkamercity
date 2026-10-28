@@ -35,7 +35,7 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 | Inbouw, sets en accessoires | [Aantallen/identiteit](components/micro/QUANTITY_AND_IDENTITY.md) | Volledige clientketen/guards geïsoleerd getoetst | Volledige clientketen nu geïsoleerd getoetst; echte browser/cart/voorraad apart open |
 | Sunshower landing/PDP/gallery | [Productpagina's](components/PRODUCT_PAGES.md) + [acties](components/micro/SUNSHOWER_ACTIONS.md) | Bron, 72 cataloguscombinaties, beperkte desktopactie | Pending-lockbevinding; touch/viewer/mobiel |
 | Cart en popup | [Cart](components/CART_AND_FEEDBACK.md) + [popup](components/micro/CART_NOTIFICATION.md) | Bron/replays | Missing-sectionbevinding, complete caller/browserfocus |
-| Wishlist, bewaren en herstellen | [Opslag](components/NAVIGATION_AND_STORAGE.md) | Sourcecontract bekend | Geblokkeerde opslag, oude variant, gevulde-cartrestore |
+| Wishlist, bewaren en herstellen | [Opslag](components/NAVIGATION_AND_STORAGE.md) | 15 verse metadata-/bytecontroles, 43 lokale cases, drie wishlistdossiers | WISH-F01/F02 open; echte multitab/beeld/focus/mobiel en cartrestore apart |
 | Begrippenlijst en uitlegpagina's | [Content](components/CONTENT_AND_FORMS.md) | 119 Page-records, lijstblocks, 120 redirects | 109 verbindingen gecontroleerd: één 404 open; bodykwaliteit/mobiel open; desktopsearch en één TOC bevestigd |
 | Blog, advies en formulieren | [Content](components/CONTENT_AND_FORMS.md) | Actuele renderers, één blog/artikel, HTTP | H2-variaties, formulierfouten en mailbezorging |
 | Accounts en systeempagina's | [Accounts/systemen](components/ACCOUNTS_AND_SYSTEM_PAGES.md) | Bron + loginredirect/404 HTTP | Accountmodel/config, testaccount/recovery, giftcardcontext |
@@ -69,3 +69,7 @@ Op verzoek blijft checkout buiten de huidige verdieping; de eerdere toegangsteko
 ## Filterverdieping DOC-03C
 
 De volledige clientketen is nu lokaal gevolgd, inclusief de echte native gridvervangingsmethode. Twee reproducties blijven open met hun eigen meetgrens. De bijbehorende backend-/browser-/mobiele controles zijn daardoor niet gesloten. Zie [filterbewijs](evidence/2026-10-28-filters/README.md).
+
+## Verlanglijstverdieping DOC-03D
+
+Het wishlistcontract is inhoudelijk en lokaal verder uitgewerkt, inclusief synthetische multitaboverschrijving en samenwerking van echte Sunshower-/wishlistcontrollers. WISH-F01/F02 zijn code-reproducties, geen gemeten live incidenten. Cache/timeout, duplicaten en herstel blijven expliciet begrensd. Echte browser-/account-/cartrestore-/operationele controles zijn daarmee niet gesloten. [Bron, 43 cases en grenzen](evidence/2026-10-28-wishlist/README.md).

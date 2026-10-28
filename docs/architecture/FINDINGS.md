@@ -58,6 +58,16 @@ Positief bewijs: de volledige product-form/inbouwclientketen blokkeert onready/o
 
 Positief: nieuwste zoek-/kleurintentie wint, een oude fout triggert geen nieuwe fallback, gewone fouten herstellen oorspronkelijke nodes/displays, afwijkend Shopify-kaart-ID activeert toevoegen niet en falende section-cache kan opnieuw worden gelezen. [41 cases en grenzen](evidence/2026-10-28-filters/README.md). Geen productiecorrectie uitgevoerd.
 
+## Verlanglijst en opslag DOC-03D
+
+| ID | Status / impact | Waarneming en vervolg |
+| --- | --- | --- |
+| WISH-F01 | VERIFIED_ISOLATED · P2-kandidaat, verlies van selectie | WL-23: twee closures met gedeelde synthetische opslag; de tweede schrijft vóór eventbezorging zijn oude geheugenarray en overschrijft de eerste toevoeging. Geen echt bezoekersincident of native timing gemeten. Identity-operaties/conflictbeleid ontwerpen; opnieuw lezen alleen bewijst geen atomiciteit. [Opslag](components/micro/WISHLIST_STORAGE.md) |
+| WISH-F02 | VERIFIED_ISOLATED · P2-kandidaat, zichtbare/aangekondigde status | WL-43: echte Sunshower-shopcommit wisselt handle/variant, maar hartje houdt is-saved/aria-pressed van vorige kleur. Volgende hartklik bewaart correct. Gedeelde refresh na bevestigde commit onderzoeken, met behoud van preload-/raceguards. [Identity](components/micro/WISHLIST_IDENTITY.md) |
+| WISH-B01 | BOUNDARY_CONFIRMED | Malformed/ander schema en leesweigering ogen leeg zonder herstel; duplicaten blijven; unavailable bewaren mag; succesvolle productcache heeft geen TTL en geen requesttimeout. Geen zeven extra live bugs of voorraad-/prijsfreezeclaim. [Render/cache](components/micro/WISHLIST_RENDER_AND_ADD.md) |
+
+Positief: mislukte opslag meldt geen succes, eigen pendingbutton blokkeert dubbelklik, verdwenen variant krijgt geen koopbutton, oude productresponse herstelt geen verwijderde kaart en synthetische add gebruikt de exacte toegestane variant. [43 cases, 34 controles, twee reproducties, zeven grenzen](evidence/2026-10-28-wishlist/README.md). Geen productiecorrectie.
+
 ## Sjabloon voor iedere nieuwe bevinding
 
 Gebruik een vast ID en leg vast: bronversie/datum; klantdoel; exacte URL/paginatype/product; viewport/browser; actuele/toekomstige staat; herhaalstappen; verwacht contract; werkelijke uitkomst; betrokken bestanden/regelnummers en data-eigenaar; bewijsstatus; klantimpact; prioriteit; voorgestelde kleinste fix; afhankelijke componenten; test/rollback; eigenaar en besluit.

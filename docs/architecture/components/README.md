@@ -52,3 +52,7 @@ Een nieuwe ontwikkelaar begint bij een gebruikersdoel, kiest één dossier en vo
 ## Dekking die nog ontbreekt
 
 DOC-02A is een bron-/HTML-verdieping, geen volledige DOC-02/03-afronding. Nog open: alle viewport-/toetsenbord-/touchstaten, echte browserinteracties, apps/pixels, volledige CSS-cascade, Shopify Section Rendering bij fouten, alle native variantgevallen, commerciële datajuistheid en VPS/indexgezondheid. Blog-/advies-/servicepagina's en checkout hebben nu eigen dossiers; ontbrekende bron-/praktijk-/bedrijfscontroles staan per onderdeel in COVERAGE.md. De [onderzoeksboom](../DEEP_SCAN_PLAN.md) bewaakt die dekking.
+
+## Verlanglijst en opslag verdiept
+
+[Opslag](micro/WISHLIST_STORAGE.md), [identity](micro/WISHLIST_IDENTITY.md) en [render/kooproute](micro/WISHLIST_RENDER_AND_ADD.md) hebben elk één eigenaarspagina. DOC-03D koppelt vijftien opnieuw geverifieerde bronbestanden aan 43 lokale cases en twee open code-reproducties. Bronhergebruik en native-browsergrenzen staan in [het bewijs](../evidence/2026-10-28-wishlist/README.md).

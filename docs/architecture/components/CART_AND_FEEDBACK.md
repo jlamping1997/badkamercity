@@ -81,3 +81,7 @@ Deze ronde bewijst uitsluitend de beschreven bron en responsemarkup. Een toekoms
 ## Inbouw als samenhangende kooproute
 
 [INBOUW_RECOVERY](micro/INBOUW_RECOVERY.md) bevestigt het returncontract naar product-form, vergrendelde herhaalsubmit en conservative uncertain-afhandeling, ook bij HTTP 422. De inbouwroute navigeert bij bevestiging; een latere popupwijziging vereist een eigen succes-/unlockcontract. Geen echte cartactie in deze verdieping.
+
+## Wishlistkooproute verder begrensd
+
+[WISHLIST_RENDER_AND_ADD](micro/WISHLIST_RENDER_AND_ADD.md) bevestigt met synthetisch transport de exacte variant-/source-/quantityguards, één POST bij dezelfde-buttondubbelklik, foutunlock en cartnavigatie. Succes verwijdert de favoriet niet. readProduct deelt een promise-cache zonder TTL; een helpercall is geen nieuwe serverread per add. Geen echte cart-/restoreactie of hercertificering van popup/browsergedrag.

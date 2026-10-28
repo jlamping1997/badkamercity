@@ -83,3 +83,7 @@ Na de brede kaart zijn [inbouwherstel, footerlifecycle, content-DOM en disclosur
 ## Filterketen DOC-03C
 
 Vier [nieuwe microdossiers](components/micro/README.md) volgen filterwaarden, URL/history/fallback, kaartverrijking/kleuren en drawer/shortcut. 41 lokale scenario’s bevestigen guards en reproduceren twee begrensde codeafwijkingen. [Bewijs](evidence/2026-10-28-filters/README.md). Checkout blijft buiten scope.
+
+## Verlanglijstverdieping DOC-03D
+
+Drie [microdossiers](components/micro/README.md) volgen opslag/events, exacte identity/adapters en render/cache/koopguards. Vijftien bestanden passen bij verse Shopify-metadata; 43 lokale cases bevestigen bescherming en reproduceren twee begrensde afwijkingen. [Bewijs](evidence/2026-10-28-wishlist/README.md). Geen live correctie of echte bezoekersopslag-/cart-/checkoutactie.

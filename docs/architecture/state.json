@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "updated_on": "2026-10-28",
-  "task": "DOC-03C",
-  "status": "FILTER_CHAIN_DOCUMENTED_WITH_TWO_ISOLATED_DEFECTS",
+  "task": "DOC-03D",
+  "status": "WISHLIST_CHAIN_DOCUMENTED_WITH_TWO_ISOLATED_DEFECTS",
   "active_branch": "fix/product-cards-2026-10-14",
-  "source_commit": "5f0dd414f9243e46757930b7924329f4abc4fe1f",
-  "main_source_commit": "dd780e9a19d18d36da33780885489cf47dc86893",
+  "source_commit": "8227eaed86c2386391b8b27a210d1490942ce2b3",
+  "main_source_commit": "cb685367c3ab75738a3ba2644eb5dd28d8e09ab7",
   "main_theme_at_capture": "195818389770",
   "audit_complete": false,
   "documentation_complete": false,
@@ -18,9 +18,9 @@
   },
   "http_routes_checked": 35,
   "public_search_reads": 4,
-  "current_browser_scope": "No new browser actions; all filter UI checks are DOM simulations with explicit numeric-validity shim.",
-  "next_task": "DOC-03D",
-  "next_action": "Isolate wishlist and browser storage identity/event/error/render chain with synthetic storage and local product responses; no real visitor storage or cart mutations.",
+  "current_browser_scope": "No new browser actions; wishlist, synthetic storage/multitab, and Sunshower adapter checks are DOM simulations.",
+  "next_task": "DOC-03E",
+  "next_action": "Trace desktop/mobile header navigation and predictive search lifecycle, ownership, latest query and errors with synthetic markup/responses; no account/customer/cart/checkout actions.",
   "open_blockers": [
     "settings_data_byte_parity",
     "checkout_configuration_access_denied",
@@ -32,13 +32,13 @@
   "glossary_links_checked": 109,
   "glossary_published_targets": 108,
   "glossary_confirmed_404": 1,
-  "current_targeted_source_files": 9,
-  "current_executed_source_files": 3,
-  "current_isolated_cases": 41,
+  "current_targeted_source_files": 15,
+  "current_executed_source_files": 2,
+  "current_isolated_cases": 43,
   "current_isolated_classifications": {
-    "CONTROL_PASSED": 35,
+    "CONTROL_PASSED": 34,
     "DEFECT_REPRODUCED": 2,
-    "BOUNDARY_CONFIRMED": 4
+    "BOUNDARY_CONFIRMED": 7
   },
   "excluded_scopes": [
     "checkout"
@@ -53,5 +53,6 @@
     "nested_h2_pages": 0,
     "predicted_duplicate_id_pages": 0
   },
-  "current_public_search_reads": 2
+  "current_public_search_reads": 0,
+  "current_source_method": "Fresh Shopify metadata at start/end; existing captured body bytes matched MD5/size and were rehashed. No new body download."
 }
