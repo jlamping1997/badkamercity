@@ -85,3 +85,7 @@ Deze scenario's zijn een acceptatiematrix, niet deze ronde uitgevoerde tests. Wi
 ## Beschrijving en specificaties op methodeniveau
 
 De [disclosureverdieping](micro/DISCLOSURE_MOTION.md) behandelt vier tekstregels, tien spec-rijen, querywissels, fonts/beelden, reversal en verborgen tabstops als één contract. [Inbouwherstel](micro/INBOUW_RECOVERY.md) volgt de gekoppelde aankooproute afzonderlijk.
+
+## Gedeelde fotobediening UI-01
+
+[UI-01](../../ui-consistency/2026-10-28/README.md) volgt de eigenaarvraag om Sunshower-achtige fotopijlen op gewone PDP’s. Eén gedeelde media-gallery-kandidaat bedient de bestaande native templates; bron,15 lokale gevallen, browser-/conceptstatus en herstel staan in dat dossier. Geen tweede variant-/zoom-/cartcontroller.

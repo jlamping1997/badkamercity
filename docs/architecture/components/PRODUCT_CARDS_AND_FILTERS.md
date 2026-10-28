@@ -89,3 +89,7 @@ Minimale matrix voor DOC-02B/03: desktop/mobiel; native/externe succes/terugval;
 ## Wishlistadapters afzonderlijk gevolgd
 
 [WISHLIST_IDENTITY](micro/WISHLIST_IDENTITY.md) volgt het gedeelde snippet naar PDP, native/externe/home-/Sunshowerkaarten en de prioriteit van actuele formulierdata. De externe renderer vraagt refresh na verrijking; Sunshower-shop doet dat bij kleurcommit niet, waardoor WL-43 een achterblijvende aria-pressed/is-saved reproduceert. De volgende klik bewaart wel de juiste nieuwe identity. Geen nieuwe filtercontrollerreplay of live fix in DOC-03D.
+
+## Pijlbedoeling verduidelijkt in UI-01
+
+De eigenaar heeft inmiddels **pijlen bij de productfoto’s** gekozen. De oudere kaart-CTA-/mobiele-CSS-hypothese hierboven blijft broncontext, geen verklaring van de nu bevestigde melding. [UI-01](../../ui-consistency/2026-10-28/README.md) vergelijkt Sunshower-overlay en native thumbnailrail en bewaakt de gedeelde conceptcorrectie. Productkaartpijlen worden door die galerijcorrectie niet gewijzigd.

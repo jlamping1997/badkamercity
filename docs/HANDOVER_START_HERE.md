@@ -1,5 +1,7 @@
 # BadkamerCity — START HIER bij een overdracht
 
+**Vervolg 28 oktober 2026 — UI-01:** eigenaar kiest nu inconsistenties en productfotopijlen. [UI-vergelijking en conceptwerk](ui-consistency/2026-10-28/README.md); volg [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) voor exact concept-/test-/publicatiepunt. DOC-03E is geparkeerd; checkout buiten scope. Oudere volgende stappen hieronder zijn geschiedenis.
+
 **Vervolg 28 oktober 2026 — DOC-03D:** [wishlistmethodedossiers](architecture/components/micro/README.md), 43 lokale cases, twee begrensde defectreproducties en vijftien verse metadata-/bytecontroles. Geen live fix of echte bezoekersopslag-/cartactie. Checkout buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
 
 **Vervolg 28 oktober 2026 — DOC-03C:** [filtermethodedossiers](architecture/components/micro/README.md), 41 lokale cases en twee begrensde defectreproducties; geen live fix. Checkout buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
