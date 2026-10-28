@@ -1,50 +1,51 @@
 # BadkamerCity — actuele werkstatus
 
-**28 oktober 2026 · DOC-02A componentverdieping vastgelegd.** Vaste huidige ingang. De [lange oude status](LIVE_STATUS_ARCHIVE_BEFORE_2026-10-28.md) en oudere releasehandelingen zijn geschiedenis, geen opdracht om import/publicatie te herhalen.
+**28 oktober 2026 · DOC-03A afzonderlijke functieanalyse.** De [oude status](LIVE_STATUS_ARCHIVE_BEFORE_2026-10-28.md) en oude import-/publicatiehandelingen blijven geschiedenis. Lees deze pagina als huidige ingang.
 
-## Huidige opdracht en resultaat
+## Opdracht en uitkomst
 
-De eigenaar vraagt sterke, diep doorzoekbare documentatie in Git: wat we gebruiken, hoe onderdelen zijn opgebouwd, hun code-/datakoppelingen en onderbouwde inconsistenties. Ook is een private export van bereikbare productgegevens gevraagd en geleverd. Geen live refactor, productmutatie of publicatieopdracht in deze documentatieronde.
+Eigenaar vraagt de onderdelen verder los te analyseren, de uitleg te verdiepen en nieuwe bevindingen te zoeken. De nieuwe [microdossiers](architecture/components/micro/README.md) behandelen cartnotification-inhoud/lifecycle, Sunshower-acties, keuzematch/fallback en aantal/identiteit. De bestaande [componentdossiers](architecture/components/README.md) en [routematrix](architecture/ROUTE_RENDERER_MATRIX.md) blijven de bovenliggende kaart.
 
-**DOC-00:** onderzoeksboom/afspraken. **DOC-01:** volledige ontvangen bronkaart en private productexport; één settings-bytepariteitsuitzondering blijft OPEN. **DOC-02A:** nu de [routematrix](architecture/ROUTE_RENDERER_MATRIX.md) en [acht inhoudelijke componentdossiers](architecture/components/README.md): fundament/tooling, PDP-data, keuzes/inbouw, kaarten/filters, cartfeedback, navigatie/opslag, datapijplijnen en stijl/beweging. Samen negen inhoudelijke uitlegpagina's, met bronnen, staten, fouten/terugval, onderhoud en acceptatiegrenzen.
+**DOC-03A vastgelegd:** 15 geïsoleerde gevallen op echte bronbytes: 10 controles, 3 defectreproducties voor **twee** verschillende problemen en 2 bevestigde grenzen. Geen storefrontfix, productmutatie of koopactie in deze ronde. De private productexport uit DOC-01 blijft apart; niet opnieuw geëxporteerd of openbaar gemaakt.
 
-## Bronstand en meetgrenzen
+## Bron en bewijs
 
-| Bron | Waarneming |
+| Bron | Gecontroleerde stand |
 | --- | --- |
 | Repository | jlamping1997/badkamercity, publiek |
-| Actieve branch / startcommit | fix/product-cards-2026-10-14 / c8f76eea2bf8a81ab0f54196e239e0b3930fe20a |
-| main bij aanvang | 2f87039c2774e27010860a4ef5ccb29dcc7bf886; documentatie-ingang |
+| Actieve branch bij aanvang | fix/product-cards-2026-10-14 op a5e3c9e0bb8a8cfb7b5aa7715a5019a54c877d7b |
+| main bij aanvang | 28741ddb1dd4f777c31565da47d2c1de26345a16 |
 | Opnieuw gelezen MAIN | 195818389770 — BadkamerCity - Smooth winkelwagen pop-up |
-| Compleet vers manifest | 1.262 bestanden; paden/checksums gelijk aan DOC-01 |
-| DOC-01-pariteit | 1.261 exact; ontvangen settings_data.json blijft afwijkend van zijn metadata |
-| Componentbronindex | 85 geselecteerde bestanden, alle bytes/groottes passend; geen claim van 85 volledige runtimeaudits |
-| Metafieldconsumenten | 52 letterlijke keys + 4 dynamische locaties; typen/aantallen uit eerdere private export |
-| Openbare responses | 8 GET's, alle HTTP 200 en Shopify.theme.id 195818389770; HTML-structuur, geen uitgevoerde JS |
-| Afgeleide keuzedata | 656/656 groepsassets bytegelijk gereconstrueerd uit 9 werkelijke bronassets |
-| Productexport uit DOC-01 | 11.343 producten/varianten, 241.064 metafields, 32.065 mediarecords; privé geleverd, geen nieuwe realtime voorraadtelling |
-| Windows / VPS / deploymentkoppeling | Niet opnieuw vastgesteld; geen synchronisatie- of servergezondheidsclaim |
+| Verse code | 22 gerichte bestanden; alle bytes/groottes gelijk aan hun metadata; niet het hele thema opnieuw gescand |
+| Replay | Vier JS-bronnen vooraf op SHA-256 gecontroleerd; Node 24.22.1 / happy-dom 21.0.4; harde fetch-/navigatiestubs |
+| Sunshower-catalogus | 72 records, unieke selections/URL's/variantidentiteiten; geen Shopify-prijs-/voorraadreadback |
+| Desktopbrowser | Viewport 1363×936, bestaande sessie met preview-UI; externe collectie-CTA zichtbaar, Maathulp/Escape/focus, galerijstap 1→2 |
+| Mobiel | NOT_TESTED; beschikbare browserinterface bood geen viewportresize. Fixturebreedte is geen browserbewijs |
+| Oude bronvrijgave | DOC-01 1.262 ontvangen / 1.261 bytegelijk; settings_data.json-uitzondering blijft OPEN |
+| Windows / VPS / checkout | Niet gecontroleerd; geen server-, synchronisatie- of bestelvrijgave |
 
-Zie [bewijs DOC-02A](architecture/evidence/2026-10-28-doc02/README.md), [bronkaart DOC-01](architecture/DOC01_SOURCE_MAP.md) en [productdata](architecture/PRODUCT_DATA.md). Tooling staat op de actieve branch; main krijgt alleen documentatie. Root-themacode is niet automatisch productiecode en is niet overschreven.
+[Bewijs en herhaalbare methode](architecture/evidence/2026-10-28-micro/README.md). Alleen tooling/fixtures op actieve branch; main krijgt documentatie en veilige proofmetadata. Geen root-theme-sync of publicatie.
 
-## Concrete inzichten voor vervolgonderzoek
+## Nieuwe problemen en bevestigde bescherming
 
-- De gewone PDP, externe kaart, Sunshower-shopkaart, inbouw/set en wishlist gebruiken verschillende cartfeedbackpaden. De nieuwe popup wordt niet via iedere ingang aangeroepen; eerst gewenst contract bepalen, geen globale submitinterceptor toevoegen.
-- Native mobiele lijst-CSS verbergt sommige Bekijk-product-labels/pijlen. Sunshower-linkkaarten hebben een eigen pijl; externe CSS/JS kan de lijst later veranderen. Dit geeft een te onderzoeken verklaring, geen afgeronde reproductie van de gemelde inconsistentie.
-- Eén onderzochte Hotbath SDS1-response gebruikt de oorspronkelijke grote dataset wegens niet passende revisieguard. De groep bestaat en de afgeleide bytes zijn correct; geen algemene performance- of datacorruptieclaim.
-- De historische generator staat in Git maar heeft geen gevolgde datasets/-invoer op het broncommit. De huidige oorspronkelijke assets zijn beschikbaar in het private pakket/read-only thema; invoer, controle en rebuild zijn nu beschreven.
-- De huidige externe-filtercode probeert na DOM-guards automatisch runSearch, zonder bcfilters=1-guard. Oude opt-inbeschrijvingen zijn voor deze bron historisch; daadwerkelijke API-/index-/browserwerking blijft open.
+- **CART-F01, P1-kandidaat / VERIFIED_ISOLATED:** een volgende response met ontbrekende/null productsection laat vorige artikelinhoud in de popup staan. Twee varianten van dezelfde fout gereproduceerd. Niet vastgesteld dat de server deze respons live leverde.
+- **SS-F01, P1-kandidaat / VERIFIED_ISOLATED:** tijdens pending setadd kan een kleurklik productnavigatie aanvragen; hoofdsubmit blijft eveneens enabled. Geen echte dubbele bestelling of cartuitkomst getest.
+- Normale popupinhoud wordt vervangen; heropenen annuleert een oude close; cancel/reduced-motionvertraging en stijl-/openerherstel werken in de gecontroleerde stub.
+- V2 weigert ambigue exacte matches; netwerkfallback werkt. Geldige JSON zonder groep verbergt de control en vraagt geen semantische fallback: grens, geen aangetoond kapotte live dataset.
+- Inbouwidentiteit, lege/nul/fractionele aantallen en een bestaande uncertain-staat worden correct begrensd in de afzonderlijke methodeproeven.
 
-## Uitgevoerd en niet uitgevoerd
+De desktopwaarneming bevestigt de externe kaart met zichtbare pijl, maar sluit de oorspronkelijke mobiele Sunshower-vergelijking niet. De galerijteller werd eerst vóór de asynchrone eindstaat gelezen en kwam daarna correct op 2; geen fout of duurmeting uit die tussenstaat afgeleid.
 
-Nieuwe controles: volledige manifestvergelijking, herhaalde drie bodyreads, exacte componenthashes, Git-blobkandidaten, veldconsumentenmetadata, acht HTML-responses, 656 afleidingsvergelijkingen, document-/JSON-/bronverwijzingscontroles en de offline componentbuilder op echte brondata. De oude vier productbuilder-/vijf scannerchecks blijven eerder bewijs; geen nieuwe featuretestclaim.
+## Grenzen en veiligheid
 
-Geen browser-/touch-/focus-/computed-style-/performance-/checkouttest. Geen add/change/update-cart, product-/theme-/VPS-write, nieuw thema, publicatie, brede dependencyupgrade of dump van private productwaarden naar Git. De settings-body is opnieuw identiek ontvangen maar wijkt nog af van metadata; geen onafhankelijke exacte settingskopie beschikbaar in deze verbinding of gevolgde Git-bestanden. De oorzaak blijft onbekend; geen pariteitscontrole versoepeld. Na oplevering geen writer of achtergrondworker actief.
+Geen add/change/clear/checkout-request naar de winkel, geen cartinhoud in bewijs, geen screenshots opgeslagen, geen live code-/product-/VPS-write en geen nieuwe publicatie. Geen claim van een anonieme browsersessie of fysieke telefoon. Alle test-ID's, productlabels en bedragen zijn synthetisch. Een geslaagde harnessrun bevat bewust defectreproducties en is geen algemene PASS.
+
+Oplossingsrichtingen zijn begrensd beschreven; niet uitgevoerd. Voor een fix: passende conceptbron, de tegenvoorbeelden behouden, gewenste feedback-/onzekerheidsregel vaststellen en relevante browserregressie. Geen globale submitinterceptor of automatische herhaalde koopactie invoeren.
 
 ## Exact één volgende handeling
 
-**DOC-02B — mobiele kaart-/pijlvergelijking read-only uitvoeren:** standaard collectie Wastafelkranen, zoekresultaten Sunshower en Sunshower-landing in dezelfde mobiele en desktopstaat bekijken; na JavaScript de werkelijke renderer, CTA-zichtbaarheid/cascade, linkfunctie en focus vastleggen. Daarna de bevinding classificeren met het bestaande componentcontract. Geen koopactie/productwijziging nodig; de settings-uitzondering blijft apart OPEN voor volledige bronvrijgave.
+**DOC-03B — inbouw-add en herstelgedrag als volledige keten isoleren:** identiteit → expliciete keuze → aantal → pending → succes/afwijzing/timeout/uncertain → terugkeer. Doe dat met harde lokale transportstubs en exacte bronhashes, zonder echte cartmutatie. Doel: vaststellen welk gezamenlijk actieregel-/foutcontract veilig kan worden hergebruikt. Mobiele DOC-02B en settingspariteit blijven zichtbaar OPEN.
 
 ## Hervatten
 
-Lees deze status → AGENTS.md → architecture/components/README.md → het betreffende dossier en gedateerde bronindex. Controleer eigen Gitwerkmap, actuele MAIN en hashes. Bron-/hand-offcheckpoint is vindbaar met git log -1 -- docs/architecture/components. De private productexport wordt via de eigenaar gedeeld, niet uit publieke Git gehaald. Oudere imports, previews en publicaties niet opnieuw starten op basis van historie.
+Lees deze status → AGENTS.md → architecture/components/micro/README.md → het betreffende dossier/proof. Controleer eigen werkmap, actuele MAIN en hashes. Broncheckpoints zijn vindbaar met git log -1 -- docs/architecture/components/micro. Bewaar bestaande wijzigingen. Oudere import-/preview-/publicatiestappen niet opnieuw starten. Geen schrijver of achtergrondworker blijft actief na oplevering.

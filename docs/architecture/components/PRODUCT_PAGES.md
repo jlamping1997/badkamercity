@@ -1,5 +1,7 @@
 # Productpagina's, specificaties en documenten
 
+**Verdieping:** zie [de actierace-analyse voor Sunshower](micro/SUNSHOWER_ACTIONS.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
+
 **Eigenaarrol:** storefrontontwikkeling voor rendering; assortiment/datahouder voor feiten en productrelaties. **Bronstatus:** VERIFIED_THEME, drie representatieve PDP's VERIFIED_HTML; interactieve/visuele staten NOT_TESTED. Zie [bronregels](README.md) en [routebeslissing](../ROUTE_RENDERER_MATRIX.md).
 
 ## Twee hoofdopbouwen

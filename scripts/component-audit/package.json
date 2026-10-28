@@ -1,0 +1,11 @@
+{
+  "name": "badkamercity-isolated-component-audit",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "happy-dom": "21.0.4"
+  },
+  "scripts": {
+    "audit": "node audit.mjs"
+  }
+}

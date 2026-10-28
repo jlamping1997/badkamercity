@@ -36,6 +36,10 @@ De [componentdossiers](components/README.md) en [route-/renderermatrix](ROUTE_RE
 
 Dit maakt DOC-02 niet geheel afgerond: eerst de werkelijk zichtbare renderers en bediening per viewport bevestigen. De settingspariteit blijft open; dit blokkeert geen bronuitleg van andere geverifieerde bestanden, maar wel een volledige bytevrijgave.
 
+## Afzonderlijke functies: DOC-03A
+
+De [microanalyse](components/micro/README.md) maakt de interne functies en hun staten verder expliciet. 22 actuele bestanden zijn opnieuw checksumgelijk opgehaald; 15 geïsoleerde cases op vier hashgecontroleerde JS-bronnen leveren 10 controles, 3 defectreproducties voor twee problemen en 2 bevestigde grenzen. De 72 Sunshower-cataloguscombinaties zijn structureel uniek. De desktopbrowser bevestigt een externe collectiekaart met zichtbare pijl, een sluitende Maathulp met focusherstel en één galerijstap. Geen echte cartactie, productiecorrectie of mobiele vrijgave. [Bewijs](evidence/2026-10-28-micro/README.md).
+
 ## Wat documentatie hier moet opleveren
 
 Een opvolger moet voor een concrete wijziging kunnen vinden: welke gebruikersfunctie hij raakt, wie de data beheert, waar de code begint, welke andere onderdelen meeveranderen, welke afspraken gelden, hoe hij het resultaat controleert en hoe hij teruggaat.
@@ -53,6 +57,7 @@ Een bestandentelling of lang verslag alleen is daarvoor onvoldoende. We onderhou
 | VERIFIED_SOURCE | Bestand of instelling op de opgegeven datum/versie werkelijk gelezen |
 | STATIC_CANDIDATE | Scanner of code-inspectie signaleert iets; gebruik en impact nog onderzoeken |
 | USER_REPORTED | Eigenaar meldt zichtbaar gedrag; exacte route/staat nog reproduceren |
+| VERIFIED_ISOLATED | Echte broncode onder benoemde synthetische stimuli uitgevoerd; geen bewijs van servervoorkomen of native browsergedrag |
 | VERIFIED_HTML | Publieke serverresponse gelezen; geen uitgevoerde JS, zichtbaarheid of interactieclaim |
 | VERIFIED_RUNTIME | Handeling op benoemde URL/viewport/browser werkelijk uitgevoerd |
 | PROPOSED | Richting of afspraak voorgesteld; nog geen goedgekeurd ontwerp of implementatie |
