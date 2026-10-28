@@ -33,3 +33,7 @@ De frontend verwijst naar de publieke `/verified/api/v1/search`-route op de beke
 Nodig om een extern onderdeel inhoudelijk af te sluiten: eigenaar/beheerlocatie; exacte repo en bronversie; omgeving/deploy; publieke/private endpoints; datavelden en bewaartermijnen; configuratie zonder secretwaarden; monitoring; backup/restore; laatste read-only controle en resterende test. Voor de eigen apps, VPS, Google-tools en gehoste checkout ontbreken delen daarvan. Een tabel met “onbekend” is hier een expliciet open dossier, geen voltooiing.
 
 Geen klant-/order-/inboxdata is gelezen of naar de publieke documentatie gekopieerd. Ontbrekende rechten worden niet omzeild. [Dekkingsregister](../COVERAGE.md) houdt deze systeemgrenzen open tot de benodigde bron daadwerkelijk is gecontroleerd.
+
+## Wishlistopslag inhoudelijk gevolgd
+
+[WISHLIST_STORAGE](micro/WISHLIST_STORAGE.md) legt het feitelijke schema, ontbreken van TTL/accountsync, lees-/schrijffouten, eventroute en multitabconflict vast. De replay gebruikt uitsluitend fictieve entries; geen bezoekeropslag of werkelijk consentgedrag gelezen. Dit is technische bron-/replaydocumentatie, geen juridische of platformconsentvrijgave.

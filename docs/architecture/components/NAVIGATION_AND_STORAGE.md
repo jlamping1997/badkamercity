@@ -1,6 +1,6 @@
 # Navigatie, zoeken en browseropslag
 
-**Doel:** dezelfde informatie kunnen vinden vanaf desktop/mobiel en de bedoelde selectie bewaren zonder oude data als actuele waarheid te gebruiken. **Eigenaarrol:** merchant voor menubestemmingen/content; storefront voor rendering, focus en opslagcontracten. Bronstatus VERIFIED_THEME; header-/notificationmarkup op acht responses VERIFIED_HTML. Geen menu-/storage-interactie of accounttest uitgevoerd.
+**Doel:** dezelfde informatie kunnen vinden vanaf desktop/mobiel en de bedoelde selectie bewaren zonder oude data als actuele waarheid te gebruiken. **Eigenaarrol:** merchant voor menubestemmingen/content; storefront voor rendering, focus en opslagcontracten. Bronstatus VERIFIED_THEME; header-/notificationmarkup op acht responses VERIFIED_HTML. DOC-03D voegt 43 lokale wishlistreplays toe; geen echte menu-/bezoekersopslaginteractie of accounttest.
 
 ## Menu: Admin → headergroep → renderer
 
@@ -34,7 +34,7 @@ Predictive search kan producten/pagina's/artikelen als suggestie teruggeven. Een
 
 | Sleutel / plaats | Inhoud en grens | Autoriteit / herstel |
 | --- | --- | --- |
-| bc_wishlist_v1 in localStorage | Maximaal 100 genormaliseerde items; handle + variantId als identiteit; beperkte titel/image/source/savedAt | Apparaat/browsergebonden selectie; geen accountlijst of actuele voorraad |
+| bc_wishlist_v1 in localStorage | Eerste 100 genormaliseerde entries; handle + variantId als identiteit; beperkte titel/image/source/savedAt; load dedupliceert niet | Browser/origingebonden selectie, geen TTL/accountlijst/actuele voorraad; multitabconflict WISH-F01 |
 | bc-saved-cart-v1:hostname in localStorage | Versie 1, maximaal 30 dagen oud; items met variant, hoeveelheid, properties en eventueel selling_plan | Bewaarde selectie; ophalen/herstellen gebruikt echte Shopify-requests |
 | V2 position/expanded-colors in sessionStorage | Korte route-/groephandoff van 30 seconden | Eenmalige overdracht; geen productdatabase |
 | bc-sunshower-choice-scroll in sessionStorage | Veld/positie/doelroute, 30 seconden | Eén volgende configuratienavigatie |
@@ -47,7 +47,9 @@ De exacte keuzeopslagguards staan bij [PRODUCT_CHOICES](PRODUCT_CHOICES.md). Dez
 
 bc-wishlist.js valideert handle en variant-ID, normaliseert metadata en vangt opslagfouten af. Dezelfde helper/knoppen worden op PDP, native kaart, externe kaart en Sunshower gebruikt; bij een kleur-/variantwissel moeten alle identity-attributen meewisselen. save meldt een fout als browseropslag geblokkeerd is en verstuurt na succes bc:wishlist-changed met het aantal. Titel/image uit opslag zijn presentatiesnapshots, geen actuele factsheet.
 
-Vanuit de wishlist haalt add eerst product.js op. Niet beschikbare/complexe producten, Sunshower-source en bepaalde multi-variant/card-/quantity-/selling-plan-gevallen gaan naar de PDP. Alleen een toegestane exacte variant wordt toegevoegd; daarna volgt cartnavigatie. De mooie notification wordt daarmee niet automatisch bereikt. Cross-device/accountsync, bewaartermijnbeleid en toestemming zijn niet in deze bronronde vastgesteld; geen accountkoppeling beloven.
+Vanuit de wishlist gebruikt add eerst readProduct. Die helper kan de eerder opgehaalde product.js-promise uit cache teruggeven: dit is geen gegarandeerde verse serverread per klik. Niet beschikbare/complexe producten, Sunshower-source en bepaalde multi-variant/card-/quantity-/selling-plan-gevallen gaan naar de PDP. Alleen een toegestane exacte variant wordt naar cart/add gestuurd; daarna volgt cartnavigatie. De notification wordt daarmee niet automatisch bereikt. Cross-device/accountsync en toestemmingswerking zijn niet vastgesteld; de huidige wishlistcode heeft geen expiratiebeleid of accountkoppeling.
+
+De inhoudelijke eigenaren staan nu apart: [opslag/events/multitab](micro/WISHLIST_STORAGE.md), [identity/knoppen/Sunshower](micro/WISHLIST_IDENTITY.md) en [render/cache/toevoegen](micro/WISHLIST_RENDER_AND_ADD.md). WISH-F01 reproduceert selectieoverschrijving tussen tabbladen onder vertraagde events; WISH-F02 reproduceert achterblijvende hartjesstatus na Sunshower-kaartkleur. Geen huidige bezoekersincidenten of live correcties vastgesteld. [43 cases en bronmethode](../evidence/2026-10-28-wishlist/README.md).
 
 ### Cart bewaren en herstellen
 
@@ -59,7 +61,7 @@ Het huidige codecontract en het gewenste klantcontract bij al gevulde cart moete
 
 Menutitel/bestemming: lees Admin-resource/handle → sectiegroep → desktop én mobiele renderer → linkdoel. Een CSS-fix voor een subpaneel hoeft geen menudata te herschrijven. Zoekfix: bepaal predictive versus native results versus externe index vóór aanpassen. Opslagfix: behoud versie/identity of ontwerp een expliciete migratie/terugval; verander een sleutel niet om een dataprobleem te verbergen.
 
-Acceptatiematrix: nul/één/drie menuniveaus, lange labels, actieve route, root/vooruit/terug, Escape, buitenklik, 989↔990px, sticky header, tweede overlay, zoeken met toetsenbord, opslag denied/vol/ongeldige JSON, oude variant, dubbele wishlistidentiteit en restore in lege/gevulde cart. Deze scenario's staan open; alleen hun bronketen is nu gedocumenteerd.
+Acceptatiematrix: nul/één/drie menuniveaus, lange labels, actieve route, root/vooruit/terug, Escape, buitenklik, 989↔990px, sticky header, tweede overlay, zoeken met toetsenbord en restore in lege/gevulde cart blijven open. Opslag denied/vol/ongeldige JSON, missende variant, dubbele opgeslagen wishlistidentity en events zijn nu lokaal getoetst; echte browser-/cartrestorecontroles blijven afzonderlijk open.
 
 ## History-eigenaarschap van de lijst
 

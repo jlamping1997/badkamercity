@@ -87,3 +87,16 @@ De harness [scripts/component-audit](https://github.com/jlamping1997/badkamercit
 ## Filterreplay DOC-03C
 
 Dezelfde gepinde harness bevat nu `filters.mjs`: drie hashgecontroleerde JS-bronnen, 41 cases en expliciete transport-/validity-/geometry-/historygrenzen. Negen gerichte sourcebytes en twee publieke facetmetadatareads staan in [het bewijs](evidence/2026-10-28-filters/README.md). Geen nieuwe dependency of volledige themesnapshot; geen echte cart-/indexwrite.
+
+## Wishlistreplay sinds DOC-03D
+
+`wishlist.mjs` op de actieve branch voert de volledige hashgecontroleerde wishlistclosure uit en in WL-43 ook de volledige Sunshower-shopcontroller. Synthetische storage, handmatig bezorgde storage-events, product-/cartresponses, timers, imagepreload en navigatiestubs voorkomen echte klant-/cartacties. Twee cases gebruiken de DOMlibrary-MutationObserver; de rest schakelt hem uit.
+
+```bash
+node scripts/component-audit/wishlist.mjs \
+  --source /pad/naar/gecontroleerde-themefiles \
+  --manifest docs/architecture/evidence/2026-10-28-wishlist/source-provenance.json \
+  --output /tmp/badkamercity-wishlist.json
+```
+
+De 43 cases leveren 34 controles, twee defectreproducties en zeven grenzen; dezelfde gepinde happy-dom 21.0.4 en optionele --dom-module gelden. De SHA-negatiefcontrole weigert vóór uitvoering/output. Geen native eventlooptiming, CSS/focus/touch of werkelijk cartresultaat afleiden. [Bewijs](evidence/2026-10-28-wishlist/README.md).

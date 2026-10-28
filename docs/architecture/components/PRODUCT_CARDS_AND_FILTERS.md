@@ -85,3 +85,7 @@ Minimale matrix voor DOC-02B/03: desktop/mobiel; native/externe succes/terugval;
 ## Kaart-/filterketen op methodeniveau
 
 [Kaartverrijking](micro/CARD_HYDRATION_AND_COLORS.md) volgt section-ID, vier workers, vijfseconden-timeout, cache en de nieuwste kleurintentie. [Filterstate/fallback](micro/FILTER_STATE_AND_FALLBACK.md) beschrijft ook de gereproduceerde native DOM-overdrachtsrace. [Waarden/controls](micro/FILTER_VALUES_AND_CONTROLS.md) scheidt raw waarden van zichtbare eenheden en beleidsflags; [drawer/shortcut](micro/MOBILE_LISTING_AND_DRAWER.md) behandelt de aparte mobiele statecontracten. De 41 replays zijn geen echte mobiele of carttest.
+
+## Wishlistadapters afzonderlijk gevolgd
+
+[WISHLIST_IDENTITY](micro/WISHLIST_IDENTITY.md) volgt het gedeelde snippet naar PDP, native/externe/home-/Sunshowerkaarten en de prioriteit van actuele formulierdata. De externe renderer vraagt refresh na verrijking; Sunshower-shop doet dat bij kleurcommit niet, waardoor WL-43 een achterblijvende aria-pressed/is-saved reproduceert. De volgende klik bewaart wel de juiste nieuwe identity. Geen nieuwe filtercontrollerreplay of live fix in DOC-03D.

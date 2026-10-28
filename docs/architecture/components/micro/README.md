@@ -40,3 +40,13 @@ Checkout is op verzoek buiten deze verdieping gehouden. De nieuwe ronde volgt vi
 | [Mobiele lijstbediening](MOBILE_LISTING_AND_DRAWER.md) | Drawer versus zwevende shortcut, overlay/focus en twee breakpoints |
 
 [Bewijs](../../evidence/2026-10-28-filters/README.md): negen verse bronbestanden, 41 lokale scenario's (35 controles, twee defectreproducties, vier grenzen) en twee publieke facetmetadatareads. FILTER-F01 reproduceert het verlies van DOM-eigenaarschap na native fallback/history; FILTER-F02 de afwijkende Meer/Minder-limiet onder synthetische configuratie. Geen live correctie, echte cartactie of mobiele browserclaim.
+
+## Verlanglijstketen sinds DOC-03D
+
+| Dossier | Eigenaar van de uitleg |
+| --- | --- |
+| [Opslag en tabbladen](WISHLIST_STORAGE.md) | Schema/normalisatie, commit, fouten, events en WISH-F01 |
+| [Identity en hartjes](WISHLIST_IDENTITY.md) | Gedeelde callers, variantprioriteit, refresh en Sunshower-status WISH-F02 |
+| [Renderen en toevoegen](WISHLIST_RENDER_AND_ADD.md) | Productpromise/cache, vier workers, stale render, koopguards en navigatie |
+
+[Bewijs](../../evidence/2026-10-28-wishlist/README.md): 15 verse metadata-/bytecontroles en 43 lokale cases (34 controles, twee defectreproducties, zeven grenzen). Geen echte bezoekersopslag, cart-/restoreactie of browser-/mobielvrijgave.

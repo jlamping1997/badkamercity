@@ -45,3 +45,16 @@ node scripts/component-audit/filters.mjs \
 ```
 
 Dezelfde pinned happy-dom 21.0.4 en optionele --dom-module gelden. De 41 cases omvatten 35 controles, twee defectreproducties en vier grenzen. FX-37 behoudt de echte native popstate-handler en containervervangingsmethode; alleen native requestorkestratie is een stub. Numerieke validity gebruikt een expliciet tolerant testmodel vanwege een aangetroffen DOMlibrary-precisieverschil. Dit is geen native browser/CSS-/focus-/mobiel-/volledige historytest. Lees de proof-README vóór conclusies.
+
+## Wishlist en browseropslag sinds DOC-03D
+
+`wishlist.mjs` voert de hele wishlistclosure en in één adaptercase ook de hele Sunshower-shopclosure uit. Beide bronnen worden vooraf op SHA-256 gecontroleerd. Gebruik de bestaande gepinde installatie; --dom-module werkt ook hier.
+
+```bash
+node scripts/component-audit/wishlist.mjs \
+  --source /pad/naar/gecontroleerde-themefiles \
+  --manifest docs/architecture/evidence/2026-10-28-wishlist/source-provenance.json \
+  --output /tmp/badkamercity-wishlist.json
+```
+
+43 cases: 34 CONTROL_PASSED, twee DEFECT_REPRODUCED, zeven BOUNDARY_CONFIRMED. Twee synthetische windows delen een Map; storage-events worden handmatig bezorgd. Product-GET/cart-POST zijn uitsluitend fetchstubs, navigatie/timers/imagepreload zijn gecontroleerd. Twee cases gebruiken de DOMlibrary-observer; geen echte browser-multitab-, CSS-, focus-, touch-, cart- of restoretest. Lees de proof-README voor bronhergebruik, guardcontrole en per-casegrenzen. Een nieuwe bronhash vraagt inhoudelijke herbeoordeling, geen uitschakelen van de hashguard.

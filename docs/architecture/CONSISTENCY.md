@@ -6,6 +6,7 @@ Bronmoment **28 oktober 2026**. Dit is de koppeling tussen [componentafspraken](
 | --- | --- | --- | --- |
 | Product openen | Native card-product, zoekkaart, externe JS-kaart, eigen home-/Sunshowerkaart | Zelfde actie duidelijk; hele-kaartlink zonder geneste links; pijl alleen betekenisvol | Bronkaart bekend; mobiele vergelijking OPEN |
 | Productkleur kiezen | V2/Hotbath, Wiesbaden-adapter, externe kaart, Sunshower | Label, geselecteerd, beschikbaar, focus, naam en identiteit samen; datamapping apart | Gedeelde keuzelogica deels getest; visueel OPEN |
+| Favoriet bewaren | Eén wishlistcontroller met PDP/native/externe/home/Sunshower-adapters | Identity en aria-pressed/is-saved na dezelfde keuzecommit bijwerken | WISH-F02: Sunshower-kaarthart blijft lokaal achter; [identitydossier](components/micro/WISHLIST_IDENTITY.md) |
 | Dropdown | Native variantpicker, V2-select, Sunshower-select, sortering | Controlhoogte, chevron, fout/disabled/loading en focus bij dezelfde functie | Geen gekozen globale referentiestijl vrijgegeven |
 | Paneel uitklappen | Footer details, filters, productdisclosure, mobile contents | Label, expanded, keyboard, verborgen tabstops | Mechanismen verschillen bewust; vergelijk resultaat |
 | Fotobladeren | Algemene media, Sunshower native scroll, PhotoSwipe | Vorige/volgende, begrensde rand, geselecteerd beeld, zoom/sluiten | Pijlen hebben andere taak dan product-CTA |
