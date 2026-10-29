@@ -78,3 +78,8 @@ Documenteer dezelfde functie eenmaal, link alle gebruiksplaatsen en leg noodzake
 ## 8. Verdiepte componentdocumentatie sinds DOC-02A
 
 Gebruik docs/architecture/components/README.md en ROUTE_RENDERER_MATRIX.md om de echte renderer, data en gewenste teststaat te vinden. Bronpaden/regelnummers horen bij de hashes in het gedateerde source-index.json, niet automatisch bij de Git-root. Registry/tooling vervangt geen inhoudelijke review. VERIFIED_HTML bewijst servermarkup, geen JavaScript, computed styles, focus, koopactie of performance. Houd de settings_data.json-pariteitsuitzondering zichtbaar tot een onafhankelijke exacte bron de vergelijking sluit.
+
+
+## 9. Categorisatie, imports en SEO-landingspagina's
+
+Lees bij een nieuw merk, productimport, categorie-/menuwijziging of merk-/serie-/SEO-pagina eerst [docs/CATEGORIZATION_AND_SEO_POLICY.md](docs/CATEGORIZATION_AND_SEO_POLICY.md). Hergebruik bestaande categorie-identiteiten; onderscheid producttype, filter, aanvullende navigatie en SEO-landingsscope. Een nieuw merk vraagt niet automatisch nieuwe productcategorieën. Zoekintentie, productdekking en bestaande overlap onderzoeken vóór nieuwe landingspagina's. De afdelingsvoorstellen in het contract zijn nog niet geïmplementeerd: controleer actuele Admin-data en volg preview-/publicatieregels vóór toepassing. Het contract vormt de vaste werkwijze; het gekoppelde bronregister is een gedateerde nulmeting.
