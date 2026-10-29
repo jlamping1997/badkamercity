@@ -1,37 +1,36 @@
 {
   "project": "BadkamerCity Quality Control",
   "branch": "quality-control",
-  "created_at": "2026-10-30",
-  "status": "FOUNDATION_DOCUMENTED",
-  "base_commit": "d5dbc60eeea4029a84b7a88659d14a18084ee69c",
-  "live_writes": false,
-  "mobile_app": {
-    "status": "NOT_BUILT",
-    "durable_storage": "NOT_CONNECTED",
-    "phone_tested": false
-  },
+  "updated_at": "2026-10-30",
+  "status": "PRIVATE_DEPLOYED_AUTHENTICATED_PHONE_REVIEW_PENDING",
+  "url": "https://badkamercity-quality.jason015.chatgpt.site",
+  "site_project_id": "appgprj_6ae3d58930e48191b4dea11d39180671",
+  "site_source_commit": "6ebf6d0185fe43eff83e8eed21a485c8743d9abe",
+  "site_version": 2,
+  "live_shopify_writes": false,
   "catalogue": {
-    "status": "NOT_IMPORTED",
-    "source_of_truth": "Existing product registers plus current Shopify Online Store publication",
+    "products": 11679,
+    "images": 34713,
+    "hotbath_missing_images": 645,
+    "automatic_sync": false,
+    "product_source": "Shopify Admin current active products with onlineStoreUrl",
+    "public_mirror_contains_full_snapshot": false
+  },
+  "reviews": {
     "products_reviewed": 0,
-    "images_reviewed": 0
+    "images_reviewed": 0,
+    "storage": "D1 per authenticated owner",
+    "checkpoints": "Named immutable bookmarks with batch and position"
   },
-  "preferred_pilot": {
-    "vendors_and_series": [
-      {
-        "vendor": "Hotbath",
-        "series": "Cobber"
-      },
-      {
-        "vendor": "Wiesbaden",
-        "series": "Caral"
-      }
-    ],
-    "target_image_reviews_min": 25,
-    "target_image_reviews_max": 50,
-    "selection_status": "NOT_SELECTED",
-    "commercial_preference_is_quality_evidence": false
+  "tests": {
+    "typecheck": "PASS",
+    "build": "PASS",
+    "api_sqlite_groups": 13,
+    "hosted_catalogue_reads": "PASS",
+    "hosted_unauthenticated_review_rejection": "PASS",
+    "hosted_visitor_login": "NOT_TESTED_NEW_SIGN_IN_REQUIRED",
+    "hosted_visitor_write": "NOT_TESTED",
+    "physical_phone": "NOT_TESTED"
   },
-  "batches": [],
-  "next_action": "Inventory existing product registers and storage/admin capabilities for a real read-only Cobber/Caral image review pilot."
+  "next_action": "Owner completes first real phone batch, then creates and resumes a named checkpoint."
 }

@@ -1,3 +1,54 @@
+# QC-02 — mobiele productcontrole
+
+30 oktober 2026 · **PRIVATE_DEPLOYED / CATALOGUE_VERIFIED / AUTHENTICATED_PHONE_REVIEW_PENDING**.
+
+[Open de privétool](https://badkamercity-quality.jason015.chatgpt.site). Toegang staat uitsluitend op het bestaande eigenaarsaccount; geen uitnodigingen/groepen toegevoegd. Meld aan met ChatGPT. Geen Shopify-thema, product, prijs, voorraad, publicatie of sortering gewijzigd.
+
+## Opgeleverd
+
+- Per merk foto’s en productgegevens beoordelen; batches25/50; Cobber/Caral als eerste werkselectie op huidige titel, zonder kwaliteitsclaim of automatisch serieattribuut.
+- Links/fout, rechts/klopt, twijfel, overslaan, undo, fotovergroting, fototype, hoofdfotogeschiktheid en notities. Knoppen bieden een alternatief voor gestures.
+- Productchecklist identiteit, specificaties, PDF, omschrijving en onderdelen; geen volledige goedkeuring zonder complete checklist.
+- Directe bevestigde D1-opslag per eigenaar, revisieconflicten, idempotente actie-ID’s en historie. Geen offline wachtrij; bij onbevestigde opslag blijft de kaart staan. Niet als opgeslagen presenteren vóór bevestiging.
+- Named checkpoints bewaren merk, controletype, batch en positie. Hervatten is een bladwijzer, geen terugdraaiing van nieuwere oordelen. Op dit moment onopgeslagen kaartnotities vallen erbuiten.
+- Aanleverlijst voor fout/twijfel/ongeschikte huidige hoofdfoto en ontbrekende foto; JSON-export van beoordelingen/checkpoints.
+
+## Brondekking
+
+Volledige gepagineerde active-inventaris: **11.679 producten / 34.713 afbeeldingen** met een huidige Shopify-webshop-URL. 8.236 Hotbath /23.266afbeeldingen, 2.451Wiesbaden/6.585,277THE MOSAIC FACTORY/1.084,273JEE-O/766,104Sunshower/358,337Porcelanosa/2.649,1bestaand BadkamerCity Test-artikel/5. Alle media-/variantverbindingen hebben hasNextPage=false. Geen ontbrekende pagina’s als 'klaar' behandeld.
+
+**645 Hotbath-producten hebben geen foto**; automatisch op aanleverlijst, niet verstopt in de swipestapel. Geen automatische foutcorrectie of publicatiewijziging.
+
+Gedateerde werkkopie, geen live synchronisatie, tweede masterregister of nieuwe fabrikantbron. Bestaande registers/verrijkingsresultaten blijven brononderzoek dragen. Geen onafhankelijke foto-/kleur-/setcontrole uitgevoerd. Geen fotorechten, PVD, materiaal, sterkte, compatibiliteit, beschikbaarheid of conversie bewezen. Webshop-URL’s niet allemaal individueel in browser geopend. SHA-256 van metadata/URL/datum is geen hash van de beeldbytes; gelijkblijvende URL/mediadatum met gewijzigde bytes blijft een open grens.
+
+## Architectuur en opslag
+
+Sites/Vinext-worker met private platformtoegang, ChatGPT-gebruiker en D1-tabellen qc_reviews en qc_checkpoints. Servercontrole op identiteit/eigenaar, same-origin POST, invoer, actuele items, revisions en dubbele aanvragen. Geen Admin-token of willekeurige connectorproxy in browser. Beoordelingen, notities, checkpoints en eventuele eigenaarsgegevens nooit naar publieke Git.
+
+Complete deploymentbron inclusief gedateerde catalogus staat in private Sites-bronrepo; publieke reviewbare code onder review-app, met importoverzicht en herstelinstructies. Volledige productwerkkopie niet opnieuw als openbare mastercatalogus gecommit. Het ontbreken van data/catalogue.json in de publieke spiegel is expliciet gedocumenteerd; herstel de private bron of voer een nieuwe volledige read-only import uit vóór bouwen/testen van de momentopname.
+
+Project appgprj_6ae3d58930e48191b4dea11d39180671. Definitieve Sites-broncommit **6ebf6d0185fe43eff83e8eed21a485c8743d9abe**; versie2, deployment appgdep_6ae3d9dfc6a88191b3fbf958fd42c1f8 **succeeded**, URL hierboven. Broncache SHA256 5d4bc24f411c68f4f32006068e9637cdf37da681a238b5ab065c01d53bd448e8.
+
+## Controlebewijs en grenzen
+
+- TypeScript geen fouten; productiebuild geslaagd.
+- **13 betekenisvolle tests geslaagd**: echte SQLite met gegenereerde migraties plus echte API-handlerlogica, waaronder identiteit/eigenaar, origin, invoer, save/read, audit/undo, dubbele aanvraag, stale revision409, checklist, checkpoint/reread/dubbel en catalogusidentiteit/dekking. Geen mock-test als hosted login gepresenteerd.
+- Lokale managed browser: echte productdata, batches, merk wisselen naar Wiesbaden/Caral, zoom/Escape. Auth ontbreekt in die preview; schrijven is zichtbaar uitgeschakeld.
+- Echte app in tijdelijke lokale iframe op320/390px; geen horizontale overflow (inner303/373px wegens scrollbar). Compacte batch toont controles op ongeveer595–630px top bij framehoogte1000; geen fysieke iPhone-/touchgesturetest. Tijdelijke QA-route verwijderd en niet gepubliceerd.
+- Hosted service-read via door Sites teruggegeven bestaande service-toegang: /api/catalogue HTTP200/7groepen; Wiesbaden HTTP200/2.451producten. /api/review zonder visitoridentiteit HTTP401 zoals bedoeld. Geen identiteitheaders geïmiteerd.
+- Hosted D1-overview bevestigt DB met qc_reviews en qc_checkpoints; geen productieoordeel of testcheckpoint aangemaakt.
+- Privé-gate toont correct ChatGPT-aanmelden. Browser kwam bij nieuwe aanmeldkeuze; geen credentials gevraagd/verwerkt. **Hosted visitor-login, visitor-write, echte telefoon, offline/reconnect en gelijktijdige apparaten niet end-to-end getest**. De update van versie2 bewaart de aanmeldmelding bij merkwissel en toont opnieuw aanmelden na een verlopen schrijfsessie; geen nieuwe server-/datastructuur.
+
+## Volgende handeling
+
+**Eigenaar opent de privélink op zijn telefoon, beoordeelt één echte batch en maakt/hervat een named checkpoint.** Daarna waargenomen telefoon-/opslagproblemen gericht oplossen vóór grotere werksessies. Fouten alleen signaleren; geen Shopify-correcties activeren.
+
+Bestaande ASSORT/TAX/storefrontuitvoering niet overgenomen. Bestaande werkcheckout ongemoeid gelaten; geen branchwissel, reset of forcepush. Nieuwe QC-tak is expliciet door de eigenaar gevraagd. GitHub-spiegel via connector met expected_sha; main uitsluitend documentatie-ingang. Rollback: deze geïsoleerde Site terug naar een bestaande versie via Sites; beoordelingen/D1 behouden. Geen destructieve reset of schemarollback.
+
+---
+
+## Historische QC-01-afspraken
+
 # BadkamerCity — Quality Control
 
 30 oktober 2026 · QC-01 · eigen projecttak: `quality-control`.

@@ -1,0 +1,3 @@
+import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core';
+export const reviews = sqliteTable('qc_reviews', { key:text('key').primaryKey(), owner:text('owner').notNull(), item:text('item').notNull(), payload:text('payload').notNull(), revision:integer('revision').notNull(), action:text('action').notNull(), history:text('history').notNull(), updated:text('updated').notNull() },table=>[index('qc_reviews_owner_idx').on(table.owner)]);
+export const checkpoints = sqliteTable('qc_checkpoints', { key:text('key').primaryKey(), owner:text('owner').notNull(), name:text('name').notNull(), payload:text('payload').notNull(), created:text('created').notNull() },table=>[index('qc_checkpoints_owner_idx').on(table.owner)]);
