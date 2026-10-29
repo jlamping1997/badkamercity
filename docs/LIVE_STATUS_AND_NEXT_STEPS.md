@@ -1,25 +1,26 @@
 # BadkamerCity — actuele werkstatus
 
-**29 oktober 2026 · ASSORT-01 — overzicht uitgevoerd en reviewgereed.** Eigenaar keurde het ontwerp goed; de werkende pagina staat alleen in concept.
+**30 oktober 2026 · ASSORT-02 — mobiele lijst uitgevoerd en reviewgereed.** Eigenaar kiest één compacte uitklapbare lijst na telefoonreview van ASSORT-01.
 
 ## Actuele uitvoering
 
-[Dossier, code en testgrenzen](assortment/2026-10-29/README.md). [Vorige werkstatus](assortment/2026-10-29/previous-work-status.md).
+[Dossier, bewijs en rollback](assortment/2026-10-30/README.md). [Gepubliceerde vorige versie](assortment/2026-10-29/README.md).
 
-- MAIN **195915448586 — BadkamerCity - Stabiele header en iconen**, 1.338 bestanden ongewijzigd.
-- Concept **195916628234 — BadkamerCity - Assortiment overzicht**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**.
-- Actieve branch `fix/product-cards-2026-10-14`. Definitief remote codecheckpoint `b70ce8940487961d4b1bc941508bf1679b1099ae`; code en bewijs op GitHub opgeslagen en branchref teruggelezen. Geen nieuwe branch, main alleen documentatie.
-- Vóór 1.338/1.338 gelijk. Na 1.344 bestanden: tien bedoelde wijzigingen/toevoegingen, overige 1.334 gelijk. Alle productie-inhoud teruggelezen; tijdelijke QA-template exact hersteld.
-- Tien afdelingen, categoriezoeker, mobiel uitklapbare directory, aanvullende links onder Maak het compleet, Sunshower/Porcelanosa. Alleen standaard `/collections`; geen catalogus-/menumutaties. Metadatatitel/-omschrijving routegebonden.
-- ThemeCheck R8 geslaagd met bestaande `scheme_classes`-waarschuwing; twintig lokale cases geslaagd. Echte desktopzoeker en twaalf bestemmingen geklikt; componentframes 320/390/1024 zonder overloop, zoek-/accordionherstel gecontroleerd. Fysieke telefoon/volledige mobiele site, ranking/conversie en performance niet getest. Geen Windowscontrole.
+- MAIN **195916628234 — BadkamerCity - Assortiment overzicht**, eigenaar heeft ASSORT-01 gepubliceerd; alle1.344livebestanden ongewijzigd in deze ronde.
+- Reviewconcept **195915448586 — BadkamerCity - Mobiel assortiment**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**. Dit voormalige headerconcept is gecontroleerd bijgewerkt tot actuele MAIN-basis en hernoemd.
+- Reserve **195917644042 — BadkamerCity - Assortiment reserve**: native duplicatie was nog in verwerking en is niet de mobiele reviewversie. Eerst volledigheid verifiëren bij eventueel gebruik.
+- Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `c21e84bf2e00b42a9e4fdef6ffba7d13833940a1`; geen nieuwe branch. Main alleen documentatie.
+- Basis:1.341byte-identiek en drie JSON-bestanden volledig semantisch gelijk. Eindconcept1.344files; vijf featurepaden plus uitsluitend door Shopify genormaliseerde ongewijzigde template, overige1.338checksums gelijk. Alle feature-inhoud teruggelezen; tijdelijke QA exact hersteld. MAIN1.344/1.344ongewijzigd.
+- Onder750px één lijst met56pxfoto, korte naam/voorbeelden en native uitklappers; geen dubbel overzicht. Kortere mobiele H1 en zoektekst. Desktopindeling behouden. Geen catalogus-/menumutaties.
+- ThemeCheck vijf bestanden PASS;39lokale render/controllercases PASS; werkelijke componentframes320/390/1024zonder overloop, zoeken/openklappen/herstel PASS. Gewone previewlink naar Opzetwastafels/H1/canonical PASS. Fysieke telefoon/volledige mobiele site, performance en conversie niet getest. Geen Windowscontrole.
 
 ## Exact één volgende handeling
 
-**Eigenaar beoordeelt concept 195916628234 op een echte telefoon en desktop en publiceert het via Shopify wanneer akkoord.** Publicatie ligt volgens AGENTS.md bij de merchant. Daarna verse MAIN-/storefrontcontrole; geen agent schrijft naar MAIN.
+**Eigenaar beoordeelt concept195915448586 op een echte telefoon en publiceert via Shopify bij akkoord.** Daarna verse MAIN-/storefrontcontrole. Agent schrijft niet naar MAIN en publiceert niet.
 
 ## Overdracht
 
-Bronnen, checksums, screenshots, testscript en uitbreidregels in het dossier. Gebruik alleen deze conceptkopie voor review; geen volledige Git-root uploaden. Hoogwaardige Porcelanosa-merkpagina, Living Colours, blogverbeteringen en verdere SEO-/categorisatieonderzoeken blijven afzonderlijke vervolgprojecten.
+Bronnen, baseline, checksums, screenshot en tests in dossier. Gebruik het genoemde reviewconcept, niet de reserve. Geen volledige Git-root uploaden. Afzonderlijke merk-/blog-/SEO-projecten blijven geparkeerd.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
