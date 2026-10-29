@@ -32,6 +32,9 @@ De categoriecontroller heeft afzonderlijke previous/next-scrollknoppen, backdrop
 
 ## Zoekroutes onderscheiden
 
+FLASH-01 (29 oktober 2026) laadt component-search.css en component-predictive-search.css synchroon in de head. De dubbele headerlink vervalt; bc-first-paint begrenst iconen en verbergt gesloten suggesties vóór de rest van de styles. De bestaande zoekcontroller en de open/loading-toestanden blijven intact. Zie [de bron-/browservergelijking](../../render-flash/2026-10-29/README.md) en centrale status voor review/publicatie.
+
+
 Predictive search kan producten/pagina's/artikelen als suggestie teruggeven. Een volledige zoekopdracht gaat naar main-search met q/type en een native resultatenlijst; externe filters kunnen die lijst later overnemen. De HTML-check met q=sunshower&type=product bewijst de volledige resultatenroute, niet de suggestielijst, enter-/tabbediening, vertraging of typfoutkwaliteit. Zie [kaarten en filters](PRODUCT_CARDS_AND_FILTERS.md).
 
 ## Opslagregister
