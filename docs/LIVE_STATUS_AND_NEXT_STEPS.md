@@ -8,7 +8,7 @@
 
 - MAIN **195915448586 — BadkamerCity - Stabiele header en iconen**, 1.338 bestanden ongewijzigd.
 - Concept **195916628234 — BadkamerCity - Assortiment overzicht**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**.
-- Actieve branch `fix/product-cards-2026-10-14`. Eerste remote codecheckpoint `f8ba3e68760a4406ee2a30a92fb98400873c2d5b`; definitieve ASSORT-01-verfijning en bewijs in vervolgcommit. Geen nieuwe branch, main alleen documentatie.
+- Actieve branch `fix/product-cards-2026-10-14`. Definitief remote codecheckpoint `b70ce8940487961d4b1bc941508bf1679b1099ae`; code en bewijs op GitHub opgeslagen en branchref teruggelezen. Geen nieuwe branch, main alleen documentatie.
 - Vóór 1.338/1.338 gelijk. Na 1.344 bestanden: tien bedoelde wijzigingen/toevoegingen, overige 1.334 gelijk. Alle productie-inhoud teruggelezen; tijdelijke QA-template exact hersteld.
 - Tien afdelingen, categoriezoeker, mobiel uitklapbare directory, aanvullende links onder Maak het compleet, Sunshower/Porcelanosa. Alleen standaard `/collections`; geen catalogus-/menumutaties. Metadatatitel/-omschrijving routegebonden.
 - ThemeCheck R8 geslaagd met bestaande `scheme_classes`-waarschuwing; twintig lokale cases geslaagd. Echte desktopzoeker en twaalf bestemmingen geklikt; componentframes 320/390/1024 zonder overloop, zoek-/accordionherstel gecontroleerd. Fysieke telefoon/volledige mobiele site, ranking/conversie en performance niet getest. Geen Windowscontrole.

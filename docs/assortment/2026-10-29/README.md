@@ -6,7 +6,7 @@
 
 **PREVIEW_READY / VERIFIED_THEME / NOT_PUBLISHED.** Uitvoering afgerond; eigenaar beoordeelt en publiceert het concept. Review op een echte telefoon blijft open.
 
-MAIN bij eindcontrole: **195915448586 — BadkamerCity - Stabiele header en iconen**, alle 1.338 bestanden ongewijzigd. Concept **195916628234 — BadkamerCity - Assortiment overzicht**, UNPUBLISHED, processing=false. Actieve branch `fix/product-cards-2026-10-14`; eerste remote codecheckpoint `f8ba3e68760a4406ee2a30a92fb98400873c2d5b`, definitieve verfijning en bewijs in de daaropvolgende ASSORT-01-commit. Deze ronde volgde op FLASH-01. Geen Windowscontrole of publicatie uitgevoerd.
+MAIN bij eindcontrole: **195915448586 — BadkamerCity - Stabiele header en iconen**, alle 1.338 bestanden ongewijzigd. Concept **195916628234 — BadkamerCity - Assortiment overzicht**, UNPUBLISHED, processing=false. Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `b70ce8940487961d4b1bc941508bf1679b1099ae`, met code, controles en screenshots. GitHub-ref wordt na opslag teruggelezen; geen Windows-synchronisatieclaim. Deze ronde volgde op FLASH-01. Geen Windowscontrole of publicatie uitgevoerd.
 
 Open in Shopify het genoemde concept en bekijk `/collections`. De bezochte previewingang was `https://badkamercity.nl/collections?preview_theme_id=195916628234`; Shopify verwijdert de parameter tijdens de previewsessie. De previewbalk bevestigde de juiste conceptnaam. De Copy link-knop leverde in deze browser geen clipboardtekst op; geen tijdelijke deel-URL verzonnen.
 
