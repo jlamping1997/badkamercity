@@ -9,7 +9,10 @@ if (!customElements.get('bc-assortment')) {
       this.mobileStates = new Map(this.departments.map(d => [d, false]));
       this.savedStates = null;
       this.media = window.matchMedia('(min-width: 990px)');
+      this.compactMedia = window.matchMedia('(max-width: 749px)');
       this.onMedia = () => this.layout();
+      this.onCompact = () => this.positionDirectory();
+      this.compactMedia.addEventListener('change', this.onCompact);
       this.media.addEventListener('change', this.onMedia);
       this.departments.forEach(dept => dept.addEventListener('toggle', () => {
         if (!this.media.matches && !this.input.value.trim()) this.mobileStates.set(dept, dept.open);
@@ -24,12 +27,20 @@ if (!customElements.get('bc-assortment')) {
       }, { signal });
       this.querySelectorAll('[data-bca-clear], [data-bca-reset]').forEach(button => button.addEventListener('click', () => this.reset(), { signal }));
       this.querySelector('[data-bca-finder]').hidden = false;
+      this.positionDirectory();
       this.layout();
     }
     disconnectedCallback() {
       this.abort?.abort();
       this.media?.removeEventListener('change', this.onMedia);
+      this.compactMedia?.removeEventListener('change', this.onCompact);
       this.abort = null;
+    }
+    positionDirectory() {
+      const directory = this.querySelector('.bca-directory');
+      const promotions = this.querySelector('[data-bca-promotions]');
+      if (this.compactMedia.matches) promotions.before(directory);
+      else promotions.after(directory);
     }
     layout() {
       this.departments.forEach(dept => {
@@ -58,7 +69,7 @@ if (!customElements.get('bc-assortment')) {
       this.querySelector('[data-bca-clear]').hidden = !query;
       let total = 0;
       this.departments.forEach(dept => {
-        const title = dept.querySelector('summary').textContent;
+        const title = dept.querySelector('summary h3').textContent;
         const items = [...dept.querySelectorAll('[data-bca-item]')];
         items.forEach(item => {
           const anchor = item.matches('a') ? item : item.querySelector(':scope > a');

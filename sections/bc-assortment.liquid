@@ -10,7 +10,7 @@
   <div class="bca-shell">
     <nav class="bca-breadcrumb" aria-label="{{ 'bc_assortment.breadcrumb' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'bc_assortment.home' | t }}</a><span aria-hidden="true">&rsaquo;</span><span>{{ 'bc_assortment.assortment' | t }}</span></nav>
     <header class="bca-intro">
-      <div><h1>{{ section.settings.heading | escape }}</h1><p>{{ section.settings.intro | escape }}</p></div>
+      <div><h1><span class="bca-only-desktop">{{ section.settings.heading | escape }}</span><span class="bca-only-mobile">{{ 'bc_assortment.mobile_heading' | t }}</span></h1><p>{{ section.settings.intro | escape }}</p></div>
       <div class="bca-finder" data-bca-finder hidden>
         <label class="visually-hidden" for="CategorySearch-{{ section.id }}">{{ 'bc_assortment.search_label' | t }}</label>
         <input type="search" id="CategorySearch-{{ section.id }}" placeholder="{{ 'bc_assortment.search_placeholder' | t | escape }}" autocomplete="off" aria-controls="Directory-{{ section.id }}" data-bca-search>
@@ -89,9 +89,17 @@
           {% if root.url contains '/collections/' %}
             {% liquid
               assign supplement = '|'
+              assign department_image = root.object.image | default: root.object.featured_image
+              assign department_asset = ''
+              assign department_title = root.title
               for block in category_blocks
                 if block.settings.collection.url == root.url
                   assign supplement = block.settings.supplement | prepend: '|' | append: '|'
+                  assign department_title = block.settings.mobile_title | default: root.title
+                  if block.settings.image != blank or block.settings.asset != blank
+                    assign department_image = block.settings.image
+                    assign department_asset = block.settings.asset
+                  endif
                   break
                 endif
               endfor
@@ -99,7 +107,14 @@
             {% capture primary_links %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% unless supplement contains item_handle %}{% render 'bc-assortment-item', item: item %}{% endunless %}{% endfor %}{% endcapture %}
             {% capture extra_links %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% if supplement contains item_handle %}{% render 'bc-assortment-item', item: item %}{% endif %}{% endfor %}{% endcapture %}
             <details class="bca-department" data-bca-department open>
-              <summary><h3>{{ root.title | escape }}</h3><span class="bca-plus" aria-hidden="true"></span></summary>
+              <summary>
+                <span class="bca-department__image">{% render 'bc-home-image', image: department_image, asset: department_asset, alt: '', sizes: '56px', width: 112, height: 112 %}</span>
+                <div class="bca-department__label">
+                  <h3><span class="bca-only-desktop">{{ root.title | escape }}</span><span class="bca-only-mobile">{{ department_title | escape }}</span></h3>
+                  <span class="bca-department__preview">{% assign preview_count = 0 %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% unless supplement contains item_handle %}{% if preview_count > 0 %}, {% endif %}{{ item.title | escape }}{% assign preview_count = preview_count | plus: 1 %}{% if preview_count == 2 %}{% break %}{% endif %}{% endunless %}{% endfor %}</span>
+                </div>
+                <span class="bca-plus" aria-hidden="true"></span>
+              </summary>
               <div class="bca-department__body">
                 <a class="bca-view-all" href="{{ root.url | escape }}" data-bca-item>{{ 'bc_assortment.view_all' | t: category: root.title }}<span aria-hidden="true">&rarr;</span></a>
                 <ul class="bca-directory__list" role="list">{{ primary_links }}</ul>

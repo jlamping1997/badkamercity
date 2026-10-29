@@ -1,3 +1,5 @@
+> **30 oktober: ASSORT-01 is inmiddels door eigenaar gepubliceerd als MAIN195916628234.** Mobiele vervolgversie en actuele review staan in [ASSORT-02](../2026-10-30/README.md). Onderstaande standen zijn de historische oplevering van29oktober.
+
 # ASSORT-01 — assortimentoverzicht
 
 29 oktober 2026. Eigenaar heeft het desktop- en mobiele ontwerp goedgekeurd en opdracht gegeven het werkend uit te voeren op `/collections`.
