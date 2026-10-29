@@ -27,7 +27,7 @@ Sites/Vinext-worker met private platformtoegang, ChatGPT-gebruiker en D1-tabelle
 
 Complete deploymentbron inclusief gedateerde catalogus staat in private Sites-bronrepo; publieke reviewbare code onder review-app, met importoverzicht en herstelinstructies. Volledige productwerkkopie niet opnieuw als openbare mastercatalogus gecommit. Het ontbreken van data/catalogue.json in de publieke spiegel is expliciet gedocumenteerd; herstel de private bron of voer een nieuwe volledige read-only import uit vóór bouwen/testen van de momentopname.
 
-Project appgprj_6ae3d58930e48191b4dea11d39180671. Definitieve Sites-broncommit **6ebf6d0185fe43eff83e8eed21a485c8743d9abe**; versie2, deployment appgdep_6ae3d9dfc6a88191b3fbf958fd42c1f8 **succeeded**, URL hierboven. Broncache SHA256 5d4bc24f411c68f4f32006068e9637cdf37da681a238b5ab065c01d53bd448e8.
+Project appgprj_6ae3d58930e48191b4dea11d39180671. Definitieve Sites-broncommit **b0a2d9514443ed487e5d09580c04b1fffa2808b6**; versie3, deployment appgdep_6ae3db3bd2d88191b3403a7b3b22b78b **succeeded**, URL hierboven. Broncache SHA256 5d4bc24f411c68f4f32006068e9637cdf37da681a238b5ab065c01d53bd448e8.
 
 ## Controlebewijs en grenzen
 
@@ -37,13 +37,19 @@ Project appgprj_6ae3d58930e48191b4dea11d39180671. Definitieve Sites-broncommit *
 - Echte app in tijdelijke lokale iframe op320/390px; geen horizontale overflow (inner303/373px wegens scrollbar). Compacte batch toont controles op ongeveer595–630px top bij framehoogte1000; geen fysieke iPhone-/touchgesturetest. Tijdelijke QA-route verwijderd en niet gepubliceerd.
 - Hosted service-read via door Sites teruggegeven bestaande service-toegang: /api/catalogue HTTP200/7groepen; Wiesbaden HTTP200/2.451producten. /api/review zonder visitoridentiteit HTTP401 zoals bedoeld. Geen identiteitheaders geïmiteerd.
 - Hosted D1-overview bevestigt DB met qc_reviews en qc_checkpoints; geen productieoordeel of testcheckpoint aangemaakt.
-- Privé-gate toont correct ChatGPT-aanmelden. Browser kwam bij nieuwe aanmeldkeuze; geen credentials gevraagd/verwerkt. **Hosted visitor-login, visitor-write, echte telefoon, offline/reconnect en gelijktijdige apparaten niet end-to-end getest**. De update van versie2 bewaart de aanmeldmelding bij merkwissel en toont opnieuw aanmelden na een verlopen schrijfsessie; geen nieuwe server-/datastructuur.
+- Privé-gate toont correct ChatGPT-aanmelden. Browser kwam bij nieuwe aanmeldkeuze; geen credentials gevraagd/verwerkt. **Hosted visitor-login, visitor-write, echte telefoon, offline/reconnect en gelijktijdige apparaten niet end-to-end getest**. Versie3 bewaart bovendien dezelfde checkpoint-ID bij een geslaagde insert gevolgd door een mislukte verversing, zodat opnieuw proberen geen dubbele bladwijzer maakt. De update van versie2 bewaart de aanmeldmelding bij merkwissel en toont opnieuw aanmelden na een verlopen schrijfsessie; geen nieuwe server-/datastructuur.
 
 ## Volgende handeling
 
 **Eigenaar opent de privélink op zijn telefoon, beoordeelt één echte batch en maakt/hervat een named checkpoint.** Daarna waargenomen telefoon-/opslagproblemen gericht oplossen vóór grotere werksessies. Fouten alleen signaleren; geen Shopify-correcties activeren.
 
 Bestaande ASSORT/TAX/storefrontuitvoering niet overgenomen. Bestaande werkcheckout ongemoeid gelaten; geen branchwissel, reset of forcepush. Nieuwe QC-tak is expliciet door de eigenaar gevraagd. GitHub-spiegel via connector met expected_sha; main uitsluitend documentatie-ingang. Rollback: deze geïsoleerde Site terug naar een bestaande versie via Sites; beoordelingen/D1 behouden. Geen destructieve reset of schemarollback.
+
+## Schermbewijs
+
+![Lokale reviewinterface met echte productdata](qa/review-desktop.jpg)
+
+Dit is de lokale managed preview: schrijfknoppen uitgeschakeld zolang visitoridentiteit ontbreekt. Geen screenshot van een succesvol ingelogde hosted sessie of fysiek toestel.
 
 ---
 
