@@ -2,7 +2,7 @@
   "task": "FLASH-01",
   "source_main": "195913482506",
   "target_draft": "195915448586",
-  "status": "COPY_PROCESSING / LOCAL_IMPLEMENTED / BROWSER_QA_PENDING",
+  "status": "PREVIEW_READY / NOT_PUBLISHED",
   "deployment_files": [
     {
       "filename": "layout/theme.liquid",
@@ -41,5 +41,15 @@
     "assets/bc-wishlist.js"
   ],
   "qa_template": "templates/index.bc-homepage-review.liquid",
-  "qa_cleanup": "Restore original inert template exactly after QA"
+  "qa_cleanup": "Original inert QA template restored exactly",
+  "code_checkpoint": "901ebfdd35400233da1337c1f1e9822739ff60cc",
+  "copy_parity": "1337/1337 checksum equal before writes",
+  "main_unchanged": "1337/1337",
+  "final_draft_count": 1338,
+  "test_evidence": [
+    "startup-comparison.jpg",
+    "startup-metrics.json",
+    "browser-check.json",
+    "theme-verification.json"
+  ]
 }
