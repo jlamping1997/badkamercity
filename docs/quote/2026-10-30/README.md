@@ -6,7 +6,7 @@
 
 MAIN **195915448586 — BadkamerCity - Mobiel assortiment**, ASSORT-02 inmiddels door eigenaar gepubliceerd. Alle1.344MAIN-bestanden ongewijzigd. Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348bestanden. De bestaande ongepubliceerde vorige versie is bijgewerkt met de zes verschillende MAIN-bronpaden, alle broninhoud exact of volledig JSON-semantisch gelijk, en hernoemd. Geen nieuwe volledige themakopie nodig.
 
-Actieve codebranch `fix/product-cards-2026-10-14`; vervolg op105b8b6. Definitieve commit volgt via bestandshistorie. Main ontvangt uitsluitend documentatie. De reservekopie uit ASSORT-02 is niet gebruikt.
+Actieve codebranch `fix/product-cards-2026-10-14`; vervolg op105b8b6. Definitief remote codecheckpoint: `99dd1bb4714148423ab2484da6f53b4b113fe7ff`. Main ontvangt uitsluitend documentatie. De reservekopie uit ASSORT-02 is niet gebruikt.
 
 Aangemaakt: ongepubliceerde Shopify-pagina **166573539594**, handle `offerte-vergelijken`, templateSuffix `offerte-vergelijken`, isPublished=false teruggelezen. Geen bestaande pagina gewijzigd. Geen klantbestanden, klanten-/orderrecords, prijzen, catalogus of e-mailberichten gebruikt.
 

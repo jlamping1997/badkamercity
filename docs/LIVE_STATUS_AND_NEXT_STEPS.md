@@ -9,7 +9,7 @@
 - MAIN **195915448586 — BadkamerCity - Mobiel assortiment**, ASSORT-02 door eigenaar gepubliceerd;1.344files ongewijzigd.
 - Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348files. Eerdere ongepubliceerde versie gecontroleerd gesynchroniseerd met actuele MAIN en hernoemd.
 - Pagina **166573539594**, handle offerte-vergelijken, templateSuffix offerte-vergelijken, **isPublished=false** teruggelezen.
-- Actieve branch `fix/product-cards-2026-10-14`; vervolg op105b8b6, definitief checkpoint via deze bestandshistorie. Main alleen documentatie.
+- Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `99dd1bb4714148423ab2484da6f53b4b113fe7ff`. Main alleen documentatie.
 - Pagina-ontwerp, NL/EN, FAQ, contactfallback en voorbereide Jotform-iframe met expliciete activatie. Voorbeeldvelden disabled, geen POST of fakebevestiging. Homepageverwijzing voorbereid maar disabled:true; nieuwe paginaroute nog niet publiek.
 - Zeven bedoelde productie-inhouden teruggelezen; overige1.341checksums gelijk. MAIN1.344/1.344ongewijzigd, QA exact hersteld.
 - ThemeCheck zeven files PASS;14lokale render-/gatecases PASS. Desktop en320/390/1024componentframes zonder overloop; FAQbediening PASS. Geen fysieke telefoon, echte upload, notificatie, privétoegang of verwijdering getest.
