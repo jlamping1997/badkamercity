@@ -1,6 +1,6 @@
 # ASSORT-02 — duidelijke mobiele categorielijst
 
-30 oktober 2026, Europe/Amsterdam. Eigenaar keurt één compacte uitklapbare lijst goed na review van de gepubliceerde tweekolomsweergave. Status **PREVIEW_READY / NOT_PUBLISHED**.
+30 oktober 2026, Europe/Amsterdam. Eigenaar keurt één compacte uitklapbare lijst goed na review van de gepubliceerde tweekolomsweergave. Status **PREVIEW_READY / NOT_PUBLISHED**. Definitief remote codecheckpoint `c21e84bf2e00b42a9e4fdef6ffba7d13833940a1` op `fix/product-cards-2026-10-14`.
 
 ## Huidige omgeving
 

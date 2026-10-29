@@ -9,7 +9,7 @@
 - MAIN **195916628234 — BadkamerCity - Assortiment overzicht**, eigenaar heeft ASSORT-01 gepubliceerd; alle1.344livebestanden ongewijzigd in deze ronde.
 - Reviewconcept **195915448586 — BadkamerCity - Mobiel assortiment**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**. Dit voormalige headerconcept is gecontroleerd bijgewerkt tot actuele MAIN-basis en hernoemd.
 - Reserve **195917644042 — BadkamerCity - Assortiment reserve**: native duplicatie was nog in verwerking en is niet de mobiele reviewversie. Eerst volledigheid verifiëren bij eventueel gebruik.
-- Actieve branch `fix/product-cards-2026-10-14`; vervolg op remote0854de5. Codecheckpoint via definitieve ASSORT-02-commit in bestandshistorie; geen nieuwe branch. Main alleen documentatie.
+- Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `c21e84bf2e00b42a9e4fdef6ffba7d13833940a1`; geen nieuwe branch. Main alleen documentatie.
 - Basis:1.341byte-identiek en drie JSON-bestanden volledig semantisch gelijk. Eindconcept1.344files; vijf featurepaden plus uitsluitend door Shopify genormaliseerde ongewijzigde template, overige1.338checksums gelijk. Alle feature-inhoud teruggelezen; tijdelijke QA exact hersteld. MAIN1.344/1.344ongewijzigd.
 - Onder750px één lijst met56pxfoto, korte naam/voorbeelden en native uitklappers; geen dubbel overzicht. Kortere mobiele H1 en zoektekst. Desktopindeling behouden. Geen catalogus-/menumutaties.
 - ThemeCheck vijf bestanden PASS;39lokale render/controllercases PASS; werkelijke componentframes320/390/1024zonder overloop, zoeken/openklappen/herstel PASS. Gewone previewlink naar Opzetwastafels/H1/canonical PASS. Fysieke telefoon/volledige mobiele site, performance en conversie niet getest. Geen Windowscontrole.
