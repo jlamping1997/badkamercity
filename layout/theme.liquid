@@ -17,6 +17,11 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- if request.page_type == 'list-collections' and template.suffix == blank -%}
+      {%- assign page_title = 'bc_assortment.seo_title' | t -%}
+      {%- assign page_description = 'bc_assortment.seo_description' | t -%}
+    {%- endif -%}
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}

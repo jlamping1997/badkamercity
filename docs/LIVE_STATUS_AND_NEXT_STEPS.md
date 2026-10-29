@@ -1,29 +1,25 @@
 # BadkamerCity — actuele werkstatus
 
-**29 oktober 2026 · FLASH-01 — opmaakflits bij laden/navigeren herstellen.** Eigenaar heeft opdracht gegeven de zoekbalk/icoonflits te verhelpen. NAV-01 is inmiddels door de eigenaar gepubliceerd: verse MAIN 195913482506.
+**29 oktober 2026 · ASSORT-01 — compact assortimentoverzicht voor mobiel en desktop.** Eigenaar heeft het visuele ontwerp goedgekeurd en uitvoering gevraagd. FLASH-01 is door eigenaar gepubliceerd: verse MAIN195915448586.
 
 ## Actuele uitvoering
 
-[Dossier, bron, oplossing en testgrenzen](render-flash/2026-10-29/README.md). [Vorige werkstatus](render-flash/2026-10-29/previous-work-status.md).
+[Dossier, code en testgrenzen](assortment/2026-10-29/README.md). [Vorige werkstatus](assortment/2026-10-29/previous-work-status.md).
 
-- MAIN 195913482506 — BadkamerCity - Menu openklappen en strakke rijen. Geen writes/publicatie door deze sessie.
-- Concept 195915448586 — BadkamerCity - Stabiele header en iconen, UNPUBLISHED; klaar voor review.
-- Status **PREVIEW_READY / CONTROLLED_STARTUP_AND_SEARCH_NAV_PASSED / IPHONE_NOT_TESTED / NOT_PUBLISHED**.
-- Actieve branch `fix/product-cards-2026-10-14`, codecheckpoint 901ebfdd35400233da1337c1f1e9822739ff60cc. Main uitsluitend documentatie.
-- Zoekstyles synchroon in head, dubbele body-link weg, minimale inline afmetingen/gesloten-suggestieguard, intrinsieke pijlmaat. Vier deployfiles; ongewijzigde bestaande dependencies alleen naar Git geïmporteerd.
-- ThemeCheck R2 zonder errors, één bestaande layoutwaarschuwing. Gecontroleerde ontbrekende-CSS-vergelijking reproduceert de hoge header/grote blauwe pijl; nieuwe variant blijft begrensd. Normale zoekfunctie/navigatie geslaagd. Fysieke iPhone/Safari nog open.
-
-## Verificatie
-
-Kopie 1.337/1.337 checksumgelijk vóór writes; na afloop alleen de vier bedoelde deployfiles afwijkend/toegevoegd. Vier exacte readbacks; QA-view exact hersteld. MAIN 1.337/1.337 ongewijzigd. Header in gecontroleerde oude starttoestand 494,66px hoog, nieuwe toestand 137,66px en alleen de guard op 320px: 131px, gesloten suggesties 0px; nieuwe frames geen overloop. Losse oude blauwe pijl circa 359×256px zonder CSS, nieuwe pijl 14×10px. Normale desktopafmetingen exact gelijk vóór/na; zoeksuggesties, Escape, zoekresultaten, Kranen en terug naar home gecontroleerd. Geen native iPhone/netwerkfilmstrip/Lighthouse-claim. Zie bewijs in dossier.
+- MAIN195915448586 — BadkamerCity - Stabiele header en iconen, niet gewijzigd.
+- Concept195916628234 — BadkamerCity - Assortiment overzicht, UNPUBLISHED; volledige kopie in verwerking.
+- Status **LOCAL_IMPLEMENTED / COPY_PROCESSING / BROWSER_QA_PENDING / NOT_PUBLISHED**.
+- Actieve branch fix/product-cards-2026-10-14; codecheckpoint fdbbc8d. Geen nieuwe branch. Main alleen documentatie.
+- Tien hoofdgroepen uit bestaand menu, directory met aanvullende links, categoriezoeker en twee merkblokken. Alleen standaard /collections, geen collectie-/productdatamutaties. Routegebonden metadatatitel/-omschrijving; bestaande canonicals behouden.
+- ThemeCheck zeven bestanden R1 en acht R3 geslaagd; bestaande scheme_classes-waarschuwing in layout. Echte Porcelanosa-assortimentslink geopend met337producten. Fysieke telefoon en browserpreview nog niet getest.
 
 ## Exact één volgende handeling
 
-**Eigenaar controleert concept ‘BadkamerCity - Stabiele header en iconen’ op zijn iPhone: homepage herladen, tussen homepage/categorie/product wisselen en één zoekopdracht; na akkoord publiceert hij.**
+**Uitvoerder voltooit de kopiepariteit, uploadt alleen de bedoelde bestanden en test de conceptpagina op desktop en smalle componentbreedtes.** Nog geen publicatie/reviewvrijgave.
 
 ## Overdracht
 
-Zie FLASH-01-dossier/AGENTS.md; MAIN, branch en bestanden vóór elke vervolgstap vers verifiëren. Eerdere telefoon-/afspraakontvangstcontrole en andere UI-/filter-/cart-/wishlistbevindingen blijven afzonderlijk bestaan. Git-root geen complete livebron. Geen Windowscontrole claimen.
+Bronmomenten en terugzetbestanden in dossier. Geen volledige Git-root uploaden. Geen Windows-, Lighthouse- of conversieclaim. De definitieve hoogwaardige Porcelanosa-merkpagina en verdere SEO-/categorisatieonderzoeken blijven afzonderlijke projecten.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
