@@ -1,4 +1,4 @@
-> **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Nieuw menuconcept195913482506 wordt opgebouwd: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); browsercontrole/publicatie nog open.
+> **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Menuconcept195913482506 is reviewgereed: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); Shopify-componentbrowsercontrole320/390 geslaagd; native telefoon en eigenaarspublicatie open.
 
 # BadkamerCity — actuele technische AI-handoff
 
