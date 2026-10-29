@@ -1,36 +1,33 @@
 # BadkamerCity — actuele werkstatus
 
-**28 oktober 2026 · UI-01 inconsistenties en gedeelde productfotopijlen.** De eigenaar geeft expliciet voorrang aan inconsistenties en kiest bij de verduidelijking **pijlen bij de productfoto’s**. DOC-03E header/zoeksuggesties is geparkeerd. Checkout blijft buiten scope.
+**29 oktober 2026 · HOME-01 — gekozen homepage met negen rondjes en actiebanners geïmplementeerd in concept.** De eigenaar geeft in de huidige conversatie expliciet opdracht om het goedgekeurde ontwerp functioneel uit te voeren. Eerdere UI-01-review blijft bewaard en geparkeerd in [de vorige werkstatus](homepage/2026-10-29/previous-work-status.md).
 
-## Ingang en stand
+## Actuele uitvoering
 
-[Vergelijking, verbeterregister en implementatie](ui-consistency/2026-10-28/README.md). De bestaande [architectuur](architecture/README.md) en microdossiers blijven behouden.
+[Implementatie, bronnen, bediening, tests en terugzetten](homepage/2026-10-29/README.md).
 
-- MAIN: **195818389770 — Smooth winkelwagen pop-up**; deze uitvoering schrijft of publiceert niet naar MAIN.
-- Concept: **195850764554 — BadkamerCity - gelijke fotopijlen**, rol UNPUBLISHED.
-- **PREVIEW_READY / DESKTOP_GETEST / MOBIEL_OPEN / NIET_GEPUBLICEERD.** Vooraf1.262/1.262 gelijk; finaal drie bedoelde bestanden gewijzigd/1.259 gelijk. Drie bodies exact teruggelezen, QA-template exact hersteld; MAIN1.262/1.262 ongewijzigd.
-- Actieve doelbranch: fix/product-cards-2026-10-14; start521c487b9c58b49f5de36fb16de210170f24d4d8. Main-start178d55292a25f93a2c2639e97cfe18680dba72e0; main uitsluitend documentatie.
+- MAIN: **195876815114 — BadkamerCity - Compact mobiel zoeken**, ongewijzigd door deze uitvoering.
+- Concept: **195910795530 — BadkamerCity - Homepage rondjes en acties**, **UNPUBLISHED**.
+- Status: **PREVIEW_READY / DESKTOP_GETEST / MOBIELE_COMPONENTLAYOUT_GETEST / NATIVE_TELEFOON_OPEN / NIET_GEPUBLICEERD**.
+- Actieve branch: `fix/product-cards-2026-10-14`; start `83b6ab9ab9a5adf22150232920cb88cf42af0974`. Main uitsluitend documentatie.
+- Startkopie1.318/1.318 bestanden checksumgelijk vóór writes. Alleen gerichte homepage-/footer-/locale-/beeldbestanden gewijzigd; geen volledige root-sync.
 
-## Wat werkelijk is gevonden
+## Opgeleverd
 
-**UI-F01:** Sunshower heeft pijlen op de hoofdfoto; de algemene PDP zet bestaande pijlen bij de thumbnailrail, bij een hoge afbeelding lager in beeld. De nieuwe gedeelde bediening zet44px pijlen op de foto, een teller en begrensde randen. Nul/één medium blijft zonder nieuwe bediening. Geen tweede zoom-/cartcontroller. De code staat uitsluitend in het genoemde concept.
+Twee configureerbare banners met bestaande collectiedoelen; negen klikbare categorieën in3×3 op mobiel; vier werkende merkbestemmingen; USP gratis verzending boven€100; showroompartner Harry Suiker alleen voor advies/3D op afspraak; afhalen/retourinformatie en compacte homepagefooter. Header/zoeken/cart behouden. Bestaande homepage-secties disabled bewaard.
 
-Drie overige desktopverschillen zijn bevestigd: **UI-C01** Lees meer/Toon meer; **UI-C02** winkelwagenknop56px/radius40 versus49px/radius8; **UI-C03** Ja/Nee-tekst versus toegankelijke vink/kruisiconen. Dit zijn nog niet aangepaste consistentie-/ontwerpkeuzes, geen automatisch bewezen verkoopbugs. UI-S01 native no-image-dubbeltitel blijft kandidaat: de settled collectie gebruikt extern. De bestaande uitgebreide Hotbath-viewer bladert en sluit met Escape.
+Geen boekingslink gevonden: **Vraag een 3D-afspraak aan** opent een native Shopify-aanvraagformulier; beschikbaarheidsagenda niet verzonnen. Via een homepage-instelling kan later een echte boekingslink worden gekoppeld. Geen testmail verstuurd.
 
 ## Bewijs en grenzen
 
-- 29 bestaande bronfiles opnieuw passend bij verse Shopify-metadata; volledig startmanifest1.262 paden.
-- Browser desktop1363×936: Sunshowerlanding/PDP, Wiesbaden24.3710, HotbathSDS1GN14 en Wastafelkranen. Renderer/laadstaat expliciet; geen volledige winkelbrede visuele audit.
-- 15 lokale galerijcontroles op bestaande SliderComponent en kandidaat-MediaGallery; simulatie van geometrie/media/timers/animatie. Geen native mobiele/keyboard/touchvrijgave hieruit afleiden. Afzonderlijk is echte Space-bediening op desktop wel bevestigd.
-- Statische Shopify-validatie van drie kandidaatfiles geslaagd. Alleen testhulpmiddelen in scratch geïnstalleerd; geen runtimebibliotheek aan de winkel toegevoegd.
-- Geen product-/prijs-/voorraadwrite, echte cart-/wishlistactie, account-/checkoutread of formulier-/mailverzending. Git-root-themacode wordt niet blind gesynchroniseerd.
+Alle negen categorieroutes, vier vendorlinks, zoeken en lege cart in echte desktopbrowser geopend. Alle13 beelden laden; ankers en aanvraag-/servicedetails werken. Liquid/JSON/theme-check op de10 gewijzigde tekstbestanden geslaagd. Componentbreedtes320/390/1024 zonder horizontale overloop; dit is een geïsoleerde gerenderde componentfixture, geen volledige native mobiele header-/touchvrijgave. Echte afspraakontvangst, native telefoon en verzendtariefgrens blijven open. Geen koopactie of checkout-/verzendinstelling veranderd.
+
+Tijdelijke QA-template veilig geneutraliseerd tot een inerte noindex-pagina nadat de connector bestandsverwijdering blokkeerde; er blijft geen testschrijver of actief testscript achter.
 
 ## Exact één volgende handeling
 
-**Eigenaar beoordeelt het concept ‘BadkamerCity - gelijke fotopijlen’ op desktop én mobiel vóór publicatie.** Desktop-Wiesbaden/Hotbath en Space-bediening zijn bevestigd; de320/390/1024px iframepoging werd geweigerd en telt niet als mobielbewijs. De15 lokale controles blijven afzonderlijk geldig. De drie overige ontwerp-/tekstverschillen staan in het verbeterregister voor gerichte vervolgstappen.
+**Eigenaar beoordeelt concept ‘BadkamerCity - Homepage rondjes en acties’ op zijn telefoon en test één echte afspraakaanvraag inclusief ontvangst vóór publicatie.** De eigenaar publiceert volgens AGENTS.md; deze uitvoering heeft geen publicatie gedaan.
 
 ## Overdracht
 
-Lees deze status → AGENTS.md → het UI-01-dossier. Eerdere FILTER-F01/F02, CART-F01, SS-F01, WISH-F01/F02 en overige bevindingen blijven open. Settings-bytepariteit, VPS/appbron, Google/deploy en echte bedrijfs-/apparaatcontroles blijven apart open. Geen Windowscontrole of automatische live-uitrol claimen.
-
-Geen eigen schrijver, testserver of Shopify-kopiejob actief na oplevering. De gewone storefront-URL bevat geen blijvende previewcontext; beoordeel via het genoemde Shopify-concept of de behouden browserpreview.
+Lees deze status → AGENTS.md → HOME-01-dossier. Eerdere UI-/filter-/cart-/wishlistbevindingen en settings-bytepariteitsvragen blijven afzonderlijk bestaan; deze homepage-opdracht lost die niet automatisch op. Geen Windowscontrole claimen. De Git-root is geen volledige actuele productiebron: gebruik alleen het expliciete deploymentmanifest bovenop een verse geverifieerde MAIN-kopie.

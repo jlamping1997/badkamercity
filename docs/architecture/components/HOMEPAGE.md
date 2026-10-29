@@ -1,3 +1,5 @@
+> **29 oktober2026 — HOME-01:** gekozen homepage met negen cirkels, configureerbare banners en 3D-afspraakaanvraag staat in concept195910795530. Zie [actuele werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) en het HOME-01-dossier. Oudere homepagevolgordes hieronder zijn historische bronnen; MAIN is niet aangepast.
+
 # Homepage: volgorde, inhoud en eigen kaarttypen
 
 Bronmoment **28 oktober 2026**. `templates/index.json` kiest de volgorde; de inhoud komt uit de sectieconfiguratie, menu's, Shopify-resources en beeldbestanden. Een niet-uitgeschakelde sectie is niet automatisch zichtbaar: Liquid kan op ontbrekende data stoppen.
