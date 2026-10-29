@@ -1,3 +1,5 @@
+> **29 oktober 2026 — ASSORT-01:** eigenaar kiest nu uitvoering van het goedgekeurde assortimentoverzicht. MAIN195915448586 (headerfix gepubliceerd), concept195916628234 in verwerking. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md) en [dossier](assortment/2026-10-29/README.md). Code lokaal gevalideerd; browserpreview volgt na kopiepariteit.
+
 > **29 oktober 2026 — FLASH-01:** MAIN195913482506 behouden. Concept195915448586 met stabiele startopmaak/icoonmaten is reviewgereed. Gecontroleerde browservergelijking en zoek-/navigatietest geslaagd; iPhone/eigenaarspublicatie open. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md).
 
 > **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Menuconcept195913482506 is reviewgereed: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); Shopify-componentbrowsercontrole320/390 geslaagd; native telefoon en eigenaarspublicatie open.
