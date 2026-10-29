@@ -1,3 +1,5 @@
+> **29 oktober 2026 — FLASH-01:** menu is nu MAIN195913482506; opmaakflitsfix in voorbereiding op concept195915448586. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md). Kopie/browsercontrole nog open; geen publicatie.
+
 > **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Menuconcept195913482506 is reviewgereed: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); Shopify-componentbrowsercontrole320/390 geslaagd; native telefoon en eigenaarspublicatie open.
 
 # BadkamerCity — actuele technische AI-handoff
