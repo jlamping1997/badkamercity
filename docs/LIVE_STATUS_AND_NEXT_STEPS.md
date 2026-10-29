@@ -23,3 +23,9 @@ Kopie 1.337/1.337 checksumgelijk; alleen header/drawer gewijzigd, exact teruggel
 ## Overdracht
 
 Zie NAV-01-dossier en AGENTS.md. Eerdere HOME-01-testgrenzen, open telefoon-/afspraakontvangstcontrole en overige UI-/filter-/cart-/wishlistbevindingen blijven afzonderlijk bestaan. Git-root is geen complete live-snapshot. Geen Windowscontrole claimen.
+
+## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
+
+[Content, merkpagina's, offerteaanvragen en productplan](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md): Living Colours/PVD met productuitleg en vergelijkingsbeelden; bestaande Sunshower-blog versterken; hoogwaardige Porcelanosa-merkpagina; bestaande offerte-upload-/prijsaanvraagtaken aanscherpen; gefaseerde productkwaliteit en verrijking. Status **BACKLOG / NOG UIT TE VOEREN**. Geen start van deze uitvoering of wijziging van de NAV-01-reviewvolgorde.
+
+Documentatiecheckpoint: GitHub-connector, uitsluitend documentatie op de bestaande werkbranch en main. Bestaande blog-/productdossiers en historische offerte-/prijstaken hergebruikt; Hotbath-bronnen voor het algemene patinaprincipe gecontroleerd. Nieuwe functies en productdetails niet getest of gebouwd. Shopify-rollen in deze sessie niet opnieuw gelezen; bovenstaande theme-metingen behoren bij NAV-01. Geen winkelmutatie, Windowscontrole, publicatie of geplande achtergrondtaak. Eigenaar kiest later welk toekomstproject start; de ene eerstvolgende handeling hierboven blijft staan.
