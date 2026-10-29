@@ -1,26 +1,26 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · ASSORT-02 — mobiele lijst uitgevoerd en reviewgereed.** Eigenaar kiest één compacte uitklapbare lijst na telefoonreview van ASSORT-01.
+**30 oktober2026 · BC-QUOTE-001 — offertevergelijker in uitvoering.** Eigenaar kiest dit project na goedkeuring van de mobiele categorielijst.
 
 ## Actuele uitvoering
 
-[Dossier, bewijs en rollback](assortment/2026-10-30/README.md). [Gepubliceerde vorige versie](assortment/2026-10-29/README.md).
+[Dossier, ontwerp en aansluitstappen](quote/2026-10-30/README.md). Status **DESIGN_IMPLEMENTED / INTEGRATION_PENDING_ACCOUNT / NOT_PUBLISHED**. Geen werkende ontvangst-/uploaddienst claimen.
 
-- MAIN **195916628234 — BadkamerCity - Assortiment overzicht**, eigenaar heeft ASSORT-01 gepubliceerd; alle1.344livebestanden ongewijzigd in deze ronde.
-- Reviewconcept **195915448586 — BadkamerCity - Mobiel assortiment**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**. Dit voormalige headerconcept is gecontroleerd bijgewerkt tot actuele MAIN-basis en hernoemd.
-- Reserve **195917644042 — BadkamerCity - Assortiment reserve**: native duplicatie was nog in verwerking en is niet de mobiele reviewversie. Eerst volledigheid verifiëren bij eventueel gebruik.
-- Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `c21e84bf2e00b42a9e4fdef6ffba7d13833940a1`; geen nieuwe branch. Main alleen documentatie.
-- Basis:1.341byte-identiek en drie JSON-bestanden volledig semantisch gelijk. Eindconcept1.344files; vijf featurepaden plus uitsluitend door Shopify genormaliseerde ongewijzigde template, overige1.338checksums gelijk. Alle feature-inhoud teruggelezen; tijdelijke QA exact hersteld. MAIN1.344/1.344ongewijzigd.
-- Onder750px één lijst met56pxfoto, korte naam/voorbeelden en native uitklappers; geen dubbel overzicht. Kortere mobiele H1 en zoektekst. Desktopindeling behouden. Geen catalogus-/menumutaties.
-- ThemeCheck vijf bestanden PASS;39lokale render/controllercases PASS; werkelijke componentframes320/390/1024zonder overloop, zoeken/openklappen/herstel PASS. Gewone previewlink naar Opzetwastafels/H1/canonical PASS. Fysieke telefoon/volledige mobiele site, performance en conversie niet getest. Geen Windowscontrole.
+- MAIN **195915448586 — BadkamerCity - Mobiel assortiment**, ASSORT-02 door eigenaar gepubliceerd;1.344files ongewijzigd.
+- Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348files. Eerdere ongepubliceerde versie gecontroleerd gesynchroniseerd met actuele MAIN en hernoemd.
+- Pagina **166573539594**, handle offerte-vergelijken, templateSuffix offerte-vergelijken, **isPublished=false** teruggelezen.
+- Actieve branch `fix/product-cards-2026-10-14`; vervolg op105b8b6, definitief checkpoint via deze bestandshistorie. Main alleen documentatie.
+- Pagina-ontwerp, NL/EN, FAQ, contactfallback en voorbereide Jotform-iframe met expliciete activatie. Voorbeeldvelden disabled, geen POST of fakebevestiging. Homepageverwijzing voorbereid maar disabled:true; nieuwe paginaroute nog niet publiek.
+- Zeven bedoelde productie-inhouden teruggelezen; overige1.341checksums gelijk. MAIN1.344/1.344ongewijzigd, QA exact hersteld.
+- ThemeCheck zeven files PASS;14lokale render-/gatecases PASS. Desktop en320/390/1024componentframes zonder overloop; FAQbediening PASS. Geen fysieke telefoon, echte upload, notificatie, privétoegang of verwijdering getest.
 
 ## Exact één volgende handeling
 
-**Eigenaar beoordeelt concept195915448586 op een echte telefoon en publiceert via Shopify bij akkoord.** Daarna verse MAIN-/storefrontcontrole. Agent schrijft niet naar MAIN en publiceert niet.
+**Eigenaar geeft aan of er al een Jotform-account of andere geschikte privé-formulierendienst is.** Daarna echte koppeling, ontvanger/toegang en upload-/ontvangstproef uitvoeren. Dit ontvangstdeel is geblokkeerd door ontbrekende accounttoegang, niet door een fictieve themebeperking. Ontwerp staat reviewbaar in concept via contact?view=offerte-vergelijken.
 
 ## Overdracht
 
-Bronnen, baseline, checksums, screenshot en tests in dossier. Gebruik het genoemde reviewconcept, niet de reserve. Geen volledige Git-root uploaden. Afzonderlijke merk-/blog-/SEO-projecten blijven geparkeerd.
+Geen publicatie, appinstallatie, accountaanmaak, betaald plan of e-mailversturing. Jotform-koppeling staat uit en homepage-CTA verborgen. Bewaartermijn/ontvanger nog in te richten; geen privacy-/servervrijgave. Account eerst, dan tests, dan eigenaarspublicatie. Zie dossier voor setup en bronlinks. Geen nieuwe schrijver of achtergrondworker actief.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
@@ -35,3 +35,7 @@ Eigenaar vraagt nu schaalbare categorisatieafspraken en documentatie voor nieuwe
 Read-only inventaris eerder in deze doorlopende sessie: 9 menu's, 226 collecties, hoofdmenu156vermeldingen/144bestemmingen; 12 dubbele bestemmingen zijn reviewgevallen, geen automatische fouten. Eerste afdelingsvoorstellen, importprocedure en selectiecriteria voor SEO-landings zijn beschreven. Verse beperkte concurrentiesteekproef en officiële Google-richtlijnen gelezen; geen keywordvolumes, rankings of conversieresultaat vastgesteld. Geen Shopify-mutatie of nieuwe themacontrole in deze documentatiestap. Volledige visuele/klik-/importtests nog open.
 
 Dit documentatiecheckpoint neemt de afzonderlijke FLASH-01-uitvoering niet over en verandert de ene volgende uitvoeringshandeling hierboven niet. Eerstvolgende categorisatiehandeling ná afronding/overdracht daarvan: TAX-02, één concreet Wastafels-voorstel met productmapping en gescheiden aanvullende links in preview beoordelen. SEO-onderzoeken staan als vervolgwerk, niet als gestarte achtergrondtaken.
+
+## QC-02 — aparte privétool, 30 oktober 2026
+
+Eigenaar heeft expliciet de eigen tak `quality-control` en mobiele foto-/productreviews met checkpoints gevraagd. [Actuele tool, code, brondekking en testgrenzen](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/README.md). [Privétool openen](https://badkamercity-quality.jason015.chatgpt.site). Status **PRIVATE_DEPLOYED / AUTHENTICATED_PHONE_REVIEW_PENDING**; QC-codecheckpoint 195f3f07ed6da728c7d9a5fdda5526da96786936. Beoordelingen/checkpoints in afgeschermde D1, geen Shopify-/storefrontmutatie. 11.679producten/34.713beeldkoppelingen in gedateerde read-only werkkopie;645Hotbath-producten zonder foto op aanleverlijst. Typecheck/build en13API-/SQLite-groepen geslaagd; hosted catalogusread en identity-afwijzing bewezen. Echte visitorlogin/-write en fysieke telefoon nog niet getest wegens nieuwe browseraanmelding. Volgende QC-handeling: eigenaar probeert één batch en maakt/hervat een named checkpoint. Deze afzonderlijke tool neemt de ASSORT-02-uitvoering en diens eerstvolgende storefrontstap hierboven niet over. Publieke Git bevat code/documentatie, geen privébeoordelingen of volledige extra mastercatalogus.

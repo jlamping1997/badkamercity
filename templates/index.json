@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "home_hero_gDkwi8": {
@@ -591,9 +582,17 @@
         "brands_link": "/collections?view=merken",
         "inspiration_link": "/collections/tegels"
       }
+    },
+    "bc_quote_teaser": {
+      "type": "bc-quote-teaser",
+      "disabled": true,
+      "settings": {
+        "link": "/pages/offerte-vergelijken"
+      }
     }
   },
   "order": [
+    "bc_quote_teaser",
     "bc_homepage",
     "home_sunshower",
     "home_hero_gDkwi8",
