@@ -1,0 +1,52 @@
+[
+  {
+    "filename": "sections/bc-assortment.liquid",
+    "equal": true,
+    "mode": "TEXT"
+  },
+  {
+    "filename": "snippets/bc-assortment-item.liquid",
+    "equal": true,
+    "mode": "TEXT"
+  },
+  {
+    "filename": "assets/bc-assortment.css",
+    "equal": true,
+    "mode": "TEXT"
+  },
+  {
+    "filename": "assets/bc-assortment.js",
+    "equal": true,
+    "mode": "TEXT"
+  },
+  {
+    "filename": "assets/bca-porcelanosa.webp",
+    "mode": "MD5",
+    "actual": "79f57a7308310adaba7e8ed14b6e1340"
+  },
+  {
+    "filename": "assets/bca-verwarming.webp",
+    "mode": "MD5",
+    "actual": "99519b080518eefe82f8b4b494caf265"
+  },
+  {
+    "filename": "layout/theme.liquid",
+    "equal": true,
+    "mode": "TEXT"
+  },
+  {
+    "filename": "locales/nl.json",
+    "equal": true,
+    "mode": "JSON_SEMANTIC"
+  },
+  {
+    "filename": "locales/en.default.json",
+    "equal": true,
+    "mode": "JSON_SEMANTIC"
+  },
+  {
+    "filename": "templates/list-collections.json",
+    "equal": true,
+    "mode": "JSON_SEMANTIC"
+  }
+]
