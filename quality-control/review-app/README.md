@@ -1,4 +1,17 @@
-# BadkamerCity — Productcontrole (QC-02)
+# BadkamerCity — Productcontrole
+
+## Actuele aanpassing QC-03 — 30 oktober 2026
+
+De fotocontrole toont uitsluitend de eerste bestaande foto per product (hoofdfoto in deze momentopname). De ongewijzigde bronimport heeft geen producten met een niet-afbeeldingsmedia-item vóór die eerste foto. Geen nieuwe import of Shopify-write.
+
+Vier directe keuzes: **Ja, Nee, Twijfel, Technische tekening**. Geen foto-notitieveld, fototype-dropdown of hoofdfotogeschiktheids-dropdown meer. `lib/main-photo.ts` maakt het complete oordeel automatisch. Technische tekening bewaart `role=technical`, `main=no`, `status=wrong` en een vaste reden; geen goedkeuring als hoofdfoto. Deze classificatie blijft zichtbaar in de aanleverlijst en export. Productgegevens heeft zijn afzonderlijke checklist behouden.
+
+Foto en volledige producttitel staan groter; titel boven de foto, zonder afkapping. Mobiel drie hoofdkeuzes met een aparte brede knop voor technische tekeningen. Eerdere reviews en hun auditgeschiedenis blijven behouden. Oude galerijcheckpoints worden bij hervatten gefilterd naar hoofdfoto’s met overeenkomstige positie; productcheckpoints blijven staan. Geen reset/migratie van beoordelingen nodig.
+
+De hoofdfotoronde bevat **11.034 kaarten** (11.679 producten min645 zonder foto); Hotbath7.591 en Wiesbaden2.451. De volledige galerij blijft in de ongewijzigde bronwerkkopie; de reviewselectie kiest er één per product uit.
+
+TypeScript en20 echte API-/SQLite-/selectiecontracttests geslaagd; hosted visitor-write en fysieke telefoon niet namens eigenaar geclaimd. De rest van dit document beschrijft de oorspronkelijke QC-02-basis; bovenstaande QC-03-interactie vervangt de oude fototype/notitie/galerijbediening.
+
 
 Mobiele, afgeschermde reviewtool. Op verzoek van de eigenaar gebouwd naast de Shopify-webshop, in projecttak `quality-control`. Geen thema- of productwrites. Live ingang en definitieve teststatus staan in het bovenliggende QC-dossier in de BadkamerCity-repository.
 
@@ -50,6 +63,6 @@ De normalizer verwacht genegeerde `.sites-runtime/Hotbath.json`, `Wiesbaden.json
 
 Geen offline wachtrij, automatische Shopify-correctie, ranking, fabrikantbronophaalservice, periodieke synchronisatie of verificatie van alle originele fotobestanden. Telefoonhardware/swipegedrag moet met de eigenaar worden getest. Een geslaagde build/API-test bewijst geen succesvolle hosted aanmelding; rapporteer dat afzonderlijk in het QC-dossier.
 
-## Publieke Git-spiegel
+## Publieke bronspiegel
 
-Deze publieke bronspiegel bevat bewust geen volledige `data/catalogue.json`-werkkopie. Herstel die via de private Sites-bronrepo van hetzelfde project, of maak een nieuwe complete read-only import met de gedocumenteerde query en normalizer. `data/import-summary.json` bevat wel de scope. De echte privédeployment bevat de complete bronwerkkopie; de deploymentcode en datacontroles zijn getest tegen die dataset. Reviews/checkpoints staan uitsluitend in D1. De snapshot-integriteitstest verwacht deze import en kan dus niet op een lege datakopie slagen.
+De volledige data/catalogue.json staat uitsluitend in de private Sites-bronrepo. Herstel die bron of voer de gedocumenteerde volledige read-only import uit vóór de snapshot-integriteitstest/build; data/import-summary.json blijft als openbare scope beschikbaar. Beoordelingen/checkpoints nooit naar Git kopiëren.

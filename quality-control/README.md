@@ -1,3 +1,23 @@
+# QC-03 — hoofdfoto’s met vier directe keuzes
+
+30 oktober 2026 · **PRIVATE_DEPLOYED / MAIN_PHOTO_PASS_IMPLEMENTED**.
+
+Op expliciet verzoek van de eigenaar: één hoofdfoto per product; Ja/Nee/Twijfel/Technische tekening; geen tekstveld of extra foto-dropdowns. Foto groter (mobiel44svh, gemeten370px bij844px iframehoogte) en volledige producttitel22px op mobiel/27px desktop, boven de foto, zonder afkapping. Productgegevens behoudt de afzonderlijke checklist.
+
+De huidige eerste afbeelding per product is de hoofdfoto van deze gedateerde werkkopie. De oorspronkelijke media-inventaris heeft geen niet-afbeeldingsmedia vóór deze foto (alle drie bronsets gecontroleerd); geen verse Shopify-import of claim van live synchronisatie. **11.034 hoofdfotokaarten**, waaronder7.591Hotbath en2.451Wiesbaden.645foto-loze producten blijven op de aanleverlijst.
+
+Technische tekening bewaart een eigen role=technical met main=no en vaste reden, status=wrong voor de correctiewachtrij; geen getypte toelichting nodig. Ja/Nee/Twijfel bouwen eveneens een compleet oordeel in één actie. Oudere oordelen/audit blijven staan. Galeriecheckpoints worden bij hervatten gefilterd op huidige hoofdfoto-ID’s en overeenkomstige voortgang; productcheckpoints blijven ongewijzigd. Geen datareset of schemamigratie.
+
+**Bewijs:** TypeScript en productiebuild PASS;20API-/echte-SQLite-/selectiecontractgroepen PASS. Zeven nieuwe scenario’s bewijzen één foto per product, lege galerij, vier volledige keuzen, aparte tekeningclassificatie, checkpointfilter/positie en productcheckpointbehoud, tekening save/read, volledige steekproefdekking11.034. Lokale browser:0tekstvelden in de fotocontrole, vierde knop aanwezig, Hotbath-totaal7.591. Tijdelijke echte app-iframes320/390px: geen horizontale overflow, titel22px/foto370px. De tijdelijke QA-route is verwijderd en zit niet in de deployment. Fysieke telefoon-/touch- en hosted visitor-schrijfproef niet opnieuw namens eigenaar geclaimd; geen private beoordeling gelezen of gewijzigd.
+
+Deployment **versie4 succeeded**, broncommit e14dadfcb7e4758b0ec47df11ff58be0f95d137c, deployment appgdep_6ae3dd8432d081919cce24dd3666d45d. [Dezelfde privélink](https://badkamercity-quality.jason015.chatgpt.site). Toegang uitsluitend bestaande eigenaar; geen audience-/authwijziging. Geen webshop-, ranking-, collectie- of productwrite.
+
+![Lokale mobiele controle320/390px; schrijfacties uit zonder visitoridentiteit](qa/main-photos-mobile.jpg)
+
+Volgende handeling: eigenaar herlaadt dezelfde privétool en doet de hoofdfotobatch met vier keuzes; checkpoint blijft beschikbaar. Publieke code in review-app; volledige productwerkkopie in private Sites-bronrepo en beoordelingen uitsluitend in D1. Onderstaande QC-02/QC-01-instructies zijn historische basis waar ze afwijken van deze vierkeuzebediening.
+
+---
+
 # QC-02 — mobiele productcontrole
 
 30 oktober 2026 · **PRIVATE_DEPLOYED / CATALOGUE_VERIFIED / AUTHENTICATED_PHONE_REVIEW_PENDING**.

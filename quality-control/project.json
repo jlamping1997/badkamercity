@@ -2,11 +2,11 @@
   "project": "BadkamerCity Quality Control",
   "branch": "quality-control",
   "updated_at": "2026-10-30",
-  "status": "PRIVATE_DEPLOYED_AUTHENTICATED_PHONE_REVIEW_PENDING",
+  "status": "PRIVATE_DEPLOYED_MAIN_PHOTO_PASS",
   "url": "https://badkamercity-quality.jason015.chatgpt.site",
   "site_project_id": "appgprj_6ae3d58930e48191b4dea11d39180671",
-  "site_source_commit": "b0a2d9514443ed487e5d09580c04b1fffa2808b6",
-  "site_version": 3,
+  "site_source_commit": "e14dadfcb7e4758b0ec47df11ff58be0f95d137c",
+  "site_version": 4,
   "live_shopify_writes": false,
   "catalogue": {
     "products": 11679,
@@ -17,20 +17,41 @@
     "public_mirror_contains_full_snapshot": false
   },
   "reviews": {
-    "products_reviewed": 0,
-    "images_reviewed": 0,
     "storage": "D1 per authenticated owner",
-    "checkpoints": "Named immutable bookmarks with batch and position"
+    "checkpoints": "Named immutable bookmarks with batch and position",
+    "counts_measured_this_session": false
   },
   "tests": {
     "typecheck": "PASS",
     "build": "PASS",
-    "api_sqlite_groups": 13,
+    "api_sqlite_groups": 20,
     "hosted_catalogue_reads": "PASS",
     "hosted_unauthenticated_review_rejection": "PASS",
     "hosted_visitor_login": "NOT_TESTED_NEW_SIGN_IN_REQUIRED",
     "hosted_visitor_write": "NOT_TESTED",
-    "physical_phone": "NOT_TESTED"
+    "physical_phone": "NOT_TESTED_THIS_SESSION",
+    "mobile_component_widths": [
+      320,
+      390
+    ]
   },
-  "next_action": "Owner completes first real phone batch, then creates and resumes a named checkpoint."
+  "next_action": "Owner reloads the existing private Site and reviews a main-photo batch using four choices.",
+  "photo_review": {
+    "scope": "First image per product in current snapshot",
+    "cards": 11034,
+    "choices": [
+      "yes",
+      "no",
+      "uncertain",
+      "technical_drawing"
+    ],
+    "typed_note_required": false,
+    "photo_text_input": false,
+    "legacy_checkpoint_filter": "Primary IDs only; corresponding position",
+    "technical_drawing": {
+      "role": "technical",
+      "main": "no",
+      "status": "wrong"
+    }
+  }
 }
