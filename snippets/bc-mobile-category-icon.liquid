@@ -1,0 +1,40 @@
+{%- doc -%}
+  Renders the approved SVG for one mobile root category.
+
+  @param {string} handle - Category handle; unsupported handles output nothing.
+{%- enddoc -%}
+{%- liquid
+  assign mobile_icon_asset = ''
+  case handle
+    when 'badkamermeubels'
+      assign mobile_icon_asset = 'bc-nav-badkamermeubels.svg'
+    when 'kranen'
+      assign mobile_icon_asset = 'bc-nav-kranen.svg'
+    when 'toiletten'
+      assign mobile_icon_asset = 'bc-nav-toiletten.svg'
+    when 'wastafels'
+      assign mobile_icon_asset = 'bc-nav-wastafels.svg'
+    when 'douche', 'douches'
+      assign mobile_icon_asset = 'bc-nav-douches.svg'
+    when 'baden'
+      assign mobile_icon_asset = 'bc-nav-baden.svg'
+    when 'spiegels', 'spiegels-en-spiegelkasten'
+      assign mobile_icon_asset = 'bc-nav-spiegels.svg'
+    when 'accessoires', 'badkameraccessoires', 'badkamer-accessoires'
+      assign mobile_icon_asset = 'bc-nav-accessoires.svg'
+    when 'tegels'
+      assign mobile_icon_asset = 'bc-nav-tegels.svg'
+    when 'badkamerverlichting', 'badkamer-verlichting', 'verlichting'
+      assign mobile_icon_asset = 'bc-nav-badkamerverlichting.svg'
+    when 'verwarming'
+      assign mobile_icon_asset = 'bc-nav-verwarming.svg'
+    when 'meer'
+      assign mobile_icon_asset = 'bc-nav-meer.svg'
+    when 'outlet'
+      assign mobile_icon_asset = 'bc-nav-outlet.svg'
+  endcase
+-%}
+{%- if mobile_icon_asset != blank -%}
+  {{- mobile_icon_asset | inline_asset_content -}}
+{%- endif -%}
+

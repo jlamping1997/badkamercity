@@ -3,9 +3,6 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 
-{%- if settings.predictive_search_enabled -%}
-  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- endif -%}
 
 {%- if section.settings.menu_type_desktop == 'mega' -%}
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -756,6 +753,29 @@
       padding-right: 0.4rem;
     }
 
+    .bc-mobile-drawer__row--primary.bc-mobile-drawer__row--category,
+    .bc-mobile-drawer__link--primary.bc-mobile-drawer__link--category {
+      grid-template-columns: 4.4rem minmax(0, 1fr) auto;
+      gap: 1.2rem;
+      min-height: 6.8rem;
+      padding: 1.2rem 0.4rem;
+      font-size: 1.6rem;
+      line-height: 1.3;
+    }
+
+    .bc-mobile-drawer__row-icon--category {
+      width: 4.4rem;
+      height: 4.4rem;
+      border-radius: 1.1rem;
+      background: #eef7fb;
+      color: #102a43;
+    }
+
+    .bc-mobile-drawer__row-icon--category svg {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
     .bc-mobile-drawer__link--secondary,
     .bc-mobile-drawer__link--tertiary {
       grid-template-columns: minmax(0, 1fr) auto;
@@ -801,6 +821,140 @@
 
     .bc-mobile-drawer__link--active {
       color: #111111;
+      font-weight: 700;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu {
+      padding-top: 0.8rem;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__panel-head {
+      flex-shrink: 0;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 1.2rem;
+      min-height: 4.8rem;
+      margin-bottom: 0.8rem;
+      padding-top: 0;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__back {
+      min-height: 4.8rem;
+      padding-right: 0.4rem;
+      font-size: 1.4rem;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__panel-title {
+      min-width: 0;
+      padding-inline: 0.4rem;
+      font-size: 2rem;
+      line-height: 1.3;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__view-all {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.6rem;
+      width: 100%;
+      min-height: 4.8rem;
+      margin: 0 0 1.2rem;
+      padding: 1.2rem 1.4rem;
+      border-radius: 0;
+      border-bottom: 2px solid #8fd4ef;
+      background: transparent;
+      color: #102a43;
+      font-size: 1.6rem;
+      line-height: 1.35;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__view-all > :first-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .bc-mobile-drawer__submenu-list {
+      flex-shrink: 0;
+      border: 0;
+      border-top: 1px solid #dce5ec;
+      border-radius: 0;
+    }
+
+    .bc-mobile-drawer__submenu-list > .bc-mobile-drawer__item {
+      border-color: #e5ebef;
+    }
+
+    .bc-mobile-drawer__submenu-list > .bc-mobile-drawer__item:last-child {
+      border-bottom: 0;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__row--secondary,
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__link--secondary,
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__link--tertiary {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1.2rem;
+      min-height: 4.8rem;
+      padding: 1.2rem 1.3rem;
+      border-radius: 0;
+      color: #102a43;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .bc-mobile-drawer__category > summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .bc-mobile-drawer__category > summary::-webkit-details-marker { display: none; }
+    .bc-mobile-drawer__category > summary::after { content: none; }
+
+    .bc-mobile-drawer__category-toggle {
+      position: relative;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .bc-mobile-drawer__category-toggle::before,
+    .bc-mobile-drawer__category-toggle::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .bc-mobile-drawer__category-toggle::after { transform: rotate(90deg); }
+    .bc-mobile-drawer__category[open] .bc-mobile-drawer__category-toggle::after { transform: none; }
+    .bc-mobile-drawer__category[open] > summary { color: #1f6685; }
+
+    .bc-mobile-drawer__category-links {
+      margin: 0 1.3rem 0 2.6rem;
+      padding: 0 0 0.8rem;
+      border-top: 1px solid #e5ebef;
+    }
+
+    .bc-mobile-drawer__category-links > li + li { border-top: 1px solid #e5ebef; }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__category-links .bc-mobile-drawer__link {
+      padding-inline: 0;
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: #415062;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__category-links .bc-mobile-drawer__category-all {
+      color: #1f6685;
+      font-weight: 600;
+    }
+
+    .bc-mobile-drawer__menu-panel--submenu .bc-mobile-drawer__link--active {
       font-weight: 700;
     }
 
@@ -941,7 +1095,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %} bc-header">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if localization_forms %} header--has-localizations{% endif %}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %} bc-header">
     <div class="bc-header__inner page-width">
       {%- if section.settings.menu != blank -%}
         <div class="bc-header__mobile-menu large-up-hide">
@@ -1006,26 +1160,11 @@
           {%- endif -%}
         </div>
 
-        {%- if shop.customer_accounts_enabled -%}
-          <a
-            href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-            class="bc-header__utility-link bc-header__utility-link--account link focus-inset"
-            rel="nofollow"
-          >
-            <span class="bc-header__utility-icon" aria-hidden="true">
-              <span class="svg-wrapper">{{ 'icon-account-bc.svg' | inline_asset_content }}</span>
-            </span>
-            <span class="bc-header__utility-label">Mijn account</span>
-            <span class="visually-hidden">
-              {%- if customer -%}{{ 'customer.account_fallback' | t }}{%- else -%}{{ 'customer.log_in' | t }}{%- endif -%}
-            </span>
-          </a>
-        {%- endif -%}
-
         <a href="/pages/verlanglijst" class="bc-header__utility-link bc-header__utility-link--wishlist link focus-inset">
           <span class="bc-header__utility-icon" aria-hidden="true">
             <span class="svg-wrapper">{{ 'icon-wishlist-bc.svg' | inline_asset_content }}</span>
           </span>
+          <span class="bc-wishlist-count" data-bc-wishlist-count hidden aria-hidden="true">0</span>
           <span class="bc-header__utility-label">Verlanglijst</span>
           <span class="visually-hidden">Verlanglijst</span>
         </a>
@@ -1244,17 +1383,21 @@
 
       this.panelStack.push(targetId);
       this.syncPanels();
+      const activePanel = this.menuPanels.find((panel) => panel.dataset.bcMobilePanelId === targetId);
+      activePanel?.querySelector('[data-bc-mobile-back]')?.focus();
     }
 
     navigateBack() {
       if (this.panelStack.length <= 1) return;
 
-      this.panelStack.pop();
+      const previousPanelId = this.panelStack.pop();
       this.syncPanels();
+      this.nextTriggers.find((trigger) => trigger.dataset.bcMobileNext === previousPanelId)?.focus();
     }
 
     resetNavigation() {
       this.panelStack = ['root'];
+      this.container.querySelectorAll('[data-bc-mobile-category]').forEach((category) => { category.open = false; });
       this.syncPanels();
     }
 
@@ -1263,6 +1406,9 @@
       const previousPanelIds = this.panelStack.slice(0, -1);
 
       this.menuPanels.forEach((menuPanel) => {
+        const isActive = menuPanel.dataset.bcMobilePanelId === activePanelId;
+        menuPanel.inert = !isActive;
+        menuPanel.setAttribute('aria-hidden', String(!isActive));
         menuPanel.classList.remove('is-active', 'is-under');
 
         if (menuPanel.dataset.bcMobilePanelId === activePanelId) {

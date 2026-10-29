@@ -1,4 +1,4 @@
-> **29 oktober2026 — HOME-01:** gekozen homepage met negen cirkels, configureerbare banners en 3D-afspraakaanvraag staat in concept195910795530. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md) en het HOME-01-dossier. Oudere homepagevolgordes hieronder zijn historische bronnen; MAIN is niet aangepast.
+> **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Nieuw menuconcept195913482506 wordt opgebouwd: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); browsercontrole/publicatie nog open.
 
 # BadkamerCity — actuele technische AI-handoff
 
