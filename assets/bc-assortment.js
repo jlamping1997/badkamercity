@@ -17,9 +17,9 @@ if (!customElements.get('bc-assortment')) {
       this.input.addEventListener('input', () => this.filter(), { signal });
       this.input.addEventListener('keydown', event => {
         if (event.key === 'Escape' && this.input.value) { event.preventDefault(); this.reset(); }
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && this.input.value.trim()) {
           event.preventDefault();
-          this.querySelector('[data-bca-department]:not([hidden]) a:not([hidden])')?.focus();
+          [...this.querySelectorAll('[data-bca-department]:not([hidden]) a')].find(anchor => !anchor.closest('[hidden]'))?.focus();
         }
       }, { signal });
       this.querySelectorAll('[data-bca-clear], [data-bca-reset]').forEach(button => button.addEventListener('click', () => this.reset(), { signal }));

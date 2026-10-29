@@ -28,11 +28,15 @@
               assign image = category.image | default: category.featured_image
               assign fallback_asset = ''
               assign category_title = root.title
+              assign category_mobile_title = root.title
               for block in category_blocks
                 if block.settings.collection.url == root.url
-                  assign image = block.settings.image
-                  assign fallback_asset = block.settings.asset
+                  if block.settings.image != blank or block.settings.asset != blank
+                    assign image = block.settings.image
+                    assign fallback_asset = block.settings.asset
+                  endif
                   assign category_title = block.settings.title | default: root.title
+                  assign category_mobile_title = block.settings.mobile_title | default: category_title
                   break
                 endif
               endfor
@@ -44,7 +48,7 @@
             <li class="bca-card">
               <a href="{{ root.url | escape }}" class="bca-card__main">
                 <span class="bca-card__image">{% render 'bc-home-image', image: image, asset: fallback_asset, alt: '', priority: image_priority, sizes: '(min-width: 1100px) 240px, (min-width: 750px) 30vw, 70px', width: 480, height: 480 %}</span>
-                <span class="bca-card__title">{{ category_title | escape }}<span class="bca-arrow" aria-hidden="true">&rsaquo;</span></span>
+                <span class="bca-card__title"><span class="bca-card__label"><span class="bca-card__desktop">{{ category_title | escape }}</span><span class="bca-card__mobile">{{ category_mobile_title | escape }}</span></span><span class="bca-arrow" aria-hidden="true">&rsaquo;</span></span>
               </a>
               <div class="bca-card__links">
                 {% for child in root.links limit: 3 %}
@@ -142,9 +146,10 @@
     {"type":"url","id":"advice_link","label":"Advieslink"}
   ],
   "blocks":[
-    {"type":"category","name":"Categoriebeeld en indeling","limit":20,"settings":[
+    {"type":"category","name":"Categoriebeeld","limit":20,"settings":[
       {"type":"collection","id":"collection","label":"Categorie"},
       {"type":"text","id":"title","label":"Korte titel"},
+      {"type":"text","id":"mobile_title","label":"Mobiele titel"},
       {"type":"image_picker","id":"image","label":"Afbeelding"},
       {"type":"text","id":"asset","label":"Standaard afbeeldingsbestand"},
       {"type":"text","id":"supplement","label":"Aanvullende categoriehandles","info":"Scheid handles met |. Deze links komen onder Maak het compleet."}

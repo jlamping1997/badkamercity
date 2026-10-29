@@ -41,6 +41,8 @@ categories = [
 blocks = {}
 for i,(handle,title,asset,supplement) in enumerate(categories):
     blocks[f'category_{i}']={'type':'category','settings':{'collection':handle,'title':title,'asset':asset,'supplement':supplement}}
+for i,title in enumerate(['Kranen','Douche','Badmeubels','Wastafels','Toiletten','Baden','Tegels','Spiegels','Accessoires','Verwarming']):
+    blocks[f'category_{i}']['settings']['mobile_title']=title
 blocks['sunshower']={'type':'promotion','settings':{
     'brand':'Sunshower','heading':'Warmte onder de douche','label':'Ontdek Sunshower','link':'/pages/sunshower',
     'image':'shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png','dark':True

@@ -1,25 +1,25 @@
 # BadkamerCity — actuele werkstatus
 
-**29 oktober 2026 · ASSORT-01 — compact assortimentoverzicht voor mobiel en desktop.** Eigenaar heeft het visuele ontwerp goedgekeurd en uitvoering gevraagd. FLASH-01 is door eigenaar gepubliceerd: verse MAIN195915448586.
+**29 oktober 2026 · ASSORT-01 — overzicht uitgevoerd en reviewgereed.** Eigenaar keurde het ontwerp goed; de werkende pagina staat alleen in concept.
 
 ## Actuele uitvoering
 
 [Dossier, code en testgrenzen](assortment/2026-10-29/README.md). [Vorige werkstatus](assortment/2026-10-29/previous-work-status.md).
 
-- MAIN195915448586 — BadkamerCity - Stabiele header en iconen, niet gewijzigd.
-- Concept195916628234 — BadkamerCity - Assortiment overzicht, UNPUBLISHED; volledige kopie in verwerking.
-- Status **LOCAL_IMPLEMENTED / COPY_PROCESSING / BROWSER_QA_PENDING / NOT_PUBLISHED**.
-- Actieve branch fix/product-cards-2026-10-14; codecheckpoint fdbbc8d. Geen nieuwe branch. Main alleen documentatie.
-- Tien hoofdgroepen uit bestaand menu, directory met aanvullende links, categoriezoeker en twee merkblokken. Alleen standaard /collections, geen collectie-/productdatamutaties. Routegebonden metadatatitel/-omschrijving; bestaande canonicals behouden.
-- ThemeCheck zeven bestanden R1 en acht R3 geslaagd; bestaande scheme_classes-waarschuwing in layout. Echte Porcelanosa-assortimentslink geopend met337producten. Fysieke telefoon en browserpreview nog niet getest.
+- MAIN **195915448586 — BadkamerCity - Stabiele header en iconen**, 1.338 bestanden ongewijzigd.
+- Concept **195916628234 — BadkamerCity - Assortiment overzicht**, UNPUBLISHED, processing=false; **PREVIEW_READY / NOT_PUBLISHED**.
+- Actieve branch `fix/product-cards-2026-10-14`. Eerste remote codecheckpoint `f8ba3e68760a4406ee2a30a92fb98400873c2d5b`; definitieve ASSORT-01-verfijning en bewijs in vervolgcommit. Geen nieuwe branch, main alleen documentatie.
+- Vóór 1.338/1.338 gelijk. Na 1.344 bestanden: tien bedoelde wijzigingen/toevoegingen, overige 1.334 gelijk. Alle productie-inhoud teruggelezen; tijdelijke QA-template exact hersteld.
+- Tien afdelingen, categoriezoeker, mobiel uitklapbare directory, aanvullende links onder Maak het compleet, Sunshower/Porcelanosa. Alleen standaard `/collections`; geen catalogus-/menumutaties. Metadatatitel/-omschrijving routegebonden.
+- ThemeCheck R8 geslaagd met bestaande `scheme_classes`-waarschuwing; twintig lokale cases geslaagd. Echte desktopzoeker en twaalf bestemmingen geklikt; componentframes 320/390/1024 zonder overloop, zoek-/accordionherstel gecontroleerd. Fysieke telefoon/volledige mobiele site, ranking/conversie en performance niet getest. Geen Windowscontrole.
 
 ## Exact één volgende handeling
 
-**Uitvoerder voltooit de kopiepariteit, uploadt alleen de bedoelde bestanden en test de conceptpagina op desktop en smalle componentbreedtes.** Nog geen publicatie/reviewvrijgave.
+**Eigenaar beoordeelt concept 195916628234 op een echte telefoon en desktop en publiceert het via Shopify wanneer akkoord.** Publicatie ligt volgens AGENTS.md bij de merchant. Daarna verse MAIN-/storefrontcontrole; geen agent schrijft naar MAIN.
 
 ## Overdracht
 
-Bronmomenten en terugzetbestanden in dossier. Geen volledige Git-root uploaden. Geen Windows-, Lighthouse- of conversieclaim. De definitieve hoogwaardige Porcelanosa-merkpagina en verdere SEO-/categorisatieonderzoeken blijven afzonderlijke projecten.
+Bronnen, checksums, screenshots, testscript en uitbreidregels in het dossier. Gebruik alleen deze conceptkopie voor review; geen volledige Git-root uploaden. Hoogwaardige Porcelanosa-merkpagina, Living Colours, blogverbeteringen en verdere SEO-/categorisatieonderzoeken blijven afzonderlijke vervolgprojecten.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
