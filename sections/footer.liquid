@@ -1,3 +1,6 @@
+{% if section.settings.compact_homepage and request.page_type == 'index' %}
+  {% render 'bc-home-footer', section: section %}
+{% else %}
 {% liquid
   assign trust_icons = 'grid,headset,sparkles,shield' | split: ','
   assign social_names = 'facebook,instagram,pinterest,youtube,linkedin' | split: ','
@@ -124,6 +127,7 @@
     </div>
   </div>
 </footer>
+{% endif %}
 {% stylesheet %}
 
 .bcf-v3{--bcf-bg:#1a253f;--bcf-text:#edf2f8;--bcf-muted:#bdcce0;--bcf-accent:#aad1ed;--bcf-yellow:#e6d259;display:block;margin:0;padding:0;border:0;color:var(--bcf-text);background:var(--bcf-bg);font-family:var(--font-body-family,Arial,sans-serif);font-style:normal;font-size:16px;line-height:1.55;letter-spacing:0;text-align:left}
@@ -249,6 +253,12 @@
 {
   "name": "Footer BadkamerCity",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "compact_homepage",
+      "label": "Compacte footer op de homepage",
+      "default": false
+    },
     {
       "type": "header",
       "content": "Inhoud en voorbeeldgegevens"
@@ -525,4 +535,5 @@
   ]
 }
 {% endschema %}
+
 

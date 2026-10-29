@@ -1,3 +1,5 @@
+> **29 oktober2026 — HOME-01:** gekozen homepage met negen cirkels, configureerbare banners en 3D-afspraakaanvraag staat in concept195910795530. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md) en het HOME-01-dossier. Oudere homepagevolgordes hieronder zijn historische bronnen; MAIN is niet aangepast.
+
 # BadkamerCity — actuele technische AI-handoff
 
 **Vervolg 28 oktober 2026 — UI-01:** eigenaar kiest nu inconsistenties en productfotopijlen. [UI-vergelijking en conceptwerk](ui-consistency/2026-10-28/README.md); volg [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) voor exact concept-/test-/publicatiepunt. DOC-03E is geparkeerd; checkout buiten scope. Oudere volgende stappen hieronder zijn geschiedenis.
