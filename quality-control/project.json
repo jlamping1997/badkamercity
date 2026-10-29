@@ -1,0 +1,37 @@
+{
+  "project": "BadkamerCity Quality Control",
+  "branch": "quality-control",
+  "created_at": "2026-10-30",
+  "status": "FOUNDATION_DOCUMENTED",
+  "base_commit": "d5dbc60eeea4029a84b7a88659d14a18084ee69c",
+  "live_writes": false,
+  "mobile_app": {
+    "status": "NOT_BUILT",
+    "durable_storage": "NOT_CONNECTED",
+    "phone_tested": false
+  },
+  "catalogue": {
+    "status": "NOT_IMPORTED",
+    "source_of_truth": "Existing product registers plus current Shopify Online Store publication",
+    "products_reviewed": 0,
+    "images_reviewed": 0
+  },
+  "preferred_pilot": {
+    "vendors_and_series": [
+      {
+        "vendor": "Hotbath",
+        "series": "Cobber"
+      },
+      {
+        "vendor": "Wiesbaden",
+        "series": "Caral"
+      }
+    ],
+    "target_image_reviews_min": 25,
+    "target_image_reviews_max": 50,
+    "selection_status": "NOT_SELECTED",
+    "commercial_preference_is_quality_evidence": false
+  },
+  "batches": [],
+  "next_action": "Inventory existing product registers and storage/admin capabilities for a real read-only Cobber/Caral image review pilot."
+}
