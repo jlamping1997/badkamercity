@@ -16,6 +16,10 @@ De Admin-inventaris van DOC-01 bevat negen menu's met maximaal drie niveaus. De 
 
 BcCategoryNavigation en BcMobileDrawer zijn actuele maatwerkklassen. Een instelling met de Dawn-naam dropdown bewijst niet dat alleen het oorspronkelijke Dawn-dropdownsnippet de UI rendert. Dat is precies waarom de bronroute moet worden gevolgd.
 
+### NAV-01 — 29 oktober 2026
+
+[Het actuele dossier](../../navigation/2026-10-29/README.md) beschrijft de nieuwe conceptversie: de eerste categorie opent nog een paneel, groepen op het tweede niveau klappen native inline open en bladeren niet naar een derde paneel. Menubladeren en Bekijk alle blijven gewone Admin-URL's. Inactieve panelen krijgen inert/aria-hidden; vooruit/terug herstelt focus. De twee accountlinks zijn op verzoek verwijderd. Rijen op het vervolgniveau hebben rechte scheidingslijnen, de eerste categorieën blijven behouden. Zie de centrale status voor test- en publicatiegraad; onderstaande historische beschrijving is geen aanvullende vrijgave.
+
 ### Mobiele drawer
 
 De drawer gebruikt data-bc-mobile-trigger/overlay/panel en een panelStack die begint bij root. Vooruit/terug verandert het actieve subpaneel; dit is geen browsergeschiedenis. Open zet aria-expanded, aria-hidden, overlay en bc-mobile-menu-open-klassen, berekent offset/scrollbarpadding en focust het paneel. Escape, overlay en overgang naar desktop sluiten. Close verbergt de inhoud na 260 ms, reset de stack en focust de trigger.
