@@ -10,13 +10,14 @@
 - Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348files. Eerdere ongepubliceerde versie gecontroleerd gesynchroniseerd met actuele MAIN en hernoemd.
 - Pagina **166573539594**, handle offerte-vergelijken, templateSuffix offerte-vergelijken, **isPublished=false** teruggelezen.
 - Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `99dd1bb4714148423ab2484da6f53b4b113fe7ff`. Main alleen documentatie.
+- Eigenaar heeft expliciet laagsteprijsgarantie goedgekeurd: Stuur je offerte op en ontvang een betere prijs. Kop/intro/stappen/FAQ/homepageverwijzing in NL/EN aangepast; ongepubliceerde paginatitel en inhoud bijgewerkt. Localevalidatie en14bestaande cases PASS; twee locale-inhouden en paginastatus teruggelezen. Geen upload of publicatie.
 - Pagina-ontwerp, NL/EN, FAQ, contactfallback en voorbereide Jotform-iframe met expliciete activatie. Voorbeeldvelden disabled, geen POST of fakebevestiging. Homepageverwijzing voorbereid maar disabled:true; nieuwe paginaroute nog niet publiek.
 - Zeven bedoelde productie-inhouden teruggelezen; overige1.341checksums gelijk. MAIN1.344/1.344ongewijzigd, QA exact hersteld.
 - ThemeCheck zeven files PASS;14lokale render-/gatecases PASS. Desktop en320/390/1024componentframes zonder overloop; FAQbediening PASS. Geen fysieke telefoon, echte upload, notificatie, privétoegang of verwijdering getest.
 
 ## Exact één volgende handeling
 
-**Eigenaar geeft aan of er al een Jotform-account of andere geschikte privé-formulierendienst is.** Daarna echte koppeling, ontvanger/toegang en upload-/ontvangstproef uitvoeren. Dit ontvangstdeel is geblokkeerd door ontbrekende accounttoegang, niet door een fictieve themebeperking. Ontwerp staat reviewbaar in concept via contact?view=offerte-vergelijken.
+**Eigenaar maakt een formulieraccount beschikbaar; hij bevestigt nog geen Jotform-account te hebben.** Daarna echte koppeling, ontvanger/toegang en upload-/ontvangstproef uitvoeren. Dit ontvangstdeel is geblokkeerd door ontbrekende accounttoegang, niet door een fictieve themebeperking. Ontwerp staat reviewbaar in concept via contact?view=offerte-vergelijken.
 
 ## Overdracht
 

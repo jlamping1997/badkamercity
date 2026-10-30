@@ -2,6 +2,12 @@
 
 30 oktober 2026, Europe/Amsterdam. Eigenaar kiest uitvoering van offertevergelijking. **DESIGN_IMPLEMENTED / INTEGRATION_PENDING_ACCOUNT / NOT_PUBLISHED.** Dit is een concreet reviewbaar ontwerp met een voorbereide providerkoppeling, geen werkende ontvangst-/uploaddienst.
 
+## Goedgekeurde commerciële aanvulling
+
+Eigenaar bevestigt30oktober expliciet: **Laagsteprijsgarantie — stuur je offerte op en ontvang een betere prijs.** Dit vervangt de eerdere terughoudende formulering. NL/EN-kop, intro, stappen, formulierkop, FAQ en homepageverwijzing aangepast. Gelijkwaardige vergelijking betekent dezelfde artikelen, aantallen en afwerkingen, inclusief btw en verzending. Geen extra kortingspercentages, termijnen of uitzonderingen toegevoegd. Geen review als voorwaarde voor de prijs gesteld.
+
+Eigenaar heeft nog geen Jotform-account. Accountkeuze/inrichting blijft de volgende praktische stap; upload en homepageverwijzing blijven uit. Conceptpagina is opnieuw als ongepubliceerd teruggelezen met titel Laagsteprijsgarantie — offerte vergelijken. [Nieuwe tekst in preview](guarantee-desktop.jpg) · [readback](guarantee-readback.json) · [localevalidatie](guarantee-themecheck.json). Veertien bestaande render-/gatecases opnieuw PASS. Geen nieuwe upload-/ontvangsttest of mobiele hercontrole geclaimd bij deze tekstwijziging. Oudere screenshots/FAQ-beschrijvingen hieronder horen bij de eerste ontwerpversie.
+
 ## Omgeving en scope
 
 MAIN **195915448586 — BadkamerCity - Mobiel assortiment**, ASSORT-02 inmiddels door eigenaar gepubliceerd. Alle1.344MAIN-bestanden ongewijzigd. Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348bestanden. De bestaande ongepubliceerde vorige versie is bijgewerkt met de zes verschillende MAIN-bronpaden, alle broninhoud exact of volledig JSON-semantisch gelijk, en hernoemd. Geen nieuwe volledige themakopie nodig.
@@ -13,7 +19,7 @@ Aangemaakt: ongepubliceerde Shopify-pagina **166573539594**, handle `offerte-ver
 ## Gebouwd
 
 - `sections/bc-quote.liquid`, `assets/bc-quote.css`, `templates/page.offerte-vergelijken.json`: uitleg, drie stappen, vergelijking op artikel/uitvoering/aantallen/totaalkosten, drie native FAQ's en contactfallback.
-- Eén aanvraag voor volledige offerte of één product; geen automatische korting of laagsteprijsgarantie, geen onbevestigde reactietijd.
+- Eén aanvraag voor volledige offerte of één product; geen automatische prijsaanpassing en geen onbevestigde reactietijd. Laagsteprijsgarantie is inmiddels expliciet door eigenaar goedgekeurd, zie aanvulling hierboven.
 - Voorbeeld met naam/e-mail, optionele telefoon/toelichting en PDF/foto. Alle voorbeeldvelden zijn echt uitgeschakeld in een disabled fieldset; er is geen verzendform/action, geen POST, geen upload of verzonnen bevestiging. Alleen preview, geen ontvangstclaim.
 - Voorbereide Jotform-iframekoppeling met uitsluitend numeriek formulier-ID, vaste HTTPS-host en afzonderlijke activatieschakelaar. Geen API-key in het thema. Zonder activering geen providerframe of externe formulierrequest. Ongeldig ID valt terug op contact. Een iframe houdt de provider verantwoordelijk voor bestandsoverdracht en servervalidatie; het eigen previewformulier wordt niet stil als providerformulier verzonden.
 - Werkelijke toekomstige Jotform-layout moet na accountkoppeling worden afgestemd op het ontwerp. De preview bewijst geen veldmapping, providerlayout, bijlagenverwerking, servervalidatie of afleveren.
@@ -56,7 +62,7 @@ Jotform is de voorbereide praktische route, geen al afgesloten dienst of gekozen
 6. Fictieve kleine PDF/foto testen op mobiel en desktop: opslag, notificatie, klantbevestiging, bevoegde download en anonieme weigering. Ook fout type/grootte, verzendfout, dubbele klik en verwijderen controleren. Geen echte klantofferte gebruiken als test.
 7. Numeriek formulier-ID in sectie invullen, provideropmaak afstemmen, preview uit, integratie activeren. Pas na resultaat: pagina en concept door eigenaar publiceren, homepageverwijzing inschakelen en definitieve SEO/canonical/mobile controleren.
 
-**Exact volgende handeling:** eigenaar geeft aan of er al een Jotform-account of andere bestaande privé-formulierendienst is; daarna werkelijke koppeling en ontvangstproef uitvoeren. Deze sessie kan zonder die accounttoegang geen echte privé-upload of aflevering configureren/verifiëren.
+**Exact volgende handeling:** eigenaar maakt een formulieraccount beschikbaar; er is nog geen Jotform-account. Daarna werkelijke koppeling en ontvangstproef uitvoeren. Deze sessie kan zonder die accounttoegang geen echte privé-upload of aflevering configureren/verifiëren.
 
 ## Rollback
 
