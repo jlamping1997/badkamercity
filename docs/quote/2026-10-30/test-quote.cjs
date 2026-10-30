@@ -8,7 +8,7 @@ const tests=[];const record=(name,fn)=>{fn();tests.push(name)};
 (async()=>{
  const render=async (settings,role="main")=>new JSDOM(await engine.parseAndRender(source,{section:{id:'quote-fixture',settings},theme:{role},pages:{contact:{url:'/pages/contact'}},routes:{root_url:'/'}}));
  let dom=await render({show_preview:true,integration_enabled:false,form_id:''}),d=dom.window.document;
- record('Single H1 and three native FAQs',()=>{assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelectorAll('details').length,3)});
+ record('Single H1 and one concise native explanation',()=>{assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelectorAll('details').length,1)});
  record('Preview cannot collect or send',()=>{assert.ok(d.querySelector('fieldset').disabled);assert.equal(d.querySelectorAll('form').length,0);assert.equal(d.querySelectorAll('iframe').length,0);assert.equal(d.querySelector('button').type,'button')});
  record('All input and textarea labels are present',()=>{for(const x of d.querySelectorAll('input:not([type=radio]),textarea'))assert.ok(d.querySelector('label[for="'+x.id+'"]'))});
  record('IDs are unique',()=>{const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);assert.equal(ids.length,new Set(ids).size)});

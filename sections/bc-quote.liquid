@@ -16,11 +16,10 @@
     <nav class="bcq-crumb" aria-label="{{ 'bc_assortment.breadcrumb' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'bc_assortment.home' | t }}</a><span aria-hidden="true">›</span><span>{{ 'bc_quote.crumb' | t }}</span></nav>
     <div class="bcq-main">
       <div class="bcq-intro"><p class="bcq-eyebrow">{{ 'bc_quote.eyebrow' | t }}</p><h1 id="QuoteHeading-{{ section.id }}">{{ 'bc_quote.heading' | t }}</h1><p class="bcq-lead">{{ 'bc_quote.intro' | t }}</p>
-        <div class="bcq-steps"><h2>{{ 'bc_quote.steps_heading' | t }}</h2><ol>{% for number in (1..3) %}{% assign key = 'bc_quote.step_' | append: number %}{% assign text_key = key | append: '_text' %}<li><span class="bcq-number" aria-hidden="true">{{ number }}</span><div><h3>{{ key | t }}</h3><p>{{ text_key | t }}</p></div></li>{% endfor %}</ol></div>
       </div>
       <div class="bcq-panel" id="QuoteForm-{{ section.id }}">{% unless form_ready %}<h2>{{ 'bc_quote.form_heading' | t }}</h2><p class="bcq-muted">{{ 'bc_quote.form_intro' | t }}</p>{% endunless %}
         {% if form_ready %}
-          <iframe class="bcq-frame" title="{{ 'bc_quote.iframe_title' | t | escape }}" src="https://form.jotform.com/{{ form_id | escape }}" loading="lazy" width="100%" height="1450"></iframe>
+          <iframe class="bcq-frame" title="{{ 'bc_quote.iframe_title' | t | escape }}" src="https://form.jotform.com/{{ form_id | escape }}" loading="lazy" width="100%" height="1100"></iframe>
           <a class="bcq-external" href="https://form.jotform.com/{{ form_id | escape }}" target="_blank" rel="noopener">{{ 'bc_quote.open_form' | t }} ↗</a>
         {% elsif section.settings.show_preview %}
           <p class="bcq-preview" role="note">{{ 'bc_quote.preview' | t }}</p>
@@ -34,8 +33,7 @@
         {% else %}<p class="bcq-unavailable">{{ 'bc_quote.not_ready' | t }}</p><a class="bcq-button" href="{{ pages.contact.url }}">{{ 'bc_quote.contact' | t }} →</a>{% endif %}
       </div>
     </div>
-    <div class="bcq-details"><section><h2>{{ 'bc_quote.compare_heading' | t }}</h2><p>{{ 'bc_quote.compare_text' | t }}</p><ul class="bcq-checks">{% for number in (1..5) %}{% assign key = 'bc_quote.compare_' | append: number %}<li><span aria-hidden="true">✓</span>{{ key | t }}</li>{% endfor %}</ul></section><aside class="bcq-tip"><h2>{{ 'bc_quote.tip_heading' | t }}</h2><p>{{ 'bc_quote.tip_text' | t }}</p></aside></div>
-    <section class="bcq-faq"><h2>{{ 'bc_quote.faq_heading' | t }}</h2>{% for number in (1..3) %}{% assign key = 'bc_quote.faq_' | append: number %}{% assign answer = key | append: '_answer' %}<details><summary>{{ key | t }}<span aria-hidden="true">+</span></summary><p>{{ answer | t }}</p></details>{% endfor %}</section>
+    <details class="bcq-help"><summary>{{ 'bc_quote.faq_3' | t }}<span aria-hidden="true">+</span></summary><p>{{ 'bc_quote.faq_3_answer' | t }}</p><p>{{ 'bc_quote.tip_text' | t }}</p></details>
   </div>
 </section>
 {% schema %}
