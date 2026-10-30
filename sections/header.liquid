@@ -1091,8 +1091,81 @@
       width: 5.2rem;
     }
   }
+
+  .bc-header__brand { grid-area: heading; justify-self: start; min-width: 0; }
+  .bc-header__brand .header__heading { margin: 0; padding: 0; line-height: 1; }
+  .bc-header__brand .header__heading-link { display: block; margin: 0; padding: 0.75rem; }
+  .bc-header__brand .header__heading-logo-wrapper { display: block; }
+  .bc-header__brand .header__heading-logo { display: block; height: auto; }
+
+  @media screen and (max-width: 989px) {
+    .section-header {
+      --bc-mobile-top-row: 64px;
+      --bc-mobile-search-row: 44px;
+      --bc-mobile-search-gap: 10px;
+      position: sticky;
+      top: 0;
+      height: calc(var(--bc-mobile-top-row) + var(--bc-mobile-search-row) + var(--bc-mobile-search-gap) + 20px);
+      pointer-events: none;
+    }
+    .section-header > .header-wrapper { pointer-events: auto; }
+    .bc-mobile-menu-open .section-header > .header-wrapper { position: fixed; top: 0; right: 0; left: 0; }
+    .bc-header__inner {
+      grid-template-columns: 38px minmax(0, 1fr) max-content;
+      grid-template-rows: var(--bc-mobile-top-row) auto;
+      column-gap: 8px;
+      row-gap: 0;
+      padding: 8px 12px 10px;
+    }
+    .bc-header__brand { display: flex; align-items: center; width: 100%; max-width: 160px; height: 100%; }
+    .bc-header__brand .header__heading,
+    .bc-header__brand .header__heading-link { width: 100%; min-height: 0; padding: 0; }
+    .bc-header__brand .header__heading-logo-wrapper { width: 100%; max-width: 100%; }
+    .bc-header__brand .header__heading-logo { width: 100%; }
+    .bc-header__mobile-menu .bc-mobile-drawer__trigger { width: 38px; text-decoration: none; }
+    .bc-header__search {
+      min-height: 0;
+      height: var(--bc-mobile-search-row);
+      margin-top: var(--bc-mobile-search-gap);
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: height 240ms cubic-bezier(.22,1,.36,1), margin-top 240ms cubic-bezier(.22,1,.36,1), opacity 160ms ease, transform 240ms cubic-bezier(.22,1,.36,1), visibility 0s;
+    }
+    .bc-header__search .bc-search--inline .field { height: var(--bc-mobile-search-row); min-height: var(--bc-mobile-search-row); }
+    .section-header[data-bc-scroll-state='compact'] .bc-header__search {
+      height: 0;
+      margin-top: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transform: translateY(-6px);
+      transition-delay: 0s, 0s, 0s, 0s, 240ms;
+    }
+    .bc-mobile-drawer__back { border: 0; border-radius: 6px; background: transparent; box-shadow: none; }
+    .section-header[data-bc-input='pointer'] .bc-mobile-drawer :is(button, a, summary, [data-bc-mobile-panel]):focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .section-header[data-bc-input='keyboard'] .bc-mobile-drawer :is(button, a, summary, [data-bc-mobile-panel]):focus-visible,
+    .section-header[data-bc-input='keyboard'] .bc-mobile-drawer .focused {
+      outline: 2px solid #1f6685;
+      outline-offset: 3px;
+      box-shadow: none;
+    }
+    .section-header[data-bc-input='keyboard'] .bc-mobile-drawer__trigger:focus-visible { outline-color: #8fd4ef; }
+  }
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .section-header { --bc-mobile-search-row: 48px; }
+    .bc-header__brand { max-width: 180px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bc-header__search,
+    .section-header[data-bc-scroll-state='compact'] .bc-header__search { transition: none; transform: none; }
+  }
 {%- endstyle -%}
 
+<script src="{{ 'bc-mobile-header.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
@@ -1128,6 +1201,7 @@
         </div>
       {%- endif -%}
 
+      <div class="bc-header__brand">
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
@@ -1155,6 +1229,7 @@
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
+      </div>
 
       <div class="bc-header__search">
         {% render 'header-search', input_id: 'Search-In-Header', mode: 'inline', placeholder: 'Waar ben je naar op zoek?' %}
@@ -1307,7 +1382,7 @@
       this.nextTriggers = Array.from(container.querySelectorAll('[data-bc-mobile-next]'));
       this.backTriggers = Array.from(container.querySelectorAll('[data-bc-mobile-back]'));
       this.desktopMedia = window.matchMedia('(min-width: 990px)');
-      this.header = document.querySelector('.section-header');
+      this.header = document.querySelector('.bc-header');
       this.closeTimer = null;
       this.panelStack = ['root'];
 
@@ -1384,7 +1459,7 @@
 
       requestAnimationFrame(() => {
         this.container.classList.add('is-open');
-        this.panel.focus();
+        this.panel.focus({ preventScroll: true });
       });
     }
 
@@ -1404,7 +1479,7 @@
         this.resetNavigation();
       }, 260);
 
-      this.trigger.focus();
+      this.trigger.focus({ preventScroll: true });
     }
 
     navigateForward(targetId) {
@@ -1413,7 +1488,7 @@
       this.panelStack.push(targetId);
       this.syncPanels();
       const activePanel = this.menuPanels.find((panel) => panel.dataset.bcMobilePanelId === targetId);
-      activePanel?.querySelector('[data-bc-mobile-back]')?.focus();
+      activePanel?.querySelector('[data-bc-mobile-back]')?.focus({ preventScroll: true });
     }
 
     navigateBack() {
@@ -1421,7 +1496,7 @@
 
       const previousPanelId = this.panelStack.pop();
       this.syncPanels();
-      this.nextTriggers.find((trigger) => trigger.dataset.bcMobileNext === previousPanelId)?.focus();
+      this.nextTriggers.find((trigger) => trigger.dataset.bcMobileNext === previousPanelId)?.focus({ preventScroll: true });
     }
 
     resetNavigation() {
