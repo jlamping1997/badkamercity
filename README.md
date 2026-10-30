@@ -1,3 +1,5 @@
+> **30 oktober 2026 — volledige documentatie:** [Badkamercity volledig naslagwerk](docs/MASTER_SITE_REFERENCE.md) bevat de actuele winkel, desktop/mobiel, alle registers en 36 technische dossiers. Begin bij de [centrale status](docs/LIVE_STATUS_AND_NEXT_STEPS.md); oudere themanummers en aantallen hieronder zijn gedateerde achtergrond.
+
 # BadkamerCity — Shopify Online Store 2.0
 
 > **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](docs/architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
