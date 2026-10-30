@@ -1,5 +1,7 @@
 # RET-02 — Retour aanmelden naast Verlanglijst
 
+> **Latere vrijgave:** de eigenaar heeft het thema gepubliceerd; de ontbrekende Page-publicatie is daarna hersteld. Knop en retourpagina zijn live. Zie [RET-03](PUBLICATION.md) voor de actuele publieke controle. De onderstaande conceptstand blijft historisch.
+
 30 oktober 2026. Eigenaar ziet op desktop geen retourknop en vraagt expliciet om een ingang naast de verlanglijst. Uitvoering op de bestaande branch `fix/product-cards-2026-10-14`.
 
 ## Bron en scope
