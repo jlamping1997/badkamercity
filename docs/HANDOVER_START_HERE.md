@@ -1,3 +1,5 @@
+> **30 oktober 2026 — HDR-01 reviewgereed:** vaste mobiele bovenrij/logopositie, inklappende zoekrij en pointerfocus zonder grijs Terug-kader in UNPUBLISHED195932061962. MAIN195915448586 behouden. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [ontwerp/test/herstel](mobile-header/2026-10-30/README.md). Eigenaar-iPhone/publicatie open; oudere vervolgstappen zijn geschiedenis.
+
 > **30 oktober 2026 — nieuwe volledige ingang:** lees [het naslagwerk](MASTER_SITE_REFERENCE.md) en [de actuele status](LIVE_STATUS_AND_NEXT_STEPS.md). Verse MAIN195915448586, Offerteconcept195916628234UNPUBLISHED. De oudere opleverrollen hieronder blijven geschiedenis.
 
 > **30 oktober2026 — reclame in offerteformulier verborgen:** alleen de aparte Jotform-reclamecontainer via CSS; publieke formulierread na herladen en Phone-preview zonder balk, verplichte-veldenfouten zichtbaar. Geen nieuwe inzending, geen Shopify-write/publicatie. Verse rollen: MAIN195916628234;195915448586UNPUBLISHED. Uploadactivatie blijft uit; eigenaar controleert verificatie-/testmail. Zie [bewijs en herstel](quote/2026-10-30/BRANDING.md).
