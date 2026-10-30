@@ -1,6 +1,6 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · RET-02 preview gecontroleerd: desktopretourknop naast Verlanglijst.**
+**30 oktober 2026 · RET-03: retourknop en retourpagina live gecontroleerd.**
 
 ## Begin hier
 
@@ -28,15 +28,17 @@ QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, a
 
 ## Actieve uitvoering
 
-**RET-02 — PREVIEW_VERIFIED / OWNER_RELEASE_PENDING.** [Retourknop naast Verlanglijst](returns/2026-10-30/HEADER.md). Verse MAIN **195947036938 — BadkamerCity - Retour aanmelden en footer**,1354files. De eigenaar heeft RET-01 inmiddels gepubliceerd;195932061962isUNPUBLISHED. Page166668894474 blijft verborgen. De nieuwe retour-URL verschijnt daardoor nog niet als klantlink in MAIN; Page-publicatie is afzonderlijk nodig. De footeradreswijziging is wel al gepubliceerd.
+**RET-03 — LIVE_VISIBILITY_VERIFIED / MAIL_DELIVERY_PENDING.** [Publicatieherstel en bewijs](returns/2026-10-30/PUBLICATION.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**, door de eigenaar gepubliceerd op16:41:30Z.195947036938 is nuUNPUBLISHED. De headercode en overige retourfiles zijn gelijk aan de gecontroleerde preview.
 
-Nieuw concept **195948839178 — BadkamerCity - Retourknop in header**, kopie van de verse MAIN. Eén blijvende runtimefile: sections/header.liquid. Retourpijl en vertaalde tekst direct vóór Verlanglijst, vanaf990px; mobiele bovenrij blijft behouden. Bestaande URL-helper hergebruikt; ThemeCheckrevision2SUCCESS. Vooraf1354/1354kopiepariteit; finaalMAIN1354/1354gelijk, concept1354/exactééngewijzigdheaderpad en text-exactreadback. Echte desktop1348knopklik→retourformulier; zeven componentframes390/989/990/1024/1280/1440zonderoverloop, desktopiconengelijk, mobielverborgen. QA-templateexacthersteld. Geen MAIN-write, Page-publicatie, succesvolle formulierinzending of mail-/labelclaim.
+Oorzaak van de ontbrekende live knop: Page166668894474 stond nog verborgen. Alleen deze bestaande retour-Page zichtbaar gemaakt op **30 oktober2026 17:44:26 CET**; isPublishedtrue onafhankelijk teruggelezen, handle en template behouden. Geen themabestandwrite of themapublicatie door deze uitvoering. Geen nieuw concept nodig voor deze Admin-correctie.
 
-Het [RET-01-formulierdossier](returns/2026-10-30/README.md) blijft geldig als gedateerde bron. Mailbox-/spamtest op info@badkamercity.nl, eigenaarstelefoon en Page-/nieuwe-themavrijgave blijven open. Offerte-Jotform-verificatie afzonderlijk geparkeerd; geen nieuwe privéaccounttoegang. Geen order-/return-/refund-/label-/catalogus-/VPS-/prijs-/voorraadmutatie. Windows niet gecontroleerd. Uitvoering Codex afgerond; branch fix/product-cards-2026-10-14, main alleen documentatie.
+Live browser buiten preview: Retour aanmelden naast Verlanglijst, echte knopklik opent `/pages/retour-aanmelden` met native retourformulier. Twee schone HTTP-GETs zonder cookies/preview:200, MAIN-ID/rolmain, juiste href/canonical, geen noindex aangetroffen. Eerder zeven responsive componentframes blijven hun gedateerde bewijs; deze correctie wijzigt geen mobiele CSS/JS. Formulier/mailbox-, eigenaarstelefoon- en labelproef blijven afzonderlijk open; geen succesvolle inzending of bezorging geclaimd.
+
+Het [RET-01-formulierdossier](returns/2026-10-30/README.md) en [RET-02-headerdossier](returns/2026-10-30/HEADER.md) bevatten de eerdere conceptstand. Offerteverificatie afzonderlijk geparkeerd; klantactivatie blijft uit. Geen privéaccount-, order-, return-, refund-, label-, catalogus-, VPS-, prijs- of voorraadmutatie. Windows niet gecontroleerd. Uitvoering afgerond; bestaande branch fix/product-cards-2026-10-14 en main in deze ronde alleen documentatie.
 
 ## Exact één volgende handeling
 
-**Eigenaar doet één herkenbare retourtestaanvraag in concept195948839178 en controleert ontvangst op info@badkamercity.nl, inclusief spam.** Daarna Page166668894474 zichtbaar maken en dit headerconcept bewust publiceren; eigenaarstelefoon blijft open. Publiceer geen ouder concept over deze samengestelde stand.
+**Eigenaar doet één herkenbare retourtestaanvraag via de live retourpagina en controleert ontvangst op info@badkamercity.nl, inclusief spam.** De knop en Page zijn al live; geen aanvullende themapublicatie nodig.
 
 ## Bevindingen en achtergrond
 
