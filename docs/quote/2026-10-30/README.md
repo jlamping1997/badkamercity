@@ -1,3 +1,5 @@
+> Headeruitbreiding: [Offerte uploaden op desktop en mobiel](HEADER.md), 30 oktober 2026. Alleen conceptpreview, klantknop uit.
+
 # BC-QUOTE-001 — offerte vergelijken
 
 30 oktober 2026, Europe/Amsterdam. Eigenaar kiest uitvoering van offertevergelijking. **DESIGN_IMPLEMENTED / INTEGRATION_PENDING_ACCOUNT / NOT_PUBLISHED.** Dit is een concreet reviewbaar ontwerp met een voorbereide providerkoppeling, geen werkende ontvangst-/uploaddienst.

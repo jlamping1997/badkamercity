@@ -15,6 +15,8 @@
 - Zeven bedoelde productie-inhouden teruggelezen; overige1.341checksums gelijk. MAIN1.344/1.344ongewijzigd, QA exact hersteld.
 - ThemeCheck zeven files PASS;14lokale render-/gatecases PASS. Desktop en320/390/1024componentframes zonder overloop; FAQbediening PASS. Geen fysieke telefoon, echte upload, notificatie, privétoegang of verwijdering getest.
 
+- Headerknop toegevoegd op eigenaarsverzoek: desktop op voormalige accountplek; mobiel aparte rij onder zoekbalk. [Ontwerp, gates en bewijs](quote/2026-10-30/HEADER.md). Alleen conceptpreview zichtbaar; klantactivatie=false. Vijf ThemeCheck-files, vijf routecases en 14 offertecases PASS; 320/390/1024 geïsoleerde headerfixture zonder overloop. Geen upload/publicatie.
+
 ## Exact één volgende handeling
 
 **Eigenaar maakt een formulieraccount beschikbaar; hij bevestigt nog geen Jotform-account te hebben.** Daarna echte koppeling, ontvanger/toegang en upload-/ontvangstproef uitvoeren. Dit ontvangstdeel is geblokkeerd door ontbrekende accounttoegang, niet door een fictieve themebeperking. Ontwerp staat reviewbaar in concept via contact?view=offerte-vergelijken.

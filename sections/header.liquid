@@ -1,3 +1,13 @@
+{%- liquid
+  assign quote_header_visible = false
+  assign quote_header_url = pages['offerte-vergelijken'].url
+  if section.settings.quote_cta_enabled and quote_header_url != blank
+    assign quote_header_visible = true
+  elsif section.settings.quote_cta_preview and theme.role != 'main'
+    assign quote_header_visible = true
+    assign quote_header_url = '/pages/contact?view=offerte-vergelijken'
+  endif
+-%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -58,6 +68,28 @@
       padding-top: 0.5rem;
     }
   }
+
+  .bc-header-quote { display:flex; align-items:center; gap:10px; min-height:46px; padding:10px 14px; background:#8fd4ef; color:#102b40; text-decoration:none; border:1px solid #8fd4ef; line-height:1.25; flex-shrink:0; }
+  .bc-header-quote:hover { background:#b5e4f5; color:#102b40; }
+  .bc-header-quote:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+  .bc-header-quote svg { width:21px; height:21px; flex-shrink:0; }
+  .bc-header-quote__copy { display:flex; flex-direction:column; gap:3px; }
+  .bc-header-quote strong { font-size:14px; font-weight:700; }
+  .bc-header-quote small { font-size:11px; }
+  .bc-header-quote--mobile { display:none; }
+  @media screen and (min-width:990px) {
+    .bc-header__inner:has(.bc-header-quote) { grid-template-columns:minmax(16rem,1fr) minmax(22rem,48.5rem) max-content; }
+    .bc-header:has(.bc-header-quote) .header__heading-logo-wrapper { max-width:100%; }
+  }
+  @media screen and (max-width:989px) {
+    .bc-header-quote--desktop { display:none; }
+    .bc-header-quote--mobile { display:flex; grid-column:1 / -1; justify-content:center; min-width:0; gap:8px; padding:9px 8px; }
+    .bc-header-quote--mobile .bc-header-quote__copy { flex-direction:row; align-items:center; flex-wrap:wrap; gap:3px 9px; }
+    .bc-header-quote--mobile strong { font-size:13px; }
+    .bc-header-quote--mobile small { font-size:10px; }
+    .bc-header-quote--mobile svg { width:18px; height:18px; }
+  }
+
 </style>
 
 {%- style -%}
@@ -1159,6 +1191,10 @@
           {%- endif -%}
         </div>
 
+        {%- if quote_header_visible -%}
+          {% render 'bc-header-quote', url: quote_header_url, variant: 'desktop' %}
+        {%- endif -%}
+
         <a href="/pages/verlanglijst" class="bc-header__utility-link bc-header__utility-link--wishlist link focus-inset">
           <span class="bc-header__utility-icon" aria-hidden="true">
             <span class="svg-wrapper">{{ 'icon-wishlist-bc.svg' | inline_asset_content }}</span>
@@ -1179,6 +1215,9 @@
           {% render 'bc-header-cart' %}
         </a>
       </div>
+      {%- if quote_header_visible -%}
+        {% render 'bc-header-quote', url: quote_header_url, variant: 'mobile' %}
+      {%- endif -%}
     </div>
   </header>
 
@@ -1794,6 +1833,9 @@
   "class": "section-header",
   "max_blocks": 3,
   "settings": [
+    {"type":"header","content":"Laagsteprijsgarantie"},
+    {"type":"checkbox","id":"quote_cta_enabled","label":"Offerteknop voor klanten tonen","default":false,"info":"Pas activeren na werkende upload, ontvangsttest en publicatie van de offertepagina."},
+    {"type":"checkbox","id":"quote_cta_preview","label":"Offerteknop in concept bekijken","default":false,"info":"Alleen in ongepubliceerde thema’s; opent het uitgeschakelde voorbeeldformulier."},
     {
       "type": "select",
       "id": "logo_position",

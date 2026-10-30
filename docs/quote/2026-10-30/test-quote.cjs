@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {Liquid}=require('liquidjs'),{JSDOM}=require('jsdom');
-const root=path.resolve(__dirname,'../../..'),locale=JSON.parse(fs.readFileSync(path.join(root,'locales/nl.json')));
+const root=path.resolve(__dirname,'../../..'),locale=JSON.parse(fs.readFileSync(path.join(root,'locales/nl.json'),'utf8').replace(/^\s*\/\*[\s\S]*?\*\//,''));
 const source=fs.readFileSync(path.join(root,'sections/bc-quote.liquid'),'utf8').replace(/{% schema %}[\s\S]*?{% endschema %}/,'');
 const engine=new Liquid({strictFilters:false});
 engine.registerFilter('asset_url',x=>'https://example.invalid/'+x);engine.registerFilter('stylesheet_tag',x=>'<link rel="stylesheet" href="'+x+'">');engine.registerFilter('t',key=>key.split('.').reduce((v,k)=>v?.[k],locale)||key);
@@ -23,7 +23,7 @@ const tests=[];const record=(name,fn)=>{fn();tests.push(name)};
  const index=JSON.parse(fs.readFileSync(path.join(root,'templates/index.json'))),template=JSON.parse(fs.readFileSync(path.join(root,'templates/page.offerte-vergelijken.json')));
  record('No live CTA or upload enabled by default',()=>{assert.equal(index.sections.bc_quote_teaser.disabled,true);assert.equal(template.sections.main.settings.integration_enabled,false)});
  for(const file of ['nl.json','en.default.json']){
-  const previous=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline/locales',file),'utf8').replace(/^\s*\/\*[\s\S]*?\*\//,''));const current=JSON.parse(fs.readFileSync(path.join(root,'locales',file)));delete current.bc_quote;
+  const previous=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline/locales',file),'utf8').replace(/^\s*\/\*[\s\S]*?\*\//,''));const current=JSON.parse(fs.readFileSync(path.join(root,'locales',file),'utf8').replace(/^\s*\/\*[\s\S]*?\*\//,''));delete current.bc_quote;
   record('Preserve all existing translations '+file,()=>assert.deepEqual(current,previous));
  }
  fs.writeFileSync(path.join(__dirname,'tests.json'),JSON.stringify({scope:'Local LiquidJS/DOM fixture; no remote upload, delivery or private access test',passed:tests.length,tests},null,2));console.log(tests.length+' quote render cases passed');
