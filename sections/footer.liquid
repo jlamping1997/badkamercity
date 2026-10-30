@@ -93,6 +93,7 @@
                 </li>
               {% endif %}
             {% endfor %}
+            {% if group == 'service' %}{% render 'bc-footer-quote', section: section %}{% endif %}
             {% if group == 'category' %}<li><a class="bcf-all" href="{{ routes.all_products_collection_url }}">{{ section.settings.all_label | escape }}<svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-arrow-{{ section.id }}"></use></svg></a></li>{% endif %}
           </ul>
         </details>
@@ -253,6 +254,9 @@
 {
   "name": "Footer BadkamerCity",
   "settings": [
+    {"type":"header","content":"Laagsteprijsgarantie"},
+    {"type":"checkbox","id":"quote_link_enabled","label":"Offertelink voor klanten tonen","default":false,"info":"Pas activeren na werkende upload, ontvangsttest en publicatie van de offertepagina."},
+    {"type":"checkbox","id":"quote_link_preview","label":"Offertelink in concept bekijken","default":false,"info":"Alleen ongepubliceerde thema’s; opent het voorbeeldformulier."},
     {
       "type": "checkbox",
       "id": "compact_homepage",
