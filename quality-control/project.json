@@ -2,11 +2,11 @@
   "project": "BadkamerCity Quality Control",
   "branch": "quality-control",
   "updated_at": "2026-10-30",
-  "status": "PRIVATE_DEPLOYED_MAIN_PHOTO_PASS",
+  "status": "PRIVATE_DEPLOYED_NOTES_GLOBAL_RANDOM_DAY_NIGHT",
   "url": "https://badkamercity-quality.jason015.chatgpt.site",
   "site_project_id": "appgprj_6ae3d58930e48191b4dea11d39180671",
-  "site_source_commit": "e14dadfcb7e4758b0ec47df11ff58be0f95d137c",
-  "site_version": 4,
+  "site_source_commit": "6095868c69cab2bfd667f0bbdd024678b5261d6c",
+  "site_version": 5,
   "live_shopify_writes": false,
   "catalogue": {
     "products": 11679,
@@ -19,12 +19,13 @@
   "reviews": {
     "storage": "D1 per authenticated owner",
     "checkpoints": "Named immutable bookmarks with batch and position",
-    "counts_measured_this_session": false
+    "counts_measured_this_session": false,
+    "progress_scope": "all products and brands; checkpoint is a bookmark, not rollback"
   },
   "tests": {
     "typecheck": "PASS",
     "build": "PASS",
-    "api_sqlite_groups": 20,
+    "api_sqlite_groups": 30,
     "hosted_catalogue_reads": "PASS",
     "hosted_unauthenticated_review_rejection": "PASS",
     "hosted_visitor_login": "NOT_TESTED_NEW_SIGN_IN_REQUIRED",
@@ -33,9 +34,13 @@
     "mobile_component_widths": [
       320,
       390
-    ]
+    ],
+    "hosted_catalogue_all_compact": "PASS_11679_PRODUCTS_11034_PRIMARY_PHOTOS",
+    "existing_data_readback": "BOUNDED_NATIVE_SAMPLES_IDENTICAL_BEFORE_AFTER",
+    "same_auth_client": "PASS",
+    "theme_reload": "PASS_LOCAL_PREVIEW"
   },
-  "next_action": "Owner reloads the existing private Site and reviews a main-photo batch using four choices.",
+  "next_action": "Owner reloads the same private Site, checks existing progress, adds an optional note and resumes exact checkpoint or a new all-brand random pending round.",
   "photo_review": {
     "scope": "First image per product in current snapshot",
     "cards": 11034,
@@ -46,12 +51,23 @@
       "technical_drawing"
     ],
     "typed_note_required": false,
-    "photo_text_input": false,
+    "photo_text_input": true,
     "legacy_checkpoint_filter": "Primary IDs only; corresponding position",
     "technical_drawing": {
       "role": "technical",
       "main": "no",
       "status": "wrong"
-    }
+    },
+    "notes": "Optional quick reasons/free text; one-tap decision or explicit note save; preserved on checkpoint/navigation",
+    "default_brand_scope": "all",
+    "default_order": "random"
+  },
+  "ui": {
+    "theme_toggle": "Fixed top right, day/night",
+    "theme_storage": "Device preference only; D1 remains review source",
+    "mobile_layouts": [
+      320,
+      390
+    ]
   }
 }

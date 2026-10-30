@@ -1,5 +1,22 @@
 # BadkamerCity — Productcontrole
 
+## Actueel QC-04 — notities, willekeurig hervatten en dag/nacht
+
+Dezelfde private Site, DB-binding, tabellen, productcache en item-ID's blijven leidend. Geen nieuwe database, gegevensreset, seed, schemamigratie of Shopify-write. Bestaande checkpoints, beoordelingen, revisies en historie blijven leesbaar met dezelfde gebruikersidentiteit. De agent schrijft geen testbeoordelingen naar productie.
+
+De fotocontrole blijft één hoofdfoto per product met Ja/Nee/Twijfel/Technische tekening. **Notitie toevoegen** is optioneel en standaard dicht. Vrije tekst of snelle redenen; je keuze bewaart de notitie. **Notitie bewaren** slaat op zonder verder te gaan en zonder een nog onbeoordeelde foto goed te keuren. De aanleverlijst toont de reden en biedt opnieuw openen/bewerken. Een nog gewijzigde notitie wordt bewaard vóór overslaan, selectie-/schermwissel of checkpoint; bij onbevestigde opslag blijft de kaart staan met retry. Sluiten van het browservenster zonder bewaren/keuze is geen opslagbevestiging.
+
+Beoordelingen zijn altijd **globaal over alle merken** opgeslagen. Een checkpoint is een bladwijzer voor selectie/ronde/positie; het draait recentere beoordelingen nooit terug. Nieuwe checkpoints leggen progressScope=all-products en de gekozen volgorde vast, met merk=all voor gemengde rondes. Oude merkspecifieke checkpoints blijven geldig. **Willekeurig verder** kiest nieuwe onbeoordeelde hoofdfoto's uit alle merken; al beoordeelde items worden overgeslagen, 'Later' kan later terugkomen. Specifieke afkeur/twijfelfilters zijn beschikbaar voor bewuste herbeoordeling.
+
+De oorspronkelijke volledige catalogus blijft ongewijzigd. De reviewroute kan nu alle merken selecteren en stuurt per product alleen de hoofdfoto en een kort omschrijvingsuittreksel. Identiteiten blijven exact gelijk; Hotbath raw JSON daalt van17.275.825 naar9.868.512bytes, geen claim over gemeten telefoonlatentie.
+
+De rustige interface heeft een kleine vaste dag/nachtknop rechtsboven. Alleen deze apparaatvoorkeur gebruikt localStorage (bc-qc-theme); geen beoordelingen/checkpoints naar browseropslag verplaatst. Foto's blijven ongefilterd op hun originele witte canvas voor kleurbeoordeling. Toegang blijft uitsluitend de bestaande eigenaar.
+
+TypeScript, build en30API-/echte-SQLite-/selectiecontracttests zijn gecontroleerd. UI-voorkeur na herladen, notitieveld/snelle reden en320/390componentbreedtes zijn in lokale preview gecontroleerd. Hosted visitor-write en fysieke telefoon worden niet namens de eigenaar geclaimd. Lokale preview zonder visitoridentiteit schakelt schrijven zichtbaar uit. Tijdelijke QA-route niet publiceren.
+
+Onderstaande QC-03/QC-02-delen zijn historische implementatiestappen. De optionele notities en globale willekeurige voortgang hierboven vervangen eerdere zinnen over geen foto-notities/merkgebonden rondes.
+
+
 ## Actuele aanpassing QC-03 — 30 oktober 2026
 
 De fotocontrole toont uitsluitend de eerste bestaande foto per product (hoofdfoto in deze momentopname). De ongewijzigde bronimport heeft geen producten met een niet-afbeeldingsmedia-item vóór die eerste foto. Geen nieuwe import of Shopify-write.
@@ -63,6 +80,6 @@ De normalizer verwacht genegeerde `.sites-runtime/Hotbath.json`, `Wiesbaden.json
 
 Geen offline wachtrij, automatische Shopify-correctie, ranking, fabrikantbronophaalservice, periodieke synchronisatie of verificatie van alle originele fotobestanden. Telefoonhardware/swipegedrag moet met de eigenaar worden getest. Een geslaagde build/API-test bewijst geen succesvolle hosted aanmelding; rapporteer dat afzonderlijk in het QC-dossier.
 
-## Publieke bronspiegel
+## Publieke Git-spiegel
 
-De volledige data/catalogue.json staat uitsluitend in de private Sites-bronrepo. Herstel die bron of voer de gedocumenteerde volledige read-only import uit vóór de snapshot-integriteitstest/build; data/import-summary.json blijft als openbare scope beschikbaar. Beoordelingen/checkpoints nooit naar Git kopiëren.
+De publieke spiegel bevat geen volledige data/catalogue.json; herstel de complete private Sites-bronrepo van hetzelfde project of doe de gedocumenteerde read-only import vóór snapshot-test/build. data/import-summary.json bevat scope. Kopieer geen private D1-beoordelingen, notities of checkpoints naar Git.

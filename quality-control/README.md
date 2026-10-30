@@ -1,3 +1,39 @@
+# QC-04 — optionele notities, globale voortgang, rustige dag/nachtinterface
+
+30 oktober 2026 · **PRIVATE_DEPLOYED / EXISTING_DATA_PRESERVED / NOTES_AND_GLOBAL_RANDOM_ROUNDS**.
+
+[Dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site). Versie5 succeeded; Sites-broncommit6095868c69cab2bfd667f0bbdd024678b5261d6c, deployment appgdep_6ae3e69ac9548191beb9180a3b61d591. De eigenaar vraagt notities bij afkeuringen, globaal/willekeurig hervatten, minimaler ontwerp en een kleine nacht/dagknop; dit zijn nu de actuele interactieafspraken boven QC-03/QC-02 hieronder.
+
+## Gedrag
+
+- Eén hoofdfoto per product, Ja/Nee/Twijfel/Technische tekening blijven direct. Geen verplichte notitie of afkeurmodal. Notitie toevoegen opent vrije tekst en snelle redenen (kleur/model/bijsnijden/resolutie/achtergrond/andere foto).
+- Keuze bewaart notitie; Notitie bewaren slaat apart op zonder doorspringen of automatische goedkeuring. Aanleverlijst toont en heropent reden. Wijzigingen worden vóór overslaan, selectie-/schermwissel en checkpoint bewaard. Bij onbevestigde opslag blijft de kaart met retry staan; revisie409 voorkomt overschrijven van andere apparaten. Een nog niet bewaarde notitie bij abrupt browser sluiten is geen bevestigde opslag.
+- Alle beoordelingen stonden al globaal per eigenaar in D1. Checkpoint bewaart selectie/positie en alle voortgang blijft daarnaast bestaan; geen rollback van latere beoordelingen. Nieuwe checkpoints ondersteunen alle merken en gemengde item-ID’s, progressScope=all-products en volgorde. Oude merkspecifieke checkpoints blijven leesbaar en hervatbaar; actuele hoofdfotofilter/positie behouden.
+- Standaard Alle merken + willekeurig. Willekeurig verder start een nieuwe pending-ronde uit alle merken en slaat beoordeelde kaarten over. Later is geen goedkeuring/afkeuring en kan opnieuw verschijnen. Afkeur/twijfel/alle-filters maken bewuste herbeoordeling mogelijk. Start wacht op de eerste poging om opgeslagen voortgang op te halen, zodat een nog ladende gebruikersregistratie geen nieuwe pending-ronde vormt.
+- Rustige interface zonder grote zijbalk. Kleine vaste dag/nachtknop rechtsboven; apparaatvoorkeur bc-qc-theme in localStorage, geen reviewrecords naar browseropslag verplaatst. Foto’s blijven kleurgetrouw zonder filter/inversie. Donkere UI betekent niet dat originele witte fotoachtergronden worden omgekleurd.
+
+## Data behouden en afgeschermd
+
+Geen nieuwe Site, DB, authclient, tabellen, item-ID’s, bronimport, schemamigratie, datareset, seed, verwijdering of Shopify-write. Dezelfde eigenaarstoegang is behouden. Na deployment is de authclient gelijk aan ervoor. Bestaande reviews en checkpoint zijn vóór/na via begrensde native D1-readback vergeleken: de daadwerkelijk teruggegeven steekproeven identiek. Dit is een begrensde controle, geen claim dat elk historisch oordeel inhoudelijk opnieuw beoordeeld is. Geen agent-testnotitie/-checkpoint naar productie geschreven; tests gebruiken afzonderlijke tijdelijke SQLite.
+
+Productwerkkopie SHA256 onveranderd:5d4bc24f411c68f4f32006068e9637cdf37da681a238b5ab065c01d53bd448e8. Beoordelingen/notities/geschiedenis en checkpointinhoud blijven uitsluitend in afgeschermde D1 en zijn niet naar publieke Git gekopieerd. Volledige bronwerkkopie blijft in private Sites-bronrepo. Publieke spiegel heeft code, importscope, documentatie en een lokale screenshot zonder visitoridentiteit.
+
+## Bewezen controle
+
+- TypeScript en productiebuild PASS; **30API-/echte-SQLite-/selectiecontractgroepen PASS**, waaronder bestaande data-/owner-/origin-/idempotentie-/409guards, notitie-update met behoud classificatie, note-only unchecked, globaal checkpoint zonder reviewsreset, oude checkpoint behouden, merkgebonden scopeafwijzing, random pending/selectie/omvang en compacte catalogus met identieke hoofdfoto-ID’s.
+- Lokale managed browser: notitieveld en snelle reden, nachtstand wisselen en behouden na herladen. Ongefilterde foto, echte productdata. Werkelijke UI in320/390px-iframes: geen horizontale overflow (inner303/373px), titel22px op390, foto circa395px bij900px iframehoogte. Tijdelijke QA-route verwijderd vóór bouwen.
+- Hosted service-read: /api/catalogue?brand=all&scope=review HTTP200,11.679producten,11.034met hoofdfoto, maximaal1afbeelding per product. Response14.057.086bytes. /api/review zonder visitoridentiteit HTTP401, zoals bedoeld; geen identiteit geïmiteerd.
+- Compacte Hotbath rawJSON17.275.825→9.868.512bytes. Dit is pakketinhoud, geen gemeten telefoonlatentie-/Lighthouseclaim. Oorspronkelijke volledige catalogusroute blijft beschikbaar; galerijen niet vernietigd.
+- Fysieke telefoon, hosted visitor-write en langdurige offline/reconnectproef niet namens eigenaar uitgevoerd. De lokale demo heeft zichtbaar uitgeschakelde schrijfknoppen zonder visitoridentiteit. Owner gebruikt de bestaande privélink met hetzelfde ChatGPT-account.
+
+![Lokale dag- en nachtweergave320/390px, zonder ingelogde visitor](qa/calm-day-night.jpg)
+
+## Volgende handeling
+
+Eigenaar herlaadt dezelfde privétool, controleert eigen voortgang, voegt optioneel een notitie toe en kiest willekeurig verder of hervat een bestaand checkpoint. Bij een probleem de concrete kaart/actie en opslagmelding onderzoeken; geen productiegegevens resetten. De storefront/offerte-uitvoering blijft afzonderlijk.
+
+---
+
 # QC-03 — hoofdfoto’s met vier directe keuzes
 
 30 oktober 2026 · **PRIVATE_DEPLOYED / MAIN_PHOTO_PASS_IMPLEMENTED**.
