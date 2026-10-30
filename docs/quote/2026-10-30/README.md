@@ -1,3 +1,5 @@
+> **Actueel besluit:** footerlink onder Klantenservice in beide footers voorbereid en getest; klantactivatie uit. MAIN195915448586 door eigenaar gepubliceerd; reviewconcept195916628234. [Footer, bewijs en aansluitstatus](FOOTER.md). Uploadkoppeling blijft accountafhankelijk.
+
 > **Actueel:** eigenaar wil geen offerteactie in de mobiele header. Zie [desktopknop en voorstellen voor betere plaatsen](HEADER.md). Reviewconcept195915448586; MAIN195916628234 door eigenaar gepubliceerd. Upload blijft uit.
 
 > Headeruitbreiding: [Offerte uploaden op desktop en mobiel](HEADER.md), 30 oktober 2026. Alleen conceptpreview, klantknop uit.

@@ -1,0 +1,16 @@
+{% doc %}
+  Compact homepage footer; other templates keep the existing footer.
+  @param {section} section - Footer section settings.
+{% enddoc %}
+<footer class="bch-footer" aria-label="{{ 'bc_home.footer.label' | t }}">
+  <div class="bch-shell">
+    <a class="bch-footer__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">{% if settings.logo != blank %}{{ settings.logo | image_url: width: 440 | image_tag: loading: 'lazy', widths: '185, 370, 440', sizes: '185px', alt: shop.name }}{% else %}<span class="bch-footer__wordmark">Badkamer<span>city</span></span>{% endif %}</a>
+    <div class="bch-footer__nav">
+      <details><summary>{{ 'bc_home.footer.service' | t }}</summary><ul role="list"><li><a href="{{ pages.contact.url }}">{{ 'bc_home.services.contact' | t }}</a></li><li><a href="#HomeDelivery">{{ 'bc_home.services.pickup' | t }}</a></li><li><a href="#HomeReturns">{{ 'bc_home.services.returns' | t }}</a></li><li><a href="{{ routes.search_url }}">{{ 'bc_home.footer.search' | t }}</a></li></ul></details>
+      <details><summary>{{ 'bc_home.footer.range' | t }}</summary><ul role="list">{% for link in linklists['main-menu'].links %}{% unless link.title == 'Merken' %}<li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>{% endunless %}{% endfor %}<li><a href="{{ routes.collections_url }}">{{ 'bc_home.footer.all_categories' | t }}</a></li></ul></details>
+      <details><summary>{{ 'bc_home.footer.about' | t }}</summary><ul role="list"><li><a href="#HomeAdvice">{{ 'bc_home.footer.appointment' | t }}</a></li><li><a href="#HomeInspiration">{{ 'bc_home.footer.inspiration' | t }}</a></li><li><a href="{{ routes.collections_url }}?view=merken">{{ 'bc_home.footer.brands' | t }}</a></li></ul></details>
+    </div>
+    <div class="bch-footer__contact"><a href="mailto:{{ shop.email | escape }}">{{ shop.email | escape }}</a><address>{{ 'bc_home.footer.address_label' | t }}<br>{{ section.settings.contact_address | escape | newline_to_br }}</address></div>
+    <div class="bch-footer__bottom"><span>&copy; {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</span>{% for policy in shop.policies %}{% if policy != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}</div>
+  </div>
+</footer>

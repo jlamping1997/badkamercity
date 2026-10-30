@@ -1,3 +1,5 @@
+> **Vervolg:** eigenaar kiest de footer; de gedeelde offertelink is daar nu in concept geplaatst. Zie [FOOTER.md](FOOTER.md). Productprijs/homepage-teaser blijven voorstellen. Actuele themarollen staan in de centrale status.
+
 > **Nieuw besluit, 30 oktober 2026:** eigenaar laat de offerteactie uit de mobiele header weg. De mobiele render en bijbehorende CSS zijn verwijderd; desktop blijft gelijk. Actueel reviewconcept **195915448586 — BadkamerCity - Offerteknop alleen desktop** (UNPUBLISHED). Eigenaar heeft eerder **195916628234** gepubliceerd; dat MAIN is in deze wijziging niet geschreven. Hieronder staat ook historisch bewijs van de vorige mobiele balk.
 
 ## Actuele controle en plaatsingsadvies
