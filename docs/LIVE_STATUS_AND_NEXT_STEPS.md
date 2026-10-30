@@ -1,21 +1,23 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · BC-QUOTE-001 — Eenvoudiger offertedesign in concept; Jotform gekoppeld.**
+**30 oktober 2026 · BC-QUOTE-001 — Jotform-reclame verborgen; uploadactivatie nog uit.**
 
 ## Actuele uitvoering
+
+[Jotform-reclame verborgen en gecontroleerd](quote/2026-10-30/BRANDING.md): gerichte CSS op de aparte brandingcontainer, geen afdekvlak. Na herladen geen reclame op publiek formulier of in Phone-preview; verplichte foutmeldingen zichtbaar. Geen Shopify-writes, abonnement, nieuwe inzending of e-mail in deze ronde.
 
 [Nieuwste ontwerp en controle](quote/2026-10-30/DESIGN.md): één uploadkaart, kortere uitleg, compacte velden en uitklapbare garantie-uitleg. Vier themebestanden exact teruggelezen, vier ThemeCheck-bestanden en17rendercases PASS;320/390component zonder overflow. Alleen design gewijzigd; actuele gates en openstaande mailverificatie behouden.
 
 [Actuele Jotform-configuratie, test en aansluitstatus](quote/2026-10-30/INTEGRATION.md). Status **FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED**.
 
-- MAIN **195915448586 — BadkamerCity - Offerteknop alleen desktop**,1.349files, in deze sessie ongewijzigd. Reviewconcept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.350files.
+- Verse read: **195916628234 — BadkamerCity - Offerte vergelijken is nu MAIN**;195915448586 is UNPUBLISHED. Publicatie buiten deze opdracht waargenomen. Tijdens deze opdracht geen Shopify-theme-write of publicatie uitgevoerd.
 - Eigenaar heeft een Jotform-account gemaakt en veilig aangemeld; geen credentials/OTP in Git. Formulier **263018521531044**, publiek providerformulier; de Shopify-pagina166573539594 is nog ongepubliceerd. Op expliciete keuze van eigenaar melding naar **info@badkamercity.nl**.
 - Formulier: volledige offerte/één product; voor-/achternaam, e-mail en bestand verplicht; toelichting optioneel. PDF/JPG/JPEG/PNG, maximaal3bestanden/10MB per bestand, als instellingen gelezen. Geen telefoonveld, betaling of marketinginschrijving.
 - Eén fictieve testaanvraag succesvol verzonden, in Jotform teruggelezen en PDF van781bytes ingelogd gedownload; exact gelijk aan origineel. .txt geweigerd met Nederlandse melding. Dit zijn geen echte klantgegevens. Testrecord gemarkeerd en nog aanwezig.
 - Require log-in to see submissions en Require log-in to view uploaded files stonden aangevinkt. Anonieme downloadweigering niet bewezen: externe uitleestool kon de test-URL niet ophalen. Geen privacyvrijgave op basis van die fout.
 - Notificatie naar eigenaar geconfigureerd met Nederlandse tekst, zonder losse bestandsbijlagen. Bezorging in de mailbox nog niet bevestigd. Automatische klantmail expliciet **disabled**, omdat accountverificatie nodig is voor aanpassing; eigenaar meldt verificatiemail nog niet te hebben ontvangen.
-- Concept: form_id ingevuld, **integration_preview=true** alleen bij theme.role=unpublished; **integration_enabled=false**, **show_preview=false**. Publicatie van het concept activeert de provider niet automatisch. Klantlinks/header/footer en homepage-teaser blijven uit volgens hun bestaande gates. Geen mobiele headerbalk.
-- Drie ThemeCheck-files en17lokale render-/gatecases PASS. Drie productie-inhouden exact/JSON-semantisch teruggelezen; alleen die drie gewijzigde bestanden in concept. Desktopiframe zichtbaar; providerframes320/390zonder horizontale overloop. Tijdelijke QA-template exact hersteld. Geen fysieke telefoon-, grensgrootte-, servervalidatie-, verwijder-, spam- of performancevrijgave.
+- Offerte-template: form_id ingevuld, **integration_preview=true** alleen bij theme.role=unpublished; **integration_enabled=false**, **show_preview=false**. Na de waargenomen publicatie activeert de previewgate de provider niet: de winkelpagina toont nu de contactfallback. Klantlinks/header/footer en homepage-teaser blijven uit volgens hun bestaande gates. Geen mobiele headerbalk.
+- Eerdere integratieronde: drie ThemeCheck-files en17lokale render-/gatecases PASS. Drie productie-inhouden exact/JSON-semantisch teruggelezen; alleen die drie gewijzigde bestanden in concept. Desktopiframe zichtbaar; providerframes320/390zonder horizontale overloop. Tijdelijke QA-template exact hersteld. Geen fysieke telefoon-, grensgrootte-, servervalidatie-, verwijder-, spam- of performancevrijgave.
 
 ## Exact één volgende handeling
 
@@ -23,7 +25,7 @@
 
 ## Overdracht
 
-Geen Shopify MAIN-write of Shopify-publicatie. Jotform-formulier bestaat wel als publieke, nog niet via klantlinks ontsloten providerroute. Geen betaald plan, API-key of nieuwe app. Huidige plan toont Jotform-branding. Bewaartermijn is nog niet vastgesteld/geconfigureerd. Geen achtergrondworker actief. Oude bewijsblokken hieronder horen bij de eerdere fasen.
+Geen Shopify MAIN-write of Shopify-publicatie door deze agent. Jotform-formulier bestaat wel als publieke, nog niet via klantlinks ontsloten providerroute. Geen betaald plan, API-key of nieuwe app. Jotform-brandingcontainer is nu verborgen met custom CSS; dit is geen officiële verwijdering via een betaald abonnement. Providerwijzigingen kunnen hercontrole nodig maken. Bewaartermijn is nog niet vastgesteld/geconfigureerd. Geen achtergrondworker actief. Oude bewijsblokken hieronder horen bij de eerdere fasen.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
