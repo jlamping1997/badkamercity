@@ -1,3 +1,5 @@
+> **30 oktober 2026 — samengebracht en geactualiseerd:** [Badkamercity volledig naslagwerk](../MASTER_SITE_REFERENCE.md) bevat de huidige bronstand, alle registers en de gedateerde component-/methodedossiers in één document. Deze map blijft de oorspronkelijke technische bewijslaag; gebruik de verse registers voor actuele rollen/aantallen.
+
 # BadkamerCity — architectuur, documentatie en eenheid
 
 **Nieuwe onderzoeksbasis: 28 oktober 2026.** Eigenaar vraagt eerst een diep onderzoeks- en documentatieplan, daarna onderbouwde inconsistenties en kleine verbeteringen. Doel: verantwoord lanceren en vervolgens beheersbaar uitbreiden. Dit dossier verklaart niet dat de volledige audit al is uitgevoerd.
