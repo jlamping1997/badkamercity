@@ -3,8 +3,12 @@
   assign form_id = section.settings.form_id | strip
   assign unexpected = form_id | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9'
   assign form_ready = false
-  if section.settings.integration_enabled and form_id.size >= 10 and form_id.size <= 20 and unexpected == blank
-    assign form_ready = true
+  if form_id.size >= 10 and form_id.size <= 20 and unexpected == blank
+    if section.settings.integration_enabled
+      assign form_ready = true
+    elsif section.settings.integration_preview and theme.role == 'unpublished'
+      assign form_ready = true
+    endif
   endif
 %}
 <section class="bcq" aria-labelledby="QuoteHeading-{{ section.id }}">
@@ -14,9 +18,9 @@
       <div class="bcq-intro"><p class="bcq-eyebrow">{{ 'bc_quote.eyebrow' | t }}</p><h1 id="QuoteHeading-{{ section.id }}">{{ 'bc_quote.heading' | t }}</h1><p class="bcq-lead">{{ 'bc_quote.intro' | t }}</p>
         <div class="bcq-steps"><h2>{{ 'bc_quote.steps_heading' | t }}</h2><ol>{% for number in (1..3) %}{% assign key = 'bc_quote.step_' | append: number %}{% assign text_key = key | append: '_text' %}<li><span class="bcq-number" aria-hidden="true">{{ number }}</span><div><h3>{{ key | t }}</h3><p>{{ text_key | t }}</p></div></li>{% endfor %}</ol></div>
       </div>
-      <div class="bcq-panel" id="QuoteForm-{{ section.id }}"><h2>{{ 'bc_quote.form_heading' | t }}</h2><p class="bcq-muted">{{ 'bc_quote.form_intro' | t }}</p>
+      <div class="bcq-panel" id="QuoteForm-{{ section.id }}">{% unless form_ready %}<h2>{{ 'bc_quote.form_heading' | t }}</h2><p class="bcq-muted">{{ 'bc_quote.form_intro' | t }}</p>{% endunless %}
         {% if form_ready %}
-          <iframe class="bcq-frame" title="{{ 'bc_quote.iframe_title' | t | escape }}" src="https://form.jotform.com/{{ form_id | escape }}" loading="lazy" width="100%" height="1100"></iframe>
+          <iframe class="bcq-frame" title="{{ 'bc_quote.iframe_title' | t | escape }}" src="https://form.jotform.com/{{ form_id | escape }}" loading="lazy" width="100%" height="1450"></iframe>
           <a class="bcq-external" href="https://form.jotform.com/{{ form_id | escape }}" target="_blank" rel="noopener">{{ 'bc_quote.open_form' | t }} ↗</a>
         {% elsif section.settings.show_preview %}
           <p class="bcq-preview" role="note">{{ 'bc_quote.preview' | t }}</p>
@@ -35,5 +39,5 @@
   </div>
 </section>
 {% schema %}
-{"name":"Offerte vergelijken","settings":[{"type":"text","id":"form_id","label":"Jotform formulier-ID","info":"Alleen het numerieke ID van het gecontroleerde formulier. Geen API-sleutel."},{"type":"checkbox","id":"integration_enabled","label":"Uploadkoppeling activeren","default":false,"info":"Pas na privébestandstoegang, notificatie, verwijdering en ontvangsttest."},{"type":"checkbox","id":"show_preview","label":"Voorbeeldformulier tonen","default":false,"info":"Alle velden zijn uitgeschakeld. Zet uit vóór publicatie."}],"presets":[{"name":"Offerte vergelijken"}]}
+{"name":"Offerte vergelijken","settings":[{"type":"text","id":"form_id","label":"Jotform formulier-ID","info":"Alleen het numerieke ID van het gecontroleerde formulier. Geen API-sleutel."},{"type":"checkbox","id":"integration_preview","label":"Jotform in concept testen","default":false,"info":"Werkt alleen in een ongepubliceerd thema. Klantactivatie blijft apart uit."},{"type":"checkbox","id":"integration_enabled","label":"Uploadkoppeling activeren","default":false,"info":"Pas na privébestandstoegang, notificatie, verwijdering en ontvangsttest."},{"type":"checkbox","id":"show_preview","label":"Voorbeeldformulier tonen","default":false,"info":"Alle velden zijn uitgeschakeld. Zet uit vóór publicatie."}],"presets":[{"name":"Offerte vergelijken"}]}
 {% endschema %}

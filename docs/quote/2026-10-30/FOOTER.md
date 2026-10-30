@@ -1,3 +1,5 @@
+> **Vervolg:** Jotform ingericht en in concept aangesloten; klantactivatie blijftuit. Account bestaat inmiddels. Zie [actuele integratiestatus](INTEGRATION.md).
+
 # Offertelink in de footer — 30 oktober 2026
 
 Eigenaar kiest de footer en vraagt de offertestatus in Git op te slaan. In beide footers onder Klantenservice staat **Laagsteprijsgarantie – Offerte uploaden**. Gewone footer: sections/footer.liquid; compacte homepage: snippets/bc-home-footer.liquid. Beide gebruiken snippets/bc-footer-quote.liquid. Geen nieuwe banner, pop-up of mobiele headerbalk.

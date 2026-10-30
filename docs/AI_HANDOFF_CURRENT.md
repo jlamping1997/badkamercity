@@ -1,3 +1,5 @@
+> **30 oktober2026 — Jotform-koppeling:** formulier263018521531044 aangemaakt, echte fictieve testupload/opslag/bevoegde download PASS; in UNPUBLISHED195916628234 gekoppeld met aparte previewgate. MAIN195915448586 behouden. Eigenaar controleert verificatie-/testmail; klantmail en publieke activatie uit. Zie [status](LIVE_STATUS_AND_NEXT_STEPS.md) en [integratie](quote/2026-10-30/INTEGRATION.md).
+
 > **30 oktober2026 — offertefooter:** link onder Klantenservice in beide footers, klantactivatie uit; geen mobiele headerbalk. MAIN195915448586; reviewconcept195916628234. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [footerbewijs](quote/2026-10-30/FOOTER.md). Uploadaccount nog nodig.
 
 > **30 oktober2026 — correctie offerteheader:** geen mobiele offertebalk; desktop behouden. Actuele MAIN195916628234; reviewconcept195915448586 — Offerteknop alleen desktop. Upload nog uit. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [besluit/plaatsingsadvies](quote/2026-10-30/HEADER.md). Oudere rollen hieronder zijn geschiedenis.

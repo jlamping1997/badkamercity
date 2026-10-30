@@ -1,6 +1,6 @@
 {
   "scope": "Local LiquidJS/DOM fixture; no remote upload, delivery or private access test",
-  "passed": 14,
+  "passed": 17,
   "tests": [
     "Single H1 and three native FAQs",
     "Preview cannot collect or send",
@@ -13,6 +13,9 @@
     "Invalid provider id blocked \"1234567890\\\" onload=\\\"alert(1)\"",
     "Invalid provider id blocked \"123456789012345678901\"",
     "Numeric ID loads only expected HTTPS provider",
+    "Actual provider preview only on unpublished theme main",
+    "Actual provider preview only on unpublished theme unpublished",
+    "Preview cannot bypass provider ID validation",
     "No live CTA or upload enabled by default",
     "Preserve all existing translations nl.json",
     "Preserve all existing translations en.default.json"
