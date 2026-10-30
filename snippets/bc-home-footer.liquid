@@ -2,7 +2,7 @@
   Compact homepage footer; other templates keep the existing footer.
   @param {section} section - Footer section settings.
 {% enddoc %}
-{%- capture returns_page_url -%}{%- render 'bc-returns-url' -%}{%- endcapture -%}
+{%- capture returns_page_url -%}{%- render 'bc-returns-url' -%}{%- endcapture -%}{%- assign returns_page_url = returns_page_url | strip -%}
 <footer class="bch-footer" aria-label="{{ 'bc_home.footer.label' | t }}">
   <div class="bch-shell">
     <a class="bch-footer__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">{% if settings.logo != blank %}{{ settings.logo | image_url: width: 440 | image_tag: loading: 'lazy', widths: '185, 370, 440', sizes: '185px', alt: shop.name }}{% else %}<span class="bch-footer__wordmark">Badkamer<span>city</span></span>{% endif %}</a>

@@ -90,7 +90,7 @@
               {% if block.type == group %}
                 <li {{ block.shopify_attributes }}>
                   {% assign footer_link_url = block.settings.url %}
-                  {% if footer_link_url == '/pages/retour-aanmelden' %}{% capture footer_link_url %}{% render 'bc-returns-url' %}{% endcapture %}{% endif %}
+                  {% if footer_link_url == '/pages/retour-aanmelden' %}{% capture footer_link_url %}{% render 'bc-returns-url' %}{% endcapture %}{% assign footer_link_url = footer_link_url | strip %}{% endif %}
                   {% if footer_link_url != blank %}<a href="{{ footer_link_url | escape }}">{{ block.settings.label | escape }}</a>{% else %}<span title="{{ section.settings.example_label | escape }}">{{ block.settings.label | escape }}</span>{% endif %}
                 </li>
               {% endif %}

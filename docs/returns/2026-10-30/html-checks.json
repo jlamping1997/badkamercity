@@ -1,0 +1,78 @@
+[
+  {
+    "page": "home-preview",
+    "footerAddressCount": 0,
+    "oldAddressInFooter": false,
+    "returnLinks": [
+      {
+        "label": "Retour aanmelden",
+        "href": "\n/pages/contact?view=retour-aanmelden"
+      }
+    ],
+    "h1": [
+      "Kleine update.\nGroot verschil."
+    ]
+  },
+  {
+    "page": "category-preview",
+    "footerAddressCount": 0,
+    "oldAddressInFooter": false,
+    "returnLinks": [
+      {
+        "label": "Retour aanmelden",
+        "href": "\n/pages/contact?view=retour-aanmelden"
+      }
+    ],
+    "h1": [
+      "Kranen"
+    ]
+  },
+  {
+    "page": "return-preview",
+    "footerAddressCount": 0,
+    "oldAddressInFooter": false,
+    "returnLinks": [
+      {
+        "label": "Retour aanmelden",
+        "href": "\n/pages/contact?view=retour-aanmelden"
+      }
+    ],
+    "h1": [
+      "Retour aanmelden"
+    ],
+    "form": {
+      "action": "/contact#ReturnForm-template--29446770393354__main",
+      "method": "post",
+      "controls": [
+        {
+          "name": "contact[name]",
+          "required": true
+        },
+        {
+          "name": "contact[email]",
+          "required": true
+        },
+        {
+          "name": "contact[Bestelnummer]",
+          "required": false
+        },
+        {
+          "name": "contact[Verzoek]",
+          "required": true
+        },
+        {
+          "name": "contact[body]",
+          "required": true
+        },
+        {
+          "name": "contact[Reden]",
+          "required": false
+        },
+        {
+          "name": "contact[Toelichting]",
+          "required": false
+        }
+      ]
+    }
+  }
+]
