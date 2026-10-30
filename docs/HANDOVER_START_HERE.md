@@ -1,3 +1,5 @@
+> **30 oktober2026 — RET-01 preview gecontroleerd:** native retouraanmelding en footer zonder Zichtenburglaan150 in UNPUBLISHED195947036938. MAIN195932061962 behouden1351/1351; concept1354/exact8featurepaden. Page166668894474verborgen. Eigenaar test mailboxontvangst vóór Page/themavrijgave. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [dossier](returns/2026-10-30/README.md). HDR-01 is inmiddels door eigenaar gepubliceerd; oudere rollen zijn geschiedenis.
+
 > **30 oktober 2026 — HDR-01 reviewgereed:** vaste mobiele bovenrij/logopositie, inklappende zoekrij en pointerfocus zonder grijs Terug-kader in UNPUBLISHED195932061962. MAIN195915448586 behouden. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [ontwerp/test/herstel](mobile-header/2026-10-30/README.md). Eigenaar-iPhone/publicatie open; oudere vervolgstappen zijn geschiedenis.
 
 > **30 oktober 2026 — nieuwe volledige ingang:** lees [het naslagwerk](MASTER_SITE_REFERENCE.md) en [de actuele status](LIVE_STATUS_AND_NEXT_STEPS.md). Verse MAIN195915448586, Offerteconcept195916628234UNPUBLISHED. De oudere opleverrollen hieronder blijven geschiedenis.

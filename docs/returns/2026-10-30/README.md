@@ -6,7 +6,7 @@
 
 De eigenaar heeft HDR-01 bekeken en goedgekeurd. Verse Shopify-read bevestigt **MAIN195932061962 — BadkamerCity - Vaste mobiele header**,1351bestanden; vorigeMAIN195915448586 is UNPUBLISHED. Headerwerk is dus inmiddels daadwerkelijk door de eigenaar gepubliceerd. Geen themePublish door deze uitvoering.
 
-Nieuw concept **195947036938 — BadkamerCity - Retour aanmelden en footer**, gedupliceerd van de huidige MAIN. Voor runtimewrites volledige1351/1351kopiepariteit bewijzen. Offerteconcept195916628234 blijft afzonderlijk en wordt niet overschreven. Acht runtimefiles; geen product-, prijs-, order-, refund-, voorraad-, vervoerder-, DNS- of notificatie-instellingenmutaties.
+Nieuw concept **195947036938 — BadkamerCity - Retour aanmelden en footer**, gedupliceerd van de huidige MAIN. Voor de eerste runtimewrite volledige1351/1351kopiepariteit bewezen. Offerteconcept195916628234 blijft afzonderlijk en wordt niet overschreven. Acht runtimefiles; geen product-, prijs-, order-, refund-, voorraad-, vervoerder-, DNS- of notificatie-instellingenmutaties.
 
 Page **166668894474**, handle`retour-aanmelden`, template`retour-aanmelden`, **isPublished=false**. Geen bestaande retourpagina aangetroffen in de volledig ontvangen120Page-records vóór creatie. Preview via bestaande gepubliceerde `/pages/contact?view=retour-aanmelden`; de Page blijft verborgen tot eigenaarreview. Publicatie van de Page is geen themefilewrite en moet bij vrijgave bewust met het concept worden afgestemd.
 
@@ -45,13 +45,22 @@ Rustige lichtgrijze achtergrond, donkerblauwe kop/knop, witte formulierkaart en 
 
 ## Verificatie
 
-- Theme Check revision2: alle8files SUCCESS in geïsoleerde actuele runtimeboom. De bestaande lokale Shopify-doccache wordt gebruikt als online refresh timeout geeft.
+- Theme Check revision3: alle8files SUCCESS in geïsoleerde actuele runtimeboom. De bestaande lokale Shopify-doccache wordt gebruikt als online refresh timeout geeft.
 - 22 render-/contractcases PASS: required/optioneel, lege/ongeldige/volledige invoer, geen reden/bestelnummer nodig, unieke veldnamen/labels/IDs, requestsoorten, escaping, server-succes/-fout, NL/EN, native FAQ, geen bijlage/account/marketing, vier URL-publicatierollen, lege-adresguard, exacte configpatch en additive locales.
 - De LiquidJS-formtag in de test is een renderfixture; geen echte Shopify-email of servervalidatieclaim. De eerste URL-test gebruikte per ongeluk render-isolatie zonder Shopify-globalen; gecorrigeerd door de echte snippet met zijn expliciete globale context te renderen. Geen productiecode veranderd voor die testfixture.
-- Browser, volledige finale manifestvergelijking en Page-readback: volgen in deze uitvoering.
+- Echte Shopify-preview op1348px: formulier, optionele reden/ordernummer, endpointPOST/contact, requiredvelden, h1 en footer bekeken. Lege-submit stopt client-side bij Naam; er is geen succesvolle aanvraag ingestuurd. Shopify’s eigen CAPTCHA-assets worden geladen; geen CAPTCHA opgelost of omzeild.
++- Homepagefooter Klantenservice geopend en Retour aanmelden aangeklikt → echte retourpreview. De huidige homepage-, categorie- en retourresponses bevatten geen adres meer in de footer. Beide renderers verwijzen naar dezelfde previewroute; na publicatie van de Page naar de echte Page. URL-captures expliciet gestript nadat servermarkup een onnodige voorloopnewline bevatte; finaleGET bevestigt schonehrefs.
++- Componentbrowserframes320/390/880/1024: scrollWidth=clientWidth,16pxvelden,49–50pxhogeinputs/selects en51pxknop. Formulier staat in DOM én mobiel visueel vóór de stappen. Geen fysieke telefoonclaim. De fixture gebruikt echte Shopify-markup/styles van de retourpagina; header en globale koopinteracties vallen buiten deze componentproef.
++- Finale bron: MAIN195932061962 nogMAIN en1351/1351ongewijzigd. Concept195947036938UNPUBLISHED,1354files: exact vijf bestaandefiles gewijzigd en drie nieuwe, geen ontbrekende. Zeven featurebodies exact teruggelezen; de nieuweJSON-template is semantisch exact en heeft de checksum van de ingezonden122bytes, maar Shopify voegt in zijn body-read een automatisch commentaarblok toe. Die body-normalisatie is geen runtimeverschil of niet-onderzochte featurewijziging.
++- Tijdelijke bestaande `templates/page.bc-mobile-qa.liquid` exact hersteld naar MD5 `24ae4cff55afe7f2453e4e9b6a0c2479`. Page166668894474 onafhankelijk teruggelezen als verborgen met juistehandle/template. Geen liveTheme-/Page-publicatie.
++- [Browsermetingen](browser-measurements.json), [eindverificatie](final-verification.json), [HTTP-footercontrole](final-footer-http.json) en [beeld](returns-mobile-desktop-proof.jpg).
 - Echte aanvraag/mailboxontvangst, eventuele spammap, klantantwoord en echte labellevering: niet stil als PASS registreren. Fysieke iPhone, refund en retourlabelaankoop niet getest/uitgevoerd.
 
-## Behandelen en terugzetten
+## Concrete volgende handeling
++
++Eigenaar doet één duidelijk herkenbare testaanvraag in het concept, controleert ontvangst op info@badkamercity.nl en de spammap en antwoordt daarop. Daarna de echte telefoonweergave beoordelen en de nieuwe Page plus dit concept bewust publiceren. Zolang die ontvangsttest niet is uitgevoerd blijft status MAIL_DELIVERY_PENDING. Een bevestigingspagina bewijst geen mailboxbezorging. Geen nieuwe klantactieve route beloven voor deze vrijgave.
++
++## Behandelen en terugzetten
 
 Controleer nieuwe contactmail op `Retouraanvraag Badkamercity`. Zoek zelf de bestelling erbij en verifieer identiteit/producten. Behandel in de inbox als Nieuw → In behandeling → Instructies verstuurd → Afgehandeld. Dit zijn aanbevolen handmatige werkstaten; geen automatisch aangemaakte mailboxlabels of dashboard. Reageer vanuit de bestaande winkelmail en voeg alleen het label/transport toe dat bij die concrete aanvraag past. Beoordeel ontvangen producten en eventuele terugbetaling apart in de bestaande orderworkflow.
 

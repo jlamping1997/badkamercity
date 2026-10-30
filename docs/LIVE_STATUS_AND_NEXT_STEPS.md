@@ -1,6 +1,6 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · RET-01 in uitvoering; HDR-01 eigenaar-goedgekeurd en gepubliceerd.**
+**30 oktober 2026 · RET-01 preview gecontroleerd; mailboxproef en vrijgave open.**
 
 ## Begin hier
 
@@ -28,18 +28,20 @@ QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, a
 
 ## Actieve uitvoering
 
-**RET-01 — retouraanmelding en footeradres in uitvoering.** De eigenaar heeft HDR-01 beoordeeld/goedgekeurd en gepubliceerd: verse MAIN195932061962,1351files. Vorige MAIN195915448586 is UNPUBLISHED. Dit is een rolread, geen publicatie door Codex.
+**RET-01 — PREVIEW_VERIFIED / MAIL_DELIVERY_AND_OWNER_RELEASE_PENDING.** [Retouraanmelding en footeradres](returns/2026-10-30/README.md). Eigenaar heeft HDR-01 goedgekeurd/gepubliceerd; actuele MAIN195932061962 — BadkamerCity - Vaste mobiele header,1351files. VorigeMAIN195915448586UNPUBLISHED. Geen publicatie door deze uitvoerder.
 
-De expliciete nieuwe opdracht verwijdert Zichtenburglaan150 uit beide footers en maakt retouraanmelding met producten/aantallen, optionele reden en handmatige labelafhandeling. [Dossier](returns/2026-10-30/README.md). Apart UNPUBLISHED195947036938 — BadkamerCity - Retour aanmelden en footer wordt gekopieerd; vóór runtimewrite volledige1351/1351pariteit. Acht codefiles en NL/EN, ThemeCheck8/8 en22render-/contractcasesPASS. Native Shopify contact-mailer als veiliger alternatief; browser-auto-review weigerde niet-expliciet geautoriseerde privé-Jotform-accounttoegang, geen omweg. Geen Jotform-werk uitgevoerd.
+Reviewconcept **UNPUBLISHED195947036938 — BadkamerCity - Retour aanmelden en footer**. Zichtenburglaan150 en het lege adreskopje uit beide footers; gezamenlijke retouringang; formulier met naam/e-mail/producten/aantallen/verzoek en optioneel bestelnummer/reden/toelichting. Native Shopify-contactmailer; afhandeling per e-mail, label/instructies handmatig en geen automatische refund. De automatische browserreview weigerde privé-Jotform-accounttoegang; geen omweg of nieuw Jotform-formulier. Veiliger alternatief gebruikt uitsluitend de al geautoriseerde website/Shopify-integratie.
 
-Page166668894474 retour-aanmelden gemaakt, template retour-aanmelden, isPublished=false. Geen bestaande Page overschreven. Huidige MAIN en offerteconcept195916628234 blijven behouden. Geen order-/refund-/label-/VPS-/prijs-/voorraadmutatie. Echte mailboxontvangst en labellevering zijn nog niet getest. Windows niet gecontroleerd. Eén actieve uitvoering; bestaande branch fix/product-cards-2026-10-14 blijft.
+Vooraf1351/1351identiek; finaalMAIN1351/1351gelijk en concept1354 met exact8featurepaden. ThemeCheckR3 8/8SUCCESS,22render-/contractcasesPASS, echte desktop1348 en componentframes320/390/880/1024zonderoverloop. Lege-submit stopte opNaam; native mailendpoint en optionelevelden geverifieerd. Beide footerresponses zonderadres en met schone retourhref; homepagefooterlink echt aangeklikt. QA-templateexacthersteld. Geen succesvolle formsubmit, mailbox-/spamtest of labellevering geclaimd.
+
+Nieuwe Page **166668894474**, `/pages/retour-aanmelden`, template`retour-aanmelden`, **isPublished=false**. Preview via `/pages/contact?view=retour-aanmelden` in dit concept. Page- en themepublicatie zijn nog open. Offerteconcept195916628234 behouden; vóór latere publicatie header/retourwerk opnieuw meenemen. Geen order-/return-/refund-/label-/catalogus-/VPS-/prijs-/voorraadmutatie. Windows niet gecontroleerd. Branch blijft fix/product-cards-2026-10-14; main alleen documentatie.
 
 ## Exact één volgende handeling
 
-**Codex rondt kopiepariteit, draftupload en browsercontrole van RET-01 af en levert daarna het concrete concept voor eigenaarreview.** De Jotform-verificatiemail van het offerteproject blijft geparkeerd.
+**Eigenaar dient één herkenbare testaanvraag in via het retourconcept en controleert ontvangst op info@badkamercity.nl, inclusief spam.** Daarna pas telefoonreview en bewuste Page-/themavrijgave. De offerte-Jotform-verificatie blijft afzonderlijk geparkeerd.
 
 ## Bevindingen en achtergrond
 
 Het naslagwerk registreert onder meer tien ontbrekende grote-footerbestemmingen, de Hygro(meter)-404, collectiemetadata, de €75/€100-verzendtekstafwijking in de native fallback, native/externe zoektellingen en tegelprijseenheden. Eerdere geïsoleerde cart/filter/wishlistbevindingen blijven met hun eigen bron-/testgrens bestaan. Mobiele bron/componentanalyse vervangt geen volledige fysieke telefoon-/koopronde; backend, Google en bedrijfsprocessen blijven expliciet begrensd.
 
-De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Eén RET-01-uitvoering is actief.
+De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen schrijver of achtergrondworker actief na deze oplevering.
