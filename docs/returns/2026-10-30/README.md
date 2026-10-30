@@ -1,5 +1,7 @@
 # RET-01 — retouraanmelding en footeradres
 
+> **Latere status:** de eigenaar heeft dit thema inmiddels gepubliceerd. De verse bron en nieuwe desktopheaderknop staan in [RET-02](HEADER.md). De onderstaande opleverstand blijft historisch.
+
 30 oktober 2026. Expliciete eigenaaropdracht: Zichtenburglaan150 uit de footer verwijderen; een klant kan een retour aanmelden met producten/reden, zodat de winkel de aanvraag beoordeelt en eventueel een label toestuurt. Uitvoerder Codex via connector/werkboom; bestaande branch `fix/product-cards-2026-10-14`, geen Windows-controle.
 
 ## Verse bron en grenzen

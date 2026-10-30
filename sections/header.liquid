@@ -8,6 +8,8 @@
     assign quote_header_url = '/pages/contact?view=offerte-vergelijken'
   endif
 -%}
+{%- capture returns_header_url -%}{%- render 'bc-returns-url' -%}{%- endcapture -%}
+{%- assign returns_header_url = returns_header_url | strip -%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -331,6 +333,22 @@
   .bc-header__utility-link--wishlist:hover,
   .bc-header__utility-link--wishlist:focus-visible {
     color: #d93b4b;
+  }
+
+  @media screen and (min-width: 990px) {
+    .bc-header__inner:has(.bc-header__utility-link--returns) {
+      grid-template-columns: minmax(16rem, 1fr) minmax(22rem, 48.5rem) max-content;
+    }
+
+    .bc-header:has(.bc-header__utility-link--returns) .header__heading-logo-wrapper {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .bc-header__utility-link--returns {
+      display: none;
+    }
   }
 
   .bc-header__utility-link--wishlist:hover .bc-header__utility-icon,
@@ -1262,6 +1280,19 @@
 
         {%- if quote_header_visible -%}
           {% render 'bc-header-quote', url: quote_header_url, variant: 'desktop' %}
+        {%- endif -%}
+
+        {%- if returns_header_url != blank -%}
+          <a href="{{ returns_header_url | escape }}" class="bc-header__utility-link bc-header__utility-link--returns link focus-inset">
+            <span class="bc-header__utility-icon" aria-hidden="true">
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="m8 3-5 5 5 5M3 8h11a7 7 0 0 1 0 14h-3"/>
+                </svg>
+              </span>
+            </span>
+            <span class="bc-header__utility-label">{{ 'bc_returns.heading' | t }}</span>
+          </a>
         {%- endif -%}
 
         <a href="/pages/verlanglijst" class="bc-header__utility-link bc-header__utility-link--wishlist link focus-inset">
