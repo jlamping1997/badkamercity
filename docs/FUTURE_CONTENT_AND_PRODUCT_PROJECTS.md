@@ -108,6 +108,8 @@ Doel: een verzorgde merkervaring die vertrouwen geeft, inspiratie toont en bezoe
 
 ## BC-QUOTE-001 / BC-PRICE-001 — offerte vergelijken en prijsaanvraag
 
+**Update30oktober:** uitvoering gestart, zie [actueel dossier](quote/2026-10-30/README.md). Eigenaar heeft laagsteprijsgarantie en de boodschap Stuur je offerte op en ontvang een betere prijs expliciet goedgekeurd. Teksten en ontwerp in concept; upload/ontvangst blijven nog aan te sluiten, geen Jotform-account aanwezig. De eerdere beslissing om wel/geen garantie te bieden is hiermee gesloten; operationele inrichting blijft open.
+
 Dit is een aanscherping van de bestaande taken in [MASTERPLAN.md](MASTERPLAN.md), geen tweede implementatieproject.
 De oude status BLOCKED is historische planinformatie; controleer bij uitvoering wat inmiddels werkelijk bestaat.
 
