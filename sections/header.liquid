@@ -76,18 +76,12 @@
   .bc-header-quote__copy { display:flex; flex-direction:column; gap:3px; }
   .bc-header-quote strong { font-size:14px; font-weight:700; }
   .bc-header-quote small { font-size:11px; }
-  .bc-header-quote--mobile { display:none; }
   @media screen and (min-width:990px) {
     .bc-header__inner:has(.bc-header-quote) { grid-template-columns:minmax(16rem,1fr) minmax(22rem,48.5rem) max-content; }
     .bc-header:has(.bc-header-quote) .header__heading-logo-wrapper { max-width:100%; }
   }
   @media screen and (max-width:989px) {
     .bc-header-quote--desktop { display:none; }
-    .bc-header-quote--mobile { display:flex; grid-column:1 / -1; justify-content:center; min-width:0; gap:8px; padding:9px 8px; }
-    .bc-header-quote--mobile .bc-header-quote__copy { flex-direction:row; align-items:center; flex-wrap:wrap; gap:3px 9px; }
-    .bc-header-quote--mobile strong { font-size:13px; }
-    .bc-header-quote--mobile small { font-size:10px; }
-    .bc-header-quote--mobile svg { width:18px; height:18px; }
   }
 
 </style>
@@ -1215,9 +1209,6 @@
           {% render 'bc-header-cart' %}
         </a>
       </div>
-      {%- if quote_header_visible -%}
-        {% render 'bc-header-quote', url: quote_header_url, variant: 'mobile' %}
-      {%- endif -%}
     </div>
   </header>
 
