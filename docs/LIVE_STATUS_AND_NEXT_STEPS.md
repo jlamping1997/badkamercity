@@ -1,8 +1,10 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · BC-QUOTE-001 — Jotform ingericht en in concept gekoppeld.**
+**30 oktober 2026 · BC-QUOTE-001 — Eenvoudiger offertedesign in concept; Jotform gekoppeld.**
 
 ## Actuele uitvoering
+
+[Nieuwste ontwerp en controle](quote/2026-10-30/DESIGN.md): één uploadkaart, kortere uitleg, compacte velden en uitklapbare garantie-uitleg. Vier themebestanden exact teruggelezen, vier ThemeCheck-bestanden en17rendercases PASS;320/390component zonder overflow. Alleen design gewijzigd; actuele gates en openstaande mailverificatie behouden.
 
 [Actuele Jotform-configuratie, test en aansluitstatus](quote/2026-10-30/INTEGRATION.md). Status **FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED**.
 
