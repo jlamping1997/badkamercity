@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "Footer",
   "type": "footer",
@@ -27,7 +36,8 @@
         "service_4": {
           "type": "service",
           "settings": {
-            "label": "Retourneren"
+            "label": "Retour aanmelden",
+            "url": "/pages/retour-aanmelden"
           }
         },
         "service_5": {
@@ -162,7 +172,7 @@
         "category_heading": "Ons assortiment",
         "all_label": "Bekijk alles",
         "contact_heading": "We helpen je graag",
-        "contact_address": "Zichtenburglaan 150\n2544 EB Den Haag",
+        "contact_address": "",
         "contact_phone": "",
         "opening_hours": "",
         "contact_email": "info@badkamercity.nl",

@@ -1,6 +1,6 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · HDR-01 — mobiele header reviewgereed; DOC-ALL-01 afgerond.**
+**30 oktober 2026 · RET-01 in uitvoering; HDR-01 eigenaar-goedgekeurd en gepubliceerd.**
 
 ## Begin hier
 
@@ -28,16 +28,18 @@ QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, a
 
 ## Actieve uitvoering
 
-De vaste mobiele logopositie, blijvende bovenrij met inklappende zoekrij en aanraakfocus zonder grijs Terug-kader staan in **UNPUBLISHED195932061962 — BadkamerCity - Vaste mobiele header**. [HDR-01: ontwerp, bewijs en herstel](mobile-header/2026-10-30/README.md). MAIN195915448586 behouden; vooraf1350/1350 identieke kopie, finaalMAIN1350/1350gelijk en concept1351 met exact header.liquid gewijzigd + nieuwe bc-mobile-header.js. QA-template exact hersteld. ThemeCheckR4 beidefilesSUCCESS;21gedragscases,12submenucontracten/tweeactieveroutes en5offerteheadergevallenPASS. Browserframes320/390/750/989/1024geenoverloop; gelijke390px-logogeometrie,138→84px zichtbare header, stabiele menuaansluiting, pointergeenrand/keyboard2px, echte CB041-zoekresultaten. Gewone conceptpagina1348px gecontroleerd. Fysieke iPhone en eigenaarspublicatie open; geen algemene performance-/checkoutvrijgave.
+**RET-01 — retouraanmelding en footeradres in uitvoering.** De eigenaar heeft HDR-01 beoordeeld/goedgekeurd en gepubliceerd: verse MAIN195932061962,1351files. Vorige MAIN195915448586 is UNPUBLISHED. Dit is een rolread, geen publicatie door Codex.
 
-Actieve branch blijft fix/product-cards-2026-10-14. Twee runtimebestanden en het dossier worden als deze checkpoint opgeslagen; main alleen documentatie. Offerteconcept195916628234 behouden en niet met de headerpreview samengevoegd. Vóór latere offertepublicatie dit headerwerk meenemen. Geen MAIN-write, publicatie, catalogus-/VPS-/prijs-/voorraadmutatie. Windows niet gecontroleerd.
+De expliciete nieuwe opdracht verwijdert Zichtenburglaan150 uit beide footers en maakt retouraanmelding met producten/aantallen, optionele reden en handmatige labelafhandeling. [Dossier](returns/2026-10-30/README.md). Apart UNPUBLISHED195947036938 — BadkamerCity - Retour aanmelden en footer wordt gekopieerd; vóór runtimewrite volledige1351/1351pariteit. Acht codefiles en NL/EN, ThemeCheck8/8 en22render-/contractcasesPASS. Native Shopify contact-mailer als veiliger alternatief; browser-auto-review weigerde niet-expliciet geautoriseerde privé-Jotform-accounttoegang, geen omweg. Geen Jotform-werk uitgevoerd.
+
+Page166668894474 retour-aanmelden gemaakt, template retour-aanmelden, isPublished=false. Geen bestaande Page overschreven. Huidige MAIN en offerteconcept195916628234 blijven behouden. Geen order-/refund-/label-/VPS-/prijs-/voorraadmutatie. Echte mailboxontvangst en labellevering zijn nog niet getest. Windows niet gecontroleerd. Eén actieve uitvoering; bestaande branch fix/product-cards-2026-10-14 blijft.
 
 ## Exact één volgende handeling
 
-**Eigenaar beoordeelt HDR-01 op de eigen iPhone via Shopify → Webshop → Thema’s → BadkamerCity - Vaste mobiele header → Voorbeeld en publiceert dit concept bij akkoord.** Daarna rollen en openbare header opnieuw lezen. De Jotform-verificatiemail/testmelding blijft geparkeerd; niet als afgerond rapporteren.
+**Codex rondt kopiepariteit, draftupload en browsercontrole van RET-01 af en levert daarna het concrete concept voor eigenaarreview.** De Jotform-verificatiemail van het offerteproject blijft geparkeerd.
 
 ## Bevindingen en achtergrond
 
 Het naslagwerk registreert onder meer tien ontbrekende grote-footerbestemmingen, de Hygro(meter)-404, collectiemetadata, de €75/€100-verzendtekstafwijking in de native fallback, native/externe zoektellingen en tegelprijseenheden. Eerdere geïsoleerde cart/filter/wishlistbevindingen blijven met hun eigen bron-/testgrens bestaan. Mobiele bron/componentanalyse vervangt geen volledige fysieke telefoon-/koopronde; backend, Google en bedrijfsprocessen blijven expliciet begrensd.
 
-De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen eigen schrijver of achtergrondworker actief na deze oplevering.
+De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Eén RET-01-uitvoering is actief.

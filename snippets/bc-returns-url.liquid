@@ -1,0 +1,10 @@
+{% doc %}
+  Returns the published return page URL or an unpublished-theme preview URL.
+{% enddoc %}
+{%- liquid
+  assign returns_url = pages['retour-aanmelden'].url
+  if returns_url == blank and theme.role != 'main'
+    assign returns_url = '/pages/contact?view=retour-aanmelden'
+  endif
+  echo returns_url
+-%}
