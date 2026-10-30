@@ -1,6 +1,6 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · RET-02 in uitvoering: desktopretourknop naast Verlanglijst.**
+**30 oktober 2026 · RET-02 preview gecontroleerd: desktopretourknop naast Verlanglijst.**
 
 ## Begin hier
 
@@ -28,18 +28,18 @@ QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, a
 
 ## Actieve uitvoering
 
-**RET-02 — IMPLEMENTATION_PREPARED / COPY_AND_BROWSER_QA_PENDING.** [Retourknop naast Verlanglijst](returns/2026-10-30/HEADER.md). Verse MAIN **195947036938 — BadkamerCity - Retour aanmelden en footer**,1354files. De eigenaar heeft RET-01 inmiddels gepubliceerd;195932061962isUNPUBLISHED. Page166668894474 blijft verborgen. De nieuwe retour-URL verschijnt daardoor nog niet als klantlink in MAIN; Page-publicatie is afzonderlijk nodig. De footeradreswijziging is wel al gepubliceerd.
+**RET-02 — PREVIEW_VERIFIED / OWNER_RELEASE_PENDING.** [Retourknop naast Verlanglijst](returns/2026-10-30/HEADER.md). Verse MAIN **195947036938 — BadkamerCity - Retour aanmelden en footer**,1354files. De eigenaar heeft RET-01 inmiddels gepubliceerd;195932061962isUNPUBLISHED. Page166668894474 blijft verborgen. De nieuwe retour-URL verschijnt daardoor nog niet als klantlink in MAIN; Page-publicatie is afzonderlijk nodig. De footeradreswijziging is wel al gepubliceerd.
 
-Nieuw concept **195948839178 — BadkamerCity - Retourknop in header**, kopie van de verse MAIN. Eén blijvende runtimefile: sections/header.liquid. Retourpijl en vertaalde tekst direct vóór Verlanglijst, vanaf990px; mobiele bovenrij blijft behouden. Bestaande URL-helper hergebruikt; ThemeCheckrevision1SUCCESS. Volledige1354/1354kopiepariteit en echte browsercontrole worden vóór oplevering gesloten. Geen MAIN-write, Page-publicatie, succesvolle formulierinzending of mail-/labelclaim.
+Nieuw concept **195948839178 — BadkamerCity - Retourknop in header**, kopie van de verse MAIN. Eén blijvende runtimefile: sections/header.liquid. Retourpijl en vertaalde tekst direct vóór Verlanglijst, vanaf990px; mobiele bovenrij blijft behouden. Bestaande URL-helper hergebruikt; ThemeCheckrevision2SUCCESS. Vooraf1354/1354kopiepariteit; finaalMAIN1354/1354gelijk, concept1354/exactééngewijzigdheaderpad en text-exactreadback. Echte desktop1348knopklik→retourformulier; zeven componentframes390/989/990/1024/1280/1440zonderoverloop, desktopiconengelijk, mobielverborgen. QA-templateexacthersteld. Geen MAIN-write, Page-publicatie, succesvolle formulierinzending of mail-/labelclaim.
 
-Het [RET-01-formulierdossier](returns/2026-10-30/README.md) blijft geldig als gedateerde bron. Mailbox-/spamtest op info@badkamercity.nl, eigenaarstelefoon en Page-/nieuwe-themavrijgave blijven open. Offerte-Jotform-verificatie afzonderlijk geparkeerd; geen nieuwe privéaccounttoegang. Geen order-/return-/refund-/label-/catalogus-/VPS-/prijs-/voorraadmutatie. Windows niet gecontroleerd. Eén uitvoerder Codex; branch fix/product-cards-2026-10-14, main alleen documentatie.
+Het [RET-01-formulierdossier](returns/2026-10-30/README.md) blijft geldig als gedateerde bron. Mailbox-/spamtest op info@badkamercity.nl, eigenaarstelefoon en Page-/nieuwe-themavrijgave blijven open. Offerte-Jotform-verificatie afzonderlijk geparkeerd; geen nieuwe privéaccounttoegang. Geen order-/return-/refund-/label-/catalogus-/VPS-/prijs-/voorraadmutatie. Windows niet gecontroleerd. Uitvoering Codex afgerond; branch fix/product-cards-2026-10-14, main alleen documentatie.
 
 ## Exact één volgende handeling
 
-**Uitvoerder rondt kopiepariteit, headerupload en browsercontrole van RET-02 af.** Daarna eigenaarstest/vrijgave; het eerdere mailboxbewijs blijft expliciet open.
+**Eigenaar doet één herkenbare retourtestaanvraag in concept195948839178 en controleert ontvangst op info@badkamercity.nl, inclusief spam.** Daarna Page166668894474 zichtbaar maken en dit headerconcept bewust publiceren; eigenaarstelefoon blijft open. Publiceer geen ouder concept over deze samengestelde stand.
 
 ## Bevindingen en achtergrond
 
 Het naslagwerk registreert onder meer tien ontbrekende grote-footerbestemmingen, de Hygro(meter)-404, collectiemetadata, de €75/€100-verzendtekstafwijking in de native fallback, native/externe zoektellingen en tegelprijseenheden. Eerdere geïsoleerde cart/filter/wishlistbevindingen blijven met hun eigen bron-/testgrens bestaan. Mobiele bron/componentanalyse vervangt geen volledige fysieke telefoon-/koopronde; backend, Google en bedrijfsprocessen blijven expliciet begrensd.
 
-De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. RET-02 heeft één actieve uitvoerder; geen andere schrijver starten tot overdracht.
+De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen schrijver of achtergrondworker actief na deze oplevering.
