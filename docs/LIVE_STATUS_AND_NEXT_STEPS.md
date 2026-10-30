@@ -6,16 +6,16 @@
 
 [Dossier, ontwerp en aansluitstappen](quote/2026-10-30/README.md). Status **DESIGN_IMPLEMENTED / INTEGRATION_PENDING_ACCOUNT / NOT_PUBLISHED**. Geen werkende ontvangst-/uploaddienst claimen.
 
-- MAIN **195915448586 — BadkamerCity - Mobiel assortiment**, ASSORT-02 door eigenaar gepubliceerd;1.344files ongewijzigd.
-- Concept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.348files. Eerdere ongepubliceerde versie gecontroleerd gesynchroniseerd met actuele MAIN en hernoemd.
+- MAIN **195916628234 — BadkamerCity - Offerte vergelijken**, inmiddels door eigenaar gepubliceerd;1.349files. In deze correctie alleMAIN-checksums ongewijzigd.
+- Reviewconcept **195915448586 — BadkamerCity - Offerteknop alleen desktop**, UNPUBLISHED,1.349files. Eerst actuele MAIN overgenomen; daarna alleen mobiele headeractie verwijderd.
 - Pagina **166573539594**, handle offerte-vergelijken, templateSuffix offerte-vergelijken, **isPublished=false** teruggelezen.
-- Actieve branch `fix/product-cards-2026-10-14`; definitief remote codecheckpoint `99dd1bb4714148423ab2484da6f53b4b113fe7ff`. Main alleen documentatie.
+- Actieve branch `fix/product-cards-2026-10-14`; voorgaand headercheckpoint `1e4c60e5e3572b66f71aaecc36e9fe26b47feaf2`. Main alleen documentatie.
 - Eigenaar heeft expliciet laagsteprijsgarantie goedgekeurd: Stuur je offerte op en ontvang een betere prijs. Kop/intro/stappen/FAQ/homepageverwijzing in NL/EN aangepast; ongepubliceerde paginatitel en inhoud bijgewerkt. Localevalidatie en14bestaande cases PASS; twee locale-inhouden en paginastatus teruggelezen. Geen upload of publicatie.
 - Pagina-ontwerp, NL/EN, FAQ, contactfallback en voorbereide Jotform-iframe met expliciete activatie. Voorbeeldvelden disabled, geen POST of fakebevestiging. Homepageverwijzing voorbereid maar disabled:true; nieuwe paginaroute nog niet publiek.
 - Zeven bedoelde productie-inhouden teruggelezen; overige1.341checksums gelijk. MAIN1.344/1.344ongewijzigd, QA exact hersteld.
 - ThemeCheck zeven files PASS;14lokale render-/gatecases PASS. Desktop en320/390/1024componentframes zonder overloop; FAQbediening PASS. Geen fysieke telefoon, echte upload, notificatie, privétoegang of verwijdering getest.
 
-- Headerknop toegevoegd op eigenaarsverzoek: desktop op voormalige accountplek; mobiel aparte rij onder zoekbalk. [Ontwerp, gates en bewijs](quote/2026-10-30/HEADER.md). Alleen conceptpreview zichtbaar; klantactivatie=false. Vijf ThemeCheck-files, vijf routecases en 14 offertecases PASS; 320/390/1024 geïsoleerde headerfixture zonder overloop. Geen upload/publicatie.
+- Nieuw eigenaarsbesluit: **geen offerteactie in mobiele header**. Render en mobiele balk-CSS verwijderd; desktop behouden. [Actuele wijziging en plaatsingsadvies](quote/2026-10-30/HEADER.md): productprijs, bestaande homepage-teaser en footer. Nieuwe plaatsen zijn voorstellen; upload en klantactivatie blijven uit. Twee ThemeCheck-files en vijf bestaande gate-/routecases PASS; exacte bronreadbacks. Geen nieuwe mobiele browsertest/publicatie.
 
 ## Exact één volgende handeling
 
