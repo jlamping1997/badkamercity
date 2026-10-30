@@ -6,7 +6,7 @@ const engine=new Liquid({strictFilters:false});
 engine.registerFilter('asset_url',x=>'https://example.invalid/'+x);engine.registerFilter('stylesheet_tag',x=>'<link rel="stylesheet" href="'+x+'">');engine.registerFilter('t',key=>key.split('.').reduce((v,k)=>v?.[k],locale)||key);
 const tests=[];const record=(name,fn)=>{fn();tests.push(name)};
 (async()=>{
- const render=async settings=>new JSDOM(await engine.parseAndRender(source,{section:{id:'quote-fixture',settings},pages:{contact:{url:'/pages/contact'}},routes:{root_url:'/'}}));
+ const render=async (settings,role="main")=>new JSDOM(await engine.parseAndRender(source,{section:{id:'quote-fixture',settings},theme:{role},pages:{contact:{url:'/pages/contact'}},routes:{root_url:'/'}}));
  let dom=await render({show_preview:true,integration_enabled:false,form_id:''}),d=dom.window.document;
  record('Single H1 and three native FAQs',()=>{assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelectorAll('details').length,3)});
  record('Preview cannot collect or send',()=>{assert.ok(d.querySelector('fieldset').disabled);assert.equal(d.querySelectorAll('form').length,0);assert.equal(d.querySelectorAll('iframe').length,0);assert.equal(d.querySelector('button').type,'button')});
@@ -20,6 +20,12 @@ const tests=[];const record=(name,fn)=>{fn();tests.push(name)};
  }
  d=(await render({show_preview:false,integration_enabled:true,form_id:'123456789012345'})).window.document;
  record('Numeric ID loads only expected HTTPS provider',()=>{assert.equal(d.querySelector('iframe').src,'https://form.jotform.com/123456789012345');assert.ok(d.querySelector('iframe').title);assert.equal(d.querySelectorAll('fieldset').length,0)});
+ for(const role of ['main','unpublished']){
+  d=(await render({integration_enabled:false,integration_preview:true,show_preview:false,form_id:'263018521531044'},role)).window.document;
+  record('Actual provider preview only on unpublished theme '+role,()=>assert.equal(d.querySelectorAll('iframe').length,role==='unpublished'?1:0));
+ }
+ d=(await render({integration_enabled:false,integration_preview:true,show_preview:false,form_id:'1234evil'},'unpublished')).window.document;
+ record('Preview cannot bypass provider ID validation',()=>assert.equal(d.querySelectorAll('iframe').length,0));
  const index=JSON.parse(fs.readFileSync(path.join(root,'templates/index.json'))),template=JSON.parse(fs.readFileSync(path.join(root,'templates/page.offerte-vergelijken.json')));
  record('No live CTA or upload enabled by default',()=>{assert.equal(index.sections.bc_quote_teaser.disabled,true);assert.equal(template.sections.main.settings.integration_enabled,false)});
  for(const file of ['nl.json','en.default.json']){

@@ -1,3 +1,5 @@
+> **Actueel: Jotform-account en formulier bestaan.** Formulier263018521531044 is aangemaakt, met fictieve PDF getest en alleen in het ongepubliceerde websiteconcept gekoppeld. Meldingen naar info@badkamercity.nl; verificatie/bezorgbevestiging nog nodig. Klantmail en publieke klantactivatie uit. Zie [actuele integratie en testgrenzen](INTEGRATION.md). Eerdere account-/rolmeldingen hieronder zijn geschiedenis.
+
 > **Actueel besluit:** footerlink onder Klantenservice in beide footers voorbereid en getest; klantactivatie uit. MAIN195915448586 door eigenaar gepubliceerd; reviewconcept195916628234. [Footer, bewijs en aansluitstatus](FOOTER.md). Uploadkoppeling blijft accountafhankelijk.
 
 > **Actueel:** eigenaar wil geen offerteactie in de mobiele header. Zie [desktopknop en voorstellen voor betere plaatsen](HEADER.md). Reviewconcept195915448586; MAIN195916628234 door eigenaar gepubliceerd. Upload blijft uit.

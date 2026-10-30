@@ -1,27 +1,27 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · BC-QUOTE-001 — footerlink en offerte-uploader opgeslagen.**
+**30 oktober 2026 · BC-QUOTE-001 — Jotform ingericht en in concept gekoppeld.**
 
 ## Actuele uitvoering
 
-[Dossier en aansluitstappen](quote/2026-10-30/README.md) · [footerplaatsing, bewijs en rollback](quote/2026-10-30/FOOTER.md). Status **DESIGN_IMPLEMENTED / INTEGRATION_PENDING_ACCOUNT / CUSTOMER_LINK_DISABLED**.
+[Actuele Jotform-configuratie, test en aansluitstatus](quote/2026-10-30/INTEGRATION.md). Status **FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED**.
 
-- MAIN **195915448586 — BadkamerCity - Offerteknop alleen desktop**, door eigenaar gepubliceerd;1.349files. AlleMAIN-checksums in deze sessie ongewijzigd.
-- Reviewconcept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.350files. Eerst1.349/1.349bestanden exact gelijkgemaakt aan actuele MAIN; daarna alleen vier bedoelde footerbestanden veranderd/toegevoegd.
-- Pagina **166573539594**, handle offerte-vergelijken, templateSuffix offerte-vergelijken, **isPublished=false** vers teruggelezen.
-- Actieve branch `fix/product-cards-2026-10-14`; vorige wijziging mobiele balk verwijderen: `912cad877a7dcaf8976fbb6cc117866659cccc65`. Actuele footerwijziging wordt op dezelfde branch opgeslagen; main uitsluitend documentatie.
-- Eigenaar heeft laagsteprijsgarantie goedgekeurd: **Stuur je offerte op en ontvang een betere prijs.** Ontwerp, NL/EN-uitleg, FAQ, Jotform-voorbereiding en disabled voorbeeldvelden bestaan. Geen werkende upload/ontvangst claimen.
-- Geen mobiele offertebalk; desktopknop behouden. Eigenaar kiest **footer** voor verdere plaatsing. Gedeelde link **Laagsteprijsgarantie – Offerte uploaden** onder Klantenservice in gewone footer én compacte homepagefooter.
-- Footerklantactivatie=false; conceptpreview=true en uitgesloten op MAIN. Preview opent contact?view=offerte-vergelijken; echte link vereist expliciete activering en beschikbare offertepagina. Homepage-teaser blijft disabled.
-- Vier ThemeCheck-files en vijf lokale activatie-/routecases PASS. Drie bronfiles exact en footer-group semantisch gelijk teruggelezen. Desktopbrowser: beide footerlinks zichtbaar, homepage-uitklapper bedienbaar en gewone footerklik opent juiste H1. Geen nieuwe fysieke telefoon-, upload-, ontvangst-, privétoegang- of verwijdertest.
+- MAIN **195915448586 — BadkamerCity - Offerteknop alleen desktop**,1.349files, in deze sessie ongewijzigd. Reviewconcept **195916628234 — BadkamerCity - Offerte vergelijken**, UNPUBLISHED,1.350files.
+- Eigenaar heeft een Jotform-account gemaakt en veilig aangemeld; geen credentials/OTP in Git. Formulier **263018521531044**, publiek providerformulier; de Shopify-pagina166573539594 is nog ongepubliceerd. Op expliciete keuze van eigenaar melding naar **info@badkamercity.nl**.
+- Formulier: volledige offerte/één product; voor-/achternaam, e-mail en bestand verplicht; toelichting optioneel. PDF/JPG/JPEG/PNG, maximaal3bestanden/10MB per bestand, als instellingen gelezen. Geen telefoonveld, betaling of marketinginschrijving.
+- Eén fictieve testaanvraag succesvol verzonden, in Jotform teruggelezen en PDF van781bytes ingelogd gedownload; exact gelijk aan origineel. .txt geweigerd met Nederlandse melding. Dit zijn geen echte klantgegevens. Testrecord gemarkeerd en nog aanwezig.
+- Require log-in to see submissions en Require log-in to view uploaded files stonden aangevinkt. Anonieme downloadweigering niet bewezen: externe uitleestool kon de test-URL niet ophalen. Geen privacyvrijgave op basis van die fout.
+- Notificatie naar eigenaar geconfigureerd met Nederlandse tekst, zonder losse bestandsbijlagen. Bezorging in de mailbox nog niet bevestigd. Automatische klantmail expliciet **disabled**, omdat accountverificatie nodig is voor aanpassing; eigenaar meldt verificatiemail nog niet te hebben ontvangen.
+- Concept: form_id ingevuld, **integration_preview=true** alleen bij theme.role=unpublished; **integration_enabled=false**, **show_preview=false**. Publicatie van het concept activeert de provider niet automatisch. Klantlinks/header/footer en homepage-teaser blijven uit volgens hun bestaande gates. Geen mobiele headerbalk.
+- Drie ThemeCheck-files en17lokale render-/gatecases PASS. Drie productie-inhouden exact/JSON-semantisch teruggelezen; alleen die drie gewijzigde bestanden in concept. Desktopiframe zichtbaar; providerframes320/390zonder horizontale overloop. Tijdelijke QA-template exact hersteld. Geen fysieke telefoon-, grensgrootte-, servervalidatie-, verwijder-, spam- of performancevrijgave.
 
 ## Exact één volgende handeling
 
-**Eigenaar maakt een formulieraccount beschikbaar; hij heeft nog geen Jotform-account.** Daarna echte koppeling, ontvanger/toegang en upload-/ontvangstproef uitvoeren. De klantlinks pas na werkende upload en publicatie van de offertepagina activeren.
+**Eigenaar controleert de Jotform-verificatiemail en testmelding op info@badkamercity.nl, ook ongewenste mail.** Daarna klantbevestiging afronden en ontvangst bevestigen; resterende toegang-/bewaar-/telefooncontrole vóór klantactivatie en publicatie door eigenaar.
 
 ## Overdracht
 
-Geen publicatie, accountaanmaak, appinstallatie, betaald plan of e-mailversturing door agent. Code, bewijs en actuele status in Git bewaren; geen klantdocumenten. Bewaartermijn/ontvanger blijven in te richten. Geen achtergrondschrijver actief.
+Geen Shopify MAIN-write of Shopify-publicatie. Jotform-formulier bestaat wel als publieke, nog niet via klantlinks ontsloten providerroute. Geen betaald plan, API-key of nieuwe app. Huidige plan toont Jotform-branding. Bewaartermijn is nog niet vastgesteld/geconfigureerd. Geen achtergrondworker actief. Oude bewijsblokken hieronder horen bij de eerdere fasen.
 
 ## Parkeerplaats — nieuwe toekomstprojecten, 29 oktober 2026
 
