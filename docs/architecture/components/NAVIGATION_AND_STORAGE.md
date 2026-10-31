@@ -1,5 +1,7 @@
 # Navigatie, zoeken en browseropslag
 
+> **31 oktober 2026 — NAV-03 in reviewconcept195947036938:** één passende rij met Meer categorieën, geen schuifrail of tweede rij. Bestaand mobiel menu onder990px;13breedteproeven en Menu→Douche→Terug/Escape gecontroleerd. Codecheckpoint b7a5308038965bf874e06ed5115aa9431eb381d3. [Actuele status en begrensd browserbewijs](../../navigation-and-tiles/2026-10-31/README.md). Oudere bronregels/scroll-/opslaglogs hieronder behouden hun meetmoment.
+
 **Doel:** dezelfde informatie kunnen vinden vanaf desktop/mobiel en de bedoelde selectie bewaren zonder oude data als actuele waarheid te gebruiken. **Eigenaarrol:** merchant voor menubestemmingen/content; storefront voor rendering, focus en opslagcontracten. Bronstatus VERIFIED_THEME; header-/notificationmarkup op acht responses VERIFIED_HTML. DOC-03D voegt 43 lokale wishlistreplays toe; geen echte menu-/bezoekersopslaginteractie of accounttest.
 
 ## Menu: Admin → headergroep → renderer
@@ -10,7 +12,7 @@ De Admin-inventaris van DOC-01 bevat negen menu's met maximaal drie niveaus. De 
 | --- | --- | --- |
 | Menuboom | Shopify Admin menu's | Titel, type, resourceId, URL en kinderen |
 | Sectieselectie | header-group.json | Welke menuhandle/settings de header gebruikt |
-| Desktop | header.liquid:1168 e.v. + BcCategoryNavigation | Categorie-/groeppanelen, horizontaal scrollen, open/close en focus |
+| Desktop | header.liquid → BcCategoryNavigation + bc-category-overflow.liquid | Werkelijke breedte meten, passende rij + Meer, categorie-/groeppanelen, open/close en focus |
 | Mobiel | header-drawer.liquid + BcMobileDrawer in header.liquid | Root/subpanelen, terugstap, sluiten en headeroffset |
 | Zoeken | header-search → search/predictive-search.js + responssectie | Zoekinvoer en suggesties; andere route dan resultatenpagina |
 
@@ -28,7 +30,9 @@ Nog te controleren: tabbereik in actieve/inactieve panelen, focus bij snel herop
 
 ### Desktopnavigatie
 
-De categoriecontroller heeft afzonderlijke previous/next-scrollknoppen, backdrop, focusin/out, toetsenbord en cleanup. Pijlen hier scrollen de categorierail; zij zijn niet dezelfde functie als een product-CTA of galerijbutton. De code bevat een destroy-pad en herinitialisatie voor section:load. Hergebruik van een stijl moet die lifecycle behouden.
+**NAV-03:** de huidige controller meet item- en lijstbreedtes na fontladen en resize; overblijvende branches verschijnen met dezelfde Admin-bestemmingen onder een native Meer-disclosure. Alle links staan al in Liquid/HTML. ResizeObserver en section-cleanup horen bij deze lifecycle. ArrowDown opent en focust de eerste zichtbare branch; Escape sluit en herstelt focus. Zonder scripts toont de native Alle categorieën-disclosure de volledige boom. Zie het gekoppelde NAV-03-dossier voor exacte bronhashes en eindmetingen.
+
+**Historische railbeschrijving (vóór NAV-02/NAV-03):** De categoriecontroller heeft afzonderlijke previous/next-scrollknoppen, backdrop, focusin/out, toetsenbord en cleanup. Pijlen hier scrollen de categorierail; zij zijn niet dezelfde functie als een product-CTA of galerijbutton. De code bevat een destroy-pad en herinitialisatie voor section:load. Hergebruik van een stijl moet die lifecycle behouden.
 
 ## Zoekroutes onderscheiden
 

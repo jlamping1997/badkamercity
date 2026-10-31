@@ -1,5 +1,7 @@
 # NAV-02 — categorieën zonder horizontaal schuiven
 
+> **Opgevolgd door NAV-03:** de twee-rijenlayout hieronder is historisch. Actueel concept195947036938 heeft één passende rij met Meer categorieën. [Actuele wijziging en bewijs](../../navigation-and-tiles/2026-10-31/README.md).
+
 31 oktober 2026. De eigenaar toont de laptopheader en wil alle categorieën direct kunnen bereiken, met goede laptop-, desktop- en mobiele versies. Bestaande actieve branch `fix/product-cards-2026-10-14`; geen Windows-/fysieke laptopcontrole.
 
 ## Bron en veilige werkstand
