@@ -1,5 +1,7 @@
 # Filters: URL, nieuwste request, history en native terugval
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** FILTER-F01 hersteld: na eerste native fallback blijft externe controller uit op huidige pagina; geen externe popstate-search, stale DOMwrite of latere range-debounce. Echte native gridmethode opgenomen in geïsoleerde replay. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03C.** Hoofddossier: [filterengine](../FILTER_ENGINE.md). Actuele `bc-external-filters.js` en `facets.js` zijn opnieuw gelezen en gehasht. De volledige externe closure is uitgevoerd met synthetische antwoorden; FX-37 gebruikt ook de echte native popstate-handler en `renderProductGridContainer`, met nagebootste native requestafhandeling. Geen live index-, cart- of checkoutactie. [Bewijs](../../evidence/2026-10-28-filters/README.md).
 
 ## De eerste eigenaar: Shopify

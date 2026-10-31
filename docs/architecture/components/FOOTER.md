@@ -1,5 +1,7 @@
 # Footer: opbouw, beheer en gedrag
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Echte bestemmingen tonen, lege placeholders alleen in editor. Onze merken naar bestaande gids; adresafwezigheid en retourroute behouden. Geen nieuwe beleids-/bedrijfsinformatie verzonnen. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 Bronmoment **28 oktober 2026**. De actuele `sections/footer-group.json` en `sections/footer.liquid` zijn bytegelijk aan het verse MAIN-manifest. De footer is maatwerk, met classes `bcf-v2 bcf-v3`; de naam Dawn van het basisthema beschrijft deze implementatie niet volledig.
 
 ## Route en gegevens

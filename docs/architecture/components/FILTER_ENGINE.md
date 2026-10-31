@@ -1,5 +1,7 @@
 # Filters van Shopify-data tot zichtbare productlijst
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Native fallback is nu definitief voor huidige pagina. Actieve zoeklijst krijgt eigen telling/titel; native titel wordt bij terugval hersteld. Backend/index niet gewijzigd; responseidentity/URLdialect/rangegrenzen blijven open. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 Bronmoment **28 oktober 2026**. De [kaarten-/filterfrontend](PRODUCT_CARDS_AND_FILTERS.md) beschrijft de actuele code. Dit dossier verbindt die aan indexering, beheer, fouten en overdracht. De serverbron is nog niet vers uit een bevoegde VPS-sessie gelezen; historische serverkennis wordt hieronder expliciet zo aangeduid.
 
 ```mermaid

@@ -1,5 +1,7 @@
 # Sunshower — keuze, kopen en verzoeken die elkaar kruisen
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** SS-F01 hersteld: pending en onzekere uitkomst blokkeren wijzigende/duplicerende kooproutes, inclusief lokale andere formulieren en bfcache. Ook422 kan gedeeltelijk toevoegen; eerst cart controleren. Alleen gesimuleerde carttransporttests, geen echte koopactie. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **Doel:** de getoonde configuratie, de actieve koopknoppen en het lopende request blijven bij dezelfde bedoeling van de klant horen. Hoofdcontracten: [keuzes](../PRODUCT_CHOICES.md) en [cart](../CART_AND_FEEDBACK.md). Bron assets/bc-sunshower-page.js; replay SS-01/SS-02. Geen echte koopactie uitgevoerd.
 
 ## Twee aparte vlaggen

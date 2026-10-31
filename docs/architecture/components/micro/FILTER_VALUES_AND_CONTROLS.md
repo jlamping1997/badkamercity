@@ -1,5 +1,7 @@
 # Filterwaarden: eenheden, exacte keuzes, groepering en beleidsflags
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** FILTER-F02 hersteld: Toon minder gebruikt dezelfde zichtbare-waardenlimiet als initiële facetweergave; geselecteerde opties blijven zichtbaar. Omgekeerd bereik, facetzoeker en URLdialecten blijven benoemde grenzen. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03C.** Deze uitleg volgt `renderFilters`, range-/checkboxhandlers, chips en de openbare facetconfiguratie. [41 cases en twee profielreads](../../evidence/2026-10-28-filters/README.md). Geen volledige backend-/indexschema-audit.
 
 ## De API-waarde is niet altijd de zichtbare waarde

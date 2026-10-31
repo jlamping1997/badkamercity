@@ -1,5 +1,7 @@
 # Metadata, structured data, redirects en talen
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Alleen lege collectie-page_description krijgt titelgebonden gelokaliseerde fallback van max160tekens, met escape_once en expliciete meta-snippetparameters. Bestaande SEO behouden; geen stylelekkage in gemeten pagina’s. Zoekstatus/titel volgen actieve bron; verzendcopy€100 consistent zonder onbewezen zelfde-dagbelofte. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 Bronmoment **28 oktober 2026**. Dit dossier beschrijft de technische uitvoer en beheerlocaties. Het is geen verklaring van ranking, indexatie, juridische juistheid of Core Web Vitals.
 
 ## Globale uitvoer

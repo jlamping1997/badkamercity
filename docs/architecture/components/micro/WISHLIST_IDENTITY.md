@@ -1,5 +1,7 @@
 # Verlanglijst: gedeelde hartjes en actuele uitvoering
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Klik legt add/remove-intent vast uit bekende identiteit/geheugen; vertraagde afhandeling toggelt een onafhankelijke add niet weg. Scoped refresh synchroniseert nieuw gerenderde kaart direct. WISH-F02-regressie geslaagd. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03D.** Eigenaar van selectie/knopidentity en adapters. [Opslag](WISHLIST_STORAGE.md) verklaart bewaren/events; [renderen en toevoegen](WISHLIST_RENDER_AND_ADD.md) verklaart de wishlistpagina. [Bewijs](../../evidence/2026-10-28-wishlist/README.md) scheidt echte broncode, synthetische stimuli en open browsercontroles.
 
 ## Eén controller, verschillende ingangen

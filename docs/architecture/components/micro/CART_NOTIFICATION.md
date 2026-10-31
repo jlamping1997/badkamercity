@@ -1,5 +1,7 @@
 # Cartnotification — inhoud en lifecycle afzonderlijk
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** CART-F01 hersteld: ontbrekende productsection wist oud artikel, ontbrekende CTA wordt generiek en oude badge verdwijnt; geen tweede add. Native dialogfixture bevestigt sluiten/Escape en focusterugkeer. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **Doel:** de bevestiging moet bij het laatst bevestigde artikel horen en voorspelbaar kunnen sluiten. Hoofdcontract: [cart en feedback](../CART_AND_FEEDBACK.md). Bronnen: assets/cart-notification.js en de gelijknamige snippet/CSS, opnieuw checksumgelijk gelezen. Resultaten CN-01 t/m CN-07 in [isolated-results.json](../../evidence/2026-10-28-micro/isolated-results.json).
 
 ## Functies en eigenaarschap

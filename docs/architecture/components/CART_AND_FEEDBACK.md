@@ -1,5 +1,7 @@
 # Toevoegen, winkelwagenbevestiging en overlays
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Cart bevestiging ruimt ontbrekende detailsections op. Sunshower staat na niet bevestigde add geen blinde retry toe. Native dialog/focus geverifieerd met fictieve sections; geen echte cart/orderactie. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **Verdieping:** zie [de afzonderlijke inhouds-/lifecycleanalyse en CART-F01](micro/CART_NOTIFICATION.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
 
 **Klantdoel:** weten dat het juiste artikel is toegevoegd, eenvoudig verder winkelen of naar de cart gaan, en het venster voorspelbaar sluiten. **Eigenaarrol:** storefront; Shopify blijft autoriteit voor cartresultaat en prijzen. Bronstatus VERIFIED_THEME; dialogmarkup op acht routes VERIFIED_HTML. Geen add/change/update/checkout-request uitgevoerd.
