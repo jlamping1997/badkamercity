@@ -1,3 +1,5 @@
+> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
+
 > **30 oktober 2026 — samengebracht en geactualiseerd:** [Badkamercity volledig naslagwerk](../MASTER_SITE_REFERENCE.md) bevat de huidige bronstand, alle registers en de gedateerde component-/methodedossiers in één document. Deze map blijft de oorspronkelijke technische bewijslaag; gebruik de verse registers voor actuele rollen/aantallen.
 
 # BadkamerCity — architectuur, documentatie en eenheid

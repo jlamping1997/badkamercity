@@ -1,47 +1,44 @@
 # Badkamercity volledig naslagwerk
 
-Versie 1.0 · 30 oktober 2026 · website, bediening, techniek, data en beheer.
+Versie 2.0 · 31 oktober 2026 · website, bediening, techniek, data en beheer.
 
 Badkamercity is een Shopify-winkel met verschillende gespecialiseerde verkooproutes boven op een Dawn-basis. De gewone productpagina, Sunshower-configurator, tegelcalculator, externe productlijst en twee footers hebben elk hun eigen verantwoordelijkheden. Dit naslagwerk legt die samenhang vast, inclusief de verschillen tussen telefoon, tablet en desktop. De registers achterin maken de concrete pagina’s, templates, instellingen, bestanden en productroutes terugvindbaar.
 
-De actuele meting hieronder gaat vóór oude themanummers, aantallen en statussen in de overgenomen technische brondossiers. Een beschreven mogelijkheid is alleen klantactief wanneer ook de toewijzing, instellingen en publicatie dat toestaan.
+Deze versie heeft 80 hoofdstukken, 50 praktische taken, 40 diagnosepaden en 50 acceptatiescenario’s. De verse controle van 31 oktober actualiseert vooral publicatie, header, retouren en laptopnavigatie. De uitgebreide registers en 36 brondossiers behouden hun eigen datum; een beschreven mogelijkheid is alleen klantactief wanneer toewijzing, instellingen én publicatie dat toestaan. Gebruik hoofdstuk 48 als takeningang en hoofdstuk 49 voor de actuele bronkaart.
 
 ## 1 Actuele winkelstand en bewijs
 
-| Onderwerp | Stand op 30 oktober 2026 |
+| Onderwerp | Stand op 31 oktober 2026 |
 | --- | --- |
-| Winkel | Badkamercity, badkamercity.nl, Shopify Basic, EUR |
-| Shopify-winkel | fpa9hu-i3.myshopify.com |
-| Actueel MAIN-thema | 195915448586 — BadkamerCity - Tegelkleuren juiste uitvoering |
-| Offerteconcept | 195916628234 — BadkamerCity - Offerte vergelijken, UNPUBLISHED |
-| Centrale repository | jlamping1997/badkamercity |
-| Onderzochte main-commit | 8a9f0684f25aba145d78830c49ab724c3395d677 |
-| Onderzochte uitvoeringsbranch | fix/product-cards-2026-10-14 |
-| Onderzocht codecheckpoint | 379a0e2c2e1aa682a479b2a3c26fca3fc0145881 |
-| Productrecords | 11.680; 11.679 ACTIVE en één DRAFT |
-| Online Store-URL | 11.679 producten hebben een Online Store-URL |
-| Collecties | 226 Admin-records; 225 collectie-URL’s in de sitemap |
-| Pages | 120 records; 118 gepubliceerd, twee ongepubliceerd |
-| Menu’s | Negen, inclusief het gebruikte main-menu |
-| Blog | Eén blog met één artikel |
-| Productmetafielddefinities | 258 definities in zeven namespaces |
-| Themabestanden | 1.350 paden volledig geïnventariseerd |
-| Opgehaalde bronbestanden | 405 relevante tekstbestanden; 404 exact gelijk aan hun controlesom |
-| Open bronuitzondering | config/settings_data.json wijkt nog af van de metadata |
+| Winkel | Badkamercity, badkamercity.nl; Shopify-winkel fpa9hu-i3.myshopify.com |
+| Actueel MAIN-thema | 195948839178 — BadkamerCity - Retourknop in header; updatedAt 2026-10-30T16:41:30Z |
+| Laptopconcept | 195947036938 — BadkamerCity - Categorieen zonder schuiven, UNPUBLISHED; NAV-02 wacht op eigenaarsbeoordeling/publicatie |
+| Offerteconcept | 195916628234, UNPUBLISHED; klantactivatie uit |
+| Retourpagina | Page 166668894474, gepubliceerd; /pages/retour-aanmelden |
+| Repository en actieve branch | jlamping1997/badkamercity; fix/product-cards-2026-10-14 |
+| Git-bron vóór deze uitbreiding | Uitvoering 0d2da1819ce582e1717aefb24899a66050f99449; main 3205c6f31516fd86282dd7554e4f490a6551321d |
+| Producttellingen | 11.680 totaal, 11.679 ACTIVE, één DRAFT; 11.679 gepubliceerd, alle tellingen EXACT |
+| Catalogusregister | 11.679 publieke productidentiteiten uit de export van 30 oktober; vandaag niet volledig opnieuw geëxporteerd |
+| Collecties en Pages | 226 collecties; 121 Pages waarvan 119 gepubliceerd en twee verborgen, volledig gepagineerd |
+| Menu’s | Negen; verse menu-inventaris met drie niveaus |
+| Blog en metafielddefinities | Eén blog/één artikel en 258 productdefinities volgens oudere nulmeting; niet opnieuw volledig geëxporteerd |
+| Themabestanden | 1.354 paden; 85 Liquid-secties, 119 snippets, 153 CSS-/JavaScript-assets |
+| Relevante tekstbronnen | 409; 407 bytegelijk aan metadata; twee expliciete uitzonderingen |
+| Bronuitzonderingen | settings_data.json en byteverschil door commentaar in retourtemplate; semantiek afzonderlijk beoordelen |
+| Verse publieke steekproef | 18 GETs: 17 HTTP 200 en de bekende Hygrometer-404; geen formulier- of cartwrite |
 
-**Volledige inventarisatie betekent hier niet dat iedere denkbare klantactie is uitgevoerd.** De inventaris omvat alle genoemde records en themapaden. De HTML-controle omvat alle collectieroutes, alle gepubliceerde Pages en representatieve product- en systeemroutes. Browsergedrag is gericht op desktop gecontroleerd. Mobiel is beschreven vanuit de actuele code en de afzonderlijk gedateerde componentcontroles; een volledige nieuwe iPhone/Safari-koopronde is geen onderdeel van deze meting.
+**Volledigheid geldt per register en meetdatum, niet voor iedere mogelijke klantactie.** De eerdere ronde bevat de brede collectie-/Page-/sitemapinventaris. De verse ronde herleest de volledige thema-, Page-, collectie- en menumetadata plus producttellingen en 18 openbare responses. Productidentiteiten, blog, metafielddefinities, alle SEO-responses en externe systemen zijn niet opnieuw integraal onderzocht.
 
 | Bewijslabel | Betekenis |
 | --- | --- |
-| ACTUEEL ADMIN | Op 30 oktober uit de winkel gelezen; niet hetzelfde als een geslaagde klanttaak |
-| ACTUELE BRON | Uit het huidige MAIN opgehaalde code; controlesom vermeld in het bronregister |
-| ACTUEEL HTML | De serverresponse is opgehaald en geanalyseerd; JavaScript kan daarna de pagina wijzigen |
-| ACTUEEL DESKTOP | De genoemde staat is zichtbaar of interactief in de browser gecontroleerd |
-| EERDER COMPONENTBEWIJS | Gedateerde, begrensde component-/fixturecontrole uit een bestaand dossier |
-| HISTORISCH | Eerdere bron of test; opnieuw toetsen wanneer bron of context is veranderd |
-| OPEN | Benodigde bron, test, bedrijfsafspraak of eigenaarsbesluit ontbreekt nog |
+| VERS ADMIN 31-10 | Verse read-only object-/tellingencontrole; geen geslaagde klanttaak |
+| VERS BRON 31-10 | Manifest en geselecteerde bronhashes; geen volledige bytepariteit bij de twee uitzonderingen |
+| VERS GET 31-10 | Serverresponse gelezen; geen JavaScript, focus, koopactie of mailaflevering |
+| EERDER COMPONENTBEWIJS | Gedateerd begrensd bron-/fixture-/browserbewijs uit HDR, RET, NAV of eerdere dossiers |
+| HISTORISCH | Eigen datum/scope behouden; niet automatisch actuele live toestand |
+| ONTWERP / OPEN | Geplande proef, ontbrekende bron of bedrijfsbesluit; geen PASS |
 
-De technische bijlagen houden de oorspronkelijke datum en bewijsgrens. Een oude P1-kandidaat is geen nieuwe vaststelling dat bezoekers dat probleem nu ondervinden. Een nieuwe themakopie bewijst op zichzelf ook geen volledige regressietest.
+De eerste hoofdstukken beschrijven de werking met expliciete actualiseringen. Hoofdstukken 30–47 behouden de nulmeting en technische dossiers; 48–79 voegen de praktische verdieping toe; 80 bevat de gedateerde productroute-ingang. Fysieke telefoon, Windows, checkout, mailaflevering en privébackend zijn niet opnieuw gecontroleerd. NAV-02 is concept; RET-03 is live bereikbaar maar mailboxbewijs blijft open.
 
 ## 2 Systeemopbouw en verantwoordelijkheden
 
@@ -80,12 +77,13 @@ Shopify blijft de bron voor een echte winkelwagen en verkoopprijs. Een zoekindex
 | Begrippenoverzicht | /pages/begrippenlijst | page.begrippenlijst.json → main-glossary |
 | Begrip | /pages/rimless | page.begrip.json → main-glossary-page |
 | Contact | /pages/contact | page.contact.json → hoofdinhoud en contactformulier |
+| Retour aanmelden | /pages/retour-aanmelden | page.retour-aanmelden.json → bc-returns; gepubliceerd, native contactaanvraag |
 | Offerte vergelijken | Ongepubliceerde Page offerte-vergelijken | page.offerte-vergelijken.json → bc-quote; klantactivatie uit |
 | Blog en adviesartikel | /blogs/nieuws en artikel daaronder | main-blog en bc-advice-article |
 | Winkelwagen | /cart | main-cart-items en main-cart-footer |
 | Account en systeem | /account/login, onbekende URL, password, gift card | Platformroute of beschikbare systeemtemplate; toepasselijkheid apart vaststellen |
 
-De verse producttoewijzing is 11.270 standaard, één Hotbath-pilot, 72 Sunshower en 337 tegels. Beschikbare alternatieven zoals product.porcelanosa.json, reviewtemplates en oudere varianten zijn geen bewijs dat producten ze gebruiken. De collectie-indeling is 209 standaard, 16 category-landing en één bc-meubelhub. Het volledige register koppelt iedere collectie en Page aan de juiste familie.
+De producttoewijzing in de nulmeting van 30 oktober is 11.270 standaard, één Hotbath-pilot, 72 Sunshower en 337 tegels. Beschikbare alternatieven zoals product.porcelanosa.json, reviewtemplates en oudere varianten zijn geen bewijs dat producten ze gebruiken. De collectie-indeling is 209 standaard, 16 category-landing en één bc-meubelhub. Het volledige register koppelt iedere collectie en Page aan de juiste familie.
 
 ## 4 Desktop mobiel en tablet
 
@@ -93,7 +91,7 @@ De winkel heeft meerdere doelgerichte omslagpunten. “Mobiel” is niet overal 
 
 | Onderdeel | Klein scherm | Groter scherm | Grens en aandachtspunt |
 | --- | --- | --- | --- |
-| Header | Hamburger en mobiele drawer; compactere zoekopbouw | Logo, breed zoekveld, iconen en horizontale categorierail | Desktopnavigatie vanaf 990px |
+| Header | Vaste bovenrij, logopositie en inklappende zoekrij (HDR-01 live) | Logo, breed zoekveld, retouractie, verlanglijst/cart en categorierail | Desktop vanaf 990px; NAV-02-concept vervangt rail door 6+5/één rij |
 | Mobiel menu | Eerste categorie opent paneel; vervolggroepen klappen inline open | Eigen desktopcategoriepanelen en horizontaal scrollen | Paneelstack is geen browsergeschiedenis |
 | Homepagebanners | Twee campagnes onder elkaar met eigen uitsnede | Twee banners naast elkaar, verhouding 1,6 : 1 | Vanaf 750px tweekoloms |
 | Homepagecategorieën | Negen cirkels in 3 × 3 | Negen naast elkaar | Vanaf 750px negen kolommen |
@@ -115,7 +113,9 @@ Op desktop is een browserbreedte van 1.348 CSS-pixels gebruikt. De homepage past
 
 De actuele headergroep bevat één headersectie, gebruikt main-menu, heeft menu_type_desktop=dropdown en sticky_header_type=on-scroll-up. De naam dropdown is een instelling uit de basis; de zichtbare categorienavigatie wordt door maatwerkcontrollers gemaakt.
 
-De desktopheader bevat het logo, de zoekinvoer, de verlanglijst en de winkelwagen. De categorierail bevat Kranen, Douche, Badkamermeubels, Wastafels, Toiletten en fonteinen, Baden, Tegels, Spiegels en verlichting, Accessoires, Verwarming en ventilatie en Merken. Previous/next-knoppen scrollen deze rail. Een klik op een categorie kan gewoon naar de collectie navigeren; de categoriepanelen hebben daarnaast hun eigen open-/focus-/pointergedrag.
+De desktopheader bevat het logo, de zoekinvoer, Retour aanmelden direct links van Verlanglijst en de winkelwagen. De retour-Page is sinds RET-03 gepubliceerd; tot 989px is deze desktopactie verborgen. De categorierail bevat Kranen, Douche, Badkamermeubels, Wastafels, Toiletten en fonteinen, Baden, Tegels, Spiegels en verlichting, Accessoires, Verwarming en ventilatie en Merken. Previous/next-knoppen scrollen deze rail in MAIN. NAV-02 verwijdert deze bediening alleen in UNPUBLISHED 195947036938: 990–1359px twee rijen 6+5, vanaf 1360px één rij met wrap-vangnet. Zie hoofdstuk 54; het concept is niet gepubliceerd. Een klik op een categorie kan gewoon naar de collectie navigeren; de categoriepanelen hebben daarnaast hun eigen open-/focus-/pointergedrag.
+
+HDR-01 houdt de mobiele logowrappers gelijk en klapt alleen de zoekrij bij doelgerichte scrollrichting in/uit; details en drempels staan in hoofdstuk 53. Pointerfocus krijgt geen grijs Terug-kader, toetsenbordfocus blijft zichtbaar.
 
 De mobiele drawer gebruikt een rootpaneel, categoriepanelen, terugknoppen, overlay, een panelstack en focusherstel. Vervolggroepen gebruiken native details/summary. De huidige renderer bevat de na 29 oktober ingevoerde inline uitklappers en rechte vervolgrijen. Accountlinks zijn in die wijziging verwijderd. Bekijk alle blijft een echte link naar de scope, zodat een bezoeker niet eerst een diepere categorie hoeft te kiezen.
 
@@ -334,12 +334,12 @@ De compacte homepagefooter wordt alleen gekozen bij homepage plus compact_homepa
 | Linkgroepen | Vast samengestelde service-/over-links en main-menu | service-, category- en info-blocks |
 | Desktop | Drie native uitklappers; in actuele waarneming gesloten | Kolommen geforceerd open, summary buiten tabvolgorde |
 | Mobiel | Native uitklappen | Controller sluit kolommen bij kleine breedte en beheert resize |
-| Afhalen/retour | Homepageankers naar bestaande informatie | Sommige labels hebben nog geen bestemming |
-| Adres | Sectieadres, benoemd als afhaal-/retouradres | Zelfde actuele adresconfiguratie |
+| Afhalen/retour | Retour aanmelden via gedeelde helper | Retouraanmelding toegevoegd; overige oude labels apart beoordelen |
+| Adres | Zichtenburglaan 150 verwijderd; geen leeg adresblok | contact_address leeg; geen lege adreskop |
 | Policies | Bestaande Shopify-policies | Bestaande Shopify-policies wanneer ingeschakeld |
 | Offerte | Gedeeld gated quote-snippet | Hetzelfde gated quote-snippet |
 
-In de grote footer zijn nog tien labels zonder URL: Veelgestelde vragen, Bezorgen & afhalen, Retourneren, Garantie & service, Over ons, Badkamerinspiratie, Badkameradvies, Onze merken, Showroom en Zakelijk. De actuele desktopcontrole op de categorie en tegel-PDP bevestigt dat dit tekst is en geen werkende link. De code gebruikt spans in plaats van een misleidende lege href. Het blijft wel een onvolledige navigatiekeuze.
+De nulmeting van 30 oktober registreerde tien grote-footerlabels zonder URL: Veelgestelde vragen, Bezorgen & afhalen, Retourneren, Garantie & service, Over ons, Badkamerinspiratie, Badkameradvies, Onze merken, Showroom en Zakelijk. De desktopcontrole van die nulmeting bevestigde tekst zonder link. De later toegevoegde retouraanmelding heeft een eigen gedeelde helper; het oude labelregister is geen nieuwe volledige linkaudit. De code gebruikt spans in plaats van een misleidende lege href. Controleer de resterende bestemmingen per label vóór een nieuwe inhoudelijke wijziging.
 
 De grote footer gebruikt geen willekeurig Shopify-footermenu voor deze drie kolommen. De links worden beheerd in de footersectieblocks van het juiste thema. Logo/socials, contactvelden, policies en echte betaalmethoden hebben afzonderlijke beheerbronnen. Betaaliconen zijn geen bewijs dat een specifieke betaalroute nu succesvol werkt.
 
@@ -351,7 +351,7 @@ De begrippenpagina bouwt bij passende directe H2-koppen inhoudskaarten en een in
 
 Hygro(meter) heeft een bestaande bekende verkeerde/missende doelroute naar /pages/hygrometer. De verse extra GET geeft nog steeds 404. Dat is een concrete inhoudelijke navigatiebevinding. Het volledige redirectregister achterin vermeldt welke overzichtsverbindingen opnieuw zijn gevolgd.
 
-Contact gebruikt Shopify form 'contact'. Nieuwsbriefmogelijkheden gebruiken andere formtypes en zijn niet automatisch actief op de homepage. Naam/e-mailvelden, een verzendknop en zelfs een bedankmelding bewijzen geen mailboxbezorging. Formulierontvangst, spamafhandeling en foutfocus hebben een eigen acceptatie nodig.
+Retour aanmelden is een afzonderlijke, nu gepubliceerde Page met native contactaanvraag; velden en handmatige behandeling staan in hoofdstukken 69–70. Mailbezorging is nog niet bewezen. Contact gebruikt Shopify form 'contact'. Nieuwsbriefmogelijkheden gebruiken andere formtypes en zijn niet automatisch actief op de homepage. Naam/e-mailvelden, een verzendknop en zelfs een bedankmelding bewijzen geen mailboxbezorging. Formulierontvangst, spamafhandeling en foutfocus hebben een eigen acceptatie nodig.
 
 Zes algemene Pages dragen nog suffix page terwijl page.page.json niet in de actuele templatecatalogus staat. De gepubliceerde routes kunnen toch op een standaardtemplate terugvallen; de uitgevoerde HTTP-controle bewijst hun bereikbaarheid, geen correcte alternatieve toewijzing. Normaliseer dit niet massaal zonder de bedoelde paginaweergave te bepalen.
 
@@ -435,8 +435,8 @@ De bestaande productverrijkingsresultaten blijven behouden. Een oudere indexblok
 
 | ID | Bevinding | Bewijs en gevolg | Status |
 | --- | --- | --- | --- |
-| DOC30-01 | Centrale oude status noemt een andere MAIN | Verse Admin-read: 195915448586 MAIN; oude themarollen blijven geschiedenis | Actueel vastgesteld; nieuwe documentatie-ingang nodig |
-| DOC30-02 | Globale settingsbody niet checksumgelijk | 404/405 bronbestanden exact, settings_data uitzondering | Open broncontrole; geen volledige snapshotpariteit claimen |
+| DOC31-01 | Publicatiekaart opnieuw gelezen | MAIN 195948839178; laptopconcept 195947036938 UNPUBLISHED | Actuele kaart in hoofdstuk 49 |
+| DOC31-02 | Twee byte-uitzonderingen | 407/409 exact; settings_data plus retourtemplatecommentaar | Settings blijft open; template semantisch apart toetsen |
 | FOOTER-F01 | Tien labels in grote footer zonder URL | Actuele bron plus desktopcategorie/PDP | Bevestigd; bestemming kiezen of label weglaten |
 | GLOSS-F01 | Hygro(meter) eindigt op 404 | Verse extra GET naar /pages/hygrometer | Bevestigd; bedoelde bestaande inhoud bepalen en redirect herstellen |
 | DOC30-03 | Groot deel collecties mist name=description | 213 van 225 bereikbare collecties in de HTTP-set | Metadatawerk; geen rankingdiagnose |
@@ -448,7 +448,7 @@ De bestaande productverrijkingsresultaten blijven behouden. Een oudere indexblok
 | DOC30-08 | tegeltoebehoren bestaat alleen als Admin-route in deze set | 404, ontbreekt in sitemap | Publicatie-/ingangencontrole; niet automatisch een live linkfout |
 | CART-F01 / SS-F01 / FILTER-F01 / WISH-F01/F02 | Eerder geïsoleerd gereproduceerde randgevallen | Methodedossiers met eigen bron en testgrens | Niet stil gesloten; geen nieuwe live incidentclaim |
 
-Praktische volgorde na deze documentatie: eerst de bestaande open offerteontvangst afronden als die functie nu gebruikt moet worden. Daarna de commerciële tekst-/eenheidsverschillen en concrete dode inhoudslink aanpakken. Brede stijlveranderingen en nieuwe contentprojecten volgen met een eigen afgebakende opdracht. Deze documentatieronde voert geen van die winkelwijzigingen uit.
+Actuele eerstvolgende releasehandeling blijft eigenaarsbeoordeling/publicatie van NAV-02-concept 195947036938. Retourmailboxbewijs is afzonderlijk open. Offerteverificatie blijft geparkeerd met klantactivatie uit. Overige DOC30-bevindingen behouden hun datum en scope; zij zijn geen nieuwe volledige live hertoetsing. Deze ronde breidt alleen documentatie uit.
 
 ## 27 Beheerkaart en veilige wijzigingsroute
 
@@ -482,11 +482,11 @@ Begin iedere codewijziging met de actuele themarol en bronvergelijking. Gebruik 
 | SEO | Head/canonical/robots, echte interne links, inhoudelijke Product/Offer, redirects, sitemap en Search Console |
 | Mobiel | Fysieke telefoon/Safari, touch, schermranden, toetsenbord, meerdere overlays en reduced motion |
 
-Deze tabel is een herbruikbare acceptatieset. Alleen de expliciet als uitgevoerd geregistreerde scenario’s zijn geslaagd. Voor backendbron/backups, Google-accountmetingen, fysieke telefoon, volledige aankoop en offerte-mailbezorging zijn nog aanvullende bronnen of tests nodig.
+Deze tabel is een herbruikbare acceptatieset. Alleen de expliciet als uitgevoerd geregistreerde scenario’s zijn geslaagd. Voor backendbron/backups, Google-accountmetingen, fysieke telefoon, volledige aankoop en offerte-/retourmailbezorging zijn nog aanvullende bronnen of tests nodig. De 50 concrete scenario’s in hoofdstuk 78 scheiden ontwerp, eerder componentbewijs en verse GETs.
 
 ## 29 Bronnen en actualiseren
 
-De primaire bron is het verse MAIN-manifest met de opgehaalde tekstbestanden en Admin-routeinventaris. De actuele HTTP- en browserwaarnemingen staan daarvan apart. De volgende bijlagen voegen alle concrete records en bestaande inhoudelijke functie-/methodedossiers toe. Daarin blijven data en meetgrenzen behouden.
+De verse primaire bron staat in [de meetbundel van 31 oktober](site-reference/2026-10-31/README.md): manifest, Admin-inventaris, bronhashes en 18 GETs. De brede [nulmeting van 30 oktober](site-reference/2026-10-30/baseline-and-checks.json) blijft afzonderlijk gedateerd. De nieuwste praktische hoofdstukken en registers staan onder docs/handbook/2026-10-31. De actuele HTTP- en browserwaarnemingen staan daarvan apart. De volgende bijlagen voegen alle concrete records en bestaande inhoudelijke functie-/methodedossiers toe. Daarin blijven data en meetgrenzen behouden.
 
 Officiële technische achtergrond: [Shopify theme architecture](https://shopify.dev/docs/storefronts/themes/architecture), [JSON templates](https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates) en [section groups](https://shopify.dev/docs/storefronts/themes/architecture/section-groups). Deze beschrijven het platformmodel; de winkel-specifieke werking volgt uit de actuele code en toewijzingen.
 
@@ -495,6 +495,8 @@ Werk bij een wijziging de betreffende functie eenmaal bij, plus de gebruiksplaat
 
 
 ## 30 Dekkingsregister en bronvergelijking
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 De broncontrole omvat alle Liquid-secties/snippets/layouts, alle templates, alle CSS/JS-assets, de twee globale configuratiebestanden en de Nederlandse/Engelse runtimevertaling. De overige paden zijn onder meer gegenereerde JSON-keuzedata, beelden, iconen, backups en andere locales. Hun metadata is volledig geregistreerd; hun inhoud is niet in deze ronde allemaal opnieuw gecertificeerd.
@@ -524,6 +526,8 @@ Dit zijn vergelijkingen van de Git-rootbestanden op de genoemde commits. Een exa
 
 
 ## 31 Alle collecties Pages en redactionele routes
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 
@@ -907,6 +911,8 @@ Dit zijn vergelijkingen van de Git-rootbestanden op de genoemde commits. Een exa
 
 ## 32 Volledige menustructuren en dubbele ingangen
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 
 ### Hoofdmenu main-menu
@@ -1246,6 +1252,8 @@ Dubbele bestemmingen zijn alternatieve ingangen en vragen inhoudelijke beoordeli
 
 
 ## 33 Alle templates en sectiegroepen
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 
@@ -1800,6 +1808,8 @@ Toewijzing: route-/callerafhankelijk.
 
 
 ## 34 Alle 84 Liquid-secties instellingen en blocktypen
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 Dit register is rechtstreeks uit de huidige schemas samengesteld. Een instellingstype of preset bewijst beschikbaarheid in de editor; de actieve template en voorwaarden bepalen de zichtbaarheid. Defaults zijn schemadefaults, geen gegarandeerde huidige winkelselecties. Vertaalkeys blijven exact herkenbaar.
@@ -4754,6 +4764,8 @@ Toepassingsgrens: {"enabled_on":null,"disabled_on":{"groups":["header","footer"]
 
 ## 35 Globale thema-instellingen
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 Schema-inventaris van config/settings_schema.json. De waarden in settings_data.json zijn niet volledig checksumgeverifieerd; onderstaande tabel betreft beschikbare instellingen en defaults.
 
@@ -5136,6 +5148,8 @@ Schema-inventaris van config/settings_schema.json. De waarden in settings_data.j
 
 ## 36 Alle 118 snippets en hun afhankelijkheden
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 
 | Snippet | Bronuitleg indien aanwezig | Geroepen snippets | Letterlijke assetrefs |
@@ -5263,6 +5277,8 @@ Schema-inventaris van config/settings_schema.json. De waarden in settings_data.j
 
 
 ## 37 Alle 152 CSS en JavaScript-assets
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 De functienamen en events hieronder zijn statisch gevonden. Dit is een vindregister, geen volledige JavaScript-parser, callgraph of verklaring dat iedere methode wordt uitgevoerd. De inhoudelijke contracten staan in de hoofdstukken en brondossiers.
@@ -6650,6 +6666,8 @@ Stijl-/libraryasset; zie het bronpad en het responsive register voor de concrete
 
 ## 38 Alle 258 productmetafielddefinities
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 De definitie beschrijft het type. Gevulde waarden, scopeguards, dynamische keys en de werkelijke productinhoud vallen daar niet automatisch mee samen. Alleen gevonden letterlijke consumers worden hier opgesomd; ontbreken is geen bewijs van ongebruikt.
 
@@ -6983,6 +7001,8 @@ De definitie beschrijft het type. Gevulde waarden, scopeguards, dynamische keys 
 
 
 ## 39 Alle gevonden responsive en bewegingsqueries
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 Dit zijn 652 statisch gevonden media-/matchMedia-verwijzingen, inclusief herhalingen en merk-/componentvarianten. Ook containerqueries en hun betekenis bij de tegelkeuze staan in hoofdstuk 12. Queryaanwezigheid is geen computed-style- of telefoontest.
@@ -7648,6 +7668,8 @@ Dit zijn 652 statisch gevonden media-/matchMedia-verwijzingen, inclusief herhali
 
 ## 40 HTTP head en structured-data register
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 Hoofdmatrix: 397 GET-responses. Extra controles: 6 GET-responses, waaronder domeinvarianten, agents.md en twee gerichte Verona-uitvoeringen. Metadata is hieronder per meetmoment vastgelegd. Een 200 is bereikbaarheid; geen volledige functionele goedkeuring.
 
@@ -8063,6 +8085,8 @@ Hoofdmatrix: 397 GET-responses. Extra controles: 6 GET-responses, waaronder dome
 
 ## 41 Alle 109 begrippenverbindingen opnieuw gevolgd
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 De HEAD-controle volgde de echte overzichtslinks: 108 eindigen op HTTP 200, één op 404. Er zijn geen nieuwe pagina’s of redirects aangemaakt.
 
@@ -8183,6 +8207,8 @@ De HEAD-controle volgde de echte overzichtslinks: 108 eindigen op HTTP 200, éé
 
 
 ## 42 Compleet manifest van alle 1350 themapaden
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 Controlesommen zijn Shopify-metadata. Voor de 405 opgehaalde tekstbronnen is aanvullende inhoudscontrole geregistreerd. De andere paden zijn metadata-only in deze ronde; een hash hier is geen nieuwe download-/inhoudsvrijgave.
@@ -9610,6 +9636,8 @@ Controlesommen zijn Shopify-metadata. Voor de 405 opgehaalde tekstbronnen is aan
 
 ## 43 Inhoudelijke technische brondossiers
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 De volgende volledige dossiers zijn als één naslagwerk samengebracht. **Ze beschrijven hun eigen gedateerde bronstand, meestal 28 oktober.** Woorden als huidig/actueel binnen zo’n brondossier verwijzen naar die brondatum. De actuele hoofdstukken 1–29 en registers 30–42 hebben voorrang voor aantallen, themarollen, homepage, assortiment, tegels en offerte. Een overgenomen PASS is geen opnieuw uitgevoerde test.
 
@@ -10800,6 +10828,8 @@ Search Console, sitemapdekking, robots.txt, echte indexatie, crawlstatistiek, co
 
 ## 44 Volledige methodedossiers en geïsoleerde randgevallen
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 Deze verdieping legt concrete methoden, invoer/uitvoer, guards en randgevallen vast. De historische replaytests gebruiken stubs/fixtures. Ze staan hier als bewijs en onderhoudshulp; er zijn geen echte winkelwagenmutaties herhaald om dit naslagwerk te maken.
 
@@ -11652,6 +11682,8 @@ Opgeslagen winkelwagens en kortlevende keuzehandoffs hebben andere contracten; z
 
 ## 45 Categorisatie productdata en onderhoudsafspraken
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 
 ### Vaste bron Categorization And Seo Policy
@@ -12053,6 +12085,8 @@ Deze routes zijn inhoudelijk uit de benoemde bron herleid. De overnameproeven zi
 
 ## 46 Toekomstprojecten en bestaande open taken
 
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
+
 
 
 | Project | Doel | Voorwaarde |
@@ -12072,6 +12106,8 @@ Deze tabel is een backlog, geen gestarte uitvoering of automatische planning. He
 
 
 ## 47 Bronherkomst en uitgevoerde controles
+
+> **Gedateerd register/dossier:** nulmeting en bronnen tot 30 oktober 2026. Niet integraal opnieuw gemeten op 31 oktober. De actuele publicatiekaart en wijzigingen staan in hoofdstuk 49; bron-/testlabels binnen overgenomen dossiers behouden hun eigen datum.
 
 
 
@@ -12552,7 +12588,652 @@ Deze tabel is een backlog, geen gestarte uitvoering of automatische planning. He
 
 
 
-## 48 Volledig register van publieke productroutes
+## 48 Leesroutes en dagelijkse beheertaken
+
+Dit deel maakt de technische registers bruikbaar voor het dagelijkse werk. Begin bij de handeling die je wilt uitvoeren. Een onderwerp dat in meerdere pagina’s voorkomt heeft één hoofdcontract; de andere hoofdstukken verwijzen naar de relevante uitzondering. Daardoor hoeft bijvoorbeeld het verschil tussen een variant en een ander product niet opnieuw te worden bedacht voor een tegelstaal, productkaart of verlanglijst.
+
+| Lezer | Begin hier | Daarna | Wanneer klaar |
+| --- | --- | --- | --- |
+| Winkeleigenaar | Actuele publicatiekaart, hoofdstuk 49 | Header, categorieën, footer, retouren: 52–55 en 68–70 | Juiste live-/conceptstand vastgesteld en de klanttaak op de bedoelde route gecontroleerd |
+| Klantenservice | Klantreizen, hoofdstuk 50 | Retourbehandeling 70; zoeken 56; bestellen 66 | Aanvraag of vraag heeft een eigenaar en een vastgelegde volgende stap |
+| Contentbeheerder | Homepage en collecties, 57–58 | Redactie 72; gegevens 73; SEO 74 | Inhoud, bestemming, template en publicatie passen bij elkaar |
+| Productbeheerder | Productidentiteit, hoofdstuk 61 | Tegels 62; merkdata 63; onderdelen 64 | De verkochte uitvoering, prijs, foto en koopactie horen bij hetzelfde artikel |
+| Ontwikkelaar | Bronprioriteit 49 | Componentcontract, diagnose 77, regressie 78, release 79 | Wijziging herleidbaar, passend getest en veilig overdraagbaar |
+
+Een klantmelding begint met URL, apparaat, schermbreedte indien bekend, handeling en verwacht/werkelijk resultaat. Vraag geen order- of persoonsgegevens om een puur visueel probleem te reproduceren. Voor ordergerelateerde service gebruikt de medewerker de eigen bevoegde omgeving; zulke gegevens horen niet in dit openbare naslagwerk of Git.
+
+De onderstaande takenkaart is ook als zoekbare takenzoeker voorin het HTML-bestand opgenomen. De kaart geeft aan wie de taak behandelt, waar de bron staat en welke controle nodig is. Het is een werkroute; een vermelde controle is niet automatisch vandaag uitgevoerd.
+
+| ID / taak | Eigenaar | Waar | Controle / hoofdstuk | Stand |
+| --- | --- | --- | --- | --- |
+| T01 Logo verspringt tussen home en product | Ontwikkelaar | sections/header.liquid; identieke wrappers | Vergelijk positie bij gelijke viewport en scrollstaat; 52 | LIVE |
+| T02 Zoekbalk soepel laten inklappen | Ontwikkelaar | assets/bc-mobile-header.js | Down/up-drempels, zoekfocus en menu-openstaat; 53 | LIVE |
+| T03 Categorieën zonder schuiven bekijken | Eigenaar | Concept 195947036938, header | 990/1359 twee rijen; 1360+ één rij; pas na beoordeling publiceren; 54 | CONCEPT |
+| T04 Grijs kader bij Terug onderzoeken | Ontwikkelaar | Headerdrawer en focusregels | Pointer zonder kader; toetsenbord met zichtbare focus; 55 | LIVE |
+| T05 Retourknop ontbreekt op desktop | Beheerder | Page-publicatie en bc-returns-url.liquid | Viewport vanaf 990, actuele MAIN en gepubliceerde Page; 52 | LIVE |
+| T06 Retourpagina bereiken | Klantenservice | /pages/retour-aanmelden | Formulier, verplichte velden en juiste bestemming; 69 | LIVE |
+| T07 Retourmailontvangst bewijzen | Eigenaar | Bevoegde servicemailbox | Afgesproken fictieve aanvraag, inbox/spam en antwoordpad; 70 | OPEN |
+| T08 Retourlabel behandelen | Klantenservice | Handmatig order- en serviceproces | Artikel/order controleren en instructie of label afspreken; 70 | OPEN |
+| T09 Retourreden wijzigen | Beheerder | bc-returns en bc_returns-vertalingen | Reden blijft optioneel; aanvraagtype en veldnamen intact; 69 | LIVE |
+| T10 Footeradres controleren | Beheerder | footer-group.json en bc-home-footer | Beide footers zonder Zichtenburglaan 150 of lege adreskop; 68 | LIVE |
+| T11 Service-link toevoegen | Contentbeheerder | Grote én compacte footer | Echte gepubliceerde inhoud, label en mobiel/desktop; 68 | BEHEER |
+| T12 Homepagecampagne aanpassen | Contentbeheerder | Actieve bc-homepage-sectie | Afbeeldingsuitsnede, contrast, copy en bestemming; 57 | BEHEER |
+| T13 Categoriecirkel wijzigen | Contentbeheerder | Homepageblokken | Juiste collectie en 3×3/negenkolomsopbouw; 57 | BEHEER |
+| T14 Assortimentvolgorde controleren | Ontwikkelaar | bc-assortment en mobiele DOM-verplaatsing | 749/750, zoekreset en echte linkbestemmingen; 57 | LIVE |
+| T15 Merkenpagina vinden | Contentbeheerder | /collections?view=merken | Niet de verborgen merken-Page gebruiken; 57 | LIVE |
+| T16 Collectietemplate wijzigen | Beheerder | Shopify-collectie templateSuffix | Hub versus productgrid en alle gekoppelde secties; 58 | BEHEER |
+| T17 Meubelhubstijl onderzoeken | Ontwikkelaar | Collection descriptionHtml plus themacode | Drie inline style-blokken en mobiele/desktopweergave; 58 | BEHEER |
+| T18 Breadcrumb corrigeren | Ontwikkelaar | Collectiecontext en breadcrumbrenderer | Directe PDP en vanuit collectie vergelijken; 58 | BEHEER |
+| T19 Product niet in zoeksuggesties | Productbeheerder | Online publicatie en predictive zoekroute | Directe URL, exacte term en request/foutstaat; 56 | BEHEER |
+| T20 Zoektelling verschilt | Ontwikkelaar | Native zoekresponse versus externe index | Zelfde term/scope en bronmoment; index niet veronderstellen; 56 | BEHEER |
+| T21 Filters blijven laden | Ontwikkelaar | Externe controller/API en native fallback | Timeout, requestidentiteit en bruikbare terugval; 59 | BEHEER |
+| T22 Filterstaat na Terug herstellen | Ontwikkelaar | URL-parameters en popstate | Selectie, URL en zichtbare resultaten gelijk; 59 | BEHEER |
+| T23 Prijsrange aanpassen | Ontwikkelaar | bcr_* min/max en rangecontrols | Geldigheid, reset en slider/tekstveld gelijk; 59 | BEHEER |
+| T24 Verkeerde kleurfoto op kaart | Productbeheerder | Kaartdata, swatch en productmedia | Foto, URL, variant, prijs en hartje samen; 60 | BEHEER |
+| T25 Productkaartprijs onderzoeken | Ontwikkelaar | Liquid/externe/wishlist-renderer | Actuele prijsnodes en eenheden van gekozen uitvoering; 60 | BEHEER |
+| T26 PDP-uitvoering wisselen | Ontwikkelaar | product-info of productlinkcontroller | Variant AJAX versus ander product met navigatie; 61 | BEHEER |
+| T27 Tegelcalculator controleren | Productbeheerder | Doosinhoud en tegelkoopblok | Oppervlakte, verlies, afronding en cartpayload; 62 | BEHEER |
+| T28 Doosinhoud ontbreekt | Productbeheerder | Productmetafield en leveranciersbron | Geen verzonnen inhoud; calculator veilig zonder geldige bron; 62 | BEHEER |
+| T29 Hotbath-specificatie aanpassen | Productbeheerder | Identiteit/importguard en adapter | Exacte SKU, zichtbaarheid en product buiten guard; 63 | BEHEER |
+| T30 Wiesbaden/JEE-O-bron beoordelen | Productbeheerder | Beoordeelde gegevens en mapping | Productmatch, eenheid en fallback bij ontbrekende waarde; 63 | BEHEER |
+| T31 Sunshower-product beoordelen | Productbeheerder | Sunshower-template en eigen configurator | Selectie, documenten en onderdelenrelaties; 61 | BEHEER |
+| T32 Binnenwerk koppelen | Productbeheerder | Gecontroleerde product-/variantrelatie | Vereist versus inbegrepen en exacte compatibiliteit; 64 | BEHEER |
+| T33 Optioneel accessoire aanbieden | Productbeheerder | PDP-relatie en selectiestaat | Geen automatische betaalde selectie; 64 | BEHEER |
+| T34 Galerij of zoom herstellen | Ontwikkelaar | Media-controller en productmedia | Teller, vorige/volgende, sluiten en focusherstel; 65 | BEHEER |
+| T35 Handleiding toevoegen | Productbeheerder | technische_documenten/merkdocumentbron | Exact artikel, HTTPS, geen duplicaat en zichtbaarheid; 65 | BEHEER |
+| T36 Cartregel klopt niet | Ontwikkelaar | Shopify-cartresponse en variantselectie | Variant-ID, hoeveelheid en teruggelezen regel; 66 | BEHEER |
+| T37 Bewaarde winkelwagen herstellen | Beheerder | Lokale opgeslagen regels en cart-POST | Schrijfhandeling: actuele geldigheid en dubbele aantallen; 66 | BEHEER |
+| T38 Verlanglijstteller klopt niet | Ontwikkelaar | Lokale opslag en bc:wishlist-changed | Dezelfde identiteit, events en herladen; 67 | BEHEER |
+| T39 Verlanglijst op tweede apparaat | Klantenservice | Browseropslagcontract | Geen onbewezen accountsynchronisatie beloven; 67 | BEHEER |
+| T40 Oude verlanglijstprijs | Ontwikkelaar | Productdata/cache en opgeslagen snapshot | Actualiteit bij openen en koopactie controleren; 67 | BEHEER |
+| T41 Offerte-upload activeren | Eigenaar | Gated offerteconcept en bevoegd formulierbeheer | Ontvangst, verificatie, privacy en expliciete vrijgave; 71 | OPEN |
+| T42 Begrip of artikel aanpassen | Contentbeheerder | Page/template of blogrenderer | H2-structuur, lokale zoekfunctie en links; 72 | BEHEER |
+| T43 Hygrometer-link herstellen | Contentbeheerder | Begrippenbron en echte Page/redirect | Bekende 404 eerst inhoudelijk beslissen, dan gericht wijzigen; 72 | OPEN |
+| T44 Nieuwe productimport voorbereiden | Productbeheerder | Bronmapping en droog mutatieoverzicht | Identiteit, eenheden, conflicten en uitzonderingen reviewen; 73 | BEHEER |
+| T45 Nieuwe SEO-landingspagina bepalen | Contentbeheerder | Categorisatiebeleid en zoekintentie | Dekking, overlap, bestaande categorie en doel; 74 | BEHEER |
+| T46 Canonical of schema onderzoeken | Ontwikkelaar | Exacte serverresponse en productdata | URL-context, prijs/valuta en robots afzonderlijk; 74 | BEHEER |
+| T47 Toetsenbordbediening controleren | Ontwikkelaar | Header/drawer/formulier/overlay | Tab, Escape, zichtbare focus en verborgen bediening; 75 | BEHEER |
+| T48 Layoutverschuiving meten | Ontwikkelaar | Eerste render, fonts, afbeeldingen en CSS | Gelijke viewport/cacheconditie, echte meetresultaten; 76 | BEHEER |
+| T49 Nieuwe release documenteren | Ontwikkelaar | Actuele status, componentdossier en handoff | Verse rollen/hashes, passende regressie en terugzetpad; 79 | BEHEER |
+| T50 Bronpariteit onderzoeken | Ontwikkelaar | settings_data en retourtemplate met metadata | Byte-uitzondering apart houden van semantische vergelijking; 49 | OPEN |
+
+## 49 Actuele publicatiekaart en bronprioriteit
+
+Peildatum van deze uitbreiding: 31 oktober 2026. De verse Shopify-lezing begon om 07:49 UTC, 08:49 in Nederland. De oudere registers vanaf hoofdstuk 30 blijven nulmetingen van 30 oktober; de productrouteregistratie is niet volledig opnieuw geëxporteerd. Gelijke aantallen bewijzen geen gelijke identiteit van alle records.
+
+| Onderdeel | Verse stand | Betekenis voor beheer |
+| --- | --- | --- |
+| MAIN | 195948839178, BadkamerCity - Retourknop in header | Dit thema serveert de onderzochte openbare pagina’s |
+| Laptopconcept | 195947036938, BadkamerCity - Categorieen zonder schuiven, UNPUBLISHED | NAV-02 is beoordeelbaar in preview; de live rail blijft aanwezig |
+| Offerteconcept | 195916628234, UNPUBLISHED | Afzonderlijk traject; geen bewijs dat de uploadroute klantactief is |
+| Retour-Page | 166668894474, gepubliceerd, suffix retour-aanmelden | Page-publicatie en themapublicatie zijn afzonderlijke schakels |
+| Catalogustellingen | 11.680 totaal, 11.679 ACTIVE, één DRAFT, 11.679 gepubliceerd | Exacte Admin-tellingen; geen voorraad- of koopbaarheidsbewijs |
+| Content | 121 Pages, 119 gepubliceerd, twee verborgen; 226 collecties; negen menu’s | Verborgen offerte- en merken-Page niet verwarren met beschikbare templates of merkendirectory |
+| Themapaden | 1.354 | Vier nieuwe paden en zes gewijzigde paden tegenover de nulmeting van 30 oktober |
+| Relevante tekstbronnen | 409; 407 bytegelijk aan metadata | Twee uitzonderingen expliciet behouden, hieronder |
+
+`config/settings_data.json` blijft een bronpariteitsuitzondering. De opgehaalde tekst verschilt van de metadatahash; er is geen onafhankelijke exacte bron waarmee die afwijking is gesloten. Bij `templates/page.retour-aanmelden.json` bevat de opgehaalde tekst een Shopify-commentaar waardoor de bytehash afwijkt. De eerdere retourcontrole toetste de semantische JSON afzonderlijk. Noem deze twee situaties niet samen een bewezen runtimefout, maar schrijf ook geen 409/409-bytepariteit op.
+
+De nieuwe openbare steekproef bevat 18 GET-responses: 17 HTTP 200 en de bekende Hygrometer-404. Op de onderzochte HTML-pagina’s staan de MAIN-ID en retourlink; de twee scrollknoppen in de categorierail zijn nog aanwezig. Deze controle voert geen JavaScript, koopactie of mailverzending uit. Het bewijst daarom niet dat een dropdown beweegt, een mailbox ontvangt of een fysieke telefoon soepel scrollt.
+
+Bronvolgorde bij verschil: recente opdracht en bevoegdheidsgrens → verse Admin-/bron-/runtimemeting voor hetzelfde object → actuele overdracht → gedateerd dossier. Gebruik een menu-editor om een menu-item te wijzigen, een Page om de Page te publiceren en een thema om presentatie aan te passen. Het omwisselen van een thema publiceert geen verborgen Page.
+
+## 50 Klantreizen en overdracht tussen functies
+
+| Klantdoel | Ingang en stappen | Overdracht | Kritisch controlepunt |
+| --- | --- | --- | --- |
+| Artikel vinden | Headerzoeker → suggestie of resultaten → product | Van zoekterm naar producthandle/variant | Suggestie en resultaat kunnen verschillende zoekbronnen gebruiken |
+| Categorie ontdekken | Categoriebar/drawer → hub of collectie → productkaart | Van menulink naar toegewezen collectie-template | Een hub biedt navigatie; een productlijst biedt filters en koopselectie |
+| Merk bekijken | Assortiment of Merken → merkcollectie → artikel | Directoryselectie naar echte collectie | `/collections?view=merken` is de directory; een verborgen Page met dezelfde naam is iets anders |
+| Tegels bestellen | Tegel-PDP → oppervlakte/verlies → dozen → winkelwagen | Rekenuitkomst naar verkoopvariant en hoeveelheid | m²-presentatie en bestelbare dooshoeveelheid moeten overeenkomen |
+| Uitvoering kiezen | Productkaart of PDP → kleur/variant/ander product | Identiteit wisselt soms naar een andere URL | Foto, URL, prijs en geselecteerde variant moeten samen veranderen |
+| Bewaren | Hartje → verlanglijst → later opnieuw openen | Productidentiteit naar browseropslag | Bewaren is geen voorraadreservering of accountkoppeling |
+| Retour aanmelden | Header/footer → retourpagina → aanvraag → medewerker | Native contactformulier naar handmatige service | Ontvangst en terugkoppeling zijn pas bewezen met mailboxcontrole |
+| Offerte laten vergelijken | Voorbereide offerte-Page → externe uploader | Shopify naar afzonderlijke aanbieder | Klantactivatie blijft uit totdat de open ontvangst-/privacycontroles rond zijn |
+
+Een goede foutmelding benoemt waar de keten stopt. “Zoeken werkt niet” wordt bijvoorbeeld: suggesties laden wel, maar de resultatenpagina blijft in laden staan. “Retourknop ontbreekt” wordt: desktop, live thema, Page verborgen of gepubliceerd, en wel of geen link in de response. Deze precisie voorkomt dat een presentatiefout met productdata of een mailprobleem met een themawijziging wordt geprobeerd op te lossen.
+
+Onderzoek eerst één reproduceerbare route. Herhaal daarna alleen de relevante zusterroutes: homepage en PDP voor globale headeropmaak; beide footers voor serviceverwijzingen; native en externe lijst voor kaartgedrag. Een geslaagde homepagecontrole dekt geen Sunshower-configurator of retourmail.
+
+## 51 Schermcontract per component
+
+Schermbreedte betekent hier de CSS-viewport, niet de schermdiagonaal of fysieke pixels. Browserzoom, zijpanelen en venstergrootte veranderen de beschikbare ruimte. Een laptop van 1.920 fysieke pixels kan dus een veel smallere CSS-viewport hebben.
+
+| Component | Tot 749px | 750–989px | 990–1359px | Vanaf 1360px |
+| --- | --- | --- | --- | --- |
+| Headerbediening | Mobiele bovenrij en drawer | Mobiele bovenrij en drawer | Desktopbediening | Desktopbediening |
+| Zoekrij mobiel | 44px veld; eigen inklapgedrag | 48px veld; eigen inklapgedrag | Desktopzoeker | Desktopzoeker |
+| Categorieën MAIN | Via mobiele drawer | Via mobiele drawer | Horizontale rail | Horizontale rail als ruimte tekortkomt |
+| Categorieën NAV-02-concept | Bestaande drawer | Bestaande drawer | Twee rijen, 6+5 | Eén rij, wrap-vangnet |
+| Filters | Drawer; shortcut onder extra voorwaarden | Drawer | Zijbalk | Zijbalk |
+| Homepagebanners | Onder elkaar | Naast elkaar | Naast elkaar | Naast elkaar |
+| Footer | Accordion bij grote footer | Open kolommen | Open kolommen | Open kolommen |
+
+Controleer bij elke responsieve wijziging de grens zelf én beide kanten. Voor de header zijn 989 en 990 essentieel; voor NAV-02 ook 1359 en 1360. Een test op alleen 390 en 1920 mist de oorspronkelijke laptopfout. Tabellen, technische code en brede specificaties mogen lokaal kunnen scrollen; dat is een ander contract dan een horizontaal schuivende hoofdnavigatie.
+
+Naast breedte horen lange labels, grotere tekst, een geopende drawer en een breedtewissel bij het scenario. Een mobiel geopend menu moet bij terugkeer naar desktop zijn scrolllock opruimen. Het verbergen van een knop met CSS mag geen onzichtbare focusbestemming achterlaten. De gedateerde NAV-02-tests dekken componentframes en specifieke browseracties; zij vormen geen fysieke laptop-/iPhonevrijgave.
+
+## 52 Headerpositie, logo en vaste merkidentiteit
+
+De oorspronkelijke melding liet een kleine logoverschuiving tussen homepage en productpagina zien. De homepage gebruikt een andere semantische wrapper dan vervolgpagina’s. Die wrappers moeten dezelfde afmetingen, uitlijning en ruimte in de mobiele bovenrij krijgen. Alleen de afbeelding een vaste breedte geven lost afwijkende wrappermarges of gridruimte niet op.
+
+Het live HDR-01-contract gebruikt op mobiel een bovenrij van 64px en dezelfde logo-uitlijning over paginatypen. Hamburger, logo, verlanglijst en winkelwagen krijgen voorspelbare plaatsen. Het aantal in de winkelwagen mag de logokolom niet wegduwen. De retouropdracht voegt op desktop een aparte actie links van Verlanglijst toe; die desktopactie wordt tot en met 989px verborgen.
+
+| Wijziging | Bron | Controle |
+| --- | --- | --- |
+| Logo en wrapper | `sections/header.liquid`, logo-instellingen | Homepage en PDP met dezelfde viewport en scrollpositie vergelijken |
+| Mobiele hoogte/zoekrij | Header-CSS en `assets/bc-mobile-header.js` | Bovenrij blijft gelijk wanneer de zoekrij inklapt |
+| Returnactie | Header en `snippets/bc-returns-url.liquid` | Echte bestemming, label op één regel, geen overlap met Verlanglijst |
+| Menu-items | Gebruikt `main-menu` | Headeropmaak verandert geen menubestemmingen |
+
+Een lege retour-URL wordt niet als een klikbare lege link gerenderd. Het zichtbaarheidssysteem kijkt naar de echte Page en de themarol. Kijk bij een ontbrekende knop daarom eerst naar viewport, Page-publicatie en actuele MAIN; voeg niet meteen een tweede knop toe. Toegankelijkheid blijft onderdeel van het contract: de homepagekop en logolinksemantiek mogen behouden blijven zonder visuele verschuiving.
+
+Aanvaardingsproef: dezelfde CSS-breedte, bovenaan de pagina, menu gesloten; vergelijk linkerrand, bovenrand en visuele logomaat op home, categorie, PDP en retourpagina. Herhaal met winkelwagenbadge en open menu. Leg zowel de gebruikte bron als de afbeelding/metingen vast; een afbeelding op een ander zoomniveau is geen betrouwbare vergelijking.
+
+## 53 Sticky zoekbalk: toestanden en overgangen
+
+De mobiele header heeft een vaste bovenrij en een zoekrij die afhankelijk van de scrollrichting inklapt. Het doel is meer productruimte tijdens lezen, met zoeken snel terug wanneer de bezoeker bewust omhoog beweegt. De implementatie staat in `assets/bc-mobile-header.js`; de desktopinstelling `on-scroll-up` uit de headergroep is geen volledige beschrijving van dit mobiele gedrag.
+
+| Toestand | Aanleiding | Verwacht gedrag |
+| --- | --- | --- |
+| Uitgebreid bovenaan | Binnen ongeveer 24px van de top | Zoekrij beschikbaar |
+| Inklappen | Voldoende voorbij de header en circa 24px omlaag opgebouwd | Alleen de zoekrij verdwijnt; bovenrij blijft staan |
+| Terug tonen | Circa 32px bewuste opwaartse beweging | Zoekrij keert terug zonder logo te verplaatsen |
+| Vastgehouden | Zoekfocus, voorspellende resultaten, drawer of dialoog actief | Geen onverwacht inklappen tijdens bediening |
+| Menu geopend | Body scrolllocked | Mobiele headerwrapper blijft bovenaan gepind |
+| Desktop | Viewport vanaf 990px | Mobiele controller laat de desktopstaat over aan de desktopopbouw |
+
+De code gebruikt scrollverwerking via requestAnimationFrame en hoogtebewaking via ResizeObserver. Het uitgebreide reserveringscontract is 138px onder 750px en 142px tot 989px; de compacte visuele header is 84px. Deze bronwaarden verklaren de implementatie. Meet bij een nieuwe wijziging de werkelijke bounding boxes; behandel de getallen niet als bewijs dat alle browsers identiek tekenen.
+
+Een verborgen zoekrij krijgt ook de passende interactiestaat: inert/aria-hidden waar van toepassing, zodat toetsenbordfocus niet achter een verdwenen veld terechtkomt. Verminderde beweging wordt gerespecteerd. Test neartop, lange neerwaartse scroll, korte richtingsruis, bewuste opwaartse scroll, typen met open toetsenbord en menu openen na scroll. Geautomatiseerde componenttests en eerdere frames staan in het HDR-01-dossier; fysieke Safari-controle blijft afzonderlijk.
+
+## 54 Categoriebar op laptop: live rail en concept zonder schuiven
+
+De screenshotmelding is terecht gekoppeld aan de beschikbare viewport: elf hoofdingangen passen bij de oude lettergrootte en tussenruimte niet altijd op één regel. MAIN bevat nog de scrollrail met twee schuifknoppen. NAV-02 vervangt dat patroon in het bestaande conceptthema. Deze documentatieronde publiceert het concept niet.
+
+| Detail | Live MAIN | NAV-02, UNPUBLISHED |
+| --- | --- | --- |
+| 990–1359px | Horizontaal schuiven mogelijk | Grid met zes en vijf ingangen; tweede rij gecentreerd |
+| Vanaf 1360px | Rail met eventuele overflow | Eén flexrij; wrap als vangnet, maximale inhoudsbreedte 1600px |
+| Bedieningspijlen | Aanwezig | Verwijderd uit markup en controller |
+| Labels | Bestaande railregels | 14px in twee rijen, 15px in brede rij |
+| Trefvlak | Bestaand | Minimaal 48px rijhoogte in de smalle desktopopbouw |
+| Mobiel | Drawer | Bestaande drawer behouden |
+
+Het hoofdbestand is `sections/header.liquid`. De voorgestelde wijziging raakt geen menu-identiteiten of collectiegegevens. Openen/sluiten van categoriepanelen houdt de bestaande vertragingen van 120/160ms, Escape-afhandeling en focuslogica. Het dropdownpaneel moet onder de volledige navigatie beginnen, ook wanneer er twee rijen zijn.
+
+Het dossier bevat twaalf breedteframes van 390 tot 1920px, alle elf ingangen zichtbaar zonder horizontale overloop, toetsenbordnavigatie, tweede-rijpaneel en breedtewissel met open mobiel menu. Merken is als echte top-level websitebestemming geopend. Een geweigerde iframe-embedding is niet omzeild. Het QA-template is na de proef exact hersteld.
+
+Na eigenaarsbeoordeling/publicatie volgt een verse MAIN-read en een gewone live controle op laptopbreedtes. Tot dat moment hoort een klantmelding over schuiven bij de bekende live stand; de previewresultaten mogen die melding niet als opgelost in productie laten lijken.
+
+## 55 Mobiele menustack, Terug en focus
+
+De mobiele menustack is een UI-structuur binnen de headerdrawer. De bovenste categorie opent een paneel; onderliggende groepen kunnen inline uitklappen. De knop Terug sluit een menuniveau, niet de browsergeschiedenis. Een pijl voor een categorie, een plus voor een uitklapper en een productlink hebben verschillende taken en mogen niet op basis van hun icoon worden samengevoegd.
+
+De gemelde grijze rechthoek rond Terug hoort bij pointerfocus/styling. HDR-01 verwijdert dat ongewenste pointerkader in de drawer, terwijl toetsenbordfocus zichtbaar blijft met een blauwe 2px-markering. Focusherstel gebruikt waar nodig `preventScroll`, zodat terugkeren niet tegelijk een sprong in de menulijst veroorzaakt.
+
+| Actie | Verwachte uitkomst | Herstelcontrole |
+| --- | --- | --- |
+| Menu openen | Drawer zichtbaar, onderliggende pagina geblokkeerd voor scroll | Sluiten maakt de body weer normaal scrollbaar |
+| Categorie openen | Juiste titel en kinditems | Terug keert naar vorige menustaat |
+| Groep uitklappen | Alleen betreffende groep wijzigt | Link blijft een link; plus is geen navigatie |
+| Escape | Actieve laag sluit volgens contract | Focus keert naar logische opener |
+| Naar desktop resizen | Mobiele openstaat opgeruimd | Geen onzichtbare overlay of vastzittende body |
+
+Diagnoseer een vierkant focuskader met de gebruikte invoermethode. Klik/tap en Tab mogen anders worden gestyled, maar verwijderen van alle outlines is geen oplossing. Test ook een lang menu dat zelf moet scrollen en het sluiten na een diepe scroll. Controleer bij overlayproblemen zowel de headercontroller als het draweronderdeel; twee onafhankelijke scrolllocks kunnen elkaar maskeren.
+
+## 56 Drie zoekroutes en vindbaarheidsdiagnose
+
+De winkel heeft geen enkele uniforme zoekmachine. De header kan native voorspellende suggesties tonen. `/search` heeft een native serverresponse en kan daarna door de externe lijst worden overgenomen. De begrippen- en assortimentzoekers filteren lokale content. Een treffer in één route garandeert geen treffer in de andere.
+
+| Zoekroute | Invoer | Resultaatbron | Controle bij klacht |
+| --- | --- | --- | --- |
+| Headerpredictive | Ingetypte term | Shopify predictive endpoint/controller | Minimuminvoer, requeststatus, lege staat, linkdoel, toetsenbord |
+| Resultatenpagina native | Querystring `q`, producttype | Shopify serverresultaten | HTTP, titel, termbehoud, producten/publicatie |
+| Externe productlijst | Zoekterm, facet/range/sort/pagina | Externe index/API met fallback | Aanvraag, indexactualiteit, abort/race, fallback, URL-staat |
+| Begrippen-/directoryzoeker | Lokale zoekterm | Reeds gerenderde items | Normalisatie, geen resultaten, reset, open-/dichtstaat |
+
+Leg bij een mismatch de exacte term vast en vergelijk tegelijk dezelfde publicatie-/voorraadcontext. Controleer eerst of het product online gepubliceerd is en via de directe product-URL bestaat. Bekijk dan welke zoekbron de gebruiker werkelijk zag. Een thema-aanpassing synchroniseert geen externe index; een producttitelcorrectie lost geen vastgelopen frontendrequest op.
+
+Bij snel typen of filteren mag een oud antwoord de nieuwere zoekopdracht niet overschrijven. De externe controller gebruikt daarom annulering en requestidentiteit. Bij een externe storing is de native fallback essentieel. Een 200-response voor de zoekpagina bewijst slechts serverbereikbaarheid; de producttelling en interactie na JavaScript moeten afzonderlijk worden bekeken.
+
+## 57 Homepage, assortiment en merken beheren
+
+De homepage wordt door `index.json` en `bc-homepage` opgebouwd. Oude uitgeschakelde homepage-secties zijn niet automatisch klantzichtbaar. Bewerk de actieve sectie en controleer de werkelijke publicatie, afbeelding, bestemming en mobiele uitsnede. Een campagne “Shop kranen” heeft een linkcontract; een mooie afbeelding zonder juiste categorie-URL voltooit die klanttaak niet.
+
+| Onderdeel | Beheerbron | Belangrijkste controles |
+| --- | --- | --- |
+| Twee hoofdcampagnes | Actieve homepage-sectie | Mobiel onder elkaar, desktop naast elkaar, tekstcontrast en linkdoel |
+| Negen categoriecirkels | Homepageblokken | 3×3 mobiel, negen naast elkaar vanaf 750px, betekenisvolle labels |
+| Adviesaanvraag | Actieve sectie/formulier | Verplichte velden, feedback, bestemming; mailbox apart bewijzen |
+| Assortiment | `list-collections.json` → `bc-assortment` | Mobiele verplaatsing en uitklapstaat, desktopkaarten, echte categorielinks |
+| Merkendirectory | `list-collections.merken.json` → `bc-brand-directory` | Route `/collections?view=merken`, zoeken, merkdoelen, lege staat |
+
+Het assortiment gebruikt onder 750px een andere contentvolgorde met echte DOM-verplaatsing. Een CSS-kolomtest alleen dekt dat niet. De directory heeft daarnaast een eigen 990px-grens voor uitklapbediening. Test zoeken, wissen en de eerder open afdelingen; een reset mag niet willekeurig alle gebruikerstaat verliezen.
+
+Houd campagnecopy en bedrijfsbeloftes gelijk aan vastgestelde winkelafspraken. De oudere inventaris signaleert een €75/€100-verzendtekstverschil tussen componenten. Die melding is geen opdracht om verzendinstellingen te wijzigen en geen verse volledige tariefaudit. Laat de eigenaar de geldige afspraak bepalen en werk daarna alle zichtbare bronplaatsen gericht bij.
+
+## 58 Collecties, hubs en breadcrumbs
+
+Een collectie kan een productlijst of een categoriehub gebruiken. De template-toewijzing in Admin bepaalt de familie; een bestaande template in Git bewijst geen gebruik. De nulmeting beschrijft 209 standaardcollecties, zestien category-landings en één meubelhub. De nieuwe ronde bevestigt het totaal 226, maar exporteert niet opnieuw alle producttemplate-identiteiten.
+
+Een wijziging begint bij het collectieobject: handle, titel, beschrijving, templateSuffix, publicatie en productselectie. Volg daarna het template naar sectie, snippets en assets. Voor Badkamermeubels bestaan drie inline style-blokken in `descriptionHtml`; die Admin-afhankelijkheid is niet volledig zichtbaar door alleen de themabron te lezen. Verwijder ze niet als vermeende overbodige opmaak zonder de betrokken schermstaten te testen.
+
+Breadcrumbs geven de paginapositie weer. Controleer linkdoelen en tekst zowel op een directe product-URL als op een route vanuit de collectie; context kan verschillen. Een product dat in meerdere collecties staat heeft niet automatisch één unieke commerciële ouder. Het categorisatiebeleid bepaalt de identiteit; menu en SEO-landingspagina zijn aanvullende ingangen.
+
+Acceptatie voor een collectie: juiste template, zinvolle titel/intro, correcte kindcategorieën of productset, werkende kaartlinks, mobiel/desktop, filters waar van toepassing, paginering en terugnavigatie. Controleer canonical/SEO op de daadwerkelijke response. Voeg bij een nieuw merk niet automatisch nieuwe hoofdproductcategorieën toe; hergebruik bestaande categorie-identiteiten en onderzoek echte zoekintentie vóór nieuwe SEO-landingspagina’s.
+
+## 59 Filters, sortering, ranges en browsergeschiedenis
+
+De externe lijst vult de serverpagina aan en heeft een eigen toestand: zoekterm, facetselecties, numerieke ranges, sortering en pagina. De URL gebruikt onder andere `bcf_*`, `bcr_*_min/max`, `bcsort` en `bcpage`. Deze parameters horen samen met de zichtbare selectie en resultaten één consistente staat te vormen.
+
+| Gebeurtenis | Verplicht gevolg | Fout die voorkomen moet worden |
+| --- | --- | --- |
+| Facet wijzigen | Nieuwe selectie en passend resultaat | Oud antwoord overschrijft de nieuwste selectie |
+| Range invoeren | Geldige grenzen, resultaat en URL gelijk | Slider en tekstveld tonen verschillende waarden |
+| Sorteren | Zelfde scope met andere volgorde | Stille verlies van filters of verkeerde pagina |
+| Browser Terug | Vorige URL-staat herstelt via popstate | Alleen URL wijzigt, zichtbare lijst blijft nieuw |
+| Timeout/storing | Bruikbare native fallback | Lege blijvende laadstaat zonder uitweg |
+| Mobiele drawer sluiten | Focus en scroll herstellen | Body blijft geblokkeerd of filterfocus onzichtbaar |
+
+De controller heeft een 12seconden-timeout en requestannulering. Aanvullende kaartdata wordt via de `bc-card-data`-sectieroute opgehaald en gecachet. Het bestaan van die code is geen bewijs dat backendindex of synchronisatie nu gezond is. Leg bij een fout de API-response, queryscope, timing en fallback vast zonder tokens of persoonlijke zoekdata publiek te publiceren.
+
+Historische FILTER-F01/F02-reproducties staan in de methodedossiers met hun eigen fixturegrens. Controleer ze opnieuw tegen de actuele bron vóór een live impactclaim. Een reparatie moet zowel een succesrespons als timeout, nulresultaat, snelle invoer en Terug/Vooruit behandelen; alleen de eerste geladen lijst is onvoldoende.
+
+## 60 Productkaart: identiteit, kleur, afbeelding en prijs
+
+Een productkaart is een klein koopcontract. De getoonde uitvoering moet overeenkomen met afbeelding, product-URL, variant-ID, prijs, beschikbaarheid en hartje. Een kleurwissel die alleen de foto verandert kan de klant naar de verkeerde uitvoering sturen. Daarom moeten gerelateerde nodes als één samenhangende staat worden bijgewerkt.
+
+De kaart kan uit Liquid, native resultaten, externe resultaten of verlanglijst worden opgebouwd. Zoek de werkelijke renderer vóór een wijziging. Een kleurstaal kan een variant binnen hetzelfde product kiezen of naar een ander product met een andere handle verwijzen. Verwar een fotogalerijpijl niet met een kleur- of productkeuze; die mag slechts media veranderen.
+
+| Te vergelijken | Controle na kleurkeuze |
+| --- | --- |
+| Identiteit | Producthandle en variant-ID horen bij de gekozen uitvoering |
+| Media | Afbeelding, alttekst en eventuele zoom passen bij dat artikel |
+| Commercieel | Huidige prijs-/vergelijkprijsnodes en eenheden kloppen |
+| Navigatie | Titellink, afbeeldingslink en knop gaan naar dezelfde uitvoering |
+| Bewaren | Verlanglijst bewaart de nieuwe identiteit, niet de vorige selectie |
+
+Test initieel laden, eerste kleurwissel, tweede kleurwissel, terug naar eerste en een gedeeltelijk ontbrekende dataset. Bij tegels moet een kaartprijs per m² herkenbaar blijven en de PDP uitleggen hoe dozen worden besteld. Een screenshot van de juiste kraanfoto bewijst niet dat de koopknop het juiste variant-ID verstuurt.
+
+## 61 Productpagina, variant en productwissel
+
+De algemene PDP gebruikt `main-product`; Sunshower heeft een eigen hoofdrenderer. De tegeltemplate hergebruikt de algemene productpagina met een gespecialiseerd koopblok. Toewijzing, niet alleen vendornaam, bepaalt welke renderer de bezoeker krijgt. Controleer daarom product-URL, templateSuffix en gerenderde sectie samen.
+
+Binnen één product kan `product-info` variantinformatie via AJAX bijwerken en de URL met `history.replaceState` aanpassen. Een keuze voor een ander product kan `location.assign` gebruiken en hoort dan een nieuwe pagina te laden. Dat verschil bepaalt ook wat browser Terug doet en welke data opnieuw moet worden geladen.
+
+Werk met een identiteitstuple: product-ID, handle, variant-ID, SKU en gekozen opties. De SKU alleen is geen universele unieke sleutel voor alle leveranciersdata. Een import of merkadapter moet expliciet toetsen of gegevens bij het actuele artikel horen. Bewaar geen specificaties van het vorige product wanneer een verzoek mislukt.
+
+De klantcontrole volgt de hele keten: titel/merk → selectie → prijs/eenheid → voorraadtekst → relevante documenten/onderdelen → aantal → winkelwagenregel. Controleer daarnaast onbeschikbare variant, foutfeedback en browsergeschiedenis. Checkout, betaling en een echte order zijn afzonderlijke platform-/bedrijfscontroles; ze zijn niet uitgevoerd door deze documentatieronde.
+
+## 62 Tegels, oppervlakte, snijverlies en doosafronding
+
+Een tegel heeft een presentatielaag in m² en een bestelbare eenheid, vaak een doos. De calculator vertaalt gewenste netto-oppervlakte en gekozen snijverlies naar hele dozen. De brondata voor inhoud per doos en verkoopvariant moeten aantoonbaar bij het product horen. Zonder geldige inhoud per doos mag de interface geen verzonnen hoeveelheid suggereren.
+
+Rekencontract: benodigde oppervlakte = netto-oppervlakte × (1 + verliespercentage/100). Dozen = naar boven afgeronde benodigde oppervlakte / inhoud per doos. Geleverde oppervlakte = dozen × inhoud per doos. Rond het aantal dozen omhoog, niet de invoeroppervlakte stilzwijgend naar beneden. Houd interne precisie en Nederlandse getalnotatie uit elkaar.
+
+**Uitsluitend rekenvoorbeeld, geen Badkamercity-product- of prijsclaim:** bij 10m², 10% verlies en een fictieve doosinhoud van 1,2m² is de behoefte 11m²; 11/1,2 vraagt tien dozen, dus 12m² levering. Dit voorbeeld vervangt geen echte productmetafields. Een prijsvoorbeeld is bewust niet nodig om de hoeveelheidslogica te begrijpen.
+
+| Randgeval | Verwachte controle |
+| --- | --- |
+| Exacte doosveelvoud | Geen extra doos door onbedoelde floating-pointafwijking |
+| Iets boven doosgrens | Volgende hele doos |
+| Leeg, nul, negatief of onleesbaar | Duidelijke veldfeedback; geen NaN of onbedoelde koopactie |
+| Komma als decimaal | Normalisatie volgens invoercontract; resultaat uitlegbaar |
+| Snijverlies wijzigen | Dozen, geleverde m² en prijsnodes tegelijk bijwerken |
+| Ontbrekende doosinhoud | Veilige uitleg en geen gefabriceerde calculatoruitkomst |
+
+Controleer het uiteindelijke cartpayload en de getoonde regel, niet alleen de rekentekst. Leg vast of de variantprijs per doos is en welke m²-prijs wordt afgeleid. De eerdere Verona Cubik-browserproef heeft een eigen product en datum; zij maakt niet alle 337 tegelartikelen automatisch inhoudelijk correct.
+
+## 63 Merkdata, specificaties en fallback
+
+De PDP combineert algemene velden met gecontroleerde merkadapters. Specificatieprioriteit is doelgericht: Sunshower-specificaties waar die renderer dat verwacht, gecontroleerde Hotbath-data onder identiteit/importguard, beoordeelde Wiesbaden/JEE-O-data, daarna gemapte of legacyvelden. Een namespace met een bekende naam is geen garantie dat alle producten daar consistente waarden hebben.
+
+| Situatie | Werkroute | Niet afleiden uit ontbrekende data |
+| --- | --- | --- |
+| Nieuwe Hotbath-import | Product-/SKU-/importscope toetsen, adapter en zichtbaarheid controleren | Dat een claim bij de hele serie hoort |
+| Wiesbaden/JEE-O-correctie | Beoordeelde bron en mappings volgen | Technische maten uit een producttitel verzinnen |
+| Sunshower | Eigen specificatie- en documentcontract volgen | Algemene PDP-velden zonder controle kopiëren |
+| Lege of conflicterende velden | Bronconflict registreren en eigenaar aanwijzen | Willekeurig de meest gevulde namespace kiezen |
+
+Onder identiteitguards kan een geïmporteerde beschrijvingstabel in de renderlaag worden onderdrukt zodat informatie niet dubbel verschijnt. Dat is iets anders dan de Shopify-beschrijving verwijderen. Geautomatiseerde import en handmatige content moeten daarom een duidelijke eigenaar en bronprioriteit hebben.
+
+Gegenereerde caches versnellen weergave, maar zijn afgeleide data. Leg bij regeneratie vast welke bronrecords, mappingversie en selectie zijn gebruikt, hoe ontbrekende gegevens worden afgehandeld en wat de fallback toont. Na een wijziging test je een volledige bron, een gedeeltelijke bron en een product buiten de adapterguard. Massale migratie van `custom.*` naar `specs.*` vraagt een afzonderlijke opdracht en echte waardecontrole; de 258-definitieregistratie is geen waardemigratieplan.
+
+## 64 Inbegrepen, vereist, optioneel en inbouwonderdelen
+
+De PDP moet onderscheiden wat bij de verkoopprijs hoort, wat de installatie nog vereist en wat een optionele aanvulling is. Een foto met meerdere onderdelen bewijst geen setinhoud. Een gerelateerd product is evenmin automatisch inbegrepen. Gebruik alleen aantoonbare productrelaties en beoordeelde leveranciersinformatie.
+
+| Klasse | Betekenis voor klant | Gewenst gedrag |
+| --- | --- | --- |
+| Inbegrepen | Onderdeel hoort bij de aangeboden uitvoering | Geen tweede betaalde toevoeging suggereren |
+| Vereist | Nodig voor de bedoelde installatie maar niet aantoonbaar inbegrepen | Duidelijk uitleggen; gecontroleerde relatie naar juiste variant |
+| Optioneel | Klant kan aanvullen | Geen automatische betaalde selectie |
+| Alternatief | Andere uitvoering of oplossing | Niet als benodigd accessoire presenteren |
+
+Inbouwkranen en Sunshower-installaties vragen extra zorg voor compatibiliteit. Leg bij een koppeling vast welk hoofdproduct, binnenwerk, montageonderdeel of accessoire de relatie draagt. Serienaam of kleur alleen is onvoldoende bewijs. Controleer variant-ID, hoeveelheid en zichtbare samenvatting vóór het cartverzoek.
+
+Een succesvolle add-to-cartresponse is pas inhoudelijk juist wanneer de bedoelde regels en aantallen terugkomen. Bij meerdere regels moet duidelijk zijn hoe een gedeeltelijke fout wordt gemeld en welke producten al zijn toegevoegd. De huidige documentatieronde voert geen cartwrite uit. De acceptatiecatalogus noemt de concrete proef zodat die later gecontroleerd en met passende toestemming kan worden uitgevoerd.
+
+## 65 Afbeeldingen, galerijen en documenten
+
+Een mediacontrole heeft drie niveaus: het bestand bestaat, het wordt correct geladen en het toont de juiste uitvoering. Alleen de eerste twee zijn technisch automatisch te toetsen. De productcontroletool ondersteunt inhoudelijke beoordeling; een label in die privétool schrijft niet automatisch productmedia naar Shopify.
+
+Controleer per galerij de hoofdafbeelding, volgorde, thumbnails, vorige/volgende, teller, zoom en sluitgedrag. Bij een kleurwissel mogen afbeelding en productidentiteit niet uiteenlopen. Na een mediawissel moet ook de alttekst passen. Maak onderscheid tussen een galerijpijl, productlink en kleurkeuze.
+
+Documentdownloads volgen een apart broncontract. `custom.technische_documenten` kan een lijst URL’s leveren; beoordeelde Wiesbaden- of zichtbare Hotbath-documenten kunnen aanvullend meedoen. Deduplicatie, HTTPS en de toepasselijke visibilityguard blijven nodig. Sunshower gebruikt een eigen route. Een geldige PDF-link bewijst niet dat de handleiding bij het exacte artikel hoort.
+
+Bij een defect document: noteer de openbare bron-URL, statuscode, productidentiteit en de gebruikte bronlaag. Gebruik geen privécontract of intern bestand als publieke vervanging. Bij een ontbrekend bestand mag de interface geen lege knop tonen. Test een product zonder documenten en één met meerdere bronnen, zodat de afwezigheids- en deduplicatiestaat ook worden gecontroleerd.
+
+## 66 Winkelwagen, popup, bewaren en herstellen
+
+Shopify is de bron voor de echte winkelwagen. De productpagina verstuurt variant-ID en hoeveelheid; de popup en cartpagina tonen de teruggekomen regels. Een lokale lijst met bewaarde artikelen is geen actuele cart en geen reservering.
+
+| Bewerking | Datastroom | Controle |
+| --- | --- | --- |
+| Toevoegen | Selectie → Shopify-cartverzoek → teruggelezen regels | Variant, aantal, foutmelding en popupstatus |
+| Hoeveelheid wijzigen | Cartregel → update → herberekende totalen | Geen oude prijs-/aantalweergave na fout |
+| Verwijderen | Regelidentiteit → verwijderverzoek | Juiste regel, lege staat en focus |
+| Bewaren | Huidige regels → browseropslag | Heldere betekenis en opslagfoutafhandeling |
+| Herstellen | Opgeslagen regels → nieuwe POST/toevoeging | Actuele geldigheid en risico op dubbele aantallen |
+
+Herstellen is een schrijfhandeling: opgeslagen regels worden opnieuw toegevoegd. Gebruik die knop niet tijdens een “alleen lezen”-controle. Herhaald klikken, timeouts en terugkeren naar een oude tab kunnen dubbele of verouderde toestanden veroorzaken; test de werkelijke controller en Shopify-response vóór een conclusie over de orderinhoud.
+
+Bij een cartprobleem leg je variant-ID, hoeveelheid, component en responsefout vast in een passende privétestomgeving; publiceer geen klantcart of orderdata. Historische CART-F01-fixtures zijn gedateerde, geïsoleerde reproducties. Ze bewijzen geen nieuwe live storing. Checkout, betaalmethoden, belasting- en verzendberekening liggen verder in de keten en vereisen afzonderlijke scope en echte platformcontrole.
+
+## 67 Verlanglijst en browseropslag
+
+De verlanglijst bewaart productidentiteit lokaal in de browser. Het hartje op de kaart, headeraantal en `/pages/verlanglijst` moeten dezelfde opslagstaat gebruiken. Identiteit combineert waar nodig handle en variant. De browsergebeurtenis `bc:wishlist-changed` ondersteunt synchronisatie tussen componenten binnen de pagina.
+
+| Gebruikersverwachting | Werkelijk contract | Controle |
+| --- | --- | --- |
+| Later terugvinden | Zelfde browser/opslagcontext | Herladen en nieuwe tab in dezelfde context |
+| Op ander apparaat zien | Niet bewezen als accountfunctie | Geen accountsynchronisatie beloven |
+| Prijs bewaren | Opgeslagen weergave kan verouderen | Actuele productdata bij openen/koop controleren |
+| Hartje verwijderen | Identieke bewaarde uitvoering verwijderen | Geen andere variant wissen |
+| Privémodus gebruiken | Opslag kan tijdelijk of beperkt zijn | Begrijpelijke lege-/foutstaat |
+
+Een opgeslagen product kan later niet meer gepubliceerd, beschikbaar of identiek geprijsd zijn. `product.js`-cachegedrag verdient daarom een aparte versheidscontrole. Toon geen oude opslag als voorraadbevestiging. De historische WISH-F01/F02-cases hebben een eigen bron en datum; controleer cache, multitab en gewijzigde productdata opnieuw vóór een reparatie.
+
+Een zinvolle regressie voegt twee verschillende uitvoeringen toe, herlaadt, opent de lijst, verwijdert één uitvoering en controleert de teller. Voeg ook corrupte opslag, geblokkeerde opslag en een verdwenen product toe als foutproef. Het wissen van klantbrowseropslag is geen algemene eerste oplossing; diagnoseer eerst welke sleutel en identiteit werkelijk fout zijn.
+
+## 68 Beide footers, adres en serviceverwijzingen
+
+Badkamercity gebruikt een grote footer en een compacte homepagefooter. Zij delen serviceonderwerpen maar hebben verschillende renderers: `sections/footer.liquid` met `footer-group.json`, en `snippets/bc-home-footer.liquid`. Een wijziging in één bron is niet automatisch op de andere paginatypen zichtbaar.
+
+De opdracht om Zichtenburglaan 150 weg te halen is verwerkt in RET-01. Het adresveld is leeg; het contactadresblok krijgt geen lege kop. De compacte footer bevat het adres evenmin. De verse HTTP-steekproef controleert alleen aanwezigheid van deze adresstring in de footer van de onderzochte responses. Dat is geen bewijs dat de tekst nergens in de hele winkel of externe systemen voorkomt.
+
+Retourlinks gebruiken dezelfde URL-helper als de header. De helper retourneert de echte gepubliceerde Page, alleen in een concept een toegestane contact-templatepreview, of een lege waarde in MAIN wanneer de Page verborgen is. Dit voorkomt een klantlink naar een onbeschikbare retour-Page.
+
+Het register van 30 oktober noemt tien grote-footerlabels zonder gekoppelde bestemming. Behandel dat als een gedateerde beheerbevinding. Voor elke nieuwe link controleer je inhoud, Page-publicatie, juiste route, betekenisvolle linktekst en beide footerweergaven. Maak van een label geen verzonnen beleidsbestemming. Retourvoorwaarden, verzendbelofte en contactinformatie vragen een eigenaarsbesluit over de inhoud; themacode bepaalt de weergave.
+
+## 69 Retouraanmelding: veld- en verzendcontract
+
+De retourpagina gebruikt `templates/page.retour-aanmelden.json` en `sections/bc-returns.liquid`. Het native Shopify-contactformulier heeft `return_to: 'back'` en post naar `/contact`. Het is een aanvraagkanaal voor handmatige beoordeling, geen orderportaal of automatisch retoursysteem.
+
+| Veld | Verplicht | Begrenzing/contract | Doel |
+| --- | --- | --- | --- |
+| Naam | Ja | Maximaal 100 tekens | Medewerker kan de aanvrager aanspreken |
+| E-mail | Ja | E-mailveld, maximaal 254 tekens | Antwoordadres |
+| Aanvraagtype | Ja | Retour, omruilen of probleem melden | Eerste triage |
+| Artikelen en aantallen | Ja | Contactbody, maximaal 2500 tekens | Herkennen wat de klant wil melden |
+| Ordernummer | Nee | Maximaal 80 tekens | Ondersteunt handmatige ordercontrole |
+| Reden | Nee | Ook geen reden opgeven toegestaan | Vooraf begrijpen wat kan helpen |
+| Toelichting | Nee | Maximaal 3000 tekens | Aanvullende context |
+| Onderwerp | Verborgen vaste waarde | Retouraanvraag Badkamercity | Herkenning in het contactkanaal |
+
+De reden is optioneel. Maak die niet stil verplicht om meer analysegegevens te verzamelen. Het formulier bevat geen foto-upload, klantaccount, automatische orderlookup, retourlabelaankoop, refund of automatisch RMA-nummer. De eigenaar beslist handmatig of een label of andere instructie volgt. Schrijf daarom ook geen vaste gratis-retourbelofte in de interface zonder vastgesteld beleid.
+
+Controleer lege verplichte velden, een ongeldige e-mail, lange invoer, geldige invoer en native fout-/succesfeedback. De veldopbouw en live bereikbaarheid zijn geverifieerd; echte mailontvangst en labellevering zijn nog niet bewezen. Een succesbericht in de browser is geen bewijs van aflevering in de mailbox.
+
+De vertalingen staan in `bc_returns` binnen NL/EN-locales. FAQ’s gebruiken native details. Velden gebruiken op mobiel 16px-tekst als onderdeel van het lees-/invoercontract. Een wijziging aan labels moet ook de vertaling, helptekst en foutfeedback meenemen, zonder de native contactveldnamen onbedoeld te breken.
+
+## 70 Retouren behandelen: voorgesteld handmatig werkproces
+
+Dit is een praktische werkinstructie voor het bestaande aanvraagkanaal. Er is geen retourdashboard gebouwd. Ontvangst, taakverdeling, responstijd en registratie moeten door de eigenaar worden bevestigd. De instructie hieronder beschrijft hoe een medewerker consequent kan handelen; zij is geen claim dat dit proces al operationeel is ingericht.
+
+| Stap | Medewerker doet | Vast te leggen resultaat |
+| --- | --- | --- |
+| 1 Ontvangst | Controleert bevoegde inbox en spam; herkent onderwerp | Ontvangen datum en toegewezen behandelaar in eigen privésysteem |
+| 2 Identiteit | Vergelijkt opgegeven bestelling, e-mail, artikelen en aantallen | Geverifieerd of welke aanvulling nodig is |
+| 3 Reden begrijpen | Leest optionele reden en toelichting | Retour, omruilen, schade/defect, adviesvraag of onvoldoende gegevens |
+| 4 Oplossing bepalen | Beoordeelt order en geldende winkelafspraken | Aanvullende vraag, hulp, instructie of voorgesteld label |
+| 5 Antwoorden | Stuurt via bevoegde servicemail een concrete volgende stap | Wat de klant moet doen en wie verder behandelt |
+| 6 Ontvangst verwerken | Controleert terugontvangen artikel en aantallen | Ontvangst-/inspectiestaat in privéregistratie |
+| 7 Afsluiten | Rondt omruil/refund/andere oplossing via bevoegd proces af | Datum, uitkomst en eventuele resterende actie |
+
+Vraag alleen aanvullende gegevens die nodig zijn voor de betreffende aanvraag. Er is geen verplichting in dit document om bewijsfoto’s, een reden of een ordernummer via het formulier af te dwingen. Een probleemmelding kan soms met advies worden opgelost; leg de keuze van de klant en de afgesproken volgende stap zorgvuldig vast.
+
+Een retourlabel wordt handmatig beoordeeld en eventueel verstuurd. Een retourformulier genereert geen verzendlabel en boekt geen terugbetaling. Voor een label-/refundkoppeling is een afzonderlijk functioneel ontwerp nodig: vervoerder, kosten, rechten, dubbele aanvraag, status, klantcommunicatie en foutafhandeling. Deze uitbreiding activeert zulke processen niet.
+
+Open vrijgavecontrole: één afgesproken fictieve testaanvraag versturen, ontvangst en spam controleren, antwoordpad bewijzen en testgegevens verantwoord opruimen. Pas daarna mag “mailbezorging getest” worden vastgelegd. Gebruik geen echte klantgegevens voor openbaar bewijs.
+
+## 71 Offerte-upload: activatie en bewijsgrenzen
+
+De offertevergelijker is een ander traject dan retouraanmelding. Het ontwerp en de externe uploadkoppeling zijn voorbereid, maar de Page is verborgen en klantactivatie staat uit. Een bestaande componentpreview met upload bewijst niet dat mailverificatie, klantcommunicatie, bewaartermijn en bevoegd beheer volledig zijn afgerond.
+
+| Schakel | Vastgelegde stand | Benodigde controle vóór klantactivatie |
+| --- | --- | --- |
+| Shopify-Page | Ongepubliceerd | Juiste Page/template en expliciete vrijgave |
+| Integratie | `integration_enabled=false`; preview apart gated | Geen ongewenste publieke ingang |
+| Externe upload | Eerdere fictieve upload en bevoegde download hebben eigen bewijs | Ontvangst, verificatie en beheerrechten bevestigen |
+| Klantmail | Nog open | Afzender, inhoud en echte aflevering controleren |
+| Privébestanden | Buiten thema | Bewaren, toegang en verwijderen bepalen |
+| Header/footer/teaser | Klantactivatie uit | Alleen na complete vrijgave zichtbaar maken |
+
+De eerdere afwijzing van toegang tot het privéformulieraccount blijft een toegangsgrens. Deze documentatieronde opent dat account niet opnieuw en gebruikt geen alternatieve route. Openstaande punten blijven expliciet open; beschikbare publieke formulierinhoud vervangt geen bevoegd accountbeheer.
+
+Beheer een offerte en een retour als verschillende onderwerpen: andere gegevens, andere verwachtingen en andere bedrijfsuitkomst. Verwijs bij wijzigingen naar de offertedossiers in hoofdstuk 43–47 en de actuele status. Neem geen oudere theme-ID of toenmalige publicatiestand over als huidige live waarheid.
+
+## 72 Redactie, begrippen en artikelstructuur
+
+Content leeft in Shopify Pages, collectieomschrijvingen, sectieblocks en blogartikelen. Een tekstcorrectie begint daarom met de echte bronplaats. Een titel die in een template staat verandert niet door alleen een Page-body te bewerken. Een uitgeklapt accordion kan bovendien andere content tonen dan de gewone intro.
+
+De begrippenlijst bevat 109 verbindingen in de nulmeting. De lokale zoekfunctie filtert die gerenderde content en is niet de externe productzoekmachine. Begripkaarten en doorgelinkte Pages moeten samen worden gecontroleerd. Hygro(meter) eindigt op de bekende 404; de verse steekproef bevestigt dat opnieuw. Het document benoemt de fout, maar maakt zonder opdracht geen Page of redirect aan.
+
+De adviesartikelrenderer verdeelt inhoud op letterlijke `<h2>`-structuur. Een editorwijziging die koppen als vette alinea of met een afwijkende markup invoegt kan de beoogde sectie-indeling verbreken. Controleer daarom niet alleen de tekst maar ook de gerenderde kophiërarchie en inhoudsblokken. De glossarykaartopbouw heeft daarnaast een contract rond directe H2-kinderen.
+
+Publiceer content na controle van titel, unieke bedoeling, linkdoelen, beeldrechten, koppen, mobiel lezen en eventuele relatie met een commerciële categorie. Schrijf geen leverancierclaim, medische werking of technische maat zonder passende bron. Een begripspagina is uitleg; zij creëert geen bewezen productspecificatie voor alle artikelen waarin het woord voorkomt.
+
+## 73 Productdata, imports en kwaliteitseigenaarschap
+
+Een bruikbaar datawoordenboek beschrijft naast naam en type ook betekenis, eenheid, bron, eigenaar, toegestane leegte en afnemende component. De 258 geregistreerde productmetafielddefinities zijn een schema-inventaris; zij tonen niet dat ieder product een waarde heeft of dat die waarde klopt.
+
+| Gegeven | Primaire controle | Typische fout |
+| --- | --- | --- |
+| Product/variant/SKU | Exacte identiteit en leveranciermatch | Data van een verwante uitvoering overnemen |
+| Prijs en vergelijkprijs | Shopify-verkoopdata, valuta en eenheid | €/m² als doosprijs interpreteren |
+| Doosinhoud | Productgebonden eenheid en numerieke geldigheid | Komma/tekst verkeerd parsen |
+| Kleur/media | Artikelinhoudelijk beoordelen | Generieke foto als uitvoeringbewijs behandelen |
+| Specificaties | Beoordeelde bron en namespaceguard | `custom`/`specs` blind samenvoegen |
+| Relaties | Compatibele variant en bedoelde rol | Accessoire als inbegrepen onderdeel tonen |
+| Publicatie | Status én verkoopkanaal | ACTIVE gelijkstellen aan koopbaar |
+
+Een import hoort een droog overzicht te geven van nieuwe, gewijzigde, ontbrekende en conflicterende records. Review de mappings vóór schrijven, leg de bronversie vast en controleer daarna representatieve uitzonderingen. Prijs, voorraad, belastingen en productmassa vallen buiten deze documentatieronde; een register is geen toestemming voor bulkmutaties.
+
+De quality-controltool is een afzonderlijke privéomgeving met beoordelingen, notities en checkpoints. Haar status is ondersteunend bewijs, geen automatische Shopifybron. Publiceer geen privébeoordelingen, klantgegevens of toegangsinformatie in het openbare repo. Gebruik openbare artikelidentiteiten en geaggregeerde kwaliteitssamenvattingen wanneer die nodig zijn voor technische overdracht.
+
+## 74 SEO, canonical en gestructureerde gegevens
+
+SEO-controle begint met de exacte URL en serverresponse. Titel, canonical, robots, H1 en JSON-LD worden per route beoordeeld. Een geldige HTTP 200 is geen bewijs van indexering; een sitemapvermelding evenmin. Search Console, Merchant Center en Analytics zijn afzonderlijke bronnen en zijn niet opnieuw onderzocht in deze uitbreiding.
+
+| Vraag | Te lezen bron | Beslisgrens |
+| --- | --- | --- |
+| Bestaat de pagina? | HTTP en route/toewijzing | Soft-404 of verkeerde template apart herkennen |
+| Wat is de voorkeurs-URL? | Canonical in HTML | Query-, collectie- en productcontext vergelijken |
+| Mag de route worden geïndexeerd? | Robotsmeta en robots.txt | Geen zoekmachine-indexclaim zonder externe meting |
+| Kloppen productgegevens? | Product-JSON-LD en zichtbare verkoopdata | Prijs/valuta/beschikbaarheid moeten coherent zijn |
+| Heeft een nieuwe landing nut? | Categorisatiebeleid, intentie, dekking en overlap | Niet automatisch per merk/serie een Page maken |
+
+Behandel filters, zoekopdrachten en alternatieve views zorgvuldig. Een nuttige gebruikers-URL is niet automatisch een gewenste indexlandingspagina. Een SEO-ingreep mag geen actieve klantnavigatie of correcte productidentiteit breken. Controleer redirects met de eindbestemming, niet alleen het bestaan van een redirectregel.
+
+Een documentatiefout of ontbrekende meta in een oude response rechtvaardigt geen massale metadataherschrijving. Leg eerst omvang, actuele bron en eigenaar vast. De registers uit hoofdstuk 40 blijven hun gedateerde responsebewijs; de nieuwe steekproef is een beperkte aanvulling, geen nieuwe volledige SEO-audit van alle 11.679 producten.
+
+## 75 Toegankelijkheid, toetsenbord en overlays
+
+Toegankelijkheid wordt per taak gecontroleerd. Een focusring heeft alleen betekenis wanneer de focus ook op de juiste, zichtbare bediening staat. Een overlay die er goed uitziet kan nog steeds achtergrondfocus of scroll toelaten. Automatische semantiekcontroles vullen handmatige bediening aan, maar vervangen die niet.
+
+| Onderdeel | Contract | Handmatige proef |
+| --- | --- | --- |
+| Headerzoeker | Label, suggestiestaat en bruikbare toetsen | Typen, pijlen, Enter, Escape en focusherstel |
+| Mobiel menu | Openstaat, logische niveaus, scrolllock | Openen, diep niveau, Terug, sluiten en resize |
+| Desktopcategorie | Bereikbare link/opener en zichtbaar paneel | Tab, submenu, Escape en tweede rij |
+| Retourformulier | Labels, required, e-mailtype en foutfeedback | Leeg verzenden en veldfeedback lezen |
+| Galerij/zoom | Benoemde knoppen en sluitroute | Vorige/volgende, Escape, terug naar opener |
+| Filters | Samenvatting, selectie en terugkeer | Openen, toepassen, wissen en terugnavigeren |
+| Verborgen zoekrij | Geen bereikbare onzichtbare invoer | Tab in compacte headerstaat |
+
+De verwijderde grijze Terug-rechthoek is geen reden om toetsenbordfocus overal uit te schakelen. Gebruik de bedoelde `focus-visible`-scheiding. Respecteer verminderde beweging en controleer of statusmeldingen begrijpelijk worden aangekondigd zonder continue storende updates.
+
+Contrast, tekstvergroting, schermlezerbediening en een fysieke telefoon blijven benoemde controles wanneer ze niet daadwerkelijk zijn uitgevoerd. Dit naslagwerk claimt geen volledige WCAG-certificering. Leg bij een gevonden probleem de concrete taak, gebruikte hulptechniek en mislukte stap vast, zodat een herstel toetsbaar is.
+
+## 76 Prestaties, afbeeldingen en opstartgedrag
+
+Snelheid kent verschillende oorzaken: netwerk, afbeeldingsgewicht, fonts, eerste opmaak, JavaScriptinitialisatie, externe API en layoutverschuiving. Een kleine HTML-response of een 200-status is geen LCP-/CLS-/INP-meting. De verse GET-steekproef bevat bron- en bereikbaarheidsbewijs, geen nieuwe performancevrijgave.
+
+Het eerdere FLASH-01-werk richtte zich op stabiele startopmaak en icoonmaten. Het headercontract voorkomt daarnaast dat een logo na initialisatie een andere plek krijgt. Houd daarvoor servermarkup, kritieke CSS en latere controllerstaat samen in beeld. Een cache-warme tweede weergave kan een eerste-visitprobleem verbergen.
+
+| Symptoom | Meetroute | Vergelijking |
+| --- | --- | --- |
+| Logo/inhoud springt | Filmstrip en layout-shiftbronnen | Eerste bezoek, home/PDP, zelfde viewport |
+| Grote banner traag | Gekozen afbeeldingsbron, bytes, prioriteit | Mobiel en desktopuitsnede, geen onnodig grote bron |
+| Filterlijst wacht | API-timing plus fallback | Snel succes, traag antwoord, timeout |
+| Haperende header | Scrollprofiel en event-/layoutwerk | Lange scroll, zoekfocus, menu, reduced motion |
+| Trage productwissel | Variant-/productrequests en renderwerk | Binnen product tegenover nieuwe product-URL |
+
+Publiceer bij nieuwe metingen testomgeving, viewport, cacheconditie, verbinding, URL, herhalingen en datum. Noem een gerichte componentverbetering geen complete winkelsnelheidsverbetering zonder passende meting. Verwijder geen onbekende assets uitsluitend omdat ze groot of ongebruikt lijken; traceer afnemers en werkelijke laadpaden eerst.
+
+## 77 Foutdiagnose: symptoom naar bron en eigenaar
+
+Deze kaart verkort het eerste onderzoek. Elke rij is een diagnosepad, geen bewering dat het symptoom nu live aanwezig is. De detailhoofdstukken beschrijven de inhoudelijke contracten.
+
+| ID / symptoom | Eerste broncontrole | Eigenaar | Regressie |
+| --- | --- | --- | --- |
+| D01 Logo staat per pagina anders | Vergelijk wrappers en viewport, daarna CSS-grid/marges | Ontwikkelaar | Home/PDP en badge, hoofdstuk 52 |
+| D02 Zoekrij verdwijnt tijdens typen | Focus/predictive-freeze en controllerstaat | Ontwikkelaar | Typen, Escape en omhoog scrollen, 53 |
+| D03 Zoekrij blijft compact bovenaan | Topdrempel, meetwaarden en scrollrichting | Ontwikkelaar | Naar top en richtingwissel, 53 |
+| D04 Body blijft vast na menu sluiten | Drawer/header scrolllocks en cleanup | Ontwikkelaar | Open/sluit en resize naar desktop, 55 |
+| D05 Vierkant om Terug | Pointerfocus tegenover focus-visible | Ontwikkelaar | Tap én toetsenbord, 55 |
+| D06 Laatste categorie valt buiten beeld | MAIN versus NAV-02 en CSS-viewport | Eigenaar | 990–1359 en 1360+, 54 |
+| D07 Dropdown staat over tweede rij | Paneelpositie onder volledige navigatie | Ontwikkelaar | Tweede rij en lange labels, 54 |
+| D08 Retourknop ontbreekt | Viewport, Page-publicatie, helper en MAIN | Beheerder | Echte live link op desktop, 52/69 |
+| D09 Retourpreview werkt maar live niet | Verborgen Page los van themapublicatie | Beheerder | Page-read en gewone URL, 49/69 |
+| D10 Retourmail ontbreekt | Native feedback, bevoegd inbox/spam en mailconfiguratie | Eigenaar | Afgesproken fictieve ontvangstproef, 70 |
+| D11 Klant verwacht direct label | Copy en handmatig servicecontract | Klantenservice | Aanvraagtekst en antwoordpad, 69/70 |
+| D12 Adres staat nog op één pagina | Welke footer is actief en cache/bronmoment | Beheerder | Home plus gewone Page/PDP, 68 |
+| D13 Footerlabel is niet klikbaar | Blockbestemming en Page-publicatie | Contentbeheerder | Beide footers en doelinhoud, 68 |
+| D14 Zoeksuggestie verschilt van resultaten | Predictive/native/extern als aparte bronnen | Ontwikkelaar | Dezelfde term en scope, 56 |
+| D15 Product direct bereikbaar maar niet vindbaar | Publicatie, termmatch en gebruikte index | Productbeheerder | Directe URL plus drie zoekroutes, 56 |
+| D16 Filterlijst blijft laden | Requeststatus, timeout en fallback | Ontwikkelaar | Traag/fout antwoord met bruikbare native staat, 59 |
+| D17 Oude filteruitslag keert terug | Abort/requestidentiteit en race | Ontwikkelaar | Twee snelle opeenvolgende wijzigingen, 59 |
+| D18 Terug wijzigt alleen URL | Popstate en heropbouw van selectie/resultaten | Ontwikkelaar | Terug én Vooruit, 59 |
+| D19 Range en slider verschillen | Parser, grenzen en gemeenschappelijke staat | Ontwikkelaar | Komma, reset en handmatige invoer, 59 |
+| D20 Kleurfoto klopt maar link niet | Gedeeltelijke kaartupdate en renderer | Ontwikkelaar | Alle identiteitsnodes vergelijken, 60 |
+| D21 Hartje bewaart vorige uitvoering | Variant/handle in opslagpayload | Ontwikkelaar | Kleurwissel, bewaren, herladen, 60/67 |
+| D22 PDP toont vorige specificatie | Identityguard, verzoekuitkomst en fallback | Productbeheerder | Twee artikelen en foutrespons, 61/63 |
+| D23 Dubbele specificatietabel | Beschrijving en merkadapterguard | Ontwikkelaar | In/out-of-guard product, 63 |
+| D24 Tegelberekening toont NaN | Ongeldige/ontbrekende numerieke bron of parser | Productbeheerder | Leeg, komma, nul en geldige doosinhoud, 62 |
+| D25 Aantal dozen lijkt te laag | Eenheid, verlies en afronding | Productbeheerder | Net boven doosgrens en cartpayload, 62 |
+| D26 Tegelprijs lijkt veel hoger in cart | m²-presentatie tegenover doosprijs | Productbeheerder | Eenheid, totale m² en aantal dozen, 62 |
+| D27 Accessoire dubbel besteld | Inbegrepen versus optioneel en selectie | Productbeheerder | Relatie en uiteindelijke cartregels, 64 |
+| D28 Handleiding opent verkeerd model | Documentbron en artikelidentiteit | Productbeheerder | Exacte SKU/variant en download, 65 |
+| D29 Zoom sluit zonder focus | Dialoogopener en focusherstel | Ontwikkelaar | Open/sluit met toetsenbord, 65/75 |
+| D30 Cartpopup blijft oud | Response, update-event en renderfout | Ontwikkelaar | Teruggelezen regel/aantal en foutstaat, 66 |
+| D31 Cart herstelt dubbele aantallen | Herstel is add-POST en herhaald klikken | Ontwikkelaar | Lege versus gevulde cart; alleen geplande schrijfproef, 66 |
+| D32 Verlanglijst leeg op telefoon | Andere browser/opslagcontext of privémodus | Klantenservice | Opslagcontract uitleggen en lokale context controleren, 67 |
+| D33 Verlanglijstprijs verouderd | Opgeslagen snapshot en productcache | Ontwikkelaar | Datawijziging en herladen zonder koopclaim, 67 |
+| D34 Assortimentvolgorde springt | DOM-verplaatsing bij 750px | Ontwikkelaar | 749/750 en zoekreset, 57 |
+| D35 Merken-Page is verborgen | Directory is andere route dan Page | Contentbeheerder | /collections?view=merken, 57 |
+| D36 Meubelhub wijkt af na opschonen | Admin-descriptionHtml styles niet meegenomen | Ontwikkelaar | Bronherstel gericht en beide lay-outs, 58 |
+| D37 Begrip eindigt op 404 | Redirectketen, Page en glossarylink | Contentbeheerder | Hygrometer bekende fout, 72 |
+| D38 Artikel verdeelt niet in secties | Letterlijke H2-markup in blogrenderer | Contentbeheerder | Gerenderde koppen en kaarten, 72 |
+| D39 Offerte-upload lijkt beschikbaar in preview | Previewgate versus klantactivatie | Eigenaar | Geen publieke link zonder vrijgave, 71 |
+| D40 Site lijkt snel maar verspringt | Eerste render, font-/media-afmetingen | Ontwikkelaar | Koude render met layout-shiftmeting, 76 |
+
+Stop een wijziging wanneer de bron onduidelijk blijft. Leg het conflict vast, geef de beheerder één concrete vraag en werk ondertussen alleen aan onafhankelijke onderdelen. Herhaald aan CSS sleutelen zonder de actieve template of Admin-toewijzing te kennen vergroot de kans op een reparatie die alleen één voorbeeld raakt.
+
+## 78 Acceptatie- en regressiecatalogus
+
+De catalogus is een uitvoerbaar testontwerp. **ONTWERP** betekent dat de proef hier is beschreven; **EERDER BEWIJS** verwijst naar een gedateerd componentdossier; **NIEUW GET** is uitsluitend de 31-oktober-servercontrole. Geen rij met een ontwerpstatus mag als geslaagde test worden overgenomen. Mail, cart, checkout, fysieke apparaten en privébackend vragen hun eigen bewijs.
+
+| ID / familie | Uitvoeren | Verwacht | Bewijsstatus / bron |
+| --- | --- | --- | --- |
+| A01 Header | Home en PDP op gelijke breedte bovenaan openen | Logopositie en bovenrij gelijk | EERDER BEWIJS — HDR-01 |
+| A02 Header | Downscroll voorbij header en bewust omhoog | Alleen zoekrij klapt volgens drempels | EERDER BEWIJS — HDR-01 |
+| A03 Header | Typen met suggesties en vervolgens scrollen | Bediening houdt zoekrij beschikbaar | ONTWERP — 53 |
+| A04 Header | Menu open na diepe scroll en weer sluiten | Header gepind, daarna pagina vrij scrollbaar | EERDER BEWIJS — HDR-01 |
+| A05 Header | Tab in compacte zoekstaat | Geen focus op verborgen invoer | ONTWERP — 53/75 |
+| A06 Menu | Terug aanklikken en daarna met Tab bereiken | Geen pointerkader; zichtbare keyboardfocus | EERDER BEWIJS — HDR-01 |
+| A07 Menu | Diep niveau openen en Terug kiezen | Vorige menulaag, geen browserback | ONTWERP — 55 |
+| A08 Menu | Mobiel open, resizen naar desktop en terug | Overlay/scrolllock opgeruimd | EERDER BEWIJS — NAV-02 |
+| A09 Navigatie | 990/1024/1280/1348/1359 preview openen | Elf ingangen in 6+5 zonder overloop | EERDER BEWIJS — NAV-02 |
+| A10 Navigatie | 1360/1366/1440/1536/1920 preview openen | Elf ingangen zonder scrollknoppen | EERDER BEWIJS — NAV-02 |
+| A11 Navigatie | Tweede rij dropdown en Escape bedienen | Paneel onder hele bar; focus herstelt | EERDER BEWIJS — NAV-02 |
+| A12 Navigatie | Merken via echte top-level link openen | Directorybestemming bereikbaar | EERDER BEWIJS — NAV-02 |
+| A13 Navigatie | Live homepage GET lezen | MAIN bevat nog twee railcontrols | NIEUW GET — http-refresh.json |
+| A14 Retour | Live retourpagina GET lezen | HTTP 200 en native contactformmarkup | NIEUW GET — http-refresh.json |
+| A15 Retour | Desktoplive headerlink lezen | /pages/retour-aanmelden aanwezig | NIEUW GET — http-refresh.json |
+| A16 Retour | Hidden Page in MAIN versus conceptfixture | Geen lege live link; veilige preview | EERDER BEWIJS — RET-01/RET-02 |
+| A17 Retour | Vereiste velden leeg en e-mail ongeldig | Native foutfeedback, geen vals succes | ONTWERP — 69 |
+| A18 Retour | Reden leeg laten bij geldige invoer | Reden blijft optioneel | ONTWERP — 69 |
+| A19 Retour | Fictieve afgesproken aanvraag verzenden | Ontvangst in inbox/spam en antwoord bewezen | ONTWERP — MAIL_DELIVERY_PENDING |
+| A20 Retour | Label handmatig beantwoorden | Juiste ontvanger/order en afgesproken instructie | ONTWERP — 70 |
+| A21 Footer | Home en gewone routes op adresstring scannen | String niet in onderzochte footers | NIEUW GET — http-refresh.json |
+| A22 Footer | Accordion mobiel en desktoplinks bedienen | Juiste uitklapstaat en echte bestemmingen | ONTWERP — 68 |
+| A23 Homepage | 749 en 750 vergelijken | Banners en categorieopbouw volgen grens | ONTWERP — 57 |
+| A24 Assortiment | 749/750 met zoeken en reset | DOM-volgorde en openstaat logisch | EERDER BEWIJS — ASSORT-02 |
+| A25 Merken | Directory GET en zoekinteractie | GET bereikbaar; lokale filter apart testen | NIEUW GET — http-refresh.json |
+| A26 Zoeken | Predictive typen, pijlen, Enter, Escape | Juiste suggestie en focusherstel | ONTWERP — 56 |
+| A27 Zoeken | Native zoekterm en nulresultaat GET | Beide routes HTTP 200; client apart | NIEUW GET — http-refresh.json |
+| A28 Filters | Twee snelle filterwijzigingen | Laatste verzoek bepaalt resultaten | ONTWERP — 59 |
+| A29 Filters | Timeout/fout van externe lijst | Bruikbare native fallback | ONTWERP — 59 |
+| A30 Filters | Range wijzigen en browser Terug/Vooruit | URL, controls en resultaten coherent | ONTWERP — 59 |
+| A31 Kaart | Twee kleuren en terug kiezen | Foto/link/variant/prijs/hartje coherent | ONTWERP — 60 |
+| A32 PDP | Variant in zelfde product kiezen | AJAX-info en URL passen bij variant | ONTWERP — 61 |
+| A33 PDP | Ander product via uitvoering kiezen | Nieuwe juiste product-URL en gegevens | ONTWERP — 61 |
+| A34 Tegels | Geldige 10m² en 10% op eerder gekozen PDP | Uitkomst volgens echte doosinhoud | EERDER BEWIJS — 30-oktober-Verona-proef |
+| A35 Tegels | Exact en net boven doosgrens rekenen | Correct omhoog afronden | ONTWERP — 62 |
+| A36 Tegels | Leeg/nul/negatief/komma invoeren | Feedback of geldige normalisatie, geen NaN | ONTWERP — 62 |
+| A37 Merkdata | Volledige, gedeeltelijke en buiten-guard bron | Juiste prioriteit en veilige fallback | ONTWERP — 63 |
+| A38 Onderdelen | Inbegrepen/vereist/optioneel vergelijken | Geen onbedoelde betaalde selectie | ONTWERP — 64 |
+| A39 Media | Galerij, zoom en Escape bedienen | Juiste media/teller en focusherstel | ONTWERP — 65 |
+| A40 Document | Ontbrekende en dubbele documentbron | Geen lege knop, geen duplicaat | ONTWERP — 65 |
+| A41 Cart | Geplande add met variant en aantal | Teruggelezen regel exact; schrijfproef apart | ONTWERP — 66 |
+| A42 Cart | Bewaren/herstellen met gevulde cart | Betekenis en mogelijke optelling verklaard | ONTWERP — 66 |
+| A43 Wishlist | Twee uitvoeringen bewaren/herladen/verwijderen | Identiteit en teller consistent | ONTWERP — 67 |
+| A44 Wishlist | Corrupt/geblokkeerd geheugen en verdwenen product | Bruikbare fout-/lege staat | ONTWERP — 67 |
+| A45 Content | Hygrometer eind-URL GET lezen | Bekende 404 bevestigd; geen stille fix | NIEUW GET — http-refresh.json |
+| A46 Content | H2-opbouw in gewijzigd adviesartikel | Correcte sectieverdeling en kophiërarchie | ONTWERP — 72 |
+| A47 SEO | Canonical/robots/schema per gewijzigde route | Bij route en verkoopdata passende markup | ONTWERP — 74 |
+| A48 A11y | Alle actieve overlays met keyboard bedienen | Focus zichtbaar, sluitroute en herstel | ONTWERP — 75 |
+| A49 Performance | Koude home/PDP op gelijke omgeving meten | Echte LCP/CLS/INP-data met bronmoment | ONTWERP — 76 |
+| A50 Offerte | Gates bij hidden Page en MAIN controleren | Klantactivatie blijft uit zonder vrijgave | ONTWERP — 71 |
+
+Bij iedere uitvoering noteer je datum, bronhash/theme-ID, URL, viewport, testdata, resultaat en bewijsbestand. Een mislukte proef krijgt een reproduceerbare stap en impact. Een blokkade krijgt een reden en eigenaar. Test na een kleine wijziging de betrokken contracten en hun foutstaat; herhaal niet gedachteloos de hele catalogus wanneer geen afhankelijkheid is veranderd.
+
+## 79 Release, onderhoud, versiebeheer en overdracht
+
+Een documentatie-update en een winkelrelease zijn verschillende handelingen. Deze versie verrijkt het naslagwerk en leest de winkel; zij schrijft geen themabestanden, Pages, producten, prijzen, voorraad of formulieren. NAV-02 blijft eigenaarsbeoordeling/publicatie nodig hebben. RET-03 blijft een mailboxproef nodig hebben. De offerteklantactivatie blijft uit.
+
+| Aanleiding | Documentatie bijwerken | Passende verificatie |
+| --- | --- | --- |
+| Thema publiceren | MAIN/conceptkaart, status en componentdossier | Verse rollen, hashes, live ingang en betrokken taken |
+| Page publiceren/verbergen | Paginaregister en linkguards | Page-read en openbare URL/header/footer |
+| Product-/categoriecontract wijzigen | Component/datawoordenboek en categorisatiebeleid | Identiteit, template, render en koop-/navigatieketen |
+| Bedrijfsafspraak wijzigen | Bevestigde servicecopy en beheerkaart | Alle zichtbare bronplaatsen plus eigenaar |
+| Externe integratie wijzigen | Eigenaarschap, gates en bewijsgrenzen | Bevoegde ontvangst/fout-/fallbackproeven |
+| Alleen naslagwerk uitbreiden | Versie, bronnen, zoekindex en interne verwijzingen | Offline documentvalidatie; geen onnodige winkelwrite |
+
+De vaste repository-ingang staat in `docs/LIVE_STATUS_AND_NEXT_STEPS.md`; de actieve branch staat daar expliciet. MAIN in Shopify is niet hetzelfde als de Gitbranch `main`. Houd de handoff op beide relevante branches gelijk en publiceer geen secrets of privégegevens. Een remote commit bewijst geen schone of gesynchroniseerde Windowswerkmap.
+
+Dit naslagwerk is één leesbestand. De bron bestaat uit het bestaande masterdocument, de nieuwe praktische hoofdstukken, taken-/diagnose-/acceptatieregisters en gedateerd bewijs. De HTML-renderer maakt inhoudsopgave, tekstzoeker, takenzoeker en productrouteregister zonder externe runtimecalls. Brede technische tabellen hebben lokale overflow; de reader heeft eigen mobiele inhoudsbediening. Offline DOM-tests bewijzen functionaliteit en structuur, geen browserlayout of fysieke telefoonweergave.
+
+Werk bij een volgende ronde eerst de actuele samenvatting bij. Vervang historische getallen niet stilzwijgend in oude meetdossiers. Leg vast wat opnieuw is gemeten, wat uit een oudere bron komt en wat nog onbekend is. Daardoor kan een volgende beheerder een concrete veilige stap zetten zonder het hele onderzoek opnieuw te moeten doen.
+
+
+## 80 Volledig register van publieke productroutes
+
+**Snapshot 30 oktober 2026:** de 11.679 productidentiteiten hieronder zijn behouden. De exacte 31-oktobertelling is gelijk; de complete identiteitset is vandaag niet opnieuw geëxporteerd.
 
 
 De HTML-uitgave bevat hieronder alle 11.679 publieke productroutes met merk, handle en producttemplate, als doorzoekbaar register. Die lijst is geheel in hetzelfde HTML-bestand opgenomen. De tekstbron verwijst naar het gedateerde JSON-register public-product-routes.json naast het bewijsdossier. De enige DRAFT-/niet-publieke productroute is uit dit publieke register gehouden.

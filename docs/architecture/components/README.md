@@ -1,3 +1,5 @@
+> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../../MASTER_SITE_REFERENCE.md), [verse bronkaart](../../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
+
 # Componentdossiers — zo vind je de juiste bouwsteen
 
 **DOC-02A/02C · 28 oktober 2026.** Dit is de verdiepte uitleg van de op deze datum gelezen productiecode. De [centrale werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) blijft leidend voor de actieve taak en bron. Geen nieuwe feature of UI-correctie is in deze ronde uitgevoerd.
