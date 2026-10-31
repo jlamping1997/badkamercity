@@ -1326,7 +1326,6 @@
   {%- if section.settings.menu != blank -%}
     <nav class="bc-category-nav" aria-label="{{ section.settings.category_nav_label | escape }}" data-bc-category-nav>
       <div class="bc-category-nav__shell">
-        <button class="bc-category-nav__scroll bc-category-nav__scroll--previous" type="button" aria-label="{{ section.settings.category_previous_label | escape }}" data-bc-category-previous hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6"/></svg></button>
         <ul class="bc-category-nav__list" role="list" data-bc-category-list>
           {%- for link in section.settings.menu.links -%}
             <li class="bc-category-nav__item">
@@ -1360,7 +1359,6 @@
             </li>
           {%- endfor -%}
         </ul>
-        <button class="bc-category-nav__scroll bc-category-nav__scroll--next" type="button" aria-label="{{ section.settings.category_next_label | escape }}" data-bc-category-next hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 6 6 6-6 6"/></svg></button>
       </div>
       <div class="bc-category-nav__backdrop" data-bc-category-backdrop aria-hidden="true" hidden></div>
     </nav>
@@ -1380,19 +1378,14 @@
 .bc-category-nav :is(a,button,summary):focus-visible{outline:2px solid var(--bcn-navy);outline-offset:-3px}
 .bc-category-nav :is(button,summary){font:inherit;color:inherit}
 .bc-category-nav svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.bc-category-nav .bc-category-nav__shell{display:flex;align-items:center;gap:8px;width:100%;max-width:1440px;margin:0 auto;padding:0 24px}
-.bc-category-nav .bc-category-nav__list{display:flex;align-items:stretch;justify-content:space-between;gap:0;min-width:0;flex:1;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#1a253f45 transparent;overscroll-behavior-inline:contain;scroll-padding-inline:12px}
-.bc-category-nav .bc-category-nav__list::-webkit-scrollbar{height:3px}
-.bc-category-nav .bc-category-nav__list::-webkit-scrollbar-thumb{background:#1a253f45;border-radius:4px}
+.bc-category-nav .bc-category-nav__shell{width:100%;max-width:1600px;margin:0 auto;padding:0 24px}
+.bc-category-nav .bc-category-nav__list{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:space-between;gap:0;min-width:0;width:100%}
 .bc-category-nav .bc-category-nav__item{flex:none;min-width:0}
-.bc-category-nav .bc-category-nav__link{display:flex;align-items:center;justify-content:center;min-height:50px;padding:0 12px;font-size:16px;line-height:22px;font-weight:700;white-space:nowrap}
+.bc-category-nav .bc-category-nav__link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:4px 8px;font-size:15px;line-height:20px;font-weight:700;white-space:nowrap;text-align:center}
 .bc-category-nav .bc-category-nav__link.is-active{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
 .bc-category-nav .bc-category-nav__details[open]>.bc-category-nav__toggle{background:#fff}
 .bc-category-nav .bc-category-nav__toggle{cursor:pointer;list-style:none}
 .bc-category-nav .bc-category-nav__toggle::-webkit-details-marker{display:none}
-.bc-category-nav .bc-category-nav__scroll{display:grid;place-items:center;flex:0 0 28px;width:28px;min-height:50px;padding:0;border:0;background:transparent;cursor:pointer}
-.bc-category-nav .bc-category-nav__scroll:hover:not(:disabled){background:#ffffff35}
-.bc-category-nav .bc-category-nav__scroll:disabled{opacity:.3;cursor:default}
 .bc-category-nav .bc-category-nav__panel{position:fixed;top:var(--bcn-panel-top,var(--header-height,160px));left:0;right:0;z-index:40;max-height:calc(100dvh - var(--bcn-panel-top,160px) - 48px);background:#fff;color:var(--bcn-navy);box-shadow:0 10px 18px #1a253f0a;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#aebbd0 transparent}
 .bc-category-nav .bc-category-nav__content{width:100%;max-width:1440px;min-height:160px;margin:0 auto;padding:32px 36px 20px}
 .bc-category-nav .bc-category-nav__groups{column-count:3;column-gap:72px;column-fill:balance}
@@ -1402,7 +1395,15 @@
 .bc-category-nav .bc-category-nav__children a{display:inline-block;padding:3px 0;font-size:17px;line-height:24px;overflow-wrap:anywhere}
 .bc-category-nav .bc-category-nav__group-link:hover,.bc-category-nav .bc-category-nav__children a:hover{text-decoration:underline;text-underline-offset:4px}
 .bc-category-nav .bc-category-nav__backdrop{display:block;position:fixed;top:var(--bcn-panel-top,var(--header-height,160px));right:0;bottom:0;left:0;z-index:30;background:#1a253f38}
-@media(max-width:1279px) and (min-width:990px){.bc-category-nav .bc-category-nav__list{justify-content:flex-start}.bc-category-nav .bc-category-nav__link{padding-inline:14px}.bc-category-nav .bc-category-nav__groups{column-gap:48px}}
+@media(max-width:1359px) and (min-width:990px){
+  .bc-category-nav .bc-category-nav__shell{padding-inline:16px}
+  .bc-category-nav .bc-category-nav__list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+  .bc-category-nav .bc-category-nav__item{grid-column:span 2}
+  .bc-category-nav .bc-category-nav__item:nth-child(7){grid-column:2/span 2}
+  .bc-category-nav .bc-category-nav__details,.bc-category-nav .bc-category-nav__toggle{height:100%}
+  .bc-category-nav .bc-category-nav__link{height:100%;font-size:14px;white-space:normal;overflow-wrap:anywhere}
+  .bc-category-nav .bc-category-nav__groups{column-gap:48px}
+}
 @media(max-width:989px){.bc-category-nav{display:none}}
 @media(prefers-reduced-motion:reduce){.bc-category-nav *{transition:none!important;scroll-behavior:auto!important}}
 {% endstylesheet %}
@@ -1568,10 +1569,6 @@
     class BcCategoryNavigation {
       constructor(root) {
         this.root = root;
-        this.shell = root.querySelector('.bc-category-nav__shell');
-        this.list = root.querySelector('[data-bc-category-list]');
-        this.previous = root.querySelector('[data-bc-category-previous]');
-        this.next = root.querySelector('[data-bc-category-next]');
         this.backdrop = root.querySelector('[data-bc-category-backdrop]');
         this.details = [...root.querySelectorAll('[data-bc-category-details]')];
         this.panels = [...root.querySelectorAll('[data-bc-category-panel]')];
@@ -1590,8 +1587,6 @@
         this.onFocusIn = this.onFocusIn.bind(this);
         this.onFocusOut = this.onFocusOut.bind(this);
         this.onPointerDown = this.onPointerDown.bind(this);
-        this.onPrevious = () => this.scroll(-1);
-        this.onNext = () => this.scroll(1);
         this.details.forEach(item => {
           item.querySelector('summary').tabIndex = -1;
           item.addEventListener('toggle', this.onToggle);
@@ -1623,8 +1618,6 @@
         window.addEventListener('scroll', this.onScroll, true);
         window.addEventListener('resize', this.onResize);
         this.desktop.addEventListener('change', this.onResize);
-        this.previous.addEventListener('click', this.onPrevious);
-        this.next.addEventListener('click', this.onNext);
         this.root.dataset.bcCategoryReady = 'true';
         this.onResize();
         document.fonts?.ready.then(() => { if (this.root.isConnected) this.onResize(); });
@@ -1714,26 +1707,11 @@
       }
       onScroll(event) {
         if (this.panels.some(panel => panel === event.target || panel.contains(event.target))) return;
-        if (event.target === this.list) this.syncControls();
         this.close();
-      }
-      syncControls() {
-        const shellStyle = getComputedStyle(this.shell);
-        const available = this.shell.clientWidth - parseFloat(shellStyle.paddingLeft) - parseFloat(shellStyle.paddingRight);
-        const overflow = this.list.scrollWidth > available + 1;
-        this.previous.hidden = !overflow;
-        this.next.hidden = !overflow;
-        this.previous.disabled = this.list.scrollLeft <= 1;
-        this.next.disabled = this.list.scrollLeft >= this.list.scrollWidth - this.list.clientWidth - 1;
-      }
-      scroll(direction) {
-        this.close();
-        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        this.list.scrollBy({ left: direction * this.list.clientWidth * 0.65, behavior: reduced ? 'auto' : 'smooth' });
       }
       onResize() {
         this.close();
-        this.syncControls();
+        if (this.desktop.matches) this.root.closest('sticky-header')?.setHeaderHeight?.();
         this.position();
       }
       destroy() {
@@ -1754,8 +1732,6 @@
         window.removeEventListener('scroll', this.onScroll, true);
         window.removeEventListener('resize', this.onResize);
         this.desktop.removeEventListener('change', this.onResize);
-        this.previous.removeEventListener('click', this.onPrevious);
-        this.next.removeEventListener('click', this.onNext);
         delete this.root.bcCategoryCleanup;
         delete this.root.dataset.bcCategoryReady;
       }
