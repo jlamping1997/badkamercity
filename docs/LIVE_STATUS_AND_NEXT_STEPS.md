@@ -1,3 +1,5 @@
+> **31 oktober 2026 — NAV-03 / TILE-02 actief:** eigenaar publiceerde FIX-01; MAIN195974824202. Bestaand UNPUBLISHED195947036938 op alle1355paden gelijkgemaakt aan MAIN vóór nieuwe features. Actieve branch fix/product-cards-2026-10-14; codebasis b55f05f9685c83c13d10762000cb2e3317d8458c. Eén schrijver: Codex. Nieuwe scope: één passende categorierij met Meer categorieën, tegelcalculator standaard1m² en toegankelijke vloer/wand-uitleg. Implementatie lokaal; concept- en breedtecontrole volgen. Publicatie door eigenaar. Oudere rollen hieronder zijn geschiedenis.
+
 # BadkamerCity — actuele werkstatus
 
 **31 oktober 2026 · FIX-01 RESTORED_SOURCE_VERIFIED / OWNER_REVIEW_PENDING.** Het verwijderde reviewconcept is opnieuw opgebouwd als UNPUBLISHED195974824202. De opgeslagen reparatiecode is hersteld; geen actieve schrijver na overdracht. Eigenaar beoordeelt en publiceert volgens AGENTS.
