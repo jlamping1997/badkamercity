@@ -1290,7 +1290,14 @@
     "more": "Toon meer",
     "less": "Toon minder",
     "more_filters": "Meer filters",
-    "search_filter": "Zoeken in"
+    "search_filter": "Zoeken in",
+    "search_title": "Zoeken: '{{ terms }}' ({{ total }}) – {{ shop }}",
+    "usp_label": "Voordelen van Badkamercity",
+    "delivery_per_item": "Levertijd per artikel",
+    "free_shipping": "Gratis verzending boven €100",
+    "expert_advice": "Persoonlijk advies van onze experts",
+    "tile_box": "per doos",
+    "tile_area": "per m²"
   },
   "bc_tiles": {
     "box_decrease": "Een doos minder",
@@ -1489,5 +1496,8 @@
     "faq_cost_question": "Wie betaalt de retourkosten?",
     "faq_cost_answer": "Dat hangt af van de reden en het soort retour. We geven je de passende informatie volgens het retourbeleid. Bij een defect of verkeerde levering bekijken we welke oplossing nodig is.",
     "topic_value": "Retouraanvraag Badkamercity"
+  },
+  "bc_seo": {
+    "collection_description": "Bekijk {{ title }} bij {{ shop }}. Ontdek het assortiment en de productinformatie of neem contact op voor persoonlijk advies."
   }
 }

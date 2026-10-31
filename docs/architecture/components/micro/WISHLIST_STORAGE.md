@@ -1,5 +1,7 @@
 # Verlanglijst: opslag, fouten en meerdere tabbladen
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** WISH-F01 aangepakt met actuele identity-intents en native Web Locks waar beschikbaar. Twee echte same-origin frames behouden2/2fictieve keuzes; geen garantie voor iedere top-level procescombinatie, oudere tabcode of fallback zonder Locks. Strikte commit weigert onleesbare/corrupte bron; geen automatische datamigratie. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03D.** Eigenaar van het opslagcontract; bediening en identity staan in [WISHLIST_IDENTITY](WISHLIST_IDENTITY.md), productverrijking en kooproute in [WISHLIST_RENDER_AND_ADD](WISHLIST_RENDER_AND_ADD.md). Bron: `assets/bc-wishlist.js` van MAIN 195818389770, tegen verse Shopify-MD5/grootte gecontroleerd. [Bewijs en 43 lokale cases](../../evidence/2026-10-28-wishlist/README.md). Geen echte bezoekersopslag gelezen of gewijzigd.
 
 ## Wat wordt bewaard?

@@ -43,6 +43,7 @@
     const cardDataCache = new Map();
     let externalActive = false;
     let nativeFallback = false;
+    const nativeTitle = document.title;
     let requestId = 0;
     let requestController;
     let filtersRendered = false;
@@ -258,6 +259,7 @@
         node.style.display = active ? '' : 'none';
       });
       if (!active) {
+        if (isSearch) document.title = nativeTitle;
         closeDrawer();
         if (externalActive) productGrid.replaceChildren(...nativeGridNodes);
         state.lastData = null;
@@ -568,7 +570,21 @@
       delivery.textContent=data.delivery_text || root.dataset.cardDelivery || '';
       delivery.classList.toggle('bc-card-delivery--stock',data.delivery_in_stock===true);
       card.querySelector('.bc-card-color').textContent = canonicalColor(data.color);
-      card.querySelector('.bc-filter-card__price').textContent = formatPrice(data.price_cents);
+      const price = card.querySelector('.bc-filter-card__price');
+      price.textContent = formatPrice(data.price_cents);
+      const tile = data.tile_price;
+      if (Number.isFinite(tile?.box_area) && tile.box_area > 0) {
+        const box = document.createElement('span');
+        box.className = 'bc-card-unit';
+        box.textContent = `${uiText('labelTileBox','per doos')} · ${new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {maximumFractionDigits: 4}).format(tile.box_area)} m²`;
+        price.append(box);
+        if (Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
+          const area = document.createElement('span');
+          area.className = 'bc-card-unit';
+          area.textContent = `${formatPrice(tile.unit_price_cents)} ${uiText('labelTileArea','per m²')}`;
+          price.append(area);
+        }
+      }
       const cart = card.querySelector('[data-bc-card-cart]');
       cart.disabled = !data.available;
       cart.setAttribute('aria-label', `${uiText('labelAdd','In winkelwagen')}: ${data.title}`);
@@ -744,6 +760,7 @@
     }
 
     function renderCount(found) {
+      if (isSearch && root.dataset.searchTitle) document.title = root.dataset.searchTitle.replace('__BC_COUNT__', String(found));
       toolbar.querySelector('[data-bc-count]').textContent =
         `${found} ${found === 1 ? 'product' : 'producten'}`;
     }

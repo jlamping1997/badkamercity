@@ -24,7 +24,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  
   {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
@@ -41,6 +41,7 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover bc-standard-card">
+    {% render 'bc-wishlist-button', product: card_product, class_name: 'bc-wishlist-button--card', source: 'card' %}
     <div
       class="
         card card--{{ settings.card_style }}
@@ -203,7 +204,9 @@
               </p>
             {%- endif -%}
 
+            {% if show_card_delivery %}{% render 'bc-card-delivery' %}{% endif %}
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'bc-card-tile-price', product: card_product, mode: 'native' %}
             {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}
             <a class="bc-card-view" href="{{ card_product.url }}">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></a>
             {%- if card_product.quantity_price_breaks_configured? -%}
@@ -514,6 +517,7 @@
                           <h3>{{ card_product.title | escape }}</h3>
                         </a>
                         {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'bc-card-tile-price', product: card_product, mode: 'native' %}
                         {%- if card_product.quantity_price_breaks_configured? -%}
                           <div class="card__information-volume-pricing-note">
                             <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
@@ -529,6 +533,7 @@
                           </h3>
                         </a>
                         {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'bc-card-tile-price', product: card_product, mode: 'native' %}
                         {%- if card_product.quantity_price_breaks_configured? -%}
                           <div class="card__information-volume-pricing-note">
                             <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>

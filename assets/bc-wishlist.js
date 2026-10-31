@@ -26,12 +26,32 @@
     };
   }
 
+  function readStored() {
+    const raw = localStorage.getItem(KEY);
+    const value = raw === null ? [] : JSON.parse(raw);
+    if (!Array.isArray(value)) throw new Error('wishlist');
+    return value.map(normalise).filter(Boolean).slice(0, MAX);
+  }
+
   function load() {
+    try { return readStored(); } catch (error) { return []; }
+  }
+
+  async function commit(operation) {
+    const apply = () => {
+      try {
+        const next = operation(readStored());
+        return next ? save(next) : false;
+      } catch (error) {
+        toast('Toevoegen aan je verlanglijst is niet gelukt.');
+        return false;
+      }
+    };
     try {
-      const value = JSON.parse(localStorage.getItem(KEY) || '[]');
-      return Array.isArray(value) ? value.map(normalise).filter(Boolean).slice(0, MAX) : [];
+      return navigator.locks?.request ? await navigator.locks.request(KEY, apply) : apply();
     } catch (error) {
-      return [];
+      toast('Toevoegen aan je verlanglijst is niet gelukt.');
+      return false;
     }
   }
 
@@ -198,9 +218,11 @@
     button.dataset.bcWishlistBusy = 'true';
     try {
       let entry = details(button);
+      const removeIntent = VARIANT.test(entry.variantId)
+        ? has(entry.handle, entry.variantId) : items.some(item => item.handle === entry.handle);
       if (!HANDLE.test(entry.handle)) throw new Error('Geen geldige productlink gevonden.');
       if (!VARIANT.test(entry.variantId)) {
-        const existing = items.filter(item => item.handle === entry.handle);
+        const existing = readStored().filter(item => item.handle === entry.handle);
         if (existing.length === 1) {
           entry.variantId = existing[0].variantId;
         } else if (existing.length > 1) {
@@ -216,10 +238,14 @@
       entry = normalise(entry);
       if (!entry) throw new Error('Product kon niet worden opgeslagen.');
       const key = identity(entry);
-      const existing = items.some(item => identity(item) === key);
-      if (!existing && items.length >= MAX) { toast('Je verlanglijst kan maximaal 100 producten bevatten.'); return; }
-      const next = existing ? items.filter(item => identity(item) !== key) : [entry].concat(items);
-      if (save(next)) toast(existing ? 'Verwijderd uit je verlanglijst' : 'Toegevoegd aan je verlanglijst');
+      const saved = await commit(latest => {
+        const existing = latest.some(item => identity(item) === key);
+        if (removeIntent) return latest.filter(item => identity(item) !== key);
+        if (existing) return latest;
+        if (latest.length >= MAX) { toast('Je verlanglijst kan maximaal 100 producten bevatten.'); return null; }
+        return [entry].concat(latest);
+      });
+      if (saved) toast(removeIntent ? 'Verwijderd uit je verlanglijst' : 'Toegevoegd aan je verlanglijst');
     } catch (error) {
       toast(error?.message || 'Toevoegen aan je verlanglijst is niet gelukt.');
     } finally {
@@ -407,8 +433,11 @@
     if (toggle) { event.preventDefault(); event.stopPropagation(); toggleButton(toggle); return; }
     const remove = event.target.closest('[data-bc-wishlist-remove]');
     if (remove) {
-      const next = items.filter(entry => identity(entry) !== remove.dataset.bcWishlistRemove);
-      if (save(next)) toast('Product verwijderd');
+      if (remove.disabled) return;
+      remove.disabled = true;
+      commit(latest => latest.filter(entry => identity(entry) !== remove.dataset.bcWishlistRemove))
+        .then(saved => { if (saved) toast('Product verwijderd'); })
+        .finally(() => { if (remove.isConnected) remove.disabled = false; });
       return;
     }
     const add = event.target.closest('[data-bc-wishlist-add]');
@@ -431,7 +460,7 @@
   });
   window.BCWishlist = {
     list: () => items.map(item => ({ ...item })),
-    refresh: schedule,
+    refresh: root => root?.querySelectorAll ? syncButtons(root) : schedule(),
     has,
     key: KEY
   };

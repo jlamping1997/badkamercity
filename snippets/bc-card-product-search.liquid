@@ -40,6 +40,7 @@
 %}
 
 <article class="bc-search-card">
+  {% render 'bc-wishlist-button', product: card_product, class_name: 'bc-wishlist-button--card', source: 'card' %}
   <a href="{{ card_product.url }}" class="bc-search-card__link full-unstyled-link">
     <div class="bc-search-card__media-wrapper">
       {% if is_on_sale %}
@@ -61,7 +62,7 @@
               {{ featured_media | image_url }} {{ featured_media.width }}w
             "
             src="{{ featured_media | image_url: width: 420 }}"
-            sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
+            sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 32vw"
             alt="{{ featured_media.alt | default: card_product.title | escape }}"
             class="bc-search-card__image bc-search-card__image--primary"
             loading="{{ media_loading }}"
@@ -81,7 +82,7 @@
                 {{ secondary_media | image_url }} {{ secondary_media.width }}w
               "
               src="{{ secondary_media | image_url: width: 420 }}"
-              sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
+              sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 32vw"
               alt="{{ secondary_media.alt | default: featured_media.alt | default: card_product.title | escape }}"
               class="bc-search-card__image bc-search-card__image--secondary"
               loading="lazy"
@@ -104,6 +105,8 @@
       </div>
 
       {% render 'bc-card-specs', product: card_product %}
+
+      {% render 'bc-card-delivery' %}
 
       <div class="bc-search-card__price-wrap">
         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
@@ -129,6 +132,8 @@
           </div>
         </div>
       </div>
+
+      {% render 'bc-card-tile-price', product: card_product %}
 
       {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}
       <span class="bc-card-view">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></span>

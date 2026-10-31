@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "happy-dom": "21.0.4"
+    "happy-dom": "21.0.4",
+    "liquidjs": "10.21.1"
   },
   "scripts": {
     "audit": "node audit.mjs"

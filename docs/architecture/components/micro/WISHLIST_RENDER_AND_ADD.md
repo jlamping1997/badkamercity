@@ -1,5 +1,7 @@
 # Verlanglijstpagina: renderen, productcache en toevoegen
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Sunshower commit roept scoped wishlistrefresh aan; read/commit-fouten geven geen succes. Productread-timeout/TTL en echte voorraadautoriteit blijven afzonderlijk open; bewaren reserveert niets. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03D.** Eigenaar van productread/paginarender/kooproute. [Identity](WISHLIST_IDENTITY.md) verklaart hartjesadapters; [opslag](WISHLIST_STORAGE.md) de bewaarde selectie. [43 cases en methode](../../evidence/2026-10-28-wishlist/README.md) zijn lokale replays; ieder productantwoord, cartantwoord en navigatieverzoek is nagebootst. Geen echte add of restore.
 
 ## Route en eerste render

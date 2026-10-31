@@ -1,0 +1,80 @@
+{% doc %}
+Renders the reusable tile purchase controls inside the existing product page.
+@param {product} product - The current tile article.
+@param {section} section - The containing product section.
+@param {string} product_form_id - The existing Shopify product form ID.
+@param {string} actions_markup - Existing buy button and cart integration.
+{% enddoc %}
+{%- liquid
+  assign tile = product.metafields.custom.bron_toelichtingen_json.value.tiles
+  assign tile_variant = product.selected_or_first_available_variant
+  assign tile_group = product.metafields.tiles.group_id.value | default: product.id | append: ''
+  assign tile_box_units = tile.m2_per_box | times: 10000 | round
+  assign tile_unit_cents = tile.price_per_m2.amount | times: 100 | round
+  assign tile_currency = localization.country.currency.iso_code | default: shop.currency
+  if tile_variant.unit_price != blank
+    assign tile_unit_cents = tile_variant.unit_price
+  elsif tile_unit_cents == 0
+    assign tile_unit_cents = tile_variant.price | times: 10000.0 | divided_by: tile_box_units | round
+  endif
+  assign tile_delivery_unknown = 'bc_tiles.delivery_unknown' | t
+  assign tile_preview = false
+  if product.published_at == blank
+    assign tile_preview = true
+  endif
+  capture tile_fixed
+    assign separator = ''
+    assign parts = product.metafields.tiles.application.value | append: '|' | append: product.metafields.tiles.color.value | append: '|' | append: product.metafields.tiles.execution.value | append: '|' | append: product.metafields.tiles.size.value | split: '|'
+    for part in parts
+      if part != blank
+        echo separator
+        echo part
+        assign separator = ' · '
+      endif
+    endfor
+  endcapture
+-%}
+{{ 'bc-porcelanosa-buybox.css' | asset_url | stylesheet_tag }}
+<bc-porcelanosa-buybox class="bc-tile-buybox" data-group="{{ tile_group | escape }}" data-section="{{ section.id }}" data-form="{{ product_form_id }}" data-root-url="{{ routes.root_url }}" data-product-id="{{ product.id }}" data-variant-id="{{ tile_variant.id }}" data-sku="{{ tile_variant.sku | escape }}" data-handle="{{ product.handle | escape }}" data-box-units="{{ tile_box_units }}" data-price-cents="{{ tile_variant.price }}" data-unit-price-cents="{{ tile_unit_cents }}" data-currency="{{ tile_currency | escape }}" data-preview="{{ tile_preview }}" data-lead-time="{{ tile.lead_time | escape }}" data-order-type="{{ tile.order_type | escape }}" data-choice-error="{{ 'bc_tiles.choice_error' | t | escape }}" data-box-error="{{ 'bc_tiles.box_error' | t | escape }}" data-area-error="{{ 'bc_tiles.area_error' | t | escape }}" data-contact-message="{{ 'bc_tiles.contact_delivery' | t | escape }}" data-delivery-unknown="{{ 'bc_tiles.delivery_unknown' | t | escape }}">
+  {%- capture tile_catalog -%}{"schema":1,"group":{{ tile_group | json }},"products":[{% render 'bc-tile-choice-data', article: product %}{% for related in product.metafields.tiles.group_products.value %}{% if related.id != product.id and related.published_at != blank and related.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0 %},{% render 'bc-tile-choice-data', article: related %}{% endif %}{% endfor %}]}{%- endcapture -%}
+  <script type="application/json" data-tile-catalog>{{ tile_catalog | replace: '<', '\u003c' }}</script>
+  <div class="bc-tile__choices" data-tile-choices aria-busy="true" hidden>
+    <fieldset class="bc-tile__field" data-tile-field="type"><legend>{{ 'bc_tiles.type' | t }}</legend><div class="bc-tile__buttons" data-tile-options></div></fieldset>
+    <fieldset class="bc-tile__field" data-tile-field="color"><legend>{{ 'bc_tiles.color' | t }}: <span data-tile-current-color>{{ product.metafields.tiles.color.value | escape }}</span></legend><div class="bc-tile__colors" data-tile-options></div></fieldset>
+    <fieldset class="bc-tile__field" data-tile-field="finish" hidden><legend>{{ 'bc_tiles.finish' | t }}</legend><div class="bc-tile__buttons" data-tile-options></div></fieldset>
+    <fieldset class="bc-tile__field" data-tile-field="size"><legend>{{ 'bc_tiles.size' | t }}</legend><div class="bc-tile__buttons" data-tile-options></div></fieldset>
+    <fieldset class="bc-tile__field" data-tile-field="thickness" hidden><legend>{{ 'bc_tiles.thickness' | t }}</legend><div class="bc-tile__buttons" data-tile-options></div></fieldset>
+  </div>
+  {% if tile_fixed != blank %}<p class="bc-tile__fixed" data-tile-fixed-choices>{{ tile_fixed | escape }}</p>{% else %}<p data-tile-fixed-choices hidden></p>{% endif %}
+  <p class="bc-tile__choice-status" data-tile-choice-status role="status" hidden></p>
+  <div class="bc-tile__pricing">
+    <p class="bc-tile__price"><span data-tile-unit-price>{{ tile_unit_cents | money }}</span><span class="bc-tile__per">{{ 'bc_tiles.per_m2' | t }}</span></p>
+    <p class="bc-tile__box-price"><span data-tile-box-price>{{ tile_variant.price | money }}</span> {{ 'bc_tiles.per_box' | t }} · <span data-tile-box-area>{{ tile.m2_per_box | replace: '.', ',' }}</span> m²</p>
+    <p class="bc-tile__vat">{{ 'bc_tiles.vat' | t }}</p>
+  </div>
+  <div class="bc-tile__calculator">
+    <div data-tile-calculator hidden>
+      <h2 class="bc-tile__calculator-title">{{ 'bc_tiles.calculator_title' | t }}</h2>
+      <div class="bc-tile__inputs">
+        <div><label class="bc-tile__label" for="TileArea-{{ section.id }}">{{ 'bc_tiles.area' | t }}</label><div class="bc-tile__area-input"><input type="text" inputmode="decimal" id="TileArea-{{ section.id }}" value="" placeholder="10" data-tile-area aria-describedby="TileHint-{{ section.id }} TileError-{{ section.id }}" autocomplete="off"><span aria-hidden="true">m²</span></div></div>
+        <div><div class="bc-tile__waste-label"><label class="bc-tile__label" for="TileWaste-{{ section.id }}">{{ 'bc_tiles.waste_label' | t }}</label><details class="bc-tile__help"><summary aria-label="{{ 'bc_tiles.waste_label' | t }}"><span aria-hidden="true">i</span></summary><p>{{ 'bc_tiles.waste_help' | t }}</p></details></div><select id="TileWaste-{{ section.id }}" data-tile-waste><option value="0">{{ 'bc_tiles.waste_none' | t }}</option><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option><option value="20">20%</option></select></div>
+      </div>
+      <p class="bc-tile__required">{{ 'bc_tiles.required' | t }}: <strong data-tile-required>{{ tile.m2_per_box | replace: '.', ',' }} m²</strong></p>
+      <p class="bc-tile__error" id="TileError-{{ section.id }}" data-tile-error role="alert" hidden></p>
+    </div>
+    <div data-tile-manual><label class="bc-tile__label" for="TileBoxes-{{ section.id }}">{{ 'bc_tiles.box_quantity' | t }}</label><input class="bc-tile__box-input" id="TileBoxes-{{ section.id }}" type="number" name="quantity" form="{{ product_form_id }}" value="1" min="1" step="1" required data-tile-quantity><noscript><p>{{ 'bc_tiles.no_script' | t }}</p></noscript></div>
+    <input type="hidden" name="properties[_bc_m2_per_box]" value="{{ tile.m2_per_box }}" form="{{ product_form_id }}" data-tile-property>
+    <div class="bc-tile__summary" aria-live="polite" aria-atomic="true">
+      <div class="bc-tile__results"><div><span id="TileBoxLabel-{{ section.id }}">{{ 'bc_tiles.box_quantity' | t }}</span><div class="bc-tile__box-controls" data-tile-box-controls hidden><button type="button" data-tile-box-step="-1" aria-label="{{ 'bc_tiles.box_decrease' | t | escape }}" disabled>−</button><input type="number" id="TileBoxCount-{{ section.id }}" value="" min="1" max="2147483647" step="1" inputmode="numeric" autocomplete="off" aria-labelledby="TileBoxLabel-{{ section.id }}" aria-describedby="TileError-{{ section.id }}" data-tile-box-input><button type="button" data-tile-box-step="1" aria-label="{{ 'bc_tiles.box_increase' | t | escape }}">+</button></div><strong data-tile-box-result><span data-tile-boxes>1</span> <span data-tile-boxes-label>{{ 'bc_tiles.box_one' | t }}</span></strong></div><div class="bc-tile__received"><span>{{ 'bc_tiles.receives' | t }}</span><strong data-tile-supplied>{{ tile.m2_per_box | replace: '.', ',' }} m²</strong></div></div>
+      <p class="bc-tile__hint" id="TileHint-{{ section.id }}">{{ 'bc_tiles.rounding_hint' | t }}</p>
+      <div class="bc-tile__total"><span>{{ 'bc_tiles.total' | t }}</span><strong class="bc-buybox__price-current" data-tile-total>{{ tile_variant.price | money }}</strong></div>
+    </div>
+    <p class="bc-tile__delivery{% if tile.order_type == 'Bestelartikel' %} is-order{% elsif tile.order_type == blank %} is-unknown{% endif %}" data-tile-delivery role="status"><span class="bc-tile__dot" aria-hidden="true"></span><span data-tile-delivery-text>{% if tile.order_type != blank %}{{ tile.order_type | escape }} · {% endif %}{{ tile.lead_time | default: tile_delivery_unknown | escape }}</span></p>
+    {{ actions_markup }}
+    <p class="bc-tile__contact" data-tile-contact role="status" hidden>{{ 'bc_tiles.contact_delivery' | t }}</p>
+    <noscript><p class="bc-tile__contact">{{ 'bc_tiles.large_order_note' | t }}</p></noscript>
+  </div>
+  <span hidden data-tile-box-one>{{ 'bc_tiles.box_one' | t }}</span><span hidden data-tile-box-many>{{ 'bc_tiles.box_many' | t }}</span>
+</bc-porcelanosa-buybox>
+<script src="{{ 'bc-porcelanosa-core.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'bc-porcelanosa-buybox.js' | asset_url }}" defer="defer"></script>

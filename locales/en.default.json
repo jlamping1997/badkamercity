@@ -1290,7 +1290,14 @@
     "more": "Show more",
     "less": "Show less",
     "more_filters": "More filters",
-    "search_filter": "Search in"
+    "search_filter": "Search in",
+    "search_title": "Search: '{{ terms }}' ({{ total }}) – {{ shop }}",
+    "usp_label": "Benefits of Badkamercity",
+    "delivery_per_item": "Delivery time per item",
+    "free_shipping": "Free shipping on orders over €100",
+    "expert_advice": "Personal advice from our experts",
+    "tile_box": "per box",
+    "tile_area": "per m²"
   },
   "bc_tiles": {
     "box_decrease": "One box less",
@@ -1489,5 +1496,8 @@
     "faq_cost_question": "Who pays for return shipping?",
     "faq_cost_answer": "This depends on the reason and type of return. We provide the applicable information under the returns policy. For faulty or incorrect items, we assess the appropriate solution.",
     "topic_value": "Retouraanvraag Badkamercity"
+  },
+  "bc_seo": {
+    "collection_description": "Browse {{ title }} at {{ shop }}. View the range and product information or contact us for personal advice."
   }
 }

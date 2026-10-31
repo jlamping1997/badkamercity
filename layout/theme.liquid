@@ -29,11 +29,15 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {%- if request.page_type == 'collection' and page_description == blank -%}
+      {%- assign page_description = 'bc_seo.collection_description' | t: title: collection.title, shop: shop.name -%}
+      {%- assign page_description = page_description | truncate: 160 -%}
+    {%- endif -%}
+    {% if page_description != blank %}
+      <meta name="description" content="{{ page_description | escape_once }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', page_title: page_title, page_description: page_description %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>

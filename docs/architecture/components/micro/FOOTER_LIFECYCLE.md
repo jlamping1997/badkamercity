@@ -1,5 +1,7 @@
 # Footer: schermwissel, herinitialisatie en cleanup
 
+> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Lege bestemmingslabels worden buiten Theme Editor verborgen, placeholders blijven bewerkbaar. Bestaande merkengids gekoppeld; retourgate en verwijderd adres behouden. Echte browserfooter gecontroleerd. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+
 **28 oktober 2026 · DOC-03B.** Hoofddossier: [footeropbouw en beheer](../FOOTER.md). Deze verdieping behandelt de JavaScript-lifecycle in de actuele `sections/footer.liquid`; inhoud/configuratie blijft eigendom van dat hoofddossier.
 
 ## Eén root, één eigenaar

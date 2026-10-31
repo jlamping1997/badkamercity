@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-31",
+  "browser": "Cloud Chrome",
+  "viewport": {
+    "width": 1348,
+    "height": 926
+  },
+  "theme": "195948839178 UNPUBLISHED",
+  "cartFixture": {
+    "realSource": true,
+    "realCartWrite": false,
+    "completeAThenNullProductSection": {
+      "productEmpty": true,
+      "cta": "Winkelwagen bekijken",
+      "oldBadgeHidden": true
+    },
+    "nativeEscapeReturnsFocus": "full",
+    "closeButtonReturnsFocus": "partial"
+  },
+  "wishlistFixture": {
+    "nativeWebLocks": true,
+    "sameOriginFrames": 2,
+    "savedIndependentChoices": 2,
+    "testKeyCleaned": true,
+    "actualCustomerKeyReadOrWritten": false,
+    "notClaimed": "Two independent top-level tabs, all engines or legacy/no-lock atomicity"
+  },
+  "search": {
+    "query": "porcelanosa",
+    "nativeInitialCount": 606,
+    "externalCount": 337,
+    "activeTitle": "Zoeken: 'porcelanosa' (337) – Badkamercity",
+    "nativeStatusHiddenAfterExternalActivation": true,
+    "sortHistory": "bcsort=price_asc then Back restored relevance URL and control",
+    "notClaimed": "A separate final sorted price-order assertion or backend index equivalence"
+  },
+  "tileProduct": {
+    "handle": "porcelanosa-taranto-bianco-mat-120-x-59-6-cm",
+    "initialArea": "",
+    "initialWaste": "10",
+    "initialTotal": "—",
+    "initialSubmitDisabled": true,
+    "area10": {
+      "wastePercent": 10,
+      "boxes": 8,
+      "requiredM2": 11,
+      "receivedM2": 11.44,
+      "totalEuros": 1143.44
+    },
+    "manual3Boxes": {
+      "wastePercent": 0,
+      "areaM2": 4.29,
+      "totalEuros": 428.79
+    },
+    "invalidArea0": {
+      "feedbackVisible": true,
+      "submitDisabled": true,
+      "total": "—"
+    },
+    "realCartWrite": false
+  },
+  "footer": {
+    "blankDestinationsHidden": true,
+    "brandsDestination": "/collections?view=merken",
+    "addressAbsent": true
+  },
+  "qaRestored": {
+    "path": "templates/page.bc-mobile-qa.liquid",
+    "exactBody": true,
+    "md5": "24ae4cff55afe7f2453e4e9b6a0c2479"
+  }
+}
