@@ -1,6 +1,6 @@
 # BadkamerCity — actuele werkstatus
 
-**30 oktober 2026 · RET-03: retourknop en retourpagina live gecontroleerd.**
+**31 oktober 2026 · NAV-02: laptop-/desktopcategorieën zonder schuiven, preview gecontroleerd.**
 
 ## Begin hier
 
@@ -28,17 +28,15 @@ QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, a
 
 ## Actieve uitvoering
 
-**RET-03 — LIVE_VISIBILITY_VERIFIED / MAIL_DELIVERY_PENDING.** [Publicatieherstel en bewijs](returns/2026-10-30/PUBLICATION.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**, door de eigenaar gepubliceerd op16:41:30Z.195947036938 is nuUNPUBLISHED. De headercode en overige retourfiles zijn gelijk aan de gecontroleerde preview.
+**NAV-02 — PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** [Categorieën zonder schuiven](laptop-navigation/2026-10-31/README.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**,1354files, behouden. Bestaand UNPUBLISHED **195947036938** hergebruikt en hernoemd naar **BadkamerCity - Categorieen zonder schuiven**; eerst alleen de achterlopende header gesynchroniseerd, daarna1354/1354pariteit bewezen. Geen nieuwe volledige themakopie of branch.
 
-Oorzaak van de ontbrekende live knop: Page166668894474 stond nog verborgen. Alleen deze bestaande retour-Page zichtbaar gemaakt op **30 oktober2026 17:44:26 CET**; isPublishedtrue onafhankelijk teruggelezen, handle en template behouden. Geen themabestandwrite of themapublicatie door deze uitvoering. Geen nieuw concept nodig voor deze Admin-correctie.
+Alle elf desktopcategorieën bereikbaar zonder scrollbalk of schuifpijlen.990–1359CSS-px twee gebalanceerde rijen6+5; vanaf1360één rij, CSS-wrap als vangnet. Mobiel tot989behoudt bestaand menu. Exact één blijvend pad sections/header.liquid; finaleMAIN1354/1354gelijk, concept1354/exactéénheaderafwijking, bodyexact. ThemeCheckR1 en JS-syntaxPASS; twaalf breedteframes390–1920zonderoverloop, alle11linkszichtbaar, nulschuifknoppen. Dropdown/focus/Escape, tweede rij, breedtewissel en mobielmenu→desktopherstel gecontroleerd; Merken echt via gewone website geopend. QA-templateexacthersteld. Geen MAIN-write/publicatie.
 
-Live browser buiten preview: Retour aanmelden naast Verlanglijst, echte knopklik opent `/pages/retour-aanmelden` met native retourformulier. Twee schone HTTP-GETs zonder cookies/preview:200, MAIN-ID/rolmain, juiste href/canonical, geen noindex aangetroffen. Eerder zeven responsive componentframes blijven hun gedateerde bewijs; deze correctie wijzigt geen mobiele CSS/JS. Formulier/mailbox-, eigenaarstelefoon- en labelproef blijven afzonderlijk open; geen succesvolle inzending of bezorging geclaimd.
-
-Het [RET-01-formulierdossier](returns/2026-10-30/README.md) en [RET-02-headerdossier](returns/2026-10-30/HEADER.md) bevatten de eerdere conceptstand. Offerteverificatie afzonderlijk geparkeerd; klantactivatie blijft uit. Geen privéaccount-, order-, return-, refund-, label-, catalogus-, VPS-, prijs- of voorraadmutatie. Windows niet gecontroleerd. Uitvoering afgerond; bestaande branch fix/product-cards-2026-10-14 en main in deze ronde alleen documentatie.
+**RET-03 blijft LIVE_VISIBILITY_VERIFIED / MAIL_DELIVERY_PENDING.** Retour-Page166668894474 gepubliceerd en bereikbaar; knop/retourwerk zit in dit concept. Mailbox-/spamproef en echte labellevering blijven open. Offerteverificatie afzonderlijk geparkeerd, klantactivatie uit. Geen Page-/catalogus-/order-/return-/refund-/prijs-/voorraad-/VPS-mutatie in NAV-02. Geen fysieke laptop-/telefoon- of Windows-controle. Uitvoering afgerond; branch fix/product-cards-2026-10-14, main uitsluitend documentatie.
 
 ## Exact één volgende handeling
 
-**Eigenaar doet één herkenbare retourtestaanvraag via de live retourpagina en controleert ontvangst op info@badkamercity.nl, inclusief spam.** De knop en Page zijn al live; geen aanvullende themapublicatie nodig.
+**Eigenaar beoordeelt en publiceert concept195947036938 — BadkamerCity - Categorieen zonder schuiven.** De retour-Page is al zichtbaar; geen aanvullende Page-publicatie nodig. Het eerdere retourmailboxbewijs blijft afzonderlijk open.
 
 ## Bevindingen en achtergrond
 
