@@ -42,10 +42,14 @@
     const expectedCount = isSearch ? NaN : Number(root.dataset.productsCount);
     const cardDataCache = new Map();
     let externalActive = false;
+    let nativeFallback = false;
     let requestId = 0;
     let requestController;
     let filtersRendered = false;
     let rangeTimer;
+
+    const drawerMedia = window.matchMedia('(max-width: 989px)');
+    let drawerTrigger;
 
     const state = {
       filters: {},
@@ -61,6 +65,7 @@
     const sidebar = document.createElement('aside');
     sidebar.className = 'facets-wrapper bc-external-filter-sidebar';
     sidebar.setAttribute('aria-label', 'Filters');
+    sidebar.id = 'BcFilterDrawer';
     sidebar.innerHTML = `
       <div class="bc-filter-panel">
         <div class="bc-filter-panel__header">
@@ -87,7 +92,7 @@
     toolbar.className = 'bc-filter-toolbar';
     toolbar.innerHTML = `
       <div class="bc-filter-toolbar__left">
-        <button type="button" class="bc-filter-mobile-button" data-bc-open-filters>
+        <button type="button" class="bc-filter-mobile-button" aria-controls="BcFilterDrawer" aria-expanded="false" data-bc-open-filters>
           Filters
         </button>
         <span class="bc-filter-count" data-bc-count>Producten laden…</span>
@@ -132,7 +137,19 @@
     sidebar.querySelector('.bc-filter-panel__close').addEventListener('click', closeDrawer);
     overlay.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeDrawer();
+      if (!document.documentElement.classList.contains('bc-filter-drawer-open')) return;
+      if (event.key === 'Escape') { event.preventDefault(); closeDrawer(); }
+      if (event.key === 'Tab') {
+        const focusable = [...sidebar.querySelectorAll('button, input, select, summary, a[href]')]
+          .filter((node) => !node.disabled && node.getClientRects().length);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !sidebar.contains(document.activeElement))) {
+          event.preventDefault(); last?.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || !sidebar.contains(document.activeElement))) {
+          event.preventDefault(); first?.focus();
+        }
+      }
     });
 
     sortSelect.addEventListener('change', () => {
@@ -143,6 +160,7 @@
     });
 
     window.addEventListener('popstate', (event) => {
+      if (nativeFallback) return;
       if (externalActive) event.stopImmediatePropagation();
       resetState();
       parseStateFromUrl();
@@ -150,6 +168,7 @@
       runSearch();
     }, { capture: true });
 
+    drawerMedia.addEventListener('change', () => { closeDrawer(); syncDrawerAccessibility(); });
     setExternalMode(false);
     runSearch();
 
@@ -244,9 +263,11 @@
         state.lastData = null;
       }
       externalActive = active;
+      syncDrawerAccessibility();
     }
 
     async function runSearch() {
+      if (nativeFallback) return;
       const currentRequest = ++requestId;
       requestController?.abort();
       const controller = new AbortController();
@@ -287,6 +308,8 @@
         if (isSearch && data.collection?.handle !== '__all__') {
           throw new Error('Onjuiste zoekindex');
         }
+        const aliases = data.filter_policy?.color_value_aliases || {};
+        if (state.filters.f_kleur) state.filters.f_kleur = [...new Set(state.filters.f_kleur.map(v => aliases[v] || v))];
         renderFilters(data.facets);
         renderActiveFilters(data.facets);
         renderProducts(data.products);
@@ -298,6 +321,8 @@
       } catch (error) {
         if (currentRequest !== requestId) return;
         console.error('[BadkamerCity filters]', error);
+        nativeFallback = true;
+        clearTimeout(rangeTimer);
         setExternalMode(false);
         errorBox.textContent =
           'De uitgebreide filters zijn tijdelijk niet beschikbaar. Je kunt de gewone filters en productlijst blijven gebruiken.';
@@ -308,110 +333,120 @@
       }
     }
 
+    const filterMemory = new Map();
+    const cardModels = new WeakMap();
+    const choiceCache = new Map();
+    const uiText = (key, fallback) => root.dataset[key] || fallback;
+
+    function swatch(value, imageUrl = '') {
+      if (imageUrl) {
+        try {
+          const asset = new URL(imageUrl, location.origin);
+          if ((asset.origin === location.origin || asset.hostname === 'cdn.shopify.com') &&
+              /^https?:$/.test(asset.protocol) && /\/bc-wiesbaden-swatch-[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/.test(asset.pathname)) {
+            return `url("${asset.href}") center / cover`;
+          }
+        } catch (_) { /* Keep the named-color fallback. */ }
+      }
+      const name = String(value || '').toLowerCase();
+      if (/zwart|black/.test(name)) return 'linear-gradient(120deg,#1e2023,#45474a,#151719)';
+      if (/gun.?metal|verouderd ijzer/.test(name)) return 'linear-gradient(120deg,#747578,#43474c,#97999a)';
+      if (/koper|copper|brons|bronze/.test(name)) return 'linear-gradient(120deg,#916647,#d7ac85,#78513e)';
+      if (/messing|goud|gold|brass/.test(name)) return 'linear-gradient(120deg,#a98137,#dfc57d,#a27935)';
+      if (/wit|white/.test(name)) return '#f8f8f6';
+      if (/rvs|staal|steel|nikkel|chroom|chrome|zilver/.test(name)) return 'linear-gradient(120deg,#8b9093,#ebeded,#a3a7aa)';
+      if (/beige|zand|sand/.test(name)) return '#cfbfa8';
+      if (/grijs|grey|gray/.test(name)) return '#93979b';
+      if (/eik|oak|hout/.test(name)) return 'linear-gradient(100deg,#ac8960,#d4b78e,#b39067)';
+      if (/blauw|blue/.test(name)) return '#6f8ea7';
+      if (/groen|green/.test(name)) return '#81957b';
+      if (/roze|pink/.test(name)) return '#d8aeb5';
+      return 'linear-gradient(135deg,#e8e4df,#b7b2ad)';
+    }
+
     function renderFilters(facets) {
       const groups = sidebar.querySelector('[data-bc-filter-groups]');
-      const openFields = new Set([...groups.querySelectorAll('details[open]')].map((group) => group.dataset.filterGroup));
-      const focused = document.activeElement;
-      const editing = groups.contains(focused) && focused.dataset.rangeField
-        ? { field: focused.dataset.rangeField, kind: focused.dataset.rangeKind, value: focused.value }
-        : null;
-
-      groups.innerHTML = facets.map((facet, index) => {
+      for (const node of groups.querySelectorAll('[data-filter-group]')) {
+        filterMemory.set(node.dataset.filterGroup, { open: node.open,
+          expanded: node.dataset.expanded === 'true' });
+      }
+      const active = document.activeElement;
+      const focused = groups.contains(active) && active.matches('[data-range-field]') ? {field: active.dataset.rangeField, kind: active.dataset.rangeKind} : null;
+      const moreOpen = groups.querySelector('[data-bc-more-filters]')?.open;
+      const render = (facet) => {
         const field = facet.field;
+        const ui = facet.ui || {};
+        const memory = filterMemory.get(field);
         const selected = state.filters[field] || [];
         const range = state.ranges[field] || {};
-        const isNumeric = ['number_integer', 'number_decimal'].includes(facet.type);
-        const isOpen = filtersRendered ? openFields.has(field) : index < 5;
-
-        if (isNumeric) {
-          const scale = field === 'price_cents' ? 100 : 1;
-          const rawMin = facet.min ?? facet.stats?.min;
-          const rawMax = facet.max ?? facet.stats?.max;
-          const min = rawMin == null ? '' : rawMin / scale;
-          const max = rawMax == null ? '' : rawMax / scale;
-          const unit = field === 'price_cents' ? '€' : facet.unit;
-          const unitSuffix = unit && !String(facet.label).trim().endsWith(`(${unit})`)
-            ? ` (${escapeHtml(unit)})` : '';
-          const step = field === 'price_cents' ? '0.01' :
-            (['int32', 'int64'].includes(facet.data_type) ? '1' : 'any');
-
-          return `
-            <details class="bc-filter-group" data-filter-group="${attr(field)}" ${isOpen ? 'open' : ''}>
-              <summary>${escapeHtml(facet.label)}${unitSuffix}</summary>
-              <div class="bc-filter-group__body">
-                <div class="bc-filter-range">
-                  <label>
-                    Van
-                    <input
-                      type="number"
-                      min="0"
-                      step="${step}"
-                      data-range-scale="${scale}"
-                      data-range-field="${attr(field)}"
-                      data-range-kind="min"
-                      placeholder="${attr(min)}"
-                      value="${attr(range.min == null ? '' : range.min / scale)}"
-                    >
-                  </label>
-                  <label>
-                    Tot
-                    <input
-                      type="number"
-                      min="0"
-                      step="${step}"
-                      data-range-scale="${scale}"
-                      data-range-field="${attr(field)}"
-                      data-range-kind="max"
-                      placeholder="${attr(max)}"
-                      value="${attr(range.max == null ? '' : range.max / scale)}"
-                    >
-                  </label>
-                </div>
-              </div>
-            </details>
-          `;
+        const numeric = ['number_integer', 'number_decimal'].includes(facet.type);
+        const exact = ui.control === 'single_select';
+        const scale = Number(ui.display_divisor) || (field === 'price_cents' ? 100 : 1);
+        const unit = ui.display_unit || (field === 'price_cents' ? '€' : facet.unit) || '';
+        const label = `${facet.label}${unit && unit !== '€' && !String(facet.label).includes(`(${unit})`) ? ` (${unit})` : ''}`;
+        const selectedCount = selected.length || (range.min != null || range.max != null ? 1 : 0);
+        const open = memory ? memory.open : Boolean(ui.default_open || selectedCount);
+        let body;
+        if (numeric && !exact) {
+          const min = facet.min ?? facet.stats?.min;
+          const max = facet.max ?? facet.stats?.max;
+          body = `<div class="bc-filter-range">${['min', 'max'].map((kind, i) => `<label>${i ? 'Tot' : 'Van'}${unit === '€' ? ' (€)' : ''}<input type="number" min="0" step="${scale > 1 ? '0.1' : '1'}" data-range-scale="${scale}" data-range-field="${attr(field)}" data-range-kind="${kind}" value="${range[kind] == null ? '' : attr(range[kind] / scale)}" placeholder="${attr((i ? max : min) == null ? '' : (i ? max : min) / scale)}"></label>`).join('')}</div>`;
+        } else {
+          let values = (facet.values || []).map(v => ({value: String(v.value), count: Number(v.count) || 0, raw: [String(v.value)]}));
+          if (ui.option_groups?.length) {
+            const seen = new Set();
+            const merged = ui.option_groups.map(g => {
+              const members = values.filter(v => g.exact_values.includes(v.value));
+              members.forEach(v => seen.add(v.value));
+              return {value: g.label, count: members.reduce((n,v) => n + v.count, 0), raw: g.exact_values};
+            }).filter(v => v.count || v.raw.some(x => selected.includes(x)));
+            values = [...merged, ...values.filter(v => !seen.has(v.value))];
+          }
+          values.sort((a,b) => numeric ? Number(a.value)-Number(b.value) : a.value.localeCompare(b.value,'nl',{numeric:true}));
+          const limit = Math.max(1, Math.floor(Number(ui.visible_values) || 6));
+          body = '';
+          body += `<div class="bc-filter-options">${values.map((v,i) => {
+            const checked = exact ? range.min === Number(v.value) && range.max === Number(v.value) : v.raw.some(x => selected.includes(x));
+            const text = facet.data_type === 'bool' ? (v.value === 'true' ? 'Ja' : 'Nee') : exact ? String(Number(v.value)/scale) : v.value;
+            return `<label class="bc-filter-option${field === 'f_kleur' ? ' bc-filter-option--color' : ''}" data-option-index="${i}" data-option-label="${attr(text.toLowerCase())}" data-option-selected="${checked}" ${!checked && i >= limit && !memory?.expanded ? 'hidden' : ''}>
+              <input type="checkbox" ${exact ? `data-exact-field="${attr(field)}"` : `data-filter-field="${attr(field)}" data-filter-values="${attr(JSON.stringify(v.raw))}"`} value="${attr(v.value)}" ${checked ? 'checked' : ''} ${!v.count && !checked ? 'disabled' : ''}>
+              ${field === 'f_kleur' ? `<span class="bc-color-dot" aria-hidden="true" style="--bc-swatch:${swatch(v.value)}"></span>` : ''}<span class="bc-filter-option__label">${escapeHtml(text)}</span><span class="bc-filter-option__count">${v.count}</span></label>`;
+          }).join('')}</div>`;
+          if (values.length > limit) body += `<button type="button" class="bc-filter-more" data-bc-show-values data-bc-visible-values="${limit}" aria-expanded="${Boolean(memory?.expanded)}">${escapeHtml(memory?.expanded ? uiText('labelLess','Toon minder') : uiText('labelMore','Toon meer'))}</button>`;
         }
-
-        const values = (facet.values || []).map((item) => {
-          const rawValue = String(item.value);
-          const checked = selected.includes(rawValue);
-          const label = facet.type === 'boolean' || facet.data_type === 'bool'
-            ? (rawValue === 'true' ? 'Ja' : 'Nee')
-            : rawValue;
-
-          return `
-            <label class="bc-filter-option">
-              <input
-                type="checkbox"
-                data-filter-field="${attr(field)}"
-                value="${attr(rawValue)}"
-                ${checked ? 'checked' : ''}
-              >
-              <span class="bc-filter-option__label">${escapeHtml(label)}</span>
-              <span class="bc-filter-option__count">${Number(item.count || 0)}</span>
-            </label>
-          `;
-        }).join('');
-
-        if (!values) return '';
-
-        return `
-          <details class="bc-filter-group" data-filter-group="${attr(field)}" ${isOpen ? 'open' : ''}>
-            <summary>${escapeHtml(facet.label)}</summary>
-            <div class="bc-filter-group__body">${values}</div>
-          </details>
-        `;
-      }).join('');
+        return `<details class="bc-filter-group" data-filter-group="${attr(field)}" data-expanded="${Boolean(memory?.expanded)}" ${open ? 'open' : ''}><summary>${escapeHtml(label)}${selectedCount ? `<span class="bc-filter-selected-count">${selectedCount}</span>` : ''}</summary><div class="bc-filter-group__body">${body}</div></details>`;
+      };
+      const primary = facets.filter(f => f.ui?.section !== 'more' || ['f_serie','vendor','price_cents'].includes(f.field));
+      const more = facets.filter(f => !primary.includes(f));
+      const moreActive = more.some(f => state.filters[f.field]?.length || state.ranges[f.field]);
+      groups.innerHTML = primary.map(render).join('') + (more.length ? `<details class="bc-filter-more-group" data-bc-more-filters ${moreOpen || moreActive ? 'open' : ''}><summary>${escapeHtml(uiText('labelMoreFilters','Meer filters'))}</summary>${more.map(render).join('')}</details>` : '');
       filtersRendered = true;
-      if (editing) {
-        const replacement = [...groups.querySelectorAll('[data-range-field]')].find((input) =>
-          input.dataset.rangeField === editing.field && input.dataset.rangeKind === editing.kind);
-        if (replacement) {
-          replacement.value = editing.value;
-          replacement.focus({ preventScroll: true });
-        }
+      if (focused) {
+        const replacement = [...groups.querySelectorAll('[data-range-field]')].find(n => n.dataset.rangeField === focused.field && n.dataset.rangeKind === focused.kind);
+        replacement?.focus({preventScroll:true});
       }
     }
+
+    sidebar.addEventListener('change', event => {
+      const input = event.target.closest('[data-exact-field]');
+      if (!input) return;
+      const value = Number(input.value);
+      if (input.checked) state.ranges[input.dataset.exactField] = {min:value,max:value};
+      else delete state.ranges[input.dataset.exactField];
+      state.page = 1; syncUrl(); runSearch();
+    });
+    sidebar.addEventListener('click', event => {
+      const more = event.target.closest('[data-bc-show-values]');
+      if (!more) return;
+      const group = more.closest('[data-filter-group]');
+      const expanded = group.dataset.expanded !== 'true';
+      group.dataset.expanded = String(expanded);
+      more.setAttribute('aria-expanded', String(expanded));
+      more.textContent = expanded ? uiText('labelLess','Toon minder') : uiText('labelMore','Toon meer');
+      const limit = Math.max(1, Number(more.dataset.bcVisibleValues) || 6);
+      for (const option of group.querySelectorAll('[data-option-label]')) option.hidden = !expanded && option.dataset.optionSelected !== 'true' && Number(option.dataset.optionIndex) >= limit;
+    });
+
 
     function renderActiveFilters(facets) {
       const labels = new Map(facets.map((facet) => [facet.field, facet.label]));
@@ -435,9 +470,13 @@
 
       Object.entries(state.ranges).forEach(([field, range]) => {
         if (range.min !== undefined || range.max !== undefined) {
-          const text = [
-            range.min !== undefined ? `vanaf ${field === 'price_cents' ? formatPrice(range.min) : range.min}` : '',
-            range.max !== undefined ? `t/m ${field === 'price_cents' ? formatPrice(range.max) : range.max}` : ''
+          const descriptor = facets.find(f => f.field === field);
+          const scale = Number(descriptor?.ui?.display_divisor) || 1;
+          const unit = descriptor?.ui?.display_unit || descriptor?.unit || '';
+          const show = v => field === 'price_cents' ? formatPrice(v) : `${new Intl.NumberFormat('nl-NL').format(v/scale)}${unit ? ' '+unit : ''}`;
+          const text = range.min != null && range.min === range.max ? show(range.min) : [
+            range.min != null ? `vanaf ${show(range.min)}` : '',
+            range.max != null ? `t/m ${show(range.max)}` : ''
           ].filter(Boolean).join(' ');
 
           chips.push(`
@@ -455,71 +494,231 @@
       activeFilters.innerHTML = chips.join('');
     }
 
-    function renderProducts(products) {
-      const cards = products.map((product) => {
-        const href = productPath(product);
-        const title = String(product.title || '').trim();
-        const vendor = String(product.vendor || '').trim();
-        const remainder = vendor && title.toLowerCase().startsWith(`${vendor.toLowerCase()} `)
-          ? title.slice(vendor.length).trim() : title;
-        const cardTitle = remainder || title;
-        const image = product.image_url
-          ? `<img src="${attr(product.image_url)}" alt="${attr(product.image_alt || product.title || '')}" loading="lazy" width="600" height="600">`
-          : '';
+    function canonicalColor(value) {
+      return /^(rvs|rvs geborsteld|geborsteld rvs)$/i.test(String(value || '').trim()) ? 'Geborsteld RVS' : String(value || '');
+    }
 
-        return `
-          <li class="grid__item">
-            <article class="bc-filter-card">
-              <a class="bc-filter-card__media" href="${attr(href)}">
-                ${image}
-              </a>
-              <div class="bc-filter-card__info">
-                ${product.vendor ? `<p class="bc-filter-card__vendor">${escapeHtml(product.vendor)}</p>` : ''}
-                <h3 class="bc-filter-card__title">
-                  <a href="${attr(href)}" title="${attr(title)}">${escapeHtml(cardTitle)}</a>
-                </h3>
-                <dl class="bc-card-specs">
-                  ${product.product_type ? `<div><dt>${escapeHtml(root.dataset.cardType || 'Productsoort')}:</dt><dd>${escapeHtml(product.product_type)}</dd></div>` : ''}
-                  ${product.sku ? `<div><dt>${escapeHtml(root.dataset.cardSku || 'Artikelnummer')}:</dt><dd>${escapeHtml(product.sku)}</dd></div>` : ''}
-                </dl>
-                <div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>
-                ${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax)}</span>` : ''}
-                <a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">&rarr;</span></a>
-              </div>
-            </article>
-          </li>
-        `;
+    function productTitle(product, data = {}) {
+      let title = String(data.short_title || data.title || product.title || '').trim();
+      const vendor = String(data.vendor || product.vendor || '').trim();
+      if (vendor && title.toLowerCase().startsWith(vendor.toLowerCase()+' ')) title = title.slice(vendor.length).trim();
+      const color = String(data.color || '').trim();
+      for (const separator of [' – ', ' - ']) {
+        if (color && title.toLowerCase().endsWith(separator+color.toLowerCase())) title = title.slice(0,-color.length-separator.length).trim();
+      }
+      return title;
+    }
+
+    function renderProducts(products) {
+      const cards = products.map(product => {
+        const href = productPath(product);
+        return `<li class="grid__item"><article class="bc-filter-card" data-bc-card-handle="${attr(product.handle)}">
+          <a class="bc-filter-card__media" href="${attr(href)}" tabindex="-1" aria-hidden="true">${product.image_url ? `<img src="${attr(product.image_url)}" alt="${attr(product.title)}" loading="lazy" width="600" height="600">` : ''}</a>
+          <div class="bc-filter-card__info"><p class="bc-filter-card__vendor">${escapeHtml(product.vendor || '')}</p>
+          <h3 class="bc-filter-card__title"><a href="${attr(href)}" title="${attr(product.title)}">${escapeHtml(productTitle(product))}</a></h3>
+          <p class="bc-card-color" aria-live="polite"></p><div class="bc-card-colors" data-bc-card-colors></div>
+          <div class="bc-card-buy"><div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax || 'incl. btw')}</span>` : ''}
+          <p class="bc-card-delivery" data-bc-card-delivery>${escapeHtml(root.dataset.cardDelivery || '')}</p>
+          <div class="bc-card-actions"><a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">→</span></a><button type="button" class="bc-card-cart" data-bc-card-cart disabled aria-label="${attr(uiText('labelAdd','In winkelwagen'))}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 3h3l2.3 12h11.5l2.2-9H6M9 20h.01M18 20h.01" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button></div></div>
+          <p class="bc-card-feedback" role="status"></p></div></article></li>`;
       }).join('');
       const empty = `<li class="grid__item bc-filter-empty" role="status">${escapeHtml(root.dataset.emptyLabel || 'Geen producten gevonden.')}</li>`;
-      productGrid.innerHTML = isSearch
-        ? `<ul class="grid product-grid" role="list">${cards || empty}</ul>`
-        : cards || empty;
+      productGrid.innerHTML = isSearch ? `<ul class="grid product-grid" role="list">${cards || empty}</ul>` : cards || empty;
+      const elements = [...productGrid.querySelectorAll('.bc-filter-card')];
+      products.forEach((product,i) => cardModels.set(elements[i], {product, data:null, options:[], version:0}));
+    }
+
+    async function cardData(href) {
+      if (!cardDataCache.has(href)) {
+        if (cardDataCache.size >= 200) cardDataCache.delete(cardDataCache.keys().next().value);
+        cardDataCache.set(href, loadCardTitle(href).then(data => { if (!data) cardDataCache.delete(href); return data; }));
+      }
+      return cardDataCache.get(href);
+    }
+
+    function updateCard(card, data) {
+      const model = cardModels.get(card);
+      if (!model || !data) return;
+      model.data = data;
+      model.product = {...model.product,handle:data.handle,title:data.title,price_cents:data.price_cents,image_url:data.image_url};
+      const href = productPath(model.product);
+      card.dataset.bcCardHandle = data.handle;
+      card.querySelectorAll('a').forEach(a => a.href = href);
+      const title = card.querySelector('.bc-filter-card__title a');
+      title.textContent = productTitle(model.product,data);
+      title.title = data.title;
+      const media = card.querySelector('.bc-filter-card__media');
+      media.classList.remove('bc-card-media--hover-ready');
+      media.querySelector('[data-bc-card-hover]')?.remove();
+      if (data.image_url) {
+        let image = media.querySelector('img');
+        if (!image) { image = document.createElement('img'); image.width=600;image.height=600;media.append(image); }
+        image.src=data.image_url; image.alt=data.title; image.loading='lazy';
+      } else media.replaceChildren();
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && data.image_url && data.hover_image_url && data.hover_image_url !== data.image_url) {
+        const hoverImage=document.createElement('img');
+        hoverImage.dataset.bcCardHover='';hoverImage.alt='';hoverImage.setAttribute('aria-hidden','true');
+        hoverImage.width=600;hoverImage.height=600;hoverImage.loading='lazy';hoverImage.decoding='async';
+        hoverImage.addEventListener('load',()=>{if(hoverImage.parentElement===media)media.classList.add('bc-card-media--hover-ready');},{once:true});
+        hoverImage.addEventListener('error',()=>{if(hoverImage.parentElement===media)media.classList.remove('bc-card-media--hover-ready');},{once:true});
+        hoverImage.src=data.hover_image_url;media.append(hoverImage);
+        if(hoverImage.complete && hoverImage.naturalWidth)media.classList.add('bc-card-media--hover-ready');
+      }
+      const delivery=card.querySelector('[data-bc-card-delivery]');
+      delivery.textContent=data.delivery_text || root.dataset.cardDelivery || '';
+      delivery.classList.toggle('bc-card-delivery--stock',data.delivery_in_stock===true);
+      card.querySelector('.bc-card-color').textContent = canonicalColor(data.color);
+      card.querySelector('.bc-filter-card__price').textContent = formatPrice(data.price_cents);
+      const cart = card.querySelector('[data-bc-card-cart]');
+      cart.disabled = !data.available;
+      cart.setAttribute('aria-label', `${uiText('labelAdd','In winkelwagen')}: ${data.title}`);
+      const wish = card.querySelector('[data-bc-wishlist-toggle]');
+      if (wish) {
+        wish.dataset.bcWishlistHandle=data.handle;wish.dataset.bcWishlistVariant=String(data.variant_id || '');
+        wish.dataset.bcWishlistTitle=data.title;wish.dataset.bcWishlistImage=data.image_url || '';
+      }
+      window.BCWishlist?.refresh();
+      renderCardColors(card);
     }
 
     async function hydrateCardTitles(products, currentRequest) {
       if (!root.dataset.cardDataSection) return;
-      const queue = [...products];
+      const cards = [...productGrid.querySelectorAll('.bc-filter-card')];
+      const queue = cards.map((card,i) => ({card,product:products[i]}));
       const worker = async () => {
         while (queue.length && currentRequest === requestId) {
-          const product = queue.shift();
-          const href = productPath(product);
-          if (!product.handle) continue;
-          if (!cardDataCache.has(href)) {
-            if (cardDataCache.size >= 200) cardDataCache.delete(cardDataCache.keys().next().value);
-            cardDataCache.set(href, loadCardTitle(href));
-          }
-          const data = await cardDataCache.get(href);
-          if (currentRequest !== requestId || !externalActive || !data) continue;
+          const {card,product}=queue.shift();
+          const data=await cardData(productPath(product));
+          if (currentRequest !== requestId || !card.isConnected || !data) continue;
           if (String(data.id) !== String(product.shopify_product_id || product.id).split('/').pop()) continue;
-          const link = [...productGrid.querySelectorAll('.bc-filter-card__title a')]
-            .find((node) => node.getAttribute('href') === href);
-          if (link && typeof data.short_title === 'string' && data.short_title.trim()) {
-            link.textContent = data.short_title.trim();
-          }
+          updateCard(card,data);
+          loadCardColors(card,data).catch(() => {});
         }
       };
-      await Promise.all(Array.from({ length: Math.min(4, queue.length) }, worker));
+      await Promise.all(Array.from({length:Math.min(4,queue.length)},worker));
     }
+
+    async function loadCardColors(card,data) {
+      if (!data.switcher_html) return;
+      const doc=new DOMParser().parseFromString(data.switcher_html,'text/html');
+      const source=doc.querySelector('[data-bc-product-switcher-v2]');
+      if (!source) return;
+      const inline = source.querySelector('[data-bc-switcher-inline]');
+      let payload;
+      if (inline) {
+        try { payload = JSON.parse(inline.textContent); } catch (_) { return; }
+      } else {
+        if (!source.dataset.switcherDataUrl) return;
+        const url=new URL(source.dataset.switcherDataUrl,location.origin);
+        if (url.origin !== location.origin && url.hostname !== 'cdn.shopify.com') return;
+        if (!choiceCache.has(url.href)) {
+          const promise=fetch(url.href,{credentials:'omit'}).then(r=>{if(!r.ok)throw new Error('Kleuren niet beschikbaar');return r.json();}).catch(e=>{choiceCache.delete(url.href);throw e;});
+          choiceCache.set(url.href,promise);
+        }
+        payload=await choiceCache.get(url.href);
+      }
+      if (!payload || typeof payload !== 'object') return;
+      const groups=Array.isArray(payload.groups) ? payload.groups : Object.values(payload.groups || {});
+      const group=groups.find(g=>g.id===source.dataset.switchGroup);
+      if (!group || !Array.isArray(group.products)) return;
+      const current=group.products.find(p=>p.handle===data.handle);
+      const menu=(group.menus || []).find(m=>/^(kleur|basiskleur|color|colour)$/i.test(m.key));
+      if (!current || !menu) return;
+      if (!data.color && current.options?.[menu.key]) {
+        data.color=current.options[menu.key];
+        card.querySelector('.bc-card-color').textContent=canonicalColor(data.color);
+        card.querySelector('.bc-filter-card__title a').textContent=productTitle(cardModels.get(card).product,data);
+      }
+      const options=group.products.filter(p=>p.handle && p.options?.[menu.key] && Object.entries(current.options || {}).every(([key,value])=>key===menu.key || p.options?.[key]===value));
+      const unique=[];const seen=new Set();
+      for(const option of options){const color=canonicalColor(option.options[menu.key]);if(!seen.has(color)){seen.add(color);unique.push({...option,color});}}
+      const model=cardModels.get(card);
+      if (!model || !card.isConnected) return;
+      model.colorGroup=group.id;
+      model.allColorsLabel=source.dataset.labelAllColors || '';
+      model.options=unique.length>1 ? unique : [];
+      renderCardColors(card);
+    }
+
+    function renderCardColors(card) {
+      const model=cardModels.get(card);if(!model)return;
+      const row=card.querySelector('[data-bc-card-colors]');
+      const selected=model.product.handle;
+      const compact=window.matchMedia('(max-width: 749px)').matches;
+      const width=Math.max(0,(row.clientWidth || 180)-(compact ? 0 : 6));
+      const slot=compact ? 36 : 30;
+      const moreWidth=compact ? 34 : 38;
+      const allFit=Math.floor((width+(compact ? 0 : 7))/slot);
+      const limit=model.options.length<=Math.min(4,allFit) ? model.options.length : Math.min(4,Math.max(1,Math.floor((width-moreWidth)/slot)));
+      const visible=model.options.slice(0,limit);
+      const active=model.options.find(option=>option.handle===selected);
+      if(active && !visible.includes(active) && visible.length)visible[visible.length-1]=active;
+      const hidden=model.options.length-visible.length;
+      let more='';
+      if(hidden>0){
+        const url=new URL(productPath(model.product),location.origin);
+        url.searchParams.set('bc_colors',model.colorGroup);
+        url.hash='bc-product-colors';
+        const label=model.allColorsLabel ? model.allColorsLabel.replace('__COUNT__',String(model.options.length)) : `${uiText('labelMore','Toon meer')} (${hidden})`;
+        more=`<a class="bc-card-color-more" data-bc-card-more-colors href="${attr(url.pathname+url.search+url.hash)}" aria-label="${attr(label)}" title="${attr(label)}">+${hidden}</a>`;
+      }
+      row.innerHTML=visible.map(option=>`<button type="button" class="bc-card-swatch" data-bc-card-color="${attr(option.handle)}" aria-label="${attr(option.color)}" title="${attr(option.color)}" aria-pressed="${option.handle===selected}" style="--bc-swatch:${attr(swatch(option.color, model.colorGroup?.startsWith('wiesbaden-colors-') ? option.swatch_url : ''))}"><span class="visually-hidden">${escapeHtml(option.color)}</span></button>`).join('')+more;
+    }
+
+    let colorResizeFrame;
+    window.addEventListener('resize',()=>{
+      if(colorResizeFrame)cancelAnimationFrame(colorResizeFrame);
+      colorResizeFrame=requestAnimationFrame(()=>productGrid.querySelectorAll('.bc-filter-card').forEach(renderCardColors));
+    },{passive:true});
+
+    let cardPointer=null;
+    productGrid.addEventListener('pointerdown',e=>{cardPointer={x:e.clientX,y:e.clientY,moved:false};},{passive:true});
+    productGrid.addEventListener('pointermove',e=>{if(cardPointer && Math.hypot(e.clientX-cardPointer.x,e.clientY-cardPointer.y)>8)cardPointer.moved=true;},{passive:true});
+    productGrid.addEventListener('pointercancel',()=>{if(cardPointer)cardPointer.moved=true;},{passive:true});
+    productGrid.addEventListener('click',async event=>{
+      const card=event.target.closest('.bc-filter-card');if(!card)return;
+      if(cardPointer?.moved && event.detail){event.preventDefault();event.stopPropagation();cardPointer=null;return;}
+      cardPointer=null;
+      const model=cardModels.get(card);if(!model)return;
+      const color=event.target.closest('[data-bc-card-color]');
+      if(color){
+        event.preventDefault();event.stopPropagation();
+        const option=model.options.find(p=>p.handle===color.dataset.bcCardColor);if(!option)return;
+        const version=++model.version;
+        card.setAttribute('aria-busy','true');
+        card.querySelector('[data-bc-card-cart]').disabled=true;
+        try {
+          const data=await cardData(productPath(option));
+          if(!data || data.handle!==option.handle)throw new Error('Kleur niet beschikbaar');
+          if(model.version===version && card.isConnected){updateCard(card,data);card.querySelector('.bc-card-feedback').textContent='';}
+        }catch(_){if(model.version===version){card.querySelector('.bc-card-feedback').textContent=uiText('labelColorError','Deze kleur kon niet worden geladen. Probeer opnieuw.');if(model.data)updateCard(card,model.data);}}
+        finally{if(model.version===version)card.removeAttribute('aria-busy');}
+        return;
+      }
+      const cart=event.target.closest('[data-bc-card-cart]');
+      if(cart){
+        event.preventDefault();event.stopPropagation();
+        if(cart.disabled || !model.data)return;
+        const data=model.data;
+        if(!data.can_add){location.assign(productPath(model.product));return;}
+        const notification=document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        const sections=notification?.getSectionsToRender?.().map(x=>x.id) || ['cart-icon-bubble'];
+        cart.disabled=true;cart.setAttribute('aria-busy','true');
+        const feedback=card.querySelector('.bc-card-feedback');
+        try {
+          const response=await fetch(`${window.Shopify?.routes?.root || '/'}cart/add.js`,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:[{id:data.variant_id,quantity:1}],sections,sections_url:location.pathname})});
+          const result=await response.json();
+          if(!response.ok || result.status)throw new Error(result.description || uiText('labelCartError','Toevoegen is niet gelukt. Probeer opnieuw.'));
+          feedback.textContent=uiText('labelAdded','Toegevoegd aan je winkelwagen');
+          try {notification?.setActiveElement?.(cart);notification?.renderContents?.({...result.items?.[0],...result,sections:result.sections});}catch(_){ }
+        }catch(error){feedback.textContent=error.message;}
+        finally{cart.disabled=!model.data?.available;cart.removeAttribute('aria-busy');}
+        return;
+      }
+      if(event.target.closest('a,button,input,select,summary,label') || event.ctrlKey || event.metaKey || event.shiftKey || String(window.getSelection()).trim())return;
+      location.assign(productPath(model.product));
+    });
+
 
     async function loadCardTitle(href) {
       const controller = new AbortController();
@@ -527,7 +726,9 @@
       try {
         const url = new URL(href, window.location.origin);
         url.searchParams.set('sections', root.dataset.cardDataSection);
-        const response = await fetch(url, { signal: controller.signal, credentials: 'omit' });
+        const previewTheme = new URL(location.href).searchParams.get('preview_theme_id');
+        if (previewTheme) url.searchParams.set('preview_theme_id', previewTheme);
+        const response = await fetch(url, { signal: controller.signal, credentials: 'same-origin' });
         if (!response.ok) return null;
         const sections = await response.json();
         const html = sections[root.dataset.cardDataSection];
@@ -567,11 +768,9 @@
 
       if (checkbox) {
         const field = checkbox.dataset.filterField;
-        const value = checkbox.value;
+        const chosen = checkbox.dataset.filterValues ? JSON.parse(checkbox.dataset.filterValues) : [checkbox.value];
         const values = new Set(state.filters[field] || []);
-
-        if (checkbox.checked) values.add(value);
-        else values.delete(value);
+        chosen.forEach(value => { if (checkbox.checked) values.add(value); else values.delete(value); });
 
         if (values.size) state.filters[field] = [...values];
         else delete state.filters[field];
@@ -681,12 +880,32 @@
       productContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    function syncDrawerAccessibility() {
+      const open = document.documentElement.classList.contains('bc-filter-drawer-open');
+      sidebar.inert = drawerMedia.matches && !open;
+      if (drawerMedia.matches) {
+        sidebar.setAttribute('role', 'dialog');
+        sidebar.setAttribute('aria-modal', 'true');
+      } else {
+        sidebar.removeAttribute('role');
+        sidebar.removeAttribute('aria-modal');
+      }
+      toolbar.querySelector('[data-bc-open-filters]').setAttribute('aria-expanded', String(open));
+    }
+
     function openDrawer() {
+      if (!externalActive || !drawerMedia.matches) return;
+      drawerTrigger = document.activeElement;
       document.documentElement.classList.add('bc-filter-drawer-open');
+      syncDrawerAccessibility();
+      sidebar.querySelector('.bc-filter-panel__close').focus({ preventScroll: true });
     }
 
     function closeDrawer() {
+      const wasOpen = document.documentElement.classList.contains('bc-filter-drawer-open');
       document.documentElement.classList.remove('bc-filter-drawer-open');
+      syncDrawerAccessibility();
+      if (wasOpen && drawerTrigger?.isConnected) drawerTrigger.focus({ preventScroll: true });
     }
 
     function setLoading(loading) {
