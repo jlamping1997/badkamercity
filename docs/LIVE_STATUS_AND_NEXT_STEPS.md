@@ -1,3 +1,5 @@
+> **31 oktober 2026 — FIX-01 herstel actief:** eigenaar heeft reviewconcept 195948839178 verwijderd. Nieuw UNPUBLISHED concept **195974824202 — BadkamerCity - Betrouwbaar bestellen en filters** wordt gedupliceerd vanuit geverifieerde MAIN195947036938. Codebron d510fc2167240009e2d0edf478f745ed022ab112; alle 21 SHA-256/MD5-broncontroles en 26 baselinecontroles geslaagd. Shopify kopieert nog; featurebestanden nog niet opnieuw geschreven. Eén actieve schrijver: Codex-herstel. Volgende handeling: volledige kopiepariteit bevestigen, daarna uitsluitend de 21 opgeslagen featurepaden terugzetten. Oudere concept-ID's hieronder zijn geschiedenis.
+
 # BadkamerCity — actuele werkstatus
 
 **31 oktober 2026 · FIX-01 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Reparaties staan in het gecontroleerde concept; geen actieve schrijver na overdracht. Eigenaar publiceert volgens AGENTS.
