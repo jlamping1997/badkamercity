@@ -1,5 +1,7 @@
 # FIX-01 — betrouwbaar bestellen, filters en presentatie
 
+> **Herstel na verwijderen, 31 oktober 2026:** het oorspronkelijke concept195948839178 bestaat niet meer. Hetzelfde FIX-01-codecheckpoint is volledig hersteld in **UNPUBLISHED195974824202 — BadkamerCity - Betrouwbaar bestellen en filters**. [Actuele herstelstatus, herhaalde checks en grenzen](recovery/README.md). Oorspronkelijke conceptrollen en browserbewijzen hieronder blijven hun meetmoment behouden.
+
 **31 oktober 2026 · PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Eigenaar geeft opdracht de gedocumenteerde fouten gericht te herstellen. Actieve branch: `fix/product-cards-2026-10-14`. Dit dossier vervangt het tussencheckpoint; oude before/replay-JSON blijft historisch bewijs. Geen schrijver of achtergrondtaak blijft actief na overdracht.
 
 ## Wat staat waar?

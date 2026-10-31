@@ -1,13 +1,19 @@
-> **31 oktober 2026 — FIX-01 herstel actief:** eigenaar heeft reviewconcept 195948839178 verwijderd. Nieuw UNPUBLISHED concept **195974824202 — BadkamerCity - Betrouwbaar bestellen en filters** wordt gedupliceerd vanuit geverifieerde MAIN195947036938. Codebron d510fc2167240009e2d0edf478f745ed022ab112; alle 21 SHA-256/MD5-broncontroles en 26 baselinecontroles geslaagd. Shopify kopieert nog; featurebestanden nog niet opnieuw geschreven. Eén actieve schrijver: Codex-herstel. Volgende handeling: volledige kopiepariteit bevestigen, daarna uitsluitend de 21 opgeslagen featurepaden terugzetten. Oudere concept-ID's hieronder zijn geschiedenis.
-
 # BadkamerCity — actuele werkstatus
 
-**31 oktober 2026 · FIX-01 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Reparaties staan in het gecontroleerde concept; geen actieve schrijver na overdracht. Eigenaar publiceert volgens AGENTS.
+**31 oktober 2026 · FIX-01 RESTORED_SOURCE_VERIFIED / OWNER_REVIEW_PENDING.** Het verwijderde reviewconcept is opnieuw opgebouwd als UNPUBLISHED195974824202. De opgeslagen reparatiecode is hersteld; geen actieve schrijver na overdracht. Eigenaar beoordeelt en publiceert volgens AGENTS.
+
+## Herstel na verwijderen van het concept
+
+De eigenaar verwijderde het oude concept **195948839178**. Nieuw concept **195974824202 — BadkamerCity - Betrouwbaar bestellen en filters** is opnieuw gedupliceerd vanuit MAIN195947036938. Voor de featurewrites waren alle **1.354 manifestchecksums gelijk**. De 21 bestanden uit codecheckpoint **d510fc2167240009e2d0edf478f745ed022ab112** hebben exact hun geregistreerde SHA-256/MD5; alle 26 baselinevoorwaarden zijn gecontroleerd. Na schrijven: **20 gewijzigde bestaande bestanden + één nieuwe helper**, alle 21 checksums correct teruggelezen, 1.355 conceptbestanden en nul overige verschillen. MAIN bleef op alle 1.354 paden ongewijzigd.
+
+De vier bestaande replays zijn opnieuw uitgevoerd: **126 gevallen/checks**, geen gereproduceerd defect in deze testscope; de 12 benoemde grenzen blijven grenzen. De twee bekende body/hash-uitzonderingen zijn niet opnieuw opgelost of overschreven. [Herstelbewijs en grenzen](repairs/2026-10-31/recovery/README.md). Geen publicatie, cartwrite, bestelling, formulierinzending of mailbox-/Windowscontrole. De eerdere browser- en Theme Check-bewijzen hieronder horen bij de oorspronkelijke uitvoering en dezelfde codebytes; dit herstel geeft geen nieuwe volledige browser- of telefoonvrijgave.
+
+[Shopify-thema’s openen](https://fpa9hu-i3.myshopify.com/admin/themes): kies **BadkamerCity - Betrouwbaar bestellen en filters** en open Voorbeeld. Een anonieme HTTP-previewselectie is niet geverifieerd: de aanvraag werd naar MAIN teruggeleid. Dit is geen nieuwe browservrijgave van het concept.
 
 ## Huidige winkel en concept
 
 - **MAIN195947036938 — BadkamerCity - Categorieen zonder schuiven**, door eigenaar gepubliceerd vóór deze uitvoering. Eindmeting:1.354paden, nul wijzigingen tegenover opening08:57:37Z. NAV-02 is dus LIVE.
-- **UNPUBLISHED195948839178 — BadkamerCity - Betrouwbaar bestellen en filters**:1.355paden, exact20gewijzigde bestaande bestanden +één nieuwe tegelprijssnippet. Actuele MAIN-header behouden; tijdelijke QA-template exact hersteld. Geen MAIN-filewrite of themapublicatie door uitvoerder.
+- **UNPUBLISHED195974824202 — BadkamerCity - Betrouwbaar bestellen en filters**:1.355paden, exact20gewijzigde bestaande bestanden +één nieuwe tegelprijssnippet. Actuele MAIN-header behouden; tijdelijke QA-template exact hersteld. Geen MAIN-filewrite of themapublicatie door uitvoerder.
 - **Hygrometer live gerepareerd:** bestaande pagina `/pages/hygro-meter` hergebruikt; beide oude routes leiden nu HTTP200 naar juiste H1/canonical. Twee redirectobjecten exact teruggelezen. Geen dubbele Page gemaakt.
 - **Retourpagina blijft live**, Page166668894474. Native contactformulier, handmatige behandeling. **MAIL_DELIVERY_PENDING** blijft open; geen automatisch label/refund/RMA of bewezen klantbevestigingsmail.
 - **Offerte CUSTOMER_ACTIVATION_DISABLED** behouden. Eigenaar moet bestaande verificatie/ontvangst en opslag/privacycontroles voltooien. Geen nieuwe privéaccountpoging.
@@ -31,13 +37,13 @@
 
 **126 lokale gevallen/checks:**18cart/Sunshower +44filters +46wishlist +18presentatie/calculator. Daarin81controle,15regressie,12expliciete grenzen en18presentatiechecks; nul DEFECT_REPRODUCED in nieuwe harnesses. Gehashte echte bronnen, synthetische requests en opslag. Overdraagbare herhaalopdracht en vier expliciete baseline-dependencies in dossier.
 
-Theme Check R4–R7 geldig, vijf bestaande niet-blokkerende waarschuwingen benoemd. Cloud Chrome1348×926: native dialog met fictieve sections, Escape/focusterugkeer; twee same-origin frames bewaren2/2fictieve wishlistkeuzes met echte Locks, testsleutel opgeruimd; echte tegel-PDP leeg/10%/disabled en geldige/ongeldige/handmatige berekeningen. Zoek-URL/controlestand terugnavigatie en footer gecontroleerd. Twee collectie-HTTPreads bewijzen meta-fallback/behoud zonder stylelekkage; Hygrometer3GETs200.
+**Historisch bron-/browserbewijs van de oorspronkelijke FIX-01-uitvoering:** Theme Check R4–R7 geldig, vijf bestaande niet-blokkerende waarschuwingen benoemd. Cloud Chrome1348×926: native dialog met fictieve sections, Escape/focusterugkeer; twee same-origin frames bewaren2/2fictieve wishlistkeuzes met echte Locks, testsleutel opgeruimd; echte tegel-PDP leeg/10%/disabled en geldige/ongeldige/handmatige berekeningen. Zoek-URL/controlestand terugnavigatie en footer gecontroleerd. Twee collectie-HTTPreads bewijzen meta-fallback/behoud zonder stylelekkage; Hygrometer3GETs200.
 
 Geen echte cart/order/checkout of nieuwe formulierinzending; mailbox/spam/antwoord/label niet bewezen. Geen fysieke iPhone/Windowscontrole, nieuwe volledige responsive matrix, privé-VPS/indexmutatie, rankings of performanceclaim. Settings_data-body/hashuitzondering blijft open; bestand niet geüpload. Git-root blijft een gerichte werkbranch, geen complete huidige MAIN-snapshot.
 
 ## Exact één volgende handeling
 
-**Jackson beoordeelt UNPUBLISHED195948839178 en doet de herkenbare fictieve retouraanvraag met controle van ontvangst/spam/antwoord in de eigen mailbox.** Code is reviewbaar; publicatie door eigenaar. Offerteactivatie blijft apart uit tot verificatie.
+**Jackson beoordeelt UNPUBLISHED195974824202 en doet de herkenbare fictieve retouraanvraag met controle van ontvangst/spam/antwoord in de eigen mailbox.** Code is reviewbaar; publicatie door eigenaar. Offerteactivatie blijft apart uit tot verificatie.
 
 ## Open grenzen voor later gericht werk
 
@@ -45,7 +51,7 @@ Omgekeerd prijsbereik/APIbeleid, native/externe URLdialecten, harde response-col
 
 ## Documentatie en overdracht
 
-Repository **jlamping1997/badkamercity**, bestaande codebranch **fix/product-cards-2026-10-14**. R1remotecheckpoint267e4b15172b26d1f0867d821c01e64b6eb1a11a; main-docs56ddb239453a801cacecea86c146e97fbf4992f5. Definitieve aanvulling volgt op die checkpoints; GitHubreadback/treeverificatie in uitvoeringsresultaat. Main krijgt uitsluitend dezelfde documentatie, geen themacode. Windows niet onderzocht.
+Repository **jlamping1997/badkamercity**, bestaande codebranch **fix/product-cards-2026-10-14**. Herstelde runtimecode exact uit **d510fc2167240009e2d0edf478f745ed022ab112**. Herstelcheckpoint met nieuw concept-ID is op beide ingangen vastgelegd; hoofdbranch krijgt uitsluitend documentatie en testbewijs, geen themacode. Windows niet onderzocht.
 
 [Het naslagwerk](MASTER_SITE_REFERENCE.md) blijft DOC-04-versie2.0 met80hoofdstukken,50taken,40diagnosepaden en50acceptatiescenario’s, gemeten vóór deze reparaties/publicatie. De nieuwe actuele herstelcontracten staan in FIX-01 en de gedateerde notities boven de componentdossiers; oude defectlogs blijven historisch. [Bronuitbreiding](handbook/2026-10-31/README.md) · [bronmeting vóór FIX](site-reference/2026-10-31/README.md).
 
