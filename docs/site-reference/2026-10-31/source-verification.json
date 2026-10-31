@@ -1,0 +1,4103 @@
+{
+  "themeId": "gid://shopify/OnlineStoreTheme/195948839178",
+  "checkedAt": "2026-10-31T07:49:03.247Z",
+  "totalThemePaths": 1354,
+  "selectedSources": 409,
+  "counts": {
+    "BYTE_MATCH": 407,
+    "BYTE_MISMATCH": 2
+  },
+  "files": [
+    {
+      "path": "assets/animations.js",
+      "expectedMd5": "fc03e9c13ba52e29e2c69d2998ca0e49",
+      "md5": "fc03e9c13ba52e29e2c69d2998ca0e49",
+      "expectedBytes": 3759,
+      "bytes": 3759,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "55bb6d4697251c4ca77b8c12e948cc32744791caaf53b156f307d9255b441d3c"
+    },
+    {
+      "path": "assets/base.css",
+      "expectedMd5": "06d9f32480e25d4e75899f5a67784dc3",
+      "md5": "06d9f32480e25d4e75899f5a67784dc3",
+      "expectedBytes": 95319,
+      "bytes": 95319,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9c201f1da8a9351de0e4a8e98f96827fb1b4f87d9f68d80ca8f1b9f7c5e270c5"
+    },
+    {
+      "path": "assets/bc-assortment.css",
+      "expectedMd5": "6b2ac9f00b69b9266b3ec3b2be1c0c9f",
+      "md5": "6b2ac9f00b69b9266b3ec3b2be1c0c9f",
+      "expectedBytes": 10021,
+      "bytes": 10021,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "94b908af787a33dd76231c8cc4ee8306e08d899517f501dc42875c50bd6c9478"
+    },
+    {
+      "path": "assets/bc-assortment.js",
+      "expectedMd5": "74d20008213d20e4dc1bb04ec575304f",
+      "md5": "74d20008213d20e4dc1bb04ec575304f",
+      "expectedBytes": 5436,
+      "bytes": 5436,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "903e3f5ae1c4ff58958cde3124fc012fa4d485825b23c6d78b9b00be6cbd40cd"
+    },
+    {
+      "path": "assets/bc-cart-page.css",
+      "expectedMd5": "0c3290c7269355f81a4772d3d50d07c6",
+      "md5": "0c3290c7269355f81a4772d3d50d07c6",
+      "expectedBytes": 14728,
+      "bytes": 14728,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c85bb3c2ea2b71e96e43fe1d87a50ada51744f64516033172c1ff2793c92adb3"
+    },
+    {
+      "path": "assets/bc-cart-page.js",
+      "expectedMd5": "742b3e0336732b2ca52c0b01d5c011ca",
+      "md5": "742b3e0336732b2ca52c0b01d5c011ca",
+      "expectedBytes": 13650,
+      "bytes": 13650,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b8b154071f930ac181b8f4825c7d9f33099e0ec7043b05823f6c5640a12e37f4"
+    },
+    {
+      "path": "assets/bc-cart-tools.js",
+      "expectedMd5": "b982861be133a2964abac752e406d3df",
+      "md5": "b982861be133a2964abac752e406d3df",
+      "expectedBytes": 4925,
+      "bytes": 4925,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "17259d0534c0233ed253cfd8104c429ca96f180994d9dee8a38ee89a2f9b90f6"
+    },
+    {
+      "path": "assets/bc-category-directory.css",
+      "expectedMd5": "8371f4c0004a8474eddf33d3ecdb90ae",
+      "md5": "8371f4c0004a8474eddf33d3ecdb90ae",
+      "expectedBytes": 5846,
+      "bytes": 5846,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "012e275242a82efcf073b04feecd8fdbc763e388fab49375646afaa6c73b4c4a"
+    },
+    {
+      "path": "assets/bc-choice-position.js",
+      "expectedMd5": "8debcfa105fe54d539159264d2e93254",
+      "md5": "8debcfa105fe54d539159264d2e93254",
+      "expectedBytes": 4008,
+      "bytes": 4008,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5fea59de9dac95e00c546f02a155edd8f7eeb0db47caf794de57349c4434254d"
+    },
+    {
+      "path": "assets/bc-collection.css",
+      "expectedMd5": "2c5c050ecfd1c412490cd4068a7268d4",
+      "md5": "2c5c050ecfd1c412490cd4068a7268d4",
+      "expectedBytes": 18706,
+      "bytes": 18706,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "00585aa63628c07a10d468be2eeedf7de73974d5ead4d79e677cb7f7c8515422"
+    },
+    {
+      "path": "assets/bc-external-filters.css",
+      "expectedMd5": "737b2e9bf593105a80239a345daec40d",
+      "md5": "737b2e9bf593105a80239a345daec40d",
+      "expectedBytes": 18801,
+      "bytes": 18801,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e82228894300a4cd8a4dcf3cafdb9947ff669c49d589d521496901f20b2b555a"
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "expectedMd5": "45fd7aee85d90ffa5d7386211c17345a",
+      "md5": "45fd7aee85d90ffa5d7386211c17345a",
+      "expectedBytes": 46890,
+      "bytes": 46890,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e0397d63950f21e8853bad9c8d50fd6b338100d1f2cf15069000dca029041434"
+    },
+    {
+      "path": "assets/bc-home-sunshower.css",
+      "expectedMd5": "7fcf855afd15f023f25089d4ca6b19b6",
+      "md5": "7fcf855afd15f023f25089d4ca6b19b6",
+      "expectedBytes": 3635,
+      "bytes": 3635,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "96d94c4788fc3d0e1bd01d470becccd7bf8c5effa0cd1d74597150aeb14904d6"
+    },
+    {
+      "path": "assets/bc-homepage.css",
+      "expectedMd5": "b61a396db1ccd3bcd8c184d1734a1b08",
+      "md5": "b61a396db1ccd3bcd8c184d1734a1b08",
+      "expectedBytes": 10995,
+      "bytes": 10995,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7183e9fd92a18f73c433945689079796ca8bafa6bf676ac66034107647a414ea"
+    },
+    {
+      "path": "assets/bc-homepage.js",
+      "expectedMd5": "72cab386f63d79883d3574c66d1d868b",
+      "md5": "72cab386f63d79883d3574c66d1d868b",
+      "expectedBytes": 1261,
+      "bytes": 1261,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2f0ec24c5be10443d9794c579f0507dd3b151e1e31640de609ff4a945dc92dd6"
+    },
+    {
+      "path": "assets/bc-hotbath-mobile.css",
+      "expectedMd5": "c1b4a29194548e6f005de35aba6b80a9",
+      "md5": "c1b4a29194548e6f005de35aba6b80a9",
+      "expectedBytes": 5872,
+      "bytes": 5872,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2088f38bcb1efe9d63b59f6f51e99e37606fd4f03ccd93b4542323da6eb0fd6d"
+    },
+    {
+      "path": "assets/bc-hotbath-mobile.js",
+      "expectedMd5": "6481320f6f2a092ba4da129cbbb70fee",
+      "md5": "6481320f6f2a092ba4da129cbbb70fee",
+      "expectedBytes": 9760,
+      "bytes": 9760,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "41da9c6ac42b03467883c1ec12243177509ed67b3ec83a0de927f245c4a2f654"
+    },
+    {
+      "path": "assets/bc-hotbath-swatches.css",
+      "expectedMd5": "e88820a1d7dc5b293d7ec4974bafb657",
+      "md5": "e88820a1d7dc5b293d7ec4974bafb657",
+      "expectedBytes": 5403,
+      "bytes": 5403,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9f3a52fd735ee4886af5d059a718930799a33e02b3fface651e536fb0da3e2a6"
+    },
+    {
+      "path": "assets/bc-meubelhub.css",
+      "expectedMd5": "4bd230406ced4c0d9738bf947a7b7116",
+      "md5": "4bd230406ced4c0d9738bf947a7b7116",
+      "expectedBytes": 16556,
+      "bytes": 16556,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2c5fa59ba56b4080059a487368e52ea7062e6c0fc66d5bd79bd626ef06e18a1b"
+    },
+    {
+      "path": "assets/bc-meubelhub.js",
+      "expectedMd5": "99e4f69419e2cb466e77830f27b5c53d",
+      "md5": "99e4f69419e2cb466e77830f27b5c53d",
+      "expectedBytes": 1609,
+      "bytes": 1609,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5141d33b86fe91445d9df37ff4466be1a91682e2d9ef0fe4cd175fb915450142"
+    },
+    {
+      "path": "assets/bc-mobile-compact-list.css",
+      "expectedMd5": "86684c4697483302c9e52c016f010974",
+      "md5": "86684c4697483302c9e52c016f010974",
+      "expectedBytes": 7969,
+      "bytes": 7969,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c27539549beb5c4b017a0cb3875120de5a77ca1d88c7133f171ee6e2428405f1"
+    },
+    {
+      "path": "assets/bc-mobile-header.js",
+      "expectedMd5": "1d52f410ab396c201f69de40296b95af",
+      "md5": "1d52f410ab396c201f69de40296b95af",
+      "expectedBytes": 7222,
+      "bytes": 7222,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6acd5e4bcd08bfffd56c036496cde6759d6e7c0872a35f661e9724058aca166b"
+    },
+    {
+      "path": "assets/bc-mobile-listing.js",
+      "expectedMd5": "dde904cf82e99c1ef9517991613c0cca",
+      "md5": "dde904cf82e99c1ef9517991613c0cca",
+      "expectedBytes": 2422,
+      "bytes": 2422,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "106b3ac643fc576f5ccec8eecd78e354cc8ee04bb4487ff0bec23ced9ced684a"
+    },
+    {
+      "path": "assets/bc-photoswipe.css",
+      "expectedMd5": "2b4afa6133120037b6107d3f7147761f",
+      "md5": "2b4afa6133120037b6107d3f7147761f",
+      "expectedBytes": 7423,
+      "bytes": 7423,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b0eaaae0b9de064d25e2f18517b9011a526d9b2142376e1c0febd096cebab9f3"
+    },
+    {
+      "path": "assets/bc-photoswipe.esm.js",
+      "expectedMd5": "97ca880233a37aa88ecd4e06b53c45bd",
+      "md5": "97ca880233a37aa88ecd4e06b53c45bd",
+      "expectedBytes": 54270,
+      "bytes": 54270,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "542069771beb34dc461cdb9374da8af643c591ebf65d8ec36331dd9a0681ebd4"
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.css",
+      "expectedMd5": "e0de778d6023bb98a27218ece0b3d65f",
+      "md5": "e0de778d6023bb98a27218ece0b3d65f",
+      "expectedBytes": 11260,
+      "bytes": 11260,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3e10c8b594589e734103d73573de76ea37d49499c285069f24d2bf4a1fed1cc1"
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "expectedMd5": "40975f22d5b7bdd762ad1bd6ae580596",
+      "md5": "40975f22d5b7bdd762ad1bd6ae580596",
+      "expectedBytes": 20502,
+      "bytes": 20502,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "735241735a779b58fa27c8ccfab0fd7b4059502552a3a0ea88213944d2c58e49"
+    },
+    {
+      "path": "assets/bc-porcelanosa-core.js",
+      "expectedMd5": "6d80b1b7c69ba340312d2b563bed9d96",
+      "md5": "6d80b1b7c69ba340312d2b563bed9d96",
+      "expectedBytes": 3038,
+      "bytes": 3038,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e2d87d7c6bcb9565f18b5c4d3c3ebc539a190953200c8377f358c624a9cdd3f7"
+    },
+    {
+      "path": "assets/bc-product-accessories.js",
+      "expectedMd5": "302ea7cdcb2a0c889b515024ed0572a2",
+      "md5": "302ea7cdcb2a0c889b515024ed0572a2",
+      "expectedBytes": 5155,
+      "bytes": 5155,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2c8057277e21b922a03cb131c50ed1d652553f5b0e3b45881cf93a82469d9a4e"
+    },
+    {
+      "path": "assets/bc-product-cards.css",
+      "expectedMd5": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "md5": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "expectedBytes": 14783,
+      "bytes": 14783,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f6e02f729096055f614318894b071ee20b5cb70edb00daaeb5ea02ec891ff485"
+    },
+    {
+      "path": "assets/bc-product-disclosure.js",
+      "expectedMd5": "7e702ef77c2a34064f044d5689c86587",
+      "md5": "7e702ef77c2a34064f044d5689c86587",
+      "expectedBytes": 5419,
+      "bytes": 5419,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2b2c792348baa4af3d5089d63368f5f4fa012d505a5fa9e64e4864951b2359b0"
+    },
+    {
+      "path": "assets/bc-product-inbouw.js",
+      "expectedMd5": "d840d8079cc88fde8c682a98b3e83414",
+      "md5": "d840d8079cc88fde8c682a98b3e83414",
+      "expectedBytes": 13714,
+      "bytes": 13714,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1bd23cbbb7288951542ae4a022d3968a064c530c47306c6fbcc7e574b87b5fd4"
+    },
+    {
+      "path": "assets/bc-product-page.css",
+      "expectedMd5": "d1c0a60270b3363d1c5e348edbac9d08",
+      "md5": "d1c0a60270b3363d1c5e348edbac9d08",
+      "expectedBytes": 26591,
+      "bytes": 26591,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "79d4b49672d1f87a5a8ed906b26565648e81f21741e12f71c2157aa5989f9b2f"
+    },
+    {
+      "path": "assets/bc-product-sticky.js",
+      "expectedMd5": "f61a1a3bf4bba88dde740c105c2a7789",
+      "md5": "f61a1a3bf4bba88dde740c105c2a7789",
+      "expectedBytes": 5827,
+      "bytes": 5827,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "537aa45af40d6ef3711cf108602b707006719063fa05a3fd959e7ce4554a08b3"
+    },
+    {
+      "path": "assets/bc-product-switcher.backup-debug.js",
+      "expectedMd5": "5edad2a62e09dc8ac23f1d223c931400",
+      "md5": "5edad2a62e09dc8ac23f1d223c931400",
+      "expectedBytes": 10345,
+      "bytes": 10345,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b40a6c912b0c55e4964968e105ee0a372f6084514e3547c50cdda3d73489f660"
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "expectedMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "md5": "c6b414ec8cf180ff45181222e807fcef",
+      "expectedBytes": 30067,
+      "bytes": 30067,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b14748ca2764c6cfbe50c24ee9416faa7379c1a92a67cfb1c2c7d4d7274f2409"
+    },
+    {
+      "path": "assets/bc-quote.css",
+      "expectedMd5": "fec73ed473d7663766b074153e912e97",
+      "md5": "fec73ed473d7663766b074153e912e97",
+      "expectedBytes": 4483,
+      "bytes": 4483,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c1a0425902ebac120740d9ecbed9bf9e7a63694ebf40ab63bb18eec2dc85661c"
+    },
+    {
+      "path": "assets/bc-sunshower-configurator.css",
+      "expectedMd5": "babd95e7c11d3859ac2e6f8b4c9219d9",
+      "md5": "babd95e7c11d3859ac2e6f8b4c9219d9",
+      "expectedBytes": 14823,
+      "bytes": 14823,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "75df3d75cb3eed8d22c22e9111d00cff66e3923f62bb793ea80d1c90d99fd48e"
+    },
+    {
+      "path": "assets/bc-sunshower-landing.css",
+      "expectedMd5": "1ab8f488e1ee3cb1285a9d8a30e5548e",
+      "md5": "1ab8f488e1ee3cb1285a9d8a30e5548e",
+      "expectedBytes": 23482,
+      "bytes": 23482,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cc2d6d2591f4914b5975dd45dd1fe8648cc14850e76f3d74372ad584327c5a4a"
+    },
+    {
+      "path": "assets/bc-sunshower-mobile.js",
+      "expectedMd5": "755f05979ba89f799a56cc7cca211030",
+      "md5": "755f05979ba89f799a56cc7cca211030",
+      "expectedBytes": 4839,
+      "bytes": 4839,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "eeaed62bb64f685186c22554decc4c57d9ba0b29ba685c013933970f948e5ccf"
+    },
+    {
+      "path": "assets/bc-sunshower-page.css",
+      "expectedMd5": "feb2965dd8f68bb543e75e68f589ba51",
+      "md5": "feb2965dd8f68bb543e75e68f589ba51",
+      "expectedBytes": 25464,
+      "bytes": 25464,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d54cecb495eef4036f3cc11020581ffc4e0e623a88e87bd048f23502abd7fdd9"
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "expectedMd5": "6e6a5705e8b99716634fae55f722883c",
+      "md5": "6e6a5705e8b99716634fae55f722883c",
+      "expectedBytes": 23438,
+      "bytes": 23438,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3a6ca514e433fef20db66d8a650df937f9b4fd8c5e333e0675fadde44b2ecfc8"
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "expectedMd5": "d769df34404e1a69d949fabbf3291b7a",
+      "md5": "d769df34404e1a69d949fabbf3291b7a",
+      "expectedBytes": 13891,
+      "bytes": 13891,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "704739cf6cb13c8224079612080a4f2e49bbbde8a677e98fa6dd2e4dbb5d03ac"
+    },
+    {
+      "path": "assets/bc-sunshower.css",
+      "expectedMd5": "4870e8e1bd2bf1f80a92f69ccfdde1be",
+      "md5": "4870e8e1bd2bf1f80a92f69ccfdde1be",
+      "expectedBytes": 1763,
+      "bytes": 1763,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7ac1a22075e97c75df5280e02002b0239e71dbe9e0912d6464266fc6db22b7c0"
+    },
+    {
+      "path": "assets/bc-sunshower.js",
+      "expectedMd5": "4de95617f0b550ce081177397ede51b8",
+      "md5": "4de95617f0b550ce081177397ede51b8",
+      "expectedBytes": 3247,
+      "bytes": 3247,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "47cdd372b644d362b5a1403f994dac892cd91ca3d2e50b241fce3fe68bf09fdb"
+    },
+    {
+      "path": "assets/bc-tile-fix-preview.css",
+      "expectedMd5": "de8e088d68d7e98ba0bfd0dc9a4700d2",
+      "md5": "de8e088d68d7e98ba0bfd0dc9a4700d2",
+      "expectedBytes": 9458,
+      "bytes": 9458,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4c47e69dd4b87f3c36a15c0bd6d474131c359e7397010454789a73ac295e1a76"
+    },
+    {
+      "path": "assets/bc-tile-fix-preview.js",
+      "expectedMd5": "6938ae6759e1536b819e96be831cabdc",
+      "md5": "6938ae6759e1536b819e96be831cabdc",
+      "expectedBytes": 14974,
+      "bytes": 14974,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2e495caa9c85ebbc8b525435b294eee4508c2c08e46d385f38090fbea6f96ca9"
+    },
+    {
+      "path": "assets/bc-typography.css",
+      "expectedMd5": "cd4fb84d430c2c282c3c4aedb2b98e46",
+      "md5": "cd4fb84d430c2c282c3c4aedb2b98e46",
+      "expectedBytes": 3657,
+      "bytes": 3657,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "caab726f2942bcd91045ea8de00a072fbe2cc855feb0236853b058efa001e029"
+    },
+    {
+      "path": "assets/bc-wiesbaden-colors.css",
+      "expectedMd5": "162a5f81acd71afd2b56b4ac17c2bacf",
+      "md5": "162a5f81acd71afd2b56b4ac17c2bacf",
+      "expectedBytes": 302,
+      "bytes": 302,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5b58f11c698380fe167d362b6b635a47725a24f9bd88834c3ff26d5954a55902"
+    },
+    {
+      "path": "assets/bc-wishlist.css",
+      "expectedMd5": "3a55e69f667f534636680468eaae614d",
+      "md5": "3a55e69f667f534636680468eaae614d",
+      "expectedBytes": 8378,
+      "bytes": 8378,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cfc8c6e3e820eb33460a4cfe39b53e506aa02b607993bf62f7c1f4611af3bdcd"
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "expectedMd5": "2767cda3d4c02b89cb62d2f35bdd9676",
+      "md5": "2767cda3d4c02b89cb62d2f35bdd9676",
+      "expectedBytes": 20126,
+      "bytes": 20126,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c41a892f0eef9829b1bf8071e51afb6b9a0fbe2c4a39474f446218e5ed6ba6fd"
+    },
+    {
+      "path": "assets/cart-drawer.js",
+      "expectedMd5": "c51ccf9528b72985b020dcac64db90c3",
+      "md5": "c51ccf9528b72985b020dcac64db90c3",
+      "expectedBytes": 4358,
+      "bytes": 4358,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ad3ada3676f175397eaf7d7bb091868e98e1d6f1e134a72129ad84de7e149118"
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "expectedMd5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "md5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "expectedBytes": 3630,
+      "bytes": 3630,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d5af8928331010e436151ce88aa90c75257889f362032b341037c1b8dcb043a6"
+    },
+    {
+      "path": "assets/cart.js",
+      "expectedMd5": "6a8fa14d592e5fc2ad010504072b1ed0",
+      "md5": "6a8fa14d592e5fc2ad010504072b1ed0",
+      "expectedBytes": 12299,
+      "bytes": 12299,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b33430d6fd18ea739f9023dea93a73d169a311a895b2f835a8f0153dca51a06e"
+    },
+    {
+      "path": "assets/collage.css",
+      "expectedMd5": "7b2b8eca0c92bc596e31f96e5dfa361a",
+      "md5": "7b2b8eca0c92bc596e31f96e5dfa361a",
+      "expectedBytes": 5436,
+      "bytes": 5436,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7e9ddd2c02fca6d223eac0228401c30b7603ad9cd57296a5de7ce4feb697e43e"
+    },
+    {
+      "path": "assets/collapsible-content.css",
+      "expectedMd5": "4764fa919cb1b04c22a3d6087b536c89",
+      "md5": "4764fa919cb1b04c22a3d6087b536c89",
+      "expectedBytes": 3075,
+      "bytes": 3075,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6d9354bc12ae452d041ee4e5b034013601dcc7478f7698c66958c3f83e7ecca4"
+    },
+    {
+      "path": "assets/component-accordion.css",
+      "expectedMd5": "397ace39c968c7ed384a40a990f162e6",
+      "md5": "397ace39c968c7ed384a40a990f162e6",
+      "expectedBytes": 1203,
+      "bytes": 1203,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7d0e051bae43d122ace0a3a74df44d6b6fce5fdfed60323413583c96b753aafe"
+    },
+    {
+      "path": "assets/component-article-card.css",
+      "expectedMd5": "a3be7cb901d013b0646d857222de032a",
+      "md5": "a3be7cb901d013b0646d857222de032a",
+      "expectedBytes": 2512,
+      "bytes": 2512,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "15dce6e87c081199493bd22aa80889bb8a80dc229a79ee4b8cf88103844df32d"
+    },
+    {
+      "path": "assets/component-bc-category-navigation.css",
+      "expectedMd5": "699c6f5bca6256b4435f391d8c279b81",
+      "md5": "699c6f5bca6256b4435f391d8c279b81",
+      "expectedBytes": 3673,
+      "bytes": 3673,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4b31a1ef3f01630c756ed1a35dddd96bfcee032f4d6611b92fe53dc30a612ffa"
+    },
+    {
+      "path": "assets/component-card.css",
+      "expectedMd5": "8a99eaf7267fc9a5d142416949968447",
+      "md5": "8a99eaf7267fc9a5d142416949968447",
+      "expectedBytes": 16114,
+      "bytes": 16114,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6e120be522e20d49ddde9134d6fc33079f816d52e6064cc9350d842e9e97240a"
+    },
+    {
+      "path": "assets/component-cart-drawer.css",
+      "expectedMd5": "8d31edf1c47e144f52dcf0ae6dcd4c49",
+      "md5": "8d31edf1c47e144f52dcf0ae6dcd4c49",
+      "expectedBytes": 7983,
+      "bytes": 7983,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9544d18913034289ed6e5d54cc79d7ea055b9a69e6ae6bc15e0b6b128160075f"
+    },
+    {
+      "path": "assets/component-cart-items.css",
+      "expectedMd5": "f15460c4d4c7b4b207cb6c8344e9c0ab",
+      "md5": "f15460c4d4c7b4b207cb6c8344e9c0ab",
+      "expectedBytes": 6432,
+      "bytes": 6432,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "28e01dbf0a6af970fc8280eee520590cda1e6d12c64ea7651920f7b063cecd06"
+    },
+    {
+      "path": "assets/component-cart-notification.css",
+      "expectedMd5": "1ecdc8d97b60be62e5781e173fc25d9d",
+      "md5": "1ecdc8d97b60be62e5781e173fc25d9d",
+      "expectedBytes": 5313,
+      "bytes": 5313,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a10ac581b6a811ff8181f59901d3499e3d918590523f30b26c4ce17e22bd92ef"
+    },
+    {
+      "path": "assets/component-cart.css",
+      "expectedMd5": "6d8f6851439358de31cc79832cd05e9c",
+      "md5": "6d8f6851439358de31cc79832cd05e9c",
+      "expectedBytes": 3561,
+      "bytes": 3561,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7e4e3b3bb6686355237614c30460b98c028ec8dd4952f12584b948780e61b110"
+    },
+    {
+      "path": "assets/component-collection-hero.css",
+      "expectedMd5": "1e2d260d49f9e8d2e872d7c0c50e74aa",
+      "md5": "1e2d260d49f9e8d2e872d7c0c50e74aa",
+      "expectedBytes": 2287,
+      "bytes": 2287,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "26c8dc658b77cd86623ead20cb116cfc41b55951cc56f06cec99748bab94cb61"
+    },
+    {
+      "path": "assets/component-complementary-products.css",
+      "expectedMd5": "aa1e9eb04ec4b89f8fb79e21e4133abc",
+      "md5": "aa1e9eb04ec4b89f8fb79e21e4133abc",
+      "expectedBytes": 4463,
+      "bytes": 4463,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "26328266f6bcfab5937b7a4d05d88a763bb8e92ca3e716c1b43822fc1a474135"
+    },
+    {
+      "path": "assets/component-deferred-media.css",
+      "expectedMd5": "1bd02c749df00290c2c3838c0a68d6cb",
+      "md5": "1bd02c749df00290c2c3838c0a68d6cb",
+      "expectedBytes": 2657,
+      "bytes": 2657,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b0ab3562f4e22b000323432c3f70e41bae43d6af6ad54a53116cf05f193cb00a"
+    },
+    {
+      "path": "assets/component-discounts.css",
+      "expectedMd5": "863225c0563e26621b2ff8de452d16a4",
+      "md5": "863225c0563e26621b2ff8de452d16a4",
+      "expectedBytes": 592,
+      "bytes": 592,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "349b4a2601c692f322e435044899af7baddcba019bfd0bec97741fbb1133f3b9"
+    },
+    {
+      "path": "assets/component-facets.css",
+      "expectedMd5": "ef6bf497a78e4866d078b6ebfb25ada0",
+      "md5": "ef6bf497a78e4866d078b6ebfb25ada0",
+      "expectedBytes": 26951,
+      "bytes": 26951,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "fdcfff22020b30c112763798d27e3c19721d8f284ea7f374c7c28244998c08a2"
+    },
+    {
+      "path": "assets/component-image-with-text.css",
+      "expectedMd5": "52fb743f81b2c7013d5a2dd10362a05b",
+      "md5": "52fb743f81b2c7013d5a2dd10362a05b",
+      "expectedBytes": 11959,
+      "bytes": 11959,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "edfea00d3108e809d287ed1ebdcc823cc9aaa2e10a1c56f0397df9e385c15261"
+    },
+    {
+      "path": "assets/component-list-menu.css",
+      "expectedMd5": "91147c211f6b86cafc693657d8e58887",
+      "md5": "91147c211f6b86cafc693657d8e58887",
+      "expectedBytes": 546,
+      "bytes": 546,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c33a002ae37691b7dc1e7fdde6faae3b1bd1b39b60ea9e9118149bc366a546bd"
+    },
+    {
+      "path": "assets/component-list-payment.css",
+      "expectedMd5": "43e30685d959d930f051678bcad8568f",
+      "md5": "43e30685d959d930f051678bcad8568f",
+      "expectedBytes": 384,
+      "bytes": 384,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a21f1aa0b5d77117427408c85cd43b6b512703d2c4435d16da7a534472700f18"
+    },
+    {
+      "path": "assets/component-list-social.css",
+      "expectedMd5": "545b4d678b02b94236221c29804908a3",
+      "md5": "545b4d678b02b94236221c29804908a3",
+      "expectedBytes": 536,
+      "bytes": 536,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2672593e8a3bde191a05bbe204c456f570f886cb584079bb0e722f1a4f6b3a2b"
+    },
+    {
+      "path": "assets/component-localization-form.css",
+      "expectedMd5": "3402ed13f057ae96e63f07e48fe97181",
+      "md5": "3402ed13f057ae96e63f07e48fe97181",
+      "expectedBytes": 10209,
+      "bytes": 10209,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e0f007cf33bb344f32b1139f4607bab1d0c0ae5a7a7032947aa2854fa8170c71"
+    },
+    {
+      "path": "assets/component-mega-menu.css",
+      "expectedMd5": "198a322c612173b7c7fef58d00cfc3be",
+      "md5": "198a322c612173b7c7fef58d00cfc3be",
+      "expectedBytes": 1768,
+      "bytes": 1768,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c8a6145021ff0c4ced4444bf70e35e83f08ca2fccebd2a5d45a0e46708c36a02"
+    },
+    {
+      "path": "assets/component-menu-drawer.css",
+      "expectedMd5": "36c780b3d4eb66f2fd12e0b0a90e1813",
+      "md5": "36c780b3d4eb66f2fd12e0b0a90e1813",
+      "expectedBytes": 5654,
+      "bytes": 5654,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b67e648f3cc8f2066e1d18b99cab11d250d7447c01abf0eb2cc88e4abb02e1e3"
+    },
+    {
+      "path": "assets/component-modal-video.css",
+      "expectedMd5": "cc8d087c660db002ee64650eb876cd9c",
+      "md5": "cc8d087c660db002ee64650eb876cd9c",
+      "expectedBytes": 1910,
+      "bytes": 1910,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "384dedccb7ed8d6c92e409d135460b5ac5f4d5129da99889b0a2ae636c667912"
+    },
+    {
+      "path": "assets/component-model-viewer-ui.css",
+      "expectedMd5": "3acf20253f4ba50318a31295fe9c382b",
+      "md5": "3acf20253f4ba50318a31295fe9c382b",
+      "expectedBytes": 1542,
+      "bytes": 1542,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "816fcdafbc0f818160f830997a78a67aaef38e695945e95ce2ef3b7a973c59e3"
+    },
+    {
+      "path": "assets/component-newsletter.css",
+      "expectedMd5": "3fed1fd7c472500d917605d9cf757e53",
+      "md5": "3fed1fd7c472500d917605d9cf757e53",
+      "expectedBytes": 1479,
+      "bytes": 1479,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e4d9beac2353816d19603555fa98543b0d344a1d4a3f34475024b928d7351afa"
+    },
+    {
+      "path": "assets/component-pagination.css",
+      "expectedMd5": "b298d5b85668fea93accb0040b207638",
+      "md5": "b298d5b85668fea93accb0040b207638",
+      "expectedBytes": 1467,
+      "bytes": 1467,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c71a1f67247f7a75136c4215dbda87d510f44ebba849c30c1e8d2608918f2044"
+    },
+    {
+      "path": "assets/component-pickup-availability.css",
+      "expectedMd5": "fea0c6003fbacec5dc0cd406f5de80cf",
+      "md5": "fea0c6003fbacec5dc0cd406f5de80cf",
+      "expectedBytes": 3686,
+      "bytes": 3686,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "25b3faaf923a56fdbc5c41603dc8f697b47d9707d5f14c581e825d917fe642da"
+    },
+    {
+      "path": "assets/component-predictive-search.css",
+      "expectedMd5": "88730f2f525026a0d22fcdc31cc2198d",
+      "md5": "88730f2f525026a0d22fcdc31cc2198d",
+      "expectedBytes": 9019,
+      "bytes": 9019,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5c2e2334f7e667695d4a443581e8e104eda4373e0706b54f606bf1d3d3131316"
+    },
+    {
+      "path": "assets/component-price.css",
+      "expectedMd5": "6649c70ca5f5ced57c509b7f5a40e8fc",
+      "md5": "6649c70ca5f5ced57c509b7f5a40e8fc",
+      "expectedBytes": 1910,
+      "bytes": 1910,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0eea91f601d5d2ac8a21b80649aa982e30193875cd394dc348e2a244c89213ac"
+    },
+    {
+      "path": "assets/component-product-accessories.css",
+      "expectedMd5": "2ed8d118994e4bcf8a9c024af2c2ff2f",
+      "md5": "2ed8d118994e4bcf8a9c024af2c2ff2f",
+      "expectedBytes": 6750,
+      "bytes": 6750,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3829f08686f32d44be664f8f7835d5a6a3dd4b5de00a7c5704b25c3de47a85ad"
+    },
+    {
+      "path": "assets/component-product-inbouw.css",
+      "expectedMd5": "c9245cff1d31d21e84864d52835cd9e3",
+      "md5": "c9245cff1d31d21e84864d52835cd9e3",
+      "expectedBytes": 2665,
+      "bytes": 2665,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cffffe83398f4e3fd0100961f885d5c637c62d0d545c24a5113fedfcefbe2fff"
+    },
+    {
+      "path": "assets/component-product-model.css",
+      "expectedMd5": "fa2e8992d97dc0122e2acbf4849a7bbc",
+      "md5": "fa2e8992d97dc0122e2acbf4849a7bbc",
+      "expectedBytes": 882,
+      "bytes": 882,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c65cd199659b27ee82bd4c7a5e1aba597950ba280dd17f4f425fc347ebc18467"
+    },
+    {
+      "path": "assets/component-product-pros-cons.css",
+      "expectedMd5": "ce98baeba2a53aea40ca1beb7be81db2",
+      "md5": "ce98baeba2a53aea40ca1beb7be81db2",
+      "expectedBytes": 2069,
+      "bytes": 2069,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "72b4feeb92eb2747c52bb4c178eb0a949767932aabf6e25e638350a9a541e0e8"
+    },
+    {
+      "path": "assets/component-product-set.css",
+      "expectedMd5": "74d52329aae00c7bc44a67cbae88771b",
+      "md5": "74d52329aae00c7bc44a67cbae88771b",
+      "expectedBytes": 3473,
+      "bytes": 3473,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c2bc04fec259ec4f4abe80ee59d89a3284aa9622105cc73fd8271fb54ff6efc6"
+    },
+    {
+      "path": "assets/component-product-variant-picker.css",
+      "expectedMd5": "63ee358233ac776a6c472b1f607f36a5",
+      "md5": "63ee358233ac776a6c472b1f607f36a5",
+      "expectedBytes": 4771,
+      "bytes": 4771,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "00c9da2f71a88bf8e764269a2db5fbd409bad20dd414c2670f63e81a08e92502"
+    },
+    {
+      "path": "assets/component-progress-bar.css",
+      "expectedMd5": "dde0a02cbc2e70178a40ac64848a965c",
+      "md5": "dde0a02cbc2e70178a40ac64848a965c",
+      "expectedBytes": 623,
+      "bytes": 623,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6cbf430bb5f352a7b3501006af7497b875734f759c102b65b80d78d7315bc267"
+    },
+    {
+      "path": "assets/component-rating.css",
+      "expectedMd5": "9278ff18cfff99c51789ae6b75c62207",
+      "md5": "9278ff18cfff99c51789ae6b75c62207",
+      "expectedBytes": 1260,
+      "bytes": 1260,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7b093c7d5f236c3205df59e8be5c05b24d111a74891cf53f7656cb0a01765334"
+    },
+    {
+      "path": "assets/component-search.css",
+      "expectedMd5": "b4bb392f5a7f7f7bcc5ae5b1348a655a",
+      "md5": "b4bb392f5a7f7f7bcc5ae5b1348a655a",
+      "expectedBytes": 3597,
+      "bytes": 3597,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "fd24560403beb2671fd04f02ad430f1b4fbefb1b30e2b4eaa56f74dd11df1b65"
+    },
+    {
+      "path": "assets/component-show-more.css",
+      "expectedMd5": "80b1c21d6ffe7d4c39f41de3e6e9f6ea",
+      "md5": "80b1c21d6ffe7d4c39f41de3e6e9f6ea",
+      "expectedBytes": 172,
+      "bytes": 172,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "aa3c97f65ee9c84f3d81d8521c34b041b172cefae1734bc60e5462d578e2cd77"
+    },
+    {
+      "path": "assets/component-slider.css",
+      "expectedMd5": "e2231598446cf160392747d3d1edceae",
+      "md5": "e2231598446cf160392747d3d1edceae",
+      "expectedBytes": 9783,
+      "bytes": 9783,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "639f46c3630d97862ebea55c5b4cc539d110688b263eebdb7721f9fac0d25bf3"
+    },
+    {
+      "path": "assets/component-slideshow.css",
+      "expectedMd5": "558eb9f7c56abfd829e4875d313ed66f",
+      "md5": "558eb9f7c56abfd829e4875d313ed66f",
+      "expectedBytes": 4423,
+      "bytes": 4423,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f49cff467c31bad70cc2f5ebc63239d20d65dd011a7e690f8d1c8ae2345c51a3"
+    },
+    {
+      "path": "assets/component-swatch-input.css",
+      "expectedMd5": "c09b4b741f39ac7fd2925dfd38ef06bd",
+      "md5": "c09b4b741f39ac7fd2925dfd38ef06bd",
+      "expectedBytes": 3171,
+      "bytes": 3171,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9f770c67453a4e3ce86f50a69b4f99ff4bd87b03e668c6d28e5159af46446b5f"
+    },
+    {
+      "path": "assets/component-swatch.css",
+      "expectedMd5": "a76a8bef54a5d0e711886afd918fdad2",
+      "md5": "a76a8bef54a5d0e711886afd918fdad2",
+      "expectedBytes": 803,
+      "bytes": 803,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "736fa06139259e4df8f535cf18565f66cd2be4bc059d5506c1bfbcf3fd1bf51c"
+    },
+    {
+      "path": "assets/component-totals.css",
+      "expectedMd5": "65c4a9f69b36aa0547885162609126dc",
+      "md5": "65c4a9f69b36aa0547885162609126dc",
+      "expectedBytes": 541,
+      "bytes": 541,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "dd932d4dec1df2257379b7697713a2ffc39d9d9c017e23f3969a41d22a653114"
+    },
+    {
+      "path": "assets/component-volume-pricing.css",
+      "expectedMd5": "56d1888ca32012b5adb470684c78b1d7",
+      "md5": "56d1888ca32012b5adb470684c78b1d7",
+      "expectedBytes": 1278,
+      "bytes": 1278,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "683cdb5146324704f95ff2536481a876deef8dbcdf756da5cda3c3d7aa936a38"
+    },
+    {
+      "path": "assets/constants.js",
+      "expectedMd5": "7ad1b8e2173604151ea8ab2ed9aff17a",
+      "md5": "7ad1b8e2173604151ea8ab2ed9aff17a",
+      "expectedBytes": 267,
+      "bytes": 267,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a4ff033599b9fe25fc9c7f22a18f70d786da73c8dd8b514811b2d04d93fe9674"
+    },
+    {
+      "path": "assets/customer.css",
+      "expectedMd5": "c8d1bed9cf6a53c150714ea21c2eb10e",
+      "md5": "c8d1bed9cf6a53c150714ea21c2eb10e",
+      "expectedBytes": 13956,
+      "bytes": 13956,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "94a1fb4b502ffe1e13ede0b61a7222dd5a4c5441fa1e42c75d79925009117811"
+    },
+    {
+      "path": "assets/customer.js",
+      "expectedMd5": "c295bf92df291f9325cccba64721fda8",
+      "md5": "c295bf92df291f9325cccba64721fda8",
+      "expectedBytes": 3063,
+      "bytes": 3063,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "90ac9c26f65ed510e9e3d9d6ec18c141977d8d3cbb15a2c2a4923999a80fc210"
+    },
+    {
+      "path": "assets/details-disclosure.js",
+      "expectedMd5": "3375b10ba492a2bd88c1de8ce986be80",
+      "md5": "3375b10ba492a2bd88c1de8ce986be80",
+      "expectedBytes": 1668,
+      "bytes": 1668,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "05fbafb9278eb8ae30cd50d8748411eb1a8067374380bef95cc45682e7cd4929"
+    },
+    {
+      "path": "assets/details-modal.js",
+      "expectedMd5": "b805d120c28c82b43f6a8ae3490b9751",
+      "md5": "b805d120c28c82b43f6a8ae3490b9751",
+      "expectedBytes": 1730,
+      "bytes": 1730,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "29af7cbb917a47d6b85ee29046d03ca2bf1843869235173b08886c3efd64fe0e"
+    },
+    {
+      "path": "assets/facets.js",
+      "expectedMd5": "5c4c1b43e6a69788c6488f263f5228be",
+      "md5": "5c4c1b43e6a69788c6488f263f5228be",
+      "expectedBytes": 14293,
+      "bytes": 14293,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5ebbdc1a4166bd66533946c7601880d2226b1565fed7c54c3c57c4b330f987cf"
+    },
+    {
+      "path": "assets/global.js",
+      "expectedMd5": "08121b6a62a561415810b8d2c27edf22",
+      "md5": "08121b6a62a561415810b8d2c27edf22",
+      "expectedBytes": 63019,
+      "bytes": 63019,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "41d96b970f39749773b8d1d69087682bad9f70f24b5400e6fecb3e49f7389253"
+    },
+    {
+      "path": "assets/localization-form.js",
+      "expectedMd5": "2fd79ff62c762064c4d62f9c65cff16b",
+      "md5": "2fd79ff62c762064c4d62f9c65cff16b",
+      "expectedBytes": 8069,
+      "bytes": 8069,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "663b78d3798e1a65aadfad749da6295a88aecf2c48b746d345f31faf52058de0"
+    },
+    {
+      "path": "assets/magnify.js",
+      "expectedMd5": "ff9ccb32d7d89e01600b2b2e8648ebc5",
+      "md5": "ff9ccb32d7d89e01600b2b2e8648ebc5",
+      "expectedBytes": 2195,
+      "bytes": 2195,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "529691b1797d1c1c50e30e429f6a5a47866b8925975929dd912e70dfeed59df3"
+    },
+    {
+      "path": "assets/main-search.js",
+      "expectedMd5": "a925d7cf5fa664850a9cf3eca9953eb3",
+      "md5": "a925d7cf5fa664850a9cf3eca9953eb3",
+      "expectedBytes": 1287,
+      "bytes": 1287,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "28b1ff3d43e052ae66526af707eff17cfc002613f3c373c3fa05e26483a629c1"
+    },
+    {
+      "path": "assets/mask-blobs.css",
+      "expectedMd5": "9cac5292eefac16d44671b12af56d19f",
+      "md5": "9cac5292eefac16d44671b12af56d19f",
+      "expectedBytes": 12097,
+      "bytes": 12097,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "316e1240f60bccff184e0a1ad42e8c31fd55cf63436758b1956646445c19c2e4"
+    },
+    {
+      "path": "assets/media-gallery.js",
+      "expectedMd5": "ee78305f52521b3433ef4a542f58344e",
+      "md5": "ee78305f52521b3433ef4a542f58344e",
+      "expectedBytes": 9712,
+      "bytes": 9712,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "950f98bb8994bf4aa21cf3885cada4a21ed55b84b0fc153d6b7f0fc073e410e5"
+    },
+    {
+      "path": "assets/newsletter-section.css",
+      "expectedMd5": "9279b76fdc4bda6bfc7057a8ab39a600",
+      "md5": "9279b76fdc4bda6bfc7057a8ab39a600",
+      "expectedBytes": 928,
+      "bytes": 928,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8c3b6e6eb91b874fc6d9ad0cdb78fb2727ab24a9cfd134c9811edb20f6af4791"
+    },
+    {
+      "path": "assets/password-modal.js",
+      "expectedMd5": "4ea127962e6eb5cab51f8343711cd28e",
+      "md5": "4ea127962e6eb5cab51f8343711cd28e",
+      "expectedBytes": 259,
+      "bytes": 259,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "987e4530bba83596fb3448b7289fdd1d179580254253e4c879d88f6ac41fa2d4"
+    },
+    {
+      "path": "assets/pickup-availability.js",
+      "expectedMd5": "4677aab295c97d1a382150a714dc01f4",
+      "md5": "4677aab295c97d1a382150a714dc01f4",
+      "expectedBytes": 4330,
+      "bytes": 4330,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "313a9c3a3b363341e0448b679e5f2257ce017aadc19b72a19c240aaa161eecb9"
+    },
+    {
+      "path": "assets/predictive-search.js",
+      "expectedMd5": "0a23e91fa72ca52f1997e1cde63e20dd",
+      "md5": "0a23e91fa72ca52f1997e1cde63e20dd",
+      "expectedBytes": 8995,
+      "bytes": 8995,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f2319aa05bdb51077be12347c947a475a1897ac2feef7bb154aa8c60a7770af8"
+    },
+    {
+      "path": "assets/price-per-item.js",
+      "expectedMd5": "e9d97f88061e40960946163bdd9c251b",
+      "md5": "e9d97f88061e40960946163bdd9c251b",
+      "expectedBytes": 4519,
+      "bytes": 4519,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "183939f1a0f55d062bdc3d7906da3733cb434ed9c13aa981b34c1858fe408c43"
+    },
+    {
+      "path": "assets/product-form.js",
+      "expectedMd5": "0586d77956e5a083c08f5461a7c648f3",
+      "md5": "0586d77956e5a083c08f5461a7c648f3",
+      "expectedBytes": 7533,
+      "bytes": 7533,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "688dd62324465f4249a53e4d91c00f8816da35cf9ebb1bd2c00252a49d854611"
+    },
+    {
+      "path": "assets/product-info.js",
+      "expectedMd5": "a8b1364ce8b67e42283a7a03067036ce",
+      "md5": "a8b1364ce8b67e42283a7a03067036ce",
+      "expectedBytes": 18557,
+      "bytes": 18557,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "26e86f7de2f15d281757ef65e6ac9cb0a7842f27fcf5c2b89dc34ebe51f74656"
+    },
+    {
+      "path": "assets/product-modal.js",
+      "expectedMd5": "23761e5d27074c39d32ef9f0a1e21c7b",
+      "md5": "23761e5d27074c39d32ef9f0a1e21c7b",
+      "expectedBytes": 6776,
+      "bytes": 6776,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "87d329a1ba948541825c35ad69231b7c24bfa719760ee8079fe99e516e9f3d29"
+    },
+    {
+      "path": "assets/product-model.js",
+      "expectedMd5": "142638263868c7dc420337bf3117ebc0",
+      "md5": "142638263868c7dc420337bf3117ebc0",
+      "expectedBytes": 1415,
+      "bytes": 1415,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d3e1811f717e921df9a277851eb221e842f3aab711aa3320875773ebd8b10a23"
+    },
+    {
+      "path": "assets/pubsub.js",
+      "expectedMd5": "7985cbe794e5d51f66ec66fcae2da7cd",
+      "md5": "7985cbe794e5d51f66ec66fcae2da7cd",
+      "expectedBytes": 623,
+      "bytes": 623,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "85151191a873cb91c7079bee9626b11533286c2d928aa0ba99129ab7e0c5e734"
+    },
+    {
+      "path": "assets/quantity-popover.css",
+      "expectedMd5": "bcc474d9c9d005d46c53a512da4c6336",
+      "md5": "bcc474d9c9d005d46c53a512da4c6336",
+      "expectedBytes": 3548,
+      "bytes": 3548,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8863d1c999a7e5d3f7a42019776e97c0a0627584b1027cc0c196d2fab67cfb95"
+    },
+    {
+      "path": "assets/quantity-popover.js",
+      "expectedMd5": "8d6ff4b3d3a5211b3ea9dc1f9e669e8e",
+      "md5": "8d6ff4b3d3a5211b3ea9dc1f9e669e8e",
+      "expectedBytes": 3638,
+      "bytes": 3638,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1eb57e1d20ad3a802591d1749c6a850d6d4a14707ce7c3a042a937fc048d8b16"
+    },
+    {
+      "path": "assets/quick-add-bulk.js",
+      "expectedMd5": "a7ad7a7bdee2942b13063d86c02dbdb3",
+      "md5": "a7ad7a7bdee2942b13063d86c02dbdb3",
+      "expectedBytes": 6785,
+      "bytes": 6785,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "033e941b364fc4737010085c4b2fa0a2d8010174a22913b4120281babb806554"
+    },
+    {
+      "path": "assets/quick-add.css",
+      "expectedMd5": "9f84f9e10f32f8619f91c54bd28c83ad",
+      "md5": "9f84f9e10f32f8619f91c54bd28c83ad",
+      "expectedBytes": 9093,
+      "bytes": 9093,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "17e5bc83e0564cff55596628db43415a6bd26541a9bd21d2696754971e29a510"
+    },
+    {
+      "path": "assets/quick-add.js",
+      "expectedMd5": "40d8b5229e7eab8e03450f6c615a5870",
+      "md5": "40d8b5229e7eab8e03450f6c615a5870",
+      "expectedBytes": 4921,
+      "bytes": 4921,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b5b07224c3e755e553f99c03a1991f5bc27d64c0ec45c4e6fde1110c607fab9b"
+    },
+    {
+      "path": "assets/quick-order-list.css",
+      "expectedMd5": "8b811b27a8c8e61332cedfc9c32a4a6c",
+      "md5": "8b811b27a8c8e61332cedfc9c32a4a6c",
+      "expectedBytes": 12711,
+      "bytes": 12711,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d0deede202325af0d08bb04ffd5817453f5035fd994f8960db30ccb0b71ad2b3"
+    },
+    {
+      "path": "assets/quick-order-list.js",
+      "expectedMd5": "901fe5cd3e70848af18cca4daf068ad3",
+      "md5": "901fe5cd3e70848af18cca4daf068ad3",
+      "expectedBytes": 18028,
+      "bytes": 18028,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0aac677b2d24bd60afe8af21e6588a304eb3d65598fdf75a8989147f3099db68"
+    },
+    {
+      "path": "assets/recipient-form.js",
+      "expectedMd5": "504d8e9b6967b903c6769d85baf3bc23",
+      "md5": "504d8e9b6967b903c6769d85baf3bc23",
+      "expectedBytes": 6669,
+      "bytes": 6669,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "965f575a239c4b5a7eb433f634c76c46131e873d704a69b81ac4a4722061cbfb"
+    },
+    {
+      "path": "assets/search-form.js",
+      "expectedMd5": "071b75ac5d831e6cf17d23e13545f38f",
+      "md5": "071b75ac5d831e6cf17d23e13545f38f",
+      "expectedBytes": 1397,
+      "bytes": 1397,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "43a0bada1bea9142491e5b69762457b8c4b8958b67ffe8c374e77504aa94d210"
+    },
+    {
+      "path": "assets/section-blog-post.css",
+      "expectedMd5": "177b9e97db01996c75d7239ea9f90099",
+      "md5": "177b9e97db01996c75d7239ea9f90099",
+      "expectedBytes": 3349,
+      "bytes": 3349,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1ef936401f193e3e56f855ff6fbb211ab61eccb7458864a3e43f4b1062699ec0"
+    },
+    {
+      "path": "assets/section-collection-list.css",
+      "expectedMd5": "2f91d040984a3fc7d945fde0b21b8786",
+      "md5": "2f91d040984a3fc7d945fde0b21b8786",
+      "expectedBytes": 1177,
+      "bytes": 1177,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c95aef7223e8bff54cd8b7ac70d99d6c68adc50aaff17462d219c456a84a6772"
+    },
+    {
+      "path": "assets/section-contact-form.css",
+      "expectedMd5": "8d95446b79e329a4648eb340b52dddd6",
+      "md5": "8d95446b79e329a4648eb340b52dddd6",
+      "expectedBytes": 605,
+      "bytes": 605,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1ac6eed8bb875692ab32297b6de2b703314c4dc5df28519afd43fb7cb0f72992"
+    },
+    {
+      "path": "assets/section-email-signup-banner.css",
+      "expectedMd5": "58427f7fcb2ef1b1f28822bca46a34fc",
+      "md5": "58427f7fcb2ef1b1f28822bca46a34fc",
+      "expectedBytes": 2696,
+      "bytes": 2696,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c66b1266d4a7390007555a18ef82052d6e0715f1fea55aa28a494be38badb7ee"
+    },
+    {
+      "path": "assets/section-featured-blog.css",
+      "expectedMd5": "1815f09759f84123d8182bd54fe6c97e",
+      "md5": "1815f09759f84123d8182bd54fe6c97e",
+      "expectedBytes": 1140,
+      "bytes": 1140,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d2972dda2d21108708c96f4733bcdef4f3ea04fbcfad740ec7dc568b03dc460d"
+    },
+    {
+      "path": "assets/section-featured-product.css",
+      "expectedMd5": "29222c7fee37a60c5427f68a8269c06c",
+      "md5": "29222c7fee37a60c5427f68a8269c06c",
+      "expectedBytes": 1566,
+      "bytes": 1566,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "154ee89ad39ace6c0b869bf919f7c6bc98e22898fc11eded8554cecf19991ae0"
+    },
+    {
+      "path": "assets/section-footer.css",
+      "expectedMd5": "7366e36d9165e77ab35b0ce38b8150d2",
+      "md5": "7366e36d9165e77ab35b0ce38b8150d2",
+      "expectedBytes": 9982,
+      "bytes": 9982,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "48235800550a2d335cc994648b7efdb34d7f8cc28929ec4f44b892d2ae6fccb9"
+    },
+    {
+      "path": "assets/section-image-banner.css",
+      "expectedMd5": "918e7f165ed5a86262ee239a4faf597a",
+      "md5": "918e7f165ed5a86262ee239a4faf597a",
+      "expectedBytes": 10741,
+      "bytes": 10741,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e599765d8f903d7b6a6f5655f88cccfde872d3e9f4569bdd6aa0e98771dbcc76"
+    },
+    {
+      "path": "assets/section-main-blog.css",
+      "expectedMd5": "debd204005026adf41ca1c9d573c0b29",
+      "md5": "debd204005026adf41ca1c9d573c0b29",
+      "expectedBytes": 2219,
+      "bytes": 2219,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "66a30232ba493ca1a486c978cf525e2b311e588baa38a9f3821345575f5f3797"
+    },
+    {
+      "path": "assets/section-main-glossary-page.css",
+      "expectedMd5": "c952423d460b202642e782c04cfdcf8c",
+      "md5": "c952423d460b202642e782c04cfdcf8c",
+      "expectedBytes": 14344,
+      "bytes": 14344,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0b92a9b39b6a09adb53b8e1c114c49030cbc4fce341e9efbfc7dd31002e96cb2"
+    },
+    {
+      "path": "assets/section-main-glossary.css",
+      "expectedMd5": "1f43fd0df8741372e0140bc0a758158f",
+      "md5": "1f43fd0df8741372e0140bc0a758158f",
+      "expectedBytes": 4361,
+      "bytes": 4361,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7702aefaf1797958875154fe80eabeed245e007a00e1bcb12ab6245a2867502d"
+    },
+    {
+      "path": "assets/section-main-page.css",
+      "expectedMd5": "85726451023bbaa241d55c7768087d4f",
+      "md5": "85726451023bbaa241d55c7768087d4f",
+      "expectedBytes": 328,
+      "bytes": 328,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d72968703ade264215c1b9ce801d2735f2f1ce7531f475799cd91b79cc9edd31"
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "expectedMd5": "b0305130d44dfc02dc13ec5b94875040",
+      "md5": "b0305130d44dfc02dc13ec5b94875040",
+      "expectedBytes": 66937,
+      "bytes": 66937,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "fd6cc9850e2f85df76dedd7acb5366250c9c90d7a33a29b64d6abcae203c2959"
+    },
+    {
+      "path": "assets/section-multicolumn.css",
+      "expectedMd5": "b5fc56e366b3b26a7ff2dce028ece917",
+      "md5": "b5fc56e366b3b26a7ff2dce028ece917",
+      "expectedBytes": 4938,
+      "bytes": 4938,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4a581171e3b957b6eebf8365723cd8a58433f11b0b7ae563da69cf977b379a32"
+    },
+    {
+      "path": "assets/section-password.css",
+      "expectedMd5": "73de96446befa988592bdcc15027f5ba",
+      "md5": "73de96446befa988592bdcc15027f5ba",
+      "expectedBytes": 5917,
+      "bytes": 5917,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "528ad31d32b92c4868b2440b6ea2ee1fd6cd53aabbafcc03cd7ab655de42a298"
+    },
+    {
+      "path": "assets/section-related-products.css",
+      "expectedMd5": "2501b9d0b60e8403b8e6541584706b48",
+      "md5": "2501b9d0b60e8403b8e6541584706b48",
+      "expectedBytes": 99,
+      "bytes": 99,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1b2b088f6d8819aa6be9e41ede708ba12db8ce01d12babede7fe8a4ece5bb7f4"
+    },
+    {
+      "path": "assets/section-rich-text.css",
+      "expectedMd5": "56a7fcfaf8f0249e4bd56823d1a63c11",
+      "md5": "56a7fcfaf8f0249e4bd56823d1a63c11",
+      "expectedBytes": 1466,
+      "bytes": 1466,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c6e8f94743561edc6dadfa732189fe36fe3f1025131e74cea33f849ca40d164b"
+    },
+    {
+      "path": "assets/share.js",
+      "expectedMd5": "7752fb288184934230de4f4b26105b45",
+      "md5": "7752fb288184934230de4f4b26105b45",
+      "expectedBytes": 2228,
+      "bytes": 2228,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b1bfc460c99a0351deb75be50da1372801e951abdb296f894adbd1da8f2b1d1d"
+    },
+    {
+      "path": "assets/show-more.js",
+      "expectedMd5": "c961839212016e1ed4e84cc4d1af1dcd",
+      "md5": "c961839212016e1ed4e84cc4d1af1dcd",
+      "expectedBytes": 1235,
+      "bytes": 1235,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cee4f6a77195239d8b5570086a8107dff20eb14e548b964f17f49e209b957c27"
+    },
+    {
+      "path": "assets/template-collection.css",
+      "expectedMd5": "3cc85bbc770ad419e739df7350492ffc",
+      "md5": "3cc85bbc770ad419e739df7350492ffc",
+      "expectedBytes": 1817,
+      "bytes": 1817,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6680d620a01a648a09cb2ec648932cb9021df8b63b7a0e9b7b733855171022d1"
+    },
+    {
+      "path": "assets/template-giftcard.css",
+      "expectedMd5": "ade8eedae9ec29dbb1f8618672d6d6fe",
+      "md5": "ade8eedae9ec29dbb1f8618672d6d6fe",
+      "expectedBytes": 6975,
+      "bytes": 6975,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4fe88ecb902ab3f2fb5741eb3acd3da754436bfb5a188eed816f863374bda3b0"
+    },
+    {
+      "path": "assets/theme-editor.js",
+      "expectedMd5": "f2e634218d4fd7ce5dd08225e716989f",
+      "md5": "f2e634218d4fd7ce5dd08225e716989f",
+      "expectedBytes": 2138,
+      "bytes": 2138,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0da5671f0ebba2a1158c7c4f7a6fb6890d93d73f496719399a3cff52ada2607b"
+    },
+    {
+      "path": "assets/video-section.css",
+      "expectedMd5": "12ea2154cde2fb5f4809c5e8b2d826d6",
+      "md5": "12ea2154cde2fb5f4809c5e8b2d826d6",
+      "expectedBytes": 1245,
+      "bytes": 1245,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a304a608c1e3198f8fb70245b50d342288319aad8c9c1d3b59843b158a52ba74"
+    },
+    {
+      "path": "config/settings_data.json",
+      "expectedMd5": "56d82e286a3ff41931816a95b614a5cf",
+      "md5": "9fd7717c3e9eb0ab55c679cc1a753361",
+      "expectedBytes": 8651,
+      "bytes": 11923,
+      "byteMatch": false,
+      "state": "BYTE_MISMATCH",
+      "sha256": "82c954a5c1f046d8251b5e4926af4cac65365e50e767fee6b4624ab7f361a191"
+    },
+    {
+      "path": "config/settings_schema.json",
+      "expectedMd5": "70b4665da3569296af1ffd3cbbb04514",
+      "md5": "70b4665da3569296af1ffd3cbbb04514",
+      "expectedBytes": 41735,
+      "bytes": 41735,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9af0130e20e0965822acf27da527d3ad6ae834ea1717fd2b844bf9153ef4a98e"
+    },
+    {
+      "path": "layout/password.liquid",
+      "expectedMd5": "d0363efebbcea90effb6c1f752b1ee71",
+      "md5": "d0363efebbcea90effb6c1f752b1ee71",
+      "expectedBytes": 14503,
+      "bytes": 14503,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cdf4042260e53d417078894a8b85d43ab979adbc3d5056740e12b4d8a3b47828"
+    },
+    {
+      "path": "layout/theme.liquid",
+      "expectedMd5": "7b17172e06148f30cdf940de6da9504c",
+      "md5": "7b17172e06148f30cdf940de6da9504c",
+      "expectedBytes": 22668,
+      "bytes": 22668,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d3ee63f13f39527d0a9e8ad4fc3398100378d6f38f77924c332cd38f7be5d135"
+    },
+    {
+      "path": "locales/en.default.json",
+      "expectedMd5": "1117fe17162d1ca12ff3a83c2763415e",
+      "md5": "1117fe17162d1ca12ff3a83c2763415e",
+      "expectedBytes": 69673,
+      "bytes": 69673,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f974099ed77378b413daaa76136fba15ec83c71372b8fed508f4d873e501b7c7"
+    },
+    {
+      "path": "locales/nl.json",
+      "expectedMd5": "6664478c61d4fc53c27537bf44bba952",
+      "md5": "6664478c61d4fc53c27537bf44bba952",
+      "expectedBytes": 73258,
+      "bytes": 73258,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "80399f5585020a08eb60f675e15bd9e13ee3054dcc254f1a70f358cf790df466"
+    },
+    {
+      "path": "sections/announcement-bar.liquid",
+      "expectedMd5": "dee6cbf3bedaf143456f22f5b15b263c",
+      "md5": "dee6cbf3bedaf143456f22f5b15b263c",
+      "expectedBytes": 10542,
+      "bytes": 10542,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c973bf68951573fcf067316f6ff7d97b4d3c21312123025aa2317bb0ea7cb8d0"
+    },
+    {
+      "path": "sections/apps.liquid",
+      "expectedMd5": "586a8e94ed4d73c3e6a1ba71bc46a106",
+      "md5": "586a8e94ed4d73c3e6a1ba71bc46a106",
+      "expectedBytes": 697,
+      "bytes": 697,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "092a69b50e07d0ba84ab23f487f0845ab5818a045e301c4247eac3420702647b"
+    },
+    {
+      "path": "sections/bc-advice-article.liquid",
+      "expectedMd5": "c284e3d31b00b0b8b20f980d19387541",
+      "md5": "c284e3d31b00b0b8b20f980d19387541",
+      "expectedBytes": 19804,
+      "bytes": 19804,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0ae84393a5c58ff864ad6241913614ccae9f317cd688bf0829ed0e9886633f82"
+    },
+    {
+      "path": "sections/bc-assortment.liquid",
+      "expectedMd5": "101cb1a1432ef67adee87ff3c3f3eb7f",
+      "md5": "101cb1a1432ef67adee87ff3c3f3eb7f",
+      "expectedBytes": 13679,
+      "bytes": 13679,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9e29218aa8c8afbc9e34638fcb3f4ad54bbd7801ca32231a5db101e2c700983a"
+    },
+    {
+      "path": "sections/bc-brand-directory.liquid",
+      "expectedMd5": "dba780cdef40e504bcae3e99d3646dc4",
+      "md5": "dba780cdef40e504bcae3e99d3646dc4",
+      "expectedBytes": 2614,
+      "bytes": 2614,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8b38bdff817de4b1bfa906c756cd172977c684bf41de4f168e0b5c0c29fa5899"
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "expectedMd5": "94916ad19c1588391444ff0325e57de7",
+      "md5": "94916ad19c1588391444ff0325e57de7",
+      "expectedBytes": 5271,
+      "bytes": 5271,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "46ee8813af4a8dc910676c11109d3511c6d53b09010442de0202d6b9eeb14a93"
+    },
+    {
+      "path": "sections/bc-collection-advice.liquid",
+      "expectedMd5": "858aaf9987d9516ccb468f34d01ec38f",
+      "md5": "858aaf9987d9516ccb468f34d01ec38f",
+      "expectedBytes": 3645,
+      "bytes": 3645,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "44da1667de83fa668256faca4ba50212d16d79bae53ca9559392238e4191db2b"
+    },
+    {
+      "path": "sections/bc-homepage.liquid",
+      "expectedMd5": "548f387a0f8d53637f6486319ec5c0f2",
+      "md5": "548f387a0f8d53637f6486319ec5c0f2",
+      "expectedBytes": 14477,
+      "bytes": 14477,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b9a569f91d8428390f8f4fddf59dcfd2f4c4ea876a6a09cd011a25a18a422929"
+    },
+    {
+      "path": "sections/bc-meubelhub.liquid",
+      "expectedMd5": "28dc83dc08f2307ab67d2dca8d77fd3f",
+      "md5": "28dc83dc08f2307ab67d2dca8d77fd3f",
+      "expectedBytes": 18665,
+      "bytes": 18665,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "35790086ea5c3eae2873aa668f31b888538aa66eeb32f52e701ffefbda62a1d3"
+    },
+    {
+      "path": "sections/bc-quote-teaser.liquid",
+      "expectedMd5": "c1132f420c7fb268240d323ce9735e46",
+      "md5": "c1132f420c7fb268240d323ce9735e46",
+      "expectedBytes": 561,
+      "bytes": 561,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2bdd4c553244d88778d668da3d943cadfacddbfb8c023960a886a1db2046c104"
+    },
+    {
+      "path": "sections/bc-quote.liquid",
+      "expectedMd5": "6c123100c78da00d41f2fd92645a1f8c",
+      "md5": "6c123100c78da00d41f2fd92645a1f8c",
+      "expectedBytes": 5109,
+      "bytes": 5109,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "702c5d1a7f9cfd243394c41e0b115219fef3b73eef78e4e681e918cc8e9f4076"
+    },
+    {
+      "path": "sections/bc-related-products.liquid",
+      "expectedMd5": "f4fef3e8a86c34a6932da0bf5443717d",
+      "md5": "f4fef3e8a86c34a6932da0bf5443717d",
+      "expectedBytes": 508,
+      "bytes": 508,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c2f9b0125a8db237728a698af76bb348bdc3224d690472b905e701e847e3a68d"
+    },
+    {
+      "path": "sections/bc-returns.liquid",
+      "expectedMd5": "1746659cd84502875b24f4fe311f80c9",
+      "md5": "1746659cd84502875b24f4fe311f80c9",
+      "expectedBytes": 11607,
+      "bytes": 11607,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bcab9755c4171de234865817a08c05c20a3c36356934f5decf4601a6ac20c125"
+    },
+    {
+      "path": "sections/bc-sunshower-landing.liquid",
+      "expectedMd5": "d1ee724ee3b8361bfa578749606f8ae4",
+      "md5": "d1ee724ee3b8361bfa578749606f8ae4",
+      "expectedBytes": 18773,
+      "bytes": 18773,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8ca203f94f2ed2ba75df5a41d6a5b95bb62b4313cc0fa0cd4f1d3b9360908920"
+    },
+    {
+      "path": "sections/bc-wishlist-page.liquid",
+      "expectedMd5": "92c46e12eef5db31e2fadb560a4a8aa4",
+      "md5": "92c46e12eef5db31e2fadb560a4a8aa4",
+      "expectedBytes": 1715,
+      "bytes": 1715,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6ee9ffccb8b4858fd2954306735f3c2447ae29a1339b70506a1f65e73df2e141"
+    },
+    {
+      "path": "sections/bulk-quick-order-list.liquid",
+      "expectedMd5": "4d8554dce5a721204f31aab353cb36ba",
+      "md5": "4d8554dce5a721204f31aab353cb36ba",
+      "expectedBytes": 398,
+      "bytes": 398,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d88f1a06ea17cd2cf23d6ed80feebf3b00daa485fe95d44e5c72f342a47738be"
+    },
+    {
+      "path": "sections/cart-drawer.liquid",
+      "expectedMd5": "8e99ac087013c23498bd7277a2b06783",
+      "md5": "8e99ac087013c23498bd7277a2b06783",
+      "expectedBytes": 30,
+      "bytes": 30,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0374aa3adbdedd3dd28125fb98ce80c6c6f1e9de16cfab40bf39135278199a12"
+    },
+    {
+      "path": "sections/cart-icon-bubble.liquid",
+      "expectedMd5": "dfe9c0b0bc3fc29bb795431ec22ba24f",
+      "md5": "dfe9c0b0bc3fc29bb795431ec22ba24f",
+      "expectedBytes": 30,
+      "bytes": 30,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ea452fed136e3e2039593bb3a57d62f1d90c366b0d6ea5db3bc5e4cb2bee1206"
+    },
+    {
+      "path": "sections/cart-live-region-text.liquid",
+      "expectedMd5": "2c803078f4da06fe04d4db7b8ebb2ae1",
+      "md5": "2c803078f4da06fe04d4db7b8ebb2ae1",
+      "expectedBytes": 93,
+      "bytes": 93,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b12c02f5187835ab5263c90ea815b03cbfab99fab7ab567a316c8550cb7cc71f"
+    },
+    {
+      "path": "sections/cart-notification-button.liquid",
+      "expectedMd5": "b777aa012f4fd7e77104de40168a8fa7",
+      "md5": "b777aa012f4fd7e77104de40168a8fa7",
+      "expectedBytes": 55,
+      "bytes": 55,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "83ef76a4bdad2fe6f4012e31c9a8e318f2d09a6e6b73c67b7b9994ddd6ed298f"
+    },
+    {
+      "path": "sections/cart-notification-product.liquid",
+      "expectedMd5": "370b5cae8302ab84e52db512abceabd1",
+      "md5": "370b5cae8302ab84e52db512abceabd1",
+      "expectedBytes": 2287,
+      "bytes": 2287,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e26d41bfe0a57f52bc2f8715845ccbd1d2d10cdc71aa32461ad25b28db949986"
+    },
+    {
+      "path": "sections/collage.liquid",
+      "expectedMd5": "e174fac873de71da57f44309dc29d9b6",
+      "md5": "e174fac873de71da57f44309dc29d9b6",
+      "expectedBytes": 17276,
+      "bytes": 17276,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9086c588b7f3c74a46e49b13da13b0ee6e7a3dff5ab991c00766bac3570d6945"
+    },
+    {
+      "path": "sections/collapsible-content.liquid",
+      "expectedMd5": "3198888e5386925d0e0220f8032248da",
+      "md5": "3198888e5386925d0e0220f8032248da",
+      "expectedBytes": 20167,
+      "bytes": 20167,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "044832f976611246a36da6f8f5ed00e21500c67e63384806b182e5f82ff57bf3"
+    },
+    {
+      "path": "sections/collection-list.liquid",
+      "expectedMd5": "873a2ec62ba01ea5182f4b78abfd3fa9",
+      "md5": "873a2ec62ba01ea5182f4b78abfd3fa9",
+      "expectedBytes": 10952,
+      "bytes": 10952,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b9b7c63f8051b001b990f646ae5a0dad5e7c06975cf7cc05cddf2bf0f4764baf"
+    },
+    {
+      "path": "sections/contact-form.liquid",
+      "expectedMd5": "5361d6ce5ea578b634cd6d0998ee350c",
+      "md5": "5361d6ce5ea578b634cd6d0998ee350c",
+      "expectedBytes": 7619,
+      "bytes": 7619,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c4aa51b6d3e6b580fa53f07ab07c783084c19a93e57d4174f6b0c05323caf711"
+    },
+    {
+      "path": "sections/custom-liquid.liquid",
+      "expectedMd5": "65fff0159b217d0bc62607b66ea45f87",
+      "md5": "65fff0159b217d0bc62607b66ea45f87",
+      "expectedBytes": 1767,
+      "bytes": 1767,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b637ae056be8f1a0547100533a138796cad1fefd943c5f908c68f75681fa7857"
+    },
+    {
+      "path": "sections/email-signup-banner.liquid",
+      "expectedMd5": "77e6954dd2867039da8cb7cf7408d761",
+      "md5": "77e6954dd2867039da8cb7cf7408d761",
+      "expectedBytes": 16110,
+      "bytes": 16110,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a8b85c67e7292932b3a21d9e97b94e517fca9f60699f142f54f9c7b8eb8117ae"
+    },
+    {
+      "path": "sections/featured-blog.liquid",
+      "expectedMd5": "f876df7dfe36e14804495173924aca85",
+      "md5": "f876df7dfe36e14804495173924aca85",
+      "expectedBytes": 12995,
+      "bytes": 12995,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0743ace8d006e6f4b2fa808e6a2315e0b3daad2b8c587be51ca782aa4455585f"
+    },
+    {
+      "path": "sections/featured-collection.liquid",
+      "expectedMd5": "8a9961b320d9e5805f6a16efa07f3a20",
+      "md5": "8a9961b320d9e5805f6a16efa07f3a20",
+      "expectedBytes": 18921,
+      "bytes": 18921,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "70d4d085bb77624e2a8df99776febdbe1657818fa1b4df2d908d424c055c60b2"
+    },
+    {
+      "path": "sections/featured-product.liquid",
+      "expectedMd5": "730ab2c90ca9b63dd39fda0a34ef31ff",
+      "md5": "730ab2c90ca9b63dd39fda0a34ef31ff",
+      "expectedBytes": 63804,
+      "bytes": 63804,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "85553be08e078c9d217ce79df881d5121ea612864e6f521c18f982c9c166a591"
+    },
+    {
+      "path": "sections/footer-group.json",
+      "expectedMd5": "037363080cfe44da4c5fa9cb1c7d339b",
+      "md5": "037363080cfe44da4c5fa9cb1c7d339b",
+      "expectedBytes": 5383,
+      "bytes": 5383,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "770d98e647dc5390a4782720a3cc2ffa5406e10c83fe57aae2dc0709503ab7ed"
+    },
+    {
+      "path": "sections/footer.liquid",
+      "expectedMd5": "357e83e6a7ef260476a0f3dd589de980",
+      "md5": "357e83e6a7ef260476a0f3dd589de980",
+      "expectedBytes": 34480,
+      "bytes": 34480,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "34ba4282ad6c65aa9b610c2eeec4ed8b7c23ad8b786faeff11352342bbda7c05"
+    },
+    {
+      "path": "sections/header-group.json",
+      "expectedMd5": "8bee2381c9b9b19383a8141340a3692d",
+      "md5": "8bee2381c9b9b19383a8141340a3692d",
+      "expectedBytes": 1229,
+      "bytes": 1229,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2d6a4d29032186dd4c6ec66967ea8027f4ca16ade57aeb0759e0f3837ae489d7"
+    },
+    {
+      "path": "sections/header.liquid",
+      "expectedMd5": "78a34a0d90ff1df449f3f6ac05db476d",
+      "md5": "78a34a0d90ff1df449f3f6ac05db476d",
+      "expectedBytes": 74845,
+      "bytes": 74845,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "315dcdad741ba4b6c48d653041c8e7078169eae1f4a48cb3f8c7c6f827169708"
+    },
+    {
+      "path": "sections/home-brand-rail.liquid",
+      "expectedMd5": "331bcbbdce1908aa7f7302144f5276b3",
+      "md5": "331bcbbdce1908aa7f7302144f5276b3",
+      "expectedBytes": 11973,
+      "bytes": 11973,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9da350792653ac82bbd2af0aabc285367f45fa1eacec58de227c62446767d7c4"
+    },
+    {
+      "path": "sections/home-category-grid.liquid",
+      "expectedMd5": "0ef64df1a20e06f9b6b3f597e615f085",
+      "md5": "0ef64df1a20e06f9b6b3f597e615f085",
+      "expectedBytes": 18755,
+      "bytes": 18755,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5e75457861de44de63fffbe8f480cb3641708f1d5d48393da8cbb1b0a360c9ca"
+    },
+    {
+      "path": "sections/home-complete-bathroom.liquid",
+      "expectedMd5": "464d44ea3502dcccbf12f1fc750761f8",
+      "md5": "464d44ea3502dcccbf12f1fc750761f8",
+      "expectedBytes": 14231,
+      "bytes": 14231,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "440239f8b339cef5e7b00406cb810b9d249ca90c6d3d552ca9d69fca6881f144"
+    },
+    {
+      "path": "sections/home-help-cta.liquid",
+      "expectedMd5": "accdf253489c82073c2af80cb5ff7feb",
+      "md5": "accdf253489c82073c2af80cb5ff7feb",
+      "expectedBytes": 12649,
+      "bytes": 12649,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "96c3aad9381ab9f3c15d29091e938040c2177f91d6eeffcdce96253dd227a2a8"
+    },
+    {
+      "path": "sections/home-hero.liquid",
+      "expectedMd5": "e0623dfe3185cff29fb38e0f92e17940",
+      "md5": "e0623dfe3185cff29fb38e0f92e17940",
+      "expectedBytes": 30106,
+      "bytes": 30106,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3246c2df1c2eca4827500a734d4d6bb3e7b025320b151d44b29fac4ba2b55492"
+    },
+    {
+      "path": "sections/home-mijn-badkamercity.liquid",
+      "expectedMd5": "d1f9369fcf7b4eb3f15e15f44385e6a2",
+      "md5": "d1f9369fcf7b4eb3f15e15f44385e6a2",
+      "expectedBytes": 14313,
+      "bytes": 14313,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f8304b04b4a4606ba8630594ebd0de4c7aac634b45852157d25377e1ddd60be6"
+    },
+    {
+      "path": "sections/home-popular-products.liquid",
+      "expectedMd5": "61b0fa708a7d7c69bdb7fc50cca47830",
+      "md5": "61b0fa708a7d7c69bdb7fc50cca47830",
+      "expectedBytes": 20093,
+      "bytes": 20093,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a9dbf4cc259444494251c509006b659ddae9721d80832cfcb5cfb6378ab427d5"
+    },
+    {
+      "path": "sections/home-shop-by-style.liquid",
+      "expectedMd5": "63aa2e8e5b2077df61f364ccd4141df4",
+      "md5": "63aa2e8e5b2077df61f364ccd4141df4",
+      "expectedBytes": 22828,
+      "bytes": 22828,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "db25053c66328d01f6777531633535afbe89fd72f26202e5b53fc862441622f9"
+    },
+    {
+      "path": "sections/home-sunshower.liquid",
+      "expectedMd5": "97e50d194a14d5febe37bdba47e4d6f4",
+      "md5": "97e50d194a14d5febe37bdba47e4d6f4",
+      "expectedBytes": 2896,
+      "bytes": 2896,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "db86a0e0338f25d0a257ad218f49a22dbcb8fad14b74453d98ef7fec55aba597"
+    },
+    {
+      "path": "sections/image-banner.liquid",
+      "expectedMd5": "9d8535019fd032c5086ed6f624bc9e8f",
+      "md5": "9d8535019fd032c5086ed6f624bc9e8f",
+      "expectedBytes": 18874,
+      "bytes": 18874,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b4dbc38de600676ecaccffd138078f274de432e8f1f56786ef699575b6394f55"
+    },
+    {
+      "path": "sections/image-with-text.liquid",
+      "expectedMd5": "9a955eba4c089512748550b6967bc63a",
+      "md5": "9a955eba4c089512748550b6967bc63a",
+      "expectedBytes": 18399,
+      "bytes": 18399,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c0daf1f2ebde507fc1d34b19fd30c4b0f8599b497e4f734a9e89cfd2c046010e"
+    },
+    {
+      "path": "sections/main-404.liquid",
+      "expectedMd5": "d57dc337478218973f9ff62681001d8b",
+      "md5": "d57dc337478218973f9ff62681001d8b",
+      "expectedBytes": 517,
+      "bytes": 517,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "98aa55048d21769c12a6b279371ae50d90f5c333a5ec3dc9d486269ff135dac3"
+    },
+    {
+      "path": "sections/main-account.liquid",
+      "expectedMd5": "88cf0e163175f4aa5e8044247c7f6767",
+      "md5": "88cf0e163175f4aa5e8044247c7f6767",
+      "expectedBytes": 6761,
+      "bytes": 6761,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cb9700633b8629b61724f3a1599b96f1522b8d97e4379f5fd2507d83ec6f4b23"
+    },
+    {
+      "path": "sections/main-activate-account.liquid",
+      "expectedMd5": "dfbce41b6df9885973ee456327acd47f",
+      "md5": "dfbce41b6df9885973ee456327acd47f",
+      "expectedBytes": 4250,
+      "bytes": 4250,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "06a6cba1dcc4695f3c5617d60c79f868e356c688402fd3e0a4bc51dbb1679f9e"
+    },
+    {
+      "path": "sections/main-addresses.liquid",
+      "expectedMd5": "bd6469371d228061ec792ee9bf3a4913",
+      "md5": "bd6469371d228061ec792ee9bf3a4913",
+      "expectedBytes": 16304,
+      "bytes": 16304,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "17d5321c9abb5e7f06fa7373ec79658d8a2d844163c77c9bafaafedd69ff1349"
+    },
+    {
+      "path": "sections/main-article.liquid",
+      "expectedMd5": "7ed14f50e89cf9439f7a10dc375516f5",
+      "md5": "7ed14f50e89cf9439f7a10dc375516f5",
+      "expectedBytes": 15450,
+      "bytes": 15450,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f4b6db96350cc4fe24d59e7e601138c6bcbd1576976ada457c4ccb8c291c6d27"
+    },
+    {
+      "path": "sections/main-blog.liquid",
+      "expectedMd5": "4ce5b3b4bc20402d2a2abc15c041d548",
+      "md5": "4ce5b3b4bc20402d2a2abc15c041d548",
+      "expectedBytes": 4336,
+      "bytes": 4336,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c02132c50f7b7cc97267df354bb05e6bf58410d9836486f83adb9c1e37b2529e"
+    },
+    {
+      "path": "sections/main-cart-footer.liquid",
+      "expectedMd5": "7835f868cca569d3fe55df62650fbc3d",
+      "md5": "7835f868cca569d3fe55df62650fbc3d",
+      "expectedBytes": 6986,
+      "bytes": 6986,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9b89c619453375829330f36cb842f808a28618d00698e0bcbbe462ac23b810ab"
+    },
+    {
+      "path": "sections/main-cart-items.liquid",
+      "expectedMd5": "61d49faeb73cc08da64625dac910144f",
+      "md5": "61d49faeb73cc08da64625dac910144f",
+      "expectedBytes": 28948,
+      "bytes": 28948,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0435560ffed3eebadd5dc3328cbffbdfa50cd4972054583d9de7ebeb7733186c"
+    },
+    {
+      "path": "sections/main-category-landing.liquid",
+      "expectedMd5": "d2adee9f02edfb36ea6489dc211847d4",
+      "md5": "d2adee9f02edfb36ea6489dc211847d4",
+      "expectedBytes": 32057,
+      "bytes": 32057,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c81a3b47fba70bbdde659cddac8f0e13d6ae4d6f89e4a44eefa1f2e0e335e12a"
+    },
+    {
+      "path": "sections/main-collection-banner.liquid",
+      "expectedMd5": "f22f8201356785d1433d24c5961c0494",
+      "md5": "f22f8201356785d1433d24c5961c0494",
+      "expectedBytes": 4035,
+      "bytes": 4035,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9b6c3520f1922e911a53c61ee4ccff49b9e6584fd6c82a972fc8ba5c2a81b53c"
+    },
+    {
+      "path": "sections/main-collection-category-landing.liquid",
+      "expectedMd5": "c8521aad9170c91eae2d8e6937689a9c",
+      "md5": "c8521aad9170c91eae2d8e6937689a9c",
+      "expectedBytes": 21340,
+      "bytes": 21340,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "22ec7042ebd9c6753d86adfe4f129d49fa6cc962467dc888a39fd94ee46884f4"
+    },
+    {
+      "path": "sections/main-collection-product-grid.liquid",
+      "expectedMd5": "d5b2024cfdaa22781537be049f303069",
+      "md5": "d5b2024cfdaa22781537be049f303069",
+      "expectedBytes": 16152,
+      "bytes": 16152,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6770aac6835530ee43c92522cf12b226e82c5c830c36d1d0d74d4bfbb98581c0"
+    },
+    {
+      "path": "sections/main-glossary-page.liquid",
+      "expectedMd5": "d13713e8b5c55551d9555ec3ed51acea",
+      "md5": "d13713e8b5c55551d9555ec3ed51acea",
+      "expectedBytes": 8708,
+      "bytes": 8708,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0f4e696c61967bb89c2b9d1e8a9f55ff24e98922179a78d2d536f13a3c208dd1"
+    },
+    {
+      "path": "sections/main-glossary.liquid",
+      "expectedMd5": "28291f4aea8fafa0f62dbb9a067fe031",
+      "md5": "28291f4aea8fafa0f62dbb9a067fe031",
+      "expectedBytes": 11357,
+      "bytes": 11357,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "195c95ec2350fb14b3505dfe9cebd461fa0bdb9421bb6b53ccd0a67b730fe5e4"
+    },
+    {
+      "path": "sections/main-list-collections.liquid",
+      "expectedMd5": "f4c0f66f21702c411783b7a9a7d54d3b",
+      "md5": "f4c0f66f21702c411783b7a9a7d54d3b",
+      "expectedBytes": 4702,
+      "bytes": 4702,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "934c37cffbc5d1128c4483a5cc5fbd863f56f416e7ca43b58f77db2b1eab5dc2"
+    },
+    {
+      "path": "sections/main-login.liquid",
+      "expectedMd5": "e73c9e9c6fc4aa2e57abc211ececedb0",
+      "md5": "e73c9e9c6fc4aa2e57abc211ececedb0",
+      "expectedBytes": 6010,
+      "bytes": 6010,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9c92f8b749ed5fc304768447eb61368ea8276c290391c18ce1464b2f092fec84"
+    },
+    {
+      "path": "sections/main-order.liquid",
+      "expectedMd5": "0727f2e1d910d3069fbfa9385089b493",
+      "md5": "0727f2e1d910d3069fbfa9385089b493",
+      "expectedBytes": 15576,
+      "bytes": 15576,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "288d49125e5a17acfecc777bd903116925d231ac43db24d121165137f708d51c"
+    },
+    {
+      "path": "sections/main-page.liquid",
+      "expectedMd5": "9db217ea3549219c68ee71580e295892",
+      "md5": "9db217ea3549219c68ee71580e295892",
+      "expectedBytes": 1623,
+      "bytes": 1623,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "040c7f57ba6af1899fc9927671d571a3da0000c8e4c97da24defc52b0cdf6d88"
+    },
+    {
+      "path": "sections/main-password-footer.liquid",
+      "expectedMd5": "4ee5e1a6f4a46e17ef9eb56a803c2c05",
+      "md5": "4ee5e1a6f4a46e17ef9eb56a803c2c05",
+      "expectedBytes": 5036,
+      "bytes": 5036,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "533aa810142ab9a19c5ac06f5961c29d53bc1756ad7338e00624776ea86bc38a"
+    },
+    {
+      "path": "sections/main-password-header.liquid",
+      "expectedMd5": "8e0ae31a6b6bf02f20542b264ed22d9c",
+      "md5": "8e0ae31a6b6bf02f20542b264ed22d9c",
+      "expectedBytes": 4682,
+      "bytes": 4682,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "93d642d73264d1b00460b428f782849db2c9d4d6bf6a75f894967abbdd93047c"
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "expectedMd5": "eee4e7a95cc1739afc3aa2c30907e5ce",
+      "md5": "eee4e7a95cc1739afc3aa2c30907e5ce",
+      "expectedBytes": 139923,
+      "bytes": 139923,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "936422ba6bcb159ef09b48daf18429d892a6d0c9489eba5355d5cb0534e60510"
+    },
+    {
+      "path": "sections/main-register.liquid",
+      "expectedMd5": "7fd4d5d4e9a5c87752b2a730476b1b0b",
+      "md5": "7fd4d5d4e9a5c87752b2a730476b1b0b",
+      "expectedBytes": 5038,
+      "bytes": 5038,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8703fbc2c2981f86d9212162923485ddcb48c08fa28015479d50a98a2b2029e8"
+    },
+    {
+      "path": "sections/main-reset-password.liquid",
+      "expectedMd5": "6778ebd61646ee437b8bd3da1ddb8a88",
+      "md5": "6778ebd61646ee437b8bd3da1ddb8a88",
+      "expectedBytes": 4233,
+      "bytes": 4233,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "86d4b5974610832451118b6d9eb7279c3f807f69cc8d5f20254e3c269c771f08"
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "expectedMd5": "3de257061f0e313921a361c13ab53fbe",
+      "md5": "3de257061f0e313921a361c13ab53fbe",
+      "expectedBytes": 29802,
+      "bytes": 29802,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e99c16d1645e352ff593d5e08dec116b7f3c80ded3946b00d95db99a13ba1005"
+    },
+    {
+      "path": "sections/main-sunshower.liquid",
+      "expectedMd5": "8de08df00ef54024133536351c6a55d6",
+      "md5": "8de08df00ef54024133536351c6a55d6",
+      "expectedBytes": 20387,
+      "bytes": 20387,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e4032838361b15177fda9696e25630b84fa8eb44c70fa759080fa4ea5f54d7bf"
+    },
+    {
+      "path": "sections/multicolumn.liquid",
+      "expectedMd5": "d5050d5af6e2238b4b0bddfee355870b",
+      "md5": "d5050d5af6e2238b4b0bddfee355870b",
+      "expectedBytes": 17023,
+      "bytes": 17023,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "145275c916c10d1f044fa8e93003876dcc0be4c8c4fed820455e26e26e7342f5"
+    },
+    {
+      "path": "sections/multirow.liquid",
+      "expectedMd5": "d887024ac27211efddec4389b86a7716",
+      "md5": "d887024ac27211efddec4389b86a7716",
+      "expectedBytes": 14650,
+      "bytes": 14650,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d0fa46491ef564e094b1d9978f0b6df61295ae8230d9c42abf684754206f949a"
+    },
+    {
+      "path": "sections/newsletter.liquid",
+      "expectedMd5": "5c081e6d071b75f0e44d39ed01833672",
+      "md5": "5c081e6d071b75f0e44d39ed01833672",
+      "expectedBytes": 8717,
+      "bytes": 8717,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8806c812f45276a80df30941bf9a5a8e8e102f3ba6dda99f898986002dda0584"
+    },
+    {
+      "path": "sections/page.liquid",
+      "expectedMd5": "40477c089e0b1a17029f153541b4ee12",
+      "md5": "40477c089e0b1a17029f153541b4ee12",
+      "expectedBytes": 3306,
+      "bytes": 3306,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "10d6200b921e44e5c2e32f8306d1c4e603d5a478db618e81b1d18deb1bff3f2f"
+    },
+    {
+      "path": "sections/pickup-availability.liquid",
+      "expectedMd5": "be91f17ccb57ad3f808bb800cb3ad105",
+      "md5": "be91f17ccb57ad3f808bb800cb3ad105",
+      "expectedBytes": 4320,
+      "bytes": 4320,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f6c946b26235afcdf2d52dc98c8983688e00bb37f457e6bd105e99ae59150e88"
+    },
+    {
+      "path": "sections/predictive-search.liquid",
+      "expectedMd5": "7dc10c70722da42a0f6765b59a258933",
+      "md5": "7dc10c70722da42a0f6765b59a258933",
+      "expectedBytes": 3842,
+      "bytes": 3842,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d60d569f052e089d587bf65ce6192bef0f910368be1dc8e007c049c665bca886"
+    },
+    {
+      "path": "sections/product-description.liquid",
+      "expectedMd5": "50c9ef69a162b7763abdcdc098bffa66",
+      "md5": "50c9ef69a162b7763abdcdc098bffa66",
+      "expectedBytes": 571,
+      "bytes": 571,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d1f8a437b329cff92dd0e3bca98e6bba3a76ac6d11853c679e74b1b9f060987b"
+    },
+    {
+      "path": "sections/product-info.liquid",
+      "expectedMd5": "6b4b3c905caa2e23d534021099e47613",
+      "md5": "6b4b3c905caa2e23d534021099e47613",
+      "expectedBytes": 757,
+      "bytes": 757,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "67ee8a4facd9afb73f9b992ae94e089120bccf6a970ae1a7d577e5213e916359"
+    },
+    {
+      "path": "sections/product-media.liquid",
+      "expectedMd5": "be68ea18f6592dc70475bc405945d4e5",
+      "md5": "be68ea18f6592dc70475bc405945d4e5",
+      "expectedBytes": 366,
+      "bytes": 366,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ede12a7a39398a4b35819af8ee81d780164aba378d7649e4ae192f269e19cb81"
+    },
+    {
+      "path": "sections/product-specs.liquid",
+      "expectedMd5": "7663844db218524c7cdb9c757aa37415",
+      "md5": "7663844db218524c7cdb9c757aa37415",
+      "expectedBytes": 5356,
+      "bytes": 5356,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "17012f5bd9b6a17c1a1029a8f7b3a116e40f682cbed445183a45f306d0689950"
+    },
+    {
+      "path": "sections/quick-order-list.liquid",
+      "expectedMd5": "933e6fdb990e6bb733340e84776922ef",
+      "md5": "933e6fdb990e6bb733340e84776922ef",
+      "expectedBytes": 2393,
+      "bytes": 2393,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "66d9176c0a075394cae19b8480abe585fac415ab33732ea2a10b21643bcd5ffd"
+    },
+    {
+      "path": "sections/related-products.liquid",
+      "expectedMd5": "38b596ca6079eef4043ae0945957c11d",
+      "md5": "38b596ca6079eef4043ae0945957c11d",
+      "expectedBytes": 7642,
+      "bytes": 7642,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "fc8cfa44d4be197b654dd9d88fce186dc5d427d2bf9c2009b0e7797699149cd1"
+    },
+    {
+      "path": "sections/rich-text.liquid",
+      "expectedMd5": "0938dd95d9ac0546387095374571468a",
+      "md5": "0938dd95d9ac0546387095374571468a",
+      "expectedBytes": 12636,
+      "bytes": 12636,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a676f08681ea03fa80a3f25fad27208f720eb2d6c7309e45eb39f5d4595bc546"
+    },
+    {
+      "path": "sections/short-specs.liquid",
+      "expectedMd5": "cc85cd497e4ba922afa43be513b9a22d",
+      "md5": "cc85cd497e4ba922afa43be513b9a22d",
+      "expectedBytes": 1529,
+      "bytes": 1529,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e564da17c370706453796cc8b2cfb98371b0155c76a0c7b162ea5a07593d4108"
+    },
+    {
+      "path": "sections/slideshow.liquid",
+      "expectedMd5": "ea8dccc63338a977de7318be8f6bcbd1",
+      "md5": "ea8dccc63338a977de7318be8f6bcbd1",
+      "expectedBytes": 22716,
+      "bytes": 22716,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "120096b9871b696ea283067bdefeeca6bc9d6dbf415d6c86d7b9229e80b5e235"
+    },
+    {
+      "path": "sections/usps.liquid",
+      "expectedMd5": "97653ca97a0a18999ee57b114558be97",
+      "md5": "97653ca97a0a18999ee57b114558be97",
+      "expectedBytes": 519,
+      "bytes": 519,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "edccc28944cfcce4f0c15f16ecd35b368080593f3d8a158d92df0b985adfe74f"
+    },
+    {
+      "path": "sections/video.liquid",
+      "expectedMd5": "97e2d830991b901bc2222878fab7a55f",
+      "md5": "97e2d830991b901bc2222878fab7a55f",
+      "expectedBytes": 8321,
+      "bytes": 8321,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3db221b987ba3d0d0cb2cb9eef487e8528e5fe467e41ac220586e1af193344ca"
+    },
+    {
+      "path": "snippets/article-card.liquid",
+      "expectedMd5": "cf4b098e08c95e7096d744ebc23dbef2",
+      "md5": "cf4b098e08c95e7096d744ebc23dbef2",
+      "expectedBytes": 8185,
+      "bytes": 8185,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0e2299751dd20d2498c733750ef7dd036f9f880b22c1a0f7ef66c765d6e2d5ce"
+    },
+    {
+      "path": "snippets/bc-assortment-item.liquid",
+      "expectedMd5": "cf84538322a95be5483ba69ea0313502",
+      "md5": "cf84538322a95be5483ba69ea0313502",
+      "expectedBytes": 1003,
+      "bytes": 1003,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9283cb5813718db64f3b3e3a916f4678de5416ab135c1fd78196ca2090225c81"
+    },
+    {
+      "path": "snippets/bc-before-pilot-set.liquid",
+      "expectedMd5": "25d12cc7bcd82b4273e091af50cbdf5d",
+      "md5": "25d12cc7bcd82b4273e091af50cbdf5d",
+      "expectedBytes": 3929,
+      "bytes": 3929,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "06339a50ebf25690c2afbc760d78bd77e9a61049b465cdab039fc1dd953c29c3"
+    },
+    {
+      "path": "snippets/bc-before-pilot-specs.liquid",
+      "expectedMd5": "889c5b55f7334a98b162dee2723486d8",
+      "md5": "889c5b55f7334a98b162dee2723486d8",
+      "expectedBytes": 6694,
+      "bytes": 6694,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e49d8ea706397db816de844f443c9b0311c7def3f887b376f5de3e35e708be70"
+    },
+    {
+      "path": "snippets/bc-card-delivery.liquid",
+      "expectedMd5": "fc2fab3feb538ba47ec5e4b1b8bace47",
+      "md5": "fc2fab3feb538ba47ec5e4b1b8bace47",
+      "expectedBytes": 177,
+      "bytes": 177,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "209e0b882db533b1473812344ba184a189503174546241016815b770c66e7b2a"
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "expectedMd5": "736db421ff31f0c056ef0e29affe05b5",
+      "md5": "736db421ff31f0c056ef0e29affe05b5",
+      "expectedBytes": 6246,
+      "bytes": 6246,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cf953cea10f2647979f27d97f4dac45cbaaf8b7290da54b786726df1f3774680"
+    },
+    {
+      "path": "snippets/bc-card-specs.liquid",
+      "expectedMd5": "47a521747ac018766838a0a9ab0f6215",
+      "md5": "47a521747ac018766838a0a9ab0f6215",
+      "expectedBytes": 1548,
+      "bytes": 1548,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "99889d334533ba37f7d326c161d7a58e4cabb3494387ffd7b83f48d62d873b29"
+    },
+    {
+      "path": "snippets/bc-card-title.liquid",
+      "expectedMd5": "4bb1bb2b40344e801af1cf5e98be0f8d",
+      "md5": "4bb1bb2b40344e801af1cf5e98be0f8d",
+      "expectedBytes": 822,
+      "bytes": 822,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "01fcc098d92b63ee924803f485fdf45d3f6ea1af9dababc2f80a1cd6e2b14690"
+    },
+    {
+      "path": "snippets/bc-cart-delivery.liquid",
+      "expectedMd5": "a5dc8dd0e0631d6605562486a6739d47",
+      "md5": "a5dc8dd0e0631d6605562486a6739d47",
+      "expectedBytes": 1273,
+      "bytes": 1273,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e8d0a878e8bfde2b0ecd498f4b18fe5bc9203b580ec6347c7a09a80fcff4df49"
+    },
+    {
+      "path": "snippets/bc-category-breadcrumbs.liquid",
+      "expectedMd5": "1071bb6de6cf257f5a5a307190600a5d",
+      "md5": "1071bb6de6cf257f5a5a307190600a5d",
+      "expectedBytes": 3559,
+      "bytes": 3559,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b23b663e9739c5f75d23aa72eaa4ed3ee98de32cc1f60f4793aee473654b9d27"
+    },
+    {
+      "path": "snippets/bc-category-children.liquid",
+      "expectedMd5": "5d148e5aeffb639c8e0c0a8e2169625f",
+      "md5": "5d148e5aeffb639c8e0c0a8e2169625f",
+      "expectedBytes": 8529,
+      "bytes": 8529,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6aaab38084ce5fd08aef9c6852468ac8e4d91999acabec9e712b74b6d1b72966"
+    },
+    {
+      "path": "snippets/bc-category-destination.liquid",
+      "expectedMd5": "b4b446ba00aa7f31be9822afeac7dbb4",
+      "md5": "b4b446ba00aa7f31be9822afeac7dbb4",
+      "expectedBytes": 827,
+      "bytes": 827,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "47614cbcf8da75b07b3547f115a946715790eb78fb8cb8d3d14630dd90d54ffd"
+    },
+    {
+      "path": "snippets/bc-category-icon.liquid",
+      "expectedMd5": "82a2b23262d1253bc88fa5a1435296a1",
+      "md5": "82a2b23262d1253bc88fa5a1435296a1",
+      "expectedBytes": 15370,
+      "bytes": 15370,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e7fee29375b99694ea74e05428eaf99567bb57b900c34ab39a7ead55c7850881"
+    },
+    {
+      "path": "snippets/bc-category-index-entry.liquid",
+      "expectedMd5": "c12ff9380f2b397c1575f853c487f5dd",
+      "md5": "c12ff9380f2b397c1575f853c487f5dd",
+      "expectedBytes": 568,
+      "bytes": 568,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "af8582b32d4f51c5b16fcbf7beb5e688cda58d8967d224a1d5bcab23b7c6dd6d"
+    },
+    {
+      "path": "snippets/bc-category-link-index.liquid",
+      "expectedMd5": "ee7183928938ea47f16e32d2561904d9",
+      "md5": "ee7183928938ea47f16e32d2561904d9",
+      "expectedBytes": 436,
+      "bytes": 436,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "15eae1a1a6c54d0eaa34e41096611c73cdb32572fbab6a2777c5b37de5cf61bf"
+    },
+    {
+      "path": "snippets/bc-choice-data-source.liquid",
+      "expectedMd5": "4a7f03e38cb5b1a488640466fd0ef8a3",
+      "md5": "4a7f03e38cb5b1a488640466fd0ef8a3",
+      "expectedBytes": 74269,
+      "bytes": 74269,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7bbbeaf6c4e3ed69f36258d64e67096e0bdfd92a704444ebc3c927cc6bc6b0d1"
+    },
+    {
+      "path": "snippets/bc-collection-active-filters.liquid",
+      "expectedMd5": "6e1998af26043449f65ff84dbaa79c41",
+      "md5": "6e1998af26043449f65ff84dbaa79c41",
+      "expectedBytes": 1793,
+      "bytes": 1793,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a5ed54fa43085c7b0f777b569280853caefeb3449be0ca1af510a4b835346716"
+    },
+    {
+      "path": "snippets/bc-collection-intro.liquid",
+      "expectedMd5": "1323e0e43790e9b40696dee8e66b6c01",
+      "md5": "1323e0e43790e9b40696dee8e66b6c01",
+      "expectedBytes": 1213,
+      "bytes": 1213,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bd41ec7fd5d94d79f9a4cbf31840689dc016f97c526bed01b63d84d0a924e577"
+    },
+    {
+      "path": "snippets/bc-content-without-styles.liquid",
+      "expectedMd5": "a712392f344fd6856c82af26fb385303",
+      "md5": "a712392f344fd6856c82af26fb385303",
+      "expectedBytes": 526,
+      "bytes": 526,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "258501deae6a4ee8acd9d2c1f9063b8f1badb29c6bbf1cef4953732f58a2b4af"
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "expectedMd5": "2fcf24fd535cea6f6dabf795c97e3fbf",
+      "md5": "2fcf24fd535cea6f6dabf795c97e3fbf",
+      "expectedBytes": 2007,
+      "bytes": 2007,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "79ef9b0b41f1634f3c8f5424e6203ca865b23549f88ebe306bdaac6b424c2825"
+    },
+    {
+      "path": "snippets/bc-first-paint.liquid",
+      "expectedMd5": "12c0ed7f9e90cc01f2731813e4b72613",
+      "md5": "12c0ed7f9e90cc01f2731813e4b72613",
+      "expectedBytes": 604,
+      "bytes": 604,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "64406ec5c98e183beef4b2c6de12a92cf529d31e84ae12c343a5ff16d6eaccfc"
+    },
+    {
+      "path": "snippets/bc-footer-quote.liquid",
+      "expectedMd5": "98d6625d1a1742eb26ef69c8513986f6",
+      "md5": "98d6625d1a1742eb26ef69c8513986f6",
+      "expectedBytes": 676,
+      "bytes": 676,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bf4be9c6212d266b4269fb247afbfa26518f2558e2c61e7a43f4c5ea38c4d97c"
+    },
+    {
+      "path": "snippets/bc-header-cart.liquid",
+      "expectedMd5": "a5e88094f88cf19db7c03fad28c64c0a",
+      "md5": "a5e88094f88cf19db7c03fad28c64c0a",
+      "expectedBytes": 800,
+      "bytes": 800,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "33dac120b4c8c3db60f0d77d0b96d435cc9b20059e24f41f7d28c4b69ca47dee"
+    },
+    {
+      "path": "snippets/bc-header-quote.liquid",
+      "expectedMd5": "61823dc064867b5f05e7ebad133ad955",
+      "md5": "61823dc064867b5f05e7ebad133ad955",
+      "expectedBytes": 607,
+      "bytes": 607,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3efe93a4a3923f6341bb81b9779d8ecc86fd7b5b02ab0f13299b5771aacf55be"
+    },
+    {
+      "path": "snippets/bc-home-footer.liquid",
+      "expectedMd5": "63943bf38ac942f65e342cc0348cb992",
+      "md5": "63943bf38ac942f65e342cc0348cb992",
+      "expectedBytes": 2649,
+      "bytes": 2649,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8341811a0ca98ae9db6a96ea1c146a1c7e692440ba25cb00ecb2897f82f3a311"
+    },
+    {
+      "path": "snippets/bc-home-image.liquid",
+      "expectedMd5": "d787be4b6ce3f386b47b84cd185e9fdb",
+      "md5": "d787be4b6ce3f386b47b84cd185e9fdb",
+      "expectedBytes": 1202,
+      "bytes": 1202,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ca500beca3a963f46420c5331a7c8a125cef29383c250d3fccf185c3afe851db"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-controls.liquid",
+      "expectedMd5": "a86c337b335b0568c09a807970f75116",
+      "md5": "a86c337b335b0568c09a807970f75116",
+      "expectedBytes": 1269,
+      "bytes": 1269,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2c613a65f506609efda17319b2a331ed4e2adacbbd5e6b446ab9e2b7d8d76c2a"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-set.liquid",
+      "expectedMd5": "df64d7dbc5133316767cb42273827bb1",
+      "md5": "df64d7dbc5133316767cb42273827bb1",
+      "expectedBytes": 2920,
+      "bytes": 2920,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8747b1a5ab37762a471d6bb944917d2e2a3132a6476cfc46969fac0843dd5ce0"
+    },
+    {
+      "path": "snippets/bc-hotbath-data-specs.liquid",
+      "expectedMd5": "c434bd5ae2096a784a9308a0ad95691c",
+      "md5": "c434bd5ae2096a784a9308a0ad95691c",
+      "expectedBytes": 1755,
+      "bytes": 1755,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3c3deb5f482b346dc65bf02bb066d4ef31a8a3b40d2782b75f02e21f5bfb6f27"
+    },
+    {
+      "path": "snippets/bc-hotbath-menu-route.liquid",
+      "expectedMd5": "3412a030be7a7e94ee9e62122ed459ad",
+      "md5": "3412a030be7a7e94ee9e62122ed459ad",
+      "expectedBytes": 73698,
+      "bytes": 73698,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "23b619f753261a687e21ffd8a737c3f398987b202551c4b8e1080f3a80ed1a90"
+    },
+    {
+      "path": "snippets/bc-hotbath-menu-source-00.liquid",
+      "expectedMd5": "d5e23fa65831af6b63134130a5dd56b5",
+      "md5": "d5e23fa65831af6b63134130a5dd56b5",
+      "expectedBytes": 20292,
+      "bytes": 20292,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0e582f6622171ed8535b4aa235ee7f3e63020ab54f90569cdcad16f7dbba380b"
+    },
+    {
+      "path": "snippets/bc-hotbath-menu-source.liquid",
+      "expectedMd5": "adbffac7e398a3464e5d49a41cf8dcdc",
+      "md5": "adbffac7e398a3464e5d49a41cf8dcdc",
+      "expectedBytes": 402,
+      "bytes": 402,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "14d2764971e8faf91f40d21900ccdf006ffc5cd44543dac371b743c2b5d9df35"
+    },
+    {
+      "path": "snippets/bc-hotbath-normal-intro.liquid",
+      "expectedMd5": "81edf21578e20f47545d9c5bad61d4de",
+      "md5": "81edf21578e20f47545d9c5bad61d4de",
+      "expectedBytes": 1303,
+      "bytes": 1303,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8763ffda2a23aeb57e06f9e66cb546f82342e9dbf9308774fab5c459aa98e6c8"
+    },
+    {
+      "path": "snippets/bc-hotbath-normal-scope.liquid",
+      "expectedMd5": "8affc82ef126f3f4623f6fe13d3f5913",
+      "md5": "8affc82ef126f3f4623f6fe13d3f5913",
+      "expectedBytes": 1403,
+      "bytes": 1403,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "621a7db7b9a08fbfe81f525b1c01f5e78a221423d5a7f395ebbecdaad71b48d0"
+    },
+    {
+      "path": "snippets/bc-hotbath-pilot-controls.liquid",
+      "expectedMd5": "f36fcd75b3f99e73911fe9f64b44c890",
+      "md5": "f36fcd75b3f99e73911fe9f64b44c890",
+      "expectedBytes": 2341,
+      "bytes": 2341,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b5532402d534abbaad407f9efaf3caa6dec4ae1500868b51a0e2e2a3f5c5ba0b"
+    },
+    {
+      "path": "snippets/bc-hotbath-pilot-specs.liquid",
+      "expectedMd5": "fcda1ffa65450847bd5a42fd4da47622",
+      "md5": "fcda1ffa65450847bd5a42fd4da47622",
+      "expectedBytes": 1474,
+      "bytes": 1474,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cdf145f292d7e495f773eab9f22fac159d70169b3ff9ba6da1518fab0dded5d8"
+    },
+    {
+      "path": "snippets/bc-hotbath-preview-group.liquid",
+      "expectedMd5": "e82c96953a691589fcc4c693de9874da",
+      "md5": "e82c96953a691589fcc4c693de9874da",
+      "expectedBytes": 42961,
+      "bytes": 42961,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e0f607897307be0653c6408bcb29b56927ff6a41075499fb827a1da2b9292e6a"
+    },
+    {
+      "path": "snippets/bc-hotbath-public-specs.liquid",
+      "expectedMd5": "197413e04f977451cb070786e2534ab2",
+      "md5": "197413e04f977451cb070786e2534ab2",
+      "expectedBytes": 4501,
+      "bytes": 4501,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ff8ee881d9f24880a1a8c174ab88db1c36cb6919d7701ed3802582d77cad6a4e"
+    },
+    {
+      "path": "snippets/bc-meubelhub-icon.liquid",
+      "expectedMd5": "a6c68f98845d0ade180805529da648f0",
+      "md5": "a6c68f98845d0ade180805529da648f0",
+      "expectedBytes": 1453,
+      "bytes": 1453,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "33e0fb24d14386d70cd534c3207aff783970feb2ad97a43c327cbe4ea453db21"
+    },
+    {
+      "path": "snippets/bc-mobile-category-icon.liquid",
+      "expectedMd5": "b8b591d6393cacd2f92ee4745397e4ef",
+      "md5": "b8b591d6393cacd2f92ee4745397e4ef",
+      "expectedBytes": 1461,
+      "bytes": 1461,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1adab9cc08f3c6e9a7bf5cd04efeab0c6edb47a45509e138bd59bf50c55953e1"
+    },
+    {
+      "path": "snippets/bc-mobile-listing.liquid",
+      "expectedMd5": "5be4f84b6c94566bf404e1e38572052a",
+      "md5": "5be4f84b6c94566bf404e1e38572052a",
+      "expectedBytes": 612,
+      "bytes": 612,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5fa5ff4d1a9800949daeb24ffc24b159f2419c7de00d5f7a1c56c98633cfc1c1"
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "expectedMd5": "f928b0a4ec49dc8bb33f74bfd49fa043",
+      "md5": "f928b0a4ec49dc8bb33f74bfd49fa043",
+      "expectedBytes": 9397,
+      "bytes": 9397,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5f36ec23fe2c3cf702bf7d24994229112809417a6c79f1c242d545e609cf0cb1"
+    },
+    {
+      "path": "snippets/bc-product-accessories-data.liquid",
+      "expectedMd5": "b6d2f26bd6d2d96db0d1375b2335a5a3",
+      "md5": "b6d2f26bd6d2d96db0d1375b2335a5a3",
+      "expectedBytes": 1140,
+      "bytes": 1140,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "34d5c0b18b3077d59f791b87f9fe1cdedf6b6e884646153245d6fec92c44724d"
+    },
+    {
+      "path": "snippets/bc-product-accessories.liquid",
+      "expectedMd5": "d1b82e807ecc7821c27432c9525410b0",
+      "md5": "d1b82e807ecc7821c27432c9525410b0",
+      "expectedBytes": 4346,
+      "bytes": 4346,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "806995c57e615123aaeffd8ae5c809d5e5390e04169c550270952f3d785d3dde"
+    },
+    {
+      "path": "snippets/bc-product-accessory-item.liquid",
+      "expectedMd5": "24f94bdcbf17d1d8eee01f1f438ba719",
+      "md5": "24f94bdcbf17d1d8eee01f1f438ba719",
+      "expectedBytes": 2521,
+      "bytes": 2521,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "eb20fbd7f8020932edf1aab012d567e1cab3b08b27a963ec447f6893a5c3f6d0"
+    },
+    {
+      "path": "snippets/bc-product-breadcrumbs.liquid",
+      "expectedMd5": "7673ca1b15719ce42d2f0eb366e6ab00",
+      "md5": "7673ca1b15719ce42d2f0eb366e6ab00",
+      "expectedBytes": 3896,
+      "bytes": 3896,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b32c018e4f68a501c2f63f9d31a5e4b1b8f252b405116c30c3291dc1b4ee3e12"
+    },
+    {
+      "path": "snippets/bc-product-description.liquid",
+      "expectedMd5": "4fabd9ad065deb45de43cef4a76076e3",
+      "md5": "4fabd9ad065deb45de43cef4a76076e3",
+      "expectedBytes": 4055,
+      "bytes": 4055,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8656b3f619c5239250e92328c0cdde658bb4a3a51993bdb2280f4274b8de3bd6"
+    },
+    {
+      "path": "snippets/bc-product-detail-row.liquid",
+      "expectedMd5": "08bc0835e74ddaaee7db7f4dc7cd0947",
+      "md5": "08bc0835e74ddaaee7db7f4dc7cd0947",
+      "expectedBytes": 1304,
+      "bytes": 1304,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e1e732ad473576ffd01686fffa5015bbc822724a260f5ff99294a8f5d63ddcb8"
+    },
+    {
+      "path": "snippets/bc-product-detail-specs-legacy.liquid",
+      "expectedMd5": "fe2cbb259184ca0a47952333da4d9b53",
+      "md5": "fe2cbb259184ca0a47952333da4d9b53",
+      "expectedBytes": 6780,
+      "bytes": 6780,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3ce4f67aa2dad9e84ed80f3cf4a4c0b2d52fa8938e10ed4e580047c9b0ef036a"
+    },
+    {
+      "path": "snippets/bc-product-detail-specs-mapped.liquid",
+      "expectedMd5": "762422a7835dbdc59922132221b753ba",
+      "md5": "762422a7835dbdc59922132221b753ba",
+      "expectedBytes": 4000,
+      "bytes": 4000,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4af8fe70d9e05fbef3dc8c2391e6f7d29b5c35d44e2cdfee44689ff7dafc24e7"
+    },
+    {
+      "path": "snippets/bc-product-detail-specs.liquid",
+      "expectedMd5": "d969d5a7d8abf9a3f7d898b28dd9a9a8",
+      "md5": "d969d5a7d8abf9a3f7d898b28dd9a9a8",
+      "expectedBytes": 1593,
+      "bytes": 1593,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e444368e7116d0b5f026f21eb75ec3ea6f91e5ab8e71a35fd53b2bad0131f0b0"
+    },
+    {
+      "path": "snippets/bc-product-documents.liquid",
+      "expectedMd5": "8ee0a9ec35bd232694cceb08e241360b",
+      "md5": "8ee0a9ec35bd232694cceb08e241360b",
+      "expectedBytes": 2859,
+      "bytes": 2859,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ecb08a34ed16455473d978d70f0e8b9f6e518a073b93e2432190c5a1a57748a6"
+    },
+    {
+      "path": "snippets/bc-product-inbouw-data.liquid",
+      "expectedMd5": "b6871c1f50c28f3c4ff4dfcb09b2f211",
+      "md5": "b6871c1f50c28f3c4ff4dfcb09b2f211",
+      "expectedBytes": 79838,
+      "bytes": 79838,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "378746772ca623633d1673ca5ed4c722332a7df1732d2dc1c8cc012be2fe70e1"
+    },
+    {
+      "path": "snippets/bc-product-inbouw.liquid",
+      "expectedMd5": "4d2811e6848c3fb0aac9c4b91df84b38",
+      "md5": "4d2811e6848c3fb0aac9c4b91df84b38",
+      "expectedBytes": 6703,
+      "bytes": 6703,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "48b2c0c0cfb3f4072c01f9ccfd3e5e8d7b93d90037e702ba0704c1753d48bb72"
+    },
+    {
+      "path": "snippets/bc-product-mapped-spec-row.liquid",
+      "expectedMd5": "cec4ea7bfbdf77bfa6e28fe1d46acb14",
+      "md5": "cec4ea7bfbdf77bfa6e28fe1d46acb14",
+      "expectedBytes": 1668,
+      "bytes": 1668,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6fb459c34d3e0ca90f9c3c0999e0ca61e4d6c40700b3edc2e392369679773d34"
+    },
+    {
+      "path": "snippets/bc-product-set-components.liquid",
+      "expectedMd5": "39d8869689fc0bc8db1d4b5fbfd7c434",
+      "md5": "39d8869689fc0bc8db1d4b5fbfd7c434",
+      "expectedBytes": 4409,
+      "bytes": 4409,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5fe9d76fcf24eb540c2581159034381e72fc9a477d9e7fc1fcd8c75d13a54686"
+    },
+    {
+      "path": "snippets/bc-product-set-data.liquid",
+      "expectedMd5": "2728c9f7e8cbede07647cc090a8c7e40",
+      "md5": "2728c9f7e8cbede07647cc090a8c7e40",
+      "expectedBytes": 16617,
+      "bytes": 16617,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "784bc0389a5eeb54cdadb0d2705811231f7d3ea350275b600358b287f4991457"
+    },
+    {
+      "path": "snippets/bc-product-set-item.liquid",
+      "expectedMd5": "26559f74572e2707ac22ad435204650c",
+      "md5": "26559f74572e2707ac22ad435204650c",
+      "expectedBytes": 3180,
+      "bytes": 3180,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0fddc58e612a8399f20f85cf7d12dd1ad432186f1a6655192b7b36159197ef89"
+    },
+    {
+      "path": "snippets/bc-product-set-product-handle.liquid",
+      "expectedMd5": "3d861d81eb6c86d60714cd757d70b81f",
+      "md5": "3d861d81eb6c86d60714cd757d70b81f",
+      "expectedBytes": 8817,
+      "bytes": 8817,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ddde9338dc169748b68ea1a96a3887d5b6f3553026fde07b3105b105953d1df6"
+    },
+    {
+      "path": "snippets/bc-product-set-verified.liquid",
+      "expectedMd5": "a5256bd393639bbf6ccc14a8a25487b9",
+      "md5": "a5256bd393639bbf6ccc14a8a25487b9",
+      "expectedBytes": 2573,
+      "bytes": 2573,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ba4a57b460c4cf95bad0517add9901af5398b416cc220dbde850175f835121f8"
+    },
+    {
+      "path": "snippets/bc-product-short-specs.liquid",
+      "expectedMd5": "290e6f134beb633b108498ceeacc33ba",
+      "md5": "290e6f134beb633b108498ceeacc33ba",
+      "expectedBytes": 39,
+      "bytes": 39,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7c94e80d5cc79a1a53aa7343e3c255264f3f6688ff364083c371970efaf59d23"
+    },
+    {
+      "path": "snippets/bc-product-spec-header.liquid",
+      "expectedMd5": "d3177f8b59addc7cb905add0c0abe92f",
+      "md5": "d3177f8b59addc7cb905add0c0abe92f",
+      "expectedBytes": 268,
+      "bytes": 268,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e41b5472030490aa6f7a7b6bf5ad86d5d6d4c819c0888b1e288176b049e58dfb"
+    },
+    {
+      "path": "snippets/bc-product-spec-row.liquid",
+      "expectedMd5": "cfaa01090316fde963ce6fad691a3280",
+      "md5": "cfaa01090316fde963ce6fad691a3280",
+      "expectedBytes": 1717,
+      "bytes": 1717,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "600e0c2443e6d70e91836b7d1d5f6efeb5b7a97f0ab03b5928a16f051ba416de"
+    },
+    {
+      "path": "snippets/bc-product-switcher.liquid",
+      "expectedMd5": "116f4877b74ad92b7d3748e07138202d",
+      "md5": "116f4877b74ad92b7d3748e07138202d",
+      "expectedBytes": 3176,
+      "bytes": 3176,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9f6f3448561f2d41cebc54930765be87f38cb9b6e0f9c1845e6250d77138489b"
+    },
+    {
+      "path": "snippets/bc-returns-url.liquid",
+      "expectedMd5": "000ab5cee978aaf63059307902dc4cc3",
+      "md5": "000ab5cee978aaf63059307902dc4cc3",
+      "expectedBytes": 310,
+      "bytes": 310,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "15535aa84dcfab42afcff27742e5df5cf123c47d62e8808f6bede184843fdc5e"
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "expectedMd5": "c636940c8566257ae7dc05ee1084cfc0",
+      "md5": "c636940c8566257ae7dc05ee1084cfc0",
+      "expectedBytes": 915,
+      "bytes": 915,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "dc575de02308c78ee156381427a0232e18a7dd5f70899ac68c48f4d82d34ec65"
+    },
+    {
+      "path": "snippets/bc-ss-choice-icon.liquid",
+      "expectedMd5": "6a9ead91f2cf7b39d4e265ad713eef58",
+      "md5": "6a9ead91f2cf7b39d4e265ad713eef58",
+      "expectedBytes": 4065,
+      "bytes": 4065,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9a8904126b32b3c4868e3192903ba74f259839b64e2737f349d6712b352a776d"
+    },
+    {
+      "path": "snippets/bc-ss-choice-label.liquid",
+      "expectedMd5": "972d28c3f059cf12df3c2c905f3d67e2",
+      "md5": "972d28c3f059cf12df3c2c905f3d67e2",
+      "expectedBytes": 1522,
+      "bytes": 1522,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "99ed8eb1464d0eaae04b71bbbed69a5a0f5725fa32f1bc5fd48cf28e7d2dbeab"
+    },
+    {
+      "path": "snippets/bc-ss-guide.liquid",
+      "expectedMd5": "57662510fc6ec3f04cd35cc142f979d8",
+      "md5": "57662510fc6ec3f04cd35cc142f979d8",
+      "expectedBytes": 7021,
+      "bytes": 7021,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "182e55042e844e90e2007bf36492b26aa3b47460cf67d28a82cf61bf67cb2b67"
+    },
+    {
+      "path": "snippets/bc-ss-highlights.liquid",
+      "expectedMd5": "3012be52f96b2b620664efdb804ab69f",
+      "md5": "3012be52f96b2b620664efdb804ab69f",
+      "expectedBytes": 3828,
+      "bytes": 3828,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7d8a800a792298e6750ac39756c3a6a69c721e56295fdf5240bd91dc9300956e"
+    },
+    {
+      "path": "snippets/bc-ss-value.liquid",
+      "expectedMd5": "a915d358c564c53e4616c1b29ca1aec6",
+      "md5": "a915d358c564c53e4616c1b29ca1aec6",
+      "expectedBytes": 382,
+      "bytes": 382,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "34112191da752c07b160269d784ab7192ef757b0c68c1a3986884c7ad9e7ac32"
+    },
+    {
+      "path": "snippets/bc-sunshower-choices.liquid",
+      "expectedMd5": "f4c1544c12d938a8c1ada56ae23a8c89",
+      "md5": "f4c1544c12d938a8c1ada56ae23a8c89",
+      "expectedBytes": 2012,
+      "bytes": 2012,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "dee78666d77db90832c2442d861317491f237e3d5d0036070d07eb72394e607d"
+    },
+    {
+      "path": "snippets/bc-sunshower-panel.liquid",
+      "expectedMd5": "6234e3fbd1c79ad2e35c1917dc3e1b3c",
+      "md5": "6234e3fbd1c79ad2e35c1917dc3e1b3c",
+      "expectedBytes": 10607,
+      "bytes": 10607,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1554f58b5e3fb283cd0e1a122f7fef7ba54de19845528b25bb422dd56a964707"
+    },
+    {
+      "path": "snippets/bc-sunshower-shop-card.liquid",
+      "expectedMd5": "3905b96d3e2fab66dbdb0e69eb4906ad",
+      "md5": "3905b96d3e2fab66dbdb0e69eb4906ad",
+      "expectedBytes": 8704,
+      "bytes": 8704,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "acd4575954413d650ff8b23bcd900b01c5259a025e3c6d1362bfed07c158b855"
+    },
+    {
+      "path": "snippets/bc-tile-choice-data.liquid",
+      "expectedMd5": "7ef117afe12849f5a8d9545faa6e0d7a",
+      "md5": "7ef117afe12849f5a8d9545faa6e0d7a",
+      "expectedBytes": 2319,
+      "bytes": 2319,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f2064d360fc33b271772b31c6a4a8135ae77a21d66dad247a9065349e47c3df1"
+    },
+    {
+      "path": "snippets/bc-tile-fix-preview.liquid",
+      "expectedMd5": "438342a63b303ea3534df26f7375e608",
+      "md5": "438342a63b303ea3534df26f7375e608",
+      "expectedBytes": 8687,
+      "bytes": 8687,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e4ea6c23c0b8a84961cc0377d763af698bf15642cb3991087383a3622c3ab04a"
+    },
+    {
+      "path": "snippets/bc-tile-specifications.liquid",
+      "expectedMd5": "5173347d597ddf5aeadac63f792a247a",
+      "md5": "5173347d597ddf5aeadac63f792a247a",
+      "expectedBytes": 3013,
+      "bytes": 3013,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "97c7bdea7e2704a27ed0981bc5d179bcda94946f569bb00d11e3fd72068132b5"
+    },
+    {
+      "path": "snippets/bc-wiesbaden-colors.liquid",
+      "expectedMd5": "840b7ad90ce0f96a865e94af9ee00d25",
+      "md5": "840b7ad90ce0f96a865e94af9ee00d25",
+      "expectedBytes": 2848,
+      "bytes": 2848,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "29936e934fe39ecf4eda604241d98ccb062284da02e1c31dfb931b5ae5382a9d"
+    },
+    {
+      "path": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+      "expectedMd5": "51a7b82e104d7f244d5cb903bcfc8e68",
+      "md5": "51a7b82e104d7f244d5cb903bcfc8e68",
+      "expectedBytes": 1119,
+      "bytes": 1119,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f839903a5a9b2d3c0a1bfc071c10eee6ed670eb7696fa37c2a19d3754b0268a0"
+    },
+    {
+      "path": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "expectedMd5": "90f7c5a7a0534c2db234b016abdc1500",
+      "md5": "90f7c5a7a0534c2db234b016abdc1500",
+      "expectedBytes": 3281,
+      "bytes": 3281,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "910d7b5a5fe67f625319d6eeafb87b3e8cdd44ff36463cc59e1d579bd0fbff5c"
+    },
+    {
+      "path": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "expectedMd5": "506edf1efe8fcc9fb6c7a2170fbd338b",
+      "md5": "506edf1efe8fcc9fb6c7a2170fbd338b",
+      "expectedBytes": 4292,
+      "bytes": 4292,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bb81c2f792003928e4de0c51e789d4c23c880bde3bd01c593333b6f2e7036802"
+    },
+    {
+      "path": "snippets/bc-wishlist-button.liquid",
+      "expectedMd5": "48c27eb93e5df1ee823c5abf9c3a0930",
+      "md5": "48c27eb93e5df1ee823c5abf9c3a0930",
+      "expectedBytes": 1127,
+      "bytes": 1127,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ecd2adce5ae0ac03e6cc7086dc459ec499c8ddf56831a45921eeb4a8ec9014b9"
+    },
+    {
+      "path": "snippets/buy-buttons.liquid",
+      "expectedMd5": "c50abe1cb9295a48369869fd80867147",
+      "md5": "c50abe1cb9295a48369869fd80867147",
+      "expectedBytes": 7634,
+      "bytes": 7634,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f35d8d522650afcb0de503401b6f5fec98c6b0a13d9ecdf029258c9d87ddd3ac"
+    },
+    {
+      "path": "snippets/card-collection.liquid",
+      "expectedMd5": "5f983b03a98bae11180f7035297ccb7c",
+      "md5": "5f983b03a98bae11180f7035297ccb7c",
+      "expectedBytes": 7838,
+      "bytes": 7838,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "32d3b4c46773217d0e31590d11fa654f87b622382799617d3503fc7263c0cb38"
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "expectedMd5": "59017e48e5fb53446843a3273947fb5b",
+      "md5": "59017e48e5fb53446843a3273947fb5b",
+      "expectedBytes": 34624,
+      "bytes": 34624,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "472857c53652f96716f0d5a3e8f14ebbc48be0cb6bf0b826ffc72dd0401669f1"
+    },
+    {
+      "path": "snippets/cart-drawer.liquid",
+      "expectedMd5": "436f8cc133f293b85bf908c380c40c06",
+      "md5": "436f8cc133f293b85bf908c380c40c06",
+      "expectedBytes": 30174,
+      "bytes": 30174,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6c0bc46156d7f04511f11792411774ae8eca4e0f0efaff2efaef1ee5d920c0c0"
+    },
+    {
+      "path": "snippets/cart-notification.liquid",
+      "expectedMd5": "1bc5c6a6842551c8ed5c2af0642b12aa",
+      "md5": "1bc5c6a6842551c8ed5c2af0642b12aa",
+      "expectedBytes": 1343,
+      "bytes": 1343,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ddf70c43bf517f258a2d024b1c1ab51fea137416a9c73f291e370114f7ce5041"
+    },
+    {
+      "path": "snippets/country-localization.liquid",
+      "expectedMd5": "1e9764febb99cc4cefe66aa5a1246aad",
+      "md5": "1e9764febb99cc4cefe66aa5a1246aad",
+      "expectedBytes": 6100,
+      "bytes": 6100,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d06f472fffb252d710f7c809743c8e89fa2340d6676dadc0cd727c5732d97d72"
+    },
+    {
+      "path": "snippets/facets.liquid",
+      "expectedMd5": "0f7277d8a48b03be2edc3c376c18f36e",
+      "md5": "0f7277d8a48b03be2edc3c376c18f36e",
+      "expectedBytes": 49042,
+      "bytes": 49042,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8695a58f60518f8fb256c602f009b04c1d486d7ca9d337c570243012c2d86863"
+    },
+    {
+      "path": "snippets/gift-card-recipient-form.liquid",
+      "expectedMd5": "678236a09026c5827a7eb51cdd380906",
+      "md5": "678236a09026c5827a7eb51cdd380906",
+      "expectedBytes": 8218,
+      "bytes": 8218,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "295e70f9d2ff07a3ece24116dd48451db53c026f664090e2622673e5a5dc434e"
+    },
+    {
+      "path": "snippets/header-drawer.liquid",
+      "expectedMd5": "39801555859e8e0a6b3704c159eaa36a",
+      "md5": "39801555859e8e0a6b3704c159eaa36a",
+      "expectedBytes": 12735,
+      "bytes": 12735,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c373ffd8af482e6a16cff4f18c8c5dfdb636eef44d7d3aa9deba556233126734"
+    },
+    {
+      "path": "snippets/header-dropdown-menu.liquid",
+      "expectedMd5": "ae31f7100a3adf0ee1d7e762522ae87d",
+      "md5": "ae31f7100a3adf0ee1d7e762522ae87d",
+      "expectedBytes": 4515,
+      "bytes": 4515,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9ef083784c095579e7d2eb7b755a37ffea6af06fd87a09753c4fd9d0a1b425fe"
+    },
+    {
+      "path": "snippets/header-mega-menu.liquid",
+      "expectedMd5": "9161c311bf9d589dd33e26b79f5bb331",
+      "md5": "9161c311bf9d589dd33e26b79f5bb331",
+      "expectedBytes": 3776,
+      "bytes": 3776,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "87a33ae58c8bb599441fea984c4e124c4b27dfe0c14ad29eeacf3cfbc5045b49"
+    },
+    {
+      "path": "snippets/header-search.liquid",
+      "expectedMd5": "1b16e730671221c91a48f8186ec52155",
+      "md5": "1b16e730671221c91a48f8186ec52155",
+      "expectedBytes": 4402,
+      "bytes": 4402,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1b73513b7b85a53c5d0ed352a6d44b3930d1b601524f046ec4c1b19e904026ca"
+    },
+    {
+      "path": "snippets/icon-accordion.liquid",
+      "expectedMd5": "721e2a6b5e7ae9af9123f36f80df811b",
+      "md5": "721e2a6b5e7ae9af9123f36f80df811b",
+      "expectedBytes": 198,
+      "bytes": 198,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "3479e689e5b090e72bed0b29abfde54e82942ee833d7e1556fdcd23c292a4de1"
+    },
+    {
+      "path": "snippets/icon-with-text.liquid",
+      "expectedMd5": "504d4e4443b502c68e1c4ad85ab38248",
+      "md5": "504d4e4443b502c68e1c4ad85ab38248",
+      "expectedBytes": 3400,
+      "bytes": 3400,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f18e6b52565fb00e220bc27a71db99fda91849e09a90fd8071db90333a96ca5c"
+    },
+    {
+      "path": "snippets/language-localization.liquid",
+      "expectedMd5": "a4fe81ed3c1487b2d80474552d4d20dc",
+      "md5": "a4fe81ed3c1487b2d80474552d4d20dc",
+      "expectedBytes": 1848,
+      "bytes": 1848,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e760e4c769802888360d92eb6de996761614e936c25b3c59fbcdac574ce76928"
+    },
+    {
+      "path": "snippets/loading-spinner.liquid",
+      "expectedMd5": "1b8d646e10a09e973225b0d6dd33c070",
+      "md5": "1b8d646e10a09e973225b0d6dd33c070",
+      "expectedBytes": 342,
+      "bytes": 342,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "745dfaac69765f8bed9124fdc96219adeee8b0281424b3102f84b4b1eb0e82c9"
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "expectedMd5": "ecc6351e747bad1e4cba6be6fe05d72e",
+      "md5": "ecc6351e747bad1e4cba6be6fe05d72e",
+      "expectedBytes": 1743,
+      "bytes": 1743,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bbda305d7a4e5ebfe711b3b1b18f84638f66586fa4317b1bc16dca302627032d"
+    },
+    {
+      "path": "snippets/pagination.liquid",
+      "expectedMd5": "f0c43be0a8dc1790eca4b539d5134eb9",
+      "md5": "f0c43be0a8dc1790eca4b539d5134eb9",
+      "expectedBytes": 2847,
+      "bytes": 2847,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "311ff7940e3b4131c2ad5c226267d7bfc7b6c962d5c6bb111c172148c6b101da"
+    },
+    {
+      "path": "snippets/price-facet.liquid",
+      "expectedMd5": "2975862981949a31a95785ca2501cc8a",
+      "md5": "2975862981949a31a95785ca2501cc8a",
+      "expectedBytes": 1457,
+      "bytes": 1457,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ea181e7467b324d2229b6771aa2d8f14f5b0d19ceba1c24414e47e3026a3e54c"
+    },
+    {
+      "path": "snippets/price.liquid",
+      "expectedMd5": "684e13e879286da0630b7b5c0e88af26",
+      "md5": "684e13e879286da0630b7b5c0e88af26",
+      "expectedBytes": 5591,
+      "bytes": 5591,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4912d40ee98c2f4f77fc9ff74c3c7e854dc92e886004aa70bcf0a4de62b947c8"
+    },
+    {
+      "path": "snippets/product-media-gallery.liquid",
+      "expectedMd5": "f20386e421683df5de57ce6a8637f8f4",
+      "md5": "f20386e421683df5de57ce6a8637f8f4",
+      "expectedBytes": 16050,
+      "bytes": 16050,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "345b5feab8045731209ede85d349db2019b5e29603c67ad0030c717318976275"
+    },
+    {
+      "path": "snippets/product-media-modal.liquid",
+      "expectedMd5": "b9d89ec4641fa8d50c1e5fb96a0ed330",
+      "md5": "b9d89ec4641fa8d50c1e5fb96a0ed330",
+      "expectedBytes": 3449,
+      "bytes": 3449,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e3ef3ce8aadb69c96f7de78aac52803ec731e443d5bb198705d71931d19f1a61"
+    },
+    {
+      "path": "snippets/product-media.liquid",
+      "expectedMd5": "7be6c5f57c127e4cba0cfbcb808eae97",
+      "md5": "7be6c5f57c127e4cba0cfbcb808eae97",
+      "expectedBytes": 5500,
+      "bytes": 5500,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5d6352e39a87a87322379f2639b2ac67d9ebb367761c3c1a89288e657a839874"
+    },
+    {
+      "path": "snippets/product-pros-cons.liquid",
+      "expectedMd5": "dace0e560d094179566029b3d7803031",
+      "md5": "dace0e560d094179566029b3d7803031",
+      "expectedBytes": 2439,
+      "bytes": 2439,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "6ce9b49d4b751de8a9e9b9a6c06d7f9ecbfc30ade2f6b4f6a712e85f3d8e6536"
+    },
+    {
+      "path": "snippets/product-thumbnail.liquid",
+      "expectedMd5": "bcfec1bc3ec849609f435f102e9ab50b",
+      "md5": "bcfec1bc3ec849609f435f102e9ab50b",
+      "expectedBytes": 6885,
+      "bytes": 6885,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "abcc9e2261a50884e563dd03c6f4eaa0a76d812ccaa748eaaf06ca708b7a4338"
+    },
+    {
+      "path": "snippets/product-variant-options.liquid",
+      "expectedMd5": "dde064eb216a8e1d8b58522f423bad59",
+      "md5": "dde064eb216a8e1d8b58522f423bad59",
+      "expectedBytes": 3658,
+      "bytes": 3658,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cfee01d1c4bb2fbd9ae3c1980f32ca4e8acc0c5ed4520dc8a86b34fb76c6dc59"
+    },
+    {
+      "path": "snippets/product-variant-picker.liquid",
+      "expectedMd5": "06e5b016c79ed31dd258d2fc7901a756",
+      "md5": "06e5b016c79ed31dd258d2fc7901a756",
+      "expectedBytes": 8189,
+      "bytes": 8189,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "504c6fae45d1372498845b98ffcac83452c12d273f9686ce318c88e5db4b8d11"
+    },
+    {
+      "path": "snippets/progress-bar.liquid",
+      "expectedMd5": "bf38a7aaa463b856f1eebe40794f820f",
+      "md5": "bf38a7aaa463b856f1eebe40794f820f",
+      "expectedBytes": 137,
+      "bytes": 137,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "315b514e9d3866783fa6be8ff0d932ab3bf8afa0e9106cc1c99c355584126aef"
+    },
+    {
+      "path": "snippets/quantity-input.liquid",
+      "expectedMd5": "169edd7e44f65769861d1a1e7d71c628",
+      "md5": "169edd7e44f65769861d1a1e7d71c628",
+      "expectedBytes": 1830,
+      "bytes": 1830,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "efabb8cdf84a18c84d4d925f351a9edcfe0c28cddda9a0090a876440ffc49ce8"
+    },
+    {
+      "path": "snippets/quick-order-list-row.liquid",
+      "expectedMd5": "c18dc03c8449efd3bb047e941260515d",
+      "md5": "c18dc03c8449efd3bb047e941260515d",
+      "expectedBytes": 19183,
+      "bytes": 19183,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "eff3e10a5fb095b47584633d90cdc2e8b8d3c0d3c8670b76e378cef21e0e840f"
+    },
+    {
+      "path": "snippets/quick-order-list.liquid",
+      "expectedMd5": "3eb0d69d1a05a0c5ba2f3f162c3f15fb",
+      "md5": "3eb0d69d1a05a0c5ba2f3f162c3f15fb",
+      "expectedBytes": 13302,
+      "bytes": 13302,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "56a8f99db9be2a6a57a702a892315a15b164e3e2b9106d36a847e7bf1bd468d8"
+    },
+    {
+      "path": "snippets/quick-order-product-row.liquid",
+      "expectedMd5": "5ac3305318d2fcdc8b00893c6d90ff2e",
+      "md5": "5ac3305318d2fcdc8b00893c6d90ff2e",
+      "expectedBytes": 1231,
+      "bytes": 1231,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1589334426224742ffd7d9807ea7492b774ac77b66395a4214d796a5a72e76fa"
+    },
+    {
+      "path": "snippets/share-button.liquid",
+      "expectedMd5": "f16f3fcf3b3ff47d1611734c0d9e10f6",
+      "md5": "f16f3fcf3b3ff47d1611734c0d9e10f6",
+      "expectedBytes": 2083,
+      "bytes": 2083,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cfd6851d4faf1df9e6bd46b0489a75eb96fb0c94de162e91987deb0b08824960"
+    },
+    {
+      "path": "snippets/social-icons.liquid",
+      "expectedMd5": "2ae64e5b1a0dcf880edeeb33d9256ccc",
+      "md5": "2ae64e5b1a0dcf880edeeb33d9256ccc",
+      "expectedBytes": 4035,
+      "bytes": 4035,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0430fefd27814e3a29fc0a1b9644b89637e933a1b3b14119f79fb93b55df71aa"
+    },
+    {
+      "path": "snippets/swatch-input.liquid",
+      "expectedMd5": "e62d5c68b1d4add61c7f94398e47e965",
+      "md5": "e62d5c68b1d4add61c7f94398e47e965",
+      "expectedBytes": 1712,
+      "bytes": 1712,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "ca1d337e0895790ac549f94ed70ddd706ed60c7122ab8c574b5926087a252f35"
+    },
+    {
+      "path": "snippets/swatch.liquid",
+      "expectedMd5": "a2e48d5e6a456d18d145655736d2b8ca",
+      "md5": "a2e48d5e6a456d18d145655736d2b8ca",
+      "expectedBytes": 1026,
+      "bytes": 1026,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0d2ee41d91eb938598d4460f7f45ab1959f882261043606950873fd5d23f34d5"
+    },
+    {
+      "path": "snippets/unit-price.liquid",
+      "expectedMd5": "0ce59b935545051c1f9ebf904371846a",
+      "md5": "0ce59b935545051c1f9ebf904371846a",
+      "expectedBytes": 889,
+      "bytes": 889,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5e2d681c449b5bf7d4157bc0986fda0f3caf61637385fe7c23158e642b84f584"
+    },
+    {
+      "path": "templates/404.json",
+      "expectedMd5": "2958a86d8443fcc58374c1fce568853a",
+      "md5": "2958a86d8443fcc58374c1fce568853a",
+      "expectedBytes": 503,
+      "bytes": 503,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4cf15f1add3b28c3fd5d187627e4fe7018f8bc101680d8bf137d2571b201d6e0"
+    },
+    {
+      "path": "templates/article.bc-advice-qa.liquid",
+      "expectedMd5": "ff29adcee03191029d7c0d3bc822a551",
+      "md5": "ff29adcee03191029d7c0d3bc822a551",
+      "expectedBytes": 34,
+      "bytes": 34,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bf65b59b0eda13d50ec710cc37bad5750e75ec5f52f502a77565e0db27e1bc75"
+    },
+    {
+      "path": "templates/article.json",
+      "expectedMd5": "771fe1498f7904b3ecc1d23cbce7558e",
+      "md5": "771fe1498f7904b3ecc1d23cbce7558e",
+      "expectedBytes": 667,
+      "bytes": 667,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5b44ba0ad3d45232b19b697007a0f8382355ee4b1bf10708b2b9f753f40e592d"
+    },
+    {
+      "path": "templates/blog.json",
+      "expectedMd5": "6f7d54ba794e3155e6746b731632b821",
+      "md5": "6f7d54ba794e3155e6746b731632b821",
+      "expectedBytes": 714,
+      "bytes": 714,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b4fdaba44686fdfa26843595c921ffb4910e34aaab3f08b386aceb76cc5cad2a"
+    },
+    {
+      "path": "templates/cart.bc-mobile.liquid",
+      "expectedMd5": "fd25f8d79c554e53d0e38038fdb9b933",
+      "md5": "fd25f8d79c554e53d0e38038fdb9b933",
+      "expectedBytes": 1508,
+      "bytes": 1508,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1658ffd932bfddaf0426afb6012a89d114d7e6116dfbeb5b81bebc9379e354f2"
+    },
+    {
+      "path": "templates/cart.json",
+      "expectedMd5": "fee400789cb31fe5a1d5a44a081e169d",
+      "md5": "fee400789cb31fe5a1d5a44a081e169d",
+      "expectedBytes": 1633,
+      "bytes": 1633,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7d2d4f51a6fd45f63b87094bddeaa2393cc47b49764dfcf2a3b92ee306746fab"
+    },
+    {
+      "path": "templates/collection.bc-meubelhub.json",
+      "expectedMd5": "83eaa98c94cdf66f748ac47520a0f4e2",
+      "md5": "83eaa98c94cdf66f748ac47520a0f4e2",
+      "expectedBytes": 5115,
+      "bytes": 5115,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a8f15bedce2bba1c0aa959a858f3924a3e1dab7e9baf37214023b0d3e8083c19"
+    },
+    {
+      "path": "templates/collection.category-landing.json",
+      "expectedMd5": "4434e8130a7a1b0850639f2e20494bd9",
+      "md5": "4434e8130a7a1b0850639f2e20494bd9",
+      "expectedBytes": 2494,
+      "bytes": 2494,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "17b53f60f6e7cdb7d97f9e66ba3f4faa3af9024af63e1858db02b09ac0a71e3d"
+    },
+    {
+      "path": "templates/collection.json",
+      "expectedMd5": "7f77af61f24be2fb543547cc00972b13",
+      "md5": "7f77af61f24be2fb543547cc00972b13",
+      "expectedBytes": 1366,
+      "bytes": 1366,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "5336a020354a9b8d2022f7294550c5b58c36f7137d74c1ac4c8c8ce5cc6bce37"
+    },
+    {
+      "path": "templates/customers/account.json",
+      "expectedMd5": "bd9d07ae7b991fec497d857e3121423b",
+      "md5": "bd9d07ae7b991fec497d857e3121423b",
+      "expectedBytes": 507,
+      "bytes": 507,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "a5d8f2391a574598beb95253d9fc804a37b6cd5aa0a92f0da9b78906ec312db8"
+    },
+    {
+      "path": "templates/customers/activate_account.json",
+      "expectedMd5": "102f72d2ba4cb054931a1442842340d0",
+      "md5": "102f72d2ba4cb054931a1442842340d0",
+      "expectedBytes": 516,
+      "bytes": 516,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "319092718c529c438550f9712735b0d577e529a3b6523e1d3e3af30146e9c265"
+    },
+    {
+      "path": "templates/customers/addresses.json",
+      "expectedMd5": "aaa692f4a5f50a4da14b6e930cf3d4cf",
+      "md5": "aaa692f4a5f50a4da14b6e930cf3d4cf",
+      "expectedBytes": 509,
+      "bytes": 509,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "73850bda7ddb6cdd042addafdb26a85f1b6c73cae82fd8b7033a3dfee96fa35c"
+    },
+    {
+      "path": "templates/customers/login.json",
+      "expectedMd5": "4c31096e5c09a7330c94ad42727485c9",
+      "md5": "4c31096e5c09a7330c94ad42727485c9",
+      "expectedBytes": 505,
+      "bytes": 505,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "42468d35f20c64ed94df77151afa543f27d14225827101c8473e8eb84a2f7b48"
+    },
+    {
+      "path": "templates/customers/order.json",
+      "expectedMd5": "cefbd0bb5f9697c4ba00d03af720c32a",
+      "md5": "cefbd0bb5f9697c4ba00d03af720c32a",
+      "expectedBytes": 505,
+      "bytes": 505,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "0965e8ffe698a0d7c232a001f0c4aa77ad9060a6ff2121a1ba1a27bf88097a06"
+    },
+    {
+      "path": "templates/customers/register.json",
+      "expectedMd5": "d17af2433fe0930468c2d89685734a73",
+      "md5": "d17af2433fe0930468c2d89685734a73",
+      "expectedBytes": 508,
+      "bytes": 508,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2cd4422af30bd375d9b90f29838e743c0415117800081441550a942f3d608c10"
+    },
+    {
+      "path": "templates/customers/reset_password.json",
+      "expectedMd5": "385c7bde34c5bcc4913457360a0baaa8",
+      "md5": "385c7bde34c5bcc4913457360a0baaa8",
+      "expectedBytes": 514,
+      "bytes": 514,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e118026b90eba8c97dbea0c80f5147f6d12e594ae282904d0fec0df7780fe361"
+    },
+    {
+      "path": "templates/gift_card.liquid",
+      "expectedMd5": "cbc4a5b0a2296bc909144d7fb1d51c25",
+      "md5": "cbc4a5b0a2296bc909144d7fb1d51c25",
+      "expectedBytes": 10515,
+      "bytes": 10515,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8b94d7e3be1ce49c9d8fa6b8c303c667682209345668c174ae5e0d27a062e784"
+    },
+    {
+      "path": "templates/index.bc-homepage-review.liquid",
+      "expectedMd5": "c76529d094fb4d534f9cd3352c63f4b4",
+      "md5": "c76529d094fb4d534f9cd3352c63f4b4",
+      "expectedBytes": 290,
+      "bytes": 290,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "48f261e1b1237b77772e1f03f1a899da28006b8c1203b86b8a0431b0e71ae7d6"
+    },
+    {
+      "path": "templates/index.json",
+      "expectedMd5": "07cc841ffa21b8864a1bbc95ca5109ca",
+      "md5": "07cc841ffa21b8864a1bbc95ca5109ca",
+      "expectedBytes": 19546,
+      "bytes": 19546,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "1141121395633a18a8489e620fefd24510dae9ebfa662f1e1d8db7797f5cd2d2"
+    },
+    {
+      "path": "templates/list-collections.json",
+      "expectedMd5": "681c2d8b661df8e5768b699cb773a139",
+      "md5": "681c2d8b661df8e5768b699cb773a139",
+      "expectedBytes": 5631,
+      "bytes": 5631,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "e6dc85cd20b7845478950b20f543103534d303df15f62d7abf885071145f9b0c"
+    },
+    {
+      "path": "templates/list-collections.merken.json",
+      "expectedMd5": "0a8c0b8557d3b8d04a82963b723b159f",
+      "md5": "0a8c0b8557d3b8d04a82963b723b159f",
+      "expectedBytes": 533,
+      "bytes": 533,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7a85b374b938a26a175266a3f190ea4a9f65f97aacd0a2fca847627f07512ba1"
+    },
+    {
+      "path": "templates/page.bc-mobile-qa.liquid",
+      "expectedMd5": "24ae4cff55afe7f2453e4e9b6a0c2479",
+      "md5": "24ae4cff55afe7f2453e4e9b6a0c2479",
+      "expectedBytes": 371,
+      "bytes": 371,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "cfc6180f04b21c91d7cdd2879621fddb7fcb66f15ea15d5c6841bff7a225cdd8"
+    },
+    {
+      "path": "templates/page.bc-sunshower.json",
+      "expectedMd5": "0d27abe7c513d5b710112feebbd26b51",
+      "md5": "0d27abe7c513d5b710112feebbd26b51",
+      "expectedBytes": 3786,
+      "bytes": 3786,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "b111a803c438b3bc72475859a3771dce7ef53e7818756f9ba0083a1661a6b179"
+    },
+    {
+      "path": "templates/page.bc-wishlist.json",
+      "expectedMd5": "8a53e5df401425cf1f679f7ceb4bc256",
+      "md5": "8a53e5df401425cf1f679f7ceb4bc256",
+      "expectedBytes": 490,
+      "bytes": 490,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "07d757fa8ab9ab9ba5336536c6fb15bd5ee16a1ef8e86809b9e2c43eef4c1134"
+    },
+    {
+      "path": "templates/page.begrip.json",
+      "expectedMd5": "f538641cf4916ca5fc52cd2ceb30550b",
+      "md5": "f538641cf4916ca5fc52cd2ceb30550b",
+      "expectedBytes": 1116,
+      "bytes": 1116,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "70a98e82942ab9d717e2dafee7b19f376a8aa1484ee4d156582477044dcf8474"
+    },
+    {
+      "path": "templates/page.begrippenlijst.json",
+      "expectedMd5": "4f03db64160ec25cbea394cd7e3994d3",
+      "md5": "4f03db64160ec25cbea394cd7e3994d3",
+      "expectedBytes": 27265,
+      "bytes": 27265,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "bcd13960c0d6604239c16d338d659f2f27bed82d9f03e966e7f3e9bc0e57371f"
+    },
+    {
+      "path": "templates/page.contact.json",
+      "expectedMd5": "06faae72a3e339f530e7f09d75ba0f63",
+      "md5": "06faae72a3e339f530e7f09d75ba0f63",
+      "expectedBytes": 808,
+      "bytes": 808,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "c96c09d5c9ffbf48f00aa4635f5a744f97e2413ed3b59e55f1ed854adfdcd89d"
+    },
+    {
+      "path": "templates/page.json",
+      "expectedMd5": "96b5d9c8238f35a844a4637f1920d56c",
+      "md5": "96b5d9c8238f35a844a4637f1920d56c",
+      "expectedBytes": 561,
+      "bytes": 561,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "611f9c242f743cd59248b5c11cc4f2e495da33e27b0db90ba73865026e9f0288"
+    },
+    {
+      "path": "templates/page.offerte-vergelijken.json",
+      "expectedMd5": "d9ea8134cb78cb2e4a4dbb71ebff22ff",
+      "md5": "d9ea8134cb78cb2e4a4dbb71ebff22ff",
+      "expectedBytes": 633,
+      "bytes": 633,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "4215823128ab4fb87346b95986593cef0312746e693506c0b40c21d7c18b3446"
+    },
+    {
+      "path": "templates/page.retour-aanmelden.json",
+      "expectedMd5": "2e5141a5c097bfb87ccc21e92fa51d66",
+      "md5": "a1fdf2694f2bbba065f6e156ce5fee57",
+      "expectedBytes": 122,
+      "bytes": 485,
+      "byteMatch": false,
+      "state": "BYTE_MISMATCH",
+      "sha256": "23ce91d78147bd94eefa8e36572857828baab1458a358107de2b7d8be9bae14e"
+    },
+    {
+      "path": "templates/password.json",
+      "expectedMd5": "d73ebfcb31c74150fe41f5a76a9385ba",
+      "md5": "d73ebfcb31c74150fe41f5a76a9385ba",
+      "expectedBytes": 1516,
+      "bytes": 1516,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "f2174f12df0dd0111eb893542c84e942ce80fb406a2f88406e4a10dfb754cec6"
+    },
+    {
+      "path": "templates/product.bc-disclosure-check.liquid",
+      "expectedMd5": "185cd0f389a8fdc36c8adc05015ad32d",
+      "md5": "185cd0f389a8fdc36c8adc05015ad32d",
+      "expectedBytes": 31,
+      "bytes": 31,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "76eb193a8eaedde37cb7d5c7df6f0d02a47b440cc817ab69e6764b12f90aa0a1"
+    },
+    {
+      "path": "templates/product.bc-hotbath-data.json",
+      "expectedMd5": "f6ecf20b09053697af07b5b1ca4e7cd3",
+      "md5": "f6ecf20b09053697af07b5b1ca4e7cd3",
+      "expectedBytes": 1408,
+      "bytes": 1408,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "798b71443594a366a38851fb596a09dc6a2c537a4b13759e8c250ae1b4122b9a"
+    },
+    {
+      "path": "templates/product.bc-hotbath-pilot.json",
+      "expectedMd5": "89cbac0460d18a50c88f93bf977a0c6b",
+      "md5": "89cbac0460d18a50c88f93bf977a0c6b",
+      "expectedBytes": 1411,
+      "bytes": 1411,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "528591f80852e095cbd53a5aea3dafff0e553804c4ef8649718f24d9d9c76be1"
+    },
+    {
+      "path": "templates/product.bc-mobile-review.liquid",
+      "expectedMd5": "7b6f95905ed46477967d4f10ca2702ce",
+      "md5": "7b6f95905ed46477967d4f10ca2702ce",
+      "expectedBytes": 1605,
+      "bytes": 1605,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "8691e982833893898731db8e7808ee13d350d045c9a14dbeab55f11b4223e847"
+    },
+    {
+      "path": "templates/product.bc-responsive-qa.liquid",
+      "expectedMd5": "0533e89005d1b3541da4f4b8e099567a",
+      "md5": "0533e89005d1b3541da4f4b8e099567a",
+      "expectedBytes": 448,
+      "bytes": 448,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2b454b86a055e16da1fc8208c146f3314141733c2654ce3e9666f57e9d66269a"
+    },
+    {
+      "path": "templates/product.json",
+      "expectedMd5": "741ac2a6d0e579cd24a91f410714406c",
+      "md5": "741ac2a6d0e579cd24a91f410714406c",
+      "expectedBytes": 2966,
+      "bytes": 2966,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7533c26615af05508b07df876ca2b5ab3e23c49ede316b0facbba93fe87febba"
+    },
+    {
+      "path": "templates/product.porcelanosa.json",
+      "expectedMd5": "d46825e52b9e097e067feef2c21a70e6",
+      "md5": "d46825e52b9e097e067feef2c21a70e6",
+      "expectedBytes": 2858,
+      "bytes": 2858,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "7cd8ae6c9064b73792bffbb61d99d64f902f0a5329a4758e394b01c2bdb76cf8"
+    },
+    {
+      "path": "templates/product.sunshower.json",
+      "expectedMd5": "d1b6070f357c96a6e90d1ef5e1605632",
+      "md5": "d1b6070f357c96a6e90d1ef5e1605632",
+      "expectedBytes": 489,
+      "bytes": 489,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "77ba3119cc79d6d46f2efe9f7cadc3e9df1b15a563afb66ba4aa7a0018d87d84"
+    },
+    {
+      "path": "templates/product.tegel-block-test.liquid",
+      "expectedMd5": "22425d195af247867e19ae8a9f961058",
+      "md5": "22425d195af247867e19ae8a9f961058",
+      "expectedBytes": 1332,
+      "bytes": 1332,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "d93a7482f884ef208a91bbf1be8d37b01d42124891984d19136e6b9908c865c8"
+    },
+    {
+      "path": "templates/product.tegel-mobiel-preview.liquid",
+      "expectedMd5": "12b4e587a429f653a9d661a9ef77610b",
+      "md5": "12b4e587a429f653a9d661a9ef77610b",
+      "expectedBytes": 450,
+      "bytes": 450,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "9d34a27504992b62f3d913a49bd8173b05b828770cd9034d73b4247df4f08a40"
+    },
+    {
+      "path": "templates/product.tegels.json",
+      "expectedMd5": "7c4b8b87631a1b657c56f21690082ab8",
+      "md5": "7c4b8b87631a1b657c56f21690082ab8",
+      "expectedBytes": 2859,
+      "bytes": 2859,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "49442382d97ff6803ed654cc84bb24f1061057d9866e78e5a5d09999aa7489b7"
+    },
+    {
+      "path": "templates/search.bc-mobile-review.liquid",
+      "expectedMd5": "f2040a16f6ade664773446ffee32bc53",
+      "md5": "f2040a16f6ade664773446ffee32bc53",
+      "expectedBytes": 28,
+      "bytes": 28,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "73a146ca6e5b67cedf2f3914a435d09d7a492f114c75768802804b174b1ebbda"
+    },
+    {
+      "path": "templates/search.json",
+      "expectedMd5": "2095d7adf49dd4a2d9b94ecc4a25b761",
+      "md5": "2095d7adf49dd4a2d9b94ecc4a25b761",
+      "expectedBytes": 937,
+      "bytes": 937,
+      "byteMatch": true,
+      "state": "BYTE_MATCH",
+      "sha256": "2e3137e81ffa4c6d242c05a7c2a88a453121577d36973b204c4c3e86a8846606"
+    }
+  ],
+  "limits": "Selected relevant text only; metadata for other files. No normalization used to manufacture checksum parity."
+}

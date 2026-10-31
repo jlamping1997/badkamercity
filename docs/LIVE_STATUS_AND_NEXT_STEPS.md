@@ -1,45 +1,45 @@
 # BadkamerCity — actuele werkstatus
 
-**31 oktober 2026 · NAV-02: laptop-/desktopcategorieën zonder schuiven, preview gecontroleerd.**
+**31 oktober 2026 · DOC-04: naslagwerk versie 2.0 uitgebreid en offline gecontroleerd.**
 
 ## Begin hier
 
-[Het volledige naslagwerk](MASTER_SITE_REFERENCE.md) brengt de actuele website, functies, desktop/mobielverschillen, alle pagina-/template-/menu-/instellingenregisters en 36 technische brondossiers samen. De bijbehorende [gedateerde bron en controles](site-reference/2026-10-30/baseline-and-checks.json) scheiden Admin, broncode, server-HTML, desktopgedrag, eerder componentbewijs en open controles.
+[Het volledige naslagwerk](MASTER_SITE_REFERENCE.md) bevat **80 hoofdstukken**, 36 gedateerde technische brondossiers, 50 beheertaken, 40 diagnosepaden, 50 acceptatiescenario’s en het ingebouwde register van 11.679 publieke productroutes. De 32 nieuwe praktische hoofdstukken behandelen klantreizen, dagelijks beheer, schermcontracten, header/menu, zoeken/filteren, productidentiteit, tegels, data, media, cart/opslag, beide footers, retouren, offertegates, redactie, SEO, toegankelijkheid en releases. [Bronuitbreiding en reproduceerbare renderer](handbook/2026-10-31/README.md) · [verse bron en controles](site-reference/2026-10-31/README.md).
 
-## Verse bronstand
+## Verse bronstand 31 oktober
 
-- MAIN **195915448586 — BadkamerCity - Tegelkleuren juiste uitvoering**; **195916628234 — Offerte vergelijken** is UNPUBLISHED. Begin- en eindread van deze documentatieronde zijn gelijk; updatedAt MAIN 2026-10-30T09:34:20Z.
-- 11.680 productrecords: 11.679 ACTIVE en één DRAFT; 11.679 Online Store-URL’s. Deze publieke URL-set sluit exact aan op de product-sitemapset.
-- 226 collecties, 120 Pages waarvan 118 gepubliceerd, negen menu’s en258 productmetafielddefinities, volledig gepagineerd. Eén blog/één artikel.
-- 1.350 themapaden geïnventariseerd; 405 relevante tekstbronnen ontvangen, 404 MD5-gelijk. De bestaande uitzondering config/settings_data.json blijft open.
-- 397 hoofd-GETs: 395 HTTP 200 en twee 404; één 404 is de bewuste foutpaginaproef. tegeltoebehoren ontbreekt in de sitemap en is niet gelinkt in de onderzochte responses. 109 begrippenverbindingen opnieuw gevolgd: 108 HTTP 200, Hygro(meter) eindigt nog op 404.
-- Gerichte desktopcontrole op 1.348 CSS-pixels: homepage/categorie, predictive zoekfunctie, native→externe lijst, Verona Cubik-PDP en 10m²/10%-calculator. Geen cartwrite, formulierinzending, checkout, betaling of order.
-- Naslagwerk offline gecontroleerd: 48 hoofdstukken, unieke interne anchors, volledige catalogus, merkfilter, zoekfunctie, nulresultaat, paginering en inhoudsknop. Dit is geen visuele browserlayout-/telefoonvrijgave. De cloudbrowser stond lokale HTML-voorvertoning niet toe; er is geen omweg gebruikt.
+- **MAIN 195948839178 — BadkamerCity - Retourknop in header**, updatedAt 2026-10-30T16:41:30Z, 1.354 paden. Relevant rol-/Page-eindread gelijk aan beginread; geen tweede volledige manifestexport aan het einde.
+- **195947036938 — BadkamerCity - Categorieen zonder schuiven is UNPUBLISHED**. NAV-02 is preview-gecontroleerd, nog niet live. MAIN bevat de oude categorierail met twee schuifknoppen. Geen publicatie in deze documentatieronde.
+- Retour-Page **166668894474** gepubliceerd; /pages/retour-aanmelden bereikbaar. Headerlink in verse openbare HTML. **MAIL_DELIVERY_PENDING** blijft open.
+- 121 Pages, 119 gepubliceerd/twee verborgen; 226 collecties en negen menu’s volledig gepagineerd. Producttellingen EXACT: 11.680 totaal, 11.679 ACTIVE, één DRAFT, 11.679 gepubliceerd. Catalogusidentiteiten blijven de export van 30 oktober; geen nieuwe volledige setgelijkheid geclaimd.
+- 409 geselecteerde tekstbronnen: **407 BYTE_MATCH en twee BYTE_MISMATCH**. settings_data.json blijft open; retourtemplate bevat Shopify-commentaar en heeft aparte semantische beoordeling uit RET-01. Geen 409/409-bytepariteit.
+- Ten opzichte van de 30-oktobernulmeting: vier nieuwe en zes gewijzigde themapaden. Huidig: 85 Liquid-secties, 119 snippets en 153 CSS-/JS-assets. Oude registers 30–47 zijn duidelijk gedateerd.
+- 18 openbare GETs: 17 HTTP 200 en bekende Hygrometer-404. Controle omvat servermarkup/metadata, retourlink, railcontrols en adresafwezigheid in onderzochte footers; geen JavaScriptuitvoering of koop-/formulieractie.
 
-## Code en uitvoeringsgrens
+## DOC-04 resultaat en verificatie
 
-Centrale repository jlamping1997/badkamercity; bestaande uitvoeringsbranch **fix/product-cards-2026-10-14** behouden. Broncommits voor dit onderzoek: main 8a9f0684f25aba145d78830c49ab724c3395d677 en uitvoeringsbranch 379a0e2c2e1aa682a479b2a3c26fca3fc0145881. Geen nieuwe codebranch, geen Shopify-write/publicatie en geen VPS-/product-/prijs-/voorraadmutatie. Deze checkpoint schrijft uitsluitend documentatie; de Git-root is nog geen volledige actuele MAIN-snapshot. Windows is niet onderzocht.
+DOCUMENTATION_VERIFIED / HANDOFF_READY. Het bestaande boek is in plaats uitgebreid; geen tweede concurrerende actuele uitleg. De HTML-reader heeft tekstzoeken, inhoudsopgave, snelle ingangen, **takenzoeker met eigenaar/stand** en merk-/productrouteregister. 80 opeenvolgende hoofdstukken, één H1, unieke IDs en geldige interne anchors; taakfilters, nulresultaten, catalogusfilter (337 Porcelanosa, drie Verona Cubik), paginering, tekstzoeken, Escape en inhoudsbediening offline PASS. Ook zonder scripts blijven alle hoofdstukken en 50 taken leesbaar. Geen externe runtimecalls of scriptfouten in de offline controle.
 
-## Bestaande open uitvoering
+[Volledige validatie](site-reference/2026-10-31/document-validation.json) is een **jsdom DOM-controle**, geen browserlayout-/fysieke telefoon-/laptop-/Windows-/checkoutvrijgave. Geen nieuwe cartwrite, testinzending, mailboxcontrole of privébackendonderzoek. De eerdere weigering van lokale HTML-browservoorvertoning is niet opnieuw geprobeerd of omzeild.
 
-**BC-QUOTE-001: FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED.** [Integratie](quote/2026-10-30/INTEGRATION.md), [design](quote/2026-10-30/DESIGN.md), [branding](quote/2026-10-30/BRANDING.md). Page offerte-vergelijken is ongepubliceerd; integration_enabled=false, integration_preview=true alleen bij unpublished, show_preview=false. Header/footer-klantlinks en homepage-teaser blijven uit. Mailontvangst/verificatie, klantmail, privétoegang, bewaartermijn, verwijderen en fysieke telefooncontrole zijn nog open. De publicatie-/themarollen in oudere offertedossiers zijn hun historische opleverstand.
+## Code, branch en uitvoeringsgrens
 
-QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, alle merken/willekeurig, checkpoints en dag/nacht; geen automatische Shopify-mutatie. [Overdracht](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/README.md). Deze documentatieronde heeft geen privébeoordelingen gelezen of gewijzigd.
+Repository jlamping1997/badkamercity; bestaande uitvoeringsbranch **fix/product-cards-2026-10-14**. Bron vóór deze docsuitbreiding: remote uitvoering 0d2da1819ce582e1717aefb24899a66050f99449, remote main 3205c6f31516fd86282dd7554e4f490a6551321d. Deze wijziging bevat uitsluitend documentatie en documentatietooling onder docs/. Geen Shopify-write, publicatie, catalogus-/prijs-/voorraad-/VPS-mutatie. Git-root blijft geen volledige huidige MAIN-snapshot. Windows niet onderzocht. De handoff en centrale ingang worden op beide branches gelijk gehouden.
 
-## Actieve uitvoering
+## Open uitvoering blijft behouden
 
-**NAV-02 — PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** [Categorieën zonder schuiven](laptop-navigation/2026-10-31/README.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**,1354files, behouden. Bestaand UNPUBLISHED **195947036938** hergebruikt en hernoemd naar **BadkamerCity - Categorieen zonder schuiven**; eerst alleen de achterlopende header gesynchroniseerd, daarna1354/1354pariteit bewezen. Geen nieuwe volledige themakopie of branch.
+**NAV-02 — PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** [Dossier](laptop-navigation/2026-10-31/README.md). Concept 195947036938 heeft exact één bedoelde headerafwijking tegenover de toen gemeten MAIN.990–1359 CSS-px twee rijen 6+5; vanaf1360 één rij met wrap-vangnet; mobiel tot989 bestaand menu. Twaalf breedteframes, menu/focus/Escape, tweede rij en resize gecontroleerd; QA-template hersteld. Dit gedateerde componentbewijs is niet opnieuw uitgevoerd door DOC-04.
 
-Alle elf desktopcategorieën bereikbaar zonder scrollbalk of schuifpijlen.990–1359CSS-px twee gebalanceerde rijen6+5; vanaf1360één rij, CSS-wrap als vangnet. Mobiel tot989behoudt bestaand menu. Exact één blijvend pad sections/header.liquid; finaleMAIN1354/1354gelijk, concept1354/exactéénheaderafwijking, bodyexact. ThemeCheckR1 en JS-syntaxPASS; twaalf breedteframes390–1920zonderoverloop, alle11linkszichtbaar, nulschuifknoppen. Dropdown/focus/Escape, tweede rij, breedtewissel en mobielmenu→desktopherstel gecontroleerd; Merken echt via gewone website geopend. QA-templateexacthersteld. Geen MAIN-write/publicatie.
+**RET-03 — LIVE_VISIBILITY_VERIFIED / MAIL_DELIVERY_PENDING.** [Publicatie](returns/2026-10-30/PUBLICATION.md). Native contactaanvraag, handmatig order-/retourproces. Geen automatisch RMA, label, refund of klantbevestigingsmail. Footeradres verwijderd; beide footers delen de retourroute. Echte mailboxontvangst/spam/antwoord en labellevering nog open.
 
-**RET-03 blijft LIVE_VISIBILITY_VERIFIED / MAIL_DELIVERY_PENDING.** Retour-Page166668894474 gepubliceerd en bereikbaar; knop/retourwerk zit in dit concept. Mailbox-/spamproef en echte labellevering blijven open. Offerteverificatie afzonderlijk geparkeerd, klantactivatie uit. Geen Page-/catalogus-/order-/return-/refund-/prijs-/voorraad-/VPS-mutatie in NAV-02. Geen fysieke laptop-/telefoon- of Windows-controle. Uitvoering afgerond; branch fix/product-cards-2026-10-14, main uitsluitend documentatie.
+**BC-QUOTE-001 — FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED.** [Integratie](quote/2026-10-30/INTEGRATION.md). Offerte-Page verborgen; integration_enabled=false, preview apart gated, klantlinks/teaser uit. Mailverificatie, klantmail, privétoegang, bewaartermijn, verwijderen en fysieke telefooncontrole open. Geen nieuwe poging tot het eerder geweigerde privéformulieraccount.
+
+QC-04 blijft afzonderlijke privétool op quality-control, zonder automatische Shopify-mutatie. [Overdracht](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/README.md). Geen privébeoordelingen gelezen of gepubliceerd.
 
 ## Exact één volgende handeling
 
-**Eigenaar beoordeelt en publiceert concept195947036938 — BadkamerCity - Categorieen zonder schuiven.** De retour-Page is al zichtbaar; geen aanvullende Page-publicatie nodig. Het eerdere retourmailboxbewijs blijft afzonderlijk open.
+**Eigenaar beoordeelt en publiceert concept 195947036938 — BadkamerCity - Categorieen zonder schuiven.** Daarna verse rollen/live navigatie controleren. De retour-Page is al gepubliceerd; mailboxbewijs blijft een afzonderlijke open controle.
 
-## Bevindingen en achtergrond
+## Historie en verdere bevindingen
 
-Het naslagwerk registreert onder meer tien ontbrekende grote-footerbestemmingen, de Hygro(meter)-404, collectiemetadata, de €75/€100-verzendtekstafwijking in de native fallback, native/externe zoektellingen en tegelprijseenheden. Eerdere geïsoleerde cart/filter/wishlistbevindingen blijven met hun eigen bron-/testgrens bestaan. Mobiele bron/componentanalyse vervangt geen volledige fysieke telefoon-/koopronde; backend, Google en bedrijfsprocessen blijven expliciet begrensd.
-
-De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen schrijver of achtergrondworker actief na deze oplevering.
+[Vorige centrale status exact gearchiveerd](site-reference/2026-10-31/previous-live-status.md). Oudere registers en 36 brondossiers blijven hun meetdatum houden. Hygrometer is opnieuw 404; oude footerbestemmingen, verzendcopy, zoektellingen, tegelprijseenheden en geïsoleerde cart/filter/wishlistcases blijven met hun eigen bewijsgrenzen bestaan. [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md) en [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) blijven achtergrond. Geen automatische reparaties of nieuwe publicatie uit documentatiebevindingen afleiden.

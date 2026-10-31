@@ -1,3 +1,5 @@
+> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
+
 # Documentatiedekking: wat compleet is en wat nog niet
 
 **28 oktober 2026 · DOC-02C brede winkelbeschrijving.** De eigenaar vraagt volledige documentatie vóór verdere stapsgewijze verbetering. De scope is de huidige BadkamerCity-winkel: storefront, product-/contentdata, beheerinstellingen, integraties, bestelketen en onderhoud. De [centrale status](../LIVE_STATUS_AND_NEXT_STEPS.md) noemt de actuele volgende handeling.

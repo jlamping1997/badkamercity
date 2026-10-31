@@ -1,0 +1,452 @@
+[
+  {
+    "id": "T01",
+    "question": "Logo verspringt tussen home en product",
+    "owner": "Ontwikkelaar",
+    "where": "sections/header.liquid; identieke wrappers",
+    "check": "Vergelijk positie bij gelijke viewport en scrollstaat",
+    "chapter": 52,
+    "status": "LIVE"
+  },
+  {
+    "id": "T02",
+    "question": "Zoekbalk soepel laten inklappen",
+    "owner": "Ontwikkelaar",
+    "where": "assets/bc-mobile-header.js",
+    "check": "Down/up-drempels, zoekfocus en menu-openstaat",
+    "chapter": 53,
+    "status": "LIVE"
+  },
+  {
+    "id": "T03",
+    "question": "Categorieën zonder schuiven bekijken",
+    "owner": "Eigenaar",
+    "where": "Concept 195947036938, header",
+    "check": "990/1359 twee rijen; 1360+ één rij; pas na beoordeling publiceren",
+    "chapter": 54,
+    "status": "CONCEPT"
+  },
+  {
+    "id": "T04",
+    "question": "Grijs kader bij Terug onderzoeken",
+    "owner": "Ontwikkelaar",
+    "where": "Headerdrawer en focusregels",
+    "check": "Pointer zonder kader; toetsenbord met zichtbare focus",
+    "chapter": 55,
+    "status": "LIVE"
+  },
+  {
+    "id": "T05",
+    "question": "Retourknop ontbreekt op desktop",
+    "owner": "Beheerder",
+    "where": "Page-publicatie en bc-returns-url.liquid",
+    "check": "Viewport vanaf 990, actuele MAIN en gepubliceerde Page",
+    "chapter": 52,
+    "status": "LIVE"
+  },
+  {
+    "id": "T06",
+    "question": "Retourpagina bereiken",
+    "owner": "Klantenservice",
+    "where": "/pages/retour-aanmelden",
+    "check": "Formulier, verplichte velden en juiste bestemming",
+    "chapter": 69,
+    "status": "LIVE"
+  },
+  {
+    "id": "T07",
+    "question": "Retourmailontvangst bewijzen",
+    "owner": "Eigenaar",
+    "where": "Bevoegde servicemailbox",
+    "check": "Afgesproken fictieve aanvraag, inbox/spam en antwoordpad",
+    "chapter": 70,
+    "status": "OPEN"
+  },
+  {
+    "id": "T08",
+    "question": "Retourlabel behandelen",
+    "owner": "Klantenservice",
+    "where": "Handmatig order- en serviceproces",
+    "check": "Artikel/order controleren en instructie of label afspreken",
+    "chapter": 70,
+    "status": "OPEN"
+  },
+  {
+    "id": "T09",
+    "question": "Retourreden wijzigen",
+    "owner": "Beheerder",
+    "where": "bc-returns en bc_returns-vertalingen",
+    "check": "Reden blijft optioneel; aanvraagtype en veldnamen intact",
+    "chapter": 69,
+    "status": "LIVE"
+  },
+  {
+    "id": "T10",
+    "question": "Footeradres controleren",
+    "owner": "Beheerder",
+    "where": "footer-group.json en bc-home-footer",
+    "check": "Beide footers zonder Zichtenburglaan 150 of lege adreskop",
+    "chapter": 68,
+    "status": "LIVE"
+  },
+  {
+    "id": "T11",
+    "question": "Service-link toevoegen",
+    "owner": "Contentbeheerder",
+    "where": "Grote én compacte footer",
+    "check": "Echte gepubliceerde inhoud, label en mobiel/desktop",
+    "chapter": 68,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T12",
+    "question": "Homepagecampagne aanpassen",
+    "owner": "Contentbeheerder",
+    "where": "Actieve bc-homepage-sectie",
+    "check": "Afbeeldingsuitsnede, contrast, copy en bestemming",
+    "chapter": 57,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T13",
+    "question": "Categoriecirkel wijzigen",
+    "owner": "Contentbeheerder",
+    "where": "Homepageblokken",
+    "check": "Juiste collectie en 3×3/negenkolomsopbouw",
+    "chapter": 57,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T14",
+    "question": "Assortimentvolgorde controleren",
+    "owner": "Ontwikkelaar",
+    "where": "bc-assortment en mobiele DOM-verplaatsing",
+    "check": "749/750, zoekreset en echte linkbestemmingen",
+    "chapter": 57,
+    "status": "LIVE"
+  },
+  {
+    "id": "T15",
+    "question": "Merkenpagina vinden",
+    "owner": "Contentbeheerder",
+    "where": "/collections?view=merken",
+    "check": "Niet de verborgen merken-Page gebruiken",
+    "chapter": 57,
+    "status": "LIVE"
+  },
+  {
+    "id": "T16",
+    "question": "Collectietemplate wijzigen",
+    "owner": "Beheerder",
+    "where": "Shopify-collectie templateSuffix",
+    "check": "Hub versus productgrid en alle gekoppelde secties",
+    "chapter": 58,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T17",
+    "question": "Meubelhubstijl onderzoeken",
+    "owner": "Ontwikkelaar",
+    "where": "Collection descriptionHtml plus themacode",
+    "check": "Drie inline style-blokken en mobiele/desktopweergave",
+    "chapter": 58,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T18",
+    "question": "Breadcrumb corrigeren",
+    "owner": "Ontwikkelaar",
+    "where": "Collectiecontext en breadcrumbrenderer",
+    "check": "Directe PDP en vanuit collectie vergelijken",
+    "chapter": 58,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T19",
+    "question": "Product niet in zoeksuggesties",
+    "owner": "Productbeheerder",
+    "where": "Online publicatie en predictive zoekroute",
+    "check": "Directe URL, exacte term en request/foutstaat",
+    "chapter": 56,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T20",
+    "question": "Zoektelling verschilt",
+    "owner": "Ontwikkelaar",
+    "where": "Native zoekresponse versus externe index",
+    "check": "Zelfde term/scope en bronmoment; index niet veronderstellen",
+    "chapter": 56,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T21",
+    "question": "Filters blijven laden",
+    "owner": "Ontwikkelaar",
+    "where": "Externe controller/API en native fallback",
+    "check": "Timeout, requestidentiteit en bruikbare terugval",
+    "chapter": 59,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T22",
+    "question": "Filterstaat na Terug herstellen",
+    "owner": "Ontwikkelaar",
+    "where": "URL-parameters en popstate",
+    "check": "Selectie, URL en zichtbare resultaten gelijk",
+    "chapter": 59,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T23",
+    "question": "Prijsrange aanpassen",
+    "owner": "Ontwikkelaar",
+    "where": "bcr_* min/max en rangecontrols",
+    "check": "Geldigheid, reset en slider/tekstveld gelijk",
+    "chapter": 59,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T24",
+    "question": "Verkeerde kleurfoto op kaart",
+    "owner": "Productbeheerder",
+    "where": "Kaartdata, swatch en productmedia",
+    "check": "Foto, URL, variant, prijs en hartje samen",
+    "chapter": 60,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T25",
+    "question": "Productkaartprijs onderzoeken",
+    "owner": "Ontwikkelaar",
+    "where": "Liquid/externe/wishlist-renderer",
+    "check": "Actuele prijsnodes en eenheden van gekozen uitvoering",
+    "chapter": 60,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T26",
+    "question": "PDP-uitvoering wisselen",
+    "owner": "Ontwikkelaar",
+    "where": "product-info of productlinkcontroller",
+    "check": "Variant AJAX versus ander product met navigatie",
+    "chapter": 61,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T27",
+    "question": "Tegelcalculator controleren",
+    "owner": "Productbeheerder",
+    "where": "Doosinhoud en tegelkoopblok",
+    "check": "Oppervlakte, verlies, afronding en cartpayload",
+    "chapter": 62,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T28",
+    "question": "Doosinhoud ontbreekt",
+    "owner": "Productbeheerder",
+    "where": "Productmetafield en leveranciersbron",
+    "check": "Geen verzonnen inhoud; calculator veilig zonder geldige bron",
+    "chapter": 62,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T29",
+    "question": "Hotbath-specificatie aanpassen",
+    "owner": "Productbeheerder",
+    "where": "Identiteit/importguard en adapter",
+    "check": "Exacte SKU, zichtbaarheid en product buiten guard",
+    "chapter": 63,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T30",
+    "question": "Wiesbaden/JEE-O-bron beoordelen",
+    "owner": "Productbeheerder",
+    "where": "Beoordeelde gegevens en mapping",
+    "check": "Productmatch, eenheid en fallback bij ontbrekende waarde",
+    "chapter": 63,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T31",
+    "question": "Sunshower-product beoordelen",
+    "owner": "Productbeheerder",
+    "where": "Sunshower-template en eigen configurator",
+    "check": "Selectie, documenten en onderdelenrelaties",
+    "chapter": 61,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T32",
+    "question": "Binnenwerk koppelen",
+    "owner": "Productbeheerder",
+    "where": "Gecontroleerde product-/variantrelatie",
+    "check": "Vereist versus inbegrepen en exacte compatibiliteit",
+    "chapter": 64,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T33",
+    "question": "Optioneel accessoire aanbieden",
+    "owner": "Productbeheerder",
+    "where": "PDP-relatie en selectiestaat",
+    "check": "Geen automatische betaalde selectie",
+    "chapter": 64,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T34",
+    "question": "Galerij of zoom herstellen",
+    "owner": "Ontwikkelaar",
+    "where": "Media-controller en productmedia",
+    "check": "Teller, vorige/volgende, sluiten en focusherstel",
+    "chapter": 65,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T35",
+    "question": "Handleiding toevoegen",
+    "owner": "Productbeheerder",
+    "where": "technische_documenten/merkdocumentbron",
+    "check": "Exact artikel, HTTPS, geen duplicaat en zichtbaarheid",
+    "chapter": 65,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T36",
+    "question": "Cartregel klopt niet",
+    "owner": "Ontwikkelaar",
+    "where": "Shopify-cartresponse en variantselectie",
+    "check": "Variant-ID, hoeveelheid en teruggelezen regel",
+    "chapter": 66,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T37",
+    "question": "Bewaarde winkelwagen herstellen",
+    "owner": "Beheerder",
+    "where": "Lokale opgeslagen regels en cart-POST",
+    "check": "Schrijfhandeling: actuele geldigheid en dubbele aantallen",
+    "chapter": 66,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T38",
+    "question": "Verlanglijstteller klopt niet",
+    "owner": "Ontwikkelaar",
+    "where": "Lokale opslag en bc:wishlist-changed",
+    "check": "Dezelfde identiteit, events en herladen",
+    "chapter": 67,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T39",
+    "question": "Verlanglijst op tweede apparaat",
+    "owner": "Klantenservice",
+    "where": "Browseropslagcontract",
+    "check": "Geen onbewezen accountsynchronisatie beloven",
+    "chapter": 67,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T40",
+    "question": "Oude verlanglijstprijs",
+    "owner": "Ontwikkelaar",
+    "where": "Productdata/cache en opgeslagen snapshot",
+    "check": "Actualiteit bij openen en koopactie controleren",
+    "chapter": 67,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T41",
+    "question": "Offerte-upload activeren",
+    "owner": "Eigenaar",
+    "where": "Gated offerteconcept en bevoegd formulierbeheer",
+    "check": "Ontvangst, verificatie, privacy en expliciete vrijgave",
+    "chapter": 71,
+    "status": "OPEN"
+  },
+  {
+    "id": "T42",
+    "question": "Begrip of artikel aanpassen",
+    "owner": "Contentbeheerder",
+    "where": "Page/template of blogrenderer",
+    "check": "H2-structuur, lokale zoekfunctie en links",
+    "chapter": 72,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T43",
+    "question": "Hygrometer-link herstellen",
+    "owner": "Contentbeheerder",
+    "where": "Begrippenbron en echte Page/redirect",
+    "check": "Bekende 404 eerst inhoudelijk beslissen, dan gericht wijzigen",
+    "chapter": 72,
+    "status": "OPEN"
+  },
+  {
+    "id": "T44",
+    "question": "Nieuwe productimport voorbereiden",
+    "owner": "Productbeheerder",
+    "where": "Bronmapping en droog mutatieoverzicht",
+    "check": "Identiteit, eenheden, conflicten en uitzonderingen reviewen",
+    "chapter": 73,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T45",
+    "question": "Nieuwe SEO-landingspagina bepalen",
+    "owner": "Contentbeheerder",
+    "where": "Categorisatiebeleid en zoekintentie",
+    "check": "Dekking, overlap, bestaande categorie en doel",
+    "chapter": 74,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T46",
+    "question": "Canonical of schema onderzoeken",
+    "owner": "Ontwikkelaar",
+    "where": "Exacte serverresponse en productdata",
+    "check": "URL-context, prijs/valuta en robots afzonderlijk",
+    "chapter": 74,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T47",
+    "question": "Toetsenbordbediening controleren",
+    "owner": "Ontwikkelaar",
+    "where": "Header/drawer/formulier/overlay",
+    "check": "Tab, Escape, zichtbare focus en verborgen bediening",
+    "chapter": 75,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T48",
+    "question": "Layoutverschuiving meten",
+    "owner": "Ontwikkelaar",
+    "where": "Eerste render, fonts, afbeeldingen en CSS",
+    "check": "Gelijke viewport/cacheconditie, echte meetresultaten",
+    "chapter": 76,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T49",
+    "question": "Nieuwe release documenteren",
+    "owner": "Ontwikkelaar",
+    "where": "Actuele status, componentdossier en handoff",
+    "check": "Verse rollen/hashes, passende regressie en terugzetpad",
+    "chapter": 79,
+    "status": "BEHEER"
+  },
+  {
+    "id": "T50",
+    "question": "Bronpariteit onderzoeken",
+    "owner": "Ontwikkelaar",
+    "where": "settings_data en retourtemplate met metadata",
+    "check": "Byte-uitzondering apart houden van semantische vergelijking",
+    "chapter": 49,
+    "status": "OPEN"
+  }
+]
