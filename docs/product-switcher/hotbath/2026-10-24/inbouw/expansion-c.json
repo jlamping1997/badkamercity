@@ -1,0 +1,1436 @@
+{
+  "schema": "hotbath-inbouw-expansion-segment-v1",
+  "segment": "c",
+  "read_only": true,
+  "source_pdf": "upload/Hotbath%20Catalogus%20Editie%2018.pdf",
+  "source_snapshot": "hotbath-menu-20261024/catalog_snapshot.json",
+  "snapshot_captured_at": "2026-10-24",
+  "coverage": {
+    "printed_pages": [
+      330,
+      502
+    ],
+    "pdf_pages": [
+      332,
+      504
+    ],
+    "method": "Full segment keyword scan for inbouwdeel/afbouwdeel/afdekset/inbouwelement and explicit parts-price tables; table pairs crosschecked visually on printed360,367 and all Rails table pages462–478. Body/trim candidates matched by exact known color suffix only.",
+    "visually_reviewed_pages": [
+      360,
+      367,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      474,
+      475,
+      476,
+      477,
+      478
+    ],
+    "limits": "Shop data is a prior same-day snapshot, not a fresh API read. No deployment, product changes or cart behavior implemented. MHF and GLF previous31 models excluded."
+  },
+  "summary": {
+    "new_verified_normal_models": 4,
+    "new_verified_normal_skus": 21,
+    "normal_candidate_skus": 31,
+    "new_missing_body_models": 1,
+    "previously_known_missing_body_models": 1,
+    "rails_verified_physical_relations_requiring_commercial_review": 27,
+    "rails_candidate_skus": 264,
+    "additional_rails_book_contradiction_models": 1
+  },
+  "mappings": [
+    {
+      "trim_model": "ARHF011",
+      "book_trim_model": "ARHF011",
+      "body_sku": "MHF001",
+      "qty": 1,
+      "printed_pages": [
+        360
+      ],
+      "pdf_pages": [
+        362
+      ],
+      "evidence": "Inbouwdeel MHF001; Afbouwdeel ARHF011..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "ARHF011BBP",
+        "ARHF011BCP",
+        "ARHF011BGP",
+        "ARHF011IX"
+      ],
+      "book_confirmed_finishes": [
+        "BBP",
+        "BCP",
+        "BGP",
+        "IX"
+      ],
+      "approved_finish_skus": [
+        "ARHF011BBP",
+        "ARHF011BCP",
+        "ARHF011BGP",
+        "ARHF011IX"
+      ],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MHF001"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "VERIFIED_BOOK",
+      "notes": "The manufacturer trim model itself has no EXT. Exact SKU plus explicitly listed finish matches.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": true
+    },
+    {
+      "trim_model": "ARHF012",
+      "book_trim_model": "ARHF012",
+      "body_sku": "MHF002",
+      "qty": 1,
+      "printed_pages": [
+        360
+      ],
+      "pdf_pages": [
+        362
+      ],
+      "evidence": "Inbouwdeel MHF002; Afbouwdeel ARHF012..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "ARHF012BBP",
+        "ARHF012BCP",
+        "ARHF012BGP",
+        "ARHF012IX"
+      ],
+      "book_confirmed_finishes": [
+        "BBP",
+        "BCP",
+        "BGP",
+        "IX"
+      ],
+      "approved_finish_skus": [
+        "ARHF012BBP",
+        "ARHF012BCP",
+        "ARHF012BGP",
+        "ARHF012IX"
+      ],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MHF002"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "VERIFIED_BOOK",
+      "notes": "The manufacturer trim model itself has no EXT. Exact SKU plus explicitly listed finish matches.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": true
+    },
+    {
+      "trim_model": "ARHF013",
+      "book_trim_model": "ARHF013",
+      "body_sku": "MHF003",
+      "qty": 1,
+      "printed_pages": [
+        360
+      ],
+      "pdf_pages": [
+        362
+      ],
+      "evidence": "Inbouwdeel MHF003; Afbouwdeel ARHF013..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "ARHF013BBP",
+        "ARHF013BCP",
+        "ARHF013BGP",
+        "ARHF013IX"
+      ],
+      "book_confirmed_finishes": [
+        "BBP",
+        "BCP",
+        "BGP",
+        "IX"
+      ],
+      "approved_finish_skus": [
+        "ARHF013BBP",
+        "ARHF013BCP",
+        "ARHF013BGP",
+        "ARHF013IX"
+      ],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MHF003"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "VERIFIED_BOOK",
+      "notes": "The manufacturer trim model itself has no EXT. Exact SKU plus explicitly listed finish matches.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": true
+    },
+    {
+      "trim_model": "KHDS3EXT",
+      "book_trim_model": "KHDS3EXT",
+      "body_sku": "HBKHDS3",
+      "qty": 1,
+      "printed_pages": [
+        367
+      ],
+      "pdf_pages": [
+        369
+      ],
+      "evidence": "Inbouwdeel HBKHDS3; Afbouwdeel KHDS3EXT..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "KHDS3EXTAB",
+        "KHDS3EXTAI",
+        "KHDS3EXTBB",
+        "KHDS3EXTBBP",
+        "KHDS3EXTBCP",
+        "KHDS3EXTCR",
+        "KHDS3EXTGN",
+        "KHDS3EXTMBP",
+        "KHDS3EXTPBP",
+        "KHDS3EXTWH"
+      ],
+      "book_confirmed_finishes": [
+        "AB",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "approved_finish_skus": [
+        "KHDS3EXTAB",
+        "KHDS3EXTBB",
+        "KHDS3EXTBBP",
+        "KHDS3EXTBCP",
+        "KHDS3EXTCR",
+        "KHDS3EXTGN",
+        "KHDS3EXTMBP",
+        "KHDS3EXTPBP",
+        "KHDS3EXTWH"
+      ],
+      "finish_review_skus": [
+        "KHDS3EXTAI"
+      ],
+      "body_catalog_skus": [
+        "HBKHDS3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "VERIFIED_BOOK",
+      "notes": "KHDS3EXTAI exists in the shop snapshot but AI is absent from this book table; that finish stays in review.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": true
+    },
+    {
+      "trim_model": "KHDS4EXT",
+      "book_trim_model": "KHDS4EXT",
+      "body_sku": "HBKHDS4",
+      "qty": 1,
+      "printed_pages": [
+        367
+      ],
+      "pdf_pages": [
+        369
+      ],
+      "evidence": "Inbouwdeel HBKHDS4; Afbouwdeel KHDS4EXT..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "KHDS4EXTBBP",
+        "KHDS4EXTBCP",
+        "KHDS4EXTGN",
+        "KHDS4EXTMBP",
+        "KHDS4EXTPBP"
+      ],
+      "book_confirmed_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [],
+      "body_product_count": 0,
+      "body_active_published": false,
+      "status": "MISSING_BODY",
+      "notes": "Manufacturer relation is explicit, but exact body HBKHDS4 is absent from the supplied shop snapshot. Do not substitute HBKHDS3.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "KHDS5EXT",
+      "book_trim_model": "KHDS5EXT",
+      "body_sku": "HBKHDS4",
+      "qty": 1,
+      "printed_pages": [
+        367
+      ],
+      "pdf_pages": [
+        369
+      ],
+      "evidence": "Inbouwdeel HBKHDS4; Afbouwdeel KHDS5EXT..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "KHDS5EXTBBP",
+        "KHDS5EXTBCP",
+        "KHDS5EXTBGP",
+        "KHDS5EXTIX"
+      ],
+      "book_confirmed_finishes": [
+        "BBP",
+        "BCP",
+        "BGP",
+        "IX"
+      ],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [],
+      "body_product_count": 0,
+      "body_active_published": false,
+      "status": "MISSING_BODY",
+      "notes": "This relation was already documented as a missing-body exception, not one of the previous31 model mappings. Not a newly discovered relation.",
+      "visual_verified": true,
+      "already_known_as_exception": true,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARH50-1",
+      "book_trim_model": "RARH50-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        462
+      ],
+      "pdf_pages": [
+        464
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RARH50-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARH50-1BBP",
+        "RARH50-1BCP",
+        "RARH50-1BGP",
+        "RARH50-1CR",
+        "RARH50-1GN",
+        "RARH50-1IX",
+        "RARH50-1MBP",
+        "RARH50-1PBP",
+        "RARH50-1TB",
+        "RARH50-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": true,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARH50-2",
+      "book_trim_model": "RARH50-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        462
+      ],
+      "pdf_pages": [
+        464
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RARH50-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARH50-2BBP",
+        "RARH50-2BCP",
+        "RARH50-2BGP",
+        "RARH50-2CR",
+        "RARH50-2GN",
+        "RARH50-2IX",
+        "RARH50-2MBP",
+        "RARH50-2PBP",
+        "RARH50-2TB",
+        "RARH50-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARH50-3",
+      "book_trim_model": "RARH50-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        463
+      ],
+      "pdf_pages": [
+        465
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RARH50-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARH50-3BBP",
+        "RARH50-3BCP",
+        "RARH50-3BGP",
+        "RARH50-3CR",
+        "RARH50-3GN",
+        "RARH50-3IX",
+        "RARH50-3MBP",
+        "RARH50-3PBP",
+        "RARH50-3TB",
+        "RARH50-3WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARH50-4",
+      "book_trim_model": "RARH50-4",
+      "body_sku": "MBASES5",
+      "qty": 1,
+      "printed_pages": [
+        463
+      ],
+      "pdf_pages": [
+        465
+      ],
+      "evidence": "Inbouwdeel MBASES5; Afbouwdeel RARH50-4..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARH50-4BBP",
+        "RARH50-4BCP",
+        "RARH50-4BGP",
+        "RARH50-4CR",
+        "RARH50-4GN",
+        "RARH50-4TB"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES5"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS50-1",
+      "book_trim_model": "RAS50-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        464
+      ],
+      "pdf_pages": [
+        466
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RAS50-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS50-1BBP",
+        "RAS50-1BCP",
+        "RAS50-1BGP",
+        "RAS50-1CR",
+        "RAS50-1GN",
+        "RAS50-1IX",
+        "RAS50-1MBP",
+        "RAS50-1PBP",
+        "RAS50-1TB"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS50-2",
+      "book_trim_model": "RAS50-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        464
+      ],
+      "pdf_pages": [
+        466
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RAS50-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS50-2BBP",
+        "RAS50-2BCP",
+        "RAS50-2BGP",
+        "RAS50-2CR",
+        "RAS50-2GN",
+        "RAS50-2IX",
+        "RAS50-2MBP",
+        "RAS50-2PBP",
+        "RAS50-2TB",
+        "RAS50-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS50-3",
+      "book_trim_model": "RAS50-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        465
+      ],
+      "pdf_pages": [
+        467
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RAS50-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS50-3BBP",
+        "RAS50-3BCP",
+        "RAS50-3BGP",
+        "RAS50-3CR",
+        "RAS50-3GN",
+        "RAS50-3IX",
+        "RAS50-3MBP",
+        "RAS50-3PBP",
+        "RAS50-3TB"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS50-4",
+      "book_trim_model": "RAS50-4",
+      "body_sku": "MBASES5",
+      "qty": 1,
+      "printed_pages": [
+        465
+      ],
+      "pdf_pages": [
+        467
+      ],
+      "evidence": "Inbouwdeel MBASES5; Afbouwdeel RAS50-4..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS50-4BBP",
+        "RAS50-4BCP",
+        "RAS50-4BGP",
+        "RAS50-4CR",
+        "RAS50-4GN",
+        "RAS50-4IX",
+        "RAS50-4MBP",
+        "RAS50-4PBP",
+        "RAS50-4TB",
+        "RAS50-4WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES5"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS80-1",
+      "book_trim_model": "RAS80-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        466
+      ],
+      "pdf_pages": [
+        468
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RAS80-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS80-1BBP",
+        "RAS80-1BCP",
+        "RAS80-1BGP",
+        "RAS80-1CR",
+        "RAS80-1GN",
+        "RAS80-1IX",
+        "RAS80-1MBP",
+        "RAS80-1PBP",
+        "RAS80-1TB",
+        "RAS80-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS80-2",
+      "book_trim_model": "RAS80-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        466
+      ],
+      "pdf_pages": [
+        468
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RAS80-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS80-2BBP",
+        "RAS80-2BCP",
+        "RAS80-2BGP",
+        "RAS80-2CR",
+        "RAS80-2GN",
+        "RAS80-2IX",
+        "RAS80-2MBP",
+        "RAS80-2PBP",
+        "RAS80-2TB",
+        "RAS80-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS80-3",
+      "book_trim_model": "RAS80-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        467
+      ],
+      "pdf_pages": [
+        469
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RAS80-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS80-3BBP",
+        "RAS80-3BCP",
+        "RAS80-3BGP",
+        "RAS80-3CR",
+        "RAS80-3GN",
+        "RAS80-3IX",
+        "RAS80-3MBP",
+        "RAS80-3PBP",
+        "RAS80-3TB",
+        "RAS80-3WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS80-4",
+      "book_trim_model": "RAS80-4",
+      "body_sku": "MBASES5",
+      "qty": 1,
+      "printed_pages": [
+        467
+      ],
+      "pdf_pages": [
+        469
+      ],
+      "evidence": "Inbouwdeel MBASES5; Afbouwdeel RAS80-4..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS80-4BBP",
+        "RAS80-4BCP",
+        "RAS80-4BGP",
+        "RAS80-4CR",
+        "RAS80-4GN",
+        "RAS80-4IX",
+        "RAS80-4MBP",
+        "RAS80-4PBP",
+        "RAS80-4TB",
+        "RAS80-4WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES5"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS50-1",
+      "book_trim_model": "RASS50-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        468
+      ],
+      "pdf_pages": [
+        470
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RASS50-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS50-1BBP",
+        "RASS50-1BCP",
+        "RASS50-1BGP",
+        "RASS50-1CR",
+        "RASS50-1GN",
+        "RASS50-1IX",
+        "RASS50-1MBP",
+        "RASS50-1PBP",
+        "RASS50-1TB",
+        "RASS50-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS50-2",
+      "book_trim_model": "RASS50-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        468
+      ],
+      "pdf_pages": [
+        470
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RASS50-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS50-2BBP",
+        "RASS50-2BCP",
+        "RASS50-2BGP",
+        "RASS50-2CR",
+        "RASS50-2GN",
+        "RASS50-2IX",
+        "RASS50-2MBP",
+        "RASS50-2PBP",
+        "RASS50-2TB",
+        "RASS50-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS50-3",
+      "book_trim_model": "RASS50-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        469
+      ],
+      "pdf_pages": [
+        471
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RASS50-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS50-3BBP",
+        "RASS50-3BCP",
+        "RASS50-3BGP",
+        "RASS50-3CR",
+        "RASS50-3GN",
+        "RASS50-3IX",
+        "RASS50-3MBP",
+        "RASS50-3PBP",
+        "RASS50-3TB",
+        "RASS50-3WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS50-4",
+      "book_trim_model": "RASS50-4",
+      "body_sku": "MBASES5",
+      "qty": 1,
+      "printed_pages": [
+        469
+      ],
+      "pdf_pages": [
+        471
+      ],
+      "evidence": "Inbouwdeel MBASES5; Afbouwdeel RASS50-4..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS50-4BBP",
+        "RASS50-4BCP",
+        "RASS50-4BGP",
+        "RASS50-4CR",
+        "RASS50-4GN",
+        "RASS50-4IX",
+        "RASS50-4MBP",
+        "RASS50-4PBP",
+        "RASS50-4TB",
+        "RASS50-4WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES5"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS80-1",
+      "book_trim_model": "RASS80-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        470
+      ],
+      "pdf_pages": [
+        472
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RASS80-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS80-1BBP",
+        "RASS80-1BCP",
+        "RASS80-1BGP",
+        "RASS80-1CR",
+        "RASS80-1GN",
+        "RASS80-1IX",
+        "RASS80-1MBP",
+        "RASS80-1PBP",
+        "RASS80-1TB",
+        "RASS80-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS80-2",
+      "book_trim_model": "RASS80-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        470
+      ],
+      "pdf_pages": [
+        472
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RASS80-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS80-2BBP",
+        "RASS80-2BCP",
+        "RASS80-2BGP",
+        "RASS80-2CR",
+        "RASS80-2GN",
+        "RASS80-2IX",
+        "RASS80-2MBP",
+        "RASS80-2PBP",
+        "RASS80-2TB",
+        "RASS80-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS80-3",
+      "book_trim_model": "RASS80-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        471
+      ],
+      "pdf_pages": [
+        473
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RASS80-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS80-3BBP",
+        "RASS80-3BCP",
+        "RASS80-3BGP",
+        "RASS80-3CR",
+        "RASS80-3GN",
+        "RASS80-3IX",
+        "RASS80-3MBP",
+        "RASS80-3PBP",
+        "RASS80-3TB",
+        "RASS80-3WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS80-4",
+      "book_trim_model": "RASS80-4",
+      "body_sku": "MBASES5",
+      "qty": 1,
+      "printed_pages": [
+        471
+      ],
+      "pdf_pages": [
+        473
+      ],
+      "evidence": "Inbouwdeel MBASES5; Afbouwdeel RASS80-4..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS80-4BBP",
+        "RASS80-4BCP",
+        "RASS80-4BGP",
+        "RASS80-4CR",
+        "RASS80-4GN",
+        "RASS80-4IX",
+        "RASS80-4MBP",
+        "RASS80-4PBP",
+        "RASS80-4TB",
+        "RASS80-4WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES5"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASS8050",
+      "book_trim_model": "RASS8050",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        472
+      ],
+      "pdf_pages": [
+        474
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RASS8050..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASS8050BBP",
+        "RASS8050BCP",
+        "RASS8050BGP",
+        "RASS8050CR",
+        "RASS8050GN",
+        "RASS8050IX",
+        "RASS8050MBP",
+        "RASS8050PBP",
+        "RASS8050TB",
+        "RASS8050WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RAS8050",
+      "book_trim_model": "RAS8050",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        472
+      ],
+      "pdf_pages": [
+        474
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RAS8050..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RAS8050BBP",
+        "RAS8050BCP",
+        "RAS8050BGP",
+        "RAS8050CR",
+        "RAS8050GN",
+        "RAS8050IX",
+        "RAS8050MBP",
+        "RAS8050PBP",
+        "RAS8050TB",
+        "RAS8050WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASV135-1",
+      "book_trim_model": "RASV135-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        474
+      ],
+      "pdf_pages": [
+        476
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RASV135-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASV135-1BBP",
+        "RASV135-1BCP",
+        "RASV135-1BGP",
+        "RASV135-1CR",
+        "RASV135-1GN",
+        "RASV135-1IX",
+        "RASV135-1MBP",
+        "RASV135-1PBP",
+        "RASV135-1TB",
+        "RASV135-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RASV135-2",
+      "book_trim_model": "RASV135-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        474
+      ],
+      "pdf_pages": [
+        476
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RASV135-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RASV135-2BBP",
+        "RASV135-2BCP",
+        "RASV135-2BGP",
+        "RASV135-2CR",
+        "RASV135-2GN",
+        "RASV135-2IX",
+        "RASV135-2MBP",
+        "RASV135-2PBP",
+        "RASV135-2TB",
+        "RASV135-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARV135-1",
+      "book_trim_model": "RARV135-1",
+      "body_sku": "MBASES2",
+      "qty": 1,
+      "printed_pages": [
+        476
+      ],
+      "pdf_pages": [
+        478
+      ],
+      "evidence": "Inbouwdeel MBASES2; Afbouwdeel RARV135-1..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARV135-1BBP",
+        "RARV135-1BCP",
+        "RARV135-1BGP",
+        "RARV135-1CR",
+        "RARV135-1GN",
+        "RARV135-1IX",
+        "RARV135-1MBP",
+        "RARV135-1PBP",
+        "RARV135-1TB",
+        "RARV135-1WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES2"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARV135-2",
+      "book_trim_model": "RARV135-2",
+      "body_sku": "MBASES3",
+      "qty": 1,
+      "printed_pages": [
+        477
+      ],
+      "pdf_pages": [
+        479
+      ],
+      "evidence": "Inbouwdeel MBASES3; Afbouwdeel RARV135-2..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARV135-2BBP",
+        "RARV135-2BCP",
+        "RARV135-2BGP",
+        "RARV135-2CR",
+        "RARV135-2GN",
+        "RARV135-2IX",
+        "RARV135-2MBP",
+        "RARV135-2PBP",
+        "RARV135-2TB",
+        "RARV135-2WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES3"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    },
+    {
+      "trim_model": "RARV135-3",
+      "book_trim_model": "RARV135-3",
+      "body_sku": "MBASES4",
+      "qty": 1,
+      "printed_pages": [
+        478
+      ],
+      "pdf_pages": [
+        480
+      ],
+      "evidence": "Inbouwdeel MBASES4; Afbouwdeel RARV135-3..; Totaal",
+      "match_type": "DIRECT",
+      "matched_skus": [
+        "RARV135-3BBP",
+        "RARV135-3BCP",
+        "RARV135-3BGP",
+        "RARV135-3CR",
+        "RARV135-3GN",
+        "RARV135-3IX",
+        "RARV135-3MBP",
+        "RARV135-3PBP",
+        "RARV135-3TB",
+        "RARV135-3WH"
+      ],
+      "book_confirmed_finishes": [],
+      "approved_finish_skus": [],
+      "finish_review_skus": [],
+      "body_catalog_skus": [
+        "MBASES4"
+      ],
+      "body_product_count": 1,
+      "body_active_published": true,
+      "status": "REVIEW",
+      "notes": "INCLUDED_PRICE_SEPARATE_ORDER: book explicitly says the body is included in the set price but must be ordered separately. Physical compatibility is verified. Do not automatically add a paid extra until shop price and fulfilment treatment are checked.",
+      "visual_verified": true,
+      "already_known_as_exception": false,
+      "paid_addon_eligible": false
+    }
+  ],
+  "exceptions": [
+    {
+      "type": "BOOK_MODEL_CONTRADICTION",
+      "trim_model": "RASV135-3",
+      "body_sku": "MBASES4",
+      "printed_pages": [
+        475
+      ],
+      "pdf_pages": [
+        477
+      ],
+      "matched_skus": [
+        "RASV135-3BBP",
+        "RASV135-3BCP",
+        "RASV135-3BGP",
+        "RASV135-3CR",
+        "RASV135-3GN",
+        "RASV135-3IX",
+        "RASV135-3MBP",
+        "RASV135-3PBP",
+        "RASV135-3TB",
+        "RASV135-3WH"
+      ],
+      "evidence": "Page title RASV135-3 and parts list contain RASV135T, RASV135, SWIROU, MBASES4; the table trim label says RASS80-3.. instead.",
+      "status": "REVIEW",
+      "paid_addon_eligible": false,
+      "visual_verified": true,
+      "notes": "Do not copy the table label to infer RASV135-3 automatically. Also subject to included-price separate-order handling."
+    },
+    {
+      "type": "NO_TABLE_IN_SEGMENT",
+      "trim_models": [
+        "ARHF014",
+        "ARHF015"
+      ],
+      "matched_skus": [
+        "ARHF014IX",
+        "ARHF015IX"
+      ],
+      "status": "REVIEW",
+      "notes": "Both exist as trim-only shop products; pages330–502 provide no exact manufacturer table for them. Do not extrapolate MHF004/MHF005 from neighboring model numbers."
+    },
+    {
+      "type": "BOOK_MODEL_CONTRADICTION",
+      "trim_model": "GLF015EXT",
+      "printed_pages": [
+        359
+      ],
+      "pdf_pages": [
+        361
+      ],
+      "status": "REVIEW",
+      "notes": "Page title GLF015 but table says MHF015EXT. Prior mapping has independent correct table evidence on printed256; do not use printed359 table as standalone GLF015EXT proof."
+    },
+    {
+      "type": "NON_EXT_DISCOVERY",
+      "models": [
+        "ARHF011",
+        "ARHF012",
+        "ARHF013"
+      ],
+      "notes": "Three confirmed trim models without EXT demonstrate why EXT-only matching would miss valid additions."
+    },
+    {
+      "type": "GHOST_TEXT",
+      "printed_pages": [
+        332,
+        384
+      ],
+      "notes": "Extracted unrelated AC105/AC111 text is present outside actual displayed product tables. Mappings use visible explicit body/trim tables only."
+    }
+  ]
+}

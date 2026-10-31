@@ -1,0 +1,25 @@
+{
+  "documentation": [
+    {
+      "checkout": "badkamercity-analysis",
+      "changedFilesAgainstBaseline": 29,
+      "relativeLinksChecked": 150,
+      "errors": []
+    },
+    {
+      "checkout": "badkamercity-analysis-main",
+      "changedFilesAgainstBaseline": 25,
+      "relativeLinksChecked": 139,
+      "errors": []
+    }
+  ],
+  "replayCases": 15,
+  "reproducedDefectCases": 3,
+  "distinctProblems": 2,
+  "controlsPassed": 10,
+  "boundariesConfirmed": 2,
+  "sourceFilesByteChecked": 22,
+  "sameCurrentStatusBothCheckouts": true,
+  "realCartActions": false,
+  "mobileBrowserTested": false
+}

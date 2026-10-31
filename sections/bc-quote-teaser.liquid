@@ -1,0 +1,5 @@
+{{ 'bc-quote.css' | asset_url | stylesheet_tag }}
+{% if section.settings.link != blank %}<aside class="bcq-teaser"><div class="bcq-teaser__inner"><div><h2>{{ 'bc_quote.teaser_heading' | t }}</h2><p>{{ 'bc_quote.teaser_text' | t }}</p></div><a href="{{ section.settings.link | escape }}">{{ 'bc_quote.teaser_button' | t }}<span aria-hidden="true">→</span></a></div></aside>{% endif %}
+{% schema %}
+{"name":"Offerte verwijzing","settings":[{"type":"url","id":"link","label":"Link naar offertepagina"}],"presets":[{"name":"Offerte verwijzing"}]}
+{% endschema %}

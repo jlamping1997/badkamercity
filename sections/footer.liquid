@@ -1,3 +1,6 @@
+{% if section.settings.compact_homepage and request.page_type == 'index' %}
+  {% render 'bc-home-footer', section: section %}
+{% else %}
 {% liquid
   assign trust_icons = 'grid,headset,sparkles,shield' | split: ','
   assign social_names = 'facebook,instagram,pinterest,youtube,linkedin' | split: ','
@@ -85,11 +88,16 @@
           <ul class="bcf-links" role="list">
             {% for block in section.blocks %}
               {% if block.type == group %}
-                <li {{ block.shopify_attributes }}>
-                  {% if block.settings.url != blank %}<a href="{{ block.settings.url | escape }}">{{ block.settings.label | escape }}</a>{% else %}<span title="{{ section.settings.example_label | escape }}">{{ block.settings.label | escape }}</span>{% endif %}
-                </li>
+                {% assign footer_link_url = block.settings.url %}
+                {% if footer_link_url == '/pages/retour-aanmelden' %}{% capture footer_link_url %}{% render 'bc-returns-url' %}{% endcapture %}{% assign footer_link_url = footer_link_url | strip %}{% endif %}
+                {% if footer_link_url != blank or request.design_mode %}
+                  <li {{ block.shopify_attributes }}>
+                    {% if footer_link_url != blank %}<a href="{{ footer_link_url | escape }}">{{ block.settings.label | escape }}</a>{% else %}<span title="{{ section.settings.example_label | escape }}">{{ block.settings.label | escape }}</span>{% endif %}
+                  </li>
+                {% endif %}
               {% endif %}
             {% endfor %}
+            {% if group == 'service' %}{% render 'bc-footer-quote', section: section %}{% endif %}
             {% if group == 'category' %}<li><a class="bcf-all" href="{{ routes.all_products_collection_url }}">{{ section.settings.all_label | escape }}<svg class="bcf-icon" aria-hidden="true" focusable="false"><use href="#bcf-arrow-{{ section.id }}"></use></svg></a></li>{% endif %}
           </ul>
         </details>
@@ -124,6 +132,7 @@
     </div>
   </div>
 </footer>
+{% endif %}
 {% stylesheet %}
 
 .bcf-v3{--bcf-bg:#1a253f;--bcf-text:#edf2f8;--bcf-muted:#bdcce0;--bcf-accent:#aad1ed;--bcf-yellow:#e6d259;display:block;margin:0;padding:0;border:0;color:var(--bcf-text);background:var(--bcf-bg);font-family:var(--font-body-family,Arial,sans-serif);font-style:normal;font-size:16px;line-height:1.55;letter-spacing:0;text-align:left}
@@ -249,6 +258,15 @@
 {
   "name": "Footer BadkamerCity",
   "settings": [
+    {"type":"header","content":"Laagsteprijsgarantie"},
+    {"type":"checkbox","id":"quote_link_enabled","label":"Offertelink voor klanten tonen","default":false,"info":"Pas activeren na werkende upload, ontvangsttest en publicatie van de offertepagina."},
+    {"type":"checkbox","id":"quote_link_preview","label":"Offertelink in concept bekijken","default":false,"info":"Alleen ongepubliceerde thema’s; opent het voorbeeldformulier."},
+    {
+      "type": "checkbox",
+      "id": "compact_homepage",
+      "label": "Compacte footer op de homepage",
+      "default": false
+    },
     {
       "type": "header",
       "content": "Inhoud en voorbeeldgegevens"
@@ -525,4 +543,3 @@
   ]
 }
 {% endschema %}
-

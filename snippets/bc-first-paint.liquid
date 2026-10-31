@@ -1,0 +1,11 @@
+{% doc %}
+  Minimal first-paint guards for shared UI icons and closed predictive search.
+  Render in the head before content_for_header; final component styling stays in its stylesheet.
+{% enddoc %}
+<style id="bc-first-paint">
+  .svg-wrapper { display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; }
+  .svg-wrapper > svg { width: 100%; height: 100%; }
+  .icon-arrow { width: 1.5rem; height: auto; }
+  predictive-search:not([open]):not([loading]) [data-predictive-search] { display: none; }
+  predictive-search .spinner { width: 1.5rem; height: 1.5rem; }
+</style>

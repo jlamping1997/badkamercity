@@ -1,0 +1,2214 @@
+{
+  "verdict": "READY",
+  "supplemental_groups": 13,
+  "supplemental_record_count": 273,
+  "gent_records": 5,
+  "rails_records": 229,
+  "colour_supplemental_records": 39,
+  "group_counts": {
+    "hotbath-gent-gt003-wastafelmengkraan": 3,
+    "hotbath-gent-gt023-wastafelmengkraan": 2,
+    "hotbath-rails-rarh-sets": 12,
+    "hotbath-rails-rarv-sets": 22,
+    "hotbath-rails-ras-sets": 78,
+    "hotbath-rails-ras8050-sets": 8,
+    "hotbath-rails-rass-sets": 80,
+    "hotbath-rails-rass8050-sets": 7,
+    "hotbath-rails-rasv-sets": 22,
+    "hotbath-colour-raar": 9,
+    "hotbath-colour-raas": 9,
+    "hotbath-colour-swirou": 6,
+    "hotbath-archie-sds32-opbouw-doucheset-keuzes": 15
+  },
+  "fixed_title_remainders": {
+    "hotbath-gent-gt003-wastafelmengkraan": {
+      "hotbath wastafelmengkraan": 3
+    },
+    "hotbath-gent-gt023-wastafelmengkraan": {
+      "hotbath wastafelmengkraan 2 gats met draaibare uitloop": 2
+    },
+    "hotbath-rails-rarh-sets": {
+      "hotbath handdoekwarmerset round": 12
+    },
+    "hotbath-rails-rarv-sets": {
+      "hotbath handdoekwarmerset round": 22
+    },
+    "hotbath-rails-ras-sets": {
+      "hotbath handdoekwarmerset square": 78
+    },
+    "hotbath-rails-ras8050-sets": {
+      "hotbath set van 2 rails ras80 square 80 en ras50": 8
+    },
+    "hotbath-rails-rass-sets": {
+      "hotbath handdoekwarmerset soft square": 80
+    },
+    "hotbath-rails-rass8050-sets": {
+      "hotbath set van 2 rails rass80 soft square 80 en": 7
+    },
+    "hotbath-rails-rasv-sets": {
+      "hotbath handdoekwarmerset square": 22
+    },
+    "hotbath-colour-raar": {
+      "hotbath ronde haak voor rarv135 rarvm135 rails": 9
+    },
+    "hotbath-colour-raas": {
+      "hotbath rechthoekige haak voor rasv135 rails": 9
+    },
+    "hotbath-colour-swirou": {
+      "hotbath temperatuur timer schakelaar rond tbv rails afbouwset": 6
+    },
+    "hotbath-archie-sds32-opbouw-doucheset-keuzes": {
+      "hotbath archie sds32 opbouw regendouche": 15
+    }
+  },
+  "gent_source_checks": [
+    {
+      "sku": "GT003IX",
+      "height": "Laag",
+      "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+    },
+    {
+      "sku": "GT003MIX",
+      "height": "Medium",
+      "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+    },
+    {
+      "sku": "GT003HIX",
+      "height": "Hoog",
+      "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+    },
+    {
+      "sku": "GT023IX",
+      "height": "Laag",
+      "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+    },
+    {
+      "sku": "GT023HIX",
+      "height": "Hoog",
+      "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+    }
+  ],
+  "rails_source_checks": [
+    {
+      "sku": "RARH50-1MBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-2MBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-3MBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-1PBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-2PBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-3PBP",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-1WH",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-2WH",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-3WH",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-1IX",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-2IX",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARH50-3IX",
+      "family": "RARH",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-1CR",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2CR",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2BGP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-1BCP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2BCP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-3BCP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-1BBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2BBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-3BBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-1GN",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2GN",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-1MBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-2MBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-3MBP",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-1WH",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-2WH",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-3WH",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-1IX",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-2IX",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-3IX",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RARV135-1TB",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RARV135-2TB",
+      "family": "RARV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "round",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1CR",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2CR",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3CR",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4CR",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1CR",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2CR",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3CR",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4CR",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1BGP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2BGP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3BGP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4BGP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1BGP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2BGP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3BGP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4BGP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1BCP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2BCP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3BCP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4BCP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1BCP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2BCP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3BCP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4BCP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1BBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2BBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3BBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4BBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1BBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2BBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3BBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4BBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1GN",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2GN",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3GN",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4GN",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1GN",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2GN",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3GN",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4GN",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-1MBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-2MBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-3MBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-4MBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-1MBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-2MBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-3MBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-4MBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-1PBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-2PBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-3PBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-4PBP",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-1PBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-2PBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-3PBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-4PBP",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-2WH",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-4WH",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-1WH",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-2WH",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-3WH",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-4WH",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-1IX",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-2IX",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-3IX",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-4IX",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-1IX",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-2IX",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-3IX",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS80-4IX",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RAS50-1TB",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-2TB",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-3TB",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS50-4TB",
+      "family": "RAS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-1TB",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-2TB",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-3TB",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS80-4TB",
+      "family": "RAS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RAS8050BGP",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050BCP",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050GN",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050MBP",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050PBP",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050WH",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050IX",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RAS8050TB",
+      "family": "RAS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS50-1CR",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2CR",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3CR",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4CR",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1CR",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2CR",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3CR",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4CR",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-1BGP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2BGP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3BGP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4BGP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1BGP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2BGP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3BGP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4BGP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-1BCP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2BCP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3BCP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4BCP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1BCP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2BCP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3BCP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4BCP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-1BBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2BBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3BBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4BBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1BBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2BBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3BBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4BBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-1GN",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2GN",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3GN",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4GN",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1GN",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2GN",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3GN",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4GN",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-1MBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-2MBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-3MBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-4MBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-1MBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-2MBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-3MBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-4MBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-1PBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-2PBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-3PBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-4PBP",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-1PBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-2PBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-3PBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-4PBP",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-1WH",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-2WH",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-3WH",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-4WH",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-1WH",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-2WH",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-3WH",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-4WH",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-1IX",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-2IX",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-3IX",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-4IX",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-1IX",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-2IX",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-3IX",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS80-4IX",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASS50-1TB",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-2TB",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-3TB",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS50-4TB",
+      "family": "RASS",
+      "length_cm": "50",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-1TB",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 1,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-2TB",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 2,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-3TB",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 3,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS80-4TB",
+      "family": "RASS",
+      "length_cm": "80",
+      "count": 4,
+      "shape": "soft square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASS8050CR",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050BGP",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050BCP",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050MBP",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050PBP",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050WH",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASS8050IX",
+      "family": "RASS8050",
+      "length_cm": "80+50",
+      "count": 2,
+      "control": "Separate switch; exact book combination; no model-digit inference"
+    },
+    {
+      "sku": "RASV135-1CR",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-3CR",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-1BGP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-2BGP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-3BGP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-1BCP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-3BCP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-1BBP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-2BBP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-1GN",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-2GN",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-1MBP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-2MBP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-3MBP",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-1WH",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-2WH",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-3WH",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-1IX",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-2IX",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-3IX",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 3,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "legacy exact words"
+    },
+    {
+      "sku": "RASV135-1TB",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 1,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    },
+    {
+      "sku": "RASV135-2TB",
+      "family": "RASV",
+      "length_cm": "135",
+      "count": 2,
+      "shape": "square",
+      "control": "Separate switch; same trim/set class",
+      "title_style": "modern exact words"
+    }
+  ],
+  "authorized_removed_group_ids": [
+    "hotbath-colour-sds32-config-4",
+    "hotbath-colour-sds32-config-5",
+    "hotbath-colour-sds32-config-6"
+  ],
+  "removed_group_records": 12,
+  "replacement_checks": [
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-rvs-geborsteld",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-koper-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-gunmetal-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-messing-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-koper-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-rvs-geborsteld",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-messing-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-gunmetal-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-messing-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-rvs-geborsteld",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-koper-pvd",
+      "old_identity_and_options_preserved": true
+    },
+    {
+      "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-gunmetal-pvd",
+      "old_identity_and_options_preserved": true
+    }
+  ],
+  "previous_records_retained": 6904,
+  "new_handles": 261,
+  "final_groups": 605,
+  "final_unique_handles": 7165,
+  "source_book_pages_read": [
+    28,
+    29,
+    30,
+    76,
+    464,
+    466,
+    467,
+    469,
+    471,
+    473,
+    474,
+    477,
+    479,
+    480
+  ],
+  "issues": [],
+  "source_limitations": [
+    "Two exact Rails title styles are semantically normalized only after validating shape,length,count and separate control class.",
+    "Book has English integrated-switch wording on RARV135 while Dutch heading and separate SWIROU component confirm separate switch; RARVM remains excluded.",
+    "RASV135-3 heading/component list used rather than erroneous RASS80-3 price table; RAAR heading/hook used rather than erroneous RAAS price row.",
+    "Rails book set price includes inwall but ordering says request separately; menu does not add inwall nor change existing prices/titles.",
+    "SDS32 uses literal title diameter/thickness only; three special round-handshower titles remain outside.",
+    "Current book/model identity does not establish stock or present availability."
+  ],
+  "input_sha256": {
+    "supplemental_groups.json": "f6b2b6cce31b98253b4bba6d15f391aebee9a31cf0e044e3971a2ba566f1096f",
+    "colour_supplemental.json": "171e9ee3fcd81c54a23736f839b47b65f2f01bcb09deba0ca41c883ce427601c",
+    "groups-input.json": "469224315eca7232e5c38a7fe8f871182ab09245c15f7d554daac80d935ff3b6"
+  }
+}

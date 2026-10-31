@@ -1,0 +1,67 @@
+@media screen and (max-width: 749px) {
+  [data-hotbath-mobile-a="true"].bc-hotbath-switcher--mobile { display: grid; gap: 1.6rem; }
+  .bc-hotbath-switcher--mobile .bc-buybox__option-group { margin: 0; }
+  .bc-hotbath-switcher--mobile .bc-buybox__option-label { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.45; }
+  .bc-hotbath-selected-color { font-weight: 600; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 1.4rem .8rem; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch {
+    appearance: none; display: flex; flex-direction: column; align-items: center; gap: .65rem;
+    min-width: 0; width: 100%; min-height: 4.8rem; margin: 0; padding: .2rem 0; border: 0;
+    border-radius: .4rem; background: transparent; color: var(--bc-pdp-ink, #102c44);
+    cursor: pointer; font: inherit; overflow: visible;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__chip {
+    position: relative; display: block; flex: 0 0 48px; box-sizing: border-box; width: 48px; height: 48px;
+    padding: 2px; border: 1px solid #d5dce1; border-radius: 50%; background: #fff;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__surface {
+    position: relative; display: grid; place-items: center; width: 100%; height: 100%;
+    border-radius: 50%; overflow: hidden; background: #f3f5f6;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__surface img {
+    position: absolute; top: 0; left: 0; display: block; width: 300%; max-width: none; height: 300%; object-fit: cover;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__label {
+    display: block; width: 100%; min-width: 0; color: var(--bc-pdp-body, #415467); font-size: 1.2rem;
+    font-weight: 500; line-height: 1.35; text-align: center; overflow-wrap: anywhere; hyphens: none;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch[hidden],
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__count[hidden] { display: none; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__fallback { padding: .2rem; font-size: 1rem; line-height: 1.1; overflow-wrap: anywhere; text-align: center; }
+  .bc-hotbath-switcher--mobile .has-swatch-image .bc-hotbath-swatch__fallback { display: none; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch.is-active .bc-hotbath-swatch__chip { border-color: var(--bc-pdp-ink, #102c44); box-shadow: 0 0 0 1px var(--bc-pdp-ink, #102c44); }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch.is-active .bc-hotbath-swatch__label { color: var(--bc-pdp-ink, #102c44); font-weight: 700; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch__check {
+    position: absolute; right: -4px; bottom: -3px; display: none; place-items: center; box-sizing: border-box;
+    width: 18px; height: 18px; border: 2px solid #fff; border-radius: 50%; background: var(--bc-pdp-ink, #102c44);
+    color: #fff; font-size: 11px; line-height: 1;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch.is-active .bc-hotbath-swatch__check { display: grid; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch:disabled { opacity: .35; cursor: not-allowed; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch:focus-visible { outline: none; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatch:focus-visible .bc-hotbath-swatch__chip,
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle:focus-visible { outline: 2px solid var(--bc-pdp-ink, #102c44); outline-offset: 3px; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle {
+    appearance: none; display: flex; align-items: center; justify-content: flex-start; gap: 1rem; box-sizing: border-box;
+    width: 100%; min-height: 4.8rem; margin: 1.4rem 0 .2rem; padding: .8rem 1.2rem; border: 1px solid #cbd9e3;
+    border-radius: .7rem; background: #fff; color: var(--bc-pdp-ink, #102c44); font: inherit; font-size: 1.25rem;
+    font-weight: 600; line-height: 1.3; text-align: left; text-decoration: none; cursor: pointer;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle-label { flex: 1; min-width: 0; }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__count {
+    display: grid; place-items: center; flex-shrink: 0; box-sizing: border-box; min-width: 2.8rem; height: 2.8rem;
+    padding: 0 .5rem; border-radius: 50%; background: #e2f4fb; font-size: 1.2rem; line-height: 1;
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle::after {
+    content: ''; flex: 0 0 .7rem; width: .7rem; height: .7rem; margin: 0 .2rem 0 .3rem;
+    border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-.15rem) rotate(45deg);
+  }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle[aria-expanded="true"]::after { transform: translateY(.15rem) rotate(225deg); }
+  .bc-hotbath-switcher--mobile .bc-hotbath-colors__toggle:hover { background: #f6fafc; border-color: #93b5ca; }
+  .bc-hotbath-switcher--mobile .bc-buybox__config-buttons { gap: .6rem; }
+  .bc-hotbath-switcher--mobile .bc-buybox__switch-status:empty { display: none; }
+}
+@media screen and (max-width: 359px) {
+  .bc-hotbath-switcher--mobile .bc-hotbath-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+

@@ -1,0 +1,31 @@
+{
+  "viewport": "1363x936",
+  "cases": [
+    {
+      "test": "First color White to Black",
+      "before": {
+        "top": 252.828125,
+        "y": 330
+      },
+      "after": {
+        "selected": "Black",
+        "top": 252.828125,
+        "url": "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-black#sunshower-configurator",
+        "y": 330
+      }
+    },
+    {
+      "test": "Size Medium to Small at arbitrary scroll position",
+      "before": {
+        "top": 210.625,
+        "y": 517
+      },
+      "after": {
+        "selected": "Small95 cm",
+        "top": 210.625,
+        "url": "https://badkamercity.nl/products/sunshower-round-one-small-inbouw-black#sunshower-configurator",
+        "y": 517
+      }
+    }
+  ]
+}

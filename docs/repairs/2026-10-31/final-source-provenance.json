@@ -1,0 +1,268 @@
+{
+  "themeId": "gid://shopify/OnlineStoreTheme/195947036938",
+  "themeCheckedAt": "2026-10-31T09:01:17.348Z",
+  "candidateThemeId": "gid://shopify/OnlineStoreTheme/195948839178",
+  "featurePaths": [
+    "assets/bc-external-filters.js",
+    "assets/bc-mobile-compact-list.css",
+    "assets/bc-porcelanosa-buybox.js",
+    "assets/bc-sunshower-page.js",
+    "assets/bc-sunshower-shop.js",
+    "assets/bc-wishlist.js",
+    "assets/cart-notification.js",
+    "layout/theme.liquid",
+    "locales/en.default.json",
+    "locales/nl.json",
+    "sections/bc-card-data.liquid",
+    "sections/footer-group.json",
+    "sections/footer.liquid",
+    "sections/main-search.liquid",
+    "snippets/bc-card-product-search.liquid",
+    "snippets/bc-card-tile-price.liquid",
+    "snippets/bc-external-filters.liquid",
+    "snippets/bc-porcelanosa-buybox.liquid",
+    "snippets/bc-search-usp-strip.liquid",
+    "snippets/card-product.liquid",
+    "snippets/meta-tags.liquid"
+  ],
+  "knownReadExceptions": [
+    "config/settings_data.json",
+    "templates/page.retour-aanmelden.json"
+  ],
+  "files": [
+    {
+      "path": "locales/nl.json",
+      "expectedMd5": "6664478c61d4fc53c27537bf44bba952",
+      "candidateMd5": "77661423d7b74967176e8ee28a52a89b",
+      "sha256": "6f9ba54232d900b409fd6b3d9397ca1a2d4a69be37722f177fd8730d38541b53",
+      "bytes": 73777,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "locales/en.default.json",
+      "expectedMd5": "1117fe17162d1ca12ff3a83c2763415e",
+      "candidateMd5": "d456bc88732f6c2c436eb6b3b4b28b27",
+      "sha256": "6ce48cd0df2fc8368502e61b96a59c2816499796bab813d2c3177053478018bb",
+      "bytes": 70174,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "layout/theme.liquid",
+      "expectedMd5": "7b17172e06148f30cdf940de6da9504c",
+      "candidateMd5": "413a857c928c57f1315e4ce681d22b65",
+      "sha256": "dc6c0fe287b1a1ae822ed29a4a299bcbaea8d68fcea19549d200ebef7f0bbde6",
+      "bytes": 23030,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "expectedMd5": "94916ad19c1588391444ff0325e57de7",
+      "candidateMd5": "6bbfc201c43e503af8ea17dd364633f6",
+      "sha256": "67d1800319a7fc221a12ba8ccdc02a306bab55e2887fca3013fd8319fbcfe23f",
+      "bytes": 5349,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "sections/footer-group.json",
+      "expectedMd5": "037363080cfe44da4c5fa9cb1c7d339b",
+      "candidateMd5": "f57d42afd9dbbc8faac64d21bda9bfff",
+      "sha256": "06f4315e9076578ee3f538eb64c1c539b84bfcd53b7988ee20d92fc95de08582",
+      "bytes": 5430,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "expectedMd5": "3de257061f0e313921a361c13ab53fbe",
+      "candidateMd5": "b647e71ebdcabefb709f2e912258a71b",
+      "sha256": "4902a6a26ed6d26d4816956100048ffdffbe3b7084e8fb14720e620f89dd7efd",
+      "bytes": 29830,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "sections/footer.liquid",
+      "expectedMd5": "357e83e6a7ef260476a0f3dd589de980",
+      "candidateMd5": "7e413995480f5066044e3e43805b5388",
+      "sha256": "1fc34bab485ebf2e4d6890a165177a3a6ad77f1b54d4af7813ead56f862a2c58",
+      "bytes": 34581,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "expectedMd5": "d769df34404e1a69d949fabbf3291b7a",
+      "candidateMd5": "ca1654691aa993c3d542e2efa200e518",
+      "sha256": "db0139ce9a1e6024d80e7dff0ae3217891c0874befb2110ff75e61faa7275363",
+      "bytes": 13931,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "expectedMd5": "6e6a5705e8b99716634fae55f722883c",
+      "candidateMd5": "db1b13be1778d5b4e679dc755f7667f8",
+      "sha256": "464944a150d847b82aebb8b56dd07d014826cc7497e49c61ea95915bf0382bdd",
+      "bytes": 24266,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "expectedMd5": "45fd7aee85d90ffa5d7386211c17345a",
+      "candidateMd5": "ae1f3629f216eb474479249346b56fbe",
+      "sha256": "a37b08f070acbe72a52f425cbd3986088b0a14a5e8eec884dbfc0a085a53a6f8",
+      "bytes": 48187,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "expectedMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "candidateMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "sha256": "b14748ca2764c6cfbe50c24ee9416faa7379c1a92a67cfb1c2c7d4d7274f2409",
+      "bytes": 30067,
+      "changed": false,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "expectedMd5": "40975f22d5b7bdd762ad1bd6ae580596",
+      "candidateMd5": "3e33d63c03a80c8e6423682e5f6d77bd",
+      "sha256": "7b8dd5b065ef358db7799e59ad3a4f987e5f1ac109002a70db4ede8fa904eff4",
+      "bytes": 21087,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/facets.js",
+      "expectedMd5": "5c4c1b43e6a69788c6488f263f5228be",
+      "candidateMd5": "5c4c1b43e6a69788c6488f263f5228be",
+      "sha256": "5ebbdc1a4166bd66533946c7601880d2226b1565fed7c54c3c57c4b330f987cf",
+      "bytes": 14293,
+      "changed": false,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-porcelanosa-core.js",
+      "expectedMd5": "6d80b1b7c69ba340312d2b563bed9d96",
+      "candidateMd5": "6d80b1b7c69ba340312d2b563bed9d96",
+      "sha256": "e2d87d7c6bcb9565f18b5c4d3c3ebc539a190953200c8377f358c624a9cdd3f7",
+      "bytes": 3038,
+      "changed": false,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-mobile-compact-list.css",
+      "expectedMd5": "86684c4697483302c9e52c016f010974",
+      "candidateMd5": "8d7a8ea654a6c72adbcb3013f074ada1",
+      "sha256": "d6dd98216624af38600ac238cf946713fa72fea4aa1977b915b3db1039ea2ec1",
+      "bytes": 8085,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-mobile-listing.js",
+      "expectedMd5": "dde904cf82e99c1ef9517991613c0cca",
+      "candidateMd5": "dde904cf82e99c1ef9517991613c0cca",
+      "sha256": "106b3ac643fc576f5ccec8eecd78e354cc8ee04bb4487ff0bec23ced9ced684a",
+      "bytes": 2422,
+      "changed": false,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "expectedMd5": "2767cda3d4c02b89cb62d2f35bdd9676",
+      "candidateMd5": "0454629d2b341fc435d30351f5ddb7cb",
+      "sha256": "c94278c0e9e15b83af3b2665015631a59d9497b893086f0eba7f3b1f8c858a4c",
+      "bytes": 21221,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/bc-product-inbouw.js",
+      "expectedMd5": "d840d8079cc88fde8c682a98b3e83414",
+      "candidateMd5": "d840d8079cc88fde8c682a98b3e83414",
+      "sha256": "1bd23cbbb7288951542ae4a022d3968a064c530c47306c6fbcc7e574b87b5fd4",
+      "bytes": 13714,
+      "changed": false,
+      "knownReadException": false
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "expectedMd5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "candidateMd5": "cbae7b0df17ace03b85f2e9a430075bc",
+      "sha256": "e3fe86840e5cf051ba477315f48afe547d936114f3eb8839a032de83a5c3f4dd",
+      "bytes": 4030,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "expectedMd5": "59017e48e5fb53446843a3273947fb5b",
+      "candidateMd5": "4377040586d06a1b694632411aa406a1",
+      "sha256": "177457e702eae008e56949aa8e129508d5212227cccc0d654d7842fd413e5f4f",
+      "bytes": 34879,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "expectedMd5": "ecc6351e747bad1e4cba6be6fe05d72e",
+      "candidateMd5": "ba4e93a774dd810e6c3be694ed8ede71",
+      "sha256": "2384896dbd96798b8a30da8dfc218da29580a665e7972c385220ac3c38b33dbe",
+      "bytes": 1714,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/bc-card-tile-price.liquid",
+      "expectedMd5": null,
+      "candidateMd5": "14b7bca6fd71fd4999c8402995d43b42",
+      "sha256": "cb694178b8389b24e6ec4bdae437aed1fb8401fc76fa788fa690f7f3e2495c1c",
+      "bytes": 1285,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "expectedMd5": "c636940c8566257ae7dc05ee1084cfc0",
+      "candidateMd5": "64cf85748078a3ede0254a02f00fceb6",
+      "sha256": "99536833838aa96e6f22f659594d12905d157cdb887488658719b8d0e5cdad93",
+      "bytes": 922,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "expectedMd5": "736db421ff31f0c056ef0e29affe05b5",
+      "candidateMd5": "f3aafce6bb9c722bef00a59b38c5bc1a",
+      "sha256": "b68296cef698d364e0402197e85a9e874ad9e2e02422dcffd402b0da09c044fb",
+      "bytes": 6310,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "expectedMd5": "f928b0a4ec49dc8bb33f74bfd49fa043",
+      "candidateMd5": "a4485b36b1e0ae45db437744a62ecd92",
+      "sha256": "e55bb877a564d01fd8de09e6c657f795153bdf51ef41b1cecc6e58fc25fceec1",
+      "bytes": 9372,
+      "changed": true,
+      "knownReadException": false
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "expectedMd5": "2fcf24fd535cea6f6dabf795c97e3fbf",
+      "candidateMd5": "ab3c8ef482b4f51e2063e72f4e3ce2dd",
+      "sha256": "a69f47aa93eb19f284a10ba35b9aa24c70e3351c3655a145d36cac657b1ee80c",
+      "bytes": 2271,
+      "changed": true,
+      "knownReadException": false
+    }
+  ]
+}

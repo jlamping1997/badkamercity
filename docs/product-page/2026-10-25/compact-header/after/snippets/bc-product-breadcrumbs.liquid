@@ -1,0 +1,78 @@
+{% doc %}
+  Shows a reviewed category path or a matching path from the store navigation.
+  @param {product} product - Current product.
+{% enddoc %}
+{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
+{%- assign reviewed_scope = reviewed_scope | strip -%}
+{%- capture category_links -%}
+  {%- if reviewed_scope == 'pilot' -%}
+    <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/kranen">{{ 'bc_pilot_category.kranen' | t }}</a></li>
+    <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/wastafelkranen">{{ 'bc_pilot_category.wastafelkranen' | t }}</a></li>
+    <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/opbouw-wastafelkranen">{{ 'bc_pilot_category.opbouw' | t }}</a></li>
+  {%- elsif reviewed_scope != blank -%}
+    {%- for handle in product.metafields.bc_data.content_review.value.category_handles -%}
+      {%- assign category = collections[handle] -%}
+      {%- assign memberships = product.collections | where: 'handle', handle -%}
+      {%- if category != blank and memberships.size > 0 -%}
+        <li><span aria-hidden="true">/</span><a href="{{ category.url | escape }}">{{ category.title | escape }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- assign membership_handles = product.collections | map: 'handle' -%}
+    {%- capture matching_paths -%}
+      {%- for parent in linklists['main-menu'].links -%}
+        {%- if parent.type == 'collection_link' and parent.object != blank -%}
+          {%- if membership_handles contains parent.object.handle -%}{{ parent.object.handle }};{%- endif -%}
+          {%- for child in parent.links -%}
+            {%- if child.type == 'collection_link' and child.object != blank -%}
+              {%- if membership_handles contains child.object.handle -%}{{ parent.object.handle }}|{{ child.object.handle }};{%- endif -%}
+              {%- for leaf in child.links -%}
+                {%- if leaf.type == 'collection_link' and leaf.object != blank -%}
+                  {%- if membership_handles contains leaf.object.handle -%}{{ parent.object.handle }}|{{ child.object.handle }}|{{ leaf.object.handle }};{%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- liquid
+      assign paths = matching_paths | split: ';'
+      assign best_depth = 0
+      assign best_path = ''
+      assign ambiguous_path = false
+      for path in paths
+        assign path_parts = path | split: '|'
+        if path_parts.size > best_depth
+          assign best_path = path
+          assign best_depth = path_parts.size
+          assign ambiguous_path = false
+        elsif path_parts.size == best_depth and path != best_path
+          assign ambiguous_path = true
+        endif
+      endfor
+      if ambiguous_path
+        assign best_path = best_path | split: '|' | last
+      endif
+      if best_path == blank
+        assign fallback_category = product.collections | first
+        assign best_path = fallback_category.handle | default: ''
+      endif
+      assign category_handles = best_path | split: '|' | uniq
+    -%}
+    {%- for handle in category_handles -%}
+      {%- assign category = collections[handle] -%}
+      {%- if category != blank -%}
+        <li><span aria-hidden="true">/</span><a href="{{ category.url | escape }}">{{ category.title | escape }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+<nav class="bc-product-breadcrumbs" aria-label="{{ 'ss.breadcrumb' | t | escape }}">
+  <ol role="list">
+    <li><a href="{{ routes.root_url }}">{{ 'ss.home' | t }}</a></li>
+    {{ category_links }}
+    <li class="visually-hidden"><span aria-current="page">{{ product.title | escape }}</span></li>
+  </ol>
+</nav>
+

@@ -1,0 +1,206 @@
+.bc-inbouw__mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__purchase-row {
+    display: block !important;
+    margin-top: 1.6rem !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions product-form,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--actions form {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__section--quantity {
+    margin: 1.4rem 0 !important;
+    max-width: none !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__quantity-row {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-buybox__quantity-label {
+    margin: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .quantity {
+    min-height: 4.4rem !important;
+    width: 14.2rem;
+    max-width: 100%;
+    flex: 0 0 14.2rem;
+    grid-template-columns: 4.4rem minmax(0, 1fr) 4.4rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .quantity__input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw {
+    margin: 0 0 1.4rem !important;
+    padding: 0 !important;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__desktop-only {
+    display: none !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__mobile-only {
+    display: inline;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__title {
+    margin: 0 0 .6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__detail,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__hint {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: 0 0 .8rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__hint {
+    margin: .6rem 0 0;
+    font-size: 1.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choices {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: .8rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2rem minmax(0, 1fr);
+    min-width: 0;
+    min-height: 4.4rem;
+    margin: 0;
+    padding: .8rem 1rem;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    border: 1px solid var(--bc-pdp-line, #d9dee3);
+    background: #fff;
+    border-radius: .6rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice::before {
+    content: '\2713';
+    visibility: hidden;
+    grid-area: 1 / 1;
+    font-weight: 700;
+    color: var(--bc-pdp-green, #087f3d);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip-path: inset(50%);
+    overflow: hidden;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice:has(input:checked) {
+    border-color: var(--bc-pdp-green, #087f3d);
+    background: var(--bc-pdp-green-soft, #f0f8f3);
+    box-shadow: inset 0 0 0 1px var(--bc-pdp-green, #087f3d);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice:has(input:checked)::before {
+    visibility: visible;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice:has(input:focus-visible) {
+    outline: 2px solid var(--bc-pdp-ink, #203345);
+    outline-offset: 3px;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice:has(input:disabled) {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__choice-mobile {
+    display: flex;
+    grid-area: 1 / 2;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .2rem .4rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-inbouw__mobile-price {
+    min-width: 0;
+    max-width: 100%;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total {
+    padding: 1.4rem 0;
+    margin: 0 0 .4rem;
+    border-top: 1px solid var(--bc-pdp-border, #dce3e7);
+    color: var(--bc-pdp-ink, #17313f);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__label {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__amount {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -.04rem;
+    white-space: nowrap;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total__caption {
+    margin: .4rem 0 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--bc-pdp-muted, #526574);
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active[data-mobile-total-state='ready'] .bc-buybox__price-panel,
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active[data-mobile-total-state='ready'] .bc-data-controls .bc-buybox__price-wrap {
+    display: none !important;
+  }
+
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total[hidden],
+  product-info[data-hotbath-mobile-a='true'].bc-hotbath-mobile-active .bc-hotbath-mobile-total [hidden] {
+    display: none !important;
+  }
+}

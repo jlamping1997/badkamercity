@@ -1,4 +1,70 @@
+> **31 oktober 2026 — NAV-03 / TILE-02 reviewgereed:** eigenaar publiceerde FIX-01 als MAIN195974824202. Nieuw reviewconcept **UNPUBLISHED195947036938 — BadkamerCity - Compact menu en tegelinformatie** bevat exact7bedoeldefeaturepaden na1355/1355basispariteit. Eén passende categorierij met Meer, calculatorstart1m²/10% en native informatiepopup. 13breedteframes, menu/Escape/resize en echte tegel-PDP gecontroleerd;10lokaleregressies enThemeCheckPASS. Codecheckpoint b7a5308038965bf874e06ed5115aa9431eb381d3. QAhersteld,MAINongewijzigd,geenactieveschrijver. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [bewijs/rollback](navigation-and-tiles/2026-10-31/README.md). Oudere rollen en calculatorcontracten hieronder zijn geschiedenis.
+
+> **31 oktober 2026 — FIX-01 concept hersteld:** oud concept195948839178 verwijderd door eigenaar; nieuw **UNPUBLISHED195974824202 — BadkamerCity - Betrouwbaar bestellen en filters** volledig opgebouwd vanuit MAIN195947036938. Voor writes1354/1354manifestpariteit; daarna exact21bedoelde featurepaden en alle21readbackchecksums correct. 126herhaalde checks, geen nieuw gereproduceerd defect; eerdere browser-/ThemeCheckbevindingen behouden hun datum. MAIN ongewijzigd; geen publicatie. Geen actieve schrijver. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [herstelbewijs](repairs/2026-10-31/recovery/README.md). Oudere concept-ID's hieronder zijn geschiedenis.
+
+> **31 oktober 2026 — FIX-01 reviewgereed:** MAIN195947036938 ongewijzigd; UNPUBLISHED195948839178 “Betrouwbaar bestellen en filters” bevat exact21bedoelde featurepaden. 126lokale gevallen/checks, Theme Check en begrensde echte browsercontrole. Cart/Sunshower/filter/wishlist/tegel-/presentatiecontracten hersteld; Hygrometerredirects live200. QA-template exact hersteld. Geen actieve schrijver; eigenaarreview/publicatie en retourmailboxbewijs open, offerteactivatie uit. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [herstel en testgrenzen](repairs/2026-10-31/README.md). Oudere rollen hieronder zijn gedateerde geschiedenis.
+
+> **31 oktober 2026 — DOC-04 naslagwerk versie 2.0:** 80 hoofdstukken, 32 nieuwe praktische verdiepingen, 50 taken met takenzoeker, 40 diagnosepaden en 50 acceptatiescenario’s. Verse MAIN 195948839178; NAV-02-concept 195947036938 nog UNPUBLISHED; retourpagina live, mailboxbewijs open. 409 bronrecords/407 bytegelijk/twee expliciete uitzonderingen, 18 GETs en offline HTML-controle PASS. Geen winkelwrite of publicatie. [Naslagwerk](MASTER_SITE_REFERENCE.md) · [status](LIVE_STATUS_AND_NEXT_STEPS.md) · [bewijs](site-reference/2026-10-31/README.md). Oudere standen hieronder zijn gedateerde geschiedenis.
+
+> **31 oktober2026 — NAV-02 preview gecontroleerd:** alle11categorieën zonder horizontaal schuiven; twee rijen op smalle desktop/laptop, één rij op breed scherm. UNPUBLISHED195947036938 heet nu Categorieen zonder schuiven;1354/1354pariteit vóór wijziging en finaalexactéénheaderpad. MAIN195948839178behouden. Twaalf breedtes, menu/focus/resize en Merken-doorklik gecontroleerd; QAhersteld. Eigenaar beoordeelt/publiceert. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [dossier](laptop-navigation/2026-10-31/README.md).
+
+> **30 oktober2026 — RET-03 live hersteld:** eigenaar publiceerde MAIN195948839178; de retour-Page was nog verborgen. Alleen Page166668894474 zichtbaar gemaakt. Live knop naast Verlanglijst en echte retourpagina zonder preview gecontroleerd. Geen themefilewrite of themapublicatie door uitvoerder; mailboxproef open. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [vrijgave](returns/2026-10-30/PUBLICATION.md). Oudere standen hieronder zijn geschiedenis.
+
+> **30 oktober2026 — RET-02 preview gecontroleerd:** retourknop op desktop direct naast Verlanglijst in UNPUBLISHED195948839178. MAIN195947036938 behouden1354/1354; concept exactéénheaderpadgewijzigd. Echte klik→formulier; zeven breedteframes zonderoverloop, QA-templatehersteld. Retour-Page nogverborgen; eigenaarstest en vrijgave open. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [dossier](returns/2026-10-30/HEADER.md). Oudere themarollen hieronder zijn geschiedenis.
+
+> **30 oktober2026 — RET-01 preview gecontroleerd:** native retouraanmelding en footer zonder Zichtenburglaan150 in UNPUBLISHED195947036938. MAIN195932061962 behouden1351/1351; concept1354/exact8featurepaden. Page166668894474verborgen. Eigenaar test mailboxontvangst vóór Page/themavrijgave. [Status](LIVE_STATUS_AND_NEXT_STEPS.md) · [dossier](returns/2026-10-30/README.md). HDR-01 is inmiddels door eigenaar gepubliceerd; oudere rollen zijn geschiedenis.
+
+> **30 oktober 2026 — HDR-01 reviewgereed:** vaste mobiele bovenrij/logopositie, inklappende zoekrij en pointerfocus zonder grijs Terug-kader in UNPUBLISHED195932061962. MAIN195915448586 behouden. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [ontwerp/test/herstel](mobile-header/2026-10-30/README.md). Eigenaar-iPhone/publicatie open; oudere vervolgstappen zijn geschiedenis.
+
+> **30 oktober 2026 — nieuwe volledige ingang:** lees [het naslagwerk](MASTER_SITE_REFERENCE.md) en [de actuele status](LIVE_STATUS_AND_NEXT_STEPS.md). Verse MAIN195915448586, Offerteconcept195916628234UNPUBLISHED. De oudere opleverrollen hieronder blijven geschiedenis.
+
+> **30 oktober2026 — reclame in offerteformulier verborgen:** alleen de aparte Jotform-reclamecontainer via CSS; publieke formulierread na herladen en Phone-preview zonder balk, verplichte-veldenfouten zichtbaar. Geen nieuwe inzending, geen Shopify-write/publicatie. Verse rollen: MAIN195916628234;195915448586UNPUBLISHED. Uploadactivatie blijft uit; eigenaar controleert verificatie-/testmail. Zie [bewijs en herstel](quote/2026-10-30/BRANDING.md).
+
+> **30 oktober2026 — eenvoudiger offertedesign:** één gecentreerde uploadkaart, minder tekst, compacte Jotform-velden en uitklapbare garantie-uitleg. UNPUBLISHED195916628234; MAIN195915448586 behouden. Vier ThemeCheck-files en17rendercases PASS;320/390component geen overflow. Alleen presentatie gewijzigd; klantactivatie uit. Volgende handeling: eigenaar controleert verificatie-/testmail. Zie [ontwerp](quote/2026-10-30/DESIGN.md) en [status](LIVE_STATUS_AND_NEXT_STEPS.md).
+
+> **30 oktober2026 — Jotform-koppeling:** formulier263018521531044 aangemaakt, echte fictieve testupload/opslag/bevoegde download PASS; in UNPUBLISHED195916628234 gekoppeld met aparte previewgate. MAIN195915448586 behouden. Eigenaar controleert verificatie-/testmail; klantmail en publieke activatie uit. Zie [status](LIVE_STATUS_AND_NEXT_STEPS.md) en [integratie](quote/2026-10-30/INTEGRATION.md).
+
+> **30 oktober2026 — offertefooter:** link onder Klantenservice in beide footers, klantactivatie uit; geen mobiele headerbalk. MAIN195915448586; reviewconcept195916628234. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [footerbewijs](quote/2026-10-30/FOOTER.md). Uploadaccount nog nodig.
+
+> **30 oktober2026 — correctie offerteheader:** geen mobiele offertebalk; desktop behouden. Actuele MAIN195916628234; reviewconcept195915448586 — Offerteknop alleen desktop. Upload nog uit. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [besluit/plaatsingsadvies](quote/2026-10-30/HEADER.md). Oudere rollen hieronder zijn geschiedenis.
+
+> **30 oktober2026 — BC-QUOTE-001:** offertepagina-ontwerp en providerkoppeling voorbereid in UNPUBLISHED195916628234 — BadkamerCity - Offerte vergelijken. MAIN195915448586 behouden. Pagina166573539594 ongepubliceerd, upload uit, homepageverwijzing disabled. ThemeCheck/14lokaletests en componentpreview PASS; echte ontvangst PRIVACY/ACCOUNT/TEST_PENDING. Volgende handeling: bestaande formulieraccounttoegang bepalen. [Actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) · [dossier](quote/2026-10-30/README.md).
+
+> **30 oktober 2026 — ASSORT-02 REVIEWGEREED:** mobiele uitklaplijst in UNPUBLISHED195915448586 — BadkamerCity - Mobiel assortiment. MAIN195916628234/1.344files behouden. Vijf featurebestanden, ThemeCheck en39lokalecases PASS;320/390/1024componentbrowsercontrole en gewone categorielink PASS. Native telefoonreview/publicatie bij eigenaar. Reserve195917644042 is niet het reviewconcept. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [dossier](assortment/2026-10-30/README.md).
+
+> **29 oktober 2026 — ASSORT-01 REVIEWGEREED:** compact assortimentoverzicht uitgevoerd in UNPUBLISHED195916628234. MAIN195915448586/1.338files ongewijzigd; concept1.344files met exact tien bedoelde paden. ThemeCheck R8, twintig lokale cases, echte desktoplinks/zoeker en320/390/1024componenttests geslaagd. Native telefoonreview en merchant-publicatie open. Zie [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [dossier](assortment/2026-10-29/README.md).
+
+> **29 oktober 2026 — FLASH-01:** MAIN195913482506 behouden. Concept195915448586 met stabiele startopmaak/icoonmaten is reviewgereed. Gecontroleerde browservergelijking en zoek-/navigatietest geslaagd; iPhone/eigenaarspublicatie open. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md).
+
+> **29 oktober 2026 — NAV-01:** homepage inmiddels MAIN195910795530. Menuconcept195913482506 is reviewgereed: inline uitklappers, rechte vervolgrijen en geen accountlinks. Zie [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md); Shopify-componentbrowsercontrole320/390 geslaagd; native telefoon en eigenaarspublicatie open.
+
 # BadkamerCity — START HIER bij een overdracht
+
+**Vervolg 28 oktober 2026 — UI-01:** eigenaar kiest nu inconsistenties en productfotopijlen. [UI-vergelijking en conceptwerk](ui-consistency/2026-10-28/README.md); volg [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) voor exact concept-/test-/publicatiepunt. DOC-03E is geparkeerd; checkout buiten scope. Oudere volgende stappen hieronder zijn geschiedenis.
+
+**Vervolg 28 oktober 2026 — DOC-03D:** [wishlistmethodedossiers](architecture/components/micro/README.md), 43 lokale cases, twee begrensde defectreproducties en vijftien verse metadata-/bytecontroles. Geen live fix of echte bezoekersopslag-/cartactie. Checkout buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
+
+**Vervolg 28 oktober 2026 — DOC-03C:** [filtermethodedossiers](architecture/components/micro/README.md), 41 lokale cases en twee begrensde defectreproducties; geen live fix. Checkout buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
+
+**Vervolg 28 oktober 2026 — DOC-03B:** [vier methodedossiers](architecture/components/micro/README.md), 39 extra geïsoleerde scenario’s en verse mapping-/contentstructuurcontrole. Checkout op eigenaarsverzoek buiten scope. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md); oudere volgende stappen hieronder zijn geschiedenis.
+
+**Vervolg 28 oktober 2026 — DOC-02C:** brede winkeldocumentatie met negen aanvullende dossiers en [naslag](architecture/reference/README.md) voor alle templates/secties/settings/snippets/assets. Lees [actuele status](LIVE_STATUS_AND_NEXT_STEPS.md) en [dekking](architecture/COVERAGE.md); 100% is niet vrijgegeven. Oudere volgende stappen hieronder zijn geschiedenis.
+
+
+**Vervolg 28 oktober 2026 — DOC-03A:** de [microdossiers](architecture/components/micro/README.md) analyseren afzonderlijke functies en overgangsstaten. Vijftien geïsoleerde cases reproduceren twee problemen en bevestigen normale guards; geen echte cartactie of productiecorrectie. Lees de [actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md). Desktopbewijs is beperkt; mobiel en settings-bytepariteit blijven open. Oudere volgende stappen hieronder zijn geschiedenis.
+
+
+> **Actuele documentatie-ingang — 28 oktober 2026:** lees [architectuur, onderzoeksboom en componentafspraken](architecture/README.md) en de centrale werkstatus. Oudere statusblokken hieronder zijn gedateerde achtergrond. De Git-root is niet gelijk aan de actuele Shopify MAIN; gebruik de bronvergelijking in het nieuwe dossier.
+
+> **Wiesbaden — afgeronde Shopify-uitvoering, 21 oktober 2026: `SHOPIFY_COMPLETE_INDEX_BLOCKED`.** Volg [het vaste plan](product-content/WIESBADEN_EXECUTION_PLAN.md), [de actuele machine-status](product-content/wiesbaden/execution-state.json) en [het uitvoeringsresultaat](product-content/WIESBADEN_EXECUTION_RESULTS_2026-10-21.md). **2.299 prijswijzigingen zijn teruggelezen; 33.6000 en 75.3510 zijn ACTIVE én Online Store-gepubliceerd.** Oorspronkelijke queue: **186 online / 28 zonder positieve prijs / 3 historische safetyblocks**, niet opnieuw geprobeerd.
+>
+> **COMPLETE en teruggelezen:** verrijking van **2.273 producten / 12.259 metafields / 33.186 feiten / 6.345 filters / 1.368 documentlijsten**, met **0 uitzonderingen**. Zichtbare afwerking van **187 unieke producten: 3 gerichte correcties + 184 eerder lege SEO-records**, met **0 uitzonderingen**. **87 hoofdcategorietoevoegingen** via `productUpdate.collectionsToJoin` aan **5 bevestigde handmatige collecties**, met behoud van alle bestaande lidmaatschappen; **46 gevallen zonder voldoende bron niet gewijzigd**. Shopify normaliseert **14 identieke SEO-titels naar `null`**; effectieve producttitel en exacte SEO-description zijn teruggelezen. **18184 openbare headcheck PASS**.
+>
+> **Definitieve Admin-tellingen:** **2.451 totaal / 2.451 ACTIVE / 2.451 Online Store-gepubliceerd**, alle precisie **EXACT**; **EUR**, `taxesIncluded=true`, **MAIN 195491168522 ongewijzigd**. 151 bestaande contentreviews en 25 producten zonder bron behouden; volledige galerijen niet bewezen.
+>
+> **Exact volgende stap:** bestaande SSH-authenticatie voor de externe index beschikbaar maken, daarna synchroniseren en controleren. Indexstatus **BLOCKED_NO_EXISTING_SESSION_AUTH**; geen syncclaim. Er is geen Shopify-schrijver of achtergrondworker actief na afronding. Actieve branch `fix/product-cards-2026-10-14`; `main` alleen documentatie. Herhaal afgeronde Shopify-operaties niet. Oudere vervolgacties hieronder zijn historische checkpoints.
+
+> **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.
 
 **Laatste geverifieerde bronstand:** 7 oktober 2026. Dit document is het **eerste dat een nieuwe AI, freelancer, ICT'er of interne medewerker leest**. Doel: binnen 15 minuten weten wat live staat; binnen een uur veilig een taak kunnen oppakken; zonder gokken over ontbrekende toegang of data.
 
@@ -34,7 +100,7 @@ Gebruik deze labels bij elke toekomstige statusrapportage. **Een Shopify-templat
 
 ## 2. De eerste 15 minuten: controleer de werkelijke omgeving
 
-1. Open de GitHub-repository `jlamping1997/badkamercity`, branch `main`.
+1. Open de centrale werkstatus op GitHub `main`; gebruik daarna de daar geregistreerde actieve codebranch. Onderstaande bronstand van 7 oktober is historisch.
 2. Lees deze pagina, daarna `AI_HANDOFF_CURRENT.md` en `AGENTS.md`.
 3. Controleer in Shopify welk thema NU rol `MAIN` heeft; vertrouw nooit blind het ID van 7 oktober.
 4. Bepaal op de Windows-computer de **juiste** Git-repository en of lokale wijzigingen bestaan.

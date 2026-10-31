@@ -1,0 +1,26 @@
+{
+  "scope": "Local LiquidJS/DOM fixture, not Shopify or browser rendering",
+  "passed": 20,
+  "tests": [
+    "10 cards false",
+    "native directory without JS dependency false",
+    "singular search false",
+    "nested context false",
+    "synonym false",
+    "enter skips hidden ancestors false",
+    "no result and recovery false",
+    "escape restores false",
+    "layout change false",
+    "supplement separated false",
+    "10 cards true",
+    "native directory without JS dependency true",
+    "singular search true",
+    "nested context true",
+    "synonym true",
+    "enter skips hidden ancestors true",
+    "no result and recovery true",
+    "escape restores true",
+    "layout change true",
+    "supplement separated true"
+  ]
+}

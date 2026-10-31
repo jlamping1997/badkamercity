@@ -1,0 +1,24 @@
+{% doc %}
+Renders verified tile box and area pricing, or its card data.
+@param {product} product - The card product.
+@param {string} [mode] - Use data for JSON or native with the existing price component.
+{% enddoc %}
+{%- liquid
+  assign tile = product.metafields.custom.bron_toelichtingen_json.value.tiles
+  assign box_area = tile.m2_per_box | default: 0 | plus: 0
+  assign tile_variant = product.selected_or_first_available_variant
+  assign unit_cents = tile.price_per_m2.amount | default: 0 | times: 100 | round
+  if box_area > 0
+    if tile_variant.unit_price > 0
+      assign unit_cents = tile_variant.unit_price
+    elsif unit_cents <= 0
+      assign unit_cents = tile_variant.price | divided_by: box_area | round
+    endif
+  endif
+-%}
+{%- if mode == 'data' -%}
+  {%- if box_area > 0 -%}{"box_area":{{ box_area | json }},"unit_price_cents":{{ unit_cents | json }}}{%- else -%}null{%- endif -%}
+{%- elsif box_area > 0 -%}
+  <span class="bc-card-unit">{{ 'bc_listing.tile_box' | t }} · {{ box_area | replace: '.', ',' }} m²</span>
+  {%- unless product.price_varies -%}{%- unless mode == 'native' and tile_variant.unit_price_measurement -%}<span class="bc-card-unit">{{ unit_cents | money }} {{ 'bc_listing.tile_area' | t }}</span>{%- endunless -%}{%- endunless -%}
+{%- endif -%}

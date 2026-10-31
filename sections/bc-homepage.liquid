@@ -1,0 +1,162 @@
+{{ 'bc-homepage.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-homepage.js' | asset_url }}" defer="defer"></script>
+{% liquid
+  assign campaigns = section.blocks | where: 'type', 'campaign'
+  assign categories = section.blocks | where: 'type', 'category'
+  assign brands = section.blocks | where: 'type', 'brand'
+  assign form_id = 'HomeAdviceForm-' | append: section.id
+  assign request_id = 'HomeAdviceRequest-' | append: section.id
+  assign contact_url = pages.contact.url | default: routes.root_url
+%}
+<div class="bch-home" data-bch-home id="Home-{{ section.id }}">
+  <a class="bch-shipping" href="#HomeDelivery">
+    <span class="bch-icon" aria-hidden="true">{{ 'icon-truck.svg' | inline_asset_content }}</span>
+    {{ section.settings.shipping_usp | escape }}
+  </a>
+  <div class="bch-shell bch-campaigns">
+    {% for block in campaigns limit: 2 %}
+      {% liquid
+        assign campaign_url = block.settings.link | default: routes.all_products_collection_url
+        assign is_first = false
+        if forloop.first
+          assign is_first = true
+        endif
+      %}
+      <a href="{{ campaign_url | escape }}" class="bch-campaign{% unless forloop.first %} bch-campaign--secondary{% endunless %}" {{ block.shopify_attributes }}>
+        <div class="bch-campaign__image">
+          {% render 'bc-home-image', image: block.settings.image, asset: block.settings.asset, alt: '', priority: is_first, width: 1440, height: 480 %}
+        </div>
+        <div class="bch-campaign__copy">
+          {% if block.settings.eyebrow != blank %}<span class="bch-eyebrow{% unless forloop.first %} bch-eyebrow--coral{% endunless %}">{{ block.settings.eyebrow | escape }}</span>{% endif %}
+          {% if forloop.first %}<h1>{{ block.settings.heading | escape | newline_to_br }}</h1>{% else %}<h2>{{ block.settings.heading | escape | newline_to_br }}</h2>{% endif %}
+          <span class="{% if forloop.first %}bch-button{% else %}bch-textlink{% endif %}">{{ block.settings.label | escape }} <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="bch-shell bch-benefits">
+    <a href="#HomeAdvice">{{ section.settings.advice_usp | escape }}</a>
+    <a href="#HomeDelivery"><span class="bch-icon" aria-hidden="true">{{ 'icon-box.svg' | inline_asset_content }}</span>{{ section.settings.pickup_usp | escape }}</a>
+  </div>
+  <section class="bch-shell bch-categories" aria-labelledby="HomeCategories-{{ section.id }}">
+    <h2 id="HomeCategories-{{ section.id }}">{{ section.settings.categories_heading | escape }}</h2>
+    <ul class="bch-category-grid" role="list">
+      {% for block in categories limit: 9 %}
+        {% liquid
+          assign category = block.settings.collection
+          assign category_title = block.settings.title | default: category.title
+          assign category_url = block.settings.link | default: category.url
+          assign category_image = block.settings.image
+          if category_image == blank and block.settings.asset == blank
+            assign category_image = category.image | default: category.featured_image
+          endif
+        %}
+        {% if category_url != blank and category_title != blank %}
+          <li {{ block.shopify_attributes }}>
+            <a class="bch-category" href="{{ category_url | escape }}">
+              <span class="bch-category__image">{% render 'bc-home-image', image: category_image, asset: block.settings.asset, alt: '', sizes: '(min-width: 990px) 150px, 30vw', width: 480, height: 480 %}</span>
+              <span>{{ category_title | escape }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <a class="bch-all" href="{{ section.settings.categories_link | default: routes.collections_url }}">{{ section.settings.categories_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+  </section>
+  <section class="bch-shell bch-brands" aria-labelledby="HomeBrands-{{ section.id }}">
+    <div class="bch-section-heading"><h2 id="HomeBrands-{{ section.id }}">{{ section.settings.brands_heading | escape }}</h2><a href="{{ section.settings.brands_link | escape }}">{{ section.settings.brands_label | escape }} <span aria-hidden="true">&rarr;</span></a></div>
+    <ul role="list">{% for block in brands %}{% if block.settings.link != blank %}<li {{ block.shopify_attributes }}><a href="{{ block.settings.link | escape }}">{% if block.settings.logo != blank %}{{ block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy', alt: block.settings.title }}{% else %}{{ block.settings.title | escape }}{% endif %}</a></li>{% endif %}{% endfor %}</ul>
+  </section>
+  <section class="bch-shell bch-inspiration" id="HomeInspiration" aria-labelledby="HomeInspirationTitle-{{ section.id }}">
+    <a href="{{ section.settings.inspiration_link | escape }}" class="bch-inspiration__link">
+      <div class="bch-inspiration__image">{% render 'bc-home-image', image: section.settings.inspiration_image, asset: 'bch-inspiration.webp', alt: '', width: 1440, height: 576 %}</div>
+      <div class="bch-inspiration__copy"><h2 id="HomeInspirationTitle-{{ section.id }}">{{ section.settings.inspiration_heading | escape }}</h2><span>{{ section.settings.inspiration_label | escape }} <span aria-hidden="true">&rarr;</span></span></div>
+    </a>
+  </section>
+  <section class="bch-shell bch-advice" id="HomeAdvice" aria-labelledby="HomeAdviceTitle-{{ section.id }}">
+    <div class="bch-advice__layout">
+      <div class="bch-advice__copy">
+        <p class="bch-eyebrow">{{ section.settings.showroom_usp | escape }}</p>
+        <h2 id="HomeAdviceTitle-{{ section.id }}">{{ section.settings.advice_heading | escape }}</h2>
+        <p>{{ section.settings.advice_text | escape }}</p>
+        {% if section.settings.booking_link != blank %}<a class="bch-button" href="{{ section.settings.booking_link | escape }}">{{ section.settings.booking_label | escape }} <span aria-hidden="true">&rarr;</span></a>{% else %}<a class="bch-button" href="#{{ request_id }}">{{ section.settings.request_label | escape }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+      </div>
+      <div class="bch-advice__image">{% render 'bc-home-image', image: section.settings.advice_image, asset: 'bch-design.webp', alt: section.settings.advice_image_alt, width: 1080, height: 720 %}</div>
+    </div>
+    {% if section.settings.booking_link == blank %}
+      <details class="bch-appointment" id="{{ request_id }}">
+        <summary>{{ 'bc_home.form.heading' | t }}</summary>
+        <div class="bch-appointment__body">
+          <p>{{ 'bc_home.form.explanation' | t }}</p>
+          {% form 'contact', id: form_id %}
+            {% if form.posted_successfully? %}<p class="bch-form-success" role="status" tabindex="-1">{{ 'bc_home.form.success' | t }}</p>{% endif %}
+            {% if form.errors %}<div class="bch-form-errors" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+            <input type="hidden" name="contact[onderwerp]" value="3D-afspraak Badkamercity">
+            <div class="bch-form-grid">
+              <div><label for="{{ form_id }}-name">{{ 'bc_home.form.name' | t }}</label><input id="{{ form_id }}-name" name="contact[name]" autocomplete="name" required value="{{ form.name | default: customer.name | escape }}"></div>
+              <div><label for="{{ form_id }}-email">{{ 'bc_home.form.email' | t }}</label><input id="{{ form_id }}-email" name="contact[email]" type="email" autocomplete="email" autocapitalize="off" required value="{{ form.email | default: customer.email | escape }}"{% if form.errors contains 'email' %} aria-invalid="true"{% endif %}></div>
+              <div><label for="{{ form_id }}-phone">{{ 'bc_home.form.phone' | t }}</label><input id="{{ form_id }}-phone" name="contact[telefoon]" type="tel" autocomplete="tel" value="{{ form.phone | escape }}"></div>
+              <div><label for="{{ form_id }}-moment">{{ 'bc_home.form.moment' | t }}</label><input id="{{ form_id }}-moment" name="contact[voorkeursmoment]" placeholder="{{ 'bc_home.form.moment_hint' | t }}"></div>
+            </div>
+            <label for="{{ form_id }}-body">{{ 'bc_home.form.message' | t }}</label>
+            <textarea id="{{ form_id }}-body" name="contact[body]" rows="4" required>{{ form.body | escape }}</textarea>
+            <p class="bch-form-note">{{ 'bc_home.form.confirmation' | t }}</p>
+            {% if shop.privacy_policy != blank %}<p class="bch-form-note"><a href="{{ shop.privacy_policy.url }}">{{ 'bc_home.form.privacy' | t }}</a></p>{% endif %}
+            <button class="bch-button" type="submit">{{ 'bc_home.form.submit' | t }} <span aria-hidden="true">&rarr;</span></button>
+          {% endform %}
+        </div>
+      </details>
+    {% endif %}
+  </section>
+  <div class="bch-shell bch-services">
+    <details id="HomeDelivery"><summary><span class="bch-icon" aria-hidden="true">{{ 'icon-box.svg' | inline_asset_content }}</span>{{ section.settings.pickup_usp | escape }}<span class="bch-plus" aria-hidden="true">+</span></summary><div class="bch-service-body"><p>{{ section.settings.delivery_text | escape }}</p><p>{{ section.settings.address | escape | newline_to_br }}</p>{% if shop.shipping_policy != blank %}<a href="{{ shop.shipping_policy.url }}">{{ 'bc_home.services.shipping' | t }} &rarr;</a>{% else %}<a href="{{ contact_url }}">{{ 'bc_home.services.contact' | t }} &rarr;</a>{% endif %}</div></details>
+    <details id="HomeReturns"><summary><span class="bch-icon" aria-hidden="true">{{ 'icon-return.svg' | inline_asset_content }}</span>{{ section.settings.returns_heading | escape }}<span class="bch-plus" aria-hidden="true">+</span></summary><div class="bch-service-body"><p>{{ section.settings.returns_text | escape }}</p><p>{{ section.settings.address | escape | newline_to_br }}</p>{% if shop.refund_policy != blank %}<a href="{{ shop.refund_policy.url }}">{{ 'bc_home.services.returns' | t }} &rarr;</a>{% endif %}<a href="mailto:{{ shop.email | escape }}">{{ shop.email | escape }}</a></div></details>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Homepage acties & rondjes",
+  "tag": "section",
+  "class": "bc-homepage-section",
+  "limit": 1,
+  "enabled_on": {"templates": ["index"]},
+  "settings": [
+    {"type":"header","content":"USP’s"},
+    {"type":"text","id":"shipping_usp","label":"Verzending","default":"Gratis verzending boven €100"},
+    {"type":"text","id":"advice_usp","label":"Advies","default":"Persoonlijk advies"},
+    {"type":"text","id":"pickup_usp","label":"Afhalen","default":"Afhalen na bevestiging"},
+    {"type":"text","id":"showroom_usp","label":"Showroom","default":"1.000 m² showroom · Op afspraak"},
+    {"type":"header","content":"Categorieën en merken"},
+    {"type":"text","id":"categories_heading","label":"Categorietitel","default":"Shop per categorie"},
+    {"type":"text","id":"categories_label","label":"Knop alle categorieën","default":"Bekijk alle categorieën"},
+    {"type":"url","id":"categories_link","label":"Alle categorieën"},
+    {"type":"text","id":"brands_heading","label":"Merkentitel","default":"Jouw favoriete merken"},
+    {"type":"text","id":"brands_label","label":"Knop alle merken","default":"Alle merken"},
+    {"type":"url","id":"brands_link","label":"Alle merken"},
+    {"type":"header","content":"Inspiratie"},
+    {"type":"image_picker","id":"inspiration_image","label":"Inspiratiefoto"},
+    {"type":"text","id":"inspiration_heading","label":"Inspiratietitel","default":"Durf kleur te kiezen."},
+    {"type":"text","id":"inspiration_label","label":"Inspiratieknop","default":"Ontdek tegels voor jouw stijl"},
+    {"type":"url","id":"inspiration_link","label":"Inspiratiebestemming"},
+    {"type":"header","content":"3D-afspraak"},
+    {"type":"text","id":"advice_heading","label":"Adviestitel","default":"Samen jouw badkamer uitdenken."},
+    {"type":"textarea","id":"advice_text","label":"Adviestekst","default":"Maak jouw badkamerontwerp in 3D bij onze partner Harry Suiker in Den Haag. We bekijken samen de indeling en materialen, op afspraak."},
+    {"type":"image_picker","id":"advice_image","label":"Adviesfoto"},
+    {"type":"text","id":"advice_image_alt","label":"Beschrijving adviesfoto","default":"Voorbeeld van een badkamerontwerp met materiaalstalen"},
+    {"type":"url","id":"booking_link","label":"Boekingslink (optioneel)","info":"Zonder boekingslink opent de knop het afspraakaanvraagformulier op deze pagina."},
+    {"type":"text","id":"booking_label","label":"Knop met boekingslink","default":"Plan een 3D-afspraak"},
+    {"type":"text","id":"request_label","label":"Knop afspraakaanvraag","default":"Vraag een 3D-afspraak aan"},
+    {"type":"header","content":"Afhalen en retourneren"},
+    {"type":"textarea","id":"address","label":"Afhaal- en retouradres","default":"Zichtenburglaan 150\n2544 EB Den Haag"},
+    {"type":"textarea","id":"delivery_text","label":"Afhaalinformatie","default":"Wil je jouw bestelling afhalen? Neem contact met ons op. Wacht op onze bevestiging dat de bestelling klaarstaat voordat je langskomt."},
+    {"type":"text","id":"returns_heading","label":"Retourkop","default":"Retourinformatie"},
+    {"type":"textarea","id":"returns_text","label":"Retourinformatie","default":"Een retour aanvragen of een vraag over retourneren? Neem contact op via info@badkamercity.nl en vermeld je bestelnummer. Hieronder vind je ons afhaal- en retouradres."}
+  ],
+  "blocks": [
+    {"type":"campaign","name":"Actiebanner","limit":2,"settings":[{"type":"text","id":"eyebrow","label":"Bovenkop"},{"type":"textarea","id":"heading","label":"Titel"},{"type":"text","id":"label","label":"Knoptekst"},{"type":"url","id":"link","label":"Bestemming"},{"type":"image_picker","id":"image","label":"Bannerfoto"},{"type":"text","id":"asset","label":"Standaardbeeld in thema"}]},
+    {"type":"category","name":"Categoriecirkel","limit":9,"settings":[{"type":"collection","id":"collection","label":"Collectie"},{"type":"text","id":"title","label":"Korte titel"},{"type":"url","id":"link","label":"Andere bestemming (optioneel)"},{"type":"image_picker","id":"image","label":"Categoriefoto"},{"type":"text","id":"asset","label":"Standaardbeeld in thema"}]},
+    {"type":"brand","name":"Merk","limit":8,"settings":[{"type":"text","id":"title","label":"Merknaam"},{"type":"url","id":"link","label":"Merkbestemming"},{"type":"image_picker","id":"logo","label":"Merklogo (optioneel)"}]}
+  ],
+  "presets":[{"name":"Homepage acties & rondjes"}]
+}
+{% endschema %}

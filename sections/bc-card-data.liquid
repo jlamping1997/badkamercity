@@ -1,0 +1,100 @@
+{%- if product != blank -%}
+{%- liquid
+    assign bc_hotbath_menu_excluded = false
+    assign bc_hotbath_menu_title = product.title | upcase
+    assign bc_hotbath_menu_handle = product.handle | upcase
+    if bc_hotbath_menu_title contains 'SPOM' or bc_hotbath_menu_handle contains 'SPOM'
+      assign bc_hotbath_menu_excluded = true
+    endif
+    for bc_hotbath_menu_variant in product.variants
+      assign bc_hotbath_menu_sku = bc_hotbath_menu_variant.sku | upcase
+      if bc_hotbath_menu_sku contains 'SPOM'
+        assign bc_hotbath_menu_excluded = true
+        break
+      endif
+    endfor
+    capture current_switch_group
+      echo product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group
+    endcapture
+    assign current_switch_group = current_switch_group | strip
+    assign bc_switcher_data_url = ''
+    if bc_hotbath_menu_excluded
+      assign current_switch_group = ''
+    else
+      capture bc_hotbath_route_key
+        render 'bc-hotbath-menu-route', product: product
+      endcapture
+      assign bc_hotbath_route_key = bc_hotbath_route_key | strip
+      if bc_hotbath_route_key != blank
+        capture bc_hotbath_route
+          render 'bc-hotbath-menu-source', key: bc_hotbath_route_key
+        endcapture
+        assign bc_hotbath_route_parts = bc_hotbath_route | strip | split: '||'
+        assign bc_hotbath_routed_group = bc_hotbath_route_parts[0] | strip
+        if bc_hotbath_routed_group == '__NO_MENU__'
+          assign current_switch_group = ''
+        elsif bc_hotbath_routed_group != blank
+          if current_switch_group == blank
+            assign current_switch_group = bc_hotbath_routed_group
+          endif
+          if current_switch_group == bc_hotbath_routed_group
+            assign bc_hotbath_data_asset = bc_hotbath_route_parts[1] | strip
+            if bc_hotbath_data_asset != blank
+              assign bc_switcher_data_url = bc_hotbath_data_asset | asset_url
+            endif
+          endif
+        endif
+      endif
+    endif
+  assign card_variant = product.selected_or_first_available_variant
+  assign card_color = product.metafields.custom.kleur.value | default: product.metafields.bc_filters.kleur.value | default: ''
+  assign card_manifest = product.metafields.bc_data.filter_manifest.value
+  assign card_sku = card_variant.sku | strip | upcase
+  assign manifest_sku = card_manifest.sku | strip | upcase
+  if card_manifest.format == 'verified-product-filters-v1' and manifest_sku == card_sku and card_sku != blank and card_manifest.values.kleur != blank
+    assign card_color = card_manifest.values.kleur
+  endif
+  assign card_supplier_stock = product.metafields.custom.leverancier_voorraad.value
+  assign card_supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
+  assign card_delivery = 'bc_delivery.lead_time_on_request' | t
+  assign card_delivery_in_stock = false
+  if card_supplier_stock == true
+    assign card_delivery = 'bc_delivery.supplier_in_stock' | t
+    assign card_delivery_in_stock = true
+  elsif card_supplier_stock == false and card_supplier_date != blank
+    assign card_today = 'now' | date: '%Y-%m-%d' | date: '%s' | plus: 0
+    assign card_expected = card_supplier_date | date: '%s' | plus: 0
+    if card_expected >= card_today
+      assign card_supplier_date_formatted = card_supplier_date | date: '%d-%m-%Y'
+      assign card_delivery = 'bc_delivery.supplier_expected_from' | t: date: card_supplier_date_formatted
+    endif
+  endif
+  assign card_hover_image = product.images[1]
+  assign card_can_add = false
+  if product.variants.size == 1 and card_variant.quantity_rule.min == 1 and card_variant.quantity_rule.increment == 1 and product.requires_selling_plan == false
+    assign card_can_add = true
+  endif
+-%}
+{%- capture card_switcher -%}{%- if product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants != blank -%}{%- render 'bc-wiesbaden-colors', product: product, section: section -%}{%- elsif current_switch_group != blank -%}{%- render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url -%}{%- endif -%}{%- endcapture -%}
+<script type="application/json" data-bc-card-data>{
+"id":{{ product.id | json }},
+"handle":{{ product.handle | json }},
+"title":{{ product.title | json | replace: '<', '\u003c' }},
+"short_title":{{ product.metafields.custom.card_title.value | default: '' | json | replace: '<', '\u003c' }},
+"vendor":{{ product.vendor | json }},
+"color":{{ card_color | json | replace: '<', '\u003c' }},
+"price_cents":{{ card_variant.price | json }},
+"tile_price":{% render 'bc-card-tile-price', product: product, mode: 'data' %},
+"variant_id":{{ card_variant.id | json }},
+"available":{{ card_variant.available | json }},
+"can_add":{{ card_can_add | json }},
+"image_url":{% if product.featured_image %}{{ product.featured_image | image_url: width: 600 | json }}{% else %}""{% endif %},
+"hover_image_url":{% if card_hover_image %}{{ card_hover_image | image_url: width: 600 | json }}{% else %}""{% endif %},
+"delivery_text":{{ card_delivery | json | replace: '<', '\u003c' }},
+"delivery_in_stock":{{ card_delivery_in_stock | json }},
+"switcher_html":{{ card_switcher | json | replace: '<', '\u003c' }}
+}</script>
+{%- endif -%}
+{% schema %}
+{"name":"Productkaartgegevens","settings":[]}
+{% endschema %}

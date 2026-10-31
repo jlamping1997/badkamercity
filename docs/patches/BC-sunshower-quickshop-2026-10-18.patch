@@ -1,0 +1,631 @@
+diff --git a/assets/bc-sunshower-landing.css b/assets/bc-sunshower-landing.css
+index 89bf4116203b00431a194109d05f7e63e45b7f5d..ef833e2573d873d0d2be6a339c8dd8a1ccd2e212 100644
+--- a/assets/bc-sunshower-landing.css
++++ b/assets/bc-sunshower-landing.css
+@@ -84,6 +84,22 @@
+ .bcsse-swatch__color--black { background: #252a29; }
+ .bcsse-swatch__color--grey { background: #747e72; }
+ .bcsse-swatch__color--sand { background: #d6c3ab; }
++.bcsse-shop-form { width: 100%; margin-top: auto; }
++.bcsse-experience .bcsse-shop-form .bcsse-button { width: 100%; min-height: 4.6rem; margin: .7rem 0 0; cursor: pointer; font-family: inherit; font-size: 1.4rem; }
++.bcsse-experience .bcsse-shop-form [data-bcsse-shop-button-label] { font: inherit; line-height: inherit; }
++.bcsse-shop-form .bcsse-button:disabled { cursor: not-allowed; opacity: .6; }
++.bcsse-experience button:focus-visible { outline: 3px solid #157fa4; outline-offset: 3px; }
++.bcsse-shop-color { font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
++.bcsse-shop-image-note { color: #536570; font-size: 1.2rem; line-height: 1.5; }
++.bcsse-experience .bcsse-shop-status { font-size: 1.3rem; line-height: 1.5; }
++.bcsse-shop-status:empty { display: none; }
++.bcsse-shop-details, .bcsse-shop-cart-link { display: inline-flex; min-height: 3.6rem; align-items: center; font-size: 1.3rem; line-height: 1.5; text-underline-offset: .3rem; }
++.bcsse-shop-cart-link { font-weight: 700; }
++.bcsse-experience [data-bcsse-shop-cart-link][hidden] { display: none; }
++.bcsse-accessory[data-bcsse-image-mode="product"] .bcsse-accessory__image { object-fit: contain; transform: none; mix-blend-mode: normal; }
++.bcsse-accessory[data-bcsse-image-mode="lifestyle"] .bcsse-accessory__image { object-fit: cover; object-position: 35% bottom; transform: scale(3); transform-origin: 37% 100%; }
++.bcsse-accessory[data-bcsse-shop-busy="image"] .bcsse-accessory__image { opacity: .55; }
++.bcsse-swatch[aria-disabled="true"] { opacity: .6; cursor: wait; }
+ .bcsse-installation { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1fr); align-items: center; gap: 1.6rem; padding-block: 2.8rem; }
+ .bcsse-installation__media { position: relative; align-self: stretch; min-height: 22rem; overflow: hidden; border-radius: .7rem; background: #e9e2d9; }
+ .bcsse-installation__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
+diff --git a/assets/bc-sunshower-shop.js b/assets/bc-sunshower-shop.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..331f654a733dd5382f036094605f825df8971fe6
+--- /dev/null
++++ b/assets/bc-sunshower-shop.js
+@@ -0,0 +1,344 @@
++(function () {
++  'use strict';
++
++  if (window.BCSunshowerShop) {
++    window.BCSunshowerShop.init(document);
++    return;
++  }
++
++  var instances = new Map();
++  var selector = '[data-bcsse-shop-card]';
++  var cartQueue = Promise.resolve();
++
++  function queueCart(task) {
++    cartQueue = cartQueue.catch(function () {}).then(task);
++    return cartQueue;
++  }
++
++  function cartEndpoint() {
++    var path = window.routes && window.routes.cart_add_url;
++    if (!path) path = ((window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/') + 'cart/add';
++    return path.replace(/\.js$/, '') + '.js';
++  }
++
++  function cartUI() {
++    return document.querySelector('cart-notification') || document.querySelector('cart-drawer');
++  }
++
++  function cartSections(cart) {
++    if (!cart) return [];
++    if (cart.tagName === 'CART-NOTIFICATION') return ['cart-icon-bubble'];
++    if (typeof cart.getSectionsToRender !== 'function') return [];
++    try {
++      return cart.getSectionsToRender().map(function (section) { return section.id; }).filter(Boolean);
++    } catch (error) {
++      return [];
++    }
++  }
++
++  function updateCartBadge(result) {
++    var html = result.sections && result.sections['cart-icon-bubble'];
++    var badge = document.getElementById('cart-icon-bubble');
++    if (!badge || typeof html !== 'string' || !html.trim()) return;
++    var content = new DOMParser().parseFromString(html, 'text/html').querySelector('.shopify-section');
++    if (content) badge.innerHTML = content.innerHTML;
++  }
++
++  function publishCart(choice, response) {
++    if (typeof publish !== 'function' || typeof PUB_SUB_EVENTS === 'undefined' || !PUB_SUB_EVENTS.cartUpdate) return Promise.resolve();
++    try {
++      return Promise.resolve(publish(PUB_SUB_EVENTS.cartUpdate, {
++        source: 'bc-sunshower-shop',
++        productVariantId: choice.id,
++        cartData: response
++      })).catch(function () {});
++    } catch (error) {
++      return Promise.resolve();
++    }
++  }
++
++  function createController(root) {
++    var data;
++    var source = root.querySelector('[data-bcsse-shop-data]');
++    var image = root.querySelector('[data-bcsse-shop-image]');
++    var color = root.querySelector('[data-bcsse-shop-color]');
++    var price = root.querySelector('[data-bcsse-shop-price]');
++    var form = root.querySelector('[data-bcsse-shop-form]');
++    var input = form && form.querySelector('[name="id"]');
++    var button = root.querySelector('[data-bcsse-shop-submit]');
++    var buttonLabel = root.querySelector('[data-bcsse-shop-button-label]');
++    var status = root.querySelector('[data-bcsse-shop-status]');
++    var cartLink = root.querySelector('[data-bcsse-shop-cart-link]');
++    var links = Array.from(root.querySelectorAll('[data-bcsse-shop-link]'));
++    var swatches = Array.from(root.querySelectorAll('[data-bcsse-shop-choice]'));
++    if (!source || !image || !price || !form || !input || !button || !buttonLabel || !status) return null;
++
++    try {
++      data = JSON.parse(source.textContent);
++      if (!data || !Array.isArray(data.choices) || !data.choices.length) return null;
++      if (!data.choices.every(function (choice) {
++        return choice && typeof choice.key === 'string' && /^\d+$/.test(String(choice.id)) && typeof choice.available === 'boolean' &&
++          typeof choice.url === 'string' && typeof choice.title === 'string' &&
++          choice.image && typeof choice.image.src === 'string' && choice.image.src;
++      })) return null;
++    } catch (error) {
++      return null;
++    }
++
++    var choices = new Map(data.choices.map(function (choice) { return [choice.key, choice]; }));
++    var current = choices.get(data.initial) || data.choices.find(function (choice) { return String(choice.id) === input.value; }) || data.choices[0];
++    var pending = false;
++    var imageLoading = false;
++    var destroyed = false;
++    var imageToken = 0;
++    var cancelImage = null;
++    var originalSwatchAttributes = swatches.map(function (swatch) {
++      return ['role', 'aria-pressed', 'aria-disabled'].map(function (name) { return [name, swatch.getAttribute(name)]; });
++    });
++
++    function label(name) {
++      return root.dataset[name] || '';
++    }
++
++    function setStatus(message, showCart) {
++      if (destroyed) return;
++      status.textContent = message || '';
++      status.hidden = !message;
++      if (cartLink) cartLink.hidden = !showCart;
++    }
++
++    function updateControls() {
++      if (destroyed) return;
++      button.disabled = pending || imageLoading || !current.available;
++      button.setAttribute('aria-disabled', String(button.disabled));
++      if (pending || imageLoading) {
++        button.setAttribute('aria-busy', 'true');
++        root.dataset.bcsseShopBusy = pending ? 'cart' : 'image';
++      } else {
++        button.removeAttribute('aria-busy');
++        delete root.dataset.bcsseShopBusy;
++      }
++      buttonLabel.textContent = pending ? label('bcsseLoadingLabel') : imageLoading ? label('bcsseLoadingImageLabel') :
++        current.available ? label('bcsseAddLabel') : label('bcsseSoldOutLabel');
++      swatches.forEach(function (swatch) {
++        var selected = swatch.dataset.bcsseShopChoice === current.key;
++        swatch.classList.toggle('bcsse-swatch--selected', selected);
++        swatch.setAttribute('aria-pressed', String(selected));
++        swatch.removeAttribute('aria-current');
++        if (pending) swatch.setAttribute('aria-disabled', 'true');
++        else swatch.removeAttribute('aria-disabled');
++      });
++    }
++
++    function setImageAttributes(target, next) {
++      if (next.sizes) target.setAttribute('sizes', next.sizes);
++      else target.removeAttribute('sizes');
++      if (next.srcset) target.setAttribute('srcset', next.srcset);
++      else target.removeAttribute('srcset');
++      if (next.width) target.setAttribute('width', String(next.width));
++      else target.removeAttribute('width');
++      if (next.height) target.setAttribute('height', String(next.height));
++      else target.removeAttribute('height');
++      target.setAttribute('alt', next.alt || '');
++      target.setAttribute('src', next.src);
++    }
++
++    function commitChoice(choice) {
++      current = choice;
++      setImageAttributes(image, choice.image);
++      root.dataset.bcsseImageMode = choice.image.mode || 'product';
++      links.forEach(function (link) {
++        link.href = choice.url;
++        link.setAttribute('aria-label', choice.title);
++      });
++      if (color) color.textContent = choice.label || '';
++      price.textContent = choice.price || '';
++      input.value = choice.id;
++      updateControls();
++    }
++
++    function preload(nextImage) {
++      return new Promise(function (resolve, reject) {
++        var probe = new Image();
++        var settled = false;
++        function finish(error) {
++          if (settled) return;
++          settled = true;
++          probe.onload = null;
++          probe.onerror = null;
++          if (cancelImage === cancel) cancelImage = null;
++          if (error) reject(error);
++          else resolve();
++        }
++        function cancel() { finish(new Error('cancelled')); }
++        cancelImage = cancel;
++        probe.onload = function () { finish(probe.naturalWidth ? null : new Error('image')); };
++        probe.onerror = function () { finish(new Error('image')); };
++        if (nextImage.sizes) probe.sizes = nextImage.sizes;
++        if (nextImage.srcset) probe.srcset = nextImage.srcset;
++        probe.src = nextImage.src;
++        if (probe.complete && probe.naturalWidth) finish();
++      });
++    }
++
++    function selectChoice(key) {
++      if (pending || destroyed || !choices.has(key)) return;
++      imageToken += 1;
++      var token = imageToken;
++      if (cancelImage) cancelImage();
++      if (current.key === key) {
++        imageLoading = false;
++        updateControls();
++        setStatus('');
++        return;
++      }
++      var choice = choices.get(key);
++      imageLoading = true;
++      setStatus(label('bcsseLoadingImageLabel'));
++      updateControls();
++      preload(choice.image).then(function () {
++        if (destroyed || token !== imageToken) return;
++        imageLoading = false;
++        commitChoice(choice);
++        setStatus('');
++      }).catch(function () {
++        if (destroyed || token !== imageToken) return;
++        imageLoading = false;
++        updateControls();
++        setStatus(label('bcsseImageErrorLabel'));
++      });
++    }
++
++    function onClick(event) {
++      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
++      var swatch = event.target.closest('[data-bcsse-shop-choice]');
++      if (!swatch || !root.contains(swatch) || !choices.has(swatch.dataset.bcsseShopChoice)) return;
++      event.preventDefault();
++      selectChoice(swatch.dataset.bcsseShopChoice);
++    }
++
++    function onKeyDown(event) {
++      if (event.defaultPrevented || (event.key !== ' ' && event.code !== 'Space') || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
++      var swatch = event.target.closest('[data-bcsse-shop-choice]');
++      if (!swatch || !root.contains(swatch) || !choices.has(swatch.dataset.bcsseShopChoice)) return;
++      event.preventDefault();
++      selectChoice(swatch.dataset.bcsseShopChoice);
++    }
++
++    async function addToCart(choice) {
++      if (destroyed) return;
++      var cart = cartUI();
++      var sections = cartSections(cart);
++      var body = { id: choice.id, quantity: 1 };
++      if (sections.length) {
++        body.sections = sections;
++        body.sections_url = window.location.pathname;
++      }
++      var response;
++      var result;
++      try {
++        response = await fetch(cartEndpoint(), {
++          method: 'POST',
++          credentials: 'same-origin',
++          headers: { 'Content-Type': 'application/json', Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
++          body: JSON.stringify(body)
++        });
++        result = await response.json();
++      } catch (error) {
++        setStatus(label('bcsseErrorLabel'), true);
++        return;
++      }
++
++      if (!response.ok || !result || result.status || !result.id) {
++        setStatus((result && typeof result.description === 'string' && result.description) || label('bcsseErrorLabel'), true);
++        return;
++      }
++
++      setStatus(label('bcsseAddedLabel').split('__product__').join(choice.title), true);
++      if (cart && cart.tagName === 'CART-NOTIFICATION') {
++        try { updateCartBadge(result); } catch (error) {}
++      } else if (cart && typeof cart.renderContents === 'function' && sections.length && result.sections &&
++          sections.every(function (id) { return typeof result.sections[id] === 'string' && result.sections[id].trim(); }) &&
++          result.id) {
++        try {
++          if (typeof cart.setActiveElement === 'function' && button.isConnected) cart.setActiveElement(button);
++          if (cart.classList.contains('is-empty')) cart.classList.remove('is-empty');
++          cart.renderContents(result);
++        } catch (error) {}
++      }
++      await publishCart(choice, result);
++    }
++
++    function onSubmit(event) {
++      event.preventDefault();
++      if (pending || imageLoading || !current.available || destroyed) return;
++      var restoreButtonFocus = document.activeElement === button;
++      pending = true;
++      var choice = current;
++      setStatus(label('bcsseLoadingLabel'));
++      updateControls();
++      queueCart(function () { return addToCart(choice); }).catch(function () {
++        setStatus(label('bcsseErrorLabel'), true);
++      }).finally(function () {
++        pending = false;
++        updateControls();
++        if (restoreButtonFocus && !destroyed && button.isConnected && !button.disabled && document.activeElement === document.body) {
++          button.focus({ preventScroll: true });
++        }
++      });
++    }
++
++    swatches.forEach(function (swatch) { swatch.setAttribute('role', 'button'); });
++    root.addEventListener('click', onClick);
++    root.addEventListener('keydown', onKeyDown);
++    form.addEventListener('submit', onSubmit);
++    root.dataset.bcsseShopReady = 'true';
++    commitChoice(current);
++
++    return {
++      destroy: function () {
++        destroyed = true;
++        imageToken += 1;
++        if (cancelImage) cancelImage();
++        root.removeEventListener('click', onClick);
++        root.removeEventListener('keydown', onKeyDown);
++        form.removeEventListener('submit', onSubmit);
++        swatches.forEach(function (swatch, index) {
++          originalSwatchAttributes[index].forEach(function (attribute) {
++            if (attribute[1] === null) swatch.removeAttribute(attribute[0]);
++            else swatch.setAttribute(attribute[0], attribute[1]);
++          });
++        });
++        button.disabled = !current.available;
++        button.setAttribute('aria-disabled', String(button.disabled));
++        button.removeAttribute('aria-busy');
++        buttonLabel.textContent = current.available ? label('bcsseAddLabel') : label('bcsseSoldOutLabel');
++        delete root.dataset.bcsseShopReady;
++        delete root.dataset.bcsseShopBusy;
++      }
++    };
++  }
++
++  function init(scope) {
++    var roots = Array.from(scope.querySelectorAll(selector));
++    if (scope.matches && scope.matches(selector)) roots.unshift(scope);
++    roots.forEach(function (root) {
++      if (instances.has(root)) return;
++      var controller = createController(root);
++      if (controller) instances.set(root, controller);
++    });
++  }
++
++  document.addEventListener('shopify:section:load', function (event) { init(event.target); });
++  document.addEventListener('shopify:section:unload', function (event) {
++    instances.forEach(function (controller, root) {
++      if (event.target === root || event.target.contains(root)) {
++        controller.destroy();
++        instances.delete(root);
++      }
++    });
++  });
++  window.BCSunshowerShop = { init: init };
++  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { init(document); }, { once: true });
++  else init(document);
++})();
+diff --git a/locales/en.default.json b/locales/en.default.json
+index fefdcc289323cd6639c454a5b5b3f855a5f3d5ec..021ed2988e09bad7eb68885b38c3d9a38bfa78e3 100644
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -1116,5 +1116,18 @@
+       "description": "Explore the UV function of Sunshower Round PLUS."
+     },
+     "accessories_heading": "Complete your shower moment"
++  },
++  "ss_quick_shop": {
++      "add": "Add to cart",
++      "adding": "Adding…",
++      "loading_image": "Loading photo…",
++      "added": "{{ product }} was added.",
++      "error": "Adding could not be confirmed. Check your cart before trying again.",
++      "image_error": "This photo could not be loaded. Your previous colour selection is unchanged.",
++      "unavailable": "Unavailable",
++      "view_cart": "View cart",
++      "details": "Product details",
++      "color": "Colour",
++      "color_overview": "Photo shows all colours"
+   }
+ }
+diff --git a/locales/nl.json b/locales/nl.json
+index b9e07cf76982214cca8c25f55a6b9c17ea9be35c..7f09f0dde7a951cce2cf7a0cead1d8e8b87b3350 100644
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -1116,5 +1116,18 @@
+       "description": "Ontdek de UV-functie van Sunshower Round PLUS."
+     },
+     "accessories_heading": "Maak je moment compleet"
++  },
++  "ss_quick_shop": {
++      "add": "In winkelwagen",
++      "adding": "Toevoegen…",
++      "loading_image": "Foto laden…",
++      "added": "{{ product }} is toegevoegd.",
++      "error": "Toevoegen kon niet worden bevestigd. Controleer je winkelwagen voordat je opnieuw probeert.",
++      "image_error": "Deze foto kon niet worden geladen. Je vorige kleurkeuze is behouden.",
++      "unavailable": "Niet beschikbaar",
++      "view_cart": "Bekijk winkelwagen",
++      "details": "Productdetails",
++      "color": "Kleur",
++      "color_overview": "Foto toont alle kleuren"
+   }
+ }
+diff --git a/sections/bc-sunshower-landing.liquid b/sections/bc-sunshower-landing.liquid
+index 12b14c452ebfeac79a59441a403ef0c68a02823c..66930e851d011cf4f4ff54099bfed1afdcb33bae 100644
+--- a/sections/bc-sunshower-landing.liquid
++++ b/sections/bc-sunshower-landing.liquid
+@@ -1,5 +1,6 @@
+ {{ 'bc-sunshower-landing.css' | asset_url | stylesheet_tag }}
+ <script src="{{ 'bc-sunshower-mobile.js' | asset_url }}" defer="defer"></script>
++<script src="{{ 'bc-sunshower-shop.js' | asset_url }}" defer="defer"></script>
+ 
+ {%- liquid
+   assign one_product = section.settings.one_product
+@@ -206,63 +207,11 @@
+         {%- for block in section.blocks -%}
+             {%- liquid
+               assign accessory_product = block.settings.product
+-              assign accessory_image = block.settings.image_override | default: accessory_product.featured_image
+               assign accessory_kind = block.settings.kind | default: 'cleaning'
+-              assign accessory_image_width = 720
+-              assign accessory_image_widths = '180, 270, 360, 540, 720'
+-              assign accessory_image_sizes = '(min-width: 1440px) 210px, (min-width: 990px) 15vw, (min-width: 750px) 25vw, 40vw'
+-              if accessory_kind == 'seat'
+-                assign accessory_image_width = 2000
+-                assign accessory_image_widths = '540, 720, 1080, 1500, 2000'
+-                assign accessory_image_sizes = '(min-width: 1440px) 630px, (min-width: 990px) 45vw, (min-width: 750px) 75vw, 240vw'
+-              endif
+-              if accessory_kind == 'wiper'
+-                assign accessory_image_sizes = '(min-width: 1440px) 210px, (min-width: 990px) 15vw, (min-width: 750px) 25vw, 80vw'
+-              endif
+-              assign accessory_heading_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_heading'
+-              assign accessory_heading = accessory_heading_key | t
+-              assign accessory_description_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_description'
+-              assign accessory_button_key = 'ss_experience.accessories.product_button'
+-              if accessory_kind == 'seat'
+-                assign accessory_button_key = 'ss_experience.accessories.color_button'
+-              endif
+-              assign colors = 'white,black,grey,sand' | split: ','
+             -%}
+             {%- if accessory_product != blank -%}
+               {%- capture accessory_card -%}
+-              <article class="bcsse-accessory bcsse-accessory--{{ accessory_kind }}" {{ block.shopify_attributes }}>
+-                {%- if accessory_image != blank -%}
+-                  <a class="bcsse-accessory__media" href="{{ accessory_product.url }}" aria-label="{{ accessory_heading | escape }}">
+-                    {{- accessory_image | image_url: width: accessory_image_width | image_tag: class: 'bcsse-accessory__image', widths: accessory_image_widths, sizes: accessory_image_sizes, width: accessory_image.width, height: accessory_image.height, loading: 'lazy', alt: accessory_product.title -}}
+-                  </a>
+-                {%- endif -%}
+-                <div class="bcsse-accessory__body">
+-                  <h3 class="bcsse-accessory__title"><a href="{{ accessory_product.url }}">{{ accessory_heading }}</a></h3>
+-                  {%- if accessory_kind == 'cleaning' -%}
+-                    <p class="bcsse-accessory__description">{{ accessory_description_key | t }}</p>
+-                  {%- else -%}
+-                    <ul class="bcsse-swatches" aria-label="{{ 'ss_experience.accessories.colors_label' | t: product: accessory_heading | escape }}">
+-                      {%- for color in colors -%}
+-                        {%- liquid
+-                          assign color_setting = 'product_' | append: color
+-                          assign color_product = block.settings[color_setting]
+-                          assign color_label_key = 'ss_experience.colors.' | append: color
+-                          assign color_label = color_label_key | t
+-                          assign swatch_current = false
+-                          if color_product.id == accessory_product.id
+-                            assign swatch_current = true
+-                          endif
+-                        -%}
+-                        {%- if color_product != blank -%}
+-                          <li><a class="bcsse-swatch{% if swatch_current %} bcsse-swatch--selected{% endif %}" href="{{ color_product.url }}" aria-label="{{ 'ss_experience.accessories.color_link' | t: product: accessory_heading, color: color_label | escape }}" title="{{ color_label | escape }}"><span class="bcsse-swatch__color bcsse-swatch__color--{{ color }}" aria-hidden="true"></span></a></li>
+-                        {%- endif -%}
+-                      {%- endfor -%}
+-                    </ul>
+-                  {%- endif -%}
+-                  <p class="bcsse-accessory__price">{{ accessory_product.price | money }}</p>
+-                  <a class="bcsse-button bcsse-button--outline" href="{{ accessory_product.url }}">{{ accessory_button_key | t }} <span aria-hidden="true">→</span></a>
+-                </div>
+-              </article>
++                {%- render 'bc-sunshower-shop-card', block: block, section_id: section.id -%}
+               {%- endcapture -%}
+               {%- case accessory_kind -%}
+                 {%- when 'seat' -%}{%- assign accessory_seat_card = accessory_seat_card | append: accessory_card -%}
+diff --git a/snippets/bc-sunshower-shop-card.liquid b/snippets/bc-sunshower-shop-card.liquid
+new file mode 100644
+index 0000000000000000000000000000000000000000..5544beb2df4c3af09875272eb49d4ea2bcfac8f3
+--- /dev/null
++++ b/snippets/bc-sunshower-shop-card.liquid
+@@ -0,0 +1,126 @@
++{% doc %}
++Renders a Sunshower accessory with inline colour choices and a product form.
++@param {object} block - The accessory section block.
++@param {string} section_id - The containing section ID.
++@example
++{% render 'bc-sunshower-shop-card', block: block, section_id: section.id %}
++{% enddoc %}
++{%- liquid
++  assign accessory_product = block.settings.product
++  assign accessory_kind = block.settings.kind | default: 'cleaning'
++  assign accessory_heading_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_heading'
++  assign accessory_heading = accessory_heading_key | t
++  assign accessory_description_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_description'
++  assign colors = 'white,black,grey,sand' | split: ','
++  assign selected_key = 'default'
++  assign selected_label = ''
++  for color in colors
++    assign color_setting = 'product_' | append: color
++    assign color_product = block.settings[color_setting]
++    if color_product != blank and color_product.id == accessory_product.id
++      assign selected_key = color
++      assign color_label_key = 'ss_experience.colors.' | append: color
++      assign selected_label = color_label_key | t
++    endif
++  endfor
++  assign accessory_variant = accessory_product.selected_or_first_available_variant
++  assign accessory_image = block.settings.image_override | default: accessory_product.featured_image
++  assign accessory_image_width = 1080
++  assign accessory_image_widths = '360, 540, 720, 1080'
++  assign accessory_image_sizes = '(min-width: 990px) 25vw, 80vw'
++  assign image_mode = 'product'
++  if accessory_kind == 'seat'
++    assign image_mode = 'lifestyle'
++    assign accessory_image_width = 2000
++    assign accessory_image_widths = '720, 1080, 1500, 2000'
++    assign accessory_image_sizes = '(min-width: 1440px) 630px, (min-width: 990px) 75vw, 240vw'
++  endif
++  assign shop_form_id = 'bcsse-shop-' | append: section_id | append: '-' | append: block.id
++  assign shop_status_id = shop_form_id | append: '-status'
++  assign choice_keys = 'default,white,black,grey,sand' | split: ','
++-%}
++<article class="bcsse-accessory bcsse-accessory--{{ accessory_kind }}" data-bcsse-shop-card data-bcsse-image-mode="{{ image_mode }}" data-bcsse-add-label="{{ 'ss_quick_shop.add' | t | escape }}" data-bcsse-loading-label="{{ 'ss_quick_shop.adding' | t | escape }}" data-bcsse-loading-image-label="{{ 'ss_quick_shop.loading_image' | t | escape }}" data-bcsse-added-label="{{ 'ss_quick_shop.added' | t: product: '__product__' | escape }}" data-bcsse-error-label="{{ 'ss_quick_shop.error' | t | escape }}" data-bcsse-image-error-label="{{ 'ss_quick_shop.image_error' | t | escape }}" data-bcsse-sold-out-label="{{ 'ss_quick_shop.unavailable' | t | escape }}" {{ block.shopify_attributes }}>
++  {%- if accessory_image != blank -%}
++    <div class="bcsse-accessory__media">
++      {{- accessory_image | image_url: width: accessory_image_width | image_tag: class: 'bcsse-accessory__image', widths: accessory_image_widths, sizes: accessory_image_sizes, width: accessory_image.width, height: accessory_image.height, loading: 'lazy', alt: accessory_product.title, data-bcsse-shop-image: '' -}}
++    </div>
++  {%- endif -%}
++  <div class="bcsse-accessory__body">
++    <h3 class="bcsse-accessory__title">{{ accessory_heading }}</h3>
++    {%- if accessory_kind == 'cleaning' -%}
++      <p class="bcsse-accessory__description">{{ accessory_description_key | t }}</p>
++    {%- else -%}
++      <ul class="bcsse-swatches" aria-label="{{ 'ss_experience.accessories.colors_label' | t: product: accessory_heading | escape }}">
++        {%- for color in colors -%}
++          {%- liquid
++            assign color_setting = 'product_' | append: color
++            assign color_product = block.settings[color_setting]
++            assign color_label_key = 'ss_experience.colors.' | append: color
++            assign color_label = color_label_key | t
++          -%}
++          {%- if color_product != blank -%}
++            <li><a class="bcsse-swatch{% if color == selected_key %} bcsse-swatch--selected{% endif %}" href="{{ color_product.url }}" data-bcsse-shop-choice="{{ color }}" aria-label="{{ 'ss_experience.accessories.color_link' | t: product: accessory_heading, color: color_label | escape }}" title="{{ color_label | escape }}"{% if color == selected_key %} aria-current="true"{% endif %}><span class="bcsse-swatch__color bcsse-swatch__color--{{ color }}" aria-hidden="true"></span></a></li>
++          {%- endif -%}
++        {%- endfor -%}
++      </ul>
++      <p class="bcsse-shop-color"><span class="visually-hidden">{{ 'ss_quick_shop.color' | t }}: </span><span data-bcsse-shop-color>{{ selected_label }}</span></p>
++      {%- if accessory_kind == 'wiper' -%}<p class="bcsse-shop-image-note">{{ 'ss_quick_shop.color_overview' | t }}</p>{%- endif -%}
++    {%- endif -%}
++    <p class="bcsse-accessory__price" data-bcsse-shop-price>{{ accessory_variant.price | money }}</p>
++    {%- form 'product', accessory_product, id: shop_form_id, class: 'bcsse-shop-form', data-bcsse-shop-form: '' -%}
++      <input type="hidden" name="id" value="{{ accessory_variant.id }}">
++      <input type="hidden" name="quantity" value="1">
++      <button type="submit" name="add" class="bcsse-button bcsse-button--outline" data-bcsse-shop-submit aria-describedby="{{ shop_status_id }}"{% unless accessory_variant.available %} disabled{% endunless %}><span data-bcsse-shop-button-label>{% if accessory_variant.available %}{{ 'ss_quick_shop.add' | t }}{% else %}{{ 'ss_quick_shop.unavailable' | t }}{% endif %}</span></button>
++    {%- endform -%}
++    <p class="bcsse-shop-status" id="{{ shop_status_id }}" role="status" aria-live="polite" data-bcsse-shop-status></p>
++    <a class="bcsse-shop-cart-link" href="{{ routes.cart_url }}" data-bcsse-shop-cart-link hidden>{{ 'ss_quick_shop.view_cart' | t }}</a>
++    <a class="bcsse-shop-details" href="{{ accessory_product.url }}" data-bcsse-shop-link>{{ 'ss_quick_shop.details' | t }}</a>
++  </div>
++  {%- capture shop_data -%}
++    {"initial":{{ selected_key | json }},"choices":[
++    {%- assign choice_separator = '' -%}
++    {%- for choice_key in choice_keys -%}
++      {%- liquid
++        assign choice_product = nil
++        assign choice_label = ''
++        if choice_key == 'default'
++          if selected_key == 'default'
++            assign choice_product = accessory_product
++          endif
++        else
++          assign choice_setting = 'product_' | append: choice_key
++          assign choice_product = block.settings[choice_setting]
++          assign choice_label_key = 'ss_experience.colors.' | append: choice_key
++          assign choice_label = choice_label_key | t
++        endif
++      -%}
++      {%- if choice_product != blank and choice_product.id -%}
++        {%- liquid
++          assign choice_variant = choice_product.selected_or_first_available_variant
++          assign choice_image = choice_product.featured_image
++          if choice_product.id == accessory_product.id
++            assign choice_image = accessory_image
++          endif
++          assign choice_image_url = ''
++          assign choice_srcset = ''
++          if choice_image != blank
++            assign choice_image_url = choice_image | image_url: width: accessory_image_width
++            assign src_widths = accessory_image_widths | split: ', '
++            for src_width in src_widths
++              assign src_number = src_width | plus: 0
++              assign src_url = choice_image | image_url: width: src_number
++              assign choice_srcset = choice_srcset | append: src_url | append: ' ' | append: src_width | append: 'w'
++              unless forloop.last
++                assign choice_srcset = choice_srcset | append: ', '
++              endunless
++            endfor
++          endif
++        -%}
++        {{- choice_separator -}}{"key":{{ choice_key | json }},"id":{{ choice_variant.id | append: '' | json }},"available":{{ choice_variant.available | json }},"url":{{ choice_product.url | json }},"title":{{ choice_product.title | json }},"label":{{ choice_label | json }},"price":{{ choice_variant.price | money | json }},"image":{"src":{{ choice_image_url | json }},"srcset":{{ choice_srcset | json }},"sizes":{{ accessory_image_sizes | json }},"width":{{ choice_image.width | default: 1 | json }},"height":{{ choice_image.height | default: 1 | json }},"alt":{{ choice_product.title | json }},"mode":{{ image_mode | json }}}}
++        {%- assign choice_separator = ',' -%}
++      {%- endif -%}
++    {%- endfor -%}
++    ]}
++  {%- endcapture -%}
++  <script type="application/json" data-bcsse-shop-data>{{ shop_data | replace: '<', '\u003c' }}</script>
++</article>

@@ -1,0 +1,1245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "bc": {
+    "inbouw": {
+      "title": "Inbouwdeel meebestellen?",
+      "intro": "Voor de montage is dit inbouwdeel nodig:",
+      "yes": "Ja, voeg toe",
+      "no": "Nee, ik heb het inbouwdeel al",
+      "quantity_note": "Per afbouwdeel voegen we bij “Ja” één inbouwdeel toe.",
+      "unavailable": "Dit inbouwdeel is momenteel niet bestelbaar. Je kunt het afbouwdeel wel zonder inbouwdeel bestellen.",
+      "invalid": "De combinatie kan nu niet worden gecontroleerd. Neem contact met ons op voordat je bestelt.",
+      "noscript": "Hier bestel je alleen het afbouwdeel. Bestel het passende inbouwdeel apart via deze link.",
+      "body_link": "Bekijk inbouwdeel {{ sku }}",
+      "cart_link": "Controleer winkelwagen",
+      "message_choice": "Kies of je het inbouwdeel wilt meebestellen.",
+      "message_unavailable": "Dit inbouwdeel is niet beschikbaar. Controleer je keuze of neem contact met ons op.",
+      "message_changed": "De gekozen uitvoering is gewijzigd. Laad de pagina opnieuw en controleer het inbouwdeel.",
+      "message_quantity": "Vul een geldig aantal in.",
+      "message_uncertain": "Toevoegen kon niet worden bevestigd. Controleer eerst je winkelwagen voordat je de artikelen opnieuw toevoegt.",
+      "message_ready": "Maak een keuze voor het inbouwdeel.",
+      "message_loading": "De inbouwdeelkeuze is nog niet geladen. Laad de pagina opnieuw en probeer het nogmaals."
+    }
+  },
+  "bc_advice": {
+    "brand": "Sunshower",
+    "home": "Home",
+    "advice": "Advies & inspiratie",
+    "eyebrow": "Sunshower · Keuzehulp",
+    "compare": "Bekijk het verschil",
+    "models": "Bekijk Sunshower",
+    "contents": "In deze keuzehulp",
+    "read_time": "{{ minutes }} min leestijd",
+    "one_name": "Round ONE",
+    "plus_name": "Round PLUS",
+    "one_function": "Alleen infrarood",
+    "plus_function": "Infrarood + uv",
+    "one_alt": "Sunshower Round ONE met verwarmend infrarood",
+    "plus_alt": "Sunshower Round PLUS met de extra uv-functie",
+    "help_heading": "Even overleggen?",
+    "help_text": "We denken graag met je mee over functie, formaat en montage.",
+    "help_link": "Vraag ons advies",
+    "back": "Terug naar alle artikelen",
+    "comparison_label": "Infrarood en uv vergeleken"
+  },
+  "bc_product_documents": {"drawing":"Lijntekening","manual":"Handleiding","document":"Document"},
+  "bc_pilot_category": {"kranen":"Kranen","wastafelkranen":"Wastafelkranen","opbouw":"Opbouw wastafelkranen"},
+  "bc_cart_page": {
+    "eyebrow": "Jouw badkamer begint hier",
+    "intro": "Controleer je artikelen en bekijk meteen je totaal.",
+    "continue_shopping": "Verder winkelen",
+    "items_heading": "Jouw artikelen",
+    "summary_eyebrow": "Nog even controleren",
+    "summary_heading": "Jouw overzicht",
+    "items_subtotal": {
+      "one": "Artikelen ({{ count }})",
+      "other": "Artikelen ({{ count }})"
+    },
+    "checkout": "Doorgaan naar afrekenen",
+    "secure_checkout": "Veilig afrekenen",
+    "empty_intro": "Maak ruimte voor iets moois. Ontdek alles voor jouw badkamer.",
+    "per_item": "per stuk",
+    "product_costs": "Producten",
+    "discounts": "Korting",
+    "products_after_discounts": "Producten na korting",
+    "shipping_nl": "Verzending (Nederland)",
+    "shipping": "Verzending",
+    "free": "Gratis",
+    "calculated_at_checkout": "Bij afrekenen",
+    "no_shipping": "Niet nodig",
+    "total": "Totaal",
+    "estimated_total": "Totaal voor Nederland",
+    "free_shipping_rule": "Gratis verzending bij een producttotaal boven {{ amount }} na korting.",
+    "shipping_estimate": "Voor een Nederlands bezorgadres. Je definitieve totaal staat bij afrekenen.",
+    "shipping_destination": "Verzendkosten worden berekend zodra je je bezorgadres invult bij afrekenen.",
+    "shipping_none": "Deze artikelen hoeven niet te worden verzonden.",
+    "taxes_included": "Inclusief btw.",
+    "duties_taxes_included": "Inclusief belastingen en invoerrechten.",
+    "duties_included": "Inclusief invoerrechten. Belastingen worden bij afrekenen berekend.",
+    "taxes_at_checkout": "Belastingen worden bij afrekenen berekend.",
+    "discount_label": "Heb je een kortingscode?",
+    "discount_placeholder": "Vul je code in",
+    "discount_apply": "Toepassen",
+    "discount_no_js": "Je kunt je kortingscode bij afrekenen invullen.",
+    "discount_invalid": "Deze code geeft nu geen korting. Controleer de code en de voorwaarden.",
+    "discount_success": "Je kortingscode is toegepast.",
+    "discount_shipping": "Je verzendkorting wordt bij afrekenen berekend.",
+    "discount_error": "Je code kon niet worden bevestigd. Vernieuw de winkelwagen om de actuele korting te zien.",
+    "discount_removed": "De kortingscode is verwijderd.",
+    "discount_loading": "Je kortingscode wordt gecontroleerd…",
+    "discount_code_label": "Kortingscode",
+    "discount_remove": "Verwijder kortingscode [code]",
+    "discount_pending": "Code opgeslagen; wordt bij afrekenen gecontroleerd.",
+    "discount_empty": "Vul een kortingscode in.",
+    "product_total": "Producttotaal"
+  },
+  "general": {
+    "password_page": {
+      "login_form_heading": "Ga winkel binnen met wachtwoord:",
+      "login_password_button": "Ga naar binnen met wachtwoord",
+      "login_form_password_label": "Wachtwoord",
+      "login_form_password_placeholder": "Je wachtwoord",
+      "login_form_error": "Wachtwoord onjuist!",
+      "login_form_submit": "Invoeren",
+      "admin_link_html": "Ben je de winkeleigenaar? <a href=\"/admin\" class=\"link underlined-link\">Log hier in</a>",
+      "powered_by_shopify_html": "Deze winkel wordt door {{ shopify }} aangedreven"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Delen op Facebook",
+        "share_on_twitter": "Delen op X",
+        "share_on_pinterest": "Pinnen op Pinterest"
+      },
+      "links": {
+        "twitter": "X (voorheen Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Terugkeren naar winkel",
+    "pagination": {
+      "label": "Paginering",
+      "page": "Pagina {{ number }}",
+      "next": "Volgende pagina",
+      "previous": "Vorige pagina"
+    },
+    "search": {
+      "search": "Zoeken",
+      "reset": "Zoekterm wissen"
+    },
+    "cart": {
+      "view": "Winkelwagen bekijken ({{ count }})",
+      "item_added": "Artikel toegevoegd aan winkelwagen",
+      "view_empty_cart": "Winkelwagen bekijken"
+    },
+    "share": {
+      "copy_to_clipboard": "Link kopiëren",
+      "share_url": "Link",
+      "success_message": "Link gekopieerd naar klembord",
+      "close": "Delen sluiten"
+    },
+    "slider": {
+      "of": "van",
+      "next_slide": "Naar rechts schuiven",
+      "previous_slide": "Naar links schuiven",
+      "name": "Schuifregelaar"
+    }
+  },
+  "newsletter": {
+    "label": "E‑mail",
+    "success": "Bedankt voor het abonneren",
+    "button_label": "Abonneren"
+  },
+  "accessibility": {
+    "skip_to_text": "Meteen naar de content",
+    "close": "Sluiten",
+    "unit_price_separator": "per",
+    "vendor": "Verkoper:",
+    "error": "Fout",
+    "refresh_page": "Een selectie kiezen resulteert in het geheel verversen van de pagina.",
+    "link_messages": {
+      "new_window": "Opent in een nieuw venster.",
+      "external": "Opent externe website."
+    },
+    "loading": "Bezig met laden...",
+    "skip_to_product_info": "Ga direct naar productinformatie",
+    "total_reviews": "totaal aantal recensies",
+    "star_reviews_info": "{{ rating_value }} van de {{ rating_max }} sterren",
+    "collapsible_content_title": "Inklapbare content",
+    "complementary_products": "Aanvullende producten"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Lees verder: {{ title }}",
+      "comments": {
+        "one": "{{ count }} reactie",
+        "other": "{{ count }} reacties"
+      },
+      "moderated": "Let op: opmerkingen moeten worden goedgekeurd voordat ze worden gepubliceerd.",
+      "comment_form_title": "Reactie plaatsen",
+      "name": "Naam",
+      "email": "E‑mail",
+      "message": "Reactie",
+      "post": "Plaats een reactie",
+      "back_to_blog": "Terug naar blog",
+      "share": "Dit artikelen delen",
+      "success": "Je reactie is geplaatst! Bedankt!",
+      "success_moderated": "Je reactie is geplaatst. Wij publiceren het zo; onze blog wordt gemodereerd."
+    }
+  },
+  "onboarding": {
+    "product_title": "Voorbeeld producttitel",
+    "collection_title": "De naam van je collectie"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Aan winkelwagen toevoegen",
+      "description": "Beschrijving",
+      "on_sale": "Aanbieding",
+      "quantity": {
+        "label": "Aantal",
+        "input_label": "Aantal voor {{ product }}",
+        "increase": "Aantal verhogen voor {{ product }}",
+        "decrease": "Aantal verlagen voor {{ product }}",
+        "minimum_of": "Minimum van {{ quantity }}",
+        "maximum_of": "Maximum van {{ quantity }}",
+        "multiples_of": "Stappen van {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in winkelwagen",
+        "note": "Hoeveelheidsregels bekijken",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Max. {{ quantity }}",
+        "in_cart_aria_label": "Aantal ({{ quantity }} in winkelwagen)"
+      },
+      "price": {
+        "from_price_html": "Vanaf {{ price }}",
+        "regular_price": "Normale prijs",
+        "sale_price": "Aanbiedingsprijs",
+        "unit_price": "Eenheidsprijs"
+      },
+      "share": "Dit product delen",
+      "sold_out": "Uitverkocht",
+      "unavailable": "Niet beschikbaar",
+      "vendor": "Verkoper",
+      "video_exit_message": "{{ title }} opent een video op volledig scherm in hetzelfde venster.",
+      "xr_button": "Bekijk in je ruimte",
+      "xr_button_label": "Bekijk in je ruimte, laadt artikel in augmented reality-venster",
+      "pickup_availability": {
+        "view_store_info": "Winkelgegevens bekijken",
+        "check_other_stores": "Controleer de beschikbaarheid bij andere winkels",
+        "pick_up_available": "Afhaling is beschikbaar",
+        "pick_up_available_at_html": "Afhaling is beschikbaar bij <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Kan beschikbaarheid voor afhalen niet laden",
+        "refresh": "Vernieuwen"
+      },
+      "media": {
+        "open_media": "Media {{ index }} openen in modaal",
+        "play_model": "3D-viewer afspelen",
+        "play_video": "Video afspelen",
+        "gallery_viewer": "Gallery-weergave",
+        "load_image": "Afbeelding {{ index }} laden in gallery-weergave",
+        "load_model": "3D-model {{ index }} laden in gallery-weergave",
+        "load_video": "Video {{ index }} afspelen in gallery-weergave",
+        "image_available": "Afbeelding {{ index }} is nu beschikbaar in gallery-weergave"
+      },
+      "nested_label": "{{ title }} voor {{ parent_title }}",
+      "view_full_details": "Alle details bekijken",
+      "card_view": "Bekijk product",
+      "card_material": "Materiaal",
+      "card_colour": "Kleur",
+      "card_mounting": "Montage",
+      "card_type": "Productsoort",
+      "card_sku": "Artikelnummer",
+      "card_tax": "incl. btw",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij de checkout.",
+      "choose_options": "Opties kiezen",
+      "choose_product_options": "Opties kiezen voor {{ product_name }}",
+      "value_unavailable": "{{ option_value }} - Niet beschikbaar",
+      "variant_sold_out_or_unavailable": "Variant uitverkocht of niet beschikbaar",
+      "inventory_in_stock": "Op voorraad",
+      "inventory_in_stock_show_count": "{{ quantity }} op voorraad",
+      "inventory_low_stock": "Voorraad laag",
+      "inventory_low_stock_show_count": "Lage voorraad: nog maar {{ quantity }}",
+      "inventory_out_of_stock": "Niet op voorraad",
+      "sku": "SKU",
+      "inventory_out_of_stock_continue_selling": "Op voorraad",
+      "volume_pricing": {
+        "title": "Volumeprijsstelling",
+        "note": "Volumeprijsstelling beschikbaar",
+        "minimum": "Meer dan {{ quantity }}",
+        "price_range": "{{ minimum }} - {{ maximum }}",
+        "price_at_each_html": "{{ price }}/st."
+      },
+      "product_variants": "Productvarianten",
+      "taxes_included": "Belastingen inbegrepen.",
+      "duties_included": "Douanerechten inbegrepen.",
+      "duties_and_taxes_included": "Douanerechten en belastingen inbegrepen."
+    },
+    "modal": {
+      "label": "Mediagalerij"
+    },
+    "facets": {
+      "apply": "Toepassen",
+      "clear": "Wissen",
+      "clear_all": "Alles verwijderen",
+      "from": "Van",
+      "filter_and_sort": "Filteren en sorteren",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} geselecteerd",
+        "other": "{{ count }} geselecteerd"
+      },
+      "max_price": "De hoogste prijs is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} korting op {{ count }} producten",
+        "other": "{{ product_count }} korting op {{ count }} producten"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} producten"
+      },
+      "reset": "Opnieuw instellen",
+      "sort_button": "Sorteren",
+      "sort_by_label": "Sorteer op:",
+      "to": "Aan",
+      "clear_filter": "Filter verwijderen",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filters geselecteerd)",
+      "show_more": "Meer weergeven",
+      "show_less": "Minder weergeven",
+      "filter_and_operator_subtitle": "Alles matchen"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "Geen resultaten gevonden voor “{{ terms }}”. Controleer de spelling of gebruik een ander woord of een andere zin.",
+      "results_with_count": {
+        "one": "{{ count }} resultaat",
+        "other": "{{ count }} resultaten"
+      },
+      "title": "Zoekresultaten",
+      "page": "Pagina",
+      "products": "Producten",
+      "search_for": "Zoeken naar '{{ terms }}'",
+      "results_with_count_and_term": {
+        "one": "{{ count }} resultaat gevonden voor “{{ terms }}”",
+        "other": "{{ count }} resultaten gevonden voor “{{ terms }}”"
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} pagina",
+        "other": "{{ count }} pagina's"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestie",
+        "other": "{{ count }} suggesties"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} producten"
+      },
+      "suggestions": "Suggesties",
+      "pages": "Pagina's"
+    },
+    "cart": {
+      "cart": "Winkelwagen"
+    },
+    "contact": {
+      "form": {
+        "name": "Naam",
+        "email": "E‑mail",
+        "phone": "Telefoonnummer",
+        "comment": "Reactie",
+        "send": "Sturen",
+        "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
+        "error_heading": "Pas het volgende aan:",
+        "title": "Contactformulier"
+      }
+    },
+    "404": {
+      "title": "Pagina niet gevonden",
+      "subtext": "404"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Aankondiging",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} artikel",
+        "other": "{{ count }} artikelen"
+      }
+    },
+    "cart": {
+      "title": "Je winkelwagen",
+      "caption": "Artikelen in winkelwagen",
+      "remove_title": "{{ title }} verwijderen",
+      "note": "Speciale instructies voor bestelling",
+      "checkout": "Afrekenen",
+      "empty": "Je winkelwagen is leeg",
+      "cart_error": "Er is een fout opgetreden bij het bijwerken van je winkelwagen. Probeer het opnieuw.",
+      "cart_quantity_error_html": "Je kunt maar {{ quantity }} van dit artikel toevoegen aan je winkelwagen.",
+      "headings": {
+        "product": "Product",
+        "price": "Prijs",
+        "total": "Totaal",
+        "quantity": "Aantal",
+        "image": "Productafbeelding"
+      },
+      "update": "Bijwerken",
+      "login": {
+        "title": "Heb je een account?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> om sneller af te rekenen."
+      },
+      "estimated_total": "Geschat totaal",
+      "new_estimated_total": "Nieuw geschat totaal",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Douanerechten en belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Douanerechten en belastingen inbegrepen. Kortingen en verzending worden bij de checkout berekend.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Belastingen inbegrepen. Kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
+      "taxes_included_shipping_at_checkout_without_policy": "Belastingen inbegrepen. Kortingen en verzending worden bij de checkout berekend.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Douanerechten inbegrepen. Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Douanerechten inbegrepen. Belastingen, kortingen en verzending worden bij de checkout berekend.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Belastingen, kortingen en verzending worden bij de checkout berekend."
+    },
+    "footer": {
+      "payment": "Betaalmethoden"
+    },
+    "featured_blog": {
+      "view_all": "Alles bekijken",
+      "onboarding_title": "Blogpost",
+      "onboarding_content": "Geef je klanten een overzicht van je blogpost"
+    },
+    "featured_collection": {
+      "view_all": "Alles bekijken",
+      "view_all_label": "Bekijk alle producten in de collectie {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Alles bekijken"
+    },
+    "collection_template": {
+      "title": "Collectie",
+      "empty": "Geen producten gevonden",
+      "use_fewer_filters_html": "Minder filters gebruiken of <a class=\"{{ class }}\" href=\"{{ link }}\">alles verwijderen</a>"
+    },
+    "video": {
+      "load_video": "Video laden: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Dia laden",
+      "previous_slideshow": "Vorige dia",
+      "next_slideshow": "Volgende dia",
+      "pause_slideshow": "Diavoorstelling pauzeren",
+      "play_slideshow": "Diavoorstelling afspelen",
+      "carousel": "Carrousel",
+      "slide": "Dia"
+    },
+    "page": {
+      "title": "Paginatitel"
+    },
+    "announcements": {
+      "previous_announcement": "Vorige aankondiging",
+      "next_announcement": "Volgende aankondiging",
+      "carousel": "Carrousel",
+      "announcement": "Aankondiging",
+      "announcement_bar": "Aankondigingsbalk"
+    },
+    "quick_order_list": {
+      "product_total": "Productsubtotaal",
+      "view_cart": "Winkelwagen bekijken",
+      "each": "{{ money }}/st",
+      "product": "Product",
+      "variant": "Variant",
+      "variant_total": "Totaal variant",
+      "items_added": {
+        "one": "{{ quantity }} artikel toegevoegd",
+        "other": "{{ quantity }} artikelen toegevoegd"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} artikel verwijderd",
+        "other": "{{ quantity }} artikelen verwijderd"
+      },
+      "product_variants": "Productvarianten",
+      "total_items": "Totaal aantal artikelen",
+      "remove_all_items_confirmation": "Alle {{ quantity }} artikelen uit je winkelwagen verwijderen?",
+      "remove_all": "Alles verwijderen",
+      "cancel": "Annuleren",
+      "remove_all_single_item_confirmation": "1 artikel uit je winkelwagen verwijderen?",
+      "min_error": "Voor dit artikel geldt een minimum van {{ min }}.",
+      "max_error": "Voor dit artikel geldt een maximum van {{ max }}.",
+      "step_error": "Je kunt dit artikel alleen toevoegen in stappen van {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Land/regio",
+    "language_label": "Taal",
+    "update_language": "Taal bijwerken",
+    "update_country": "Land/regio bijwerken",
+    "search": "Zoeken",
+    "popular_countries_regions": "Populaire landen/regio's",
+    "country_results_count": "{{ count }} landen/regio's gevonden"
+  },
+  "customer": {
+    "account": {
+      "title": "Account",
+      "details": "Accountgegevens",
+      "view_addresses": "Adressen bekijken",
+      "return": "Terug naar Accountgegevens"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "Account activeren",
+      "subtext": "Maak je wachtwoord aan om je account te activeren.",
+      "password": "Wachtwoord",
+      "password_confirm": "Wachtwoord bevestigen",
+      "submit": "Account activeren",
+      "cancel": "Uitnodiging afwijzen"
+    },
+    "addresses": {
+      "title": "Adressen",
+      "default": "Standaard",
+      "add_new": "Voeg een nieuw adres toe",
+      "edit_address": "Adres bewerken",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "company": "Bedrijf",
+      "address1": "Adres 1",
+      "address2": "Adres 2",
+      "city": "Plaats",
+      "country": "Land/regio",
+      "province": "Provincie",
+      "zip": "Postcode",
+      "phone": "Telefoonnummer",
+      "set_default": "Als standaard adres instellen",
+      "add": "Adres toevoegen",
+      "update": "Adres bijwerken",
+      "cancel": "Annuleren",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "delete_confirm": "Weet je zeker dat je dit adres wilt verwijderen?"
+    },
+    "log_in": "Inloggen",
+    "log_out": "Uitloggen",
+    "login_page": {
+      "cancel": "Annuleren",
+      "create_account": "Account aanmaken",
+      "email": "E‑mail",
+      "forgot_password": "Wachtwoord vergeten?",
+      "guest_continue": "Doorgaan",
+      "guest_title": "Doorgaan als gast",
+      "password": "Wachtwoord",
+      "title": "Inloggegevens",
+      "sign_in": "Inloggen",
+      "submit": "Verzenden",
+      "alternate_provider_separator": "of"
+    },
+    "orders": {
+      "title": "Besteloverzicht",
+      "order_number": "Bestelling",
+      "order_number_link": "Bestelnummer {{ number }}",
+      "date": "Datum",
+      "payment_status": "Betaalstatus",
+      "fulfillment_status": "Fulfilmentstatus",
+      "total": "Totaal",
+      "none": "Je hebt nog geen bestellingen geplaatst."
+    },
+    "recover_password": {
+      "title": "Wachtwoord opnieuw instellen",
+      "subtext": "Wij sturen je een e-mail om je wachtwoord opnieuw in te stellen",
+      "success": "We hebben je een e-mail gestuurd met een link om je wachtwoord opnieuw in te stellen."
+    },
+    "register": {
+      "title": "Account aanmaken",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "email": "E‑mail",
+      "password": "Wachtwoord",
+      "submit": "Aanmaken"
+    },
+    "reset_password": {
+      "title": "Account-wachtwoord opnieuw instellen",
+      "subtext": "Voer een nieuw wachtwoord in",
+      "password": "Wachtwoord",
+      "password_confirm": "Wachtwoord bevestigen",
+      "submit": "Wachtwoord opnieuw instellen"
+    },
+    "order": {
+      "title": "Bestelling {{ name }}",
+      "date_html": "Geplaatst op {{ date }}",
+      "cancelled_html": "Bestelling geannuleerd op {{ date }}",
+      "cancelled_reason": "Reden: {{ reason }}",
+      "billing_address": "Factuuradres",
+      "payment_status": "Betaalstatus",
+      "shipping_address": "Bezorgadres",
+      "fulfillment_status": "Fulfilmentstatus",
+      "discount": "Korting",
+      "shipping": "Verzending",
+      "tax": "Belasting",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Prijs",
+      "quantity": "Aantal",
+      "total": "Totaal",
+      "fulfilled_at_html": "Voldaan {{ date }}",
+      "track_shipment": "Volg verzending",
+      "tracking_url": "Volglink",
+      "tracking_company": "Vervoerder",
+      "tracking_number": "Trackingnummer",
+      "subtotal": "Subtotaal",
+      "total_duties": "Douanerechten",
+      "total_refunded": "Terugbetaald"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Dit is het saldo van de cadeaubon ter waarde van {{ value }} voor {{ shop }}",
+      "subtext": "Je cadeaubon",
+      "gift_card_code": "Cadeaubon code",
+      "shop_link": "Onlinewinkel bezoeken",
+      "add_to_apple_wallet": "Aan Apple Wallet toevoegen",
+      "qr_image_alt": "QR-code — scannen om cadeaubon te verzilveren",
+      "copy_code": "Cadeauboncode kopiëren",
+      "expired": "Verlopen",
+      "copy_code_success": "Code gekopieerd",
+      "how_to_use_gift_card": "Gebruik de cadeauboncode online of de QR-code in de winkel",
+      "expiration_date": "Verloopt op {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Ik wil dit als cadeau sturen",
+      "email_label": "E-mailadres ontvanger",
+      "email": "E‑mailadres",
+      "name_label": "Naam ontvanger (optioneel)",
+      "name": "Naam",
+      "message_label": "Bericht (optioneel)",
+      "message": "Bericht",
+      "max_characters": "Maximaal {{ max_chars }} tekens",
+      "email_label_optional_for_no_js_behavior": "E-mailadres ontvanger (optioneel)",
+      "send_on": "JJJJ-MM-DD",
+      "send_on_label": "Verzenden op (optioneel)",
+      "expanded": "Formulier voor ontvanger cadeaubon uitgevouwen",
+      "collapsed": "Formulier voor ontvanger cadeaubon ingeklapt"
+    }
+  },
+  "bc_collection": {
+    "intro": {
+      "kranen": "Een kraan bepaalt de uitstraling én het dagelijks comfort van je badkamer. Kies hieronder waarvoor je een kraan zoekt en ontdek de modellen, kleuren en afwerkingen die daarbij passen.",
+      "wastafelkranen": "Vind een wastafelkraan die past bij jouw wastafel en badkamerstijl. Kies voor opbouw of inbouw en verfijn het assortiment op de kenmerken die voor jou belangrijk zijn.",
+      "opbouw": "Een opbouw wastafelkraan plaats je op de wastafel of het wastafelblad. Let bij je keuze op de hoogte, de lengte van de uitloop en de ruimte rond je wastafel.",
+      "inbouw": "Met een inbouw wastafelkraan komen de uitloop en bediening uit de wand. Controleer de uitlooplengte, de montagepositie en welk inbouwdeel bij het gekozen model hoort.",
+      "badkranen": "Kies een badkraan die past bij je bad en de beschikbare aansluitingen. Ontdek opbouw-, inbouw- en vrijstaande modellen en kies de afwerking die jouw badkamer compleet maakt.",
+      "douchekranen": "Kies de bediening en montage die bij jouw douche passen. Vergelijk opbouw- en inbouwkranen en controleer welke aansluitingen en onderdelen je nodig hebt.",
+      "general": "Ontdek {{ category }} voor jouw badkamer. Kies een passende uitvoering en let op de afmetingen, de montage en de afwerking."
+    },
+    "selected_filters": "Geselecteerde filters",
+    "filters_and_sorting": "Filteren en sorteren",
+    "empty": {
+      "title": "Op zoek naar een passend product?",
+      "body": "Er staan op dit moment geen producten in {{ category }}. Neem contact met ons op voor hulp bij het vinden van een passend artikel.",
+      "filtered": "Er zijn geen producten die bij deze combinatie van filters passen. Verwijder een filter of wis je selectie om verder te kijken."
+    },
+    "choice_help": "Hulp bij kiezen",
+    "faq_title": "Veelgestelde vragen over {{ category }}",
+    "help_title": "Twijfel je over je keuze?",
+    "help_body": "We denken graag mee over een product dat bij jouw badkamer past.",
+    "contact": "Vraag ons advies",
+    "faucets": {
+      "heading": "De juiste kraan begint bij drie keuzes.",
+      "intro": "Kijk eerst naar de montage en de plek waar je de kraan gebruikt. Kies daarna de afwerking die past bij de rest van je badkamer.",
+      "title_1": "Kies de montage",
+      "body_1": "Bij opbouw blijft de kraan zichtbaar op de wastafel of tegen de wand. Bij inbouw zit een deel in de wand. Controleer vooraf of je aansluitingen en beschikbare ruimte passen.",
+      "title_2": "Let op hoogte en uitloop",
+      "body_2": "De uitloop moet prettig boven de wastafel of het bad uitkomen. Meet de beschikbare ruimte en houd rekening met de hoogte van een eventuele opzetwastafel.",
+      "title_3": "Stem de afwerking af",
+      "body_3": "Combineer de kraan met je douche, accessoires en overige sanitair. Controleer de exacte kleurnaam en afwerking: vergelijkbare kleuren kunnen per merk verschillen."
+    },
+    "general": {
+      "heading": "Kies wat past bij jouw badkamer.",
+      "intro": "Met deze drie aandachtspunten vind je een uitvoering die past bij je ruimte en je wensen.",
+      "title_1": "Meet je ruimte",
+      "body_1": "Controleer de afmetingen en houd rekening met de ruimte die nodig is om het product te gebruiken en te onderhouden.",
+      "title_2": "Controleer de montage",
+      "body_2": "Bekijk de aansluitingen, de manier van bevestigen en de onderdelen die bij het product horen. Zo weet je wat je nodig hebt voor de installatie.",
+      "title_3": "Maak er één geheel van",
+      "body_3": "Stem kleur, materiaal en afwerking af op de rest van je badkamer. Bekijk daarvoor de specificaties en afbeeldingen van de gekozen uitvoering."
+    },
+    "faq": {
+      "question_1": "Wat is het verschil tussen een opbouw- en inbouwkraan?",
+      "answer_1": "Bij een opbouwkraan is de kraan zelf zichtbaar op de wastafel of aan de wand. Bij een inbouwkraan zit het kraanmechanisme in de wand en blijven de uitloop en bediening zichtbaar. Controleer bij inbouw altijd welk inbouwdeel nodig is en of dit wordt meegeleverd.",
+      "question_2": "Welke kraan past bij een opzetwastafel?",
+      "answer_2": "Bij een opzetwastafel heb je voldoende hoogte en bereik nodig tussen de uitloop en de waskom. Een verhoogde opbouwkraan of een passend geplaatste inbouwkraan kan een optie zijn. Vergelijk de maten van de kraan met de hoogte en positie van je wastafel.",
+      "question_3": "Zijn het inbouwdeel en andere onderdelen inbegrepen?",
+      "answer_3": "Dat verschilt per product. Een afbouwdeel is niet automatisch een complete kraan. Controleer de productomschrijving en de meegeleverde onderdelen. Twijfel je of je alles hebt voor de installatie, vraag ons dan om advies."
+    },
+    "directory_heading": "Verder zoeken binnen {{ category }}",
+    "read_advice": "Lees meer informatie en advies over {{ category }}"
+  },
+  "bc_delivery": {
+    "information": "Levertijd en bezorginformatie",
+    "supplier_in_stock": "Op voorraad bij leverancier",
+    "contact_current_lead_time": "Neem contact op voor de actuele levertijd",
+    "supplier_expected_from": "Verwacht bij leverancier vanaf {{ date }}",
+    "lead_time_on_request": "Levertijd op aanvraag"
+  },
+  "bc_specs": {
+    "heading": "Specificaties",
+    "title": "Specificaties",
+    "yes": "Ja",
+    "no": "Nee",
+    "groups": {
+      "product": "Product",
+      "appearance": "Uiterlijk en materiaal",
+      "dimensions": "Afmetingen",
+      "installation": "Montage en aansluiting",
+      "features": "Eigenschappen"
+    },
+    "fields": {
+      "artikelnummer": "Artikelnummer",
+      "merk": "Merk",
+      "serie": "Serie",
+      "model": "Model",
+      "uitvoering": "Uitvoering",
+      "garantie": "Garantie",
+      "kleur": "Kleur en uitvoering",
+      "basiskleur": "Basiskleur",
+      "kleurgroep": "Kleurgroep",
+      "glaskleur": "Glaskleur",
+      "kleur_binnenzijde": "Kleur binnenzijde",
+      "afwerking": "Afwerking",
+      "glansgraad": "Glansgraad",
+      "materiaal": "Materiaal",
+      "materiaal_inzet": "Materiaal inzet",
+      "vorm": "Vorm",
+      "binnenvorm": "Binnenvorm",
+      "bladvorm": "Bladvorm",
+      "type_bad": "Type bad",
+      "vormgeving_stijlgroep": "Vormgeving / stijlgroep",
+      "afwerking_greep": "Afwerking greep",
+      "afwerking_wand": "Afwerking wand",
+      "afmetingen_original": "Afmetingen",
+      "afmeting": "Afmeting",
+      "lengte_mm": "Lengte (mm)",
+      "breedte_mm": "Breedte (mm)",
+      "breedte_diameter_mm": "Breedte / diameter (mm)",
+      "hoogte_mm": "Hoogte (mm)",
+      "diepte_mm": "Diepte (mm)",
+      "dikte_mm": "Dikte (mm)",
+      "glasdikte_mm": "Glasdikte (mm)",
+      "opbouwhoogte_totaal": "Totale opbouwhoogte",
+      "hoogte_uitloop_mm": "Uitloophoogte (mm)",
+      "voorsprong_uitloop_mm": "Voorsprong uitloop (mm)",
+      "diepte_uitloop": "Diepte uitloop",
+      "inbouwdiepte": "Inbouwdiepte",
+      "breedte_diameter_hoofddouche": "Breedte / diameter hoofddouche",
+      "dikte_hoofddouche": "Dikte hoofddouche",
+      "breedte_diameter_douchekop": "Breedte / diameter douchekop",
+      "diepte_douchekop": "Diepte douchekop",
+      "lengte_douchearm": "Lengte douchearm",
+      "lengte_doucheslang": "Lengte doucheslang",
+      "gewicht": "Gewicht",
+      "inhoud": "Inhoud",
+      "montage": "Montage",
+      "aantal_kraangaten": "Aantal kraangaten",
+      "aantal_grepen": "Aantal grepen",
+      "plaats_kraangat": "Plaats kraangat",
+      "kraangat": "Kraangat",
+      "plaats_afvoergat": "Plaats afvoergat",
+      "plaats_bediening": "Plaats bediening",
+      "maat_aansluiting_aanvoer": "Maat aansluiting aanvoer",
+      "maat_draadaansluiting_inch": "Maat draadaansluiting (inch)",
+      "warm_koud_aansluiting": "Warm- / koudwateraansluiting",
+      "type_bevestiging_hoofddouche": "Bevestiging hoofddouche",
+      "geschikt_voor_onderkast": "Geschikt voor onderkast",
+      "geschikt_voor_vrijhangende_montage": "Geschikt voor vrijhangende montage",
+      "met_bevestigingsmateriaal": "Met bevestigingsmateriaal",
+      "verdekte_bevestiging": "Verdekte bevestiging",
+      "inkortbaar": "Inkortbaar",
+      "coldstart": "Coldstart",
+      "thermostatisch": "Thermostatisch",
+      "met_overloop": "Met overloop",
+      "overloop": "Overloop",
+      "met_overloopgat": "Met overloopgat",
+      "met_plug": "Met plug",
+      "met_sifon": "Met sifon",
+      "met_afvoerplug": "Met afvoerplug",
+      "met_badafvoer": "Met badafvoer",
+      "met_kraan": "Met kraan",
+      "met_hoofddouche": "Met hoofddouche",
+      "met_handdouche": "Met handdouche",
+      "met_doucheslang": "Met doucheslang",
+      "met_douchearm": "Met douchearm",
+      "met_inbouwdeel": "Met inbouwdeel",
+      "met_temperatuurregeling": "Met temperatuurregeling",
+      "aantal_straalsoorten_hoofddouche": "Aantal straalsoorten hoofddouche",
+      "aantal_straalsoorten_handdouche": "Aantal straalsoorten handdouche",
+      "met_watervalstraal": "Met watervalstraal",
+      "vorm_uitloop": "Vorm uitloop",
+      "type_handdouche": "Type handdouche",
+      "vorm_thermostaat": "Vorm thermostaat",
+      "aantal_uitgangen_tegelijk_bedienbaar": "Gelijktijdig bedienbare uitgangen",
+      "bediening_voor_aan_uit": "Aan- / uitbediening",
+      "softclose": "Softclose",
+      "quick_release": "Quick release",
+      "rimless": "Zonder spoelrand",
+      "nano_coating": "Nano coating",
+      "vuilafstotend": "Vuilafstotend",
+      "met_verlichting": "Met verlichting",
+      "met_verwarming": "Met verwarming",
+      "dimbaar": "Dimbaar",
+      "vermogen_w": "Vermogen (W)",
+      "aantal_laden": "Aantal laden",
+      "aantal_waskommen": "Aantal waskommen",
+      "aantal_glazen": "Aantal glazen",
+      "met_bekers_glazen": "Met bekers / glazen",
+      "aantal_haken": "Aantal haken",
+      "aantal_handdoekstangen": "Aantal handdoekstangen",
+      "aantal_rollen": "Aantal rollen",
+      "met_klep": "Met klep",
+      "geschikt_voor_aantal_personen": "Geschikt voor aantal personen",
+      "verstelbaar": "Verstelbaar",
+      "verstelbare_kop": "Verstelbare kop",
+      "zwenkbaar": "Zwenkbaar",
+      "met_audio": "Met audio",
+      "belgaqua_keurmerk": "Belgaqua keurmerk",
+      "volumestroomklasse": "Volumestroomklasse"
+    }
+  },
+  "bc_sunshower": {
+    "loading": "Uitvoering laden…",
+    "error": "De uitvoering kon niet worden geladen. Probeer opnieuw.",
+    "javascript": "Schakel JavaScript in om van uitvoering te wisselen.",
+    "specifications": "Specificaties",
+    "yes": "Ja",
+    "no": "Nee",
+    "documents": "Bijlagen en handleidingen",
+    "components": "Deze set bestaat uit",
+    "included_note": "Deze onderdelen zijn inbegrepen in de prijs van deze uitvoering.",
+    "included": "Inbegrepen",
+    "accessories": "Maak je set compleet",
+    "accessories_note": "Deze artikelen zijn aanvullende opties. Kies zelf wat je nodig hebt; ze worden apart berekend.",
+    "add_extras": "Voeg geselecteerde accessoires toe",
+    "added": "De geselecteerde accessoires zijn toegevoegd.",
+    "cart_error": "Deze accessoires konden niet worden toegevoegd. Probeer opnieuw of neem contact op.",
+    "cart": "Bekijk winkelwagen",
+    "choice_help": "Hulp bij je keuze",
+    "accessories_eyebrow": "Handig om mee te bestellen",
+    "optional_extras": "Optionele extra’s",
+    "optional_note": "Voeg naar wens iets extra’s toe aan je bestelling.",
+    "article_number": "Artikelnummer:",
+    "per_piece": "per stuk",
+    "unavailable": "Niet beschikbaar om toe te voegen",
+    "select_accessory": "Selecteer {{ title }}",
+    "add": "Toevoegen",
+    "quantity": "Aantal",
+    "accessory_quantity": "Aantal {{ title }}",
+    "open_accessory": "Open een accessoire via de productnaam om het aan je winkelwagen toe te voegen.",
+    "none_selected": "Geen accessoires geselecteerd",
+    "accessory_total": "Totaal accessoires · inclusief btw",
+    "only_extras": "Je voegt hiermee alleen de geselecteerde accessoires toe.",
+    "pros_title": "Plus- en aandachtspunten",
+    "pros_ir": "Infraroodwarmte zonder UV-licht.",
+    "pros_uv": "Infraroodwarmte en UV in één apparaat.",
+    "pros_touch": "Eenvoudig te bedienen met het touchscreen.",
+    "pros_shape": "Rechthoekige glasplaat met afgeronde hoeken.",
+    "attention_installation": "Controleer de benodigde ruimte en aansluitingen vóór montage.",
+    "attention_extras": "Aanvullende accessoires zijn niet inbegrepen in de setprijs."
+  },
+  "ss": {
+    "config": {
+      "title": "Stel jouw Sunshower samen",
+      "subtitle": "Kies de uitvoering die bij jouw badkamer past.",
+      "met_uv": "Lichtfunctie",
+      "kleur": "Kleur",
+      "uitvoering": "Formaat",
+      "plaatsing": "Montage",
+      "help_met_uv": "Wat is het verschil?",
+      "help_kleur": "Uitleg",
+      "help_uitvoering": "Maathulp",
+      "help_plaatsing": "Uitleg",
+      "ir": "Infrarood",
+      "ir_uv": "Infrarood + UV",
+      "tax": "Inclusief btw",
+      "ask_delivery": "Vraag de levertijd op",
+      "complete": "Maak je set compleet"
+    },
+    "benefits": {
+      "ir_title": "Voordelen van infrarood",
+      "ir_warmth": "Aangename warmte voor je lichaam",
+      "ir_relax": "Helpt spieren en gewrichten ontspannen",
+      "ir_circulation": "Stimuleert de doorbloeding",
+      "ir_tension": "Helpt spierspanning verminderen",
+      "ir_pain": "Kan spier- en gewrichtspijn verlichten",
+      "uv_title": "Voordelen van UV",
+      "uv_vitamin": "UVB stimuleert de aanmaak van vitamine D",
+      "vitamin_intro": "Vitamine D ondersteunt:",
+      "uv_immune": "Een normale werking van je immuunsysteem",
+      "uv_bones": "Het behoud van sterke botten en tanden",
+      "uv_muscles": "Een normale werking van je spieren"
+    },
+    "yes": "Ja",
+    "no": "Nee",
+    "loading": "Uitvoering laden…",
+    "choice_error": "Deze uitvoering kon niet worden geladen. Probeer opnieuw.",
+    "cart_error": "Toevoegen kon niet worden bevestigd. Controleer je winkelwagen voordat je opnieuw probeert.",
+    "adding": "Toevoegen…",
+    "breadcrumb": "Je bevindt je hier",
+    "home": "Home",
+    "article": "Artikelnummer:",
+    "enlarge": "Productfoto vergroten",
+    "photos": "Productfoto’s",
+    "photo_number": "Productfoto {{ number }} bekijken",
+    "photo_error": "Deze foto kon niet worden geladen.",
+    "explain": "Uitleg",
+    "delivery": "Levertijd op aanvraag",
+    "delivery_note": "Neem contact op voor de actuele levertijd.",
+    "quantity": "Aantal:",
+    "decrease": "Aantal verlagen",
+    "increase": "Aantal verhogen",
+    "add_cart": "In winkelwagen",
+    "unavailable": "Niet beschikbaar",
+    "complete_link": "Maak je bestelling compleet",
+    "promise_prices": "Prijzen inclusief btw",
+    "promise_advice": "Persoonlijk advies",
+    "promise_parts": "Hulp bij passende onderdelen",
+    "short": "In het kort",
+    "show_more": "Toon meer",
+    "show_less": "Toon minder",
+    "specifications": "Specificaties",
+    "all_specs": "Bekijk alle specificaties",
+    "components": "Deze set bestaat uit",
+    "included": "Inbegrepen in deze set",
+    "complete": "Maak je set compleet",
+    "select_extra": "Selecteer {{ title }}",
+    "installation_group": "Voor complete installatie adviseren wij:",
+    "optional_group": "Extra’s: niet verplicht, wel handig:",
+    "total": "Totaalprijs:",
+    "total_note": "Inclusief btw · product en geselecteerde extra’s",
+    "add_set": "Plaats set in winkelwagen",
+    "check_cart": "Controleer je winkelwagen",
+    "documents": "Bijlagen",
+    "close": "Sluiten",
+    "guide": {
+      "navigation": "Productinformatie",
+      "nav_light": "Infrarood & UV",
+      "nav_install": "Installatie & nismaten",
+      "nav_pdf": "PDF-bestanden",
+      "your_choice": "Dit bestel je",
+      "ir_uv": "Infrarood + UV",
+      "ir_only": "Alleen infrarood",
+      "functions_intro": "Beide modellen hebben infrarood. Het verschil zit in de UV-functie.",
+      "one_help": "Infraroodwarmte tijdens het douchen. Kies ONE wanneer je warmte en ontspanning zoekt, zonder UV-licht.",
+      "plus_help": "Infrarood én een afzonderlijke UV-functie. UVB-licht kan de natuurlijke aanmaak van vitamine D in de huid stimuleren. Kies PLUS als je naast infrarood ook UV wilt kunnen gebruiken.",
+      "uv_use": "UV vraagt om bewust gebruik. De PLUS is voor volwassenen vanaf 18 jaar. Draag bij UV de voorgeschreven UV-bril en volg het huidschema en de beperkingen in de gebruikershandleiding.",
+      "colour_help": "De kleur hoort bij de glasplaat. De infrarood- en UV-functies worden bepaald door ONE of PLUS en veranderen niet met de kleur.",
+      "colour_note": "De kleurstalen zijn een indicatie. Scherminstellingen en licht kunnen de kleurweergave beïnvloeden.",
+      "size_help": "Alle Round-modellen zijn 33 cm breed. De hoogte bepaalt samen met de montagehoogte welk deel van je lichaam wordt belicht.",
+      "coverage_small": "1/4 lichaam",
+      "coverage_medium": "3/4 lichaam",
+      "coverage_large": "Hele lichaam",
+      "size_note": "Dit zijn glasmaten, geen nismaten. Houd 30–50 cm gebruikersafstand aan. Controleer voor installatie de maatvoering in de juiste handleiding.",
+      "inbouw": "Inbouw in de wand",
+      "opbouw": "Opbouw op een vlakke wand",
+      "hoek": "Opbouw in de hoek",
+      "mount_inbouw": "De romp wordt in een uitsparing in de wand geplaatst. De glasplaat vormt de zichtbare afwerking. Controleer de nis en de aansluiting vóór het tegelwerk.",
+      "mount_opbouw": "De Sunshower wordt op een vlakke wand gemonteerd. De bijbehorende vlakke montageset is inbegrepen bij deze uitvoering. Er is geen inbouwnis nodig.",
+      "mount_hoek": "De Sunshower wordt in de hoek van de douche gemonteerd. De bijbehorende hoekmontageset is inbegrepen bij deze uitvoering. Er is geen inbouwnis nodig.",
+      "mount_help_note": "Bij een andere plaatsingskeuze veranderen de complete uitvoering, de onderdelen en eventueel de prijs. Bekijk altijd “Deze set bestaat uit” voor de exacte levering.",
+      "light_eyebrow": "Jouw dagelijkse moment",
+      "light_title": "Infrarood of infrarood én UV?",
+      "light_intro": "Je hebt Round {{ model }} gekozen. Dit betekenen de lichtfuncties voor jouw douche.",
+      "included_choice": "In jouw uitvoering",
+      "only_plus": "Alleen bij PLUS",
+      "ir_title": "Infrarood. Voel de warmte.",
+      "ir_text": "Maak van douchen een warm ontspanningsmoment. De infraroodlampen geven gerichte warmte terwijl je onder de douche staat.",
+      "ir_benefit": "Infrarood is aanwezig bij ONE én PLUS.",
+      "ir_session": "Een sessie duurt maximaal 10 minuten en kan eerder worden gestopt.",
+      "uv_title": "UV. Een extra lichtfunctie.",
+      "uv_text": "Jouw PLUS voegt laag gedoseerd UV-licht toe. UVB-licht kan de natuurlijke aanmaak van vitamine D in de huid stimuleren. Via de bediening kies je de gewenste lichtfunctie.",
+      "no_uv_text": "Jouw ONE geeft infraroodwarmte zonder UV. Wil je ook de UV-functie? Kies dan “Ja” bij Met UV in het keuzemenu.",
+      "uv_choice": "ONE: zonder UV · PLUS: met UV.",
+      "uv_manual": "Gebruik UV volgens het huidschema in de handleiding.",
+      "energy_eyebrow": "Helder over verbruik",
+      "energy_title": "Wat kost een warmtemoment?",
+      "energy_intro": "Round {{ size }} heeft een maximaal opgenomen vermogen van {{ watts }} W. Bekijk een rekenvoorbeeld voor 10 minuten op dat vermogen.",
+      "rate": "Jouw stroomtarief (€/kWh)",
+      "energy_result": "Rekenvoorbeeld",
+      "energy_time": "per 10 minuten",
+      "energy_usage": "{{ kwh }} kWh op maximaal vermogen",
+      "energy_note": "Berekening: vermogen in kW × 10/60 uur × jouw tarief. Het ingevulde tarief is een voorbeeld. Werkelijk verbruik hangt af van de lichtfunctie en gebruiksduur; nakoeling, water en overige douchekosten zijn niet meegerekend.",
+      "install_eyebrow": "Voor jou & je installateur",
+      "install_title": "Installatie & PDF-bestanden",
+      "install_intro": "De gegevens hieronder horen bij jouw gekozen Round {{ size }} · {{ mount }}.",
+      "glass": "Glasmaat",
+      "width_height": "breedte × hoogte",
+      "niche": "Nis zonder installatiebox",
+      "width_height_depth": "breedte × hoogte × minimale diepte",
+      "max_power": "Maximaal vermogen",
+      "distance": "Gebruikersafstand",
+      "niche_note": "Nismaten volgens Sunshower P6094 rev. I, zonder installatiebox. Met een installatiebox gelden andere maten. Controleer ook montagehoogte, draagkracht en aansluitruimte in de tekening voordat je de nis maakt.",
+      "current_drawing": "Actuele inbouwtekening bij Sunshower (PDF)",
+      "electric_note": "Elektrische aansluiting: 230 V, beveiligd met 16 A. Laat een vakinstallateur de groep en badkamerinstallatie controleren. Round is niet geschikt voor een stoomcabine.",
+      "downloads": "Handleidingen bij deze uitvoering",
+      "download_note": "Open de installatiehandleiding voor montage en aansluitingen, of de gebruikershandleiding voor bediening en onderhoud.",
+      "faq_eyebrow": "Goed om te weten",
+      "faq_title": "Veelgestelde vragen over Sunshower Round",
+      "faq_difference_q": "Wat is het verschil tussen Round ONE en PLUS?",
+      "faq_difference_a": "ONE heeft infrarood. PLUS heeft infrarood en een extra UV-functie. Je kiest dit bovenaan bij “Met UV”; de pagina schakelt naar de bijbehorende uitvoering met de juiste prijs en onderdelen.",
+      "faq_contents_q": "Welke onderdelen ontvang ik?",
+      "faq_contents_a": "Onder “Deze set bestaat uit” staan de onderdelen en fabrikantnummers van jouw uitvoering. Opbouw- en hoekuitvoeringen bevatten de bijbehorende montageset. Accessoires bij “Maak je set compleet” bestel je alleen mee als je ze zelf aanvinkt.",
+      "faq_dimensions_q": "Zijn de glasmaat en de nismaat hetzelfde?",
+      "faq_dimensions_a": "Nee. De glasplaat is de zichtbare afwerking; de nis is de uitsparing voor de inbouwromp. Met een installatiebox gelden andere nismaten dan zonder box. Gebruik voor het tegelwerk altijd de juiste installatietekening.",
+      "faq_steam_q": "Kan Sunshower Round in een stoomcabine?",
+      "faq_steam_a": "Nee. De Round-serie is niet geschikt voor een stoomcabine. Volg ook de ventilatie- en installatievoorschriften in de handleiding."
+    },
+    "redesign": {
+      "highlights": "Plus- en aandachtspunten",
+      "description": "Omschrijving",
+      "parts": "Setonderdelen",
+      "accessories": "Accessoires",
+      "pro_ir": "Gerichte infraroodwarmte tijdens het douchen.",
+      "pro_one": "Infrarood zonder UV: kies bewust voor alleen warmte.",
+      "pro_plus": "Infrarood en een afzonderlijke UV-functie in één product.",
+      "pro_inbouw": "De romp wordt in de wand weggewerkt voor een rustige afwerking.",
+      "pro_mount": "De passende montageset is inbegrepen bij deze complete uitvoering.",
+      "con_steam": "Niet geschikt voor een stoomcabine.",
+      "con_inbouw": "De nis en aansluiting moeten vóór het tegelwerk worden voorbereid.",
+      "con_space": "Houd rekening met ruimte vóór de wand en 30–50 cm gebruikersafstand.",
+      "con_uv": "UV vraagt om een huidschema en de voorgeschreven UV-bril.",
+      "light_eyebrow": "Warmte & licht · Sunshower Round",
+      "light_title": "Jouw douche. Jouw moment.",
+      "light_intro": "Een moment van warmte, gewoon in je eigen badkamer. Ontdek wat jouw uitvoering toevoegt aan het douchen.",
+      "ir_title": "Infrarood. Gerichte warmte.",
+      "ir_text": "De infraroodlampen geven warmte terwijl je doucht. Infrarood is aanwezig bij zowel Round ONE als Round PLUS.",
+      "uv_title": "PLUS. Ook een aparte UV-functie.",
+      "uv_text": "Round PLUS voegt laag gedoseerd UV-licht toe. UVB kan de aanmaak van vitamine D in de huid stimuleren. Gebruik UV volgens het huidschema en met de voorgeschreven UV-bril.",
+      "one_title": "ONE. Alleen infrarood.",
+      "one_text": "Deze uitvoering heeft geen UV-functie. Zo kies je voor infraroodwarmte zonder UV. Wil je beide lichtfuncties? Kies dan Round PLUS.",
+      "energy_cost": "Ca. {{ cost }} stroom per douchebeurt*",
+      "energy_note": "* Rekenvoorbeeld: 10 minuten op maximaal vermogen bij €0,24/kWh. Exclusief nakoeling en water; werkelijk verbruik hangt af van de lichtfunctie en gebruiksduur.",
+      "installation_specs": "Installatiematen"
+    }
+  },
+  "ss_home": {
+    "eyebrow": "Sunshower",
+    "heading": "Een warm moment. In je eigen douche.",
+    "intro": "Ontdek Sunshower ONE en PLUS.",
+    "cta": "Ontdek Sunshower",
+    "image_alt": "Sunshower in een warme badkamer"
+  },
+  "ss_landing": {
+    "hero": {
+      "eyebrow": "Sunshower",
+      "heading": "Sunshower voor jouw douche",
+      "intro": "Vergelijk ONE en PLUS en stel daarna jouw uitvoering samen.",
+      "compare": "Ontdek het verschil",
+      "image_alt": "Sunshower in een doucheomgeving"
+    },
+    "models": {
+      "heading": "Kies jouw Sunshower",
+      "intro": "Infrarood of infrarood met UV? Hier begint jouw keuze.",
+      "note": "Kies daarna formaat, montage en kleur in het keuzemenu."
+    },
+    "one": {
+      "heading": "Round ONE",
+      "badge": "Infrarood",
+      "description": "Infraroodwarmte tijdens het douchen.",
+      "button": "Stel ONE samen",
+      "image_alt": "Sunshower Round ONE met infrarood"
+    },
+    "plus": {
+      "heading": "Round PLUS",
+      "badge": "Infrarood + UV",
+      "description": "Infraroodwarmte, met een extra UV-functie.",
+      "button": "Stel PLUS samen",
+      "image_alt": "Sunshower Round PLUS met infrarood en UV"
+    },
+    "explain": {
+      "eyebrow": "Even uitgelegd",
+      "heading": "Wat is een Sunshower?",
+      "intro": "Een Sunshower is een infraroodpaneel voor in je douche. Round PLUS heeft daarnaast een UV-functie.",
+      "ir_heading": "Infrarood",
+      "ir_text": "De warmtelampen geven infraroodwarmte af. Deze functie vind je bij zowel ONE als PLUS.",
+      "uv_heading": "UV bij PLUS",
+      "uv_text": "Round PLUS heeft naast infrarood ook UV-lampen. ONE heeft alleen infrarood."
+    },
+    "mount": {
+      "heading": "Welke montage past bij jou?",
+      "intro": "Laat de uitvoering aansluiten op je douche en de beschikbare ruimte.",
+      "inbouw_heading": "Inbouw",
+      "inbouw_text": "Het paneel wordt in de wand verwerkt.",
+      "inbouw_alt": "Sunshower uitgevoerd als inbouwmodel",
+      "opbouw_heading": "Opbouw",
+      "opbouw_text": "Het paneel wordt op de wand gemonteerd.",
+      "opbouw_alt": "Sunshower uitgevoerd als opbouwmodel",
+      "sizes": "Small · Medium · Large",
+      "note": "In het keuzemenu zie je welke uitvoeringen beschikbaar zijn."
+    },
+    "advice": {
+      "heading": "Hulp nodig bij je keuze?",
+      "text": "We denken met je mee over het model en de montage in jouw douche.",
+      "button": "Vraag ons advies"
+    },
+    "faq": {
+      "heading": "Goed om te weten",
+      "difference_question": "Wat is het verschil tussen ONE en PLUS?",
+      "difference_answer": "Round ONE heeft infraroodlampen. Round PLUS combineert infraroodlampen met een UV-functie. Je kiest eerst het model en stelt daarna je uitvoering samen.",
+      "size_question": "Welke afmeting past in mijn douche?",
+      "size_answer": "Je kunt kiezen uit Small, Medium en Large. De geschikte maat hangt af van je douche en de gekozen uitvoering. Bekijk de afmetingen en installatiegegevens op de productpagina en laat de beschikbare ruimte controleren.",
+      "mount_question": "Welke montage kan ik kiezen?",
+      "mount_answer": "Het keuzemenu toont de beschikbare montagevormen, waaronder inbouw, opbouw en hoekmontage. Welke uitvoering geschikt is, hangt af van de wand en indeling van je douche.",
+      "install_question": "Wat moet ik regelen voor de installatie?",
+      "install_answer": "Laat een vakbekwame installateur controleren wat nodig is voor de gekozen uitvoering. De voorbereiding, plaatsing en elektrische aansluiting moeten passen bij de installatievoorschriften van dat model. De technische informatie staat op de productpagina."
+    }
+  },
+  "ss_home_v2": {
+    "eyebrow": "Sunshower",
+    "heading": "Warmte onder de douche.",
+    "intro": "ONE met infrarood. PLUS met infrarood + UV.",
+    "cta": "Ontdek Sunshower",
+    "image_alt": "Een Sunshower in een warme badkamer"
+  },
+  "ss_experience": {
+    "hero": {
+      "eyebrow": "Sunshower",
+      "heading": "Meer uit jouw douche.",
+      "intro": "Infraroodwarmte, met of zonder UV.",
+      "button": "Naar de configurator",
+      "accessories": "Shop accessoires",
+      "image_alt": "Sunshower in een warme badkamer, met blauw UV-licht"
+    },
+    "navigation": {
+      "label": "Op deze Sunshower-pagina",
+      "models": "Modellen",
+      "accessories": "Accessoires",
+      "installation": "Installatie"
+    },
+    "models": {
+      "heading": "Welke Sunshower past bij jou?",
+      "note": "Kies formaat, kleur en montage in de configurator."
+    },
+    "one": {
+      "heading": "Round ONE",
+      "badge": "Infrarood",
+      "description": "Warmte tijdens het douchen.",
+      "button": "Stel ONE samen",
+      "image_alt": "Sunshower Round ONE met rood infraroodlicht"
+    },
+    "plus": {
+      "heading": "Round PLUS",
+      "badge": "Infrarood + UV",
+      "description": "Kies voor warmte of UV-licht.",
+      "button": "Stel PLUS samen",
+      "image_alt": "Sunshower Round PLUS in de blauwe UV-stand"
+    },
+    "accessories": {
+      "heading": "Maak je Sunshower compleet",
+      "intro": "Voor comfort en onderhoud.",
+      "cleaning_heading": "Reinigingsset",
+      "cleaning_description": "Cleaner & coating",
+      "seat_heading": "Sunseat",
+      "seat_description": "Douchekruk",
+      "wiper_heading": "Douchewisser",
+      "wiper_description": "SunSwipe",
+      "product_button": "Bekijk product",
+      "color_button": "Kies jouw kleur",
+      "colors_label": "Kleuren voor {{ product }}",
+      "color_link": "Bekijk {{ product }} in {{ color }}"
+    },
+    "colors": {
+      "white": "White",
+      "black": "Black",
+      "grey": "Organic Grey",
+      "sand": "Sand White"
+    },
+    "installation": {
+      "heading": "Past in jouw plannen.",
+      "options": "Inbouw · Opbouw vlak · Opbouw hoek",
+      "intro": "Bekijk de mogelijkheden voor jouw douche.",
+      "button": "Vraag installatieadvies",
+      "image_alt": "Sunshower geïntegreerd in een douche met warme natuursteentinten"
+    },
+    "faq": {
+      "heading": "Goed om te weten",
+      "difference_question": "Wat is het verschil tussen ONE en PLUS?",
+      "difference_answer": "Round ONE geeft infraroodwarmte. Round PLUS heeft infrarood én UV; je kiest welke functie je gebruikt. In de configurator bekijk je de uitvoeringen en mogelijkheden.",
+      "size_question": "Welk formaat past in mijn douche?",
+      "size_answer": "Dat hangt af van de beschikbare ruimte en de montagewijze. Kies een formaat in de configurator en controleer de afmetingen en installatietekening op de productpagina. Twijfel je? Vraag ons om advies.",
+      "install_question": "Wat is er nodig voor de installatie?",
+      "install_answer": "De benodigde ruimte, ventilatie en elektrische aansluiting verschillen per uitvoering. Laat je installateur vóór de aankoop de installatiehandleiding van het gekozen model controleren."
+    },
+    "closing": {
+      "heading": "Klaar voor jouw Sunshower?",
+      "button": "Start de configurator",
+      "mobile_button": "Stel jouw Sunshower samen"
+    }
+  },
+  "ss_mobile_light": {
+    "intro": "Ontdek infrarood en UV.",
+    "back": "Infrarood & UV",
+    "switch_label": "Ontdek infrarood en UV",
+    "models_link": "Welke Sunshower past bij jou?",
+    "accessories_link": "Shop accessoires",
+    "configure": "Stel jouw Sunshower samen",
+    "function_note": "Infrarood en UV, apart te kiezen. UV beschikbaar bij Round PLUS.",
+    "swipe_hint": "Veeg voor meer",
+    "shelf_label": "Sunseat en douchewisser",
+    "infrared": {
+      "label": "Infrarood",
+      "teaser": "Warmte onder de douche.",
+      "heading": "Warmte in jouw douche.",
+      "description": "Ontdek infrarood voor een warm moment tijdens het douchen."
+    },
+    "uv": {
+      "label": "UV",
+      "teaser": "Ontdek UV-licht.",
+      "heading": "UV in jouw douche.",
+      "description": "Ontdek de UV-functie van Sunshower Round PLUS."
+    },
+    "accessories_heading": "Maak je moment compleet"
+  },
+  "ss_quick_shop": {
+      "add": "In winkelwagen",
+      "adding": "Toevoegen…",
+      "loading_image": "Foto laden…",
+      "added": "{{ product }} is toegevoegd.",
+      "error": "Toevoegen kon niet worden bevestigd. Controleer je winkelwagen voordat je opnieuw probeert.",
+      "image_error": "Deze foto kon niet worden geladen. Je vorige kleurkeuze is behouden.",
+      "unavailable": "Niet beschikbaar",
+      "view_cart": "Bekijk winkelwagen",
+      "details": "Productdetails",
+      "color": "Kleur",
+      "color_overview": "Foto toont alle kleuren"
+  },
+  "bc_hotbath_mobile": {
+      "inbouw_add": "Inbouwdeel toevoegen",
+      "inbouw_subtle_note": "nodig als je dit nog niet hebt",
+      "more_colors": "+__COUNT__ kleuren",
+      "more_colors_one": "+1 kleur",
+      "inbouw_title": "Inbouwdeel meebestellen",
+      "inbouw_yes": "Ja",
+      "inbouw_no": "Nee, heb ik al",
+      "inbouw_detail": "Nodig voor montage:",
+      "inbouw_quantity_note": "Bij ‘Ja’: 1 inbouwdeel per kraan.",
+      "all_colors": "Bekijk alle kleuren",
+      "less_colors": "Minder kleuren",
+      "total": "Totaal",
+      "vat": "Inclusief btw",
+      "choose_inbouw": "Kies hierboven of je het inbouwdeel wilt meebestellen."
+  }
+}
+

@@ -1,0 +1,76 @@
+/* BadkamerCity wishlist: reusable hearts and one self-contained listing. */
+.bc-wishlist-button { display:inline-flex; align-items:center; justify-content:center; flex:none; border:1px solid #d7e0e7; color:#0f2740; background:#fff; border-radius:50%; cursor:pointer; transition:background .18s,color .18s,border-color .18s; }
+.bc-wishlist-button .svg-wrapper,.bc-wishlist-button svg { display:inline-flex; width:21px; height:21px; }
+.bc-wishlist-button .icon-wishlist-bc__fill { transform-origin:center bottom;transform-box:fill-box;transform:scaleY(0); transition:transform .2s ease; }
+.bc-wishlist-button:hover,.bc-wishlist-button:focus-visible { color:#d93b4b; border-color:#f1a7ac; }
+.bc-wishlist-button:hover .icon-wishlist-bc__fill { transform:scaleY(1); }
+.bc-wishlist-button.is-saved { color:#d93b4b; border-color:#f1a7ac; background:#fff5f5; }
+.bc-product-form__wishlist.bc-wishlist-button.is-saved,
+.bc-product-form__wishlist.bc-wishlist-button.is-saved:hover { color:#d93b4b; border-color:#f1a7ac; background:#fff5f5; }
+.bc-wishlist-button.is-saved .icon-wishlist-bc__fill { transform:scaleY(1) !important; }
+.bc-wishlist-button:focus-visible { outline:3px solid #8fd4ef;outline-offset:3px; }
+.bc-wishlist-button[data-bc-wishlist-busy=true] { opacity:.65;pointer-events:none; }
+.bc-standard-card,.bc-search-card,.bc-filter-card,.bcsse-accessory,.home-popular-products__card { position:relative; }
+.bc-product-form__wishlist.bc-wishlist-button { width:5.6rem; min-width:5.6rem; max-width:5.6rem; min-height:5.6rem; padding:0; border-radius:50%; }
+.bc-wishlist-button--card { position:absolute; z-index:5;top:10px;right:10px; width:44px; height:44px; padding:0; box-shadow:0 2px 9px rgba(15,39,64,.09); }
+.bcsse-accessory > .bc-wishlist-button--card { top:12px;right:12px; }
+.ss-config-purchase > .bc-wishlist-button--sunshower { width:48px; height:48px; min-width:48px; padding:0; }
+.ss-config-purchase { display:flex; flex-wrap:wrap; align-items:center;gap:10px; }
+.ss-config-purchase > .ss-cart-button { min-width:0; flex:1; }
+.bc-header__utility-link--wishlist { position:relative; }
+.bc-wishlist-count { position:absolute;top:-5px;right:-4px; min-width:18px; height:18px;padding:0 4px;display:flex;align-items:center;justify-content:center;border-radius:20px;background:#d93b4b;color:#fff;font-size:11px;line-height:1;font-weight:700;z-index:2; }
+.bc-wishlist-count[hidden]{display:none!important;}
+.bc-header__utility-link--wishlist .icon-wishlist-bc__fill { transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .2s ease; }
+.bc-header__utility-link--wishlist.has-saved-items { color:#d93b4b; }
+.bc-header__utility-link--wishlist.has-saved-items .icon-wishlist-bc__fill { transform:scaleY(1); }
+.bc-wishlist-toast { position:fixed; bottom:max(22px,env(safe-area-inset-bottom)); left:50%;transform:translateX(-50%); z-index:9999; padding:12px 18px; width:max-content; max-width:calc(100vw - 30px); background:#0f2740; color:#fff; border-radius:10px; box-shadow:0 10px 24px rgba(15,39,64,.23); font-size:14px; line-height:1.5; text-align:center; }
+.bc-wishlist-toast[hidden]{display:none!important;}
+.bc-wishlist-page { max-width:1350px;margin:0 auto;padding:40px 18px 90px; color:#0f2740; }
+.bc-wishlist-page__header { display:flex; align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:30px; }
+.bc-wishlist-page__eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase;color:#526574; font-weight:700;margin:0 0 8px; }
+.bc-wishlist-page h1 { font-size:clamp(27px,3vw,40px);line-height:1.2;margin:0 0 8px;font-weight:750;color:#0f2740; }
+.bc-wishlist-page__count,.bc-wishlist-page__note { color:#526574;font-size:14px;line-height:1.6;margin:0; }
+.bc-wishlist-page__continue { display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:10px 18px;text-decoration:none;color:#0f2740;border:1px solid #d2dce3;border-radius:8px;font-size:14px;font-weight:650;background:#fff; }
+.bc-wishlist-page__continue:hover{background:#f4f7f9;}
+.bc-wishlist-page__empty { text-align:center; padding:80px 24px;border:1px solid #e0e8ee;border-radius:15px;background:#f6f9fb; }
+.bc-wishlist-page__empty svg{width:48px;height:48px;color:#d93b4b;}
+.bc-wishlist-page__empty h2{margin:14px 0 8px;font-size:23px;}
+.bc-wishlist-page__empty p{color:#526574;margin:0 auto 22px;max-width:380px;}
+.bc-wishlist-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px; }
+.bc-wishlist-grid[hidden],.bc-wishlist-page__empty[hidden],.bc-wishlist-page__loading[hidden]{display:none!important;}
+.bc-wishlist-item { display:flex; flex-direction:column;min-width:0;border:1px solid #e1e8ed;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 9px rgba(15,39,64,.03); }
+.bc-wishlist-item__media{display:grid;place-items:center;aspect-ratio:1/1;background:#fff;border-bottom:1px solid #f0f2f4; }
+.bc-wishlist-item__media img{display:block;width:100%;height:100%;object-fit:contain;padding:18px;}
+.bc-wishlist-item__media img[hidden]{display:none!important;}
+.bc-wishlist-item__placeholder{font-size:12px;color:#7b8d99;text-align:center;padding:18px;}
+.bc-wishlist-item__placeholder[hidden]{display:none!important;}
+.bc-wishlist-item__body{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:16px;flex:1;}
+.bc-wishlist-item__title{color:#0f2740;text-decoration:none;font-weight:700;font-size:15px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;}
+.bc-wishlist-item__title:hover{text-decoration:underline;text-underline-offset:3px;}
+.bc-wishlist-item__variant{font-size:13px;color:#526574;margin:0;}
+.bc-wishlist-item__variant[hidden]{display:none!important;}
+.bc-wishlist-item__price{color:#0f2740;font-weight:750;font-size:18px;margin:4px 0 0;font-variant-numeric:tabular-nums;}
+.bc-wishlist-item__delivery{color:#526574;font-size:12px;line-height:1.5;margin:0 0 10px;}
+.bc-wishlist-item__actions{display:flex; flex-direction:column;gap:8px;margin-top:auto;}
+.bc-wishlist-item__primary{display:flex; align-items:center;justify-content:center;min-height:43px; width:100%;padding:9px 13px;background:#087f3d;color:#fff;text-align:center;font-size:13px;font-weight:700;border-radius:7px;border:1px solid #087f3d;text-decoration:none;cursor:pointer;}
+.bc-wishlist-item__primary:hover:not(:disabled){background:#066a33;color:#fff;}
+.bc-wishlist-item__primary:disabled{opacity:.66;cursor:wait;}
+.bc-wishlist-item__remove{border:0;background:transparent;color:#526574;text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:35px;font-size:13px;}
+.bc-wishlist-item__remove:hover{color:#b92939;}
+.bc-wishlist-page__note{margin-top:28px;border-top:1px solid #e1e8ed;padding-top:18px;}
+@media(max-width:990px){.bc-wishlist-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:690px){.bc-wishlist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;}.bc-wishlist-page{padding:24px 13px 65px;}.bc-wishlist-item__body{padding:12px;gap:7px;}.bc-wishlist-item__title{font-size:13px;}.bc-wishlist-item__price{font-size:16px;}.bc-wishlist-item__media img{padding:11px;}.bc-wishlist-item__primary{padding:8px;font-size:12px;}.bc-wishlist-page__empty{padding:55px 14px;}}
+@media(max-width:350px){.bc-wishlist-grid{gap:8px;}.bc-wishlist-item__body{padding:9px;}.bc-wishlist-item__delivery{font-size:11px;}.bc-wishlist-item__primary{font-size:11px;}}
+@media(prefers-reduced-motion:reduce){.bc-wishlist-button,.bc-wishlist-button .icon-wishlist-bc__fill{transition:none;}}
+
+
+/* Keep Sunshower quantity, cart and wishlist controls aligned in one row. */
+.ss-configurator form.ss-config-purchase { display:grid; grid-template-columns:112px minmax(0,1fr) 48px;gap:12px;align-items:stretch; }
+.ss-configurator .ss-config-purchase > .bc-wishlist-button--sunshower { justify-self:end;align-self:stretch;border-radius:8px;width:48px;min-width:48px;height:auto;min-height:48px; }
+@media(max-width:749px) {
+  .ss-configurator form.ss-config-purchase {grid-template-columns:96px minmax(0,1fr) 48px;gap:10px;}
+}
+@media(max-width:359px) {
+  .ss-configurator form.ss-config-purchase {grid-template-columns:76px minmax(0,1fr) 42px;gap:7px;}
+  .ss-configurator .ss-config-purchase > .bc-wishlist-button--sunshower {width:42px;min-width:42px;}
+}

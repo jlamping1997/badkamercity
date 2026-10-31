@@ -1,0 +1,13 @@
+{
+  "name": "badkamercity-cart-clear-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Behaviour and Liquid contract tests for the 19 October 2026 cart patch",
+  "scripts": {
+    "test": "node cart-controller.test.cjs && node test-shipping-liquid.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "liquidjs": "10.30.0"
+  }
+}

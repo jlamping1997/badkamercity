@@ -1,0 +1,1477 @@
+{
+  "method": "Anonymous independent HTTP GETs; no cookies reused, JS/assets/forms not executed; not browser evidence.",
+  "routes": [
+    {
+      "path": "/",
+      "checkedAt": "2026-10-28T12:12:02.389231+00:00",
+      "status": 200,
+      "finalPath": "/",
+      "bytes": 453080,
+      "sha256": "661b49eb3a8b57b6dd92a2d9ef19f9c26167e1a050f05142c127b3d2d0107317",
+      "title": "Badkamercity",
+      "h1": [
+        ""
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639456522__home_sunshower",
+        "shopify-section-template--29406639456522__home_category_grid_FgNMtn",
+        "shopify-section-template--29406639456522__home_popular_products",
+        "shopify-section-template--29406639456522__home_complete_bathroom",
+        "shopify-section-template--29406639456522__home_shop_by_style_BK9a6q",
+        "shopify-section-template--29406639456522__home_brand_rail_aUrAmK",
+        "shopify-section-template--29406639456522__home_mijn_badkamercity_3wELah",
+        "shopify-section-template--29406639456522__home_help_cta",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      },
+      "homepage": {
+        "hero": false,
+        "popularProducts": false
+      }
+    },
+    {
+      "path": "/account/login",
+      "checkedAt": "2026-10-28T12:12:02.390615+00:00",
+      "status": 200,
+      "finalPath": "/authentication/94179590410/oauth/authorize",
+      "bytes": 11967,
+      "sha256": "ea5417cc8896fbd819868e42a79fb25c475ca34bee29294534584021be43a7dd",
+      "title": null,
+      "h1": [],
+      "themeId": null,
+      "canonical": null,
+      "robots": [
+        "noindex, nocache, noarchive, nofollow"
+      ],
+      "sections": [],
+      "jsonLd": {
+        "blocks": 0,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/bc-documentatie-niet-bestaand-47",
+      "checkedAt": "2026-10-28T12:12:02.391362+00:00",
+      "status": 404,
+      "finalPath": "/bc-documentatie-niet-bestaand-47",
+      "bytes": 246964,
+      "sha256": "e0152bce32090f40285aa277de324588116b775714400969294eef397d68a0b1",
+      "title": "404 niet gevonden – Badkamercity",
+      "h1": [
+        "Pagina niet gevonden"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/404",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627365130__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/blogs/nieuws",
+      "checkedAt": "2026-10-28T12:12:02.392562+00:00",
+      "status": 200,
+      "finalPath": "/blogs/nieuws",
+      "bytes": 249936,
+      "sha256": "e7a32d9b9132b1a31b932a413dc24e8da8b3d47d61b3802c34e5eb9cfe5c78e7",
+      "title": "Nieuws – Badkamercity",
+      "h1": [
+        "Nieuws"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/blogs/nieuws",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627430666__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/blogs/nieuws/sunshower-infrarood-of-uv",
+      "checkedAt": "2026-10-28T12:12:07.429682+00:00",
+      "status": 200,
+      "finalPath": "/blogs/nieuws/sunshower-infrarood-of-uv",
+      "bytes": 264224,
+      "sha256": "473c4d611c084f7c47345831243312cc058e95f81d9e4115056a64af10191a7e",
+      "title": "Sunshower: alleen infrarood of ook uv? – Badkamercity",
+      "h1": [
+        "Sunshower: alleen infrarood of ook uv?"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/blogs/nieuws/sunshower-infrarood-of-uv",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627397898__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections",
+      "checkedAt": "2026-10-28T12:12:07.550911+00:00",
+      "status": 200,
+      "finalPath": "/collections",
+      "bytes": 349082,
+      "sha256": "ceaacd11c82b6c46decdd7cd0e8746d76a91e4507bf218aa14a21390b4c30efa",
+      "title": "Collecties – Badkamercity",
+      "h1": [
+        "Collections"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639489290__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/accessoires",
+      "checkedAt": "2026-10-28T12:12:07.568194+00:00",
+      "status": 200,
+      "finalPath": "/collections/accessoires",
+      "bytes": 336442,
+      "sha256": "a486d06b8a515b122afc2c7fbdfc1dded04df3b5b62a333bd7a6042548179cdb",
+      "title": "Badkameraccessoires en toiletaccessoires – Badkamercity",
+      "h1": [
+        "Accessoires"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/accessoires",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/baden",
+      "checkedAt": "2026-10-28T12:12:11.496841+00:00",
+      "status": 200,
+      "finalPath": "/collections/baden",
+      "bytes": 340101,
+      "sha256": "c05e90b72ad8f6347828e633e3f91543d5383d3c959c720f7a6ca3705c00db7b",
+      "title": "Baden inbouw en vrijstaande baden – Badkamercity",
+      "h1": [
+        "Baden"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/baden",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/badkamer-verlichting",
+      "checkedAt": "2026-10-28T12:12:11.916277+00:00",
+      "status": 200,
+      "finalPath": "/collections/badkamer-verlichting",
+      "bytes": 321623,
+      "sha256": "4a01a6058f664404aa617721660b1cf71ff1c3d91396a11669e11fcac313e95a",
+      "title": "Badkamerverlichting spots en spiegellampen – Badkamercity",
+      "h1": [
+        "Badkamerverlichting"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/badkamer-verlichting",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/badkamermeubels",
+      "checkedAt": "2026-10-28T12:12:12.051910+00:00",
+      "status": 200,
+      "finalPath": "/collections/badkamermeubels",
+      "bytes": 340683,
+      "sha256": "dc7ff0205ca6a31522168cc6856ede56b66cedae083046a2139aa1dea3802dd3",
+      "title": "Badkamermeubels en wastafelmeubels – Badkamercity",
+      "h1": [
+        "Badkamermeubels"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/badkamermeubels",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627496202__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/doucheafvoer",
+      "checkedAt": "2026-10-28T12:12:15.441477+00:00",
+      "status": 200,
+      "finalPath": "/collections/doucheafvoer",
+      "bytes": 334106,
+      "sha256": "2ebabbf2e6b061f611f55f4c70ce8d14e0059e29f86d06a0ea93daa3998ae323",
+      "title": "Doucheafvoer – Badkamercity",
+      "h1": [
+        "Doucheafvoer"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/doucheafvoer",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/doucheonderdelen",
+      "checkedAt": "2026-10-28T12:12:16.128616+00:00",
+      "status": 200,
+      "finalPath": "/collections/doucheonderdelen",
+      "bytes": 336218,
+      "sha256": "c5eafcb7bdbf3bbb9784a979fce4f87d5f43e4d1ec20f48482c7b3152513b65a",
+      "title": "Doucheonderdelen – Badkamercity",
+      "h1": [
+        "Doucheonderdelen"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/doucheonderdelen",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/douches",
+      "checkedAt": "2026-10-28T12:12:16.226053+00:00",
+      "status": 200,
+      "finalPath": "/collections/douches",
+      "bytes": 354333,
+      "sha256": "c43321b981424a0a020aece3ac6fdb0b82e9657f57c7ca3143a3ce8ce7ddc897",
+      "title": "Douches douchewanden en douchecabines – Badkamercity",
+      "h1": [
+        "Douche"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/douches",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/inloopdouches",
+      "checkedAt": "2026-10-28T12:12:16.412087+00:00",
+      "status": 200,
+      "finalPath": "/collections/inloopdouches",
+      "bytes": 480616,
+      "sha256": "bd1c8cb12317e9200ee5b1c1098b404d00cf514001dbde8d52f74bba172f1db9",
+      "title": "Inloopdouches – Badkamercity",
+      "h1": [
+        "Inloopdouches"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/inloopdouches",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "externalContext": {
+        "collection": "inloopdouches",
+        "expectedProducts": "305"
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627561738__banner",
+        "shopify-section-template--29406627561738__product-grid",
+        "shopify-section-template--29406627561738__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/kranen",
+      "checkedAt": "2026-10-28T12:12:19.598753+00:00",
+      "status": 200,
+      "finalPath": "/collections/kranen",
+      "bytes": 348380,
+      "sha256": "fbc764ba01b9b1949e0b0a7de0eb81750699ba5da44521acf478a54c26e28ee4",
+      "title": "Kranen voor wastafel bad en douche – Badkamercity",
+      "h1": [
+        "Kranen"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/kranen",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/meer",
+      "checkedAt": "2026-10-28T12:12:19.702561+00:00",
+      "status": 200,
+      "finalPath": "/collections/meer",
+      "bytes": 294797,
+      "sha256": "5cff288920ed3848cce997ff0f9622d66a9b0536f7767df2244b404501910bbb",
+      "title": "Meer – Badkamercity",
+      "h1": [
+        "Meer"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/meer",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/outlet",
+      "checkedAt": "2026-10-28T12:12:19.863895+00:00",
+      "status": 200,
+      "finalPath": "/collections/outlet",
+      "bytes": 261490,
+      "sha256": "7259d9ffdaa5e5beb6d314639bbc9afb8ba9439db76260c687052486e518e92f",
+      "title": "Outlet – Badkamercity",
+      "h1": [
+        "Outlet"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/outlet",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/spiegels-en-spiegelkasten",
+      "checkedAt": "2026-10-28T12:12:19.898215+00:00",
+      "status": 200,
+      "finalPath": "/collections/spiegels-en-spiegelkasten",
+      "bytes": 329875,
+      "sha256": "a8c1dad20f0e8c03b705bd01854d0707fdec50394ff7528b3d450b288b15bf49",
+      "title": "Badkamerspiegels en spiegelkasten – Badkamercity",
+      "h1": [
+        "Spiegels"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/spiegels-en-spiegelkasten",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/spiegels-en-verlichting",
+      "checkedAt": "2026-10-28T12:12:23.564666+00:00",
+      "status": 200,
+      "finalPath": "/collections/spiegels-en-verlichting",
+      "bytes": 338767,
+      "sha256": "913d8d6581d276d22bb9a8f0abe85e8f9c7bdb0825d8f1b716c99051b6d64105",
+      "title": "Spiegels en verlichting – Badkamercity",
+      "h1": [
+        "Spiegels en verlichting"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/spiegels-en-verlichting",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/tegels",
+      "checkedAt": "2026-10-28T12:12:23.754979+00:00",
+      "status": 200,
+      "finalPath": "/collections/tegels",
+      "bytes": 265914,
+      "sha256": "089474fec4da2925aefae0d409462e8d1d0245f3b5e8453fe994458d4ff55a2f",
+      "title": "Tegels voor badkamer vloer en wand – Badkamercity",
+      "h1": [
+        "Tegels"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/tegels",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/toiletten",
+      "checkedAt": "2026-10-28T12:12:23.819920+00:00",
+      "status": 200,
+      "finalPath": "/collections/toiletten",
+      "bytes": 343809,
+      "sha256": "784d1ea56e49640d788becf70306001d32cdf847d56129feccdeb15335afe761",
+      "title": "Toiletten hangtoiletten en toiletsets – Badkamercity",
+      "h1": [
+        "Toiletten en fonteinen"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/toiletten",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/verwarming",
+      "checkedAt": "2026-10-28T12:12:23.976586+00:00",
+      "status": 200,
+      "finalPath": "/collections/verwarming",
+      "bytes": 332671,
+      "sha256": "db81dc39dc3a61e462b71c517498f272020c8009b6f3efc256df402331815d18",
+      "title": "Badkamerverwarming en radiatoren – Badkamercity",
+      "h1": [
+        "Verwarming"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/verwarming",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/verwarming-en-ventilatie",
+      "checkedAt": "2026-10-28T12:12:27.598717+00:00",
+      "status": 200,
+      "finalPath": "/collections/verwarming-en-ventilatie",
+      "bytes": 339870,
+      "sha256": "b2fb0fa99bab55bf95ac3a12904555a376e09f04910e1bcc3e5059cf64d05f57",
+      "title": "Verwarming en ventilatie – Badkamercity",
+      "h1": [
+        "Verwarming en ventilatie"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/verwarming-en-ventilatie",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/wastafelkranen",
+      "checkedAt": "2026-10-28T12:12:27.723891+00:00",
+      "status": 200,
+      "finalPath": "/collections/wastafelkranen",
+      "bytes": 482288,
+      "sha256": "50001b7e48f16391eed12d1261046765ca3173c289b4c5ee616f597a93665402",
+      "title": "Wastafelkranen – Badkamercity",
+      "h1": [
+        "Wastafelkranen"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/wastafelkranen",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "externalContext": {
+        "collection": "wastafelkranen",
+        "expectedProducts": "573"
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627561738__banner",
+        "shopify-section-template--29406627561738__product-grid",
+        "shopify-section-template--29406627561738__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections/wastafels",
+      "checkedAt": "2026-10-28T12:12:27.789417+00:00",
+      "status": 200,
+      "finalPath": "/collections/wastafels",
+      "bytes": 341509,
+      "sha256": "c6e4432c7077c218fcd2dffa3989a3d3ba09709c5c652c7ec00d1fa24a8ccd1a",
+      "title": "Wastafels en waskommen voor je badkamer – Badkamercity",
+      "h1": [
+        "Wastafels"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections/wastafels",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406627528970__main",
+        "shopify-section-template--29406627528970__bc-advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/collections?view=merken",
+      "checkedAt": "2026-10-28T12:12:27.822553+00:00",
+      "status": 200,
+      "finalPath": "/collections",
+      "bytes": 247590,
+      "sha256": "09864de0813488201c3040e0b41d6c0246e878a8cfd978e87bb2c4978533dda5",
+      "title": "Collecties – Badkamercity",
+      "h1": [
+        "Onze merken"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/collections",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639522058__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/begrippenlijst",
+      "checkedAt": "2026-10-28T12:12:31.823351+00:00",
+      "status": 200,
+      "finalPath": "/pages/begrippenlijst",
+      "bytes": 313059,
+      "sha256": "fee84864fb696855b4af4aa1444fa79b9403fde32c8a50d42c461ebd92d7a51d",
+      "title": "Begrippenlijst – Badkamercity",
+      "h1": [
+        "Begrippenlijst badkamer sanitair"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/begrippenlijst",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639653130__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/buffers",
+      "checkedAt": "2026-10-28T12:12:32.008271+00:00",
+      "status": 200,
+      "finalPath": "/pages/buffers",
+      "bytes": 250247,
+      "sha256": "61560a3ee5be864a9839912e3f86c2b56c70631321076651550afa0bfd444de8",
+      "title": "Waarom toiletbuffers belangrijk zijn voor je wc-bril – Badkamercity",
+      "h1": [
+        "buffers"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/buffers",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639718666__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/contact",
+      "checkedAt": "2026-10-28T12:12:32.216650+00:00",
+      "status": 200,
+      "finalPath": "/pages/contact",
+      "bytes": 250393,
+      "sha256": "22b1d9883fa332d5a3764e9b352d053b78c622301891fbf49839c2f3907c0dbf",
+      "title": "Contact – Badkamercity",
+      "h1": [
+        "Contact"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/contact",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639685898__main",
+        "shopify-section-template--29406639685898__form",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/rimless",
+      "checkedAt": "2026-10-28T12:12:32.275415+00:00",
+      "status": 200,
+      "finalPath": "/pages/rimless",
+      "bytes": 255519,
+      "sha256": "b21350e683abd52e8de5338197e6147368a046098d12ca063698cc116941dfea",
+      "title": "Wat is een rimless toilet en waarom kiezen mensen ervoor? – Badkamercity",
+      "h1": [
+        "Rimless"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/rimless",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639620362__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/sunshower",
+      "checkedAt": "2026-10-28T12:12:35.696062+00:00",
+      "status": 200,
+      "finalPath": "/pages/sunshower",
+      "bytes": 291827,
+      "sha256": "fc99cffb3f273685184fcc3cbed5c0d149896f09ee314ca11d1551b44e7e07ce",
+      "title": "Sunshower ONE en PLUS vergelijken – Badkamercity",
+      "h1": [
+        "Meer uit jouw douche."
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/sunshower",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639554826__main",
+        "shopify-section-template--29406639554826__sunshower_advice",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/pages/verlanglijst",
+      "checkedAt": "2026-10-28T12:12:35.822420+00:00",
+      "status": 200,
+      "finalPath": "/pages/verlanglijst",
+      "bytes": 248869,
+      "sha256": "34c13e99855ad97111ea0d5973fc95dbcda2ae9bb136cd69067da2f92500ad7d",
+      "title": "Mijn verlanglijst – Badkamercity",
+      "h1": [
+        "Mijn verlanglijst"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/pages/verlanglijst",
+      "robots": [
+        "noindex,follow"
+      ],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639587594__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/password",
+      "checkedAt": "2026-10-28T12:12:35.828538+00:00",
+      "status": 200,
+      "finalPath": "/",
+      "bytes": 453080,
+      "sha256": "82cdf31c67e6b783367cf55c6ff7be2833db451b17afa4d4f550a2d6c7b7791c",
+      "title": "Badkamercity",
+      "h1": [
+        ""
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639456522__home_sunshower",
+        "shopify-section-template--29406639456522__home_category_grid_FgNMtn",
+        "shopify-section-template--29406639456522__home_popular_products",
+        "shopify-section-template--29406639456522__home_complete_bathroom",
+        "shopify-section-template--29406639456522__home_shop_by_style_BK9a6q",
+        "shopify-section-template--29406639456522__home_brand_rail_aUrAmK",
+        "shopify-section-template--29406639456522__home_mijn_badkamercity_3wELah",
+        "shopify-section-template--29406639456522__home_help_cta",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 2,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/search?q=bc_documentatie_geen_resultaat_47&type=product",
+      "checkedAt": "2026-10-28T12:12:35.964335+00:00",
+      "status": 200,
+      "finalPath": "/search",
+      "bytes": 265018,
+      "sha256": "1af93ace6ba6d2767d8ee22b14d6027c54389ed16cc074533942b1fc71344244",
+      "title": "Zoeken: 0 resultaten gevonden voor 'bc_documentatie_geen_resultaat_47' – Badkamercity",
+      "h1": [
+        "Zoekresultaten voor 'bc_documentatie_geen_resultaat_47'"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/search?q=bc_documentatie_geen_resultaat_47&type=product",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "externalContext": {
+        "collection": "__all__",
+        "expectedProducts": ""
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639915274__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    },
+    {
+      "path": "/search?q=sunshower&type=product",
+      "checkedAt": "2026-10-28T12:12:39.613194+00:00",
+      "status": 200,
+      "finalPath": "/search",
+      "bytes": 495340,
+      "sha256": "7075d01e1f6c40f019aaf6a7001bdc698122272a93554c93bf4d91b3c34a5bce",
+      "title": "Zoeken: 1000 resultaten gevonden voor 'sunshower' – Badkamercity",
+      "h1": [
+        "Zoekresultaten voor 'sunshower'"
+      ],
+      "themeId": "195818389770",
+      "canonical": "https://badkamercity.nl/search?q=sunshower&type=product",
+      "robots": [],
+      "footer": {
+        "groups": 3,
+        "nonLinkLabels": [
+          "Veelgestelde vragen",
+          "Bezorgen & afhalen",
+          "Retourneren",
+          "Garantie & service",
+          "Over ons",
+          "Badkamerinspiratie",
+          "Badkameradvies",
+          "Onze merken",
+          "Showroom",
+          "Zakelijk"
+        ],
+        "legalLinks": 1,
+        "paymentIcons": 0
+      },
+      "externalContext": {
+        "collection": "__all__",
+        "expectedProducts": ""
+      },
+      "sections": [
+        "shopify-section-sections--29406639980810__header",
+        "shopify-section-template--29406639915274__main",
+        "shopify-section-sections--29406639948042__footer"
+      ],
+      "jsonLd": {
+        "blocks": 1,
+        "invalid": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1132 @@
+{
+  "recorded_at": "2026-10-20T18:32:54.304754+00:00",
+  "files": [
+    {
+      "filename": "snippets/bc-product-breadcrumbs.liquid",
+      "before_md5": "26b4a42babc7b8c9d978e4dd8a052771",
+      "after_md5": "90c4ca5eb3f20070f8de74b42765f6b1"
+    },
+    {
+      "filename": "snippets/bc-product-documents.liquid",
+      "before_md5": "214f375f30c5d123499f4bf3b0395776",
+      "after_md5": "a163048293dd08efc8592c047fb5dc3c"
+    },
+    {
+      "filename": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+      "before_md5": null,
+      "after_md5": "51a7b82e104d7f244d5cb903bcfc8e68"
+    },
+    {
+      "filename": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "before_md5": "503968acfdffd45ecd6684352f827a87",
+      "after_md5": "90f7c5a7a0534c2db234b016abdc1500"
+    }
+  ],
+  "theme_check": {
+    "success": true,
+    "responses": [
+      {
+        "result": "success",
+        "resultDetail": "snippets/bc-wiesbaden-reviewed-scope.liquid passed all checks.",
+        "artifactId": "bc-wiesbaden-proefgroep2-20261020",
+        "artifactRevision": 2
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/bc-product-breadcrumbs.liquid passed all checks.",
+        "artifactId": "bc-wiesbaden-proefgroep2-20261020",
+        "artifactRevision": 2
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/bc-product-documents.liquid passed all checks.",
+        "artifactId": "bc-wiesbaden-proefgroep2-20261020",
+        "artifactRevision": 2
+      },
+      {
+        "result": "success",
+        "resultDetail": "snippets/bc-wiesbaden-reviewed-specs.liquid passed all checks.",
+        "artifactId": "bc-wiesbaden-proefgroep2-20261020",
+        "artifactRevision": 2
+      }
+    ]
+  },
+  "rendering": {
+    "cases": [
+      {
+        "sku": "20.3755",
+        "rows": 20,
+        "documents": 2,
+        "breadcrumbLinks": 4,
+        "passed": true
+      },
+      {
+        "sku": "20.3756",
+        "rows": 20,
+        "documents": 2,
+        "breadcrumbLinks": 4,
+        "passed": true
+      },
+      {
+        "sku": "32.3411",
+        "rows": 35,
+        "documents": 1,
+        "breadcrumbLinks": 3,
+        "passed": true
+      },
+      {
+        "sku": "32.3594",
+        "rows": 10,
+        "documents": 0,
+        "breadcrumbLinks": 4,
+        "passed": true
+      },
+      {
+        "sku": "32.2510",
+        "rows": 22,
+        "documents": 3,
+        "breadcrumbLinks": 3,
+        "passed": true
+      },
+      {
+        "sku": "32.3670",
+        "rows": 21,
+        "documents": 3,
+        "breadcrumbLinks": 3,
+        "passed": true
+      },
+      {
+        "sku": "38.4125",
+        "rows": 23,
+        "documents": 2,
+        "breadcrumbLinks": 4,
+        "passed": true
+      }
+    ],
+    "pilot": {
+      "sku": "24.3710",
+      "rows": 33,
+      "passed": true
+    },
+    "guards": [
+      {
+        "name": "no_review",
+        "passed": true
+      },
+      {
+        "name": "wrong_product",
+        "passed": true
+      },
+      {
+        "name": "wrong_sku",
+        "passed": true
+      },
+      {
+        "name": "wrong_vendor",
+        "passed": true
+      },
+      {
+        "name": "variants",
+        "passed": true
+      }
+    ]
+  },
+  "shopify_html": [
+    {
+      "sku": "20.3755",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 20,
+      "expected_rows": 20,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 2,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "20.3756",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 20,
+      "expected_rows": 20,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 2,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "32.3411",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 35,
+      "expected_rows": 35,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 1,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "32.3594",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 10,
+      "expected_rows": 10,
+      "breadcrumbs": 1,
+      "document_blocks": 0,
+      "expected_documents": 0,
+      "all_documents_present": true,
+      "anchor_present": false,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "32.2510",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 22,
+      "expected_rows": 22,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 3,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "32.3670",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 21,
+      "expected_rows": 21,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 3,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    },
+    {
+      "sku": "38.4125",
+      "status": 200,
+      "theme": 195491168522,
+      "role": "unpublished",
+      "rows": 23,
+      "expected_rows": 23,
+      "breadcrumbs": 1,
+      "document_blocks": 1,
+      "expected_documents": 2,
+      "all_documents_present": true,
+      "anchor_present": true,
+      "liquid_errors": false,
+      "title_present": true,
+      "passed": true
+    }
+  ],
+  "public_sku_search": [
+    {
+      "sku": "20.3755",
+      "collection": "inloopdouches",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657252147466"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657252147466",
+          "sku": "20.3755",
+          "title": "Wiesbaden Graffic inloopdouche 800 x 2000 x 10 mm nano safety glass folie helder glas/chroom",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "20.3756",
+      "collection": "inloopdouches",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657273643274"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657273643274",
+          "sku": "20.3756",
+          "title": "Wiesbaden Graffic inloopdouche 900 x 2000 x 10 mm nano safety glass folie helder glas/chroom",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "32.3411",
+      "collection": "opzetwastafels",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657255489802"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657255489802",
+          "sku": "32.3411",
+          "title": "Wiesbaden Barco waskom ovaal 40 x 33 x 14,5 cm keramiek glans wit",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "32.3594",
+      "collection": "fonteinsets",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657255653642"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657255653642",
+          "sku": "32.3594",
+          "title": "Wiesbaden one-pack Porta fontein + Metro kraan",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "32.2510",
+      "collection": "hangtoiletten",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657255686410"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657255686410",
+          "sku": "32.2510",
+          "title": "Wiesbaden Vesta Tornado flush wandcloset rimless met nano coating met Shade slim toiletzitting softclose en quick release glans wit",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "32.3670",
+      "collection": "losse-onderkasten",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657255751946"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657255751946",
+          "sku": "32.3670",
+          "title": "Wiesbaden Marmaris onderkast met 2 laden 60 x 45 cm mat zwart",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    },
+    {
+      "sku": "38.4125",
+      "collection": "spiegels-met-verlichting",
+      "found": 1,
+      "exact_sku": true,
+      "matched_ids": [
+        "10657255817482"
+      ],
+      "matching_product_found": true,
+      "products": [
+        {
+          "id": "10657255817482",
+          "sku": "38.4125",
+          "title": "Wiesbaden Ambi one spiegel rechthoek met LED, dimbaar en spiegelverwarming 140 x 60 cm",
+          "name": null,
+          "card_title": null,
+          "price": null
+        }
+      ]
+    }
+  ],
+  "card_data": [
+    {
+      "sku": "20.3755",
+      "status": 200,
+      "data": {
+        "id": 10657252147466,
+        "short_title": "Wiesbaden Graffic inloopdouche 80 × 200 cm chroom"
+      },
+      "passed": true
+    },
+    {
+      "sku": "20.3756",
+      "status": 200,
+      "data": {
+        "id": 10657273643274,
+        "short_title": "Wiesbaden Graffic inloopdouche 90 × 200 cm chroom"
+      },
+      "passed": true
+    },
+    {
+      "sku": "32.3411",
+      "status": 200,
+      "data": {
+        "id": 10657255489802,
+        "short_title": "Wiesbaden Barco waskom 40 × 33 cm glans wit"
+      },
+      "passed": true
+    },
+    {
+      "sku": "32.3594",
+      "status": 200,
+      "data": {
+        "id": 10657255653642,
+        "short_title": "Wiesbaden Porta fonteinset met Metro kraan"
+      },
+      "passed": true
+    },
+    {
+      "sku": "32.2510",
+      "status": 200,
+      "data": {
+        "id": 10657255686410,
+        "short_title": "Wiesbaden Vesta Tornado hangtoilet glans wit met zitting"
+      },
+      "passed": true
+    },
+    {
+      "sku": "32.3670",
+      "status": 200,
+      "data": {
+        "id": 10657255751946,
+        "short_title": "Wiesbaden Marmaris onderkast 60 cm mat zwart"
+      },
+      "passed": true
+    },
+    {
+      "sku": "38.4125",
+      "status": 200,
+      "data": {
+        "id": 10657255817482,
+        "short_title": "Wiesbaden Ambi One LED-spiegel 140 × 60 cm"
+      },
+      "passed": true
+    }
+  ],
+  "filter_sample": [
+    {
+      "sku": "20.3755",
+      "wrong_value": false,
+      "found": 1,
+      "ids": [
+        "10657252147466"
+      ],
+      "passed": true
+    },
+    {
+      "sku": "20.3755",
+      "wrong_value": true,
+      "found": 0,
+      "ids": [],
+      "passed": true
+    },
+    {
+      "sku": "38.4125",
+      "wrong_value": false,
+      "found": 1,
+      "ids": [
+        "10657255817482"
+      ],
+      "passed": true
+    },
+    {
+      "sku": "38.4125",
+      "wrong_value": true,
+      "found": 0,
+      "ids": [],
+      "passed": true
+    }
+  ],
+  "asset_checks": [
+    {
+      "sku": "20.3755",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/20.3755.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 374484,
+      "sha256": "96eeb1106aba480494b6e6afb9868307cd3554f9bb344fc51622242d2f5e6fa2",
+      "valid": true
+    },
+    {
+      "sku": "20.3755",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/20.3755.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 511549,
+      "sha256": "82927c38cc93d14a93962a610c71ddf2d4d5f02e882a7a6b4a775cf2285a4245",
+      "valid": true
+    },
+    {
+      "sku": "20.3756",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/20.3756.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 291275,
+      "sha256": "ab53420d0f7886c22209d5789cbb90dde61f618e1251d8cdb114ca6a65a7b7d8",
+      "valid": true
+    },
+    {
+      "sku": "20.3756",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/20.3756.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 394982,
+      "sha256": "d489c93f1146a8b977a5af83cc2235b887335d8330b7641de3ad260831330d0d",
+      "valid": true
+    },
+    {
+      "sku": "29.8007",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.8007.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 125647,
+      "sha256": "f851a545f2315d73fcf20a4deade496684887db43a3cac4397266fd60ab9f362",
+      "valid": true
+    },
+    {
+      "sku": "29.8007",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.8007%202.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 77959,
+      "sha256": "927b99267d37d1d7fc251ccb3c8af293f7271cb32771013f6fbbc519ce90ddca",
+      "valid": true
+    },
+    {
+      "sku": "32.2510",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.2510.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 116945,
+      "sha256": "26953247a757489fa76f25f9e1613f034a91ed5edaa3beca0f078b59eb6dc28e",
+      "valid": true
+    },
+    {
+      "sku": "32.2510",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.2510%202.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 51454,
+      "sha256": "cd24317e00c5b5f5dbeae198441b554c0aecc0ef4f5c9acb943954f84d6f49cc",
+      "valid": true
+    },
+    {
+      "sku": "32.2510",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/32.2510.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 1395682,
+      "sha256": "beb283d745fb4fd08fb29bc111a5322e921f2f4145467132c032d61a56feb1ba",
+      "valid": true
+    },
+    {
+      "sku": "32.3411",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3411.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 103532,
+      "sha256": "f213d28d662d50dcd06b8da30f52b8ddad5bd1cccfd348e53032b77a14d5dc96",
+      "valid": true
+    },
+    {
+      "sku": "32.3670",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3670.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 168947,
+      "sha256": "b461ff2b019ee3df4495231335c9ece106b40276cc3d5c8b6a9b60e84f996314",
+      "valid": true
+    },
+    {
+      "sku": "32.3670",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3670%201.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 7023660,
+      "sha256": "2072097acf3fd66c14c465ac9254f6d1d2f70bbc78dd3ccb6f77785161662ec8",
+      "valid": true
+    },
+    {
+      "sku": "32.3670",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/32.3670.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 10145633,
+      "sha256": "fc11e4f81bb15b51742d92f9b929aea43908d4e0935092b04961c498729f3713",
+      "valid": true
+    },
+    {
+      "sku": "38.4125",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/38.4125.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 99276,
+      "sha256": "8fb8f9059e596fb95f837e5b6b04c92250e9dcc315beafda42be6bc9a12dcdc0",
+      "valid": true
+    },
+    {
+      "sku": "38.4125",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/38.4125.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 633210,
+      "sha256": "6f6f16e950faed41d44e027111ab70ac64b02cceefdba44bb033c5f15ceb9369",
+      "valid": true
+    },
+    {
+      "sku": "41.3540",
+      "kind": "drawing",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/41.3540.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 441004,
+      "sha256": "ef8f630db3c31d4e244675a94bbe9507ef66420f9bf0143dc24a123ac48848ff",
+      "valid": true
+    },
+    {
+      "sku": "41.3540",
+      "kind": "pdf",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/41.3540.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 577542,
+      "sha256": "695b98901c604dbde211bf32529dad8e75ef434f966405b1e91f03520f715ed2",
+      "valid": true
+    },
+    {
+      "sku": "41.3540",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/41.3540.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 441004,
+      "sha256": "ef8f630db3c31d4e244675a94bbe9507ef66420f9bf0143dc24a123ac48848ff",
+      "valid": true
+    },
+    {
+      "sku": "20.3756",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/20.3756.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 291275,
+      "sha256": "ab53420d0f7886c22209d5789cbb90dde61f618e1251d8cdb114ca6a65a7b7d8",
+      "valid": true
+    },
+    {
+      "sku": "29.8007",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.8007.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 125647,
+      "sha256": "f851a545f2315d73fcf20a4deade496684887db43a3cac4397266fd60ab9f362",
+      "valid": true
+    },
+    {
+      "sku": "29.8007",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.8007%202.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 77959,
+      "sha256": "927b99267d37d1d7fc251ccb3c8af293f7271cb32771013f6fbbc519ce90ddca",
+      "valid": true
+    },
+    {
+      "sku": "32.2510",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.2510.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 116945,
+      "sha256": "26953247a757489fa76f25f9e1613f034a91ed5edaa3beca0f078b59eb6dc28e",
+      "valid": true
+    },
+    {
+      "sku": "32.2510",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.2510%202.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 51454,
+      "sha256": "cd24317e00c5b5f5dbeae198441b554c0aecc0ef4f5c9acb943954f84d6f49cc",
+      "valid": true
+    },
+    {
+      "sku": "32.3670",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3670.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 168947,
+      "sha256": "b461ff2b019ee3df4495231335c9ece106b40276cc3d5c8b6a9b60e84f996314",
+      "valid": true
+    },
+    {
+      "sku": "32.3670",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3670%201.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 7023660,
+      "sha256": "2072097acf3fd66c14c465ac9254f6d1d2f70bbc78dd3ccb6f77785161662ec8",
+      "valid": true
+    },
+    {
+      "sku": "20.3755",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/20.3755.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 374484,
+      "sha256": "96eeb1106aba480494b6e6afb9868307cd3554f9bb344fc51622242d2f5e6fa2",
+      "valid": true
+    },
+    {
+      "sku": "32.3411",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3411.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 103532,
+      "sha256": "f213d28d662d50dcd06b8da30f52b8ddad5bd1cccfd348e53032b77a14d5dc96",
+      "valid": true
+    },
+    {
+      "sku": "38.4125",
+      "kind": "drawing",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/38.4125.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "bytes": 99276,
+      "sha256": "8fb8f9059e596fb95f837e5b6b04c92250e9dcc315beafda42be6bc9a12dcdc0",
+      "valid": true
+    }
+  ],
+  "admin": [
+    {
+      "sku": "20.3755",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "custom.technische_documenten",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "32.3411",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "32.3594",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "32.2510",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "custom.technische_documenten",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "32.3670",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "custom.technische_documenten",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "38.4125",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "custom.technische_documenten",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    },
+    {
+      "sku": "41.3540",
+      "unchanged": true
+    },
+    {
+      "sku": "24.3710",
+      "unchanged": true
+    },
+    {
+      "sku": "29.8007",
+      "unchanged": true
+    },
+    {
+      "sku": "20.3756",
+      "verified": true,
+      "changedFields": [
+        "title",
+        "descriptionHtml",
+        "seo"
+      ],
+      "changedMetafields": [
+        "global.title_tag",
+        "global.description_tag",
+        "custom.technische_documenten",
+        "bc_data.content_review",
+        "custom.card_title",
+        "custom.complete_specificaties"
+      ],
+      "variantsCollectionsMediaAndFiltersUnchanged": true
+    }
+  ],
+  "themes": {
+    "mainUnchanged": true,
+    "mainCount": 511,
+    "previewCount": 512,
+    "previewChanged": [
+      {
+        "filename": "snippets/bc-product-breadcrumbs.liquid",
+        "checksumMd5": "90c4ca5eb3f20070f8de74b42765f6b1"
+      },
+      {
+        "filename": "snippets/bc-product-documents.liquid",
+        "checksumMd5": "a163048293dd08efc8592c047fb5dc3c"
+      },
+      {
+        "filename": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+        "checksumMd5": "51a7b82e104d7f244d5cb903bcfc8e68"
+      },
+      {
+        "filename": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+        "checksumMd5": "90f7c5a7a0534c2db234b016abdc1500"
+      }
+    ],
+    "otherFilesUnchanged": 508
+  },
+  "patch_apply": [
+    {
+      "filename": "bc-wiesbaden-reviewed-specs.liquid",
+      "after_md5": "90f7c5a7a0534c2db234b016abdc1500",
+      "patch_exact": true
+    },
+    {
+      "filename": "bc-product-breadcrumbs.liquid",
+      "after_md5": "90c4ca5eb3f20070f8de74b42765f6b1",
+      "patch_exact": true
+    },
+    {
+      "filename": "bc-wiesbaden-reviewed-scope.liquid",
+      "after_md5": "51a7b82e104d7f244d5cb903bcfc8e68",
+      "patch_exact": true
+    },
+    {
+      "filename": "bc-product-documents.liquid",
+      "after_md5": "a163048293dd08efc8592c047fb5dc3c",
+      "patch_exact": true
+    }
+  ],
+  "original_pilot_preview": {
+    "sku": "24.3710",
+    "theme": 195491168522,
+    "rows": 33,
+    "breadcrumbs": 1,
+    "http": 200,
+    "liquidErrors": false
+  },
+  "native_browser": {
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "marmaris": {
+      "rows": 21,
+      "breadcrumbs": 1,
+      "documents": 3,
+      "measurements": [
+        "590 mm",
+        "450 mm",
+        "580 mm"
+      ],
+      "horizontalOverflow": false,
+      "liquidErrors": false
+    },
+    "search": {
+      "q": "20.3755",
+      "visibleCardTitle": "Wiesbaden Graffic inloopdouche 80 × 200 cm chroom",
+      "horizontalOverflow": false
+    },
+    "mobile": "NOT_TESTED for new products; prior reference24.3710 user approved",
+    "cartWishlistCheckout": "NOT_TESTED this batch"
+  },
+  "private_backup": {
+    "created": true,
+    "filename": "BadkamerCity_Wiesbaden_proefgroep2_herstelkopie_20261020.zip",
+    "raw_snapshots_public": false
+  },
+  "index_title_note": "Raw external API titles are still from the old index. Current short card titles are hydrated from custom.card_title via the existing bc-card-data bridge (7/7 verified). New-wording search passed for 3/4 sampled queries; 'Barco ovale waskom' returned 0. No external index mutation was performed. A bounded seven-title sync and twelve passing offline safety tests are prepared; live execution is BLOCKED because the SSH network route is unavailable.",
+  "ssh_read_only_probe": {
+    "attempted": true,
+    "result": "Network is unreachable",
+    "remote_executed": false
+  },
+  "text_search": [
+    {
+      "sku": "20.3755",
+      "q": "Wiesbaden Graffic 80",
+      "collection": "inloopdouches",
+      "found": 1,
+      "product_on_page1": true
+    },
+    {
+      "sku": "32.3411",
+      "q": "Barco ovale waskom",
+      "collection": "opzetwastafels",
+      "found": 0,
+      "product_on_page1": false
+    },
+    {
+      "sku": "32.3594",
+      "q": "Porta fonteinset",
+      "collection": "fonteinsets",
+      "found": 2,
+      "product_on_page1": true
+    },
+    {
+      "sku": "32.3670",
+      "q": "Marmaris onderkast 60",
+      "collection": "losse-onderkasten",
+      "found": 1,
+      "product_on_page1": true
+    }
+  ],
+  "source_identity": [
+    {
+      "sku": "20.3755",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:16:55.835476+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "20.3756",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:16:55.912042+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "32.3411",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:16:55.495668+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "32.3594",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:17:02.077657+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "32.2510",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:16:55.687168+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "32.3670",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:17:02.267389+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    },
+    {
+      "sku": "38.4125",
+      "sku_brand_source_match": true,
+      "html_sha256_verified": true,
+      "source_date": "2026-10-19T11:17:02.335347+00:00",
+      "tax_basis": "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT"
+    }
+  ],
+  "index_sync": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "only_field": "title",
+    "product_count": 7,
+    "script_sha256": "e932a56588240bab5497eba87af6124e0475c2dd127cc41b2fce2aefb8fdabd6",
+    "offline_safety_tests": {
+      "passed": 12,
+      "failed": 0
+    },
+    "live_tests": "NOT_EXECUTED",
+    "reason": "SSH network is unreachable; no remote command executed"
+  },
+  "latest_theme_roles": [
+    {
+      "id": "gid://shopify/OnlineStoreTheme/189117628682",
+      "name": "BadkamerCity V1.0",
+      "role": "UNPUBLISHED",
+      "processing": false
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195449651466",
+      "name": "BadkamerCity - Verlanglijst preview 20 okt",
+      "role": "UNPUBLISHED",
+      "processing": false
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195486253322",
+      "name": "BadkamerCity - Wiesbaden 33 specs 20 okt",
+      "role": "UNPUBLISHED",
+      "processing": false
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195488317706",
+      "name": "BadkamerCity - Productpagina smal desktop",
+      "role": "MAIN",
+      "processing": false
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195491168522",
+      "name": "BadkamerCity - Wiesbaden proefgroep 2",
+      "role": "UNPUBLISHED",
+      "processing": false
+    }
+  ],
+  "screenshot": {
+    "file": "docs/design/wiesbaden-proefgroep2-marmaris-20261020.jpg",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "description": "Native draft storefront: own Marmaris description, product heading and price, start of specifications. Measurement rows/documents were verified in DOM and server HTML; they are outside this screenshot's viewport."
+  }
+}

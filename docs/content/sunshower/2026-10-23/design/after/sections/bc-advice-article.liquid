@@ -1,0 +1,288 @@
+{%- liquid
+  assign article_parts = article.content | split: '<h2>'
+  assign words = article.content | strip_html | split: ' ' | size
+  assign reading_minutes = words | divided_by: 200.0 | ceil | at_least: 1
+  assign sunshower_guide = false
+  if article.tags contains 'Sunshower'
+    assign sunshower_guide = true
+  endif
+  assign one_image = section.settings.one_image
+  assign plus_image = section.settings.plus_image
+  assign has_pair = false
+  if sunshower_guide and one_image != blank and plus_image != blank
+    assign has_pair = true
+  endif
+  assign one_alt = 'bc_advice.one_alt' | t
+  assign plus_alt = 'bc_advice.plus_alt' | t
+-%}
+
+<article class="bc-advice" aria-labelledby="bc-advice-title-{{ section.id }}">
+  <div class="bc-advice__wrap">
+    <nav class="bc-advice__breadcrumbs" aria-label="{{ 'bc_advice.advice' | t | escape }}">
+      <a href="{{ routes.root_url }}">{{ 'bc_advice.home' | t }}</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ blog.url }}">{{ 'bc_advice.advice' | t }}</a>
+      {%- if sunshower_guide -%}<span aria-hidden="true">/</span><a href="{{ pages.sunshower.url }}">{{ 'bc_advice.brand' | t }}</a>{%- endif -%}
+    </nav>
+
+    <header class="bc-advice__hero{% unless has_pair or article.image %} bc-advice__hero--text{% endunless %}">
+      <div class="bc-advice__intro">
+        {%- if sunshower_guide -%}<p class="bc-advice__eyebrow">{{ 'bc_advice.eyebrow' | t }}</p>{%- endif -%}
+        <h1 id="bc-advice-title-{{ section.id }}">{{ article.title | escape }}</h1>
+        {%- if article.excerpt != blank -%}
+          <div class="bc-advice__lead">{{ article.excerpt }}</div>
+        {%- endif -%}
+        <div class="bc-advice__meta">
+          <span>{{ article.author | escape }}</span>
+          <span aria-hidden="true">·</span>
+          <span>{{ 'bc_advice.read_time' | t: minutes: reading_minutes }}</span>
+          <span aria-hidden="true">·</span>
+          <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%d-%m-%Y' }}</time>
+        </div>
+        <div class="bc-advice__hero-actions">
+          {%- if article_parts.size > 1 -%}
+            <a class="bc-advice__button" href="#bc-advice-part-{{ section.id }}-1">{{ 'bc_advice.compare' | t }}<span aria-hidden="true">↘︎</span></a>
+          {%- endif -%}
+          {%- if sunshower_guide -%}
+            <a class="bc-advice__text-link" href="{{ pages.sunshower.url }}">{{ 'bc_advice.models' | t }}<span aria-hidden="true">→</span></a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- if has_pair -%}
+        <div class="bc-advice__photos" role="group" aria-label="{{ 'bc_advice.comparison_label' | t | escape }}">
+          <figure class="bc-advice__photo bc-advice__photo--one">
+            {{ one_image | image_url: width: 1000 | image_tag: widths: '240, 360, 540, 720, 1000', sizes: '(min-width: 1200px) 280px, (min-width: 900px) 23vw, 44vw', loading: 'eager', fetchpriority: 'high', alt: one_alt }}
+            <figcaption><span class="bc-advice__dot bc-advice__dot--one" aria-hidden="true"></span><span><strong>{{ 'bc_advice.one_name' | t }}</strong><small>{{ 'bc_advice.one_function' | t }}</small></span></figcaption>
+          </figure>
+          <figure class="bc-advice__photo bc-advice__photo--plus">
+            {{ plus_image | image_url: width: 1000 | image_tag: widths: '240, 360, 540, 720, 1000', sizes: '(min-width: 1200px) 280px, (min-width: 900px) 23vw, 44vw', loading: 'eager', alt: plus_alt }}
+            <figcaption><span class="bc-advice__dot bc-advice__dot--plus" aria-hidden="true"></span><span><strong>{{ 'bc_advice.plus_name' | t }}</strong><small>{{ 'bc_advice.plus_function' | t }}</small></span></figcaption>
+          </figure>
+        </div>
+      {%- elsif article.image -%}
+        <figure class="bc-advice__single-photo">
+          {{ article.image | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1200, 1600', sizes: '(min-width: 900px) 44vw, 90vw', loading: 'eager', fetchpriority: 'high' }}
+        </figure>
+      {%- endif -%}
+    </header>
+  </div>
+
+  <div class="bc-advice__reading-wrap">
+    <div class="bc-advice__reading bc-advice__wrap">
+      <div class="bc-advice__body">
+        {%- if article_parts.size > 1 -%}
+          <div class="bc-advice__opening bc-advice__prose">{{ article_parts.first }}</div>
+          <details class="bc-advice__mobile-contents">
+            <summary>{{ 'bc_advice.contents' | t }}<span aria-hidden="true">+</span></summary>
+            <ol>
+              {%- for part in article_parts offset: 1 -%}
+                {%- assign heading = part | split: '</h2>' | first | strip_html -%}
+                <li><a href="#bc-advice-part-{{ section.id }}-{{ forloop.index }}">{{ heading }}</a></li>
+              {%- endfor -%}
+            </ol>
+          </details>
+
+          {%- for part in article_parts offset: 1 -%}
+            {%- assign heading_parts = part | split: '</h2>' -%}
+            <section class="bc-advice__part bc-advice__prose{% if forloop.first %} bc-advice__part--comparison{% endif %}{% if forloop.last %} bc-advice__part--closing{% endif %}" aria-labelledby="bc-advice-part-{{ section.id }}-{{ forloop.index }}">
+              <h2 id="bc-advice-part-{{ section.id }}-{{ forloop.index }}">{{ heading_parts.first }}</h2>
+              {{ heading_parts[1] }}
+            </section>
+          {%- endfor -%}
+        {%- else -%}
+          <div class="bc-advice__prose">{{ article.content }}</div>
+        {%- endif -%}
+        <a class="bc-advice__back" href="{{ blog.url }}"><span aria-hidden="true">←</span>{{ 'bc_advice.back' | t }}</a>
+      </div>
+
+      {%- if article_parts.size > 1 -%}
+        <aside class="bc-advice__sidebar" aria-label="{{ 'bc_advice.contents' | t | escape }}">
+          <nav class="bc-advice__contents">
+            <p>{{ 'bc_advice.contents' | t }}</p>
+            <ol>
+              {%- for part in article_parts offset: 1 -%}
+                {%- assign heading = part | split: '</h2>' | first | strip_html -%}
+                <li><a href="#bc-advice-part-{{ section.id }}-{{ forloop.index }}"><span aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>{{ heading }}</a></li>
+              {%- endfor -%}
+            </ol>
+          </nav>
+          <div class="bc-advice__help">
+            <span class="bc-advice__help-mark" aria-hidden="true">?</span>
+            <h2>{{ 'bc_advice.help_heading' | t }}</h2>
+            <p>{{ 'bc_advice.help_text' | t }}</p>
+            <a href="{{ pages.contact.url }}">{{ 'bc_advice.help_link' | t }}<span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      {%- endif -%}
+    </div>
+  </div>
+</article>
+
+<script type="application/ld+json">{{ article | structured_data }}</script>
+
+{% stylesheet %}
+.bc-advice {
+  --bca-navy: #0b3049;
+  --bca-cyan: #37d7ef;
+  --bca-ink: #223a49;
+  --bca-muted: #60717d;
+  --bca-line: #dce5e9;
+  --bca-soft: #f4f8fa;
+  color: var(--bca-ink);
+  background: #fff;
+  font-family: var(--font-body-family, system-ui, sans-serif);
+}
+.bc-advice, .bc-advice * { box-sizing: border-box; }
+.bc-advice__wrap { width: min(1280px, calc(100% - 64px)); margin-inline: auto; }
+.bc-advice :is(h1, h2, p, figure, ol) { margin: 0; }
+.bc-advice a { color: var(--bca-navy); text-underline-offset: .3em; }
+.bc-advice a:focus-visible, .bc-advice summary:focus-visible { outline: 3px solid #087893; outline-offset: 5px; border-radius: 2px; }
+.bc-advice__breadcrumbs { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding-block: 25px 20px; font-size: 12px; line-height: 1.5; color: var(--bca-muted); }
+.bc-advice__breadcrumbs a { text-decoration: none; color: inherit; }
+.bc-advice__breadcrumbs a:hover { text-decoration: underline; }
+.bc-advice__breadcrumbs > span { color: #a0b0b8; }
+.bc-advice__hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: 12px 54px; }
+.bc-advice__hero--text { grid-template-columns: minmax(0, 820px); }
+.bc-advice__intro { min-width: 0; }
+.bc-advice__eyebrow { display: flex; align-items: center; gap: 10px; color: var(--bca-navy); font-size: 11px; line-height: 1.5; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.bc-advice__eyebrow::before { content: ""; width: 30px; height: 2px; background: var(--bca-cyan); }
+.bc-advice h1 { margin-top: 17px; color: var(--bca-navy); font-family: var(--font-heading-family, inherit); font-size: clamp(36px, 4.05vw, 58px); font-weight: 730; letter-spacing: -.045em; line-height: 1.08; text-wrap: balance; }
+.bc-advice__hero--text h1 { max-width: 21ch; }
+.bc-advice__lead { margin-top: 23px; max-width: 47ch; color: #48606f; font-size: 18px; line-height: 1.65; }
+.bc-advice__lead p { margin: 0; }
+.bc-advice__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 19px; color: var(--bca-muted); font-size: 11px; line-height: 1.65; }
+.bc-advice__meta > span:first-child { color: #365363; font-weight: 650; }
+.bc-advice__hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 25px; margin-top: 26px; }
+.bc-advice .bc-advice__button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 26px; padding: 13px 19px; border: 1px solid var(--bca-navy); border-radius: 4px; color: #fff; background: var(--bca-navy); font-size: 13px; font-weight: 650; line-height: 1.4; text-decoration: none; }
+.bc-advice .bc-advice__button:hover { background: #194c69; }
+.bc-advice__button span, .bc-advice__text-link span { font-size: 19px; line-height: 1; font-weight: 400; }
+.bc-advice__text-link { display: inline-flex; min-height: 44px; align-items: center; gap: 14px; font-size: 13px; line-height: 1.4; font-weight: 600; text-decoration-thickness: 1px; }
+.bc-advice__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; }
+.bc-advice__photo { min-width: 0; overflow: hidden; border: 1px solid #e0e5e7; border-radius: 8px; background: #fff; }
+.bc-advice__photo img { display: block; width: 100%; height: auto; aspect-ratio: .76; object-fit: cover; background: #ebe6dd; }
+.bc-advice__photo--one img { object-position: 60% center; }
+.bc-advice__photo--plus img { object-position: 77% center; }
+.bc-advice__photo figcaption { display: flex; align-items: center; gap: 10px; padding: 16px 14px 17px; }
+.bc-advice__photo figcaption strong { display: block; color: var(--bca-navy); font-size: 15px; line-height: 1.4; letter-spacing: -.02em; }
+.bc-advice__photo figcaption small { display: block; margin-top: 2px; color: #596e7c; font-size: 11px; line-height: 1.4; }
+.bc-advice__dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; }
+.bc-advice__dot--one { background: #b75436; box-shadow: 0 0 0 4px #fff0e9; }
+.bc-advice__dot--plus { background: #1b8bae; box-shadow: 0 0 0 4px #e6f8fc; }
+.bc-advice__single-photo { overflow: hidden; border-radius: 8px; }
+.bc-advice__single-photo img { display: block; width: 100%; height: auto; max-height: 470px; object-fit: cover; }
+.bc-advice__reading-wrap { border-top: 1px solid var(--bca-line); }
+.bc-advice__reading { display: grid; grid-template-columns: minmax(0, 1fr) 270px; align-items: start; gap: clamp(40px, 7vw, 100px); padding-block: 42px 80px; }
+.bc-advice__body { min-width: 0; }
+.bc-advice__prose { font-size: 16px; line-height: 1.82; overflow-wrap: break-word; }
+.bc-advice__opening { padding-bottom: 31px; color: #526672; font-size: 15px; line-height: 1.8; }
+.bc-advice__part { padding-block: 10px 34px; }
+.bc-advice__part + .bc-advice__part { padding-top: 35px; border-top: 1px solid var(--bca-line); }
+.bc-advice__prose h2 { margin-bottom: 20px; color: var(--bca-navy); font-family: var(--font-heading-family, inherit); font-size: clamp(25px, 2.4vw, 32px); font-weight: 700; line-height: 1.22; letter-spacing: -.035em; text-wrap: balance; scroll-margin-top: 200px; }
+.bc-advice__prose p + p { margin-top: 16px; }
+.bc-advice__prose strong { color: var(--bca-navy); font-weight: 700; }
+.bc-advice__prose a { font-weight: 600; text-decoration-thickness: 1px; }
+.bc-advice__prose a:hover { text-decoration-thickness: 2px; }
+.bc-advice__prose table { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 0; overflow: hidden; margin-top: 25px; border: 1px solid var(--bca-line); border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.bc-advice__prose th, .bc-advice__prose td { padding: 16px 18px; border: 0; border-bottom: 1px solid var(--bca-line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.bc-advice__prose thead th { color: var(--bca-navy); background: #f0f6f8; font-size: 13px; font-weight: 750; }
+.bc-advice__prose thead th:first-child { width: 29%; }
+.bc-advice__prose thead th:nth-child(2) { border-top: 3px solid #bd6a50; padding-top: 13px; }
+.bc-advice__prose thead th:nth-child(3) { border-top: 3px solid #31a4c6; padding-top: 13px; }
+.bc-advice__prose tbody th { color: var(--bca-navy); background: #fafcfc; font-weight: 650; }
+.bc-advice__prose td:nth-child(3) { background: #f6fcfd; }
+.bc-advice__prose tbody tr:last-child > * { border-bottom: 0; }
+.bc-advice__prose ul { display: grid; gap: 14px; padding-left: 22px; margin: 20px 0 0; }
+.bc-advice__prose li { padding-left: 5px; }
+.bc-advice__prose li::marker { color: #0c86a1; }
+.bc-advice__part--closing { padding: 29px 30px 31px; margin-top: 12px; border: 1px solid #d7e9ed !important; border-radius: 9px; background: #f0f8fa; }
+.bc-advice__part--closing h2 { font-size: 29px; }
+.bc-advice__prose small { display: block; padding-top: 19px; margin-top: 22px; border-top: 1px solid #d5e3e8; color: #607580; font-size: 12px; line-height: 1.8; }
+.bc-advice__prose small a { font-weight: 500; }
+.bc-advice__back { display: inline-flex; min-height: 44px; align-items: center; gap: 12px; margin-top: 23px; font-size: 12px; line-height: 1.5; font-weight: 600; }
+.bc-advice__sidebar { position: sticky; top: 200px; min-width: 0; }
+.bc-advice__contents { padding-bottom: 25px; border-bottom: 1px solid var(--bca-line); }
+.bc-advice__contents > p { color: var(--bca-navy); font-size: 14px; font-weight: 750; }
+.bc-advice__contents ol { display: grid; gap: 3px; margin-top: 16px; padding: 0; list-style: none; }
+.bc-advice__contents a { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; color: #536a78; font-size: 12px; line-height: 1.65; text-decoration: none; }
+.bc-advice__contents a > span { flex: 0 0 20px; padding-top: 1px; color: #8b9ba5; font-size: 10px; font-weight: 600; }
+.bc-advice__contents a:hover, .bc-advice__contents a:focus-visible { color: var(--bca-navy); text-decoration: underline; }
+.bc-advice__help { padding-top: 25px; }
+.bc-advice__help-mark { display: grid; width: 30px; height: 30px; place-items: center; margin-bottom: 13px; border: 1px solid #b8dce5; border-radius: 50%; color: var(--bca-navy); background: #effbfe; font-size: 15px; font-weight: 700; }
+.bc-advice__help h2 { color: var(--bca-navy); font-size: 18px; font-weight: 700; line-height: 1.35; letter-spacing: -.02em; }
+.bc-advice__help p { margin-top: 10px; color: #607580; font-size: 12px; line-height: 1.75; }
+.bc-advice__help a { display: inline-flex; min-height: 44px; align-items: center; gap: 15px; margin-top: 7px; font-size: 12px; line-height: 1.5; font-weight: 650; }
+.bc-advice__mobile-contents { display: none; }
+@media (min-width: 1440px) {
+  .bc-advice__wrap { width: min(1280px, calc(100% - 96px)); }
+}
+@media (max-width: 989px) {
+  .bc-advice__hero { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .bc-advice h1 { font-size: clamp(32px, 4.7vw, 44px); }
+  .bc-advice__lead { font-size: 16px; }
+  .bc-advice__reading { grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; }
+  .bc-advice__prose { font-size: 15px; }
+  .bc-advice__prose th, .bc-advice__prose td { padding: 13px 12px; }
+}
+@media (max-width: 749px) {
+  .bc-advice__wrap { width: calc(100% - 40px); }
+  .bc-advice__breadcrumbs { padding-block: 18px; font-size: 11px; }
+  .bc-advice__hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 8px 30px; }
+  .bc-advice h1 { max-width: 20ch; margin-top: 14px; font-size: clamp(32px, 7.7vw, 44px); line-height: 1.12; letter-spacing: -.04em; }
+  .bc-advice__lead { margin-top: 17px; max-width: 52ch; font-size: 16px; line-height: 1.7; }
+  .bc-advice__meta { margin-top: 15px; gap: 7px; font-size: 11px; }
+  .bc-advice__hero-actions { gap: 12px 20px; margin-top: 21px; }
+  .bc-advice .bc-advice__button { min-height: 46px; gap: 20px; padding: 12px 15px; font-size: 12px; }
+  .bc-advice__text-link { font-size: 12px; gap: 10px; }
+  .bc-advice__photos { gap: 12px; }
+  .bc-advice__photo img { aspect-ratio: 1.05; }
+  .bc-advice__photo figcaption { padding: 13px 12px 14px; gap: 9px; }
+  .bc-advice__photo figcaption strong { font-size: 14px; }
+  .bc-advice__photo figcaption small { font-size: 11px; }
+  .bc-advice__reading { grid-template-columns: minmax(0, 1fr); gap: 0; padding-block: 25px 45px; }
+  .bc-advice__sidebar { display: none; }
+  .bc-advice__opening { padding-bottom: 22px; font-size: 14px; line-height: 1.8; }
+  .bc-advice__mobile-contents { display: block; margin-bottom: 27px; padding: 0 16px; border: 1px solid var(--bca-line); border-radius: 6px; background: var(--bca-soft); }
+  .bc-advice__mobile-contents summary { display: flex; min-height: 49px; align-items: center; justify-content: space-between; gap: 15px; color: var(--bca-navy); font-size: 13px; line-height: 1.5; font-weight: 650; cursor: pointer; list-style: none; }
+  .bc-advice__mobile-contents summary::-webkit-details-marker { display: none; }
+  .bc-advice__mobile-contents summary > span { font-size: 20px; font-weight: 400; }
+  .bc-advice__mobile-contents[open] summary > span { transform: rotate(45deg); }
+  .bc-advice__mobile-contents ol { display: grid; gap: 1px; padding: 0 0 14px 20px; color: #7e95a1; }
+  .bc-advice__mobile-contents li { padding-left: 4px; }
+  .bc-advice__mobile-contents a { display: block; min-height: 44px; padding-block: 10px; font-size: 12px; line-height: 1.6; text-decoration: none; }
+  .bc-advice__part { padding-bottom: 26px; }
+  .bc-advice__part + .bc-advice__part { padding-top: 28px; }
+  .bc-advice__prose { font-size: 15px; line-height: 1.85; }
+  .bc-advice__prose h2 { margin-bottom: 17px; font-size: 26px; line-height: 1.25; text-wrap: pretty; scroll-margin-top: 140px; }
+  .bc-advice__prose table { margin-top: 22px; font-size: 12px; line-height: 1.65; border-radius: 6px; }
+  .bc-advice__prose th, .bc-advice__prose td { padding: 12px 10px; }
+  .bc-advice__prose thead th { font-size: 12px; }
+  .bc-advice__prose thead th:first-child { width: 30%; }
+  .bc-advice__prose thead th:nth-child(2), .bc-advice__prose thead th:nth-child(3) { padding-top: 9px; }
+  .bc-advice__prose ul { gap: 16px; padding-left: 18px; }
+  .bc-advice__part--closing { padding: 23px 20px 24px !important; }
+  .bc-advice__part--closing h2 { font-size: 26px; }
+  .bc-advice__prose small { font-size: 12px; line-height: 1.8; }
+}
+@media (max-width: 359px) {
+  .bc-advice__wrap { width: calc(100% - 30px); }
+  .bc-advice h1 { font-size: 31px; }
+  .bc-advice__hero-actions { column-gap: 16px; }
+  .bc-advice__photo figcaption { padding-inline: 9px; gap: 8px; }
+  .bc-advice__photo figcaption strong { font-size: 12px; }
+  .bc-advice__photo figcaption small { font-size: 10px; }
+  .bc-advice__prose th, .bc-advice__prose td { padding-inline: 8px; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.main-article.name",
+  "tag": "section",
+  "class": "bc-advice-section",
+  "settings": [
+    { "type": "image_picker", "id": "one_image", "label": "t:ss_experience.settings.one_image" },
+    { "type": "image_picker", "id": "plus_image", "label": "t:ss_experience.settings.plus_image" }
+  ]
+}
+{% endschema %}

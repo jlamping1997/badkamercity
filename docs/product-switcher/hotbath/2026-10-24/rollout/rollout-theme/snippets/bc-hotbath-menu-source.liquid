@@ -1,0 +1,12 @@
+{% doc %}
+Routes a generated Hotbath menu lookup to one bounded part.
+@param {string} key - Generated route key.
+{% enddoc %}
+{%- liquid
+  assign bc_hotbath_route_key_number = key | plus: 0
+  assign bc_hotbath_route_bucket = bc_hotbath_route_key_number | modulo: 1
+  case bc_hotbath_route_bucket
+    when 0
+      render 'bc-hotbath-menu-source-00', route_key: bc_hotbath_route_key_number
+  endcase
+-%}

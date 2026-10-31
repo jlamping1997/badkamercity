@@ -1,0 +1,19 @@
+{
+  "task": "DOC-03D",
+  "jsonFilesParsedBeforeThisReport": 55,
+  "relativeArchitectureLinksChecked": 1133,
+  "brokenLinks": [],
+  "targetedSourcesMd5SizeSha256": 15,
+  "matchesPriorSelectedSourceIndex": 11,
+  "uniqueReplayCases": 43,
+  "classifications": {
+    "CONTROL_PASSED": 34,
+    "DEFECT_REPRODUCED": 2,
+    "BOUNDARY_CONFIRMED": 7
+  },
+  "negativeShaGuard": "REFUSED_BEFORE_EXECUTION_AND_OUTPUT",
+  "gitDiffCheck": "PASS",
+  "changedPathScope": "docs and offline audit only",
+  "privacyCheck": "No matched credential markers or raw export archive/database/JSONL among changed files",
+  "nativeBrowserAndRealCartTested": false
+}

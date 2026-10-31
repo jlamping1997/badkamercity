@@ -1,0 +1,6466 @@
+{
+  "assets/base.css": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 189,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 260,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/cart.bc-mobile.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-list-social.css": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 190,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "asset_url",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/details-modal.js": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 193,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/global.js": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 192,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 35,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/password-modal.js": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 194,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-password.css": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "asset_url",
+      "line": 188,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-password-footer.liquid": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "section",
+      "line": 208,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-password-header.liquid": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "section",
+      "line": 202,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/meta-tags.liquid": [
+    {
+      "source": "layout/password.liquid",
+      "kind": "render",
+      "line": 22,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "layout/theme.liquid",
+      "kind": "render",
+      "line": 31,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/animations.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-collection.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 263,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-collection-advice.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 297,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 39,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-cards.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 261,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-typography.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 264,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wishlist.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 265,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wishlist.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 266,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/cart-drawer.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 380,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-cart-drawer.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 270,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-cart-items.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 267,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-cart.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 271,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-footer.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-discounts.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 273,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-footer.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-localization-form.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 288,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-predictive-search.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 295,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-price.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 262,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-totals.css": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 272,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-footer.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/constants.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 33,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/details-disclosure.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 36,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/localization-form.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 289,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/predictive-search.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 376,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/pubsub.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 34,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/search-form.js": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "asset_url",
+      "line": 38,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/footer-group.json": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "sections",
+      "line": 323,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/header-group.json": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "sections",
+      "line": 317,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/cart-drawer.liquid": [
+    {
+      "source": "layout/theme.liquid",
+      "kind": "render",
+      "line": 314,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/cart-drawer.liquid",
+      "kind": "render",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-slider.css": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/multicolumn.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-slideshow.css": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-arrow.svg": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "inline_asset_content",
+      "line": 45,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "inline_asset_content",
+      "line": 105,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "inline_asset_content",
+      "line": 110,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 462,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 89,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-category-landing.liquid",
+      "kind": "inline_asset_content",
+      "line": 345,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/multicolumn.liquid",
+      "kind": "inline_asset_content",
+      "line": 139,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/newsletter.liquid",
+      "kind": "inline_asset_content",
+      "line": 89,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 102,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 111,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 138,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 147,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 161,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 317,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 511,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 532,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 545,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 674,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 687,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-caret.svg": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "inline_asset_content",
+      "line": 69,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "inline_asset_content",
+      "line": 124,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-collection-advice.liquid",
+      "kind": "inline_asset_content",
+      "line": 54,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collapsible-content.liquid",
+      "kind": "inline_asset_content",
+      "line": 88,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 93,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 109,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "inline_asset_content",
+      "line": 150,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "inline_asset_content",
+      "line": 166,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 176,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 193,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/home-mijn-badkamercity.liquid",
+      "kind": "inline_asset_content",
+      "line": 334,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/home-mijn-badkamercity.liquid",
+      "kind": "inline_asset_content",
+      "line": 337,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 101,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 129,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 115,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 129,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 278,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 294,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 345,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "inline_asset_content",
+      "line": 373,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "inline_asset_content",
+      "line": 85,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 503,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 946,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1013,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1047,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1123,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1259,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 688,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/multicolumn.liquid",
+      "kind": "inline_asset_content",
+      "line": 157,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/multicolumn.liquid",
+      "kind": "inline_asset_content",
+      "line": 171,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 44,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 79,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 203,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 238,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 483,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 41,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 154,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 310,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 414,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 747,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 854,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-dropdown-menu.liquid",
+      "kind": "inline_asset_content",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-dropdown-menu.liquid",
+      "kind": "inline_asset_content",
+      "line": 54,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-mega-menu.liquid",
+      "kind": "inline_asset_content",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/language-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/pagination.liquid",
+      "kind": "inline_asset_content",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/pagination.liquid",
+      "kind": "inline_asset_content",
+      "line": 70,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 141,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 157,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 202,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 332,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "inline_asset_content",
+      "line": 175,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/theme-editor.js": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "asset_url",
+      "line": 130,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 476,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 65,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "asset_url",
+      "line": 261,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/country-localization.liquid": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "render",
+      "line": 145,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1106,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-drawer.liquid",
+      "kind": "render",
+      "line": 144,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/language-localization.liquid": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "render",
+      "line": 156,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1117,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-drawer.liquid",
+      "kind": "render",
+      "line": 155,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/social-icons.liquid": [
+    {
+      "source": "sections/announcement-bar.liquid",
+      "kind": "render",
+      "line": 26,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-switcher.liquid": [
+    {
+      "source": "sections/bc-card-data.liquid",
+      "kind": "render",
+      "line": 78,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 770,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-wiesbaden-colors.liquid": [
+    {
+      "source": "sections/bc-card-data.liquid",
+      "kind": "render",
+      "line": 78,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 768,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-meubelhub.css": [
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-meubelhub.js": [
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "asset_url",
+      "line": 7,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-meubelhub-icon.liquid": [
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 49,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 90,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 104,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 104,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 108,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 112,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 115,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 146,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 154,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/bc-meubelhub.liquid",
+      "kind": "render",
+      "line": 160,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/related-products.liquid": [
+    {
+      "source": "sections/bc-related-products.liquid",
+      "kind": "section",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/product.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-landing.css": [
+    {
+      "source": "sections/bc-sunshower-landing.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-mobile.js": [
+    {
+      "source": "sections/bc-sunshower-landing.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-shop.js": [
+    {
+      "source": "sections/bc-sunshower-landing.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-sunshower-shop-card.liquid": [
+    {
+      "source": "sections/bc-sunshower-landing.liquid",
+      "kind": "render",
+      "line": 179,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quick-order-list.css": [
+    {
+      "source": "sections/bulk-quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "asset_url",
+      "line": 28,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quick-order-list.js": [
+    {
+      "source": "sections/bulk-quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 24,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 22,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 7,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/quick-order-list.liquid": [
+    {
+      "source": "sections/bulk-quick-order-list.liquid",
+      "kind": "render",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-header-cart.liquid": [
+    {
+      "source": "sections/cart-icon-bubble.liquid",
+      "kind": "render",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1157,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/collage.css": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-card.css": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-blog.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-list-collections.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1059,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/related-products.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "asset_url",
+      "line": 9,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-deferred-media.css": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 30,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/video.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-modal-video.css": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-close.svg": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "inline_asset_content",
+      "line": 182,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 399,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-password-header.liquid",
+      "kind": "inline_asset_content",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-password-header.liquid",
+      "kind": "inline_asset_content",
+      "line": 56,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1320,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/pickup-availability.liquid",
+      "kind": "inline_asset_content",
+      "line": 64,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 263,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 337,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 464,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 42,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 73,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 427,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-notification.liquid",
+      "kind": "inline_asset_content",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 82,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 469,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 16,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 86,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 108,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-modal.liquid",
+      "kind": "inline_asset_content",
+      "line": 40,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 242,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/share-button.liquid",
+      "kind": "inline_asset_content",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-play.svg": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "inline_asset_content",
+      "line": 136,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 93,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 252,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/video.liquid",
+      "kind": "inline_asset_content",
+      "line": 78,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 288,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media.liquid",
+      "kind": "inline_asset_content",
+      "line": 59,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 67,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 119,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/card-collection.liquid": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "render",
+      "line": 107,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "render",
+      "line": 75,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-list-collections.liquid",
+      "kind": "render",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "render",
+      "line": 59,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/card-product.liquid": [
+    {
+      "source": "sections/collage.liquid",
+      "kind": "render",
+      "line": 96,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "render",
+      "line": 120,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "render",
+      "line": 155,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "render",
+      "line": 519,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-category-landing.liquid",
+      "kind": "render",
+      "line": 388,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 189,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 986,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/related-products.liquid",
+      "kind": "render",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/collapsible-content.css": [
+    {
+      "source": "sections/collapsible-content.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-accordion.css": [
+    {
+      "source": "sections/collapsible-content.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 26,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/icon-accordion.liquid": [
+    {
+      "source": "sections/collapsible-content.liquid",
+      "kind": "render",
+      "line": 84,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 498,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 939,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/icon-with-text.liquid",
+      "kind": "render",
+      "line": 46,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/icon-with-text.liquid",
+      "kind": "render",
+      "line": 68,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/icon-with-text.liquid",
+      "kind": "render",
+      "line": 90,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-collection-list.css": [
+    {
+      "source": "sections/collection-list.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-list-collections.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-error.svg": [
+    {
+      "source": "sections/contact-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 41,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/contact-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 93,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "inline_asset_content",
+      "line": 117,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-activate-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-activate-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 66,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-activate-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 92,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 145,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 207,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 241,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 273,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 428,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-login.liquid",
+      "kind": "inline_asset_content",
+      "line": 55,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-login.liquid",
+      "kind": "inline_asset_content",
+      "line": 88,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-register.liquid",
+      "kind": "inline_asset_content",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-register.liquid",
+      "kind": "inline_asset_content",
+      "line": 99,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-register.liquid",
+      "kind": "inline_asset_content",
+      "line": 124,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-reset-password.liquid",
+      "kind": "inline_asset_content",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-reset-password.liquid",
+      "kind": "inline_asset_content",
+      "line": 67,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-reset-password.liquid",
+      "kind": "inline_asset_content",
+      "line": 93,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/newsletter.liquid",
+      "kind": "inline_asset_content",
+      "line": 96,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "inline_asset_content",
+      "line": 37,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 458,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 92,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 125,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 165,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 199,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 318,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 427,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 296,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-success.svg": [
+    {
+      "source": "sections/contact-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 35,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "inline_asset_content",
+      "line": 132,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "inline_asset_content",
+      "line": 170,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-login.liquid",
+      "kind": "inline_asset_content",
+      "line": 78,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/newsletter.liquid",
+      "kind": "inline_asset_content",
+      "line": 111,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/gift_card.liquid",
+      "kind": "inline_asset_content",
+      "line": 167,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-contact-form.css": [
+    {
+      "source": "sections/contact-form.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-newsletter.css": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/newsletter.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/email-signup-banner-background-mobile.svg": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "inline_asset_content",
+      "line": 57,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/email-signup-banner-background.svg": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "inline_asset_content",
+      "line": 56,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/newsletter-section.css": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/newsletter.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-email-signup-banner.css": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-image-banner.css": [
+    {
+      "source": "sections/email-signup-banner.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/image-banner.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-article-card.css": [
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-blog.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-featured-blog.css": [
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/article-card.liquid": [
+    {
+      "source": "sections/featured-blog.liquid",
+      "kind": "render",
+      "line": 71,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-blog.liquid",
+      "kind": "render",
+      "line": 34,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 749,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/mask-arch.svg": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "inline_asset_content",
+      "line": 212,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "inline_asset_content",
+      "line": 216,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 819,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/related-products.liquid",
+      "kind": "inline_asset_content",
+      "line": 57,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/mask-blobs.css": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/related-products.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/price-per-item.js": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 46,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 58,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/product-form.js": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 471,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "asset_url",
+      "line": 355,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 15,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 53,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quantity-popover.js": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 22,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 20,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "asset_url",
+      "line": 12,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quick-add-bulk.js": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 19,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quick-add.css": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 12,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 10,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1062,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quick-add.js": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 14,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1063,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/template-collection.css": [
+    {
+      "source": "sections/featured-collection.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-model-viewer-ui.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 63,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 81,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-model.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 52,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 70,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-variant-picker.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 38,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-rating.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 22,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "asset_url",
+      "line": 24,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-swatch-input.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "asset_url",
+      "line": 16,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-swatch.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 40,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "asset_url",
+      "line": 17,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-volume-pricing.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "asset_url",
+      "line": 25,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-minus.svg": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 204,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 279,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 553,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 301,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quantity-input.liquid",
+      "kind": "inline_asset_content",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-plus.svg": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 228,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 316,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 578,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 385,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 342,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quantity-input.liquid",
+      "kind": "inline_asset_content",
+      "line": 44,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/magnify.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 473,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 62,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/media-gallery.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 500,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1332,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/product-info.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 44,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 52,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/product-modal.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 499,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1331,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/product-model.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 483,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1339,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-featured-product.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-main-product.css": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 25,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/show-more.js": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "asset_url",
+      "line": 45,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 57,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "asset_url",
+      "line": 110,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/buy-buttons.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 403,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 869,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-info.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/icon-with-text.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 450,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1067,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/loading-spinner.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 189,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "render",
+      "line": 457,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "render",
+      "line": 208,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "render",
+      "line": 435,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 109,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 539,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 693,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/predictive-search.liquid",
+      "kind": "render",
+      "line": 72,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "render",
+      "line": 112,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 320,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 388,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 444,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "render",
+      "line": 237,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 435,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 889,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "render",
+      "line": 62,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "render",
+      "line": 79,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "render",
+      "line": 153,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "render",
+      "line": 415,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "render",
+      "line": 143,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "render",
+      "line": 234,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/price.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 118,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-info.liquid",
+      "kind": "render",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 208,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 518,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 533,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 621,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-media-gallery.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 76,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 327,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-media.liquid",
+      "kind": "render",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-media-modal.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 467,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1302,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-variant-picker.liquid": [
+    {
+      "source": "sections/featured-product.liquid",
+      "kind": "render",
+      "line": 397,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 862,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-info.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/footer.liquid": [
+    {
+      "source": "sections/footer-group.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/header.liquid": [
+    {
+      "source": "sections/header-group.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/cart-notification.js": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 1032,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-cart-notification.css": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-list-menu.css": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-mega-menu.css": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 8,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-menu-drawer.css": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-search.css": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-account-bc.svg": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "inline_asset_content",
+      "line": 1131,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-wishlist-bc.svg": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "inline_asset_content",
+      "line": 1142,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wishlist-button.liquid",
+      "kind": "inline_asset_content",
+      "line": 21,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/cart-notification.liquid": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1208,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/header-drawer.liquid": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1063,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/header-search.liquid": [
+    {
+      "source": "sections/header.liquid",
+      "kind": "render",
+      "line": 1096,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "render",
+      "line": 101,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-box.svg": [
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "inline_asset_content",
+      "line": 407,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-cart-bc.svg": [
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "inline_asset_content",
+      "line": 453,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 1293,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-header-cart.liquid",
+      "kind": "inline_asset_content",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "inline_asset_content",
+      "line": 104,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-wishlist-button.liquid": [
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "render",
+      "line": 395,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 81,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-card-product-search.liquid",
+      "kind": "render",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-sunshower-shop-card.liquid",
+      "kind": "render",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "render",
+      "line": 114,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 44,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/unit-price.liquid": [
+    {
+      "source": "sections/home-popular-products.liquid",
+      "kind": "render",
+      "line": 427,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "render",
+      "line": 234,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "render",
+      "line": 461,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-order.liquid",
+      "kind": "render",
+      "line": 169,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "render",
+      "line": 261,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/price.liquid",
+      "kind": "render",
+      "line": 112,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "render",
+      "line": 148,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "render",
+      "line": 411,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-home-sunshower.css": [
+    {
+      "source": "sections/home-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-image-with-text.css": [
+    {
+      "source": "sections/image-with-text.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/multirow.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/customer.css": [
+    {
+      "source": "sections/main-account.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-activate-account.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-login.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-order.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-register.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-reset-password.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-account.svg": [
+    {
+      "source": "sections/main-account.liquid",
+      "kind": "inline_asset_content",
+      "line": 22,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/customer.js": [
+    {
+      "source": "sections/main-addresses.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-blog-post.css": [
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/pagination.liquid": [
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "render",
+      "line": 129,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-blog.liquid",
+      "kind": "render",
+      "line": 48,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 208,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-list-collections.liquid",
+      "kind": "render",
+      "line": 47,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 809,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "render",
+      "line": 103,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/share-button.liquid": [
+    {
+      "source": "sections/main-article.liquid",
+      "kind": "render",
+      "line": 80,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-main-blog.css": [
+    {
+      "source": "sections/main-blog.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-cart-page.js": [
+    {
+      "source": "sections/main-cart-footer.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-cart-tools.js": [
+    {
+      "source": "sections/main-cart-footer.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-cart-page.css": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 7,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/cart.js": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 24,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "asset_url",
+      "line": 11,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-discount.svg": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 199,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-order.liquid",
+      "kind": "inline_asset_content",
+      "line": 99,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-order.liquid",
+      "kind": "inline_asset_content",
+      "line": 227,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-order.liquid",
+      "kind": "inline_asset_content",
+      "line": 237,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 229,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 507,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-info.svg": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 262,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 346,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 373,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 209,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 301,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-remove.svg": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "inline_asset_content",
+      "line": 335,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 361,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "inline_asset_content",
+      "line": 289,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 150,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 241,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/quantity-popover.css": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/quick-order-list.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "asset_url",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/cart-drawer.liquid",
+      "kind": "asset_url",
+      "line": 8,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-cart-delivery.liquid": [
+    {
+      "source": "sections/main-cart-items.liquid",
+      "kind": "render",
+      "line": 194,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-category-directory.css": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 298,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-bc-category-navigation.css": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-category-breadcrumbs.liquid": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "render",
+      "line": 375,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "render",
+      "line": 17,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-category-children.liquid": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "render",
+      "line": 414,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "render",
+      "line": 25,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-category-link-index.liquid": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "render",
+      "line": 495,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "render",
+      "line": 28,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-collection-intro.liquid": [
+    {
+      "source": "sections/main-category-landing.liquid",
+      "kind": "render",
+      "line": 385,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-collection-hero.css": [
+    {
+      "source": "sections/main-collection-banner.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-facets.css": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 116,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 8,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/facets.js": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "asset_url",
+      "line": 117,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 9,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-collection-active-filters.liquid": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 144,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-external-filters.liquid": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 54,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 615,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-mobile-listing.liquid": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 220,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 822,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/facets.liquid": [
+    {
+      "source": "sections/main-collection-product-grid.liquid",
+      "kind": "render",
+      "line": 126,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 629,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-main-glossary-page.css": [
+    {
+      "source": "sections/main-glossary-page.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-main-glossary.css": [
+    {
+      "source": "sections/main-glossary.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-main-page.css": [
+    {
+      "source": "sections/main-page.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/page.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-facebook.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 17,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-instagram.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 27,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-pinterest.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 67,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-shopify.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 105,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-snapchat.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 69,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 77,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-tiktok.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 49,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 47,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-tumblr.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 59,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 87,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-twitter.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 57,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-vimeo.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 89,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 97,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-youtube.svg": [
+    {
+      "source": "sections/main-password-footer.liquid",
+      "kind": "inline_asset_content",
+      "line": 79,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/social-icons.liquid",
+      "kind": "inline_asset_content",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-error": [
+    {
+      "source": "sections/main-password-header.liquid",
+      "kind": "inline_asset_content",
+      "line": 84,
+      "resolution": "not_resolved"
+    }
+  ],
+  "assets/icon-padlock.svg": [
+    {
+      "source": "sections/main-password-header.liquid",
+      "kind": "inline_asset_content",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-choice-position.js": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 49,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 5,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-hotbath-mobile.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 33,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-hotbath-mobile.js": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 34,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-hotbath-swatches.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 32,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-colors.liquid",
+      "kind": "asset_url",
+      "line": 47,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-accessories.js": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 54,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-disclosure.js": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 47,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-page.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 46,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-sticky.js": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1299,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-complementary-products.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1060,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-accessories.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 55,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-pros-cons.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1242,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-set.css": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "asset_url",
+      "line": 1179,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-inventory-status.svg": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 441,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 453,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 467,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "inline_asset_content",
+      "line": 472,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-hotbath-normal-scope.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 388,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-hotbath-normal-intro.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-hotbath-public-specs.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 10,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-accessories.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1184,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-breadcrumbs.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 315,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-description.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1093,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-detail-specs.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1169,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-documents.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1164,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-set-components.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1181,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-sunshower-choices.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 766,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-pros-cons.liquid": [
+    {
+      "source": "sections/main-product.liquid",
+      "kind": "render",
+      "line": 1177,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/main-search.js": [
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "asset_url",
+      "line": 16,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-card-product-search.liquid": [
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 740,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-search-usp-strip.liquid": [
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 785,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 791,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 797,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-search.liquid",
+      "kind": "render",
+      "line": 803,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-photoswipe.css": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-photoswipe.esm.js": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 24,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-configurator.css": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-page.css": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 2,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-page.js": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower-products.json": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "asset_url",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-sunshower-choices.liquid",
+      "kind": "asset_url",
+      "line": 9,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-ss-choice-label.liquid": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 70,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-ss-guide.liquid": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 71,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 102,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 130,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 130,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 131,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-ss-highlights.liquid": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 93,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-ss-value.liquid": [
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 97,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/main-sunshower.liquid",
+      "kind": "render",
+      "line": 130,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-multicolumn.css": [
+    {
+      "source": "sections/multicolumn.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-tick.svg": [
+    {
+      "source": "sections/pickup-availability.liquid",
+      "kind": "inline_asset_content",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/pickup-availability.liquid",
+      "kind": "inline_asset_content",
+      "line": 89,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-spec-header.liquid": [
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-spec-row.liquid": [
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 10,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 11,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 12,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 14,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 15,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 16,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 20,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 22,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 24,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 30,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 31,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 32,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 33,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 34,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 35,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 36,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 37,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 38,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 40,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 42,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 44,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/product-specs.liquid",
+      "kind": "render",
+      "line": 45,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/short-specs.liquid",
+      "kind": "render",
+      "line": 10,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/short-specs.liquid",
+      "kind": "render",
+      "line": 11,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/short-specs.liquid",
+      "kind": "render",
+      "line": 12,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/short-specs.liquid",
+      "kind": "render",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/short-specs.liquid",
+      "kind": "render",
+      "line": 14,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-related-products.css": [
+    {
+      "source": "sections/related-products.liquid",
+      "kind": "asset_url",
+      "line": 3,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/section-rich-text.css": [
+    {
+      "source": "sections/rich-text.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-pause.svg": [
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 90,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "sections/slideshow.liquid",
+      "kind": "inline_asset_content",
+      "line": 249,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/video-section.css": [
+    {
+      "source": "sections/video.liquid",
+      "kind": "asset_url",
+      "line": 1,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-set-data.liquid": [
+    {
+      "source": "snippets/bc-before-pilot-set.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 12,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-set-item.liquid": [
+    {
+      "source": "snippets/bc-before-pilot-set.liquid",
+      "kind": "render",
+      "line": 24,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-set.liquid",
+      "kind": "render",
+      "line": 53,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 58,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-verified.liquid",
+      "kind": "render",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-set-product-handle.liquid": [
+    {
+      "source": "snippets/bc-before-pilot-set.liquid",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-set.liquid",
+      "kind": "render",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 44,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-detail-row.liquid": [
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 14,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 15,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 16,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 24,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 30,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 31,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 32,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 33,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 34,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 35,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 36,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 37,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 38,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 40,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 41,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 45,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 46,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 47,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-before-pilot-specs.liquid",
+      "kind": "render",
+      "line": 48,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 10,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 11,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 15,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 16,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 19,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 20,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 26,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 29,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 30,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 31,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 32,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 33,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 34,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 35,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 36,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 37,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 38,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 39,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 40,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 41,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 42,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 43,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 47,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 48,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 49,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-legacy.liquid",
+      "kind": "render",
+      "line": 50,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-mapped.liquid",
+      "kind": "render",
+      "line": 34,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs-mapped.liquid",
+      "kind": "render",
+      "line": 35,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-mapped-spec-row.liquid",
+      "kind": "render",
+      "line": 47,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-mapped-spec-row.liquid",
+      "kind": "render",
+      "line": 49,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "kind": "render",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-card-delivery.liquid": [
+    {
+      "source": "snippets/bc-card-product-search.liquid",
+      "kind": "render",
+      "line": 109,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 207,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-card-specs.liquid": [
+    {
+      "source": "snippets/bc-card-product-search.liquid",
+      "kind": "render",
+      "line": 107,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 167,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-card-title.liquid": [
+    {
+      "source": "snippets/bc-card-product-search.liquid",
+      "kind": "render",
+      "line": 104,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 124,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 163,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-category-destination.liquid": [
+    {
+      "source": "snippets/bc-category-children.liquid",
+      "kind": "render",
+      "line": 113,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-category-index-entry.liquid",
+      "kind": "render",
+      "line": 12,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-close-small.svg": [
+    {
+      "source": "snippets/bc-collection-active-filters.liquid",
+      "kind": "inline_asset_content",
+      "line": 11,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-collection-active-filters.liquid",
+      "kind": "inline_asset_content",
+      "line": 21,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 82,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 98,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 348,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 364,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 793,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 810,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 902,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 919,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-external-filters.css": [
+    {
+      "source": "snippets/bc-external-filters.liquid",
+      "kind": "asset_url",
+      "line": 10,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-external-filters.js": [
+    {
+      "source": "snippets/bc-external-filters.liquid",
+      "kind": "asset_url",
+      "line": 11,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-mobile-listing.js": [
+    {
+      "source": "snippets/bc-mobile-listing.liquid",
+      "kind": "asset_url",
+      "line": 8,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-accessories-data.liquid": [
+    {
+      "source": "snippets/bc-product-accessories.liquid",
+      "kind": "render",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-accessory-item.liquid": [
+    {
+      "source": "snippets/bc-product-accessories.liquid",
+      "kind": "render",
+      "line": 36,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-sunshower-panel.liquid": [
+    {
+      "source": "snippets/bc-product-accessories.liquid",
+      "kind": "render",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 8,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 2,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-pros-cons.liquid",
+      "kind": "render",
+      "line": 7,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-wiesbaden-reviewed-scope.liquid": [
+    {
+      "source": "snippets/bc-product-breadcrumbs.liquid",
+      "kind": "render",
+      "line": 5,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-product-documents.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "kind": "render",
+      "line": 11,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-mapped-spec-row.liquid": [
+    {
+      "source": "snippets/bc-product-detail-specs-mapped.liquid",
+      "kind": "render",
+      "line": 38,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-hotbath-public-specs.liquid": [
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 13,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-detail-specs-legacy.liquid": [
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 23,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-detail-specs-mapped.liquid": [
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 20,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-wiesbaden-reviewed-specs.liquid": [
+    {
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "kind": "render",
+      "line": 15,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-inbouw.js": [
+    {
+      "source": "snippets/bc-product-inbouw.liquid",
+      "kind": "asset_url",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-product-inbouw.css": [
+    {
+      "source": "snippets/bc-product-inbouw.liquid",
+      "kind": "asset_url",
+      "line": 40,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-set-verified.liquid": [
+    {
+      "source": "snippets/bc-product-set-components.liquid",
+      "kind": "render",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-false.svg": [
+    {
+      "source": "snippets/bc-product-spec-row.liquid",
+      "kind": "asset_url",
+      "line": 40,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-true.svg": [
+    {
+      "source": "snippets/bc-product-spec-row.liquid",
+      "kind": "asset_url",
+      "line": 38,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-product-switcher.js": [
+    {
+      "source": "snippets/bc-product-switcher.liquid",
+      "kind": "asset_url",
+      "line": 58,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-colors.liquid",
+      "kind": "asset_url",
+      "line": 63,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/product-switcher-data.json": [
+    {
+      "source": "snippets/bc-product-switcher.liquid",
+      "kind": "asset_url",
+      "line": 12,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-chat-bubble.svg": [
+    {
+      "source": "snippets/bc-search-usp-strip.liquid",
+      "kind": "inline_asset_content",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-stopwatch.svg": [
+    {
+      "source": "snippets/bc-search-usp-strip.liquid",
+      "kind": "inline_asset_content",
+      "line": 4,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-truck.svg": [
+    {
+      "source": "snippets/bc-search-usp-strip.liquid",
+      "kind": "inline_asset_content",
+      "line": 11,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-ss-choice-icon.liquid": [
+    {
+      "source": "snippets/bc-ss-choice-label.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-ss-choice-label.liquid",
+      "kind": "render",
+      "line": 9,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-ss-choice-label.liquid",
+      "kind": "render",
+      "line": 16,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower.css": [
+    {
+      "source": "snippets/bc-sunshower-choices.liquid",
+      "kind": "asset_url",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-sunshower-panel.liquid",
+      "kind": "asset_url",
+      "line": 9,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-sunshower.js": [
+    {
+      "source": "snippets/bc-sunshower-choices.liquid",
+      "kind": "asset_url",
+      "line": 7,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-sunshower-panel.liquid",
+      "kind": "asset_url",
+      "line": 10,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-colors.css": [
+    {
+      "source": "snippets/bc-wiesbaden-colors.liquid",
+      "kind": "asset_url",
+      "line": 48,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-antraciet.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 45,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-beige.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 41,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-black.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 11,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 31,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-brass.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 15,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 33,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-bronze-copper.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 19,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-bruin-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 95,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-cashmere.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 99,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-chrome.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 9,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-chroom-mat-zwart.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 69,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-copper.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 21,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-donker-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 55,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-eik.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 65,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 63,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-geborsteld-brons-koper-mat-zwart.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 71,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-geborsteld-messing-mat-zwart.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 73,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-geborsteld-staal-mat-zwart.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 75,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-glans-wit-geborsteld-goud.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 77,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-glans-wit.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 37,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-grafietgrijs.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 47,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-grijs-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 53,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-grijs.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 51,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-gunmetal-mat-zwart.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 79,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-gunmetal.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 17,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-houtnerf-grijs.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 61,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-licht-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 57,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-beige.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 97,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-grijs.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 49,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-wit.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 35,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zand.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 43,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-chroom.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 81,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-geborsteld-brons-koper.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 83,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-geborsteld-goud.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 85,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-geborsteld-messing.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 87,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-gunmetal.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 89,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-mat-zwart-rvs-look.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 91,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-naturel-eik.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 67,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-steel.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 13,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 23,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 25,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 27,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 29,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-walnoot.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 59,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-warm-eiken.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 93,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/bc-wiesbaden-swatch-wit.svg": [
+    {
+      "source": "snippets/bc-wiesbaden-swatch-url.liquid",
+      "kind": "asset_url",
+      "line": 39,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-pickup-availability.css": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "asset_url",
+      "line": 137,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-unavailable.svg": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "inline_asset_content",
+      "line": 156,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/pickup-availability.js": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "asset_url",
+      "line": 168,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-inbouw-data.liquid": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "render",
+      "line": 16,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-product-inbouw.liquid": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "render",
+      "line": 67,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/gift-card-recipient-form.liquid": [
+    {
+      "source": "snippets/buy-buttons.liquid",
+      "kind": "render",
+      "line": 63,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/quantity-input.liquid": [
+    {
+      "source": "snippets/card-product.liquid",
+      "kind": "render",
+      "line": 418,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list-row.liquid",
+      "kind": "render",
+      "line": 274,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-checkmark.svg": [
+    {
+      "source": "snippets/cart-notification.liquid",
+      "kind": "inline_asset_content",
+      "line": 10,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 112,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 141,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 269,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 638,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 28,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/language-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 38,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 160,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "inline_asset_content",
+      "line": 252,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-reset.svg": [
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 70,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 50,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-search.svg": [
+    {
+      "source": "snippets/country-localization.liquid",
+      "kind": "inline_asset_content",
+      "line": 73,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 55,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/header-search.liquid",
+      "kind": "inline_asset_content",
+      "line": 83,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-show-more.css": [
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "asset_url",
+      "line": 15,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-filter.svg": [
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 450,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/square.svg": [
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 266,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "inline_asset_content",
+      "line": 637,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "inline_asset_content",
+      "line": 27,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/price-facet.liquid": [
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 331,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 697,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/swatch-input.liquid": [
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 226,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/facets.liquid",
+      "kind": "render",
+      "line": 595,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-variant-options.liquid",
+      "kind": "render",
+      "line": 69,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/recipient-form.js": [
+    {
+      "source": "snippets/gift-card-recipient-form.liquid",
+      "kind": "asset_url",
+      "line": 14,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-hamburger.svg": [
+    {
+      "source": "snippets/header-drawer.liquid",
+      "kind": "inline_asset_content",
+      "line": 15,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/loading-spinner.svg": [
+    {
+      "source": "snippets/loading-spinner.liquid",
+      "kind": "inline_asset_content",
+      "line": 11,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/component-pagination.css": [
+    {
+      "source": "snippets/pagination.liquid",
+      "kind": "asset_url",
+      "line": 14,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-3d-model.svg": [
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 173,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "inline_asset_content",
+      "line": 282,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 71,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 114,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 163,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-thumbnail.liquid": [
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "render",
+      "line": 77,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-media-gallery.liquid",
+      "kind": "render",
+      "line": 115,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-3d-model": [
+    {
+      "source": "snippets/product-media.liquid",
+      "kind": "inline_asset_content",
+      "line": 57,
+      "resolution": "not_resolved"
+    },
+    {
+      "source": "snippets/product-media.liquid",
+      "kind": "inline_asset_content",
+      "line": 113,
+      "resolution": "not_resolved"
+    }
+  ],
+  "assets/icon-zoom.svg": [
+    {
+      "source": "snippets/product-thumbnail.liquid",
+      "kind": "inline_asset_content",
+      "line": 75,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/product-variant-options.liquid": [
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "render",
+      "line": 114,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "render",
+      "line": 130,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "render",
+      "line": 140,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "render",
+      "line": 167,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/swatch.liquid": [
+    {
+      "source": "snippets/product-variant-picker.liquid",
+      "kind": "render",
+      "line": 158,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/swatch-input.liquid",
+      "kind": "render",
+      "line": 50,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/progress-bar.liquid": [
+    {
+      "source": "snippets/quantity-input.liquid",
+      "kind": "render",
+      "line": 46,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/quick-order-list-row.liquid": [
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "render",
+      "line": 77,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/quick-order-list.liquid",
+      "kind": "render",
+      "line": 88,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-copy.svg": [
+    {
+      "source": "snippets/share-button.liquid",
+      "kind": "inline_asset_content",
+      "line": 47,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/icon-share.svg": [
+    {
+      "source": "snippets/share-button.liquid",
+      "kind": "inline_asset_content",
+      "line": 17,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "snippets/share-button.liquid",
+      "kind": "inline_asset_content",
+      "line": 22,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/share.js": [
+    {
+      "source": "snippets/share-button.liquid",
+      "kind": "asset_url",
+      "line": 13,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-404.liquid": [
+    {
+      "source": "templates/404.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-advice-article.liquid": [
+    {
+      "source": "templates/article.bc-advice-qa.liquid",
+      "kind": "section",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/article.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-blog.liquid": [
+    {
+      "source": "templates/blog.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-cart-footer.liquid": [
+    {
+      "source": "templates/cart.bc-mobile.liquid",
+      "kind": "section",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/cart.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-cart-items.liquid": [
+    {
+      "source": "templates/cart.bc-mobile.liquid",
+      "kind": "section",
+      "line": 6,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/cart.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/featured-collection.liquid": [
+    {
+      "source": "templates/cart.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-meubelhub.liquid": [
+    {
+      "source": "templates/collection.bc-meubelhub.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-collection-advice.liquid": [
+    {
+      "source": "templates/collection.category-landing.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/collection.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-category-landing.liquid": [
+    {
+      "source": "templates/collection.category-landing.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-collection-banner.liquid": [
+    {
+      "source": "templates/collection.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-collection-product-grid.liquid": [
+    {
+      "source": "templates/collection.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-account.liquid": [
+    {
+      "source": "templates/customers/account.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-activate-account.liquid": [
+    {
+      "source": "templates/customers/activate_account.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-addresses.liquid": [
+    {
+      "source": "templates/customers/addresses.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-login.liquid": [
+    {
+      "source": "templates/customers/login.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-order.liquid": [
+    {
+      "source": "templates/customers/order.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-register.liquid": [
+    {
+      "source": "templates/customers/register.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-reset-password.liquid": [
+    {
+      "source": "templates/customers/reset_password.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "assets/template-giftcard.css": [
+    {
+      "source": "templates/gift_card.liquid",
+      "kind": "asset_url",
+      "line": 105,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-brand-rail.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-category-grid.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-complete-bathroom.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-help-cta.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-hero.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-mijn-badkamercity.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-popular-products.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-shop-by-style.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/home-sunshower.liquid": [
+    {
+      "source": "templates/index.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-list-collections.liquid": [
+    {
+      "source": "templates/list-collections.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-brand-directory.liquid": [
+    {
+      "source": "templates/list-collections.merken.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-sunshower-landing.liquid": [
+    {
+      "source": "templates/page.bc-sunshower.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/rich-text.liquid": [
+    {
+      "source": "templates/page.bc-sunshower.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/bc-wishlist-page.liquid": [
+    {
+      "source": "templates/page.bc-wishlist.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-glossary-page.liquid": [
+    {
+      "source": "templates/page.begrip.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-glossary.liquid": [
+    {
+      "source": "templates/page.begrippenlijst.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/contact-form.liquid": [
+    {
+      "source": "templates/page.contact.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-page.liquid": [
+    {
+      "source": "templates/page.contact.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/page.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/email-signup-banner.liquid": [
+    {
+      "source": "templates/password.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-product.liquid": [
+    {
+      "source": "templates/product.bc-disclosure-check.liquid",
+      "kind": "section",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/product.bc-hotbath-data.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/product.bc-hotbath-pilot.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/product.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-hotbath-data-controls.liquid": [
+    {
+      "source": "templates/product.bc-hotbath-data.json",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-hotbath-pilot-controls.liquid": [
+    {
+      "source": "templates/product.bc-hotbath-pilot.json",
+      "kind": "render",
+      "line": 18,
+      "resolution": "in_scan"
+    }
+  ],
+  "snippets/bc-hotbath-normal-intro.liquid": [
+    {
+      "source": "templates/product.json",
+      "kind": "render",
+      "line": 61,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-sunshower.liquid": [
+    {
+      "source": "templates/product.sunshower.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ],
+  "sections/main-search.liquid": [
+    {
+      "source": "templates/search.bc-mobile-review.liquid",
+      "kind": "section",
+      "line": 1,
+      "resolution": "in_scan"
+    },
+    {
+      "source": "templates/search.json",
+      "kind": "json_section",
+      "line": null,
+      "resolution": "in_scan"
+    }
+  ]
+}

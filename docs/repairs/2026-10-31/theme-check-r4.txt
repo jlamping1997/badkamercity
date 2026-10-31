@@ -1,0 +1,175 @@
+## Validation Summary
+
+**Overall Status:** ⚠️ VALID (with warnings)
+**Total Files:** 20
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-external-filters.js passed all checks.
+
+### File 2
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-mobile-compact-list.css passed all checks.
+
+### File 3
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-sunshower-page.js passed all checks.
+
+### File 4
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-sunshower-shop.js passed all checks.
+
+### File 5
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-tile-fix-preview.js passed all checks.
+
+### File 6
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-wishlist.js passed all checks.
+
+### File 7
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/cart-notification.js passed all checks.
+
+### File 8
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ⚠️ INFORM
+**Details:** layout/theme.liquid passed all checks (with non-error findings):
+WARNING [line 71, col 36]: Unknown object 'scheme_classes' used.
+
+### File 9
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** locales/en.default.json passed all checks.
+
+### File 10
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** locales/nl.json passed all checks.
+
+### File 11
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/bc-card-data.liquid passed all checks.
+
+### File 12
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/footer-group.json passed all checks.
+
+### File 13
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/footer.liquid passed all checks.
+
+### File 14
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ⚠️ INFORM
+**Details:** sections/main-search.liquid passed all checks (with non-error findings):
+WARNING [line 742, col 27]: Unknown argument 'media_aspect_ratio' in render tag for snippet 'bc-card-product-search'.; SUGGESTED FIXES: Remove 'media_aspect_ratio'.
+WARNING [line 743, col 27]: Unknown argument 'image_shape' in render tag for snippet 'bc-card-product-search'.; SUGGESTED FIXES: Remove 'image_shape'.
+WARNING [line 747, col 25]: The variable 'skip_card_product_styles' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'skip_card_product_styles'.
+
+### File 15
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ⚠️ INFORM
+**Details:** snippets/bc-card-product-search.liquid passed all checks (with non-error findings):
+WARNING [line 33, col 5]: The variable 'has_specs' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'has_specs'.
+
+### File 16
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-card-tile-price.liquid passed all checks.
+
+### File 17
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-external-filters.liquid passed all checks.
+
+### File 18
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-search-usp-strip.liquid passed all checks.
+
+### File 19
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-tile-fix-preview.liquid passed all checks.
+
+### File 20
+**Artifact ID:** BC-FIX-01
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/card-product.liquid passed all checks.
+
+
+
+Failed to setup with the following error: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/latest.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms

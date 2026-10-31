@@ -1,0 +1,27 @@
+{% doc %}
+  @param {link} item - Navigation item.
+{% enddoc %}
+{% liquid
+  assign destination = item.url
+  assign linked_collection = item.object
+  if item.type != 'collection_link' and destination contains '/collections/'
+    assign item_handle = destination | split: '/collections/' | last | split: '?' | first
+    assign linked_collection = collections[item_handle]
+  endif
+  assign visible_item = true
+  if linked_collection != blank and linked_collection.products_count == 0
+    assign visible_item = false
+  endif
+%}
+{% if visible_item and destination != blank and destination != '#' %}
+  <li class="bca-directory__item" data-bca-item>
+    <a href="{{ destination | escape }}">{{ item.title | escape }}<span aria-hidden="true">&rarr;</span></a>
+    {% if item.links.size > 0 %}
+      <ul class="bca-directory__children" role="list">
+        {% for child in item.links %}
+          {% render 'bc-assortment-item', item: child %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endif %}

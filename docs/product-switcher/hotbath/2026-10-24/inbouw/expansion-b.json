@@ -1,0 +1,4072 @@
+{
+  "schema": "hotbath-inbouw-expansion-part-b-v1",
+  "read_only": true,
+  "source_pdf": "/workspace/scratch/6866aa3baeaf/upload/Hotbath%20Catalogus%20Editie%2018.pdf",
+  "source_snapshot": "/workspace/scratch/6866aa3baeaf/hotbath-menu-20261024/catalog_snapshot.json",
+  "source_live_candidate_read": "/workspace/scratch/6866aa3baeaf/hotbath-inbouw-20261024/expansion-live-products.json",
+  "coverage": {
+    "printed_page_from": 170,
+    "printed_page_to": 329,
+    "pdf_page_from": 172,
+    "pdf_page_to": 331,
+    "method": "Searched all160 extracted pages for inbouwdeel, afbouwdeel, afdekset, apart bestellen, exclusief, EXT; extracted explicit price-table pairs; visually verified EVERY new pair header in four contact sheets and full exceptional pages190/249. IBS complete-set lists excluded from paid addon relations.",
+    "header_contact_sheets": [
+      "expansion-b-headers-1.png",
+      "expansion-b-headers-2.png",
+      "expansion-b-headers-3.png",
+      "expansion-b-headers-4.png"
+    ],
+    "full_page_visuals": [
+      "expansion-b-page190.png",
+      "expansion-b-page249.png"
+    ],
+    "limits": "Body existence is full earlier snapshot, not full live vendor scan. Fresh live read is candidate-ID scope. Product/variant availability must be refreshed before deployment. No storefront changes."
+  },
+  "summary": {
+    "new_relation_rows": 60,
+    "new_unique_models": 59,
+    "new_candidate_unique_skus": 366,
+    "new_book_finish_unique_skus": 362,
+    "new_simple_ready_models_snapshot": 51,
+    "new_simple_ready_unique_skus_snapshot": 327,
+    "status_rows": {
+      "VERIFIED_BOOK": 52,
+      "MISSING_BODY": 5,
+      "REVIEW": 3
+    },
+    "unlisted_finish_unique_skus": 4,
+    "live_included_flag_conflict_skus": 3,
+    "no_matching_trim_models": [
+      "CB010H/CEXT",
+      "CB187EXT",
+      "CW010EXT"
+    ]
+  },
+  "mappings": [
+    {
+      "trim_model": "KHDS3EXT",
+      "book_trim_model": "KHDS3EXT",
+      "book_table_model": "KHDS3EXT",
+      "body_sku": "HBKHDS3",
+      "qty": 1,
+      "printed_pages": [
+        176,
+        304
+      ],
+      "pdf_pages": [
+        178,
+        306
+      ],
+      "evidence": [
+        {
+          "printed_page": 176,
+          "pdf_page": 178,
+          "exact_table_header": "Inbouwdeel HBKHDS3 Afbouwdeel KHDS3EXT.. Totaal",
+          "visual_verified": true
+        },
+        {
+          "printed_page": 304,
+          "pdf_page": 306,
+          "exact_table_header": "Inbouwdeel HBKHDS3 Afbouwdeel KHDS3EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "KHDS3EXTAB",
+        "KHDS3EXTAI",
+        "KHDS3EXTBB",
+        "KHDS3EXTBBP",
+        "KHDS3EXTBCP",
+        "KHDS3EXTCR",
+        "KHDS3EXTGN",
+        "KHDS3EXTMBP",
+        "KHDS3EXTPBP",
+        "KHDS3EXTWH"
+      ],
+      "matched_skus": [
+        "KHDS3EXTAB",
+        "KHDS3EXTAI",
+        "KHDS3EXTBB",
+        "KHDS3EXTBBP",
+        "KHDS3EXTBCP",
+        "KHDS3EXTCR",
+        "KHDS3EXTGN",
+        "KHDS3EXTMBP",
+        "KHDS3EXTPBP",
+        "KHDS3EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "KHDS3EXTAB",
+        "KHDS3EXTAI",
+        "KHDS3EXTBB",
+        "KHDS3EXTBBP",
+        "KHDS3EXTBCP",
+        "KHDS3EXTCR",
+        "KHDS3EXTGN",
+        "KHDS3EXTMBP",
+        "KHDS3EXTPBP",
+        "KHDS3EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBKHDS3"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "KHDS4EXT",
+      "book_trim_model": "KHDS4EXT",
+      "book_table_model": "KHDS4EXT",
+      "body_sku": "HBKHDS4",
+      "qty": 1,
+      "printed_pages": [
+        177
+      ],
+      "pdf_pages": [
+        179
+      ],
+      "evidence": [
+        {
+          "printed_page": 177,
+          "pdf_page": 179,
+          "exact_table_header": "Inbouwdeel HBKHDS4 Afbouwdeel KHDS4EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "KHDS4EXTBBP",
+        "KHDS4EXTBCP",
+        "KHDS4EXTGN",
+        "KHDS4EXTMBP",
+        "KHDS4EXTPBP"
+      ],
+      "matched_skus": [
+        "KHDS4EXTBBP",
+        "KHDS4EXTBCP",
+        "KHDS4EXTGN",
+        "KHDS4EXTMBP",
+        "KHDS4EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "MISSING_BODY",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Exact rough-in SKU absent or not uniquely active/published in full earlier snapshot. Fresh exact-SKU search still required before stating absent from the live store."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB131EXT",
+      "book_trim_model": "CB131EXT",
+      "book_table_model": "CB131EXT",
+      "body_sku": "HBCB131",
+      "qty": 1,
+      "printed_pages": [
+        182
+      ],
+      "pdf_pages": [
+        184
+      ],
+      "evidence": [
+        {
+          "printed_page": 182,
+          "pdf_page": 184,
+          "exact_table_header": "Inbouwdeel HBCB131 Afbouwdeel CB131EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB131EXTAB",
+        "CB131EXTAI",
+        "CB131EXTBB",
+        "CB131EXTBBP",
+        "CB131EXTBCP",
+        "CB131EXTCR",
+        "CB131EXTGN",
+        "CB131EXTMBP",
+        "CB131EXTPBP",
+        "CB131EXTWH"
+      ],
+      "matched_skus": [
+        "CB131EXTAB",
+        "CB131EXTAI",
+        "CB131EXTBB",
+        "CB131EXTBBP",
+        "CB131EXTBCP",
+        "CB131EXTCR",
+        "CB131EXTGN",
+        "CB131EXTMBP",
+        "CB131EXTPBP",
+        "CB131EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB131EXTAB",
+        "CB131EXTAI",
+        "CB131EXTBB",
+        "CB131EXTBBP",
+        "CB131EXTBCP",
+        "CB131EXTCR",
+        "CB131EXTGN",
+        "CB131EXTMBP",
+        "CB131EXTPBP",
+        "CB131EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB131"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB010H/CEXT",
+      "book_trim_model": "CB010H/CEXT",
+      "book_table_model": "CB010H/CEXT",
+      "body_sku": "HBCB010H/C",
+      "qty": 1,
+      "printed_pages": [
+        182
+      ],
+      "pdf_pages": [
+        184
+      ],
+      "evidence": [
+        {
+          "printed_page": 182,
+          "pdf_page": 184,
+          "exact_table_header": "Inbouwdeel HBCB010H/C Afbouwdeel CB010H/CEXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "ALIAS_REVIEW",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [],
+      "matched_skus": [],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "REVIEW",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Manufacturer combined H/C notation. No exact trim SKU in snapshot. Separate HBCB010H and HBCB010C products exist; do not treat HBCB010H/C as an orderable SKU or auto-resolve to either.",
+        "No exact book-finish trim SKU matched in snapshot; source relationship retained for coverage, not rollout."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB111EXT",
+      "book_trim_model": "CB111EXT",
+      "book_table_model": "CB111EXT",
+      "body_sku": "HBCB111",
+      "qty": 1,
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        185
+      ],
+      "evidence": [
+        {
+          "printed_page": 183,
+          "pdf_page": 185,
+          "exact_table_header": "Inbouwdeel HBCB111 Afbouwdeel CB111EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB111EXTAB",
+        "CB111EXTAI",
+        "CB111EXTBB",
+        "CB111EXTBBP",
+        "CB111EXTBCP",
+        "CB111EXTCR",
+        "CB111EXTGN",
+        "CB111EXTMBP",
+        "CB111EXTPBP",
+        "CB111EXTWH"
+      ],
+      "matched_skus": [
+        "CB111EXTAB",
+        "CB111EXTAI",
+        "CB111EXTBB",
+        "CB111EXTBBP",
+        "CB111EXTBCP",
+        "CB111EXTCR",
+        "CB111EXTGN",
+        "CB111EXTMBP",
+        "CB111EXTPBP",
+        "CB111EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB111EXTAB",
+        "CB111EXTAI",
+        "CB111EXTBB",
+        "CB111EXTBBP",
+        "CB111EXTBCP",
+        "CB111EXTCR",
+        "CB111EXTGN",
+        "CB111EXTMBP",
+        "CB111EXTPBP",
+        "CB111EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB111"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB129EXT",
+      "book_trim_model": "CB129EXT",
+      "book_table_model": "CB129EXT",
+      "body_sku": "HBCB129",
+      "qty": 1,
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        185
+      ],
+      "evidence": [
+        {
+          "printed_page": 183,
+          "pdf_page": 185,
+          "exact_table_header": "Inbouwdeel HBCB129 Afbouwdeel CB129EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB129EXTAB",
+        "CB129EXTAI",
+        "CB129EXTBB",
+        "CB129EXTBBP",
+        "CB129EXTBCP",
+        "CB129EXTCR",
+        "CB129EXTGN",
+        "CB129EXTMBP",
+        "CB129EXTPBP",
+        "CB129EXTWH"
+      ],
+      "matched_skus": [
+        "CB129EXTAB",
+        "CB129EXTAI",
+        "CB129EXTBB",
+        "CB129EXTBBP",
+        "CB129EXTBCP",
+        "CB129EXTCR",
+        "CB129EXTGN",
+        "CB129EXTMBP",
+        "CB129EXTPBP",
+        "CB129EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB129EXTAB",
+        "CB129EXTAI",
+        "CB129EXTBB",
+        "CB129EXTBBP",
+        "CB129EXTBCP",
+        "CB129EXTCR",
+        "CB129EXTGN",
+        "CB129EXTMBP",
+        "CB129EXTPBP",
+        "CB129EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB129"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB127EXT",
+      "book_trim_model": "CB127EXT",
+      "book_table_model": "CB127EXT",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        186
+      ],
+      "evidence": [
+        {
+          "printed_page": 184,
+          "pdf_page": 186,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel CB127EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB127EXTAB",
+        "CB127EXTAI",
+        "CB127EXTBB",
+        "CB127EXTBBP",
+        "CB127EXTBCP",
+        "CB127EXTGN",
+        "CB127EXTMBP",
+        "CB127EXTPBP",
+        "CB127EXTWH"
+      ],
+      "matched_skus": [
+        "CB127EXTAB",
+        "CB127EXTAI",
+        "CB127EXTBB",
+        "CB127EXTBBP",
+        "CB127EXTBCP",
+        "CB127EXTGN",
+        "CB127EXTMBP",
+        "CB127EXTPBP",
+        "CB127EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB127EXTAB",
+        "CB127EXTAI",
+        "CB127EXTBB",
+        "CB127EXTBBP",
+        "CB127EXTBCP",
+        "CB127EXTGN",
+        "CB127EXTMBP",
+        "CB127EXTPBP",
+        "CB127EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB187EXT",
+      "book_trim_model": "CB187EXT",
+      "book_table_model": "CB187EXT",
+      "body_sku": "HBCB177",
+      "qty": 1,
+      "printed_pages": [
+        186
+      ],
+      "pdf_pages": [
+        188
+      ],
+      "evidence": [
+        {
+          "printed_page": 186,
+          "pdf_page": 188,
+          "exact_table_header": "Inbouwdeel HBCB177 Afbouwdeel CB187EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [],
+      "matched_skus": [],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [
+        "HBCB177"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "No exact book-finish trim SKU matched in snapshot; source relationship retained for coverage, not rollout."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7070EXT",
+      "book_trim_model": "CB7070EXT",
+      "book_table_model": "CB7070EXT",
+      "body_sku": "HBCB7070",
+      "qty": 1,
+      "printed_pages": [
+        188
+      ],
+      "pdf_pages": [
+        190
+      ],
+      "evidence": [
+        {
+          "printed_page": 188,
+          "pdf_page": 190,
+          "exact_table_header": "Inbouwdeel HBCB7070 Afbouwdeel CB7070EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7070EXTAB",
+        "CB7070EXTAI",
+        "CB7070EXTBB",
+        "CB7070EXTBBP",
+        "CB7070EXTBCP",
+        "CB7070EXTCR",
+        "CB7070EXTGN",
+        "CB7070EXTMBP",
+        "CB7070EXTPBP",
+        "CB7070EXTWH"
+      ],
+      "matched_skus": [
+        "CB7070EXTAB",
+        "CB7070EXTAI",
+        "CB7070EXTBB",
+        "CB7070EXTBBP",
+        "CB7070EXTBCP",
+        "CB7070EXTCR",
+        "CB7070EXTGN",
+        "CB7070EXTMBP",
+        "CB7070EXTPBP",
+        "CB7070EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7070EXTAB",
+        "CB7070EXTAI",
+        "CB7070EXTBB",
+        "CB7070EXTBBP",
+        "CB7070EXTBCP",
+        "CB7070EXTCR",
+        "CB7070EXTGN",
+        "CB7070EXTMBP",
+        "CB7070EXTPBP",
+        "CB7070EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7070"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7172EXT",
+      "book_trim_model": "CB7172EXT",
+      "book_table_model": "CB7172EXT",
+      "body_sku": "HBCB7072",
+      "qty": 1,
+      "printed_pages": [
+        189
+      ],
+      "pdf_pages": [
+        191
+      ],
+      "evidence": [
+        {
+          "printed_page": 189,
+          "pdf_page": 191,
+          "exact_table_header": "Inbouwdeel HBCB7072 Afbouwdeel CB7172EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7172EXTAB",
+        "CB7172EXTAI",
+        "CB7172EXTBB",
+        "CB7172EXTBBP",
+        "CB7172EXTBCP",
+        "CB7172EXTGN",
+        "CB7172EXTMBP",
+        "CB7172EXTPBP",
+        "CB7172EXTWH"
+      ],
+      "matched_skus": [
+        "CB7172EXTAB",
+        "CB7172EXTAI",
+        "CB7172EXTBB",
+        "CB7172EXTBBP",
+        "CB7172EXTBCP",
+        "CB7172EXTGN",
+        "CB7172EXTMBP",
+        "CB7172EXTPBP",
+        "CB7172EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7172EXTAB",
+        "CB7172EXTAI",
+        "CB7172EXTBB",
+        "CB7172EXTBBP",
+        "CB7172EXTBCP",
+        "CB7172EXTGN",
+        "CB7172EXTMBP",
+        "CB7172EXTPBP",
+        "CB7172EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7072"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7171EXT",
+      "book_trim_model": "CB7171EXT",
+      "book_table_model": "CB7171EXT",
+      "body_sku": "HBCB7071",
+      "qty": 1,
+      "printed_pages": [
+        189
+      ],
+      "pdf_pages": [
+        191
+      ],
+      "evidence": [
+        {
+          "printed_page": 189,
+          "pdf_page": 191,
+          "exact_table_header": "Inbouwdeel HBCB7071 Afbouwdeel CB7171EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7171EXTAB",
+        "CB7171EXTAI",
+        "CB7171EXTBB",
+        "CB7171EXTBBP",
+        "CB7171EXTBCP",
+        "CB7171EXTGN",
+        "CB7171EXTMBP",
+        "CB7171EXTPBP",
+        "CB7171EXTWH"
+      ],
+      "matched_skus": [
+        "CB7171EXTAB",
+        "CB7171EXTAI",
+        "CB7171EXTBB",
+        "CB7171EXTBBP",
+        "CB7171EXTBCP",
+        "CB7171EXTGN",
+        "CB7171EXTMBP",
+        "CB7171EXTPBP",
+        "CB7171EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7171EXTAB",
+        "CB7171EXTAI",
+        "CB7171EXTBB",
+        "CB7171EXTBBP",
+        "CB7171EXTBCP",
+        "CB7171EXTGN",
+        "CB7171EXTMBP",
+        "CB7171EXTPBP",
+        "CB7171EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7071"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7001EXT",
+      "book_trim_model": "CB7001EXT",
+      "book_table_model": "CB7001EXT",
+      "body_sku": "HBCB7001H",
+      "qty": 1,
+      "printed_pages": [
+        190
+      ],
+      "pdf_pages": [
+        192
+      ],
+      "evidence": [
+        {
+          "printed_page": 190,
+          "pdf_page": 192,
+          "exact_table_header": "Inbouwdeel HBCB7001H Afbouwdeel CB7001EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7001EXTAB",
+        "CB7001EXTAI",
+        "CB7001EXTBB",
+        "CB7001EXTBBP",
+        "CB7001EXTBCP",
+        "CB7001EXTCR",
+        "CB7001EXTGN",
+        "CB7001EXTMBP",
+        "CB7001EXTPBP",
+        "CB7001EXTWH"
+      ],
+      "matched_skus": [
+        "CB7001EXTAB",
+        "CB7001EXTAI",
+        "CB7001EXTBB",
+        "CB7001EXTBBP",
+        "CB7001EXTBCP",
+        "CB7001EXTCR",
+        "CB7001EXTGN",
+        "CB7001EXTMBP",
+        "CB7001EXTPBP",
+        "CB7001EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [
+        "HBCB7001H"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "REVIEW",
+      "selection_required": true,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Same trim explicitly works with two different rough-ins: HBCB7001H horizontal, HBCB7001V vertical. These are alternatives, not parts to buy together. A horizontal/vertical choice is required; no single-body automatic mapping."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7001EXT",
+      "book_trim_model": "CB7001EXT",
+      "book_table_model": "CB7001EXT",
+      "body_sku": "HBCB7001V",
+      "qty": 1,
+      "printed_pages": [
+        190
+      ],
+      "pdf_pages": [
+        192
+      ],
+      "evidence": [
+        {
+          "printed_page": 190,
+          "pdf_page": 192,
+          "exact_table_header": "Inbouwdeel HBCB7001V Afbouwdeel CB7001EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7001EXTAB",
+        "CB7001EXTAI",
+        "CB7001EXTBB",
+        "CB7001EXTBBP",
+        "CB7001EXTBCP",
+        "CB7001EXTCR",
+        "CB7001EXTGN",
+        "CB7001EXTMBP",
+        "CB7001EXTPBP",
+        "CB7001EXTWH"
+      ],
+      "matched_skus": [
+        "CB7001EXTAB",
+        "CB7001EXTAI",
+        "CB7001EXTBB",
+        "CB7001EXTBBP",
+        "CB7001EXTBCP",
+        "CB7001EXTCR",
+        "CB7001EXTGN",
+        "CB7001EXTMBP",
+        "CB7001EXTPBP",
+        "CB7001EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [
+        "HBCB7001V"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "REVIEW",
+      "selection_required": true,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Same trim explicitly works with two different rough-ins: HBCB7001H horizontal, HBCB7001V vertical. These are alternatives, not parts to buy together. A horizontal/vertical choice is required; no single-body automatic mapping."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7068EXT",
+      "book_trim_model": "CB7068EXT",
+      "book_table_model": "CB7068EXT",
+      "body_sku": "HBCB7068",
+      "qty": 1,
+      "printed_pages": [
+        191,
+        283
+      ],
+      "pdf_pages": [
+        193,
+        285
+      ],
+      "evidence": [
+        {
+          "printed_page": 191,
+          "pdf_page": 193,
+          "exact_table_header": "Inbouwdeel HBCB7068 Afbouwdeel CB7068EXT.. Totaal",
+          "visual_verified": true
+        },
+        {
+          "printed_page": 283,
+          "pdf_page": 285,
+          "exact_table_header": "Inbouwdeel HBCB7068 Afbouwdeel CB7068EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7068EXTAB",
+        "CB7068EXTAI",
+        "CB7068EXTBB",
+        "CB7068EXTBBP",
+        "CB7068EXTBCP",
+        "CB7068EXTCR",
+        "CB7068EXTGN",
+        "CB7068EXTMBP",
+        "CB7068EXTPBP",
+        "CB7068EXTWH"
+      ],
+      "matched_skus": [
+        "CB7068EXTAB",
+        "CB7068EXTAI",
+        "CB7068EXTBB",
+        "CB7068EXTBBP",
+        "CB7068EXTBCP",
+        "CB7068EXTCR",
+        "CB7068EXTGN",
+        "CB7068EXTMBP",
+        "CB7068EXTPBP",
+        "CB7068EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7068EXTAB",
+        "CB7068EXTAI",
+        "CB7068EXTBB",
+        "CB7068EXTBBP",
+        "CB7068EXTBCP",
+        "CB7068EXTCR",
+        "CB7068EXTGN",
+        "CB7068EXTMBP",
+        "CB7068EXTPBP",
+        "CB7068EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7068"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7069EXT",
+      "book_trim_model": "CB7069EXT",
+      "book_table_model": "CB7069EXT",
+      "body_sku": "HBCB7069",
+      "qty": 1,
+      "printed_pages": [
+        191
+      ],
+      "pdf_pages": [
+        193
+      ],
+      "evidence": [
+        {
+          "printed_page": 191,
+          "pdf_page": 193,
+          "exact_table_header": "Inbouwdeel HBCB7069 Afbouwdeel CB7069EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7069EXTAB",
+        "CB7069EXTAI",
+        "CB7069EXTBB",
+        "CB7069EXTBBP",
+        "CB7069EXTBCP",
+        "CB7069EXTCR",
+        "CB7069EXTGN",
+        "CB7069EXTMBP",
+        "CB7069EXTPBP",
+        "CB7069EXTWH"
+      ],
+      "matched_skus": [
+        "CB7069EXTAB",
+        "CB7069EXTAI",
+        "CB7069EXTBB",
+        "CB7069EXTBBP",
+        "CB7069EXTBCP",
+        "CB7069EXTCR",
+        "CB7069EXTGN",
+        "CB7069EXTMBP",
+        "CB7069EXTPBP",
+        "CB7069EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "MISSING_BODY",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Exact rough-in SKU absent or not uniquely active/published in full earlier snapshot. Fresh exact-SKU search still required before stating absent from the live store."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7080EXT",
+      "book_trim_model": "CB7080EXT",
+      "book_table_model": "CB7080EXT",
+      "body_sku": "HBCB7080",
+      "qty": 1,
+      "printed_pages": [
+        192
+      ],
+      "pdf_pages": [
+        194
+      ],
+      "evidence": [
+        {
+          "printed_page": 192,
+          "pdf_page": 194,
+          "exact_table_header": "Inbouwdeel HBCB7080 Afbouwdeel CB7080EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7080EXTAB",
+        "CB7080EXTAI",
+        "CB7080EXTBB",
+        "CB7080EXTBBP",
+        "CB7080EXTBCP",
+        "CB7080EXTCR",
+        "CB7080EXTGN",
+        "CB7080EXTMBP",
+        "CB7080EXTPBP",
+        "CB7080EXTWH"
+      ],
+      "matched_skus": [
+        "CB7080EXTAB",
+        "CB7080EXTAI",
+        "CB7080EXTBB",
+        "CB7080EXTBBP",
+        "CB7080EXTBCP",
+        "CB7080EXTCR",
+        "CB7080EXTGN",
+        "CB7080EXTMBP",
+        "CB7080EXTPBP",
+        "CB7080EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7080EXTAB",
+        "CB7080EXTAI",
+        "CB7080EXTBB",
+        "CB7080EXTBBP",
+        "CB7080EXTBCP",
+        "CB7080EXTCR",
+        "CB7080EXTGN",
+        "CB7080EXTMBP",
+        "CB7080EXTPBP",
+        "CB7080EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7080"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CB7083EXT",
+      "book_trim_model": "CB7083EXT",
+      "book_table_model": "CB7083EXT",
+      "body_sku": "HBCB7083",
+      "qty": 1,
+      "printed_pages": [
+        192
+      ],
+      "pdf_pages": [
+        194
+      ],
+      "evidence": [
+        {
+          "printed_page": 192,
+          "pdf_page": 194,
+          "exact_table_header": "Inbouwdeel HBCB7083 Afbouwdeel CB7083EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "CB7083EXTAB",
+        "CB7083EXTAI",
+        "CB7083EXTBB",
+        "CB7083EXTBBP",
+        "CB7083EXTBCP",
+        "CB7083EXTCR",
+        "CB7083EXTGN",
+        "CB7083EXTMBP",
+        "CB7083EXTPBP",
+        "CB7083EXTWH"
+      ],
+      "matched_skus": [
+        "CB7083EXTAB",
+        "CB7083EXTAI",
+        "CB7083EXTBB",
+        "CB7083EXTBBP",
+        "CB7083EXTBCP",
+        "CB7083EXTCR",
+        "CB7083EXTGN",
+        "CB7083EXTMBP",
+        "CB7083EXTPBP",
+        "CB7083EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CB7083EXTAB",
+        "CB7083EXTAI",
+        "CB7083EXTBB",
+        "CB7083EXTBBP",
+        "CB7083EXTBCP",
+        "CB7083EXTCR",
+        "CB7083EXTGN",
+        "CB7083EXTMBP",
+        "CB7083EXTPBP",
+        "CB7083EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBCB7083"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB009EXT",
+      "book_trim_model": "PB009EXT",
+      "book_table_model": "PB009EXT",
+      "body_sku": "HBPB009",
+      "qty": 1,
+      "printed_pages": [
+        196
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "evidence": [
+        {
+          "printed_page": 196,
+          "pdf_page": 198,
+          "exact_table_header": "Inbouwdeel HBPB009 Afbouwdeel PB009EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB009EXTAB",
+        "PB009EXTAI",
+        "PB009EXTBB",
+        "PB009EXTBBP",
+        "PB009EXTBCP",
+        "PB009EXTCR",
+        "PB009EXTGN",
+        "PB009EXTMBP",
+        "PB009EXTPBP",
+        "PB009EXTWH"
+      ],
+      "matched_skus": [
+        "PB009EXTAB",
+        "PB009EXTAI",
+        "PB009EXTBB",
+        "PB009EXTBBP",
+        "PB009EXTBCP",
+        "PB009EXTCR",
+        "PB009EXTGN",
+        "PB009EXTMBP",
+        "PB009EXTPBP",
+        "PB009EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB009EXTAB",
+        "PB009EXTAI",
+        "PB009EXTBB",
+        "PB009EXTBBP",
+        "PB009EXTBCP",
+        "PB009EXTCR",
+        "PB009EXTGN",
+        "PB009EXTMBP",
+        "PB009EXTPBP",
+        "PB009EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB009"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB009QEXT",
+      "book_trim_model": "PB009QEXT",
+      "book_table_model": "PB009QEXT",
+      "body_sku": "HBPB009",
+      "qty": 1,
+      "printed_pages": [
+        196
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "evidence": [
+        {
+          "printed_page": 196,
+          "pdf_page": 198,
+          "exact_table_header": "Inbouwdeel HBPB009 Afbouwdeel PB009QEXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB009QEXTAB",
+        "PB009QEXTAI",
+        "PB009QEXTBB",
+        "PB009QEXTBBP",
+        "PB009QEXTBCP",
+        "PB009QEXTCR",
+        "PB009QEXTGN",
+        "PB009QEXTMBP",
+        "PB009QEXTPBP",
+        "PB009QEXTWH"
+      ],
+      "matched_skus": [
+        "PB009QEXTAB",
+        "PB009QEXTAI",
+        "PB009QEXTBB",
+        "PB009QEXTBBP",
+        "PB009QEXTBCP",
+        "PB009QEXTCR",
+        "PB009QEXTGN",
+        "PB009QEXTMBP",
+        "PB009QEXTPBP",
+        "PB009QEXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB009QEXTAB",
+        "PB009QEXTAI",
+        "PB009QEXTBB",
+        "PB009QEXTBBP",
+        "PB009QEXTBCP",
+        "PB009QEXTCR",
+        "PB009QEXTGN",
+        "PB009QEXTMBP",
+        "PB009QEXTPBP",
+        "PB009QEXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB009"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB066EXT",
+      "book_trim_model": "PB066EXT",
+      "book_table_model": "PB066EXT",
+      "body_sku": "HBPB066",
+      "qty": 1,
+      "printed_pages": [
+        197
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "evidence": [
+        {
+          "printed_page": 197,
+          "pdf_page": 199,
+          "exact_table_header": "Inbouwdeel HBPB066 Afbouwdeel PB066EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB066EXTAB",
+        "PB066EXTAI",
+        "PB066EXTBB",
+        "PB066EXTBBP",
+        "PB066EXTBCP",
+        "PB066EXTCR",
+        "PB066EXTGN",
+        "PB066EXTMBP",
+        "PB066EXTPBP",
+        "PB066EXTWH"
+      ],
+      "matched_skus": [
+        "PB066EXTAB",
+        "PB066EXTAI",
+        "PB066EXTBB",
+        "PB066EXTBBP",
+        "PB066EXTBCP",
+        "PB066EXTCR",
+        "PB066EXTGN",
+        "PB066EXTMBP",
+        "PB066EXTPBP",
+        "PB066EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB066EXTAB",
+        "PB066EXTAI",
+        "PB066EXTBB",
+        "PB066EXTBBP",
+        "PB066EXTBCP",
+        "PB066EXTCR",
+        "PB066EXTGN",
+        "PB066EXTMBP",
+        "PB066EXTPBP",
+        "PB066EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB066"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB050EXT",
+      "book_trim_model": "PB050EXT",
+      "book_table_model": "PB050EXT",
+      "body_sku": "HBPB050",
+      "qty": 1,
+      "printed_pages": [
+        197
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "evidence": [
+        {
+          "printed_page": 197,
+          "pdf_page": 199,
+          "exact_table_header": "Inbouwdeel HBPB050 Afbouwdeel PB050EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB050EXTAB",
+        "PB050EXTAI",
+        "PB050EXTBB",
+        "PB050EXTBBP",
+        "PB050EXTBCP",
+        "PB050EXTBL",
+        "PB050EXTCR",
+        "PB050EXTGN",
+        "PB050EXTMBP",
+        "PB050EXTPBP",
+        "PB050EXTWH"
+      ],
+      "matched_skus": [
+        "PB050EXTAB",
+        "PB050EXTAI",
+        "PB050EXTBB",
+        "PB050EXTBBP",
+        "PB050EXTBCP",
+        "PB050EXTCR",
+        "PB050EXTGN",
+        "PB050EXTMBP",
+        "PB050EXTPBP",
+        "PB050EXTWH"
+      ],
+      "unlisted_finish_skus": [
+        "PB050EXTBL"
+      ],
+      "approved_skus": [
+        "PB050EXTAB",
+        "PB050EXTAI",
+        "PB050EXTBB",
+        "PB050EXTBBP",
+        "PB050EXTBCP",
+        "PB050EXTCR",
+        "PB050EXTGN",
+        "PB050EXTMBP",
+        "PB050EXTPBP",
+        "PB050EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB050"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB7009EXT",
+      "book_trim_model": "PB7009EXT",
+      "book_table_model": "PB7009EXT",
+      "body_sku": "HBPB7009",
+      "qty": 1,
+      "printed_pages": [
+        198
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "evidence": [
+        {
+          "printed_page": 198,
+          "pdf_page": 200,
+          "exact_table_header": "Inbouwdeel HBPB7009 Afbouwdeel PB7009EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB7009EXTAB",
+        "PB7009EXTAI",
+        "PB7009EXTBB",
+        "PB7009EXTBBP",
+        "PB7009EXTBCP",
+        "PB7009EXTCR",
+        "PB7009EXTGN",
+        "PB7009EXTMBP",
+        "PB7009EXTPBP",
+        "PB7009EXTWH"
+      ],
+      "matched_skus": [
+        "PB7009EXTAB",
+        "PB7009EXTAI",
+        "PB7009EXTBB",
+        "PB7009EXTBBP",
+        "PB7009EXTBCP",
+        "PB7009EXTCR",
+        "PB7009EXTGN",
+        "PB7009EXTMBP",
+        "PB7009EXTPBP",
+        "PB7009EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB7009EXTAB",
+        "PB7009EXTAI",
+        "PB7009EXTBB",
+        "PB7009EXTBBP",
+        "PB7009EXTBCP",
+        "PB7009EXTCR",
+        "PB7009EXTGN",
+        "PB7009EXTMBP",
+        "PB7009EXTPBP",
+        "PB7009EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB7009"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB7039EXT",
+      "book_trim_model": "PB7039EXT",
+      "book_table_model": "PB7039EXT",
+      "body_sku": "HBPB7039",
+      "qty": 1,
+      "printed_pages": [
+        198
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "evidence": [
+        {
+          "printed_page": 198,
+          "pdf_page": 200,
+          "exact_table_header": "Inbouwdeel HBPB7039 Afbouwdeel PB7039EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BB",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP",
+        "WH"
+      ],
+      "candidate_skus": [
+        "PB7039EXTAB",
+        "PB7039EXTAI",
+        "PB7039EXTBB",
+        "PB7039EXTBBP",
+        "PB7039EXTBCP",
+        "PB7039EXTCR",
+        "PB7039EXTGN",
+        "PB7039EXTMBP",
+        "PB7039EXTPBP",
+        "PB7039EXTWH"
+      ],
+      "matched_skus": [
+        "PB7039EXTAB",
+        "PB7039EXTAI",
+        "PB7039EXTBB",
+        "PB7039EXTBBP",
+        "PB7039EXTBCP",
+        "PB7039EXTCR",
+        "PB7039EXTGN",
+        "PB7039EXTMBP",
+        "PB7039EXTPBP",
+        "PB7039EXTWH"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB7039EXTAB",
+        "PB7039EXTAI",
+        "PB7039EXTBB",
+        "PB7039EXTBBP",
+        "PB7039EXTBCP",
+        "PB7039EXTCR",
+        "PB7039EXTGN",
+        "PB7039EXTMBP",
+        "PB7039EXTPBP",
+        "PB7039EXTWH"
+      ],
+      "body_catalog_skus": [
+        "HBPB7039"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX105EXT18",
+      "book_trim_model": "CX105EXT18",
+      "book_table_model": "CX105EXT18",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        214
+      ],
+      "pdf_pages": [
+        216
+      ],
+      "evidence": [
+        {
+          "printed_page": 214,
+          "pdf_page": 216,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel CX105EXT18.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "CX105EXT18AB",
+        "CX105EXT18AI",
+        "CX105EXT18BBP",
+        "CX105EXT18BCP",
+        "CX105EXT18CR",
+        "CX105EXT18GN",
+        "CX105EXT18MBP"
+      ],
+      "matched_skus": [
+        "CX105EXT18AB",
+        "CX105EXT18AI",
+        "CX105EXT18BBP",
+        "CX105EXT18BCP",
+        "CX105EXT18CR",
+        "CX105EXT18GN",
+        "CX105EXT18MBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX105EXT18AB",
+        "CX105EXT18AI",
+        "CX105EXT18BBP",
+        "CX105EXT18BCP",
+        "CX105EXT18CR",
+        "CX105EXT18GN",
+        "CX105EXT18MBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX105EXT25",
+      "book_trim_model": "CX105EXT25",
+      "book_table_model": "CX105EXT25",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        214
+      ],
+      "pdf_pages": [
+        216
+      ],
+      "evidence": [
+        {
+          "printed_page": 214,
+          "pdf_page": 216,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel CX105EXT25.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "CX105EXT25AB",
+        "CX105EXT25AI",
+        "CX105EXT25BBP",
+        "CX105EXT25BCP",
+        "CX105EXT25CR",
+        "CX105EXT25GN",
+        "CX105EXT25MBP"
+      ],
+      "matched_skus": [
+        "CX105EXT25AB",
+        "CX105EXT25AI",
+        "CX105EXT25BBP",
+        "CX105EXT25BCP",
+        "CX105EXT25CR",
+        "CX105EXT25GN",
+        "CX105EXT25MBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX105EXT25AB",
+        "CX105EXT25AI",
+        "CX105EXT25BBP",
+        "CX105EXT25BCP",
+        "CX105EXT25CR",
+        "CX105EXT25GN",
+        "CX105EXT25MBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX178WEXT",
+      "book_trim_model": "CX178WEXT",
+      "book_table_model": "CX178WEXT",
+      "body_sku": "HBCB177",
+      "qty": 1,
+      "printed_pages": [
+        215
+      ],
+      "pdf_pages": [
+        217
+      ],
+      "evidence": [
+        {
+          "printed_page": 215,
+          "pdf_page": 217,
+          "exact_table_header": "Inbouwdeel HBCB177 Afbouwdeel CX178WEXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "CX178WEXTAB",
+        "CX178WEXTAI",
+        "CX178WEXTBBP",
+        "CX178WEXTBCP",
+        "CX178WEXTGN",
+        "CX178WEXTMBP"
+      ],
+      "matched_skus": [
+        "CX178WEXTAB",
+        "CX178WEXTAI",
+        "CX178WEXTBBP",
+        "CX178WEXTBCP",
+        "CX178WEXTGN",
+        "CX178WEXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX178WEXTAB",
+        "CX178WEXTAI",
+        "CX178WEXTBBP",
+        "CX178WEXTBCP",
+        "CX178WEXTGN",
+        "CX178WEXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB177"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX131EXT",
+      "book_trim_model": "CX131EXT",
+      "book_table_model": "CX131EXT",
+      "body_sku": "HBCB131",
+      "qty": 1,
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        222
+      ],
+      "evidence": [
+        {
+          "printed_page": 220,
+          "pdf_page": 222,
+          "exact_table_header": "Inbouwdeel HBCB131 Afbouwdeel CX131EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX131EXTAB",
+        "CX131EXTAI",
+        "CX131EXTBBP",
+        "CX131EXTBCP",
+        "CX131EXTCR",
+        "CX131EXTGN",
+        "CX131EXTMBP"
+      ],
+      "matched_skus": [
+        "CX131EXTAB",
+        "CX131EXTAI",
+        "CX131EXTBBP",
+        "CX131EXTBCP",
+        "CX131EXTCR",
+        "CX131EXTGN",
+        "CX131EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX131EXTAB",
+        "CX131EXTAI",
+        "CX131EXTBBP",
+        "CX131EXTBCP",
+        "CX131EXTCR",
+        "CX131EXTGN",
+        "CX131EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB131"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX111EXT",
+      "book_trim_model": "CX111EXT",
+      "book_table_model": "CX111EXT",
+      "body_sku": "HBCB111",
+      "qty": 1,
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        222
+      ],
+      "evidence": [
+        {
+          "printed_page": 220,
+          "pdf_page": 222,
+          "exact_table_header": "Inbouwdeel HBCB111 Afbouwdeel CX111EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX111EXTAB",
+        "CX111EXTAI",
+        "CX111EXTBBP",
+        "CX111EXTBCP",
+        "CX111EXTCR",
+        "CX111EXTGN",
+        "CX111EXTMBP"
+      ],
+      "matched_skus": [
+        "CX111EXTAB",
+        "CX111EXTAI",
+        "CX111EXTBBP",
+        "CX111EXTBCP",
+        "CX111EXTCR",
+        "CX111EXTGN",
+        "CX111EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX111EXTAB",
+        "CX111EXTAI",
+        "CX111EXTBBP",
+        "CX111EXTBCP",
+        "CX111EXTCR",
+        "CX111EXTGN",
+        "CX111EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB111"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX127EXT",
+      "book_trim_model": "CX127EXT",
+      "book_table_model": "CX127EXT",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        221
+      ],
+      "pdf_pages": [
+        223
+      ],
+      "evidence": [
+        {
+          "printed_page": 221,
+          "pdf_page": 223,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel CX127EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX127EXTAB",
+        "CX127EXTAI",
+        "CX127EXTBBP",
+        "CX127EXTBCP",
+        "CX127EXTGN",
+        "CX127EXTMBP"
+      ],
+      "matched_skus": [
+        "CX127EXTAB",
+        "CX127EXTAI",
+        "CX127EXTBBP",
+        "CX127EXTBCP",
+        "CX127EXTGN",
+        "CX127EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX127EXTAB",
+        "CX127EXTAI",
+        "CX127EXTBBP",
+        "CX127EXTBCP",
+        "CX127EXTGN",
+        "CX127EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX187EXT",
+      "book_trim_model": "CX187EXT",
+      "book_table_model": "CX187EXT",
+      "body_sku": "HBCB177",
+      "qty": 1,
+      "printed_pages": [
+        221
+      ],
+      "pdf_pages": [
+        223
+      ],
+      "evidence": [
+        {
+          "printed_page": 221,
+          "pdf_page": 223,
+          "exact_table_header": "Inbouwdeel HBCB177 Afbouwdeel CX187EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX187EXTAB",
+        "CX187EXTAI",
+        "CX187EXTBBP",
+        "CX187EXTBCP",
+        "CX187EXTCR",
+        "CX187EXTGN",
+        "CX187EXTMBP"
+      ],
+      "matched_skus": [
+        "CX187EXTAB",
+        "CX187EXTAI",
+        "CX187EXTBBP",
+        "CX187EXTBCP",
+        "CX187EXTCR",
+        "CX187EXTGN",
+        "CX187EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX187EXTAB",
+        "CX187EXTAI",
+        "CX187EXTBBP",
+        "CX187EXTBCP",
+        "CX187EXTCR",
+        "CX187EXTGN",
+        "CX187EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB177"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX7171EXT",
+      "book_trim_model": "CX7171EXT",
+      "book_table_model": "CX7171EXT",
+      "body_sku": "HBCB7071",
+      "qty": 1,
+      "printed_pages": [
+        222
+      ],
+      "pdf_pages": [
+        224
+      ],
+      "evidence": [
+        {
+          "printed_page": 222,
+          "pdf_page": 224,
+          "exact_table_header": "Inbouwdeel HBCB7071 Afbouwdeel CX7171EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX7171EXTAB",
+        "CX7171EXTAI",
+        "CX7171EXTBBP",
+        "CX7171EXTBCP",
+        "CX7171EXTGN",
+        "CX7171EXTMBP"
+      ],
+      "matched_skus": [
+        "CX7171EXTAB",
+        "CX7171EXTAI",
+        "CX7171EXTBBP",
+        "CX7171EXTBCP",
+        "CX7171EXTGN",
+        "CX7171EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX7171EXTAB",
+        "CX7171EXTAI",
+        "CX7171EXTBBP",
+        "CX7171EXTBCP",
+        "CX7171EXTGN",
+        "CX7171EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB7071"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX7172EXT",
+      "book_trim_model": "CX7172EXT",
+      "book_table_model": "CX7172EXT",
+      "body_sku": "HBCB7072",
+      "qty": 1,
+      "printed_pages": [
+        222
+      ],
+      "pdf_pages": [
+        224
+      ],
+      "evidence": [
+        {
+          "printed_page": 222,
+          "pdf_page": 224,
+          "exact_table_header": "Inbouwdeel HBCB7072 Afbouwdeel CX7172EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX7172EXTAB",
+        "CX7172EXTAI",
+        "CX7172EXTBBP",
+        "CX7172EXTBCP",
+        "CX7172EXTGN",
+        "CX7172EXTMBP"
+      ],
+      "matched_skus": [
+        "CX7172EXTAB",
+        "CX7172EXTAI",
+        "CX7172EXTBBP",
+        "CX7172EXTBCP",
+        "CX7172EXTGN",
+        "CX7172EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX7172EXTAB",
+        "CX7172EXTAI",
+        "CX7172EXTBBP",
+        "CX7172EXTBCP",
+        "CX7172EXTGN",
+        "CX7172EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB7072"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CX7067EXT",
+      "book_trim_model": "CX7067EXT",
+      "book_table_model": "CX7067EXT",
+      "body_sku": "HBCB7067",
+      "qty": 1,
+      "printed_pages": [
+        223
+      ],
+      "pdf_pages": [
+        225
+      ],
+      "evidence": [
+        {
+          "printed_page": 223,
+          "pdf_page": 225,
+          "exact_table_header": "Inbouwdeel HBCB7067 Afbouwdeel CX7067EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "AB",
+        "AI",
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "CX7067EXTAB",
+        "CX7067EXTAI",
+        "CX7067EXTBBP",
+        "CX7067EXTBCP",
+        "CX7067EXTCR",
+        "CX7067EXTGN",
+        "CX7067EXTMBP"
+      ],
+      "matched_skus": [
+        "CX7067EXTAB",
+        "CX7067EXTAI",
+        "CX7067EXTBBP",
+        "CX7067EXTBCP",
+        "CX7067EXTCR",
+        "CX7067EXTGN",
+        "CX7067EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CX7067EXTAB",
+        "CX7067EXTAI",
+        "CX7067EXTBBP",
+        "CX7067EXTBCP",
+        "CX7067EXTCR",
+        "CX7067EXTGN",
+        "CX7067EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB7067"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW005TEXT18",
+      "book_trim_model": "CW005TEXT18",
+      "book_table_model": "CW005TEXT18",
+      "body_sku": "HBCW005T",
+      "qty": 1,
+      "printed_pages": [
+        230
+      ],
+      "pdf_pages": [
+        232
+      ],
+      "evidence": [
+        {
+          "printed_page": 230,
+          "pdf_page": 232,
+          "exact_table_header": "Inbouwdeel HBCW005T Afbouwdeel CW005TEXT18 Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW005TEXT18BBP",
+        "CW005TEXT18CR",
+        "CW005TEXT18GN"
+      ],
+      "matched_skus": [
+        "CW005TEXT18BBP",
+        "CW005TEXT18CR",
+        "CW005TEXT18GN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW005TEXT18BBP",
+        "CW005TEXT18CR",
+        "CW005TEXT18GN"
+      ],
+      "body_catalog_skus": [
+        "HBCW005T"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW005TEXT25",
+      "book_trim_model": "CW005TEXT25",
+      "book_table_model": "CW005TEXT25",
+      "body_sku": "HBCW005T",
+      "qty": 1,
+      "printed_pages": [
+        230
+      ],
+      "pdf_pages": [
+        232
+      ],
+      "evidence": [
+        {
+          "printed_page": 230,
+          "pdf_page": 232,
+          "exact_table_header": "Inbouwdeel HBCW005T Afbouwdeel CW005TEXT25 Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW005TEXT25BBP",
+        "CW005TEXT25CR",
+        "CW005TEXT25GN"
+      ],
+      "matched_skus": [
+        "CW005TEXT25BBP",
+        "CW005TEXT25CR",
+        "CW005TEXT25GN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW005TEXT25BBP",
+        "CW005TEXT25CR",
+        "CW005TEXT25GN"
+      ],
+      "body_catalog_skus": [
+        "HBCW005T"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW010EXT",
+      "book_trim_model": "CW010EXT",
+      "book_table_model": "CW010EXT",
+      "body_sku": "HBCW010",
+      "qty": 1,
+      "printed_pages": [
+        232
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "evidence": [
+        {
+          "printed_page": 232,
+          "pdf_page": 234,
+          "exact_table_header": "Inbouwdeel HBCW010 Afbouwdeel CW010EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [],
+      "matched_skus": [],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "MISSING_BODY",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Exact rough-in SKU absent or not uniquely active/published in full earlier snapshot. Fresh exact-SKU search still required before stating absent from the live store.",
+        "No exact book-finish trim SKU matched in snapshot; source relationship retained for coverage, not rollout."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW011EXT",
+      "book_trim_model": "CW011EXT",
+      "book_table_model": "CW011EXT",
+      "body_sku": "HBCB011",
+      "qty": 1,
+      "printed_pages": [
+        232
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "evidence": [
+        {
+          "printed_page": 232,
+          "pdf_page": 234,
+          "exact_table_header": "Inbouwdeel HBCB011 Afbouwdeel CW011EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW011EXTBBP",
+        "CW011EXTCR",
+        "CW011EXTGN"
+      ],
+      "matched_skus": [
+        "CW011EXTBBP",
+        "CW011EXTCR",
+        "CW011EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW011EXTBBP",
+        "CW011EXTCR",
+        "CW011EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB011"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW7067EXT",
+      "book_trim_model": "CW7067EXT",
+      "book_table_model": "CW7067EXT",
+      "body_sku": "HBCB7067",
+      "qty": 1,
+      "printed_pages": [
+        234
+      ],
+      "pdf_pages": [
+        236
+      ],
+      "evidence": [
+        {
+          "printed_page": 234,
+          "pdf_page": 236,
+          "exact_table_header": "Inbouwdeel HBCB7067 Afbouwdeel CW7067EXT Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW7067EXTBBP",
+        "CW7067EXTCR",
+        "CW7067EXTGN"
+      ],
+      "matched_skus": [
+        "CW7067EXTBBP",
+        "CW7067EXTCR",
+        "CW7067EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW7067EXTBBP",
+        "CW7067EXTCR",
+        "CW7067EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB7067"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW7171EXT",
+      "book_trim_model": "CW7171EXT",
+      "book_table_model": "CW7171EXT",
+      "body_sku": "HBCB7071",
+      "qty": 1,
+      "printed_pages": [
+        234
+      ],
+      "pdf_pages": [
+        236
+      ],
+      "evidence": [
+        {
+          "printed_page": 234,
+          "pdf_page": 236,
+          "exact_table_header": "Inbouwdeel HBCB7071 Afbouwdeel CW7171EXT Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW7171EXTBBP",
+        "CW7171EXTGN"
+      ],
+      "matched_skus": [
+        "CW7171EXTBBP",
+        "CW7171EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW7171EXTBBP",
+        "CW7171EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB7071"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "CW7172EXT",
+      "book_trim_model": "CW7172EXT",
+      "book_table_model": "CW7172EXT",
+      "body_sku": "HBCB7072",
+      "qty": 1,
+      "printed_pages": [
+        235
+      ],
+      "pdf_pages": [
+        237
+      ],
+      "evidence": [
+        {
+          "printed_page": 235,
+          "pdf_page": 237,
+          "exact_table_header": "Inbouwdeel HBCB7072 Afbouwdeel CW7172EXT Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "CW7172EXTBBP",
+        "CW7172EXTGN"
+      ],
+      "matched_skus": [
+        "CW7172EXTBBP",
+        "CW7172EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "CW7172EXTBBP",
+        "CW7172EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB7072"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL005EXT",
+      "book_trim_model": "GL005EXT",
+      "book_table_model": "GL005EXT",
+      "body_sku": "HBGL005",
+      "qty": 1,
+      "printed_pages": [
+        244
+      ],
+      "pdf_pages": [
+        246
+      ],
+      "evidence": [
+        {
+          "printed_page": 244,
+          "pdf_page": 246,
+          "exact_table_header": "Inbouwdeel HBGL005 Afbouwdeel GL005EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL005EXTBBP",
+        "GL005EXTBGP",
+        "GL005EXTBL",
+        "GL005EXTCR"
+      ],
+      "matched_skus": [
+        "GL005EXTBBP",
+        "GL005EXTBGP",
+        "GL005EXTCR"
+      ],
+      "unlisted_finish_skus": [
+        "GL005EXTBL"
+      ],
+      "approved_skus": [
+        "GL005EXTBBP",
+        "GL005EXTBGP",
+        "GL005EXTCR"
+      ],
+      "body_catalog_skus": [
+        "HBGL005"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL177EXT",
+      "book_trim_model": "GL177EXT",
+      "book_table_model": "GL177",
+      "body_sku": "HBCB177",
+      "qty": 1,
+      "printed_pages": [
+        249
+      ],
+      "pdf_pages": [
+        251
+      ],
+      "evidence": [
+        {
+          "printed_page": 249,
+          "pdf_page": 251,
+          "exact_table_header": "Inbouwdeel HBCB177 Afbouwdeel GL177.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL177EXTBBP",
+        "GL177EXTBGP",
+        "GL177EXTCR",
+        "GL177EXTGN"
+      ],
+      "matched_skus": [
+        "GL177EXTBBP",
+        "GL177EXTBGP",
+        "GL177EXTCR",
+        "GL177EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "GL177EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB177"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [
+        "GL177EXTBBP",
+        "GL177EXTBGP",
+        "GL177EXTCR"
+      ],
+      "deployment_data_review": true,
+      "notes": [
+        "Table uses GL177..; same-page drawing explicitly labels the upper trim GL177EXT... and lower rough-in HBCB177. Full page visually verified. This resolves the table abbreviation without a guessed alias.",
+        "Fresh Shopify data says inbouwdeel included for GL177EXTBBP, GL177EXTBGP, GL177EXTCR. Hold these SKUs for sale-content/data review to avoid charging twice. Manufacturer relationship remains proven. Other exact book-finish SKUs remain candidates when no included flag conflict exists."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL009EXT",
+      "book_trim_model": "GL009EXT",
+      "book_table_model": "GL009EXT",
+      "body_sku": "MB009",
+      "qty": 1,
+      "printed_pages": [
+        250
+      ],
+      "pdf_pages": [
+        252
+      ],
+      "evidence": [
+        {
+          "printed_page": 250,
+          "pdf_page": 252,
+          "exact_table_header": "Inbouwdeel MB009 Afbouwdeel GL009EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL009EXTBBP",
+        "GL009EXTBGP",
+        "GL009EXTCR",
+        "GL009EXTGN"
+      ],
+      "matched_skus": [
+        "GL009EXTBBP",
+        "GL009EXTBGP",
+        "GL009EXTCR",
+        "GL009EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "GL009EXTBBP",
+        "GL009EXTBGP",
+        "GL009EXTCR",
+        "GL009EXTGN"
+      ],
+      "body_catalog_skus": [
+        "MB009"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL031EXT",
+      "book_trim_model": "GL031EXT",
+      "book_table_model": "GL031EXT",
+      "body_sku": "HBGL031",
+      "qty": 1,
+      "printed_pages": [
+        250
+      ],
+      "pdf_pages": [
+        252
+      ],
+      "evidence": [
+        {
+          "printed_page": 250,
+          "pdf_page": 252,
+          "exact_table_header": "Inbouwdeel HBGL031 Afbouwdeel GL031EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL031EXTBBP",
+        "GL031EXTBGP",
+        "GL031EXTCR",
+        "GL031EXTGN"
+      ],
+      "matched_skus": [
+        "GL031EXTBBP",
+        "GL031EXTBGP",
+        "GL031EXTCR",
+        "GL031EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "GL031EXTBBP",
+        "GL031EXTBGP",
+        "GL031EXTCR",
+        "GL031EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBGL031"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL7071EXT",
+      "book_trim_model": "GL7071EXT",
+      "book_table_model": "GL7071EXT",
+      "body_sku": "HBGL7071",
+      "qty": 1,
+      "printed_pages": [
+        251
+      ],
+      "pdf_pages": [
+        253
+      ],
+      "evidence": [
+        {
+          "printed_page": 251,
+          "pdf_page": 253,
+          "exact_table_header": "Inbouwdeel HBGL7071 Afbouwdeel GL7071EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL7071EXTBBP",
+        "GL7071EXTBGP",
+        "GL7071EXTBL",
+        "GL7071EXTCR"
+      ],
+      "matched_skus": [
+        "GL7071EXTBBP",
+        "GL7071EXTBGP",
+        "GL7071EXTCR"
+      ],
+      "unlisted_finish_skus": [
+        "GL7071EXTBL"
+      ],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "MISSING_BODY",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Exact rough-in SKU absent or not uniquely active/published in full earlier snapshot. Fresh exact-SKU search still required before stating absent from the live store."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL7072EXT",
+      "book_trim_model": "GL7072EXT",
+      "book_table_model": "GL7072EXT",
+      "body_sku": "HBGL7072",
+      "qty": 1,
+      "printed_pages": [
+        251
+      ],
+      "pdf_pages": [
+        253
+      ],
+      "evidence": [
+        {
+          "printed_page": 251,
+          "pdf_page": 253,
+          "exact_table_header": "Inbouwdeel HBGL7072 Afbouwdeel GL7072EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL7072EXTBBP",
+        "GL7072EXTBGP",
+        "GL7072EXTCR",
+        "GL7072EXTGN"
+      ],
+      "matched_skus": [
+        "GL7072EXTBBP",
+        "GL7072EXTBGP",
+        "GL7072EXTCR",
+        "GL7072EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [],
+      "body_catalog_skus": [],
+      "body_unique_active_published_snapshot": false,
+      "status": "MISSING_BODY",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [
+        "Exact rough-in SKU absent or not uniquely active/published in full earlier snapshot. Fresh exact-SKU search still required before stating absent from the live store."
+      ],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL7067EXT",
+      "book_trim_model": "GL7067EXT",
+      "book_table_model": "GL7067EXT",
+      "body_sku": "HBCB7067",
+      "qty": 1,
+      "printed_pages": [
+        252
+      ],
+      "pdf_pages": [
+        254
+      ],
+      "evidence": [
+        {
+          "printed_page": 252,
+          "pdf_page": 254,
+          "exact_table_header": "Inbouwdeel HBCB7067 Afbouwdeel GL7067EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL7067EXTBBP",
+        "GL7067EXTBGP",
+        "GL7067EXTBL",
+        "GL7067EXTCR"
+      ],
+      "matched_skus": [
+        "GL7067EXTBBP",
+        "GL7067EXTBGP",
+        "GL7067EXTCR"
+      ],
+      "unlisted_finish_skus": [
+        "GL7067EXTBL"
+      ],
+      "approved_skus": [
+        "GL7067EXTBBP",
+        "GL7067EXTBGP",
+        "GL7067EXTCR"
+      ],
+      "body_catalog_skus": [
+        "HBCB7067"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "GL7009EXT",
+      "book_trim_model": "GL7009EXT",
+      "book_table_model": "GL7009EXT",
+      "body_sku": "HBCB7009",
+      "qty": 1,
+      "printed_pages": [
+        252
+      ],
+      "pdf_pages": [
+        254
+      ],
+      "evidence": [
+        {
+          "printed_page": 252,
+          "pdf_page": 254,
+          "exact_table_header": "Inbouwdeel HBCB7009 Afbouwdeel GL7009EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "GL7009EXTBBP",
+        "GL7009EXTBGP",
+        "GL7009EXTCR",
+        "GL7009EXTGN"
+      ],
+      "matched_skus": [
+        "GL7009EXTBBP",
+        "GL7009EXTBGP",
+        "GL7009EXTCR",
+        "GL7009EXTGN"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "GL7009EXTBBP",
+        "GL7009EXTBGP",
+        "GL7009EXTCR",
+        "GL7009EXTGN"
+      ],
+      "body_catalog_skus": [
+        "HBCB7009"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "PB7071EXT",
+      "book_trim_model": "PB7071EXT",
+      "book_table_model": "PB7071EXT",
+      "body_sku": "HBPB7071",
+      "qty": 1,
+      "printed_pages": [
+        253
+      ],
+      "pdf_pages": [
+        255
+      ],
+      "evidence": [
+        {
+          "printed_page": 253,
+          "pdf_page": 255,
+          "exact_table_header": "Inbouwdeel HBPB7071 Afbouwdeel PB7071EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BGP",
+        "CR",
+        "GN"
+      ],
+      "candidate_skus": [
+        "PB7071EXTBBP",
+        "PB7071EXTBGP",
+        "PB7071EXTCR"
+      ],
+      "matched_skus": [
+        "PB7071EXTBBP",
+        "PB7071EXTBGP",
+        "PB7071EXTCR"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "PB7071EXTBBP",
+        "PB7071EXTBGP",
+        "PB7071EXTCR"
+      ],
+      "body_catalog_skus": [
+        "HBPB7071"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "B105EXT18",
+      "book_trim_model": "B105EXT18",
+      "book_table_model": "B105EXT18",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        275
+      ],
+      "pdf_pages": [
+        277
+      ],
+      "evidence": [
+        {
+          "printed_page": 275,
+          "pdf_page": 277,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel B105EXT18.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "B105EXT18BCP",
+        "B105EXT18CR",
+        "B105EXT18GN",
+        "B105EXT18MBP"
+      ],
+      "matched_skus": [
+        "B105EXT18BCP",
+        "B105EXT18CR",
+        "B105EXT18GN",
+        "B105EXT18MBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "B105EXT18BCP",
+        "B105EXT18CR",
+        "B105EXT18GN",
+        "B105EXT18MBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "B105EXT22",
+      "book_trim_model": "B105EXT22",
+      "book_table_model": "B105EXT22",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        275
+      ],
+      "pdf_pages": [
+        277
+      ],
+      "evidence": [
+        {
+          "printed_page": 275,
+          "pdf_page": 277,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel B105EXT22.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "B105EXT22BCP",
+        "B105EXT22CR",
+        "B105EXT22GN",
+        "B105EXT22MBP"
+      ],
+      "matched_skus": [
+        "B105EXT22BCP",
+        "B105EXT22CR",
+        "B105EXT22GN",
+        "B105EXT22MBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "B105EXT22BCP",
+        "B105EXT22CR",
+        "B105EXT22GN",
+        "B105EXT22MBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "B131EXT",
+      "book_trim_model": "B131EXT",
+      "book_table_model": "B131EXT",
+      "body_sku": "HBCB131",
+      "qty": 1,
+      "printed_pages": [
+        281
+      ],
+      "pdf_pages": [
+        283
+      ],
+      "evidence": [
+        {
+          "printed_page": 281,
+          "pdf_page": 283,
+          "exact_table_header": "Inbouwdeel HBCB131 Afbouwdeel B131EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "B131EXTBCP",
+        "B131EXTCR",
+        "B131EXTGN",
+        "B131EXTMBP"
+      ],
+      "matched_skus": [
+        "B131EXTBCP",
+        "B131EXTCR",
+        "B131EXTGN",
+        "B131EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "B131EXTBCP",
+        "B131EXTCR",
+        "B131EXTGN",
+        "B131EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB131"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "B111EXT",
+      "book_trim_model": "B111EXT",
+      "book_table_model": "B111EXT",
+      "body_sku": "HBCB111",
+      "qty": 1,
+      "printed_pages": [
+        281
+      ],
+      "pdf_pages": [
+        283
+      ],
+      "evidence": [
+        {
+          "printed_page": 281,
+          "pdf_page": 283,
+          "exact_table_header": "Inbouwdeel HBCB111 Afbouwdeel B111EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "B111EXTBCP",
+        "B111EXTCR",
+        "B111EXTGN",
+        "B111EXTMBP"
+      ],
+      "matched_skus": [
+        "B111EXTBCP",
+        "B111EXTCR",
+        "B111EXTGN",
+        "B111EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "B111EXTBCP",
+        "B111EXTCR",
+        "B111EXTGN",
+        "B111EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB111"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "B177EXT",
+      "book_trim_model": "B177EXT",
+      "book_table_model": "B177EXT",
+      "body_sku": "HBCB177",
+      "qty": 1,
+      "printed_pages": [
+        283
+      ],
+      "pdf_pages": [
+        285
+      ],
+      "evidence": [
+        {
+          "printed_page": 283,
+          "pdf_page": 285,
+          "exact_table_header": "Inbouwdeel HBCB177 Afbouwdeel B177EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BCP",
+        "CR",
+        "GN",
+        "MBP"
+      ],
+      "candidate_skus": [
+        "B177EXTBCP",
+        "B177EXTCR",
+        "B177EXTGN",
+        "B177EXTMBP"
+      ],
+      "matched_skus": [
+        "B177EXTBCP",
+        "B177EXTCR",
+        "B177EXTGN",
+        "B177EXTMBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "B177EXTBCP",
+        "B177EXTCR",
+        "B177EXTGN",
+        "B177EXTMBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB177"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC105EXT",
+      "book_trim_model": "AC105EXT",
+      "book_table_model": "AC105EXT",
+      "body_sku": "HBCB105",
+      "qty": 1,
+      "printed_pages": [
+        300
+      ],
+      "pdf_pages": [
+        302
+      ],
+      "evidence": [
+        {
+          "printed_page": 300,
+          "pdf_page": 302,
+          "exact_table_header": "Inbouwdeel HBCB105 Afbouwdeel AC105EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC105EXTBBP",
+        "AC105EXTBCP",
+        "AC105EXTCR",
+        "AC105EXTGN",
+        "AC105EXTMBP",
+        "AC105EXTPBP"
+      ],
+      "matched_skus": [
+        "AC105EXTBBP",
+        "AC105EXTBCP",
+        "AC105EXTCR",
+        "AC105EXTGN",
+        "AC105EXTMBP",
+        "AC105EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC105EXTBBP",
+        "AC105EXTBCP",
+        "AC105EXTCR",
+        "AC105EXTGN",
+        "AC105EXTMBP",
+        "AC105EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB105"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC111EXT",
+      "book_trim_model": "AC111EXT",
+      "book_table_model": "AC111EXT",
+      "body_sku": "HBCB111",
+      "qty": 1,
+      "printed_pages": [
+        306
+      ],
+      "pdf_pages": [
+        308
+      ],
+      "evidence": [
+        {
+          "printed_page": 306,
+          "pdf_page": 308,
+          "exact_table_header": "Inbouwdeel HBCB111 Afbouwdeel AC111EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC111EXTBBP",
+        "AC111EXTBCP",
+        "AC111EXTCR",
+        "AC111EXTGN",
+        "AC111EXTMBP",
+        "AC111EXTPBP"
+      ],
+      "matched_skus": [
+        "AC111EXTBBP",
+        "AC111EXTBCP",
+        "AC111EXTCR",
+        "AC111EXTGN",
+        "AC111EXTMBP",
+        "AC111EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC111EXTBBP",
+        "AC111EXTBCP",
+        "AC111EXTCR",
+        "AC111EXTGN",
+        "AC111EXTMBP",
+        "AC111EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB111"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC131EXT",
+      "book_trim_model": "AC131EXT",
+      "book_table_model": "AC131EXT",
+      "body_sku": "HBCB131",
+      "qty": 1,
+      "printed_pages": [
+        306
+      ],
+      "pdf_pages": [
+        308
+      ],
+      "evidence": [
+        {
+          "printed_page": 306,
+          "pdf_page": 308,
+          "exact_table_header": "Inbouwdeel HBCB131 Afbouwdeel AC131EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC131EXTBBP",
+        "AC131EXTBCP",
+        "AC131EXTCR",
+        "AC131EXTGN",
+        "AC131EXTMBP",
+        "AC131EXTPBP"
+      ],
+      "matched_skus": [
+        "AC131EXTBBP",
+        "AC131EXTBCP",
+        "AC131EXTCR",
+        "AC131EXTGN",
+        "AC131EXTMBP",
+        "AC131EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC131EXTBBP",
+        "AC131EXTBCP",
+        "AC131EXTCR",
+        "AC131EXTGN",
+        "AC131EXTMBP",
+        "AC131EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB131"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC129EXT",
+      "book_trim_model": "AC129EXT",
+      "book_table_model": "AC129EXT",
+      "body_sku": "HBCB129",
+      "qty": 1,
+      "printed_pages": [
+        307
+      ],
+      "pdf_pages": [
+        309
+      ],
+      "evidence": [
+        {
+          "printed_page": 307,
+          "pdf_page": 309,
+          "exact_table_header": "Inbouwdeel HBCB129 Afbouwdeel AC129EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC129EXTBBP",
+        "AC129EXTBCP",
+        "AC129EXTCR",
+        "AC129EXTGN",
+        "AC129EXTMBP",
+        "AC129EXTPBP"
+      ],
+      "matched_skus": [
+        "AC129EXTBBP",
+        "AC129EXTBCP",
+        "AC129EXTCR",
+        "AC129EXTGN",
+        "AC129EXTMBP",
+        "AC129EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC129EXTBBP",
+        "AC129EXTBCP",
+        "AC129EXTCR",
+        "AC129EXTGN",
+        "AC129EXTMBP",
+        "AC129EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBCB129"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC071EXT",
+      "book_trim_model": "AC071EXT",
+      "book_table_model": "AC071EXT",
+      "body_sku": "HBAC071",
+      "qty": 1,
+      "printed_pages": [
+        309
+      ],
+      "pdf_pages": [
+        311
+      ],
+      "evidence": [
+        {
+          "printed_page": 309,
+          "pdf_page": 311,
+          "exact_table_header": "Inbouwdeel HBAC071 Afbouwdeel AC071EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC071EXTBBP",
+        "AC071EXTBCP",
+        "AC071EXTCR",
+        "AC071EXTGN",
+        "AC071EXTMBP",
+        "AC071EXTPBP"
+      ],
+      "matched_skus": [
+        "AC071EXTBBP",
+        "AC071EXTBCP",
+        "AC071EXTCR",
+        "AC071EXTGN",
+        "AC071EXTMBP",
+        "AC071EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC071EXTBBP",
+        "AC071EXTBCP",
+        "AC071EXTCR",
+        "AC071EXTGN",
+        "AC071EXTMBP",
+        "AC071EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBAC071"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    },
+    {
+      "trim_model": "AC072EXT",
+      "book_trim_model": "AC072EXT",
+      "book_table_model": "AC072EXT",
+      "body_sku": "HBAC072",
+      "qty": 1,
+      "printed_pages": [
+        309
+      ],
+      "pdf_pages": [
+        311
+      ],
+      "evidence": [
+        {
+          "printed_page": 309,
+          "pdf_page": 311,
+          "exact_table_header": "Inbouwdeel HBAC072 Afbouwdeel AC072EXT.. Totaal",
+          "visual_verified": true
+        }
+      ],
+      "match_type": "DIRECT",
+      "book_finishes": [
+        "BBP",
+        "BCP",
+        "CR",
+        "GN",
+        "MBP",
+        "PBP"
+      ],
+      "candidate_skus": [
+        "AC072EXTBBP",
+        "AC072EXTBCP",
+        "AC072EXTCR",
+        "AC072EXTGN",
+        "AC072EXTMBP",
+        "AC072EXTPBP"
+      ],
+      "matched_skus": [
+        "AC072EXTBBP",
+        "AC072EXTBCP",
+        "AC072EXTCR",
+        "AC072EXTGN",
+        "AC072EXTMBP",
+        "AC072EXTPBP"
+      ],
+      "unlisted_finish_skus": [],
+      "approved_skus": [
+        "AC072EXTBBP",
+        "AC072EXTBCP",
+        "AC072EXTCR",
+        "AC072EXTGN",
+        "AC072EXTMBP",
+        "AC072EXTPBP"
+      ],
+      "body_catalog_skus": [
+        "HBAC072"
+      ],
+      "body_unique_active_published_snapshot": true,
+      "status": "VERIFIED_BOOK",
+      "selection_required": false,
+      "live_included_flag_conflicts": [],
+      "deployment_data_review": false,
+      "notes": [],
+      "visual_verified": true
+    }
+  ],
+  "exceptions": [
+    {
+      "type": "CATALOGUE_CODE_INCONSISTENCY",
+      "printed_page": 254,
+      "pdf_page": 256,
+      "book_code": "GLF0011EXT",
+      "likely_model": "GLF011EXT",
+      "note": "Table literally says GLF0011EXT, heading GLF011. Existing original mapping for GLF011EXT is based on a separate explicit table on page358. Do not count this spelling as a new model or invent a matching shop SKU."
+    },
+    {
+      "type": "UNLISTED_FINISH_HOLD",
+      "trim_model": "PB050EXT",
+      "skus": [
+        "PB050EXTBL"
+      ],
+      "printed_pages": [
+        197
+      ],
+      "note": "Existing trim SKU finish not listed in the cited manufacturer price table; no automatic scope expansion."
+    },
+    {
+      "type": "UNLISTED_FINISH_HOLD",
+      "trim_model": "GL005EXT",
+      "skus": [
+        "GL005EXTBL"
+      ],
+      "printed_pages": [
+        244
+      ],
+      "note": "Existing trim SKU finish not listed in the cited manufacturer price table; no automatic scope expansion."
+    },
+    {
+      "type": "UNLISTED_FINISH_HOLD",
+      "trim_model": "GL7071EXT",
+      "skus": [
+        "GL7071EXTBL"
+      ],
+      "printed_pages": [
+        251
+      ],
+      "note": "Existing trim SKU finish not listed in the cited manufacturer price table; no automatic scope expansion."
+    },
+    {
+      "type": "UNLISTED_FINISH_HOLD",
+      "trim_model": "GL7067EXT",
+      "skus": [
+        "GL7067EXTBL"
+      ],
+      "printed_pages": [
+        252
+      ],
+      "note": "Existing trim SKU finish not listed in the cited manufacturer price table; no automatic scope expansion."
+    }
+  ]
+}

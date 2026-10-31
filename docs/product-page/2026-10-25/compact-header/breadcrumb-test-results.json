@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cases": [
+    "Actual CB105EXT25AB collection memberships and main navigation",
+    "Shared generic category avoids a misleading parent",
+    "Product outside navigation falls back to its actual collection",
+    "Uncategorised product has a safe home route",
+    "Existing Wiesbaden pilot path preserved",
+    "Reviewed path still checks actual membership"
+  ],
+  "renderer": "LiquidJS",
+  "scope": "Breadcrumb snippet rendering; the existing Wiesbaden scope dependency is stubbed"
+}

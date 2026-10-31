@@ -1,0 +1,121 @@
+{% doc %}
+  Renders the verified rough-in option inside a product purchase form.
+  @param {product} product - The trim product.
+  @param {string} relation - Exact pipe-separated product mapping.
+  @param {string} product_form_id - The owning product form ID.
+{% enddoc %}
+{%- assign bc_inbouw_fields = relation | strip | split: '|' -%}
+{%- if bc_inbouw_fields.size == 6 -%}
+  {%- liquid
+    assign bc_inbouw_expected_parent_id = bc_inbouw_fields[0] | plus: 0
+    assign bc_inbouw_expected_parent_sku = bc_inbouw_fields[1]
+    assign bc_inbouw_body_handle = bc_inbouw_fields[2]
+    assign bc_inbouw_expected_body_sku = bc_inbouw_fields[3]
+    assign bc_inbouw_expected_body_id = bc_inbouw_fields[4] | plus: 0
+    assign bc_inbouw_quantity = bc_inbouw_fields[5] | plus: 0
+    assign bc_inbouw_parent = product.selected_or_first_available_variant
+    assign bc_inbouw_body = all_products[bc_inbouw_body_handle]
+    assign bc_inbouw_variant = bc_inbouw_body.variants | where: 'id', bc_inbouw_expected_body_id | first
+    assign bc_inbouw_valid = false
+    assign bc_inbouw_body_available = false
+    assign bc_inbouw_vendor = product.vendor | downcase
+    assign bc_inbouw_body_vendor = bc_inbouw_body.vendor | downcase
+    if bc_inbouw_vendor == 'hotbath' and bc_inbouw_body_vendor == 'hotbath'
+      if bc_inbouw_parent.id == bc_inbouw_expected_parent_id and bc_inbouw_parent.sku == bc_inbouw_expected_parent_sku
+        if bc_inbouw_variant.id == bc_inbouw_expected_body_id and bc_inbouw_variant.sku == bc_inbouw_expected_body_sku
+          if bc_inbouw_quantity == 1 and bc_inbouw_variant.price > 0
+            unless product.metafields.specs.met_inbouwdeel.value == true
+              assign bc_inbouw_valid = true
+              if bc_inbouw_variant.available
+                assign bc_inbouw_body_available = true
+              endif
+            endunless
+          endif
+        endif
+      endif
+    endif
+    assign bc_inbouw_id = product_form_id | append: '-inbouw'
+    assign bc_inbouw_currency = localization.country.currency.iso_code | default: shop.currency
+  -%}
+  {{ 'component-product-inbouw.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'bc-product-inbouw.js' | asset_url }}" defer="defer"></script>
+  <bc-inbouw-addon
+    class="bc-inbouw"
+    data-valid="{{ bc_inbouw_valid }}"
+    data-parent-variant="{{ bc_inbouw_expected_parent_id }}"
+    data-parent-sku="{{ bc_inbouw_expected_parent_sku | escape }}"
+    data-body-variant="{{ bc_inbouw_expected_body_id }}"
+    data-body-sku="{{ bc_inbouw_expected_body_sku | escape }}"
+    data-body-available="{{ bc_inbouw_body_available }}"
+    data-body-price="{{ bc_inbouw_variant.price | default: 0 }}"
+    data-quantity-per-trim="{{ bc_inbouw_quantity }}"
+    data-currency="{{ bc_inbouw_currency | escape }}"
+    data-add-url="{{ routes.cart_add_url }}.js"
+    data-cart-url="{{ routes.cart_url }}"
+    data-message-choice="{{ 'bc.inbouw.message_choice' | t | escape }}"
+    data-message-unavailable="{{ 'bc.inbouw.message_unavailable' | t | escape }}"
+    data-message-changed="{{ 'bc.inbouw.message_changed' | t | escape }}"
+    data-message-quantity="{{ 'bc.inbouw.message_quantity' | t | escape }}"
+    data-message-uncertain="{{ 'bc.inbouw.message_uncertain' | t | escape }}"
+    data-message-ready="{{ 'bc.inbouw.message_ready' | t | escape }}"
+    data-message-loading="{{ 'bc.inbouw.message_loading' | t | escape }}"
+  >
+    {%- if bc_inbouw_valid -%}
+      <fieldset class="bc-inbouw__fieldset" data-inbouw-controls disabled hidden aria-describedby="{{ bc_inbouw_id }}-detail">
+        <legend class="bc-inbouw__title">{{ 'bc.inbouw.title' | t }}</legend>
+        <p id="{{ bc_inbouw_id }}-detail" class="bc-inbouw__detail">
+          {{ 'bc.inbouw.intro' | t }}
+          <a href="{{ bc_inbouw_body.url }}" class="bc-inbouw__body-link">{{ bc_inbouw_expected_body_sku | escape }}</a>
+        </p>
+        <div class="bc-inbouw__choices">
+          <label class="bc-inbouw__choice" for="{{ bc_inbouw_id }}-yes">
+            <input
+              id="{{ bc_inbouw_id }}-yes"
+              type="radio"
+              name="bc_inbouw_choice"
+              value="yes"
+              data-inbouw-choice
+              required
+              disabled
+            >
+            <span class="bc-inbouw__choice-text">{{ 'bc.inbouw.yes' | t }}</span>
+            <span class="bc-inbouw__price">+ {{ bc_inbouw_variant.price | money }}</span>
+          </label>
+          <label class="bc-inbouw__choice" for="{{ bc_inbouw_id }}-no">
+            <input
+              id="{{ bc_inbouw_id }}-no"
+              type="radio"
+              name="bc_inbouw_choice"
+              value="no"
+              data-inbouw-choice
+              required
+              disabled
+            >
+            <span class="bc-inbouw__choice-text">{{ 'bc.inbouw.no' | t }}</span>
+          </label>
+        </div>
+        <p class="bc-inbouw__hint">{{ 'bc.inbouw.quantity_note' | t }}</p>
+        {%- unless bc_inbouw_body_available -%}
+          <p class="bc-inbouw__notice">{{ 'bc.inbouw.unavailable' | t }}</p>
+        {%- endunless -%}
+      </fieldset>
+      <noscript>
+        <p class="bc-inbouw__notice">{{ 'bc.inbouw.noscript' | t }}</p>
+        <a href="{{ bc_inbouw_body.url }}" class="bc-inbouw__body-link">{{ 'bc.inbouw.body_link' | t: sku: bc_inbouw_expected_body_sku }}</a>
+      </noscript>
+    {%- else -%}
+      <p class="bc-inbouw__notice">{{ 'bc.inbouw.invalid' | t }}</p>
+    {%- endif -%}
+    <p class="bc-inbouw__error" data-inbouw-error role="alert" tabindex="-1" hidden></p>
+    <a class="bc-inbouw__cart-link" href="{{ routes.cart_url }}" data-inbouw-cart-link hidden>{{ 'bc.inbouw.cart_link' | t }}</a>
+  </bc-inbouw-addon>
+{%- elsif relation != blank -%}
+  <bc-inbouw-addon
+    class="bc-inbouw"
+    data-valid="false"
+    data-message-changed="{{ 'bc.inbouw.message_changed' | t | escape }}"
+    data-message-loading="{{ 'bc.inbouw.message_loading' | t | escape }}"
+  >
+    <p class="bc-inbouw__notice">{{ 'bc.inbouw.invalid' | t }}</p>
+  </bc-inbouw-addon>
+{%- endif -%}

@@ -1,0 +1,1267 @@
+{
+  "schema_version": 2,
+  "brand": "Wiesbaden",
+  "manufacturer_number": "24.3710",
+  "state": "PARTIALLY_APPLIED_BLOCKED",
+  "reviewed_date": "2026-10-20",
+  "product_id": "gid://shopify/Product/10657256210698",
+  "variant_id": "gid://shopify/ProductVariant/53859735175434",
+  "sources": [
+    {
+      "id": "shopify",
+      "kind": "live_admin",
+      "retrieved_date": "2026-10-16",
+      "product_id": "gid://shopify/Product/10657256210698",
+      "updated_at": "2026-10-12T15:49:11Z"
+    },
+    {
+      "id": "tegeldepot",
+      "kind": "user_uploaded_html",
+      "url": "https://www.tegeldepot.nl/wastafelmengkraan-wiesbaden-grant-opbouw-rvs-18-4-cm",
+      "sha256": "f53ef3c9b1dc73f7632e7fca26c933c1fb95ec077b7a9769db8edbf58181a0c2",
+      "reviewed_date": "2026-10-16",
+      "snapshot_capture_date": null,
+      "identifier_basis": "Artikelnummer fabrikant 24.3710; retailer-SKU KOH24.3710"
+    },
+    {
+      "id": "badenvloer",
+      "kind": "user_uploaded_html",
+      "url": "https://www.badenvloer.nl/product/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710/",
+      "sha256": "ca7b8c02a039f161803f6624d577ad679f733f9c48e5ec743dd451ec72bf6c28",
+      "reviewed_date": "2026-10-16",
+      "snapshot_capture_date": null,
+      "identifier_basis": "SKU 24.3710"
+    },
+    {
+      "id": "warmteservice",
+      "kind": "user_uploaded_html",
+      "url": "https://www.warmteservice.nl/Sanitair/Kranen/Wastafelkranen/Wiesbaden-Grant-wastafelmengkraan-/p/A0125065",
+      "sha256": "ce46cfa3ba4f9c932f1fedbb54ef8d7f846b0efb665cb57bd4b7e9a8026aedd6",
+      "reviewed_date": "2026-10-16",
+      "snapshot_capture_date": null,
+      "identifier_basis": "MPN 24.3710; retailer-SKU A0125065"
+    },
+    {
+      "id": "supplier_drawing",
+      "kind": "supplier_asset",
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/24.3710.jpg",
+      "retrieved_date": "2026-10-16",
+      "http_status": 200,
+      "visually_inspected": true
+    },
+    {
+      "id": "own_product_photo",
+      "kind": "shopify_media",
+      "media_id": "gid://shopify/MediaImage/51232813646090",
+      "url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/wiesbaden-24-3710-01.jpg?v=1791213018",
+      "visually_inspected": true
+    },
+    {
+      "id": "own_dimension_image",
+      "kind": "shopify_media",
+      "media_id": "gid://shopify/MediaImage/51232813678858",
+      "url": "https://cdn.shopify.com/s/files/1/0941/7959/0410/files/wiesbaden-24-3710-02.jpg?v=1791213018",
+      "visually_inspected": true
+    },
+    {
+      "id": "manufacturer_20261019",
+      "kind": "existing_datarun",
+      "relative_path": "products/57ba2583ba36eae8afc7ad82.json",
+      "file_sha256": "f7583f647647764a11ff126b5505cb0892f81947b1f406189000285d20c9d00d",
+      "url": "https://www.wiesbaden.nl/304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710.html",
+      "fetched_at": "2026-10-19T11:16:55.807360+00:00",
+      "source_response_sha256": "2e1cfce172d18891d71e04a8a95232b285206a06f0cba090032b4b2c4d684c1d",
+      "file_hash_checked": true,
+      "raw_response_in_transport_package": false
+    }
+  ],
+  "facts": [
+    {
+      "key": "brand",
+      "value": "Wiesbaden",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "manufacturer_number",
+      "value": "24.3710",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "retail_model_name",
+      "value": "Grant",
+      "unit": null,
+      "status": "REJECTED_FOR_CUSTOMER_CONTENT",
+      "sources": [
+        "tegeldepot",
+        "warmteservice"
+      ],
+      "note": "Historische alias, niet goedgekeurd. Officiële serie 304."
+    },
+    {
+      "key": "existing_series",
+      "value": "304",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "manufacturer_20261019"
+      ],
+      "note": "Grant en 304 niet automatisch als verschillende artikelen behandelen. Serie-metafield en serie-304-tag nog niet wijzigen; 304 evenmin als bewezen RVS-legering publiceren."
+    },
+    {
+      "key": "product_type",
+      "value": "Opbouwwastafelkraan",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "material",
+      "value": "RVS",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "finish",
+      "value": "Geborsteld",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "colour",
+      "value": "Geborsteld RVS",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "mounting",
+      "value": "Blad/kraangat",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "tap_holes",
+      "value": 1,
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "control_handles",
+      "value": 1,
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "tegeldepot",
+        "warmteservice",
+        "own_product_photo"
+      ],
+      "note": null
+    },
+    {
+      "key": "control",
+      "value": "Handbediend",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "coldstart",
+      "value": true,
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "cartridge",
+      "value": "Keramisch",
+      "unit": null,
+      "status": "RETAIL_ONLY_NOT_FOR_PROPOSAL",
+      "sources": [
+        "tegeldepot",
+        "warmteservice"
+      ],
+      "note": "Niet bevestigd in opgehaalde fabrikantentabel; uit klantvoorstel weggelaten."
+    },
+    {
+      "key": "height",
+      "value": 183.5,
+      "unit": "mm",
+      "status": "verified_drawing",
+      "sources": [
+        "supplier_drawing",
+        "own_dimension_image",
+        "badenvloer"
+      ],
+      "note": "Tegeldepot 18,4 cm is afgerond. Warmteservice 1835 mm verworpen."
+    },
+    {
+      "key": "spout_outlet_height",
+      "value": 73,
+      "unit": "mm",
+      "status": "verified_drawing",
+      "sources": [
+        "supplier_drawing",
+        "own_dimension_image",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "spout_projection",
+      "value": 130,
+      "unit": "mm",
+      "status": "verified_drawing",
+      "sources": [
+        "supplier_drawing",
+        "own_dimension_image",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "body_diameter",
+      "value": 45,
+      "unit": "mm",
+      "status": "verified_drawing",
+      "sources": [
+        "supplier_drawing",
+        "own_dimension_image"
+      ],
+      "note": "Diameter kraanhuis; geen maat voor montagegat."
+    },
+    {
+      "key": "mounting_hole_diameter",
+      "value": null,
+      "unit": "mm",
+      "status": "unknown",
+      "sources": [
+        "supplier_drawing"
+      ],
+      "note": "Geen expliciete boormaat aangetroffen; niet afleiden uit Ø45."
+    },
+    {
+      "key": "spout_shape",
+      "value": "Gebogen buisuitloop",
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "own_product_photo",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "spout_rotatable",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "spout_aerator",
+      "value": "Straalbreker",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "tegeldepot",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "waste_included",
+      "value": false,
+      "unit": null,
+      "status": "accepted",
+      "sources": [
+        "shopify",
+        "tegeldepot",
+        "badenvloer",
+        "warmteservice"
+      ],
+      "note": null
+    },
+    {
+      "key": "couplings_included",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "rosette_or_coverplate_included",
+      "value": true,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "side_spray",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "pullout_handshower",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "pullout_aerator",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "self_closing",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "temperature_limiter",
+      "value": false,
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "surface_protection",
+      "value": "Onbehandeld",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "handle_material",
+      "value": "RVS",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "warmteservice",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "supply_connection_size",
+      "value": "1/2\"",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "supply_connection_type",
+      "value": "Pijpje",
+      "unit": null,
+      "status": "VERIFIED_MANUFACTURER",
+      "sources": [
+        "badenvloer",
+        "manufacturer_20261019"
+      ],
+      "note": "Nu bevestigd door fabrikantentabel uit bestaande bronrun."
+    },
+    {
+      "key": "kiwa_certified",
+      "value": true,
+      "unit": null,
+      "status": "needs_certificate_confirmation",
+      "sources": [
+        "tegeldepot"
+      ],
+      "note": "Geen certificaat of officiële verklaring gecontroleerd; weglaten uit verkooptekst."
+    },
+    {
+      "key": "water_saving_position",
+      "value": true,
+      "unit": null,
+      "status": "needs_supplier_confirmation",
+      "sources": [
+        "tegeldepot"
+      ],
+      "note": "Geen opgegeven debiet of besparingspercentage; perlator bewijst op zichzelf geen besparing."
+    },
+    {
+      "key": "flow_rate",
+      "value": null,
+      "unit": "l/min",
+      "status": "unknown",
+      "sources": [],
+      "note": null
+    },
+    {
+      "key": "warranty",
+      "value": "5 jaar",
+      "unit": null,
+      "status": "existing_store_only_unverified",
+      "sources": [
+        "shopify"
+      ],
+      "note": "Garantievoorwaarden en fabrikantdekking niet gecontroleerd."
+    },
+    {
+      "key": "connection_hoses_included",
+      "value": null,
+      "unit": null,
+      "status": "unknown",
+      "sources": [],
+      "note": null
+    },
+    {
+      "key": "maximum_deck_thickness",
+      "value": null,
+      "unit": "mm",
+      "status": "unknown",
+      "sources": [],
+      "note": null
+    },
+    {
+      "key": "retailer_weight",
+      "value": 3,
+      "unit": "kg",
+      "status": "not_for_publication",
+      "sources": [
+        "tegeldepot"
+      ],
+      "note": "Geen bevestigde netto-/brutodefinitie."
+    },
+    {
+      "key": "packaged_weight_raw",
+      "value": 1240,
+      "unit": null,
+      "status": "not_for_publication",
+      "sources": [
+        "badenvloer"
+      ],
+      "note": "Eenheid ontbreekt; niet stil naar kilogram/gram converteren."
+    },
+    {
+      "key": "package_dimensions_raw",
+      "value": {
+        "length": 32.4,
+        "width": 19.5,
+        "height": 7.5
+      },
+      "unit": null,
+      "status": "not_for_publication",
+      "sources": [
+        "badenvloer"
+      ],
+      "note": "Verpakkingsmaten met onduidelijke eenheid; niet verwarren met productmaten."
+    },
+    {
+      "key": "package_units_large",
+      "value": 15,
+      "unit": null,
+      "status": "logistics_only",
+      "sources": [
+        "badenvloer"
+      ],
+      "note": null
+    },
+    {
+      "key": "package_units_small",
+      "value": 1,
+      "unit": null,
+      "status": "logistics_only",
+      "sources": [
+        "badenvloer"
+      ],
+      "note": null
+    }
+  ],
+  "decisions": {
+    "matching": "Exact fabrikantnummer; retailer-SKU's alleen voor bronherkomst, niet als Shopify-SKU.",
+    "series": "Officiële serie 304; Grant afgewezen voor alle nieuwe klantvelden.",
+    "height": "183,5 mm op tekening is leidend; 1835 mm verworpen.",
+    "diameter": "Ø45 beschrijft kraanhuis; montagegatmaat onbekend.",
+    "price": "Geen prijsadvies of mutatie in deze opdracht.",
+    "inventory": "Geen voorraad-/levertermijn overgenomen uit retailers of opgeslagen boolean.",
+    "warranty": "Geen nieuwe garantieclaim in concept.",
+    "ean": "Niet gebruikt; bestaande historische identificatie is uitsluitend SKU.",
+    "rights": "Feiten en zelfgeschreven tekst; geen volledige retaileromschrijvingen of HTML in publieke Git.",
+    "specifications": "27 fabrikantregels, vier tekeningmaten, productsoort uit categorie en één visueel bevestigde greep: 33 rijen."
+  },
+  "proposal": {
+    "title": "Wiesbaden 304 wastafelkraan met coldstart – geborsteld RVS",
+    "short_title": {
+      "namespace": "custom",
+      "key": "card_title",
+      "type": "single_line_text_field",
+      "value": "Wiesbaden 304 wastafelkraan geborsteld RVS",
+      "definition_reference": "docs/SEARCH_AND_SHORT_TITLES_2026-10-14.md",
+      "definition_live_rechecked": true,
+      "definition_verified_date": "2026-10-20"
+    },
+    "seo": {
+      "title": "Wiesbaden 304 wastafelkraan RVS coldstart | BadkamerCity",
+      "description": "Wiesbaden 304 opbouw wastafelkraan in geborsteld RVS met coldstart. Hoogte 183,5 mm, voorsprong 130 mm. Voor één kraangat, zonder afvoerplug."
+    },
+    "description_html": "<p>De Wiesbaden 304 is een opbouw wastafelkraan in geborsteld RVS, met een vaste, gebogen uitloop en één hendel. Je monteert de kraan in één kraangat op de wastafel of het wastafelblad.</p>\n<h2>Bediening met coldstart</h2>\n<p>Met de hendel bedien je de kraan en regel je de temperatuur handmatig. Deze uitvoering heeft coldstart: in de middenstand vraag je koud water; voor warm water draai je de hendel naar de warme stand.</p>\n<h2>Past de kraan bij jouw wastafel?</h2>\n<p>De totale hoogte is 183,5 mm. De uitloop zit 73 mm boven het montagevlak en steekt 130 mm naar voren. Vergelijk deze maten met de positie van het kraangat en de vorm van je wastafel. De diameter van het kraanhuis is 45 mm; dit is niet de maat van het benodigde kraangat.</p>\n<h2>Montage en afvoer</h2>\n<p>De fabrikant vermeldt een aanvoeraansluiting met een pijpje van ½ inch. De kraan heeft een straalbreker en wordt geleverd zonder afvoerplug en zonder koppelingen. Controleer vóór montage welke aansluitmaterialen en afvoer bij jouw wastafel passen.</p>\n<p>Bekijk ook onze andere <a href=\"/collections/opbouw-wastafelkranen\">opbouw wastafelkranen</a>.</p>",
+    "specifications": [
+      [
+        "Artikelnummer",
+        "24.3710"
+      ],
+      [
+        "Merk",
+        "Wiesbaden"
+      ],
+      [
+        "Serie",
+        "304"
+      ],
+      [
+        "Productsoort",
+        "Opbouwwastafelkraan"
+      ],
+      [
+        "Zelfsluitend",
+        "Nee"
+      ],
+      [
+        "Type temperatuurregeling",
+        "Handbediend"
+      ],
+      [
+        "Aantal kraangaten",
+        "1-gats"
+      ],
+      [
+        "Uitvoering uitloop",
+        "Vast"
+      ],
+      [
+        "Type uitloop",
+        "Buis"
+      ],
+      [
+        "Kraanmondstuk",
+        "Straalbreker"
+      ],
+      [
+        "Uittrekbare uitloop met kraanbeluchter/mousseur",
+        "Nee"
+      ],
+      [
+        "Uittrekbare uitloop met handdouche",
+        "Nee"
+      ],
+      [
+        "Met zijwaartse douche",
+        "Nee"
+      ],
+      [
+        "Met koppelingen",
+        "Nee"
+      ],
+      [
+        "Met afvoerplug",
+        "Nee"
+      ],
+      [
+        "Temperatuurbegrenzing",
+        "Nee"
+      ],
+      [
+        "Coldstart",
+        "Ja"
+      ],
+      [
+        "Volumestroomklasse",
+        "Geen"
+      ],
+      [
+        "Programmering",
+        "Handmatig"
+      ],
+      [
+        "Materiaal kraan",
+        "Roestvaststaal (RVS)"
+      ],
+      [
+        "Oppervlaktebescherming",
+        "Onbehandeld"
+      ],
+      [
+        "Oppervlaktebehandeling",
+        "Geborsteld"
+      ],
+      [
+        "Materiaal greep",
+        "Roestvaststaal (RVS)"
+      ],
+      [
+        "Basiskleur",
+        "Geborsteld staal"
+      ],
+      [
+        "Montage",
+        "Blad/kraangat"
+      ],
+      [
+        "Aansluiting aanvoer",
+        "Pijpje"
+      ],
+      [
+        "Maat aansluiting aanvoer",
+        "1/2\""
+      ],
+      [
+        "Met rozetten / afdekplaat",
+        "Ja"
+      ],
+      [
+        "Totale hoogte",
+        "183,5 mm"
+      ],
+      [
+        "Uitloophoogte vanaf montagevlak",
+        "73 mm"
+      ],
+      [
+        "Voorsprong uitloop",
+        "130 mm"
+      ],
+      [
+        "Kraanhuisdiameter (geen kraangatmaat)",
+        "45 mm"
+      ],
+      [
+        "Aantal grepen",
+        "1"
+      ]
+    ],
+    "internal_links": [
+      {
+        "path": "/collections/opbouw-wastafelkranen",
+        "anchor": "opbouw wastafelkranen",
+        "verified_date": "2026-10-16",
+        "http_status": 200,
+        "h1": "Opbouw wastafelkranen"
+      }
+    ],
+    "image_alt_updates": [
+      {
+        "media_id": "gid://shopify/MediaImage/51232813646090",
+        "value": "Wiesbaden 304 wastafelkraan in geborsteld RVS met gebogen uitloop en één hendel",
+        "based_on": "own_product_photo"
+      },
+      {
+        "media_id": "gid://shopify/MediaImage/51232813678858",
+        "value": "Maattekening Wiesbaden 304 wastafelkraan 24.3710: hoogte 183,5 mm, uitloophoogte 73 mm en voorsprong 130 mm",
+        "based_on": "own_dimension_image"
+      }
+    ],
+    "handle": "wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+    "handle_change": false,
+    "technical_documents": "Bestaande documentmetafield en media behouden; geen extra documentsectie in nieuwe descriptionHtml.",
+    "complete_specifications": {
+      "namespace": "custom",
+      "key": "complete_specificaties",
+      "type": "json",
+      "value": [
+        {
+          "group": "Product",
+          "items": [
+            {
+              "key": "fabrikantnummer",
+              "label": "Artikelnummer",
+              "value": "24.3710"
+            },
+            {
+              "key": "merk",
+              "label": "Merk",
+              "value": "Wiesbaden"
+            },
+            {
+              "key": "serie",
+              "label": "Serie",
+              "value": "304"
+            },
+            {
+              "key": "productsoort",
+              "label": "Productsoort",
+              "value": "Opbouwwastafelkraan"
+            }
+          ]
+        },
+        {
+          "group": "Eigenschappen",
+          "items": [
+            {
+              "key": "zelfsluitend",
+              "label": "Zelfsluitend",
+              "value": "Nee"
+            },
+            {
+              "key": "type_temperatuurregeling",
+              "label": "Type temperatuurregeling",
+              "value": "Handbediend"
+            },
+            {
+              "key": "aantal_kraangaten",
+              "label": "Aantal kraangaten",
+              "value": "1-gats"
+            },
+            {
+              "key": "uitvoering_uitloop",
+              "label": "Uitvoering uitloop",
+              "value": "Vast"
+            },
+            {
+              "key": "type_uitloop",
+              "label": "Type uitloop",
+              "value": "Buis"
+            },
+            {
+              "key": "kraanmondstuk",
+              "label": "Kraanmondstuk",
+              "value": "Straalbreker"
+            },
+            {
+              "key": "uittrekbare_uitloop_met_kraanbeluchter_mousseur",
+              "label": "Uittrekbare uitloop met kraanbeluchter/mousseur",
+              "value": "Nee"
+            },
+            {
+              "key": "uittrekbare_uitloop_met_handdouche",
+              "label": "Uittrekbare uitloop met handdouche",
+              "value": "Nee"
+            },
+            {
+              "key": "met_zijwaartse_douche",
+              "label": "Met zijwaartse douche",
+              "value": "Nee"
+            },
+            {
+              "key": "met_koppelingen",
+              "label": "Met koppelingen",
+              "value": "Nee"
+            },
+            {
+              "key": "met_afvoerplug",
+              "label": "Met afvoerplug",
+              "value": "Nee"
+            },
+            {
+              "key": "temperatuurbegrenzing",
+              "label": "Temperatuurbegrenzing",
+              "value": "Nee"
+            },
+            {
+              "key": "coldstart",
+              "label": "Coldstart",
+              "value": "Ja"
+            },
+            {
+              "key": "volumestroomklasse",
+              "label": "Volumestroomklasse",
+              "value": "Geen"
+            },
+            {
+              "key": "programmering",
+              "label": "Programmering",
+              "value": "Handmatig"
+            }
+          ]
+        },
+        {
+          "group": "Materiaal en uitvoering",
+          "items": [
+            {
+              "key": "materiaal_kraan",
+              "label": "Materiaal kraan",
+              "value": "Roestvaststaal (RVS)"
+            },
+            {
+              "key": "oppervlaktebescherming",
+              "label": "Oppervlaktebescherming",
+              "value": "Onbehandeld"
+            },
+            {
+              "key": "oppervlaktebehandeling",
+              "label": "Oppervlaktebehandeling",
+              "value": "Geborsteld"
+            },
+            {
+              "key": "materiaal_greep",
+              "label": "Materiaal greep",
+              "value": "Roestvaststaal (RVS)"
+            },
+            {
+              "key": "basiskleur",
+              "label": "Basiskleur",
+              "value": "Geborsteld staal"
+            }
+          ]
+        },
+        {
+          "group": "Montage en aansluiting",
+          "items": [
+            {
+              "key": "montage",
+              "label": "Montage",
+              "value": "Blad/kraangat"
+            },
+            {
+              "key": "aansluiting_aanvoer",
+              "label": "Aansluiting aanvoer",
+              "value": "Pijpje"
+            },
+            {
+              "key": "maat_aansluiting_aanvoer",
+              "label": "Maat aansluiting aanvoer",
+              "value": "1/2\""
+            },
+            {
+              "key": "met_rozetten_afdekplaat",
+              "label": "Met rozetten / afdekplaat",
+              "value": "Ja"
+            }
+          ]
+        },
+        {
+          "group": "Maten volgens tekening",
+          "items": [
+            {
+              "key": "hoogte_mm",
+              "label": "Totale hoogte",
+              "value": "183,5 mm"
+            },
+            {
+              "key": "hoogte_uitloop_mm",
+              "label": "Uitloophoogte vanaf montagevlak",
+              "value": "73 mm"
+            },
+            {
+              "key": "voorsprong_uitloop_mm",
+              "label": "Voorsprong uitloop",
+              "value": "130 mm"
+            },
+            {
+              "key": "kraanhuisdiameter_mm",
+              "label": "Kraanhuisdiameter (geen kraangatmaat)",
+              "value": "45 mm"
+            }
+          ]
+        },
+        {
+          "group": "Bediening",
+          "items": [
+            {
+              "key": "aantal_grepen",
+              "label": "Aantal grepen",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    "category": {
+      "path": [
+        "Kranen",
+        "Wastafelkranen",
+        "Opbouw wastafelkranen"
+      ],
+      "collection_handles": [
+        "kranen",
+        "wastafelkranen",
+        "opbouw-wastafelkranen"
+      ],
+      "collection_ids": [
+        "gid://shopify/Collection/569428181258",
+        "gid://shopify/Collection/570058506506",
+        "gid://shopify/Collection/570059522314"
+      ],
+      "memberships_verified_date": "2026-10-20",
+      "collections_to_add": [],
+      "existing_extra_collection": {
+        "handle": "wastafels",
+        "action": "REVIEW_KEEP_UNTIL_EXPLICIT_DECISION"
+      },
+      "custom.categoriepad": "Kranen > Wastafelkranen > Opbouw wastafelkranen",
+      "breadcrumb_rendering": "Geen productbreadcrumb gevonden in actuele main-product/DOM; zichtbare categorielinks staan in lokale specificatieproef. Metafield alleen rendert niets.",
+      "shopify_taxonomy_category": "NOT_CHANGED; eigen collectiehiërarchie is geen Shopify-taxonomie-ID"
+    },
+    "filters": {
+      "current_manifest": {
+        "version": "2026-10-12",
+        "sku": "24.3710",
+        "fields": [
+          "afwerking",
+          "artikelsoort",
+          "coldstart",
+          "kleur",
+          "kleurgroep",
+          "kraanmontage",
+          "materiaal",
+          "productsoort",
+          "serie"
+        ],
+        "values_sha256": "a3289b4d3f8d9c353e7b104572bb2f982a89f39ef72ca7324a70b29ae81b2c2e",
+        "values": {
+          "productsoort": "Opbouwwastafelkraan",
+          "artikelsoort": "Kraan",
+          "serie": "304",
+          "kleur": "Geborsteld RVS",
+          "afwerking": "Geborsteld",
+          "materiaal": "RVS",
+          "coldstart": true,
+          "kleurgroep": "RVS",
+          "kraanmontage": "Opbouw"
+        },
+        "format": "verified-product-filters-v1"
+      },
+      "proposed_values": {
+        "productsoort": "Opbouwwastafelkraan",
+        "artikelsoort": "Kraan",
+        "serie": "304",
+        "kleur": "Geborsteld RVS",
+        "afwerking": "Geborsteld",
+        "materiaal": "RVS",
+        "coldstart": true,
+        "kleurgroep": "RVS",
+        "kraanmontage": "Opbouw",
+        "aantal_kraangaten": 1
+      },
+      "candidate_without_digest": {
+        "version": "2026-10-20",
+        "sku": "24.3710",
+        "fields": [
+          "aantal_kraangaten",
+          "afwerking",
+          "artikelsoort",
+          "coldstart",
+          "kleur",
+          "kleurgroep",
+          "kraanmontage",
+          "materiaal",
+          "productsoort",
+          "serie"
+        ],
+        "values": {
+          "productsoort": "Opbouwwastafelkraan",
+          "artikelsoort": "Kraan",
+          "serie": "304",
+          "kleur": "Geborsteld RVS",
+          "afwerking": "Geborsteld",
+          "materiaal": "RVS",
+          "coldstart": true,
+          "kleurgroep": "RVS",
+          "kraanmontage": "Opbouw",
+          "aantal_kraangaten": 1
+        },
+        "format": "verified-product-filters-v1"
+      },
+      "status": "BLOCKED_NOT_APPLIED: SSH authentication denied; actual manifest hash contract not verified",
+      "keep_normalized_values": {
+        "materiaal": "RVS",
+        "kleurgroep": "RVS",
+        "kleur": "Geborsteld RVS",
+        "serie": "304",
+        "kraanmontage": "Opbouw"
+      },
+      "typed_candidates": [
+        {
+          "field": "bc_filters.aantal_kraangaten",
+          "type": "number_integer",
+          "value": "1",
+          "api_field": "f_aantal_kraangaten",
+          "state": "NEW_VALUE_NEEDS_MANIFEST_AND_INDEX"
+        }
+      ],
+      "api_observed": {
+        "vendor": "Wiesbaden",
+        "f_serie": "304",
+        "f_kleur": "Geborsteld RVS",
+        "f_kleurgroep": "RVS",
+        "f_materiaal": "RVS",
+        "f_kraanmontage": "Opbouw",
+        "f_productsoort": "Opbouw wastafelkraan",
+        "f_artikelsoort": "Kraan"
+      },
+      "manifest_values_not_shown_as_facets": [
+        "afwerking",
+        "coldstart"
+      ],
+      "not_proposed": [
+        "glansgraad",
+        "debiet",
+        "keurmerken",
+        "garantie",
+        "voorraad",
+        "levertijd"
+      ],
+      "required_sequence": [
+        "Verify server manifest schema and digest algorithm from actual importer",
+        "Approve exact one-SKU field writes and back up current values",
+        "Update approved manifest and typed fields consistently, read back",
+        "Run authorized single-product index refresh and read indexed document",
+        "Assert filters for one tap hole include SKU and incompatible values exclude it; test native fallback"
+      ]
+    }
+  },
+  "deployment": {
+    "performed": true,
+    "complete": false,
+    "status": "PARTIALLY_APPLIED_BLOCKED",
+    "approved_by": "BadkamerCity-eigenaar",
+    "approved_scope": "Only SKU24.3710; content and minimal current-theme changes; no other theme publication",
+    "main_observed": "195449651466",
+    "product_updated_at": "2026-10-20T14:58:30Z",
+    "prohibited_changes": [
+      "price",
+      "inventory",
+      "handle",
+      "status",
+      "publications",
+      "other_products",
+      "theme_publication"
+    ],
+    "verification_report": "24.3710.application.json",
+    "blocked": [
+      "full_specification_rendering_and_category_links",
+      "filter_manifest_contract_and_single_product_index_refresh"
+    ],
+    "rollback": "Use private rollback.json and originals. Fresh-read before restoring only the changed product fields/media/metafields; CAS with current digest. Remove newly created metafields only if still equal to this run. No theme/index rollback needed: neither changed."
+  },
+  "missing_or_conflicting": [
+    {
+      "item": "Serie",
+      "decision": "304 bevestigd door fabrikant; Grant alleen historische retailer/API-placeholderalias, niet publiceren."
+    },
+    {
+      "item": "Totale hoogte",
+      "decision": "183,5 mm visueel bevestigd; 1835 mm verworpen, 18,4 cm is afronding."
+    },
+    {
+      "item": "Kraangatdiameter / maximale bladdikte",
+      "decision": "Niet bevestigd. Ø45 betreft kraanhuis; geen installatiegatmaat afleiden."
+    },
+    {
+      "item": "Keramisch binnenwerk",
+      "decision": "Twee retailers noemen keramisch; fabrikantentabel bevestigt dit niet. Weggelaten."
+    },
+    {
+      "item": "Aansluitslangen / volledige montageset",
+      "decision": "Niet bevestigd. Zonder koppelingen betekent niet automatisch zonder slangen."
+    },
+    {
+      "item": "Kiwa / waterbesparing / debiet",
+      "decision": "Geen certificaat of l/min bevestigd. Volumestroomklasse Geen is niet nul liter per minuut."
+    },
+    {
+      "item": "Garantie",
+      "decision": "Huidige winkel toont 5 jaar, onafhankelijke voorwaarden ontbreken. Geen garantieclaim in voorstel."
+    },
+    {
+      "item": "Gewicht / verpakking",
+      "decision": "Retailerwaarden en eenheden onduidelijk; niet als productspecificatie opgenomen."
+    },
+    {
+      "item": "Kleur / materiaal",
+      "decision": "Fabrikant Basiskleur Geborsteld staal; klantkleur Geborsteld RVS. Indexnorm RVS behouden; geen staalmateriaal afleiden."
+    },
+    {
+      "item": "Oppervlaktebescherming",
+      "decision": "Onbehandeld en oppervlaktebehandeling Geborsteld zijn afzonderlijke fabrikantvelden, geen conflict."
+    },
+    {
+      "item": "Collectie Wastafels",
+      "decision": "Bestaand extra lidmaatschap behouden voor review; gewenste hoofdroute Kranen > Wastafelkranen > Opbouw wastafelkranen."
+    },
+    {
+      "item": "Filters",
+      "decision": "Aantal kraangaten 1 nog niet geïndexeerd. Coldstart staat in manifest maar niet in geteste facetprofielen; backendprofielwijziging niet uitgevoerd."
+    },
+    {
+      "item": "Handleiding",
+      "decision": "Bronrun heeft document-URL; inhoud en montage-eisen uit PDF niet opnieuw beoordeeld."
+    }
+  ],
+  "verification": {
+    "source_specification_rows": 27,
+    "proposed_rows": 33,
+    "raw_source_rescraped": false,
+    "supplier_drawing": "Bestaande Shopify-maatafbeelding opnieuw visueel bekeken op 20 oktober",
+    "theme": "Fresh MAIN route fetched; no remote theme changes",
+    "pdp_live_spec_rows": 9,
+    "filters_api_exact_sku_profiles": [
+      "opbouw-wastafelkranen",
+      "wastafelkranen",
+      "__all__"
+    ],
+    "definitions": [
+      {
+        "id": "gid://shopify/MetafieldDefinition/409709641994",
+        "namespace": "custom",
+        "key": "complete_specificaties",
+        "type": {
+          "name": "json"
+        },
+        "access": {
+          "storefront": "PUBLIC_READ"
+        }
+      },
+      {
+        "id": "gid://shopify/MetafieldDefinition/418932031754",
+        "namespace": "custom",
+        "key": "card_title",
+        "type": {
+          "name": "single_line_text_field"
+        },
+        "access": {
+          "storefront": "PUBLIC_READ"
+        }
+      },
+      {
+        "id": "gid://shopify/MetafieldDefinition/409275793674",
+        "namespace": "custom",
+        "key": "categoriepad",
+        "type": {
+          "name": "single_line_text_field"
+        },
+        "access": {
+          "storefront": "PUBLIC_READ"
+        }
+      }
+    ],
+    "liquid_test_groups_passed": 14,
+    "theme_check": "R3 four files SUCCESS; official toolkit using local schema cache",
+    "local_browser_widths": [
+      1440,
+      390,
+      320
+    ],
+    "live_collection_widths": [
+      1440,
+      390
+    ],
+    "external_filter_fallback": "Network abort in local browser restores 24 native cards and native controls",
+    "application_report": "24.3710.application.json"
+  }
+}

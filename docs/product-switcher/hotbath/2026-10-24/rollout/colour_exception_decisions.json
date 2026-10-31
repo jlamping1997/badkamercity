@@ -1,0 +1,2944 @@
+{
+  "schema": "hotbath-colour-exception-review-v1",
+  "scope": "Outside IBS70/IBS7009/IBS20/IBS20A/IBS1/IBS1A/IBS12/IBS12A; explicit SPOM and TEST exclusion",
+  "required_runtime_gates": [
+    "Current ACTIVE and publishedAt",
+    "No SPOM in SKU or title, case insensitive",
+    "No TEST in SKU or title",
+    "No duplicate complete choice tuple",
+    "Preserve existing group IDs and unchanged prior records",
+    "No stock or current manufacturer availability inferred"
+  ],
+  "summary": {
+    "reviewed_buckets": 147,
+    "decisions": {
+      "APPROVE_COLOUR_ONLY": 79,
+      "KEEP_REVIEW": 68
+    },
+    "approved_product_memberships": 457,
+    "approved_new_product_count": 300
+  },
+  "decisions": [
+    {
+      "proposal_id": "colour-ar001ext",
+      "model": "AR001EXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 64,
+          "printed_page": 62
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar004",
+      "model": "AR004",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 67,
+          "printed_page": 65
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p65 names AR004 as the same swivel-spout basin mixer; short IX title omits details present in other finishes.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar021",
+      "model": "AR021",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 45,
+          "printed_page": 43
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Textile hose body is explicitly grey versus black across finishes; a plain metal-finish label needs a model-specific treatment."
+    },
+    {
+      "proposal_id": "colour-ar076",
+      "model": "AR076",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-ar105ext18",
+      "model": "AR105EXT18",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 69,
+          "printed_page": 67
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p67 confirms AR105EXT18 is the 18cm trim; both title forms describe that same 18cm in-wall basin trim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar105ext25",
+      "model": "AR105EXT25",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 69,
+          "printed_page": 67
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p67 confirms AR105EXT25 is the 25cm trim; both title forms describe that same 25cm in-wall basin trim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar305",
+      "model": "AR305",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 44,
+          "printed_page": 42
+        },
+        {
+          "pdf_page": 94,
+          "printed_page": 92
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar440",
+      "model": "AR440",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 46,
+          "printed_page": 44
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "AR440 title aliases handshower set with water supply and handshower set for in-wall taps describe the same product; book p44 confirms outlet/hose set.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar443",
+      "model": "AR443",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 47,
+          "printed_page": 45
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact AR443 model; title spacing and omitted purpose suffix only, no contradictory dimension or included component.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ar472",
+      "model": "AR472",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 50,
+          "printed_page": 48
+        },
+        {
+          "pdf_page": 100,
+          "printed_page": 98
+        },
+        {
+          "pdf_page": 338,
+          "printed_page": 336
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Only residual finish adjective geborsteld differs after colour stripping; all titles say Beam ceiling mounting.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ara05",
+      "model": "ARA05",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 412,
+          "printed_page": 410
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p410 confirms double paper holder ARA05 in IX/BBP/BCP/BGP; titles retain finish codes rather than colour words.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-arhf011",
+      "model": "ARHF011",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 88,
+          "printed_page": 86
+        },
+        {
+          "pdf_page": 362,
+          "printed_page": 360
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same trim model and one stop valve; voor/inbouw wording is an omission, not a distinct assembly.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-arhf012",
+      "model": "ARHF012",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 88,
+          "printed_page": 86
+        },
+        {
+          "pdf_page": 362,
+          "printed_page": 360
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same trim model and two stop valves; voor/inbouw wording is an omission, not a distinct assembly.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-arhf013",
+      "model": "ARHF013",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 88,
+          "printed_page": 86
+        },
+        {
+          "pdf_page": 362,
+          "printed_page": 360
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same trim model and three stop valves; voor/inbouw wording is an omission, not a distinct assembly.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-b005j",
+      "model": "B005J",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Current exact B005J model; wastafelkraan/wastafelmengkraan and duplicate uitloop are wording aliases. No manufacturer-stock claim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-b095-15",
+      "model": "B095/15",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    },
+    {
+      "proposal_id": "colour-b095-15j",
+      "model": "B095/15J",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    },
+    {
+      "proposal_id": "colour-b095-25",
+      "model": "B095/25",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    },
+    {
+      "proposal_id": "colour-b097",
+      "model": "B097",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-b098",
+      "model": "B098",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    },
+    {
+      "proposal_id": "colour-baa05",
+      "model": "BAA05",
+      "configuration_suffix": "",
+      "products_count": 12,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 417,
+          "printed_page": 415
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "The one longer title adds Living Colours patina information, not a different product function.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-baa26",
+      "model": "BAA26",
+      "configuration_suffix": "",
+      "products_count": 8,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 420,
+          "printed_page": 418
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-baa27",
+      "model": "BAA27",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 420,
+          "printed_page": 418
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-baa28",
+      "model": "BAA28",
+      "configuration_suffix": "",
+      "products_count": 8,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 421,
+          "printed_page": 419
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-bas320",
+      "model": "BAS320",
+      "configuration_suffix": "",
+      "products_count": 8,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 247,
+          "printed_page": 245
+        },
+        {
+          "pdf_page": 307,
+          "printed_page": 305
+        },
+        {
+          "pdf_page": 422,
+          "printed_page": 420
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p420 confirms BAS320 flush plate; TB title spells out compatibility omitted in the other titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-bow480",
+      "model": "BOW480",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 443,
+          "printed_page": 441
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-bow510",
+      "model": "BOW510",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 443,
+          "printed_page": 441
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-bss01",
+      "model": "BSS01",
+      "configuration_suffix": "",
+      "products_count": 3,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 282,
+          "printed_page": 280
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-c7009ext",
+      "model": "C7009EXT",
+      "configuration_suffix": "",
+      "products_count": 3,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 114,
+          "printed_page": 112
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p112 confirms same C7009EXT trim for two-way stop/diverter; title wording is equivalent.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-c7070ext",
+      "model": "C7070EXT",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 115,
+          "printed_page": 113
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-cb001ext",
+      "model": "CB001EXT",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 164,
+          "printed_page": 162
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-cb094-18",
+      "model": "CB094-18",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "All exact CB094-18 codes refer to an 18cm spout for CB105/106; toepasbaar op and tbv are aliases. Complete/trim model identities stay separate.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-cb094-25",
+      "model": "CB094-25",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "All exact CB094-25 codes refer to a 25cm spout for CB105/106; toepasbaar op and tbv are aliases. Complete/trim model identities stay separate.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-cb111ext",
+      "model": "CB111EXT",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 185,
+          "printed_page": 183
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Remaining MBP/PBP title tokens are finish codes; every title describes the same two-way diverter trim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-cb470",
+      "model": "CB470",
+      "configuration_suffix": "",
+      "products_count": 11,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 338,
+          "printed_page": 336
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p336 confirms Beam three-function wall shower; TB uses only a different word order.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-cba08",
+      "model": "CBA08",
+      "configuration_suffix": "",
+      "products_count": 3,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "HISTORICAL_FINISH_OUTSIDE_EDITION18_PALETTE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Legacy model, exact current SKU and explicit title colours agree; zwart chroom residue is the historical BK finish. No current-edition or stock claim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-cba14",
+      "model": "CBA14",
+      "configuration_suffix": "",
+      "products_count": 8,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "HISTORICAL_FINISH_OUTSIDE_EDITION18_PALETTE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Legacy model, exact current SKU and explicit title colours agree, including BL mat zwart. No current-edition or stock claim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-cw7171ext",
+      "model": "CW7171EXT",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "printed_page": 234,
+          "pdf_page": 236
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p234 confirms CW7171EXT bath/shower trim with two stop valves without outlet, and integrated handshower; title variants are compatible omissions.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-cx178wext",
+      "model": "CX178WEXT",
+      "configuration_suffix": "",
+      "products_count": 6,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 217,
+          "printed_page": 215
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-db01",
+      "model": "DB01",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 415,
+          "printed_page": 413
+        },
+        {
+          "pdf_page": 421,
+          "printed_page": 419
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gl001",
+      "model": "GL001",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 244,
+          "printed_page": 242
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gl008",
+      "model": "GL008",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 248,
+          "printed_page": 246
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gl020",
+      "model": "GL020",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 248,
+          "printed_page": 246
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gl177ext",
+      "model": "GL177EXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 251,
+          "printed_page": 249
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p249 identifies GL177EXT as floor-mounted bath-mixer trim; generic GN title omits trim qualifier but makes no contrary complete-set claim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gl7009ext",
+      "model": "GL7009EXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 254,
+          "printed_page": 252
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    },
+    {
+      "proposal_id": "colour-gy176",
+      "model": "GY176",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 134,
+          "printed_page": 132
+        },
+        {
+          "pdf_page": 152,
+          "printed_page": 150
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gy7070dext",
+      "model": "GY7070DEXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 136,
+          "printed_page": 134
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-gy7070rext",
+      "model": "GY7070REXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 154,
+          "printed_page": 152
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ibs27",
+      "model": "IBS27",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs27-1",
+      "model": "IBS27",
+      "configuration_suffix": "1",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs27-17",
+      "model": "IBS27",
+      "configuration_suffix": "17",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs27-7",
+      "model": "IBS27",
+      "configuration_suffix": "7",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33",
+      "model": "IBS33",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-1",
+      "model": "IBS33",
+      "configuration_suffix": "1",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-12",
+      "model": "IBS33",
+      "configuration_suffix": "12",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-124",
+      "model": "IBS33",
+      "configuration_suffix": "124",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-125",
+      "model": "IBS33",
+      "configuration_suffix": "125",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-126",
+      "model": "IBS33",
+      "configuration_suffix": "126",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-13",
+      "model": "IBS33",
+      "configuration_suffix": "13",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-134",
+      "model": "IBS33",
+      "configuration_suffix": "134",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-135",
+      "model": "IBS33",
+      "configuration_suffix": "135",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-136",
+      "model": "IBS33",
+      "configuration_suffix": "136",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-14",
+      "model": "IBS33",
+      "configuration_suffix": "14",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-15",
+      "model": "IBS33",
+      "configuration_suffix": "15",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-16",
+      "model": "IBS33",
+      "configuration_suffix": "16",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-2",
+      "model": "IBS33",
+      "configuration_suffix": "2",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-24",
+      "model": "IBS33",
+      "configuration_suffix": "24",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-25",
+      "model": "IBS33",
+      "configuration_suffix": "25",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-26",
+      "model": "IBS33",
+      "configuration_suffix": "26",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-3",
+      "model": "IBS33",
+      "configuration_suffix": "3",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-34",
+      "model": "IBS33",
+      "configuration_suffix": "34",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-35",
+      "model": "IBS33",
+      "configuration_suffix": "35",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-36",
+      "model": "IBS33",
+      "configuration_suffix": "36",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-4",
+      "model": "IBS33",
+      "configuration_suffix": "4",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "SKU_TITLE_COLOUR_CONFLICT",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "A title explicitly contradicts the SKU finish code; no automatic correction or merge."
+    },
+    {
+      "proposal_id": "colour-ibs33-5",
+      "model": "IBS33",
+      "configuration_suffix": "5",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs33-6",
+      "model": "IBS33",
+      "configuration_suffix": "6",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Keep whole configuration family together for later sourced review. Several sibling suffixes have real handshower/head/tube contradictions; do not atomically promote isolated colour buckets."
+    },
+    {
+      "proposal_id": "colour-ibs34",
+      "model": "IBS34",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Only residual finish adjective geborsteld differs; same exact model and mixing-valve Beam shower assembly in all four titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-khds4ext",
+      "model": "KHDS4EXT",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 179,
+          "printed_page": 177
+        },
+        {
+          "pdf_page": 369,
+          "printed_page": 367
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-khds5ext",
+      "model": "KHDS5EXT",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 73,
+          "printed_page": 71
+        },
+        {
+          "pdf_page": 369,
+          "printed_page": 367
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-l005j",
+      "model": "L005J",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Current exact L005J model; wastafelkraan/wastafelmengkraan and met are wording aliases, same curved spout. No current-edition or stock claim.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-led01",
+      "model": "LED01",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 448,
+          "printed_page": 446
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-led02",
+      "model": "LED02",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 448,
+          "printed_page": 446
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-led03",
+      "model": "LED03",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 449,
+          "printed_page": 447
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-led04",
+      "model": "LED04",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 449,
+          "printed_page": 447
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-led05",
+      "model": "LED05",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 450,
+          "printed_page": 448
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m010",
+      "model": "M010",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 375,
+          "printed_page": 373
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "100cm and 1 mtr are equivalent; remaining BB token is the colour code.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m021",
+      "model": "M021",
+      "configuration_suffix": "",
+      "products_count": 8,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 376,
+          "printed_page": 374
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m148",
+      "model": "M148",
+      "configuration_suffix": "",
+      "products_count": 6,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 351,
+          "printed_page": 349
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p349 confirms one square 38x38cm in-wall shower model, with two connections/functions; shorter titles omit size/water-pillar detail.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m161",
+      "model": "M161",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 343,
+          "printed_page": 341
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p341 confirms exposed wall cascade; cascade uitloop opbouw and douche cascade opbouw wand are aliases.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m162",
+      "model": "M162",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 343,
+          "printed_page": 341
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p341 confirms in-wall cascade; cascade uitloop inbouw and ingebouwde cascade voor douche are aliases.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m354",
+      "model": "M354",
+      "configuration_suffix": "",
+      "products_count": 12,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 364,
+          "printed_page": 362
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p362 confirms brass stick handshower M354; BGP title says messing handdouche staafmodel plus finish code, equivalent to staafhanddouche.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m378",
+      "model": "M378",
+      "configuration_suffix": "",
+      "products_count": 6,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 366,
+          "printed_page": 364
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m445",
+      "model": "M445",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 367,
+          "printed_page": 365
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p365 confirms M445 handshower/outlet/hose set; Guy/Cobber series labels differ in current catalogue titles but exact component model is unchanged.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m446",
+      "model": "M446",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 367,
+          "printed_page": 365
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p365 confirms M446 round handshower/outlet/hose set; shorter titles omit round and use the water-supply alias.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m447",
+      "model": "M447",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 367,
+          "printed_page": 365
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p365 confirms M447 includes M354 stick handshower for exposed mixers; TB spells out that included component omitted in shorter titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-m448",
+      "model": "M448",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 367,
+          "printed_page": 365
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p365 confirms M448 round handshower/bracket/hose set for exposed mixers; TB spells out the M355 handshower omitted in shorter titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-mhf011",
+      "model": "MHF011",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "printed_page": 356,
+          "pdf_page": 358
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Book p356 identifies colour-dependent trim as MHF011EXT/MHF012EXT/MHF013EXT, while current SKUs omit EXT and mix trim qualifier wording. Confirm exact article identity before promotion."
+    },
+    {
+      "proposal_id": "colour-mhf012",
+      "model": "MHF012",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "printed_page": 356,
+          "pdf_page": 358
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Book p356 identifies colour-dependent trim as MHF011EXT/MHF012EXT/MHF013EXT, while current SKUs omit EXT and mix trim qualifier wording. Confirm exact article identity before promotion."
+    },
+    {
+      "proposal_id": "colour-mhf013",
+      "model": "MHF013",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "printed_page": 356,
+          "pdf_page": 358
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Book p356 identifies colour-dependent trim as MHF011EXT/MHF012EXT/MHF013EXT, while current SKUs omit EXT and mix trim qualifier wording. Confirm exact article identity before promotion."
+    },
+    {
+      "proposal_id": "colour-mhf014",
+      "model": "MHF014",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Book p356 identifies colour-dependent trim as MHF011EXT/MHF012EXT/MHF013EXT, while current SKUs omit EXT and mix trim qualifier wording. Confirm exact article identity before promotion."
+    },
+    {
+      "proposal_id": "colour-mhf015",
+      "model": "MHF015",
+      "configuration_suffix": "",
+      "products_count": 5,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Book p356 identifies colour-dependent trim as MHF011EXT/MHF012EXT/MHF013EXT, while current SKUs omit EXT and mix trim qualifier wording. Confirm exact article identity before promotion."
+    },
+    {
+      "proposal_id": "colour-p061",
+      "model": "P061",
+      "configuration_suffix": "",
+      "products_count": 12,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 377,
+          "printed_page": 375
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Book p375 confirms P061 Follow-Me bath deck support; newer titles explicitly exclude handshower, older titles do not claim to include it.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-ph60b",
+      "model": "PH60B",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 496,
+          "printed_page": 494
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-q095-15",
+      "model": "Q095/15",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-q095-25",
+      "model": "Q095/25",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-r2x100",
+      "model": "R2X100",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 442,
+          "printed_page": 440
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact R2X100 model/size; TB title expands lighting/heating/control details omitted in other titles, with no contradictory stated feature.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-r2x120",
+      "model": "R2X120",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 442,
+          "printed_page": 440
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact R2X120 model/size; TB title expands lighting/heating/control details omitted in other titles, with no contradictory stated feature.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-rarh50-1",
+      "model": "RARH50-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 464,
+          "printed_page": 462
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rarh50-2",
+      "model": "RARH50-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 464,
+          "printed_page": 462
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rarh50-3",
+      "model": "RARH50-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 465,
+          "printed_page": 463
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rarv135-1",
+      "model": "RARV135-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 478,
+          "printed_page": 476
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rarv135-2",
+      "model": "RARV135-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 479,
+          "printed_page": 477
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rarv135-3",
+      "model": "RARV135-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 480,
+          "printed_page": 478
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras50-1",
+      "model": "RAS50-1",
+      "configuration_suffix": "",
+      "products_count": 9,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 466,
+          "printed_page": 464
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras50-2",
+      "model": "RAS50-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 466,
+          "printed_page": 464
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras50-3",
+      "model": "RAS50-3",
+      "configuration_suffix": "",
+      "products_count": 9,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 467,
+          "printed_page": 465
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras50-4",
+      "model": "RAS50-4",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 467,
+          "printed_page": 465
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras80-1",
+      "model": "RAS80-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 468,
+          "printed_page": 466
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras80-2",
+      "model": "RAS80-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 468,
+          "printed_page": 466
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras80-3",
+      "model": "RAS80-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 469,
+          "printed_page": 467
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras80-4",
+      "model": "RAS80-4",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 469,
+          "printed_page": 467
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-ras8050",
+      "model": "RAS8050",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 474,
+          "printed_page": 472
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass50-1",
+      "model": "RASS50-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 470,
+          "printed_page": 468
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass50-2",
+      "model": "RASS50-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 470,
+          "printed_page": 468
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass50-3",
+      "model": "RASS50-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 471,
+          "printed_page": 469
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass50-4",
+      "model": "RASS50-4",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 471,
+          "printed_page": 469
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass80-1",
+      "model": "RASS80-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 472,
+          "printed_page": 470
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass80-2",
+      "model": "RASS80-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 472,
+          "printed_page": 470
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass80-3",
+      "model": "RASS80-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 473,
+          "printed_page": 471
+        },
+        {
+          "pdf_page": 477,
+          "printed_page": 475
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass80-4",
+      "model": "RASS80-4",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 473,
+          "printed_page": 471
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rass8050",
+      "model": "RASS8050",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 474,
+          "printed_page": 472
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rasv135-1",
+      "model": "RASV135-1",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 476,
+          "printed_page": 474
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rasv135-2",
+      "model": "RASV135-2",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 476,
+          "printed_page": 474
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rasv135-3",
+      "model": "RASV135-3",
+      "configuration_suffix": "",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "Rail set metadata differs about separately ordered in-wall elements; retain for family/source review, not blind title normalization."
+    },
+    {
+      "proposal_id": "colour-rou100",
+      "model": "ROU100",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 426,
+          "printed_page": 424
+        },
+        {
+          "pdf_page": 427,
+          "printed_page": 425
+        },
+        {
+          "pdf_page": 428,
+          "printed_page": 426
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact ROU100 100cm round mirror; TB title expands direct/indirect lighting/heating/control details omitted in other titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-rou120",
+      "model": "ROU120",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 426,
+          "printed_page": 424
+        },
+        {
+          "pdf_page": 427,
+          "printed_page": 425
+        },
+        {
+          "pdf_page": 428,
+          "printed_page": 426
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact ROU120 120cm round mirror; TB title expands direct/indirect lighting/heating/control details omitted in other titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-rou40",
+      "model": "ROU40",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 426,
+          "printed_page": 424
+        },
+        {
+          "pdf_page": 427,
+          "printed_page": 425
+        },
+        {
+          "pdf_page": 428,
+          "printed_page": 426
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact ROU40 40cm round toilet mirror; all stated lighting is indirect, with TB expanding controls.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-rou60",
+      "model": "ROU60",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 426,
+          "printed_page": 424
+        },
+        {
+          "pdf_page": 427,
+          "printed_page": 425
+        },
+        {
+          "pdf_page": 428,
+          "printed_page": 426
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact ROU60 60cm round mirror; TB title expands direct/indirect lighting/heating/control details omitted in other titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-rou80",
+      "model": "ROU80",
+      "configuration_suffix": "",
+      "products_count": 7,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 426,
+          "printed_page": 424
+        },
+        {
+          "pdf_page": 427,
+          "printed_page": 425
+        },
+        {
+          "pdf_page": 428,
+          "printed_page": 426
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Same exact ROU80 80cm round mirror; TB title expands direct/indirect lighting/heating/control details omitted in other titles.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_REVIEWED_TITLE_EQUIVALENCE_PLUS_BOOK_MODEL"
+    },
+    {
+      "proposal_id": "colour-sds3",
+      "model": "SDS3",
+      "configuration_suffix": "",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds3-1",
+      "model": "SDS3",
+      "configuration_suffix": "1",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds3-14",
+      "model": "SDS3",
+      "configuration_suffix": "14",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds3-15",
+      "model": "SDS3",
+      "configuration_suffix": "15",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds3-4",
+      "model": "SDS3",
+      "configuration_suffix": "4",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds3-5",
+      "model": "SDS3",
+      "configuration_suffix": "5",
+      "products_count": 2,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "APPROVE_COLOUR_ONLY",
+      "approve_for_colour_group": true,
+      "reason": "Every current title has an identical non-colour signature and the entire model/configuration portion of each SKU is identical; known finish codes provide the colour values. Missing spelled-out colour is not a product-function difference.",
+      "confidence_basis": "CURRENT_EXACT_MODEL_SKU_AND_IDENTICAL_TITLE_SIGNATURE_NO_CURRENT_EDITION_CLAIM"
+    },
+    {
+      "proposal_id": "colour-sds32",
+      "model": "SDS32",
+      "configuration_suffix": "",
+      "products_count": 4,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "SKU_TITLE_COLOUR_CONFLICT"
+      ],
+      "book_sources": [],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "A title explicitly contradicts the SKU finish code; no automatic correction or merge."
+    },
+    {
+      "proposal_id": "colour-sds9-1",
+      "model": "SDS9",
+      "configuration_suffix": "1",
+      "products_count": 10,
+      "source_confidence": "REVIEW",
+      "source_reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ],
+      "book_sources": [
+        {
+          "pdf_page": 181,
+          "printed_page": 179
+        }
+      ],
+      "reviewer_scope": "COLOUR_ONLY_SAME_COMPLETE_MODEL_AND_SUFFIX",
+      "decision": "KEEP_REVIEW",
+      "approve_for_colour_group": false,
+      "reason": "No reviewed equivalence rule applies; preserve the remaining wording/component ambiguity."
+    }
+  ]
+}

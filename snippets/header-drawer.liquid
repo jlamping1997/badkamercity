@@ -40,25 +40,12 @@
           data-bc-mobile-menu-panel
           data-bc-mobile-panel-id="root"
         >
-          {%- if shop.customer_accounts_enabled or afspraak_page != blank -%}
+          {%- if afspraak_page != blank -%}
             <div class="bc-mobile-drawer__cta-list">
-              {%- if shop.customer_accounts_enabled -%}
-                <a
-                  href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                  class="bc-mobile-drawer__cta link focus-inset"
-                  rel="nofollow"
-                >
-                  <span class="bc-mobile-drawer__cta-label">Mijn account</span>
-                  <span class="bc-mobile-drawer__cta-arrow" aria-hidden="true"></span>
-                </a>
-              {%- endif -%}
-
-              {%- if afspraak_page != blank -%}
-                <a href="{{ afspraak_page.url }}" class="bc-mobile-drawer__cta link focus-inset">
-                  <span class="bc-mobile-drawer__cta-label">{{ afspraak_page.title | default: 'Afspraak maken' }}</span>
-                  <span class="bc-mobile-drawer__cta-arrow" aria-hidden="true"></span>
-                </a>
-              {%- endif -%}
+              <a href="{{ afspraak_page.url }}" class="bc-mobile-drawer__cta link focus-inset">
+                <span class="bc-mobile-drawer__cta-label">{{ afspraak_page.title | default: 'Afspraak maken' | escape }}</span>
+                <span class="bc-mobile-drawer__cta-arrow" aria-hidden="true"></span>
+              </a>
             </div>
           {%- endif -%}
 
@@ -77,23 +64,38 @@
                   else
                     assign bc_mobile_category_handle = bc_mobile_category_title_handle
                   endif
+                  assign bc_mobile_category_upgraded = false
                   capture bc_mobile_category_icon
-                    render 'bc-category-icon', handle: bc_mobile_category_handle
+                    render 'bc-mobile-category-icon', handle: bc_mobile_category_handle
                   endcapture
+                  assign bc_mobile_category_icon = bc_mobile_category_icon | strip
                   if bc_mobile_category_icon == blank and bc_mobile_category_title_handle != bc_mobile_category_handle
                     capture bc_mobile_category_icon
-                      render 'bc-category-icon', handle: bc_mobile_category_title_handle
+                      render 'bc-mobile-category-icon', handle: bc_mobile_category_title_handle
                     endcapture
+                    assign bc_mobile_category_icon = bc_mobile_category_icon | strip
+                  endif
+                  if bc_mobile_category_icon != blank
+                    assign bc_mobile_category_upgraded = true
+                  else
+                    capture bc_mobile_category_icon
+                      render 'bc-category-icon', handle: bc_mobile_category_handle
+                    endcapture
+                    if bc_mobile_category_icon == blank and bc_mobile_category_title_handle != bc_mobile_category_handle
+                      capture bc_mobile_category_icon
+                        render 'bc-category-icon', handle: bc_mobile_category_title_handle
+                      endcapture
+                    endif
                   endif
                 -%}
                 <li class="bc-mobile-drawer__item">
                   {%- if link.links != blank -%}
                     <button
                       type="button"
-                      class="bc-mobile-drawer__row bc-mobile-drawer__row--primary localization-selector"
+                      class="bc-mobile-drawer__row bc-mobile-drawer__row--primary{% if bc_mobile_category_upgraded %} bc-mobile-drawer__row--category{% endif %} localization-selector"
                       data-bc-mobile-next="BcMobileDrawerPrimary-{{ section.id }}-{{ forloop.index }}"
                     >
-                      <span class="bc-mobile-drawer__row-icon" aria-hidden="true">
+                      <span class="bc-mobile-drawer__row-icon{% if bc_mobile_category_upgraded %} bc-mobile-drawer__row-icon--category{% endif %}" aria-hidden="true">
                         {{ bc_mobile_category_icon }}
                       </span>
                       <span class="bc-mobile-drawer__row-label">{{ bc_mobile_category_title_formatted | escape }}</span>
@@ -102,12 +104,12 @@
                   {%- else -%}
                     <a
                       href="{{ link.url }}"
-                      class="bc-mobile-drawer__link bc-mobile-drawer__link--primary link focus-inset{% if link.current %} bc-mobile-drawer__link--active{% endif %}"
+                      class="bc-mobile-drawer__link bc-mobile-drawer__link--primary{% if bc_mobile_category_upgraded %} bc-mobile-drawer__link--category{% endif %} link focus-inset{% if link.current %} bc-mobile-drawer__link--active{% endif %}"
                       {% if link.current %}
                         aria-current="page"
                       {% endif %}
                     >
-                      <span class="bc-mobile-drawer__row-icon" aria-hidden="true">
+                      <span class="bc-mobile-drawer__row-icon{% if bc_mobile_category_upgraded %} bc-mobile-drawer__row-icon--category{% endif %}" aria-hidden="true">
                         {{ bc_mobile_category_icon }}
                       </span>
                       <span class="bc-mobile-drawer__row-label">{{ bc_mobile_category_title_formatted | escape }}</span>
@@ -149,7 +151,7 @@
         {%- for link in section.settings.menu.links -%}
           {%- if link.links != blank -%}
             <div
-              class="bc-mobile-drawer__menu-panel"
+              class="bc-mobile-drawer__menu-panel bc-mobile-drawer__menu-panel--submenu"
               data-bc-mobile-menu-panel
               data-bc-mobile-panel-id="BcMobileDrawerPrimary-{{ section.id }}-{{ forloop.index }}"
             >
@@ -165,61 +167,60 @@
                 <p class="bc-mobile-drawer__panel-title">{{ link.title | strip | slice: 0, 1 | upcase | append: link.title | strip | slice: 1, 200 | escape }}</p>
               </div>
 
+              {%- liquid
+                assign bc_mobile_parent_title = link.title | strip
+                assign bc_mobile_parent_title_handle = bc_mobile_parent_title | handleize
+              -%}
               <a href="{{ link.url }}" class="bc-mobile-drawer__view-all link focus-inset">
-                Bekijk alles in {{ link.title | strip | slice: 0, 1 | upcase | append: link.title | strip | slice: 1, 200 | escape }}
+                <span>
+                  {%- case bc_mobile_parent_title_handle -%}
+                    {%- when 'badkamermeubels', 'kranen', 'toiletten', 'wastafels', 'baden', 'spiegels', 'accessoires', 'tegels' -%}
+                      Bekijk alle {{ bc_mobile_parent_title | downcase | escape }}
+                    {%- else -%}
+                      Bekijk alles in {{ bc_mobile_parent_title | escape }}
+                  {%- endcase -%}
+                </span>
+                <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
               </a>
 
-              <ul class="bc-mobile-drawer__menu list-menu" role="list">
+              <ul class="bc-mobile-drawer__menu bc-mobile-drawer__submenu-list list-menu" role="list">
                 {%- for childlink in link.links -%}
                   {%- liquid
-                    assign bc_mobile_child_handle = ''
                     assign bc_mobile_child_title = childlink.title | strip
                     assign bc_mobile_child_title_formatted = bc_mobile_child_title | slice: 0, 1 | upcase | append: bc_mobile_child_title | slice: 1, 200
-                    assign bc_mobile_child_title_handle = childlink.title | handleize
-                    if childlink.object and childlink.object.handle
-                      assign bc_mobile_child_handle = childlink.object.handle
-                    elsif childlink.handle != blank
-                      assign bc_mobile_child_handle = childlink.handle
-                    else
-                      assign bc_mobile_child_handle = bc_mobile_child_title_handle
-                    endif
-                    capture bc_mobile_child_icon
-                      render 'bc-category-icon', handle: bc_mobile_child_handle
-                    endcapture
-                    if bc_mobile_child_icon == blank and bc_mobile_child_title_handle != bc_mobile_child_handle
-                      capture bc_mobile_child_icon
-                        render 'bc-category-icon', handle: bc_mobile_child_title_handle
-                      endcapture
-                    endif
                   -%}
                   <li class="bc-mobile-drawer__item">
                     {%- if childlink.links != blank -%}
-                      <button
-                        type="button"
-                        class="bc-mobile-drawer__row bc-mobile-drawer__row--secondary localization-selector{% if bc_mobile_child_icon != blank %} bc-mobile-drawer__row--with-icon{% endif %}"
-                        data-bc-mobile-next="BcMobileDrawerChild-{{ section.id }}-{{ forloop.parentloop.index }}-{{ forloop.index }}"
-                      >
-                        {%- if bc_mobile_child_icon != blank -%}
-                          <span class="bc-mobile-drawer__row-icon bc-mobile-drawer__row-icon--secondary" aria-hidden="true">
-                            {{ bc_mobile_child_icon }}
-                          </span>
-                        {%- endif -%}
-                        <span class="bc-mobile-drawer__row-label">{{ bc_mobile_child_title_formatted | escape }}</span>
-                        <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
-                      </button>
+                      <details class="bc-mobile-drawer__category" data-bc-mobile-category>
+                        <summary class="bc-mobile-drawer__row bc-mobile-drawer__row--secondary focus-inset">
+                          <span class="bc-mobile-drawer__row-label">{{ childlink.title | strip | escape }}</span>
+                          <span class="bc-mobile-drawer__category-toggle" aria-hidden="true"></span>
+                        </summary>
+                        <ul class="bc-mobile-drawer__category-links list-menu" role="list">
+                          <li>
+                            <a href="{{ childlink.url }}" class="bc-mobile-drawer__link bc-mobile-drawer__link--tertiary bc-mobile-drawer__category-all link focus-inset"{% if childlink.current %} aria-current="page"{% endif %}>
+                              <span class="bc-mobile-drawer__row-label">Bekijk alle {{ childlink.title | strip | downcase | escape }}</span>
+                              <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                            </a>
+                          </li>
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a href="{{ grandchildlink.url }}" class="bc-mobile-drawer__link bc-mobile-drawer__link--tertiary link focus-inset{% if grandchildlink.current %} bc-mobile-drawer__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                <span class="bc-mobile-drawer__row-label">{{ grandchildlink.title | strip | escape }}</span>
+                                <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </details>
                     {%- else -%}
                       <a
                         href="{{ childlink.url }}"
-                        class="bc-mobile-drawer__link bc-mobile-drawer__link--secondary link focus-inset{% if bc_mobile_child_icon != blank %} bc-mobile-drawer__link--with-icon{% endif %}{% if childlink.current %} bc-mobile-drawer__link--active{% endif %}"
+                        class="bc-mobile-drawer__link bc-mobile-drawer__link--secondary link focus-inset{% if childlink.current %} bc-mobile-drawer__link--active{% endif %}"
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
                       >
-                        {%- if bc_mobile_child_icon != blank -%}
-                          <span class="bc-mobile-drawer__row-icon bc-mobile-drawer__row-icon--secondary" aria-hidden="true">
-                            {{ bc_mobile_child_icon }}
-                          </span>
-                        {%- endif -%}
                         <span class="bc-mobile-drawer__row-label">{{ bc_mobile_child_title_formatted | escape }}</span>
                         <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
                       </a>
@@ -229,52 +230,6 @@
               </ul>
             </div>
 
-            {%- for childlink in link.links -%}
-              {%- if childlink.links != blank -%}
-                <div
-                  class="bc-mobile-drawer__menu-panel"
-                  data-bc-mobile-menu-panel
-                  data-bc-mobile-panel-id="BcMobileDrawerChild-{{ section.id }}-{{ forloop.parentloop.index }}-{{ forloop.index }}"
-                >
-                  <div class="bc-mobile-drawer__panel-head">
-                    <button
-                      type="button"
-                      class="bc-mobile-drawer__back link focus-inset"
-                      data-bc-mobile-back
-                    >
-                      <span class="bc-mobile-drawer__back-arrow" aria-hidden="true"></span>
-                      <span>Terug</span>
-                    </button>
-                    <p class="bc-mobile-drawer__panel-title">{{ childlink.title | strip | slice: 0, 1 | upcase | append: childlink.title | strip | slice: 1, 200 | escape }}</p>
-                  </div>
-
-                  <a href="{{ childlink.url }}" class="bc-mobile-drawer__view-all link focus-inset">
-                    Bekijk alles in {{ childlink.title | strip | slice: 0, 1 | upcase | append: childlink.title | strip | slice: 1, 200 | escape }}
-                  </a>
-
-                  <ul class="bc-mobile-drawer__menu list-menu" role="list">
-                    {%- for grandchildlink in childlink.links -%}
-                      {%- liquid
-                        assign bc_mobile_grandchild_title = grandchildlink.title | strip
-                        assign bc_mobile_grandchild_title_formatted = bc_mobile_grandchild_title | slice: 0, 1 | upcase | append: bc_mobile_grandchild_title | slice: 1, 200
-                      -%}
-                      <li class="bc-mobile-drawer__item">
-                        <a
-                          href="{{ grandchildlink.url }}"
-                          class="bc-mobile-drawer__link bc-mobile-drawer__link--tertiary link focus-inset{% if grandchildlink.current %} bc-mobile-drawer__link--active{% endif %}"
-                          {% if grandchildlink.current %}
-                            aria-current="page"
-                          {% endif %}
-                        >
-                          <span class="bc-mobile-drawer__row-label">{{ bc_mobile_grandchild_title_formatted | escape }}</span>
-                          <span class="bc-mobile-drawer__row-chevron" aria-hidden="true"></span>
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
           {%- endif -%}
         {%- endfor -%}
       </div>
