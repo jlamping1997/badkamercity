@@ -1,0 +1,25 @@
+{% doc %}
+Renders the complete category branches that did not fit the desktop row.
+@param menu_links - Top-level links from the existing header menu.
+{% enddoc %}
+{%- for category in menu_links -%}
+  <li class="bc-category-nav__group" data-bc-category-overflow-index="{{ forloop.index }}">
+    <a class="bc-category-nav__group-link" href="{{ category.url | escape }}"{% if category.current %} aria-current="page"{% endif %}>{{ category.title | escape }}</a>
+    {%- if category.links != blank -%}
+      <ul class="bc-category-nav__children" role="list">
+        {%- for child in category.links -%}
+          <li>
+            <a href="{{ child.url | escape }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a>
+            {%- if child.links != blank -%}
+              <ul class="bc-category-nav__overflow-children" role="list">
+                {%- for grandchild in child.links -%}
+                  <li><a href="{{ grandchild.url | escape }}"{% if grandchild.current %} aria-current="page"{% endif %}>{{ grandchild.title | escape }}</a></li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif %}
+  </li>
+{%- endfor -%}

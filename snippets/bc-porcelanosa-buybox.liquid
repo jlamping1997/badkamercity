@@ -54,9 +54,12 @@ Renders the reusable tile purchase controls inside the existing product page.
   </div>
   <div class="bc-tile__calculator">
     <div data-tile-calculator hidden>
-      <h2 class="bc-tile__calculator-title">{{ 'bc_tiles.calculator_title' | t }}</h2>
+      <div class="bc-tile__calculator-heading">
+        <h2 class="bc-tile__calculator-title">{{ 'bc_tiles.calculator_title' | t }}</h2>
+        <button type="button" class="bc-tile__application-help" data-tile-application-help aria-label="{{ 'bc_tiles.application_help_label' | t | escape }}" aria-haspopup="dialog" aria-expanded="false" aria-controls="TileApplication-{{ section.id }}"><span aria-hidden="true">i</span></button>
+      </div>
       <div class="bc-tile__inputs">
-        <div><label class="bc-tile__label" for="TileArea-{{ section.id }}">{{ 'bc_tiles.area' | t }}</label><div class="bc-tile__area-input"><input type="text" inputmode="decimal" id="TileArea-{{ section.id }}" value="" placeholder="10" data-tile-area aria-describedby="TileHint-{{ section.id }} TileError-{{ section.id }}" autocomplete="off"><span aria-hidden="true">m²</span></div></div>
+        <div><label class="bc-tile__label" for="TileArea-{{ section.id }}">{{ 'bc_tiles.area' | t }}</label><div class="bc-tile__area-input"><input type="text" inputmode="decimal" id="TileArea-{{ section.id }}" value="1" placeholder="1" data-tile-area aria-describedby="TileHint-{{ section.id }} TileError-{{ section.id }}" autocomplete="off"><span aria-hidden="true">m²</span></div></div>
         <div><div class="bc-tile__waste-label"><label class="bc-tile__label" for="TileWaste-{{ section.id }}">{{ 'bc_tiles.waste_label' | t }}</label><details class="bc-tile__help"><summary aria-label="{{ 'bc_tiles.waste_label' | t }}"><span aria-hidden="true">i</span></summary><p>{{ 'bc_tiles.waste_help' | t }}</p></details></div><select id="TileWaste-{{ section.id }}" data-tile-waste><option value="0">{{ 'bc_tiles.waste_none' | t }}</option><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option><option value="20">20%</option></select></div>
       </div>
       <p class="bc-tile__required">{{ 'bc_tiles.required' | t }}: <strong data-tile-required>{{ tile.m2_per_box | replace: '.', ',' }} m²</strong></p>
@@ -74,6 +77,12 @@ Renders the reusable tile purchase controls inside the existing product page.
     <p class="bc-tile__contact" data-tile-contact role="status" hidden>{{ 'bc_tiles.contact_delivery' | t }}</p>
     <noscript><p class="bc-tile__contact">{{ 'bc_tiles.large_order_note' | t }}</p></noscript>
   </div>
+  <dialog class="bc-tile__application-dialog" id="TileApplication-{{ section.id }}" data-tile-application-dialog aria-labelledby="TileApplicationTitle-{{ section.id }}">
+    <button type="button" class="bc-tile__application-close" data-tile-application-close aria-label="{{ 'accessibility.close' | t | escape }}"><span aria-hidden="true">×</span></button>
+    <h2 id="TileApplicationTitle-{{ section.id }}">{{ 'bc_tiles.application_help_title' | t }}</h2>
+    <p>{{ 'bc_tiles.application_help_floor' | t }}</p>
+    <p>{{ 'bc_tiles.application_help_wall' | t }}</p>
+  </dialog>
   <span hidden data-tile-box-one>{{ 'bc_tiles.box_one' | t }}</span><span hidden data-tile-box-many>{{ 'bc_tiles.box_many' | t }}</span>
 </bc-porcelanosa-buybox>
 <script src="{{ 'bc-porcelanosa-core.js' | asset_url }}" defer="defer"></script>

@@ -43,7 +43,41 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       this.calculate();
       const manual = this.querySelector('[data-tile-manual]');
       manual?.setAttribute('aria-hidden', 'true');
+      this.setupApplicationHelp();
       this.loadChoices();
+    }
+    setupApplicationHelp() {
+      this.applicationDialog = this.querySelector('[data-tile-application-dialog]');
+      this.applicationHelp = this.querySelector('[data-tile-application-help]');
+      this.applicationOverflow = null;
+      if (!this.applicationDialog || !this.applicationHelp) return;
+      this.applicationHelp.addEventListener('click', () => {
+        if (this.applicationDialog.open) return;
+        this.applicationDialog.showModal();
+        this.applicationOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        this.applicationHelp.setAttribute('aria-expanded', 'true');
+      });
+      this.querySelector('[data-tile-application-close]').addEventListener('click', () => this.applicationDialog.close());
+      this.applicationDialog.addEventListener('close', () => {
+        this.restoreApplicationHelp();
+        if (this.applicationHelp.isConnected) this.applicationHelp.focus({ preventScroll: true });
+      });
+      this.applicationDialog.addEventListener('click', event => {
+        const bounds = this.applicationDialog.getBoundingClientRect();
+        if (event.target === this.applicationDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) this.applicationDialog.close();
+      });
+    }
+    restoreApplicationHelp() {
+      if (this.applicationOverflow !== null && this.applicationOverflow !== undefined) {
+        document.body.style.overflow = this.applicationOverflow;
+        this.applicationOverflow = null;
+      }
+      this.applicationHelp?.setAttribute('aria-expanded', 'false');
+    }
+    disconnectedCallback() {
+      if (this.applicationDialog?.open) this.applicationDialog.close();
+      this.restoreApplicationHelp();
     }
     text(selector, value) { const element = this.querySelector(selector); if (element) element.textContent = value; }
     save() {
@@ -290,7 +324,7 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
         return;
       }
       this.current = next;
-      if (!this.explicitArea) this.area.value = '';
+      if (!this.explicitArea) this.area.value = '1';
       this.updatePreview();
       this.renderChoices();
       this.calculate();

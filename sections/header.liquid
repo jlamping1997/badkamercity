@@ -1328,11 +1328,11 @@
       <div class="bc-category-nav__shell">
         <ul class="bc-category-nav__list" role="list" data-bc-category-list>
           {%- for link in section.settings.menu.links -%}
-            <li class="bc-category-nav__item">
+            <li class="bc-category-nav__item" data-bc-category-item>
               {%- if link.links != blank -%}
                 <details class="bc-category-nav__details" data-bc-category-details>
                   <summary class="bc-category-nav__toggle">
-                    <a class="bc-category-nav__link{% if link.active %} is-active{% endif %}" href="{{ link.url | escape }}" aria-expanded="false" aria-controls="CategoryPanel-{{ section.id }}-{{ forloop.index }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+                    <a class="bc-category-nav__link{% if link.active %} is-active{% endif %}" href="{{ link.url | escape }}" data-bc-category-trigger aria-expanded="false" aria-controls="CategoryPanel-{{ section.id }}-{{ forloop.index }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
                   </summary>
                   <div class="bc-category-nav__panel" id="CategoryPanel-{{ section.id }}-{{ forloop.index }}" data-bc-category-panel>
                     <div class="bc-category-nav__content">
@@ -1358,6 +1358,21 @@
               {%- endif -%}
             </li>
           {%- endfor -%}
+          <li class="bc-category-nav__item bc-category-nav__item--more" data-bc-category-more>
+            <details class="bc-category-nav__details" data-bc-category-details data-bc-category-more-details>
+              <summary class="bc-category-nav__toggle bc-category-nav__link bc-category-nav__more-trigger" role="button" data-bc-category-trigger aria-expanded="false" aria-controls="CategoryMore-{{ section.id }}">
+                <span data-bc-category-more-label data-more-label="{{ 'bc_assortment.more_categories' | t | escape }}">{{ 'bc_home.footer.all_categories' | t }}</span>
+                <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg>
+              </summary>
+              <div class="bc-category-nav__panel" id="CategoryMore-{{ section.id }}" data-bc-category-panel>
+                <div class="bc-category-nav__content">
+                  <ul class="bc-category-nav__groups bc-category-nav__more-groups" role="list">
+                    {% render 'bc-category-overflow', menu_links: section.settings.menu.links %}
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </li>
         </ul>
       </div>
       <div class="bc-category-nav__backdrop" data-bc-category-backdrop aria-hidden="true" hidden></div>
@@ -1379,7 +1394,7 @@
 .bc-category-nav :is(button,summary){font:inherit;color:inherit}
 .bc-category-nav svg{display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .bc-category-nav .bc-category-nav__shell{width:100%;max-width:1600px;margin:0 auto;padding:0 24px}
-.bc-category-nav .bc-category-nav__list{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:space-between;gap:0;min-width:0;width:100%}
+.bc-category-nav .bc-category-nav__list{display:flex;flex-wrap:nowrap;align-items:stretch;justify-content:space-between;gap:0;min-width:0;width:100%}
 .bc-category-nav .bc-category-nav__item{flex:none;min-width:0}
 .bc-category-nav .bc-category-nav__link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:4px 8px;font-size:15px;line-height:20px;font-weight:700;white-space:nowrap;text-align:center}
 .bc-category-nav .bc-category-nav__link.is-active{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
@@ -1395,14 +1410,20 @@
 .bc-category-nav .bc-category-nav__children a{display:inline-block;padding:3px 0;font-size:17px;line-height:24px;overflow-wrap:anywhere}
 .bc-category-nav .bc-category-nav__group-link:hover,.bc-category-nav .bc-category-nav__children a:hover{text-decoration:underline;text-underline-offset:4px}
 .bc-category-nav .bc-category-nav__backdrop{display:block;position:fixed;top:var(--bcn-panel-top,var(--header-height,160px));right:0;bottom:0;left:0;z-index:30;background:#1a253f38}
-@media(max-width:1359px) and (min-width:990px){
+.bc-category-nav:not([data-bc-category-ready]) [data-bc-category-item]{display:none}
+.bc-category-nav:not([data-bc-category-ready]) .bc-category-nav__panel{position:absolute;top:100%}
+.bc-category-nav .bc-category-nav__more-trigger{gap:7px}
+.bc-category-nav [data-bc-category-more-details]>.bc-category-nav__panel{left:auto;right:max(16px,calc((100vw - 1600px)/2 + 24px));width:min(640px,calc(100vw - 32px))}
+.bc-category-nav [data-bc-category-more-details] .bc-category-nav__content{min-height:0;padding:24px}
+.bc-category-nav .bc-category-nav__more-groups{column-count:2;column-gap:28px}
+.bc-category-nav .bc-category-nav__details[open]>.bc-category-nav__more-trigger svg{transform:rotate(180deg)}
+.bc-category-nav .bc-category-nav__more-groups>.bc-category-nav__group>.bc-category-nav__group-link{font-size:16px;line-height:24px}
+.bc-category-nav .bc-category-nav__more-groups .bc-category-nav__children a{font-size:14px;line-height:22px}
+.bc-category-nav .bc-category-nav__overflow-children{padding-left:12px;border-left:1px solid #e0e7ed}
+@media(max-width:1199px) and (min-width:990px){
   .bc-category-nav .bc-category-nav__shell{padding-inline:16px}
-  .bc-category-nav .bc-category-nav__list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
-  .bc-category-nav .bc-category-nav__item{grid-column:span 2}
-  .bc-category-nav .bc-category-nav__item:nth-child(7){grid-column:2/span 2}
-  .bc-category-nav .bc-category-nav__details,.bc-category-nav .bc-category-nav__toggle{height:100%}
-  .bc-category-nav .bc-category-nav__link{height:100%;font-size:14px;white-space:normal;overflow-wrap:anywhere}
-  .bc-category-nav .bc-category-nav__groups{column-gap:48px}
+  .bc-category-nav .bc-category-nav__link{font-size:14px;padding-inline:7px}
+  .bc-category-nav .bc-category-nav__groups{column-count:2;column-gap:36px}
 }
 @media(max-width:989px){.bc-category-nav{display:none}}
 @media(prefers-reduced-motion:reduce){.bc-category-nav *{transition:none!important;scroll-behavior:auto!important}}
@@ -1572,6 +1593,12 @@
         this.backdrop = root.querySelector('[data-bc-category-backdrop]');
         this.details = [...root.querySelectorAll('[data-bc-category-details]')];
         this.panels = [...root.querySelectorAll('[data-bc-category-panel]')];
+        this.list = root.querySelector('[data-bc-category-list]');
+        this.items = [...root.querySelectorAll('[data-bc-category-item]')];
+        this.moreItem = root.querySelector('[data-bc-category-more]');
+        this.moreDetails = root.querySelector('[data-bc-category-more-details]');
+        this.moreLabel = root.querySelector('[data-bc-category-more-label]');
+        this.overflowGroups = [...root.querySelectorAll('[data-bc-category-overflow-index]')];
         this.desktop = window.matchMedia('(min-width: 990px)');
         this.finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
         this.hoverHandlers = [];
@@ -1588,8 +1615,9 @@
         this.onFocusOut = this.onFocusOut.bind(this);
         this.onPointerDown = this.onPointerDown.bind(this);
         this.details.forEach(item => {
-          item.querySelector('summary').tabIndex = -1;
+          if (item !== this.moreDetails) item.querySelector('summary').tabIndex = -1;
           item.addEventListener('toggle', this.onToggle);
+          if (item === this.moreDetails) return;
           const container = item.closest('.bc-category-nav__item');
           const enter = () => {
             if (!this.desktop.matches || !this.finePointer.matches) return;
@@ -1619,6 +1647,13 @@
         window.addEventListener('resize', this.onResize);
         this.desktop.addEventListener('change', this.onResize);
         this.root.dataset.bcCategoryReady = 'true';
+        if (window.ResizeObserver) {
+          this.widthObserver = new ResizeObserver(entries => {
+            const width = entries[0].contentRect.width;
+            if (Math.abs(width - (this.lastWidth || 0)) > 0.5) this.onResize();
+          });
+          this.widthObserver.observe(this.list);
+        }
         this.onResize();
         document.fonts?.ready.then(() => { if (this.root.isConnected) this.onResize(); });
       }
@@ -1626,7 +1661,7 @@
         this.root.style.setProperty('--bcn-panel-top', `${Math.max(0, Math.round(this.root.getBoundingClientRect().bottom))}px`);
       }
       syncState() {
-        this.details.forEach(item => item.querySelector('.bc-category-nav__link').setAttribute('aria-expanded', String(item.open)));
+        this.details.forEach(item => item.querySelector('[data-bc-category-trigger]').setAttribute('aria-expanded', String(item.open)));
         this.backdrop.hidden = !this.details.some(item => item.open);
       }
       open(item) {
@@ -1646,7 +1681,7 @@
         this.syncState();
         if (returnFocus && open) {
           this.suppressFocusOpen = true;
-          open.querySelector('.bc-category-nav__link').focus({ preventScroll: true });
+          open.querySelector('[data-bc-category-trigger]').focus({ preventScroll: true });
           this.suppressFocusOpen = false;
         }
       }
@@ -1670,6 +1705,11 @@
         const link = event.target.closest('.bc-category-nav__link');
         if (link && this.root.contains(link)) {
           const item = link.closest('details');
+          if (item === this.moreDetails) {
+            event.preventDefault();
+            if (item.open) this.close(); else this.open(item);
+            return;
+          }
           if (item && event.detail > 0 && (this.lastPointerType === 'touch' || !this.finePointer.matches) && !this.touchWasOpen) {
             event.preventDefault();
             this.open(item);
@@ -1689,13 +1729,13 @@
         if (item && this.root.contains(item) && (event.key === 'ArrowDown' || event.key === ' ')) {
           event.preventDefault();
           this.open(item);
-          item.querySelector('[data-bc-category-panel] a')?.focus();
+          (item.querySelector('[data-bc-category-overflow-index]:not([hidden]) a') || item.querySelector('[data-bc-category-panel] a'))?.focus();
         }
       }
       onFocusIn(event) {
         const link = event.target.closest('.bc-category-nav__link');
         const item = link?.closest('details');
-        if (item && !this.suppressFocusOpen && link.matches(':focus-visible')) this.open(item);
+        if (item && item !== this.moreDetails && !this.suppressFocusOpen && link.matches(':focus-visible')) this.open(item);
       }
       onFocusOut(event) {
         const item = event.target.closest('[data-bc-category-details]');
@@ -1709,13 +1749,44 @@
         if (this.panels.some(panel => panel === event.target || panel.contains(event.target))) return;
         this.close();
       }
+      fit() {
+        if (!this.desktop.matches) return;
+        const focused = document.activeElement;
+        this.items.forEach(item => { item.hidden = false; });
+        this.moreItem.hidden = false;
+        this.moreLabel.textContent = this.moreLabel.dataset.moreLabel;
+        const available = this.list.clientWidth;
+        this.lastWidth = available;
+        const widths = this.items.map(item => item.getBoundingClientRect().width);
+        const moreWidth = this.moreItem.getBoundingClientRect().width;
+        let visible = widths.length;
+        if (widths.reduce((sum, width) => sum + width, 0) > available - 1) {
+          visible = 0;
+          let used = moreWidth;
+          for (const width of widths) {
+            if (used + width > available - 1) break;
+            used += width;
+            visible++;
+          }
+        }
+        this.items.forEach((item, index) => { item.hidden = index >= visible; });
+        this.overflowGroups.forEach((group, index) => { group.hidden = index < visible; });
+        this.moreItem.hidden = visible === this.items.length;
+        if (this.items.some(item => item.hidden && item.contains(focused)) || (!this.moreItem.hidden && this.overflowGroups.some(group => group.hidden && group.contains(focused)))) {
+          this.moreDetails.querySelector('[data-bc-category-trigger]').focus({ preventScroll: true });
+        } else if (this.moreItem.hidden && this.moreItem.contains(focused)) {
+          this.items.at(-1)?.querySelector('a')?.focus({ preventScroll: true });
+        }
+      }
       onResize() {
         this.close();
+        this.fit();
         if (this.desktop.matches) this.root.closest('sticky-header')?.setHeaderHeight?.();
         this.position();
       }
       destroy() {
         this.close();
+        this.widthObserver?.disconnect();
         this.details.forEach(item => {
           item.querySelector('summary').removeAttribute('tabindex');
           item.removeEventListener('toggle', this.onToggle);
