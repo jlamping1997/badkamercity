@@ -1,3 +1,11 @@
+# QC-06 — Lagoo: grote foto, kleur, direct verder
+
+2 november 2026 · **PRIVATE_DEPLOYED / OWNER_REVIEW_PENDING**. [Dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site) opent nu direct met Lagoo: kleur uit titel groot, één foto, Ja/Nee/Twijfel, automatisch volgende SKU na bevestigde opslag. Andere foto wisselt kandidaat zonder menu; Uitgebreid behoudt volledige QC. [Werkwijze en testgrenzen](LAGOO_FAST_REVIEW_2026-11-02.md).
+
+Versie7 succeeded; Sites-broncommit `e21a5308e2d4867fc702a0bd73d13b8ec7de6177`, deployment `appgdep_6ae897e9677c81918bd7fe9efee75b7f`. TypeScript/build PASS,43bestaande SQLite/API/Lagoo-contractgroepen en6nieuwe gerenderde componentcontracten PASS.24reviewrijen+1checkpoint identiek vóór/na in begrensde native readback; authenticatie/toegangsbeleid gelijk. Geen Shopify-mutaties. Browser/telefoon/nieuwe hosted visitor-write niet getest; eerdere previewinfrastructuur blijft onverifieerbaar.
+
+---
+
 # QC-05 — Lagoo per SKU en eigen bestanden
 
 2 november 2026 · PRIVATE_DEPLOYED / OWNER_REVIEW_PENDING. [Dossier](LAGOO_QC_2026-11-02.md). Dezelfde privétool, 211 Lagoo-groepen / 1.796 varianten, alle bronafbeeldingen en PDF’s naar eigen Shopify Files. Bestaande beoordelingen/checkpoints behouden; geen automatische goedkeuring of Shopify-fotocorrectie. Versie6 succeeded, Sites-broncommit5634119673735eb88cce104c51e2b4f8fe7a8d2a; deployment appgdep_6ae894b87f3c8191b8f1ce1d6894e20c. Hosted Lagoo compactHTTP200/1796kaarten, review zonder visitorHTTP401. Bounded native24reviews+1checkpoint inhoudelijk identiek; authclient/toegangsbeleid ongewijzigd.
