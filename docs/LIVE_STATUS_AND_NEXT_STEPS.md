@@ -1,5 +1,11 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-06 — Lagoo: directe kleurcontrole · 2 november 2026
+
+Dezelfde privétool opent nu standaard alleen Lagoo: kleur uit titel groot boven één foto, Ja/Nee/Twijfel en automatisch volgende SKU na bevestigde opslag. Andere foto wisselt kandidaat direct. Geen ronde-start of algemene merk-/PDF-menu's in de eenvoudige weergave; Uitgebreid behoudt de bestaande QC en voortgang. [Actuele werkwijze op quality-control](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_FAST_REVIEW_2026-11-02.md).
+
+Sites-versie7 succeeded; broncommit e21a5308e2d4867fc702a0bd73d13b8ec7de6177, deployment appgdep_6ae897e9677c81918bd7fe9efee75b7f. TypeScript/build,43bestaande API/SQLite/Lagoo-groepen en6gerenderde kleurcontrolecontracten PASS. Hosted Lagoo1796kaarten en SKU-gallery HTTP200; review zonder visitor401. Native begrensde24reviews+1checkpoint identiek vóór/na, authclient/toegangsbeleid gelijk. Geen Shopify-write, catalogus- of databaseschemamutatie. Browser/telefoon/hosted visitor-write niet opnieuw getest; eerdere previewinfrastructuur niet aantoonbaar hersteld. Volgende QC-actie: eigenaar herlaadt privélink en controleert kleur/foto met directe knoppen. Andere storefronttaken hieronder blijven afzonderlijk.
+
 **31 oktober 2026 · NAV-03 / TILE-02 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Compact menu, startwaarde1m² en tegelinformatie staan in het gecontroleerde concept. Geen actieve schrijver na overdracht.
 
 ## QC-05 — Lagoo in dezelfde privécontrole · 2 november 2026
