@@ -1,3 +1,9 @@
+# QC-05 — Lagoo per SKU en eigen bestanden
+
+2 november 2026 · PRIVATE_DEPLOYED / OWNER_REVIEW_PENDING. [Dossier](LAGOO_QC_2026-11-02.md). Dezelfde privétool, 211 Lagoo-groepen / 1.796 varianten, alle bronafbeeldingen en PDF’s naar eigen Shopify Files. Bestaande beoordelingen/checkpoints behouden; geen automatische goedkeuring of Shopify-fotocorrectie. Versie6 succeeded, Sites-broncommit5634119673735eb88cce104c51e2b4f8fe7a8d2a; deployment appgdep_6ae894b87f3c8191b8f1ce1d6894e20c. Hosted Lagoo compactHTTP200/1796kaarten, review zonder visitorHTTP401. Bounded native24reviews+1checkpoint inhoudelijk identiek; authclient/toegangsbeleid ongewijzigd.
+
+---
+
 # QC-04 — optionele notities, globale voortgang, rustige dag/nachtinterface
 
 30 oktober 2026 · **PRIVATE_DEPLOYED / EXISTING_DATA_PRESERVED / NOTES_AND_GLOBAL_RANDOM_ROUNDS**.

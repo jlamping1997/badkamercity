@@ -1,8 +1,11 @@
 {
   "snapshot": {
     "date": "30 oktober 2026",
-    "scope": "Alle geïmporteerde merken · producten met webshop-URL",
-    "automaticSync": false
+    "scope": "Bestaande Shopify-werkkopie plus Lagoo-brondata per SKU; geen live synchronisatie",
+    "automaticSync": false,
+    "lagooAdded": "2026-11-02",
+    "lagooGroups": 211,
+    "lagooVariants": 1796
   },
   "brands": [
     {
@@ -74,6 +77,17 @@
       "excludedWithoutOnlineStoreUrl": 0,
       "activeRead": 337,
       "complete": true
+    },
+    {
+      "name": "Lagoo",
+      "products": 1796,
+      "productGroups": 211,
+      "images": 15618,
+      "missingImages": 51,
+      "incomplete": 0,
+      "activeRead": 0,
+      "complete": true,
+      "scope": "Gedateerde bronimport; één controle per artikel/kleurvariant; zes Shopify-conceptgroepen"
     }
   ]
 }
