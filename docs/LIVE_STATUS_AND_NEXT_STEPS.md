@@ -2,6 +2,14 @@
 
 **31 oktober 2026 · NAV-03 / TILE-02 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Compact menu, startwaarde1m² en tegelinformatie staan in het gecontroleerde concept. Geen actieve schrijver na overdracht.
 
+## QC-05 — Lagoo in dezelfde privécontrole · 2 november 2026
+
+Afzonderlijk van het NAV-03-themaconcept: branch `quality-control` bevat nu 211 Lagoo-brongroepen als 1.796 SKU/kleurkaarten in [dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site), versie6. Per SKU hoofdfoto kiezen/expliciet goedkeuren; Aanleverlijst met ontbrekende PDF, technische documentatie, foto, kenmerken en EAN. 1.229 afbeeldingen en251PDF-bestanden in eigen Shopify Files; PDF-kopieën volledig op SHA256/grootte gecontroleerd. 92groepen zonder directe PDF; koppelsuggesties blijven ongeverifieerd. Geen automatische goedkeuring of fotocorrectie.
+
+Sites-broncommit `5634119673735eb88cce104c51e2b4f8fe7a8d2a`, deployment `appgdep_6ae894b87f3c8191b8f1ce1d6894e20c` succeeded. TypeScript/build/43contractgroepen PASS. Hosted Lagoo1796kaarten en lazySKU-gallery HTTP200; review zonder visitor401. Bounded native24reviewrijen+1checkpoint identiek vóór/na, authclient/toegangsbeleid ongewijzigd. Browser/telefoon/hosted-visitorwrite niet getest in deze taak. Volledige catalogus en reviews blijven privé; publieke Git alleen code en scope.
+
+Vijf bestaande DRAFT-proefomschrijvingen gebruiken nu eigen PDF-links. Geen volledige import/publicatie van overige205groepen. Volgende QC-actie: eigenaar kiest Lagoo en controleert foto's en ontbrekende gegevens per SKU. [QC-dossier op quality-control](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_QC_2026-11-02.md). NAV-03-status en vervolghandeling hieronder blijven van kracht voor het storefrontthema.
+
 ## Begin hier: actuele rollen en code
 
 - **MAIN195974824202 — BadkamerCity - Betrouwbaar bestellen en filters.** De eigenaar heeft de herstelde FIX-01 gepubliceerd. Verse eindmeting:1.355bestanden, nul gewijzigde paden tegenover opening van deze taak. Geen MAIN-filewrite of publicatie door deze uitvoering.
