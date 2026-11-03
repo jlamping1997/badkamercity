@@ -8,6 +8,8 @@ Volledige vergelijking: live1374bestanden; oude Git-root507, waarvan451bytegelij
 
 Alle1374livepaden gelezen:1373inhoudelijk bytegelijk vastgesteld. Acht historische QA/debugbackups niet als actieve code opgenomen: de actuele bronmap bevat1366themafiles, waarvan1365bytegelijk. Enige API-bodyuitzondering config/settings_data.json expliciet vastgelegd en tegen upload beschermd. Retourtemplate hersteld naar exact de Shopify-checksum door uitsluitend de gegenereerde API-header weg te nemen.804JSON/JSONC-bestanden parsebaar; geen credentialpatroon gevonden. Bronmanifest opnieuw gelezen:1374paden/geen wijzigingen tijdens de capture. Geen nieuwe browser-/mobiel-/checkoutvrijgave.
 
+Broncodecheckpoint **d4cc4bcf360d1f91d5a6ab8270a0ad7a188f0434**; Git-readback1366/1366exact aan de gecontroleerde capture.
+
 [Actuele bron, gebruik en herstel](git-sync/2026-11-03/README.md) · [volledige bestandscontrole](git-sync/2026-11-03/live-theme-manifest.json). Catalogus, metafields, menu-inhoud, orders en externe backend blijven afzonderlijke systemen. QC-/Lagoo-status hieronder behouden. Geen actieve Git-schrijver na overdracht.
 
 **Volgende Git-handeling:** bij nieuw themawerk de codebranch met **shopify/current/** als bron openen en de actuele MAIN opnieuw controleren; settings_data pas meenemen nadat de checksumuitzondering onafhankelijk is gesloten.
