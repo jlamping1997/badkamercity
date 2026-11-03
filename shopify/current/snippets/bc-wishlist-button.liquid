@@ -1,0 +1,22 @@
+{% doc %}
+  Eén BadkamerCity verlanglijsthartje. Geen aparte opslag of JavaScript per template.
+  @param {object} product - Shopify product.
+  @param {string} [class_name] - Extra layout classes.
+  @param {string} [source] - card, detail of sunshower.
+{% enddoc %}
+{%- if product != blank -%}
+  {%- assign bc_wishlist_variant = product.selected_or_first_available_variant -%}
+  <button
+    type="button"
+    class="bc-wishlist-button {{ class_name | escape }}"
+    data-bc-wishlist-toggle
+    data-bc-wishlist-handle="{{ product.handle | escape }}"
+    data-bc-wishlist-variant="{{ bc_wishlist_variant.id }}"
+    data-bc-wishlist-title="{{ product.title | escape }}"
+    data-bc-wishlist-image="{% if product.featured_image != blank %}{{ product.featured_image | image_url: width: 480 | escape }}{% endif %}"
+    data-bc-wishlist-source="{{ source | default: 'card' | escape }}"
+    aria-pressed="false"
+    aria-label="Bewaar {{ product.title | escape }} op je verlanglijst"
+    title="Toevoegen aan verlanglijst"
+  ><span class="svg-wrapper">{{ 'icon-wishlist-bc.svg' | inline_asset_content }}</span></button>
+{%- endif -%}

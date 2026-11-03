@@ -1,3 +1,5 @@
+> **3 november 2026 — GIT-SYNC-01 / JEE-O LIVE:** actuele MAIN196110090506; alle24JEE-O-featurepaden komen overeen met Git en de nieuwe bronkopie `shopify/current/` op `fix/product-cards-2026-10-14`. Legacy root:507files/451gelijk/56afwijkend/867ontbrekend. Bronkopie:1366actuelethemafiles; acht oude QA/debugbackups alleen in manifest/historie. Eén expliciete API-bodyuitzondering: config/settings_data.json; beschermd door .shopifyignore. [Actuele broncontrole](git-sync/2026-11-03/README.md) en [centrale status](LIVE_STATUS_AND_NEXT_STEPS.md) gaan vóór oudere rollen/bronpaden hieronder. Geen Shopify-write of publicatie in deze Git-taak.
+
 # BadkamerCity — operationeel runbook
 
 > **Vaste dagstart sinds 15 oktober 2026:** lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md). Daar staan de actuele taak, werkbranch, Shopify MAIN en volgende handeling. De oudere themarollen en werkvoorbeelden hieronder zijn gedateerde achtergrond. Er is maximaal één actieve uitvoering; een nieuwe chat maakt geen nieuw plan of nieuwe codebranch.

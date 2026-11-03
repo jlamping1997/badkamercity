@@ -1,3 +1,5 @@
+> **3 november 2026 — GIT-SYNC-01:** actuele themabron staat op de bestaande codebranch `fix/product-cards-2026-10-14` in `shopify/current/`. Shopify MAIN is nu **196110090506 — BadkamerCity - JEE-O kleurkeuzes**. De oude themamappen op repositoryniveau zijn historische bron en mogen niet als actuele deploybron worden gebruikt. [Broncontrole en grenzen](docs/git-sync/2026-11-03/README.md). `main` blijft de documentatie-ingang; de volledige bronmap staat op de actieve codebranch.
+
 > **30 oktober 2026 — volledige documentatie:** [Badkamercity volledig naslagwerk](docs/MASTER_SITE_REFERENCE.md) bevat de actuele winkel, desktop/mobiel, alle registers en 36 technische dossiers. Begin bij de [centrale status](docs/LIVE_STATUS_AND_NEXT_STEPS.md); oudere themanummers en aantallen hieronder zijn gedateerde achtergrond.
 
 # BadkamerCity — Shopify Online Store 2.0

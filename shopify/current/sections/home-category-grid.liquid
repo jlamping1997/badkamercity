@@ -1,0 +1,578 @@
+{%- style -%}
+  .home-category-grid-{{ section.id }} {
+    --hcg-text: #0f2740;
+    --hcg-border: rgba(15, 39, 64, 0.12);
+    --hcg-columns-mobile: {{ section.settings.columns_mobile | default: 2 }};
+    --hcg-columns-desktop: {{ section.settings.columns_desktop | default: 4 }};
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    background: #ffffff;
+    color: var(--hcg-text);
+  }
+
+  .home-category-grid-{{ section.id }} .page-width {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 20px;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__title {
+    margin: 0;
+    min-width: 0;
+    color: var(--hcg-text);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    max-width: 100%;
+    color: #176b9b;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__view-all:focus-visible,
+  .home-category-grid-{{ section.id }} .home-category-grid__tile:focus-visible {
+    outline: 3px solid #1f6685;
+    outline-offset: 3px;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__items {
+    display: grid;
+    grid-template-columns: repeat(var(--hcg-columns-mobile), minmax(0, 1fr));
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__item {
+    min-width: 0;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--hcg-border);
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--hcg-text);
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(15, 39, 64, 0.035);
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__tile[aria-disabled='true'] {
+    cursor: default;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__media {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #1f6685;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__icon svg {
+    width: clamp(40px, 30%, 80px);
+    height: auto;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__caption {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px;
+    background: #ffffff;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__label {
+    min-width: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .home-category-grid-{{ section.id }} .home-category-grid__chevron {
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    margin-right: 2px;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  @media screen and (max-width: 374px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__caption {
+      gap: 4px;
+      padding: 8px 6px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__label {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .home-category-grid-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__view-all {
+      min-height: 32px;
+    }
+
+    .home-category-grid-{{ section.id }} .page-width {
+      padding-inline: 24px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__header {
+      margin-bottom: 20px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__caption {
+      min-height: 48px;
+      padding: 8px 12px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__label {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__items {
+      grid-template-columns: repeat(var(--hcg-columns-desktop), minmax(0, 1fr));
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__media {
+      aspect-ratio: 1.5 / 1;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__caption {
+      min-height: 52px;
+      padding: 12px 16px;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__item--hide-desktop {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .home-category-grid-{{ section.id }} .home-category-grid__item--hide-mobile {
+      display: none;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .home-category-grid-{{ section.id }} .home-category-grid__view-all:hover {
+      text-decoration: underline;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__tile[href]:hover {
+      border-color: rgba(15, 39, 64, 0.28);
+      box-shadow: 0 4px 12px rgba(15, 39, 64, 0.075);
+    }
+
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-category-grid-{{ section.id }} .home-category-grid__tile,
+    .home-category-grid-{{ section.id }} .home-category-grid__image {
+      transition: none;
+    }
+
+    .home-category-grid-{{ section.id }} .home-category-grid__tile[href]:hover .home-category-grid__image {
+      transform: none;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign category_menu = section.settings.menu
+  if category_menu == blank
+    assign category_menu = linklists['main-menu']
+  endif
+  assign category_handles = 'badkamermeubels,kranen,toiletten,wastafels,douche,baden,spiegels,tegels' | split: ','
+  assign rendered_category_count = 0
+  assign rendered_category_keys = '|'
+  assign view_all_label = section.settings.view_all_label | default: 'Bekijk alle categorieën'
+  assign view_all_link = section.settings.view_all_link | default: routes.collections_url
+  assign desktop_columns = section.settings.columns_desktop | default: 4
+  assign mobile_columns = section.settings.columns_mobile | default: 2
+  assign desktop_gaps = desktop_columns | minus: 1 | times: 16
+  assign mobile_gaps = mobile_columns | minus: 1 | times: 12
+-%}
+
+{%- capture category_image_sizes -%}
+  (min-width: 1440px) calc((1392px - {{ desktop_gaps }}px) / {{ desktop_columns }}), (min-width: 990px) calc((100vw - 48px - {{ desktop_gaps }}px) / {{ desktop_columns }}), (min-width: 900px) calc((100vw - 80px) / 3), (min-width: 750px) calc((100vw - 64px) / 2), calc((100vw - 32px - {{ mobile_gaps }}px) / {{ mobile_columns }})
+{%- endcapture -%}
+
+<section class="home-category-grid home-category-grid-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="home-category-grid__header">
+      {%- if section.settings.title != blank -%}
+        <h2 class="home-category-grid__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      <a href="{{ view_all_link | escape }}" class="home-category-grid__view-all">
+        {{ view_all_label | escape }} <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+
+    <ul class="home-category-grid__items" role="list">
+      {%- if section.settings.source_mode == 'menu' and category_menu.links.size > 0 -%}
+        {%- for link in category_menu.links -%}
+          {%- liquid
+            assign menu_title = link.title | strip
+            assign title_handle = menu_title | handleize
+            assign category_collection = nil
+            if link.type == 'collection_link'
+              assign category_collection = link.object
+            elsif link.url contains '/collections/'
+              assign collection_handle = link.url | split: '/collections/' | last | split: '/' | first | split: '?' | first | split: '#' | first
+              assign category_collection = collections[collection_handle]
+            endif
+
+            assign matched_category_handle = ''
+            if category_handles contains title_handle
+              assign matched_category_handle = title_handle
+            elsif category_handles contains category_collection.handle
+              assign matched_category_handle = category_collection.handle
+            elsif category_handles contains link.handle
+              assign matched_category_handle = link.handle
+            endif
+            if matched_category_handle == blank
+              continue
+            endif
+            assign category_key = '|' | append: matched_category_handle | append: '|'
+            if rendered_category_keys contains category_key
+              continue
+            endif
+            assign rendered_category_keys = rendered_category_keys | append: matched_category_handle | append: '|'
+
+            assign category_image = category_collection.image
+            if category_image == blank
+              assign category_image = category_collection.featured_image
+            endif
+            if category_image == blank
+              for block in section.blocks
+                assign source_title_handle = block.settings.custom_title | handleize
+                if block.settings.collection.handle == matched_category_handle or source_title_handle == title_handle
+                  assign category_image = block.settings.collection.image | default: block.settings.collection.featured_image
+                  if category_image != blank
+                    break
+                  endif
+                endif
+              endfor
+            endif
+
+            assign category_icon = ''
+            if category_image == blank
+              assign icon_handle = category_collection.handle | default: matched_category_handle
+              capture category_icon
+                render 'bc-category-icon', handle: icon_handle
+              endcapture
+              if category_icon == blank and title_handle != icon_handle
+                capture category_icon
+                  render 'bc-category-icon', handle: title_handle
+                endcapture
+              endif
+            endif
+          -%}
+
+          <li class="home-category-grid__item">
+            <a href="{{ link.url | escape }}" class="home-category-grid__tile">
+              <span class="home-category-grid__media">
+                {%- if category_image != blank -%}
+                  {{ category_image | image_url: width: 1600 | image_tag:
+                    widths: '180, 280, 360, 540, 720, 900, 1200, 1440, 1600',
+                    sizes: category_image_sizes,
+                    class: 'home-category-grid__image',
+                    loading: 'lazy',
+                    alt: ''
+                  }}
+                {%- elsif category_icon != blank -%}
+                  <span class="home-category-grid__icon" aria-hidden="true">{{ category_icon }}</span>
+                {%- endif -%}
+              </span>
+              <span class="home-category-grid__caption">
+                <span class="home-category-grid__label">{{ menu_title | escape }}</span>
+                <span class="home-category-grid__chevron" aria-hidden="true"></span>
+              </span>
+            </a>
+          </li>
+
+          {%- liquid
+            assign rendered_category_count = rendered_category_count | plus: 1
+            if rendered_category_count == 8
+              break
+            endif
+          -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign block_collection = block.settings.collection
+            assign block_title = block.settings.custom_title | strip
+            if block_title == blank
+              assign block_title = block_collection.title | default: 'Categorie'
+            endif
+            assign title_handle = block_title | handleize
+            assign icon_handle = block_collection.handle | default: title_handle
+            assign tile_url = block_collection.url
+            assign category_image = block_collection.image | default: block_collection.featured_image
+            assign item_class = 'home-category-grid__item'
+            unless block.settings.show_on_desktop
+              assign item_class = item_class | append: ' home-category-grid__item--hide-desktop'
+            endunless
+            unless block.settings.show_on_mobile
+              assign item_class = item_class | append: ' home-category-grid__item--hide-mobile'
+            endunless
+
+            assign category_icon = ''
+            if category_image == blank
+              capture category_icon
+                render 'bc-category-icon', handle: icon_handle
+              endcapture
+              if category_icon == blank and title_handle != icon_handle
+                capture category_icon
+                  render 'bc-category-icon', handle: title_handle
+                endcapture
+              endif
+            endif
+          -%}
+
+          <li class="{{ item_class }}" {{ block.shopify_attributes }}>
+            <a
+              {% if tile_url != blank %}href="{{ tile_url | escape }}"{% else %}role="link" aria-disabled="true"{% endif %}
+              class="home-category-grid__tile"
+            >
+              <span class="home-category-grid__media">
+                {%- if category_image != blank -%}
+                  {{ category_image | image_url: width: 1600 | image_tag:
+                    widths: '180, 280, 360, 540, 720, 900, 1200, 1440, 1600',
+                    sizes: category_image_sizes,
+                    class: 'home-category-grid__image',
+                    loading: 'lazy',
+                    alt: ''
+                  }}
+                {%- elsif category_icon != blank -%}
+                  <span class="home-category-grid__icon" aria-hidden="true">{{ category_icon }}</span>
+                {%- endif -%}
+              </span>
+              <span class="home-category-grid__caption">
+                <span class="home-category-grid__label">{{ block_title | escape }}</span>
+                <span class="home-category-grid__chevron" aria-hidden="true"></span>
+              </span>
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home category grid",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 16,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section title",
+      "default": "Shop per categorie"
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "All categories link label",
+      "default": "Bekijk alle categorieën"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "All categories link",
+      "info": "Falls back to the Shopify collection list."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Category menu",
+      "default": "main-menu",
+      "info": "Top-level links from this menu will be shown as category tiles."
+    },
+    {
+      "type": "select",
+      "id": "source_mode",
+      "label": "Category source",
+      "default": "menu",
+      "options": [
+        {
+          "value": "menu",
+          "label": "Use menu"
+        },
+        {
+          "value": "manual",
+          "label": "Use manual category blocks"
+        }
+      ],
+      "info": "Use manual blocks if you want to choose different categories for desktop and mobile."
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": "Items per row on desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Items per row on mobile",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_item",
+      "name": "Category item",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom title",
+          "info": "Optional. Falls back to the selected collection title."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_desktop",
+          "label": "Show on desktop",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_mobile",
+          "label": "Show on mobile",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home category grid",
+      "blocks": [
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

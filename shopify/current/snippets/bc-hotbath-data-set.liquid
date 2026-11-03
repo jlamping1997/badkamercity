@@ -1,0 +1,55 @@
+{% doc %}
+  Included set contents only. Never adds included components to the cart.
+  @param {product} product - Current product.
+  @param {string} section_id - Current section ID.
+{% enddoc %}
+{%- assign components = product.metafields.bc_data.set_components.value -%}
+{%- assign linked_products = product.metafields.bc_data.component_products.value -%}
+{%- if components != blank -%}
+  <section class="bc-product-set" aria-labelledby="ProductSetTitle-{{ section_id }}">
+    <h2 id="ProductSetTitle-{{ section_id }}">Dit zit in de set</h2>
+    <p>Deze onderdelen zijn inbegrepen. Je hoeft ze niet apart bij te bestellen.</p>
+    <ul class="bc-data-set" role="list">
+      {%- for component in components -%}
+        {%- assign component_url = '' -%}
+        {%- assign component_label = component.sku -%}
+        {%- for linked in linked_products -%}
+          {%- assign linked_gid = linked.id | prepend: 'gid://shopify/Product/' -%}
+          {%- if linked_gid == component.product_id and linked.vendor == product.vendor -%}
+            {%- for linked_variant in linked.variants -%}
+              {%- if linked_variant.sku == component.sku -%}
+                {%- assign component_url = linked.url -%}
+                {%- assign component_label = linked.title -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <li class="bc-data-set__row">
+          <span>{{ component.quantity | escape }} ×</span>
+          <div>
+            {%- if component_url != blank -%}
+              <a href="{{ component_url | escape }}" target="_blank" rel="noopener">{{ component_label | escape }}</a>
+            {%- else -%}
+              {{ component_label | escape }}
+            {%- endif -%}
+            <div class="bc-data-set__sku">{{ component.sku | escape }}</div>
+          </div>
+          <span class="bc-data-set__included">Inbegrepen</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  {% style %}
+    #MainProduct-{{ section_id }} .bc-data-set { list-style: none; margin: 0; padding: 0; }
+    #MainProduct-{{ section_id }} .bc-data-set__row { display: grid; grid-template-columns: 2.8rem minmax(0,1fr) auto; gap: 1.2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--bc-pdp-line); font-size: 1.4rem; line-height: 1.5; }
+    #MainProduct-{{ section_id }} .bc-data-set__row a { color: inherit; text-underline-offset: .3rem; }
+    #MainProduct-{{ section_id }} .bc-data-set__sku { margin-top: .4rem; overflow-wrap: anywhere; }
+    #MainProduct-{{ section_id }} .bc-data-set__included { color: var(--bc-pdp-green); font-size: 1.2rem; }
+    @media (max-width: 749px) {
+      #MainProduct-{{ section_id }} .bc-data-set__row { grid-template-columns: 2.8rem minmax(0,1fr); }
+      #MainProduct-{{ section_id }} .bc-data-set__included { grid-column: 2; }
+    }
+  {% endstyle %}
+{%- endif -%}

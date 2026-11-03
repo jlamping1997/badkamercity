@@ -1,0 +1,482 @@
+{%- liquid
+  assign section_heading = section.settings.title | default: 'Badkamerinspiratie'
+  assign fallback_caption = section.settings.hashtag_label | default: section_heading
+-%}
+
+{%- style -%}
+  .home-inspiration-{{ section.id }} {
+    --hi-text: #0f2740;
+    --hi-muted: #516273;
+    --hi-gap: 12px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    background: #ffffff;
+    color: var(--hi-text);
+  }
+
+  .home-inspiration-{{ section.id }} .page-width {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__shell {
+    display: grid;
+    gap: 12px;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__title {
+    min-width: 0;
+    margin: 0;
+    color: var(--hi-text);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    max-width: 100%;
+    color: #176b9b;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__intro {
+    min-width: 0;
+    max-width: 96rem;
+    color: var(--hi-muted);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__intro > :first-child {
+    margin-top: 0;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__intro > :last-child {
+    margin-bottom: 0;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__slider {
+    position: relative;
+    display: block;
+    min-width: 0;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__track {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    gap: var(--hi-gap);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 4px;
+    scrollbar-width: none;
+    padding: 4px;
+    margin: 0 -4px;
+    list-style: none;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__item {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(15, 39, 64, 0.12);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--hi-text);
+    text-decoration: none;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__media {
+    position: relative;
+    flex: 0 0 auto;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #e9f1f6;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__image,
+  .home-inspiration-{{ section.id }} .home-inspiration__placeholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__placeholder {
+    fill: #b6cbd6;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__caption {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px 12px;
+    background: #ffffff;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__card-title {
+    min-width: 0;
+    margin: 0;
+    color: var(--hi-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__controls:has(button[name='previous']:disabled):has(button[name='next']:disabled) {
+    display: none;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(15, 39, 64, 0.15);
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--hi-text);
+    cursor: pointer;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__nav[disabled] {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__nav svg {
+    display: block;
+    width: 12px;
+    height: 8px;
+    transform: rotate(-90deg);
+  }
+
+  .home-inspiration-{{ section.id }} .home-inspiration__nav[name='previous'] svg {
+    transform: rotate(90deg);
+  }
+
+  .home-inspiration-{{ section.id }} a.home-inspiration__view-all:focus-visible,
+  .home-inspiration-{{ section.id }} a.home-inspiration__card:focus-visible,
+  .home-inspiration-{{ section.id }} .home-inspiration__track:focus-visible,
+  .home-inspiration-{{ section.id }} .home-inspiration__nav:focus-visible {
+    outline: 3px solid #1f6685;
+    outline-offset: 2px;
+  }
+
+  @media screen and (min-width: 480px) {
+    .home-inspiration-{{ section.id }} .home-inspiration__track {
+      grid-auto-columns: 42%;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .home-inspiration-{{ section.id }} {
+      --hi-gap: 16px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .home-inspiration-{{ section.id }} .home-inspiration__view-all {
+      min-height: 32px;
+    }
+
+    .home-inspiration-{{ section.id }} .page-width {
+      padding-inline: 24px;
+    }
+
+    .home-inspiration-{{ section.id }} .home-inspiration__shell {
+      gap: 12px;
+    }
+
+    .home-inspiration-{{ section.id }} .home-inspiration__track {
+      grid-auto-columns: 28%;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .home-inspiration-{{ section.id }} .home-inspiration__track {
+      grid-auto-columns: calc((100% - 5 * var(--hi-gap)) / 6);
+    }
+
+    .home-inspiration-{{ section.id }} .home-inspiration__card-title {
+      font-size: clamp(1.4rem, 1.1vw, 1.6rem);
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .home-inspiration-{{ section.id }} a.home-inspiration__view-all:hover {
+      text-decoration: underline;
+    }
+
+    .home-inspiration-{{ section.id }} a.home-inspiration__card:hover,
+    .home-inspiration-{{ section.id }} .home-inspiration__nav:not([disabled]):hover {
+      border-color: rgba(31, 102, 133, 0.35);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-inspiration-{{ section.id }} .home-inspiration__track {
+      scroll-behavior: auto;
+    }
+  }
+{%- endstyle -%}
+
+<section class="home-inspiration home-inspiration-{{ section.id }}" aria-labelledby="InspirationHeading-{{ section.id }}">
+  <div class="page-width">
+    <div class="home-inspiration__shell">
+      <div class="home-inspiration__header">
+        <h2 class="home-inspiration__title" id="InspirationHeading-{{ section.id }}">{{ section_heading | escape }}</h2>
+        {%- if section.settings.button_label != blank -%}
+          {%- if section.settings.button_link != blank -%}
+            <a href="{{ section.settings.button_link | escape }}" class="home-inspiration__view-all">{{ section.settings.button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+          {%- else -%}
+            <span class="home-inspiration__view-all">{{ section.settings.button_label | escape }} <span aria-hidden="true">&rarr;</span></span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.show_intro and section.settings.intro != blank -%}
+        <div class="home-inspiration__intro rte">{{ section.settings.intro }}</div>
+      {%- endif -%}
+
+      <slider-component class="home-inspiration__slider">
+        <ul id="Slider-{{ section.id }}" class="home-inspiration__track" role="list" tabindex="0" aria-labelledby="InspirationHeading-{{ section.id }}">
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign card_caption = block.settings.caption | default: fallback_caption
+              assign card_caption_id = 'InspirationCaption-' | append: section.id | append: '-' | append: block.id
+            -%}
+            <li id="Slide-{{ section.id }}-{{ block.id }}" class="home-inspiration__item" {{ block.shopify_attributes }}>
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link | escape }}" class="home-inspiration__card" aria-labelledby="{{ card_caption_id }}">
+              {%- else -%}
+                <div class="home-inspiration__card">
+              {%- endif -%}
+                <div class="home-inspiration__media">
+                  {%- if block.settings.image != blank -%}
+                    {{ block.settings.image | image_url: width: 750 | image_tag:
+                      widths: '180, 260, 360, 480, 600, 750',
+                      sizes: '(min-width: 1440px) 217px, (min-width: 990px) calc(16.67vw - 24px), (min-width: 750px) calc(28vw - 15px), (min-width: 480px) calc(42vw - 15px), calc(72vw - 25px)',
+                      loading: 'lazy',
+                      class: 'home-inspiration__image',
+                      alt: ''
+                    }}
+                  {%- else -%}
+                    <span aria-hidden="true">{{ 'lifestyle-1' | placeholder_svg_tag: 'home-inspiration__placeholder' }}</span>
+                  {%- endif -%}
+                </div>
+                <div class="home-inspiration__caption">
+                  <h3 class="home-inspiration__card-title" id="{{ card_caption_id }}">{{ card_caption | escape }}</h3>
+                </div>
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- else -%}
+                </div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <div class="home-inspiration__controls">
+          <button type="button" name="previous" class="home-inspiration__nav" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}" disabled>
+            <span aria-hidden="true">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+          <button type="button" name="next" class="home-inspiration__nav" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}" disabled>
+            <span aria-hidden="true">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+          </button>
+        </div>
+      </slider-component>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Badkamerinspiratie",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 12,
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Badkamerinspiratie"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro",
+      "label": "Toon introductietekst",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Ontdek stijlen, indelingen en details voor jouw badkamer.</p>"
+    },
+    {
+      "type": "text",
+      "id": "hashtag_label",
+      "label": "Fallback kaarttitel",
+      "default": "Badkamerinspiratie"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Knop label",
+      "default": "Bekijk alle inspiratie"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Knop link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "post",
+      "name": "Inspiratiekaart",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Inspiratieafbeelding"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Titel",
+          "default": "Badkamerinspiratie"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Badkamerinspiratie",
+      "blocks": [
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Modern & licht"
+          }
+        },
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Kleine badkamer"
+          }
+        },
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Hotel chic"
+          }
+        },
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Japandi"
+          }
+        },
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Vrijstaande baden"
+          }
+        },
+        {
+          "type": "post",
+          "settings": {
+            "caption": "Inloopdouche"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

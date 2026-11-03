@@ -1,0 +1,23 @@
+{% doc %}
+  Renders the header cart icon, label and item count for initial and Ajax updates.
+  @example
+  {% render 'bc-header-cart' %}
+{% enddoc %}
+
+<span class="bc-header__utility-icon" aria-hidden="true">
+  <span class="svg-wrapper">{{ 'icon-cart-bc.svg' | inline_asset_content }}</span>
+</span>
+<span class="bc-header__utility-label">{{ 'templates.cart.cart' | t }}</span>
+<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+{%- if cart.item_count > 0 -%}
+  <div class="cart-count-bubble">
+    <span aria-hidden="true">
+      {%- if cart.item_count < 100 -%}
+        {{ cart.item_count }}
+      {%- else -%}
+        99+
+      {%- endif -%}
+    </span>
+    <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+  </div>
+{%- endif -%}

@@ -1,0 +1,34 @@
+{% doc %}
+  Read complete imported specification groups, with display values already including units.
+  @param {product} product - Current product.
+  @param {string} section_id - Current section ID.
+{% enddoc %}
+{%- assign groups = product.metafields.custom.complete_specificaties.value -%}
+{%- if groups != blank -%}
+  <section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+    <div class="bc-product-specs__inner">
+      <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">Specificaties</h2>
+      <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+        {%- for group in groups -%}
+          {%- if group.items != blank -%}
+            <tbody>
+              <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group.group | escape }}</th></tr>
+              {%- for row in group.items -%}
+                {%- if row.value != blank -%}
+                  {%- assign row_label = row.label -%}
+                  {%- if product.metafields.custom.artikelnummer.value == 'IBS70CR347' and row_label == 'Lengte douchearm' -%}
+                    {%- assign row_label = 'Lengte plafondbuis' -%}
+                  {%- endif -%}
+                  <tr class="bc-product-specs__row">
+                    <th class="bc-product-specs__label" scope="row">{{ row_label | escape }}</th>
+                    <td class="bc-product-specs__value">{{ row.value | escape }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          {%- endif -%}
+        {%- endfor -%}
+      </table>
+    </div>
+  </section>
+{%- endif -%}

@@ -1,0 +1,101 @@
+{% doc %}
+Returns an illustrative Wiesbaden color/finish asset URL, including two-tone finishes.
+@param {string} color - The full product color name.
+{% enddoc %}
+{%- liquid
+  assign finish = color | downcase | strip | remove: ' pvd'
+  case finish
+    when 'chroom'
+      echo 'bc-wiesbaden-swatch-chrome.svg' | asset_url
+    when 'mat zwart'
+      echo 'bc-wiesbaden-swatch-black.svg' | asset_url
+    when 'geborsteld staal'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'geborsteld messing'
+      echo 'bc-wiesbaden-swatch-brass.svg' | asset_url
+    when 'gunmetal'
+      echo 'bc-wiesbaden-swatch-gunmetal.svg' | asset_url
+    when 'geborsteld brons koper'
+      echo 'bc-wiesbaden-swatch-bronze-copper.svg' | asset_url
+    when 'geborsteld koper'
+      echo 'bc-wiesbaden-swatch-copper.svg' | asset_url
+    when 'rvs'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'rvs geborsteld'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'geborsteld rvs'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'rvs look'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'zwart'
+      echo 'bc-wiesbaden-swatch-black.svg' | asset_url
+    when 'geborsteld goud'
+      echo 'bc-wiesbaden-swatch-brass.svg' | asset_url
+    when 'mat wit'
+      echo 'bc-wiesbaden-swatch-mat-wit.svg' | asset_url
+    when 'glans wit'
+      echo 'bc-wiesbaden-swatch-glans-wit.svg' | asset_url
+    when 'wit'
+      echo 'bc-wiesbaden-swatch-wit.svg' | asset_url
+    when 'beige'
+      echo 'bc-wiesbaden-swatch-beige.svg' | asset_url
+    when 'mat zand'
+      echo 'bc-wiesbaden-swatch-mat-zand.svg' | asset_url
+    when 'antraciet'
+      echo 'bc-wiesbaden-swatch-antraciet.svg' | asset_url
+    when 'grafietgrijs'
+      echo 'bc-wiesbaden-swatch-grafietgrijs.svg' | asset_url
+    when 'mat grijs'
+      echo 'bc-wiesbaden-swatch-mat-grijs.svg' | asset_url
+    when 'grijs'
+      echo 'bc-wiesbaden-swatch-grijs.svg' | asset_url
+    when 'grijs eiken'
+      echo 'bc-wiesbaden-swatch-grijs-eiken.svg' | asset_url
+    when 'donker eiken'
+      echo 'bc-wiesbaden-swatch-donker-eiken.svg' | asset_url
+    when 'licht eiken'
+      echo 'bc-wiesbaden-swatch-licht-eiken.svg' | asset_url
+    when 'walnoot'
+      echo 'bc-wiesbaden-swatch-walnoot.svg' | asset_url
+    when 'houtnerf grijs'
+      echo 'bc-wiesbaden-swatch-houtnerf-grijs.svg' | asset_url
+    when 'eiken'
+      echo 'bc-wiesbaden-swatch-eiken.svg' | asset_url
+    when 'eik'
+      echo 'bc-wiesbaden-swatch-eik.svg' | asset_url
+    when 'naturel eik'
+      echo 'bc-wiesbaden-swatch-naturel-eik.svg' | asset_url
+    when 'chroom / mat zwart'
+      echo 'bc-wiesbaden-swatch-chroom-mat-zwart.svg' | asset_url
+    when 'geborsteld brons koper / mat zwart'
+      echo 'bc-wiesbaden-swatch-geborsteld-brons-koper-mat-zwart.svg' | asset_url
+    when 'geborsteld messing / mat zwart'
+      echo 'bc-wiesbaden-swatch-geborsteld-messing-mat-zwart.svg' | asset_url
+    when 'geborsteld staal / mat zwart'
+      echo 'bc-wiesbaden-swatch-geborsteld-staal-mat-zwart.svg' | asset_url
+    when 'glans wit / geborsteld goud'
+      echo 'bc-wiesbaden-swatch-glans-wit-geborsteld-goud.svg' | asset_url
+    when 'gunmetal / mat zwart'
+      echo 'bc-wiesbaden-swatch-gunmetal-mat-zwart.svg' | asset_url
+    when 'mat zwart / chroom'
+      echo 'bc-wiesbaden-swatch-mat-zwart-chroom.svg' | asset_url
+    when 'mat zwart / geborsteld brons koper'
+      echo 'bc-wiesbaden-swatch-mat-zwart-geborsteld-brons-koper.svg' | asset_url
+    when 'mat zwart / geborsteld goud'
+      echo 'bc-wiesbaden-swatch-mat-zwart-geborsteld-goud.svg' | asset_url
+    when 'mat zwart / geborsteld messing'
+      echo 'bc-wiesbaden-swatch-mat-zwart-geborsteld-messing.svg' | asset_url
+    when 'mat zwart / gunmetal'
+      echo 'bc-wiesbaden-swatch-mat-zwart-gunmetal.svg' | asset_url
+    when 'mat zwart / rvs look'
+      echo 'bc-wiesbaden-swatch-mat-zwart-rvs-look.svg' | asset_url
+    when 'warm eiken'
+      echo 'bc-wiesbaden-swatch-warm-eiken.svg' | asset_url
+    when 'bruin eiken'
+      echo 'bc-wiesbaden-swatch-bruin-eiken.svg' | asset_url
+    when 'mat beige'
+      echo 'bc-wiesbaden-swatch-mat-beige.svg' | asset_url
+    when 'cashmere'
+      echo 'bc-wiesbaden-swatch-cashmere.svg' | asset_url
+  endcase
+-%}

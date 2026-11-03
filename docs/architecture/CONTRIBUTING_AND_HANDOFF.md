@@ -1,3 +1,5 @@
+> **3 november 2026 — GIT-SYNC-01:** de actuele themabron staat op `shopify/current/` op de bestaande codebranch. De oudere root hieronder blijft historische bron; geen rootconsolidatie of automatische deploy uitgevoerd. Lees [broncontrole en API-uitzondering](../git-sync/2026-11-03/README.md).
+
 # Werken aan BadkamerCity als ontwikkelaar of AI
 
 ## De eerste vijftien minuten

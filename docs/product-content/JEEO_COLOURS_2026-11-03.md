@@ -1,6 +1,8 @@
 # JEE-O kleurkeuze — 3 november 2026
 
-Status: **VERIFIED_ADMIN / PREVIEW_VERIFIED_DESKTOP / PUBLICATION_BLOCKED**.
+Status: **LIVE_THEME_CONFIRMED / DESKTOP_PREVIEW_TESTED**.
+
+Actuele controle3november2026: thema196110090506 is nu MAIN; alle24featurefiles exact gelijk aan de eerder geteste implementatie. Actuele Git-bron staat in shopify/current/ op de bestaande codebranch. De publicatieblokkade en opdracht tot publiceren hieronder beschrijven het eerdere implementatiemoment, niet een nog open publicatie. [Nieuwe Git-broncontrole](../git-sync/2026-11-03/README.md).
 
 ## Opdracht en resultaat
 

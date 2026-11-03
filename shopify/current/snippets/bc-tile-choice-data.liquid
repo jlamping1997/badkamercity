@@ -1,0 +1,37 @@
+{% doc %}
+Serializes a tile article for the product selector using current Shopify data.
+@param {product} article - The tile product.
+{% enddoc %}
+{%- liquid
+  assign variant = article.selected_or_first_available_variant
+  assign data = article.metafields.custom.bron_toelichtingen_json.value.tiles
+  assign execution = article.metafields.tiles.execution.value | split: ' · '
+  capture finish
+    for part in execution
+      unless part contains ' mm'
+        unless forloop.first
+          echo ' · '
+        endunless
+        echo part
+      endunless
+    endfor
+  endcapture
+  assign thickness = article.metafields.bc_filters.tegel_dikte_mm.value | default: 0
+  assign width = article.metafields.bc_filters.tegel_breedte_mm.value | default: 0
+  assign length = article.metafields.bc_filters.tegel_lengte_mm.value | default: 0
+  assign area = width | times: length | divided_by: 100.0
+  assign box_units = data.m2_per_box | times: 10000 | round
+  assign unit_cents = data.price_per_m2.amount | times: 100 | round
+  if variant.unit_price != blank
+    assign unit_cents = variant.unit_price
+  elsif unit_cents == 0 and box_units > 0
+    assign unit_cents = variant.price | times: 10000.0 | divided_by: box_units | round
+  endif
+  assign image = ''
+  if article.featured_image != blank
+    assign image = article.featured_image | image_url: width: 1600
+  endif
+  assign article_id = article.id | append: ''
+  assign variant_id = variant.id | append: ''
+-%}
+{"id":{{ article_id | json }},"variant":{{ variant_id | json }},"sku":{{ variant.sku | json }},"handle":{{ article.handle | json }},"title":{{ article.title | json | replace: '<', '\u003c' }},"type":{{ article.metafields.tiles.application.value | default: article.product_type | json }},"color":{{ article.metafields.tiles.color.value | default: article.metafields.custom.kleur.value | json }},"finish":{{ finish | strip | json }},"size":{{ article.metafields.tiles.size.value | default: article.metafields.custom.afmetingen_original.value | json }},"thickness":{{ thickness | json }},"area":{{ area | json }},"boxUnits":{{ box_units | json }},"priceCents":{{ variant.price | json }},"unitPriceCents":{{ unit_cents | json }},"leadTime":{{ data.lead_time | default: '' | json }},"orderType":{{ data.order_type | default: '' | json }},"image":{{ image | json }}}

@@ -1,0 +1,57 @@
+{% doc %}
+  Shows the available public specifications for Wiesbaden and JEE-O.
+  @param {product} product - Current product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- liquid
+  assign vendor = product.vendor | strip | downcase
+  assign source_namespace = 'custom'
+  if vendor == 'jee-o'
+    assign source_namespace = 'specs'
+  endif
+  assign group_names = 'product,appearance,dimensions,installation,features' | split: ','
+-%}
+{%- capture spec_groups -%}
+  {%- for group_name in group_names -%}
+    {%- liquid
+      case group_name
+        when 'product'
+          assign fields = 'serie,model,uitvoering,garantie' | split: ','
+        when 'appearance'
+          assign fields = 'kleur,basiskleur,kleurgroep,glaskleur,kleur_binnenzijde,afwerking,glansgraad,materiaal,materiaal_inzet,vorm,binnenvorm,bladvorm,type_bad,vormgeving_stijlgroep,afwerking_greep,afwerking_wand' | split: ','
+        when 'dimensions'
+          assign fields = 'afmetingen_original,afmeting,lengte_mm,breedte_mm,breedte_diameter_mm,hoogte_mm,diepte_mm,dikte_mm,glasdikte_mm,opbouwhoogte_totaal,hoogte_uitloop_mm,voorsprong_uitloop_mm,diepte_uitloop,inbouwdiepte,breedte_diameter_hoofddouche,dikte_hoofddouche,breedte_diameter_douchekop,diepte_douchekop,lengte_douchearm,lengte_doucheslang,gewicht,inhoud' | split: ','
+        when 'installation'
+          assign fields = 'montage,aantal_kraangaten,aantal_grepen,plaats_kraangat,kraangat,plaats_afvoergat,plaats_bediening,maat_aansluiting_aanvoer,maat_draadaansluiting_inch,warm_koud_aansluiting,type_bevestiging_hoofddouche,geschikt_voor_onderkast,geschikt_voor_vrijhangende_montage,met_bevestigingsmateriaal,verdekte_bevestiging,inkortbaar' | split: ','
+        when 'features'
+          assign fields = 'coldstart,thermostatisch,met_overloop,overloop,met_overloopgat,met_plug,met_sifon,met_afvoerplug,met_badafvoer,met_kraan,met_hoofddouche,met_handdouche,met_doucheslang,met_douchearm,met_inbouwdeel,met_temperatuurregeling,aantal_straalsoorten_hoofddouche,aantal_straalsoorten_handdouche,met_watervalstraal,vorm_uitloop,type_handdouche,vorm_thermostaat,aantal_uitgangen_tegelijk_bedienbaar,bediening_voor_aan_uit,softclose,quick_release,rimless,nano_coating,vuilafstotend,met_verlichting,met_verwarming,dimbaar,vermogen_w,aantal_laden,aantal_waskommen,aantal_glazen,met_bekers_glazen,aantal_haken,aantal_handdoekstangen,aantal_rollen,met_klep,geschikt_voor_aantal_personen,verstelbaar,verstelbare_kop,zwenkbaar,met_audio,belgaqua_keurmerk,volumestroomklasse' | split: ','
+      endcase
+    -%}
+    {%- capture rows -%}
+      {%- if group_name == 'product' -%}
+        {%- assign article_label = 'bc_specs.fields.artikelnummer' | t -%}
+        {%- assign brand_label = 'bc_specs.fields.merk' | t -%}
+        {%- render 'bc-product-detail-row', value: product.selected_or_first_available_variant.sku, label: article_label -%}
+        {%- render 'bc-product-detail-row', value: product.vendor, label: brand_label -%}
+      {%- endif -%}
+      {%- for field in fields -%}
+        {%- render 'bc-product-mapped-spec-row', product: product, namespace: source_namespace, field: field -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign rows = rows | strip -%}
+    {%- if rows != blank -%}
+      {%- assign group_key = 'bc_specs.groups.' | append: group_name -%}
+      <tbody>
+        <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group_key | t }}</th></tr>
+        {{ rows }}
+      </tbody>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+<section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+  <div class="bc-product-specs__inner">
+    <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">{{ 'bc_specs.title' | t }}</h2>
+    <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">{{ spec_groups }}</table>
+  </div>
+</section>
+

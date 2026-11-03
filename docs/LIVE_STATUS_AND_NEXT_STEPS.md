@@ -1,5 +1,29 @@
 # BadkamerCity — actuele werkstatus
 
+## GIT-SYNC-01 — actuele themabron en JEE-O-publicatie bevestigd · 3 november 2026
+
+Shopify MAIN is inmiddels **196110090506 — BadkamerCity - JEE-O kleurkeuzes**; vorig MAIN196052189450 is UNPUBLISHED. De24JEE-O-codefiles stonden al exact in Git en zijn ongewijzigd live aangetroffen. Eerdere PUBLICATION_BLOCKED-status hieronder is hiermee historisch; deze Git-taak heeft zelf niet gepubliceerd.
+
+Volledige vergelijking: live1374bestanden; oude Git-root507, waarvan451bytegelijk en56afwijkend;867livepaden ontbraken in de root. Daarom een aparte actuele bronkopie **shopify/current/** op bestaande branch **fix/product-cards-2026-10-14**. Geen onzekere root-/deploykoppeling omgezet. Main ontvangt uitsluitend documentatie/manifest.
+
+Alle1374livepaden gelezen:1373inhoudelijk bytegelijk vastgesteld. Acht historische QA/debugbackups niet als actieve code opgenomen: de actuele bronmap bevat1366themafiles, waarvan1365bytegelijk. Enige API-bodyuitzondering config/settings_data.json expliciet vastgelegd en tegen upload beschermd. Retourtemplate hersteld naar exact de Shopify-checksum door uitsluitend de gegenereerde API-header weg te nemen.804JSON/JSONC-bestanden parsebaar; geen credentialpatroon gevonden. Bronmanifest opnieuw gelezen:1374paden/geen wijzigingen tijdens de capture. Geen nieuwe browser-/mobiel-/checkoutvrijgave.
+
+[Actuele bron, gebruik en herstel](git-sync/2026-11-03/README.md) · [volledige bestandscontrole](git-sync/2026-11-03/live-theme-manifest.json). Catalogus, metafields, menu-inhoud, orders en externe backend blijven afzonderlijke systemen. QC-/Lagoo-status hieronder behouden. Geen actieve Git-schrijver na overdracht.
+
+**Volgende Git-handeling:** bij nieuw themawerk de codebranch met **shopify/current/** als bron openen en de actuele MAIN opnieuw controleren; settings_data pas meenemen nadat de checksumuitzondering onafhankelijk is gesloten.
+
+## QC-14 — Lagoo online op Webshop · 3 november 2026
+
+Op expliciete opdracht de208geïmporteerdeLagoo-productgroepen gepubliceerd op de bewezen OnlineStore/Webshop-publicatie283427864842, geïdentificeerd via apphandle online_store. Eerst éénpilot gepubliceerd en teruggelezen, daarna207groepen in begrensde aliasbatches.208geslaagd/0fouten. Finale onafhankelijke paginering: alle208ACTIVE, publishedOnPublication=true op exactditkanaal en publishedAtingevuld. LVS1/LVS2/LVS3 uitgesloten. Andereverkoopkanalen/marktpublicaties, productdata, thema en reviews niet gewijzigd.
+
+OpenbareNesso-productpagina op badkamercity.nl HTTP200 met juisteproductnaam. Verdere publiekeproductsteekproeven volgen in privéverslag. Geen echtecart/checkout of fysieke telefoon getest. Privépublicatieverslag bevat exactebefore/afterID’s en herstel: uitsluitend ditkanaal ontkoppelen na expliciete opdracht. Bestaande57beeldlozegroepen en eerder gedocumenteerde datagaten blijven kwaliteitswerk; publicatie is geen nieuwe inhoudelijke datavrijgave.
+
+**Volgende Lagoo-stap:** eigenaar bekijkt de gepubliceerdeproducten en vult ontbrekende fabrikantbeelden/technischeinformatie gericht aan. Publicatie afgerond; geen actieve schrijver.
+
+## QC-13 — Lagoo-status ACTIVE · 3 november 2026
+
+Op expliciete opdracht “Zet ze op actief” exact de208eerder geïmporteerdeLagoo-productgroepen vanDRAFTnaarACTIVEgezet. Vijf native statusbatches50/50/50/50/8:208geslaagd/0mislukt. Alle208daarna opnieuw uitShopify gelezen: juisteID/handle/vendor enACTIVE. LVS1/LVS2/LVS3 en andereproducten buiten scope. Alleenproductstatus gewijzigd; geen prijs-,optie-,media-,voorraad-,review- ofthemawijziging. PublishedAtblijftvooralle208null; geenverkoopkanaalpublicatiegeclaimd. [Importscope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_IMPORT_EXECUTED_2026-11-03.md). Privéactivatieverslag bevat before/after enexacteID’s. VolgendeLagoo-stap: verkoopkanaalpublicatie en ontbrekendegegevens gericht beoordelen; geen actieve schrijver.
+
 ## QC-12 — Lagoo geïmporteerd als concept · 3 november 2026
 
 Op expliciete opdracht208groepen/1772varianten geïmporteerd:202nieuweDRAFT-groepen,6bestaandeproefgroepenopbestaandeIDbijgewerkt. Alle208groepen direct vergeleken en finale vendorinventaris208uniekehandles/alleDRAFT/publishedAtnull.105bestaandevariant-ID’s behouden; prijzen, opties, SKU’s en fotorelaties gecontroleerd.151groepenmetfabrikantfoto’s,57zonder;1764galerijreferenties/1763uniekefabrikantbestandenREADY,612exactevariantfoto’s.156seriewaarden geverifieerd,390PDF-linksnaar eigenopslag. LVS1/2/3 uitgesloten.
@@ -8,17 +32,13 @@ Geen publicatie/thema-/voorraadhoeveelheid-/review-/D1-mutatie; MAINvóór/na196
 
 **Volgende Lagoo-stap:** eigenaar bekijkt de concepten en vult alleen de ontbrekende fabrikantbeelden/technische gegevens aan vóór gerichte publicatie. Import afgerond; geen actieve Lagoo-schrijver.
 
-## JEEO-03 — 228 kleurkoppelingen en kleurbolletjes in concept afgerond · 3 november 2026
+## JEEO-03 — 228 kleurkoppelingen en kleurbolletjes LIVE bevestigd · 3 november 2026
 
-**VERIFIED_ADMIN / PREVIEW_VERIFIED_DESKTOP / PUBLICATION_BLOCKED.** Alle65goedgekeurde groepen/228producten hebben custom.color_variants en custom.kleur:456metafields met compareDigest:null, na iedere batch exact teruggelezen. SWMBAS71/2producten en43zonder kleurtegenhanger ongemoeid. Eindinventaris273/273: alle titels/handles, varianten inclusief SKU/prijs/voorraad en overige vergeleken velden gelijk; nul koppelafwijkingen.
+**VERIFIED_ADMIN / LIVE_THEME_CONFIRMED / DESKTOP_PREVIEW_TESTED.** Bij deze nieuwe controle is196110090506 MAIN; alle24eerder geleverde JEE-O-codefiles zijn exact gelijk gebleven. Alle65groepen/228producten,456metafields en273behouden titels horen bij de eerder gecontroleerde uitvoering; deze Git-taak heeft geen productdata opnieuw geschreven.
 
-MAIN196052189450 ongewijzigd1356/1356. Nieuw concept **UNPUBLISHED196110090506 — BadkamerCity - JEE-O kleurkeuzes** begon met1356/1356exacte checksumpariteit; finaal1374files, exact6bestaande gewijzigd +18nieuwe, alle24featurechecksums correct. Codecheckpoint **e249975fc43c1666a7e740254b4134de1226fcd2** op bestaande branch fix/product-cards-2026-10-14. Alleen deze24paden gebruiken; Git-root is geen volledige actuele themasnapshot.
+De eerdere29PDP-/29kaartdata-, prijs-/foto-/SKU-/link- en desktopcontroles behouden hun bronmoment. Mobiele interactie/fysieke telefoon en checkout niet als nieuw getest opgevoerd. SWMBAS71/2producten en43producten zonder kleurtegenhanger behouden hun eerdere uitzondering.
 
-Hotbath-stijl op PDP en externe kaarten; native zoek-/collectiekaarten krijgen dezelfde gevalideerde kleuren als links naar de exacte uitvoering, ook zonder JavaScript. Canonieke kaartkleur heeft alleen bij gekoppelde JEE-O voorrang. Echte desktopkleurwissels/foto/SKU/link, uitbreiding vijf kleuren en kaartprijs200→248PASS.29producten plus29kaartdataresponses gecontroleerd; native collectieHTTP200/16kleurrijen/88links. Theme Check20/20 +5/5files geldig; bestaande waarschuwingen behouden. Mobiele interactie/fysieke telefoon NIET_GETEST: lokale component-URL door browserbeleid geweigerd; geen omweg gebruikt. Zoekindex niet gewijzigd.
-
-themePublish expliciet geweigerd door veiligheidsbeleid van Shopify-koppeling; geen andere publicatieroute gebruikt. Geen actieve schrijver na overdracht. Privé herstel-/controlebestand bijgewerkt. [Contract, tests en herstel](product-content/JEEO_COLOURS_2026-11-03.md) · [24featurepaden/hashes](product-content/JEEO_COLOURS_THEME_FILES_2026-11-03.json).
-
-**Exact één volgende JEE-O-handeling:** eigenaar opent bij Webshop→Thema’s het Voorbeeld van **BadkamerCity - JEE-O kleurkeuzes**, controleert eigen telefoon en publiceert dit concept in Shopify. Andere QC-/Lagoo-trajecten behouden hun afzonderlijke status. Oudere themarollen hieronder zijn gedateerde historie.
+Publiceren was tijdens implementatie door de Shopify-koppeling geblokkeerd; het thema is daarna buiten deze uitvoering gepubliceerd. Geen nieuwe publicatie nodig. [Kleurcontract, tests en herstel](product-content/JEEO_COLOURS_2026-11-03.md) · [24featurepaden](product-content/JEEO_COLOURS_THEME_FILES_2026-11-03.json). Voor actuele Git-bron: GIT-SYNC-01 hierboven.
 
 ## QC-11 — uitsluitend officiële Lagoo-foto’s in import en proefproducten · 3 november 2026
 

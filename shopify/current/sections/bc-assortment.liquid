@@ -1,0 +1,185 @@
+{{ 'bc-assortment.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-assortment.js' | asset_url }}" defer="defer"></script>
+{% liquid
+  assign navigation = section.settings.menu | default: linklists['main-menu']
+  assign represented_urls = '|'
+  assign category_blocks = section.blocks | where: 'type', 'category'
+  assign promotion_blocks = section.blocks | where: 'type', 'promotion'
+%}
+<bc-assortment class="bca" id="Assortment-{{ section.id }}">
+  <div class="bca-shell">
+    <nav class="bca-breadcrumb" aria-label="{{ 'bc_assortment.breadcrumb' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'bc_assortment.home' | t }}</a><span aria-hidden="true">&rsaquo;</span><span>{{ 'bc_assortment.assortment' | t }}</span></nav>
+    <header class="bca-intro">
+      <div><h1><span class="bca-only-desktop">{{ section.settings.heading | escape }}</span><span class="bca-only-mobile">{{ 'bc_assortment.mobile_heading' | t }}</span></h1><p>{{ section.settings.intro | escape }}</p></div>
+      <div class="bca-finder" data-bca-finder hidden>
+        <label class="visually-hidden" for="CategorySearch-{{ section.id }}">{{ 'bc_assortment.search_label' | t }}</label>
+        <input type="search" id="CategorySearch-{{ section.id }}" placeholder="{{ 'bc_assortment.search_placeholder' | t | escape }}" autocomplete="off" aria-controls="Directory-{{ section.id }}" data-bca-search>
+        <button type="button" data-bca-clear aria-label="{{ 'bc_assortment.clear' | t | escape }}" hidden>&times;</button>
+        <span class="bca-finder__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+      </div>
+    </header>
+    <section class="bca-overview" aria-labelledby="Overview-{{ section.id }}" data-bca-overview>
+      <h2 id="Overview-{{ section.id }}">{{ section.settings.categories_heading | escape }}</h2>
+      <ul class="bca-grid" role="list">
+        {% for root in navigation.links %}
+          {% if root.url contains '/collections/' %}
+            {% liquid
+              assign category = root.object
+              assign image = category.image | default: category.featured_image
+              assign fallback_asset = ''
+              assign category_title = root.title
+              assign category_mobile_title = root.title
+              for block in category_blocks
+                if block.settings.collection.url == root.url
+                  if block.settings.image != blank or block.settings.asset != blank
+                    assign image = block.settings.image
+                    assign fallback_asset = block.settings.asset
+                  endif
+                  assign category_title = block.settings.title | default: root.title
+                  assign category_mobile_title = block.settings.mobile_title | default: category_title
+                  break
+                endif
+              endfor
+              assign image_priority = false
+              if forloop.index < 3
+                assign image_priority = true
+              endif
+            %}
+            <li class="bca-card">
+              <a href="{{ root.url | escape }}" class="bca-card__main">
+                <span class="bca-card__image">{% render 'bc-home-image', image: image, asset: fallback_asset, alt: '', priority: image_priority, sizes: '(min-width: 1100px) 240px, (min-width: 750px) 30vw, 70px', width: 480, height: 480 %}</span>
+                <span class="bca-card__title"><span class="bca-card__label"><span class="bca-card__desktop">{{ category_title | escape }}</span><span class="bca-card__mobile">{{ category_mobile_title | escape }}</span></span><span class="bca-arrow" aria-hidden="true">&rsaquo;</span></span>
+              </a>
+              <div class="bca-card__links">
+                {% for child in root.links limit: 3 %}
+                  <a href="{{ child.url | escape }}">{{ child.title | escape }}</a>
+                {% endfor %}
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="bca-promotions" aria-labelledby="Promotions-{{ section.id }}" data-bca-promotions>
+      <h2 id="Promotions-{{ section.id }}">{{ section.settings.promotions_heading | escape }}</h2>
+      <div class="bca-promotions__grid">
+        {% for block in promotion_blocks %}
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link | escape }}" class="bca-promo{% if block.settings.dark %} bca-promo--dark{% endif %}" {{ block.shopify_attributes }}>
+              <div class="bca-promo__image">{% render 'bc-home-image', image: block.settings.image, asset: block.settings.asset, alt: '', sizes: '(min-width: 750px) 600px, 95vw', width: 1200, height: 600 %}</div>
+              <div class="bca-promo__copy"><p>{{ block.settings.brand | escape }}</p><h3>{{ block.settings.heading | escape }}</h3><span class="bca-button">{{ block.settings.label | escape }}<span aria-hidden="true">&rarr;</span></span></div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+    <section class="bca-directory" id="Directory-{{ section.id }}" aria-labelledby="DirectoryTitle-{{ section.id }}">
+      <div class="bca-directory__heading"><h2 id="DirectoryTitle-{{ section.id }}">{{ section.settings.directory_heading | escape }}</h2><p data-bca-status role="status" aria-live="polite" data-empty="{{ 'bc_assortment.no_results' | t | escape }}" data-results="{{ 'bc_assortment.results' | t | escape }}"></p></div>
+      <div class="bca-directory__grid">
+        {% for root in navigation.links %}
+          {% liquid
+            assign represented_urls = represented_urls | append: root.url | append: '|'
+            for item in root.links
+              assign represented_urls = represented_urls | append: item.url | append: '|'
+              for child in item.links
+                assign represented_urls = represented_urls | append: child.url | append: '|'
+              endfor
+            endfor
+          %}
+          {% if root.url contains '/collections/' %}
+            {% liquid
+              assign supplement = '|'
+              assign department_image = root.object.image | default: root.object.featured_image
+              assign department_asset = ''
+              assign department_title = root.title
+              for block in category_blocks
+                if block.settings.collection.url == root.url
+                  assign supplement = block.settings.supplement | prepend: '|' | append: '|'
+                  assign department_title = block.settings.mobile_title | default: root.title
+                  if block.settings.image != blank or block.settings.asset != blank
+                    assign department_image = block.settings.image
+                    assign department_asset = block.settings.asset
+                  endif
+                  break
+                endif
+              endfor
+            %}
+            {% capture primary_links %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% unless supplement contains item_handle %}{% render 'bc-assortment-item', item: item %}{% endunless %}{% endfor %}{% endcapture %}
+            {% capture extra_links %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% if supplement contains item_handle %}{% render 'bc-assortment-item', item: item %}{% endif %}{% endfor %}{% endcapture %}
+            <details class="bca-department" data-bca-department open>
+              <summary>
+                <span class="bca-department__image">{% render 'bc-home-image', image: department_image, asset: department_asset, alt: '', sizes: '56px', width: 112, height: 112 %}</span>
+                <div class="bca-department__label">
+                  <h3><span class="bca-only-desktop">{{ root.title | escape }}</span><span class="bca-only-mobile">{{ department_title | escape }}</span></h3>
+                  <span class="bca-department__preview">{% assign preview_count = 0 %}{% for item in root.links %}{% assign item_handle = item.url | split: '/collections/' | last | split: '?' | first | prepend: '|' | append: '|' %}{% unless supplement contains item_handle %}{% if preview_count > 0 %}, {% endif %}{{ item.title | escape }}{% assign preview_count = preview_count | plus: 1 %}{% if preview_count == 2 %}{% break %}{% endif %}{% endunless %}{% endfor %}</span>
+                </div>
+                <span class="bca-plus" aria-hidden="true"></span>
+              </summary>
+              <div class="bca-department__body">
+                <a class="bca-view-all" href="{{ root.url | escape }}" data-bca-item>{{ 'bc_assortment.view_all' | t: category: root.title }}<span aria-hidden="true">&rarr;</span></a>
+                <ul class="bca-directory__list" role="list">{{ primary_links }}</ul>
+                {% assign extra_stripped = extra_links | strip %}
+                {% if extra_stripped != blank %}<div class="bca-supplement"><h4>{{ 'bc_assortment.complete' | t }}</h4><ul class="bca-directory__list" role="list">{{ extra_links }}</ul></div>{% endif %}
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
+        {% capture other_links %}
+          {% paginate collections by 250 %}
+            {% for other in collections %}
+              {% assign other_key = other.url | prepend: '|' | append: '|' %}
+              {% unless represented_urls contains other_key %}
+                {% if other.products_count > 0 %}<li class="bca-directory__item" data-bca-item><a href="{{ other.url }}">{{ other.title | escape }}<span aria-hidden="true">&rarr;</span></a></li>{% endif %}
+              {% endunless %}
+            {% endfor %}
+            {% if paginate.pages > 1 %}<li>{{ paginate | default_pagination }}</li>{% endif %}
+          {% endpaginate %}
+        {% endcapture %}
+        {% assign other_stripped = other_links | strip %}
+        {% if other_stripped != blank %}<details class="bca-department bca-department--other" data-bca-department open><summary><h3>{{ 'bc_assortment.more_categories' | t }}</h3><span class="bca-plus" aria-hidden="true"></span></summary><div class="bca-department__body"><ul class="bca-directory__list" role="list">{{ other_links }}</ul></div></details>{% endif %}
+      </div>
+      <div class="bca-no-results" data-bca-no-results hidden><p>{{ 'bc_assortment.no_results_help' | t }}</p><button type="button" class="bca-button" data-bca-reset>{{ 'bc_assortment.show_all' | t }}</button></div>
+    </section>
+    {% if section.settings.seo_text != blank %}<section class="bca-about"><h2>{{ section.settings.seo_heading | escape }}</h2><div class="rte">{{ section.settings.seo_text }}</div></section>{% endif %}
+    <aside class="bca-advice"><div><h2>{{ section.settings.advice_heading | escape }}</h2><p>{{ section.settings.advice_text | escape }}</p></div><a class="bca-button" href="{{ section.settings.advice_link | default: pages.contact.url }}">{{ 'bc_assortment.ask_advice' | t }}<span aria-hidden="true">&rarr;</span></a></aside>
+  </div>
+</bc-assortment>
+{% schema %}
+{
+  "name":"Assortiment overzicht",
+  "settings":[
+    {"type":"link_list","id":"menu","label":"Categorieënmenu","default":"main-menu"},
+    {"type":"text","id":"heading","label":"Titel","default":"Ontdek ons assortiment"},
+    {"type":"text","id":"intro","label":"Introductie","default":"Alles voor jouw badkamer, overzichtelijk bij elkaar."},
+    {"type":"text","id":"categories_heading","label":"Categorieëntitel","default":"Waar ben je naar op zoek?"},
+    {"type":"text","id":"promotions_heading","label":"Merktitel","default":"Uitgelicht voor jouw badkamer"},
+    {"type":"text","id":"directory_heading","label":"Overzichtstitel","default":"Alle categorieën, per afdeling"},
+    {"type":"text","id":"seo_heading","label":"Informatietitel","default":"Vind wat past bij jouw badkamer"},
+    {"type":"richtext","id":"seo_text","label":"Informatietekst"},
+    {"type":"text","id":"advice_heading","label":"Adviestitel","default":"Hulp bij het kiezen?"},
+    {"type":"text","id":"advice_text","label":"Adviestekst","default":"We denken graag met je mee."},
+    {"type":"url","id":"advice_link","label":"Advieslink"}
+  ],
+  "blocks":[
+    {"type":"category","name":"Categoriebeeld","limit":20,"settings":[
+      {"type":"collection","id":"collection","label":"Categorie"},
+      {"type":"text","id":"title","label":"Korte titel"},
+      {"type":"text","id":"mobile_title","label":"Mobiele titel"},
+      {"type":"image_picker","id":"image","label":"Afbeelding"},
+      {"type":"text","id":"asset","label":"Standaard afbeeldingsbestand"},
+      {"type":"text","id":"supplement","label":"Aanvullende categoriehandles","info":"Scheid handles met |. Deze links komen onder Maak het compleet."}
+    ]},
+    {"type":"promotion","name":"Merkblok","limit":4,"settings":[
+      {"type":"text","id":"brand","label":"Merk"},
+      {"type":"text","id":"heading","label":"Titel"},
+      {"type":"text","id":"label","label":"Knoptekst"},
+      {"type":"url","id":"link","label":"Bestemming"},
+      {"type":"image_picker","id":"image","label":"Afbeelding"},
+      {"type":"text","id":"asset","label":"Standaard afbeeldingsbestand"},
+      {"type":"checkbox","id":"dark","label":"Witte tekst op donker beeld","default":false}
+    ]}
+  ],
+  "presets":[{"name":"Assortiment overzicht"}],
+  "enabled_on":{"templates":["list-collections"]}
+}
+{% endschema %}
