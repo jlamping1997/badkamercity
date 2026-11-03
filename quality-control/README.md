@@ -1,3 +1,9 @@
+# QC-09 — LVS1/2/3 uitgesloten, eerste400fotoselecties verwerkt
+
+3 november 2026. [Dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site) vervolgt vanaf N8100CH.24LVS-varianten overgeslagen zonder gegevens/Shopify te wijzigen. Eerste400gecontroleerde varianten:366met selectie/367beelden;34zonder selectie blijven open. Verwerkte importdata apart in export; originele kandidaatfoto's behouden. Vijf bestaande DRAFT-variantkoppelingen gecorrigeerd en drie niet-geselecteerde galerieverwijzingen losgekoppeld, eigen bestanden behouden. Geen nieuwe producten of publicatie. [Exacte scope en tests](LAGOO_400_APPLIED_2026-11-03.md).
+
+---
+
 # QC-08 — goede foto's selecteren, vaste kleur en twintigproductencheckpoint
 
 3 november 2026. Alleen goede foto's selecteren of deselecteren; niet-geselecteerd is geen afkeur. Kleur/SKU blijven sticky zichtbaar. Foto-keuzes direct opgeslagen; bij20/40/60producten eerst automatisch online checkpoint en dan verder. Na herladen automatisch hervatten vanaf nieuwste galeriecheckpoint. [Werkwijze en testgrenzen](LAGOO_SELECTION_2026-11-03.md). TypeScript/45API- en SQLite-contractgroepen PASS. Geen nieuwe browser/telefoon/hosted-visitorwrite-test. Geen Shopify-write of D1-schemamutatie.

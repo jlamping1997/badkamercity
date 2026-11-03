@@ -1,13 +1,13 @@
 {
   "project": "BadkamerCity Quality Control",
   "branch": "quality-control",
-  "updated_at": "2026-11-02",
-  "status": "PRIVATE_DEPLOYED_LAGOO_FAST_COLOUR_REVIEW",
+  "updated_at": "2026-11-03",
+  "status": "PRIVATE_DEPLOYED_LAGOO_FIRST400_APPLIED_LVS_EXCLUDED",
   "url": "https://badkamercity-quality.jason015.chatgpt.site",
   "site_project_id": "appgprj_6ae3d58930e48191b4dea11d39180671",
-  "site_source_commit": "e21a5308e2d4867fc702a0bd73d13b8ec7de6177",
-  "site_version": 7,
-  "live_shopify_writes": "QC06 none; QC05 copied own Files and replaced PDF links in five existing DRAFT trial descriptions",
+  "site_source_commit": "1b7fabbd6840ec8d2c91511fd1b8fc38776eea66",
+  "site_version": 10,
+  "live_shopify_writes": "Five DRAFT variant-photo links changed to approved selections; three unselected Nesso product-media references removed; files retained. No new products or publication.",
   "catalogue": {
     "products": 13475,
     "images": 50331,
@@ -28,8 +28,8 @@
   "tests": {
     "typecheck": "PASS",
     "build": "PASS",
-    "api_sqlite_groups": 43,
-    "hosted_catalogue_reads": "PASS_LAGOO_1796",
+    "api_sqlite_groups": 45,
+    "hosted_catalogue_reads": "Import and next SKU service-read checked separately",
     "hosted_unauthenticated_review_rejection": "PASS",
     "hosted_visitor_login": "NOT_TESTED_THIS_SESSION",
     "hosted_visitor_write": "NOT_TESTED_THIS_SESSION",
@@ -39,13 +39,14 @@
       390
     ],
     "hosted_catalogue_all_compact": "NOT_RETESTED_THIS_SESSION; Lagoo compact HTTP200 /1796 cards /max1 image",
-    "existing_data_readback": "24 returned review rows and one checkpoint identical before/after QC06; bounded native samples",
+    "existing_data_readback": "Entire authorised snapshot read with native cursors before apply; no production D1 writes or migrations",
     "same_auth_client": "PASS",
     "theme_reload": "NOT_RETESTED_THIS_SESSION; QC04 historical",
     "managed_browser": "NOT_TESTED_QC06; prior preview connection refused/error-tab policy, no infrastructure recovery observed",
-    "rendered_lagoo_fast_contracts": 6
+    "rendered_lagoo_fast_contracts": 6,
+    "data_integrity_groups": 6
   },
-  "next_action": "Owner reloads same private URL: compare large colour label with picture, Ja/Nee/Twijfel, Andere foto as needed.",
+  "next_action": "Owner reloads same private tool and continues at N8100CH; LVS1/2/3 skipped.",
   "photo_review": {
     "scope": "One main picture per original product plus one per Lagoo SKU; selectable candidate gallery",
     "cards": 12779,
@@ -87,5 +88,19 @@
     "shop": "fpa9hu-i3.myshopify.com",
     "all_files_ready": true
   },
-  "site_deployment_id": "appgdep_6ae897e9677c81918bd7fe9efee75b7f"
+  "site_deployment_id": "appgdep_6ae9a3a5712c81918b0638ebdd0bb148",
+  "applied_lagoo_photos": {
+    "checkpoint": 400,
+    "selected_variants": 366,
+    "selected_images": 367,
+    "no_selection": 34,
+    "excluded_articles": [
+      "LVS1",
+      "LVS2",
+      "LVS3"
+    ],
+    "excluded_variants": 24,
+    "next_sku": "N8100CH",
+    "full_product_import": false
+  }
 }
