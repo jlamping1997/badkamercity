@@ -1,5 +1,15 @@
 # BadkamerCity — actuele werkstatus
 
+## JEEO-03 — kleurbolletjes in uitvoering · 3 november 2026
+
+Expliciete eigenaarsopdracht: Hotbath-stijl kleurkeuze voor JEE-O op productpagina en productkaart. Huidige MAIN196052189450 blijft ongewijzigd. Nieuw UNPUBLISHED-concept196110090506 **BadkamerCity - JEE-O kleurkeuzes** is via themeDuplicate gemaakt; kopieerjob nog actief, daarom nog geen theme-filewrite. Alle1.356bronchecksums vooraf bewaard; vóór upload exacte pariteit vereisen.
+
+Code op bestaande branch `fix/product-cards-2026-10-14`: aparte JEE-O-adapter, bestaande V2-bediening/CSS hergebruikt, kaartkleurprecedentie gericht opgelost en15eigen SVG-afwerkingen. Theme Check revisie3:20/20files geldig, drie bestaande waarschuwingen. JavaScript syntax en15SVG's geldig. Geen browserbewijs vóór volledige kopie/upload.
+
+Goedgekeurde scope65groepen/228producten; SWMBAS71/2producten uitgesloten,43zonder kleurtegenhanger behouden. Eerste3Slimline-plafondarmgroepen (15/25/35cm),15producten/30metafields geschreven met compareDigest:null en exact teruggelezen. Overige62groepen/213producten nog niet geschreven. Privé vooropname/herstel bewaard. Alle273eerder verbeterde titels blijven staan. [Uitvoering en herstel](product-content/JEEO_COLOURS_2026-11-03.md).
+
+**Volgende JEE-O-actie:** voltooide conceptkopie op1356/1356checksums verifiëren, uitsluitend20featurefiles uploaden en de15proefproducten interactief testen vóór de overige koppelingen. Actieve schrijver: Codex connector/cloudsessie. Andere QC-/Lagoo- en historische themastatus hieronder behouden.
+
 ## QC-11 — uitsluitend officiële Lagoo-foto’s in import en proefproducten · 3 november 2026
 
 Op expliciete eigenaarsopdracht fabrikantgalerijen toegestaan in importv5, zonder terugval op Badkamervoorjou. 1.562 van1.772niet-beschermde varianten hebben fabrikantbeelden;210zonder gevonden fabrikantfoto. Productgalerij en vaste variantfoto gescheiden:612exacte artikel-/kleurkoppelingen. Het eerdere getal1.558 telde alleen kandidaatgalerijen; vier exacte varianten zonder kandidaatgalerij komen erbij. LVS1/2/3 ongewijzigd.
