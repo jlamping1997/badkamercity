@@ -1,5 +1,7 @@
 # BadkamerCity — instructies voor AI, Codex en ontwikkelaars
 
+> **Actuele bron sinds GIT-SYNC-01, 3 november 2026:** gebruik op de bestaande codebranch `shopify/current/` als themabron. Logische asset-/section-/snippetpaden in oude dossiers zijn relatief aan die map. De oude themamappen op repositoryniveau zijn historische bron; geen blind root-deploy. MAIN is bij de laatste controle196110090506. Eén beschermde API-bodyuitzondering: config/settings_data.json. Lees [de actuele broncontrole](docs/git-sync/2026-11-03/README.md) en behoud de .shopifyignore-guard. Main blijft documentatie-ingang; actuele code staat op fix/product-cards-2026-10-14.
+
 ## 1. Verplichte bronvolgorde
 
 Bij **elke** taak:

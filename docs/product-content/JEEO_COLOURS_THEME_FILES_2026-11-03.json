@@ -1,6 +1,6 @@
 {
   "recorded_at": "2026-11-03T12:06:45.570Z",
-  "status": "UNPUBLISHED_PUBLICATION_BLOCKED",
+  "status": "LIVE_CONFIRMED",
   "source_theme_id": "196052189450",
   "draft_theme_id": "196110090506",
   "code_checkpoint": "e249975fc43c1666a7e740254b4134de1226fcd2",
@@ -128,5 +128,10 @@
       "source_checksum_md5": "4377040586d06a1b694632411aa406a1",
       "draft_checksum_md5": "d86a718bef90e8c979258df3d2d92693"
     }
-  ]
+  ],
+  "published_theme_id": "196110090506",
+  "theme_role": "MAIN",
+  "role_checked_at": "2026-11-03T12:28:54.707Z",
+  "current_source_path": "shopify/current",
+  "all_24_feature_checksums_unchanged": true
 }
