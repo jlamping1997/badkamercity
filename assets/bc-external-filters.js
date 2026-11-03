@@ -345,7 +345,7 @@
         try {
           const asset = new URL(imageUrl, location.origin);
           if ((asset.origin === location.origin || asset.hostname === 'cdn.shopify.com') &&
-              /^https?:$/.test(asset.protocol) && /\/bc-wiesbaden-swatch-[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/.test(asset.pathname)) {
+              /^https?:$/.test(asset.protocol) && /\/bc-(?:wiesbaden|jeeo)-swatch-[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/.test(asset.pathname)) {
             return `url("${asset.href}") center / cover`;
           }
         } catch (_) { /* Keep the named-color fallback. */ }
@@ -508,6 +508,7 @@
       for (const separator of [' – ', ' - ']) {
         if (color && title.toLowerCase().endsWith(separator+color.toLowerCase())) title = title.slice(0,-color.length-separator.length).trim();
       }
+      if (vendor === 'JEE-O' && color && title.toLowerCase().endsWith(' '+color.toLowerCase())) title = title.slice(0,-color.length-1).trim();
       return title;
     }
 
@@ -678,7 +679,7 @@
         const label=model.allColorsLabel ? model.allColorsLabel.replace('__COUNT__',String(model.options.length)) : `${uiText('labelMore','Toon meer')} (${hidden})`;
         more=`<a class="bc-card-color-more" data-bc-card-more-colors href="${attr(url.pathname+url.search+url.hash)}" aria-label="${attr(label)}" title="${attr(label)}">+${hidden}</a>`;
       }
-      row.innerHTML=visible.map(option=>`<button type="button" class="bc-card-swatch" data-bc-card-color="${attr(option.handle)}" aria-label="${attr(option.color)}" title="${attr(option.color)}" aria-pressed="${option.handle===selected}" style="--bc-swatch:${attr(swatch(option.color, model.colorGroup?.startsWith('wiesbaden-colors-') ? option.swatch_url : ''))}"><span class="visually-hidden">${escapeHtml(option.color)}</span></button>`).join('')+more;
+      row.innerHTML=visible.map(option=>`<button type="button" class="bc-card-swatch" data-bc-card-color="${attr(option.handle)}" aria-label="${attr(option.color)}" title="${attr(option.color)}" aria-pressed="${option.handle===selected}" style="--bc-swatch:${attr(swatch(option.color, /^(wiesbaden|jeeo)-colors-/.test(model.colorGroup || '') ? option.swatch_url : ''))}"><span class="visually-hidden">${escapeHtml(option.color)}</span></button>`).join('')+more;
     }
 
     let colorResizeFrame;
