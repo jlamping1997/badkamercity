@@ -1,0 +1,5 @@
+# QC-07 — alle foto's per Lagoo-SKU
+
+Dezelfde privétool toont producttitel, exacte kleur en alle kandidaatfoto's per SKU. Elke foto krijgt onafhankelijk Goed/Niet goed/Twijfel via zijn bestaande per-SKU afbeelding-ID, bestaande eigenaargebonden D1 API, revisiecontrole en idempotente retry. Meerdere goede foto's per SKU mogelijk. Productwissel alleen met Vorig/Volgend product; gedeeltelijke beoordelingen blijven staan. Bestaande hoofdafbeeldingskeuzes worden niet naar alle kandidaten doorgegeven. Foto-goedkeuring in deze galerie kiest geen hoofdfoto (main=unknown). Shopify en schema blijven ongewijzigd. Uitgebreid behoudt bestaande controles. Geen beoordelingen of catalogus naar publieke Git.
+
+TypeScript,30bestaandeAPI/SQLite-groepen en14Lagoo-groepen PASS; nieuwe SQLite-case bewijst Goed/Niet goed voor twee afzonderlijke foto's van dezelfde SKU. Browser/telefoon niet getest; eerdere previewinfrastructuurblokkade blijft. Na herladen start de galerie op het eerste product; reeds opgeslagen foto-oordelen worden opnieuw getoond. Nog geen afzonderlijk galeriecheckpoint. Eigenaar controleert een SKU met meerdere foto’s en gaat daarna naar Volgend product.
