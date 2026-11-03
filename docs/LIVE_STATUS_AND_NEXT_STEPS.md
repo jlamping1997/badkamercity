@@ -1,5 +1,9 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-07 — Lagoo-galerie per SKU · 3 november 2026
+
+Dezelfde privétool toont producttitel, kleur en alle kandidaatfoto’s; per foto Goed/Niet goed/Twijfel. Meerdere goede foto’s per variant, productwissel handmatig. Individuele foto-oordelen via bestaande D1-review-API, geen automatische hoofdfotokeuze/Shopify-write. TypeScript/build en44API/SQLite/Lagoo-contractgroepen PASS, inclusief twee onafhankelijke oordelen binnen één SKU. Browser/telefoon niet getest. Sites-bron71e835d774cdca06467f685e9286ed0fc0c8feb8, deployment appgdep_6ae98b7954fc8191b5ce72dfe703f0a0 succeeded. [Werkwijze](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_GALLERY_2026-11-03.md). Eigenaar herlaadt privétool en beoordeelt foto’s per kleurvariant. Bij herladen start galerie op eerste product; bevestigde oordelen blijven zichtbaar.
+
 ## QC-06 — Lagoo: directe kleurcontrole · 2 november 2026
 
 Dezelfde privétool opent nu standaard alleen Lagoo: kleur uit titel groot boven één foto, Ja/Nee/Twijfel en automatisch volgende SKU na bevestigde opslag. Andere foto wisselt kandidaat direct. Geen ronde-start of algemene merk-/PDF-menu's in de eenvoudige weergave; Uitgebreid behoudt de bestaande QC en voortgang. [Actuele werkwijze op quality-control](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_FAST_REVIEW_2026-11-02.md).
