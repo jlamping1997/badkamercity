@@ -2,6 +2,7 @@
 Renders the explicitly linked finishes of the same JEE-O model.
 @param {product} product - The current product.
 @param {section} section - The containing section.
+@param {string} [mode] - Use card for native colour links without JavaScript.
 {% enddoc %}
 {%- liquid
   assign color_products = product.metafields.custom.color_variants.value
@@ -17,6 +18,7 @@ Renders the explicitly linked finishes of the same JEE-O model.
   assign includes_current = false
   assign seen_colors = '|'
   assign duplicate_color = false
+  assign native_links = ''
   capture product_json
     for color_product in color_products
       assign linked_anchor = color_product.metafields.custom.color_variants.value | first
@@ -42,6 +44,24 @@ Renders the explicitly linked finishes of the same JEE-O model.
         capture color_image
           render 'bc-jeeo-swatch-url', color: color_name
         endcapture
+        if mode == 'card'
+          capture native_link
+            echo '<a class="bc-jeeo-card-swatch" href="'
+            echo color_product.url | escape
+            echo '" aria-label="'
+            echo color_name | escape
+            echo '" title="'
+            echo color_name | escape
+            echo '"'
+            if color_product.id == product.id
+              echo ' aria-current="true"'
+            endif
+            echo '><img src="'
+            echo color_image | strip | escape
+            echo '" alt="" width="28" height="28" loading="lazy"></a>'
+          endcapture
+          assign native_links = native_links | append: native_link
+        endif
         echo '{"handle":'
         echo color_product.handle | json
         echo ',"url":'
@@ -60,6 +80,10 @@ Renders the explicitly linked finishes of the same JEE-O model.
   endcapture
 -%}
 {%- if product.vendor == 'JEE-O' and color_group != blank and valid_count > 1 and includes_current and duplicate_color == false -%}
+  {%- if mode == 'card' -%}
+    {{ 'bc-jeeo-card-colors.css' | asset_url | stylesheet_tag }}
+    <div class="bc-jeeo-card-colors" role="group" aria-label="{{ color_label | escape }}">{{ native_links }}</div>
+  {%- else -%}
   {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
   {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
   <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
@@ -77,4 +101,5 @@ Renders the explicitly linked finishes of the same JEE-O model.
     </script>
   </div>
   <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
 {%- endif -%}
