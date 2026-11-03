@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-12 — Lagoo geïmporteerd als concept · 3 november 2026
+
+Op expliciete opdracht208groepen/1772varianten geïmporteerd:202nieuweDRAFT-groepen,6bestaandeproefgroepenopbestaandeIDbijgewerkt. Alle208groepen direct vergeleken en finale vendorinventaris208uniekehandles/alleDRAFT/publishedAtnull.105bestaandevariant-ID’s behouden; prijzen, opties, SKU’s en fotorelaties gecontroleerd.151groepenmetfabrikantfoto’s,57zonder;1764galerijreferenties/1763uniekefabrikantbestandenREADY,612exactevariantfoto’s.156seriewaarden geverifieerd,390PDF-linksnaar eigenopslag. LVS1/2/3 uitgesloten.
+
+Geen publicatie/thema-/voorraadhoeveelheid-/review-/D1-mutatie; MAINvóór/na196052189450. Browser/telefoon/checkout niet getest. Volledige input/before/readbacks/importverslag uitsluitend privé in bijgewerkte fabrikantwerkset; nieuwe producten blijven concept tot gegevens en verkoopprijzen zijn gecontroleerd. [Scope, bewijs en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_IMPORT_EXECUTED_2026-11-03.md).
+
+**Volgende Lagoo-stap:** eigenaar bekijkt de concepten en vult alleen de ontbrekende fabrikantbeelden/technische gegevens aan vóór gerichte publicatie. Import afgerond; geen actieve Lagoo-schrijver.
+
 ## JEEO-03 — kleurbolletjes in uitvoering · 3 november 2026
 
 Expliciete eigenaarsopdracht: Hotbath-stijl kleurkeuze voor JEE-O op productpagina en productkaart. Huidige MAIN196052189450 blijft ongewijzigd. Nieuw UNPUBLISHED-concept196110090506 **BadkamerCity - JEE-O kleurkeuzes** is via themeDuplicate gemaakt; kopieerjob nog actief, daarom nog geen theme-filewrite. Alle1.356bronchecksums vooraf bewaard; vóór upload exacte pariteit vereisen.
