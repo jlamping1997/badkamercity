@@ -8,4 +8,6 @@ fs.writeFileSync('data/lagoo-runtime.json',JSON.stringify(catalogue));
 // Vinext shares output paths across build stages; stale hashed chunks must not enter a new Worker.
 fs.rmSync('dist',{recursive:true,force:true});
 const result=spawnSync(process.execPath,['scripts/run-framework.mjs','build'],{stdio:'inherit'});
-process.exit(result.status??1);
+if(result.status!==0)process.exit(result.status??1);
+const prune=spawnSync(process.execPath,['scripts/prune-build-chunks.mjs'],{stdio:'inherit'});
+process.exit(prune.status??1);

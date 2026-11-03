@@ -6,3 +6,13 @@ export function applyOfficialSource(catalogue:QCCatalogue,source:OfficialIndex):
  const old=new Set(catalogue.items.map(i=>i.key));const added=products.flatMap(p=>p.images.filter(i=>!old.has(i.key)).map(i=>({key:i.key,kind:'image'})));
  return {...catalogue,products,items:[...catalogue.items,...added]};
 }
+
+// Manufacturer galleries are accepted by the owner. Colour-specific associations require exact evidence.
+export function officialImportProducts(products:QCProduct[],source:OfficialIndex){
+ return products.filter(p=>p.vendor==='Lagoo'&&p.quality?.official&&source.variants[p.key]).map(p=>{
+  const row=source.variants[p.key];
+  const ids=[...new Set([...row.imageIds,...((row as {galleryImageIds?:string[]}).galleryImageIds||[])])];
+  const images:QCImage[]=ids.map(id=>source.assets[id]).filter(a=>a?.kind==='IMAGE'&&a.url&&a.fileId).map((a,i)=>({key:'image:lagoo-official:'+p.skus[0]+':'+a.id,url:a.url,sourceUrl:a.sourceUrl,alt:'Lagoo '+p.skus[0]+' · '+a.title,width:a.width,height:a.height,position:i+1,mediaId:a.fileId}));
+  return {...p,images,variantImages:row.photoEvidence==='exact_code'?p.images:[],photoImportReady:images.length>0,variantPhotoMatched:row.photoEvidence==='exact_code',photoSource:'lagoo.nl',photoPolicy:'manufacturer_gallery_only',photoGap:images.length?'':'Geen fabrikantfoto gevonden; geen oude bronfoto gebruiken'};
+ });
+}
