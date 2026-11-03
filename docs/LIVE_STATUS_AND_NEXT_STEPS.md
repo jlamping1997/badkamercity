@@ -1,5 +1,15 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-15 — fotogalerijprobleem vastgesteld; LVS-foto’s voorbereid · 3 november 2026
+
+Eigenaar constateert dat kraangalerijen te veel modellen/kleuren bevatten. Bevestigd: de QC-11-fabrikantgalerijen zijn te breed samengevoegd; bronherkomst/READY en eerdere API-verificaties bewijzen geen juiste klantgalerij per gekozenkleur/model. De208publicaties uitQC-14 blijven uitgevoerd, maar de galerijpresentatie is nog niet hersteld. Geen nieuwe brede fotovervanging uitvoeren. Eerst één model/kleur aantoonbaar correct maken en bestaande gegevens behouden.
+
+G1104 gebruikt publiek een VulpStudio3D/AR-viewer met één3D-model en materiaalpalet ch/bn/mb/tc/bb/bk/gm/pg; kleurbolletjes daar leveren niet automatisch acht losse2D-foto’s. Geen AR in Badkamercity ingebouwd. Advies: eerst correcte2D-variantfoto’s; externe viewerintegratie later afzonderlijk toetsen.
+
+Nieuwe eigenaarsopdracht omvat LVS1/2/3-foto’s.20fabrikantkleurbeelden voorbereid:7LVS1/5LVS2/8LVS3, éénbeeldperkleur;4exacte fabrikantcodekoppelingen en16sterke beeldidentiteiten met eerder door eigenaar geaccepteerde LVS-foto’s metkleurcode (genormaliseerdeRMSEmax0,602/255, duidelijkeafstandtotanderekleuren). Legacybestanden uitsluitend referentie, alle nieuwe beeldURL’s eigen fabrikantkopieën. Extra/niet-gematchte beelden niet alskleurfoto opgenomen. Ontbreekt:LVS1PG,LVS2CH,LVS2TC,LVS2PG; geenanderekleurfallback.
+
+LiveShopify-zoekopdracht vendorLagoo+LVS1*/LVS2*/LVS3* gaf0producten. Alleenfoto’s/CSV/bronbewijzenaangevuld in privéfabrikantwerkset, inclusief20echteJPG’s. Productimportbescherming blijft; geen drie nieuwe producten/prijzen/publicatie, geen themamutatie of QC-reviewwijziging. VolgendeLagoo-stap: G1104-fotokoppeling en zichtbare galerij per uitvoering corrigeren op bewezen bronnen; LVS-productimport eventueel gericht uitvoeren met de vier open fotogaten zichtbaar.
+
 ## GIT-SYNC-01 — actuele themabron en JEE-O-publicatie bevestigd · 3 november 2026
 
 Shopify MAIN is inmiddels **196110090506 — BadkamerCity - JEE-O kleurkeuzes**; vorig MAIN196052189450 is UNPUBLISHED. De24JEE-O-codefiles stonden al exact in Git en zijn ongewijzigd live aangetroffen. Eerdere PUBLICATION_BLOCKED-status hieronder is hiermee historisch; deze Git-taak heeft zelf niet gepubliceerd.
