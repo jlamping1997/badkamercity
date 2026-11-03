@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## JEEO-01 — 273 klantvriendelijke producttitels afgerond · 3 november 2026
+
+Op expliciete eigenaarsopdracht alle273JEE-O-producttitels aangepast naar natuurlijke namen, bijvoorbeeld **JEE-O flow hoge wastafelkraan Geborsteld RVS**. Merk/serie/product/afwerking; geen lange technische omschrijvingen. Maat behouden waar uitvoeringen anders niet herkenbaar zijn. Korte/lange Soho-uitlopen apart; nul dubbele nieuwe titels.
+
+Drie proefproducten + vijf groepen van50 + één van20 vooraf gecontroleerd en exact teruggelezen. Volledige eindinventaris273/273titels exact; nul onverwachte wijzigingen in vergeleken overige velden, waaronder URL/handle, omschrijving, status, opties en varianten met SKU/prijs. Drie oorspronkelijke openbare URL's HTTP200 met juiste nieuweH1. Geen theme-write/publicatie, keuzemenu-, SEO-, metafield- of mediabatch. Voor/na-overzicht en herstelgegevens privé bewaard; geen actieve JEE-O-schrijver. [Scope, bewijs en herstel](product-content/JEEO_TITLES_2026-11-03.md).
+
+**Volgende JEE-O-stap:** keuzemenu's per exacte modelfamilie uitwerken; eerst15Slimline-plafondarmen met lengte15/25/35cm en vijf afwerkingen. Huidige storefrontbron vóór implementatie controleren. Lagoo-QC en de bestaande themareview hieronder behouden hun eigen status.
+
 **31 oktober 2026 · NAV-03 / TILE-02 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Compact menu, startwaarde1m² en tegelinformatie staan in het gecontroleerde concept. Geen actieve schrijver na overdracht.
 
 ## Begin hier: actuele rollen en code
