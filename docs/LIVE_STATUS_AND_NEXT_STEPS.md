@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## LAGOO-16 — foto’s en echte productnavigatie; LVS later · 3 november 2026
+
+Nieuwe eigenaarsopdracht: eerst de te brede Lagoo-galerijen verwijderen en kleur-/uitvoeringsknoppen laten navigeren naar een eigen product met eigen URL, foto en prijs, zoals Hotbath. Huidige import groepeert meerdere modellen/kleuren als varianten; gewone variantkeuze levert geen apart product op. Eerst bron-/Hotbath-contract en één proefgroep verifiëren, daarna gecontroleerd uitrollen. LVS1/LVS2/LVS3 nu ongemoeid laten.
+
+**To-do voor later, na fotocorrectie:** LVS1/LVS2/LVS3 als zelf samen te stellen sets opbouwen, naar het voorbeeld van Hotbath IBS70. Minimaal keuzes voor type handdouche en met/zonder glijstang; overige setopties, passende onderdelen, prijzen en productrelaties eerst controleren. De20beschikbare LVS-foto’s en4ontbrekende uitvoeringen blijven voorbereid in privéwerkset. Geen LVS-producten/configurator nu aanmaken.
+
+Actieve prioriteit: Lagoo-foto’s en productnavigatie. Geen live theme-write/publicatie; benodigde theme-aanpassing via gecontroleerd UNPUBLISHED-concept. Andere merken behouden.
+
 ## QC-15 — fotogalerijprobleem vastgesteld; LVS-foto’s voorbereid · 3 november 2026
 
 Eigenaar constateert dat kraangalerijen te veel modellen/kleuren bevatten. Bevestigd: de QC-11-fabrikantgalerijen zijn te breed samengevoegd; bronherkomst/READY en eerdere API-verificaties bewijzen geen juiste klantgalerij per gekozenkleur/model. De208publicaties uitQC-14 blijven uitgevoerd, maar de galerijpresentatie is nog niet hersteld. Geen nieuwe brede fotovervanging uitvoeren. Eerst één model/kleur aantoonbaar correct maken en bestaande gegevens behouden.
