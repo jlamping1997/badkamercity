@@ -1,0 +1,13 @@
+# QC-12 — Lagoo conceptimport uitgevoerd · 3 november 2026
+
+Op expliciete opdracht “Oke importeer het” de bijgewerkte fabrikantwerkset geïmporteerd in Badkamercity. 208productgroepen/1772varianten:202nieuweDRAFT-groepen en6bestaande proefgroepen bijgewerkt op hun bestaande product-/variant-ID’s. PROEF-titelprefix verwijderd volgens het goedgekeurde importbestand. LVS1/LVS2/LVS3 uitgesloten. Geen productpublicatie of themamutatie; MAIN vóór/na196052189450.
+
+Alle208groepen direct na iedere productSet teruggelezen en vergeleken op titel/handle/type/status/publicatie, volledigeSKU-dekking, prijzen/vergelijkprijzen, belasting, opties/optiewaarden, galerij-ID’s, vaste variantfoto’s en nieuwe inventarisinstellingen. Alle105bestaandevariant-ID’s behouden. Finale onafhankelijke vendorinventaris208uniekehandles, alleDRAFT/publishedAtnull. 1772uniekeSKU’s, geen duplicaatgroepen.
+
+151groepen met fabrikantbeelden,57zonder gevonden fabrikantfoto;1764galerijreferenties/1763unieke eigen fabrikantbestanden, alleREADY. Geen terugval op oude winkelbronfoto’s.612exacte variantfotokoppelingen; algemene fabrikantgalerijen krijgen geen onbewezen vaste kleurkoppeling.156seriewaarden getoetst aan de bestaande custom.serie-definitie;151nieuwewaarden geschreven,5bestaandegelijkbehouden.390PDF-verwijzingen naar eigen opslag omgezet; alle omschrijvingen teruggelezen met alleen whitespace-normalisatie tussen HTML-tags. Prijzen uit de goedgekeurde werkkopie; geen nieuwe fabrikantprijsbevestiging of volledige publicatievrijgave.
+
+Vooraf lege/ontbrekende variantoptienamen uit herhaaldeCSV-rijen correct van groepsopties overgenomen; eerste afgewezen pilot leverde geen product op. Daarna drie nieuwe/bestaande/beeldloze pilotvormen en de volledige reeks met read-after-write uitgevoerd. ProductSet gebruikt bestaandefile-ID’s en maakt geen dubbele bestandskopieën. Geen review-/checkpoint-/D1-mutatie. Browser/telefoon/checkout niet getest. Geen Windowscontrole geclaimd.
+
+Volledige uitvoerinput, before-snapshot van6bestaande groepen, alle208readbacks, eindinventaris, foto-uitzonderingen en herstelverslag privé in de bijgewerkte fabrikantwerkset. PubliekeGit bevat uitsluitend dit scope-/bewijsdossier. Herstel: nieuwe202concepten uitsluitend op expliciete opdracht archiveren/verwijderen;6bestaande groepen herstellen vanuit de privébefore-snapshot, geen generieke bulkdelete. Bestaande bronbestanden behouden.
+
+**Volgende Lagoo-actie:** eigenaar bekijkt de geïmporteerde concepten, werkt de ontbrekende fabrikantbeelden/technische gegevens en verkoopprijzen af en geeft daarna gericht producten vrij voor publicatie. Geen actieve importschrijver na oplevering.
