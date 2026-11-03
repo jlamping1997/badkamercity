@@ -2,6 +2,8 @@
 
 Status: **CURRENT_SOURCE_CAPTURED / JEEO_LIVE_CONFIRMED / ONE_PROTECTED_API_EXCEPTION**.
 
+Broncodecheckpoint: **d4cc4bcf360d1f91d5a6ab8270a0ad7a188f0434**. De volledige sourcecommit is opnieuw uit Git opgehaald;1366/1366bronfiles exact gelijk aan de gecontroleerde capture, nul ontbrekende paden. [Git-verificatie](git-verification.json).
+
 ## Resultaat
 
 Actuele Shopify MAIN **196110090506 — BadkamerCity - JEE-O kleurkeuzes**. Vorig MAIN196052189450 is nu UNPUBLISHED. Alle24JEE-O-featurefiles stonden al exact op de codebranch en zijn ongewijzigd in live aangetroffen. De eerdere themapublicatieblokkade is historische uitvoeringsstatus; deze Git-taak heeft niets gepubliceerd.
