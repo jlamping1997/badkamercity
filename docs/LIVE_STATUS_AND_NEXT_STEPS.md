@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-09 — eerste400Lagoo-fotoselecties verwerkt, LVS1/2/3 overgeslagen · 3 november 2026
+
+Checkpoint400 bevestigd: vervolg N8100CH.24LVS1/2/3varianten uitgesloten van galerie, brondata/Shopify daarvoor ongemoeid.400bekeken varianten verwerkt in private importwerkkopie:366met selectie/367beelden,34zonder keuze blijven open. Alle oorspronkelijke kandidaten, specificaties, prijzen, opties en eigen PDF's behouden. Export bevat approvedLagooImport. Geen automatische goedkeuring/afkeur of D1-reset.
+
+Actuele Shopifyinventaris6DRAFT-proefgroepen; binnen eerste400bestaan3groepen/25varianten. Vijf Nesso-variantkoppelingen gecorrigeerd en drie niet-geselecteerde productgalerijreferenties verwijderd; eigen bestanden behouden. Alle25koppelingen en drie galerijen exact teruggelezen; geen nieuwe producten/publicatie. De overige30groepen zijn alleen voorbereid in importdata, niet geïmporteerd. [Scope/rollback/testgrenzen](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_400_APPLIED_2026-11-03.md).
+
+Sites-versie10 succeeded, bron1b7fabbd6840ec8d2c91511fd1b8fc38776eea66, deployment appgdep_6ae9a3a5712c81918b0638ebdd0bb148. TypeScript/build/45API-SQLite-Lagoo-groepen+6selectie-integriteitstests PASS. Authclient/toegangsbeleid gelijk. Browser/telefoon/hosted visitor-write niet getest. Reviews/checkpoints/volledige catalogus/receipt uitsluitend privé. Eigenaar herlaadt de bestaande privétool en vervolgt met N8100CH.
+
 ## QC-08 — alleen goede foto's, vaste kleur, checkpoints per20 · 3 november 2026
 
 Galerie toont één selecteerknop per foto, geen fout-/twijfelactie. Deselecteren=unchecked; niet geselecteerd is geen afkeur. Kleur/SKU blijven sticky bovenaan. Foto-oordelen direct opgeslagen; bij20/40/60etc en laatste groep eerst online checkpoint, dan volgende product. Herladen hervat op nextSku van laatste galeriecheckpoint; tussentijdse bevestigde selecties blijven behouden. Zelfde eigenaargebonden API/schema, geen Shopify-write. TypeScript/build/45API-SQLite-Lagoo-groepen PASS. Browser/telefoon/hosted visitor-write niet getest. Versie9 succeeded, bron c5a4ee8dea2043da36db698505cb19bfc06893a2, deployment appgdep_6ae98d0bef948191831ff2ad92f3b432. Authclient/toegangsbeleid identiek. [Dossier](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_SELECTION_2026-11-03.md). Eigenaar herlaadt en controleert selectie/hervatten na20producten.
