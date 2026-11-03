@@ -71,19 +71,6 @@
     }
   }
 
-  .bc-header-quote { display:flex; align-items:center; gap:10px; min-height:46px; padding:10px 14px; background:#8fd4ef; color:#102b40; text-decoration:none; border:1px solid #8fd4ef; line-height:1.25; flex-shrink:0; }
-  .bc-header-quote:hover { background:#b5e4f5; color:#102b40; }
-  .bc-header-quote:focus-visible { outline:3px solid #fff; outline-offset:3px; }
-  .bc-header-quote svg { width:21px; height:21px; flex-shrink:0; }
-  .bc-header-quote__copy { display:flex; flex-direction:column; gap:3px; }
-  .bc-header-quote strong { font-size:14px; font-weight:700; }
-  .bc-header-quote small { font-size:11px; }
-  @media screen and (min-width:990px) {
-    .bc-header__inner:has(.bc-header-quote) { --bc-header-side-min:33rem; }
-    .bc-header__inner:has(.bc-header-quote) .header__icons { flex-wrap:wrap; justify-content:flex-end; max-width:100%; }
-    .bc-header__inner:has(.bc-header-quote) .bc-header-quote { flex-basis:100%; justify-content:center; }
-    .bc-header:has(.bc-header-quote) .header__heading-logo-wrapper { max-width:100%; }
-  }
   @media screen and (max-width:989px) {
     .bc-header-quote--desktop { display:none; }
   }

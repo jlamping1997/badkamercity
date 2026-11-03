@@ -8,6 +8,7 @@ Renders explicit Lagoo product destinations through the shared product switcher.
   assign choice_group = choice_data.groups | first
   assign includes_current = false
   assign valid_destinations = true
+  capture color_products_json
   for choice in choice_group.products
     assign expected_url = choice.handle | prepend: '/products/'
     if choice.url != expected_url or choice.handle == blank
@@ -16,17 +17,43 @@ Renders explicit Lagoo product destinations through the shared product switcher.
     if choice.handle == product.handle
       assign includes_current = true
     endif
+    assign swatch_color = choice.options.kleur
+    capture swatch_url
+      render 'bc-lagoo-swatch-url', color: swatch_color
+    endcapture
+    unless forloop.first
+      echo ','
+    endunless
+    echo '{"handle":'
+    echo choice.handle | json
+    echo ',"url":'
+    echo choice.url | json
+    echo ',"title":'
+    echo choice.title | json
+    echo ',"sort_order":'
+    echo choice.sort_order | json
+    echo ',"options":'
+    echo choice.options | json
+    echo ',"swatch_url":'
+    echo swatch_url | strip | json
+    echo '}'
   endfor
+  endcapture
 -%}
 {%- if product.vendor == 'Lagoo' and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 -%}
+  {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
+  {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
   <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
+    data-bc-compact-colors="true"
     data-bc-preserve-position="true"
     data-switch-group="{{ choice_group.id | escape }}"
     data-product-handle="{{ product.handle | escape }}"
     data-product-url="{{ product.url | escape }}"
     data-section-id="{{ section.id | escape }}"
+    data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}"
+    data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}"
   >
-    <script type="application/json" data-bc-switcher-inline>{{ choice_data | json | replace: '</', '<\/' }}</script>
+    <script type="application/json" data-bc-switcher-inline>{"groups":[{"id":{{ choice_group.id | json | replace: '</', '<\/' }},"menus":{{ choice_group.menus | json | replace: '</', '<\/' }},"products":[{{ color_products_json | replace: '</', '<\/' }}]}]}</script>
     <noscript>
       <ul>
         {%- for choice in choice_group.products -%}

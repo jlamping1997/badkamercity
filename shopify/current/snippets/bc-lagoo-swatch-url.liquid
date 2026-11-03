@@ -1,0 +1,25 @@
+{% doc %}
+Returns an illustrative finish asset for a Lagoo color label.
+@param {string} color - The product's own color name.
+{% enddoc %}
+{%- liquid
+  assign finish = color | strip | downcase | remove: ' pvd'
+  case finish
+    when 'chroom'
+      echo 'bc-wiesbaden-swatch-chrome.svg' | asset_url
+    when 'geborsteld nikkel'
+      echo 'bc-wiesbaden-swatch-steel.svg' | asset_url
+    when 'mat zwart'
+      echo 'bc-wiesbaden-swatch-black.svg' | asset_url
+    when 'tuscany'
+      echo 'bc-lagoo-swatch-tuscany.svg' | asset_url
+    when 'geborsteld messing'
+      echo 'bc-wiesbaden-swatch-brass.svg' | asset_url
+    when 'geborsteld koper'
+      echo 'bc-wiesbaden-swatch-copper.svg' | asset_url
+    when 'geborsteld gunmetal'
+      echo 'bc-wiesbaden-swatch-gunmetal.svg' | asset_url
+    when 'geborsteld champagne'
+      echo 'bc-lagoo-swatch-champagne.svg' | asset_url
+  endcase
+-%}

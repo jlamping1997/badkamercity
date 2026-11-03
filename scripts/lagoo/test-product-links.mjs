@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
+import os from 'node:os';
+import path from 'node:path';
 
 const require = createRequire(new URL('../component-audit/package.json', import.meta.url));
 const { Window } = await import(require.resolve('happy-dom'));
@@ -24,12 +26,16 @@ for (const product of group.products) {
       window.eval(source);
       const root = window.document.createElement('div');
       Object.assign(root.dataset, { switchGroup: group.id, productHandle: product.handle,
-        productUrl: product.url, sectionId: 'lagoo-test' });
+        productUrl: product.url, sectionId: 'lagoo-test', bcCompactColors: 'true',
+        labelAllColors: 'Bekijk alle __COUNT__ kleuren', labelLessColors: 'Minder kleuren' });
       window.document.body.append(root);
       const instance = new window.TestSwitcher(root, data);
       const button = [...root.querySelectorAll('button[data-switch-field]')].find(b =>
         b.dataset.switchField === menu.key && b.dataset.switchValue === value);
       assert(button && !button.disabled);
+      assert.equal(root.querySelectorAll('.bc-hotbath-swatch:not([hidden])').length, 4);
+      assert.equal(root.querySelector('.bc-hotbath-swatch.is-active').hidden, false);
+      if (button.hidden) root.querySelector('.bc-hotbath-colors__toggle').click();
       button.click();
       assert.equal(window.location.pathname, expected[0].url);
       assert.equal(window.location.search, '');
@@ -45,9 +51,15 @@ for (const product of group.products) {
     }
   }
 }
-const liquid = new Liquid();
+const snippetRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'lagoo-liquid-'));
+fs.writeFileSync(path.join(snippetRoot, 'bc-lagoo-swatch-url.liquid'), fs.readFileSync(
+  new URL('../../shopify/current/snippets/bc-lagoo-swatch-url.liquid', import.meta.url), 'utf8')
+  .replace(/{% doc %}[\s\S]*?{% enddoc %}/, ''));
+const liquid = new Liquid({ root: snippetRoot, extname: '.liquid' });
 liquid.registerFilter('json', value => JSON.stringify(value));
 liquid.registerFilter('asset_url', value => '/assets/' + value);
+liquid.registerFilter('stylesheet_tag', value => '<link rel="stylesheet" href="' + value + '">');
+liquid.registerFilter('t', key => key);
 const snippet = fs.readFileSync(new URL('../../shopify/current/snippets/bc-lagoo-choices.liquid', import.meta.url), 'utf8')
   .replace(/{% doc %}[\s\S]*?{% enddoc %}/, '');
 const product = { vendor: 'Lagoo', handle: group.products[0].handle, url: group.products[0].url,
@@ -55,7 +67,16 @@ const product = { vendor: 'Lagoo', handle: group.products[0].handle, url: group.
 const rendered = await liquid.parseAndRender(snippet, { product, section: { id: 'test' } });
 assert(rendered.includes('data-bc-product-switcher-v2'));
 const inline = rendered.match(/<script type="application\/json" data-bc-switcher-inline>([\s\S]*?)<\/script>/);
-assert.deepEqual(JSON.parse(inline[1]), data);
+const renderedData = JSON.parse(inline[1]);
+assert.deepEqual({ groups: renderedData.groups.map(g => ({ ...g, products:
+  g.products.map(({ swatch_url, ...product }) => product) })) }, data);
+assert(rendered.includes('data-bc-compact-colors="true"'));
+assert(rendered.includes('bc-hotbath-swatches.css'));
+for (const choice of renderedData.groups[0].products) {
+  assert(choice.swatch_url.startsWith('/assets/'));
+  const asset = new URL('../../shopify/current' + choice.swatch_url, import.meta.url);
+  assert(fs.existsSync(asset));
+}
 for (const changed of [{ ...product, vendor: 'Hotbath' }, { ...product, variants: [{}, {}] },
   { ...product, handle: 'not-a-member' }]) {
   assert(!(await liquid.parseAndRender(snippet, { product: changed })).includes('data-bc-product-switcher-v2'));
@@ -64,4 +85,6 @@ const invalid = structuredClone(product);
 invalid.metafields.custom.lagoo_choices.value.groups[0].products[0].url = 'https://example.invalid/products/other';
 assert(!(await liquid.parseAndRender(snippet, { product: invalid })).includes('data-bc-product-switcher-v2'));
 console.log(JSON.stringify({ products: inputs.length, transitions, snippetRendering: 'PASS',
+  sharedHotbathSwatchesAndSelectedVisible: 'PASS', colorAssets: 'PASS',
   incorrectBrandMultipleVariantsUnknownProductInvalidUrl: 'PASS', actualBrowser: 'NOT_TESTED' }));
+fs.rmSync(snippetRoot, { recursive: true });

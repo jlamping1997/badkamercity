@@ -1,5 +1,17 @@
 # Lagoo — echte productlinks en begrensde foto's
 
+## LAGOO-17 — Hotbath-stijl en rustige offerteknop · 3 november 2026
+
+Eigenaar accepteert de productnavigatie en vraagt exact de Hotbath-keuzestijl met eigen Lagoo-opties. De Lagoo-adapter gebruikt nu dezelfde bestaande bc-hotbath-swatches.css en hetzelfde bc-product-switcher.js: vier kleurbolletjes, geselecteerde kleur zichtbaar, selectierand/vinkje en Bekijk alle 8 kleuren / +4. Hoogte blijft Regular/Medium/High. Bestaande compacte afbeeldingsregels worden hergebruikt; geen gedeelde Hotbath-code aangepast. Zes bestaande illustratieve afwerkingsassets hergebruikt, aparte illustratieve Tuscany/champagne-SVG's toegevoegd. Deze bolletjes zijn een kleuraanduiding, geen nieuwe fabrikantkleurmeting; echte productfoto's en productdata zijn ongewijzigd.
+
+De grote offertebalk is vervangen door hetzelfde icoon-/labelpatroon als Retour, Verlanglijst en Winkelwagen. Geen extra subtitel of blauw vlak. Laagsteprijsgarantie blijft als tooltip; bestaande bestemmingen en activeringsinstellingen behouden. Op mobiel blijft deze desktopactie verborgen. De huidige conceptbestemming is nog het bestaande offertevoorbeeld; geen nieuwe claim over werkende formulierontvangst.
+
+Alleen bestaand UNPUBLISHED196116087050 aangepast: header.liquid, bc-header-quote.liquid, bc-lagoo-choices.liquid, nieuwe bc-lagoo-swatch-url.liquid en twee nieuwe kleur-SVG's onder shopify/current/. Deze zes bestanden identiek teruggelezen. MAIN196110090506 en gedeelde Hotbath-CSS/JavaScript ongewijzigd geverifieerd. Producten, prijzen, foto's en publicatiestatus niet gemuteerd; LVS blijft later.
+
+**Tests:** ThemeCheck 6/6 PASS; bijgewerkte bestaande DOM-test 216/216 kleur-/hoogtewissels, vier zichtbare kleuren met selectie altijd zichtbaar, uitklappen voor verborgen keuzes, alle 24 renderbestemmingen met bestaande kleurasset, validatiegrenzen PASS. Echte Chrome-browser op 1363 CSS-pixels: nieuwe header zonder horizontale overloop, offerteactie transparant/compact; acht swatchafbeeldingen geladen. Uitklappen → koper High G1104BK (€570) → Medium G1102BK (€440), juiste URL, titel, selectie en foto; koper en uitgeklapte staat behouden. Desktop visueel gecontroleerd. Fysieke telefoon, aparte mobiele viewport, cart/checkout en offerteontvangst niet opnieuw getest. Geen browser-screenshots in publieke Git of Library opgeslagen.
+
+**Volgende handeling:** eigenaar bekijkt de bijgewerkte stijl in hetzelfde concept; daarna gecontroleerde Lagoo-uitrol voortzetten. Geen themapublicatie. Herstel: alleen deze zes conceptbestanden terugzetten vanaf de vorige codecommit; nieuwe helper/assets zo nodig ongebruikt laten. Oorspronkelijke LAGOO-16-proef en catalogusbrede fotocorrectie blijven hieronder afgebakend.
+
 3 november 2026 · LAGOO-16 · IMPLEMENTED_TEST_ONLY
 
 ## Scope
