@@ -1,5 +1,15 @@
 # BadkamerCity — actuele werkstatus
 
+## CONTENT-01 — plus- en aandachtspunten beoordeeld; niets toegepast · 3 november 2026
+
+**READ_ONLY_AUDIT / PROPOSALS_READY / NOT_APPLIED.** Op verzoek van de eigenaar de bestaande punten inhoudelijk beoordeeld. Volledige inventaris11.887ACTIVE producten/48pagina's;148verschillende veldteksten, waarvan67bij273JEE-O-producten.6.318producten hebben minstens één gevuld veld. Twee gecontroleerde JEE-O-lijsten overlappen woordelijk met BadkamerXXL; geen algemene herkomstclaim voor alle producten. Bij48JEE-O-waskommen staat geen overloop zowel bij plus als aandacht.
+
+Privéreview bevat alle148teksten met voorstel, reden en verificatievoorwaarde; standaardJEE-O-filter. Geen verplicht aantal punten; specificaties/setinhoud apart, geen stijl- of veiligheidsclaims verzinnen. Temperatuur, onderhoud, universele passing en ontbrekende eenheden eerst controleren. Sunshower heeft daarnaast een aparte configuratieroute buiten deze veldinventaris.
+
+**PASS:** inventaris/148van148beoordelingen en filterlogica67/148/81/18 plus lege zoekstatus; geen visuele browser-, telefoon- of checkouttest. Geen Shopify-product-/thema-/publicatiemutatie. Verse eindcontrole MAIN196110090506; Lagoo-concept196116087050 UNPUBLISHED. Bestaande Lagoo-code/status behouden. [Scope, broncontrole en overdracht](product-content/PROS_CONS_REVIEW_2026-11-03.md).
+
+**Exact één volgende handeling voor CONTENT-01:** Jackson beoordeelt de JEE-O-termvoorstellen. Daarna pas een kleine fabrikantbevestigde productgroep voorbereiden; geen automatische catalogusbrede vervanging. Geen actieve schrijver na overdracht.
+
 ## LAGOO-17 — Hotbath-keuzestijl en subtiele offerteactie in concept · 3 november 2026
 
 Eigenaar accepteert de productnavigatie en vraagt exact de Hotbath-stijl met eigen Lagoo-opties. Bestaand UNPUBLISHED **196116087050** aangepast: dezelfde Hotbath-CSS/JavaScript voor vier ronde kleurbolletjes, geselecteerde kleur altijd zichtbaar, selectierand/vinkje en Bekijk alle 8 kleuren / +4. Eigen Lagoo-kleurnamen en Regular/Medium/High behouden. Bestaande illustratieve afwerkingsassets hergebruikt, aparte illustratieve Tuscany/champagne-SVG's; echte productfoto's blijven ongewijzigd. De grote blauwe offertebalk is nu een rustig icoon met label bij Retour/Verlanglijst/Winkelwagen. Bestemming, instellingen en mobiele verberging blijven behouden; geen nieuwe formulierontvangsttest geclaimd.
