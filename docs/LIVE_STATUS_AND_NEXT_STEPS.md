@@ -1,5 +1,29 @@
 # BadkamerCity — actuele werkstatus
 
+## LAGOO-16 — proef met juiste foto's en echte productlinks klaar; uitrol nog open · 3 november 2026
+
+**LVS1/LVS2/LVS3 nu ongemoeid laten. To-do voor na de fotocorrectie:** zelf samen te stellen sets zoals Hotbath IBS70, met type handdouche en met/zonder glijstang. Andere setkeuzes, technische compatibiliteit, prijzen en productrelaties eerst controleren. De 20 beschikbare LVS-beelden en 4 fotogaten blijven in de privéwerkset. Geen nieuwe LVS-producten/configurator nu.
+
+De huidige Lagoo-import heeft 208 groepen / 1772 SKU-varianten en te brede gezamenlijke galerijen. Eigenaar wil aparte echte product-URL's zoals Hotbath. **Eerste concrete proef:** 24 nieuwe producten voor G1100/G1102/G1104, elk één SKU, één aantoonbaar bijbehorende eigen Lagoo-foto, actuele bestaande prijs/BTW/verzend-/trackingwaarden, artikelgerichte fabrikanttekst en bevestigde eigen PDF's. Status UNLISTED; alleen Webshop gepubliceerd en via directe link bereikbaar/koopbaar, buiten zoeken/collecties/aanbevelingen. Dezelfde SKU's bestaan tijdelijk ook nog in de oude groep. Geen catalogusbrede omzetting claimen: bestaande proefouder exact intact (ACTIVE / 24 varianten / 37 foto's); overige 207 groepen niet gemuteerd.
+
+UNPUBLISHED **196116087050 — BadkamerCity - Lagoo foto's en productkeuzes**, eerst volledig 1374/1374 checksums identiek aan verse MAIN **196110090506**. Nu 1375 conceptbestanden met exact twee bedoelde afwijkingen: main-product.liquid en nieuwe bc-lagoo-choices.liquid onder shopify/current/. De adapter gebruikt de bestaande Hotbath V2-navigatie met expliciete productbestemmingen; kleur/hoogte blijven bij wisselen behouden. Andere merken en gedeelde JavaScript/CSS niet gewijzigd. MAIN na afloop 1374/1374 checksums ongewijzigd, niet gepubliceerd.
+
+**Bewezen:** 24/24 Admin-readbacks op foto, SKU, prijs, opties, publicatie, tekst/PDF's en voorraad-/verzendinstellingen; 216/216 kleur-/hoogtewissels in bestaande echte JavaScript via Happy DOM; Liquid-rendering en grensgevallen PASS; 24/24 conceptpagina's HTTP200 met juiste inline navigatie en exact één juiste fabrikantfoto-ID. ThemeCheck PASS met twee bestaande main-product-waarschuwingen; git diff --check en Python compile PASS. **NOT_TESTED:** echte browser/mobiel/visuele eigenaarreview, cart/checkout, volledige migratie en SEO-/historische URL-afhandeling.
+
+Codecheckpoint **433ee10324a29fa755f9b4aff484ba57eb9a8f9a** op bestaande branch **fix/product-cards-2026-10-14**. [Proefpagina High/nikkel](https://badkamercity.nl/products/lagoo-g1104bn?preview_theme_id=196116087050) · [uitvoering en herstel](lagoo/2026-11-03/product-links/README.md). Volledige catalogus, oorspronkelijke 400 reviews en API-receipts niet publiek opgeslagen; privéfabrikantwerkset bijgewerkt naar versie 7 met fotobewijs en readbacks.
+
+**Exact één volgende handeling:** eigenaar beoordeelt deze 24 uitvoeringen in het concept; daarna de resterende groepen met bewezen foto-/kleurkoppelingen en behoudende ID-/URL-omzetting voorbereiden. Publiceren door eigenaar na controle, volgens de bestaande Git-werkwijze. Herstel: nieuwe proefproducten terug naar DRAFT / uitsluitend hun Webshop-publicatie ontkoppelen; oorspronkelijke groep intact. Geen actieve schrijver na overdracht.
+
+## QC-15 — fotogalerijprobleem vastgesteld; LVS-foto’s voorbereid · 3 november 2026
+
+Eigenaar constateert dat kraangalerijen te veel modellen/kleuren bevatten. Bevestigd: de QC-11-fabrikantgalerijen zijn te breed samengevoegd; bronherkomst/READY en eerdere API-verificaties bewijzen geen juiste klantgalerij per gekozenkleur/model. De208publicaties uitQC-14 blijven uitgevoerd, maar de galerijpresentatie is nog niet hersteld. Geen nieuwe brede fotovervanging uitvoeren. Eerst één model/kleur aantoonbaar correct maken en bestaande gegevens behouden.
+
+G1104 gebruikt publiek een VulpStudio3D/AR-viewer met één3D-model en materiaalpalet ch/bn/mb/tc/bb/bk/gm/pg; kleurbolletjes daar leveren niet automatisch acht losse2D-foto’s. Geen AR in Badkamercity ingebouwd. Advies: eerst correcte2D-variantfoto’s; externe viewerintegratie later afzonderlijk toetsen.
+
+Nieuwe eigenaarsopdracht omvat LVS1/2/3-foto’s.20fabrikantkleurbeelden voorbereid:7LVS1/5LVS2/8LVS3, éénbeeldperkleur;4exacte fabrikantcodekoppelingen en16sterke beeldidentiteiten met eerder door eigenaar geaccepteerde LVS-foto’s metkleurcode (genormaliseerdeRMSEmax0,602/255, duidelijkeafstandtotanderekleuren). Legacybestanden uitsluitend referentie, alle nieuwe beeldURL’s eigen fabrikantkopieën. Extra/niet-gematchte beelden niet alskleurfoto opgenomen. Ontbreekt:LVS1PG,LVS2CH,LVS2TC,LVS2PG; geenanderekleurfallback.
+
+LiveShopify-zoekopdracht vendorLagoo+LVS1*/LVS2*/LVS3* gaf0producten. Alleenfoto’s/CSV/bronbewijzenaangevuld in privéfabrikantwerkset, inclusief20echteJPG’s. Productimportbescherming blijft; geen drie nieuwe producten/prijzen/publicatie, geen themamutatie of QC-reviewwijziging. VolgendeLagoo-stap: G1104-fotokoppeling en zichtbare galerij per uitvoering corrigeren op bewezen bronnen; LVS-productimport eventueel gericht uitvoeren met de vier open fotogaten zichtbaar.
+
 ## GIT-SYNC-01 — actuele themabron en JEE-O-publicatie bevestigd · 3 november 2026
 
 Shopify MAIN is inmiddels **196110090506 — BadkamerCity - JEE-O kleurkeuzes**; vorig MAIN196052189450 is UNPUBLISHED. De24JEE-O-codefiles stonden al exact in Git en zijn ongewijzigd live aangetroffen. Eerdere PUBLICATION_BLOCKED-status hieronder is hiermee historisch; deze Git-taak heeft zelf niet gepubliceerd.
