@@ -773,6 +773,8 @@
                       {%- render 'bc-sunshower-choices', product: product, section: section -%}
                     {%- elsif product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank -%}
                       {%- render 'bc-jeeo-colors', product: product, section: section -%}
+                    {%- elsif product.vendor == 'Lagoo' and product.metafields.custom.lagoo_choices.value != blank -%}
+                      {%- render 'bc-lagoo-choices', product: product, section: section -%}
                     {%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants.value != blank -%}
                       {%- render 'bc-wiesbaden-colors', product: product, section: section -%}
                     {%- elsif current_switch_group != blank -%}

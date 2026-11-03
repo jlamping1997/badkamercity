@@ -1,0 +1,39 @@
+{% doc %}
+Renders explicit Lagoo product destinations through the shared product switcher.
+@param {product} product - The current single-SKU product.
+@param {section} section - The containing section.
+{% enddoc %}
+{%- liquid
+  assign choice_data = product.metafields.custom.lagoo_choices.value
+  assign choice_group = choice_data.groups | first
+  assign includes_current = false
+  assign valid_destinations = true
+  for choice in choice_group.products
+    assign expected_url = choice.handle | prepend: '/products/'
+    if choice.url != expected_url or choice.handle == blank
+      assign valid_destinations = false
+    endif
+    if choice.handle == product.handle
+      assign includes_current = true
+    endif
+  endfor
+-%}
+{%- if product.vendor == 'Lagoo' and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 -%}
+  <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
+    data-bc-preserve-position="true"
+    data-switch-group="{{ choice_group.id | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+  >
+    <script type="application/json" data-bc-switcher-inline>{{ choice_data | json | replace: '</', '<\/' }}</script>
+    <noscript>
+      <ul>
+        {%- for choice in choice_group.products -%}
+          <li><a href="{{ choice.url | escape }}"{% if choice.handle == product.handle %} aria-current="page"{% endif %}>{{ choice.title | escape }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </noscript>
+  </div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
