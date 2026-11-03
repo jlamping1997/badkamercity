@@ -54,6 +54,9 @@
   if card_manifest.format == 'verified-product-filters-v1' and manifest_sku == card_sku and card_sku != blank and card_manifest.values.kleur != blank
     assign card_color = card_manifest.values.kleur
   endif
+  if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank and product.metafields.custom.kleur.value != blank
+    assign card_color = product.metafields.custom.kleur.value
+  endif
   assign card_supplier_stock = product.metafields.custom.leverancier_voorraad.value
   assign card_supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
   assign card_delivery = 'bc_delivery.lead_time_on_request' | t
@@ -75,7 +78,7 @@
     assign card_can_add = true
   endif
 -%}
-{%- capture card_switcher -%}{%- if product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants != blank -%}{%- render 'bc-wiesbaden-colors', product: product, section: section -%}{%- elsif current_switch_group != blank -%}{%- render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url -%}{%- endif -%}{%- endcapture -%}
+{%- capture card_switcher -%}{%- if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank -%}{%- render 'bc-jeeo-colors', product: product, section: section -%}{%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants != blank -%}{%- render 'bc-wiesbaden-colors', product: product, section: section -%}{%- elsif current_switch_group != blank -%}{%- render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url -%}{%- endif -%}{%- endcapture -%}
 <script type="application/json" data-bc-card-data>{
 "id":{{ product.id | json }},
 "handle":{{ product.handle | json }},
