@@ -8,15 +8,17 @@ Geen publicatie/thema-/voorraadhoeveelheid-/review-/D1-mutatie; MAINvóór/na196
 
 **Volgende Lagoo-stap:** eigenaar bekijkt de concepten en vult alleen de ontbrekende fabrikantbeelden/technische gegevens aan vóór gerichte publicatie. Import afgerond; geen actieve Lagoo-schrijver.
 
-## JEEO-03 — kleurbolletjes in uitvoering · 3 november 2026
+## JEEO-03 — 228 kleurkoppelingen en kleurbolletjes in concept afgerond · 3 november 2026
 
-Expliciete eigenaarsopdracht: Hotbath-stijl kleurkeuze voor JEE-O op productpagina en productkaart. Huidige MAIN196052189450 blijft ongewijzigd. Nieuw UNPUBLISHED-concept196110090506 **BadkamerCity - JEE-O kleurkeuzes** is via themeDuplicate gemaakt; kopieerjob nog actief, daarom nog geen theme-filewrite. Alle1.356bronchecksums vooraf bewaard; vóór upload exacte pariteit vereisen.
+**VERIFIED_ADMIN / PREVIEW_VERIFIED_DESKTOP / PUBLICATION_BLOCKED.** Alle65goedgekeurde groepen/228producten hebben custom.color_variants en custom.kleur:456metafields met compareDigest:null, na iedere batch exact teruggelezen. SWMBAS71/2producten en43zonder kleurtegenhanger ongemoeid. Eindinventaris273/273: alle titels/handles, varianten inclusief SKU/prijs/voorraad en overige vergeleken velden gelijk; nul koppelafwijkingen.
 
-Code op bestaande branch `fix/product-cards-2026-10-14`: aparte JEE-O-adapter, bestaande V2-bediening/CSS hergebruikt, kaartkleurprecedentie gericht opgelost en15eigen SVG-afwerkingen. Theme Check revisie3:20/20files geldig, drie bestaande waarschuwingen. JavaScript syntax en15SVG's geldig. Geen browserbewijs vóór volledige kopie/upload.
+MAIN196052189450 ongewijzigd1356/1356. Nieuw concept **UNPUBLISHED196110090506 — BadkamerCity - JEE-O kleurkeuzes** begon met1356/1356exacte checksumpariteit; finaal1374files, exact6bestaande gewijzigd +18nieuwe, alle24featurechecksums correct. Codecheckpoint **e249975fc43c1666a7e740254b4134de1226fcd2** op bestaande branch fix/product-cards-2026-10-14. Alleen deze24paden gebruiken; Git-root is geen volledige actuele themasnapshot.
 
-Goedgekeurde scope65groepen/228producten; SWMBAS71/2producten uitgesloten,43zonder kleurtegenhanger behouden. Eerste3Slimline-plafondarmgroepen (15/25/35cm),15producten/30metafields geschreven met compareDigest:null en exact teruggelezen. Overige62groepen/213producten nog niet geschreven. Privé vooropname/herstel bewaard. Alle273eerder verbeterde titels blijven staan. [Uitvoering en herstel](product-content/JEEO_COLOURS_2026-11-03.md).
+Hotbath-stijl op PDP en externe kaarten; native zoek-/collectiekaarten krijgen dezelfde gevalideerde kleuren als links naar de exacte uitvoering, ook zonder JavaScript. Canonieke kaartkleur heeft alleen bij gekoppelde JEE-O voorrang. Echte desktopkleurwissels/foto/SKU/link, uitbreiding vijf kleuren en kaartprijs200→248PASS.29producten plus29kaartdataresponses gecontroleerd; native collectieHTTP200/16kleurrijen/88links. Theme Check20/20 +5/5files geldig; bestaande waarschuwingen behouden. Mobiele interactie/fysieke telefoon NIET_GETEST: lokale component-URL door browserbeleid geweigerd; geen omweg gebruikt. Zoekindex niet gewijzigd.
 
-**Volgende JEE-O-actie:** voltooide conceptkopie op1356/1356checksums verifiëren, uitsluitend20featurefiles uploaden en de15proefproducten interactief testen vóór de overige koppelingen. Actieve schrijver: Codex connector/cloudsessie. Andere QC-/Lagoo- en historische themastatus hieronder behouden.
+themePublish expliciet geweigerd door veiligheidsbeleid van Shopify-koppeling; geen andere publicatieroute gebruikt. Geen actieve schrijver na overdracht. Privé herstel-/controlebestand bijgewerkt. [Contract, tests en herstel](product-content/JEEO_COLOURS_2026-11-03.md) · [24featurepaden/hashes](product-content/JEEO_COLOURS_THEME_FILES_2026-11-03.json).
+
+**Exact één volgende JEE-O-handeling:** eigenaar opent bij Webshop→Thema’s het Voorbeeld van **BadkamerCity - JEE-O kleurkeuzes**, controleert eigen telefoon en publiceert dit concept in Shopify. Andere QC-/Lagoo-trajecten behouden hun afzonderlijke status. Oudere themarollen hieronder zijn gedateerde historie.
 
 ## QC-11 — uitsluitend officiële Lagoo-foto’s in import en proefproducten · 3 november 2026
 
