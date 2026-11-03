@@ -1,5 +1,15 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-11 — uitsluitend officiële Lagoo-foto’s in import en proefproducten · 3 november 2026
+
+Op expliciete eigenaarsopdracht fabrikantgalerijen toegestaan in importv5, zonder terugval op Badkamervoorjou. 1.562 van1.772niet-beschermde varianten hebben fabrikantbeelden;210zonder gevonden fabrikantfoto. Productgalerij en vaste variantfoto gescheiden:612exacte artikel-/kleurkoppelingen. Het eerdere getal1.558 telde alleen kandidaatgalerijen; vier exacte varianten zonder kandidaatgalerij komen erbij. LVS1/2/3 ongewijzigd.
+
+Zes bestaande Shopify-DRAFT-proefgroepen aangepast en volledig teruggelezen:168eigen fabrikantfoto’s in vijf galerijen,102oude referenties uit zes galerijen ontkoppeld. RE9012zonder fabrikantfoto nu beeldloos. Alle105variantrelaties gecontroleerd:48exactgekoppeld/57zondervastefoto. Bestanden behouden voor herstel. Geen productcreatie/publicatie of prijs-,titel-,optie-,voorraad- of themamutatie. Verse MAIN196052189450; andere taken hieronder behouden hun status.
+
+Sites-versie14 succeeded, bron dff37cd29558b345be7d1bd9b7411bfbbe3db61e, deployment appgdep_6ae9c6a0f6c481918766f09ec4f3de90. TypeScript/15Lagoo- en10fabrikantcontractgroepen PASS. HostedimportHTTP200:1772/1562metfoto/210leeg/612exact, allebeeldURLs eigen fabrikantbestanden. Authclient/toegangsbeleid identiek. Eerste deployment faalde op oude buildchunks; schone tweede build33.697.516bytes geslaagd. Alleen onbereikbare gegenereerde chunks opgeschoond, brondata behouden. Browser/telefoon niet opnieuw getest.
+
+Privéwerkset bijgewerkt met Shopify-concept-CSV208groepen/1772varianten. OpenbareGit uitsluitend code/dossier; brondata/reviews/herstel privé. [Scope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_PHOTO_POLICY_2026-11-03.md). **Volgende Lagoo-stap:** bijgewerkte fabrikantconceptimport gebruiken en alleen ontbrekende beelden/technische gegevens behandelen. Geen automatische volledige publicatie.
+
 ## JEEO-02 — titels bevestigd en kleurkoppelingen uitgewerkt · 3 november 2026
 
 Alle273JEE-O-titels/handles opnieuw uit Shopify gelezen: exact gelijk aan JEEO-01. Geen herhaalde productwrite.66mogelijke kleurgroepen/230producten en43zonder kleurtegenhanger voorbereid;8groepen/28producten ook op fabrikantartikelcode bevestigd,57catalogusgevalideerd en1SWMBAS71-HOLDgroep/2producten. Volledige koppellijst privé; geen kleurrelatie geactiveerd.
