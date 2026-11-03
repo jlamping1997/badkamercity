@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-10 — officiële Lagoo-bron en klantdocumenten · 3 november2026
+
+Alle199productpagina's en27mediapagina's gelezen;2.629mediarecords tegenover2.679headercount,50verschil expliciet open. Nieuwe werkset met1.823eigen fabrikantfoto's en372PDF-kopieën READY. Geen3D/CAD-bestandsdownload.254PDF-records in actuele paginalinks; overige alleen kandidaat.48pagina's/314bestaande varianten noemen inbouwdelen met originele voorwaarden/alternatieven.616varianten met expliciete artikel-/kleurcode,612niet beschermd voor importfoto's. Andere kleurkoppelingen blijven onzeker; ook fabrikant hergebruikt seriebeelden.
+
+Dezelfde privé-QC gebruikt nieuwe fabrikantfoto-ID's, duidelijke bronlabels en huidige/kandidaat-PDF's;24LVS1/2/3varianten en alle andere merken exact behouden. Oude400beoordelingen blijven historie, geen automatische goedkeuring van nieuwe bestanden. Checkpoints blijven per SKU. Importv4:1772niet-beschermde varianten,612photoImportReady; alle andere importfoto's leeg/hold. Prijzen/opties/EAN's niet uit groepsclaims overschreven. Geen Shopify-productmutatie/publicatie; uitsluitend eigen bestandskopieën. [Scope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_OFFICIAL_SOURCE_2026-11-03.md).
+
+Sites-versie12 succeeded; bron627aafcae4508977066e13e68ef7ab8e1341b2c2, deployment appgdep_6ae9b9ea19488191a5816154ba3b1387. Schone build33MiB, originele brondata privé behouden. TypeScript/build/45bestaande API-SQLite-Lagoo-groepen+8nieuwe fabrikantcontractgroepen PASS. Hosted reviewcatalogus1796/1772official/24protected HTTP200; G1100BN juiste eigen fabrikant-URL HTTP200; import1772/612photoReady HTTP200; review zonder visitor401. Authclient/toegangsbeleid gelijk. Browsergoedkeuring faalde door capaciteit, geen browseromweg; fysieke telefoon/visitor-write niet getest. Twee bronbeelden onverwerkbaar;24PDF-kopieën lokaal signature/EOF/SHA gecontroleerd, overige READY maar lokale verificatie door proxy403onvolledig. Volledige data/reviews uitsluitend privé; downloadbare werkset geleverd. Eigenaar herlaadt en behandelt alleen resterende onzekere fabrikantkoppelingen.
+
 ## QC-09 — eerste400Lagoo-fotoselecties verwerkt, LVS1/2/3 overgeslagen · 3 november 2026
 
 Checkpoint400 bevestigd: vervolg N8100CH.24LVS1/2/3varianten uitgesloten van galerie, brondata/Shopify daarvoor ongemoeid.400bekeken varianten verwerkt in private importwerkkopie:366met selectie/367beelden,34zonder keuze blijven open. Alle oorspronkelijke kandidaten, specificaties, prijzen, opties en eigen PDF's behouden. Export bevat approvedLagooImport. Geen automatische goedkeuring/afkeur of D1-reset.
