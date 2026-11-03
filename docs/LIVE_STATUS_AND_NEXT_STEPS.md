@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## JEEO-01 — 273 klantvriendelijke producttitels afgerond · 3 november 2026
+
+Op expliciete eigenaarsopdracht alle273JEE-O-producttitels aangepast naar natuurlijke namen, bijvoorbeeld **JEE-O flow hoge wastafelkraan Geborsteld RVS**. Merk/serie/product/afwerking; geen lange technische omschrijvingen. Maat behouden waar uitvoeringen anders niet herkenbaar zijn. Korte/lange Soho-uitlopen apart; nul dubbele nieuwe titels.
+
+Drie proefproducten + vijf groepen van50 + één van20 vooraf gecontroleerd en exact teruggelezen. Volledige eindinventaris273/273titels exact; nul onverwachte wijzigingen in vergeleken overige velden, waaronder URL/handle, omschrijving, status, opties en varianten met SKU/prijs. Drie oorspronkelijke openbare URL's HTTP200 met juiste nieuweH1. Geen theme-write/publicatie, keuzemenu-, SEO-, metafield- of mediabatch. Voor/na-overzicht en herstelgegevens privé bewaard; geen actieve JEE-O-schrijver. [Scope, bewijs en herstel](product-content/JEEO_TITLES_2026-11-03.md).
+
+**Volgende JEE-O-stap:** keuzemenu's per exacte modelfamilie uitwerken; eerst15Slimline-plafondarmen met lengte15/25/35cm en vijf afwerkingen. Huidige storefrontbron vóór implementatie controleren. Lagoo-QC en de bestaande themareview hieronder behouden hun eigen status.
+
 ## QC-10 — officiële Lagoo-bron en klantdocumenten · 3 november2026
 
 Alle199productpagina's en27mediapagina's gelezen;2.629mediarecords tegenover2.679headercount,50verschil expliciet open. Nieuwe werkset met1.823eigen fabrikantfoto's en372PDF-kopieën READY. Geen3D/CAD-bestandsdownload.254PDF-records in actuele paginalinks; overige alleen kandidaat.48pagina's/314bestaande varianten noemen inbouwdelen met originele voorwaarden/alternatieven.616varianten met expliciete artikel-/kleurcode,612niet beschermd voor importfoto's. Andere kleurkoppelingen blijven onzeker; ook fabrikant hergebruikt seriebeelden.
