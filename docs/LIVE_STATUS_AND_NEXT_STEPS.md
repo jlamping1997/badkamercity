@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## LAGOO-18 — goedgekeurde Lagoo-stijl live bevestigd; offerteactie nog uit · 3 november 2026
+
+Eigenaar keurt LAGOO-17 goed met “Ja dit is goed voeg toe”. Verse Shopify-controle toont dat thema **196116087050 — BadkamerCity - Lagoo foto's en productkeuzes** inmiddels al **MAIN** is; voormalig MAIN196110090506 is UNPUBLISHED. Deze uitvoering heeft niets gepubliceerd en geen Shopify-code/data/instellingen gemuteerd.
+
+Volledige live-inventaris: 1378 bestanden. Alle zeven LAGOO-featurebestanden komen exact overeen met de eerder gecontroleerde code (checkpoint e8939e96d9aebd4f7338f29cba0ff17fd3a3d649). Publieke G1104BN-pagina zonder previewcookie/-parameter HTTP200 met compacte kleurenadapter en 24 echte productbestemmingen. De Hotbath-keuzestijl is dus live; eerdere NOT_PUBLISHED voor het thema is historisch.
+
+**Concrete resterende afwijking offerteknop:** live header-group heeft quote_cta_enabled=false / quote_cta_preview=true. De offerte-Page166573539594 (offerte-vergelijken) is nog isPublished=false en de klant-URL geeft404. Op de live productpagina is de offerteactie daarom afwezig. De alternatieve contact?view-route geeft200 maar bevat live geen Jotform-iframe. Het goedgekeurde rustige ontwerp staat in de code; geen kapotte klantlink geactiveerd en geen claim dat offerte-upload al live werkt.
+
+Bestaande productstatussen, foto's, 400 reviews en LVS-uitstel niet gewijzigd. Volledige Lagoo-catalogusomzetting blijft open volgens LAGOO-16. CONTENT-01 en andere taken hieronder behouden.
+
+**Exact één volgende handeling voor offerteactivatie:** bestaande uploadpagina/koppeling en ontvangst aantoonbaar afronden, daarna de Page en klantactie gericht activeren via de bestaande preview-/publicatiewerkwijze. Geen actieve schrijver na overdracht.
+
 ## CONTENT-01 — plus- en aandachtspunten beoordeeld; niets toegepast · 3 november 2026
 
 **READ_ONLY_AUDIT / PROPOSALS_READY / NOT_APPLIED.** Op verzoek van de eigenaar de bestaande punten inhoudelijk beoordeeld. Volledige inventaris11.887ACTIVE producten/48pagina's;148verschillende veldteksten, waarvan67bij273JEE-O-producten.6.318producten hebben minstens één gevuld veld. Twee gecontroleerde JEE-O-lijsten overlappen woordelijk met BadkamerXXL; geen algemene herkomstclaim voor alle producten. Bij48JEE-O-waskommen staat geen overloop zowel bij plus als aandacht.
