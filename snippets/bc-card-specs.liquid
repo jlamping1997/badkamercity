@@ -28,6 +28,10 @@
   if value_1 == blank
     assign value_1 = product.type
   endif
+  if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank and product.metafields.custom.kleur.value != blank
+    assign value_2 = product.metafields.custom.kleur.value
+    assign label_2 = 'products.product.card_colour' | t
+  endif
   if value_2 == blank
     assign value_2 = sku
   endif
@@ -38,3 +42,4 @@
     {%- if value_2 != blank -%}<div><dt>{{ label_2 | escape }}:</dt><dd>{{ value_2 | escape }}</dd></div>{%- endif -%}
   </dl>
 {%- endif -%}
+
