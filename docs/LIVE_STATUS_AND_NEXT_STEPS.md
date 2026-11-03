@@ -1,5 +1,9 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-13 — Lagoo-status ACTIVE · 3 november 2026
+
+Op expliciete opdracht “Zet ze op actief” exact de208eerder geïmporteerdeLagoo-productgroepen vanDRAFTnaarACTIVEgezet. Vijf native statusbatches50/50/50/50/8:208geslaagd/0mislukt. Alle208daarna opnieuw uitShopify gelezen: juisteID/handle/vendor enACTIVE. LVS1/LVS2/LVS3 en andereproducten buiten scope. Alleenproductstatus gewijzigd; geen prijs-,optie-,media-,voorraad-,review- ofthemawijziging. PublishedAtblijftvooralle208null; geenverkoopkanaalpublicatiegeclaimd. [Importscope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_IMPORT_EXECUTED_2026-11-03.md). Privéactivatieverslag bevat before/after enexacteID’s. VolgendeLagoo-stap: verkoopkanaalpublicatie en ontbrekendegegevens gericht beoordelen; geen actieve schrijver.
+
 ## QC-12 — Lagoo geïmporteerd als concept · 3 november 2026
 
 Op expliciete opdracht208groepen/1772varianten geïmporteerd:202nieuweDRAFT-groepen,6bestaandeproefgroepenopbestaandeIDbijgewerkt. Alle208groepen direct vergeleken en finale vendorinventaris208uniekehandles/alleDRAFT/publishedAtnull.105bestaandevariant-ID’s behouden; prijzen, opties, SKU’s en fotorelaties gecontroleerd.151groepenmetfabrikantfoto’s,57zonder;1764galerijreferenties/1763uniekefabrikantbestandenREADY,612exactevariantfoto’s.156seriewaarden geverifieerd,390PDF-linksnaar eigenopslag. LVS1/2/3 uitgesloten.
