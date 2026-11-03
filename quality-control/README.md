@@ -1,3 +1,11 @@
+# QC-10 — officiële Lagoo-bron en klantdocumenten
+
+3 november2026.199fabrikantpagina's uitgelezen;1.823foto's en372PDF-kopieën READY in eigen Shopify Files. Geen3D/CAD-bestandsdownload. Nieuwe actieve fotowerkset uitsluitend fabrikantbron, met expliciet codebewijs of onzekere productgroep-kandidaten;24LVS1/2/3varianten en andere merken exact behouden. Oude400beoordelingen blijven historie en worden niet naar nieuwe foto-ID's gekopieerd.612niet-beschermde varianten hebben exacte codekoppeling voor importfoto's; overige importfoto's leeg/hold.254PDF-records in actuele paginalinks, overige kandidaat.48pagina's/314bestaande varianten met expliciete inbouwdeelcontext. [Scope, bewijs, rollback en beperkingen](LAGOO_OFFICIAL_SOURCE_2026-11-03.md).
+
+TypeScript/45API-SQLite-Lagoo-contractgroepen+8nieuwe fabrikantcontracten PASS. Twee bronbeelden niet verwerkbaar;50verschil tussen mediaheadercount en geretourneerde records expliciet open. Geen Shopify-productmutatie of publicatie. Browsergoedkeuringscontrole faalde door capaciteit; geen browseromweg. Volledige bron-/productdata uitsluitend privé. Versie12 succeeded, Sites-bron627aafcae4508977066e13e68ef7ab8e1341b2c2; deployment appgdep_6ae9b9ea19488191a5816154ba3b1387. Runtime33MiB, volledige hersteldata privé bewaard.
+
+---
+
 # QC-09 — LVS1/2/3 uitgesloten, eerste400fotoselecties verwerkt
 
 3 november 2026. [Dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site) vervolgt vanaf N8100CH.24LVS-varianten overgeslagen zonder gegevens/Shopify te wijzigen. Eerste400gecontroleerde varianten:366met selectie/367beelden;34zonder selectie blijven open. Verwerkte importdata apart in export; originele kandidaatfoto's behouden. Vijf bestaande DRAFT-variantkoppelingen gecorrigeerd en drie niet-geselecteerde galerieverwijzingen losgekoppeld, eigen bestanden behouden. Geen nieuwe producten of publicatie. [Exacte scope en tests](LAGOO_400_APPLIED_2026-11-03.md).

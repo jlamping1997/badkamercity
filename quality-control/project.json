@@ -2,12 +2,12 @@
   "project": "BadkamerCity Quality Control",
   "branch": "quality-control",
   "updated_at": "2026-11-03",
-  "status": "PRIVATE_DEPLOYED_LAGOO_FIRST400_APPLIED_LVS_EXCLUDED",
+  "status": "PRIVATE_DEPLOYED_LAGOO_OFFICIAL_MANUFACTURER_SOURCE",
   "url": "https://badkamercity-quality.jason015.chatgpt.site",
   "site_project_id": "appgprj_6ae3d58930e48191b4dea11d39180671",
-  "site_source_commit": "1b7fabbd6840ec8d2c91511fd1b8fc38776eea66",
-  "site_version": 10,
-  "live_shopify_writes": "Five DRAFT variant-photo links changed to approved selections; three unselected Nesso product-media references removed; files retained. No new products or publication.",
+  "site_source_commit": "627aafcae4508977066e13e68ef7ab8e1341b2c2",
+  "site_version": 12,
+  "live_shopify_writes": "QC10 only own file copies; no product mutations or publication",
   "catalogue": {
     "products": 13475,
     "images": 50331,
@@ -42,11 +42,12 @@
     "existing_data_readback": "Entire authorised snapshot read with native cursors before apply; no production D1 writes or migrations",
     "same_auth_client": "PASS",
     "theme_reload": "NOT_RETESTED_THIS_SESSION; QC04 historical",
-    "managed_browser": "NOT_TESTED_QC06; prior preview connection refused/error-tab policy, no infrastructure recovery observed",
+    "managed_browser": "AUTO_APPROVAL_REVIEW_CAPACITY_FAILURE; no browser workaround",
     "rendered_lagoo_fast_contracts": 6,
-    "data_integrity_groups": 6
+    "data_integrity_groups": 6,
+    "official_contract_groups": 8
   },
-  "next_action": "Owner reloads same private tool and continues at N8100CH; LVS1/2/3 skipped.",
+  "next_action": "Owner reloads manufacturer QC and reviews only unresolved source-data matches, using downloadable official working set.",
   "photo_review": {
     "scope": "One main picture per original product plus one per Lagoo SKU; selectable candidate gallery",
     "cards": 12779,
@@ -88,7 +89,7 @@
     "shop": "fpa9hu-i3.myshopify.com",
     "all_files_ready": true
   },
-  "site_deployment_id": "appgdep_6ae9a3a5712c81918b0638ebdd0bb148",
+  "site_deployment_id": "appgdep_6ae9b9ea19488191a5816154ba3b1387",
   "applied_lagoo_photos": {
     "checkpoint": 400,
     "selected_variants": 366,
@@ -102,5 +103,18 @@
     "excluded_variants": 24,
     "next_sku": "N8100CH",
     "full_product_import": false
+  },
+  "official_source": {
+    "pages": 199,
+    "owned_images": 1823,
+    "owned_pdfs": 372,
+    "active_page_pdf_records": 254,
+    "exact_code_variants": 616,
+    "unprotected_photo_ready_variants": 612,
+    "rough_part_variants": 314,
+    "protected": 24,
+    "excluded_cad_records": 229,
+    "failed_source_images": 2,
+    "media_header_difference": 50
   }
 }
