@@ -1,3 +1,9 @@
+# QC-08 — goede foto's selecteren, vaste kleur en twintigproductencheckpoint
+
+3 november 2026. Alleen goede foto's selecteren of deselecteren; niet-geselecteerd is geen afkeur. Kleur/SKU blijven sticky zichtbaar. Foto-keuzes direct opgeslagen; bij20/40/60producten eerst automatisch online checkpoint en dan verder. Na herladen automatisch hervatten vanaf nieuwste galeriecheckpoint. [Werkwijze en testgrenzen](LAGOO_SELECTION_2026-11-03.md). TypeScript/45API- en SQLite-contractgroepen PASS. Geen nieuwe browser/telefoon/hosted-visitorwrite-test. Geen Shopify-write of D1-schemamutatie.
+
+---
+
 # QC-06 — Lagoo: grote foto, kleur, direct verder
 
 2 november 2026 · **PRIVATE_DEPLOYED / OWNER_REVIEW_PENDING**. [Dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site) opent nu direct met Lagoo: kleur uit titel groot, één foto, Ja/Nee/Twijfel, automatisch volgende SKU na bevestigde opslag. Andere foto wisselt kandidaat zonder menu; Uitgebreid behoudt volledige QC. [Werkwijze en testgrenzen](LAGOO_FAST_REVIEW_2026-11-02.md).
