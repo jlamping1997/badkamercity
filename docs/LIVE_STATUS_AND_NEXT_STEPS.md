@@ -1,5 +1,9 @@
 # BadkamerCity — actuele werkstatus
 
+## QC-08 — alleen goede foto's, vaste kleur, checkpoints per20 · 3 november 2026
+
+Galerie toont één selecteerknop per foto, geen fout-/twijfelactie. Deselecteren=unchecked; niet geselecteerd is geen afkeur. Kleur/SKU blijven sticky bovenaan. Foto-oordelen direct opgeslagen; bij20/40/60etc en laatste groep eerst online checkpoint, dan volgende product. Herladen hervat op nextSku van laatste galeriecheckpoint; tussentijdse bevestigde selecties blijven behouden. Zelfde eigenaargebonden API/schema, geen Shopify-write. TypeScript/build/45API-SQLite-Lagoo-groepen PASS. Browser/telefoon/hosted visitor-write niet getest. Versie9 succeeded, bron c5a4ee8dea2043da36db698505cb19bfc06893a2, deployment appgdep_6ae98d0bef948191831ff2ad92f3b432. Authclient/toegangsbeleid identiek. [Dossier](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_SELECTION_2026-11-03.md). Eigenaar herlaadt en controleert selectie/hervatten na20producten.
+
 ## QC-07 — Lagoo-galerie per SKU · 3 november 2026
 
 Dezelfde privétool toont producttitel, kleur en alle kandidaatfoto’s; per foto Goed/Niet goed/Twijfel. Meerdere goede foto’s per variant, productwissel handmatig. Individuele foto-oordelen via bestaande D1-review-API, geen automatische hoofdfotokeuze/Shopify-write. TypeScript/build en44API/SQLite/Lagoo-contractgroepen PASS, inclusief twee onafhankelijke oordelen binnen één SKU. Browser/telefoon niet getest. Sites-bron71e835d774cdca06467f685e9286ed0fc0c8feb8, deployment appgdep_6ae98b7954fc8191b5ce72dfe703f0a0 succeeded. [Werkwijze](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_GALLERY_2026-11-03.md). Eigenaar herlaadt privétool en beoordeelt foto’s per kleurvariant. Bij herladen start galerie op eerste product; bevestigde oordelen blijven zichtbaar.
