@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## JEEO-02 — titels bevestigd en kleurkoppelingen uitgewerkt · 3 november 2026
+
+Alle273JEE-O-titels/handles opnieuw uit Shopify gelezen: exact gelijk aan JEEO-01. Geen herhaalde productwrite.66mogelijke kleurgroepen/230producten en43zonder kleurtegenhanger voorbereid;8groepen/28producten ook op fabrikantartikelcode bevestigd,57catalogusgevalideerd en1SWMBAS71-HOLDgroep/2producten. Volledige koppellijst privé; geen kleurrelatie geactiveerd.
+
+Huidige MAIN196052189450 read-only onderzocht. Bestaande kleuradapter en bc-card-data begrenzen color_variants tot Wiesbaden; alleen productrefs invullen toont JEE-O nog niet. V2 kan worden hergebruikt. Manifestprecedentie voor kaartkleur bij implementatie expliciet oplossen. [Details en testgrenzen](product-content/JEEO_TITLES_2026-11-03.md).
+
+**Volgende JEE-O-actie:** in een identiek UNPUBLISHED-concept de JEE-O-product- en kaartkoppeling voorbereiden; eerst3groepen van5Slimline-plafondarmen per lengte15/25/35cm testen. Geen theme-write/publicatie of metafieldmutatie in deze controle; geen actieve JEE-O-schrijver. Andere trajecten hieronder behouden hun status.
+
 ## JEEO-01 — 273 klantvriendelijke producttitels afgerond · 3 november 2026
 
 Op expliciete eigenaarsopdracht alle273JEE-O-producttitels aangepast naar natuurlijke namen, bijvoorbeeld **JEE-O flow hoge wastafelkraan Geborsteld RVS**. Merk/serie/product/afwerking; geen lange technische omschrijvingen. Maat behouden waar uitvoeringen anders niet herkenbaar zijn. Korte/lange Soho-uitlopen apart; nul dubbele nieuwe titels.
