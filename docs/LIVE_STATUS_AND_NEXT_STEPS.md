@@ -1,5 +1,25 @@
 # BadkamerCity — actuele werkstatus
 
+## JEEO-03 — kleurbolletjes in uitvoering · 3 november 2026
+
+Expliciete eigenaarsopdracht: Hotbath-stijl kleurkeuze voor JEE-O op productpagina en productkaart. Huidige MAIN196052189450 blijft ongewijzigd. Nieuw UNPUBLISHED-concept196110090506 **BadkamerCity - JEE-O kleurkeuzes** is via themeDuplicate gemaakt; kopieerjob nog actief, daarom nog geen theme-filewrite. Alle1.356bronchecksums vooraf bewaard; vóór upload exacte pariteit vereisen.
+
+Code op bestaande branch `fix/product-cards-2026-10-14`: aparte JEE-O-adapter, bestaande V2-bediening/CSS hergebruikt, kaartkleurprecedentie gericht opgelost en15eigen SVG-afwerkingen. Theme Check revisie3:20/20files geldig, drie bestaande waarschuwingen. JavaScript syntax en15SVG's geldig. Geen browserbewijs vóór volledige kopie/upload.
+
+Goedgekeurde scope65groepen/228producten; SWMBAS71/2producten uitgesloten,43zonder kleurtegenhanger behouden. Eerste3Slimline-plafondarmgroepen (15/25/35cm),15producten/30metafields geschreven met compareDigest:null en exact teruggelezen. Overige62groepen/213producten nog niet geschreven. Privé vooropname/herstel bewaard. Alle273eerder verbeterde titels blijven staan. [Uitvoering en herstel](product-content/JEEO_COLOURS_2026-11-03.md).
+
+**Volgende JEE-O-actie:** voltooide conceptkopie op1356/1356checksums verifiëren, uitsluitend20featurefiles uploaden en de15proefproducten interactief testen vóór de overige koppelingen. Actieve schrijver: Codex connector/cloudsessie. Andere QC-/Lagoo- en historische themastatus hieronder behouden.
+
+## QC-11 — uitsluitend officiële Lagoo-foto’s in import en proefproducten · 3 november 2026
+
+Op expliciete eigenaarsopdracht fabrikantgalerijen toegestaan in importv5, zonder terugval op Badkamervoorjou. 1.562 van1.772niet-beschermde varianten hebben fabrikantbeelden;210zonder gevonden fabrikantfoto. Productgalerij en vaste variantfoto gescheiden:612exacte artikel-/kleurkoppelingen. Het eerdere getal1.558 telde alleen kandidaatgalerijen; vier exacte varianten zonder kandidaatgalerij komen erbij. LVS1/2/3 ongewijzigd.
+
+Zes bestaande Shopify-DRAFT-proefgroepen aangepast en volledig teruggelezen:168eigen fabrikantfoto’s in vijf galerijen,102oude referenties uit zes galerijen ontkoppeld. RE9012zonder fabrikantfoto nu beeldloos. Alle105variantrelaties gecontroleerd:48exactgekoppeld/57zondervastefoto. Bestanden behouden voor herstel. Geen productcreatie/publicatie of prijs-,titel-,optie-,voorraad- of themamutatie. Verse MAIN196052189450; andere taken hieronder behouden hun status.
+
+Sites-versie14 succeeded, bron dff37cd29558b345be7d1bd9b7411bfbbe3db61e, deployment appgdep_6ae9c6a0f6c481918766f09ec4f3de90. TypeScript/15Lagoo- en10fabrikantcontractgroepen PASS. HostedimportHTTP200:1772/1562metfoto/210leeg/612exact, allebeeldURLs eigen fabrikantbestanden. Authclient/toegangsbeleid identiek. Eerste deployment faalde op oude buildchunks; schone tweede build33.697.516bytes geslaagd. Alleen onbereikbare gegenereerde chunks opgeschoond, brondata behouden. Browser/telefoon niet opnieuw getest.
+
+Privéwerkset bijgewerkt met Shopify-concept-CSV208groepen/1772varianten. OpenbareGit uitsluitend code/dossier; brondata/reviews/herstel privé. [Scope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_PHOTO_POLICY_2026-11-03.md). **Volgende Lagoo-stap:** bijgewerkte fabrikantconceptimport gebruiken en alleen ontbrekende beelden/technische gegevens behandelen. Geen automatische volledige publicatie.
+
 ## JEEO-02 — titels bevestigd en kleurkoppelingen uitgewerkt · 3 november 2026
 
 Alle273JEE-O-titels/handles opnieuw uit Shopify gelezen: exact gelijk aan JEEO-01. Geen herhaalde productwrite.66mogelijke kleurgroepen/230producten en43zonder kleurtegenhanger voorbereid;8groepen/28producten ook op fabrikantartikelcode bevestigd,57catalogusgevalideerd en1SWMBAS71-HOLDgroep/2producten. Volledige koppellijst privé; geen kleurrelatie geactiveerd.
@@ -16,7 +36,45 @@ Drie proefproducten + vijf groepen van50 + één van20 vooraf gecontroleerd en e
 
 **Volgende JEE-O-stap:** keuzemenu's per exacte modelfamilie uitwerken; eerst15Slimline-plafondarmen met lengte15/25/35cm en vijf afwerkingen. Huidige storefrontbron vóór implementatie controleren. Lagoo-QC en de bestaande themareview hieronder behouden hun eigen status.
 
+## QC-10 — officiële Lagoo-bron en klantdocumenten · 3 november2026
+
+Alle199productpagina's en27mediapagina's gelezen;2.629mediarecords tegenover2.679headercount,50verschil expliciet open. Nieuwe werkset met1.823eigen fabrikantfoto's en372PDF-kopieën READY. Geen3D/CAD-bestandsdownload.254PDF-records in actuele paginalinks; overige alleen kandidaat.48pagina's/314bestaande varianten noemen inbouwdelen met originele voorwaarden/alternatieven.616varianten met expliciete artikel-/kleurcode,612niet beschermd voor importfoto's. Andere kleurkoppelingen blijven onzeker; ook fabrikant hergebruikt seriebeelden.
+
+Dezelfde privé-QC gebruikt nieuwe fabrikantfoto-ID's, duidelijke bronlabels en huidige/kandidaat-PDF's;24LVS1/2/3varianten en alle andere merken exact behouden. Oude400beoordelingen blijven historie, geen automatische goedkeuring van nieuwe bestanden. Checkpoints blijven per SKU. Importv4:1772niet-beschermde varianten,612photoImportReady; alle andere importfoto's leeg/hold. Prijzen/opties/EAN's niet uit groepsclaims overschreven. Geen Shopify-productmutatie/publicatie; uitsluitend eigen bestandskopieën. [Scope en herstel](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_OFFICIAL_SOURCE_2026-11-03.md).
+
+Sites-versie12 succeeded; bron627aafcae4508977066e13e68ef7ab8e1341b2c2, deployment appgdep_6ae9b9ea19488191a5816154ba3b1387. Schone build33MiB, originele brondata privé behouden. TypeScript/build/45bestaande API-SQLite-Lagoo-groepen+8nieuwe fabrikantcontractgroepen PASS. Hosted reviewcatalogus1796/1772official/24protected HTTP200; G1100BN juiste eigen fabrikant-URL HTTP200; import1772/612photoReady HTTP200; review zonder visitor401. Authclient/toegangsbeleid gelijk. Browsergoedkeuring faalde door capaciteit, geen browseromweg; fysieke telefoon/visitor-write niet getest. Twee bronbeelden onverwerkbaar;24PDF-kopieën lokaal signature/EOF/SHA gecontroleerd, overige READY maar lokale verificatie door proxy403onvolledig. Volledige data/reviews uitsluitend privé; downloadbare werkset geleverd. Eigenaar herlaadt en behandelt alleen resterende onzekere fabrikantkoppelingen.
+
+## QC-09 — eerste400Lagoo-fotoselecties verwerkt, LVS1/2/3 overgeslagen · 3 november 2026
+
+Checkpoint400 bevestigd: vervolg N8100CH.24LVS1/2/3varianten uitgesloten van galerie, brondata/Shopify daarvoor ongemoeid.400bekeken varianten verwerkt in private importwerkkopie:366met selectie/367beelden,34zonder keuze blijven open. Alle oorspronkelijke kandidaten, specificaties, prijzen, opties en eigen PDF's behouden. Export bevat approvedLagooImport. Geen automatische goedkeuring/afkeur of D1-reset.
+
+Actuele Shopifyinventaris6DRAFT-proefgroepen; binnen eerste400bestaan3groepen/25varianten. Vijf Nesso-variantkoppelingen gecorrigeerd en drie niet-geselecteerde productgalerijreferenties verwijderd; eigen bestanden behouden. Alle25koppelingen en drie galerijen exact teruggelezen; geen nieuwe producten/publicatie. De overige30groepen zijn alleen voorbereid in importdata, niet geïmporteerd. [Scope/rollback/testgrenzen](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_400_APPLIED_2026-11-03.md).
+
+Sites-versie10 succeeded, bron1b7fabbd6840ec8d2c91511fd1b8fc38776eea66, deployment appgdep_6ae9a3a5712c81918b0638ebdd0bb148. TypeScript/build/45API-SQLite-Lagoo-groepen+6selectie-integriteitstests PASS. Authclient/toegangsbeleid gelijk. Browser/telefoon/hosted visitor-write niet getest. Reviews/checkpoints/volledige catalogus/receipt uitsluitend privé. Eigenaar herlaadt de bestaande privétool en vervolgt met N8100CH.
+
+## QC-08 — alleen goede foto's, vaste kleur, checkpoints per20 · 3 november 2026
+
+Galerie toont één selecteerknop per foto, geen fout-/twijfelactie. Deselecteren=unchecked; niet geselecteerd is geen afkeur. Kleur/SKU blijven sticky bovenaan. Foto-oordelen direct opgeslagen; bij20/40/60etc en laatste groep eerst online checkpoint, dan volgende product. Herladen hervat op nextSku van laatste galeriecheckpoint; tussentijdse bevestigde selecties blijven behouden. Zelfde eigenaargebonden API/schema, geen Shopify-write. TypeScript/build/45API-SQLite-Lagoo-groepen PASS. Browser/telefoon/hosted visitor-write niet getest. Versie9 succeeded, bron c5a4ee8dea2043da36db698505cb19bfc06893a2, deployment appgdep_6ae98d0bef948191831ff2ad92f3b432. Authclient/toegangsbeleid identiek. [Dossier](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_SELECTION_2026-11-03.md). Eigenaar herlaadt en controleert selectie/hervatten na20producten.
+
+## QC-07 — Lagoo-galerie per SKU · 3 november 2026
+
+Dezelfde privétool toont producttitel, kleur en alle kandidaatfoto’s; per foto Goed/Niet goed/Twijfel. Meerdere goede foto’s per variant, productwissel handmatig. Individuele foto-oordelen via bestaande D1-review-API, geen automatische hoofdfotokeuze/Shopify-write. TypeScript/build en44API/SQLite/Lagoo-contractgroepen PASS, inclusief twee onafhankelijke oordelen binnen één SKU. Browser/telefoon niet getest. Sites-bron71e835d774cdca06467f685e9286ed0fc0c8feb8, deployment appgdep_6ae98b7954fc8191b5ce72dfe703f0a0 succeeded. [Werkwijze](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_GALLERY_2026-11-03.md). Eigenaar herlaadt privétool en beoordeelt foto’s per kleurvariant. Bij herladen start galerie op eerste product; bevestigde oordelen blijven zichtbaar.
+
+## QC-06 — Lagoo: directe kleurcontrole · 2 november 2026
+
+Dezelfde privétool opent nu standaard alleen Lagoo: kleur uit titel groot boven één foto, Ja/Nee/Twijfel en automatisch volgende SKU na bevestigde opslag. Andere foto wisselt kandidaat direct. Geen ronde-start of algemene merk-/PDF-menu's in de eenvoudige weergave; Uitgebreid behoudt de bestaande QC en voortgang. [Actuele werkwijze op quality-control](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_FAST_REVIEW_2026-11-02.md).
+
+Sites-versie7 succeeded; broncommit e21a5308e2d4867fc702a0bd73d13b8ec7de6177, deployment appgdep_6ae897e9677c81918bd7fe9efee75b7f. TypeScript/build,43bestaande API/SQLite/Lagoo-groepen en6gerenderde kleurcontrolecontracten PASS. Hosted Lagoo1796kaarten en SKU-gallery HTTP200; review zonder visitor401. Native begrensde24reviews+1checkpoint identiek vóór/na, authclient/toegangsbeleid gelijk. Geen Shopify-write, catalogus- of databaseschemamutatie. Browser/telefoon/hosted visitor-write niet opnieuw getest; eerdere previewinfrastructuur niet aantoonbaar hersteld. Volgende QC-actie: eigenaar herlaadt privélink en controleert kleur/foto met directe knoppen. Andere storefronttaken hieronder blijven afzonderlijk.
+
 **31 oktober 2026 · NAV-03 / TILE-02 PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Compact menu, startwaarde1m² en tegelinformatie staan in het gecontroleerde concept. Geen actieve schrijver na overdracht.
+
+## QC-05 — Lagoo in dezelfde privécontrole · 2 november 2026
+
+Afzonderlijk van het NAV-03-themaconcept: branch `quality-control` bevat nu 211 Lagoo-brongroepen als 1.796 SKU/kleurkaarten in [dezelfde privétool](https://badkamercity-quality.jason015.chatgpt.site), versie6. Per SKU hoofdfoto kiezen/expliciet goedkeuren; Aanleverlijst met ontbrekende PDF, technische documentatie, foto, kenmerken en EAN. 1.229 afbeeldingen en251PDF-bestanden in eigen Shopify Files; PDF-kopieën volledig op SHA256/grootte gecontroleerd. 92groepen zonder directe PDF; koppelsuggesties blijven ongeverifieerd. Geen automatische goedkeuring of fotocorrectie.
+
+Sites-broncommit `5634119673735eb88cce104c51e2b4f8fe7a8d2a`, deployment `appgdep_6ae894b87f3c8191b8f1ce1d6894e20c` succeeded. TypeScript/build/43contractgroepen PASS. Hosted Lagoo1796kaarten en lazySKU-gallery HTTP200; review zonder visitor401. Bounded native24reviewrijen+1checkpoint identiek vóór/na, authclient/toegangsbeleid ongewijzigd. Browser/telefoon/hosted-visitorwrite niet getest in deze taak. Volledige catalogus en reviews blijven privé; publieke Git alleen code en scope.
+
+Vijf bestaande DRAFT-proefomschrijvingen gebruiken nu eigen PDF-links. Geen volledige import/publicatie van overige205groepen. Volgende QC-actie: eigenaar kiest Lagoo en controleert foto's en ontbrekende gegevens per SKU. [QC-dossier op quality-control](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/LAGOO_QC_2026-11-02.md). NAV-03-status en vervolghandeling hieronder blijven van kracht voor het storefrontthema.
 
 ## Begin hier: actuele rollen en code
 
