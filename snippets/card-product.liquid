@@ -164,6 +164,9 @@
             </a>
           </h3>
           <div class="card-information">
+            {%- if card_product.vendor == 'JEE-O' and card_product.metafields.custom.color_variants.value != blank -%}
+              {% render 'bc-jeeo-colors', product: card_product, mode: 'card' %}
+            {%- endif -%}
             {% render 'bc-card-specs', product: card_product %}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
@@ -628,3 +631,4 @@
     </div>
   </div>
 {%- endif -%}
+
