@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## LAGOO-17 — Hotbath-keuzestijl en subtiele offerteactie in concept · 3 november 2026
+
+Eigenaar accepteert de productnavigatie en vraagt exact de Hotbath-stijl met eigen Lagoo-opties. Bestaand UNPUBLISHED **196116087050** aangepast: dezelfde Hotbath-CSS/JavaScript voor vier ronde kleurbolletjes, geselecteerde kleur altijd zichtbaar, selectierand/vinkje en Bekijk alle 8 kleuren / +4. Eigen Lagoo-kleurnamen en Regular/Medium/High behouden. Bestaande illustratieve afwerkingsassets hergebruikt, aparte illustratieve Tuscany/champagne-SVG's; echte productfoto's blijven ongewijzigd. De grote blauwe offertebalk is nu een rustig icoon met label bij Retour/Verlanglijst/Winkelwagen. Bestemming, instellingen en mobiele verberging blijven behouden; geen nieuwe formulierontvangsttest geclaimd.
+
+Zes conceptfiles bijgewerkt/toegevoegd en exact teruggelezen. Gedeelde Hotbath-CSS/JavaScript en MAIN-header/snippet ongewijzigd. Finale volledige vergelijking: MAIN 1374 bestanden, concept 1378, exact zeven bedoelde verschillen inclusief vorige Lagoo-adapter/main-product-wijziging; geen ontbrekende bestanden. Geen product-/prijs-/foto-/publicatiedatamutaties en geen themapublicatie; LVS blijft later.
+
+**Bewezen:** ThemeCheck 6/6 PASS; bijgewerkte bestaande DOM-test 216/216 wissels, juiste vier zichtbare kleuren met selectie, uitklappen en bestaande kleurassets, Liquid-grensgevallen PASS. Echte Chrome op 1363 CSS-pixels: transparante compacte offerteactie, geen horizontale overloop, 8/8 swatchafbeeldingen geladen. Uitklappen en kleurwissel naar G1104BK (€570), daarna Medium naar G1102BK (€440): echte nieuwe URL, koper behouden, juiste foto/selectie/titel/prijs. **NOT_TESTED:** fysieke telefoon/aparte mobiele viewport, cart/checkout en offerteontvangst. Browserbeelden buiten publieke Git/Library gehouden.
+
+Codecheckpoint **e8939e96d9aebd4f7338f29cba0ff17fd3a3d649** op **fix/product-cards-2026-10-14**, bron **shopify/current/**. [Details en herstel](lagoo/2026-11-03/product-links/README.md). Alleen het bestaande concept aangepast; volledige Lagoo-catalogusomzetting blijft open volgens LAGOO-16.
+
+**Exact één volgende handeling:** eigenaar bekijkt de bijgewerkte stijl in hetzelfde concept, daarna gecontroleerde Lagoo-uitrol voortzetten. Publicatie door eigenaar volgens bestaande werkwijze. Herstel via vorige codecommit voor de zes gewijzigde conceptpaden; nieuwe ongebruikte assets/helper mogen blijven. Geen actieve schrijver na overdracht.
+
 ## LAGOO-16 — proef met juiste foto's en echte productlinks klaar; uitrol nog open · 3 november 2026
 
 **LVS1/LVS2/LVS3 nu ongemoeid laten. To-do voor na de fotocorrectie:** zelf samen te stellen sets zoals Hotbath IBS70, met type handdouche en met/zonder glijstang. Andere setkeuzes, technische compatibiliteit, prijzen en productrelaties eerst controleren. De 20 beschikbare LVS-beelden en 4 fotogaten blijven in de privéwerkset. Geen nieuwe LVS-producten/configurator nu.
