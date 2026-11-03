@@ -39,7 +39,7 @@
   endif
 %}
 
-<article class="bc-search-card">
+<article class="bc-search-card{% if card_product.vendor == 'JEE-O' and card_product.metafields.custom.color_variants.value != blank %} bc-search-card--jeeo-colors{% endif %}">
   {% render 'bc-wishlist-button', product: card_product, class_name: 'bc-wishlist-button--card', source: 'card' %}
   <a href="{{ card_product.url }}" class="bc-search-card__link full-unstyled-link">
     <div class="bc-search-card__media-wrapper">
@@ -139,4 +139,8 @@
       <span class="bc-card-view">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></span>
     </div>
   </a>
+  {%- if card_product.vendor == 'JEE-O' and card_product.metafields.custom.color_variants.value != blank -%}
+    {% render 'bc-jeeo-colors', product: card_product, mode: 'card' %}
+  {%- endif -%}
 </article>
+
