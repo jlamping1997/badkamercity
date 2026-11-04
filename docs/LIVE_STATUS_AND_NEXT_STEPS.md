@@ -1,5 +1,15 @@
 # BadkamerCity — actuele werkstatus
 
+## LAGOO-19 — alle productafbeeldingen verwijderd · 4 november 2026
+
+**VERIFIED_ADMIN / LIVE_PRODUCT_CHECK.** Op expliciete eigenaaropdracht alle Lagoo-productafbeeldingen onmiddellijk verwijderd. Verse inventaris: **232 Lagoo-producten**, waarvan 175 met samen **1.788 afbeeldingskoppelingen** naar 1.763 unieke bestanden. Eén proefverwijdering met readback, daarna acht opeenvolgende batches via `fileUpdate.referencesToRemove`; alle antwoorden zonder userErrors. Alleen relaties met gecontroleerde vendor Lagoo verwijderd. Bestanden blijven beschikbaar voor herstel; variantafbeeldingen worden door dezelfde Shopify-operatie leeggemaakt.
+
+Volledige eindcontrole: **232/232 producten, nul media** en geen volgende pagina. Titels, handles, vendor, status en descriptionHtml gelijk aan de nulmeting. MAIN **196116087050** ongewijzigd; geen themefilewrite/publicatie. Openbare Garda-productpagina zonder preview: nul product-`img` in main en visueel geen productfoto. Native zoekmarkup bevat Lagoo-kaarten zonder foto's; de latere externe zoeklaag toont vier Wiesbaden Lagos-producten met hun eigen foto's. Deze afzonderlijke zoekafwijking is niet aangepast. Geen Windows-, fysieke telefoon-, cart- of checkouttest.
+
+**Nieuwe foto-instructie gaat vóór eerdere foto-uitrol:** Lagoo blijft zonder productfoto's. Niet automatisch opnieuw importeren/herkoppelen of de oude foto-uitrol hervatten. LVS1/2/3 en overige eerdere grenzen behouden. [Bewijs en herstel](lagoo/2026-11-04/no-product-images/README.md).
+
+**Exact één volgende handeling voor Lagoo:** wacht op een nieuwe expliciete eigenaaropdracht voordat foto's opnieuw worden gekoppeld. Geen actieve schrijver na overdracht.
+
 ## LAGOO-18 — goedgekeurde Lagoo-stijl live bevestigd; offerteactie nog uit · 3 november 2026
 
 Eigenaar keurt LAGOO-17 goed met “Ja dit is goed voeg toe”. Verse Shopify-controle toont dat thema **196116087050 — BadkamerCity - Lagoo foto's en productkeuzes** inmiddels al **MAIN** is; voormalig MAIN196110090506 is UNPUBLISHED. Deze uitvoering heeft niets gepubliceerd en geen Shopify-code/data/instellingen gemuteerd.
