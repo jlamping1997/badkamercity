@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## COTTO-03 — catalogusuitrol in gecontroleerde batches · 5 november 2026
+
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-03.** Eigenaar autoriseert het overige Cottoceramix-assortiment op dezelfde manier online te zetten, per gecontroleerde batch, met brongetrouwe productkeuzes en behoud van handmatige correcties. Verse Shopify-rol: **MAIN196238639370 — BadkamerCity - Re-Bel tegelkeuze**; de eigenaar heeft het concept gepubliceerd. Bestaande 22 Re-Bel-producten blijven behouden.
+
+Broninventaris: gecorrigeerd werkboek versie 2, 3.770 importartikelen inclusief de bestaande 22; 3.172 m²-artikelen, 563 stuksartikelen en 35 speciale eenheden. Samples/vervallen artikelen uitgesloten. Bulkimport wordt met concept-/teruglees-/groeps-/publicatiegates voorbereid. Niet-m²-artikelen mogen geen onjuiste m²-calculator krijgen; onzekere combinaties blijven zichtbaar als uitzondering. Toekomstige automatische feed is nog niet ingericht; eigen velden en overrides worden als importcontract beschermd. SEARCH-01 blijft afzonderlijk.
+
+**Exact één volgende handeling:** bron-/SKU-deduplicatie en een eerste complete serie-batch uitvoeren, controleren en publiceren; daarna dezelfde bewezen batchprocedure voortzetten.
+
 ## COTTO-02 — Cottoceramix en uitklapbare tegelkleuren gereed · 5 november 2026
 
 **ADMIN_APPLIED_VERIFIED / PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION.** Alle 22 bestaande Re-Bel-artikelen hebben Cottoceramix als vendor, titelvoorvoegsel en zichtbaar Merk; beschrijving, SEO en 70 afbeeldings-altwaarden aangepast. Volledige voor-/navergelijking: nul afwijkingen van plan; identiteiten, URL's, publicaties, doos-/m²-prijzen, verpakking, gewicht, voorraadbeleid en fotoreferenties behouden.
