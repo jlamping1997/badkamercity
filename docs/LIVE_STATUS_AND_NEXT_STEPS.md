@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## COTTO-02 — merknaam en uitklapbare tegelkleuren in uitvoering · 5 november 2026
+
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-02.** Eigenaar vraagt voor alle 22 Re-Bel-pilotartikelen Cottoceramix vóór de bestaande titel en als zichtbaar merk. De kleurkeuze krijgt vier zichtbare vierkante tegelafbeeldingen, met de geselecteerde kleur altijd zichtbaar, en een knop voor alle elf kleuren in vier kolommen. De aangeleverde screenshots zijn de bedoelde weergave. Bestaande gegevens, doos-/m²-prijzen, eigen artikelidentiteiten en eerdere cart-/zoekcorrecties blijven uitgangspunt.
+
+Verse rollen: MAIN196227170570, bestaand gecombineerd UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze. Geen themapublicatie door uitvoerder. Bron `shopify/current/`, vaste branch `fix/product-cards-2026-10-14`. SEARCH-01 blijft afzonderlijk en wordt niet overgenomen.
+
+**Exact één volgende handeling:** de 22 huidige artikelen veilig vastleggen en merkweergave plus configureerbare inklapbare kleurkeuze in het bestaande concept uitvoeren.
+
 ## COTTO-01 — Re-Bel live; winkelwagencorrectie gereed voor eigenaarspublicatie · 5 november 2026
 
 **PRODUCTS_LIVE_VERIFIED / CART_PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION.** Exact 22 nieuwe Revoir Paris Re-Bel-artikelen ACTIVE en gepubliceerd op de Webshop: 11 kleuren × 60×60/100×100 cm. Gedeeld kleur-/formaatmenu, native m²-eenheidsprijzen, juiste doosprijzen, dozen als bestelaantal, 70 afbeeldingen READY, volledige specificaties en gewichten gecontroleerd. Actuele XML gebruikt; vijf voorraadverschillen tegenover Excel verwerkt. EAN RR6011 heeft een onjuist controlecijfer en is niet als barcode gepubliceerd. [Uitvoering, productregister, hergebruik en herstel](cottoceramix/2026-11-05/rebel/README.md).
