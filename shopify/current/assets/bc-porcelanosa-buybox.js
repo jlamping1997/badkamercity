@@ -22,6 +22,12 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       this.boxMode = Boolean(this.boxInput);
       if (this.boxInput) this.boxInput.value = '1';
       this.cacheKey = 'bc-tile-order:v2:' + (this.dataset.group || this.dataset.productId);
+      this.colorGrid = this.dataset.colorLayout === 'expandable_grid';
+      this.colorStateKey = 'bc-tile-colors:v1:' + (this.dataset.group || this.dataset.productId);
+      this.colorsExpanded = false;
+      if (this.colorGrid) {
+        try { this.colorsExpanded = sessionStorage.getItem(this.colorStateKey) === 'true'; } catch (_) { }
+      }
       try {
         const saved = JSON.parse(sessionStorage.getItem(this.cacheKey));
         if (saved?.mode === 'boxes' && this.boxInput && this.core.calculateBoxes(saved.boxes, this.current.boxUnits, this.current.priceCents)) { this.boxMode = true; this.boxInput.value = String(saved.boxes); this.waste.value = '0'; this.explicitArea = true; }
@@ -229,11 +235,51 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
         });
       });
       this.text('[data-tile-current-color]', this.current.color);
-      this.querySelectorAll('.bc-tile__colors [aria-pressed="true"]').forEach(element => { const row = element.parentElement; row.scrollLeft = Math.max(0, element.offsetLeft - row.offsetLeft - 8); });
       const controls = this.querySelector('[data-tile-choices]');
       controls.hidden = !Array.from(controls.querySelectorAll('[data-tile-field]')).some(element => !element.hidden);
       this.querySelector('[data-tile-fixed-choices]').hidden = !controls.hidden;
-      this.setupColorRail();
+      if (this.colorGrid) this.setupColorGrid();
+      else {
+        this.querySelectorAll('.bc-tile__colors [aria-pressed="true"]').forEach(element => { const row = element.parentElement; row.scrollLeft = Math.max(0, element.offsetLeft - row.offsetLeft - 8); });
+        this.setupColorRail();
+      }
+    }
+    setupColorGrid() {
+      const toggle = this.querySelector('[data-tile-colors-toggle]');
+      if (!toggle) return;
+      if (!this.colorToggleBound) {
+        toggle.addEventListener('click', () => {
+          this.colorsExpanded = !this.colorsExpanded;
+          try { sessionStorage.setItem(this.colorStateKey, String(this.colorsExpanded)); } catch (_) { }
+          this.updateColorGrid();
+          toggle.focus({ preventScroll: true });
+        });
+        this.colorToggleBound = true;
+      }
+      this.updateColorGrid();
+    }
+    updateColorGrid() {
+      const row = this.querySelector('.bc-tile__colors');
+      const toggle = this.querySelector('[data-tile-colors-toggle]');
+      if (!row || !toggle) return;
+      const buttons = [...row.querySelectorAll('button[data-choice]')];
+      const visible = new Set(buttons.slice(0, 4));
+      const selected = buttons.find(button => button.getAttribute('aria-pressed') === 'true');
+      if (selected && !visible.has(selected)) {
+        visible.delete(buttons[3]);
+        visible.add(selected);
+      }
+      const expanded = this.colorsExpanded && buttons.length > 4;
+      buttons.forEach(button => { button.hidden = !expanded && !visible.has(button); });
+      toggle.hidden = buttons.length <= 4;
+      toggle.setAttribute('aria-expanded', String(expanded));
+      const label = expanded ? this.dataset.labelLessColors : this.dataset.labelAllColors;
+      this.text('[data-tile-colors-label]', String(label || '').replace(/__COUNT__/g, String(buttons.length)));
+      const count = toggle.querySelector('[data-tile-colors-count]');
+      if (count) {
+        count.textContent = '+' + (buttons.length - visible.size);
+        count.hidden = expanded;
+      }
     }
     setupColorRail() {
       const row = this.querySelector('.bc-tile__colors');
