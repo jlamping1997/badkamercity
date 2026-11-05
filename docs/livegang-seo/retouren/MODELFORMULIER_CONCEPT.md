@@ -6,7 +6,7 @@ Aan: Badkamercity.nl
 Correspondentieadres: Hengelolaan70, 2545JR 's-Gravenhage  
 E-mail: info@badkamercity.nl
 
-Dit correspondentieadres is niet automatisch het fysieke adres voor retourgoederen. Dat retouradres moet afzonderlijk worden bevestigd.
+Dit is het correspondentie-/bedrijfsadres. Retourgoederen gaan naar: Badkamercity.nl — retourontvangst bij Harry Suiker, Zichtenburglaan150, 2544EB 's-Gravenhage. Persoonlijk afgeven vooraf per e-mail afstemmen.
 
 Hierbij laat ik/wij weten dat ik/wij de overeenkomst voor de volgende aankoop geheel of gedeeltelijk wil/willen herroepen:
 

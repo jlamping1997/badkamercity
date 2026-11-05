@@ -16,7 +16,8 @@ Beide renderers tonen al shop.policies. Zodra het juiste Shopify-retourbeleid is
 | --- | --- |
 | Klantenservice | Contact, bezorgen, retourbeleid, retourneren/koop ongedaan maken, voorwaarden; alleen echte openbare bestemmingen |
 | Assortiment | Dezelfde bedoelde hoofdgroepen op alle pagina's; huidige homepage heeft meer hoofdingangen dan de zes standaardfooterblocks, dus dekking bewaren |
-| Contact | Eén beheerde bron voor e-mail, bevestigd bedrijfsadres/telefoon/KvK; geen oude showroom-/afhaalclaim |
+| Contact/verkoper | Eenmanszaak/Badkamercity.nl op Hengelolaan70; info@badkamercity.nl, KvK; eigen telefoon volgt later, geen Harry Suiker-nummer |
+| Retouradres | Zichtenburglaan150 bij Harry Suiker, 2544EB 's-Gravenhage, duidelijk als retourontvangst; geen vrije inloop-/afhaalclaim |
 | Beleid | shop.policies als primaire bron; geen losse tweede policyversie onderhouden |
 | Retourfunctie | Bestaande veilige bc-returns-url-guard behouden; niet naar een verborgen of kapotte Page linken |
 | Offerte | Bestaande bc-footer-quote-guard behouden; uploadfunctie niet onbedoeld activeren |

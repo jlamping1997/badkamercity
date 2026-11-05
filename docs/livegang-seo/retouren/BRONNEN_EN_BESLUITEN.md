@@ -12,7 +12,9 @@ LAUNCH-02, 5 november 2026. De upload Retourneren.html is als commerciële refer
 | Tegels/douchewanden | Geen generieke wettelijke uitsluiting | Batchverschil/geopende verpakking op zichzelf maakt geen wettelijke uitzondering |
 | Staat/verpakking | Beoordelen toegestaan; aantoonbare waardevermindering mogelijk | Geen eis die wettelijk beoordelen/herroepen onmogelijk maakt |
 | Restocking/50% | Niet overnemen | Geen vaste boete in plaats van onderbouwde waardevermindering |
-| Retouradres/afhalen | Nog bevestigen | Zakelijk adres is niet automatisch een ontvangst-/afhaalpunt |
+| Retouradres | Bevestigd in LAUNCH-03: Zichtenburglaan150, bij Harry Suiker | Eigenaarbevestiging; postcode2544EB via officiële Harry Suiker-contactpagina |
+| Bedrijfsadres | Eenmanszaak op Hengelolaan70 | Apart van retouradres houden; Harry Suiker wordt niet de verkoper |
+| Persoonlijk afgeven/afhalen | Alleen na vooraf afstemmen, geen vrije inloop beloofd | Retouradres geeft niet automatisch afhaal-/inlooprechten |
 | Digitaal herroepen | Duidelijke functie + definitieve bevestiging + directe bevestiging per bewaarbare drager | Huidige voorwaarden; gewoon contactformulier niet als volledig aftekenen |
 | Google | Openbare duidelijke policy, zelfde30dagen/methode/kosten als Merchant | Geen speciale custom-API of extra schema nodig om de tekst openbaar leesbaar te maken |
 

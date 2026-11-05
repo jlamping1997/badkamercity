@@ -1,5 +1,15 @@
 # Logboek — livegang, Google en SEO
 
+## 5 november 2026 — LAUNCH-03: bedrijfsadres en retourontvangst bevestigd
+
+Eigenaar bevestigt dat Badkamercity onder zijn eenmanszaak op Hengelolaan70 valt, maar vanuit Harry Suiker op Zichtenburglaan150 opereert. Retouren gaan naar Zichtenburglaan150. Postcode2544EB gecontroleerd op de officiële Harry Suiker-contactpagina; de retourafspraak zelf komt van de eigenaar.
+
+Bedrijfsgegevens, retourconcept, modelformulier, footerplan en taken op dit onderscheid bijgewerkt. BC-LIVE-001A DONE; BC-LIVE-001 blijft PARTIAL wegens andere open gegevens. Eigen zakelijk telefoonnummer komt later; geen Harry Suiker-nummer overgenomen. Harry Suiker is retourontvangstlocatie, geen nieuwe juridische verkoper. Persoonlijk afgeven/afhalen niet als vrije inloop beloofd.
+
+Uitsluitend documentatie; geen Shopify-/Google-/footerpublicatie of formulierproef. Bestaande retourtermijn30dagen en overige voorwaarden behouden. Nog open: volledig btw-id/juridische handelsnaam, grote-retourkosten/raming en de eerder beschreven functie-/mail-/publicatiecontroles.
+
+Volgende handeling binnen livegang: resterende btw-/retourkostengegevens aanvullen. Telefoon toevoegen zodra beschikbaar; bevestigd retouradres niet opnieuw opvragen.
+
 ## 5 november 2026 — LAUNCH-02: eigenaarsgegevens en uitvoerbare vervolgstappen
 
 **Ontvangen:** zakelijk adres, KvK, btw-id, IBAN, domein en de keuze jaarrond30dagen retour; Tegeldepot-HTML als commerciële referentie. Eigenaar werkt aan leverdata, Verlavio-beelden en verdere beeldcontrole; bestelroute lijkt volgens eigenaar te werken.

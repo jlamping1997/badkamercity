@@ -1,6 +1,6 @@
 # Retourbeleid — concept voor Badkamercity.nl
 
-**CONCEPT / NIET GEPUBLICEERD.** Dit is eigen tekst op basis van de aangeleverde wensen, niet een kopie van Tegeldepot. Nog invullen: Nederlands retouradres en kosten/raming voor grote goederen. De online herroepingsfunctie en bewaarbare ontvangstbevestiging moeten ook worden afgerond. Volledige bedrijfsgegevens staan in het [bedrijfsregister](../BEDRIJFSGEGEVENS.md).
+**CONCEPT / NIET GEPUBLICEERD.** Dit is eigen tekst op basis van de aangeleverde wensen, niet een kopie van Tegeldepot. Het retouradres is in LAUNCH-03 bevestigd. Nog invullen: kosten/raming voor grote goederen. De online herroepingsfunctie en bewaarbare ontvangstbevestiging moeten ook worden afgerond. Volledige bedrijfsgegevens staan in het [bedrijfsregister](../BEDRIJFSGEGEVENS.md).
 
 ## Voorgestelde klanttekst
 
@@ -22,7 +22,12 @@ Voor de definitieve online functie wordt een bevestiging met de betrokken aankoo
 
 Verpak je retour zorgvuldig om schade tijdens het vervoer te voorkomen. Bewaar je verzendbewijs.
 
-**Retouradres: [NEDERLANDS RETOURADRES NOG BEVESTIGEN].**
+**Retouradres**  
+Badkamercity.nl — retourontvangst bij Harry Suiker  
+Zichtenburglaan 150  
+2544 EB 's-Gravenhage
+
+Dit adres is voor retourgoederen. Ons bedrijfsadres is Hengelolaan70, 2545JR 's-Gravenhage. Wil je zelf iets komen afgeven? Neem dan vooraf per e-mail contact met ons op om dat af te stemmen.
 
 De directe kosten van de retourzending zijn voor jouw rekening, als dit vóór je aankoop duidelijk aan je is gemeld. Bij een pakket betaal je de kosten van de vervoerder die je voor de retour kiest.
 
