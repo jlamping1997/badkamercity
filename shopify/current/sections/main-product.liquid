@@ -395,7 +395,9 @@
                       {%- capture bc_hotbath_article_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
                       {%- assign bc_hotbath_article_scope = bc_hotbath_article_scope | strip -%}
                       {%- assign bc_delivery_vendor = product.vendor | strip | downcase -%}
-                      {%- if bc_delivery_vendor == 'wiesbaden' -%}
+                      {%- if bc_delivery_vendor == 'fabriecio' -%}
+                        {%- render 'bc-fabriecio-delivery', product: product -%}
+                      {%- elsif bc_delivery_vendor == 'wiesbaden' -%}
                         {%- liquid
                           assign bc_supplier_stock = product.metafields.custom.leverancier_voorraad.value
                           assign bc_supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
@@ -775,6 +777,8 @@
                       {%- render 'bc-jeeo-colors', product: product, section: section -%}
                     {%- elsif product.vendor == 'Lagoo' and product.metafields.custom.lagoo_choices.value != blank -%}
                       {%- render 'bc-lagoo-choices', product: product, section: section -%}
+                    {%- elsif product.vendor == 'Fabriecio' and product.metafields.custom.fabriecio_choices.value != blank -%}
+                      {%- render 'bc-fabriecio-choices', product: product, section: section -%}
                     {%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants.value != blank -%}
                       {%- render 'bc-wiesbaden-colors', product: product, section: section -%}
                     {%- elsif current_switch_group != blank -%}
@@ -1082,7 +1086,7 @@
             {%- render 'bc-porcelanosa-buybox', product: product, section: section, product_form_id: product_form_id, actions_markup: bc_buybox_actions_markup -%}
           {%- else -%}
           {%- if bc_hotbath_menu_excluded == false and bc_hotbath_menu_disabled == false -%}
-          {%- if product.metafields.custom.color_variants.value != blank or product.metafields.bc_sunshower.configuration.value != blank or current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}
+          {%- if product.metafields.custom.color_variants.value != blank or product.metafields.custom.fabriecio_choices.value != blank or product.metafields.bc_sunshower.configuration.value != blank or current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}
             {{ bc_buybox_options_markup }}
           {%- endif -%}
           {%- endif -%}
