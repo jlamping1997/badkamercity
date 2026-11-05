@@ -2,11 +2,15 @@
 
 ## COTTO-05 — volledig assortiment publiceren en vindbaarheid controleren · 5 november 2026
 
-**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige Cottoceramix-assortiment online. Verse Admin-read bevestigt846 ACTIVE-artikelen en reeds gepubliceerde andere series dan Re-Bel; bestaande artikelen niet dupliceren. Scope: nog ontbrekende werksetartikelen in gecontroleerde batches, juiste verkoopeenheid/prijsbasis en keuzefamilies, Webshop-publicatie plus bestaande collectie-/zoekvindbaarheid. Bronconflicten niet oplossen door specificaties of gewichten te raden; samples/vervallen bronregels blijven uitgesloten.
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige assortiment online. Verse startinventaris854Cottoceramix-producten, waarvan846ACTIVE/gepubliceerd en8bestaande bron-HOLDs. Geen bestaande SKU blind opnieuw aangemaakt. Zichtbaarheidsprobleem bevestigd: externe zoekindex bevat nog22Re-Bel-artikelen en generatie18:07; nieuwe producten zitten al correct in Shopify-collecties. Bestaande VPS-sync moet na import worden vernieuwd; geen actuele geauthenticeerde VPS-route beschikbaar in deze uitvoering.
 
-MAIN196238639370. Geen theme-publicatie gepland. Eerst private broninventaris, per-eenheidroute en zichtbaarheid vaststellen; bestaande846producten behouden.
+**Eerste proefbatch voltooid:**6Habitat-artikelen ACTIVE én op Webshop gepubliceerd;852ACTIVE totaal. Alle414veld-/groep-/mediacontroles PASS. Zes oorspronkelijke JPEG's exact/onbewerkt gestaged vanwege octet-stream-header; alle6READY. Live Chrome Cloud→Alabaster bewaart2,5m²+10% en rekent3dozen/€395,55. Nieuwe automatische merkcollectie586666901770 ('cottoceramix') op exact vendorCottoceramix AND statusACTIVE, Webshopgepubliceerd;852leden teruggelezen.
 
-**Exact één volgende handeling:** uit de resterende bronset de aantoonbaar correcte m²-/stuks-/m¹-routes en collectie-/zoekindexdekking bepalen en een eerste begrensde importbatch voorbereiden.
+Private vervolgplannen:1127volledige m²-producten(inclusief6pilot) plus1177eerlijke singletons met ontbrekende optionele velden;2304nieuwe m²-kandidaten totaal.284XML-gewichten en3verpakkingsgewichten bewezen opgelost; bij overige conflicten geen gewicht verzinnen. Alle actuele verzendmethoden zijn read-only bevestigd op TOTAL_PRICEvoorwaarden, geen WEIGHTvoorwaarden; ontbrekend fysiek gewicht wordt niet als0kg geclaimd. Acht exacte-maatgevallen en zes afwerkingsconflicten apart.597stuks-/pak-/setkandidaten voorbereid; AD5917heeft alleenplaceholderenblijftHOLD.
+
+Stuks-/pak-/setbediening en Cottoceramix-merkvermelding lokaal voorbereid/gevalideerd;25semantische checks en12officiële themefilevalidaties PASS, onafhankelijkereviewPASS. **UNPUBLISHED196246372618 — BadkamerCity - Cottoceramix volledig assortiment** via duplicatie aangemaakt; kopie nog processing=true/processingFailed=false en onvolledig, dus geen themefilewrite tot volledige manifestpariteit. MAIN196238639370ongeschreven. Geen themapublicatie door uitvoerder.
+
+**Exact één volgende handeling:** de overige gecontroleerde m²-inputs begrensd alsDRAFTaanmaken, groepsreferenties en foto's aansluiten, volledig teruglezen en daarna alleen geslaagde artikelen publiceren.
 
 ## COTTO-04 — tweede controle productkeuzes · 5 november 2026
 
