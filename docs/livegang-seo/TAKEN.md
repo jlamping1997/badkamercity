@@ -1,6 +1,6 @@
 # Taken — livegang, Google en SEO
 
-Stand **5 november 2026**. Eigenaarrol Jackson = bedrijfsbesluit/accountbeheer/controle; uitvoering = toegewezen ontwikkelaar of Jackson. LAUNCH-02 verwerkt de eigenaarsaanvulling. Er is na deze documentatieoverdracht geen actieve schrijver of achtergrondtaak.
+Stand **5 november 2026**. Eigenaarrol Jackson = bedrijfsbesluit/accountbeheer/controle; uitvoering = toegewezen ontwikkelaar of Jackson. LAUNCH-03 verwerkt het bevestigde onderscheid tussen eenmanszaakadres en retourlocatie. Er is na deze documentatieoverdracht geen actieve schrijver of achtergrondtaak.
 
 Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = een deel bewezen; IN_PROGRESS_USER = eigenaar werkt eraan, geen zelfstandige testvrijgave; DRAFT_READY = concreet concept klaar, nog niet gepubliceerd; TO_VERIFY = actuele werking ontbreekt; LATER = na de basis. P0 = voor betrouwbare verkoop/promotie; P1 = voor het betreffende Google- of SEO-spoor; P2 = verdere groei. Een blokkade voor één merk houdt de rest niet automatisch tegen.
 
@@ -9,7 +9,8 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 | ID | Prio | Taak | Status | Gereed wanneer | Eigenaarrol |
 | --- | --- | --- | --- | --- | --- |
 | BC-LIVE-000 | P0 | Openbaarheid, HTTPS, robots en sitemap lezen | DONE | Read-only resultaat en grenzen in nulmeting | Uitvoering |
-| BC-LIVE-001 | P0 | Bedrijfsgegevens en retourafspraken compleet maken | PARTIAL | [Gegevens ontvangen](BEDRIJFSGEGEVENS.md): adres/KvK/IBAN/30dagen vastgelegd; btw-id mist een cijfer, telefoon/juridische naam/retouradres en grote-retourkosten nog bevestigen | Jackson |
+| BC-LIVE-001 | P0 | Bedrijfsgegevens en retourafspraken compleet maken | PARTIAL | [Gegevens ontvangen](BEDRIJFSGEGEVENS.md): adres/KvK/IBAN/30dagen vastgelegd; bedrijfsadres Hengelolaan70 en retouradres Zichtenburglaan150 bevestigd; btw-id/juridische naam en grote-retourkosten nog afronden, eigen telefoon volgt later | Jackson |
+| BC-LIVE-001A | P0 | Bedrijfsadres en retouradres apart vastleggen | DONE | LAUNCH-03: eenmanszaak Hengelolaan70; retourontvangst bij Harry Suiker op Zichtenburglaan150. Eigen telefoon volgt later; geen Harry Suiker-nummer of verkoopidentiteit overnemen | Uitvoering |
 | BC-LIVE-002 | P0 | Contact, verzending, retourbeleid en voorwaarden publiceren | PARTIAL | [Eigen retourconcept klaar](retouren/RETOURBELEID_CONCEPT.md); policy/voorwaarden/verzending en [één footer](FOOTER_EN_BELEID.md) nog uitvoeren na gegevenscontrole | Jackson + uitvoering |
 | BC-LIVE-003 | P0 | Bestelproces samen doorlopen | PARTIAL | Eigenaar meldt werking; [kleine checklist](CONTROLES.md) door Jackson én uitvoering afgevinkt, inclusief artikel/variant/doosprijs/verzending en apart betaal-/ordermailbewijs | Jackson + uitvoering |
 | BC-LIVE-004 | P0 | Leverbaarheid en levertijden afmaken | IN_PROGRESS_USER | Jackson werkt aan bronnen; latere FAB-04-bewijzen hergebruiken, andere merken niet automatisch aftekenen | Jackson + uitvoering |
@@ -18,7 +19,7 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 | BC-LIVE-007 | P1 | Verlavio-foto's en Google-geschiktheid controleren | PARTIAL | Fabriecio is interne bronnaam; rebrand/koopbaarheid later in FAB-03/04 bewezen. Eigenaar onderzoekt foto's: goed/ontbreekt/onzeker scheiden, identifiers en actuele Google-bestemming toetsen | Jackson + uitvoering |
 | BC-LIVE-008 | P1 | Productfoto's en lege/foute beeldweergave nalopen | IN_PROGRESS_USER | Jackson loopt dit na; echte beeldrequests/zichtbaarheid per relevante renderer controleren; Lagoo-fotoverbod behouden | Jackson + uitvoering |
 | BC-LIVE-009 | P1 | Bestaande standaardfooter op alle pagina's gebruiken | OPEN | [Kortste route vastgelegd](FOOTER_EN_BELEID.md): compact_homepage uit in bewezen ongepubliceerd concept, volledige categorie-/contactdekking en policy-links behouden | Uitvoering |
-| BC-LIVE-010 | P0 | Dertig-dagenretourbeleid definitief maken | DRAFT_READY | [Concept](retouren/RETOURBELEID_CONCEPT.md), juiste retouradres/kosten invullen; geen algemene speciaal-besteld-/tegeluitsluiting; als Shopify-policy publiceren en Google gelijkzetten | Jackson + uitvoering |
+| BC-LIVE-010 | P0 | Dertig-dagenretourbeleid definitief maken | DRAFT_READY | [Concept](retouren/RETOURBELEID_CONCEPT.md), bevestigd retouradres verwerkt, kosten nog invullen; geen algemene speciaal-besteld-/tegeluitsluiting; als Shopify-policy publiceren en Google gelijkzetten | Jackson + uitvoering |
 | BC-LIVE-011 | P0 | Online herroepingsfunctie en directe klantbevestiging afronden | OPEN | Toegankelijke functie, definitieve bevestiging en bewaarbare mail met aankoop/datum/tijd; huidige native contactroute alleen niet als compleet aftekenen | Uitvoering + Jackson voor mailboxbewijs |
 | BC-LIVE-012 | P0 | Modelformulier herroeping beschikbaar maken | DRAFT_READY | [Leeg sjabloon klaar](retouren/MODELFORMULIER_CONCEPT.md); nog als downloadbaar/bewaarbaar klantformulier integreren, gebruik niet verplicht stellen | Uitvoering |
 
@@ -55,5 +56,5 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 
 ## Nu eerst
 
-**BC-LIVE-001 — het ontbrekende gegevenspakket aanvullen:** volledig btw-id, telefoon/juridische identiteit, Nederlands retouradres en raming van grote retourzendingen. Adres/KvK/IBAN en de keuze voor jaarrond30dagen hoeven niet opnieuw verzameld te worden.
+**BC-LIVE-001 — het ontbrekende gegevenspakket aanvullen:** volledig btw-id/juridische identiteit en raming van grote retourzendingen. Eigen telefoonnummer volgt later; bedrijfs- en retouradres zijn bevestigd. Adres/KvK/IBAN en de keuze voor jaarrond30dagen hoeven niet opnieuw verzameld te worden.
 De eigenaar wil de bestaande verkoopklare producten vindbaar maken; ontbrekende toekomstige merken en algemene afwerking blijven parallel groeiproject. Sluit de bewezen winkel-/feedproblemen binnen de gekozen scope of houd de betreffende producten uit die promotiebestemming.

@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## LAUNCH-03 — eenmanszaakadres en retourlocatie apart bevestigd · 5 november 2026
+
+**OWNER_CONFIRMED / DOCS_UPDATED / NOT_PUBLISHED.** Bedrijfsadres van de eenmanszaak blijft **Hengelolaan70,2545JR 's-Gravenhage**. Werk-/retourontvangstlocatie is **bij Harry Suiker, Zichtenburglaan150,2544EB 's-Gravenhage**. Eigenaar bevestigt de retourafspraak; postcode via officiële contactpagina gecontroleerd. Harry Suiker wordt niet de verkoper.
+
+[Bedrijfsgegevens](livegang-seo/BEDRIJFSGEGEVENS.md), [retourconcept](livegang-seo/retouren/RETOURBELEID_CONCEPT.md), modelformulier, footerplan en taken bijgewerkt. **BC-LIVE-001A DONE**; eigen zakelijk telefoonnummer volgt later, geen Harry Suiker-nummer overnemen. Geen algemene vrije-inloop-/afhaalbelofte. Oudere LAUNCH-02-opmerkingen dat retouradres nog onbekend is, zijn hiermee historisch.
+
+**Volgende handeling voor livegang:** volledig btw-id/juridische identiteit en retourkosten/raming voor grote goederen aanvullen; telefoon later zodra beschikbaar. Retourfunctie/mail-/publicatiecontroles blijven open. Geen Shopify- of Google-mutatie; andere actuele taken behouden.
+
 ## VERLAVIO-SET-01 — inbegrepen onderdelen douchesets · 5 november 2026
 
 **APPLIED_VERIFIED / 78 SETS LIVE / 12 SOURCE_HOLDS.** De eigenaar vroeg dezelfde onderdelenweergave als Hotbath IBS70. 36 Milaan-,36 Palermo- en6 Porlezza-sets hebben nu462 bevestigde inbegrepen onderdelenregels uit108 losse Verlavio-artikelen. Uitsluitend156 waarden in de bestaande `bc_data.set_components` en `bc_data.component_products` toegevoegd; geen theme-writes of publicatie. MAIN blijft196238639370.

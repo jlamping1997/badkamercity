@@ -1,7 +1,7 @@
 # BadkamerCity — Livegang & SEO
 
 Startpunt voor verantwoord verkopen, Google-vindbaarheid en verdere groei.
-Aangemaakt op **5 november 2026**. Laatste aanvulling **LAUNCH-02**: bedrijfsgegevens ontvangen, eigen retourconcept met jaarrond30dagen, concrete bestel-/mailchecks en een eenvoudiger Google-/footerplan. Google-inrichting en deze winkelcorrecties zijn nog niet uitgevoerd.
+Aangemaakt op **5 november 2026**. Laatste aanvulling **LAUNCH-03**: bedrijfsadres Hengelolaan70 en retouradres Zichtenburglaan150 bij Harry Suiker zijn apart bevestigd; eigen telefoonnummer volgt later. LAUNCH-02: bedrijfsgegevens ontvangen, eigen retourconcept met jaarrond30dagen, concrete bestel-/mailchecks en een eenvoudiger Google-/footerplan. Google-inrichting en deze winkelcorrecties zijn nog niet uitgevoerd.
 
 ## Aanpak
 
@@ -54,7 +54,7 @@ De volgende punten bewaren hun oorspronkelijke meetmoment. Latere product-/thema
 
 ## Eerstvolgende handeling
 
-**BC-LIVE-001:** alleen het ontbrekende [gegevenspakket](BEDRIJFSGEGEVENS.md) aanvullen: volledig btw-id/telefoon/juridische naam, retouradres en grote-retourkosten. De aangeleverde gegevens en jaarrond30dagen zijn al verwerkt; algemene uitsluiting van speciaal bestelde standaardartikelen niet overgenomen. Zie de [takenlijst](TAKEN.md). De overige Google-voorbereiding kan onafhankelijk worden voorbereid.
+**BC-LIVE-001:** alleen het ontbrekende [gegevenspakket](BEDRIJFSGEGEVENS.md) aanvullen: volledig btw-id/juridische naam en grote-retourkosten. Bedrijfs- en retouradres zijn bevestigd; eigen telefoon volgt later. De aangeleverde gegevens en jaarrond30dagen zijn al verwerkt; algemene uitsluiting van speciaal bestelde standaardartikelen niet overgenomen. Zie de [takenlijst](TAKEN.md). De overige Google-voorbereiding kan onafhankelijk worden voorbereid.
 
 ## Onderhoud en overdracht
 
