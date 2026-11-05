@@ -1,4 +1,10 @@
-# BadkamerCity — veilige Wiesbaden → Typesense indexvoorbereiding
+# BadkamerCity — zoekindex en synchronisatie
+
+**5 november 2026 — SERVER_APPLIED_VERIFIED / PUBLIC_VERIFIED.** De bestaande volledige catalogussynchronisatie is hersteld voor producten met meerdere varianten. De actieve generatie `bc_sync_20261105t180750_9caf43` bevat 12.760 producten en 226 profielen. Publieke controles bevestigen 851 Verlavio-resultaten, 22 Re-Bel-artikelen en exacte primaire/secundaire Lagoo-SKU's. Live Enter-zoeken op Verlavio toont 851 producten. De eigenaar heeft de geteste installer succesvol uitgevoerd; de ververstimer is hervat. Een volgende toekomstige timeruitvoering is nog niet waargenomen.
+
+De reguliere synchronisatie gebruikt de bestaande `bc-filter-sync.timer`/`bc-filter-sync.service` en `/opt/badkamercity/filter-sync/sync.py`. `repair_variant_index.py` is het eenmalige, brongecontroleerde herstelpad. [Actuele uitvoering, bewijs, broncheckpoint en herstel](../../docs/search-index/2026-11-05/README.md). De themaprijsweergave met “Vanaf” wacht afzonderlijk op publicatie van het gecombineerde Re-Bel-concept.
+
+## Historische offline Wiesbaden-tool — 22 oktober 2026
 
 **Status 22 oktober 2026: IMPLEMENTED_OFFLINE / NOT_DEPLOYED.** Deze tool is bedoeld voor de bestaande Shopify-catalogus en de bestaande Typesense-architectuur op de VPS. Er is géén live-indexsynchonisatie, automatische planning, API-omschakeling of VPS-uitvoering door deze Git-commit uitgevoerd.
 

@@ -1,12 +1,12 @@
-> **Publicatie-afstemming COTTO-01:** de oorspronkelijke zoekbescherming (historisch controlepunt MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`, vóór de prijsuitbreiding met concept-JS `11de150d3e2797a6f35742a813281fcb`) is meegenomen in **UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze**, samen met de vier COTTO-winkelwagenbestanden. Eigen 23 runtimechecks en gecombineerde 5/5 validatie PASS. Publiceer alleen dit gecombineerde concept. Het losse zoekconcept 196116087050 mist de winkelwagenwijzigingen en mag daarna niet als latere release worden gebruikt. De nieuwe Re-Bel-artikelen geven bij de browserproef nog nul zoekresultaten; hun vindbaarheid blijft onderdeel van het open indexonderzoek.
+> **Publicatie-afstemming COTTO-01:** de oorspronkelijke zoekbescherming (historisch controlepunt MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`, vóór de prijsuitbreiding met concept-JS `11de150d3e2797a6f35742a813281fcb`) is meegenomen in **UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze**, samen met de vier COTTO-winkelwagenbestanden. Eigen 23 runtimechecks en gecombineerde 5/5 validatie PASS. Publiceer alleen dit gecombineerde concept. Het losse zoekconcept 196116087050 mist de winkelwagenwijzigingen en mag daarna niet als latere release worden gebruikt. De onafhankelijke publieke controle na reparatie vindt Verlavio 851, Re-Bel 22 en RR6001 als exact Cottoceramix-artikel.
 
 # Zoekindex — ontbrekende Verlavio-resultaten
 
-5 november 2026. **PATCH_VERIFIED_LOCAL / SERVER_EXECUTION_PENDING / COMBINED_PREVIEW_VERIFIED**.
+5 november 2026. **SERVER_APPLIED_VERIFIED / API_PUBLIC_VERIFIED / LIVE_BROWSER_VERIFIED**.
 
-De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. Het runtime-rapport, LAST_ERROR en de actuele worker-/API-bron zijn ontvangen en gecontroleerd. De variantcorrectie is lokaal voorbereid en getest. De serverinstallatie is nog niet uitgevoerd; de gecombineerde themapreview wordt afzonderlijk afgerond. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
+De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. De eigenaar heeft de vastgepinde installer succesvol uitgevoerd. De volledige indexactivatie is daarna onafhankelijk via de publieke API en echte live Chrome bevestigd. De index werkt in de huidige MAIN; de “Vanaf”-/kaartwijzigingen en COTTO-verbeteringen wachten nog op publicatie van het gecombineerde concept. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
 
-## Verse productiecontrole
+## Nulmeting vóór de serverreparatie
 
 | Bron of controle | Waarneming |
 | --- | --- |
@@ -22,7 +22,7 @@ De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mi
 
 De aantallen horen bij verschillende query-/profielscopes; trek er geen ongeteste exacte ontbrekende-productenlijst van af. De native Verlavio-resultaattelling wisselde tijdens de controles van 188 tot 214. Dit bewijst geen dekking van alle 851 Verlavio-artikelen. Het concrete defect is wel bewezen: Shopify levert resultaten die de externe route door nul vervangt.
 
-De timer is actief en ingeschakeld, maar de service is gefaald. LAST_ERROR bevestigt inmiddels de één-variantaanname als blokkade in de normalisatie. De publieke health-route blijft de collectie van 3 november melden; er is geen succesvolle nieuwe indexopbouw of werkende vijfminutenverversing bewezen. Oudere oktoberbeschrijvingen zijn geen actuele bron voor de publieke index.
+Het eerste runtime-rapport toonde een actieve timer en een gefaalde service; LAST_ERROR bevestigde de één-variantaanname als blokkade. De index van 3 november in bovenstaande nulmeting is inmiddels volgens de installeruitvoer vervangen door de gecontroleerde generatie van 5 november. De onafhankelijke publieke nacontrole bevestigt de nieuwe generatie en correcte Verlavio-/SKU-resultaten; zie de eindcontrole hieronder. Dit bewijst geen vijfminutenkoppeling voor leveranciersfeeds.
 
 ## Begrensde frontendbescherming — eerder gecontroleerde losse preview
 
@@ -60,7 +60,7 @@ LAST_ERROR van **5 november 2026, 17:01:22 UTC** stopt tijdens normalisatie op p
 
 De diagnose en bronoverdracht zijn afgerond. Privébronbestanden, catalogusdata en credentialbestanden worden niet in publieke Git opgeslagen. De publieke implementatie bevat uitsluitend de gerichte patchmodules, installatiecode en tests.
 
-## Complete variantcorrectie voorbereid
+## Complete variantcorrectie
 
 - **Worker:** één zoekdocument per product; alle variant-SKU's als genormaliseerde `sku_aliases`. De minimumvariantprijs wordt deterministisch gekozen; `price_varies` markeert verschillende prijzen. Geen product overslaan of Shopify-varianten aanpassen.
 - **API:** normale en exacte SKU-zoekopdrachten gebruiken alle aliassen zodra de nieuwe snapshot actief is. Het bestaande snapshot-/schemacontract blijft werken vóór activatie; geen gedeeltelijke omschakeling.
@@ -76,29 +76,49 @@ De drie bedoelde themabestanden zijn uitsluitend naar het gecombineerde UNPUBLIS
 | `sections/bc-card-data.liquid` | `b4e58946edc02ba1e44dd876c6239ef5` |
 | `snippets/bc-external-filters.liquid` | `2a0136a8420e8a710f448c99d5fc3aad` |
 
-## Serverinstallatie nog uit te voeren
+## Serverreparatie uitgevoerd en gecontroleerd
 
-De voorbereide installer controleert eerst de exacte productiebron. Hij maakt root-back-ups met mapmodus 0700 en bouwt via de bestaande stagingroute een volledige nieuwe index. Productdekking, prijzen en alle SKU-aliassen worden teruggelezen voordat de nieuwe snapshot atomair wordt geactiveerd. Bij een mislukking is herstel van de eerdere actieve toestand voorzien.
+De eigenaar heeft installercommit `05a54c8d8b7df8c41644eec7abd5bd812a3cb6d5` uitgevoerd en de eindstatus **`applied_verified`** gedeeld. Het serververslag meldt:
 
-De uitvoerfase heeft een deadline van 15 minuten en geeft elke 20 seconden voortgang. De nieuwe worker voor de bestaande uurlijkse taak wordt pas na geslaagde indexactivatie geïnstalleerd. De oorspronkelijke aan-/uitstand van de timer blijft behouden. De installer wijzigt geen Shopify-productdata, prijzen, voorraad, varianten of afbeeldingen.
+| Onderdeel | Gerapporteerd en door installer gecontroleerd |
+| --- | --- |
+| Actieve collectie | `bc_sync_20261105t180750_9caf43` |
+| Producten | 12.760 |
+| Profielen | 226 |
+| Variantsnapshot | `variant_aliases_v1=true` |
+| Automatische timer | Hervat |
 
-De API-patch gebruikt een canonieke AST-controle zodat formatteringsverschillen tussen Python-versies de versiecontrole niet vervalsen.
+Alle controles melden GOED: volledige ID-dekking en documentteruglezing, prijzen en mediareferenties, primaire en secundaire SKU's, lokale/publieke API, CORS, B2C/RVS en behoud van de catalogus. De gecontroleerde worker en API zijn geïnstalleerd; een root-back-up is gemaakt. De uitvoer en herstelgegevens blijven privé; geen ruwe logs, bronbestanden of credentialbestanden in deze publieke repository.
 
-Deze stappen zijn uitsluitend lokaal getest: er is nog geen productiebron, index of actieve collectie veranderd, geen worker gestart en geen volledige nieuwe publieke index bewezen.
+De installatie is bewezen door de gedeelde serveruitvoer én de onderstaande onafhankelijke publieke nacontrole. Er zijn geen Shopify-producten, varianten, prijzen, voorraad of afbeeldingen gewijzigd.
+
+De bestaande uurlijkse timer is volgens het eindverslag hervat. Een volgende toekomstige timeruitvoering is nog niet waargenomen; geen claim dat toekomstige automatische verversingen al zijn getest. Geen nieuwe scheduler of ChatGPT-automatisering aangemaakt en geen vijfminutenverversing van leveranciersfeeds ingericht.
+
+De installatie voorziet volledige staging en alle SKU-teruglezing vóór atomaire activatie, root-back-ups met modus 0700 en herstel bij fouten, een deadline van 15 minuten en voortgang elke 20 seconden. De nieuwe worker is pas na geslaagde indexactivatie geïnstalleerd. De oorspronkelijke timerstand is behouden.
+
+## Onafhankelijke publieke eindcontrole
+
+**API_PUBLIC_VERIFIED.** Health en alle gecontroleerde zoekantwoorden melden dezelfde nieuwe generatie `20261105T180750_9caf43` / collectie `bc_sync_20261105t180750_9caf43`:
+
+| Controle | Werkelijk resultaat |
+| --- | --- |
+| Profielen / globaal / shopping | 226 / 12.760 / 12.018 |
+| Verlavio | 851 |
+| `N8271TC` en `N8270CH` | Elk één exacte SKU-match op product 10698301571338; aliassen werken |
+| Nesso-prijs / foto | `price_cents=7800`, `price_varies=true`, geen afbeelding conform Lagoo-fotoverbod |
+| `RR6001` | Eén exacte match, merk Cottoceramix |
+| Re-Bel / Hotbath | 22 / 7.540 |
+| Niet-bestaande zoekterm | Nul resultaten |
+
+**LIVE_BROWSER_VERIFIED.** In echte Chrome na Exit preview, zonder preview-iframe, via de werkelijke header “verlavio” ingevoerd en Enter gedrukt: correcte zoekkop, **851 producten, 24 externe kaarten, nul native kaarten, geen foutbanner**. De eerste Helsingborg-kaart hoort bij het gezochte assortiment. De huidige MAIN gebruikt dus de herstelde externe index; dit is geen native fallback of conceptpreview.
+
+De actuele themarollen zijn onafhankelijk gecontroleerd: MAIN 196227170570; gecombineerd COTTO-concept 196238639370 en los zoekconcept 196116087050 zijn UNPUBLISHED. De nieuwe index is live; de nieuwe “Vanaf”-/kaartpresentatie staat in het gecombineerde concept en is nog niet op MAIN gepubliceerd.
 
 ## Overdracht en publicatie
 
-**Exact één volgende handeling voor het volledige indexherstel:** eigenaar voert de vastgepinde installer vanaf de eigen pc uit en plakt de voortgang/einduitkomst terug in de chat:
+**Exact één volgende handeling:** eigenaar beoordeelt/publiceert uitsluitend het gecombineerde **BadkamerCity - Re-Bel tegelkeuze (196238639370)** volgens de gereedstaande COTTO-02-afstemming. Daarna MAIN-rol en “Vanaf”-/kaart-/COTTO-weergave gericht teruglezen. De index werkt al; **de installer niet opnieuw uitvoeren**.
 
-```powershell
-$reparatie = Join-Path $env:TEMP "badkamercity-zoekindex-herstel.py"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/05a54c8d8b7df8c41644eec7abd5bd812a3cb6d5/scripts/filter-sync/repair_variant_index.py" -OutFile $reparatie
-Get-Content -Raw -LiteralPath $reparatie | ssh ubuntu@57.129.175.195 "sudo -n python3 -u -"
-```
-
-Vastgepind codecheckpoint: `05a54c8d8b7df8c41644eec7abd5bd812a3cb6d5`. De gecombineerde browserregressie voor Hotbath en Verlavio is gecontroleerd; de serveruitvoering blijft open. Deel geen wachtwoorden of sleutels. Na uitvoering eerst het eindverslag en de publieke index/SKU-/prijscontroles beoordelen; geen tweede blinde herstart.
-
-MAIN blijft 196227170570. Alleen het gecombineerde **BadkamerCity - Re-Bel tegelkeuze (196238639370)** bevat de COTTO-winkelwagenwijzigingen plus de zoekbescherming. De drie nieuwe prijsbestanden zijn daar exact teruggelezen; gecombineerde Hotbath-/Verlavio-browserregressie PASS. Publiceer uitsluitend dit gecombineerde concept volgens de actuele COTTO-afstemming. Het losse zoekconcept196116087050 mist de COTTO-wijzigingen en mag daarna niet als latere release worden gebruikt.
+Het gecombineerde concept bevat de COTTO-kleur-/winkelwagenwijzigingen én de actuele zoek-/prijswijzigingen. Het losse zoekconcept 196116087050 mist de COTTO-wijzigingen en mag niet als latere release worden gebruikt. Geen publicatie door deze uitvoering.
 
 De Verlavio-voorraadtekst is door de eigenaar gepubliceerd: MAIN is nu 196227170570. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. SEARCH-01 heeft geen backendworker gestart; na overdracht is geen SEARCH-01-schrijver actief.
 
