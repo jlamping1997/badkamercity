@@ -1,8 +1,8 @@
 # Zoekindex — ontbrekende Verlavio-resultaten
 
-5 november 2026. **PREVIEW_VERIFIED / BACKEND_BLOCKED_SSH / OWNER_PUBLICATION_PENDING**.
+5 november 2026. **PREVIEW_VERIFIED / SYNC_FAILURE_CONFIRMED / ERROR_DETAILS_PENDING**.
 
-De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. Het volledige backendindexherstel blijft open en vraagt eerst een alleen-lezen VPS-diagnose. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
+De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. Het alleen-lezen runtime-rapport is ontvangen: de automatische timer staat aan, maar de synchronisatieservice heeft gefaald. Voor het volledige backendherstel ontbreekt nog de precieze foutmelding. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
 
 ## Verse productiecontrole
 
@@ -20,7 +20,7 @@ De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mi
 
 De aantallen horen bij verschillende query-/profielscopes; trek er geen ongeteste exacte ontbrekende-productenlijst van af. De native Verlavio-resultaattelling wisselde tijdens de controles van 188 tot 214. Dit bewijst geen dekking van alle 851 Verlavio-artikelen. Het concrete defect is wel bewezen: Shopify levert resultaten die de externe route door nul vervangt.
 
-De live service en collectie tonen dat oudere oktoberbeschrijvingen niet als bewijs voor de huidige synchronisatiestatus kunnen dienen. Welke taak de collectie opbouwt, hoe incrementele updates lopen en of een automatische taak faalt, zijn nog niet op de VPS vastgesteld. Geen conclusie dat automatische synchronisatie ontbreekt, en geen claim van een werkende vijfminutenkoppeling.
+Het ontvangen runtime-rapport bevestigt dat automatische synchronisatie is ingericht: de timer is actief en ingeschakeld, maar de service staat op failed. De oorzaak is nog niet vastgesteld. De publieke health-route blijft de collectie van 3 november melden; het rapport bewijst geen succesvolle nieuwe indexopbouw of werkende vijfminutenverversing. Oudere oktoberbeschrijvingen zijn geen actuele bron voor de publieke index.
 
 ## Begrensde frontendbescherming
 
@@ -47,34 +47,35 @@ Deze situatie toont geen foutbanner. Echte fouten behouden de bestaande waarschu
 
 Deze proeven bewijzen de begrensde fallback en behoud van de bestaande Hotbath-route, geen volledige indexdekking. Geen nieuwe cart-, checkout- of betalingstest voor deze zoektaak.
 
-## Volledige backendindex nog geblokkeerd
+## Runtime-rapport ontvangen; precieze fout nog nodig
 
-In deze uitvoeromgeving is geen bruikbare SSH-authenticatie voor de VPS beschikbaar. Er is niet ingelogd en geen backendindex, actieve collectie, scheduler of zoekservice gewijzigd. De eerstvolgende stap is een alleen-lezen runtime-diagnose via de bestaande SSH-toegang van de eigenaar.
+De eigenaar heeft het alleen-lezen runtime-rapport aangeleverd. Het bevestigt:
 
-Het vastgepinde [diagnosescript `scripts/filter-sync/diagnose_runtime.py`](https://raw.githubusercontent.com/jlamping1997/badkamercity/a8b056a20c5a7e57089832b6774fc21440d43b8e/scripts/filter-sync/diagnose_runtime.py) verzamelt runtime-metadata zonder authwaarden af te drukken en zonder serverwrites. Codecheckpoint: `a8b056a20c5a7e57089832b6774fc21440d43b8e`. **Acht beveiligingstests PASS.** De eigenaar krijgt de PowerShell-/SSH-instructie die precies deze vastgepinde versie uitvoert; niet een veranderlijke branchtip.
+| Onderdeel | Vastgesteld |
+| --- | --- |
+| `bc-filter-sync.timer` | `enabled` en `active` |
+| `bc-filter-sync.service` | `failed` |
+| Werkelijke worker | `/opt/badkamercity/filter-sync/sync.py`, 98.867 bytes |
+| Worker-SHA256 | `2064b549e173d709fe1d5e8e5fe8cb549276e817d46b111510fcc4bc12471cf2` |
 
-Voer deze drie regels uit in PowerShell:
+De automatische taak ontbreekt dus niet; de uitvoering heeft gefaald. Het metadata-rapport bevat niet de exacte foutoorzaak. Aan- of afwezige variabelen in het diagnoseproces bewijzen niet hoe de worker zijn authenticatie laadt. Er is geen ontbrekende authenticatie als oorzaak vastgesteld.
 
-```powershell
-$controle = Join-Path $env:TEMP "badkamercity-zoekindex-controle.py"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/a8b056a20c5a7e57089832b6774fc21440d43b8e/scripts/filter-sync/diagnose_runtime.py" -OutFile $controle
-Get-Content -Raw -LiteralPath $controle | ssh ubuntu@57.129.175.195 "sudo -n python3 -"
-```
-
-Plak daarna de uitvoer terug in de chat. Deel geen wachtwoorden of sleutels.
-
-De diagnose moet de werkelijk draaiende service, configuratiepaden, actieve indexcollectie, profielen en bestaande synchronisatie-/opbouwtaken vaststellen. Het verslag moet geschoond blijven van secrets. Een oude werkinstructie of een nieuwe lege collectie is geen vervanging voor die diagnose.
-
-Na ontvangst kan de volledige productdekking tegen Shopify worden vergeleken en de bestaande opbouw-/incrementele synchronisatieroute gericht worden hersteld. Schema, werkelijke synchronisatietaak, eventuele herindexering, wisseling van actieve collectie en rollback moeten op de gevonden runtime worden gebaseerd. **Deze backendstappen zijn nog niet uitgevoerd.** Er is geen blind reparatiescript of automatische collectieomzetting toegevoegd.
+De eerdere vastgepinde runtime-diagnose is hiermee afgerond; het verslag blijft privé en wordt niet in deze publieke repository opgenomen. Er is geen index of actieve collectie gewijzigd en de worker is niet opnieuw gestart. De volgende stap leest uitsluitend het bestaande foutbestand; geen workerstatusopdracht of herstart uitvoeren.
 
 ## Overdracht en publicatie
 
-**Exact één volgende handeling voor het volledige indexherstel:** eigenaar voert de alleen-lezen VPS-diagnose vanuit de vastgepinde Git-commit uit en levert het geschoonde verslag aan. Nog geen index opnieuw opbouwen of actieve collectie omzetten.
+**Exact één volgende handeling voor het volledige indexherstel:** eigenaar leest de precieze fout en plakt de uitvoer terug in de chat:
+
+```powershell
+ssh ubuntu@57.129.175.195 "sudo -n cat /opt/badkamercity/filter-sync/LAST_ERROR.json"
+```
+
+Deel geen wachtwoorden of sleutels. Pas na deze foutmelding de oorzaak gericht herstellen; geen worker herstarten, index opnieuw opbouwen of actieve collectie omzetten voordat die oorzaak bekend is.
 
 De eigenaar kan **BadkamerCity - Zoekresultaten herstel (196116087050)** afzonderlijk publiceren. De preview is gecontroleerd; dit voorkomt dat aanwezige native resultaten door een externe nul worden verborgen. Het voltooit het volledige indexherstel niet. Na publicatie moeten MAIN-rol, één Verlavio-nulresultaatgeval, een externe Hotbath-zoekopdracht en een echt gefilterd nulresultaat gericht worden teruggelezen.
 
 **Samenloop met COTTO-01:** het afzonderlijke Re-Bel-concept 196238639370 is op de huidige MAIN gebaseerd, waarin deze zoekwijziging nog ontbreekt. De huidige inhoud van dat andere concept is door SEARCH-01 niet opnieuw gecontroleerd. Vóór publicatie van dat concept moet de COTTO-schrijver deze ene zoekwijziging meenemen en gericht controleren; anders verdwijnt de zoekbescherming bij een latere themapublicatie. Dit zoekconcept bevat omgekeerd niet de nog ongepubliceerde vier winkelwagenwijzigingen. Geen van beide concepten is door SEARCH-01 over het andere heen geschreven.
 
-De Verlavio-voorraadtekst is door de eigenaar gepubliceerd: MAIN is nu 196227170570. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. Na overdracht is geen SEARCH-01-schrijver of backendworker actief.
+De Verlavio-voorraadtekst is door de eigenaar gepubliceerd: MAIN is nu 196227170570. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. SEARCH-01 heeft geen backendworker gestart; na overdracht is geen SEARCH-01-schrijver actief.
 
 Volledige catalogusdata, privé-runtimeverslagen en screenshots horen niet in de publieke repository. Dit dossier bevat uitsluitend aggregaten, publieke code-identiteiten, controlegrenzen en het vervolgpad.
