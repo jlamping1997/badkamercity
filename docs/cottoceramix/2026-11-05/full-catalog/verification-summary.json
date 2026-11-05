@@ -1,0 +1,363 @@
+{
+  "date": "2026-11-05",
+  "status": "PARTIALLY_PUBLISHED",
+  "completion_status": "BLOCKED_MERCHANT_THEME_AND_INDEX_LAG",
+  "document_state": "PUBLIC_SAFE_CHECKPOINT",
+  "updated_at_utc": "2026-11-05T21:26:03.849889+00:00",
+  "observed_at_utc": "2026-11-05T21:22:50.177688+00:00",
+  "public_document_namespace": "docs/cottoceramix/2026-11-05/full-catalog/",
+  "code_commit": "916a431e180e28672b70feebc574ca345c6fbe80",
+  "code_branch": "fix/product-cards-2026-10-14",
+  "code_source": "shopify/current/",
+  "code_remote_verified": true,
+  "code_changed_by_finalization": false,
+  "counts": {
+    "confirmed_active_total": 3159,
+    "confirmed_webshop_published_total": 3159,
+    "confirmed_draft_total": 605,
+    "confirmed_shopify_total": 3764,
+    "unique_registered_product_ids": 3764,
+    "source_skus": 3771,
+    "baseline_active_published": 846,
+    "strict_new_m2_active_published": 1127,
+    "remaining_new_m2_active_published": 1186,
+    "native_unit_created_draft": 597,
+    "old_source_hold_draft": 8,
+    "source_holds": 15,
+    "source_holds_not_created": 7,
+    "components_disjoint": true,
+    "snapshot_is_atomic": false,
+    "source_inventory_live_refresh_claimed": false
+  },
+  "strict_m2": {
+    "status": "PUBLISHED_VERIFIED",
+    "readback_products": 1127,
+    "checks": 87323,
+    "failure_count": 0,
+    "post_publication": {
+      "status": "PASS",
+      "unique_products": 1127,
+      "active": 1127,
+      "webshop_published": 1127,
+      "safe_public_urls": 1127,
+      "failures": 0
+    }
+  },
+  "remaining_m2": {
+    "status": "PUBLISHED_VERIFIED",
+    "unique_products": 1186,
+    "full_v2_readback": {
+      "status": "PASS",
+      "products": 1186,
+      "checks": 91398,
+      "failure_count": 0,
+      "group_references_included": true
+    },
+    "post_publication": {
+      "status": "PASS",
+      "products": 1186,
+      "checks": 9489,
+      "failure_count": 0,
+      "active": 1186,
+      "webshop_published": 1186,
+      "exact_public_urls": 1186,
+      "first_read_at_utc": "2026-11-05T21:20:17.678Z",
+      "last_read_at_utc": "2026-11-05T21:20:36.612Z",
+      "scope": "Exact product/variant IDs, SKU, ACTIVE, Webshop publication, execution-overlay handle and public URL; not a repeated full-field or per-URL HTTP/browser test."
+    },
+    "identity_review": {
+      "status": "PASS_HANDLES_REPAIRED_AND_REVERIFIED",
+      "sku_pairs": [
+        [
+          "MA1003",
+          "MA1003."
+        ],
+        [
+          "MA1005",
+          "MA1005."
+        ],
+        [
+          "MA1017",
+          "MA1017."
+        ]
+      ],
+      "handle_only_corrections": 4,
+      "dotted_sku_handle_suffix": "-dot",
+      "bare_MA1005_handle_restored": true,
+      "source_sku_unchanged": true,
+      "prices_unchanged": true,
+      "source_json_unchanged": true,
+      "excluded_products": 0
+    }
+  },
+  "native_units": {
+    "status": "ADMIN_VERIFIED_DRAFT_STOREFRONT_BLOCKED",
+    "created_products": 597,
+    "unique_product_ids": 597,
+    "unique_variant_ids": 597,
+    "source_prices_confirmed": 597,
+    "created_statuses": {
+      "DRAFT": 597
+    },
+    "native_units": {
+      "stuk": 539,
+      "pak": 23,
+      "set": 35
+    },
+    "families": 497,
+    "known_weights": 134,
+    "omitted_unknown_weights": 463,
+    "media_count": 1182,
+    "media_status": {
+      "READY": 1182
+    },
+    "full_admin_readback": {
+      "status": "PASS",
+      "revision": "POST_CATEGORY_CORRECTION",
+      "products": 597,
+      "checks": 41740,
+      "failure_count": 0
+    },
+    "semantic_admin_readback": {
+      "status": "PASS",
+      "revision": "POST_CATEGORY_CORRECTION",
+      "products": 597,
+      "checks": 21297,
+      "failure_count": 0
+    },
+    "group_references": "APPLIED_AND_VERIFIED",
+    "order_mode_path": "custom.bron_toelichtingen_json.value.tiles.order_mode",
+    "order_mode_value": "unit",
+    "m2_calculator_permitted": false,
+    "linear_coverage_claimed": false,
+    "category_correction": {
+      "status": "PASS",
+      "sku": "MC0031",
+      "product_type": "Onderhoudsmiddelen",
+      "existing_maintenance_collection_used": true,
+      "incorrect_tile_application_removed": true,
+      "corrected_products": 1,
+      "other_inputs_unchanged": 596,
+      "product_and_variant_ids_preserved": true,
+      "native_fields_preserved": true,
+      "source_json_preserved": true,
+      "group_references_preserved": true,
+      "media_preserved": true,
+      "post_correction_read_at_utc": "2026-11-05T21:20:48.437Z",
+      "supersedes_pre_category_full_field_checks": 41742
+    },
+    "real_preview_browser_result": "BLOCKED_PRODUCT_PREVIEW_THEME_BINDING",
+    "real_cart_result": "BLOCKED_NOT_PERFORMED",
+    "preview_blocker": {
+      "targeted_attempts": 2,
+      "observed_theme": "Old MAIN/Re-Bel theme despite requested Cotto preview",
+      "supported_share_url_obtained": false,
+      "unit_ui_pass_claimed": false,
+      "cart_pass_claimed": false,
+      "renderer_defect_proven": false
+    },
+    "publication_gate": "BLOCKED_UNTIL_MERCHANT_PUBLISHES_VERIFIED_THEME_FRESH_MAIN_CHECK_AND_SIX_UNIT_PILOTS_PASS",
+    "all_597_remain_draft": true
+  },
+  "themes": {
+    "roles_verified_at_utc": "2026-11-05T21:22:50.177688+00:00",
+    "main": {
+      "id": "196238639370",
+      "name": "BadkamerCity - Re-Bel tegelkeuze",
+      "role": "MAIN",
+      "baseline_files": 1383,
+      "baseline_changed_files": 0
+    },
+    "preview": {
+      "id": "196246372618",
+      "name": "BadkamerCity - Cottoceramix volledig assortiment",
+      "role": "UNPUBLISHED",
+      "files": 1384,
+      "changed_files": 14,
+      "new_helpers": 1,
+      "validated_files": 15,
+      "exact_validated_bytes": true
+    },
+    "manifest_comparison": "PASS",
+    "executor_published_theme": false,
+    "merchant_publication_pending": true
+  },
+  "tests": {
+    "python": {
+      "tests": 80,
+      "status": "PASS"
+    },
+    "render_runtime": {
+      "unit_route": 12,
+      "color_grid": 6,
+      "existing_pilot": 7,
+      "card_delivery": 4,
+      "existing_card_price": 7,
+      "total": 36,
+      "status": "PASS"
+    },
+    "official_theme_validation": {
+      "files": 15,
+      "status": "PASS_WITH_NON_ERROR_WARNINGS",
+      "nonblocking_warnings": "Recorded per validation round; no aggregate count claimed"
+    },
+    "unit_contract_offline": "PASS",
+    "live_unit_preview": "BLOCKED_PRODUCT_PREVIEW_THEME_BINDING",
+    "live_unit_cart": "BLOCKED_NOT_PERFORMED",
+    "physical_mobile": "NOT_TESTED",
+    "shipping_checkout_payment": "NOT_TESTED"
+  },
+  "browser_m2": {
+    "status": "PASS_SCOPED_NATIVE_COLLECTION_AND_M2_PREVIEW",
+    "browser": "Chrome desktop",
+    "theme_id": "196246372618",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "final_collection": {
+      "count": 3159,
+      "cards": 24,
+      "first_row_photos_loaded": 3,
+      "horizontal_overflow": false,
+      "last_page_link_visible": 132,
+      "last_page_visited": false,
+      "every_catalog_photo_visually_checked": false,
+      "expanded_filters_fallback_message_visible": true
+    },
+    "earlier_native_pagination": {
+      "interim_count": 1973,
+      "page1_cards": 24,
+      "page2_cards": 24,
+      "page1_unique_handles": 24,
+      "page2_unique_handles": 24,
+      "page_overlap": 0,
+      "real_page2_navigation": "PASS"
+    },
+    "series": "Sweet Bars",
+    "color_photos_loaded": 8,
+    "selected_final_hero_loaded": true,
+    "color_change": [
+      "Deep White",
+      "Royal Green"
+    ],
+    "m2_retained": "2.5",
+    "waste_percent_retained": 10,
+    "boxes": 7,
+    "total_eur": "398.44",
+    "unit_route_proof": false,
+    "cart_action": false
+  },
+  "baseline_preservation": {
+    "status": "PASS",
+    "readback_products": 854,
+    "old_active": 846,
+    "still_active": 846,
+    "webshop_published": 846,
+    "public_url_preserved": 846,
+    "handle_preserved": 846,
+    "old_holds_draft_unpublished_without_url": 8,
+    "failures": 0,
+    "scope": "Identity/status/handle/publication/public URL only; no fresh full price, stock, metafield or media comparison."
+  },
+  "source_holds": {
+    "status": "BLOCKED_SOURCE_CONFIRMATION_REQUIRED",
+    "total": 15,
+    "existing_draft_conflicts": [
+      "MAR128L",
+      "MAR130L",
+      "MAR129L",
+      "MAR132L",
+      "MAR131L",
+      "VA3202",
+      "VA3201",
+      "VA3203"
+    ],
+    "uncreated_finish_conflicts": [
+      "GQR107M",
+      "MA1070",
+      "ES1271",
+      "EX1170",
+      "EX1171",
+      "MA1071"
+    ],
+    "uncreated_missing_real_image": [
+      "AD5917"
+    ]
+  },
+  "search_index": {
+    "status": "HEALTHY_WITH_CONTENT_LAG",
+    "measured_completed_at_utc": "2026-11-05T21:20:05.800433+00:00",
+    "http_calls": 4,
+    "all_http_200": true,
+    "healthy": true,
+    "generation": "20261105T210044_bd0667",
+    "observed_search_count": 1973,
+    "expected_published_count": 3159,
+    "count_difference": 1186,
+    "generation_consistent": true,
+    "health_collection_matches_generation": true,
+    "full_search_coverage_verified": false,
+    "individual_missing_sku_audit": false,
+    "current_service_fault_claimed": false,
+    "refresh_origin_automatic_or_manual": "NOT_DETERMINED",
+    "earlier_22_product_snapshot": "SUPERSEDED",
+    "next_action": "Recheck coverage after unit release; refresh existing regular synchronization only if coverage still lags."
+  },
+  "feed": {
+    "automatic_worker_installed": false,
+    "current_live_inventory_refresh_claimed": false,
+    "protected_fields": [
+      "store_brand",
+      "titles",
+      "SEO",
+      "descriptions",
+      "groups",
+      "references",
+      "manual_corrections"
+    ],
+    "future_key": "supplier+exact_sku"
+  },
+  "next_action": {
+    "owner": "MERCHANT",
+    "action": "Publish the reviewed theme BadkamerCity - Cottoceramix volledig assortiment",
+    "theme_id": "196246372618"
+  },
+  "followup_sequence": [
+    {
+      "step": 1,
+      "action": "Freshly verify MAIN role and reviewed theme version."
+    },
+    {
+      "step": 2,
+      "action": "Activate and test only the six registered native-unit pilots in the actual browser and cart.",
+      "skus": [
+        "CB1801",
+        "CB1802",
+        "FGB323M",
+        "UM0104",
+        "KE4815",
+        "MC0031"
+      ]
+    },
+    {
+      "step": 3,
+      "condition": "Six pilot UI/cart tests PASS",
+      "action": "Publish remaining 591 native-unit articles and reread status/publication.",
+      "failure_action": "Restore affected pilots to DRAFT; keep the remaining 591 DRAFT."
+    },
+    {
+      "step": 4,
+      "action": "Recheck search-index coverage and refresh the existing regular synchronization only if needed."
+    }
+  ],
+  "scope_limits": [
+    "PARTIALLY_PUBLISHED is a measured checkpoint, not full release completion.",
+    "3159 ACTIVE and Webshop-published products are proven by disjoint phased component checks, not an atomic full-catalog snapshot.",
+    "All 597 native-unit products remain DRAFT; offline and Admin PASS do not establish actual unit UI/cart behavior.",
+    "The 15 source holds comprise eight existing DRAFT products and seven uncreated source products.",
+    "The index is healthy but current count coverage is behind; count difference is not a missing-ID audit or proof of a service fault.",
+    "No physical-phone, address-dependent shipping, checkout, payment or automatic-feed claim.",
+    "No source exports, private paths, raw mutation receipts, credentials, screenshots or signed URLs included."
+  ]
+}

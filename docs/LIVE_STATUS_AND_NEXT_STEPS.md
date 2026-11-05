@@ -1,20 +1,22 @@
 # BadkamerCity — actuele werkstatus
 
-## COTTO-05 — volledig assortiment publiceren en vindbaarheid controleren · 5 november 2026
+## COTTO-05 — m²-assortiment gepubliceerd; native units wachten op eigenaar · 5 november 2026
 
-**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige assortiment online. De 1.127 nieuwe m²-artikelen zijn volledig teruggelezen: **87.323 controles PASS**. De nacontrole na publicatie bevestigt voor alle 1.127 artikelen ACTIVE, publicatie op Webshop en de juiste product-URL. Actueel totaal: **1.973 actieve Cottoceramix-artikelen**.
+**PARTIALLY_PUBLISHED / BLOCKED_MERCHANT_THEME_AND_INDEX_LAG.** Verse eindcontrole bevestigt **3.159 ACTIVE en Webshop-gepubliceerde Cottoceramix-artikelen**. Er zijn 3.764 unieke Shopify-producten/varianten: 3.159 ACTIVE en 605 DRAFT, waarvan 597 native stuks-/pak-/setartikelen en acht bestaande bron-HOLDs. De broncheckpointset bevat 3.771 exacte SKU's; zes nieuwe afwerkingsconflicten en AD5917 zonder bruikbare foto zijn niet aangemaakt. Totaal 15 bron-HOLDs, geen extra unit-HOLD.
 
-De create-operaties voor **1.186 overige m²-artikelen** zijn COMPLETE; deze artikelen staan DRAFT en de volledige readback loopt nog. Publicatie pas na geslaagde gegevens-, groeps- en mediacontrole.
+De 1.127 nieuwe strict-m²-artikelen slagen met 87.323 veld-/groep-/mediacontroles; alle 1.127 publicaties en publieke URL's teruggelezen. De 1.186 overige m²-artikelen slagen met 91.398 controles en daarna 9.489 nacontroles op exacte SKU-/product-/variantidentiteit, ACTIVE, Webshop en URL. Vier gerichte Malaga-handlecorrecties behouden de afzonderlijke punt-SKU's; nul uitsluitingen. De 854 bestaande producten zijn apart teruggelezen: 846 blijven ACTIVE/gepubliceerd met behouden handles/URL's; acht HOLDs blijven ongepubliceerd DRAFT.
 
-**Stuks-/pak-/setroute:** 597 kandidaten. Zes proefartikelen zijn DRAFT met asynchrone verwerking; de overige 591 moeten nog worden aangemaakt. **Alle 597 blijven DRAFT totdat de eigenaar het gecontroleerde previewthema publiceert.**
+Alle **597 native unitartikelen blijven DRAFT**. De actuele gecombineerde readback na de ene MC0031-onderhoudscorrectie slaagt: 41.740 hoofdcontroles en 21.297 onafhankelijke semantische controles, nul fouten; 1.182 beelden READY en 497 groepen exact. 134 gewichten bevestigd, 463 onbekende gewichten bewust weggelaten; geen m²-claims op de unitroute. MC0031 gebruikt de bestaande onderhoudscollectie; SKU, variant, prijs €39,95, bron-JSON, foto's en referenties behouden. De overige 596 unitrecords zijn exact ongewijzigd.
 
-**Preview gereed voor verdere controle:** UNPUBLISHED **196246372618 — BadkamerCity - Cottoceramix volledig assortiment**, met 15 gevalideerde themabestanden. Finale manifestcontrole PASS: MAIN **196238639370** heeft alle 1.383 baselinebestanden ongewijzigd; preview heeft 1.384 bestanden, met exact 14 gewijzigde bestanden en één nieuwe helper. Geen themapublicatie door uitvoerder.
+**Themapublicatie door eigenaar vereist:** MAIN **196238639370** blijft ongeschreven, alle 1.383 baselinebestanden checksumgelijk. Alleen **UNPUBLISHED196246372618 — BadkamerCity - Cottoceramix volledig assortiment** bevat de 15 gevalideerde bestanden: exact 14 wijzigingen en één nieuwe helper, 1.384 bestanden totaal. Codecheckpoint **916a431e180e28672b70feebc574ca345c6fbe80**, bron `shopify/current/`, vaste branch `fix/product-cards-2026-10-14`; geen broncodewijziging sinds dit checkpoint.
 
-Codecheckpoint **916a431e180e28672b70feebc574ca345c6fbe80** staat remote en lokaal op `fix/product-cards-2026-10-14`; lokale werkmap schoon bij dit checkpoint. Bron: `shopify/current/`.
+Echte conceptbrowser: Cottoceramix-collectie toont 3.159 producten, 24 kaarten per pagina en paginalink132, de eerste drie foto's geladen en geen overloop; bestaande melding over uitgebreide filters blijft zichtbaar. Sweet Bars heeft acht geladen kleurkeuzen; Deep White→Royal Green bewaart 2,5m²+10% en rekent zeven dozen/€398,44. De echte unit-UI/cartproef blijft **BLOCKED** doordat de gebruikte DRAFT-productpreview aan het oude MAIN-thema bleef gebonden; geen unit-koopbewijs of rendererfout geclaimd.
 
-**Open:** 15 bron-HOLDs (acht bestaande conflicten, zes afwerkingsconflicten en één ontbrekende bruikbare foto). De externe zoekindex bevat nog slechts 22 Re-Bel-artikelen en is achterhaald; VPS-/SSH-verbinding is vanuit deze uitvoering niet bereikbaar. De bestaande indexsynchronisatie moet nog worden hersteld of uitgevoerd.
+De openbare zoekdienst is gezond (HTTP200), consistente generatie **20261105T210044_bd0667**, inmiddels 1.973 Cottoceramix-resultaten; CF3009 en AH6571 elk één. Het telverschil met het gepubliceerde totaal is 1.186; geen individuele ontbrekende-SKU-audit uitgevoerd. Geen timerstoring of verplichte reparatie bewezen; volledige zoekopname van 3.159 nog niet bevestigd. SSH/VPS-route vanuit deze uitvoering niet bereikbaar.
 
-**Exact één volgende handeling:** de volledige readback van de 1.186 DRAFT m²-artikelen afronden en uitsluitend de geslaagde artikelen publiceren.
+[Definitieve beperkte overdracht en publicatiegrens](cottoceramix/2026-11-05/full-catalog/README.md) · [Openbare verificatiesamenvatting](cottoceramix/2026-11-05/full-catalog/verification-summary.json). Geen automatische Cottoceramix-feed ingericht. Fysieke telefoon, adresafhankelijke verzending, checkout en betaling niet uit de Admin-/offlinetests afgeleid.
+
+**Exact één volgende handeling:** eigenaar publiceert **BadkamerCity - Cottoceramix volledig assortiment (196246372618)**. Daarna verse MAIN-rol/hashcontrole, zes unitproefartikelen activeren en echte unit-/cartproef uitvoeren; alleen na PASS de overige 591 unitartikelen publiceren. Vervolgens indexopname opnieuw controleren en uitsluitend indien nodig de bestaande reguliere synchronisatie uitvoeren.
 
 ## COTTO-04 — tweede controle productkeuzes · 5 november 2026
 
