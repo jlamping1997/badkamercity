@@ -207,7 +207,7 @@
               </p>
             {%- endif -%}
 
-            {% if show_card_delivery %}{% render 'bc-card-delivery' %}{% endif %}
+            {% if show_card_delivery %}{% render 'bc-card-delivery', product: card_product %}{% endif %}
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {% render 'bc-card-tile-price', product: card_product, mode: 'native' %}
             {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}

@@ -1508,5 +1508,20 @@
   },
   "bc_seo": {
     "collection_description": "Browse {{ title }} at {{ shop }}. View the range and product information or contact us for personal advice."
+  },
+  "bc_units": {
+    "per_piece": "per piece",
+    "per_pack": "per pack",
+    "per_set": "per set",
+    "per_unit": "per order unit",
+    "quantity_pieces": "Number of pieces",
+    "quantity_packs": "Number of packs",
+    "quantity_sets": "Number of sets",
+    "quantity_units": "Number of order units",
+    "invalid_quantity": "Enter a valid number of whole order units.",
+    "pieces_one": "{{ count }} piece",
+    "pieces_many": "{{ count }} pieces",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity"
   }
 }

@@ -12,6 +12,7 @@ function engine(locale = 'nl') {
   const strings = JSON.parse(fs.readFileSync(path.join(base, 'locales', locale === 'nl' ? 'nl.json' : 'en.default.json'), 'utf8').replace(/^\s*\/\*[\s\S]*?\*\/\s*/, ''));
   const files = new Map([
     ['/snippets/bc-card-tile-price.liquid', adapt(fs.readFileSync(path.join(base, 'snippets/bc-card-tile-price.liquid'), 'utf8'))],
+    ['/snippets/bc-cotto-unit-mode.liquid', adapt(fs.readFileSync(path.join(base, 'snippets/bc-cotto-unit-mode.liquid'), 'utf8'))],
     ['/snippets/bc-hotbath-menu-route.liquid', '']
   ]);
   const read = file => { assert(files.has(file), 'known snippet: ' + file); return files.get(file); };

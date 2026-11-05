@@ -43,7 +43,7 @@ if (!customElements.get('bc-product-sticky')) {
       }, options);
       [['minus', '[data-sticky-minus]'], ['plus', '[data-sticky-plus]']].forEach(([name, selector]) => {
         this.querySelector(selector).addEventListener('click', () => {
-          this.buybox.querySelector(`quantity-input button[name="${name}"]`)?.click();
+          this.originalQuantityButton(name)?.click();
           this.refresh();
         }, options);
       });
@@ -62,6 +62,11 @@ if (!customElements.get('bc-product-sticky')) {
 
     originalQuantity() {
       return this.buybox.querySelector('input[name="quantity"]');
+    }
+
+    originalQuantityButton(name) {
+      return this.buybox.querySelector(`quantity-input button[name="${name}"]`) ||
+        this.buybox.querySelector(`bc-porcelanosa-buybox[data-order-mode="unit"] [data-unit-step="${name === 'minus' ? -1 : 1}"]`);
     }
 
     sync() {
@@ -103,7 +108,7 @@ if (!customElements.get('bc-product-sticky')) {
         else this.quantity.setAttribute(name, value);
       });
       ['minus', 'plus'].forEach(name => {
-        const source = this.buybox.querySelector(`quantity-input button[name="${name}"]`);
+        const source = this.originalQuantityButton(name);
         this.querySelector(`[data-sticky-${name}]`).disabled = !source || source.disabled || source.classList.contains('disabled');
       });
     }

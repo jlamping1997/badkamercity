@@ -8,6 +8,16 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 
+OPTIONAL_COTTO_METAFIELDS = {
+    ('tiles', 'color'), ('tiles', 'execution'), ('tiles', 'size'),
+    ('custom', 'kleur'), ('custom', 'afwerking'), ('custom', 'serie'),
+    ('custom', 'afmetingen_original'), ('bc_filters', 'kleur'),
+    ('bc_filters', 'afwerking'), ('bc_filters', 'glansgraad'), ('bc_filters', 'serie'),
+    ('bc_filters', 'tegel_dikte_mm'), ('bc_filters', 'tegel_lengte_mm'),
+    ('bc_filters', 'tegel_breedte_mm'),
+}
+
+
 class HTMLTokens(HTMLParser):
     VOID_ELEMENTS = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
@@ -133,7 +143,7 @@ def verify(plans, readback, active_skus=None, require_group_refs=False):
     expected_groups = defaultdict(list)
     for plan in plans:
         expected_groups[plan['group_key']].append(plan['sku'])
-    checks, errors = Counter(), []
+    checks, errors, unconfirmed_weight_skus = Counter(), [], []
     def record(sku, field, condition, actual=None, expected=None):
         checks[field] += 1
         if not condition:
@@ -167,10 +177,15 @@ def verify(plans, readback, active_skus=None, require_group_refs=False):
                 record(sku, 'variant.' + field, got.get(field) == wanted[field], got.get(field), wanted[field])
             record(sku, 'variant.price', decimal_equal(got.get('price'), wanted['price']), got.get('price'), wanted['price'])
             measurement = got.get('unitPriceMeasurement') or {}
-            for field in ['quantityUnit', 'referenceUnit']:
-                record(sku, 'unit_price.' + field, measurement.get(field) == wanted['unitPriceMeasurement'][field], measurement.get(field), wanted['unitPriceMeasurement'][field])
-            for field in ['quantityValue', 'referenceValue']:
-                record(sku, 'unit_price.' + field, decimal_equal(measurement.get(field), wanted['unitPriceMeasurement'][field]), measurement.get(field), wanted['unitPriceMeasurement'][field])
+            desired_measurement = wanted.get('unitPriceMeasurement')
+            if desired_measurement is not None:
+                for field in ['quantityUnit', 'referenceUnit']:
+                    record(sku, 'unit_price.' + field, measurement.get(field) == desired_measurement[field], measurement.get(field), desired_measurement[field])
+                for field in ['quantityValue', 'referenceValue']:
+                    record(sku, 'unit_price.' + field, decimal_equal(measurement.get(field), desired_measurement[field]), measurement.get(field), desired_measurement[field])
+            else:
+                unconfigured = not measurement.get('quantityUnit') and not measurement.get('referenceUnit') and all(measurement.get(field) is None or decimal_equal(measurement.get(field), 0) for field in ['quantityValue', 'referenceValue'])
+                record(sku, 'unit_price.not_configured', unconfigured, measurement, 'no reference-unit measurement configured for native piece/pack/set')
             selected = got.get('selectedOptions')
             record(sku, 'variant.selected_options', selected == [{'name': 'Title', 'value': 'Default Title'}], selected)
             if 'barcodes' in got:
@@ -187,13 +202,38 @@ def verify(plans, readback, active_skus=None, require_group_refs=False):
             for field in ['tracked', 'requiresShipping']:
                 record(sku, 'inventory.' + field, inventory.get(field) == wanted['inventoryItem'][field], inventory.get(field), wanted['inventoryItem'][field])
             weight = (inventory.get('measurement') or {}).get('weight') or {}
-            desired_weight = wanted['inventoryItem']['measurement']['weight']
-            record(sku, 'weight.unit', weight.get('unit') == desired_weight['unit'], weight.get('unit'), desired_weight['unit'])
-            record(sku, 'weight.value', decimal_equal(weight.get('value'), desired_weight['value']), weight.get('value'), desired_weight['value'])
+            desired_weight = (wanted['inventoryItem'].get('measurement') or {}).get('weight')
+            if desired_weight is not None:
+                record(sku, 'weight.unit', weight.get('unit') == desired_weight['unit'], weight.get('unit'), desired_weight['unit'])
+                record(sku, 'weight.value', decimal_equal(weight.get('value'), desired_weight['value']), weight.get('value'), desired_weight['value'])
+            else:
+                # A new Shopify variant can expose a zero-valued platform default
+                # after the input omitted weight. That is not a verified physical
+                # weight and must not be promoted into a displayed specification.
+                unconfirmed_weight_skus.append(sku)
+                value = weight.get('value')
+                record(sku, 'weight.platform_default_only', value is None or decimal_equal(value, 0), value, 'absent or zero platform default; physical weight remains unknown')
         actual_meta = {(m.get('namespace'), m.get('key')): m for m in nodes(actual.get('metafields'))}
+        expected_meta = {(m['namespace'], m['key']): m for m in expected['metafields']}
         for wanted in expected['metafields']:
             got = actual_meta.get((wanted['namespace'], wanted['key']))
             record(sku, 'metafield.' + wanted['namespace'] + '.' + wanted['key'], got is not None and metafield_equal(got, wanted), got.get('value') if got else None, wanted['value'])
+        if expected.get('vendor') == 'Cottoceramix':
+            for namespace, key in sorted(OPTIONAL_COTTO_METAFIELDS - set(expected_meta)):
+                record(sku, 'metafield.absent.' + namespace + '.' + key, (namespace, key) not in actual_meta, actual_meta.get((namespace, key)), 'absent; source fact not supplied')
+        if sku in unconfirmed_weight_skus:
+            try:
+                tile = json.loads(actual_meta[('custom', 'bron_toelichtingen_json')]['value'])['tiles']
+                specs = json.loads(actual_meta[('custom', 'complete_specificaties')]['value'])
+                weight_items = [item for group in specs for item in group.get('items', [])
+                                if 'gewicht' in str(item.get('key', '')).lower()
+                                or 'weight' in str(item.get('key', '')).lower()
+                                or 'gewicht' in str(item.get('label', '')).lower()
+                                or 'weight' in str(item.get('label', '')).lower()]
+                omitted = not {'weight_kg_per_box', 'weight_kg_per_unit'} & set(tile) and not weight_items
+            except (KeyError, ValueError, TypeError, AttributeError):
+                omitted = False
+            record(sku, 'weight.sourced_display_absent', omitted, expected='no weight field in tile contract or displayed specs')
         desired_collection_ids = set(expected.get('collections', []))
         actual_collection_ids = {collection.get('id') for collection in nodes(actual.get('collections'))}
         record(sku, 'collections.expected_membership', desired_collection_ids <= actual_collection_ids, sorted(actual_collection_ids), sorted(desired_collection_ids))
@@ -222,7 +262,7 @@ def verify(plans, readback, active_skus=None, require_group_refs=False):
         group_failures[sku_group[error['sku']]].append(error)
     groups = [{'group_key': key, 'skus': skus, 'readback_pass': key not in group_failures, 'failure_count': len(group_failures.get(key, []))} for key, skus in sorted(expected_groups.items())]
     blocked_groups = [group for group in groups if not group['readback_pass']]
-    return {'status': 'PASS' if not errors else 'HOLD', 'planned_products': len(plans), 'readback_products': len(actual_products), 'checks': sum(checks.values()), 'checks_by_field': dict(checks), 'failure_count': len(errors), 'errors': errors, 'groups': groups, 'blocked_groups': blocked_groups, 'readback_pass_skus': [sku for group in groups if group['readback_pass'] for sku in group['skus']], 'scope': 'Exact planned Admin field and media readiness comparison only. Source correctness, publication channels, checkout and visual image identity are independent gates.', 'writes_performed': False}
+    return {'status': 'PASS' if not errors else 'HOLD', 'planned_products': len(plans), 'readback_products': len(actual_products), 'checks': sum(checks.values()), 'checks_by_field': dict(checks), 'failure_count': len(errors), 'errors': errors, 'groups': groups, 'blocked_groups': blocked_groups, 'readback_pass_skus': [sku for group in groups if group['readback_pass'] for sku in group['skus']], 'unconfirmed_physical_weight_skus': unconfirmed_weight_skus, 'scope': 'Exact planned Admin field and media readiness comparison only. Absent/zero platform-default weight does not verify physical weight. Source correctness, publication channels, checkout and visual image identity are independent gates.', 'writes_performed': False}
 
 
 def main():

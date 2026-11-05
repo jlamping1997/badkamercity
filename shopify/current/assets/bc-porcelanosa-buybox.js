@@ -5,6 +5,8 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       this.started = true;
       this.core = window.BCPorcelanosa;
       if (!this.core) return;
+      this.unitMode = this.dataset.orderMode === 'unit';
+      if (this.unitMode) { this.connectUnits(); return; }
       this.page = this.closest('product-info');
       this.form = document.getElementById(this.dataset.form);
       this.area = this.querySelector('[data-tile-area]');
@@ -54,6 +56,72 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       this.setupApplicationHelp();
       this.loadChoices();
     }
+    connectUnits() {
+      this.page = this.closest('product-info');
+      this.form = document.getElementById(this.dataset.form);
+      this.quantity = this.querySelector('[data-unit-quantity]');
+      this.submit = this.form?.querySelector('[type="submit"]');
+      this.initialDisabled = this.submit?.disabled;
+      this.money = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { style: 'currency', currency: this.dataset.currency });
+      this.number = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { maximumFractionDigits: 4 });
+      this.preview = this.dataset.preview === 'true';
+      this.current = { sku: this.dataset.sku, orderMode: 'unit', saleUnit: this.dataset.saleUnit, unitCount: Number(this.dataset.unitCount), priceCents: Number(this.dataset.priceCents), leadTime: this.dataset.leadTime, orderType: this.dataset.orderType };
+      this.cacheKey = 'bc-tile-unit-order:v1:' + (this.dataset.group || this.dataset.productId) + ':' + this.current.saleUnit + ':' + this.current.unitCount;
+      this.colorGrid = this.dataset.colorLayout === 'expandable_grid';
+      this.colorStateKey = 'bc-tile-colors:v1:' + (this.dataset.group || this.dataset.productId);
+      this.colorsExpanded = false;
+      try {
+        this.colorsExpanded = this.colorGrid && sessionStorage.getItem(this.colorStateKey) === 'true';
+        const saved = JSON.parse(sessionStorage.getItem(this.cacheKey));
+        if (saved && this.unitResult(saved.quantity)) this.quantity.value = String(saved.quantity);
+      } catch (_) { }
+      const changed = () => { this.calculate(); this.save(); };
+      this.quantity?.addEventListener('input', changed);
+      this.quantity?.addEventListener('change', changed);
+      this.querySelectorAll('[data-unit-step]').forEach(button => button.addEventListener('click', () => {
+        const typed = this.quantity.value.trim();
+        const current = /^\d+$/.test(typed) && Number.isSafeInteger(Number(typed)) ? Number(typed) : 0;
+        this.quantity.value = String(Math.max(1, current + Number(button.dataset.unitStep)));
+        this.quantity.dispatchEvent(new Event('input', { bubbles: true }));
+      }));
+      this.calculate();
+      this.loadChoices();
+    }
+    unitResult(value) {
+      const text = String(value ?? '').trim();
+      if (!/^\d{1,10}$/.test(text)) return null;
+      const quantity = Number(text);
+      const items = Number(this.current.unitCount);
+      const price = Number(this.current.priceCents);
+      if (!['stuk', 'pak', 'set'].includes(this.current.saleUnit) || !Number.isSafeInteger(quantity) || quantity < 1 || quantity > 2147483647 || !Number.isSafeInteger(items) || items < 1 || !Number.isSafeInteger(price) || price <= 0) return null;
+      if (this.current.saleUnit === 'stuk' && items !== 1) return null;
+      const pieces = quantity * items;
+      const total = quantity * price;
+      return Number.isSafeInteger(pieces) && Number.isSafeInteger(total) ? { quantity, pieces, total } : null;
+    }
+    calculateUnits() {
+      const result = this.unitResult(this.quantity?.value);
+      const error = this.querySelector('[data-tile-error]');
+      if (error) { error.hidden = Boolean(result); error.textContent = result ? '' : this.dataset.unitError; }
+      this.quantity?.setAttribute('aria-invalid', String(!result));
+      if (this.submit) this.submit.disabled = this.initialDisabled || !result;
+      this.page?.querySelectorAll('[data-sticky-submit]').forEach(button => { button.disabled = this.initialDisabled || !result; });
+      this.text('[data-tile-total]', result ? this.money.format(result.total / 100) : '—');
+      const pieceLabel = result?.pieces === 1 ? this.dataset.piecesOne : this.dataset.piecesMany;
+      this.text('[data-unit-received]', result ? String(pieceLabel || '').replace(/__COUNT__/g, this.number.format(result.pieces)) : '—');
+      this.text('[data-tile-unit-price]', this.money.format(this.current.priceCents / 100));
+      const decrease = this.querySelector('[data-unit-step="-1"]');
+      const increase = this.querySelector('[data-unit-step="1"]');
+      if (decrease) decrease.disabled = !result || result.quantity <= 1;
+      if (increase) increase.disabled = !result || !this.unitResult(result.quantity + 1);
+      const order = this.current.orderType || '';
+      const delivery = this.current.leadTime || this.dataset.deliveryUnknown;
+      this.text('[data-tile-delivery-text]', [order, delivery].filter(Boolean).join(' · '));
+      const deliveryElement = this.querySelector('[data-tile-delivery]');
+      deliveryElement?.classList.toggle('is-order', order.toLowerCase().includes('bestel'));
+      deliveryElement?.classList.toggle('is-unknown', !order);
+      this.page?.querySelectorAll('.bc-product-sticky__price').forEach(element => { element.textContent = result ? this.money.format(result.total / 100) : '—'; });
+    }
     setupApplicationHelp() {
       this.applicationDialog = this.querySelector('[data-tile-application-dialog]');
       this.applicationHelp = this.querySelector('[data-tile-application-help]');
@@ -90,11 +158,16 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
     text(selector, value) { const element = this.querySelector(selector); if (element) element.textContent = value; }
     save() {
       try {
+        if (this.unitMode) {
+          if (this.unitResult(this.quantity?.value)) sessionStorage.setItem(this.cacheKey, JSON.stringify({ quantity: this.quantity.value }));
+          return;
+        }
         const valid = this.boxMode ? this.core.calculateBoxes(this.boxInput?.value, this.current.boxUnits, this.current.priceCents) : this.core.units(this.area.value);
         if (this.explicitArea && valid) sessionStorage.setItem(this.cacheKey, JSON.stringify({ area: this.area.value, waste: Number(this.waste.value), mode: this.boxMode ? 'boxes' : 'area', boxes: this.boxInput?.value }));
       } catch (_) { }
     }
     calculate() {
+      if (this.unitMode) { this.calculateUnits(); return; }
       const manual = this.boxMode && this.boxInput;
       const result = manual ? this.core.calculateBoxes(this.boxInput.value, this.current.boxUnits, this.current.priceCents) : this.core.calculate(this.area.value, Number(this.waste.value), this.current.boxUnits, this.current.priceCents);
       if (manual && result) { this.waste.value = '0'; this.area.value = this.inputNumber.format(result.supplied / this.core.scale); }
@@ -149,6 +222,7 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
         const config = JSON.parse(embedded.textContent);
         if (config.schema !== 1 || config.group !== this.dataset.group || !Array.isArray(config.products)) throw new Error('choices');
         this.products = config.products;
+        if (this.unitMode && this.products.some(p => p.orderMode !== 'unit' || p.saleUnit !== this.current.saleUnit || Number(p.unitCount) !== this.current.unitCount)) throw new Error('mixed sellable units');
         const selected = this.products.find(p => p.id === this.dataset.productId);
         if (!selected) throw new Error('article');
         this.current = { ...selected, ...this.current };
@@ -183,6 +257,7 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
     nominalSize(value) {
       const parts = String(value).match(/[0-9]+(?:[.,][0-9]+)?/g);
       if (!parts || parts.length !== 2) return String(value);
+      if (this.dataset.exactSize === 'true') return parts.map(part => this.number.format(Number(part.replace(',', '.')))).join(' x ') + ' cm';
       const sizes = { '14.3':15, '19.3':20, '29.4':30, '33.3':30, '44.3':45, '59.2':60, '59.5':60, '59.6':60, '60.2':60 };
       return parts.map(part => {
         const number = Number(part.replace(',', '.'));
@@ -372,7 +447,7 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
         return;
       }
       this.current = next;
-      if (!this.explicitArea) this.area.value = '1';
+      if (!this.unitMode && !this.explicitArea) this.area.value = '1';
       this.updatePreview();
       this.renderChoices();
       this.calculate();
@@ -385,7 +460,7 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       const title = this.page?.querySelector('.bc-product__title');
       if (title) title.textContent = current.title;
       const sku = this.page?.querySelector('.bc-product__sku');
-      if (sku) sku.textContent = sku.textContent.replace(/PO\d+/, current.sku);
+      if (sku) sku.textContent = this.unitMode ? sku.textContent.replace(/:\s*.*$/, ': ' + current.sku) : sku.textContent.replace(/PO\d+/, current.sku);
       this.page?.querySelectorAll('.bc-product-specs__value').forEach(element => {
         if (/^PO\d+$/.test(element.textContent.trim())) element.textContent = current.sku;
       });

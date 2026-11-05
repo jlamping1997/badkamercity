@@ -1508,5 +1508,20 @@
   },
   "bc_seo": {
     "collection_description": "Bekijk {{ title }} bij {{ shop }}. Ontdek het assortiment en de productinformatie of neem contact op voor persoonlijk advies."
+  },
+  "bc_units": {
+    "per_piece": "per stuk",
+    "per_pack": "per pak",
+    "per_set": "per set",
+    "per_unit": "per besteleenheid",
+    "quantity_pieces": "Aantal stuks",
+    "quantity_packs": "Aantal pakken",
+    "quantity_sets": "Aantal sets",
+    "quantity_units": "Aantal besteleenheden",
+    "invalid_quantity": "Vul een geldig aantal hele besteleenheden in.",
+    "pieces_one": "{{ count }} stuk",
+    "pieces_many": "{{ count }} stuks",
+    "decrease": "Aantal verlagen",
+    "increase": "Aantal verhogen"
   }
 }

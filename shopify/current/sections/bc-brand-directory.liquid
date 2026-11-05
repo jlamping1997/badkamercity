@@ -1,5 +1,5 @@
 {%- liquid
-  assign approved_vendors = 'hotbath|jee-o|sunshower|the mosaic factory|wiesbaden' | split: '|'
+  assign approved_vendors = 'cottoceramix|hotbath|jee-o|sunshower|the mosaic factory|wiesbaden' | split: '|'
   assign sorted_vendors = shop.vendors | sort_natural
 -%}
 
@@ -10,7 +10,11 @@
       {%- assign vendor_key = vendor | downcase -%}
       {%- if approved_vendors contains vendor_key -%}
         <li class="bc-brand-directory__item">
-          {{- vendor | link_to_vendor: class: 'bc-brand-directory__link' -}}
+          {%- if vendor_key == 'cottoceramix' and collections['cottoceramix'] != blank -%}
+            <a href="{{ collections['cottoceramix'].url }}" class="bc-brand-directory__link">{{ vendor | escape }}</a>
+          {%- else -%}
+            {{- vendor | link_to_vendor: class: 'bc-brand-directory__link' -}}
+          {%- endif -%}
         </li>
       {%- endif -%}
     {%- endfor -%}

@@ -7,7 +7,13 @@
 -%}
 {%- liquid
   assign bc_tiles_enabled = false
+  capture bc_cotto_unit_mode
+    render 'bc-cotto-unit-mode', product: product
+  endcapture
+  assign bc_cotto_unit_mode = bc_cotto_unit_mode | strip
   if product.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0
+    assign bc_tiles_enabled = true
+  elsif bc_cotto_unit_mode == 'unit'
     assign bc_tiles_enabled = true
   endif
 -%}

@@ -55,6 +55,26 @@ def public_url(value):
     return parsed.scheme == 'https' and parsed.hostname in {'cottoceramix.nl', 'www.cottoceramix.nl'} and not parsed.query and not parsed.username
 
 
+def image_transport_source(value):
+    """Use the proven JPEG route without rewriting the source photo identity."""
+    if not isinstance(value, str):
+        return value
+    try:
+        parsed = urlsplit(value)
+        trusted = (parsed.scheme == 'https' and parsed.hostname in {'cottoceramix.nl', 'www.cottoceramix.nl'}
+                   and parsed.username is None and parsed.password is None and parsed.port in {None, 443})
+    except ValueError:
+        return value
+    prefix = re.match(r'https://[^/?#]+', value, re.I)
+    if not trusted or not prefix or not parsed.path.startswith('/resize/'):
+        return value
+    start, end = prefix.end(), prefix.end() + len(parsed.path)
+    if value[start:end] != parsed.path:
+        return value
+    path = re.sub(r'\.JPG(?=/|$)', '.jpg', parsed.path)
+    return value[:start] + path + value[end:]
+
+
 def valid_ean(value):
     value = str(value or '')
     return len(value) == 13 and value.isdigit() and sum(int(v) * (1 if i % 2 == 0 else 3) for i, v in enumerate(value)) % 10 == 0
@@ -161,9 +181,12 @@ def availability(row):
     return lead, order, stock, manual
 
 
-def make_input(row, key, collections=None, source_snapshot=None):
+def make_input(row, key, collections=None, source_snapshot=None, allow_missing_optional=False):
     application, product_type = APPLICATIONS[row['category']]
     finish = normalized_finish(row)
+    color = row.get('color')
+    if allow_missing_optional:
+        finish, color = finish or '', color or ''
     source_name = str(row['source_name']).strip()
     title = 'Cottoceramix ' + source_name
     handle = 'cottoceramix-' + slug(source_name) + '-' + slug(row['sku'])
@@ -173,9 +196,17 @@ def make_input(row, key, collections=None, source_snapshot=None):
     fields = live.get('fields') or {}
     specs = live.get('specs') or {}
     length, width = chosen_dimensions(row)
+    if allow_missing_optional and not row.get('size'):
+        length, width = None, None
     box = float(positive(row['m2_per_box']))
-    pieces = int(positive(row['pieces_per_box']))
-    weight = float(positive(row['weight_kg_candidate']))
+    pieces_value = positive(row.get('pieces_per_box'))
+    weight_value = positive(row.get('weight_kg_candidate'))
+    pieces = int(pieces_value) if pieces_value is not None else None
+    weight = float(weight_value) if weight_value is not None else None
+    if allow_missing_optional and set(row.get('flags') or []) & {'missing_weight', 'weight_conflict'}:
+        weight = None
+    if not allow_missing_optional and (pieces is None or weight is None):
+        raise ValueError('Strict m² input requires confirmed piece count and weight')
     notes = []
     barcode = fields.get('ean') or raw.get('R')
     if not valid_ean(barcode):
@@ -204,6 +235,11 @@ def make_input(row, key, collections=None, source_snapshot=None):
         'sale_unit': 'doos', 'weight_kg_per_box': weight, 'color_picker_layout': 'expandable_grid',
         'source': source,
     }
+    if allow_missing_optional:
+        if pieces is None:
+            del tile['pieces_per_box']
+        if weight is None:
+            del tile['weight_kg_per_box']
     if positive(raw.get('BE')) is not None:
         tile['boxes_per_pallet'] = float(positive(raw['BE']))
     mf = []
@@ -212,9 +248,9 @@ def make_input(row, key, collections=None, source_snapshot=None):
             return
         mf.append({'namespace': namespace, 'key': field, 'type': kind, 'value': json.dumps(value, ensure_ascii=False, separators=(',', ':')) if kind == 'json' else str(value)})
     simple = {
-        'tiles': {'group_id': 'COTTO-' + slug(key).upper(), 'group_label': row['series'], 'color': row['color'], 'size': row['size'], 'execution': finish, 'application': application},
-        'custom': {'artikelnummer': row['sku'], 'leverancier_artikelnummer': row['sku'], 'switch_group': 'cottoceramix-' + slug(key), 'serie': row['series'], 'kleur': row['color'], 'afwerking': finish, 'afmetingen_original': row['size']},
-        'bc_filters': {'kleur': row['color'], 'afwerking': finish, 'glansgraad': finish, 'serie': row['series'], 'tegel_toepassing': application, 'verkoopeenheid': 'Doos'},
+        'tiles': {'group_id': 'COTTO-' + slug(key).upper(), 'group_label': row['series'], 'color': color, 'size': row['size'], 'execution': finish, 'application': application},
+        'custom': {'artikelnummer': row['sku'], 'leverancier_artikelnummer': row['sku'], 'switch_group': 'cottoceramix-' + slug(key), 'serie': row['series'], 'kleur': color, 'afwerking': finish, 'afmetingen_original': row['size']},
+        'bc_filters': {'kleur': color, 'afwerking': finish, 'glansgraad': finish, 'serie': row['series'], 'tegel_toepassing': application, 'verkoopeenheid': 'Doos'},
     }
     for namespace, pairs in simple.items():
         for field, value in pairs.items():
@@ -223,29 +259,46 @@ def make_input(row, key, collections=None, source_snapshot=None):
         return {'key': field, 'label': label, 'value': value}
     groups = [
         {'group': 'Product', 'items': [item('artikelnummer', 'Artikelnummer', row['sku']), item('merk', 'Merk', 'Cottoceramix'), item('serie', 'Serie', row['series']), item('productsoort', 'Productsoort', application)]},
-        {'group': 'Maatvoering', 'items': [item('lengte_cm', 'Lengte', str(float(length)).replace('.', ',') + ' cm'), item('breedte_cm', 'Breedte', str(float(width)).replace('.', ',') + ' cm')]},
-        {'group': 'Eigenschappen', 'items': [item('kleur', 'Kleur', row['color']), item('afwerking', 'Afwerking', finish)]},
-        {'group': 'Verpakking', 'items': [item('stuks_per_doos', 'Stuks per doos', pieces), item('m2_per_doos', 'Oppervlakte per doos', str(box).replace('.', ',') + ' m²'), item('verkoopeenheid', 'Verkoopeenheid', 'Doos'), item('gewicht_per_doos', 'Gewicht per doos', str(weight).replace('.', ',') + ' kg')]},
+        {'group': 'Maatvoering', 'items': [item('lengte_cm', 'Lengte', str(float(length)).replace('.', ',') + ' cm' if length is not None else None), item('breedte_cm', 'Breedte', str(float(width)).replace('.', ',') + ' cm' if width is not None else None)]},
+        {'group': 'Eigenschappen', 'items': [item('kleur', 'Kleur', color), item('afwerking', 'Afwerking', finish)]},
+        {'group': 'Verpakking', 'items': [item('stuks_per_doos', 'Stuks per doos', pieces), item('m2_per_doos', 'Oppervlakte per doos', str(box).replace('.', ',') + ' m²'), item('verkoopeenheid', 'Verkoopeenheid', 'Doos'), item('gewicht_per_doos', 'Gewicht per doos', str(weight).replace('.', ',') + ' kg' if weight is not None else None)]},
     ]
     for field, label, spec in [('antislipwaarde', 'Antislipwaarde', 'Antislip'), ('slijtgroep', 'Slijtgroep', 'Slijtgroep'), ('vorstbestendig', 'Vorstbestendig', 'Vorstbestendig'), ('gerectificeerd', 'Gerectificeerd', 'Gerectificeerd')]:
         if specs.get(spec):
             groups[2]['items'].append(item(field, label, specs[spec]))
     thickness = chosen_thickness(row)
+    if allow_missing_optional and not row.get('thickness'):
+        thickness = None
     if thickness is not None:
         meta('bc_filters', 'tegel_dikte_mm', 'number_decimal', float(thickness))
         groups[1]['items'].append(item('dikte_mm', 'Dikte', str(float(thickness)).replace('.', ',') + ' mm'))
     for field, value in [('tegel_lengte_mm', length), ('tegel_breedte_mm', width)]:
-        meta('bc_filters', field, 'number_decimal', float(positive(value) * 10))
+        if value is not None:
+            meta('bc_filters', field, 'number_decimal', float(positive(value) * 10))
     meta('custom', 'leverancier_voorraad', 'boolean', 'true' if order == 'Voorraadartikel' else 'false')
     meta('custom', 'bron_toelichtingen_json', 'json', {'tiles': tile})
+    if allow_missing_optional:
+        for group in groups:
+            group['items'] = [item for item in group['items'] if item['value'] is not None and item['value'] != '']
+        groups = [group for group in groups if group['items']]
     meta('custom', 'complete_specificaties', 'json', groups)
-    description = '<p>' + html.escape(title) + ' is een ' + html.escape(application.lower()) + ' in de kleur ' + html.escape(row['color']) + ', met afwerking ' + html.escape(finish.lower()) + '.</p><p>Een doos bevat ' + str(pieces) + ' tegels, samen ' + str(box).replace('.', ',') + ' m². Bereken het aantal hele dozen met de tegelcalculator.</p>'
+    description = '<p>' + html.escape(title) + ' is een ' + html.escape(application.lower())
+    if color or not allow_missing_optional:
+        description += ' in de kleur ' + html.escape(color)
+    if finish or not allow_missing_optional:
+        description += ', met afwerking ' + html.escape(finish.lower())
+    description += '.</p><p>Een doos bevat '
+    if pieces is not None:
+        description += str(pieces) + ' tegels, samen '
+    description += str(box).replace('.', ',') + ' m². Bereken het aantal hele dozen met de tegelcalculator.</p>'
     variant = {
         'sku': row['sku'], 'price': money(row['box_price']), 'taxable': True, 'inventoryPolicy': 'CONTINUE',
         'inventoryItem': {'tracked': False, 'requiresShipping': True, 'measurement': {'weight': {'unit': 'KILOGRAMS', 'value': weight}}},
         'optionValues': [{'optionName': 'Title', 'name': 'Default Title'}], 'showUnitPrice': True,
         'unitPriceMeasurement': {'quantityUnit': 'M2', 'quantityValue': box, 'referenceUnit': 'M2', 'referenceValue': 1},
     }
+    if allow_missing_optional and weight is None:
+        del variant['inventoryItem']['measurement']
     if valid_ean(barcode):
         variant['barcodes'] = [{'type': 'EAN', 'value': str(barcode)}]
     value = {
@@ -255,8 +308,10 @@ def make_input(row, key, collections=None, source_snapshot=None):
         'tags': ['Cottoceramix', 'bc-cottoceramix-cotto03-20261105', 'Tegels', application, 'tegelgroep:' + slug(key), str(row['series'])],
         'productOptions': [{'name': 'Title', 'values': [{'name': 'Default Title'}]}],
         'variants': [variant], 'metafields': mf,
-        'files': [{'originalSource': url, 'contentType': 'IMAGE', 'alt': title + ('' if i == 0 else ' – afbeelding ' + str(i + 1))} for i, url in enumerate(live['images'])],
+        'files': [{'originalSource': image_transport_source(url), 'contentType': 'IMAGE', 'alt': title + ('' if i == 0 else ' – afbeelding ' + str(i + 1))} for i, url in enumerate(live['images'])],
     }
+    if allow_missing_optional and not row.get('series'):
+        value['tags'].pop()  # Do not persist str(None) as an invented series tag.
     if collections and row['category'] in collections:
         value['collections'] = list(collections[row['category']])
     return value

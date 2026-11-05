@@ -106,7 +106,7 @@
 
       {% render 'bc-card-specs', product: card_product %}
 
-      {% render 'bc-card-delivery' %}
+      {% render 'bc-card-delivery', product: card_product %}
 
       <div class="bc-search-card__price-wrap">
         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
