@@ -1,0 +1,12 @@
+{
+  "installer": "repair_variant_index.py",
+  "installer_sha256": "7c924875d0d3378e5c21f46a481346e1f750ef16efb249d9bea19a874f5a7aec",
+  "base_worker_sha256": "2064b549e173d709fe1d5e8e5fe8cb549276e817d46b111510fcc4bc12471cf2",
+  "base_api_sha256": "6e4895a1ebc7937da9fbec0a92b141213320e87a382a2fcf5d479daedde0a573",
+  "target_worker_sha256": "e5f3c4103266c3df1f03b855395d0d6c1711b7452a7626c91889cfc9b3ab280c",
+  "target_api_sha256": "7fe0b7faa2f5bf83af40edfa8d409dc382ba25453c15f6ebea4115c76e29f3b3",
+  "deadline_seconds": 900,
+  "target_api_ast_sha256": "76a5ab7e741528d0aa5327b64988fd57d5f3b5fb7f54e952f76ce2bd50e0a938",
+  "private_runtime_sources_embedded": false,
+  "transport_ascii": true
+}

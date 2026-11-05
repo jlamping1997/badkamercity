@@ -532,6 +532,12 @@
       return title;
     }
 
+    function productPrice(product) {
+      const price = formatPrice(product.price_cents);
+      if (product.price_varies !== true || product.price_cents == null || !Number.isFinite(Number(product.price_cents))) return price;
+      return uiText('labelPriceFrom', 'Vanaf __BC_PRICE__').replace('__BC_PRICE__', price);
+    }
+
     function renderProducts(products) {
       const cards = products.map(product => {
         const href = productPath(product);
@@ -540,7 +546,7 @@
           <div class="bc-filter-card__info"><p class="bc-filter-card__vendor">${escapeHtml(product.vendor || '')}</p>
           <h3 class="bc-filter-card__title"><a href="${attr(href)}" title="${attr(product.title)}">${escapeHtml(productTitle(product))}</a></h3>
           <p class="bc-card-color" aria-live="polite"></p><div class="bc-card-colors" data-bc-card-colors></div>
-          <div class="bc-card-buy"><div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax || 'incl. btw')}</span>` : ''}
+          <div class="bc-card-buy"><div class="bc-filter-card__price">${escapeHtml(productPrice(product))}</div>${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax || 'incl. btw')}</span>` : ''}
           <p class="bc-card-delivery" data-bc-card-delivery>${escapeHtml(root.dataset.cardDelivery || '')}</p>
           <div class="bc-card-actions"><a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">→</span></a><button type="button" class="bc-card-cart" data-bc-card-cart disabled aria-label="${attr(uiText('labelAdd','In winkelwagen'))}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 3h3l2.3 12h11.5l2.2-9H6M9 20h.01M18 20h.01" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button></div></div>
           <p class="bc-card-feedback" role="status"></p></div></article></li>`;
@@ -563,7 +569,7 @@
       const model = cardModels.get(card);
       if (!model || !data) return;
       model.data = data;
-      model.product = {...model.product,handle:data.handle,title:data.title,price_cents:data.price_cents,image_url:data.image_url};
+      model.product = {...model.product,handle:data.handle,title:data.title,price_cents:data.price_cents,price_varies:data.price_varies,image_url:data.image_url};
       const href = productPath(model.product);
       card.dataset.bcCardHandle = data.handle;
       card.querySelectorAll('a').forEach(a => a.href = href);
@@ -592,14 +598,14 @@
       delivery.classList.toggle('bc-card-delivery--stock',data.delivery_in_stock===true);
       card.querySelector('.bc-card-color').textContent = canonicalColor(data.color);
       const price = card.querySelector('.bc-filter-card__price');
-      price.textContent = formatPrice(data.price_cents);
+      price.textContent = productPrice(data);
       const tile = data.tile_price;
       if (Number.isFinite(tile?.box_area) && tile.box_area > 0) {
         const box = document.createElement('span');
         box.className = 'bc-card-unit';
         box.textContent = `${uiText('labelTileBox','per doos')} · ${new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {maximumFractionDigits: 4}).format(tile.box_area)} m²`;
         price.append(box);
-        if (Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
+        if (data.price_varies !== true && Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
           const area = document.createElement('span');
           area.className = 'bc-card-unit';
           area.textContent = `${formatPrice(tile.unit_price_cents)} ${uiText('labelTileArea','per m²')}`;

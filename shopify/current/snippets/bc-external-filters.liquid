@@ -23,6 +23,7 @@
   data-products-count="{% unless search_mode %}{{ collection.all_products_count }}{% endunless %}"
   data-card-data-section="bc-card-data"
   data-empty-label="{{ 'templates.search.no_results' | t: terms: search.terms | escape }}"
+  data-label-price-from="{{ 'products.product.price.from_price_html' | t: price: '__BC_PRICE__' | escape }}"
   data-label-tile-box="{{ 'bc_listing.tile_box' | t | escape }}"
   data-label-tile-area="{{ 'bc_listing.tile_area' | t | escape }}"
   data-label-add="{{ 'bc_listing.add' | t | escape }}"

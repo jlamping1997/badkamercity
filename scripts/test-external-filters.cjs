@@ -32,7 +32,8 @@ async function fixture(searchMode = false, shortTitle = null, options = {}) {
     if (options.nativeResults !== false) dom.window.document.querySelector('#native-product').className = options.nativeClass || 'bc-search-card';
   }
   if (options.url) dom.reconfigure({ url: options.url });
-  if (shortTitle !== null) dom.window.document.querySelector('#BcExternalFilters').dataset.cardDataSection = 'bc-card-data';
+  if (shortTitle !== null || options.cardData) dom.window.document.querySelector('#BcExternalFilters').dataset.cardDataSection = 'bc-card-data';
+  if (options.priceFrom) dom.window.document.querySelector('#BcExternalFilters').dataset.labelPriceFrom = options.priceFrom;
   const w = dom.window;
   w.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
   const calls = [];
@@ -43,12 +44,12 @@ async function fixture(searchMode = false, shortTitle = null, options = {}) {
   let nativeHistoryEvents = 0;
   w.addEventListener('popstate', () => { nativeHistoryEvents += 1; });
   w.console.error = () => {};
-  w.fetch = async (url, options) => {
-    if (!options.body) return { ok: true, json: async () => ({ 'bc-card-data': `<script data-bc-card-data type="application/json">${JSON.stringify({ id: '123', title: 'Kraan', short_title: shortTitle }).replaceAll('<', '\\u003c')}</script>` }) };
-    calls.push(JSON.parse(options.body));
+  w.fetch = async (url, requestOptions) => {
+    if (!requestOptions.body) return { ok: true, json: async () => ({ 'bc-card-data': `<script data-bc-card-data type="application/json">${JSON.stringify({ id: '123', title: 'Kraan', short_title: shortTitle, ...options.cardData }).replaceAll('<', '\\u003c')}</script>` }) };
+    calls.push(JSON.parse(requestOptions.body));
     if (fail) throw new Error('API unavailable');
     if (httpFailure) return { ok: false, status: 503 };
-    return { ok: true, json: async () => ({ found, collection: { handle: searchMode ? '__all__' : 'wastafelkranen', profile_products: count }, products: found ? [{ id: '123', shopify_product_id: 'gid://shopify/Product/123', handle: 'kraan', title: 'Kraan', price_cents: 16400 }] : [], facets: [
+    return { ok: true, json: async () => ({ found, collection: { handle: searchMode ? '__all__' : 'wastafelkranen', profile_products: count }, products: found ? [{ id: '123', shopify_product_id: 'gid://shopify/Product/123', handle: 'kraan', title: 'Kraan', price_cents: 16400, ...options.product }] : [], facets: [
       { field: 'price_cents', label: 'Prijs', type: 'number_decimal', data_type: 'int64', unit: 'cent', min: 1000, max: 20000 },
       { field: 'f_met_hoofddouche', label: 'Met hoofddouche', type: 'string', data_type: 'bool', values: [{ value: 'true', count: 1 }, { value: 'false', count: 0 }] },
       { field: 'f_aantal_grepen', label: 'Aantal grepen', type: 'number_decimal', data_type: 'int32', min: 1, max: 2 }
@@ -269,3 +270,53 @@ test('A different query in browser history cannot restore the original query res
     assert.ok(f.w.document.documentElement.classList.contains('bc-external-filters-active'));
   } finally { f.dom.window.close(); }
 });
+
+for (const [varies, prefix] of [[true, 'Vanaf '], [false, ''], [undefined, '']]) {
+  test(`Initial API card uses a minimum-price label only for price_varies=${varies}`, async () => {
+    const f = await fixture(true, null, { product: { price_cents: 7800, price_varies: varies }, priceFrom: 'Vanaf __BC_PRICE__' });
+    try {
+      assert.equal(f.w.document.querySelector('.bc-filter-card__price').textContent, `${prefix}€\u00a078,00`);
+    } finally { f.dom.window.close(); }
+  });
+}
+
+for (const [cents, varies, expected] of [[7800, true, 'Vanaf €\u00a078,00'], [7800, false, '€\u00a078,00'], [0, true, 'Vanaf €\u00a00,00']]) {
+  test(`Hydration retains Shopify product minimum ${cents} and varying-price state ${varies}`, async () => {
+    const f = await fixture(true, null, {
+      product: { price_cents: 20000, price_varies: false },
+      cardData: { handle: 'kraan', price_cents: cents, price_varies: varies, variant_id: 456, available: true, can_add: false }
+    });
+    try {
+      await flush();
+      assert.equal(f.w.document.querySelector('.bc-filter-card__price').textContent, expected);
+      assert.equal(f.w.document.querySelector('.bc-filter-card__title a').getAttribute('href'), '/products/kraan');
+    } finally { f.dom.window.close(); }
+  });
+}
+
+test('Translated minimum-price templates remain text in initial cards and hydrated cards', async () => {
+  const f = await fixture(true, null, { product: { price_cents: 7800, price_varies: true }, priceFrom: 'From <img src=x onerror=alert(1)> __BC_PRICE__' });
+  try {
+    const price = f.w.document.querySelector('.bc-filter-card__price');
+    assert.equal(price.textContent, 'From <img src=x onerror=alert(1)> €\u00a078,00');
+    assert.equal(price.querySelector('img'), null);
+  } finally { f.dom.window.close(); }
+});
+
+for (const varies of [false, true]) {
+  test(`Tile box pricing keeps its area label and only shows a fixed m² price when price_varies=${varies}`, async () => {
+    const f = await fixture(true, null, { cardData: {
+      handle: 'kraan', price_cents: 9929, price_varies: varies,
+      tile_price: { box_area: 1.44, unit_price_cents: 6895 }
+    } });
+    try {
+      await flush();
+      const price = f.w.document.querySelector('.bc-filter-card__price');
+      assert.equal(price.firstChild.textContent, `${varies ? 'Vanaf ' : ''}€\u00a099,29`);
+      const units = [...price.querySelectorAll('.bc-card-unit')].map(node => node.textContent);
+      assert.equal(units[0], 'per doos · 1,44 m²');
+      assert.equal(units.length, varies ? 1 : 2);
+      if (!varies) assert.equal(units[1], '€\u00a068,95 per m²');
+    } finally { f.dom.window.close(); }
+  });
+}
