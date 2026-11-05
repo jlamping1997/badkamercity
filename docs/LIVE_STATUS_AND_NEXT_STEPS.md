@@ -2,11 +2,15 @@
 
 ## COTTO-04 — tweede controle productkeuzes · 5 november 2026
 
-**IN_PROGRESS. Actieve schrijver: Codex COTTO-04.** Eigenaar vraagt een onafhankelijke dubbele controle van meerdere keuzemenu's en een praktische beoordeling van het schakelen. Scope: bestaande Cottoceramix-artikelen, live kleuren/formaten/gekoppelde diktes en aparte model-/afwerkingsfamilies; juiste titel/foto/prijs/verpakking/selectie en calculatorbehoud. Bestaande correcte werking laten staan. Geen nieuwe import of prijs-/voorraadbatch.
+**REVIEW_COMPLETE / VERIFIED_BROWSER / NO_STORE_WRITES.** Zeven live series getest: Funky, Re-Bel, Croccante, Zelij, Magnetism, Lula en Marea Alta Mat. In 26 vastgelegde browsertoestanden kloppen doosafronding en totaalbedrag; geen horizontale overloop bij desktopviewport1363×936. Kleur-, formaat-, foto-, titel-, verpakkings- en prijswissels werken in de geteste routes. In m²-modus blijven gewenste m² en snijverlies behouden; na handmatig dozen invoeren blijven juist de dozen behouden. Uit-/inklappen bewaart de gekozen kleur, ook bij Zelij met24kleuren.
 
-Verse MAIN **196238639370**, 846 actieve Cottoceramix-artikelen. Reële browserproeven en een onafhankelijke bron-/selectiekerncontrole worden gecombineerd. Verbeterideeën onderscheiden van bewezen fouten; geen ongeteste telefoon- of volledige catalogusvrijgave.
+Onafhankelijke selectiecontrole op824 gepubliceerde nieuwe producten/126families: **11.314 kernwissels**, geen ongewenste technische verandering door alleen een kleurwissel. Dit is een bron-/runtimecontrole, geen live browserklik op elk artikel. Veertig formaat→dikte-koppelingen zijn verwacht; Croccante60→80cm met9→10mm ook live bevestigd. De vier relevante componentbestanden zijn checksumgelijk aan MAIN **196238639370**;846 actieve Cottoceramix-artikelen bij begin en einde.
 
-**Exact één volgende handeling:** de representatieve kleur-, formaat- en uitvoeringswissels live uitvoeren en concrete bevindingen vastleggen.
+Geen functionele blokkade gevonden in deze steekproef. Verbeteringen geparkeerd: expliciete vormnamen bij onder meer Magnetism/Cottage, aparte uitvoeringnavigatie tussen model-/afwerkingsfamilies, bronkleurnamen bij Croccante normaliseren. Afrondingsverschillen van maximaal één cent in de afgeleide m²-prijs vragen geen prijsbatch. Eén laag geprioriteerde lifecycle-kwestie alleen in een verwijdertest gereproduceerd; geen fout in de normale productwissel bewezen. Geen product-/prijs-/voorraad-/theme-mutatie of publicatie.
+
+[Uitgevoerde scenario's, beoordeling en grenzen](cottoceramix/2026-11-05/menu-review/README.md) · [Beperkte openbare verificatie](cottoceramix/2026-11-05/menu-review/verification.json). Fysieke telefoon, nieuwe cartactie, verzending, checkout/betaling en livefeed deze ronde **NOT_TESTED**. Geen actieve COTTO-04-schrijver na overdracht.
+
+**Exact één volgende handeling binnen het cataloguswerk:** de al openstaande aparte stuks-/m¹-route voor onder meer Casablanca-randstukken en Enso als kleine volgende batch voorbereiden; bovenstaande UX-ideeën blijven apart van die import.
 
 ## LAUNCH-03 — eenmanszaakadres en retourlocatie apart bevestigd · 5 november 2026
 
