@@ -1,10 +1,12 @@
+> **5 november 2026 — actuele publicatie bevestigd:** de eigenaar heeft **BadkamerCity - Re-Bel tegelkeuze (196238639370)** gepubliceerd; dit is nu MAIN. Voormalig MAIN 196227170570 is UNPUBLISHED. Zoekindex en nieuwe kaartprijsweergave zijn live gecontroleerd; SEARCH-01 is afgerond. De gedateerde COTTO-/SEARCH-publicatieverzoeken hieronder beschrijven eerdere checkpoints en zijn geen resterende actie.
+
 > **Publicatie-afstemming COTTO-01:** de oorspronkelijke zoekbescherming (historisch controlepunt MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`, vóór de prijsuitbreiding met concept-JS `11de150d3e2797a6f35742a813281fcb`) is meegenomen in **UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze**, samen met de vier COTTO-winkelwagenbestanden. Eigen 23 runtimechecks en gecombineerde 5/5 validatie PASS. Publiceer alleen dit gecombineerde concept. Het losse zoekconcept 196116087050 mist de winkelwagenwijzigingen en mag daarna niet als latere release worden gebruikt. De onafhankelijke publieke controle na reparatie vindt Verlavio 851, Re-Bel 22 en RR6001 als exact Cottoceramix-artikel.
 
 # Zoekindex — ontbrekende Verlavio-resultaten
 
-5 november 2026. **SERVER_APPLIED_VERIFIED / API_PUBLIC_VERIFIED / LIVE_BROWSER_VERIFIED**.
+5 november 2026. **OWNER_PUBLISHED / INDEX_LIVE_VERIFIED / UI_LIVE_VERIFIED**.
 
-De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. De eigenaar heeft de vastgepinde installer succesvol uitgevoerd. De volledige indexactivatie is daarna onafhankelijk via de publieke API en echte live Chrome bevestigd. De index werkt in de huidige MAIN; de “Vanaf”-/kaartwijzigingen en COTTO-verbeteringen wachten nog op publicatie van het gecombineerde concept. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
+De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. De eigenaar heeft de vastgepinde installer succesvol uitgevoerd én het gecombineerde thema gepubliceerd. De index en de nieuwe “Vanaf”-/kaartweergave zijn onafhankelijk in de publieke API en echte live Chrome bevestigd. MAIN is nu196238639370; SEARCH-01 is afgerond. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
 
 ## Nulmeting vóór de serverreparatie
 
@@ -70,7 +72,7 @@ Geconsolideerde controle PASS: 49 Python-tests (18 worker, 11 API, 16 installer 
 
 De drie bedoelde themabestanden zijn uitsluitend naar het gecombineerde UNPUBLISHED-concept 196238639370 geschreven, met behoud van de COTTO-wijzigingen en bestaande zoekfallback. Alle drie readbacks zijn exact; MAIN is niet geschreven. Echte browserregressie: Hotbath 7.540 resultaten/24 externe kaarten en Verlavio 36 native kaarten/nul externe kaarten zonder foutbanner. Aanvullend PASS: de echte gecombineerde previewroute `bc-card-data` voor Lagoo Nesso levert `price_cents=7800` en `price_varies=true`, zonder `image_url`; het Lagoo-fotoverbod blijft behouden. Echte Chrome-SKU-proef `VSB_2001`: één native Malmö-kaart met productfoto, nul externe kaarten en geen foutbanner.
 
-| Bestand in `shopify/current/` | Teruggelezen concept-MD5 |
+| Bestand in `shopify/current/` | Teruggelezen LIVE-MAIN-MD5 |
 | --- | --- |
 | `assets/bc-external-filters.js` | `11de150d3e2797a6f35742a813281fcb` |
 | `sections/bc-card-data.liquid` | `b4e58946edc02ba1e44dd876c6239ef5` |
@@ -98,6 +100,8 @@ De installatie voorziet volledige staging en alle SKU-teruglezing vóór atomair
 
 ## Onafhankelijke publieke eindcontrole
 
+De onderstaande eindcontrole hoort bij de generatie van 5 november rond 18:07 UTC. Latere COTTO-03-imports vallen buiten deze momentopname; directe indexdekking daarvan is niet beweerd.
+
 **API_PUBLIC_VERIFIED.** Health en alle gecontroleerde zoekantwoorden melden dezelfde nieuwe generatie `20261105T180750_9caf43` / collectie `bc_sync_20261105t180750_9caf43`:
 
 | Controle | Werkelijk resultaat |
@@ -112,14 +116,16 @@ De installatie voorziet volledige staging en alle SKU-teruglezing vóór atomair
 
 **LIVE_BROWSER_VERIFIED.** In echte Chrome na Exit preview, zonder preview-iframe, via de werkelijke header “verlavio” ingevoerd en Enter gedrukt: correcte zoekkop, **851 producten, 24 externe kaarten, nul native kaarten, geen foutbanner**. De eerste Helsingborg-kaart hoort bij het gezochte assortiment. De huidige MAIN gebruikt dus de herstelde externe index; dit is geen native fallback of conceptpreview.
 
-De actuele themarollen zijn onafhankelijk gecontroleerd: MAIN 196227170570; gecombineerd COTTO-concept 196238639370 en los zoekconcept 196116087050 zijn UNPUBLISHED. De nieuwe index is live; de nieuwe “Vanaf”-/kaartpresentatie staat in het gecombineerde concept en is nog niet op MAIN gepubliceerd.
+**OWNER_PUBLISHED / UI_LIVE_VERIFIED.** Verse rollen: MAIN 196238639370; voormalig voorraadthema 196227170570 en los zoekconcept 196116087050 zijn UNPUBLISHED. Alle drie live prijsbestanden zijn checksum-exact teruggelezen: JS `11de150d3e2797a6f35742a813281fcb`, kaartdata `b4e58946edc02ba1e44dd876c6239ef5`, vertaalsnippet `2a0136a8420e8a710f448c99d5fc3aad`.
+
+Echte live Chrome ná deze publicatie, zonder preview-iframe: via de werkelijke header `N8271TC` + Enter geeft correcte zoekkop, **één product / één externe Nesso-plafondbuiskaart, “Vanaf € 78,00”, geen foutbanner**. Daarmee zijn SKU-aliaszoeken en de nieuwe prijsweergave samen op MAIN bewezen.
 
 ## Overdracht en publicatie
 
-**Exact één volgende handeling:** eigenaar beoordeelt/publiceert uitsluitend het gecombineerde **BadkamerCity - Re-Bel tegelkeuze (196238639370)** volgens de gereedstaande COTTO-02-afstemming. Daarna MAIN-rol en “Vanaf”-/kaart-/COTTO-weergave gericht teruglezen. De index werkt al; **de installer niet opnieuw uitvoeren**.
+**SEARCH-01 afgerond.** Geen server- of publicatiehandeling meer nodig. De installer niet opnieuw uitvoeren; de geslaagde installatie, publieke index en live “Vanaf”-/kaartweergave zijn gecontroleerd. De bestaande uurlijkse timer is hervat; een volgende toekomstige uitvoering is nog niet waargenomen.
 
-Het gecombineerde concept bevat de COTTO-kleur-/winkelwagenwijzigingen én de actuele zoek-/prijswijzigingen. Het losse zoekconcept 196116087050 mist de COTTO-wijzigingen en mag niet als latere release worden gebruikt. Geen publicatie door deze uitvoering.
+Het gepubliceerde gecombineerde thema bevat de COTTO-kleur-/winkelwagenwijzigingen en de actuele zoek-/prijswijzigingen. Het oude losse zoekconcept mist de COTTO-wijzigingen en mag niet als latere release worden gebruikt. De eigenaar heeft gepubliceerd; deze uitvoering heeft geen thema gepubliceerd.
 
-De Verlavio-voorraadtekst is door de eigenaar gepubliceerd: MAIN is nu 196227170570. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. SEARCH-01 heeft geen backendworker gestart; na overdracht is geen SEARCH-01-schrijver actief.
+De eerder gepubliceerde Verlavio-voorraadtekst is behouden in het huidige gecombineerde MAIN 196238639370. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. SEARCH-01 heeft geen backendworker gestart; na overdracht is geen SEARCH-01-schrijver actief.
 
 Volledige catalogusdata, privé-runtimeverslagen en screenshots horen niet in de publieke repository. Dit dossier bevat uitsluitend aggregaten, publieke code-identiteiten, controlegrenzen en het vervolgpad.
