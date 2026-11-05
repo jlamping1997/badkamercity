@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## COTTO-01 — Re-Bel seriepilot in uitvoering · 5 november 2026
+
+**IN_PROGRESS / READ_ONLY_BASELINE.** Eigenaar geeft nu expliciet opdracht één Cottoceramix-serie met keuzemenu en correcte productdata online te zetten. Gekozen: Re-Bel, 22 bronartikelen, 11 kleuren × 60×60 en 100×100 cm. Casablanca blijft buiten deze proef. Actuele Shopify-read: MAIN196116087050, shop fpa9hu-i3.myshopify.com. Actieve codebranch fix/product-cards-2026-10-14, themabron shopify/current/. Schone nieuwe cloudcheckout; geen Windows-controle.
+
+**Actieve schrijver: Codex COTTO-01.** Nog geen Cottoceramix-productmutatie of themamutatie uitgevoerd. Bestaande tegelcalculator en selectorcontract eerst controleren; geen catalogusbrede import. Bestaande andere merken, hun voorraad en de Lagoo-foto-instructie blijven buiten scope. Afgeronde FAB-03 blijft behouden; deze expliciete nieuwe eigenaarsopdracht is de huidige prioriteit.
+
+**Exact één volgende handeling:** live tegelrenderer/metafieldcontract verifiëren en de Re-Bel-pilot op exacte SKU/maat/kleur voorbereiden.
+
 ## FAB-03 — Verlavio live en volledig gecontroleerd · 5 november 2026
 
 **APPLIED_VERIFIED / MERCHANT_PUBLISHED.** De eigenaar heeft **BadkamerCity - Verlavio merknaam** gepubliceerd. Verse Shopify-controle bevestigt **MAIN 196116087050**; voormalig MAIN 196227170570 is UNPUBLISHED. Alle drie gepubliceerde compatibiliteitsbestanden zijn checksum-exact gecontroleerd. Geen MAIN-filewrite of publicatie door de uitvoerder.
