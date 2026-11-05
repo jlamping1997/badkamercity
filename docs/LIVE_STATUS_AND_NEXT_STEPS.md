@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## LAUNCH-01 — vast dossier voor livegang, Google en SEO · 5 november 2026
+
+**DOCUMENTATION_READY / READ_ONLY_BASELINE / SETUP_NOT_EXECUTED.** Eigenaar wil bestaande verkoopklare producten nu vindbaar maken en het assortiment daarna uitbreiden. Vast dossier [Livegang & SEO](livegang-seo/README.md) aangemaakt: [taken/acceptatie](livegang-seo/TAKEN.md), webshopbasis, account-/gegevensstromen, Search Console, Merchant Center, GA4/privacy, SEO-roadmap, paginaregister, volledig niet-product-URL-register en logboek.
+
+Verse Shopify-read: MAIN **196116087050**, hoofdadres HTTPS badkamercity.nl, NL, taxesIncluded=true; zeven app-installaties volledig gelezen, Google & YouTube niet aangetroffen. Alleen standaard privacybeleid ingevuld; standaard refund/terms/shipping-URL's geven404. Retourformulier en Contact zijn publiek200; ontvangst en volledige bedrijfsinformatie niet bewezen. Homepage mist meta description. Alle17kind-sitemaps gelezen: **11.887unieke product-URL's**,225collecties,119Pages,éénblog,éénartikel; dit is geen indexatie-/koopbaarheidsmeting. Zes productvoorbeelden met head/schema onderzocht. FabriecioGM_1002 meldt schemaOutOfStock en ontbreekt in deze product-sitemapcapture; oorzaak open.
+
+Route: bestaand Merchant Center **5898992928** hergebruiken (account/status alleen eerder door eigenaar gemeld), standaard Google & YouTube-koppeling, gratis vermeldingen eerst; Ads later afzonderlijk. Google-login, domeinverificatie, Search Console-indexatie en GA4 niet gecontroleerd. **Lagoo-fotoverbod behouden**: geen foto's terugzetten; beeldloze artikelen afzonderlijk uit de Google-productbestemming houden zolang ze niet aan de beeldvereiste voldoen. Bestaande catalogus-/kleur-/LVS-/offerteafspraken blijven gelden.
+
+Uitsluitend documentatie op main en de bestaande codebranch **fix/product-cards-2026-10-14**; themabron blijft **shopify/current/**. Geen Shopify-write, appinstallatie, feedactivering, advertentiebudget, formulierinzending of publicatie. Geen browser-/mobiel-/checkout-/betalingstest of Windows-controle. [Nulmeting en grenzen](livegang-seo/bewijs/2026-11-05-nulmeting.json) · [logboek/herstel](livegang-seo/LOGBOEK.md).
+
+**Exact één volgende handeling:** **BC-LIVE-001** — de werkelijke verkopersgegevens en bezorg-/retourafspraken vaststellen om ontbrekende winkelinformatie gericht af te ronden. Andere dossiers blijven behouden; geen actieve schrijver na overdracht.
+
 ## LAGOO-19 — alle productafbeeldingen verwijderd · 4 november 2026
 
 **VERIFIED_ADMIN / LIVE_PRODUCT_CHECK.** Op expliciete eigenaaropdracht alle Lagoo-productafbeeldingen onmiddellijk verwijderd. Verse inventaris: **232 Lagoo-producten**, waarvan 175 met samen **1.788 afbeeldingskoppelingen** naar 1.763 unieke bestanden. Eén proefverwijdering met readback, daarna acht opeenvolgende batches via `fileUpdate.referencesToRemove`; alle antwoorden zonder userErrors. Alleen relaties met gecontroleerde vendor Lagoo verwijderd. Bestanden blijven beschikbaar voor herstel; variantafbeeldingen worden door dezelfde Shopify-operatie leeggemaakt.
