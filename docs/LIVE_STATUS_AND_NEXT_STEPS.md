@@ -2,15 +2,19 @@
 
 ## COTTO-05 — volledig assortiment publiceren en vindbaarheid controleren · 5 november 2026
 
-**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige assortiment online. Verse startinventaris854Cottoceramix-producten, waarvan846ACTIVE/gepubliceerd en8bestaande bron-HOLDs. Geen bestaande SKU blind opnieuw aangemaakt. Zichtbaarheidsprobleem bevestigd: externe zoekindex bevat nog22Re-Bel-artikelen en generatie18:07; nieuwe producten zitten al correct in Shopify-collecties. Bestaande VPS-sync moet na import worden vernieuwd; geen actuele geauthenticeerde VPS-route beschikbaar in deze uitvoering.
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige assortiment online. De 1.127 nieuwe m²-artikelen zijn volledig teruggelezen: **87.323 controles PASS**. De nacontrole na publicatie bevestigt voor alle 1.127 artikelen ACTIVE, publicatie op Webshop en de juiste product-URL. Actueel totaal: **1.973 actieve Cottoceramix-artikelen**.
 
-**Eerste proefbatch voltooid:**6Habitat-artikelen ACTIVE én op Webshop gepubliceerd;852ACTIVE totaal. Alle414veld-/groep-/mediacontroles PASS. Zes oorspronkelijke JPEG's exact/onbewerkt gestaged vanwege octet-stream-header; alle6READY. Live Chrome Cloud→Alabaster bewaart2,5m²+10% en rekent3dozen/€395,55. Nieuwe automatische merkcollectie586666901770 ('cottoceramix') op exact vendorCottoceramix AND statusACTIVE, Webshopgepubliceerd;852leden teruggelezen.
+De create-operaties voor **1.186 overige m²-artikelen** zijn COMPLETE; deze artikelen staan DRAFT en de volledige readback loopt nog. Publicatie pas na geslaagde gegevens-, groeps- en mediacontrole.
 
-Private vervolgplannen:1127volledige m²-producten(inclusief6pilot) plus1177eerlijke singletons met ontbrekende optionele velden;2304nieuwe m²-kandidaten totaal.284XML-gewichten en3verpakkingsgewichten bewezen opgelost; bij overige conflicten geen gewicht verzinnen. Alle actuele verzendmethoden zijn read-only bevestigd op TOTAL_PRICEvoorwaarden, geen WEIGHTvoorwaarden; ontbrekend fysiek gewicht wordt niet als0kg geclaimd. Acht exacte-maatgevallen en zes afwerkingsconflicten apart.597stuks-/pak-/setkandidaten voorbereid; AD5917heeft alleenplaceholderenblijftHOLD.
+**Stuks-/pak-/setroute:** 597 kandidaten. Zes proefartikelen zijn DRAFT met asynchrone verwerking; de overige 591 moeten nog worden aangemaakt. **Alle 597 blijven DRAFT totdat de eigenaar het gecontroleerde previewthema publiceert.**
 
-Stuks-/pak-/setbediening en Cottoceramix-merkvermelding lokaal voorbereid/gevalideerd;25semantische checks en12officiële themefilevalidaties PASS, onafhankelijkereviewPASS. **UNPUBLISHED196246372618 — BadkamerCity - Cottoceramix volledig assortiment** via duplicatie aangemaakt; kopie nog processing=true/processingFailed=false en onvolledig, dus geen themefilewrite tot volledige manifestpariteit. MAIN196238639370ongeschreven. Geen themapublicatie door uitvoerder.
+**Preview gereed voor verdere controle:** UNPUBLISHED **196246372618 — BadkamerCity - Cottoceramix volledig assortiment**, met 15 gevalideerde themabestanden. Finale manifestcontrole PASS: MAIN **196238639370** heeft alle 1.383 baselinebestanden ongewijzigd; preview heeft 1.384 bestanden, met exact 14 gewijzigde bestanden en één nieuwe helper. Geen themapublicatie door uitvoerder.
 
-**Exact één volgende handeling:** de overige gecontroleerde m²-inputs begrensd alsDRAFTaanmaken, groepsreferenties en foto's aansluiten, volledig teruglezen en daarna alleen geslaagde artikelen publiceren.
+Codecheckpoint **916a431e180e28672b70feebc574ca345c6fbe80** staat remote en lokaal op `fix/product-cards-2026-10-14`; lokale werkmap schoon bij dit checkpoint. Bron: `shopify/current/`.
+
+**Open:** 15 bron-HOLDs (acht bestaande conflicten, zes afwerkingsconflicten en één ontbrekende bruikbare foto). De externe zoekindex bevat nog slechts 22 Re-Bel-artikelen en is achterhaald; VPS-/SSH-verbinding is vanuit deze uitvoering niet bereikbaar. De bestaande indexsynchronisatie moet nog worden hersteld of uitgevoerd.
+
+**Exact één volgende handeling:** de volledige readback van de 1.186 DRAFT m²-artikelen afronden en uitsluitend de geslaagde artikelen publiceren.
 
 ## COTTO-04 — tweede controle productkeuzes · 5 november 2026
 
