@@ -73,3 +73,12 @@ De Python-controles behandelen onder meer foutieve bronlinks, dubbele artikelide
 Bewaar de volledige broncapture, Admin-inventaris, schrijfplan, write/readback-antwoorden en herstelgegevens privé. Commit alleen code, beperkte openbare uitleg en aantoonbare testtotalen. HTML-cache, volledige catalogi en ruwe Admin-exports horen niet in deze openbare Git-repository.
 
 Voor themarollen, implementatiestand, herstel en vrijgave: [uitvoeringsdossier](../../docs/fabriecio/2026-11-05/product-choices/README.md).
+
+
+## Voorraad en levertijd — 5 november 2026
+
+De voorraadhersteluitvoering staat in [het voorraaddossier](../../docs/fabriecio/2026-11-05/stock/README.md). Shopify gebruikt voor deze winkel de actieve verzendoptie van Markets (`marketDrivenShipping`); het oude DeliveryProfile alleen bewijst geen bestelbaarheid.
+
+Het leverinformatieveld kan nu ook `stock_conflict: true` bevatten. Dit is een expliciete boolean en onderdrukt een voorraad-/1–2-werkdagenbelofte zolang de leveranciersfeed en de fabrikantpagina elkaar tegenspreken. Behoud deze velden bij volgende plannen; een oud bronplan mag deze controle niet stil overschrijven. De zes vastgehouden bronconflicten staan in het dossier en de privéaudit.
+
+Een leeg voorraadaantal blijft onbekend. De bestaande 84 artikelen met status Y zonder aantal behouden hun voorraadbeleid CONTINUE; er zijn geen aantallen verzonnen. De belofte van 1–2 werkdagen komt van de eigenaar, niet uit het CSV-veld Voorraad Verwacht. Automatische feedverversing is hiermee nog niet ingericht.

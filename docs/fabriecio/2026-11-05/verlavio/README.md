@@ -1,5 +1,7 @@
 # Verlavio — private label Fabriecio
 
+> **Vervolg FAB-04 — 5 november 2026:** de rebrand hieronder is het bewezen checkpoint van 15:51:12 UTC. Daarna zijn 29 echte voorraadaantallen gesynchroniseerd en is de Nederlandse Market-verzendoorsprong gericht hersteld. Volledige backendcontrole en echte winkelwagenproef PASS; alleen de voorraadtekst wacht op eigenaarspublicatie van **BadkamerCity - Verlavio voorraad en levertijd (196227170570)**. Zie [het actuele voorraaddossier](../stock/README.md). Het oude koopbaarheidsonderzoek is daarmee afgerond; de rebrand zelf blijft voltooid.
+
 5 november 2026. **APPLIED_VERIFIED / MERCHANT_PUBLISHED**.
 
 Het commerciële merk is **Verlavio**. Fabriecio blijft de interne leverancier en bronkoppeling. De eigenaar heeft **BadkamerCity - Verlavio merknaam** gepubliceerd; verse Shopify-controle bevestigt **MAIN 196116087050**. Voormalig MAIN 196227170570 is UNPUBLISHED. De publicatieblokkade uit FAB-02 is daarmee vervallen. Er zijn in deze uitvoering geen bestanden naar MAIN geschreven en geen thema's door de uitvoerder gepubliceerd.
@@ -41,8 +43,8 @@ Volledige brondata, plan, nulmeting en mutatiebonnen blijven in de privéaudit, 
 
 ## Open werk
 
-De 53 producten met vastgehouden bronmenu’s en het bestaande Uitverkocht-probleem blijven afzonderlijk open. Automatische feedsynchronisatie is uitgesteld. De merknaamwijziging bewijst geen koopbaarheid en lost de bestaande koopblokkade niet op. Overige merken en het Lagoo-fotoverbod blijven buiten deze wijziging.
+De 53 producten met vastgehouden bronmenu’s blijven open. Het toenmalige Uitverkocht-probleem is later onderzocht en de Nederlandse Market-oorsprong is in FAB-04 hersteld; volledige controle en winkelwagenproef zijn daar vastgelegd. De merknaamwijziging zelf bewijst geen koopbaarheid. Automatische feedsynchronisatie is uitgesteld. Overige merken en het Lagoo-fotoverbod blijven buiten deze wijziging.
 
 Verlavio ontbreekt nog in het bestaande merkenoverzicht, zoals Fabriecio daar vóór deze wijziging ook ontbrak. Dat is geen regressie van de rebrand; eventuele toevoeging vereist een afzonderlijke conceptthemawijziging.
 
-**Exact één volgende handeling:** de bestaande Uitverkocht-/koopbaarheidsafwijking eerst gericht onderzoeken met een product dat volgens Admin voorraad heeft. Geen merkdatabatches of publicatie meer nodig. De rebranduitvoering is afgerond; geen actieve schrijver of feedworker na overdracht.
+**Exact één volgende handeling voor de rebrand:** geen verdere merkdatabatches uitvoeren; de rebrand is afgerond. Voor de vervolgvraag over voorraad en verzending geldt [FAB-04](../stock/README.md): de eigenaar publiceert het gecontroleerde concept **BadkamerCity - Verlavio voorraad en levertijd (196227170570)**. Automatische feedsynchronisatie blijft uitgesteld.

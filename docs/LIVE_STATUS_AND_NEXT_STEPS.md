@@ -8,7 +8,19 @@
 
 **Exact één volgende handeling:** live tegelrenderer/metafieldcontract verifiëren en de Re-Bel-pilot op exacte SKU/maat/kleur voorbereiden.
 
-## FAB-03 — Verlavio live en volledig gecontroleerd · 5 november 2026
+## FAB-04 — koopbaarheid hersteld; voorraadtekst klaar voor publicatie · 5 november 2026
+
+**BACKEND_APPLIED_VERIFIED / PREVIEW_VERIFIED / COPY_AWAITING_MERCHANT_PUBLICATION.** De winkel gebruikt Market-driven verzending. De werkelijke Nederlandse verzendoptie bevatte alleen de winkellocatie. Uitsluitend de Verlavio-leverancierslocatie is als oorsprong toegevoegd. Volledige voor-/navergelijking: alleen die toevoeging; bestaande tarief-ID's, €6,95, gratis-verzendingdrempel €100,01 en andere Markets gelijk.
+
+**Volledige readback PASS, 16:37:57 UTC:** alle 861 producten, nul afwijkingen. Exact 29 gewijzigde echte aantallen met CAS uit de feed bijgewerkt; 118 lege aantallen niet verzonnen. De 84 actieve Y-artikelen met leeg aantal behouden CONTINUE/nul; overige voorraadregels DENY. ID's, titels, handles, SKU's, prijzen, tracking, beleid, status en overige locatievoorraad/-velden behouden; 851 ACTIVE / 10 ARCHIVED. Zes bronconflicten op aanvraag; bestaande portalweek 50 behouden waar de feed week 28 meldt.
+
+Publieke eindcontrole 16:31:19 UTC: drie voorraadproducten beschikbaar/InStock met actieve koopknop; nulvoorraadvoorbeeld niet beschikbaar/OutOfStock met week 50; conflict zonder bevestigde voorraadbelofte. Echte Chrome-preview: VSB_2001 met “Op voorraad / Levertijd: 1–2 werkdagen” succesvol toegevoegd via de winkelwagenknop; alleen eigen testregel verwijderd, eindcart nul. Mat Wit navigeert naar VSB_2003 met week 50 en uitgeschakelde knop; GM_3001 toont “Voorraad en levertijd op aanvraag”. Geen checkout-/betalingstest of fysieke telefoon.
+
+MAIN **196116087050** blijft ongeschreven. **UNPUBLISHED196227170570 — BadkamerCity - Verlavio voorraad en levertijd**: vóór wijziging 1.381/1.381 identiek aan MAIN, finaal exact drie bestanden gewijzigd (leveringssnippet en NL/EN-vertaling), alle hashes teruggelezen. 23 leveringsgevallen, 16 menu-/URL-overgangen en drie Liquidvalidaties geldig. De 1–2 werkdagen is winkelbeleid voor de 774 bevestigde actieve Y-artikelen zonder conflict; dit staat niet als apart levertijdveld in de feed. De 71 N-artikelen en zes conflicten volgen hun eigen status.
+
+**Exact één volgende handeling:** eigenaar publiceert **BadkamerCity - Verlavio voorraad en levertijd (196227170570)**; daarna MAIN-rol en drie publieke leverstatussen teruglezen. Geen actieve FAB-04-schrijver of feedworker na overdracht; de aparte COTTO-01-prioriteit hierboven blijft behouden. [Voorraad, oorzaak, herstel en bewijsgrenzen](fabriecio/2026-11-05/stock/README.md). Zes leveranciersconflicten, 53 bronmenu-uitzonderingen en merkenoverzicht blijven open; geen automatische feed of vijfminutenverversing ingericht. FAB-03 hieronder is het gedateerde rebrandcheckpoint; het toenmalige koopbaarheidsonderzoek is door FAB-04 afgerond.
+
+## FAB-03 — historisch rebrandcheckpoint: Verlavio live en volledig gecontroleerd · 5 november 2026
 
 **APPLIED_VERIFIED / MERCHANT_PUBLISHED.** De eigenaar heeft **BadkamerCity - Verlavio merknaam** gepubliceerd. Verse Shopify-controle bevestigt **MAIN 196116087050**; voormalig MAIN 196227170570 is UNPUBLISHED. Alle drie gepubliceerde compatibiliteitsbestanden zijn checksum-exact gecontroleerd. Geen MAIN-filewrite of publicatie door de uitvoerder.
 

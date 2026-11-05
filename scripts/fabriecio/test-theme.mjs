@@ -9,11 +9,12 @@ const { Liquid } = await import(require.resolve('liquidjs'));
 const theme = path.resolve(new URL('../../shopify/current/', import.meta.url).pathname);
 const locale = name => JSON.parse(fs.readFileSync(path.join(theme, 'locales', name), 'utf8').replace(/^\s*\/\*[\s\S]*?\*\//, ''));
 const locales = { nl: locale('nl.json'), en: locale('en.default.json') };
+let activeLocale = 'nl';
 const engine = new Liquid({ strictFilters: true });
 engine.registerFilter('json', value => JSON.stringify(value));
 engine.registerFilter('asset_url', value => '/assets/' + value);
 engine.registerFilter('stylesheet_tag', value => '<link rel="stylesheet" href="' + value + '">');
-engine.registerFilter('t', key => key.split('.').reduce((value, part) => value?.[part], locales.nl) || key);
+engine.registerFilter('t', key => key.split('.').reduce((value, part) => value?.[part], locales[activeLocale]) || key);
 const snippet = name => fs.readFileSync(path.join(theme, 'snippets', name), 'utf8').replace(/{% doc %}[\s\S]*?{% enddoc %}/, '');
 const choicesSnippet = snippet('bc-fabriecio-choices.liquid');
 const deliverySnippet = snippet('bc-fabriecio-delivery.liquid');
@@ -138,32 +139,71 @@ const absentSize = [...root.querySelectorAll('button[data-switch-field="maat"]')
 assert(absentSize?.disabled);
 assert.equal(window.location.pathname, group.products[2].url);
 await window.happyDOM.close();
-const delivery = async (value, legacy, vendor = 'Fabriecio') => engine.parseAndRender(deliverySnippet, {
-  product: { vendor, metafields: { custom: { fabriecio_delivery: { value }, leverancier_voorraad: { value: legacy } } } }
-});
-assert.match(await delivery({ in_stock: true, expected_text: 'Verwacht: Week 28' }), /Op voorraad bij leverancier/);
-assert(!(await delivery({ in_stock: true, expected_text: 'Verwacht: Week 28' })).includes('Week 28'));
+let deliveryCases = 0;
+const delivery = async (value, legacy, vendor = 'Fabriecio') => {
+  deliveryCases++;
+  return engine.parseAndRender(deliverySnippet, {
+    product: { vendor, metafields: { custom: { fabriecio_delivery: { value }, leverancier_voorraad: { value: legacy } } } }
+  });
+};
+const inStock = await delivery({ in_stock: true, expected_text: 'Verwacht: Week 28' });
+assert.match(inStock, /Op voorraad/);
+assert.match(inStock, /Levertijd: 1–2 werkdagen/);
+assert(!inStock.includes('Week 28'));
+assert(!inStock.includes('Neem contact op'));
 const expected = await delivery({ in_stock: false, expected_text: 'Verwacht: Week 50' });
 assert.match(expected, /Verwacht bij leverancier/);
 assert.match(expected, /Verwacht: Week 50/);
 assert.match(await delivery({ in_stock: false, expected_text: '' }), /Levertijd op aanvraag/);
 assert.match(await delivery({ in_stock: null, expected_text: null }), /Levertijd op aanvraag/);
-assert.match(await delivery(undefined, true), /Op voorraad bij leverancier/);
+assert.match(await delivery(undefined, true), /Levertijd: 1–2 werkdagen/);
 assert.match(await delivery({ in_stock: false, expected_text: '' }, true), /Levertijd op aanvraag/);
 assert.equal((await delivery({ in_stock: true }, true, 'Hotbath')).trim(), '');
+assert.equal((await delivery({ in_stock: true }, true, 'Wiesbaden')).trim(), '');
 assert(!(await delivery({ in_stock: false, expected_text: '<img src=x onerror=alert(1)>' })).includes('<img'));
-assert.match(await delivery({ in_stock: true }, false, 'Verlavio'), /Op voorraad bij leverancier/);
+assert.match(await delivery({ in_stock: true }, false, 'Verlavio'), /Levertijd: 1–2 werkdagen/);
 assert.match(await delivery({ in_stock: false, expected_text: 'Verwacht: Week 50' }, false, 'Verlavio'), /Week 50/);
 assert.match(await delivery({ in_stock: false, discontinued: true }, false, 'Verlavio'), /Niet meer leverbaar/);
 const discontinued = await delivery({ in_stock: true, expected_text: 'Verwacht: Week 50', discontinued: true }, true);
 assert.match(discontinued, /Niet meer leverbaar/);
-assert(!discontinued.includes('Op voorraad bij leverancier'));
+assert(!discontinued.includes('Op voorraad'));
 assert(!discontinued.includes('Week 50'));
 assert(!discontinued.includes('Levertijd op aanvraag'));
+assert(!discontinued.includes('1–2 werkdagen'));
+for (const in_stock of [false, null, undefined, 'true']) {
+  const unknown = await delivery({ in_stock, expected_text: '' });
+  assert(!unknown.includes('1–2 werkdagen'), 'Only explicit true stock can promise a short lead time');
+}
+const conflict = await delivery({ in_stock: true, stock_conflict: true, expected_text: 'Verwacht: Week 50' });
+assert.match(conflict, /Voorraad en levertijd op aanvraag/);
+assert(!conflict.includes('1–2 werkdagen'));
+assert(!conflict.includes('Op voorraad'));
+assert(!conflict.includes('Week 50'));
+assert.match(await delivery({ in_stock: true, stock_conflict: false }), /1–2 werkdagen/);
+assert.match(await delivery({ in_stock: true, stock_conflict: 'true' }), /1–2 werkdagen/,
+  'The conflict flag is a JSON boolean, not a truthy string');
+const discontinuedConflict = await delivery({ in_stock: true, stock_conflict: true, discontinued: true });
+assert.match(discontinuedConflict, /Niet meer leverbaar/);
+assert(!discontinuedConflict.includes('Voorraad en levertijd op aanvraag'));
+activeLocale = 'en';
+const englishStock = await delivery({ in_stock: true }, false, 'Verlavio');
+assert.match(englishStock, /In stock/);
+assert.match(englishStock, /Delivery: 1–2 working days/);
+const englishConflict = await delivery({ in_stock: true, stock_conflict: true }, false, 'Verlavio');
+assert.match(englishConflict, /Stock and lead time on request/);
+assert(!englishConflict.includes('1–2 working days'));
+activeLocale = 'nl';
 for (const dictionary of Object.values(locales)) {
   assert(dictionary.bc_delivery.supplier_expected);
   assert(dictionary.bc_delivery.discontinued);
+  assert(dictionary.bc_delivery.verlavio_in_stock);
+  assert(dictionary.bc_delivery.verlavio_stock_lead_time);
+  assert(dictionary.bc_delivery.verlavio_stock_on_request);
 }
+assert.equal(locales.nl.bc_delivery.supplier_in_stock, 'Op voorraad bij leverancier');
+assert.equal(locales.nl.bc_delivery.contact_current_lead_time, 'Neem contact op voor de actuele levertijd');
+assert.equal(locales.en.bc_delivery.supplier_in_stock, 'In stock at supplier');
+assert.equal(locales.en.bc_delivery.contact_current_lead_time, 'Contact us for the current lead time');
 const section = fs.readFileSync(path.join(theme, 'sections/main-product.liquid'), 'utf8');
 assert.match(section, /if bc_fabriecio_supplier_product[\s\S]*?render 'bc-fabriecio-delivery'[\s\S]*?elsif bc_delivery_vendor == 'wiesbaden'/);
 assert.match(section, /bc_mobile_vendor == 'fabriecio' or bc_mobile_vendor == 'verlavio'/);
@@ -192,5 +232,6 @@ console.log(JSON.stringify({ products: 8, supportedBrands: 2, transitions, spars
   actualSingleSkuFinalOutputGateAndExistingExclusionGuards: 'PASS',
   seventyTwoProductValidationAndNoScriptLinks: 'PASS',
   invalidBrandVariantCurrentDestinationAndDuplicateHandleGuards: 'PASS', inlineJsonEscaping: 'PASS',
-  deliveryCases: 12, discontinuedPriority: 'PASS', supplierStockFallbackAndStaleExpectationHidden: 'PASS',
+  deliveryCases, discontinuedAndConflictPriority: 'PASS', explicitBooleanStockAndConflictGuards: 'PASS',
+  privateLabelShortLeadTimeAndSharedLocalePreservation: 'PASS', supplierStockFallbackAndStaleExpectationHidden: 'PASS',
   liveBrowserMobileAndCart: 'NOT_TESTED' }));
