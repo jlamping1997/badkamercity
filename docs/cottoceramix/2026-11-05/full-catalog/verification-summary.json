@@ -3,14 +3,14 @@
   "status": "PARTIALLY_PUBLISHED",
   "completion_status": "BLOCKED_MERCHANT_THEME_AND_INDEX_LAG",
   "document_state": "PUBLIC_SAFE_CHECKPOINT",
-  "updated_at_utc": "2026-11-05T21:26:03.849889+00:00",
-  "observed_at_utc": "2026-11-05T21:22:50.177688+00:00",
+  "updated_at_utc": "2026-11-05T21:41:29.446670+00:00",
+  "observed_at_utc": "2026-11-05T21:39:36.714835+00:00",
   "public_document_namespace": "docs/cottoceramix/2026-11-05/full-catalog/",
-  "code_commit": "916a431e180e28672b70feebc574ca345c6fbe80",
+  "code_commit": "4976dd7ee56e9dd664e4e19198b6e2d852a46b2b",
   "code_branch": "fix/product-cards-2026-10-14",
   "code_source": "shopify/current/",
   "code_remote_verified": true,
-  "code_changed_by_finalization": false,
+  "code_changed_by_finalization": true,
   "counts": {
     "confirmed_active_total": 3159,
     "confirmed_webshop_published_total": 3159,
@@ -160,7 +160,7 @@
     "all_597_remain_draft": true
   },
   "themes": {
-    "roles_verified_at_utc": "2026-11-05T21:22:50.177688+00:00",
+    "roles_verified_at_utc": "2026-11-05T21:38:26.871Z",
     "main": {
       "id": "196238639370",
       "name": "BadkamerCity - Re-Bel tegelkeuze",
@@ -172,20 +172,44 @@
       "id": "196246372618",
       "name": "BadkamerCity - Cottoceramix volledig assortiment",
       "role": "UNPUBLISHED",
-      "files": 1384,
-      "changed_files": 14,
-      "new_helpers": 1,
-      "validated_files": 15,
-      "exact_validated_bytes": true
+      "files": 1385,
+      "changed_files": 16,
+      "new_helpers": 2,
+      "validated_files": 18,
+      "exact_validated_bytes": true,
+      "full_manifest_status": "PASS"
     },
     "manifest_comparison": "PASS",
     "executor_published_theme": false,
-    "merchant_publication_pending": true
+    "merchant_publication_pending": true,
+    "previous_manifest": {
+      "status": "PASS",
+      "feature_paths": 15,
+      "preview_files": 1384,
+      "main_unchanged": true,
+      "phase": "BEFORE_AVAILABILITY_LABEL_PATCH"
+    },
+    "availability_upload": {
+      "status": "PASS",
+      "files": 5,
+      "all_uploaded_md5_exact": true,
+      "main_unchanged": true,
+      "preview_role": "UNPUBLISHED"
+    },
+    "manifest_measured_at_utc": "2026-11-05T21:38:27.673410+00:00",
+    "main_preservation_scope": {
+      "fresh_main_metadata_unchanged": true,
+      "full_main_manifest_requeried_in_final_round": false,
+      "retained_prior_full_baseline_comparison": "PASS",
+      "baseline_files": 1383,
+      "final_round_full_preview_manifest": "PASS"
+    }
   },
   "tests": {
     "python": {
       "tests": 80,
-      "status": "PASS"
+      "status": "PASS",
+      "run_context": "Prior import checkpoint PASS; not rerun for availability-label-only change."
     },
     "render_runtime": {
       "unit_route": 12,
@@ -194,18 +218,30 @@
       "card_delivery": 4,
       "existing_card_price": 7,
       "total": 36,
-      "status": "PASS"
+      "status": "PASS",
+      "run_context": "Prior import checkpoint PASS; not rerun for availability-label-only change."
     },
     "official_theme_validation": {
-      "files": 15,
+      "files": 18,
       "status": "PASS_WITH_NON_ERROR_WARNINGS",
-      "nonblocking_warnings": "Recorded per validation round; no aggregate count claimed"
+      "scope": "Original 15-file validation plus five-file availability round; two locale files overlap and their new bytes are revalidated.",
+      "availability_round_files": 5,
+      "availability_round_nonblocking_warnings": 1,
+      "availability_warning": "Existing facets.liquid complexity 136 exceeds 120.",
+      "nonblocking_warnings": "Recorded per validation round; no aggregate warning total claimed."
     },
     "unit_contract_offline": "PASS",
     "live_unit_preview": "BLOCKED_PRODUCT_PREVIEW_THEME_BINDING",
     "live_unit_cart": "BLOCKED_NOT_PERFORMED",
     "physical_mobile": "NOT_TESTED",
-    "shipping_checkout_payment": "NOT_TESTED"
+    "shipping_checkout_payment": "NOT_TESTED",
+    "availability_facets_render": {
+      "tests": 8,
+      "status": "PASS",
+      "scope": "Actual Liquid desktop/mobile/screen-reader labels, all active chips, unchanged native controls, other collections/search/other parameters/unknown values/escaping and English numeric values.",
+      "existing_test_suites_rerun": false,
+      "browser_proof": false
+    }
   },
   "browser_m2": {
     "status": "PASS_SCOPED_NATIVE_COLLECTION_AND_M2_PREVIEW",
@@ -246,7 +282,8 @@
     "boxes": 7,
     "total_eur": "398.44",
     "unit_route_proof": false,
-    "cart_action": false
+    "cart_action": false,
+    "observed_before_availability_label_patch": true
   },
   "baseline_preservation": {
     "status": "PASS",
@@ -287,8 +324,8 @@
   },
   "search_index": {
     "status": "HEALTHY_WITH_CONTENT_LAG",
-    "measured_completed_at_utc": "2026-11-05T21:20:05.800433+00:00",
-    "http_calls": 4,
+    "measured_completed_at_utc": "2026-11-05T21:39:41.804945+00:00",
+    "http_calls": 2,
     "all_http_200": true,
     "healthy": true,
     "generation": "20261105T210044_bd0667",
@@ -302,7 +339,9 @@
     "current_service_fault_claimed": false,
     "refresh_origin_automatic_or_manual": "NOT_DETERMINED",
     "earlier_22_product_snapshot": "SUPERSEDED",
-    "next_action": "Recheck coverage after unit release; refresh existing regular synchronization only if coverage still lags."
+    "next_action": "Recheck coverage after unit release; refresh existing regular synchronization only if coverage still lags.",
+    "prior_four_call_verification_retained": true,
+    "fresh_sku_or_collection_profile_tests": false
   },
   "feed": {
     "automatic_worker_installed": false,
@@ -358,6 +397,65 @@
     "The 15 source holds comprise eight existing DRAFT products and seven uncreated source products.",
     "The index is healthy but current count coverage is behind; count difference is not a missing-ID audit or proof of a service fault.",
     "No physical-phone, address-dependent shipping, checkout, payment or automatic-feed claim.",
-    "No source exports, private paths, raw mutation receipts, credentials, screenshots or signed URLs included."
-  ]
+    "No source exports, private paths, raw mutation receipts, credentials, screenshots or signed URLs included.",
+    "Availability labels pass actual desktop default/select/visible-chip/clear tests; mobile labels are rendered-DOM/fixture coverage only, with no actual mobile viewport or cart proof.",
+    "The final 18-file round freshly reread the complete preview manifest and unchanged MAIN metadata; full MAIN-baseline parity is retained from the earlier complete comparison."
+  ],
+  "source_import_code_commit": "916a431e180e28672b70feebc574ca345c6fbe80",
+  "availability_code_commit": "4976dd7ee56e9dd664e4e19198b6e2d852a46b2b",
+  "data_changed_by_availability_patch": false,
+  "availability_labels": {
+    "status": "VALIDATED_ADMIN_PREVIEW_AND_ACTUAL_DESKTOP_PASS",
+    "code_commit": "4976dd7ee56e9dd664e4e19198b6e2d852a46b2b",
+    "scope_collection_handle": "cottoceramix",
+    "scope_results_handle": "cottoceramix",
+    "filter_param": "filter.v.availability",
+    "labels_nl": {
+      "1": "Bestelbaar",
+      "0": "Niet bestelbaar"
+    },
+    "labels_en": {
+      "1": "Available to order",
+      "0": "Not available to order"
+    },
+    "render_places": 9,
+    "desktop_mobile_screen_reader_active_chips": true,
+    "native_values_counts_selection_remove_urls_preserved": true,
+    "other_collections_and_search_unchanged": true,
+    "external_api_and_index_unchanged": true,
+    "supplier_stock_claim": false,
+    "product_data_changed": false,
+    "uploaded_files": 5,
+    "uploaded_md5_match": true,
+    "full_18_file_manifest": "PASS",
+    "real_browser": {
+      "status": "PASS_ACTUAL_DESKTOP_UI",
+      "observed_at_utc": "2026-11-05T21:40:20.542532+00:00",
+      "theme_id": "196246372618",
+      "theme_status_observed": "Draft",
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "default_label_pass": true,
+      "default_orderable_count": 3159,
+      "default_not_orderable_count": 0,
+      "not_orderable_disabled": true,
+      "active_chip_pass": true,
+      "active_chip_text": "Beschikbaarheid: Bestelbaar",
+      "visible_top_chip": true,
+      "native_desktop_and_mobile_chip_text_correct_in_hidden_dom": true,
+      "clear_filter_pass": true,
+      "clear_after_native_ajax_settled": true,
+      "cleared_checkbox_checked": false,
+      "cleared_active_chip_count": 0,
+      "settled_product_count": 3159,
+      "cards": 24,
+      "loaded_photos_observed": true,
+      "horizontal_overflow": false,
+      "actual_mobile_viewport_tested": false,
+      "cart_action": false
+    },
+    "unit_ui_or_cart_proof": false
+  }
 }
