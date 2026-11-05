@@ -1,22 +1,26 @@
 # Taken — livegang, Google en SEO
 
-Stand **5 november 2026**. Eigenaarrol Jackson = bedrijfsbesluit/accountbeheer/controle; uitvoering = toegewezen ontwikkelaar of Jackson. Er is na LAUNCH-01 geen actieve schrijver of achtergrondtaak.
+Stand **5 november 2026**. Eigenaarrol Jackson = bedrijfsbesluit/accountbeheer/controle; uitvoering = toegewezen ontwikkelaar of Jackson. LAUNCH-02 verwerkt de eigenaarsaanvulling. Er is na deze documentatieoverdracht geen actieve schrijver of achtergrondtaak.
 
-Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = een deel bewezen; TO_VERIFY = actuele werking ontbreekt; LATER = na de basis. P0 = voor betrouwbare verkoop/promotie; P1 = voor het betreffende Google- of SEO-spoor; P2 = verdere groei. Een blokkade voor één merk houdt de rest niet automatisch tegen.
+Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = een deel bewezen; IN_PROGRESS_USER = eigenaar werkt eraan, geen zelfstandige testvrijgave; DRAFT_READY = concreet concept klaar, nog niet gepubliceerd; TO_VERIFY = actuele werking ontbreekt; LATER = na de basis. P0 = voor betrouwbare verkoop/promotie; P1 = voor het betreffende Google- of SEO-spoor; P2 = verdere groei. Een blokkade voor één merk houdt de rest niet automatisch tegen.
 
 ## Winkelbasis
 
 | ID | Prio | Taak | Status | Gereed wanneer | Eigenaarrol |
 | --- | --- | --- | --- | --- | --- |
 | BC-LIVE-000 | P0 | Openbaarheid, HTTPS, robots en sitemap lezen | DONE | Read-only resultaat en grenzen in nulmeting | Uitvoering |
-| BC-LIVE-001 | P0 | Verkopersidentiteit en commerciële afspraken vaststellen | OPEN | Juiste handelsnaam, zakelijk adres, contact, KvK/btw-id, levering en retourafspraken bevestigd; geen oude showroomgegevens overnemen | Jackson |
-| BC-LIVE-002 | P0 | Contact-, verzend-, retour- en voorwaardeninformatie afronden | PARTIAL | Privacy en retourformulier bestaan; ontbrekende beleidsvelden/pagina's ingevuld, footer bereikbaar, inhoud onderling gelijk | Jackson + uitvoering |
-| BC-LIVE-003 | P0 | Representatieve bestelroute controleren | TO_VERIFY | Kraan, gekozen uitvoering/set en tegeldoos getest op artikel, bedrag, btw, verzending en betaalroute; betaal-/ordermailbewijs afzonderlijk vastgelegd | Jackson + uitvoering |
-| BC-LIVE-004 | P0 | Leverbaarheid en levertijdbron controleren | TO_VERIFY | Steekproeven bij verschillende merken onderbouwd; geen algemene 8–9-wekenfallback als onbewezen productbelofte | Jackson + uitvoering |
-| BC-LIVE-005 | P0 | Klantcontact en retourontvangst controleren | PARTIAL | Publieke pagina's bestaan; beheerder ontvangt de afgesproken testmelding en kan antwoorden | Jackson |
-| BC-LIVE-006 | P1 | Verkoopklaar assortiment voor Google afbakenen | OPEN | Per batch de juiste kanaalpublicatie, afbeeldingen, identifiers, prijs, levertijd en uitzonderingen vastgelegd | Jackson + uitvoering |
-| BC-LIVE-007 | P1 | Fabriecio-proef opnieuw controleren | TO_VERIFY | GM_1002-beschikbaarheid, pagina/schema en Google-bestemming sluiten aan; sitemapafwijking opnieuw gemeten | Uitvoering |
-| BC-LIVE-008 | P1 | Afbeeldingen en placeholders per afwijkende renderer controleren | TO_VERIFY | Werkelijke afbeeldingsrequests/visuele staat op o.a. Sunshower en beeldloze Lagoo-PDP gecontroleerd; afgesproken uitzonderingen behouden | Uitvoering |
+| BC-LIVE-001 | P0 | Bedrijfsgegevens en retourafspraken compleet maken | PARTIAL | [Gegevens ontvangen](BEDRIJFSGEGEVENS.md): adres/KvK/IBAN/30dagen vastgelegd; btw-id mist een cijfer, telefoon/juridische naam/retouradres en grote-retourkosten nog bevestigen | Jackson |
+| BC-LIVE-002 | P0 | Contact, verzending, retourbeleid en voorwaarden publiceren | PARTIAL | [Eigen retourconcept klaar](retouren/RETOURBELEID_CONCEPT.md); policy/voorwaarden/verzending en [één footer](FOOTER_EN_BELEID.md) nog uitvoeren na gegevenscontrole | Jackson + uitvoering |
+| BC-LIVE-003 | P0 | Bestelproces samen doorlopen | PARTIAL | Eigenaar meldt werking; [kleine checklist](CONTROLES.md) door Jackson én uitvoering afgevinkt, inclusief artikel/variant/doosprijs/verzending en apart betaal-/ordermailbewijs | Jackson + uitvoering |
+| BC-LIVE-004 | P0 | Leverbaarheid en levertijden afmaken | IN_PROGRESS_USER | Jackson werkt aan bronnen; latere FAB-04-bewijzen hergebruiken, andere merken niet automatisch aftekenen | Jackson + uitvoering |
+| BC-LIVE-005 | P0 | Contact- en retourberichten echt ontvangen en beantwoorden | PARTIAL | [Mailproef](CONTROLES.md): paginasucces, ontvangst in info@/spam, juiste velden en antwoord terug op eigen testadres bewezen; geen proef ingezonden in LAUNCH-02 | Jackson + uitvoering |
+| BC-LIVE-006 | P1 | Producten klaarzetten voor Google | OPEN | [Automatische eerste controle](GOOGLE_PRODUCTCONTROLE.md); alleen echte uitzonderingen handmatig beoordelen; kleine feedproef en Google-readback vóór opschalen | Uitvoering, Jackson voor bronvragen |
+| BC-LIVE-007 | P1 | Verlavio-foto's en Google-geschiktheid controleren | PARTIAL | Fabriecio is interne bronnaam; rebrand/koopbaarheid later in FAB-03/04 bewezen. Eigenaar onderzoekt foto's: goed/ontbreekt/onzeker scheiden, identifiers en actuele Google-bestemming toetsen | Jackson + uitvoering |
+| BC-LIVE-008 | P1 | Productfoto's en lege/foute beeldweergave nalopen | IN_PROGRESS_USER | Jackson loopt dit na; echte beeldrequests/zichtbaarheid per relevante renderer controleren; Lagoo-fotoverbod behouden | Jackson + uitvoering |
+| BC-LIVE-009 | P1 | Bestaande standaardfooter op alle pagina's gebruiken | OPEN | [Kortste route vastgelegd](FOOTER_EN_BELEID.md): compact_homepage uit in bewezen ongepubliceerd concept, volledige categorie-/contactdekking en policy-links behouden | Uitvoering |
+| BC-LIVE-010 | P0 | Dertig-dagenretourbeleid definitief maken | DRAFT_READY | [Concept](retouren/RETOURBELEID_CONCEPT.md), juiste retouradres/kosten invullen; geen algemene speciaal-besteld-/tegeluitsluiting; als Shopify-policy publiceren en Google gelijkzetten | Jackson + uitvoering |
+| BC-LIVE-011 | P0 | Online herroepingsfunctie en directe klantbevestiging afronden | OPEN | Toegankelijke functie, definitieve bevestiging en bewaarbare mail met aankoop/datum/tijd; huidige native contactroute alleen niet als compleet aftekenen | Uitvoering + Jackson voor mailboxbewijs |
+| BC-LIVE-012 | P0 | Modelformulier herroeping beschikbaar maken | DRAFT_READY | [Leeg sjabloon klaar](retouren/MODELFORMULIER_CONCEPT.md); nog als downloadbaar/bewaarbaar klantformulier integreren, gebruik niet verplicht stellen | Uitvoering |
 
 ## Google en meten
 
@@ -46,9 +50,10 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 | BC-SEO-006 | P2 | Merk-/seriepagina's onderzoeken | OPEN | Bestaande vendor-URL's en Sunshower-routes onderzocht; één scope per klantvraag, geen automatische kruistabelpagina's | Uitvoering |
 | BC-SEO-007 | P2 | Advies en begrippen onderhouden | OPEN | Bestaande 119 Pages inhoudelijk beoordeeld; geen definitie alleen om meer pagina's te maken | Uitvoering |
 | BC-SEO-008 | P2 | Imports standaard controleren | OPEN | Nieuwe producten krijgen categorie, identifiers, media, prijs/eenheid, levering en Google-status in bestaande importcontrole | Uitvoering |
-| BC-DOC-001 | P1 | Vast livegang-/Google-/SEO-dossier maken | DONE | Structuur, taken, bronnen, nulmeting, URL-register en navigatie-ingangen in Git vastgelegd; remote readback vereist bij oplevering | Uitvoering |
+| BC-DOC-001 | P1 | Vast livegang-/Google-/SEO-dossier maken | DONE | LAUNCH-01: structuur, taken, bronnen, nulmeting en URL-register in Git; eigenaarsaanvulling en nieuwe controles in LAUNCH-02 | Uitvoering |
+| BC-DOC-002 | P1 | Eigenaarsaanvulling en concrete vervolgstappen vastleggen | DONE | LAUNCH-02: gegevens, retourconcept, twee-persoonsbestelcheck, mailproef, Google-uitleg en hergebruik van footer gedocumenteerd; geen winkel-/Google-mutaties | Uitvoering |
 
 ## Nu eerst
 
-**BC-LIVE-001 — verkopersgegevens en bezorg-/retourafspraken vaststellen.**
+**BC-LIVE-001 — het ontbrekende gegevenspakket aanvullen:** volledig btw-id, telefoon/juridische identiteit, Nederlands retouradres en raming van grote retourzendingen. Adres/KvK/IBAN en de keuze voor jaarrond30dagen hoeven niet opnieuw verzameld te worden.
 De eigenaar wil de bestaande verkoopklare producten vindbaar maken; ontbrekende toekomstige merken en algemene afwerking blijven parallel groeiproject. Sluit de bewezen winkel-/feedproblemen binnen de gekozen scope of houd de betreffende producten uit die promotiebestemming.
