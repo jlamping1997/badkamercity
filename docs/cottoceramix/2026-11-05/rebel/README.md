@@ -1,6 +1,6 @@
 # COTTO-01 — Revoir Paris Re-Bel pilot
 
-5 november 2026. Producten: **LIVE_VERIFIED**. Winkelwagencorrectie: **PREVIEW_BUILDING**, nog geen themapublicatie.
+5 november 2026. Producten: **LIVE_VERIFIED**. Winkelwagencorrectie: **PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION**, nog geen themapublicatie.
 
 De eigenaar vroeg één complete Cottoceramix-serie online te zetten als voorbeeld voor de verdere import. Re-Bel heeft een gecontroleerde matrix van 11 kleuren × twee vierkante formaten. Casablanca bevat daarnaast vormen en randstukken met een andere verkoopeenheid; dat vraagt een afzonderlijke beoordeling.
 
@@ -52,14 +52,22 @@ Er zijn geen nieuwe scripts, stylesheets of vertaalwaarden toegevoegd. MAIN bij 
 
 ## Controle en grenzen
 
-- Admin-readback: 22/22 veldenets, prijzen, native eenheidsprijzen, verpakkingen, gewichten en brongegevens gelijk; 22/22 groepslijsten met 22 referenties; 22/22 Webshoppublicatie; 70/70 media READY.
+- Admin-readback: 22/22 veldsets, prijzen, native eenheidsprijzen, verpakkingen, gewichten en brongegevens gelijk; 22/22 groepslijsten met 22 referenties; 22/22 Webshoppublicatie; 70/70 media READY.
 - Echte Chrome, zonder preview: 11 kleuren en twee maten zichtbaar; Blanc 60→100 en Blanc→Caramel behouden de passende andere keuze. Foto's, specificaties en levering wisselen mee.
 - 10 m² + 10%: 60 cm geeft 8 dozen, 11,52 m² en €794,32; 100 cm geeft 6 dozen, 12 m² en €959,40. Oppervlakte 0 blokkeert de koopknop. Drie handmatige dozen geven 4,32 m² en €297,87, zonder extra snijverlies.
 - Drie dozen RR6002 via de echte productknop toegevoegd, winkelwagenbedrag €297,87 en artikelidentiteit correct; alleen de eigen testregel verwijderd, winkelwagen weer leeg.
 - `node scripts/component-audit/cottoceramix-pilot.mjs`: zeven semantische render-/matrixchecks PASS, inclusief alle 286 kleur-/maatwissels, normale artikelen, afgeprijsde prijzen, ontbrekende metadata en ge-escapete leveringstekst.
-- Shopify Liquid-validatie: 4/4 gewijzigde bestanden SUCCESS, met meegeleverde documentatiefallback omdat de live documentatiecache niet bereikbaar was.
-- Echte previewcart na upload: **PENDING**. Fysieke telefoon, verzendberekening met afleveradres, checkout en betaling: **NOT_TESTED**.
+- Shopify Liquid-validatie: 5/5 bestanden SUCCESS in gecombineerde revisie 2, met meegeleverde documentatiefallback omdat de live documentatiecache niet bereikbaar was.
+- Echte previewcart na upload: **PASS** — drie dozen RR6001 voor €297,87; melding én cart tonen “per doos”, de bevestigde leveranciersvoorraad en €68,95/m². Eigen testregel verwijderd; cart leeg. Fysieke telefoon, verzendberekening met afleveradres, checkout en betaling: **NOT_TESTED**.
 
 Herstelpad: alleen de 22 in het productregister genoemde artikelen uit de Webshop halen en op DRAFT zetten; er bestonden geen eerdere Re-Bel-artikelen met die SKU's/handles. Het conceptthema kan ongepubliceerd blijven; er is geen themapublicatie door de uitvoerder. Na eventuele publicatie kan de bewaarde vorige MAIN teruggezet worden. Geen andere producten terugrollen.
 
-Volgende handeling: voltooide Shopify-kopie op volledige bestandspariteit controleren, uitsluitend de vier bestanden uploaden en echte previewcart testen. Daarna beoordeelt/publiceert de eigenaar het concept volgens de projectafspraken.
+De volledige kopie was vooraf 1381/1381 identiek aan MAIN. Na upload heeft het concept 1382 bestanden met exact de vier bedoelde afwijkingen; MAIN bleef 1381/1381 behouden. Echte previewcart en afbeeldingen PASS.
+
+Volgende handeling: eigenaar bekijkt Re-Bel en publiceert **BadkamerCity - Re-Bel tegelkeuze** in Shopify. Daarna uitsluitend de actuele MAIN-rol en de gepubliceerde winkelwagenlabels teruglezen. Tot dat moment zijn de 22 producten live en de winkelwagencorrecties alleen in het concept beschikbaar.
+
+## Gelijktijdige zoekcorrectie behouden
+
+De bestaande zoekbescherming uit SEARCH-01 is byte-exact overgenomen uit concept196116087050 (MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`). Eigen 23 runtimechecks PASS; de vier winkelwagenbestanden zijn ongewijzigd en alle vijf bronbodies exact teruggelezen. Publiceer uitsluitend het gecombineerde **BadkamerCity - Re-Bel tegelkeuze**. Het losse zoekconcept mist de winkelwagenaanpassing en mag daarna niet terug gepubliceerd worden.
+
+**Zoekvindbaarheid OPEN:** de browserproeven op `RR6001` en `Re-Bel` leveren nog nul op. De directe artikelpagina, menu's en bestellen werken. Er is geen oorzaak verondersteld en geen backendindex gewijzigd; vervolg via het afzonderlijke SEARCH-01-onderzoek. Dit is geen verklaring dat Re-Bel al via de algemene zoekfunctie vindbaar is.

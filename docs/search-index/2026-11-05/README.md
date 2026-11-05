@@ -1,3 +1,5 @@
+> **Publicatie-afstemming COTTO-01:** de bewezen zoekbescherming (MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`) is inmiddels byte-exact meegenomen in **UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze**, samen met de vier COTTO-winkelwagenbestanden. Eigen 23 runtimechecks en gecombineerde 5/5 validatie PASS. Publiceer alleen dit gecombineerde concept. Het losse zoekconcept196116087050 mist de winkelwagenwijzigingen en mag daarna niet als latere release worden gebruikt. De nieuwe Re-Bel-artikelen geven bij de browserproef nog nul zoekresultaten; hun vindbaarheid blijft onderdeel van het open indexonderzoek.
+
 # Zoekindex — ontbrekende Verlavio-resultaten
 
 5 november 2026. **PREVIEW_VERIFIED / SYNC_FAILURE_CONFIRMED / ERROR_DETAILS_PENDING**.
