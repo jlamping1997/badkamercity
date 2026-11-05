@@ -1,6 +1,18 @@
 # BadkamerCity — actuele werkstatus
 
-## FAB-02 — Verlavio private label voorbereid · 5 november 2026
+## FAB-03 — Verlavio live en volledig gecontroleerd · 5 november 2026
+
+**APPLIED_VERIFIED / MERCHANT_PUBLISHED.** De eigenaar heeft **BadkamerCity - Verlavio merknaam** gepubliceerd. Verse Shopify-controle bevestigt **MAIN 196116087050**; voormalig MAIN 196227170570 is UNPUBLISHED. Alle drie gepubliceerde compatibiliteitsbestanden zijn checksum-exact gecontroleerd. Geen MAIN-filewrite of publicatie door de uitvoerder.
+
+Alle **861 bestaande producten** hebben nu merk Verlavio, de bijbehorende producttitel en exacte merk-tag. **665 keuzemenutitels** en **1.665 afbeeldings-altwaarden** zijn omgezet. Volledige read-after-writecontrole op 15:51:12 UTC: exact gelijk aan het uitvoerplan, nul afwijkingen; eindtelling **861 Verlavio / 0 Fabriecio**. Status blijft 851 ACTIVE / 10 ARCHIVED. Product-/variant-ID's, handles/URL's, SKU's, prijzen, voorraad/-beleid, mediareferenties/-URL's, omschrijvingen, SEO en levering zijn gelijk aan de nulmeting. Menuopbouw, opties en bestemmingen blijven behouden; interne leveranciersvelden en bron-/importtags blijven Fabriecio.
+
+**PASS:** eerst vier Malmö-producten als proef; daarna de volledige catalogusvergelijking. Publieke eindcontrole op 15:49:20 UTC: VSB_2001, VSB_2004 en BKK_1001 geven HTTP 200 met Verlavio in H1, JSON-LD Brand, alle menutitels en productafbeelding-alt; menu's aanwezig. Vooraf alle 665 menu's onder Verlavio getest: 5.425 keuzecontroles / 4.096 URL-wissels / nul fouten. Geen nieuwe fysieke telefoon-, cart-, checkout- of betalingstest.
+
+Het bestaande Uitverkocht-probleem en 53 bronuitzonderingen blijven open; automatische feedkoppeling blijft uitgesteld. De merknaamwijziging bewijst geen koopbaarheid. Verlavio ontbreekt nog in het merkenoverzicht, net zoals Fabriecio daar voordien ontbrak; een eventuele toevoeging is afzonderlijk themawerk.
+
+**Exact één volgende handeling:** de bestaande Uitverkocht-/koopbaarheidsafwijking gericht onderzoeken met een product dat volgens Admin voorraad heeft. Geen merkdatabatches of publicatie meer nodig. Geen actieve schrijver of feedworker na overdracht. [Uitvoering, herstel en testgrenzen](fabriecio/2026-11-05/verlavio/README.md). De FAB-01/FAB-02-blokken hieronder zijn historische checkpoints; hun publicatie-/nulproductclaims zijn niet de huidige status.
+
+## FAB-02 — historisch checkpoint: Verlavio private label voorbereid · 5 november 2026
 
 **AWAITING_MERCHANT_PUBLICATION / PRODUCT_REBRAND_NOT_APPLIED.** Eigenaar wil merk **Verlavio**. Fabriecio blijft intern de leverancier. Verse rollen: **196227170570 is nu MAIN**; eigenaar heeft het vorige concept gepubliceerd. Alleen vendor wijzigen zou de665menu's verbergen. Daarom compatibel concept **UNPUBLISHED196116087050 — BadkamerCity - Verlavio merknaam** gereedgemaakt: eerst zes verschillen exact vanuit MAIN overgenomen, daarna drie files ondersteunen beide merknamen. Alle drie hashes teruggelezen; MAIN niet geschreven.
 
@@ -8,7 +20,7 @@
 
 **Exact één volgende handeling:** eigenaar publiceert **BadkamerCity - Verlavio merknaam**. Daarna actueleMAIN/hashcontrole en de voorbereide merkdatamutaties met teruglezing uitvoeren. De Shopify-koppeling staat codewrites alleen in concept toe. Geen actieve schrijver na overdracht. [Uitvoering en hervatten](fabriecio/2026-11-05/verlavio/README.md).
 
-## FAB-01 — Fabriecio productkeuzes en levering in concept · 5 november 2026
+## FAB-01 — historisch checkpoint: Fabriecio productkeuzes en levering in concept · 5 november 2026
 
 **VERIFIED_ADMIN / PREVIEW_VERIFIED / OWNER_REVIEW_PENDING / NOT_PUBLISHED.** Alle 861 Fabriecio-bronartikelen exact aan bestaande Shopify-SKU's gekoppeld. Op 851 actieve artikelen zijn 1.516 nieuwe velden opgeslagen en exact teruggelezen: 665 keuzemenu's en 851 leverinformatie. Prijs, voorraad, status, SKU/variant-ID, handle en featuredMedia onveranderd. Tien gearchiveerde artikelen overgeslagen; 132 actieve artikelen hebben geen bronmenu, één heeft alleen een gearchiveerde tegenhanger. Twee families/53 artikelen blijven op HOLD wegens 26 bronlinks die ongemerkt ook een andere maat/kleur wijzigen.
 
