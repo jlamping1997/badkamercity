@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## COTTO-04 — tweede controle productkeuzes · 5 november 2026
+
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-04.** Eigenaar vraagt een onafhankelijke dubbele controle van meerdere keuzemenu's en een praktische beoordeling van het schakelen. Scope: bestaande Cottoceramix-artikelen, live kleuren/formaten/gekoppelde diktes en aparte model-/afwerkingsfamilies; juiste titel/foto/prijs/verpakking/selectie en calculatorbehoud. Bestaande correcte werking laten staan. Geen nieuwe import of prijs-/voorraadbatch.
+
+Verse MAIN **196238639370**, 846 actieve Cottoceramix-artikelen. Reële browserproeven en een onafhankelijke bron-/selectiekerncontrole worden gecombineerd. Verbeterideeën onderscheiden van bewezen fouten; geen ongeteste telefoon- of volledige catalogusvrijgave.
+
+**Exact één volgende handeling:** de representatieve kleur-, formaat- en uitvoeringswissels live uitvoeren en concrete bevindingen vastleggen.
+
 ## LAUNCH-03 — eenmanszaakadres en retourlocatie apart bevestigd · 5 november 2026
 
 **OWNER_CONFIRMED / DOCS_UPDATED / NOT_PUBLISHED.** Bedrijfsadres van de eenmanszaak blijft **Hengelolaan70,2545JR 's-Gravenhage**. Werk-/retourontvangstlocatie is **bij Harry Suiker, Zichtenburglaan150,2544EB 's-Gravenhage**. Eigenaar bevestigt de retourafspraak; postcode via officiële contactpagina gecontroleerd. Harry Suiker wordt niet de verkoper.
