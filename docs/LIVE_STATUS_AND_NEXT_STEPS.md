@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## COTTO-05 — volledig assortiment publiceren en vindbaarheid controleren · 5 november 2026
+
+**IN_PROGRESS. Actieve schrijver: Codex COTTO-05.** Eigenaar vraagt het volledige Cottoceramix-assortiment online. Verse Admin-read bevestigt846 ACTIVE-artikelen en reeds gepubliceerde andere series dan Re-Bel; bestaande artikelen niet dupliceren. Scope: nog ontbrekende werksetartikelen in gecontroleerde batches, juiste verkoopeenheid/prijsbasis en keuzefamilies, Webshop-publicatie plus bestaande collectie-/zoekvindbaarheid. Bronconflicten niet oplossen door specificaties of gewichten te raden; samples/vervallen bronregels blijven uitgesloten.
+
+MAIN196238639370. Geen theme-publicatie gepland. Eerst private broninventaris, per-eenheidroute en zichtbaarheid vaststellen; bestaande846producten behouden.
+
+**Exact één volgende handeling:** uit de resterende bronset de aantoonbaar correcte m²-/stuks-/m¹-routes en collectie-/zoekindexdekking bepalen en een eerste begrensde importbatch voorbereiden.
+
 ## COTTO-04 — tweede controle productkeuzes · 5 november 2026
 
 **REVIEW_COMPLETE / VERIFIED_BROWSER / NO_STORE_WRITES.** Zeven live series getest: Funky, Re-Bel, Croccante, Zelij, Magnetism, Lula en Marea Alta Mat. In 26 vastgelegde browsertoestanden kloppen doosafronding en totaalbedrag; geen horizontale overloop bij desktopviewport1363×936. Kleur-, formaat-, foto-, titel-, verpakkings- en prijswissels werken in de geteste routes. In m²-modus blijven gewenste m² en snijverlies behouden; na handmatig dozen invoeren blijven juist de dozen behouden. Uit-/inklappen bewaart de gekozen kleur, ook bij Zelij met24kleuren.
