@@ -1,5 +1,7 @@
 # Verlavio — voorraad en koopbaarheid
 
+> **Publicatie vastgesteld tijdens SEARCH-01, 5 november 2026:** de eigenaar heeft **BadkamerCity - Verlavio voorraad en levertijd (196227170570)** gepubliceerd; verse Shopify-rollen tonen dit thema als MAIN. De onderstaande COPY_AWAITING_MERCHANT_PUBLICATION-status beschrijft het eerdere oplevermoment en is geen actuele publicatieblokkade. Het nieuwe zoekherstel wordt in het andere, ongepubliceerde thema voorbereid. Zie [SEARCH-01](../../../search-index/2026-11-05/README.md).
+
 5 november 2026. **BACKEND_APPLIED_VERIFIED / PREVIEW_VERIFIED / COPY_AWAITING_MERCHANT_PUBLICATION**.
 
 De eerdere rebrand is afgerond in [FAB-03](../verlavio/README.md). Dit dossier beschrijft de daaropvolgende voorraadcontrole, de gerichte reparatie van Nederlandse verzending en de voorraadtekst in concept. MAIN blijft **196116087050 — BadkamerCity - Verlavio merknaam**. De backend werkt; voor de nieuwe tekst publiceert de eigenaar **BadkamerCity - Verlavio voorraad en levertijd**, concept **196227170570**. Er zijn geen bestanden naar MAIN geschreven en geen thema's door de uitvoerder gepubliceerd.

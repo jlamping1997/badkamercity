@@ -10,7 +10,21 @@
 
 **Exact één volgende handeling:** zodra Shopify de conceptkopie heeft voltooid, volledige pariteit met MAIN bewijzen, uitsluitend de vier winkelwagenbestanden uploaden en de echte previewwinkelwagen controleren.
 
-## FAB-04 — koopbaarheid hersteld; voorraadtekst klaar voor publicatie · 5 november 2026
+## SEARCH-01 — zoekbescherming gecontroleerd; volledig indexherstel vraagt VPS-diagnose · 5 november 2026
+
+**PREVIEW_VERIFIED / BACKEND_BLOCKED_SSH / OWNER_PUBLICATION_PENDING.** Verse externe service 0.4.0 gebruikt collectie `bc_sync_20261103t120045_4e7799`, 226 profielen; globaal 11.679 / shopping 10.937. Shopify telt 12.760 ACTIVE/gepubliceerd, waaronder 851 Verlavio. Externe Verlavio/Fabriecio/VSB_2001-query's geven nul terwijl native Shopify bestaande resultaten levert. Native tellingen wisselden 188–214: geen bewijs van alle 851 geïndexeerde Verlavio-artikelen. Huidige scheduler/incrementele synchronisatie nog niet op de VPS vastgesteld; oude oktoberdocumentatie bewijst de huidige werking niet.
+
+**UNPUBLISHED 196116087050 — BadkamerCity - Zoekresultaten herstel**: na overname van drie gepubliceerde voorraadtekstbestanden volledige 1.381/1.381-pariteit met **MAIN 196227170570**; finaal 1.381 bestanden met exact één verschil: `assets/bc-external-filters.js` (MD5 `e0783b4ed15e1acc70ff1518cf2b5f20`). Alleen dezelfde ongefilterde query met echte native kaarten en externe nul behoudt stil native resultaten. Echte fouten houden hun waarschuwing; gefilterde nul, prijs nul en querygeschiedenis blijven behouden. Gedeeltelijk ontbrekende niet-lege externe resultaten blijven backendwerk.
+
+**PASS:** 23 runtimecontroles, officiële validator revisie 2 en echte Chrome-zoekproeven: Verlavio 214 resultaten/36 native kaarten zonder foutbanner; Hotbath 7.540/24 externe kaarten; VSB_2001 één native Malmö-kaart met echte foto. Geen nieuwe winkelwagen-/checkout-/betalingstest voor deze taak. Geen MAIN-write of publicatie door uitvoerder.
+
+Volledig backendindexherstel blijft **BLOCKED_SSH**: geen bruikbare SSH-authenticatie, geen login/indexmutatie. Alleen-lezen `scripts/filter-sync/diagnose_runtime.py` voorbereid; acht beveiligingstests PASS, geen authwaarden/serverwrites. **Exact één volgende handeling voor SEARCH-01:** eigenaar voert dit script vanuit de vastgepinde Git-commit uit en deelt het geschoonde verslag. Pas daarna schema, volledige opbouw en incrementele synchronisatie gericht herstellen; niets daarvan is al uitgevoerd.
+
+Eigenaar kan het gecontroleerde frontendconcept afzonderlijk publiceren; dat herstelt de backendindex niet. De voorraadtekst is inmiddels door eigenaar gepubliceerd in MAIN 196227170570. [Dossier, vastgepind script en vervolg](search-index/2026-11-05/README.md). Geen actieve SEARCH-01-schrijver of backendworker na overdracht; COTTO-01 en andere taken blijven behouden.
+
+**Publicatie-afstemming:** COTTO-concept 196238639370 is gestart vanaf MAIN zonder deze zoekwijziging; vóór de latere publicatie moet de COTTO-schrijver controleren dat de zoekwijziging is meegenomen. Het zoekconcept bevat de vier nog ongepubliceerde COTTO-winkelwagenwijzigingen niet. Alleen de afzonderlijke eigen concepten zijn bewerkt.
+
+## FAB-04 — historisch checkpoint vóór eigenaarspublicatie: koopbaarheid hersteld · 5 november 2026
 
 **BACKEND_APPLIED_VERIFIED / PREVIEW_VERIFIED / COPY_AWAITING_MERCHANT_PUBLICATION.** De winkel gebruikt Market-driven verzending. De werkelijke Nederlandse verzendoptie bevatte alleen de winkellocatie. Uitsluitend de Verlavio-leverancierslocatie is als oorsprong toegevoegd. Volledige voor-/navergelijking: alleen die toevoeging; bestaande tarief-ID's, €6,95, gratis-verzendingdrempel €100,01 en andere Markets gelijk.
 
