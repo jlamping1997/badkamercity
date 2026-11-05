@@ -7,7 +7,7 @@ Renders removable selected filters above the collection's product grid.
     {%- for value in filter.active_values -%}
       <facet-remove>
         <a href="{{ value.url_to_remove }}" class="bc-selected-filters__pill js-facet-remove">
-          {{ filter.label | escape }}: {{ value.label | escape }}
+          {{ filter.label | escape }}: {% render 'bc-native-facet-value-label', filter: filter, value: value, collection_handle: collection.handle, results_handle: results.handle %}
           <span class="svg-wrapper" aria-hidden="true">{{ 'icon-close-small.svg' | inline_asset_content }}</span>
           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
         </a>

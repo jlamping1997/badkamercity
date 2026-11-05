@@ -1,0 +1,20 @@
+{% doc %}
+Renders an escaped native facet value label in the current collection context.
+@param {object} filter - The native Shopify filter
+@param {object} value - The native filter value
+@param {string} [collection_handle] - Current collection handle
+@param {string} [results_handle] - Rendered collection results handle
+{% enddoc %}
+{%- liquid
+  assign facet_value_label = value.label
+  assign native_value = value.value | append: ''
+  if collection_handle == 'cottoceramix' and results_handle == 'cottoceramix' and filter.param_name == 'filter.v.availability'
+    case native_value
+      when '1'
+        assign facet_value_label = 'bc_collection.orderable' | t
+      when '0'
+        assign facet_value_label = 'bc_collection.not_orderable' | t
+    endcase
+  endif
+  echo facet_value_label | escape
+-%}
