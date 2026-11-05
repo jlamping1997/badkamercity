@@ -1,13 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
-## COTTO-02 — merknaam en uitklapbare tegelkleuren in uitvoering · 5 november 2026
+## COTTO-02 — Cottoceramix en uitklapbare tegelkleuren gereed · 5 november 2026
 
-**IN_PROGRESS. Actieve schrijver: Codex COTTO-02.** Eigenaar vraagt voor alle 22 Re-Bel-pilotartikelen Cottoceramix vóór de bestaande titel en als zichtbaar merk. De kleurkeuze krijgt vier zichtbare vierkante tegelafbeeldingen, met de geselecteerde kleur altijd zichtbaar, en een knop voor alle elf kleuren in vier kolommen. De aangeleverde screenshots zijn de bedoelde weergave. Bestaande gegevens, doos-/m²-prijzen, eigen artikelidentiteiten en eerdere cart-/zoekcorrecties blijven uitgangspunt.
+**ADMIN_APPLIED_VERIFIED / PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION.** Alle 22 bestaande Re-Bel-artikelen hebben Cottoceramix als vendor, titelvoorvoegsel en zichtbaar Merk; beschrijving, SEO en 70 afbeeldings-altwaarden aangepast. Volledige voor-/navergelijking: nul afwijkingen van plan; identiteiten, URL's, publicaties, doos-/m²-prijzen, verpakking, gewicht, voorraadbeleid en fotoreferenties behouden.
 
-Verse rollen: MAIN196227170570, bestaand gecombineerd UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze. Geen themapublicatie door uitvoerder. Bron `shopify/current/`, vaste branch `fix/product-cards-2026-10-14`. SEARCH-01 blijft afzonderlijk en wordt niet overgenomen.
+Het bestaande concept toont vier vierkante tegelfoto's inclusief de gekozen kleur; “Bekijk alle 11 kleuren” / +7 opent de volledige vierkolomskeuze. Open toestand blijft bij productwissels bewaard. Opt-in via `tiles.color_picker_layout="expandable_grid"`; overige tegelgroepen behouden de rail. Zes nieuwe semantische kleurchecks en zeven bestaande pilotchecks PASS; drie productbestanden en de neutrale QA-template door Liquid-validator goedgekeurd. Echte Chrome: uit-/inklappen, alle elf foto's, Blanc→Perle en 60→100 cm met behoud van de andere keuze; componentkaders 320/390 CSS-pixels zonder overloop. Fysieke telefoon, volledige mobiele PDP en checkout/betaling deze ronde NOT_TESTED.
 
-**Exact één volgende handeling:** de 22 huidige artikelen veilig vastleggen en merkweergave plus configureerbare inklapbare kleurkeuze in het bestaande concept uitvoeren.
+**Thema's:** MAIN **196227170570** is volledig 1381/1381 checksumgelijk gebleven. Alleen **UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze** bevat het nieuwe menu. Finale inventaris: 1383 bestanden, elf verschillen tegenover MAIN — vier eerdere cartfiles, drie nieuwe productcomponentfiles, één inactieve neutrale QA-template en drie laatste SEARCH-01-files. De parallelle zoekpatch `05a54c8d8b7df8c41644eec7abd5bd812a3cb6d5` behouden; oude COTTO-01-zoekhash is niet langer de huidige zoekbaseline. COTTO-02 heeft geen backendindex gewijzigd en publiceert geen thema.
 
+Codecheckpoint **cb55eb45f1e32f9044a3b91279e0c41aa1b7c410**, vaste branch `fix/product-cards-2026-10-14`, bron `shopify/current/`. [Gegevens, menucontract, bewijs en herstel](cottoceramix/2026-11-05/rebel/brand-colors.md). Geen actieve COTTO-02-schrijver na overdracht.
+
+**Exact één volgende handeling voor COTTO-02:** eigenaar beoordeelt en publiceert **BadkamerCity - Re-Bel tegelkeuze**; daarna verse MAIN-rol en publieke merk-/kleurenweergave controleren. SEARCH-01 en verdere import blijven afzonderlijk. De COTTO-01-merk-/menubeschrijving hieronder is het vorige checkpoint.
 ## COTTO-01 — Re-Bel live; winkelwagencorrectie gereed voor eigenaarspublicatie · 5 november 2026
 
 **PRODUCTS_LIVE_VERIFIED / CART_PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION.** Exact 22 nieuwe Revoir Paris Re-Bel-artikelen ACTIVE en gepubliceerd op de Webshop: 11 kleuren × 60×60/100×100 cm. Gedeeld kleur-/formaatmenu, native m²-eenheidsprijzen, juiste doosprijzen, dozen als bestelaantal, 70 afbeeldingen READY, volledige specificaties en gewichten gecontroleerd. Actuele XML gebruikt; vijf voorraadverschillen tegenover Excel verwerkt. EAN RR6011 heeft een onjuist controlecijfer en is niet als barcode gepubliceerd. [Uitvoering, productregister, hergebruik en herstel](cottoceramix/2026-11-05/rebel/README.md).

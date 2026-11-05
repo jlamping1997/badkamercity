@@ -1,5 +1,7 @@
 # COTTO-01 — Revoir Paris Re-Bel pilot
 
+> **Actueel sinds COTTO-02:** winkelmerk en titelvoorvoegsel zijn Cottoceramix. Het uitklapbare menu met vier/elf vierkante tegelfoto's staat in hetzelfde concept. [Huidig contract, controle en herstel](brand-colors.md). De merk-, rail- en enkele zoekhashvermeldingen hieronder zijn het gedateerde COTTO-01-checkpoint.
+
 5 november 2026. Producten: **LIVE_VERIFIED**. Winkelwagencorrectie: **PREVIEW_VERIFIED / AWAITING_MERCHANT_PUBLICATION**, nog geen themapublicatie.
 
 De eigenaar vroeg één complete Cottoceramix-serie online te zetten als voorbeeld voor de verdere import. Re-Bel heeft een gecontroleerde matrix van 11 kleuren × twee vierkante formaten. Casablanca bevat daarnaast vormen en randstukken met een andere verkoopeenheid; dat vraagt een afzonderlijke beoordeling.
