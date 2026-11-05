@@ -39,6 +39,8 @@
     const nativeNodes = [nativeAside, nativeSort, nativePagination, ...sectionRoot.querySelectorAll('[data-bc-native-search-status]')].filter(Boolean);
     const nativeDisplays = new Map(nativeNodes.map((node) => [node, node.style.display]));
     const nativeGridNodes = [...productGrid.childNodes];
+    const nativeSearchQuery = isSearch ? (new URL(window.location.href).searchParams.get('q') ?? root.dataset.searchQuery ?? '*') : null;
+    const nativeSearchHasResults = isSearch && !!productGrid.querySelector('.bc-search-card, .article-card-wrapper');
     const expectedCount = isSearch ? NaN : Number(root.dataset.productsCount);
     const cardDataCache = new Map();
     let externalActive = false;
@@ -268,6 +270,18 @@
       syncDrawerAccessibility();
     }
 
+    function shouldKeepNativeSearchResults(data) {
+      if (!nativeSearchHasResults || data.found !== 0) return false;
+      const params = new URL(window.location.href).searchParams;
+      if ((params.get('q') ?? root.dataset.searchQuery ?? '*') !== nativeSearchQuery) return false;
+      if ([...params.keys()].some((key) => key.startsWith('filter.'))) return false;
+      const hasSelectedFilters = Object.values(state.filters).some((values) => values.length > 0);
+      const hasSelectedRanges = Object.values(state.ranges).some((range) =>
+        ['min', 'max'].some((key) => range[key] !== undefined && range[key] !== null && range[key] !== '')
+      );
+      return !hasSelectedFilters && !hasSelectedRanges;
+    }
+
     async function runSearch() {
       if (nativeFallback) return;
       const currentRequest = ++requestId;
@@ -309,6 +323,12 @@
         }
         if (isSearch && data.collection?.handle !== '__all__') {
           throw new Error('Onjuiste zoekindex');
+        }
+        if (shouldKeepNativeSearchResults(data)) {
+          nativeFallback = true;
+          clearTimeout(rangeTimer);
+          setExternalMode(false);
+          return;
         }
         const aliases = data.filter_policy?.color_value_aliases || {};
         if (state.filters.f_kleur) state.filters.f_kleur = [...new Set(state.filters.f_kleur.map(v => aliases[v] || v))];
