@@ -1,5 +1,7 @@
 # Toevoegen, winkelwagenbevestiging en overlays
 
+> **5 november 2026 — COTTO-01, PREVIEW_VERIFIED / niet gepubliceerd:** `bc-cart-unit-label` hergebruikt het bestaande positieve `custom.bron_toelichtingen_json.tiles.m2_per_box`-contract: “per doos” in cart en toevoegbevestiging, overige producten behouden “per stuk”. `bc-cart-delivery` toont voor tegels de bevestigde `tiles.order_type`/`lead_time`, zonder verkoopbare voorraad als bezorgbelofte te gebruiken. Echte Re-Bel-add/cart/cleanup en normale/afgeprijsde/missende-datafixtures PASS. MAIN196227170570 blijft behouden; alleen UNPUBLISHED196238639370 bevat de correctie. [Contract, vier gebruiksbestanden, bewijs en herstel](../../cottoceramix/2026-11-05/rebel/README.md). Oudere nulmetingen hieronder blijven gedateerde geschiedenis.
+
 > **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Cart bevestiging ruimt ontbrekende detailsections op. Sunshower staat na niet bevestigde add geen blinde retry toe. Native dialog/focus geverifieerd met fictieve sections; geen echte cart/orderactie. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
 
 **Verdieping:** zie [de afzonderlijke inhouds-/lifecycleanalyse en CART-F01](micro/CART_NOTIFICATION.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
