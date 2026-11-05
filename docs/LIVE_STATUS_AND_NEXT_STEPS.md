@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## FAB-01 — Fabriecio productkeuzes en levering in concept · 5 november 2026
+
+**VERIFIED_ADMIN / PREVIEW_VERIFIED / OWNER_REVIEW_PENDING / NOT_PUBLISHED.** Alle 861 Fabriecio-bronartikelen exact aan bestaande Shopify-SKU's gekoppeld. Op 851 actieve artikelen zijn 1.516 nieuwe velden opgeslagen en exact teruggelezen: 665 keuzemenu's en 851 leverinformatie. Prijs, voorraad, status, SKU/variant-ID, handle en featuredMedia onveranderd. Tien gearchiveerde artikelen overgeslagen; 132 actieve artikelen hebben geen bronmenu, één heeft alleen een gearchiveerde tegenhanger. Twee families/53 artikelen blijven op HOLD wegens 26 bronlinks die ongemerkt ook een andere maat/kleur wijzigen.
+
+UNPUBLISHED **196227170570 — BadkamerCity - Fabriecio productkeuzes** is eerst 1.378/1.378 identiek aan MAIN **196116087050** gemaakt. Daarna exact zes featurepaden: twee snippets, main-product, twee locales en een geneutraliseerde ongebruikte QA-template. MAIN 1.378/1.378 ongewijzigd. Geen publicatie. Actuele bron: **shopify/current/** op **fix/product-cards-2026-10-14**, codecheckpoint **ab312b8f3685de23fb34166c307d680d284869e4**.
+
+**PASS:** 17 Python-tests, 5.425 werkelijke Liquid/JS-keuzecontroles/4.096 URL-wissels; native Chrome Malmö-wissels met behoud van kleur/maat, juiste prijs/Week50 en geladen swatches; 320/390 CSS-pixelcomponenten zonder overloop; zes ThemeCheck-files geldig. Fysieke telefoon/cart/checkout niet vrijgegeven. De bestaande publieke Uitverkocht-blokkade blijft open; automatische feedkoppeling is uitgesteld. Limiet256metafielddefinities behouden; twee nieuwe ongestructureerde JSON-velden zonder bestaande definities te verwijderen.
+
+[Uitvoering, herstel en grenzen](fabriecio/2026-11-05/product-choices/README.md) · [getelde verificatie](fabriecio/2026-11-05/product-choices/verification.json).
+
+**Exact één volgende handeling:** Jackson bekijkt het concept **BadkamerCity - Fabriecio productkeuzes**, te beginnen bij Malmö. Geen actieve schrijver na overdracht. Andere dossiers en het Lagoo-fotoverbod blijven behouden.
+
 ## LAUNCH-01 — vast dossier voor livegang, Google en SEO · 5 november 2026
 
 **DOCUMENTATION_READY / READ_ONLY_BASELINE / SETUP_NOT_EXECUTED.** Eigenaar wil bestaande verkoopklare producten nu vindbaar maken en het assortiment daarna uitbreiden. Vast dossier [Livegang & SEO](livegang-seo/README.md) aangemaakt: [taken/acceptatie](livegang-seo/TAKEN.md), webshopbasis, account-/gegevensstromen, Search Console, Merchant Center, GA4/privacy, SEO-roadmap, paginaregister, volledig niet-product-URL-register en logboek.
