@@ -2,6 +2,8 @@
 
 ## COTTO-05 — m²-assortiment gepubliceerd; native units wachten op eigenaar · 5 november 2026
 
+**IN_PROGRESS — aanvullende native filtercorrectie.** De Cottoceramix-beschikbaarheidsfilter gebruikte Shopify-bestelbaarheid als label ‘Op voorraad’. Alleen deze native filterwaarden worden ‘Bestelbaar’ / ‘Niet bestelbaar’, inclusief mobiel, schermlezertekst en actieve filters. Vijf themabestanden officieel gevalideerd, acht gerichte renderchecks en onafhankelijke review PASS; codecheckpoint **4976dd7ee56e9dd664e4e19198b6e2d852a46b2b** op de actieve codebranch. Preview-upsert, manifest- en browsernacontrole nog afronden; product-/voorraadgegevens en onderstaande tellingen ongewijzigd.
+
 **PARTIALLY_PUBLISHED / BLOCKED_MERCHANT_THEME_AND_INDEX_LAG.** Verse eindcontrole bevestigt **3.159 ACTIVE en Webshop-gepubliceerde Cottoceramix-artikelen**. Er zijn 3.764 unieke Shopify-producten/varianten: 3.159 ACTIVE en 605 DRAFT, waarvan 597 native stuks-/pak-/setartikelen en acht bestaande bron-HOLDs. De broncheckpointset bevat 3.771 exacte SKU's; zes nieuwe afwerkingsconflicten en AD5917 zonder bruikbare foto zijn niet aangemaakt. Totaal 15 bron-HOLDs, geen extra unit-HOLD.
 
 De 1.127 nieuwe strict-m²-artikelen slagen met 87.323 veld-/groep-/mediacontroles; alle 1.127 publicaties en publieke URL's teruggelezen. De 1.186 overige m²-artikelen slagen met 91.398 controles en daarna 9.489 nacontroles op exacte SKU-/product-/variantidentiteit, ACTIVE, Webshop en URL. Vier gerichte Malaga-handlecorrecties behouden de afzonderlijke punt-SKU's; nul uitsluitingen. De 854 bestaande producten zijn apart teruggelezen: 846 blijven ACTIVE/gepubliceerd met behouden handles/URL's; acht HOLDs blijven ongepubliceerd DRAFT.
