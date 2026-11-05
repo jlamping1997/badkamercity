@@ -2,9 +2,9 @@
 
 # Zoekindex — ontbrekende Verlavio-resultaten
 
-5 november 2026. **PREVIEW_VERIFIED / SYNC_FAILURE_CONFIRMED / ERROR_DETAILS_PENDING**.
+5 november 2026. **ROOT_CAUSE_CONFIRMED / CURRENT_SOURCE_REQUIRED**.
 
-De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. Het alleen-lezen runtime-rapport is ontvangen: de automatische timer staat aan, maar de synchronisatieservice heeft gefaald. Voor het volledige backendherstel ontbreekt nog de precieze foutmelding. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
+De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mist Verlavio en vervangt daarbij bestaande Shopify-resultaten door nul. De begrensde frontendbescherming is in een echt conceptthema gecontroleerd. Het runtime-rapport en LAST_ERROR zijn ontvangen. De synchronisatie stopt tijdens normalisatie op een echt product met zestien varianten; voor een complete correctie zijn nu de actuele worker- en API-bron nodig. De frontendbescherming maakt ontbrekende indexdocumenten niet aan.
 
 ## Verse productiecontrole
 
@@ -22,7 +22,7 @@ De eigenaar vraagt de volledige zoekindex te herstellen. De externe zoekroute mi
 
 De aantallen horen bij verschillende query-/profielscopes; trek er geen ongeteste exacte ontbrekende-productenlijst van af. De native Verlavio-resultaattelling wisselde tijdens de controles van 188 tot 214. Dit bewijst geen dekking van alle 851 Verlavio-artikelen. Het concrete defect is wel bewezen: Shopify levert resultaten die de externe route door nul vervangt.
 
-Het ontvangen runtime-rapport bevestigt dat automatische synchronisatie is ingericht: de timer is actief en ingeschakeld, maar de service staat op failed. De oorzaak is nog niet vastgesteld. De publieke health-route blijft de collectie van 3 november melden; het rapport bewijst geen succesvolle nieuwe indexopbouw of werkende vijfminutenverversing. Oudere oktoberbeschrijvingen zijn geen actuele bron voor de publieke index.
+De timer is actief en ingeschakeld, maar de service is gefaald. LAST_ERROR bevestigt inmiddels de één-variantaanname als blokkade in de normalisatie. De publieke health-route blijft de collectie van 3 november melden; er is geen succesvolle nieuwe indexopbouw of werkende vijfminutenverversing bewezen. Oudere oktoberbeschrijvingen zijn geen actuele bron voor de publieke index.
 
 ## Begrensde frontendbescherming
 
@@ -49,34 +49,36 @@ Deze situatie toont geen foutbanner. Echte fouten behouden de bestaande waarschu
 
 Deze proeven bewijzen de begrensde fallback en behoud van de bestaande Hotbath-route, geen volledige indexdekking. Geen nieuwe cart-, checkout- of betalingstest voor deze zoektaak.
 
-## Runtime-rapport ontvangen; precieze fout nog nodig
+## Oorzaak bevestigd; actuele bron nodig
 
-De eigenaar heeft het alleen-lezen runtime-rapport aangeleverd. Het bevestigt:
+Het runtime-rapport bevestigt een actieve, ingeschakelde `bc-filter-sync.timer` en een gefaalde `bc-filter-sync.service`. LAST_ERROR van **5 november 2026, 17:01:22 UTC** meldt in de normalisatiestap:
 
-| Onderdeel | Vastgesteld |
-| --- | --- |
-| `bc-filter-sync.timer` | `enabled` en `active` |
-| `bc-filter-sync.service` | `failed` |
-| Werkelijke worker | `/opt/badkamercity/filter-sync/sync.py`, 98.867 bytes |
-| Worker-SHA256 | `2064b549e173d709fe1d5e8e5fe8cb549276e817d46b111510fcc4bc12471cf2` |
+> Meer of minder dan één variant voor gid://shopify/Product/10698301571338; eerst variantlogica beoordelen
 
-De automatische taak ontbreekt dus niet; de uitvoering heeft gefaald. Het metadata-rapport bevat niet de exacte foutoorzaak. Aan- of afwezige variabelen in het diagnoseproces bewijzen niet hoe de worker zijn authenticatie laadt. Er is geen ontbrekende authenticatie als oorzaak vastgesteld.
+Een verse Shopify-controle bevestigt dat dit **Lagoo Nesso plafondbuis** is, met **zestien echte varianten** en variantprijzen van **€78 tot €215**. De varianten zijn geldige productdata. De synchronisatie moet meerdere varianten kunnen verwerken; dit product overslaan of Shopify-varianten aanpassen is geen volledige oplossing.
 
-De eerdere vastgepinde runtime-diagnose is hiermee afgerond; het verslag blijft privé en wordt niet in deze publieke repository opgenomen. Er is geen index of actieve collectie gewijzigd en de worker is niet opnieuw gestart. De volgende stap leest uitsluitend het bestaande foutbestand; geen workerstatusopdracht of herstart uitvoeren.
+Voor de correctie zijn de actuele worker `/opt/badkamercity/filter-sync/sync.py` (98.867 bytes; SHA256 `2064b549e173d709fe1d5e8e5fe8cb549276e817d46b111510fcc4bc12471cf2`) en de API-app `/home/ubuntu/bc_apiproef_20261013/app.py` nodig. Een oudere workersnapshot is geen bewezen exacte vervanging voor deze productiebron.
+
+Het contract blijft één zoekdocument per product, met vindbaarheid op alle variant-SKU's via een SKU-aliasveld en passende exacte SKU-zoeklogica in de API. Het prijsbeleid moet aansluiten op de getoonde product-/variantprijs. Worker, API en prijsweergave daarom samen beoordelen met de actuele bron; nog geen blinde correctie of herstart.
+
+De runtime- en foutdiagnose zijn afgerond. Hun privéverslagen worden niet in deze publieke repository opgenomen. Er is geen index, actieve collectie, serverbron of Shopify-variant gewijzigd en de worker is niet opnieuw gestart.
 
 ## Overdracht en publicatie
 
-**Exact één volgende handeling voor het volledige indexherstel:** eigenaar leest de precieze fout en plakt de uitvoer terug in de chat:
+**Exact één volgende handeling voor het volledige indexherstel:** eigenaar kopieert de twee actuele bronbestanden via SCP naar Downloads, maakt daar een ZIP en uploadt die in de chat:
 
 ```powershell
-ssh ubuntu@57.129.175.195 "sudo -n cat /opt/badkamercity/filter-sync/LAST_ERROR.json"
+$bronmap = Join-Path $env:USERPROFILE ("Downloads\BC-zoekindex-bron-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
+New-Item -ItemType Directory -Path $bronmap | Out-Null
+scp "ubuntu@57.129.175.195:/opt/badkamercity/filter-sync/sync.py" "ubuntu@57.129.175.195:/home/ubuntu/bc_apiproef_20261013/app.py" $bronmap
+if ($LASTEXITCODE -ne 0) { throw "Kopiëren mislukt. Plak de foutmelding hier." }
+Compress-Archive -Path (Join-Path $bronmap "*.py") -DestinationPath "$bronmap.zip"
+Write-Host "Upload hier: $bronmap.zip"
 ```
 
-Deel geen wachtwoorden of sleutels. Pas na deze foutmelding de oorzaak gericht herstellen; geen worker herstarten, index opnieuw opbouwen of actieve collectie omzetten voordat die oorzaak bekend is.
+Deze opdracht leest de twee serverbestanden en schrijft uitsluitend op de eigen pc. Geen workerherstart of serverwijziging. De correctie volgt pas na beoordeling van deze actuele bron.
 
-De eigenaar kan **BadkamerCity - Zoekresultaten herstel (196116087050)** afzonderlijk publiceren. De preview is gecontroleerd; dit voorkomt dat aanwezige native resultaten door een externe nul worden verborgen. Het voltooit het volledige indexherstel niet. Na publicatie moeten MAIN-rol, één Verlavio-nulresultaatgeval, een externe Hotbath-zoekopdracht en een echt gefilterd nulresultaat gericht worden teruggelezen.
-
-**Samenloop met COTTO-01:** het afzonderlijke Re-Bel-concept 196238639370 is op de huidige MAIN gebaseerd, waarin deze zoekwijziging nog ontbreekt. De huidige inhoud van dat andere concept is door SEARCH-01 niet opnieuw gecontroleerd. Vóór publicatie van dat concept moet de COTTO-schrijver deze ene zoekwijziging meenemen en gericht controleren; anders verdwijnt de zoekbescherming bij een latere themapublicatie. Dit zoekconcept bevat omgekeerd niet de nog ongepubliceerde vier winkelwagenwijzigingen. Geen van beide concepten is door SEARCH-01 over het andere heen geschreven.
+**Verse themarollen:** MAIN blijft **196227170570 — BadkamerCity - Verlavio voorraad en levertijd**. Het losse zoekconcept196116087050 en het gecombineerde COTTO-concept196238639370 zijn beide UNPUBLISHED. De zoekbescherming is byte-exact opgenomen in het gecombineerde **BadkamerCity - Re-Bel tegelkeuze**, samen met vier winkelwagencorrecties; publiceer alleen dat gecombineerde concept volgens de COTTO-afstemming hierboven. Het losse zoekconcept mist die winkelwagencorrecties en mag daarna niet als latere release worden gebruikt. Publicatie herstelt de backendindex niet; na publicatie MAIN en de gerichte zoek-/winkelwagencases controleren.
 
 De Verlavio-voorraadtekst is door de eigenaar gepubliceerd: MAIN is nu 196227170570. De oude FAB-04-publicatiegrens is geschiedenis; de afzonderlijke voorraad-/Market-reparatie blijft behouden. Andere merken, zes leveranciersconflicten, 53 vastgehouden bronmenu's, de merkenoverzichtvraag en het Lagoo-fotoverbod blijven buiten deze zoekwijziging. De aparte COTTO-01-schrijver en prioriteit in de centrale status blijven behouden. SEARCH-01 heeft geen backendworker gestart; na overdracht is geen SEARCH-01-schrijver actief.
 
