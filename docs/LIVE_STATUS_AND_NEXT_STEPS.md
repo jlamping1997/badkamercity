@@ -1,12 +1,14 @@
 # BadkamerCity — actuele werkstatus
 
-## COTTO-01 — Re-Bel seriepilot in uitvoering · 5 november 2026
+## COTTO-01 — Re-Bel producten live; winkelwagenproef in uitvoering · 5 november 2026
 
-**IN_PROGRESS / READ_ONLY_BASELINE.** Eigenaar geeft nu expliciet opdracht één Cottoceramix-serie met keuzemenu en correcte productdata online te zetten. Gekozen: Re-Bel, 22 bronartikelen, 11 kleuren × 60×60 en 100×100 cm. Casablanca blijft buiten deze proef. Actuele Shopify-read: MAIN196116087050, shop fpa9hu-i3.myshopify.com. Actieve codebranch fix/product-cards-2026-10-14, themabron shopify/current/. Schone nieuwe cloudcheckout; geen Windows-controle.
+**PRODUCTS_LIVE_VERIFIED / CART_PREVIEW_BUILDING.** Exact 22 nieuwe Revoir Paris Re-Bel-artikelen ACTIVE en expliciet gepubliceerd in de Webshop: 11 kleuren × 60×60/100×100 cm. Wederzijdse `tiles.group_products`-koppelingen; 70 afbeeldingen READY. Volledige prijs-/doos-/gewicht-/metafieldreadback PASS. Actuele leveranciersfeed gebruikt (vijf voorraadverschillen t.o.v. Excel); ongeldige EAN RR6011 weggelaten. Voorraad is een leveranciersmomentopname; automatische feedverversing is niet ingericht.
 
-**Actieve schrijver: Codex COTTO-01.** Nog geen Cottoceramix-productmutatie of themamutatie uitgevoerd. Bestaande tegelcalculator en selectorcontract eerst controleren; geen catalogusbrede import. Bestaande andere merken, hun voorraad en de Lagoo-foto-instructie blijven buiten scope. Afgeronde FAB-03 blijft behouden; deze expliciete nieuwe eigenaarsopdracht is de huidige prioriteit.
+**Actieve schrijver: Codex COTTO-01.** Echte live Chrome-proef: kleur/maat behouden selectie, 10 m² + 10% geeft 8 dozen/11,52 m²/€794,32 bij 60 cm of 6 dozen/12 m²/€959,40 bij 100 cm. Drie dozen RR6002 werkelijk toegevoegd voor €297,87; eigen testregel verwijderd, cart leeg. Bestaande winkelwagen toont nog “per stuk” bij doosprijzen en de generieke levertijd; vier bestanden corrigeren dit in een nieuw concept. Toolkit 4/4 en zeven lokale render-/matrixchecks PASS. Geen MAIN-write/themapublicatie door uitvoerder.
 
-**Exact één volgende handeling:** live tegelrenderer/metafieldcontract verifiëren en de Re-Bel-pilot op exacte SKU/maat/kleur voorbereiden.
+**Actuele rollen:** MAIN196227170570 — BadkamerCity - Verlavio voorraad en levertijd; in andere opdracht door eigenaar gepubliceerd. Nieuw UNPUBLISHED196238639370 — BadkamerCity - Re-Bel tegelkeuze wordt door Shopify nog gekopieerd. Branch `fix/product-cards-2026-10-14`, bron `shopify/current/`. Bestaande FAB-04 en overige merken/instellingen behouden.
+
+**Exact één volgende handeling:** zodra Shopify de conceptkopie heeft voltooid, volledige pariteit met MAIN bewijzen, uitsluitend de vier winkelwagenbestanden uploaden en de echte previewwinkelwagen controleren.
 
 ## FAB-04 — koopbaarheid hersteld; voorraadtekst klaar voor publicatie · 5 november 2026
 
