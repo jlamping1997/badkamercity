@@ -1,5 +1,21 @@
 # Logboek — livegang, Google en SEO
 
+## 5 november 2026 — LAUNCH-02: eigenaarsgegevens en uitvoerbare vervolgstappen
+
+**Ontvangen:** zakelijk adres, KvK, btw-id, IBAN, domein en de keuze jaarrond30dagen retour; Tegeldepot-HTML als commerciële referentie. Eigenaar werkt aan leverdata, Verlavio-beelden en verdere beeldcontrole; bestelroute lijkt volgens eigenaar te werken.
+
+**Gemaakt:** bedrijfsgegevensregister; eigen retourconcept; leeg modelformuliersjabloon; korte dubbele bestelcheck en volledige contact-/retourmailproef; uitleg van Google-productselectie met automatische eerste controle; concrete hergebruikroute voor één footer. Taken, startpagina, webshop-/Merchant-instructies en overdracht bijgewerkt.
+
+**Niet blind afgevinkt:** btw-id heeft acht in plaats van negen cijfers vóór B; geen cijfer toegevoegd. Telefoon/juridische naam, retouradres en concrete kosten/raming voor niet-postale retouren ontbreken. IBAN lengte/checksum geldig, geen bank-/rekeninghoudercontrole. KvK alleen eigenaaropgave. Termijn30dagen vastgelegd; speciaal bij een leverancier besteld is niet automatisch wettelijk uitgesloten maatwerk.
+
+**Broncontrole:** actuele primaire ACM/ConsuWijzer/Google/Belastingdienst-informatie; bestaande footer- en contact/retourbron op shopify/current/. Twee footerrenderers binnen één section; beide loopen shop.policies. Hergebruik is eenvoudiger dan nieuwbouw, maar standaardfooterblocks dekken niet vanzelf alle huidige homepagecategorieën. Native retourformulier toont paginasucces; directe eigen klantmail niet in de bron gevonden. Mailbox-/platformwerking en wettelijke herroepingsfunctie moeten apart worden gecontroleerd.
+
+**Latere voortgang behouden:** FAB-03/04 geven inmiddels Verlavio-rebrand en koopbaarheidsherstel; de oude algemene Fabriecio-uitverkochtbevinding is historisch. COTTO/SEARCH-updates blijven intact. MAIN veranderde tijdens deze read-only taak van196227170570 naar196238639370 door publicatie buiten deze uitvoering. Daarom geen oud concept als schrijfdoel of latere release gebruikt.
+
+**Scope:** uitsluitend documentatie. Geen Shopify-policy/Page-/footer-/product-/prijs-/voorraad-/mail-/Google-writes; geen inzending, checkout, betaling of publicatie. Geen nieuwe browser-/telefoon-/Google-indexatie-/mailboxvrijgave. De geüploade concurrentpagina niet gewijzigd of in Git gekopieerd. Nieuwe documenten en gewijzigde links controleren; op beide bestaande branches alleen deze documentatiediff opslaan met behoud van tussentijdse updates.
+
+**Eerstvolgende handeling:** BC-LIVE-001 — het ontbrekende bedrijfs-/retourgegevenspakket aanvullen, daarna de voorbereide policy en footerroute uitvoeren. Geen actieve schrijver na overdracht.
+
 ## 5 november 2026 — LAUNCH-01: dossier en nulmeting
 
 **Opdracht:** bestaande verkoopklare producten nu vindbaar maken, zonder te wachten op compleet assortiment; een vaste Git-boom voor stappen, instellingen, SEO, gemaakte onderdelen en voortgang.

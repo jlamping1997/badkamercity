@@ -1,7 +1,7 @@
 # BadkamerCity — Livegang & SEO
 
 Startpunt voor verantwoord verkopen, Google-vindbaarheid en verdere groei.
-Aangemaakt op **5 november 2026**. Actieve opdracht **LAUNCH-01**: nulmeting en uitvoerbaar dossier in Git. De Google-inrichting en winkelcorrecties zijn nog niet uitgevoerd.
+Aangemaakt op **5 november 2026**. Laatste aanvulling **LAUNCH-02**: bedrijfsgegevens ontvangen, eigen retourconcept met jaarrond30dagen, concrete bestel-/mailchecks en een eenvoudiger Google-/footerplan. Google-inrichting en deze winkelcorrecties zijn nog niet uitgevoerd.
 
 ## Aanpak
 
@@ -24,6 +24,11 @@ Meer producten toevoegen en SEO verbeteren kan daarna per kleine groep doorgaan.
 | --- | --- |
 | Wat moet nu, wat is bewezen en wie doet het? | [Taken en acceptatie](TAKEN.md) |
 | Winkelbasis en verkoopcontrole | [Webshop](WEBSHOP.md) |
+| Opgegeven bedrijfsgegevens en wat nog ontbreekt | [Bedrijfsgegevens](BEDRIJFSGEGEVENS.md) |
+| Dertig-dagenbeleid om af te maken | [Retourconcept](retouren/RETOURBELEID_CONCEPT.md) |
+| Korte bestel-/contact-/retourchecks voor ons allebei | [Controles](CONTROLES.md) |
+| Producten voor Google in gewone taal | [Google-productcontrole](GOOGLE_PRODUCTCONTROLE.md) |
+| Eén bestaande footer en policybron hergebruiken | [Footer en beleid](FOOTER_EN_BELEID.md) |
 | Accounts, eigendom en gegevensstromen | [Accounts en koppelingen](google/ACCOUNTS_EN_KOPPELINGEN.md) |
 | Zoekresultaten, sitemap en indexering | [Search Console](google/SEARCH_CONSOLE.md) |
 | Productfeed en gratis vermeldingen | [Merchant Center](google/MERCHANT_CENTER.md) |
@@ -35,7 +40,9 @@ Meer producten toevoegen en SEO verbeteren kan daarna per kleine groep doorgaan.
 | Read-only nulmeting met meetgrenzen | [Bewijs 5 november](bewijs/2026-11-05-nulmeting.json) |
 | Officiële informatie | [Bronnen](BRONNEN.md) |
 
-## Vastgesteld op 5 november
+## Nulmeting LAUNCH-01 — eerder op 5 november
+
+De volgende punten bewaren hun oorspronkelijke meetmoment. Latere product-/themapublicaties, waaronder FAB-03/04 en COTTO, staan in de centrale status en gelden vóór oude momentopnamen.
 
 - Openbare homepage, sitemap en robots.txt antwoorden met HTTP 200; www verwijst bij de gecontroleerde requests naar https://badkamercity.nl. HTTPS is ook in Shopify bevestigd.
 - De twaalf product-sitemaps bevatten **11.887 unieke /products/-URL's** en daarnaast de homepage. Er staan ook **225 collectie-URL's, 119 Pages, één blog en één artikel** in de sitemaps. Dit bewijst publicatie in een sitemap, geen Google-indexatie of koopbaarheid.
@@ -47,7 +54,7 @@ Meer producten toevoegen en SEO verbeteren kan daarna per kleine groep doorgaan.
 
 ## Eerstvolgende handeling
 
-**BC-LIVE-001:** de werkelijke verkopersgegevens, bezorgafspraken en retourvoorwaarden vaststellen, zodat de ontbrekende winkelinformatie en beleidsvelden gericht kunnen worden afgerond. Zie de [takenlijst](TAKEN.md). De overige Google-voorbereiding kan onafhankelijk worden voorbereid.
+**BC-LIVE-001:** alleen het ontbrekende [gegevenspakket](BEDRIJFSGEGEVENS.md) aanvullen: volledig btw-id/telefoon/juridische naam, retouradres en grote-retourkosten. De aangeleverde gegevens en jaarrond30dagen zijn al verwerkt; algemene uitsluiting van speciaal bestelde standaardartikelen niet overgenomen. Zie de [takenlijst](TAKEN.md). De overige Google-voorbereiding kan onafhankelijk worden voorbereid.
 
 ## Onderhoud en overdracht
 

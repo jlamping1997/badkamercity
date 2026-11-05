@@ -1,5 +1,19 @@
 # BadkamerCity — actuele werkstatus
 
+## LAUNCH-02 — bedrijfsgegevens,30dagenretourconcept en praktische controles · 5 november 2026
+
+**OWNER_INPUT_RECORDED / DRAFT_READY / NOT_PUBLISHED.** Jackson levert bedrijfsadres/KvK/IBAN en kiest jaarrond30dagen retour. Opgenomen in [bedrijfsgegevens](livegang-seo/BEDRIJFSGEGEVENS.md); btw-id **NL00548932B64** mist in het opgegeven formaat één cijfer vóór B, telefoon/juridische handelsnaam en fysiek retouradres nog niet compleet. Geen cijfer of oude showroomgegevens gegokt. IBAN-checksum geldig, geen rekeninghouderschap of officiële KvK/VIES-koppeling geclaimd.
+
+Eigen [retourconcept](livegang-seo/retouren/RETOURBELEID_CONCEPT.md) en leeg modelformulier voorbereid:30dagen melden, daarna14dagen terugsturen, geen novemberverlenging. Algemene uitsluiting “speciaal besteld” niet overgenomen; echt individueel maatwerk apart toetsen. Referentie is geen juridische bron; geen automatische50%-aftrek of algemene tegel-/douchewanduitsluiting. Retouradres en vooraf kenbare grote-retourkosten/raming nog aanvullen.
+
+[Bestel-/contact-/retourchecks](livegang-seo/CONTROLES.md) maken het werk voor Jackson en uitvoering afzonderlijk afvinkbaar. Het native retourformulier toont paginasucces, maar een eigen directe bewaarbare klantmail is niet in de bron aangetroffen; werkelijke mailbox-/platformafhandeling nog testen. Herroepingsfunctie/ontvangstbevestiging en publicatie van het modelformulier staan expliciet open. Geen formulierinzending, order of betaling in deze taak uitgevoerd.
+
+[Google-productcontrole in gewone taal](livegang-seo/GOOGLE_PRODUCTCONTROLE.md): bestaande data automatisch controleren, alleen uitzonderingen aan eigenaar voorleggen, geschikt assortiment niet laten wachten op ontbrekende beelden. Verlavio is publieke merknaam, Fabriecio blijft interne bron. Latere FAB-03/04-bewijzen vervangen het oude algemene koopbaarheidsprobleem; foto-/Google-vrijgave niet uit die proeven afleiden. Jackson werkt verder aan levertijden en foto’s; die taken niet als volledig getest afgevinkt. Lagoo-fotoverbod behouden.
+
+[Universele-footerplan](livegang-seo/FOOTER_EN_BELEID.md): bestaande standaardfooter hergebruiken via footer-group/compact_homepage, volledige navigatiedekking bewaren; beide renderers tonen al shop.policies. Tijdens de read-only controle veranderde MAIN van196227170570 naar **196238639370 — BadkamerCity - Re-Bel tegelkeuze** door publicatie buiten deze uitvoering. Dit is geen schrijfbaar concept meer. Geen themefilewrite, policy-/product-/Google-instelling gewijzigd of thema gepubliceerd; COTTO/SEARCH-werk behouden.
+
+**Exact één volgende handeling voor LAUNCH-02:** ontbrekend [gegevenspakket](livegang-seo/BEDRIJFSGEGEVENS.md) aanvullen: volledig btw-id/telefoon/juridische naam, bevestigd Nederlands retouradres en grote-retourkosten/raming. Daarna het al voorbereide beleid en de bestaande footerroute gericht afronden. [Bijgewerkte taken](livegang-seo/TAKEN.md) · [logboek](livegang-seo/LOGBOEK.md). Geen actieve LAUNCH-02-schrijver na overdracht.
+
 ## COTTO-03 — catalogusuitrol in gecontroleerde batches · 5 november 2026
 
 **IN_PROGRESS. Actieve schrijver: Codex COTTO-03.** Eigenaar autoriseert het overige Cottoceramix-assortiment op dezelfde manier online te zetten, per gecontroleerde batch, met brongetrouwe productkeuzes en behoud van handmatige correcties. Verse Shopify-rol: **MAIN196238639370 — BadkamerCity - Re-Bel tegelkeuze**; de eigenaar heeft het concept gepubliceerd. Bestaande 22 Re-Bel-producten blijven behouden.

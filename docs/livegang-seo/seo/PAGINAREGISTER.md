@@ -1,6 +1,6 @@
 # Paginaregister — bestaande ingangen en nieuwe kansen
 
-Stand **5 november 2026**. Het [volledige niet-productregister](url-register-2026-11-05.json) bevat alle 346 collectie-/Page-/blog-/artikel-URL's uit de gelezen sitemap. De **11.887 product-URL's** worden als telling in de nulmeting bewaard; Shopify blijft het productregister.
+Stand **5 november 2026**, aangevuld in LAUNCH-02. Verlavio is inmiddels de publieke merknaam; de oorspronkelijke sitemapcapture hieronder bewaart zijn eigen meetmoment. Het [volledige niet-productregister](url-register-2026-11-05.json) bevat alle 346 collectie-/Page-/blog-/artikel-URL's uit de gelezen sitemap. De **11.887 product-URL's** worden als telling in de nulmeting bewaard; Shopify blijft het productregister.
 
 Bestaand betekent niet SEO-klaar. SITEMAP = URL alleen in sitemap aangetroffen; HTTP_HTML = response/head gelezen; LINK_ONLY = alleen een bestaande interne link gezien; CANDIDATE = voorstel zonder aangemaakte pagina. Alle daadwerkelijke Google-indexatiestatussen zijn nog TO_VERIFY.
 
@@ -42,7 +42,7 @@ De proef-URL's /collections/merken en /pages/retourneren gaven 404, maar zijn ni
 | Porcelanosa-merklanding | Tegels en collecties ontdekken | Bestaande bestemming, rechten, assortiment en verkoopeenheden |
 | Porcelanosa Bottega | Een specifieke serie vergelijken | Werkelijk aanbod en zoekintentie; geen zoekvolumeclaim |
 | JEE-O-merk/series | Vormgeving en passende uitvoeringen | Bestaande producten, groep/kleurregels en unieke klantvraag |
-| Fabriecio-merk/series | Nieuw assortiment vinden | Werkelijke koopbaarheid, sitemap-/indexdekking en identifiers |
+| Verlavio-merk/series, interne Fabriecio-bron | Nieuw assortiment vinden | FAB-03/04 voortgang behouden; eigen foto's, actuele Google-/indexdekking en identifiers controleren, bestaande handles behouden |
 | Wastafelkraan kiezen | Montage, hoogte en passende inbouwdelen | Bestaande begrippen/advies; bron voor compatibiliteit |
 | Tegels bestellen | Doos, m² en snijverlies begrijpen | Bestaande calculatoruitleg en lever-/retourafspraken |
 | Over BadkamerCity | De werkelijke verkoper leren kennen | Bedrijfsfeiten en bestaande pagina's; geen Harry Suiker-verhaal kopiëren |

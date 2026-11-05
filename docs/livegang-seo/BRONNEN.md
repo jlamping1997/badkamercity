@@ -21,6 +21,9 @@ Geraadpleegd **5 november 2026**. Schermen en voorwaarden kunnen veranderen; con
 | Verplichte informatie vóór/na koop | [ACM — Informatieplicht](https://www.acm.nl/nl/verkoop-aan-consumenten/consumenten-informeren/verplichte-informatie-voor-en-na-de-koop) |
 | Bedrijf, contact, prijs en online verkoop | [Ondernemersplein — Regels voor online verkoop](https://ondernemersplein.overheid.nl/wetten-en-regels/regels-voor-online-verkoop/) |
 | Levering en leverbeloften | [ACM — Leveren en bezorgen](https://www.acm.nl/nl/verkoop-aan-consumenten/leveren-en-bezorgen) |
+| Dertig-dagenconcept, wettelijke basis en concrete keuzes | [Retourbronnen en besluiten](retouren/BRONNEN_EN_BESLUITEN.md) |
+| Retourinformatie in Merchant Center | [Google — Retourbeleid instellen](https://support.google.com/merchants/answer/14011730?hl=nl) |
+| Opbouw btw-id | [Belastingdienst — Btw-id](https://www.belastingdienst.nl/wps/wcm/connect/nl/btw/content/btw-identificatienummer-en-omzetbelastingnummer) |
 | Toestemming voor tracking | [Autoriteit Persoonsgegevens — Trackingcookies](https://autoriteitpersoonsgegevens.nl/themas/internet-slimme-apparaten/cookies/trackingcookies) |
 
 Voor winkelmetingen geldt het eigen [nulmetingsbestand](bewijs/2026-11-05-nulmeting.json), niet een algemene Google-/Shopify-handleiding. Voor bestaande projectkeuzes gelden de actuele projectstatus, het categorisatiebeleid en de gedateerde product-/retourdossiers.

@@ -1,5 +1,7 @@
 # Merchant Center — productvermeldingen
 
+> **LAUNCH-02:** zie de [eenvoudige Google-productcontrole](../GOOGLE_PRODUCTCONTROLE.md). Verlavio is nu het publieke merk; Fabriecio is de interne leverancier. Eerdere momentopnamen over koopbaarheid zijn door FAB-04 aangevuld. [Retourconcept en publicatieplan](../retouren/RETOURBELEID_CONCEPT.md): jaarrond30dagen, maar nog niet in Shopify of Merchant gepubliceerd.
+
 Doel: eerst geschikte producten gratis kunnen laten verschijnen op Google. Google Ads en advertentiebudget zijn een aparte latere keuze.
 
 ## Beginstand en route
@@ -37,10 +39,15 @@ Ontbrekende identifiers nooit verzinnen. Ook niet standaard identifier_exists=fa
 ## Vast te behouden uitzonderingen
 
 - **Lagoo blijft zonder foto's.** Daarom nu uit de Google-productbestemming houden zolang geen geschikte afbeelding beschikbaar is. Dit document autoriseert geen fototerugplaatsing en verandert de webshopstatus niet.
-- **Fabriecio GM_1002** meldt OutOfStock in de gelezen aanbieding; controleer beschikbaarheid/publicatie vóór een InStock-feedclaim.
+- **Verlavio (Fabriecio-bron):** FAB-03/04 bewijzen de latere rebrand en het gerichte koopbaarheidsherstel. Het eerdere GM_1002-OutOfStock-resultaat is historisch; foto's/identifiers en huidige beschikbaarheid per batch blijven apart te controleren.
 - **Tegels:** de voorbeeldpagina verkoopt een doos van 1,44 m² voor €158,33 en toont daarnaast €109,95/m². Verzend-/eenheids-/feedprijs moet dezelfde echte bestelverpakking beschrijven.
 - **Sunshower en samengestelde sets:** juiste gekozen uitvoering en prijs toetsen; geen andere uitvoering in de advertentie beloven dan de doorklik aanbiedt.
 - **Levertijd:** de herhaalde 8–9-wekenweergave is nog geen gecontroleerde leveranciersregel.
+
+
+## Retourbeleid voor Google
+
+Gebruik de uiteindelijke openbare Shopify-policy-URL, jaarrond30dagen en de werkelijk gekozen retourmethode/kosten. Geen novemberverlenging, geen algemene speciaal-besteld-uitzondering en geen gratis retour invullen zonder die afspraak. Maak alleen productuitzonderingen voor aantoonbaar geldige gevallen. Lees de opgeslagen Merchant-waarden terug naast de openbare tekst; Google-inrichting is in LAUNCH-02 niet uitgevoerd.
 
 ## Acceptatie
 
