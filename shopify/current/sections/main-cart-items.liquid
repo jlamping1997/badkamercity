@@ -141,12 +141,12 @@
                           <strong class="cart-item__final-price product-option">
                             {{ item.final_price | money }}
                           </strong>
-                          <span class="bc-cart-unit-label">{{ 'bc_cart_page.per_item' | t }}</span>
+                          <span class="bc-cart-unit-label">{% render 'bc-cart-unit-label', product: item.product, fallback_key: 'bc_cart_page.per_item' %}</span>
                         </div>
                       {%- else -%}
                         <div class="product-option bc-cart-unit-price">
                           {{ item.original_price | money }}
-                          <span class="bc-cart-unit-label">{{ 'bc_cart_page.per_item' | t }}</span>
+                          <span class="bc-cart-unit-label">{% render 'bc-cart-unit-label', product: item.product, fallback_key: 'bc_cart_page.per_item' %}</span>
                         </div>
                       {%- endif -%}
 

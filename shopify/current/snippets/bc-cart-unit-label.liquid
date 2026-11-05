@@ -1,0 +1,14 @@
+{% doc %}
+  Renders the sale unit for a cart price, using the existing tile box contract.
+  @param {product} product - The cart product
+  @param {string} [fallback_key] - Translation key for non-tile products
+{% enddoc %}
+{%- liquid
+  assign box_m2 = product.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box | default: 0
+  assign unit_fallback = fallback_key | default: 'bc_cart_page.per_item'
+-%}
+{%- if box_m2 > 0 -%}
+  {{- 'bc_tiles.per_box' | t -}}
+{%- else -%}
+  {{- unit_fallback | t -}}
+{%- endif -%}

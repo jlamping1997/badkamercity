@@ -6,11 +6,18 @@
   assign delivery_vendor = product.vendor | strip | downcase
   assign supplier_stock = product.metafields.custom.leverancier_voorraad.value
   assign supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
+  assign tile_delivery = product.metafields.custom.bron_toelichtingen_json.value.tiles
 -%}
 <p class="bc-cart-delivery">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M2 5h12v12H2zM14 10h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
   <span>
-    {%- if delivery_vendor == 'wiesbaden' and supplier_stock == true -%}
+    {%- if tile_delivery.m2_per_box > 0 and tile_delivery.lead_time != blank -%}
+      {%- if tile_delivery.order_type != blank -%}
+        {{ tile_delivery.order_type | escape }}<span class="bc-cart-delivery__detail">{{ tile_delivery.lead_time | escape }}</span>
+      {%- else -%}
+        {{ tile_delivery.lead_time | escape }}
+      {%- endif -%}
+    {%- elsif delivery_vendor == 'wiesbaden' and supplier_stock == true -%}
       {{ 'bc_delivery.supplier_in_stock' | t }}<span class="bc-cart-delivery__detail">{{ 'bc_delivery.contact_current_lead_time' | t }}</span>
     {%- elsif delivery_vendor == 'wiesbaden' and supplier_stock == false and supplier_date != blank -%}
       {%- assign formatted_date = supplier_date | date: '%d-%m-%Y' -%}

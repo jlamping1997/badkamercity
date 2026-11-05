@@ -47,7 +47,7 @@
         {%- if item.selling_plan_allocation != null -%}
           <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
         {%- endif -%}
-        <p class="cart-notification-product__price">{{ item.final_price | money }}<small>{{ 'general.cart.per_item' | t }}</small></p>
+        <p class="cart-notification-product__price">{{ item.final_price | money }}<small>{% render 'bc-cart-unit-label', product: item.product, fallback_key: 'general.cart.per_item' %}</small></p>
       </div>
     </div>
   {%- endfor -%}
