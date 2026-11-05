@@ -82,3 +82,10 @@ De voorraadhersteluitvoering staat in [het voorraaddossier](../../docs/fabriecio
 Het leverinformatieveld kan nu ook `stock_conflict: true` bevatten. Dit is een expliciete boolean en onderdrukt een voorraad-/1–2-werkdagenbelofte zolang de leveranciersfeed en de fabrikantpagina elkaar tegenspreken. Behoud deze velden bij volgende plannen; een oud bronplan mag deze controle niet stil overschrijven. De zes vastgehouden bronconflicten staan in het dossier en de privéaudit.
 
 Een leeg voorraadaantal blijft onbekend. De bestaande 84 artikelen met status Y zonder aantal behouden hun voorraadbeleid CONTINUE; er zijn geen aantallen verzonnen. De belofte van 1–2 werkdagen komt van de eigenaar, niet uit het CSV-veld Voorraad Verwacht. Automatische feedverversing is hiermee nog niet ingericht.
+
+
+## Inbegrepen onderdelen van douchesets — 5 november 2026
+
+`collect_set_components.py` leest uitsluitend expliciete verplichte bundelregels uit de bestaande privécatalogus/HTML-cache. Met `--verify-live` worden de betrokken bronpagina's opnieuw gericht gelezen. `build_set_components.py` maakt daarna een dry-run voor de bestaande `bc_data.set_components` en `bc_data.component_products`, met exact gepubliceerde actieve Verlavio-SKU's en product-/variant-ID's. Beide wijzigen Shopify niet; conflicterende bestaande waarden blijven op HOLD, identieke waarden worden overgeslagen. Alleen ontbrekende velden krijgen CAS-null in het plan.
+
+78 sets zijn gecontroleerd en via een afzonderlijke Admin-uitvoering live aangevuld. Twaalf Venetie-sets blijven zonder onderdelenlijst bij ontbrekend expliciet bronbewijs. Zie [dossier, opdrachten, verificatie en herstel](../../docs/fabriecio/2026-11-05/set-components/README.md). Volledige bron- en Adminbestanden blijven buiten deze openbare repository. Dit regelt geen automatische feedverversing.

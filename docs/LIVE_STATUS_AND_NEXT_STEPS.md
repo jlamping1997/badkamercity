@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## VERLAVIO-SET-01 — inbegrepen onderdelen douchesets · 5 november 2026
+
+**APPLIED_VERIFIED / 78 SETS LIVE / 12 SOURCE_HOLDS.** De eigenaar vroeg dezelfde onderdelenweergave als Hotbath IBS70. 36 Milaan-,36 Palermo- en6 Porlezza-sets hebben nu462 bevestigde inbegrepen onderdelenregels uit108 losse Verlavio-artikelen. Uitsluitend156 waarden in de bestaande `bc_data.set_components` en `bc_data.component_products` toegevoegd; geen theme-writes of publicatie. MAIN blijft196238639370.
+
+Alle78 bronpagina's exact opnieuw gecontroleerd; alle156 waarden teruggelezen in de volledige861-productinventaris, overige vastgelegde velden gelijk. Alle78 live productpagina's/462 regels PASS op aantallen, namen, SKU's, exacte variantlinks en prijzen. Desktopbrowser1363px bevestigt pilotCKK_2015. IBS70CR347 bleef exact gelijk met8 onderdelen; herhaling geeft0 writes. Mobiele browser en aankoop niet uitgevoerd.
+
+[Uitvoering, grenzen en herstel](fabriecio/2026-11-05/set-components/README.md) · [Beperkte openbare verificatie](fabriecio/2026-11-05/set-components/verification.json). Twaalf Venetie-sets blijven zonder lijst wegens ontbrekend leveranciersbewijs. Volgende inhoudelijke handeling binnen deze scope: expliciete samenstelling voor deze twaalf opvragen/verkrijgen; niet raden. COTTO-03,LAUNCH-02 en overige lopende werkzaamheden hieronder blijven van kracht.
+
 ## LAUNCH-02 — bedrijfsgegevens,30dagenretourconcept en praktische controles · 5 november 2026
 
 **OWNER_INPUT_RECORDED / DRAFT_READY / NOT_PUBLISHED.** Jackson levert bedrijfsadres/KvK/IBAN en kiest jaarrond30dagen retour. Opgenomen in [bedrijfsgegevens](livegang-seo/BEDRIJFSGEGEVENS.md); btw-id **NL00548932B64** mist in het opgegeven formaat één cijfer vóór B, telefoon/juridische handelsnaam en fysiek retouradres nog niet compleet. Geen cijfer of oude showroomgegevens gegokt. IBAN-checksum geldig, geen rekeninghouderschap of officiële KvK/VIES-koppeling geclaimd.
