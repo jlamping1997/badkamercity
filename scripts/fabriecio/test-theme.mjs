@@ -46,8 +46,9 @@ const currentProduct = (choice = group.products[0], data = family) => ({
 });
 const renderChoices = product => engine.parseAndRender(choicesSnippet, { product, section: { id: 'fabriecio-test' } });
 let transitions = 0;
+for (const vendor of ['Fabriecio', 'Verlavio']) {
 for (const choice of group.products) {
-  const rendered = await renderChoices(currentProduct(choice));
+  const rendered = await renderChoices({ ...currentProduct(choice), vendor });
   assert.match(rendered, /data-bc-compact-colors="true"/);
   assert.match(rendered, /data-bc-preserve-position="true"/);
   assert.match(rendered, /bc-hotbath-swatches\.css/);
@@ -81,6 +82,7 @@ for (const choice of group.products) {
       await window.happyDOM.close();
     }
   }
+}
 }
 const blocked = [
   { ...currentProduct(), vendor: 'Hotbath' },
@@ -150,6 +152,9 @@ assert.match(await delivery(undefined, true), /Op voorraad bij leverancier/);
 assert.match(await delivery({ in_stock: false, expected_text: '' }, true), /Levertijd op aanvraag/);
 assert.equal((await delivery({ in_stock: true }, true, 'Hotbath')).trim(), '');
 assert(!(await delivery({ in_stock: false, expected_text: '<img src=x onerror=alert(1)>' })).includes('<img'));
+assert.match(await delivery({ in_stock: true }, false, 'Verlavio'), /Op voorraad bij leverancier/);
+assert.match(await delivery({ in_stock: false, expected_text: 'Verwacht: Week 50' }, false, 'Verlavio'), /Week 50/);
+assert.match(await delivery({ in_stock: false, discontinued: true }, false, 'Verlavio'), /Niet meer leverbaar/);
 const discontinued = await delivery({ in_stock: true, expected_text: 'Verwacht: Week 50', discontinued: true }, true);
 assert.match(discontinued, /Niet meer leverbaar/);
 assert(!discontinued.includes('Op voorraad bij leverancier'));
@@ -160,8 +165,9 @@ for (const dictionary of Object.values(locales)) {
   assert(dictionary.bc_delivery.discontinued);
 }
 const section = fs.readFileSync(path.join(theme, 'sections/main-product.liquid'), 'utf8');
-assert.match(section, /bc_delivery_vendor == 'fabriecio'[\s\S]*?render 'bc-fabriecio-delivery'[\s\S]*?elsif bc_delivery_vendor == 'wiesbaden'/);
-assert.match(section, /product\.vendor == 'Fabriecio' and product\.metafields\.custom\.fabriecio_choices\.value != blank/);
+assert.match(section, /if bc_fabriecio_supplier_product[\s\S]*?render 'bc-fabriecio-delivery'[\s\S]*?elsif bc_delivery_vendor == 'wiesbaden'/);
+assert.match(section, /bc_mobile_vendor == 'fabriecio' or bc_mobile_vendor == 'verlavio'/);
+assert.match(section, /bc_fabriecio_supplier_product and product\.metafields\.custom\.fabriecio_choices\.value != blank/);
 const outputGate = section.match(/\{%- if bc_hotbath_menu_excluded == false and bc_hotbath_menu_disabled == false -%\}[\s\S]*?\{\{ bc_buybox_options_markup \}\}[\s\S]*?\{%- endif -%\}\s*\{%- endif -%\}/)?.[0];
 assert(outputGate, 'Read the actual final buybox output gate from the product section');
 const singleSku = { ...currentProduct(), has_only_default_variant: true };
@@ -173,6 +179,7 @@ const outputContext = {
 };
 assert.match(await engine.parseAndRender(outputGate, outputContext), /data-bc-product-switcher-v2/,
   'A default single-SKU Fabriecio product without legacy groups displays the captured choices');
+assert.match(await engine.parseAndRender(outputGate, { ...outputContext, product: { ...singleSku, vendor: 'Verlavio' } }), /data-bc-product-switcher-v2/);
 const noChoices = { ...singleSku, metafields: { custom: {} } };
 assert.equal((await engine.parseAndRender(outputGate, { ...outputContext, product: noChoices })).trim(), '');
 for (const flag of ['bc_hotbath_menu_excluded', 'bc_hotbath_menu_disabled']) {
@@ -181,9 +188,9 @@ for (const flag of ['bc_hotbath_menu_excluded', 'bc_hotbath_menu_disabled']) {
 assert.match(await engine.parseAndRender(outputGate, { ...outputContext,
   product: { ...noChoices, has_only_default_variant: false } }), /data-bc-product-switcher-v2/,
   'The existing native-variant condition still displays its captured markup');
-console.log(JSON.stringify({ products: 4, transitions, sparseCombinationDisabled: 'PASS',
+console.log(JSON.stringify({ products: 8, supportedBrands: 2, transitions, sparseCombinationDisabled: 'PASS',
   actualSingleSkuFinalOutputGateAndExistingExclusionGuards: 'PASS',
   seventyTwoProductValidationAndNoScriptLinks: 'PASS',
   invalidBrandVariantCurrentDestinationAndDuplicateHandleGuards: 'PASS', inlineJsonEscaping: 'PASS',
-  deliveryCases: 9, discontinuedPriority: 'PASS', supplierStockFallbackAndStaleExpectationHidden: 'PASS',
+  deliveryCases: 12, discontinuedPriority: 'PASS', supplierStockFallbackAndStaleExpectationHidden: 'PASS',
   liveBrowserMobileAndCart: 'NOT_TESTED' }));

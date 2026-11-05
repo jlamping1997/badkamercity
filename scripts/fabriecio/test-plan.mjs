@@ -7,11 +7,12 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 
 const { values: args } = parseArgs({ options: {
-  plan: { type: 'string' }, source: { type: 'string' }, output: { type: 'string' }
+  plan: { type: 'string' }, source: { type: 'string' }, output: { type: 'string' }, vendor: { type: 'string', default: 'Fabriecio' }
 } });
 if (!args.plan || !args.source) {
   throw new Error('Usage: node scripts/fabriecio/test-plan.mjs --plan PLAN.json --source normalized-catalog.json [--output REPORT.json]');
 }
+assert(['Fabriecio', 'Verlavio'].includes(args.vendor), 'Supported supplier/private-label brand required');
 const require = createRequire(new URL('../component-audit/package.json', import.meta.url));
 const { Window } = await import(require.resolve('happy-dom'));
 const { Liquid } = await import(require.resolve('liquidjs'));
@@ -84,7 +85,7 @@ for (const row of plan.updates.filter(item => item.choices)) {
     const origin = 'https://badkamercity.nl';
     const currentUrl = '/products/' + row.handle;
     const rendered = await liquid.parseAndRender(snippetSource, {
-      product: { vendor: 'Fabriecio', handle: row.handle, url: currentUrl, variants: [{}],
+      product: { vendor: args.vendor, handle: row.handle, url: currentUrl, variants: [{}],
         metafields: { custom: { fabriecio_choices: { value: row.choices } } } },
       section: { id: 'fabriecio-plan-' + results.length }
     });

@@ -62,6 +62,18 @@ class BuilderTests(unittest.TestCase):
                     self.assertTrue(target["url"].startswith("/products/fabriecio-sku-"))
                     self.assertTrue(target["swatch_url"].startswith("https://cdn.shopify.com/"))
 
+    def test_verlavio_and_supplier_brand_keep_exact_sku_matching(self):
+        catalogue, shopify = fixture()
+        for index, product in enumerate(shopify):
+            product["vendor"] = "Verlavio" if index % 2 else "Fabriecio"
+            product["title"] = "Verlavio " + product["variants"]["nodes"][0]["sku"]
+        result = build_plan(catalogue, shopify)
+        self.assertEqual(result["summary"]["choice_products"], 4)
+        self.assertEqual(result["holds"], [])
+        self.assertEqual(result["summary"]["missing_active_shopify_source_skus"], [])
+        for row in result["updates"]:
+            self.assertTrue(all(p["title"].startswith("Verlavio ") for p in row["choices"]["groups"][0]["products"]))
+
     def test_large_group_uses_complete_local_neighborhood(self):
         catalogue, shopify = fixture({"kleur": [str(i) for i in range(6)],
             "maat": [str(i) for i in range(3)], "vorm": ["Rond", "Vierkant"],

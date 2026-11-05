@@ -5,6 +5,11 @@ Renders verified Fabriecio product destinations through the shared product switc
 {% enddoc %}
 {%- capture json_open_tag_escape -%}\u003c{%- endcapture -%}
 {%- liquid
+  assign choice_vendor = product.vendor | strip | downcase
+  assign supported_vendor = false
+  if choice_vendor == 'fabriecio' or choice_vendor == 'verlavio'
+    assign supported_vendor = true
+  endif
   assign choice_data = product.metafields.custom.fabriecio_choices.value
   assign choice_group = choice_data.groups | first
   assign includes_current = false
@@ -28,7 +33,7 @@ Renders verified Fabriecio product destinations through the shared product switc
     endfor
   endfor
 -%}
-{%- if product.vendor == 'Fabriecio' and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 and choice_group.menus.size > 0 -%}
+{%- if supported_vendor and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 and choice_group.menus.size > 0 -%}
   {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
   {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
   <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2

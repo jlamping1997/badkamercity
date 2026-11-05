@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## FAB-02 — Verlavio private label voorbereid · 5 november 2026
+
+**AWAITING_MERCHANT_PUBLICATION / PRODUCT_REBRAND_NOT_APPLIED.** Eigenaar wil merk **Verlavio**. Fabriecio blijft intern de leverancier. Verse rollen: **196227170570 is nu MAIN**; eigenaar heeft het vorige concept gepubliceerd. Alleen vendor wijzigen zou de665menu's verbergen. Daarom compatibel concept **UNPUBLISHED196116087050 — BadkamerCity - Verlavio merknaam** gereedgemaakt: eerst zes verschillen exact vanuit MAIN overgenomen, daarna drie files ondersteunen beide merknamen. Alle drie hashes teruggelezen; MAIN niet geschreven.
+
+**PASS:**18Python-tests,16brand/productwissels,12leveringsgevallen,5425keuzecontroles/4096URL-wissels met Verlavio,3Liquidfiles geldig. Privéplan:861merk/titelwijzigingen,665menutitels,1665imagealtwaarden. Actueel nog **861Fabriecio / 0Verlavio**; niets als gewijzigd claimen. Leverancierssleutels en bestaandeURL's/SKU's blijven behouden. De53bronuitzonderingenenhetbestaandeUitverkocht-probleemblijvenopen.
+
+**Exact één volgende handeling:** eigenaar publiceert **BadkamerCity - Verlavio merknaam**. Daarna actueleMAIN/hashcontrole en de voorbereide merkdatamutaties met teruglezing uitvoeren. De Shopify-koppeling staat codewrites alleen in concept toe. Geen actieve schrijver na overdracht. [Uitvoering en hervatten](fabriecio/2026-11-05/verlavio/README.md).
+
 ## FAB-01 — Fabriecio productkeuzes en levering in concept · 5 november 2026
 
 **VERIFIED_ADMIN / PREVIEW_VERIFIED / OWNER_REVIEW_PENDING / NOT_PUBLISHED.** Alle 861 Fabriecio-bronartikelen exact aan bestaande Shopify-SKU's gekoppeld. Op 851 actieve artikelen zijn 1.516 nieuwe velden opgeslagen en exact teruggelezen: 665 keuzemenu's en 851 leverinformatie. Prijs, voorraad, status, SKU/variant-ID, handle en featuredMedia onveranderd. Tien gearchiveerde artikelen overgeslagen; 132 actieve artikelen hebben geen bronmenu, één heeft alleen een gearchiveerde tegenhanger. Twee families/53 artikelen blijven op HOLD wegens 26 bronlinks die ongemerkt ook een andere maat/kleur wijzigen.

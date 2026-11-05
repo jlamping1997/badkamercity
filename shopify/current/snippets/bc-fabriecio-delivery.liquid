@@ -2,7 +2,8 @@
 Renders Fabriecio supplier availability without inventing a delivery promise.
 @param {product} product - The current product.
 {% enddoc %}
-{%- if product.vendor == 'Fabriecio' -%}
+{%- assign delivery_vendor = product.vendor | strip | downcase -%}
+{%- if delivery_vendor == 'fabriecio' or delivery_vendor == 'verlavio' -%}
   {%- liquid
     assign delivery_data = product.metafields.custom.fabriecio_delivery.value
     assign supplier_stock = delivery_data.in_stock

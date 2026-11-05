@@ -109,7 +109,7 @@ def build_plan(catalogue, products):
         sources_by_sku[text(record.get("sku"))].append(record)
         sources_by_url[source_url(record.get("source_url"))].append(record)
     for product in products:
-        if text(product.get("vendor")).casefold() == "fabriecio":
+        if text(product.get("vendor")).casefold() in {"fabriecio", "verlavio"}:
             for variant in variants(product):
                 stores_by_sku[text(variant.get("sku"))].append(product)
 
