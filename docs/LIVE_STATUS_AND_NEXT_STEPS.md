@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-01 - brononderzoek en plan gereed · 6 november 2026
+
+**SOURCE_AUDIT_COMPLETE / PLAN_REVIEW_PENDING / NO_SHOPIFY_WRITES.** Nieuwe eigenaarprioriteit: BRAUER voorbereiden voor volledige, gecontroleerde webshopuitrol. Drie bronnen: meubels8.687, kranen3.374, glas1.696; totaal13.757 bronregels, **13.161 exacte unieke SKU's**. 372 SKU's staan in meerdere bestanden (596 extra vermeldingen). 578 veldverschillen over371SKU's, waaronder27materiaal- en2afwerkingsconflicten; geen overlappende prijs-/EAN-conflicten. Alle EAN13-checkdigits geldig. **163 unieke artikelen** hebben beschikbaarheid vanaf1februari2027; geen actuele voorraadclaim.
+
+[Plan van aanpak](brauer/2026-11-06/PLAN_VAN_AANPAK.md), [taken](brauer/2026-11-06/TAKEN.md), bronmanifest en veilige samenvatting gereed. Voorstel: één SKU per product, bestaande V2-selector/setblokken hergebruiken,31gevarieerde proefartikelen, daarna DRAFT-batches en vrijgave per geschikte deelgroep. Verkoopprijzen nog niet vastgesteld; alle bronnen geven adviesprijs ex btw. Brongegevens en complete exports blijven privé; deze Git is openbaar. Geen volledige XLSX-/mediaupload naar publieke Git.
+
+Read-only Shopify: nul Brauer via vendorfilter en vrije zoekterm; volledige exacte SKU-botsingscontrole nog open. Verse rolmeting bevestigt **MAIN196246372618 - BadkamerCity - Cottoceramix volledig assortiment**. Dit bewijst geen nieuwe Cottoceramix-unitcarttest; oude publicatieblokkade hieronder is een historisch checkpoint. Geen BRAUER-import, theme-write, productpublicatie of browser-/cartproef. Bestaande Cottoceramix-openpunten blijven apart behouden.
+
+**Exact één volgende handeling:** prijs-/publicatieafspraken voor de BRAUER-proef vastleggen, daarna categorie-/veldmapping. Foto's/PDF's volgen; bronvoorbereiding kan al door. Actuele codebranch blijft `fix/product-cards-2026-10-14`, themabron `shopify/current/`. Geen actieve schrijver na overdracht.
+
+
 ## COTTO-05 — m²-assortiment gepubliceerd; native units wachten op eigenaar · 5 november 2026
 
 **PARTIALLY_PUBLISHED / BLOCKED_MERCHANT_THEME_AND_INDEX_LAG.** Verse eindcontrole bevestigt **3.159 ACTIVE en Webshop-gepubliceerde Cottoceramix-artikelen**. Er zijn 3.764 unieke Shopify-producten/varianten: 3.159 ACTIVE en 605 DRAFT, waarvan 597 native stuks-/pak-/setartikelen en acht bestaande bron-HOLDs. De broncheckpointset bevat 3.771 exacte SKU's; zes nieuwe afwerkingsconflicten en AD5917 zonder bruikbare foto zijn niet aangemaakt. Totaal 15 bron-HOLDs, geen extra unit-HOLD.

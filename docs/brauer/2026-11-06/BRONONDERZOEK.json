@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-06",
+  "sources": [
+    {
+      "file": "Prijslijst BRAUER glasprogramma v28-10-2026.xlsx",
+      "sha256": "fb6017cd68889ea6ca7130d3d0ecba0581df3ae9cea76ac29ae9d5ecc6a45ce7",
+      "article_rows": 1696
+    },
+    {
+      "file": "Prijslijst BRAUER kranenprogramma v13-10-2026.xlsx",
+      "sha256": "f76f3fd08bf2aba50a7c8ca08e0567c34870b2172c6df06468ac7abac9711f57",
+      "article_rows": 3374
+    },
+    {
+      "file": "Prijslijst BRAUER meubelprogramma v13-10-2026.xlsx",
+      "sha256": "94491ed4a81a0d433aa9ca02884d00a6b9346a9ec743e02806cdd615fb58d5fe",
+      "article_rows": 8687
+    }
+  ],
+  "source_rows": 13757,
+  "unique_skus": 13161,
+  "repeated_source_rows": 596,
+  "skus_in_multiple_files": 372,
+  "occurrence_distribution": {
+    "3": 224,
+    "1": 12789,
+    "2": 148
+  },
+  "conflict_fields": {
+    "Hoofdcategorie": 371,
+    "Productcategorie": 60,
+    "Productgroep": 118,
+    "Materiaal": 27,
+    "Afwerking": 2
+  },
+  "skus_with_any_field_difference": 371,
+  "invalid_eans": [],
+  "future_availability_count": 163,
+  "readiness": "SOURCE_AUDIT_ONLY_NOT_AN_IMPORT_OR_PUBLICATION_PLAN",
+  "conflict_policy": "No field precedence by file date; conflicting fields unresolved.",
+  "field_differences_total": 578,
+  "price_conflict_sku_count": 0,
+  "ean_collision_count": 0,
+  "shopify_brauer_query_count": 0,
+  "shopify_writes": 0,
+  "browser_tests": "NOT_PERFORMED",
+  "main_theme_observed": "196246372618"
+}
