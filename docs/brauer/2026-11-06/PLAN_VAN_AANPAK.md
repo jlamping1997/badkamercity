@@ -4,6 +4,8 @@ Plan van aanpak en brononderzoek · 6 november 2026 · uitwerking 2
 
 **Status: aanpak door Jackson positief beoordeeld; btw in prijs bevestigd. Brononderzoek, btw-berekening en eerste categorisatie-/proefuitwerking gereed. Geen BRAUER-producten geïmporteerd of gepubliceerd.**
 
+**Aanvullende werkafspraak, 6 november 2026:** Jackson wil pas importeren wanneer alle afbeeldingen, PDF's en overige aangekondigde bestanden binnen zijn. Dit geldt ook voor een kleine DRAFT-proefimport. Tot dat moment maken we productinhoud, categorie-/veldvoorstellen, relaties en controlebestanden uitsluitend offline klaar. Deze afspraak vervangt eerdere passages waarin een eerdere conceptimport als mogelijkheid werd genoemd. Ontvangst en bestandsinventarisatie komen vóór de eerste Shopify-productwrite; ontbreken of mismatch per artikel blijft daarna een controlepunt.
+
 ## Update: btw en concrete voorbereiding
 
 Jackson heeft bevestigd dat de btw in de prijs moet zitten. Voor alle 13.161 artikelen is daarom de adviesprijs inclusief 21% btw berekend: adviesprijs ex btw × 1,21, commercieel afgerond op twee decimalen. De voorbereide consumentenprijs gebruikt diezelfde basis, zonder aangenomen korting. De originele ex-btw-prijs blijft behouden. Dit stelt geen marge of kortingsbeleid vast.
@@ -101,7 +103,7 @@ Bestandsnamen met SKU zijn een goede start, maar niet automatisch voldoende bewi
 
 Maak per bestand een register met oorspronkelijk pad/naam, exact gevonden SKU, rol (productfoto, detail, sfeer, maattekening, installatie, onderhoud), volgorde, checksum en controle-uitkomst. Exacte match gaat vóór gecontroleerde naamregels. Alleen afgesproken suffixen zoals een fotovolgnummer verwijderen; streepjes/cijfers niet algemeen wegpoetsen. Fuzzy matches alleen voorstellen, nooit automatisch koppelen.
 
-Meld onbekende bestanden, ontbrekende hoofdfoto's, meerdere mogelijke SKU's en conflicterende versies. Dezelfde afbeelding mag alleen gedeeld worden na expliciete artikeldekking; gedeelde checksum kan een geldige sfeerfoto zijn en is geen automatische fout. Productfoto en hoofdfoto moeten exact de juiste uitvoering tonen. PDF's op type en revisie controleren. Vóór publicatie minimaal één correcte bruikbare productfoto per aangeboden artikel; conceptvoorbereiding kan eerder.
+Meld onbekende bestanden, ontbrekende hoofdfoto's, meerdere mogelijke SKU's en conflicterende versies. Dezelfde afbeelding mag alleen gedeeld worden na expliciete artikeldekking; gedeelde checksum kan een geldige sfeerfoto zijn en is geen automatische fout. Productfoto en hoofdfoto moeten exact de juiste uitvoering tonen. PDF's op type en revisie controleren. Vóór publicatie minimaal één correcte bruikbare productfoto per aangeboden artikel. Offline voorbereiding kan nu; ook een conceptimport wacht op ontvangst van het volledige aangekondigde bestandenpakket.
 
 ## 6. Werkvolgorde met concrete oplevering
 
