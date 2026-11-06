@@ -2,6 +2,8 @@
 
 6 november 2026. Aanpak positief beoordeeld; btw in de prijs bevestigd. Prijs-, type- en proefvoorbereiding uitgewerkt. Er zijn geen BRAUER-producten aangemaakt of gepubliceerd.
 
+**Nieuwe harde grens:** geen enkele Shopify-productimport, ook geen DRAFT-proef, totdat alle aangekondigde afbeeldingen/PDF's en overige bestanden ontvangen en geïnventariseerd zijn. Tot die tijd uitsluitend offline productvoorbereiding. Ontbrekende documenten hoeven niet per se een eigen PDF per SKU te zijn; de officiële documentdekking moet aantoonbaar kloppen.
+
 | ID | Taak | Verantwoordelijk | Status | Gereed wanneer |
 | --- | --- | --- | --- | --- |
 | 01 | Drie bronnen volledig inventariseren | Uitvoering | GEDAAN | 13.757 bronregels en 13.161 exacte SKU's onafhankelijk gereconcilieerd |
@@ -17,7 +19,7 @@
 | 11 | 31 proef-SKU's en families technisch verrijken | Uitvoering | BRONUITWERKING GEREED | Expliciete kenmerken, rollen en proefverwachtingen vastgelegd; ontbrekende maat-/componentdata en media nog aanvullen |
 | 12 | Media/PDF-register na WeTransfer aanlevering | Uitvoering | WACHT OP BESTANDEN | Exact SKU/rol/volgorde/revisie; twijfelgevallen niet automatisch gekoppeld |
 | 13 | Verzendbeleid voor glas en meubels bevestigen | Jackson/uitvoering | OPEN | Passende verzendwijze/tarieven; geen fictief gewicht of korte levertijdbelofte |
-| 14 | Kleine DRAFT-proef in Shopify | Uitvoering | NA PLANAKKOORD EN DATA | Alle geschreven waarden teruggelezen en previews via juiste renderer zichtbaar |
+| 14 | Kleine DRAFT-proef in Shopify | Uitvoering | WACHT OP COMPLEET BESTANDENPAKKET | Pas na ontvangst/inventarisatie alle aangekondigde media/PDF's; daarna proefwaarden teruglezen en juiste renderer controleren |
 | 15 | Desktop/mobiel/cart en selectorproef | Uitvoering | OPEN | Juiste technische selectie, foto/prijs/SKU/URL en eigen testregels opgeruimd |
 | 16 | Hervatbare volledige DRAFT-import | Uitvoering | NA PROEFPASS | Identiteiten en groepsreferenties exact, alle writes gecontroleerd, herhalen zonder duplicaten |
 | 17 | Index-/filter-/categorie- en merkmapping voorbereiden | Uitvoering | OPEN | Preview en indexplan kloppen; concepten niet publiek indexeren |
@@ -25,6 +27,6 @@
 | 19 | Gefaseerd publiceren en nacontroleren | Uitvoering | NA VRIJGAVE | ACTIVE + kanaal + publieke URL + bestelbaarheid; daarna publieke zoekindex/SKU/prijs bewezen |
 | 20 | Onderhoudscontract en wijzigingsrapport | Uitvoering | OPEN | Nieuwe bronnen verversen alleen afgesproken velden, handmatige verbeteringen beschermd |
 
-**Exact één volgende handeling:** officiële productdata en media voor de 31 proefartikelen koppelen, gevolgd door de Brauer-preview voor specificaties en leverinformatie. Btw-prijsbasis en eerste mapping zijn voorbereid; geen nieuwe prijskeuze nodig om door te gaan.
+**Exact één volgende handeling:** 31 productinhouden offline uitwerken en controleren, met open technische vragen per artikel. Parallel het volledige aangekondigde media-/documentpakket afwachten; daarna pas inventariseren, koppelen en de eerste conceptimport voorbereiden.
 
 Alle import-/publicatie-/browserchecks zijn nog OPEN; bronanalyse is geen kooptest. De benodigde router-/leveradapter is expliciet vastgelegd in UITWERKING.md. Cottoceramix-openpunten blijven afzonderlijk bestaan. De verse MAIN-rolmeting in deze ronde bevestigt196246372618; dat bewijst geen nieuwe unitcarttest.

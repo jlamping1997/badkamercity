@@ -2,6 +2,8 @@
 
 6 november 2026, uitwerking 2. **DATA_PREPARATION_COMPLETE / PILOT_INFORMATION_PENDING.** Jackson bevestigt btw in de prijs en wil de aanpak verder uitwerken. Geen Shopify-producten, collecties, metafields of themabestanden gewijzigd. Dit document beschrijft wat nu concreet is voorbereid en wat de eerste proef moet bewijzen.
 
+**Latere expliciete afspraak op dezelfde dag:** alle import, inclusief DRAFT-pilots, wacht totdat het volledige aangekondigde afbeeldingen-/PDF-/bestandenpakket binnen en geïnventariseerd is. Nu werken we alleen offline aan productinhoud, structuur, relaties en technische vragen. De onderstaande proefroute is werk voor ná deze ontvangstvoorwaarde.
+
 ## 1. Vastgelegde prijsbasis
 
 Voor alle **13.161** unieke artikelen:

@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-03 - productinhoud offline; alle import wacht op bestanden · 6 november 2026
+
+**OFFLINE_CONTENT_PREPARED / ALL_IMPORT_PAUSED_BY_OWNER.** Jackson stelt expliciet: pas importeren wanneer alle afbeeldingen/PDF's en overige aangekondigde bestanden binnen zijn. Dit geldt ook voor DRAFT-pilots. Tot ontvangst en inventarisatie alleen offline inhoud/structuur/relaties/controles voorbereiden; geen Shopify-productwrite.
+
+31proefartikelen nu inhoudelijk uitgewerkt: leesbare titels, handlevoorstellen, korte tekst, bronbevestigde specs, productrol en expliciete inhoud/uitsluitingen. Alle31 onafhankelijk inhoudelijk beoordeeld;646bronverwijzingen gecontroleerd, nul feitelijke verschillen na normale numerieke-/witruimtenotatievergelijking.31handlevoorstellen onderling uniek; volledige catalogus/URL-conflictcontrole nog open. Gewicht alleen nodig waar vervoerberekening het vereist; gedeelde officiële modelhandleiding toegestaan bij bewezen dekking; component-ID's nodig voor gekoppeld setblok, geen universele productpublicatievoorwaarde.27materiaalconflicten blijven open;2afwerkingsvelden vallen binnen diezelfdeSKU-groep.
+
+[Productinhoud en gerichte aanlevering](brauer/2026-11-06/PRODUCTINHOUD.md) · [werkafspraken in plan](brauer/2026-11-06/PLAN_VAN_AANPAK.md) · [taken](brauer/2026-11-06/TAKEN.md). Volledige privéproductteksten/bronbewijs blijven buiten publieke Git. Excel uitgebreid met afzonderlijke Productteksten-tab; de bestaande13.161artikelen/prijzen en bronverschillen behouden. Geen nieuwe theme-/Admin-/collectie-/prijs-/voorraad-/publicatiewrites of browsercartproef.
+
+**Exact één volgende handeling:** de31offlineinhoudsvoorstellen beoordelen en gerichte ontbrekende productinformatie aanvullen; compleet toegezegd mediapakket afwachten. Daarna pas inventariseren/koppelen en eerste conceptimport voorbereiden. Actieve codebranch blijft `fix/product-cards-2026-10-14`, themabron `shopify/current/`; andere merken/Cottoceramix behouden. Eerdere passages over vroege conceptimport zijn door deze eigenaarinstructie vervangen.
+
+
 ## BRAUER-02 - btw-prijsbasis, producttypen en proef uitgewerkt · 6 november 2026
 
 **DATA_PREPARED / NO_SHOPIFY_WRITES.** Jackson bevestigt btw in de prijs en verdere uitwerking. Alle13.161adviesprijzen incl21% en consumentenbasis zonder aangenomen korting voorbereid. Decimal+onafhankelijke centcontrole; Excel26.322prijswaarden en469exactehalve-centgevallen gecontroleerd, nul afwijkingen. Bron ex btw behouden; `shop.taxesIncluded=true` vers bevestigd, geen belastinginstellingen gewijzigd.
