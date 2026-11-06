@@ -1,8 +1,20 @@
 # BRAUER op Badkamercity
 
-Plan van aanpak en brononderzoek · 6 november 2026
+Plan van aanpak en brononderzoek · 6 november 2026 · uitwerking 2
 
-**Status: brononderzoek afgerond; voorstel voor uitvoering. Geen BRAUER-producten geïmporteerd of gepubliceerd.**
+**Status: aanpak door Jackson positief beoordeeld; btw in prijs bevestigd. Brononderzoek, btw-berekening en eerste categorisatie-/proefuitwerking gereed. Geen BRAUER-producten geïmporteerd of gepubliceerd.**
+
+## Update: btw en concrete voorbereiding
+
+Jackson heeft bevestigd dat de btw in de prijs moet zitten. Voor alle 13.161 artikelen is daarom de adviesprijs inclusief 21% btw berekend: adviesprijs ex btw × 1,21, commercieel afgerond op twee decimalen. De voorbereide consumentenprijs gebruikt diezelfde basis, zonder aangenomen korting. De originele ex-btw-prijs blijft behouden. Dit stelt geen marge of kortingsbeleid vast.
+
+Voorbeeld: `5-CE-001` heeft adviesprijs €155,10 ex btw en €187,67 incl btw. De winkel staat bij de verse read-only controle al op `taxesIncluded=true`. Het importontwerp moet daarom de consumentenprijs inclusief btw gebruiken en geen tweede btw-opslag toepassen. Er zijn geen winkelbrede belastinginstellingen gewijzigd. Afwijkende Markets/checkoutbelasting blijft onderdeel van de proef.
+
+Voor elk exact artikelnummer ligt ook een producttypevoorstel klaar. Dat is een inhoudelijke classificatie, geen opdracht om voor elk type een nieuwe collectie te maken. Technische conflicten blijven apart. De 31 proefartikelen zijn op hun expliciete bronkenmerken uitgewerkt; voor deze 31 zijn in de hele Shopify-catalogus via SKU- en barcodezoekingangen geen bestaande matches gevonden. Een volledige SKU/EAN-botsingscontrole voor de andere artikelen is nog niet uitgevoerd.
+
+De bestaande specificatieroute moet voor Brauer eerst gericht in preview worden aangepast: Brauer valt nu op de legacy-weergave. Alleen `custom.complete_specificaties` vullen garandeert dus geen zichtbare volledige meubel-/glasinformatie. Ook leverteksten op kaart en winkelwagen moeten voor Brauer expliciet worden aangesloten en getest.
+
+Zie de concrete vervolgspecificatie in `UITWERKING.md`. De beschrijvingen verderop zijn het basisplan; bovenstaande vastgelegde besluiten vervangen de eerdere lege prijsbasis en prijskeuze als eerste blokkade.
 
 ## 1. Aanbevolen route
 
@@ -36,7 +48,7 @@ Er zijn geen aparte kolommen voor lange omschrijving, gestructureerde maatvoerin
 
 | Bevinding | Gevolg en voorgestelde verwerking |
 | --- | --- |
-| Alle prijzen zijn adviesprijzen EX btw | Bewaar bruto adviesprijs apart. Stel verkoopprijsbeleid vast vóór Shopify-prijzen worden ingevuld. Geen automatische korting of marge verzinnen. |
+| Alle bronprijzen zijn adviesprijzen EX btw | Bron behouden; voor alle artikelen advies incl 21% en voorbereide consumentenprijs zonder korting berekend. Korting/marge afzonderlijk; geen Shopify-prijzen geschreven. |
 | 163 unieke artikelen hebben beschikbaarheid vanaf 1 februari 2027 | Apart behandelen. Geen voorraadclaim vandaag; pas als verwachte beschikbaarheid tonen na actuele bevestiging. Geen automatische vrijgave enkel omdat de datum verstrijkt. |
 | 7.826 meubelregels vermelden vijf weken levertijd | Geen algemene korte levertijd voor BRAUER gebruiken. Prijslijst is een momentopname, geen live voorraadfeed. |
 | 371 overlappende SKU's verschillen in minstens één veld | Veel verschillen zijn categoriebenamingen. Deze normaliseren naar bestaande winkelcategorieën; ze zijn niet allemaal koopblokkades. |
@@ -108,7 +120,7 @@ Meld onbekende bestanden, ontbrekende hoofdfoto's, meerdere mogelijke SKU's en c
 
 Media en data-aanvulling kunnen parallel lopen. De eerste technische proef opmaken zodra de belangrijkste voorbeeldartikelen compleet zijn; niet wachten tot elke optionele specificatie van alle 13.161 artikelen bekend is. Start de webshopproef met kranen omdat die goed aansluit op de bestaande selector. Neem glas en meubels meteen mee als architectuurproef; begin niet met duizenden eenvoudige kranen voordat een lastige meubelsamenstelling is getest.
 
-**Volgende concrete handeling:** prijs-/publicatieafspraken vastleggen en vervolgens een categorisatie- en veldmapping maken voor de proefartikelen. Dit plan autoriseert nog geen volledige import of publicatie.
+**Volgende concrete handeling:** de benodigde officiële productdata en media voor de 31 proefartikelen koppelen en de Brauer-preview voor specificaties en leverinformatie voorbereiden. De prijsbasis en eerste classificatie zijn uitgewerkt. Volledige import en publicatie volgen pas na de beschreven controles.
 
 ## 7. Voorstel voor de proefselectie
 
@@ -158,13 +170,13 @@ Een latere feed koppelt op leverancier plus exact SKU en beheert alleen afgespro
 
 ## 10. Besluiten die Jackson moet nemen
 
-1. **Prijsbeleid:** adviesprijs inclusief bevestigde btw als start, of eigen verkoopprijzen/kortingsregels per productgroep? Inkoopafspraken zijn nodig voor een echte margecontrole en blijven privé. Nu staan verkoopprijzen bewust leeg.
+1. **Prijsbeleid:** btw in de prijs is bevestigd. Adviesprijs inclusief 21% is de voorbereide consumentenprijs zonder korting. Eigen verkoopkortingen zijn nog niet afgesproken; dat houdt de verdere datavoorbereiding niet tegen. Inkoopafspraken zijn nodig voor een echte margecontrole en blijven privé.
 2. **Verkoopscope:** alle zelfstandige artikelen meenemen; losse fronten en onderdelen als zodanig presenteren. Eventuele samengestelde meubelsets pas toevoegen na een bevestigde samenstelling, prijs en logistiek.
 3. **Toekomstige artikelen:** voorlopig concept houden is de aanbevolen standaard. Voorbestelling alleen met bewuste klanttekst en actuele leveranciersbevestiging.
 4. **Logistiek:** leverbeleid, verzending en retourafhandeling voor glas en meubels bevestigen vóór koopvrijgave.
 5. **Bronopslag:** volledige bronnen in private catalogus-Git als gewenst; publieke themarepo alleen voor code/plan/mappings en veilige samenvattingen.
 
-De werkzaamheden staan in `TAKEN.md`. De aparte Excel toont het huidige artikelregister en de veldverschillen. Dit is een nulmeting; de voorgestelde catalogusindeling, familieaantallen, verkoopprijzen en productgereedheid zijn nog niet definitief.
+De werkzaamheden staan in `TAKEN.md`. De bijgewerkte Excel toont het artikelregister, advies ex btw, berekende adviesprijs incl btw, voorbereide consumentenprijs en de bronverschillen. Catalogusindeling, familieaantallen, kortingsbeleid en productgereedheid zijn nog niet definitief.
 
 ## Bronnen en bewijsgrenzen
 
@@ -174,3 +186,4 @@ De werkzaamheden staan in `TAKEN.md`. De aparte Excel toont het huidige artikelr
 - Officiële verkoopmaterialen: https://topa-import.com/products/21/nl/Verkoopmateriaal . De onderzochte downloadverwijzing leidde naar inloggen; de exacte aangeleverde bestanden zijn niet als openbaar gedistribueerd bevestigd.
 - Officiële programma-informatie: https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma . Officiële handleidingen: https://www.brauerkranen.nl/site/installatie-handleidingen-kranen . Geen volledige fabrikantcatalogus of alle PDF's onderzocht.
 - Geen omzetpotentieel, bestsellerranglijst, livevoorraad, huidige handelskorting, technische compatibiliteit of levertijdgarantie afgeleid uit deze nulmeting. Niet uitgebrachte Shopify-/browser-/checkouttests blijven open.
+- Btw-bron: Belastingdienst, algemeen tarief 21%, gecontroleerd 6 november 2026: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/goederen_diensten_21_btw/ . De prijsberekening is een voorbereiding voor de Nederlandse consumentenprijs; geen wijziging van belastinginstellingen of bewijs van grensoverschrijdende checkout.

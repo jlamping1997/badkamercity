@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-02 - btw-prijsbasis, producttypen en proef uitgewerkt · 6 november 2026
+
+**DATA_PREPARED / NO_SHOPIFY_WRITES.** Jackson bevestigt btw in de prijs en verdere uitwerking. Alle13.161adviesprijzen incl21% en consumentenbasis zonder aangenomen korting voorbereid. Decimal+onafhankelijke centcontrole; Excel26.322prijswaarden en469exactehalve-centgevallen gecontroleerd, nul afwijkingen. Bron ex btw behouden; `shop.taxesIncluded=true` vers bevestigd, geen belastinginstellingen gewijzigd.
+
+Alle13.161SKU's hebben een producttypevoorstel; dit zijn geen nieuwe categoriepagina's of technische vrijgaven.36lichtlijsten/vijf ontbrekende groepvelden/vijf fout als handdoekbeugel getypeerde topbladbeugels/één haak-beugel-afwijking als brononderbouwde classificatievoorstellen;27materiaal- en2afwerkingsconflicten blijven open.227collecties en258PRODUCT-definities volledig gelezen; exacte bestaande doelen en echte hiaten vastgelegd.31proefartikelen technisch uitgewerkt, winkelbredeSKU- énEAN-zoekingangen nul matches voor die31; overige13.130nog niet gecontroleerd.
+
+[Concrete uitwerking](brauer/2026-11-06/UITWERKING.md) · [velden/collecties](brauer/2026-11-06/VELDEN_EN_COLLECTIES.md) · [bijgewerkt plan](brauer/2026-11-06/PLAN_VAN_AANPAK.md) · [taken](brauer/2026-11-06/TAKEN.md). Actuele MAIN196246372618 read-only: Brauer valt op legacy-specs; generieke leverroute voor kaart/cart ontbreekt. Gerichte previewadapter en V2-dataset nodig; niets aan theme/Admin geschreven.31pilots krijgen eigen Excel-tab;163toekomstigeSKU's blijven gemarkeerd, geen actuele voorraadclaim. Ruwe bronnen/exports blijven privé.
+
+**Exact één volgende handeling:** officiële productdata/media voor de31pilots koppelen en daarna de Brauer-preview met correcte specificaties/leverinformatie voorbereiden. Btw-keuze blokkeert dit niet meer. Geen productimport/publicatie/browsercartproef/feed uitgevoerd. Actieve branch `fix/product-cards-2026-10-14`, bron `shopify/current/`; Cottoceramix blijft apart. De BRAUER-01-prijsblokkade hieronder is het eerdere checkpoint.
+
+
 ## BRAUER-01 - brononderzoek en plan gereed · 6 november 2026
 
 **SOURCE_AUDIT_COMPLETE / PLAN_REVIEW_PENDING / NO_SHOPIFY_WRITES.** Nieuwe eigenaarprioriteit: BRAUER voorbereiden voor volledige, gecontroleerde webshopuitrol. Drie bronnen: meubels8.687, kranen3.374, glas1.696; totaal13.757 bronregels, **13.161 exacte unieke SKU's**. 372 SKU's staan in meerdere bestanden (596 extra vermeldingen). 578 veldverschillen over371SKU's, waaronder27materiaal- en2afwerkingsconflicten; geen overlappende prijs-/EAN-conflicten. Alle EAN13-checkdigits geldig. **163 unieke artikelen** hebben beschikbaarheid vanaf1februari2027; geen actuele voorraadclaim.
