@@ -1,5 +1,22 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-11 - eenvoudiger meubelkeuze en visuele glasopstellingen · 7 november 2026
+
+Eigenaar beoordeelt de doucheset positief, vindt het meubelmenu te technisch en vraagt om kleurdropdowns bij veel kleuren en plaatjes voor zijwanden. Alleen het offline gesprekvoorbeeld aangepast; geen Shopify-productimport (ook geen DRAFT), media-import, themawrite of publicatie.
+
+**Voorstel ter beoordeling, niet al catalogusbreed goedgekeurd:**
+- Joy MFC: 15 originele decorstalen met naam in een native uitklapmenu; selectie sluit het menu en brengt focus terug. Afzonderlijke assen voor meubelmaat, diepte en aantal lades. De oude gecombineerde lade-/sifonkeuze vervalt als primaire as.
+- De afvoeruitsparing wordt automatisch afgeleid als exact één bronartikel bij de hoofdkeuzes hoort. Alleen standaard 120 cm / twee lades heeft twee bronuitvoeringen (één/twee uitsparingen); daar verschijnt een aparte uitklapbare afstemming op de wastafel. Bij zo'n nieuwe onbesliste combinatie GEEN definitief artikelnummer/EAN en alleen een vanafprijs uit de echte kandidaten. Geen stille artikelkeuze. Kleurwissels behouden een al gekozen afvoerindeling; andere gewijzigde hoofdkeuzes laten eventuele ambiguïteit opnieuw kiezen.
+- Eindrichting is de juiste onderkast uit een gekozen wastafel afleiden. Daarvoor ontbreekt een bewezen compatibiliteitsmatrix. Aantal waskommen/afvoeren is niet geïmplementeerd als voldoende compatibiliteitsbewijs. Ook bij een unieke bronuitvoering blijft wastafelpassing te controleren.
+- Void: drie klikbare bovenaanzichten (recht, zijwand maat 30, zijwand maat 40), schematisch en niet op schaal. Vaste haakse zijwand aan vrij einde geverifieerd met officiële BRAUER-handleiding (GS-VOI2, technische tekening/overzichtsbeeld). Links/rechts omkeerbaarheid niet als extra SKU-as toegevoegd. Breedte heet nu Breedtemaat: catalogusmaat niet gelijkstellen aan plaatsingsmaat.
+- Edition-doucheset: dezelfde bronartikelen, prijzen en keuzemogelijkheden behouden.
+
+**Bewijs:** uitgevoerd met de werkelijke ingebedde JavaScript in een VM met DOM-stub: alle 465 artikeltoestanden; 8.370 geldige hoofdkeuzetransities; 951 ontbrekende combinaties geweigerd; 60 meubeltransities correct onbeslist gelaten. Afvoerresolutie, artikel/EAN/btw-prijs, statebehoud, dropdownselectie/focus/Escape/buitenklikhandlers en grijze glasopties gecontroleerd. Ingebedde bronfamilies byte-inhoudelijk gelijk aan het voorgaande voorbeeld; 15 bestaande originele decorstalen behouden. Gesprekfragment 382.145 bytes. Browserlayout en echte toetsenbord-/touchbediening: **NOT_TESTED** (geen browserexecutable); dit is geen live webshoptest.
+
+**Opslag/afbakening:** inline gesprekvoorbeeld, geen los websiteproject; volledige private artikeldata en derdenbeelden niet naar publieke Git gekopieerd. Bestaande productbasis-XLSX niet gewijzigd. Scratch is geen Git-werkboom; geen uitspraak over Windows-lokale status. MAIN vers read-only bevestigd als 196246372618 (BadkamerCity - Cottoceramix volledig assortiment). Centrale checkpoint in beide branches exact teruglezen. Eerdere previews blijven als herstel/referentie beschikbaar.
+
+**Volgende handeling:** eigenaar beoordeelt dit vereenvoudigde gesprekvoorbeeld; daarna de wastafel-onderkastcompatibiliteit met officiële tekeningen vastleggen, binnen de bestaande importstop tot alle aangekondigde leveranciersbestanden zijn ontvangen/geïnventariseerd.
+
 ## BRAUER-10 - drie extra offline productfamilies met meerdere keuzes · 7 november 2026
 
 Eigenaar bevestigt: niet-opgenomen combinaties blijven in de opties staan, grijs en niet aanklikbaar; geen stille wijziging van andere keuzes. Verzoek daarna: enkele extra producten proberen. Drie gesprekvoorbeelden voorbereid uit de actuele drie bronlijsten, met uitsluitend exact aanwezige SKU's:
