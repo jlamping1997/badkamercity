@@ -1,5 +1,7 @@
 # Verlavio keuzemenu’s — 7 november 2026
 
+> **Update 8 november 2026:** dit menuconcept is inmiddels MAIN; alle vijf productiefiles zijn exact gelijk aan de gecontroleerde versie. De eigenaar heeft bovendien winkelbreed doorverkopen toegestaan: 767 policies naar CONTINUE, 73 voorraadblokkades opgeheven. [Actuele bestelafspraak en bewijs](../../../orderability/2026-11-08/README.md). Het onderstaande beschrijft het eerdere checkpoint van 7 november.
+
 ## Resultaat en status
 
 De eigenaar heeft uitvoering van de eerder gecontroleerde menuverbeteringen goedgekeurd. De productgegevens zijn toegepast en volledig teruggelezen. De nieuwe presentatie staat in het conceptthema **196341825802 — BadkamerCity - Verlavio keuzemenus 7 nov**. Publicatie door de eigenaar is nog nodig; de Shopify-koppeling ondersteunt geen theme-publicatie of MAIN-filewrites.
