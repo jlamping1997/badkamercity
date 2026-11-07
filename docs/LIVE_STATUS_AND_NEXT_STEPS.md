@@ -1,5 +1,29 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-15 - grepen hersteld, eerste productafbeelding als bron en zelfstandige steekproef · 7 november 2026
+
+Eigenaar wil de eerdere losse greepafbeeldingen terug, keuzefoto's voortaan uit de eerste afbeelding van het gekoppelde product laden, en een onafhankelijke BadkamerXXL-steekproef op ontbrekende data.
+
+**Uitgevoerd in de offline preview:**
+- De vijf goedgekeurde losse hendelvormbeelden zijn terug op de inbouw-hendelkeuze; uitloop, wandafwerking, bedieningskant en opbouwuitvoering blijven fotokeuzes.
+- De renderer leest nu de eerste afbeelding uit het gekoppelde productrecord via product-ID én exact SKU. Geen aparte productPhotos/keuzefoto-URL-tabel in de renderer. Bij append blijft de bestaande eerste foto; herschikken verandert de eerste; verwijderen toont Afbeelding volgt en maakt een geldige SKU niet onbestelbaar. Geen fallback naar een ander artikel of een tweede/onjuiste foto.
+- Canonieke offline productrecords worden nog gevuld met de eerder gecontroleerde 58 tijdelijke referentiebeelden; synthetische offline-ID's zijn geen Shopify-ID's. Nieuwe productbeelden kunnen via bijgewerkte productdata direct door dezelfde renderer worden gelezen, ook op een eerder fotoloos product. Geen claim op live push vanuit Shopify Admin: nieuwe data/paginaherlaadbeurt blijft nodig.
+- Herbruikbare resolver en contracttests staan alleen op de actieve codebranch onder scripts/brauer/prototypes/. Voorbereide Liquid-adapter leest linked_product.images.first uit een al door de bestaande familieprovider opgelost productobject; vereist het huidige één-SKU-per-productcontract en geeft geen beeld bij mismatch/meerdere varianten. **Niet in een Shopify-thema geïntegreerd of uitgerold.**
+- Shopify Liquid-docs geraadpleegd. Liquid ThemeCheck geprobeerd, maar BLOCKED: toolkit mist @shopify/theme-check-common. Geen geslaagde Liquid-/live integratievalidatie geclaimd; vóór latere conceptthema-integratie opnieuw valideren. De losse JS-resolver en de werkelijke preview zijn wel uitgevoerd/getest.
+
+**Zelfstandige bronsteekproef:** elf exacte SKU/EAN-controles, verspreid over lage wastafelkranen, inbouwkranen, inbouwbadset, drie glasopstellingen en twee onderkasten. Identiteiten en gekozen configuraties in deze steekproef passen bij de bron; geen complete catalogusdekking geclaimd.
+- 32 exact-artikelgebonden specificatieaanvullingen: inbouwdeel/plug/sifon inbegrepen, kraansetuitvoering en stopfuncties, glasdikte/stelbereik, meubel zonder wastafel/blad en zonder sifon. Niet blind naar hele series/kleuren overgenomen; dealerprijzen/voorraad/levertijden niet gekopieerd.
+- Vijf maatvelden zichtbaar op Te bevestigen gezet wegens drie bronconflicten: 5-CE-001 (hoogte, uitloophoogte, uitloopdiepte), 5-GG-001 (hoogte) en GS-OBI2B9030200CE (plaatsingsmaten).
+- De aan 5-CE-001 en 5-GG-001 gekoppelde merk-PDF's zijn byte-identiek en tonen 148/68/115 mm; dealer meldt bij CE 165/85/104 mm, bij GG hoogte 158 mm. De tekening drukt geen artikel/revisie af: actuele leveranciersversie opvragen/controleren, geen bron stil als definitieve waarheid gekozen. Eerdere maatverschillen zijn dus niet simpel als werkelijke kleurverschillen bevestigd.
+- De bronzen Oblivion-plaatsingsmaten bij de dealer wijken af van de eerder gelezen generieke GS-OBI2-handleiding. Catalogusmaat 90/30 blijft, nauwkeurige inbouwmaten blijven open tot de productgeneratie/tekening vaststaat.
+- Exacte 5-CE-083-S2-65-tekening ondersteunt de 18,1–20,1cm-uitloopdiepte: totaal255 mm minus inbouw54–74 mm. Dit is montageafhankelijk en geen extra kort/lang-SKU-keuze; niet als inkortbaar gepresenteerd.
+
+**Bewijs:** alle 876 voorbeeldrecords / 864 unieke artikelen door de werkelijke preview-JS met DOM-stub getest; 13.488 geldige en 1.489 geweigerde transities, 60 meubeltransities bewust onbeslist. Alle artikelen bereikbaar. Byte-exacte tijdelijke beelden, losse hendelbeelden, product-ID/SKU-bescherming en eerste-beeldgedrag bij toevoegen/append/herschikken/verwijderen PASS. Ook een afbeelding toegevoegd aan een voorheen fotoloos glasartikel: renderer volgt de nieuwe productdata zonder keuzefoto-codering. Afbeelding ontbreken beïnvloedt de SKU-combinatiegeldigheid niet. Bron-/specificatiecorrecties exact hersteld uit gedeelde paren. Fragment 740.487 bytes. Browserlayout/echte bediening en live Shopify-integratie NOT_TESTED.
+
+[Bronsteekproef, bevindingen en mediacontract](brauer/2026-11-06/MEDIAKOPPELING_EN_STEEKPROEF.json). Geen bronbeeldbytes, volledige prijslijsten of privégegevens in publieke Git. Productbasis-XLSX versie 1 niet vervangen; deze data is een aanvullende exacte-SKU-overlay voor latere voorbereiding. MAIN read-only bevestigd als 196246372618 — BadkamerCity - Groene voorraadmelding. Geen Shopify-write, import (ook geen DRAFT), media-upload of themapublicatie. Alles wacht op het volledige aangekondigde leveranciersbeeld-/PDF-pakket en inventarisatie. Scratch is geen Git-werkboom; geen Windows-lokale statusclaim. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** de drie gevonden maatconflicten sluiten met de actuele artikelgebonden leveranciersdocumenten zodra het pakket binnen is. Daarna verrijking en eerste-afbeeldingadapter in de bestaande import-/UNPUBLISHED-reviewroute verwerken, inclusief nog geblokkeerde Liquid-validatie; geen vroege import.
+
 ## BRAUER-14 - visuele inbouwconfiguratie, hoogtemodellen en kleine maatkeuzes · 7 november 2026
 
 Eigenaar merkt terecht op dat twee Galactic-breedtes geen dropdown nodig hebben; vraagt passende laag/verhoogd/hoog-groeperingen en echte eerste artikelfoto's voor inbouw-uitloop, rozetten/afdekplaat en bediening links/rechts. Onderzoek expliciet op BadkamerXXL gevraagd.
