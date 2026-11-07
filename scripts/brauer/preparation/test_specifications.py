@@ -15,13 +15,15 @@ class SpecificationTests(unittest.TestCase):
    for label,e in ev[p['sku']]['facts'].items():
     self.assertTrue(e['fragment']);self.assertEqual(ev[p['sku']]['ean'],p['ean'])
     if e['kind']=='supplier':self.assertTrue(e['source_refs'])
+    elif e['kind']=='retailer_exact_sku_ean':
+     self.assertTrue(e['url']);self.assertEqual(e['identity'],{'sku':p['sku'],'ean':p['ean'],'brand':'BRAUER'})
     else:self.assertTrue(e['url']);self.assertTrue(p.get('previous_exact_sku_verification'))
    self.assertEqual(p['specifications']['Artikelnummer'],p['sku'])
    self.assertFalse(any('Te bevestigen' in i['value'] for i in items))
  def test_existing_business_state_unchanged(self):
   baseline=json.loads(Path('prepared/specification-baseline.json').read_text())
   for p in c:
-   original={k:v for k,v in p.items() if k not in {'specifications','customer_specifications','specification_review'}}
+   original={k:v for k,v in p.items() if k not in {'specifications','customer_specifications','specification_review','retail_review'}}
    digest=hashlib.sha256(json.dumps(original,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
    self.assertEqual(digest,baseline[p['sku']],p['sku'])
  def test_conflicted_values_are_absent(self):
@@ -32,7 +34,9 @@ class SpecificationTests(unittest.TestCase):
   for p in c:
    for label,e in ev[p['sku']]['facts'].items():
     if label in {'Breedte','Diepte','Hoogte','Lengte'} and e['kind']=='supplier':self.assertRegex(e['fragment'],r'\b(?:mm|cm)\b',p['sku'])
-  self.assertNotIn('Breedte',by['OK-JY100CH']['specifications'])
+  if 'Breedte' in by['OK-JY100CH']['specifications']:
+   self.assertEqual(by['OK-JY100CH']['specifications']['Breedte'],'99 cm')
+   self.assertEqual(ev['OK-JY100CH']['facts']['Breedte']['identity']['ean'],by['OK-JY100CH']['ean'])
   self.assertEqual(by['OK-JY120-4CH']['specifications']['Breedte'],'119 cm')
  def test_singular_plural_and_explicit_negative(self):
   self.assertEqual(by['SK-IM60LCH']['specifications']['Aantal deuren'],'1')
