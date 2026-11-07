@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-07 - offline voorbeeld met meerdere keuzeassen · 7 november 2026
+
+Eigenaar verduidelijkt dat naast kleur ook andere opties nodig zijn. Het gesprekvoorbeeld is uitgebreid naar **Kleur + Hendelmodel** voor de lage Edition-opbouwkraan. Exact 32 bestaande bronartikelen met vijf modellen A–E en zeven kleuren; geen combinaties uit een volledig cartesisch product aangemaakt. Coffee komt in deze bron uitsluitend voor bij A en B (twee SKU's met bronbeschikbaarheid 1 februari 2027). Coffee/C–E zijn niet in de lijst opgenomen en blijven onselecteerbaar. Modelnaam uit de fabrikantlijst behouden; geen gegokte vertaling van A–E naar dealerhendeltypen. Carving en Stripe vallen buiten deze proef.
+
+Kleurwissel behoudt het gekozen model, modelwissel behoudt de kleur. Ontbrekende combinaties zijn grijs; de andere keuze wordt nooit stil gewijzigd. Titel, artikelnummer, EAN, beschrijving en adviesbasis incl btw volgen de exacte SKU. De dealerverrijking uit BRAUER-06 blijft alleen op 5-CE-001-HD1; andere modellen/kleuren erven die maten niet. De geselecteerde kleur blijft zichtbaar bij inklappen. Dit is een offline menuvoorstel, geen technische compatibiliteitsvrijgave of winkelintegratie.
+
+Alle 32 toestanden en 360 geldige keuzeovergangen gecontroleerd; 24 pogingen richting niet-opgenomen combinaties veilig afgewezen. Prijs/identiteit, behoud van de andere keuze, toekomstige bronbeschikbaarheid en verwijderen van achterblijvende specs gecontroleerd; nul fouten. Browserlayout/live URL/cart niet getest. Productbasis-XLSX versie 1 ongewijzigd. MAIN opnieuw read-only bevestigd als 196246372618. Geen Shopify-writes/import/publicatie. Alle aangekondigde officiële beelden/PDF's blijven af te wachten.
+
+**Exact één volgende handeling:** dit model per productfamilie uitwerken naar bronbevestigde relevante opties voor kranen, glas en meubels, beginnend met één representatieve douchefamilie. Geen universeel menu of onbewezen setkoppelingen toepassen. Geen actieve schrijver na dit checkpoint.
+
+
 ## BRAUER-06 - offline Hotbath-menuvoorbeeld en gerichte verrijking · 7 november 2026
 
 Eigenaar vraagt zichtbaar artikelnummer, Hotbath-opzet en één BadkamerXXL-proef. Voor het verrijkte voorbeeld is exact 5-CE-001-HD1 / EAN 4260483798535 gekoppeld aan [de dealerpagina](https://www.badkamerxxl.nl/brauer-chrome-edition-wastafelmengkraan-opbouw-round-energy-saving-chroom-550001cs-hd1). Fabrikantlijst noemt model E, dealer noemt hendel Type 2. Dealer-ID 899558 blijft uitsluitend bronidentificatie. Twaalf technische velden als dealerinformatie vastgelegd, alleen voor deze SKU: hoogte 16,5 cm, uitloophoogte 8,5 cm, diepte 10,4 cm, vaste I-uitloop, hendel Type 2/glad, 1-gats/eengreeps, aanvoer 1/2 inch, warm/koud, Brauer ColdStart. Niet als fabrikantbevestiging aangemerkt. De eerdere model-A-proef 5-CE-001 is hiermee niet technisch verrijkt.
