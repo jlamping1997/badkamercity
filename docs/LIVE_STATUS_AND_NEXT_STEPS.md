@@ -1,5 +1,25 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-13 - dropdownmaten, zes kleurstalen en uitgebreide offline steekproef · 7 november 2026
+
+Eigenaar wijzigt de eerdere kleurdropdownwens: toon zes kleuren op de productpagina en alleen bij meer dan zes een knop Bekijk meer kleuren. Afmetingen moeten een gewone nette dropdown krijgen. Nieuwe beoordeling gevraagd van andere glaswanden en verschillende wastafel-/badkranen.
+
+**Uitgevoerd, alleen offline gesprekvoorbeeld:**
+- Native dropdowns voor beschikbare breedte-/hoofddouchematen; ontbrekende combinaties blijven als uitgeschakelde opties zichtbaar. Een wijziging behoudt alle andere keuzes; ook een programmatig ongeldige selectiewijziging wordt teruggezet.
+- Alle kleur-/decorgroepen tonen maximaal zes stalen. Bij meer dan zes: Bekijk meer kleuren / Minder kleuren; gekozen kleur blijft bij inklappen zichtbaar. Meubels tonen nu eveneens zes echte decorstalen, geen kleurdropdown. Standaard en ondiep blijven aparte meubelfamilies met de eerder 165 gecontroleerde maatrecords.
+- Eén productkiezer met groepen Kranen, Glas en Meubels voorkomt dertien lange navigatieknoppen. Iedere voorbeeldfamilie bewaart de eigen selectie.
+- Zes kraanproefgroepen: lage Edition 001 (32, met de bestaande vijf vormfoto's), hoge Edition draaibare uitloop model A (13, rond/plat), inbouwwastafelkraan model A1 (25, rechte/gebogen uitloop en rozetten/afdekplaat), opbouwbadkraanset (26, houder/handdouche), vrijstaande badkraan (14, handdouche), inbouwbadkraanset (52, badvulling/bediening/handdouche). De hoge/inbouw-wastafelproeven zijn expliciet afgebakend tot A/A1; geen universele modelcodevertaling of overdracht van 001-hendelfoto's naar andere modellen. Carving/Stripe en A2 zijn hier niet als bewezen gekoppelde opties toegevoegd.
+- Drie andere glasfamilies: Oblivion standaard helder/brons (168; Flow apart gehouden), Orion helder/brons (36), Galactic tweedelige schuifnisdeur (12). Oblivion gebruikt de bestaande drie bovenaanzichten; de haakse GS-OBI2-opstelling is visueel tegen de officiële technische tekening gecontroleerd. Bronbreedtes van deze nieuwe glasproeven zijn catalogusmaten, geen gegokte plaatsingsmaten. Galactic-deurtype/omkeerbaarheid volgen de exacte prijslijst; de grote online PDF kon de webviewer niet openen en is niet als volledig gecontroleerde montagebron geclaimd.
+- Eerdere Edition-doucheset (168), Void (132) en twee Joy-menu's (120/45) blijven beschikbaar. Totaal dertien families en 843 unieke bronartikelen. Geen volledige cartesische varianten aangemaakt. Het verschil tussen heldere/bronzen Oblivion-combinaties blijft werkelijk zichtbaar als grijze ontbrekende keuzes.
+
+**Bewijs:** werkelijke ingebedde JavaScript met DOM-stub uitgevoerd: alle 843 artikeltoestanden, 13.141 geldige transities, 1.509 ontbrekende transities geweigerd en 60 meubeltransities correct onbeslist gelaten. Alle artikelen bereikbaar via geldige keuzes; artikel/EAN/btw-prijzen, native selectwaarden/disabled-opties, zes-stalenlimiet/uitklappen/actieve staal, statebehoud en exact-SKU-only verrijking gecontroleerd. Geen 16,5cm-kraanhoogte of andere eerdere HD1-verrijking gelekt naar andere kranen. Browserlayout/echte native dropdown-/touch-/toetsenbordbediening NOT_TESTED (geen browserexecutable); geen live Shopify/PDP/cart-test. Fragment 617.730 bytes, ingebedde bestaande beelden; geen netwerkafhankelijkheid in de preview.
+
+[Steekproefcontract en tellingen](brauer/2026-11-06/UITGEBREIDE_STEEKPROEF_CONTRACT.json) bevat scope/controles zonder volledige private productlijsten of derdenbeelden. Data/bronafbakening blijven privaat voorbereid; productbasis-XLSX versie 1 niet vervangen. De voormalige BRAUER-11-kleurdropdown is hiermee als UI-voorstel vervangen; de maat-/SKU-koppelingen van BRAUER-12 blijven gelden.
+
+MAIN read-only bevestigd als 196246372618, nu genaamd BadkamerCity - Groene voorraadmelding. Naamwijziging van andere sessie waargenomen; geen themafilewrite, publicatie of product-/voorraadwijziging door deze taak. Alle Shopify-import, ook DRAFT, blijft wachten op volledige aangekondigde media-/PDF-ontvangst en inventarisatie. Scratch geen lokale Git-werkboom; geen Windows-lokale status geclaimd. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** eigenaar probeert de uitgebreide steekproef, met aandacht voor afmetingdropdowns, kleurinklappen, hoge/inbouw-wastafeluitlopen, de drie badkraanroutes en de beperkte bronzen Oblivion-combinaties. Alleen daarna de beoordeelde groeperingsregels naar volgende bronfamilies uitbreiden.
+
 ## BRAUER-12 - aparte meubeldieptes, Breedte-labels en gecontroleerde afmetingen · 7 november 2026
 
 Eigenaar vraagt de dieptekeuze te verwijderen en standaard/ondiep niet in hetzelfde menu te groeperen; Meubelmaat en Meubelmaat uit prijslijst worden Breedte. Breedte/diepte/hoogte en verdere specificaties aanvullen. De visuele glasopstellingen zijn door eigenaar positief beoordeeld. Eerst dit aangepaste voorbeeld beoordelen; pas daarna een nieuwe steekproef met verschillende productfamilies uit kranen, glas en meubels.
