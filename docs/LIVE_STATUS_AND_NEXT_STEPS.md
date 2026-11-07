@@ -1,5 +1,12 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-04 - volledig offline productwerkbestand · 7 november 2026
+
+Alle 13.161 SKU's in een aparte productbasis voorbereid: brongetrouwe opgeschoonde titels/omschrijving, unieke handlevoorstellen met SKU-suffix, producttypevoorstel, bronbevestigde specs, btw-prijsbasis, toekomstige datum, bronconflicten en vier lege aanvulkolommen. De 31 eerder inhoudelijk uitgewerkte voorbeelden blijven herkenbaar; de overige 13.130 omschrijvingen zijn bronbasis en geen volledig verrijkte tekst. Techniek/media nog aanvullen; 27 materiaalconflicten en twee afwerkingsvelden blijven open. Volledige gegevens blijven privé.
+
+Geen enkele import, ook geen DRAFT, totdat alle aangekondigde beelden/PDF's/bestanden ontvangen en geïnventariseerd zijn. Geen Shopify-writes of kooptest. Volgende handeling: ontbrekende productdata in het werkbestand aanvullen en na ontvangst de media exact koppelen. Andere merken en eerdere werkzaamheden behouden.
+
+
 ## BRAUER-03 - productinhoud offline; alle import wacht op bestanden · 6 november 2026
 
 **OFFLINE_CONTENT_PREPARED / ALL_IMPORT_PAUSED_BY_OWNER.** Jackson stelt expliciet: pas importeren wanneer alle afbeeldingen/PDF's en overige aangekondigde bestanden binnen zijn. Dit geldt ook voor DRAFT-pilots. Tot ontvangst en inventarisatie alleen offline inhoud/structuur/relaties/controles voorbereiden; geen Shopify-productwrite.
