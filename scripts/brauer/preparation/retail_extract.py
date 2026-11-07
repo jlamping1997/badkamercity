@@ -3,16 +3,19 @@ import json,re,hashlib
 from pathlib import Path
 
 LENGTHS={'Breedte':'Breedte','Breedte/diameter':'Breedte','Diepte':'Diepte','Hoogte':'Hoogte','Hoogte (excl. verlichting)':'Hoogte',
+ 'Hartafstand':'Hartafstand','Diameter plug':'Diameter plug',
  'Hoogte kraan':'Hoogte kraan','Hoogte uitloop':'Hoogte uitloop','Diepte uitloop':'Lengte uitloop','Voorsprong uitloop':'Lengte uitloop',
  'Inbouwdiepte':'Inbouwdiepte','Glasdikte':'Glasdikte','Dikte glas':'Glasdikte','Lengte':'Lengte','Dikte':'Dikte',
  'Lengte douchearm':'Lengte douchearm','Lengte doucheslang':'Lengte doucheslang','Diameter':'Diameter','Diameter hoofddouche':'Diameter hoofddouche',
  'Verstelbaarheid breedte':'Verstelbaarheid breedte','Lengte stabilisatiestang':'Lengte stabilisatiestang','Breedte/diameter douchekop':'Diameter',
  'Breedte/diameter hoofddouche':'Diameter hoofddouche','Lengte glijstang':'Lengte glijstang'}
 COUNTS={'Aantal laden':'Aantal lades','Aantal lades':'Aantal lades','Aantal deuren':'Aantal deuren','Aantal deuren (totaal)':'Aantal deuren',
+ 'Aantal rozetten':'Aantal rozetten',
  'Aantal sifonuitsparingen':'Aantal sifonuitsparingen','Aantal kraangaten':'Aantal kraangaten','Aantal waskommen':'Aantal spoelbakken',
  'Aantal grepen':'Aantal grepen','Aantal delen':'Aantal delen','Aantal stopfuncties':'Aantal stopfuncties',
  'Aantal straalsoorten hoofddouche':'Aantal straalstanden hoofddouche','Aantal straalsoorten handdouche':'Aantal straalstanden handdouche'}
 ENUMS={'Montagewijze':'Montage','Montage':'Montage','Type deur':'Deursysteem','Type douchedeur':'Deursysteem','Glassoort':'Glas','Glas decor':'Glas',
+ 'Plaats bediening':'Plaats bediening','Afwerking wand':'Wandafwerking','Vorm rozet':'Vorm rozet','Bediening voor aan/uit':'Bediening aan/uit','Aansluitmaat sifon':'Aansluitmaat sifon',
  'Uitvoering handgrepen':'Greepuitvoering','Uitvoering uitloop':'Uitvoering uitloop','Kraanuitloop':'Uitvoering uitloop',
  'Warm/koud aansluiting':'Watertoevoer','Draairichting deur':'Draairichting deur','Materiaal onderkast':'Materiaal',
  'Materiaal kraan':'Materiaal','Materiaal':'Materiaal','Materiaal slang':'Materiaal slang','Materiaal glas':'Materiaal glas',
@@ -21,6 +24,7 @@ ENUMS={'Montagewijze':'Montage','Montage':'Montage','Type deur':'Deursysteem','T
  'Maat draadaansluiting doucheslang':'Aansluitmaat doucheslang','Type bevestiging stabilisatiestang':'Bevestiging stabilisatiestang',
  'Lichtkleur':'Kleurtemperatuur','Afzetplateau':'Plaats afzetplateau','Leverwijze':'Leverwijze'}
 BOOLS={'Met verlichting':'Verlichting','Met lichtschakelaar':'Lichtschakelaar','Met schakelaar':'Lichtschakelaar','Met stopcontact':'Stopcontact','Wandcontactdoos':'Stopcontact',
+ 'Met handdouche':'Handdouche inbegrepen','Met doucheslang':'Doucheslang inbegrepen','Met glijstang':'Glijstang inbegrepen','Met hoofddouche':'Hoofddouche inbegrepen','Met uitloop':'Uitloop inbegrepen','Inkortbaar':'Inkortbaar',
  'Met softclose':'Softclose','Softclose':'Softclose','Met inbouwdeel':'Inbouwdeel inbegrepen','Met afvoerplug':'Afvoerplug inbegrepen',
  'Met plug':'Afvoerplug inbegrepen','Met sifon':'Sifon inbegrepen','Met wastafel/blad':'Wastafel of blad inbegrepen','Overloop':'Overloop',
  'Inclusief douchebak':'Douchebak inbegrepen','Met bevestigingsmateriaal':'Bevestigingsmateriaal inbegrepen',
@@ -33,7 +37,7 @@ def parse(page):
  for i,row in enumerate(rows):
   text=clean(row['text']);parts=[x.strip() for x in text.split('|') if x.strip()]
   if text in {'Hoofddouche','Handdouche','Doucheslang','Glijstang','Thermostaat'}:section=text
-  if text in {'Bijlagen','Technische documenten','Over Brauer'}:break
+  if text in {'Bijlagen','Technische documenten','Over Brauer','Bijpassende onderdelen','Ervaringen met dit product','Ervaringen met onze klantenservice'}:break
   inline=len(parts)==2
   if inline:label,value=parts
   else:
@@ -74,9 +78,12 @@ def parse(page):
   elif label in ENUMS:
    if len(value)>90 or value.startswith(('Image:','*','##')):continue
    target=ENUMS[label];norm=value
+   allowed={'Plaats bediening':{'Links','Rechts','Links en rechts'},'Wandafwerking':{'Met rozetten','Met achterplaat'},'Vorm rozet':{'Rond','Vierkant','Rechthoekig','Ovaal'},'Bediening aan/uit':{'Draaigreep','Drukknop','Sensor'}}
+   if target in allowed and value not in allowed[target]:continue
+   if target=='Wandafwerking':norm={'Met rozetten':'Rozetten','Met achterplaat':'Afdekplaat'}[value]
    if target.startswith('Aansluitmaat'):
-    if not re.fullmatch(r'\d+[/]\d+\s*(?:inch|\"|″)?',value):continue
-    norm=re.match(r'\d+[/]\d+',value).group()+'"'
+    if not re.fullmatch(r'(?:\d+[. ]?)?\d+[/]\d+\s*(?:inch|\"|″)?',value):continue
+    norm=re.match(r'(?:\d+[. ]?)?\d+[/]\d+',value).group().replace('.',' ')+'"'
   else:target=label;norm=value
   if target=='Diameter' and section=='Handdouche':target='Diameter handdouche'
   found.append({'label':target,'value':norm,'source_label':label,'source_value':value,'source_section':section,'line':row['line']})

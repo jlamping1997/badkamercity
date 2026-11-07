@@ -8,6 +8,7 @@ const evidence=JSON.parse(await fs.readFile(path.join(root,'prepared/specificati
 const examples=JSON.parse(await fs.readFile(path.join(root,'prepared/specification-examples.json'),'utf8'));
 let retail=null;try{retail=JSON.parse(await fs.readFile(path.join(root,'prepared/retail-enrichment-report.json'),'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}
 let openWork=null;try{openWork=JSON.parse(await fs.readFile(path.join(root,'prepared/open-work.json'),'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}
+let supplier=null;try{supplier=JSON.parse(await fs.readFile(path.join(root,'prepared/supplier-enrichment-report.json'),'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}
 const wb=Workbook.create(),font={name:'Arial',size:10,color:'#213647'};
 for(const n of ['Overzicht','Voorbeelden','Artikelen',...(retail?['Aanvullingen','Bronverschillen']:[])])wb.worksheets.add(n);
 function col(i){let v='';for(i++;i;i=Math.floor((i-1)/26))v=String.fromCharCode(65+(i-1)%26)+v;return v;}
@@ -41,8 +42,9 @@ o.tables.add(`A9:F${tr.length+9}`,true,'SpecTypen');o.freezePanes.freezeRows(9);
 if(retail){
  const types=new Map(catalog.map(p=>[p.sku,p.product_type]));
  const added=retail.changes.filter(x=>x.action==='AANGEVULD');
- const a=table('Aanvullingen',['Artikelnummer','Producttype','Specificatie','Nieuwe waarde','Bronpagina','Controle'],added.map(x=>[x.sku,types.get(x.sku),x.field,x.new,x.url,'Exact SKU + EAN']),[25,32,40,44,95,26]);
- a.getRange(`D2:F${added.length+1}`).format.wrapText=true;a.getRange(`A2:F${added.length+1}`).format.rowHeight=54;
+ const addRows=[...added.map(x=>[x.sku,types.get(x.sku),x.field,x.new,x.url,'Exact SKU + EAN']),...(supplier?.additions||[]).map(x=>[x.sku,types.get(x.sku),x.field,x.new,x.source_refs.map(r=>r.file+' | '+r.sheet+':'+r.row).join('\n'),'Leverancier: '+x.source_field])];
+ const a=table('Aanvullingen',['Artikelnummer','Producttype','Specificatie','Nieuwe waarde','Bronbestand of pagina','Herkomst / controle'],addRows,[25,32,40,44,95,30]);
+ a.getRange(`D2:F${addRows.length+1}`).format.wrapText=true;a.getRange(`A2:F${addRows.length+1}`).format.rowHeight=54;
  const qs=new Map((openWork?.questions||[]).map(q=>[q.sku+'|'+q.field,q]));
  const eans=new Map(catalog.map(p=>[p.sku,p.ean]));
  const diffs=[...retail.differences.map(x=>[x.sku,x.field,x.status,x.existing||'',x.candidates.map(c=>c.value).filter((v,i,a)=>a.indexOf(v)===i).join(' / '),qs.get(x.sku+'|'+x.field)?.question||x.action,[...new Set(x.candidates.map(c=>c.url))].join('\n'),eans.get(x.sku)||'']),...retail.scope_rejections.filter(x=>x.reason.startsWith('Afwijkende')).map(x=>[x.sku,x.label,'AFWIJKENDE_WAARDE','',x.source_value,qs.get(x.sku+'|'+x.label)?.question||x.reason,x.url,eans.get(x.sku)||'']),...retail.identity_notes.map(x=>[x.sku,'Artikelidentiteit','EAN_CONTROLEREN','','',x.reason,x.url,eans.get(x.sku)||'']),...(openWork?.questions||[]).filter(q=>!['BRONVERSCHIL','AFWIJKENDE_SLANGLENGTE'].includes(q.status)).map(q=>[q.sku,q.field,q.status,'',q.values,q.question,q.urls.join('\n'),q.ean])];

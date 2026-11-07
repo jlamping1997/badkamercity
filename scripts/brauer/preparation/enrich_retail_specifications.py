@@ -25,6 +25,7 @@ def normalized(label,value):
  if label=='Type handdouche':return {'staaf handdouche':'staafmodel','staafhanddouche':'staafmodel'}.get(v,v)
  if label=='Uitvoering uitloop':return {'vast':'vast','vaste uitloop':'vast','niet draaibaar':'vast','draaibare uitloop':'draaibaar'}.get(v,v)
  if label=='Vorm':return {'rechthoek':'rechthoekig'}.get(v,v)
+ if label=='Wandafwerking':return {'met achterplaat':'afdekplaat','met afdekplaat':'afdekplaat','met rozetten':'rozetten'}.get(v,v)
  if label=='Glas':return {'helder':'helder glas','brons':'brons glas','brons rook':'brons glas'}.get(v,v)
  if label=='Materiaal':return v.replace('roestvaststaal (rvs)','rvs').replace(' / ',' ').replace(',',' ')
  if label=='Deursysteem':return {'1 schuifdeur':'schuifdeur','1 draaideur':'draaideur'}.get(v,v)
@@ -33,6 +34,12 @@ def normalized(label,value):
 
 def applicable(p,f):
  typ=p['product_type'];label=f['label'];s=p['source']['Productomschrijving'].lower()
+ if label=='Hartafstand' and typ not in TAPS|{'Meubelgrepen','Spiegeldeurgrepen'}:return False,'Hartafstand niet zonder passende aansluit-/bevestigingscontext gebruiken'
+ if label=='Diameter plug' and typ!='Afvoerpluggen':return False,'Plugdiameter hoort bij een afzonderlijke afvoerplug'
+ if label=='Aansluitmaat sifon' and typ not in {'Afvoerpluggen','Sifons','Fonteinen','Meubelwastafels','Waskommen','Vrijhangende wastafels'}:return False,'Sifonaansluiting niet als wateraanvoer gebruiken'
+ if label in {'Plaats bediening','Wandafwerking','Vorm rozet','Aantal rozetten','Bediening aan/uit'} and typ not in TAPS|{'Hoekstopkranen'}:return False,'Kraanbediening/-afwerking hoort niet bij dit producttype'
+ if label in {'Vorm rozet','Aantal rozetten'} and normalized('Wandafwerking',p['specifications'].get('Wandafwerking',''))=='afdekplaat':return False,'Rozettenkenmerk niet als afdekplaatkenmerk gebruiken'
+ if label in {'Handdouche inbegrepen','Doucheslang inbegrepen','Glijstang inbegrepen','Hoofddouche inbegrepen','Uitloop inbegrepen'} and typ not in TAPS|{'Handdouches en houders'}:return False,'Meegeleverd onderdeel niet bewezen als onderdeel van deze productsoort'
  if label in {'Breedte','Diepte','Hoogte','Dikte'} and typ in {'Inbouwdouchesets','Inbouwbadkranen','Opbouwbadkranen','Opbouwdouchekranen','Douchepanelen','Losse inbouwthermostaten'}:
   return False,'Afmeting kan een setonderdeel betreffen; niet als totale setmaat gebruiken'
  if label in {'Hoogte','Breedte','Diepte','Dikte'} and typ=='Inbouwwastafelkranen':return False,'Rozet/afdekplaat/onderdeelmaat niet als totale kraanmaat gebruiken'
@@ -82,6 +89,8 @@ def collect(catalog,records,resolutions):
 
 def main():
  root=Path('prepared');catalog=json.loads((root/'catalog.json').read_text());evidence=json.loads((root/'specification-evidence.json').read_text());records=json.loads((root/'retail-observations.json').read_text());resolutions=json.loads((root/'retail-resolutions.json').read_text())
+ previous_path=root/'retail-enrichment-report.json';previous=json.loads(previous_path.read_text()) if previous_path.exists() else {}
+ previous_open={(x['sku'],x['field']):x for x in previous.get('differences',[]) if x['status']=='OPEN'}
  candidates,rejected,scope=collect(catalog,records,resolutions);changes=[];conflicts=[];unchanged=0
  for p in catalog:
   sku=p['sku'];flat=p['specifications'];held={ALIASES.get(x,x) for x in p.get('measurement_hold',{}).get('fields',[])}|set(p['source_conflicts']);review=[]
@@ -96,6 +105,8 @@ def main():
    # SKU-only pages cannot introduce a fact, but counterevidence must still be reviewed.
    comparison=set(variants)
    if base is not None:comparison.add(base_key)
+   historic=previous_open.get((sku,label),{}).get('existing')
+   if historic is not None:comparison.add(str(normalized(label,historic)))
    if not primary:
     if len(variants)>1 or base is not None and any(k!=base_key for k in variants):
      conflicts.append({'sku':sku,'field':label,'status':'SECONDARY_SOURCE_DIFFERENCE','existing':base,'candidates':values,'action':'Geen zelfstandige wijziging zonder EAN'})
@@ -123,7 +134,7 @@ def main():
     if label=='Materiaal' and base:
      b=normalized(label,base).replace('-kunststof','').replace(',',' ').split()
      if all(set(normalized(label,v['value']).replace('-kunststof','').replace(',',' ').split()).issubset(set(b)) or set(b).issubset(set(normalized(label,v['value']).replace('-kunststof','').replace(',',' ').split())) for v in primary):unchanged+=1;continue
-    item={'sku':sku,'field':label,'status':'OPEN','existing':base,'candidates':values,'action':'Betwiste externe waarde niet invullen; reeds externe waarde inhouden bij tegenspraak'}
+    item={'sku':sku,'field':label,'status':'OPEN','existing':base if base is not None else historic,'candidates':values,'action':'Betwiste externe waarde niet invullen; reeds externe waarde inhouden bij tegenspraak'}
     conflicts.append(item);review.append(label)
     if base_ev and base_ev['kind']!='supplier':
      flat.pop(label,None);evidence[sku]['facts'].pop(label,None);changes.append({'sku':sku,'field':label,'old':base,'new':'','action':'INGEHOUDEN_BIJ_BRONVERSCHIL','url':chosen['url'],'ref':chosen['ref']})
@@ -152,7 +163,18 @@ def main():
   r=report[p['product_type']];r['articles']+=1;r['facts']+=len(p['specifications']);r['missing'].update(p['specification_review']['missing_essential_fields']);r['complete_essential_articles']+=not p['specification_review']['missing_essential_fields']
  summary=json.loads((root/'specification-summary.json').read_text());summary['facts']=sum(len(p['specifications']) for p in catalog);summary['articles_needing_essential_details']=sum(bool(p['specification_review']['missing_essential_fields']) for p in catalog);summary['types']=[{'type':t,**r,'missing':dict(r['missing'])} for t,r in sorted(report.items())]
  selected={x['sku'] for x in json.loads((root/'specification-examples.json').read_text())};examples=[{'sku':p['sku'],'title':p['title'],'type':p['product_type'],'groups':p['customer_specifications'],'missing':p['specification_review']['missing_essential_fields']} for p in catalog if p['sku'] in selected]
- audit={'checked_on':'2026-11-07','source_pages':len(records),'unique_source_skus':len({r['sku'] for r in records}),'exact_sku_ean_pages':sum(r.get('ean')==next((p['ean'] for p in catalog if p['sku']==r['sku']),None) and r.get('ean') is not None for r in records),
+ added_this_run=sum(x['action']=='AANGEVULD' for x in changes)
+ withheld={(x['sku'],x['field'],x['action']):x for x in previous.get('changes',[]) if x['action']!='AANGEVULD'}
+ withheld.update({(x['sku'],x['field'],x['action']):x for x in changes if x['action']!='AANGEVULD'})
+ current_by={p['sku']:p for p in catalog}
+ withheld={k:x for k,x in withheld.items() if x['field'] not in current_by[x['sku']]['specifications']}
+ # Current evidence owns the cumulative ledger; repeat runs must not erase it.
+ cumulative=[]
+ for p in catalog:
+  for label,e in evidence[p['sku']]['facts'].items():
+   if e['kind']=='retailer_exact_sku_ean':cumulative.append({'sku':p['sku'],'field':label,'old':'','new':p['specifications'][label],'action':'AANGEVULD','url':e['url'],'ref':e['ref']})
+ changes=cumulative+list(withheld.values())
+ audit={'checked_on':'2026-11-07','fields_added_this_run':added_this_run,'source_pages':len(records),'unique_source_skus':len({r['sku'] for r in records}),'exact_sku_ean_pages':sum(r.get('ean')==next((p['ean'] for p in catalog if p['sku']==r['sku']),None) and r.get('ean') is not None for r in records),
  'articles_with_additions':len({x['sku'] for x in changes if x['action']=='AANGEVULD'}),'new_fields':sum(x['action']=='AANGEVULD' for x in changes),'withheld_previous_external_fields':sum(x['action']!='AANGEVULD' for x in changes),
  'open_field_conflicts':sum(x['status']=='OPEN' for x in conflicts),'open_conflict_articles':len({x['sku'] for x in conflicts if x['status']=='OPEN'}),'changes':changes,'differences':conflicts,'identity_notes':rejected,'scope_rejections':scope,'import_allowed':False,'all_catalogue_scraped':False,'direct_http':'403 in this environment; cause not established; no bypass attempted'}
  audit['live_public_pages']=sum(r.get('retrieval')=='public_live_fetch_html' for r in records)

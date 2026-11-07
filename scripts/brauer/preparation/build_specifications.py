@@ -31,11 +31,11 @@ ALIASES = {'Aantal laden':'Aantal lades','Afwerking wand':'Wandafwerking','Diept
 SKIP_AUDIT = {'Artikelnummer','Fabrikantnummer','EAN','Merk','Serie','Kleur','Kleurgroep','Kleur profiel/bevestiging',
  'Kleur kast','Kleur corpus','Glansgraad','Materiaal','Materiaal kraan','Materiaal onderkast','Vormgeving / stijlgroep',
  'Type hendel','Vorm uitloop','Breedtemaat','Dieptemaat','Belgaqua keurmerk','Materiaal afbouwdeel'}
-DIMENSIONS = {'Breedte','Diepte','Hoogte','Hoogte kraan','Hoogte uitloop','Lengte uitloop','Inbouwdiepte',
+DIMENSIONS = {'Breedte','Diepte','Hoogte','Hoogte kraan','Hoogte uitloop','Lengte uitloop','Inbouwdiepte','Hartafstand','Diameter plug',
  'Glasdikte','Lengte stabilisatiestang','Breedte zijwand','Verstelbaarheid breedte','Diameter','Lengte', 'Lengte douchearm','Diameter hoofddouche','Maat hoofddouche','Lengte doucheslang'}
 INCLUDED = {'Inbouwdeel inbegrepen','Afvoerplug inbegrepen','Sifon inbegrepen','Wastafel of blad inbegrepen',
  'Douchegarnituur inbegrepen','Handdoekhouder inbegrepen','Stabilisatiestang inbegrepen','Zijwand inbegrepen',
- 'Uitloop inbegrepen','Doucheslang inbegrepen','Handdouche inbegrepen','Wandaansluitbocht inbegrepen',
+ 'Uitloop inbegrepen','Doucheslang inbegrepen','Handdouche inbegrepen','Hoofddouche inbegrepen','Wandaansluitbocht inbegrepen',
  'Glijstang inbegrepen','Grepen inbegrepen','Bodemplaat inbegrepen','Ophanging inbegrepen','Toiletzitting inbegrepen','Aansluitslang inbegrepen','Afbouwdeel inbegrepen'}
 
 def essentials(typ):

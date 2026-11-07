@@ -20,6 +20,7 @@ class RetailTests(unittest.TestCase):
   self.assertEqual(normalized('Lengte','150 cm'),normalized('Lengte','1500 mm'))
   self.assertEqual(normalized('Uitvoering uitloop','Vaste uitloop'),normalized('Uitvoering uitloop','Vast'))
   self.assertEqual(normalized('Aantal grepen','Eengreeps'),normalized('Aantal grepen','1'))
+  self.assertEqual(normalized('Wandafwerking','Met achterplaat'),normalized('Wandafwerking','Afdekplaat'))
  def test_set_dimensions_and_outlier_hose_are_not_applied(self):
   p=by['5-CE-403'];self.assertNotIn('Diameter',p['specifications']);self.assertNotIn('Lengte doucheslang',p['specifications'])
   self.assertEqual(p['specifications']['Diameter handdouche'],'2,4 cm')
@@ -33,6 +34,7 @@ class RetailTests(unittest.TestCase):
   fields=parse(page)['fields'];self.assertNotIn(('Vorm','handdouche'),[(f['label'],f['value']) for f in fields]);self.assertNotIn(('Materiaal','deur'),[(f['label'],f['value']) for f in fields])
  def test_conflicting_old_retail_fields_are_withheld(self):
   self.assertNotIn('Hoogte kraan',by['5-CE-003']['specifications']);self.assertNotIn('Lengte uitloop',by['5-CE-004']['specifications'])
+  self.assertNotIn('Inbouwdiepte',by['5-CE-004-B4']['specifications']);self.assertNotIn('Lengte uitloop',by['5-CE-004-B4']['specifications'])
   # A new live refresh resolved the old 59/60 cached discrepancy: both current tables say 59.
   self.assertEqual(by['SK-IM60LCH']['specifications']['Breedte'],'59 cm');self.assertGreaterEqual(len(ev['SK-IM60LCH']['facts']['Breedte']['corroborating_urls']),2)
   self.assertEqual(by['SK-IM60LCH']['specifications']['Hoogte'],'70 cm')
@@ -54,6 +56,15 @@ class RetailTests(unittest.TestCase):
   self.assertTrue(any(v['value']=='Brons rook' for v in d['candidates']))
   self.assertTrue(any(v['value']=='Helder' and v['identity']=='SKU_EAN_MERK' for v in d['candidates']))
   self.assertEqual(d['resolution']['supplier_source_refs'],ev[sku]['facts']['Glas']['source_refs'])
+ def test_retail_ledger_matches_current_evidence(self):
+  actual={(p['sku'],label,p['specifications'][label]) for p in catalog for label,e in ev[p['sku']]['facts'].items() if e['kind']=='retailer_exact_sku_ean'}
+  ledger={(x['sku'],x['field'],x['new']) for x in report['changes'] if x['action']=='AANGEVULD'}
+  self.assertEqual(actual,ledger)
+ def test_extra_fields_keep_identity_units_and_component_scope(self):
+  self.assertFalse(applicable(by['5-CE-403'],{'label':'Diameter plug','value':'64 mm'})[0])
+  self.assertFalse(applicable(by['SK-IM60LCH'],{'label':'Plaats bediening','value':'Links'})[0])
+  page={'url':'https://www.badkamerxxl.nl/test','title':'Brauer test','ref':'fixture','retrieval':'public_live_fetch_html','lines':[{'line':i+1,'text':t} for i,t in enumerate(['Fabrikantnummer','5-NG-008','EAN','4260483795992','Merk','Brauer','Diameter plug','64 mm','Aansluitmaat sifon','1.1/4"','Met handdouche','Bijlagen'])]}
+  fields=parse(page)['fields'];self.assertIn(('Diameter plug','64 mm'),[(x['label'],x['value']) for x in fields]);self.assertIn(('Aansluitmaat sifon','1 1/4"'),[(x['label'],x['value']) for x in fields]);self.assertNotIn('Handdouche inbegrepen',[x['label'] for x in fields])
  def test_gate_blocks_review_flag_only_changes(self):
   gate=json.loads(Path('prepared/release-gate.json').read_text());self.assertFalse(gate['retail_specifications_reviewed'])
   for f in REQUIRED:gate[f]=True
