@@ -1,5 +1,26 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-14 - visuele inbouwconfiguratie, hoogtemodellen en kleine maatkeuzes · 7 november 2026
+
+Eigenaar merkt terecht op dat twee Galactic-breedtes geen dropdown nodig hebben; vraagt passende laag/verhoogd/hoog-groeperingen en echte eerste artikelfoto's voor inbouw-uitloop, rozetten/afdekplaat en bediening links/rechts. Onderzoek expliciet op BadkamerXXL gevraagd.
+
+**Uitgevoerd, uitsluitend offline review:**
+- Maatgroepen met twee of drie waarden tonen knoppen; grotere groepen blijven native dropdowns, één waarde wordt niet als keuze herhaald. Galactic heeft twee breedteknoppen. Zes kleuren plus Bekijk meer kleuren blijft.
+- Opbouwgroep toegevoegd met 18 exact gecontroleerde Edition-basishendelartikelen: zes kleuren × laag / verhoogd / hoog met gebogen uitloop. Dit zijn passende bronuitvoeringen, geen universele samenvoeging van alle 001/002/003-hendelmodellen. Modelnamen en werkelijke artikelhoogte staan op de fotokeuzes en in de specificaties.
+- Belangrijk: Verhoogd is hier 32,8 cm; de fabrikanttekening 5-CE-002_T.pdf is gedownload, gerenderd en visueel gelezen (328 mm). Hoog met gebogen uitloop staat bij deze zes dealerartikelen op 29,2 cm. Daarom niet hernoemd naar Middel of blind op benaming gesorteerd. Laag heeft per dealer-SKU 15,8 of 16,5 cm; waarden blijven artikelgebonden en moeten vóór import met het complete officiële documentpakket worden vergeleken. Geen maat van één kleur naar andere kleuren gekopieerd.
+- Inbouwproef verdiept naar 40 Chrome Edition gladde uitvoeringen: vijf hendelvormen × twee uitlopen × twee wandafwerkingen × twee bedieningskanten. Alle 40 exacte fabrikant-SKU/EAN's en dealerkenmerken gecontroleerd. Binnen deze afgebakende proef: model A1–E1 / 004 = bediening rechts; A2–E2 / 083 = links. E1/E2 is Type 2, B1/B2 Type 5 etc. Tien codeboekregels opgeslagen; geen onbewezen universele decoder voor andere series/merken/kleuren.
+- Eerste productgalerij-afbeelding van alle 58 artikelen afzonderlijk uit de artikelpagina vastgesteld. De keuzes tonen het eerste beeld van het **prospectieve exacte artikel bij behoud van de overige opties**, en de grote foto toont het gekozen artikel. Originele 480px-beelden bewaard voor analyse; het gesprek bevat ongewijzigde 200px-CDN-rendities van hetzelfde eerste bronbestand. Geen AI-beelden, omkleuring, spiegeling of generieke rozetten-/links-rechtsillustratie als artikelbeeld.
+- Alle afbeeldingsbestanden byte/hash-gecontroleerd; vier representatieve artikelbeelden visueel ingezien (004 rechts, 083 links, rechte uitloop/afdekplaat, verhoogde opbouw). Bronpagina 5-s-001 gebruikt lowercase fabrikantnummer; alleen lettercase genormaliseerd naar het oorspronkelijke bron-SKU 5-S-001, EAN exact bevestigd.
+- De foto-inbouwproef is expliciet chroom; Carving/Stripe en overige kleuren zijn niet als al gefotografeerd vrijgegeven. Het eerdere A1-kleurvoorbeeld staat nog in de vorige gesprekpreview, maar is in de nieuwe preview vervangen door de gerichte fotovergelijking.
+
+**Bewijs/omvang:** 14 voorbeeldfamilies, 876 voorbeeldrecords / 864 unieke bron-SKU's (12 bewuste overlaprecords door de nieuwe basishoogtevergelijking naast bestaande losse kraanproeven). Werkelijke ingebedde JavaScript in VM/DOM-stub: alle 876 toestanden, 13.488 geldige transities, 1.489 ontbrekende transities geweigerd, 60 meubeltransities correct onbeslist. Alle artikelen bereikbaar. Foto per kandidaat-SKU en gekozen SKU, 58 fotobytes, 40 links/rechts-koppelingen, per-artikelhoogtes, prijs/EAN, kleine maatknoppen en zes-kleurenlimiet PASS. Specificatieparen gedeeld opgeslagen en voor weergave exact hersteld; reconstructie getest. Fragment 729.943 bytes. Browserlayout/echte native bediening/live PDP/cart NOT_TESTED (geen browserexecutable).
+
+[Visuele configuratie: bron- en fotokoppelingen](brauer/2026-11-06/VISUELE_KRAANCONFIGURATIE.json) bevat de 58 publieke artikel-/fotobronverwijzingen, controles, codeboek en maatverschillen. Geen productprijzen, volledige private bronlijsten of derdenbeeldbytes naar publieke Git. Productbasis-XLSX versie 1 niet vervangen; verrijking blijft aanvullende reviewdata. Overige eerdere douche-/glas-/meubelvoorbeelden behouden.
+
+MAIN read-only bevestigd als 196246372618 — BadkamerCity - Groene voorraadmelding. Geen Shopify-write, import (ook geen DRAFT), media-import, voorraadwijziging of themapublicatie. Alle import wacht op het volledige aangekondigde leveranciersbeeld-/PDF-pakket en inventarisatie; deze dealerfoto's tellen niet als volledige ontvangst of productiebeeldvrijgave. Scratch geen Git-werkboom; geen Windows-lokale statusclaim. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** eigenaar beoordeelt de 40 foto-opstellingen en de drie opbouwuitvoeringen met hun echte hoogtes. Daarna alleen bronbevestigde regels/foto's per volgende familie/kleur uitbreiden en de gemelde lage-kraanmaatverschillen met de officiële documenten sluiten.
+
 ## BRAUER-13 - dropdownmaten, zes kleurstalen en uitgebreide offline steekproef · 7 november 2026
 
 Eigenaar wijzigt de eerdere kleurdropdownwens: toon zes kleuren op de productpagina en alleen bij meer dan zes een knop Bekijk meer kleuren. Afmetingen moeten een gewone nette dropdown krijgen. Nieuwe beoordeling gevraagd van andere glaswanden en verschillende wastafel-/badkranen.
