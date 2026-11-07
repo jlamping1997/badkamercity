@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## VERLAVIO-MENU-02 — gegevens toegepast, concept gecontroleerd · 7 november 2026
+
+Eigenaar heeft uitvoering van de geauditeerde keuzeverbeteringen goedgekeurd. **481 bestaande custom.fabriecio_choices-velden live aangepast en exact teruggelezen**: 494 fotoreferenties, 406 eigen-kleurprioriteiten voor compatibiliteit met de huidige renderer, 30 bewezen vervallen keuzes en 15 numerieke lijsten. Alle 4.761 records en 4.096 geldige overgangen behouden; geen prijzen, voorraad, verkoopbeleid of productstatus geschreven. De eerder goedgekeurde productfoto’s blijven gekoppeld; het losse overloopartikel ACS_6001 blijft overgeslagen.
+
+**Nieuw concept: 196341825802 — BadkamerCity - Verlavio keuzemenus 7 nov (UNPUBLISHED).** Exacte kleur-plus-configuratiefoto’s, zes kleuren direct zichtbaar, duidelijke Nederlandse labels en oplopende maten. 19/19 echte JS-tests, 5/5 Shopify-validatorchecks en drie werkelijke browserroutes geslaagd. Eigen server-rendered component op 320/390 CSS-pixels: alle zes foto’s zichtbaar/geladen, geen horizontale overloop. Geen fysieke-telefoon- of checkoutclaim.
+
+De native kopie was vóór bewerking 1.385/1.385 bestanden gelijk aan MAIN **196246372618 — BadkamerCity - Groene voorraadmelding**. Eindcontrole: MAIN nog steeds dezelfde rol en alle oorspronkelijke checksums ongewijzigd; concept 1.387 files, exact vijf productieverschillen plus één geneutraliseerd controletemplate. De connector blokkeerde verwijderen van alleen die QA-file met de algemene theme-deletionregel; daarom veilig overschreven met alleen standaard productsectie, zonder QA-interface, iframes of aparte layout. Geen template-toewijzing uitgevoerd. Config/settings_data.json ongewijzigd.
+
+**Volgende Verlavio-stap:** eigenaar bekijkt en publiceert uitsluitend dit genoemde menuconcept in Shopify. De koppeling staat theme-publicatie/MAIN-filewrites niet toe. Vlak vóór publicatie opnieuw MAIN/einddiff controleren bij eventuele tussentijdse andere theme-wijzigingen; daarna rol/hashes en drie productroutes teruglezen. Geen publicatie uitgevoerd. De bestaande tijdelijke instelling die overal Op voorraad toont verklaart de tegenstelling met een uitverkochte koopknop bij BC_2008/BC_2009; leveranciersstatus N bevestigd. Eerdere eigenaarafspraak over die tekst niet stil gewijzigd; adviseer de voorraadtekst weer de werkelijke beschikbaarheid te laten volgen, zonder voorraad te verzinnen of nabestellen aan te zetten.
+
+[Dossier en herstelgrenzen](fabriecio/2026-11-07/menu-improvements/README.md), [eindcontrole](fabriecio/2026-11-07/menu-improvements/final-verification.json). Code/tests op bestaande branch fix/product-cards-2026-10-14; main krijgt alleen documentatie. Volledig herstelpakket privé opgeslagen; geen ruwe catalogus/feed, herstelwaarden of Admin-receipts in publieke Git. Bestaande lokale header/main-product/Lagoo-werkbestanden blijven behouden. Dit checkpoint wijzigt de aparte BRAUER/Cottoceramix-holds en vervolgafspraken hieronder niet.
+
 ## BRAUER-23 - leveranciersbestanden en bestaande tabellen verder benut · 7 november 2026
 
 Eigenaar vraagt toe te voegen wat nog kan; drie oorspronkelijke kranen-, glas- en meubelbestanden zijn al aanwezig en blijven de basis. Alle 13.161 artikelen gescand op nog onbenutte letterlijke gegevens. **4.734 extra specificaties bij 4.380 artikelen:** 4.300 uit de leveranciersgegevens, 434 uit al eerder gecontroleerde technische tabellen. Geen nieuwe websitecrawl of achtergrondtaak voor deze batch.

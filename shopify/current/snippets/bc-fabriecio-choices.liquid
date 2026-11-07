@@ -12,6 +12,18 @@ Renders verified Fabriecio product destinations through the shared product switc
   endif
   assign choice_data = product.metafields.custom.fabriecio_choices.value
   assign choice_group = choice_data.groups | first
+  assign choice_menu_keys = choice_group.menus | map: 'key'
+  assign choice_product_type = product.type | strip | downcase
+  assign choice_context = ''
+  if choice_product_type == 'douchesystemen'
+    if choice_menu_keys contains 'vorm' and choice_menu_keys contains 'uitvoering' and choice_menu_keys contains 'maat'
+      assign choice_context = 'shower_set'
+    endif
+  elsif choice_product_type == 'regendouchesets'
+    assign choice_context = 'shower_set'
+  elsif choice_product_type == 'hoofddouches'
+    assign choice_context = 'shower_head'
+  endif
   assign includes_current = false
   assign valid_destinations = true
   assign distinct_handles = choice_group.products | map: 'handle' | uniq
@@ -34,10 +46,37 @@ Renders verified Fabriecio product destinations through the shared product switc
   endfor
 -%}
 {%- if supported_vendor and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 and choice_group.menus.size > 0 -%}
+  {%- capture choice_labels -%}
+    {
+      "color": {{ 'bc_verlavio_choices.color' | t | json }},
+      "set_shape": {{ 'bc_verlavio_choices.set_shape' | t | json }},
+      "head_shape": {{ 'bc_verlavio_choices.head_shape' | t | json }},
+      "head_mount": {{ 'bc_verlavio_choices.head_mount' | t | json }},
+      "head_size": {{ 'bc_verlavio_choices.head_size' | t | json }},
+      "with_overflow": {{ 'bc_verlavio_choices.with_overflow' | t | json }},
+      "without_overflow": {{ 'bc_verlavio_choices.without_overflow' | t | json }},
+      "wall": {{ 'bc_verlavio_choices.wall' | t | json }},
+      "ceiling": {{ 'bc_verlavio_choices.ceiling' | t | json }},
+      "round": {{ 'bc_verlavio_choices.round' | t | json }},
+      "square": {{ 'bc_verlavio_choices.square' | t | json }},
+      "colors": {
+        "Chroom": {{ 'bc_verlavio_choices.chrome' | t | json }},
+        "Mat Zwart": {{ 'bc_verlavio_choices.matte_black' | t | json }},
+        "Brushed Gold": {{ 'bc_verlavio_choices.brushed_gold' | t | json }},
+        "Gun Metal": {{ 'bc_verlavio_choices.gunmetal' | t | json }},
+        "RVS": {{ 'bc_verlavio_choices.stainless_steel' | t | json }},
+        "Brushed Copper": {{ 'bc_verlavio_choices.brushed_copper' | t | json }}
+      }
+    }
+  {%- endcapture -%}
   {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
   {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
+  {{ 'bc-verlavio-choices.css' | asset_url | stylesheet_tag }}
   <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
     data-bc-compact-colors="true"
+    data-bc-verlavio-choices="true"
+    data-bc-verlavio-context="{{ choice_context | escape }}"
+    data-bc-verlavio-labels="{{ choice_labels | strip | escape }}"
     data-bc-preserve-position="true"
     data-switch-group="{{ choice_group.id | escape }}"
     data-product-handle="{{ product.handle | escape }}"
@@ -60,3 +99,4 @@ Renders verified Fabriecio product destinations through the shared product switc
   </div>
   <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
+

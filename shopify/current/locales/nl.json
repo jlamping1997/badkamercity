@@ -721,6 +721,7 @@
     "read_advice": "Lees meer informatie en advies over {{ category }}"
   },
   "bc_delivery": {
+    "temporary_in_stock": "Op voorraad",
     "information": "Levertijd en bezorginformatie",
     "supplier_in_stock": "Op voorraad bij leverancier",
     "verlavio_in_stock": "Op voorraad",
@@ -1525,5 +1526,26 @@
     "pieces_many": "{{ count }} stuks",
     "decrease": "Aantal verlagen",
     "increase": "Aantal verhogen"
+  },
+  "bc_verlavio_choices": {
+    "color": "Kleur",
+    "set_shape": "Vorm doucheset",
+    "head_shape": "Vorm hoofddouche",
+    "head_mount": "Bevestiging hoofddouche",
+    "head_size": "Formaat hoofddouche",
+    "with_overflow": "Met overloop",
+    "without_overflow": "Zonder overloop",
+    "wall": "Wand",
+    "ceiling": "Plafond",
+    "round": "Rond",
+    "square": "Vierkant",
+    "chrome": "Chroom",
+    "matte_black": "Mat zwart",
+    "brushed_gold": "Geborsteld goud",
+    "gunmetal": "Gunmetal",
+    "stainless_steel": "RVS",
+    "brushed_copper": "Geborsteld koper"
   }
 }
+
+

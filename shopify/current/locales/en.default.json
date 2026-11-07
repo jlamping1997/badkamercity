@@ -721,6 +721,7 @@
     "read_advice": "Read more information and advice about {{ category }}"
   },
   "bc_delivery": {
+    "temporary_in_stock": "In stock",
     "information": "Lead time and delivery information",
     "supplier_in_stock": "In stock at supplier",
     "verlavio_in_stock": "In stock",
@@ -1525,5 +1526,26 @@
     "pieces_many": "{{ count }} pieces",
     "decrease": "Decrease quantity",
     "increase": "Increase quantity"
+  },
+  "bc_verlavio_choices": {
+    "color": "Color",
+    "set_shape": "Shower set shape",
+    "head_shape": "Shower head shape",
+    "head_mount": "Shower head mounting",
+    "head_size": "Shower head size",
+    "with_overflow": "With overflow",
+    "without_overflow": "Without overflow",
+    "wall": "Wall",
+    "ceiling": "Ceiling",
+    "round": "Round",
+    "square": "Square",
+    "chrome": "Chrome",
+    "matte_black": "Matte black",
+    "brushed_gold": "Brushed gold",
+    "gunmetal": "Gunmetal",
+    "stainless_steel": "Stainless steel",
+    "brushed_copper": "Brushed copper"
   }
 }
+
+

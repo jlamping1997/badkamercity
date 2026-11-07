@@ -276,6 +276,31 @@
     return values.length > BUTTON_THRESHOLD ? 'dropdown' : 'buttons';
   }
 
+  function isMeasurementMenu(menu) {
+    return /^(maat|lengte|breedte|hoogte|diameter|afmeting)$/i.test(normalize(menu.key));
+  }
+
+  function compareMeasurements(a, b) {
+    const numbers = (value) => (normalize(value).match(/\d+(?:[.,]\d+)?/g) || [])
+      .map((part) => Number(part.replace(',', '.')));
+    const left = numbers(a);
+    const right = numbers(b);
+    if (left.length && right.length) {
+      for (let index = 0; index < Math.min(left.length, right.length); index += 1) {
+        if (left[index] !== right[index]) return left[index] - right[index];
+      }
+      if (left.length !== right.length) return left.length - right.length;
+    }
+    return normalize(a).localeCompare(normalize(b), undefined, { numeric: true, sensitivity: 'base' });
+  }
+
+  function formatMeasurement(value) {
+    return normalize(value)
+      .replace(/\s*[x×]\s*(?=\d)/gi, ' × ')
+      .replace(/Ø\s*(?=\d)/g, 'Ø ')
+      .replace(/(\d)\s*(cm|mm|m)\b/gi, (_, number, unit) => `${number} ${unit.toLowerCase()}`);
+  }
+
   function createCheck() {
     const check = document.createElement('span');
     check.className = 'bc-buybox__option-check';
@@ -352,6 +377,15 @@
       }
 
       this.state = this.buildInitialState();
+      this.isVerlavio = this.root.dataset.bcVerlavioChoices === 'true';
+      this.verlavioContext = normalize(this.root.dataset.bcVerlavioContext);
+      this.choiceLabels = {};
+      if (this.isVerlavio) {
+        try {
+          const labels = JSON.parse(this.root.dataset.bcVerlavioLabels || '{}');
+          if (labels && typeof labels === 'object' && !Array.isArray(labels)) this.choiceLabels = labels;
+        } catch (_) {}
+      }
       this.compactChoices = this.root.dataset.hotbathMobileA === 'true' || this.root.dataset.bcCompactColors === 'true';
       try {
         this.swatchUrls = JSON.parse(this.root.dataset.hotbathSwatchUrls || '{}');
@@ -360,7 +394,15 @@
         this.swatchUrls = {};
       }
       if (this.root.dataset.bcCompactColors === 'true') {
-        this.swatchUrls = Object.fromEntries(this.products.map(product => [getProductOption(product, 'kleur'), product.swatch_url || '']));
+        const colorMenu = this.menus.find(isColorMenu);
+        if (this.isVerlavio && colorMenu) {
+          this.swatchUrls = Object.fromEntries(this.getMenuValues(colorMenu).map((value) => {
+            const destination = findExactMatch(this.products, this.menus, { ...this.state, [colorMenu.key]: value });
+            return [value, destination?.swatch_url || ''];
+          }));
+        } else {
+          this.swatchUrls = Object.fromEntries(this.products.map(product => [getProductOption(product, 'kleur'), product.swatch_url || '']));
+        }
       }
       this.expandedColors = this.compactChoices
         ? restoreExpandedColors(this.groupId, this.menus) : new Set();
@@ -420,6 +462,55 @@
       }, {});
     }
 
+    getMenuValues(menu) {
+      const values = getValuesForMenu.call(menu, this.products, menu.key);
+      return this.isVerlavio && isMeasurementMenu(menu) ? [...values].sort(compareMeasurements) : values;
+    }
+
+    getMenuLabel(menu) {
+      const fallback = normalize(menu.label) || menu.key;
+      if (!this.isVerlavio) return fallback;
+      if (isColorMenu(menu)) return normalize(this.choiceLabels.color) || fallback;
+      if (this.verlavioContext === 'shower_set') {
+        const keys = { vorm: 'set_shape', uitvoering: 'head_mount', maat: 'head_size' };
+        return normalize(this.choiceLabels[keys[menu.key]]) || fallback;
+      }
+      if (this.verlavioContext === 'shower_head') {
+        const keys = { vorm: 'head_shape', maat: 'head_size' };
+        return normalize(this.choiceLabels[keys[menu.key]]) || fallback;
+      }
+      return fallback;
+    }
+
+    getValueLabel(menu, value) {
+      const raw = normalize(value);
+      if (!this.isVerlavio) return raw;
+      if (isColorMenu(menu)) return normalize(this.choiceLabels.colors?.[raw]) || raw;
+      if (menu.key === 'overloop') {
+        const key = { Ja: 'with_overflow', Nee: 'without_overflow' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      if (menu.key === 'uitvoering' && this.verlavioContext === 'shower_set') {
+        const key = { Muur: 'wall', Plafond: 'ceiling' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      if (menu.key === 'vorm') {
+        const key = { Rond: 'round', Vierkant: 'square' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      return isMeasurementMenu(menu) ? formatMeasurement(raw) : raw;
+    }
+
+    getDisplayMenus() {
+      const menus = this.compactChoices
+        ? [...this.menus].sort((a, b) => Number(isColorMenu(b)) - Number(isColorMenu(a)))
+        : this.menus;
+      if (!this.isVerlavio || !['shower_set', 'shower_head'].includes(this.verlavioContext)) return menus;
+      const order = this.verlavioContext === 'shower_set' ? ['vorm', 'uitvoering', 'maat'] : ['vorm', 'maat'];
+      const rank = (menu) => isColorMenu(menu) ? -1 : order.includes(menu.key) ? order.indexOf(menu.key) : order.length;
+      return [...menus].sort((a, b) => rank(a) - rank(b));
+    }
+
     hide() {
       this.positionRestore?.cancel();
       this.root.innerHTML = '';
@@ -431,9 +522,9 @@
       const compact = this.compactChoices === true;
       this.root.classList.toggle('bc-hotbath-switcher--mobile', compact);
 
-      const menus = compact ? [...this.menus].sort((a, b) => Number(isColorMenu(b)) - Number(isColorMenu(a))) : this.menus;
+      const menus = this.getDisplayMenus();
       menus.forEach((menu) => {
-        const values = getValuesForMenu.call(menu, this.products, menu.key);
+        const values = this.getMenuValues(menu);
         if (!values.length) return;
         if (values.length === 1 && menu.hide_if_single_value === true) return;
 
@@ -443,12 +534,12 @@
 
         const label = document.createElement('p');
         label.className = 'form__label bc-buybox__option-label';
-        label.textContent = normalize(menu.label) || menu.key;
+        label.textContent = this.getMenuLabel(menu);
         if (compact && isColorMenu(menu)) {
           const selected = document.createElement('strong');
           selected.className = 'bc-hotbath-selected-color';
           selected.dataset.hotbathSelectedColor = menu.key;
-          selected.textContent = normalize(this.state[menu.key]);
+          selected.textContent = this.getValueLabel(menu, this.state[menu.key]);
           label.append(document.createTextNode(': '), selected);
         }
         groupElement.append(label);
@@ -482,11 +573,12 @@
       list.className = 'bc-hotbath-swatches';
       list.id = `bc-hotbath-colors-${this.root.dataset.sectionId || this.productHandle}-${menu.key}`;
       list.setAttribute('role', 'group');
-      list.setAttribute('aria-label', normalize(menu.label) || menu.key);
+      list.setAttribute('aria-label', this.getMenuLabel(menu));
       const selectedValue = normalize(this.state[menu.key]);
-      const visibleValues = new Set(values.slice(0, 4));
+      const visibleLimit = this.isVerlavio ? values.length : 4;
+      const visibleValues = new Set(values.slice(0, visibleLimit));
       if (!visibleValues.has(selectedValue) && values.includes(selectedValue)) {
-        visibleValues.delete(values[3]);
+        visibleValues.delete(values[visibleLimit - 1]);
         visibleValues.add(selectedValue);
       }
       const buttons = values.map((value) => {
@@ -495,7 +587,7 @@
         button.className = 'bc-hotbath-swatch';
         button.dataset.switchField = menu.key;
         button.dataset.switchValue = value;
-        button.setAttribute('aria-label', value);
+        button.setAttribute('aria-label', this.getValueLabel(menu, value));
         button.setAttribute('aria-pressed', 'false');
         const chip = document.createElement('span');
         chip.className = 'bc-hotbath-swatch__chip';
@@ -508,7 +600,7 @@
           value.split(/\s+/).map((word) => word.charAt(0)).join('').slice(0, 3)).toUpperCase();
         const colorName = document.createElement('span');
         colorName.className = 'bc-hotbath-swatch__label';
-        colorName.textContent = value;
+        colorName.textContent = this.getValueLabel(menu, value);
         const url = swatchUrl(value, this.swatchUrls);
         if (url) {
           const img = document.createElement('img');
@@ -553,7 +645,7 @@
             .replace('__COUNT__', String(values.length));
         badge.hidden = expanded;
       };
-      if (values.length > 4) {
+      if (values.length > visibleLimit) {
         toggle = document.createElement('button');
         toggle.type = 'button';
         toggle.className = 'bc-hotbath-colors__toggle';
@@ -581,7 +673,7 @@
       const buttonList = document.createElement('div');
       buttonList.className = 'bc-buybox__config-buttons';
       buttonList.setAttribute('role', 'group');
-      buttonList.setAttribute('aria-label', normalize(menu.label) || menu.key);
+      buttonList.setAttribute('aria-label', this.getMenuLabel(menu));
 
       values.forEach((value) => {
         const button = document.createElement('button');
@@ -590,7 +682,7 @@
         button.dataset.switchField = menu.key;
         button.dataset.switchValue = value;
         button.setAttribute('aria-pressed', 'false');
-        button.append(createCheck(), createText(value));
+        button.append(createCheck(), createText(this.getValueLabel(menu, value)));
         button.addEventListener('click', () => this.updateSelection(menu.key, value));
         buttonList.append(button);
       });
@@ -606,12 +698,12 @@
       wrapper.dataset.switchField = menu.key;
       select.className = 'bc-buybox__config-select';
       select.dataset.switchField = menu.key;
-      select.setAttribute('aria-label', normalize(menu.label) || menu.key);
+      select.setAttribute('aria-label', this.getMenuLabel(menu));
 
       values.forEach((value) => {
         const option = document.createElement('option');
         option.value = value;
-        option.textContent = value;
+        option.textContent = this.getValueLabel(menu, value);
         select.append(option);
       });
 
@@ -622,7 +714,8 @@
 
     syncControls() {
       this.root.querySelectorAll('[data-hotbath-selected-color]').forEach((label) => {
-        label.textContent = normalize(this.state[label.dataset.hotbathSelectedColor]);
+        const menu = this.menus.find((item) => item.key === label.dataset.hotbathSelectedColor);
+        label.textContent = menu ? this.getValueLabel(menu, this.state[menu.key]) : normalize(this.state[label.dataset.hotbathSelectedColor]);
       });
       this.root.querySelectorAll('button[data-switch-field][data-switch-value]').forEach((button) => {
         const field = button.dataset.switchField;
@@ -696,6 +789,15 @@
         return;
       }
 
+      if (this.isVerlavio) {
+        const currentUrl = new URL(window.location.href);
+        if (currentUrl.searchParams.has('preview_theme_id')) {
+          ['preview_theme_id', '_fd', 'pb', '_ab', '_sc'].forEach((key) => {
+            if (currentUrl.searchParams.has(key)) destination.searchParams.set(key, currentUrl.searchParams.get(key));
+          });
+        }
+      }
+
       const positionToken = switcherPosition.remember(this.root, destination.href, this.group);
       const expandedToken = this.compactChoices
         ? rememberExpandedColors(this.groupId, this.expandedColors, destination.href) : null;
@@ -763,6 +865,7 @@
     init();
   }
 })();
+
 
 
 
