@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-24 — brononderzoek loopt; gecontroleerd tussenresultaat · 7 november 2026
+
+Actieve offline taak: resterende 4.968 openbare bronkandidaten exact op merk/SKU/EAN toetsen. Gecontroleerde tussenstand na 2.110 nieuwe pagina’s: **11.809 extra velden**, totaal155.887feiten. Nog9.100artikelen met ontbrekende gekozen kerngegevens,989minder dan BRAUER-23. Dataset en nativeXLSX gecontroleerd op dezelfde stand:13.161artikelregels,20.528cumulatieve aanvullingen,178vragen exact gelijk;12EAN-voorbeelden strings, nul native foutcellen, vijf bladen gerenderd/gecontroleerd.32tests PASS.
+
+Nog28open retailveldverschillen en108verdachte slanglengtes apart. Oorspronkelijke42dataholds/163toekomstige artikelen en alle prijzen/titels/families/opties/notities/media behouden. Primaire bronraadpleging loopt verder; extra gelezen technische tabellen staan privé klaar voor verwerking. Dit is een lopend checkpoint, geen claim dat de volledige werklijst klaar is. Bronraadpleging houdt de gepubliceerde leeslimiet aan; geen tariefwijziging, betaalde uitbreiding of omzeiling.
+
+Geen Shopify-writes, DRAFT-import, media-upload of publicatie; officiële complete afbeeldingen/PDF’s nog afwachten. Retail-extractie bewaart nu ook de aangevraagde URL, zodat doorverwijzingen niet als onbehandelde kandidaten blijven staan. Geen Windows/Excel-app- of live winkeltest geclaimd.
+
+**Eén volgende handeling:** de resterende primaire bronkandidaten en tijdelijke leesfouten afwerken, daarna definitieve dataset/vragen/XLSX/privépakket controleren en dit lopende checkpoint afsluiten. Andere Brauer-schrijvers wachten tot afronding/overdracht.
+
+---
+
 ## VERLAVIO-MENU-02 — gegevens toegepast, concept gecontroleerd · 7 november 2026
 
 Eigenaar heeft uitvoering van de geauditeerde keuzeverbeteringen goedgekeurd. **481 bestaande custom.fabriecio_choices-velden live aangepast en exact teruggelezen**: 494 fotoreferenties, 406 eigen-kleurprioriteiten voor compatibiliteit met de huidige renderer, 30 bewezen vervallen keuzes en 15 numerieke lijsten. Alle 4.761 records en 4.096 geldige overgangen behouden; geen prijzen, voorraad, verkoopbeleid of productstatus geschreven. De eerder goedgekeurde productfoto’s blijven gekoppeld; het losse overloopartikel ACS_6001 blijft overgeslagen.
