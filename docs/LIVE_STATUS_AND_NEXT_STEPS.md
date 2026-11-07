@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-24 — OVERGEDRAGEN, geen actieve schrijver · 8 november 2026
+
+Uitvoering op verzoek van de eigenaar gestopt voor een nieuwe chat. Geen achtergrondleescel of schrijver meer actief. **Catalogus163.461feiten /19.383extra velden sinds BRAUER-23;4748nieuwe technische bronrecords bewaard.** Nog220bronaanvragen zonder bewaarde tabel, waaronder laatste18niet afgerond. Nog geen herhaalronde. Excel/open-work zijn oudere gecontroleerde stage2; eerst bronmerge en eindcontroles. Geen Shopify-writes/import/media-upload/publicatie. Officiële complete media nog afwachten.
+
+**Eén volgende taak:** herstel het bijgewerkte privévoorbereidingspakket en volg [de volledige overdracht](brauer/2026-11-08/HANDOFF_BRAUER24.md):220resterende kandidaten, getypeerde bronmerge, verrijking, vragen, tests en definitieve Excel/nativecontrole. Lees prepared/HANDOFF_BRAUER24.json; niet opnieuw4748pagina’s raadplegen en retail_extract.py niet op een lege research-map uitvoeren.
+
+---
+
 ## BRAUER-24 — brononderzoek loopt; gecontroleerd tussenresultaat · 7 november 2026
 
 Actieve offline taak: resterende 4.968 openbare bronkandidaten exact op merk/SKU/EAN toetsen. Gecontroleerde tussenstand na 2.110 nieuwe pagina’s: **11.809 extra velden**, totaal155.887feiten. Nog9.100artikelen met ontbrekende gekozen kerngegevens,989minder dan BRAUER-23. Dataset en nativeXLSX gecontroleerd op dezelfde stand:13.161artikelregels,20.528cumulatieve aanvullingen,178vragen exact gelijk;12EAN-voorbeelden strings, nul native foutcellen, vijf bladen gerenderd/gecontroleerd.32tests PASS.
