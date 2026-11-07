@@ -1,5 +1,26 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-16 - kleurbeelden overal gekoppeld en UX-goedkeuring vastgelegd · 7 november 2026
+
+Eigenaar vult aan dat dezelfde eerste-productfoto-regel ook overal voor kleurkeuzes geldt en keurt met die aanvulling de huidige opzet goed. Vraagt welke afwijkende keuzemenu's nog controle verdienen.
+
+**Uitgevoerd:** alle bestaande kleur-/decorstalen in de gesprekproef gebruiken nu het eerste beeld van het exacte kandidaatkleurartikel, met de andere keuzes behouden. Dezelfde product-ID/SKU-resolver als voor overige fotokeuzes; geen aparte kleurfoto-URL's of representatief ander model. Zes zichtbaar / Bekijk meer kleuren / actieve kleur zichtbaar bij inklappen behouden. Zonder beeld blijft een benoemde voorbeeldstaal met Productfoto volgt; ontbrekende combinaties blijven uitgeschakeld en heten Niet combineerbaar. De losse greepbeelden zijn ongewijzigd. De preview opent op de basishoogtegroep zodat de zes daadwerkelijk gekoppelde kleurartikelfoto's direct zichtbaar zijn.
+
+De huidige opzet is hiermee **UX_GOEDGEKEURD**. Dit is geen verklaring dat alle brondata, alle 13.161 artikelen, alle menu's of de nog niet gekoppelde Shopify-media compleet/gepubliceerd zijn. Bestaande importstop tot volledige leveranciersmedia-/PDF-ontvangst blijft.
+
+**Controle:** werkelijke preview-JS opnieuw doorlopen voor alle 876 voorbeeldrecords / 864 unieke SKU's; 13.488 geldige / 1.489 geweigerde transities en 60 bewust onbesliste meubeltransities. Iedere kleurtegel op kandidaat-SKU/beeldbron gecontroleerd; eerste-beeld-update op een voordien fotoloos glasartikel werkt tegelijk in de hoofdfoto én kleurtegel. Zes-stalenlimiet en grepen intact. Browserlayout/echte bediening NOT_TESTED. Fragment 741.784 bytes; nog 58 tijdelijke referentiebeelden, geen extra leveranciersbeelden geclaimd.
+
+[Goedkeuring en resterende controles](brauer/2026-11-06/UX_GOEDKEURING_EN_RESTERENDE_CONTROLES.md) onderbouwd met de oorspronkelijke drie leverancierslijsten. Grootste nog niet beoordeelde gedragingen:
+1. Douchecabines en andere nisdeuren: draai/schuif/draai-schuif, breedte × diepte, deur aan wand/glas en correcte omgang met omkeerbaarheid.
+2. Andere onderkastseries, wastafels en topbladen: grepen, kraangaten, bakpositie, afvoeren en bewezen onderlinge compatibiliteit; Joy is geen volledige meubeldekking.
+3. Carving/Stripe, overige douchevarianten en fonteinkranen: structuur, bediening, sets en inkortbaarheid.
+4. Hoge kasten, spiegels/spiegelkasten: deurrichting en modelgebonden verlichting/bediening.
+Losse accessoires en gewone kleur-/maatgroepen daarna met dezelfde geautomatiseerde combinatietests; geen handmatige product-voor-productcontrole als nieuwe standaard.
+
+Geen nieuwe productfamilies gebouwd of Shopify-writes uitgevoerd in deze inventarisatiestap. De eerdere drie maatbronconflicten en Liquid ThemeCheck-dependency blijven open. MAIN read-only bevestigd als196246372618 — BadkamerCity - Groene voorraadmelding; geen themawrite, productimport, media-upload of publicatie. Productbasis-XLSX versie1 ongewijzigd, scratch geen Git-werkboom; geen Windows-lokale statusclaim. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** één representatieve douchecabine met afwijkende deur-/opstellingskeuzes als volgende offline proef uitwerken. Daarna een wastafel-/meubelcombinatie; bronconflicten sluiten zodra het officiële pakket binnen is.
+
 ## BRAUER-15 - grepen hersteld, eerste productafbeelding als bron en zelfstandige steekproef · 7 november 2026
 
 Eigenaar wil de eerdere losse greepafbeeldingen terug, keuzefoto's voortaan uit de eerste afbeelding van het gekoppelde product laden, en een onafhankelijke BadkamerXXL-steekproef op ontbrekende data.
