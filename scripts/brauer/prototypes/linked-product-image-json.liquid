@@ -1,0 +1,31 @@
+{% doc %}
+  Serializes the first image of an already resolved, single-SKU linked product.
+  @param {product} linked_product - Product resolved by the existing family provider
+  @param {string} expected_sku - Exact source article code
+  @param {number} [width] - Requested image width
+{% enddoc %}
+{%- liquid
+  assign image_width = width | default: 400
+  assign linked_variant = linked_product.variants.first
+  assign first_image = linked_product.images.first
+  assign valid_link = false
+  if linked_product.variants.size == 1
+    if linked_variant.sku == expected_sku
+      assign valid_link = true
+    endif
+  endif
+-%}
+{
+  "id": {{ linked_product.id | append: '' | json }},
+  "sku": {{ linked_variant.sku | json | replace: '<', '\u003c' }},
+  "images": [
+    {%- if valid_link and first_image != blank -%}
+      {
+        "id": {{ first_image.id | append: '' | json }},
+        "src": {{ first_image | image_url: width: image_width | json }},
+        "alt": {{ first_image.alt | default: linked_product.title | json | replace: '<', '\u003c' }},
+        "media_type": "image"
+      }
+    {%- endif -%}
+  ]
+}
