@@ -1,5 +1,23 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-23 - leveranciersbestanden en bestaande tabellen verder benut · 7 november 2026
+
+Eigenaar vraagt toe te voegen wat nog kan; drie oorspronkelijke kranen-, glas- en meubelbestanden zijn al aanwezig en blijven de basis. Alle 13.161 artikelen gescand op nog onbenutte letterlijke gegevens. **4.734 extra specificaties bij 4.380 artikelen:** 4.300 uit de leveranciersgegevens, 434 uit al eerder gecontroleerde technische tabellen. Geen nieuwe websitecrawl of achtergrondtaak voor deze batch.
+
+Leveranciersaanvullingen omvatten letterlijke uitvoeringsnamen, expliciete straalstanden handdouche, uitgesloten grepen, draaibare/platte uitlopen, dim-/lichtkleurfuncties, afstandsbediening, klokken, wasbak-aantallen en expliciete plaatsings-/opbergkenmerken. Geen mm-dikte of fysieke maten uit namen als Slim/Medium of uit unitloze maatcodes afgeleid. Retail onder andere bediening, plaats bediening, hartafstand, vorm/aantal rozetten, plugdiameter en sifonaansluiting; uitsluitend passende veldcontext en exact merk/SKU/EAN. Geen uitlezen van ontbrekende iconen als Nee.
+
+**Alle bestaande specificatiewaarden, prijzen inclusief btw, SKU/EAN, titels, families, opties, eigen aanvullingen, originele bronnen en media behouden.** Businessrecords exact gelijk aan BRAUER-22 buiten specificaties en controlenotities; geen bestaande specificatie gewijzigd/verwijderd. Oorspronkelijke 42 dataholds, 163 toekomstige artikelen, 28 open retailveldverschillen bij 24 artikelen, 14 verdachte slangwaarden en dezelfde 84 vragen bij 80 artikelen behouden. Historische tegenstrijdige maatwaarden blijven meetellen na verwijdering uit klantvelden; opnieuw verwerken maakt die velden niet alsnog vrij. Twee 004-B4-maatvelden blijven leeg. Herhaalde verwerking behoudt catalogus, veldherkomst en cumulatieve aanvullingen exact.
+
+Totaal **144.078 feiten**. Cumulatieve aanvullende herkomst: 4.419 retailvelden plus 4.300 leveranciersvelden. Nog 10.089 artikelen met minimaal één ontbrekend gekozen kernveld; geen aantal ontbrekende producten of foutpercentage. 4.968 verdere openbare bronkandidaten blijven onbeoordeeld. Nog steeds 905 bronpagina’s / 892 bron-SKU’s / 902 exacte merk-SKU-EAN-pagina’s; drie overige pagina’s zonder EAN alleen aanvullend bewijs.
+
+**Controle:** 23 specificatie-/retail-/leverancierstests + negen voorbereidingstests PASS. NativeXLSX alle 13.161 artikelregels, 8.719 cumulatieve aanvullingen en 84 vragen exact vergeleken; 12 EAN-voorbeelden strings, nul native foutcellen. Vijf bladen gerenderd/gecontroleerd plus afzonderlijk de leveranciersregels; recalc 13.161/10.089 correct. Privébundel 79 entries, 78 manifesthashes; alle oorspronkelijke bestanden en eigen invoer behouden. Codecheckpoint **3e873f0056ee8605610dac7865d933fc5f343cca** op fix/product-cards-2026-10-14. [Gegevens en vervolg](brauer/2026-11-07/RETAILSPECIFICATIES.md), [dekking](brauer/2026-11-07/RETAILDEKKING.json).
+
+**Geen Shopify-writes, DRAFT-import, media-upload, themawrite of publicatie.** MAIN voor/na 196246372618. Alle vrijgavevlaggen false; preflight terecht exit2. Officiële volledige afbeeldingen/PDF-aanlevering nog afwachten. Daarna inventarisatie/exacte koppeling en complete representatieve pagina-/keuzeproef vóór enige import. Connector/remote-werk, scratch geen Git-checkout; geen Windows/Excel-app- of live winkeltest geclaimd. Volledige catalogus, leveranciersbestanden en gebruikersinhoud blijven privé.
+
+**Eén volgende handeling:** verdere openbare bronkandidaten exact op artikelidentiteit onderzoeken voor ontbrekende kerngegevens; uitzonderingsvragen apart laten bevestigen. Media afwachten en import geblokkeerd houden tot ontvangst, inventarisatie, volledige proef en akkoord.
+
+---
+
 ## BRAUER-22 - verdere specificaties en concrete open vragen · 7 november 2026
 
 500 verdere openbare productpagina’s uit34typen gelezen; alle500 exact op fabrikant-SKU, EAN en merk. Cumulatief905pagina’s /892bron-SKU’s /902exacte merk-SKU-EAN-pagina’s. Drie pagina’s zonderEAN alleen vergelijkingsbewijs. **Deze batch2.264extra klantvelden; cumulatief3.985nieuwe velden bij871artikelen**, zeven oudere externe waarden ingehouden. Totaal139.344feiten;10.089artikelen missen één of meer gekozen kernvelden. De volledige catalogus is nog niet uit alle bronnen onderzocht;4.968verdere URL-kandidaten staan klaar zonder achtergrondtaak.
