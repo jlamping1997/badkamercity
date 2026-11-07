@@ -1,5 +1,23 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-17 - acht andere productgroepen als offline proef · 7 november 2026
+
+Eigenaar wil de overige voorgestelde producten daadwerkelijk kunnen proberen. Alleen offline gesprekproef, geen import- of publicatievrijgave.
+
+**Nieuwe scope:** 462 unieke bronartikelen: Galactic cabine12, Void tweedelige nisdeur132, Aurora13, Trust MFC standaard120, Adore MFC standaard hoge kast45, Impress Deluxe MFC90, Carving/Stripe laag12 en opbouwfonteinkranen38. Voorgaande veertien-familieproef blijft apart en ongewijzigd.
+
+Galactic heeft twee afmetingknoppen en omkeerbaarheid als specificatie. Void toont eerste artikelfoto’s voor scharnieren aan muur of glas; de deurbreedte volgt de echte bronconfiguratie. Aurora combineert breedte, bak midden/links/rechts en kraangaten; alle13exacte dealer-SKU/EANs bevestigen bakpositie en buitenbreedte61/81/101/121cm. Trust heeft aparte standaarddieptescope, grepen uitgesloten en de bestaande voorwaardelijke afvoerindeling. Adore gebruikt drie heldere hoogte/deuruitvoeringen; Wavy uitgesloten. Impress combineert breedte/deuren en voegt geen onbewezen bediening/dimmer toe. Carving/Stripe gebruiken eigen artikelfoto’s. Fonteinkranen houden design, uitloop en werkelijke kleurbeperkingen.
+
+**Foto’s en data:** 98 tijdelijke eerste-galerijbeelden, ieder exact SKU/EAN gecontroleerd; 200px-rendities van hetzelfde eerste bestandsnaambeeld, byte/hashes gecontroleerd. Een ontbrekende foto blijft Productfoto volgt en blokkeert geen geldige SKU. Maatverrijking blijft uitsluitend per gecontroleerde SKU; overige buitenmaten Te bevestigen. Geen Joy-maten op Trust. Alle462btw-prijzen onafhankelijk Decimal×1,21 half-up vergeleken met het bestaande prijsvoorstel. Productbasis-XLSX versie1 ongewijzigd.
+
+**Verificatie:** werkelijke ingebedde JavaScript met DOM-stub, alle462toestanden en8.319geldige /559geweigerde transities PASS;60meubeltransities bewust onbeslist tot afvoerkeuze. Alle bronartikelen bereikbaar, SKU/EAN/prijs/statebehoud/zes-kleurenlimiet/disabled-opties en eerste-beeld add/append/reorder/remove plus identity guards PASS. Gekozen afvoerindeling blijft nu ook bij kleurpreview behouden; een onbesliste afvoerindeling toont geen willekeurige exact-artikelfoto. Acht representatieve productbeelden visueel ingezien, waaronder beide Void-scharnieropstellingen en Carving/Stripe. Fragment876.510bytes. Browserlayout/native bediening/live PDP/cart NOT_TESTED.
+
+[Proefcontract en representatieve bronnen](brauer/2026-11-06/NIEUWE_PRODUCTPROEF_CONTRACT.json). Alleen sanitiseerde generator-/renderer-/testcode op de actieve codebranch onder scripts/brauer/prototypes/other-products/; geen volledige private product-/prijslijsten of derdenbeeldbytes in publieke Git. Lokale fixtures blijven aanvullende reviewdata. De voorbeeldtemplate is een offline generatorbasis, geen Shopify-theme-integratie.
+
+MAIN read-only bevestigd als196246372618 — BadkamerCity - Groene voorraadmelding. Geen Shopify-writes, media-upload, import (ookgeenDRAFT) of themapublicatie. Alle import wacht op volledige aangekondigde leveranciersbeeld-/PDF-ontvangst en inventarisatie; tijdelijke dealerfoto’s vervangen dat pakket niet. Drie eerdere maatbronconflicten en Liquid ThemeCheck-blokkade blijven open. Scratch geen Git-werkboom; geen Windows-lokale statusclaim. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** eigenaar beoordeelt deze acht nieuwe offline menu’s; daarna concrete feedback verwerken voordat de catalogus verder wordt vrijgegeven.
+
 ## BRAUER-16 - kleurbeelden overal gekoppeld en UX-goedkeuring vastgelegd · 7 november 2026
 
 Eigenaar vult aan dat dezelfde eerste-productfoto-regel ook overal voor kleurkeuzes geldt en keurt met die aanvulling de huidige opzet goed. Vraagt welke afwijkende keuzemenu's nog controle verdienen.
