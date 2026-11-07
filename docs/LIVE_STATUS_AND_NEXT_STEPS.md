@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-09 - echte hendelafbeeldingen in het offline keuzemenu · 7 november 2026
+
+Eigenaar vraagt afbeeldingen op de hendelkeuzes. Vijf bestaande 147×147 JPEG-vormvoorbeelden uit het [BadkamerXXL-hendelmenu](https://www.badkamerxxl.nl/brauer-chrome-edition-wastafelmengkraan-opbouw-round-energy-saving-chroom-550001cs-hd1) gelezen en visueel beoordeeld. Mapping binnen uitsluitend deze 001-proeffamilie: A → type-1.jpg (lang/smal), B → type-5-1.jpg (kort/smal), C → type-3.jpg (breed/plat), D → type-4.jpg (smal/plat), E → type-2.jpg (dikkere greep). C/D ook in hun exacte dealerartikelvelden als Type 3/4 gecontroleerd; de eerdere fabrikant-SKU/EAN- en vormbeschrijvingen blijven de bronkoppeling. De beelden zijn ongewijzigd in het gesprekvoorbeeld opgenomen; geen AI-beelden, geen omkleuring en geen fabriekspakketvrijgave. E heet nu 'Dikkere greep' in plaats van 'Dik en rond', passend bij de concrete foto.
+
+Keuzes tonen afbeelding plus begrijpelijke naam en actieve rand. Duidelijk gelabeld als vormvoorbeelden in chroom: zij wisselen niet naar de gekozen verkoopkleur. De aparte kleurkeuze, exacte artikelidentiteit, prijsbasis incl btw en bestaande combinatiebeperkingen blijven behouden. Originele leverancierbeelden/PDF's voor producten blijven af te wachten; niets aan productmedia in Shopify of productbasis-XLSX versie 1 toegevoegd.
+
+Vijf ingebedde JPEGs byte-exact tegen gedownloade bron geverifieerd, lokale beelden visueel bekeken; alle 32 keuzestaten op label/artikel/EAN/prijs/selectie en ontbrekende combinaties gecontroleerd, nul fouten. HTML/IDs gecontroleerd. Browserlayout/live URL/cart niet getest. MAIN opnieuw read-only bevestigd als 196246372618. Geen Shopify-writes/import/publicatie.
+
+**Exact één volgende handeling:** deze afbeelding-met-naam-opzet als offline voorbeeld beoordelen en vervolgens per volgende productfamilie alleen exact gecontroleerde keuzeafbeeldingen koppelen. De aangekondigde volledige mediaontvangst blijft voorwaarde vóór alle Shopify-import. Geen actieve schrijver na dit checkpoint.
+
+
 ## BRAUER-08 - begrijpelijke hendelnamen in het offline voorbeeld · 7 november 2026
 
 Eigenaar wil herkenbare klantkeuzes in plaats van Model A/B of Type 1/2. Voor uitsluitend de lage Edition-wastafelkraan 001 zijn vijf productbeschrijvingen op exacte fabrikant-SKU en EAN vergeleken. Gekozen korte klantlabels: A Lang en smal (5-CE-001), B Kort en smal (5-CE-001-HD5), C Breed en plat (5-CE-001-HD3), D Smal en plat (5-CE-001-HD4), E Dik en rond (5-CE-001-HD1). A–D volgen de lange/korte/smalle/brede/platte dealerbeschrijvingen; E is verkort uit 'Middel dikke gladde hendel', met de ronde cilindrische vorm ook zichtbaar in de geraadpleegde technische tekening. Dit zijn eigen klantlabels, geen nieuw bevestigde fabrikantnamen of universele modelcodebetekenis.
