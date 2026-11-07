@@ -107,8 +107,17 @@ def main():
    if resolution:
     target=normalized(label,resolution['value']);selected=[v for v in primary if normalized(label,v['value'])==target]
     assert selected,(sku,label,'Resolution must select an observed primary fact')
-    chosen=selected[0];status='LINKED_DRAWING_CHECKED';conflict=False
-    conflicts.append({'sku':sku,'field':label,'status':'RESOLVED_LINKED_DRAWING','existing':base,'candidates':values,'resolution':resolution,'action':'Gekozen tabelwaarde ondersteund door gekoppelde artikeltekening'})
+    chosen=selected[0];conflict=False
+    if resolution.get('basis')=='SUPPLIER_AND_EXACT_RETAILER':
+     assert base_ev and base_ev['kind']=='supplier' and base_key==str(target),(sku,label,'Supplier resolution requires the unchanged supplier fact')
+     assert resolution.get('supplier_source_refs')==base_ev['source_refs'],(sku,label,'Supplier references must match')
+     assert chosen['url']==resolution['corroborating_url'],(sku,label,'Corroboration must be exact SKU/EAN evidence')
+     status='SUPPLIER_CORROBORATED';resolved='RESOLVED_SUPPLIER_CORROBORATED'
+     action='Leveranciersgegeven behouden; exact artikel bij tweede winkel bevestigt dezelfde waarde; afwijkende winkelwaarde verworpen'
+    else:
+     status='LINKED_DRAWING_CHECKED';resolved='RESOLVED_LINKED_DRAWING'
+     action='Gekozen tabelwaarde ondersteund door gekoppelde artikeltekening'
+    conflicts.append({'sku':sku,'field':label,'status':resolved,'existing':base,'candidates':values,'resolution':resolution,'action':action})
    elif conflict:
     # More general material wording is not an alternative physical composition.
     if label=='Materiaal' and base:

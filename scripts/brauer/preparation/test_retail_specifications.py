@@ -45,6 +45,15 @@ class RetailTests(unittest.TestCase):
  def test_secondary_source_cannot_be_ignored_when_it_contradicts(self):
   self.assertNotIn('Breedte',by['SP-GA100RH']['specifications'])
   self.assertTrue(any(d['sku']=='SP-GA100RH' and d['field']=='Breedte' and d['status']=='OPEN' and any(v['identity']=='SKU_MERK_ONLY' for v in d['candidates']) for d in report['differences']))
+ def test_supplier_resolution_preserves_exact_fact_and_disagreement_history(self):
+  sku='GS-CLI1H100200CE'
+  self.assertEqual(by[sku]['specifications']['Glas'],'Helder glas')
+  self.assertEqual(ev[sku]['facts']['Glas']['kind'],'supplier')
+  d=next(d for d in report['differences'] if d['sku']==sku and d['field']=='Glas')
+  self.assertEqual(d['status'],'RESOLVED_SUPPLIER_CORROBORATED')
+  self.assertTrue(any(v['value']=='Brons rook' for v in d['candidates']))
+  self.assertTrue(any(v['value']=='Helder' and v['identity']=='SKU_EAN_MERK' for v in d['candidates']))
+  self.assertEqual(d['resolution']['supplier_source_refs'],ev[sku]['facts']['Glas']['source_refs'])
  def test_gate_blocks_review_flag_only_changes(self):
   gate=json.loads(Path('prepared/release-gate.json').read_text());self.assertFalse(gate['retail_specifications_reviewed'])
   for f in REQUIRED:gate[f]=True
