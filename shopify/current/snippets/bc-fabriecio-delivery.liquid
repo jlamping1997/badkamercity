@@ -1,0 +1,40 @@
+{% doc %}
+Renders Fabriecio supplier availability without inventing a delivery promise.
+@param {product} product - The current product.
+{% enddoc %}
+{%- assign delivery_vendor = product.vendor | strip | downcase -%}
+{%- if delivery_vendor == 'fabriecio' or delivery_vendor == 'verlavio' -%}
+  {%- liquid
+    assign delivery_data = product.metafields.custom.fabriecio_delivery.value
+    assign supplier_stock = delivery_data.in_stock
+    assign supplier_expectation = delivery_data.expected_text | strip
+    if delivery_data == blank
+      assign supplier_stock = product.metafields.custom.leverancier_voorraad.value
+    endif
+  -%}
+  <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}">
+    <div class="bc-buybox__delivery-meta">
+      <span class="bc-buybox__delivery-title">
+        {%- if delivery_data.discontinued == true -%}
+          {{- 'bc_delivery.discontinued' | t -}}
+        {%- elsif delivery_data.stock_conflict == true -%}
+          {{- 'bc_delivery.verlavio_stock_on_request' | t -}}
+        {%- elsif supplier_stock == true -%}
+          {{- 'bc_delivery.verlavio_in_stock' | t -}}
+        {%- elsif supplier_expectation != blank -%}
+          {{- 'bc_delivery.supplier_expected' | t -}}
+        {%- else -%}
+          {{- 'bc_delivery.lead_time_on_request' | t -}}
+        {%- endif -%}
+      </span>
+      <span class="bc-buybox__delivery-icon" aria-hidden="true">i</span>
+    </div>
+    {%- unless delivery_data.discontinued == true or delivery_data.stock_conflict == true -%}
+      {%- if supplier_stock == true -%}
+        <p class="bc-buybox__delivery-copy">{{ 'bc_delivery.verlavio_stock_lead_time' | t }}</p>
+      {%- elsif supplier_expectation != blank -%}
+        <p class="bc-buybox__delivery-copy">{{ supplier_expectation | escape }}</p>
+      {%- endif -%}
+    {%- endunless -%}
+  </aside>
+{%- endif -%}

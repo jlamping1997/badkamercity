@@ -1,0 +1,3648 @@
+{
+  "version": "0.1",
+  "date": "2026-10-29",
+  "scope": "TAX-01 read-only baseline; not a published taxonomy or complete UX audit",
+  "source": "Shopify Admin read in same ongoing conversation, preceding documentation step",
+  "main_at_read": {
+    "id": "gid://shopify/OnlineStoreTheme/195913482506",
+    "name": "BadkamerCity - Menu openklappen en strakke rijen",
+    "role": "MAIN"
+  },
+  "pagination": {
+    "menus": {
+      "hasNextPage": false,
+      "endCursor": "eyJsYXN0X2lkIjozMTczMjYyMjk3NzAsImxhc3RfdmFsdWUiOjMxNzMyNjIyOTc3MH0="
+    },
+    "collections": {
+      "hasNextPage": false,
+      "endCursor": "eyJsYXN0X2lkIjo1ODU3OTQwOTMzMjIsImxhc3RfdmFsdWUiOiIyMDI2LTEwLTI2IDA4OjQ1OjA3LjIxNjk4NyJ9"
+    },
+    "counts": {
+      "hasNextPage": false,
+      "endCursor": "eyJsYXN0X2lkIjo1ODU3OTQwOTMzMjIsImxhc3RfdmFsdWUiOiIyMDI2LTEwLTI2IDA4OjQ1OjA3LjIxNjk4NyJ9"
+    }
+  },
+  "summary": {
+    "menus": 9,
+    "collections": 226,
+    "main_entries": 156,
+    "main_unique_urls": 144
+  },
+  "menus": [
+    {
+      "handle": "main-menu",
+      "title": "Hoofdmenu",
+      "items": [
+        {
+          "title": "Kranen",
+          "url": "/collections/kranen",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Wastafelkranen",
+              "url": "/collections/wastafelkranen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Opbouw wastafelkranen",
+                  "url": "/collections/opbouw-wastafelkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Inbouw wastafelkranen",
+                  "url": "/collections/inbouw-wastafelkranen",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Fonteinkranen",
+              "url": "/collections/fonteinkranen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Opbouw fonteinkranen",
+                  "url": "/collections/opbouw-fonteinkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Inbouw fonteinkranen",
+                  "url": "/collections/inbouw-fonteinkranen",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douchekranen",
+              "url": "/collections/douchekranen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Inbouw douchekranen",
+                  "url": "/collections/inbouw-douchekranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Douchethermostaatkranen",
+                  "url": "/collections/douche-thermostaatkranen",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Badkranen",
+              "url": "/collections/badkranen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Inbouw badkranen",
+                  "url": "/collections/inbouw-badkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Vrijstaande badkranen",
+                  "url": "/collections/vrijstaande-badkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Badrandkranen",
+                  "url": "/collections/badrandkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Badthermostaatkranen",
+                  "url": "/collections/bad-thermostaatkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Badsets",
+                  "url": "/collections/badsets",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douchesets",
+              "url": "/collections/douchesets",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Buitendouches",
+              "url": "/collections/buitendouches",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Keukenkranen",
+              "url": "/collections/keukenkranen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Bidetkranen",
+              "url": "/collections/bidetkranen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Kraanonderdelen en montage",
+              "url": "/collections/kraan-toebehoren",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Losse inbouwdelen",
+                  "url": "/collections/losse-inbouwdelen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Uitlopen",
+                  "url": "/collections/universele-uitlopen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Serviceonderdelen",
+                  "url": "/collections/kraanonderdelen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Hoekstopkranen",
+                  "url": "/collections/hoekstopkranen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Baduitlopen",
+                  "url": "/collections/baduitlopen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Wastafeluitlopen",
+                  "url": "/collections/wastafeluitlopen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Montagegereedschap",
+                  "url": "/collections/montagegereedschap",
+                  "type": "COLLECTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Douche",
+          "url": "/collections/douches",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Douchesets",
+              "url": "/collections/douchesets",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Inbouw douchesets",
+                  "url": "/collections/inbouw-douchesets",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Opbouw douchesets",
+                  "url": "/collections/opbouw-douchesets",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Glijstangsets",
+                  "url": "/collections/glijstangsets",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Inloopdouches en douchewanden",
+              "url": "/collections/douchewanden",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Inloopdouches",
+                  "url": "/collections/inloopdouches",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douchedeuren",
+              "url": "/collections/douchedeuren",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Draaideuren",
+                  "url": "/collections/draaideuren",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Schuifdeuren",
+                  "url": "/collections/schuifdeuren",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Pendeldeuren",
+                  "url": "/collections/pendeldeuren",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Vouwdeuren",
+                  "url": "/collections/vouwdeuren",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douchecabines",
+              "url": "/collections/douchecabines",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Kwartronde douchecabines",
+                  "url": "/collections/kwartrond",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Vijfhoekige douchecabines",
+                  "url": "/collections/vijfhoek",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douchebakken",
+              "url": "/collections/douchebakken",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Doucheafvoer",
+              "url": "/collections/doucheafvoer",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Douchegoten",
+                  "url": "/collections/douchegoten",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Doucheputten",
+                  "url": "/collections/doucheputten",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Sunshower",
+              "url": "/pages/sunshower",
+              "type": "PAGE",
+              "items": []
+            },
+            {
+              "title": "Douchekranen",
+              "url": "/collections/douchekranen",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Doucheonderdelen",
+              "url": "/collections/doucheonderdelen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Hoofddouches",
+                  "url": "/collections/hoofddouches",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Handdouches",
+                  "url": "/collections/handdouches",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Doucheslangen",
+                  "url": "/collections/doucheslangen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Glijstangen",
+                  "url": "/collections/glijstangen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Houders en uitlaten",
+                  "url": "/collections/douchehouders-en-uitlaten",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Zijdouches",
+                  "url": "/collections/zijdouches",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Cascade douches",
+                  "url": "/collections/cascade-douches",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Doucheaccessoires",
+              "url": "/collections/douche-accessoires",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Doucherekken",
+                  "url": "/collections/doucherekken",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Douchewissers",
+                  "url": "/collections/douchewissers",
+                  "type": "HTTP"
+                },
+                {
+                  "title": "Douchewisserhouders",
+                  "url": "/collections/douchewisserhouders",
+                  "type": "COLLECTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Badkamermeubels",
+          "url": "/collections/badkamermeubels",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Onderkasten",
+              "url": "/collections/losse-onderkasten",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Wastafelbladen",
+              "url": "/collections/wastafelbladen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badkamerkasten",
+              "url": "/collections/kolom-zijkasten",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Meubelwastafels",
+              "url": "/collections/meubelwastafels",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Fonteinmeubels",
+              "url": "/collections/fonteinmeubels",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Spiegels",
+              "url": "/collections/badkamerspiegels",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Afvoer en montage",
+              "url": "/collections/wastafel-toebehoren",
+              "type": "HTTP",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Wastafels",
+          "url": "/collections/wastafels",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Waskommen en opzetwastafels",
+              "url": "/collections/opzetwastafels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Meubelwastafels",
+              "url": "/collections/meubelwastafels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Fonteinen",
+              "url": "/collections/fonteinen",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Wastafelkranen",
+              "url": "/collections/wastafelkranen",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Afvoer en montage",
+              "url": "/collections/wastafel-toebehoren",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Sifons",
+                  "url": "/collections/sifons",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Afvoerpluggen",
+                  "url": "/collections/afvoerpluggen",
+                  "type": "COLLECTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Toiletten en fonteinen",
+          "url": "/collections/toiletten",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Hangtoiletten",
+              "url": "/collections/hangtoiletten",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Toiletten zonder spoelrand",
+                  "url": "/collections/toilet-zonder-spoelrand",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Compacte toiletten",
+                  "url": "/collections/compacte-toiletten",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Douche-wc’s",
+              "url": "/collections/douche-wcs",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Fonteinen",
+              "url": "/collections/fonteinen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Losse fonteinen",
+                  "url": "/collections/losse-fonteinen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Fonteinsets",
+                  "url": "/collections/fonteinsets",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Fonteinmeubels",
+                  "url": "/collections/fonteinmeubels",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Bedieningsplaten",
+              "url": "/collections/bedieningspanelen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Toiletzittingen",
+              "url": "/collections/toiletzittingen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Reservoirs",
+              "url": "/collections/reservoirs",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Toiletaccessoires",
+              "url": "/collections/toilet-accessoires",
+              "type": "HTTP",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Baden",
+          "url": "/collections/baden",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Vrijstaande baden",
+              "url": "/collections/vrijstaande-baden",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Halfvrijstaande baden",
+              "url": "/collections/halfvrijstaande-baden",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Whirlpoolbaden",
+              "url": "/collections/whirlpool-baden",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badwanden",
+              "url": "/collections/badwanden",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badkranen",
+              "url": "/collections/badkranen",
+              "type": "HTTP",
+              "items": []
+            },
+            {
+              "title": "Badafvoer en vulling",
+              "url": "/collections/badafvoeren-vulsystemen",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Baddoorvoersets",
+                  "url": "/collections/baddoorvoersets",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Badaccessoires",
+              "url": "/collections/bad-accessoires",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Badgrepen",
+                  "url": "/collections/badgrepen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Badbruggen en badplanken",
+                  "url": "/collections/badbruggen-badplanken",
+                  "type": "COLLECTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tegels",
+          "url": "/collections/tegels",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Vloertegels",
+              "url": "/collections/vloertegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Wandtegels",
+              "url": "/collections/wandtegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Betonlook tegels",
+              "url": "/collections/betonlook-tegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Houtlook tegels",
+              "url": "/collections/houtlook-tegels",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Keramisch parket",
+                  "url": "/collections/keramisch-parket",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Marmerlook tegels",
+              "url": "/collections/marmerlook-tegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Steenlook tegels",
+              "url": "/collections/stonelook-tegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Metaallook tegels",
+              "url": "/collections/metaallook-tegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Decortegels",
+              "url": "/collections/decortegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Mozaïek tegels",
+              "url": "/collections/mozaiek-tegels",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Spiegels en verlichting",
+          "url": "/collections/spiegels-en-verlichting",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Badkamerspiegels",
+              "url": "/collections/badkamerspiegels",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Ronde spiegels",
+                  "url": "/collections/ronde-spiegels",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Rechthoekige spiegels",
+                  "url": "/collections/rechthoekige-spiegels",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Spiegels met verlichting",
+                  "url": "/collections/spiegels-met-verlichting",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Spiegels zonder verlichting",
+                  "url": "/collections/spiegels-zonder-verlichting",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Spiegels met verwarming",
+                  "url": "/collections/spiegels-met-verwarming",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Scheer- en make-upspiegels",
+              "url": "/collections/scheer-make-up-spiegels",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Spiegelverlichting",
+              "url": "/collections/spiegelverlichting",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Spots",
+              "url": "/collections/spots",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Hanglampen",
+              "url": "/collections/hanglampen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Plafondlampen",
+              "url": "/collections/plafondlampen",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Accessoires",
+          "url": "/collections/accessoires",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Handdoekhouders",
+              "url": "/collections/handdoekhouders",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Handdoekhaken",
+                  "url": "/collections/handdoekhaken",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Handdoekstangen",
+                  "url": "/collections/handdoekstangen",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Handdoekrekken",
+                  "url": "/collections/handdoekrekken",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Handdoekringen",
+                  "url": "/collections/handdoekringen",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Toiletaccessoires",
+              "url": "/collections/toilet-accessoires",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Toiletrolhouders",
+                  "url": "/collections/toiletrolhouders",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Toiletborstelhouders",
+                  "url": "/collections/toiletborstelhouders",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Reserverolhouders",
+                  "url": "/collections/reserverolhouders",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Zeepaccessoires",
+              "url": "/collections/zeepaccessoires",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Zeepdispensers",
+                  "url": "/collections/zeepdispensers",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Zeephouders",
+                  "url": "/collections/zeephouders",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Planchetten",
+              "url": "/collections/planchetten",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Glashouders",
+              "url": "/collections/glashouders",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badkamernissen",
+              "url": "/collections/inbouw-opbouw-nissen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Douchewissers",
+              "url": "/collections/douchewissers",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badkamerkrukjes",
+              "url": "/collections/badkrukjes",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Afvalemmers",
+              "url": "/collections/afvalemmers",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Onderhoudsmiddelen",
+              "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Badaccessoires",
+              "url": "/collections/bad-accessoires",
+              "type": "HTTP",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Verwarming en ventilatie",
+          "url": "/collections/verwarming-en-ventilatie",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Radiatoren",
+              "url": "/collections/radiatoren",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Handdoekradiatoren",
+                  "url": "/collections/handdoekradiatoren",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Designradiatoren",
+                  "url": "/collections/designradiatoren",
+                  "type": "COLLECTION"
+                },
+                {
+                  "title": "Elektrische radiatoren",
+                  "url": "/collections/elektrische-radiatoren",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Handdoekwarmers",
+              "url": "/collections/handdoekwarmers",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Elektrische vloerverwarming",
+              "url": "/collections/elektrische-vloerverwarming",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Radiatortoebehoren",
+              "url": "/collections/radiatortoebehoren",
+              "type": "COLLECTION",
+              "items": [
+                {
+                  "title": "Radiator aansluitmateriaal",
+                  "url": "/collections/radiator-aansluitmateriaal",
+                  "type": "COLLECTION"
+                }
+              ]
+            },
+            {
+              "title": "Badkamerventilatie",
+              "url": "/collections/badkamerventilatie",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Merken",
+          "url": "/collections?view=merken",
+          "type": "HTTP",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "footer",
+      "title": "Voettekstmenu",
+      "items": [
+        {
+          "title": "Zoeken",
+          "url": "/search",
+          "type": "SEARCH",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "customer-account-main-menu",
+      "title": "Hoofdmenu klantaccount",
+      "items": [
+        {
+          "title": "Bestellingen",
+          "url": "https://shopify.com/94179590410/account/orders",
+          "type": "CUSTOMER_ACCOUNT_PAGE",
+          "items": []
+        },
+        {
+          "title": "Profiel",
+          "url": "https://shopify.com/94179590410/account/profile",
+          "type": "CUSTOMER_ACCOUNT_PAGE",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "assortiment",
+      "title": "Assortiment",
+      "items": [
+        {
+          "title": "Accessoires",
+          "url": "/collections/accessoires",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Baden",
+          "url": "/collections/baden",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badkamermeubels",
+          "url": "/collections/badkamermeubels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Homepage",
+          "url": "/collections/kranen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Meer",
+          "url": "/collections/meer",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Tegels",
+          "url": "/collections/tegels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Toiletten",
+          "url": "/collections/toiletten",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Verwarming",
+          "url": "/collections/verwarming",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Wastafels",
+          "url": "/collections/wastafels",
+          "type": "COLLECTION",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "badkamermeubels-b",
+      "title": "Badkamermeubels - B",
+      "items": [
+        {
+          "title": "Alle producten",
+          "url": "/collections/all",
+          "type": "CATALOG",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "bc-wastafels-a-z",
+      "title": "BadkamerCity — Wastafels A-Z",
+      "items": [
+        {
+          "title": "Afvoer en montage",
+          "url": "/collections/wastafel-toebehoren",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Afvoerpluggen",
+          "url": "/collections/afvoerpluggen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Fonteinen",
+          "url": "/collections/fonteinen",
+          "type": "HTTP",
+          "items": []
+        },
+        {
+          "title": "Fonteinmeubels",
+          "url": "/collections/fonteinmeubels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Fonteinsets",
+          "url": "/collections/fonteinsets",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Losse fonteinen",
+          "url": "/collections/losse-fonteinen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Meubelwastafels",
+          "url": "/collections/meubelwastafels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Sifons",
+          "url": "/collections/sifons",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Waskommen en opzetwastafels",
+          "url": "/collections/opzetwastafels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Wastafelkranen",
+          "url": "/collections/wastafelkranen",
+          "type": "HTTP",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "bc-accessoires-a-z",
+      "title": "BadkamerCity — Accessoires A-Z",
+      "items": [
+        {
+          "title": "Afvalemmers",
+          "url": "/collections/afvalemmers",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badaccessoires",
+          "url": "/collections/bad-accessoires",
+          "type": "HTTP",
+          "items": []
+        },
+        {
+          "title": "Badkamerkrukjes",
+          "url": "/collections/badkrukjes",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badkamernissen",
+          "url": "/collections/inbouw-opbouw-nissen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Douchewissers",
+          "url": "/collections/douchewissers",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Glashouders",
+          "url": "/collections/glashouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Handdoekhaken",
+          "url": "/collections/handdoekhaken",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Handdoekhouders",
+          "url": "/collections/handdoekhouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Handdoekrekken",
+          "url": "/collections/handdoekrekken",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Handdoekringen",
+          "url": "/collections/handdoekringen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Handdoekstangen",
+          "url": "/collections/handdoekstangen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Onderhoudsmiddelen",
+          "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Planchetten",
+          "url": "/collections/planchetten",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Reserverolhouders",
+          "url": "/collections/reserverolhouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Toiletaccessoires",
+          "url": "/collections/toilet-accessoires",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Toiletborstelhouders",
+          "url": "/collections/toiletborstelhouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Toiletrolhouders",
+          "url": "/collections/toiletrolhouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Zeepaccessoires",
+          "url": "/collections/zeepaccessoires",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Zeepdispensers",
+          "url": "/collections/zeepdispensers",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Zeephouders",
+          "url": "/collections/zeephouders",
+          "type": "COLLECTION",
+          "items": []
+        }
+      ]
+    },
+    {
+      "handle": "bc-wastafels-categorieen",
+      "title": "BadkamerCity — Wastafels categorieën",
+      "items": [
+        {
+          "title": "Waskommen en opzetwastafels",
+          "url": "/collections/opzetwastafels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Meubelwastafels",
+          "url": "/collections/meubelwastafels",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Fonteinen",
+          "url": "/collections/fonteinen",
+          "type": "HTTP",
+          "items": []
+        },
+        {
+          "title": "Wastafelkranen",
+          "url": "/collections/wastafelkranen",
+          "type": "HTTP",
+          "items": []
+        },
+        {
+          "title": "Afvoer en montage",
+          "url": "/collections/wastafel-toebehoren",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Sifons",
+              "url": "/collections/sifons",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Afvoerpluggen",
+              "url": "/collections/afvoerpluggen",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "handle": "bc-accessoires-categorieen",
+      "title": "BadkamerCity — Accessoires categorieën",
+      "items": [
+        {
+          "title": "Handdoekhouders",
+          "url": "/collections/handdoekhouders",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Handdoekhaken",
+              "url": "/collections/handdoekhaken",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Handdoekstangen",
+              "url": "/collections/handdoekstangen",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Handdoekrekken",
+              "url": "/collections/handdoekrekken",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Handdoekringen",
+              "url": "/collections/handdoekringen",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Toiletaccessoires",
+          "url": "/collections/toilet-accessoires",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Toiletrolhouders",
+              "url": "/collections/toiletrolhouders",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Toiletborstelhouders",
+              "url": "/collections/toiletborstelhouders",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Reserverolhouders",
+              "url": "/collections/reserverolhouders",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Zeepaccessoires",
+          "url": "/collections/zeepaccessoires",
+          "type": "COLLECTION",
+          "items": [
+            {
+              "title": "Zeepdispensers",
+              "url": "/collections/zeepdispensers",
+              "type": "COLLECTION",
+              "items": []
+            },
+            {
+              "title": "Zeephouders",
+              "url": "/collections/zeephouders",
+              "type": "COLLECTION",
+              "items": []
+            }
+          ]
+        },
+        {
+          "title": "Planchetten",
+          "url": "/collections/planchetten",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Glashouders",
+          "url": "/collections/glashouders",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badkamernissen",
+          "url": "/collections/inbouw-opbouw-nissen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Douchewissers",
+          "url": "/collections/douchewissers",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badkamerkrukjes",
+          "url": "/collections/badkrukjes",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Afvalemmers",
+          "url": "/collections/afvalemmers",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Onderhoudsmiddelen",
+          "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+          "type": "COLLECTION",
+          "items": []
+        },
+        {
+          "title": "Badaccessoires",
+          "url": "/collections/bad-accessoires",
+          "type": "HTTP",
+          "items": []
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "handle": "frontpage",
+      "title": "Homepage",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkamermeubels",
+      "title": "Badkamermeubels",
+      "templateSuffix": "bc-meubelhub",
+      "admin_products_count": {
+        "count": 242,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "kranen",
+      "title": "Kranen",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 5687,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletten",
+      "title": "Toiletten en fonteinen",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 272,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafels",
+      "title": "Wastafels",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 476,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "baden",
+      "title": "Baden",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 196,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "accessoires",
+      "title": "Accessoires",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 1072,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "tegels",
+      "title": "Tegels",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 337,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "verwarming",
+      "title": "Verwarming",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 374,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "meer",
+      "title": "Meer",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 24,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "outlet",
+      "title": "Outlet",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "decoratie-vintage",
+      "title": "Decoratie & Vintage",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toilet-accessoires",
+      "title": "Toilet accessoires",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 185,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekhouders",
+      "title": "Handdoekhouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 203,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafel-accessoires",
+      "title": "Wastafel accessoires",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 197,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "bad-accessoires",
+      "title": "Bad accessoires",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 18,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "zeepaccessoires",
+      "title": "Zeep accessoires",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 98,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-opbouw-nissen",
+      "title": "Inbouw/opbouw nissen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 192,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "textiel",
+      "title": "Textiel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "stoelen-krukjes",
+      "title": "Stoelen & krukjes",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "afvalemmers",
+      "title": "Afvalemmers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 16,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "sanitaire-veiligheid",
+      "title": "Sanitaire veiligheid",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "onderhouds-en-schoonmaakmiddelen",
+      "title": "Onderhouds- en schoonmaakmiddelen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 4,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toilet-accessoires-sets",
+      "title": "Toilet accessoires sets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletrolhouders",
+      "title": "Toiletrolhouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 100,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletborstelhouders",
+      "title": "Toiletborstelhouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 63,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "reserverolhouders",
+      "title": "Reserverolhouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 25,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchewissers",
+      "title": "Douchewissers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 21,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchezitjes",
+      "title": "Douchezitjes",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douches",
+      "title": "Douche",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 1080,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkamer-verlichting",
+      "title": "Badkamerverlichting",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 63,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekstangen",
+      "title": "Handdoekstangen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 86,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekrekken",
+      "title": "Handdoekrekken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 35,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekhaken",
+      "title": "Handdoekhaken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 54,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekringen",
+      "title": "Handdoekringen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 28,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "zeepdispensers",
+      "title": "Zeepdispensers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 80,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "zeephouders",
+      "title": "Zeephouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 18,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "planchetten",
+      "title": "Planchetten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 115,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "glashouders",
+      "title": "Glashouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 28,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkrukjes",
+      "title": "Badkrukjes",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badgrepen",
+      "title": "Badgrepen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 12,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badmeubel-sets",
+      "title": "Badmeubel sets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletmeubels",
+      "title": "Toiletmeubels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 7,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "kolom-zijkasten",
+      "title": "Kolom & Zijkasten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 16,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "losse-onderkasten",
+      "title": "Losse onderkasten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 70,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafelbladen",
+      "title": "Wastafelbladen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 51,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegels-en-spiegelkasten",
+      "title": "Spiegels",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 321,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toebehoren",
+      "title": "Toebehoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 2663,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badmeubel-met-waskom",
+      "title": "Badmeubel met waskom",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badmeubel-zonder-spiegel",
+      "title": "Badmeubel zonder spiegel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badmeubel-met-spiegel",
+      "title": "Badmeubel met spiegel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badmeubel-met-spiegelkast",
+      "title": "Badmeubel met spiegelkast",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hoge-kasten",
+      "title": "Hoge kasten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 16,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "halfhoge-kasten",
+      "title": "Halfhoge kasten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelkasten",
+      "title": "Spiegelkasten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafelkranen",
+      "title": "Wastafelkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 573,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "sifons",
+      "title": "Sifons",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 49,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "afvoerpluggen",
+      "title": "Afvoerpluggen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 67,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkamermeubel-met-wastafel",
+      "title": "Badmeubel met wastafel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkamerspiegels",
+      "title": "Badkamerspiegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 316,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchekranen",
+      "title": "Douchekranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 4256,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchesets",
+      "title": "Douchesets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3519,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douche-thermostaatkranen",
+      "title": "Douche thermostaatkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 76,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-douchekranen",
+      "title": "Inbouw douchekranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 183,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdouches",
+      "title": "Handdouches",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 224,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hoofddouches",
+      "title": "Hoofddouches",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 314,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkranen",
+      "title": "Badkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 354,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "bad-thermostaatkranen",
+      "title": "Bad thermostaatkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 18,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-badkranen",
+      "title": "Inbouw badkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 135,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vrijstaande-badkranen",
+      "title": "Vrijstaande badkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 73,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badrandkranen",
+      "title": "Badrandkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 90,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badsets",
+      "title": "Badsets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opbouw-wastafelkranen",
+      "title": "Opbouw wastafelkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 355,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-wastafelkranen",
+      "title": "Inbouw wastafelkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 200,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "fonteinkranen",
+      "title": "Fonteinkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 99,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-fonteinkranen",
+      "title": "Inbouw fonteinkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 20,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opbouw-fonteinkranen",
+      "title": "Opbouw fonteinkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 79,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "keukenkranen",
+      "title": "Keukenkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 56,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "bidetkranen",
+      "title": "Bidetkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 51,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "urinoirspoelers",
+      "title": "Urinoirspoelers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "buitendouches",
+      "title": "Buitendouches",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 20,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "universele-uitlopen",
+      "title": "Universele uitlopen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 276,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hoekstopkranen",
+      "title": "Hoekstopkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 16,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "doucheslangen",
+      "title": "Doucheslangen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 69,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdouchehouders",
+      "title": "Handdouchehouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 97,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hoofddouchehouders",
+      "title": "Hoofddouchehouders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 202,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "complete-toiletsets",
+      "title": "Complete toiletsets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hangtoiletten",
+      "title": "Hangtoiletten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 58,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "staande-toiletten",
+      "title": "Staande toiletten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douche-wcs",
+      "title": "Douche wc's",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 27,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "bidetten",
+      "title": "Bidetten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "urinoirs",
+      "title": "Urinoirs",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "fonteinen",
+      "title": "Fonteinen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 102,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "reservoirs",
+      "title": "Reservoirs",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 1,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toebehoren-overig",
+      "title": "Toebehoren & Overig",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 34,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toilet-zonder-spoelrand",
+      "title": "Toilet zonder spoelrand",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 54,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "compacte-toiletten",
+      "title": "Compacte toiletten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 8,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "duoblok-toilet",
+      "title": "Duoblok toilet",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toilet-met-losse-stortbak",
+      "title": "Toilet met losse stortbak",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "losse-fonteinen",
+      "title": "Losse fonteinen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 67,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "fonteinsets",
+      "title": "Fonteinsets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 24,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "fonteinmeubels",
+      "title": "Fonteinmeubels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 7,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouwreservoirs",
+      "title": "Inbouwreservoirs",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hangende-reservoirs",
+      "title": "Hangende reservoirs",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "accessoires-sets",
+      "title": "Accessoires sets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletborstels",
+      "title": "Toiletborstels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 16,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "bedieningspanelen",
+      "title": "Bedieningspanelen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 38,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletzittingen",
+      "title": "Toiletzittingen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 17,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletblokhouder",
+      "title": "Toiletblokhouder",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vrijhangende-wastafels",
+      "title": "Vrijhangende wastafels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "meubelwastafels",
+      "title": "Meubelwastafels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 49,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opzetwastafels",
+      "title": "Opzetwastafels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 93,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "standaard-fonteinen",
+      "title": "Standaard fonteinen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 57,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hoekfonteinen",
+      "title": "Hoekfonteinen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 10,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opzetfonteinen",
+      "title": "Opzetfonteinen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 6,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "gootstenen",
+      "title": "Gootstenen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "overloopringen",
+      "title": "Overloopringen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchecabines",
+      "title": "Douchecabines",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 40,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vierkant",
+      "title": "Vierkant",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "rechthoek",
+      "title": "Rechthoek",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "kwartrond",
+      "title": "Kwartronde douchecabines",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 10,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vijfhoek",
+      "title": "Vijfhoek",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 2,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchewanden",
+      "title": "Douchewanden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 326,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inloopdouches",
+      "title": "Inloopdouches",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 305,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badwanden",
+      "title": "Badwanden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 5,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchedeuren",
+      "title": "Douchedeuren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 163,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "draaideuren",
+      "title": "Draaideuren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 133,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "schuifdeuren",
+      "title": "Schuifdeuren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 32,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "pendeldeuren",
+      "title": "Pendeldeuren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 4,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vouwdeuren",
+      "title": "Vouwdeuren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 6,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchebakken",
+      "title": "Douchebakken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 32,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchegoten",
+      "title": "Douchegoten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 67,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "doucheputten",
+      "title": "Doucheputten",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 4,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "sunshower",
+      "title": "Sunshower",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wissers",
+      "title": "Wissers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 14,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "doucherekken",
+      "title": "Doucherekken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 26,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douche-accessoires",
+      "title": "Douche accessoires",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 220,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouwbaden",
+      "title": "Inbouwbaden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "halfvrijstaande-baden",
+      "title": "Halfvrijstaande baden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 6,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vrijstaande-baden",
+      "title": "Vrijstaande baden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 30,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "whirlpool-baden",
+      "title": "Whirlpool baden",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 1,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badafvoeren-vulsystemen",
+      "title": "Badafvoeren & vulsystemen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 77,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "1-delig",
+      "title": "1-Delig",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "2-delig",
+      "title": "2-Delig",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 1,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badbruggen-badplanken",
+      "title": "Badbruggen & badplanken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 2,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "rechthoekige-spiegels",
+      "title": "Rechthoekige spiegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 32,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "ronde-spiegels",
+      "title": "Ronde spiegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 23,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "toiletspiegels",
+      "title": "Toiletspiegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegels-met-verlichting",
+      "title": "Spiegels met verlichting",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 84,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegels-zonder-verlichting",
+      "title": "Spiegels zonder verlichting",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 4,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegels-met-verwarming",
+      "title": "Spiegels met verwarming",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 60,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelkast-met-verlichting",
+      "title": "Spiegelkast met verlichting",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelkast-zonder-verlichting",
+      "title": "Spiegelkast zonder verlichting",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelverlichting",
+      "title": "Spiegelverlichting",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "scheer-make-up-spiegels",
+      "title": "Scheer / make-up spiegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 2,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelbevestiging",
+      "title": "Spiegelbevestiging",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "vloertegels",
+      "title": "Vloertegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 146,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wandtegels",
+      "title": "Wandtegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 191,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "decortegels",
+      "title": "Decortegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 67,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "tegelstroken",
+      "title": "Tegelstroken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "mozaiek-tegels",
+      "title": "Mozaïek tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 1,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "keramisch-parket",
+      "title": "Keramisch parket",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 43,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "populair",
+      "title": "Populair",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "betonlook-tegels",
+      "title": "Betonlook tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 46,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "stonelook-tegels",
+      "title": "Steenlook tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 116,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "marmerlook-tegels",
+      "title": "Marmerlook tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 59,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "houtlook-tegels",
+      "title": "Houtlook tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 43,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "terrazzo-tegels",
+      "title": "Terrazzo tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "tegellijm",
+      "title": "Tegellijm",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "voorstrijkmiddel",
+      "title": "Voorstrijkmiddel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "voegmortel",
+      "title": "Voegmortel",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "silicone-kit",
+      "title": "Silicone kit",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "leveling-systeem",
+      "title": "Leveling systeem",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "metaallook-tegels",
+      "title": "Metaallook tegels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 6,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spots",
+      "title": "Spots",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 14,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouwspots",
+      "title": "Inbouwspots",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 14,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opbouwspots",
+      "title": "Opbouwspots",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hanglampen",
+      "title": "Hanglampen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 35,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wandlampen",
+      "title": "Wandlampen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "plafondlampen",
+      "title": "Plafondlampen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 7,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegellampen",
+      "title": "Spiegellampen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 3,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "radiatoren",
+      "title": "Radiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 55,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekradiatoren",
+      "title": "Handdoekradiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 6,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "designradiatoren",
+      "title": "Designradiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 41,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "elektrische-radiatoren",
+      "title": "Elektrische radiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 41,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "paneelradiatoren",
+      "title": "Paneelradiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "lage-temperatuur-radiatoren",
+      "title": "Lage temperatuur radiatoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "handdoekwarmers",
+      "title": "Handdoekwarmers",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 275,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "elektrische-vloerverwarming",
+      "title": "Elektrische vloerverwarming",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 18,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegelverwarming",
+      "title": "Spiegelverwarming",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "radiator-aansluitmateriaal",
+      "title": "Radiator aansluitmateriaal",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 10,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "onderblokken",
+      "title": "Onderblokken",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "radiatorkranen",
+      "title": "Radiatorkranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "voetventielen",
+      "title": "Voetventielen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "thermostaatknoppen",
+      "title": "Thermostaatknoppen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "knelsets",
+      "title": "Knelsets",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "waterontharders",
+      "title": "Waterontharders",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "schakelmateriaal",
+      "title": "Schakelmateriaal",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "badkamerventilatie",
+      "title": "Badkamerventilatie",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 24,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "ibs70-cobber-doucheset",
+      "title": "IBS70 cobber doucheset",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "hotbath-ace-ac003-wastafelkraan",
+      "title": "Hotbath Ace AC003 wastafelkraan",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 12,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "kraan-toebehoren",
+      "title": "Toebehoren voor kranen",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 2472,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafel-toebehoren",
+      "title": "Toebehoren voor wastafels",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 143,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "tegeltoebehoren",
+      "title": "Tegeltoebehoren",
+      "templateSuffix": "",
+      "admin_products_count": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "inbouw-douchesets",
+      "title": "Inbouw douchesets",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 2994,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "opbouw-douchesets",
+      "title": "Opbouw douchesets",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 239,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "glijstangen",
+      "title": "Glijstangen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 37,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "glijstangsets",
+      "title": "Glijstangsets",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 75,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "afbouwdelen-voor-kranen",
+      "title": "Afbouwdelen voor kranen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 897,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "losse-inbouwdelen",
+      "title": "Losse inbouwdelen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 59,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "kraanonderdelen",
+      "title": "Kraanonderdelen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 712,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wanduitlaten",
+      "title": "Wanduitlaten",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 36,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "baduitlopen",
+      "title": "Baduitlopen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 203,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "wastafeluitlopen",
+      "title": "Wastafeluitlopen",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 20,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "zijdouches",
+      "title": "Zijdouches",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 8,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "radiatortoebehoren",
+      "title": "Radiatortoebehoren",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 18,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "baddoorvoersets",
+      "title": "Baddoorvoersets",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 12,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchewisserhouders",
+      "title": "Douchewisserhouders",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 8,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "elektrische-toebehoren",
+      "title": "Elektrische toebehoren",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 7,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "cascade-douches",
+      "title": "Cascade douches",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 2,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "montagegereedschap",
+      "title": "Montagegereedschap",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 7,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "doucheafvoer",
+      "title": "Doucheafvoer",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 71,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "douchehouders-en-uitlaten",
+      "title": "Douchehouders en uitlaten",
+      "templateSuffix": null,
+      "admin_products_count": {
+        "count": 335,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "doucheonderdelen",
+      "title": "Doucheonderdelen",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 989,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "spiegels-en-verlichting",
+      "title": "Spiegels en verlichting",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 381,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "handle": "verwarming-en-ventilatie",
+      "title": "Verwarming en ventilatie",
+      "templateSuffix": "category-landing",
+      "admin_products_count": {
+        "count": 398,
+        "precision": "EXACT"
+      }
+    }
+  ],
+  "duplicate_destinations": [
+    {
+      "url": "/collections/wastafelkranen",
+      "paths": [
+        [
+          "Kranen",
+          "Wastafelkranen"
+        ],
+        [
+          "Wastafels",
+          "Wastafelkranen"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/douchekranen",
+      "paths": [
+        [
+          "Kranen",
+          "Douchekranen"
+        ],
+        [
+          "Douche",
+          "Douchekranen"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/badkranen",
+      "paths": [
+        [
+          "Kranen",
+          "Badkranen"
+        ],
+        [
+          "Baden",
+          "Badkranen"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/douchesets",
+      "paths": [
+        [
+          "Kranen",
+          "Douchesets"
+        ],
+        [
+          "Douche",
+          "Douchesets"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/douchewissers",
+      "paths": [
+        [
+          "Douche",
+          "Doucheaccessoires",
+          "Douchewissers"
+        ],
+        [
+          "Accessoires",
+          "Douchewissers"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/meubelwastafels",
+      "paths": [
+        [
+          "Badkamermeubels",
+          "Meubelwastafels"
+        ],
+        [
+          "Wastafels",
+          "Meubelwastafels"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/fonteinmeubels",
+      "paths": [
+        [
+          "Badkamermeubels",
+          "Fonteinmeubels"
+        ],
+        [
+          "Toiletten en fonteinen",
+          "Fonteinen",
+          "Fonteinmeubels"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/badkamerspiegels",
+      "paths": [
+        [
+          "Badkamermeubels",
+          "Spiegels"
+        ],
+        [
+          "Spiegels en verlichting",
+          "Badkamerspiegels"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/wastafel-toebehoren",
+      "paths": [
+        [
+          "Badkamermeubels",
+          "Afvoer en montage"
+        ],
+        [
+          "Wastafels",
+          "Afvoer en montage"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/fonteinen",
+      "paths": [
+        [
+          "Wastafels",
+          "Fonteinen"
+        ],
+        [
+          "Toiletten en fonteinen",
+          "Fonteinen"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/toilet-accessoires",
+      "paths": [
+        [
+          "Toiletten en fonteinen",
+          "Toiletaccessoires"
+        ],
+        [
+          "Accessoires",
+          "Toiletaccessoires"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    },
+    {
+      "url": "/collections/bad-accessoires",
+      "paths": [
+        [
+          "Baden",
+          "Badaccessoires"
+        ],
+        [
+          "Accessoires",
+          "Badaccessoires"
+        ]
+      ],
+      "decision": "REVIEW_CONTEXT_NOT_AUTOMATIC_REMOVAL"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "TAX-WAS-01",
+      "status": "VOORSTEL",
+      "existing_url": "/collections/wastafelkranen",
+      "action": "Keep destination under Kranen; present Wastafels cross-link separately as supplementary navigation; verify memberships and preview before applying."
+    },
+    {
+      "id": "TAX-TILE-01",
+      "status": "ONDERZOEK",
+      "existing_urls": [
+        "/collections/houtlook-tegels",
+        "/collections/keramisch-parket"
+      ],
+      "action": "Compare exact product sets and search intent; equal counts do not prove duplication."
+    },
+    {
+      "id": "SEO-SERIES-01",
+      "status": "ONDERZOEK",
+      "candidate": "Hotbath Cobber",
+      "action": "Research search intent, current pages, assortment and series mapping before creating a URL."
+    }
+  ],
+  "limitations": [
+    "Admin collection counts do not prove online purchasability.",
+    "Public BadkamerCity web retrieval failed; no visual or interactive site-wide tests.",
+    "No new category, product assignment, filter, SEO page or theme change applied."
+  ]
+}

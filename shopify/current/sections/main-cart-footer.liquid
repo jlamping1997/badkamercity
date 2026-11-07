@@ -1,0 +1,136 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-cart-page.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'bc-cart-tools.js' | asset_url }}" defer="defer"></script>
+
+<div class="bc-cart-summary color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+  <div class="page-width">
+    <div class="cart__footer isolate">
+      <div class="cart__blocks">
+        <div class="js-contents">
+          <div class="bc-cart-card">
+            <h2 class="bc-cart-summary-title">{{ 'bc_cart_page.summary_heading' | t }}</h2>
+            <div class="bc-cart-overview" data-bc-cart-summary
+              data-bc-product-total="{{ cart.total_price | money | escape }}"
+              data-bc-total-label="{{ 'bc_cart_page.subtotal' | t | escape }}"
+              data-bc-shipping-pending-label="{{ 'bc_cart_page.calculated_at_checkout' | t | escape }}">
+              {%- if cart.total_discount > 0 -%}
+                <dl class="bc-cart-costs bc-cart-before-discounts">
+                  <div class="bc-cart-costs__row"><dt>{{ 'bc_cart_page.product_costs' | t }}</dt><dd>{{ cart.original_total_price | money }}</dd></div>
+                  <div class="bc-cart-costs__row bc-cart-costs__row--discount"><dt>{{ 'bc_cart_page.discounts' | t }}</dt><dd>−{{ cart.total_discount | money }}</dd></div>
+                </dl>
+              {%- endif -%}
+              <div class="totals">
+                <h3 class="totals__total" data-bc-total-label>{{ 'bc_cart_page.subtotal' | t }}</h3>
+                <p class="totals__total-value" data-bc-order-total>{{ cart.total_price | money }}</p>
+              </div>
+              <p class="tax-note">
+                {%- if cart.duties_included and cart.taxes_included -%}
+                  {{ 'bc_cart_page.duties_taxes_included' | t }}
+                {%- elsif cart.taxes_included -%}
+                  {{ 'bc_cart_page.taxes_included' | t }}
+                {%- elsif cart.duties_included -%}
+                  {{ 'bc_cart_page.duties_included' | t }}
+                {%- else -%}
+                  {{ 'bc_cart_page.taxes_at_checkout' | t }}
+                {%- endif -%}
+              </p>
+              <dl class="bc-cart-costs bc-cart-shipping-row">
+                <div class="bc-cart-costs__row"><dt>{{ 'bc_cart_page.shipping' | t }}</dt><dd data-bc-shipping-price>{% if cart.requires_shipping %}{{ 'bc_cart_page.calculated_at_checkout' | t }}{% else %}{{ 'bc_cart_page.no_shipping' | t }}{% endif %}</dd></div>
+              </dl>
+              <bc-cart-discount hidden
+                data-section-id="{{ section.id }}"
+                data-cart-url="{{ routes.cart_url }}"
+                data-update-url="{{ routes.cart_update_url }}"
+                data-message-invalid="{{ 'bc_cart_page.discount_invalid' | t | escape }}"
+                data-message-success="{{ 'bc_cart_page.discount_success' | t | escape }}"
+                data-message-shipping="{{ 'bc_cart_page.discount_shipping' | t | escape }}"
+                data-message-error="{{ 'bc_cart_page.discount_error' | t | escape }}"
+                data-message-removed="{{ 'bc_cart_page.discount_removed' | t | escape }}"
+                data-message-loading="{{ 'bc_cart_page.discount_loading' | t | escape }}"
+                data-message-code-label="{{ 'bc_cart_page.discount_code_label' | t | escape }}"
+                data-message-remove="{{ 'bc_cart_page.discount_remove' | t | escape }}"
+                data-message-pending="{{ 'bc_cart_page.discount_pending' | t | escape }}"
+                data-message-empty="{{ 'bc_cart_page.discount_empty' | t | escape }}">
+                <ul class="bc-cart-discount__codes list-unstyled" data-bc-discount-codes></ul>
+                <p class="bc-cart-discount__status" data-bc-discount-status role="status" aria-live="polite"></p>
+              </bc-cart-discount>
+            </div>
+            <div class="cart__ctas">
+              <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout" form="cart"{% if cart == empty %} disabled{% endif %}>
+                <span>{{ 'bc_cart_page.checkout' | t }}</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <p class="bc-cart-secure"><svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>{{ 'bc_cart_page.secure_checkout' | t }}</p>
+            <p class="bc-cart-help">{{ 'bc_cart_page.help' | t }} <a href="{{ section.settings.contact_url | default: '/pages/contact' }}">{{ 'bc_cart_page.contact' | t }}</a></p>
+          </div>
+          {%- for block in section.blocks -%}
+            {%- if block.type == '@app' -%}{% render block %}{%- endif -%}
+          {%- endfor -%}
+          <div id="cart-errors" role="alert"></div>
+          <div class="bc-cart-mobile-checkout"{% if cart == empty %} hidden{% endif %}>
+            <div class="bc-cart-mobile-subtotal"><strong>{{ 'bc_cart_page.subtotal' | t }}</strong><strong>{{ cart.total_price | money }}</strong></div>
+            <p class="bc-cart-mobile-tax">{% if cart.taxes_included %}{{ 'bc_cart_page.taxes_included' | t }} {% endif %}{% if cart.requires_shipping %}{{ 'bc_cart_page.mobile_shipping' | t }}{% endif %}</p>
+            <button type="submit" id="checkout-mobile" class="cart__checkout-button button" name="checkout" form="cart"{% if cart == empty %} disabled{% endif %}><span>{{ 'bc_cart_page.checkout' | t }}</span><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },    
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}
+

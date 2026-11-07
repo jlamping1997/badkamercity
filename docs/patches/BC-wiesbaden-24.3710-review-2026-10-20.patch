@@ -1,0 +1,95 @@
+--- a/snippets/bc-product-detail-specs.liquid
++++ b/snippets/bc-product-detail-specs.liquid
+@@ -12,7 +12,13 @@
+   {%- if bc_normal_scope == 'ready' -%}
+     {%- render 'bc-hotbath-public-specs', product: product, section_id: section_id -%}
+   {%- elsif specs_vendor == 'wiesbaden' or specs_vendor == 'jee-o' -%}
+-    {%- render 'bc-product-detail-specs-mapped', product: product, section_id: section_id -%}
++    {%- capture reviewed_specs -%}{%- render 'bc-wiesbaden-reviewed-specs', product: product, section_id: section_id -%}{%- endcapture -%}
++    {%- assign reviewed_specs = reviewed_specs | strip -%}
++    {%- if reviewed_specs != blank -%}
++      {{ reviewed_specs }}
++    {%- else -%}
++      {%- render 'bc-product-detail-specs-mapped', product: product, section_id: section_id -%}
++    {%- endif -%}
+   {%- else -%}
+     {%- render 'bc-product-detail-specs-legacy', product: product, section_id: section_id -%}
+   {%- endif -%}
+--- /dev/null
++++ b/snippets/bc-wiesbaden-reviewed-specs.liquid
+@@ -0,0 +1,55 @@
++{% doc %}
++  Renders the reviewed 24.3710 pilot only; returns empty for all other products.
++  @param {product} product - Current product.
++  @param {string} section_id - Main product section identifier.
++{% enddoc %}
++{%- liquid
++  assign vendor = product.vendor | strip | downcase
++  assign spec = product.metafields.custom.complete_specificaties
++  assign matched_article = false
++  assign allowed_keys = 'fabrikantnummer,merk,serie,productsoort,zelfsluitend,type_temperatuurregeling,aantal_kraangaten,uitvoering_uitloop,type_uitloop,kraanmondstuk,uittrekbare_uitloop_met_kraanbeluchter_mousseur,uittrekbare_uitloop_met_handdouche,met_zijwaartse_douche,met_koppelingen,met_afvoerplug,temperatuurbegrenzing,coldstart,volumestroomklasse,programmering,materiaal_kraan,oppervlaktebescherming,oppervlaktebehandeling,materiaal_greep,basiskleur,montage,aansluiting_aanvoer,maat_aansluiting_aanvoer,met_rozetten_afdekplaat,hoogte_mm,hoogte_uitloop_mm,voorsprong_uitloop_mm,kraanhuisdiameter_mm,aantal_grepen' | split: ','
++-%}
++{%- if vendor == 'wiesbaden' and product.has_only_default_variant and product.selected_or_first_available_variant.sku == '24.3710' and spec.type == 'json' -%}
++  {%- for group in spec.value -%}
++    {%- for item in group.items -%}
++      {%- if item.key == 'fabrikantnummer' and item.value == '24.3710' -%}
++        {%- assign matched_article = true -%}
++      {%- endif -%}
++    {%- endfor -%}
++  {%- endfor -%}
++  {%- if matched_article -%}
++    {%- capture spec_groups -%}
++      {%- for group in spec.value -%}
++        {%- capture rows -%}
++          {%- for item in group.items -%}
++            {%- if allowed_keys contains item.key and item.label != blank -%}
++              {%- assign display_value = item.value | append: '' -%}
++              {%- if item.value == true -%}
++                {%- assign display_value = 'bc_specs.yes' | t -%}
++              {%- elsif item.value == false -%}
++                {%- assign display_value = 'bc_specs.no' | t -%}
++              {%- endif -%}
++              {%- if display_value != blank -%}
++                {%- render 'bc-product-detail-row', value: display_value, label: item.label -%}
++              {%- endif -%}
++            {%- endif -%}
++          {%- endfor -%}
++        {%- endcapture -%}
++        {%- assign rows = rows | strip -%}
++        {%- if rows != blank -%}
++          <tbody>
++            <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group.group | escape }}</th></tr>
++            {{ rows }}
++          </tbody>
++        {%- endif -%}
++      {%- endfor -%}
++    {%- endcapture -%}
++    <section class="bc-product-specs" id="ProductSpecs-{{ section_id | escape }}" aria-labelledby="ProductSpecsTitle-{{ section_id | escape }}">
++      <div class="bc-product-specs__inner">
++        <p class="bc-product-specs__category"><a href="{{ routes.collections_url }}/kranen">{{ 'bc_pilot_category.kranen' | t }}</a> &gt; <a href="{{ routes.collections_url }}/wastafelkranen">{{ 'bc_pilot_category.wastafelkranen' | t }}</a> &gt; <a href="{{ routes.collections_url }}/opbouw-wastafelkranen">{{ 'bc_pilot_category.opbouw' | t }}</a></p>
++        <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id | escape }}">{{ 'bc_specs.title' | t }}</h2>
++        <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id | escape }}">{{ spec_groups }}</table>
++      </div>
++    </section>
++  {%- endif -%}
++{%- endif -%}
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -8,6 +8,7 @@
+  * ------------------------------------------------------------
+  */
+ {
++  "bc_pilot_category": {"kranen": "Kranen", "wastafelkranen": "Wastafelkranen", "opbouw": "Opbouw wastafelkranen"},
+   "bc_cart_page": {
+     "eyebrow": "Jouw badkamer begint hier",
+     "intro": "Controleer je artikelen en bekijk meteen je totaal.",
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -8,6 +8,7 @@
+  * ------------------------------------------------------------
+  */
+ {
++  "bc_pilot_category": {"kranen": "Taps", "wastafelkranen": "Basin taps", "opbouw": "Deck-mounted basin taps"},
+   "bc_cart_page": {
+     "eyebrow": "Your bathroom starts here",
+     "intro": "Check your items and see your total at a glance.",

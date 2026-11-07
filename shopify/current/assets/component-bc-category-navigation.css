@@ -1,0 +1,33 @@
+/* Scoped category navigation. Does not change footer, product cards or checkout. */
+.bc-category-path-wrap{padding-top:16px;padding-bottom:8px}
+.bc-category-path{margin:0 0 18px;color:#526474;font:inherit;font-size:14px;line-height:1.55}
+.bc-category-path ol{display:flex;flex-wrap:wrap;gap:5px 9px;list-style:none;padding:0;margin:0}
+.bc-category-path li{display:flex;gap:9px;align-items:baseline;min-width:0;max-width:100%;margin:0}
+.bc-category-path a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.bc-category-path a:hover{text-decoration:underline;text-underline-offset:3px}
+.bc-category-path [aria-hidden]{color:#758492;flex-shrink:0}
+.bc-category-path [aria-current]{color:rgb(var(--bc-color-primary,15,39,64));font-weight:600;overflow-wrap:anywhere}
+.bc-category-path a:focus-visible,.bc-category-children a:focus-visible{outline:2px solid #1f6685;outline-offset:4px;border-radius:3px;box-shadow:none}
+.bc-category-children__list{list-style:none;padding:0;margin:0}
+.bc-category-children__item{min-width:0;margin:0}
+.bc-category-children--compact{margin-top:22px}
+.bc-category-children--compact .bc-category-children__list{display:flex;flex-wrap:wrap;gap:8px}
+.bc-category-children--compact .bc-category-children__link{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 14px;min-height:44px;border:1px solid rgb(var(--bc-color-border,228,232,236));border-radius:8px;background:#fff;color:rgb(var(--bc-color-primary,15,39,64));text-decoration:none;font-size:14px;line-height:1.35}
+.bc-category-children--compact .bc-category-children__link:hover{background:#f4f7f9;border-color:#aebecb}
+.bc-category-children__arrow{font-size:20px;line-height:1;flex-shrink:0}
+.bc-category-children--cards .bc-category-children__placeholder{color:#5b788e;background:#f4f7f9;border-radius:8px}
+.bc-category-children--cards .bc-category-children__link{color:rgb(var(--bc-color-primary,15,39,64))}
+@media(max-width:749px){.bc-category-path{font-size:13px;margin-bottom:14px}.bc-category-path-wrap{padding-top:12px}.bc-category-path ol{gap:4px 7px}.bc-category-path li{gap:7px}.bc-category-children--compact{margin-top:16px}.bc-category-children--compact .bc-category-children__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.bc-category-children--compact .bc-category-children__link{display:flex;height:100%;padding:10px 12px;gap:8px;overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){.bc-category-children__link{transition:none}}
+
+/* The currently shared Toebehoren overview remains grouped by department. */
+.bc-category-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 0}
+.bc-category-groups__group{min-width:0;margin:0;padding:20px;border:1px solid rgba(15,39,64,.12);border-radius:12px;background:#fff}
+.bc-category-groups__title{margin:0 0 12px;font-size:18px;line-height:1.3;font-weight:700}
+.bc-category-groups__title a{color:rgb(var(--bc-color-primary,15,39,64));text-decoration:none}
+.bc-category-groups__list{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.bc-category-groups__list li{margin:0;padding:0}
+.bc-category-groups__list a{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:44px;color:rgb(var(--bc-color-text,24,39,56));text-decoration:none;font-size:15px;line-height:1.4}
+.bc-category-groups a:hover{text-decoration:underline;text-underline-offset:3px}
+.bc-category-groups a:focus-visible{outline:2px solid #1f6685;outline-offset:3px;border-radius:3px}
+@media(max-width:749px){.bc-category-groups{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:20px}.bc-category-groups__group{padding:16px}}

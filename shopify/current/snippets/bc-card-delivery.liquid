@@ -1,0 +1,12 @@
+{% doc %}
+  Renders the canonical Cottoceramix delivery text or the existing neutral label.
+  @param {product} product - The card article.
+{% enddoc %}
+{%- liquid
+  assign card_delivery_vendor = product.vendor | strip | downcase
+  assign card_supplier_lead = ''
+  if card_delivery_vendor == 'cottoceramix'
+    assign card_supplier_lead = product.metafields.custom.bron_toelichtingen_json.value.tiles.lead_time | strip
+  endif
+-%}
+<p class="bc-card-delivery">{% if card_supplier_lead != blank %}{{ card_supplier_lead | escape }}{% else %}{{ 'bc_delivery.lead_time_on_request' | t }}{% endif %}</p>

@@ -1,0 +1,148 @@
+{
+  "baseline": "2026-10-30",
+  "current": "2026-10-31",
+  "changes": [
+    {
+      "path": "assets/bc-mobile-header.js",
+      "change": "ADDED",
+      "current": {
+        "filename": "assets/bc-mobile-header.js",
+        "checksumMd5": "1d52f410ab396c201f69de40296b95af",
+        "size": "7222",
+        "updatedAt": "2026-10-30T16:15:05Z"
+      }
+    },
+    {
+      "path": "locales/en.default.json",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "locales/en.default.json",
+        "checksumMd5": "1117fe17162d1ca12ff3a83c2763415e",
+        "size": "69673",
+        "updatedAt": "2026-10-30T16:19:29Z"
+      },
+      "previous": {
+        "filename": "locales/en.default.json",
+        "checksumMd5": "61b8f2ce80eefd0d9994273adf0a1464",
+        "size": "65671",
+        "contentType": "application/json",
+        "updatedAt": "2026-10-30T08:26:45Z"
+      }
+    },
+    {
+      "path": "locales/nl.json",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "locales/nl.json",
+        "checksumMd5": "6664478c61d4fc53c27537bf44bba952",
+        "size": "73258",
+        "updatedAt": "2026-10-30T16:19:31Z"
+      },
+      "previous": {
+        "filename": "locales/nl.json",
+        "checksumMd5": "68748d54f2c394e74080ba6c822984e3",
+        "size": "69094",
+        "contentType": "application/json",
+        "updatedAt": "2026-10-30T08:26:45Z"
+      }
+    },
+    {
+      "path": "sections/bc-returns.liquid",
+      "change": "ADDED",
+      "current": {
+        "filename": "sections/bc-returns.liquid",
+        "checksumMd5": "1746659cd84502875b24f4fe311f80c9",
+        "size": "11607",
+        "updatedAt": "2026-10-30T16:19:42Z"
+      }
+    },
+    {
+      "path": "sections/footer-group.json",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "sections/footer-group.json",
+        "checksumMd5": "037363080cfe44da4c5fa9cb1c7d339b",
+        "size": "5383",
+        "updatedAt": "2026-10-30T16:19:53Z"
+      },
+      "previous": {
+        "filename": "sections/footer-group.json",
+        "checksumMd5": "b1e457265dc7fefb596a5c0c6944ae26",
+        "size": "5369",
+        "contentType": "application/json",
+        "updatedAt": "2026-10-30T08:28:40Z"
+      }
+    },
+    {
+      "path": "sections/footer.liquid",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "sections/footer.liquid",
+        "checksumMd5": "357e83e6a7ef260476a0f3dd589de980",
+        "size": "34480",
+        "updatedAt": "2026-10-30T16:19:44Z"
+      },
+      "previous": {
+        "filename": "sections/footer.liquid",
+        "checksumMd5": "bef0a0fdbdfeb2b2521fea07f07a96c3",
+        "size": "34207",
+        "contentType": "application/x-liquid",
+        "updatedAt": "2026-10-30T08:26:46Z"
+      }
+    },
+    {
+      "path": "sections/header.liquid",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "sections/header.liquid",
+        "checksumMd5": "78a34a0d90ff1df449f3f6ac05db476d",
+        "size": "74845",
+        "updatedAt": "2026-10-30T16:22:04Z"
+      },
+      "previous": {
+        "filename": "sections/header.liquid",
+        "checksumMd5": "129abf78b2b471553425145a769f9fce",
+        "size": "69738",
+        "contentType": "application/x-liquid",
+        "updatedAt": "2026-10-30T00:37:52Z"
+      }
+    },
+    {
+      "path": "snippets/bc-home-footer.liquid",
+      "change": "MODIFIED",
+      "current": {
+        "filename": "snippets/bc-home-footer.liquid",
+        "checksumMd5": "63943bf38ac942f65e342cc0348cb992",
+        "size": "2649",
+        "updatedAt": "2026-10-30T16:19:34Z"
+      },
+      "previous": {
+        "filename": "snippets/bc-home-footer.liquid",
+        "checksumMd5": "b5dd083ea44a8d644ee19444783ae33a",
+        "size": "2317",
+        "contentType": "application/x-liquid",
+        "updatedAt": "2026-10-30T08:26:46Z"
+      }
+    },
+    {
+      "path": "snippets/bc-returns-url.liquid",
+      "change": "ADDED",
+      "current": {
+        "filename": "snippets/bc-returns-url.liquid",
+        "checksumMd5": "000ab5cee978aaf63059307902dc4cc3",
+        "size": "310",
+        "updatedAt": "2026-10-30T16:19:37Z"
+      }
+    },
+    {
+      "path": "templates/page.retour-aanmelden.json",
+      "change": "ADDED",
+      "current": {
+        "filename": "templates/page.retour-aanmelden.json",
+        "checksumMd5": "2e5141a5c097bfb87ccc21e92fa51d66",
+        "size": "122",
+        "updatedAt": "2026-10-30T16:19:52Z"
+      }
+    }
+  ]
+}

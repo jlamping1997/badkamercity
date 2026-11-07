@@ -27,7 +27,12 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# Ephemeral exports and archives; committed existing theme backup files remain tracked
+# Ephemeral exports and archives; historical backups remain available in Git history
 *.zip
 *.tmp
 *.log
+
+# Oude Shopify theme QA/debug-kopieen; actuele bronbestanden blijven behouden
+assets/*.backup*
+assets/*backup-qa*
+assets/*backup-before-production*

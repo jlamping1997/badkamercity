@@ -1,0 +1,17 @@
+{% doc %}
+Renders the quote link inside a footer service list.
+@param {section} section - Footer section settings.
+{% enddoc %}
+{%- liquid
+  assign quote_url = pages['offerte-vergelijken'].url
+  assign quote_visible = false
+  if section.settings.quote_link_enabled and quote_url != blank
+    assign quote_visible = true
+  elsif section.settings.quote_link_preview and theme.role != 'main'
+    assign quote_visible = true
+    assign quote_url = '/pages/contact?view=offerte-vergelijken'
+  endif
+-%}
+{%- if quote_visible -%}
+  <li><a href="{{ quote_url | escape }}" data-bc-footer-quote>{{ 'bc_quote.eyebrow' | t }} – {{ 'bc_quote.header_button' | t }}</a></li>
+{%- endif -%}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": [
+    "10 kleuren: vier zichtbaar, geselecteerd, namen, totaal en +6 correct",
+    "Inline uit-/inklappen en toegankelijke knopstatus",
+    "Geselecteerde kleur buiten eerste vier blijft zichtbaar",
+    "1, 3, 4, 5, 7 en 9 kleuren zonder lege knoppen of duplicaten",
+    "Kleurwissel navigeert naar exact product en herstelt uitgeklapte staat",
+    "Verlopen of niet-passende bewaarde keuzes worden genegeerd",
+    "Desktop en mobiel delen ronde kleuren en uitgeklapte staat; andere merken behouden dropdowns",
+    "Onmogelijke combinatie blijft uitgeschakeld",
+    "Kleurkeuze blijft werken bij geblokkeerde sessieopslag",
+    "Afbeeldingsfout behoudt leesbare kleurkeuze",
+    "Volledige init gebruikt handoff direct zonder fetch; juiste kleur en uitgeklapt paneel blijven behouden"
+  ]
+}

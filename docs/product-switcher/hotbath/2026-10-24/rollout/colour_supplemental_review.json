@@ -1,0 +1,40 @@
+{
+  "schema": "hotbath-colour-supplemental-v1",
+  "groups": 4,
+  "records": 39,
+  "new_connections_vs_stable_input": 27,
+  "replaces_group_ids": [
+    "hotbath-colour-sds32-config-4",
+    "hotbath-colour-sds32-config-5",
+    "hotbath-colour-sds32-config-6"
+  ],
+  "pure_letter_model_counts": {
+    "RAAR": 9,
+    "RAAS": 9,
+    "SWIROU": 6
+  },
+  "sds32_records": 15,
+  "review": [
+    {
+      "sku": "SDS32BGP",
+      "reason": "SOURCE_CONFLICT_HELD_FOR_REVIEW"
+    },
+    {
+      "sku": "SDS32IX1",
+      "reason": "Round-handshower title/component difference or missing literal diameter/thickness. No inference from numeric suffix."
+    },
+    {
+      "sku": "SDS32IX15",
+      "reason": "Round-handshower title/component difference or missing literal diameter/thickness. No inference from numeric suffix."
+    },
+    {
+      "sku": "SDS32IX14",
+      "reason": "Round-handshower title/component difference or missing literal diameter/thickness. No inference from numeric suffix."
+    }
+  ],
+  "limits": [
+    "No Shopify/Git changes.",
+    "No manufacturer stock claim.",
+    "SDS32BGP remains hard HOLD."
+  ]
+}

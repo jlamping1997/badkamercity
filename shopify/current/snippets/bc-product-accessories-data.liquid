@@ -1,0 +1,15 @@
+{%- comment -%}
+  Exact, reviewed relationships only. Format: group|SKU|handle|customer explanation~
+  See docs/PDP_ACCESSORIES.md. Prices and availability always come from Shopify.
+  Testproduct rows are demonstration relationships, never copied onto real products.
+{%- endcomment -%}
+{%- if product.handle == 'testproduct-badkamercity-productpagina' -%}
+required|AR035IX|hotbath-archie-ar035-sifon-rvs-316-rvs|Voorbeeld van een apart benodigde sifon.~
+required|AR710IX|hotbath-archie-ar710-klikplug-rond-rvs-316-rvs-geborsteld|Voorbeeld van een apart benodigde afvoerplug.~
+optional|HB001|hotbath-sanitair-reiniger-1-liter|Voorbeeld van een optioneel onderhoudsproduct.~
+{%- elsif product.vendor == 'Hotbath' -%}
+  {%- case product.selected_or_first_available_variant.sku -%}
+    {%- when 'AC003CR', 'AC003GN', 'AC003BBP', 'AC003BCP', 'AC003MBP', 'AC003HCR', 'AC003HGN', 'AC003HBBP', 'AC003HBCP', 'AC003HMBP', 'AC440CR', 'AC440GN', 'AC440BBP', 'AC440BCP', 'AC440MBP' -%}
+optional|HB001|hotbath-sanitair-reiniger-1-liter|Voor zichtbare kalkaanslag op deze afwerking. Volg het schoonmaakadvies van Hotbath.~
+  {%- endcase -%}
+{%- endif -%}

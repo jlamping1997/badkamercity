@@ -1,0 +1,282 @@
+[
+  {
+    "id": "D01",
+    "symptom": "Logo staat per pagina anders",
+    "source": "Vergelijk wrappers en viewport, daarna CSS-grid/marges",
+    "owner": "Ontwikkelaar",
+    "regression": "Home/PDP en badge, hoofdstuk 52"
+  },
+  {
+    "id": "D02",
+    "symptom": "Zoekrij verdwijnt tijdens typen",
+    "source": "Focus/predictive-freeze en controllerstaat",
+    "owner": "Ontwikkelaar",
+    "regression": "Typen, Escape en omhoog scrollen, 53"
+  },
+  {
+    "id": "D03",
+    "symptom": "Zoekrij blijft compact bovenaan",
+    "source": "Topdrempel, meetwaarden en scrollrichting",
+    "owner": "Ontwikkelaar",
+    "regression": "Naar top en richtingwissel, 53"
+  },
+  {
+    "id": "D04",
+    "symptom": "Body blijft vast na menu sluiten",
+    "source": "Drawer/header scrolllocks en cleanup",
+    "owner": "Ontwikkelaar",
+    "regression": "Open/sluit en resize naar desktop, 55"
+  },
+  {
+    "id": "D05",
+    "symptom": "Vierkant om Terug",
+    "source": "Pointerfocus tegenover focus-visible",
+    "owner": "Ontwikkelaar",
+    "regression": "Tap én toetsenbord, 55"
+  },
+  {
+    "id": "D06",
+    "symptom": "Laatste categorie valt buiten beeld",
+    "source": "MAIN versus NAV-02 en CSS-viewport",
+    "owner": "Eigenaar",
+    "regression": "990–1359 en 1360+, 54"
+  },
+  {
+    "id": "D07",
+    "symptom": "Dropdown staat over tweede rij",
+    "source": "Paneelpositie onder volledige navigatie",
+    "owner": "Ontwikkelaar",
+    "regression": "Tweede rij en lange labels, 54"
+  },
+  {
+    "id": "D08",
+    "symptom": "Retourknop ontbreekt",
+    "source": "Viewport, Page-publicatie, helper en MAIN",
+    "owner": "Beheerder",
+    "regression": "Echte live link op desktop, 52/69"
+  },
+  {
+    "id": "D09",
+    "symptom": "Retourpreview werkt maar live niet",
+    "source": "Verborgen Page los van themapublicatie",
+    "owner": "Beheerder",
+    "regression": "Page-read en gewone URL, 49/69"
+  },
+  {
+    "id": "D10",
+    "symptom": "Retourmail ontbreekt",
+    "source": "Native feedback, bevoegd inbox/spam en mailconfiguratie",
+    "owner": "Eigenaar",
+    "regression": "Afgesproken fictieve ontvangstproef, 70"
+  },
+  {
+    "id": "D11",
+    "symptom": "Klant verwacht direct label",
+    "source": "Copy en handmatig servicecontract",
+    "owner": "Klantenservice",
+    "regression": "Aanvraagtekst en antwoordpad, 69/70"
+  },
+  {
+    "id": "D12",
+    "symptom": "Adres staat nog op één pagina",
+    "source": "Welke footer is actief en cache/bronmoment",
+    "owner": "Beheerder",
+    "regression": "Home plus gewone Page/PDP, 68"
+  },
+  {
+    "id": "D13",
+    "symptom": "Footerlabel is niet klikbaar",
+    "source": "Blockbestemming en Page-publicatie",
+    "owner": "Contentbeheerder",
+    "regression": "Beide footers en doelinhoud, 68"
+  },
+  {
+    "id": "D14",
+    "symptom": "Zoeksuggestie verschilt van resultaten",
+    "source": "Predictive/native/extern als aparte bronnen",
+    "owner": "Ontwikkelaar",
+    "regression": "Dezelfde term en scope, 56"
+  },
+  {
+    "id": "D15",
+    "symptom": "Product direct bereikbaar maar niet vindbaar",
+    "source": "Publicatie, termmatch en gebruikte index",
+    "owner": "Productbeheerder",
+    "regression": "Directe URL plus drie zoekroutes, 56"
+  },
+  {
+    "id": "D16",
+    "symptom": "Filterlijst blijft laden",
+    "source": "Requeststatus, timeout en fallback",
+    "owner": "Ontwikkelaar",
+    "regression": "Traag/fout antwoord met bruikbare native staat, 59"
+  },
+  {
+    "id": "D17",
+    "symptom": "Oude filteruitslag keert terug",
+    "source": "Abort/requestidentiteit en race",
+    "owner": "Ontwikkelaar",
+    "regression": "Twee snelle opeenvolgende wijzigingen, 59"
+  },
+  {
+    "id": "D18",
+    "symptom": "Terug wijzigt alleen URL",
+    "source": "Popstate en heropbouw van selectie/resultaten",
+    "owner": "Ontwikkelaar",
+    "regression": "Terug én Vooruit, 59"
+  },
+  {
+    "id": "D19",
+    "symptom": "Range en slider verschillen",
+    "source": "Parser, grenzen en gemeenschappelijke staat",
+    "owner": "Ontwikkelaar",
+    "regression": "Komma, reset en handmatige invoer, 59"
+  },
+  {
+    "id": "D20",
+    "symptom": "Kleurfoto klopt maar link niet",
+    "source": "Gedeeltelijke kaartupdate en renderer",
+    "owner": "Ontwikkelaar",
+    "regression": "Alle identiteitsnodes vergelijken, 60"
+  },
+  {
+    "id": "D21",
+    "symptom": "Hartje bewaart vorige uitvoering",
+    "source": "Variant/handle in opslagpayload",
+    "owner": "Ontwikkelaar",
+    "regression": "Kleurwissel, bewaren, herladen, 60/67"
+  },
+  {
+    "id": "D22",
+    "symptom": "PDP toont vorige specificatie",
+    "source": "Identityguard, verzoekuitkomst en fallback",
+    "owner": "Productbeheerder",
+    "regression": "Twee artikelen en foutrespons, 61/63"
+  },
+  {
+    "id": "D23",
+    "symptom": "Dubbele specificatietabel",
+    "source": "Beschrijving en merkadapterguard",
+    "owner": "Ontwikkelaar",
+    "regression": "In/out-of-guard product, 63"
+  },
+  {
+    "id": "D24",
+    "symptom": "Tegelberekening toont NaN",
+    "source": "Ongeldige/ontbrekende numerieke bron of parser",
+    "owner": "Productbeheerder",
+    "regression": "Leeg, komma, nul en geldige doosinhoud, 62"
+  },
+  {
+    "id": "D25",
+    "symptom": "Aantal dozen lijkt te laag",
+    "source": "Eenheid, verlies en afronding",
+    "owner": "Productbeheerder",
+    "regression": "Net boven doosgrens en cartpayload, 62"
+  },
+  {
+    "id": "D26",
+    "symptom": "Tegelprijs lijkt veel hoger in cart",
+    "source": "m²-presentatie tegenover doosprijs",
+    "owner": "Productbeheerder",
+    "regression": "Eenheid, totale m² en aantal dozen, 62"
+  },
+  {
+    "id": "D27",
+    "symptom": "Accessoire dubbel besteld",
+    "source": "Inbegrepen versus optioneel en selectie",
+    "owner": "Productbeheerder",
+    "regression": "Relatie en uiteindelijke cartregels, 64"
+  },
+  {
+    "id": "D28",
+    "symptom": "Handleiding opent verkeerd model",
+    "source": "Documentbron en artikelidentiteit",
+    "owner": "Productbeheerder",
+    "regression": "Exacte SKU/variant en download, 65"
+  },
+  {
+    "id": "D29",
+    "symptom": "Zoom sluit zonder focus",
+    "source": "Dialoogopener en focusherstel",
+    "owner": "Ontwikkelaar",
+    "regression": "Open/sluit met toetsenbord, 65/75"
+  },
+  {
+    "id": "D30",
+    "symptom": "Cartpopup blijft oud",
+    "source": "Response, update-event en renderfout",
+    "owner": "Ontwikkelaar",
+    "regression": "Teruggelezen regel/aantal en foutstaat, 66"
+  },
+  {
+    "id": "D31",
+    "symptom": "Cart herstelt dubbele aantallen",
+    "source": "Herstel is add-POST en herhaald klikken",
+    "owner": "Ontwikkelaar",
+    "regression": "Lege versus gevulde cart; alleen geplande schrijfproef, 66"
+  },
+  {
+    "id": "D32",
+    "symptom": "Verlanglijst leeg op telefoon",
+    "source": "Andere browser/opslagcontext of privémodus",
+    "owner": "Klantenservice",
+    "regression": "Opslagcontract uitleggen en lokale context controleren, 67"
+  },
+  {
+    "id": "D33",
+    "symptom": "Verlanglijstprijs verouderd",
+    "source": "Opgeslagen snapshot en productcache",
+    "owner": "Ontwikkelaar",
+    "regression": "Datawijziging en herladen zonder koopclaim, 67"
+  },
+  {
+    "id": "D34",
+    "symptom": "Assortimentvolgorde springt",
+    "source": "DOM-verplaatsing bij 750px",
+    "owner": "Ontwikkelaar",
+    "regression": "749/750 en zoekreset, 57"
+  },
+  {
+    "id": "D35",
+    "symptom": "Merken-Page is verborgen",
+    "source": "Directory is andere route dan Page",
+    "owner": "Contentbeheerder",
+    "regression": "/collections?view=merken, 57"
+  },
+  {
+    "id": "D36",
+    "symptom": "Meubelhub wijkt af na opschonen",
+    "source": "Admin-descriptionHtml styles niet meegenomen",
+    "owner": "Ontwikkelaar",
+    "regression": "Bronherstel gericht en beide lay-outs, 58"
+  },
+  {
+    "id": "D37",
+    "symptom": "Begrip eindigt op 404",
+    "source": "Redirectketen, Page en glossarylink",
+    "owner": "Contentbeheerder",
+    "regression": "Hygrometer bekende fout, 72"
+  },
+  {
+    "id": "D38",
+    "symptom": "Artikel verdeelt niet in secties",
+    "source": "Letterlijke H2-markup in blogrenderer",
+    "owner": "Contentbeheerder",
+    "regression": "Gerenderde koppen en kaarten, 72"
+  },
+  {
+    "id": "D39",
+    "symptom": "Offerte-upload lijkt beschikbaar in preview",
+    "source": "Previewgate versus klantactivatie",
+    "owner": "Eigenaar",
+    "regression": "Geen publieke link zonder vrijgave, 71"
+  },
+  {
+    "id": "D40",
+    "symptom": "Site lijkt snel maar verspringt",
+    "source": "Eerste render, font-/media-afmetingen",
+    "owner": "Ontwikkelaar",
+    "regression": "Koude render met layout-shiftmeting, 76"
+  }
+]

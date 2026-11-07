@@ -1,0 +1,4865 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-28",
+  "scope": "Read-only Admin configuration metadata. No products/customers/orders/raw bodies/secrets. Published page handles only.",
+  "collections": {
+    "count": 226,
+    "pages": 5,
+    "nodes": [
+      {
+        "handle": "frontpage",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkamermeubels",
+        "templateSuffix": "bc-meubelhub",
+        "bodyBytes": 7570,
+        "bodySha256": "56109be9d39226d136fe4a371c8fdfb35b1f00fdf6092cd153443a8e787ddf88",
+        "styleBlocks": 3,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kranen",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3532,
+        "bodySha256": "ca195b4c285afef03cc82b9a5dd98c1032ea92fd60ae419b3630aef08cc46950",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletten",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3580,
+        "bodySha256": "9b9482a2219aeb8dd14d3fa243b9c1e3310ec77fafa29d2f10947afe260d39fa",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafels",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3617,
+        "bodySha256": "c9db6e85722a9d99f694e1ecde88d30d3d86d9984f89fa011c616e1b9048ca5b",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "baden",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3484,
+        "bodySha256": "3d004682364c781fea3e6b1589cb954eef79cf7f2f9208f2c6b0249cd49001a4",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "accessoires",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3619,
+        "bodySha256": "0e6ce6482e85374c8ea960eedc1e3d0522afe8781ab470029bfb78c9a517c144",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "tegels",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3743,
+        "bodySha256": "4eac1de26ab7caeb19b111dc5998638188112a383be2234fdce32f81656d8fdf",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "verwarming",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3755,
+        "bodySha256": "368b45298a841250d4d8e4fc2ed7c1d37a02355e60ec8dfca710196606cc83ec",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "meer",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "outlet",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "decoratie-vintage",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toilet-accessoires",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekhouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafel-accessoires",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bad-accessoires",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zeepaccessoires",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-opbouw-nissen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "textiel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "stoelen-krukjes",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "afvalemmers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "sanitaire-veiligheid",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "onderhouds-en-schoonmaakmiddelen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toilet-accessoires-sets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletrolhouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletborstelhouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "reserverolhouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchewissers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchezitjes",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douches",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3564,
+        "bodySha256": "20c54311cfa6e0f0b1b8c57b8741e9f5d74385101e44842c7191a900617f5179",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkamer-verlichting",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3605,
+        "bodySha256": "a16581d56b550eeb476caa7b99396c54b1f9de45412305a54836812393a6fdee",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekstangen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekrekken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekhaken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekringen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zeepdispensers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zeephouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "planchetten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "glashouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkrukjes",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badgrepen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badmeubel-sets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletmeubels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kolom-zijkasten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "losse-onderkasten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafelbladen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegels-en-spiegelkasten",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 3596,
+        "bodySha256": "7647bf0dd9c7916452fca5472b57fa1a316363831747b1c2356a5b0a0b19e661",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toebehoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badmeubel-met-waskom",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badmeubel-zonder-spiegel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badmeubel-met-spiegel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badmeubel-met-spiegelkast",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hoge-kasten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "halfhoge-kasten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelkasten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafelkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "sifons",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "afvoerpluggen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkamermeubel-met-wastafel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkamerspiegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchekranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchesets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douche-thermostaatkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-douchekranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdouches",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hoofddouches",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bad-thermostaatkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-badkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vrijstaande-badkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badrandkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badsets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opbouw-wastafelkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-wastafelkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "fonteinkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-fonteinkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opbouw-fonteinkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "keukenkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bidetkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "urinoirspoelers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "buitendouches",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "universele-uitlopen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hoekstopkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doucheslangen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdouchehouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hoofddouchehouders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "complete-toiletsets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hangtoiletten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "staande-toiletten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douche-wcs",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bidetten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "urinoirs",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "fonteinen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "reservoirs",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toebehoren-overig",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toilet-zonder-spoelrand",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "compacte-toiletten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "duoblok-toilet",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toilet-met-losse-stortbak",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "losse-fonteinen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "fonteinsets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "fonteinmeubels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouwreservoirs",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hangende-reservoirs",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "accessoires-sets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletborstels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bedieningspanelen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletzittingen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletblokhouder",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vrijhangende-wastafels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "meubelwastafels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opzetwastafels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "standaard-fonteinen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hoekfonteinen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opzetfonteinen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "gootstenen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "overloopringen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchecabines",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vierkant",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rechthoek",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kwartrond",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vijfhoek",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchewanden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inloopdouches",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badwanden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchedeuren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "draaideuren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "schuifdeuren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "pendeldeuren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vouwdeuren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchebakken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchegoten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doucheputten",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "sunshower",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wissers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doucherekken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douche-accessoires",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouwbaden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "halfvrijstaande-baden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vrijstaande-baden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "whirlpool-baden",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badafvoeren-vulsystemen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "1-delig",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "2-delig",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badbruggen-badplanken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rechthoekige-spiegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ronde-spiegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "toiletspiegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegels-met-verlichting",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegels-zonder-verlichting",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegels-met-verwarming",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelkast-met-verlichting",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelkast-zonder-verlichting",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelverlichting",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "scheer-make-up-spiegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelbevestiging",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vloertegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wandtegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "decortegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "tegelstroken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "mozaiek-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "keramisch-parket",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "populair",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "betonlook-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "stonelook-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "marmerlook-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "houtlook-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "terrazzo-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "tegellijm",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "voorstrijkmiddel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "voegmortel",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "silicone-kit",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "leveling-systeem",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "metaallook-tegels",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spots",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouwspots",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opbouwspots",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hanglampen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wandlampen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "plafondlampen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegellampen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "radiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekradiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "designradiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "elektrische-radiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "paneelradiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "lage-temperatuur-radiatoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "handdoekwarmers",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "elektrische-vloerverwarming",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegelverwarming",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "radiator-aansluitmateriaal",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "onderblokken",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "radiatorkranen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "voetventielen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "thermostaatknoppen",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "knelsets",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "waterontharders",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "schakelmateriaal",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "badkamerventilatie",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ibs70-cobber-doucheset",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hotbath-ace-ac003-wastafelkraan",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kraan-toebehoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafel-toebehoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "tegeltoebehoren",
+        "templateSuffix": "",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inbouw-douchesets",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opbouw-douchesets",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "glijstangen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "glijstangsets",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "afbouwdelen-voor-kranen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "losse-inbouwdelen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kraanonderdelen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wanduitlaten",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "baduitlopen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wastafeluitlopen",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zijdouches",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "radiatortoebehoren",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "baddoorvoersets",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchewisserhouders",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "elektrische-toebehoren",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "cascade-douches",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "montagegereedschap",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doucheafvoer",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 99,
+        "bodySha256": "698a7f1f3e111d74dde48b1c5e58dc4c5357dbbefbf9a4db75827f2e4359587e",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "douchehouders-en-uitlaten",
+        "templateSuffix": null,
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doucheonderdelen",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spiegels-en-verlichting",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "verwarming-en-ventilatie",
+        "templateSuffix": "category-landing",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      }
+    ]
+  },
+  "pages": {
+    "count": 119,
+    "pages": 3,
+    "unpublishedCount": 1,
+    "publishedNodes": [
+      {
+        "handle": "contact",
+        "templateSuffix": "contact",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "begrippenlijst",
+        "templateSuffix": "begrippenlijst",
+        "bodyBytes": 0,
+        "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rimless",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2530,
+        "bodySha256": "3b3b441fbb7ee88185361dfcf7d33ef40a4e815bc3db02b1d90c13d41f862dc7",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "acrylglas",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2458,
+        "bodySha256": "f11d650d791f8d1d21bb9862b3b5eb03eab9b601947d94a4896275fa5b6d9179",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "afdichtrubber",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2384,
+        "bodySha256": "603f70bd0e26dc3e0285b63543b32fd7ac317008342b8e0d3e60dede7293d90f",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "afvoermanchet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2389,
+        "bodySha256": "742bbfe9b213eb24104c954e9a5e51a27d7a8b6d46cc0f705fc0219a84f3a9b2",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "anodiseren",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2406,
+        "bodySha256": "e0a4d3eeb92d2d6dfd8b8de724a64f0b6594fa716795579e7c6cf5d1aa73a94c",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "anti-plaque",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2322,
+        "bodySha256": "b85569d8106ce003561a203a561a0c988761bf01511ea70633fef21ab2c97fcf",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "anticondens",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2302,
+        "bodySha256": "e353c593fae17ca46bb826551706df39d411aa3dd5e77bce972c845cb0913d0c",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "antikalk",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2765,
+        "bodySha256": "8b8e46d4694ae079c758a35df73dc99908d07438fe0eb78a1c38b1b72a0a1291",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "antislip",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2336,
+        "bodySha256": "772f050512c34be1e45ac4611759ec4f63d3e257c054a4e6a92abc111a9a8fdc",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "antraciet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2343,
+        "bodySha256": "2b7d4b51289cc6f776fea10760d7b246bc2a474ed75b336ea3093d39356eb820",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bedieningsmogelijkheden",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2467,
+        "bodySha256": "12bab9aba7ef12c5e9ff5afcc035d85db210d2d5aabb00377525ee150f7474d4",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "blindflens",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2472,
+        "bodySha256": "658c23ec649ab261fb9aaf7f5e455d760867bf8214db2215445c0b41b8b1e17d",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "blindstop",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2301,
+        "bodySha256": "7b136a4592c592132e8e23b10d8e96989955c9dff8d5d4153f351ecaf2352fb0",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "bodemventiel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2360,
+        "bodySha256": "9d8f1584799d563b1a479d4578cd16fc66f6e470f4a378e25b5accec1bed71c9",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "borstelen",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2385,
+        "bodySha256": "668b0f093a62df014b7a020da3ed68fd9dd8956c5817657c959e4015f3d64b7a",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "buffers",
+        "templateSuffix": "page",
+        "bodyBytes": 2227,
+        "bodySha256": "4b9b5124989a887d15d2fb17ae9b864b1d0c2fcc0ddb5274c464a7a2c62d3ea6",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "capillair",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2474,
+        "bodySha256": "2a86cf9a0f9cb4111d525dfe1ecb5d75dc40c9df3b51e5fee1ea541868f43ad2",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ceramic",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2279,
+        "bodySha256": "427070a4e123ab5f389859f25420f995357748aec5a3dfd1b3f688b2439087ba",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ceramicplus",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2306,
+        "bodySha256": "04572d1e2af8a97daa44793a9439efbd9e1b2ed23a3022104675e461b344be86",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "coldstart",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2271,
+        "bodySha256": "89de7665b6becbe5fb47442a529b03bdb9f321d03e48ec2862f5a9256481f2f2",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "comfortzone",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2331,
+        "bodySha256": "3e93ffc012ca910ae63835f3d1813b8877e2343969efa5d448dd3aebfb189685",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "composiet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2337,
+        "bodySha256": "e271a23fda0c1561f039844b5eaa47a84b6bf8be6991bde1f425704cee8e3c54",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "conisch",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2241,
+        "bodySha256": "371027a8e868049f4aca10ace743cb2a2584598b313a803b7d22c10d04a23631",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "coolstart",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2197,
+        "bodySha256": "3d7fbd126a1a2b0e222a835eff8cfc5e639c37c75a1f733a76bec888b6b660be",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "cooltouch",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2269,
+        "bodySha256": "791bdc1298c07bc403d9517e8367ab3f791c814654e8d3a23f26b5a345dc85ec",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "diepspoel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2154,
+        "bodySha256": "7884f96eba2ce9378ace9b2b7441dae826319307604d55a1a43e89a973c45a61",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doorstroom-begrenzer",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2294,
+        "bodySha256": "3ed223f2cc5bdd482ce4a46c71801bcdeca08919d68855629ee3f41a62a18c09",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "doorstroomcapaciteit",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2268,
+        "bodySha256": "c6e99b3cba2882f6668e99606670b0733c7d71cf67a375eb7ef61b53d38d64a7",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "draadmaat",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2150,
+        "bodySha256": "1ac92277ad116bf250bbf83a4a2786b097dba19885c5243a8b6497a58931ad7e",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "droogbouw",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2226,
+        "bodySha256": "bdf25e43d2a39c8d6b7d8e9aa3701fb97b41b52613432ebcbb7c0641887f1ca1",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "drukstiften",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2160,
+        "bodySha256": "c7fe24042ca53b69375fcf04038b9a24278126aab78c68ede33532e7261542ff",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "dual-flush",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2257,
+        "bodySha256": "0ad63add32151e88174641f7201969d923ab9093fb70ce05dc67ee5ee40a75b5",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "duofresh",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2321,
+        "bodySha256": "fe49dc9f42bd42300cea9c14ff7473f6f9201e87f2b501e20e2e317a0e3a44f1",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "easypool",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2133,
+        "bodySha256": "acc8d0cff99fd237486dee09f373b5a9011f14c36ebafd6ffa0c77b2ce71b2e4",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ecosmart",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2164,
+        "bodySha256": "7f2bac7b87455c4c906d927e65d1110d04503771fb075416b7175d27aa0b9da5",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "eloxeren",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2268,
+        "bodySha256": "8e0d44cd84e02012a07e35575fab6598e13c0b692f9f02046c931e67f6353760",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "facetrand",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2223,
+        "bodySha256": "0a58881bb45be528589af6874a2a332618c86a70898fb792e70ab632ca52907b",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "flaconhouder",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2067,
+        "bodySha256": "5150590390de0ee94a0dc9565ea25ff5fd3492047d40cfdb00202abd22d201ca",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "fitting",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2144,
+        "bodySha256": "bcf7b160ce39e5e03b7d9455775cd6ebfa9cc643492edd160c0b3261360d52ad",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "flens",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2134,
+        "bodySha256": "c548e8d5ee76350fca46a854e99fb690890fb494a53dffb0051ad72ab0a9f650",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "glazuren",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2101,
+        "bodySha256": "6bd3f96d038866800f7f9dcabe488d328e0c0d2c66e5ef4d57c3e38b6321e80e",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "greeploos",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2214,
+        "bodySha256": "e974fba57755957de7f89cc5987f80dbc1e8145117bfa5f4ac0895444f23303f",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "greepmontage",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2129,
+        "bodySha256": "e742e176f7b54974dc1abf08dd5c492ad96d5ecc6ffc7a7a87e3d0d379762ced",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "gummi",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2107,
+        "bodySha256": "6d7c40c36d46317f3977243d45f0e408026a6bbc30dc3236455f7b3385be7ed1",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hart-op-hart",
+        "templateSuffix": "page",
+        "bodyBytes": 2145,
+        "bodySha256": "1df17a267663a4d5bbd3d0308c57ffef6b3d60c607ad3812edda8c67806c5198",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hartafstand",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2175,
+        "bodySha256": "3b238778a6c2fff6fb8bf1a9b38078c4531e023461da10a78f38df9fbe93e6e3",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hygro",
+        "templateSuffix": "page",
+        "bodyBytes": 2179,
+        "bodySha256": "01b2f3c3e49e975c7b9f384194e6687d01eda0e17ece766ac0c9f61a2a17c239",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inregelventiel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2238,
+        "bodySha256": "3725e395389ace7b8f0383fdfce213ff96cfe754b65f1a8fd418d2b7fe709354",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "inzet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2075,
+        "bodySha256": "18d74427de2cdfb2186f520f60caa9641cc8c5737c22bd74ff18e3c3bb7cfc5b",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "jet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2098,
+        "bodySha256": "7e59e372fe3b43531a955d393d01361a5a173486c217a6643bade4ee3597a088",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "keratect",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2090,
+        "bodySha256": "421d1d3820dcc03ba61c0cd70520ce17ffa623f21260878ae4739120f1559212",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "kermiclean",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2188,
+        "bodySha256": "c196625513bfb441b1ca03cde649f499594b1339f7cd3881fbc9e877d93938eb",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "klikwaste",
+        "templateSuffix": "begrip",
+        "bodyBytes": 1974,
+        "bodySha256": "d63fee12e1489fcaa6d85d6a33b0ca2114599c8465eed604bc328cca62f431f5",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "koolstoffilter",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2131,
+        "bodySha256": "0c4896457e2a0e658b394bc40d4157e87470f24924dcc684430517bba49e3239",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "loofah",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2034,
+        "bodySha256": "9b08764c633a173460df9d97721647bde4a750d5150ba7eedbb872b8a1b009f0",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "mantel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2032,
+        "bodySha256": "3483193063629ac098d1f0dc24ce422279ec2130b9dadfd598510ad80ac83665",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "mdf",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2268,
+        "bodySha256": "01998a829226383630570bd79bc85f75bd286d519ef4af03389519d61e4ad5e9",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "mineraalcomposiet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2262,
+        "bodySha256": "ddeeb04241822ab34287970d270304a18a47cb3890eb0e67ed551c86d6ed7317",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "monolith",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2371,
+        "bodySha256": "5b52f9f3a1d481ecb4dd9919ed1e5d619e9fa7f0079abc881b909f5f7bc13c3d",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "multijet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2266,
+        "bodySha256": "b3c1009525f5cd711c601d394d012b06a833c988320e32d11286e743f6f60ee3",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "muurprofiel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2206,
+        "bodySha256": "44433da87e9364c367fb775204ac4ba093920e194c014022dd3a342ab25a85e8",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "nano-coating",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2152,
+        "bodySha256": "04ef09d9b207caa436fb2f282bea5653ae8b5dca4daeba09c8374404052e81fd",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "nisdeur",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2263,
+        "bodySha256": "401573029c90696a6a0b23519f5698f466909fa74ecb793b2e3b2a2a45a922a2",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "ommanteling",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2198,
+        "bodySha256": "95804d4e97212474939b253c1f25b2638cceb22be99b5fef53644305b8c0bc3d",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "omstel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2152,
+        "bodySha256": "c54b26719f41c2da9e12d82e8496d697b2fc6c0f49086a77369a9bb87b19ee8f",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "onderstel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2180,
+        "bodySha256": "cebdf13c24e72e7ec8a5904c625d76e7459a35386a2fda5554d2993e8f0a5e19",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "opaalglas",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2166,
+        "bodySha256": "b714ead3d8500d16fe77b80ac2ca3f1d07b7192400ffb190245a0e0614d33b9b",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "overloop",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2214,
+        "bodySha256": "280671f0671eba584e82c08d9a6c963e84c16484d4374fe21cd8a2d256beb27a",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "perlator",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2060,
+        "bodySha256": "391c528e832cfad1094c0f08e166c67a2343e628ca771c4be4e8cb8ea45bfc55",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "pijp-kort",
+        "templateSuffix": "page",
+        "bodyBytes": 2237,
+        "bodySha256": "16913bbd79362617b5540a7bb982aee7d59e02fc837e0abd008731ae7033817c",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "polijsten",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2149,
+        "bodySha256": "76d651b246fc85b3438dc2e11b8d8dd5e363bfefb746eb3f45c133354baf9301",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "profielloos",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2184,
+        "bodySha256": "7a58d55b2025e963af16c92e75c546ffc677251b2f0d2d7c769de24669fb2b99",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "quaryl",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2125,
+        "bodySha256": "9e27ecff29886f87662c5e171b7d6bda2619657cc5574934d173a412bc911ad7",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "quickrelease",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2117,
+        "bodySha256": "ff34e27ae40474791a1728541272c1dd232e7d473492a68b92155957582437f9",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "radius",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2173,
+        "bodySha256": "7034151e1ff61f1a31a20fdadf70489bea8a600ff1a78e2b15247d8e2267d8d9",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rapowash",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2237,
+        "bodySha256": "d448a87ee9c7678b9199f6540115be3d9c53039af2d18d98f8b4411132d1b0ae",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "reukslot",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2049,
+        "bodySha256": "d7deb2649d0016642a3835d171e1c9333ab1a9736787031540123e7a2e295314",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rimless-1",
+        "templateSuffix": "page",
+        "bodyBytes": 2530,
+        "bodySha256": "3b3b441fbb7ee88185361dfcf7d33ef40a4e815bc3db02b1d90c13d41f862dc7",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rookglas",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2104,
+        "bodySha256": "b3736f8e7b0c9c4bd9e84d1f738ce0613f3639f7c7cc4ef5cea3b3c86c384c13",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zuil",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2211,
+        "bodySha256": "92bc6627d5e614247ea285299bdbf650c7594a71c30baa5b0441b66ef61816c9",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rozet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 1987,
+        "bodySha256": "119944b0dd464f8021771f36862ecd3a4d6e6503ad50265143b896ffa4384187",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rubit",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2016,
+        "bodySha256": "a933fcd62d025939fbef1e6ca8f6ee2a87447bbcef019aaec2d3a90a0a0731eb",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "rvs",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2188,
+        "bodySha256": "71e2fb690483b97cfd1a7706b30154e7dd56d04fb5dcc166d2134edb16c5f977",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "satineren",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2124,
+        "bodySha256": "60647a5556f22a5c00c2a7472e0841d67238e44d9a77739ff91710259337ad42",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "schachtplug",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2181,
+        "bodySha256": "93da94837659b2ce23e83c854cf0a8b5c55f70f2d351d225381b576298dc5fab",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "sensowash",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2179,
+        "bodySha256": "ef6526cb5040df4826dda29c951abd6a87e9ea64fe9615098ef514da62e7b034",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "showerstep",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2096,
+        "bodySha256": "b7ca1a20de787b8ebfc1d283ceca7327e5d1dee890bf276118df0c9a5bf25157",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "silkmove",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2031,
+        "bodySha256": "a324ef2e1be07a67e1d625f66768d79492fba1a382ba43f4b4486ae5b8cbfb18",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "slangwartel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2156,
+        "bodySha256": "9892ef89b0f2513799fb4ed0554740016c75b888c78dea3c8b25d08259a28f55",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "smc",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2100,
+        "bodySha256": "093f07ddd58b42b1be6b48c6d7a492b21e7e526f4e7dc4126670057e892466c0",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "soft-closing",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2014,
+        "bodySha256": "c39a4686dda310d529371d9d874fc36505dde62a59e6ed5031b87ae1f39890de",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "solid-surface",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2567,
+        "bodySha256": "d0182ccd577b3cd45799a1beb013c21c226edca96e02683633791bf7159a6e83",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "spoeltechniek",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2150,
+        "bodySha256": "5cc2bcd0ba875bf9679fb2706a58ed061be536bb7131fa4bdaae9ecfd1c41af4",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "styropordrager",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2179,
+        "bodySha256": "29d87db98e9616d2079b03ed10e27ce9774e95bc509541273b97fe1b5e1efca6",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "thermobegrenzer",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2131,
+        "bodySha256": "72ec703946cf84893dfe3fde358a51446922f1c066149c13cf74ed1486dec8cd",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "topfix",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2065,
+        "bodySha256": "d59b8e77848252eccc80408982a0754a0ca803395908ae6f9844c123b543f16c",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "trafo",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2201,
+        "bodySha256": "8bf7d85d65834e6d40d76d565ea4704393885cea5a9933fd5b6a67daaa07fb31",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "trekwaste",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2105,
+        "bodySha256": "4891ef2cb9519afa4b7412bc617351fa5bf1b2780f131384d94782765e854457",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "turbostat",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2096,
+        "bodySha256": "ab08b9fb36e34c641d95be34240c48fd55d658c28fe2dd63d71e4dfc9bbcf2aa",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "univerticalscharnier",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2172,
+        "bodySha256": "401a767bff67f1fdb7b6396015102adbfdb98bed5a68843afbd3a3f5970bb64c",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "veiligheidsglas",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2143,
+        "bodySha256": "0f511e2f6815c813cbd891dea9b9dc18f6a8757c46a9562ee577dd19d17b207d",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vlakspoel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2055,
+        "bodySha256": "9faf59d318313e90142724e52837a508ac45a34191b2f0a33260def6a6ba4d00",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "vlotter",
+        "templateSuffix": "begrip",
+        "bodyBytes": 1992,
+        "bodySha256": "3334ad921ad09c80b7b3d32ffd6fa2590ef7fb9ce0b3ba03799f0de4d88fc56a",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wartel",
+        "templateSuffix": "begrip",
+        "bodyBytes": 1958,
+        "bodySha256": "2135e9d4c64c3a835a06dcbd3bf5f73e999677fc3ebce8c4bd1d80d0ba461b4f",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "waste",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2188,
+        "bodySha256": "07314e0f15301446be8c9818638499e7f088b577b6648f65955e1aca537e1e75",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "waterslot",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2270,
+        "bodySha256": "f4f7fcbe6ecefd943d90e51d1ffadfb665a4830558543987cb0171ca532ddf2a",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "wondergliss",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2265,
+        "bodySha256": "4ce180a30896f89a8d5907cd39d9abff0d7ab9ebeccf9f13c8cda1ce8aed1253",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zijdeglans",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2055,
+        "bodySha256": "7ac7b8ea6e758f7bde1eb2b83878e40f8190155ccf1f52f2fc396aba9e95f104",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "zuiger",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2093,
+        "bodySha256": "221e40f1e3873fc7ca9e520f61aad9bbb9e87837bf0ca3565bd4f034f3d14c21",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "achter-onder-ao",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2590,
+        "bodySha256": "45f8239476dfde4fbb87b3e3bdc8c591b754d24bfe71fc9bccadece046540e47",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "buffers-toilet",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2485,
+        "bodySha256": "b3993695705e0deb8df654dfd1222442585a245cbeebfc852ba43b4dccf1f461",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hart-op-hart-hoh",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2405,
+        "bodySha256": "d04a554dddcf9da268547b57eb5c19124947ff211ba10963bd8d5773d9b2626b",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "hygro-meter",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2429,
+        "bodySha256": "09904910f3dd49f94e5e18eaffd75245be8c9e44126d51b15e7fcf8cbc68ca47",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "pijp-kort-pk",
+        "templateSuffix": "begrip",
+        "bodyBytes": 2483,
+        "bodySha256": "3c619381bbcd4441167a9e43d01681731c18fb9d1845025806ab750c190fedd6",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "sunshower",
+        "templateSuffix": "bc-sunshower",
+        "bodyBytes": 771,
+        "bodySha256": "f52e2b1311651fe45b38917914d7f500d9aec8b45952abcbeff75a126f919e1d",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      },
+      {
+        "handle": "verlanglijst",
+        "templateSuffix": "bc-wishlist",
+        "bodyBytes": 130,
+        "bodySha256": "e02c385952d1c8b02ed6f0038a4b01ab3af2a3ba5890c0e46dfe5e8061a50fea",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      }
+    ]
+  },
+  "blogs": {
+    "nodes": [
+      {
+        "handle": "nieuws",
+        "title": "Nieuws",
+        "templateSuffix": null,
+        "commentPolicy": "CLOSED"
+      }
+    ],
+    "calls": 1
+  },
+  "articles": {
+    "count": 1,
+    "pages": 1,
+    "nodes": [
+      {
+        "handle": "sunshower-infrarood-of-uv",
+        "blog": "nieuws",
+        "isPublished": true,
+        "templateSuffix": null,
+        "bodyBytes": 4436,
+        "bodySha256": "b324817056efd733b0e58ae535c23c99aa0e262fba38868516e00e3ac7752318",
+        "styleBlocks": 0,
+        "scriptBlocks": 0
+      }
+    ]
+  },
+  "menus": {
+    "nodes": [
+      {
+        "handle": "main-menu",
+        "items": [
+          {
+            "title": "Kranen",
+            "type": "COLLECTION",
+            "url": "/collections/kranen",
+            "items": [
+              {
+                "title": "Wastafelkranen",
+                "type": "COLLECTION",
+                "url": "/collections/wastafelkranen",
+                "items": [
+                  {
+                    "title": "Opbouw wastafelkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/opbouw-wastafelkranen"
+                  },
+                  {
+                    "title": "Inbouw wastafelkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/inbouw-wastafelkranen"
+                  }
+                ]
+              },
+              {
+                "title": "Fonteinkranen",
+                "type": "COLLECTION",
+                "url": "/collections/fonteinkranen",
+                "items": [
+                  {
+                    "title": "Opbouw fonteinkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/opbouw-fonteinkranen"
+                  },
+                  {
+                    "title": "Inbouw fonteinkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/inbouw-fonteinkranen"
+                  }
+                ]
+              },
+              {
+                "title": "Douchekranen",
+                "type": "COLLECTION",
+                "url": "/collections/douchekranen",
+                "items": [
+                  {
+                    "title": "Inbouw douchekranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/inbouw-douchekranen"
+                  },
+                  {
+                    "title": "Douchethermostaatkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/douche-thermostaatkranen"
+                  }
+                ]
+              },
+              {
+                "title": "Badkranen",
+                "type": "COLLECTION",
+                "url": "/collections/badkranen",
+                "items": [
+                  {
+                    "title": "Inbouw badkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/inbouw-badkranen"
+                  },
+                  {
+                    "title": "Vrijstaande badkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/vrijstaande-badkranen"
+                  },
+                  {
+                    "title": "Badrandkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/badrandkranen"
+                  },
+                  {
+                    "title": "Badthermostaatkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/bad-thermostaatkranen"
+                  },
+                  {
+                    "title": "Badsets",
+                    "type": "COLLECTION",
+                    "url": "/collections/badsets"
+                  }
+                ]
+              },
+              {
+                "title": "Douchesets",
+                "type": "HTTP",
+                "url": "/collections/douchesets",
+                "items": []
+              },
+              {
+                "title": "Buitendouches",
+                "type": "COLLECTION",
+                "url": "/collections/buitendouches",
+                "items": []
+              },
+              {
+                "title": "Keukenkranen",
+                "type": "COLLECTION",
+                "url": "/collections/keukenkranen",
+                "items": []
+              },
+              {
+                "title": "Bidetkranen",
+                "type": "COLLECTION",
+                "url": "/collections/bidetkranen",
+                "items": []
+              },
+              {
+                "title": "Kraanonderdelen en montage",
+                "type": "COLLECTION",
+                "url": "/collections/kraan-toebehoren",
+                "items": [
+                  {
+                    "title": "Losse inbouwdelen",
+                    "type": "COLLECTION",
+                    "url": "/collections/losse-inbouwdelen"
+                  },
+                  {
+                    "title": "Uitlopen",
+                    "type": "COLLECTION",
+                    "url": "/collections/universele-uitlopen"
+                  },
+                  {
+                    "title": "Serviceonderdelen",
+                    "type": "COLLECTION",
+                    "url": "/collections/kraanonderdelen"
+                  },
+                  {
+                    "title": "Hoekstopkranen",
+                    "type": "COLLECTION",
+                    "url": "/collections/hoekstopkranen"
+                  },
+                  {
+                    "title": "Baduitlopen",
+                    "type": "COLLECTION",
+                    "url": "/collections/baduitlopen"
+                  },
+                  {
+                    "title": "Wastafeluitlopen",
+                    "type": "COLLECTION",
+                    "url": "/collections/wastafeluitlopen"
+                  },
+                  {
+                    "title": "Montagegereedschap",
+                    "type": "COLLECTION",
+                    "url": "/collections/montagegereedschap"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Douche",
+            "type": "COLLECTION",
+            "url": "/collections/douches",
+            "items": [
+              {
+                "title": "Douchesets",
+                "type": "COLLECTION",
+                "url": "/collections/douchesets",
+                "items": [
+                  {
+                    "title": "Inbouw douchesets",
+                    "type": "COLLECTION",
+                    "url": "/collections/inbouw-douchesets"
+                  },
+                  {
+                    "title": "Opbouw douchesets",
+                    "type": "COLLECTION",
+                    "url": "/collections/opbouw-douchesets"
+                  },
+                  {
+                    "title": "Glijstangsets",
+                    "type": "COLLECTION",
+                    "url": "/collections/glijstangsets"
+                  }
+                ]
+              },
+              {
+                "title": "Inloopdouches en douchewanden",
+                "type": "COLLECTION",
+                "url": "/collections/douchewanden",
+                "items": [
+                  {
+                    "title": "Inloopdouches",
+                    "type": "COLLECTION",
+                    "url": "/collections/inloopdouches"
+                  }
+                ]
+              },
+              {
+                "title": "Douchedeuren",
+                "type": "COLLECTION",
+                "url": "/collections/douchedeuren",
+                "items": [
+                  {
+                    "title": "Draaideuren",
+                    "type": "COLLECTION",
+                    "url": "/collections/draaideuren"
+                  },
+                  {
+                    "title": "Schuifdeuren",
+                    "type": "COLLECTION",
+                    "url": "/collections/schuifdeuren"
+                  },
+                  {
+                    "title": "Pendeldeuren",
+                    "type": "COLLECTION",
+                    "url": "/collections/pendeldeuren"
+                  },
+                  {
+                    "title": "Vouwdeuren",
+                    "type": "COLLECTION",
+                    "url": "/collections/vouwdeuren"
+                  }
+                ]
+              },
+              {
+                "title": "Douchecabines",
+                "type": "COLLECTION",
+                "url": "/collections/douchecabines",
+                "items": [
+                  {
+                    "title": "Kwartronde douchecabines",
+                    "type": "COLLECTION",
+                    "url": "/collections/kwartrond"
+                  },
+                  {
+                    "title": "Vijfhoekige douchecabines",
+                    "type": "COLLECTION",
+                    "url": "/collections/vijfhoek"
+                  }
+                ]
+              },
+              {
+                "title": "Douchebakken",
+                "type": "COLLECTION",
+                "url": "/collections/douchebakken",
+                "items": []
+              },
+              {
+                "title": "Doucheafvoer",
+                "type": "COLLECTION",
+                "url": "/collections/doucheafvoer",
+                "items": [
+                  {
+                    "title": "Douchegoten",
+                    "type": "COLLECTION",
+                    "url": "/collections/douchegoten"
+                  },
+                  {
+                    "title": "Doucheputten",
+                    "type": "COLLECTION",
+                    "url": "/collections/doucheputten"
+                  }
+                ]
+              },
+              {
+                "title": "Sunshower",
+                "type": "PAGE",
+                "url": "/pages/sunshower",
+                "items": []
+              },
+              {
+                "title": "Douchekranen",
+                "type": "HTTP",
+                "url": "/collections/douchekranen",
+                "items": []
+              },
+              {
+                "title": "Doucheonderdelen",
+                "type": "COLLECTION",
+                "url": "/collections/doucheonderdelen",
+                "items": [
+                  {
+                    "title": "Hoofddouches",
+                    "type": "COLLECTION",
+                    "url": "/collections/hoofddouches"
+                  },
+                  {
+                    "title": "Handdouches",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdouches"
+                  },
+                  {
+                    "title": "Doucheslangen",
+                    "type": "COLLECTION",
+                    "url": "/collections/doucheslangen"
+                  },
+                  {
+                    "title": "Glijstangen",
+                    "type": "COLLECTION",
+                    "url": "/collections/glijstangen"
+                  },
+                  {
+                    "title": "Houders en uitlaten",
+                    "type": "COLLECTION",
+                    "url": "/collections/douchehouders-en-uitlaten"
+                  },
+                  {
+                    "title": "Zijdouches",
+                    "type": "COLLECTION",
+                    "url": "/collections/zijdouches"
+                  },
+                  {
+                    "title": "Cascade douches",
+                    "type": "COLLECTION",
+                    "url": "/collections/cascade-douches"
+                  }
+                ]
+              },
+              {
+                "title": "Doucheaccessoires",
+                "type": "COLLECTION",
+                "url": "/collections/douche-accessoires",
+                "items": [
+                  {
+                    "title": "Doucherekken",
+                    "type": "COLLECTION",
+                    "url": "/collections/doucherekken"
+                  },
+                  {
+                    "title": "Douchewissers",
+                    "type": "HTTP",
+                    "url": "/collections/douchewissers"
+                  },
+                  {
+                    "title": "Douchewisserhouders",
+                    "type": "COLLECTION",
+                    "url": "/collections/douchewisserhouders"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Badkamermeubels",
+            "type": "COLLECTION",
+            "url": "/collections/badkamermeubels",
+            "items": [
+              {
+                "title": "Onderkasten",
+                "type": "COLLECTION",
+                "url": "/collections/losse-onderkasten",
+                "items": []
+              },
+              {
+                "title": "Wastafelbladen",
+                "type": "COLLECTION",
+                "url": "/collections/wastafelbladen",
+                "items": []
+              },
+              {
+                "title": "Badkamerkasten",
+                "type": "COLLECTION",
+                "url": "/collections/kolom-zijkasten",
+                "items": []
+              },
+              {
+                "title": "Meubelwastafels",
+                "type": "HTTP",
+                "url": "/collections/meubelwastafels",
+                "items": []
+              },
+              {
+                "title": "Fonteinmeubels",
+                "type": "HTTP",
+                "url": "/collections/fonteinmeubels",
+                "items": []
+              },
+              {
+                "title": "Spiegels",
+                "type": "HTTP",
+                "url": "/collections/badkamerspiegels",
+                "items": []
+              },
+              {
+                "title": "Afvoer en montage",
+                "type": "HTTP",
+                "url": "/collections/wastafel-toebehoren",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Wastafels",
+            "type": "COLLECTION",
+            "url": "/collections/wastafels",
+            "items": [
+              {
+                "title": "Waskommen en opzetwastafels",
+                "type": "COLLECTION",
+                "url": "/collections/opzetwastafels",
+                "items": []
+              },
+              {
+                "title": "Meubelwastafels",
+                "type": "COLLECTION",
+                "url": "/collections/meubelwastafels",
+                "items": []
+              },
+              {
+                "title": "Fonteinen",
+                "type": "HTTP",
+                "url": "/collections/fonteinen",
+                "items": []
+              },
+              {
+                "title": "Wastafelkranen",
+                "type": "HTTP",
+                "url": "/collections/wastafelkranen",
+                "items": []
+              },
+              {
+                "title": "Afvoer en montage",
+                "type": "COLLECTION",
+                "url": "/collections/wastafel-toebehoren",
+                "items": [
+                  {
+                    "title": "Sifons",
+                    "type": "COLLECTION",
+                    "url": "/collections/sifons"
+                  },
+                  {
+                    "title": "Afvoerpluggen",
+                    "type": "COLLECTION",
+                    "url": "/collections/afvoerpluggen"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Toiletten en fonteinen",
+            "type": "COLLECTION",
+            "url": "/collections/toiletten",
+            "items": [
+              {
+                "title": "Hangtoiletten",
+                "type": "COLLECTION",
+                "url": "/collections/hangtoiletten",
+                "items": [
+                  {
+                    "title": "Toiletten zonder spoelrand",
+                    "type": "COLLECTION",
+                    "url": "/collections/toilet-zonder-spoelrand"
+                  },
+                  {
+                    "title": "Compacte toiletten",
+                    "type": "COLLECTION",
+                    "url": "/collections/compacte-toiletten"
+                  }
+                ]
+              },
+              {
+                "title": "Douche-wc’s",
+                "type": "COLLECTION",
+                "url": "/collections/douche-wcs",
+                "items": []
+              },
+              {
+                "title": "Fonteinen",
+                "type": "COLLECTION",
+                "url": "/collections/fonteinen",
+                "items": [
+                  {
+                    "title": "Losse fonteinen",
+                    "type": "COLLECTION",
+                    "url": "/collections/losse-fonteinen"
+                  },
+                  {
+                    "title": "Fonteinsets",
+                    "type": "COLLECTION",
+                    "url": "/collections/fonteinsets"
+                  },
+                  {
+                    "title": "Fonteinmeubels",
+                    "type": "COLLECTION",
+                    "url": "/collections/fonteinmeubels"
+                  }
+                ]
+              },
+              {
+                "title": "Bedieningsplaten",
+                "type": "COLLECTION",
+                "url": "/collections/bedieningspanelen",
+                "items": []
+              },
+              {
+                "title": "Toiletzittingen",
+                "type": "COLLECTION",
+                "url": "/collections/toiletzittingen",
+                "items": []
+              },
+              {
+                "title": "Reservoirs",
+                "type": "COLLECTION",
+                "url": "/collections/reservoirs",
+                "items": []
+              },
+              {
+                "title": "Toiletaccessoires",
+                "type": "HTTP",
+                "url": "/collections/toilet-accessoires",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Baden",
+            "type": "COLLECTION",
+            "url": "/collections/baden",
+            "items": [
+              {
+                "title": "Vrijstaande baden",
+                "type": "COLLECTION",
+                "url": "/collections/vrijstaande-baden",
+                "items": []
+              },
+              {
+                "title": "Halfvrijstaande baden",
+                "type": "COLLECTION",
+                "url": "/collections/halfvrijstaande-baden",
+                "items": []
+              },
+              {
+                "title": "Whirlpoolbaden",
+                "type": "COLLECTION",
+                "url": "/collections/whirlpool-baden",
+                "items": []
+              },
+              {
+                "title": "Badwanden",
+                "type": "COLLECTION",
+                "url": "/collections/badwanden",
+                "items": []
+              },
+              {
+                "title": "Badkranen",
+                "type": "HTTP",
+                "url": "/collections/badkranen",
+                "items": []
+              },
+              {
+                "title": "Badafvoer en vulling",
+                "type": "COLLECTION",
+                "url": "/collections/badafvoeren-vulsystemen",
+                "items": [
+                  {
+                    "title": "Baddoorvoersets",
+                    "type": "COLLECTION",
+                    "url": "/collections/baddoorvoersets"
+                  }
+                ]
+              },
+              {
+                "title": "Badaccessoires",
+                "type": "COLLECTION",
+                "url": "/collections/bad-accessoires",
+                "items": [
+                  {
+                    "title": "Badgrepen",
+                    "type": "COLLECTION",
+                    "url": "/collections/badgrepen"
+                  },
+                  {
+                    "title": "Badbruggen en badplanken",
+                    "type": "COLLECTION",
+                    "url": "/collections/badbruggen-badplanken"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Spiegels en verlichting",
+            "type": "COLLECTION",
+            "url": "/collections/spiegels-en-verlichting",
+            "items": [
+              {
+                "title": "Badkamerspiegels",
+                "type": "COLLECTION",
+                "url": "/collections/badkamerspiegels",
+                "items": [
+                  {
+                    "title": "Ronde spiegels",
+                    "type": "COLLECTION",
+                    "url": "/collections/ronde-spiegels"
+                  },
+                  {
+                    "title": "Rechthoekige spiegels",
+                    "type": "COLLECTION",
+                    "url": "/collections/rechthoekige-spiegels"
+                  },
+                  {
+                    "title": "Spiegels met verlichting",
+                    "type": "COLLECTION",
+                    "url": "/collections/spiegels-met-verlichting"
+                  },
+                  {
+                    "title": "Spiegels zonder verlichting",
+                    "type": "COLLECTION",
+                    "url": "/collections/spiegels-zonder-verlichting"
+                  },
+                  {
+                    "title": "Spiegels met verwarming",
+                    "type": "COLLECTION",
+                    "url": "/collections/spiegels-met-verwarming"
+                  }
+                ]
+              },
+              {
+                "title": "Scheer- en make-upspiegels",
+                "type": "COLLECTION",
+                "url": "/collections/scheer-make-up-spiegels",
+                "items": []
+              },
+              {
+                "title": "Spiegelverlichting",
+                "type": "COLLECTION",
+                "url": "/collections/spiegelverlichting",
+                "items": []
+              },
+              {
+                "title": "Spots",
+                "type": "COLLECTION",
+                "url": "/collections/spots",
+                "items": []
+              },
+              {
+                "title": "Hanglampen",
+                "type": "COLLECTION",
+                "url": "/collections/hanglampen",
+                "items": []
+              },
+              {
+                "title": "Plafondlampen",
+                "type": "COLLECTION",
+                "url": "/collections/plafondlampen",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Accessoires",
+            "type": "COLLECTION",
+            "url": "/collections/accessoires",
+            "items": [
+              {
+                "title": "Handdoekhouders",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekhouders",
+                "items": [
+                  {
+                    "title": "Handdoekhaken",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdoekhaken"
+                  },
+                  {
+                    "title": "Handdoekstangen",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdoekstangen"
+                  },
+                  {
+                    "title": "Handdoekrekken",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdoekrekken"
+                  },
+                  {
+                    "title": "Handdoekringen",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdoekringen"
+                  }
+                ]
+              },
+              {
+                "title": "Toiletaccessoires",
+                "type": "COLLECTION",
+                "url": "/collections/toilet-accessoires",
+                "items": [
+                  {
+                    "title": "Toiletrolhouders",
+                    "type": "COLLECTION",
+                    "url": "/collections/toiletrolhouders"
+                  },
+                  {
+                    "title": "Toiletborstelhouders",
+                    "type": "COLLECTION",
+                    "url": "/collections/toiletborstelhouders"
+                  },
+                  {
+                    "title": "Reserverolhouders",
+                    "type": "COLLECTION",
+                    "url": "/collections/reserverolhouders"
+                  }
+                ]
+              },
+              {
+                "title": "Zeepaccessoires",
+                "type": "COLLECTION",
+                "url": "/collections/zeepaccessoires",
+                "items": [
+                  {
+                    "title": "Zeepdispensers",
+                    "type": "COLLECTION",
+                    "url": "/collections/zeepdispensers"
+                  },
+                  {
+                    "title": "Zeephouders",
+                    "type": "COLLECTION",
+                    "url": "/collections/zeephouders"
+                  }
+                ]
+              },
+              {
+                "title": "Planchetten",
+                "type": "COLLECTION",
+                "url": "/collections/planchetten",
+                "items": []
+              },
+              {
+                "title": "Glashouders",
+                "type": "COLLECTION",
+                "url": "/collections/glashouders",
+                "items": []
+              },
+              {
+                "title": "Badkamernissen",
+                "type": "COLLECTION",
+                "url": "/collections/inbouw-opbouw-nissen",
+                "items": []
+              },
+              {
+                "title": "Douchewissers",
+                "type": "COLLECTION",
+                "url": "/collections/douchewissers",
+                "items": []
+              },
+              {
+                "title": "Badkamerkrukjes",
+                "type": "COLLECTION",
+                "url": "/collections/badkrukjes",
+                "items": []
+              },
+              {
+                "title": "Afvalemmers",
+                "type": "COLLECTION",
+                "url": "/collections/afvalemmers",
+                "items": []
+              },
+              {
+                "title": "Onderhoudsmiddelen",
+                "type": "COLLECTION",
+                "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+                "items": []
+              },
+              {
+                "title": "Badaccessoires",
+                "type": "HTTP",
+                "url": "/collections/bad-accessoires",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Verwarming en ventilatie",
+            "type": "COLLECTION",
+            "url": "/collections/verwarming-en-ventilatie",
+            "items": [
+              {
+                "title": "Radiatoren",
+                "type": "COLLECTION",
+                "url": "/collections/radiatoren",
+                "items": [
+                  {
+                    "title": "Handdoekradiatoren",
+                    "type": "COLLECTION",
+                    "url": "/collections/handdoekradiatoren"
+                  },
+                  {
+                    "title": "Designradiatoren",
+                    "type": "COLLECTION",
+                    "url": "/collections/designradiatoren"
+                  },
+                  {
+                    "title": "Elektrische radiatoren",
+                    "type": "COLLECTION",
+                    "url": "/collections/elektrische-radiatoren"
+                  }
+                ]
+              },
+              {
+                "title": "Handdoekwarmers",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekwarmers",
+                "items": []
+              },
+              {
+                "title": "Elektrische vloerverwarming",
+                "type": "COLLECTION",
+                "url": "/collections/elektrische-vloerverwarming",
+                "items": []
+              },
+              {
+                "title": "Radiatortoebehoren",
+                "type": "COLLECTION",
+                "url": "/collections/radiatortoebehoren",
+                "items": [
+                  {
+                    "title": "Radiator aansluitmateriaal",
+                    "type": "COLLECTION",
+                    "url": "/collections/radiator-aansluitmateriaal"
+                  }
+                ]
+              },
+              {
+                "title": "Badkamerventilatie",
+                "type": "COLLECTION",
+                "url": "/collections/badkamerventilatie",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Merken",
+            "type": "HTTP",
+            "url": "/collections?view=merken",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "footer",
+        "items": [
+          {
+            "title": "Zoeken",
+            "type": "SEARCH",
+            "url": "/search",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "customer-account-main-menu",
+        "items": [
+          {
+            "title": "Bestellingen",
+            "type": "CUSTOMER_ACCOUNT_PAGE",
+            "url": "https://shopify.com/94179590410/account/orders",
+            "items": []
+          },
+          {
+            "title": "Profiel",
+            "type": "CUSTOMER_ACCOUNT_PAGE",
+            "url": "https://shopify.com/94179590410/account/profile",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "assortiment",
+        "items": [
+          {
+            "title": "Accessoires",
+            "type": "COLLECTION",
+            "url": "/collections/accessoires",
+            "items": []
+          },
+          {
+            "title": "Baden",
+            "type": "COLLECTION",
+            "url": "/collections/baden",
+            "items": []
+          },
+          {
+            "title": "Badkamermeubels",
+            "type": "COLLECTION",
+            "url": "/collections/badkamermeubels",
+            "items": []
+          },
+          {
+            "title": "Homepage",
+            "type": "COLLECTION",
+            "url": "/collections/kranen",
+            "items": []
+          },
+          {
+            "title": "Meer",
+            "type": "COLLECTION",
+            "url": "/collections/meer",
+            "items": []
+          },
+          {
+            "title": "Tegels",
+            "type": "COLLECTION",
+            "url": "/collections/tegels",
+            "items": []
+          },
+          {
+            "title": "Toiletten",
+            "type": "COLLECTION",
+            "url": "/collections/toiletten",
+            "items": []
+          },
+          {
+            "title": "Verwarming",
+            "type": "COLLECTION",
+            "url": "/collections/verwarming",
+            "items": []
+          },
+          {
+            "title": "Wastafels",
+            "type": "COLLECTION",
+            "url": "/collections/wastafels",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "badkamermeubels-b",
+        "items": [
+          {
+            "title": "Alle producten",
+            "type": "CATALOG",
+            "url": "/collections/all",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "bc-wastafels-a-z",
+        "items": [
+          {
+            "title": "Afvoer en montage",
+            "type": "COLLECTION",
+            "url": "/collections/wastafel-toebehoren",
+            "items": []
+          },
+          {
+            "title": "Afvoerpluggen",
+            "type": "COLLECTION",
+            "url": "/collections/afvoerpluggen",
+            "items": []
+          },
+          {
+            "title": "Fonteinen",
+            "type": "HTTP",
+            "url": "/collections/fonteinen",
+            "items": []
+          },
+          {
+            "title": "Fonteinmeubels",
+            "type": "COLLECTION",
+            "url": "/collections/fonteinmeubels",
+            "items": []
+          },
+          {
+            "title": "Fonteinsets",
+            "type": "COLLECTION",
+            "url": "/collections/fonteinsets",
+            "items": []
+          },
+          {
+            "title": "Losse fonteinen",
+            "type": "COLLECTION",
+            "url": "/collections/losse-fonteinen",
+            "items": []
+          },
+          {
+            "title": "Meubelwastafels",
+            "type": "COLLECTION",
+            "url": "/collections/meubelwastafels",
+            "items": []
+          },
+          {
+            "title": "Sifons",
+            "type": "COLLECTION",
+            "url": "/collections/sifons",
+            "items": []
+          },
+          {
+            "title": "Waskommen en opzetwastafels",
+            "type": "COLLECTION",
+            "url": "/collections/opzetwastafels",
+            "items": []
+          },
+          {
+            "title": "Wastafelkranen",
+            "type": "HTTP",
+            "url": "/collections/wastafelkranen",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "bc-accessoires-a-z",
+        "items": [
+          {
+            "title": "Afvalemmers",
+            "type": "COLLECTION",
+            "url": "/collections/afvalemmers",
+            "items": []
+          },
+          {
+            "title": "Badaccessoires",
+            "type": "HTTP",
+            "url": "/collections/bad-accessoires",
+            "items": []
+          },
+          {
+            "title": "Badkamerkrukjes",
+            "type": "COLLECTION",
+            "url": "/collections/badkrukjes",
+            "items": []
+          },
+          {
+            "title": "Badkamernissen",
+            "type": "COLLECTION",
+            "url": "/collections/inbouw-opbouw-nissen",
+            "items": []
+          },
+          {
+            "title": "Douchewissers",
+            "type": "COLLECTION",
+            "url": "/collections/douchewissers",
+            "items": []
+          },
+          {
+            "title": "Glashouders",
+            "type": "COLLECTION",
+            "url": "/collections/glashouders",
+            "items": []
+          },
+          {
+            "title": "Handdoekhaken",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekhaken",
+            "items": []
+          },
+          {
+            "title": "Handdoekhouders",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekhouders",
+            "items": []
+          },
+          {
+            "title": "Handdoekrekken",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekrekken",
+            "items": []
+          },
+          {
+            "title": "Handdoekringen",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekringen",
+            "items": []
+          },
+          {
+            "title": "Handdoekstangen",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekstangen",
+            "items": []
+          },
+          {
+            "title": "Onderhoudsmiddelen",
+            "type": "COLLECTION",
+            "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+            "items": []
+          },
+          {
+            "title": "Planchetten",
+            "type": "COLLECTION",
+            "url": "/collections/planchetten",
+            "items": []
+          },
+          {
+            "title": "Reserverolhouders",
+            "type": "COLLECTION",
+            "url": "/collections/reserverolhouders",
+            "items": []
+          },
+          {
+            "title": "Toiletaccessoires",
+            "type": "COLLECTION",
+            "url": "/collections/toilet-accessoires",
+            "items": []
+          },
+          {
+            "title": "Toiletborstelhouders",
+            "type": "COLLECTION",
+            "url": "/collections/toiletborstelhouders",
+            "items": []
+          },
+          {
+            "title": "Toiletrolhouders",
+            "type": "COLLECTION",
+            "url": "/collections/toiletrolhouders",
+            "items": []
+          },
+          {
+            "title": "Zeepaccessoires",
+            "type": "COLLECTION",
+            "url": "/collections/zeepaccessoires",
+            "items": []
+          },
+          {
+            "title": "Zeepdispensers",
+            "type": "COLLECTION",
+            "url": "/collections/zeepdispensers",
+            "items": []
+          },
+          {
+            "title": "Zeephouders",
+            "type": "COLLECTION",
+            "url": "/collections/zeephouders",
+            "items": []
+          }
+        ]
+      },
+      {
+        "handle": "bc-wastafels-categorieen",
+        "items": [
+          {
+            "title": "Waskommen en opzetwastafels",
+            "type": "COLLECTION",
+            "url": "/collections/opzetwastafels",
+            "items": []
+          },
+          {
+            "title": "Meubelwastafels",
+            "type": "COLLECTION",
+            "url": "/collections/meubelwastafels",
+            "items": []
+          },
+          {
+            "title": "Fonteinen",
+            "type": "HTTP",
+            "url": "/collections/fonteinen",
+            "items": []
+          },
+          {
+            "title": "Wastafelkranen",
+            "type": "HTTP",
+            "url": "/collections/wastafelkranen",
+            "items": []
+          },
+          {
+            "title": "Afvoer en montage",
+            "type": "COLLECTION",
+            "url": "/collections/wastafel-toebehoren",
+            "items": [
+              {
+                "title": "Sifons",
+                "type": "COLLECTION",
+                "url": "/collections/sifons",
+                "items": []
+              },
+              {
+                "title": "Afvoerpluggen",
+                "type": "COLLECTION",
+                "url": "/collections/afvoerpluggen",
+                "items": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "handle": "bc-accessoires-categorieen",
+        "items": [
+          {
+            "title": "Handdoekhouders",
+            "type": "COLLECTION",
+            "url": "/collections/handdoekhouders",
+            "items": [
+              {
+                "title": "Handdoekhaken",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekhaken",
+                "items": []
+              },
+              {
+                "title": "Handdoekstangen",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekstangen",
+                "items": []
+              },
+              {
+                "title": "Handdoekrekken",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekrekken",
+                "items": []
+              },
+              {
+                "title": "Handdoekringen",
+                "type": "COLLECTION",
+                "url": "/collections/handdoekringen",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Toiletaccessoires",
+            "type": "COLLECTION",
+            "url": "/collections/toilet-accessoires",
+            "items": [
+              {
+                "title": "Toiletrolhouders",
+                "type": "COLLECTION",
+                "url": "/collections/toiletrolhouders",
+                "items": []
+              },
+              {
+                "title": "Toiletborstelhouders",
+                "type": "COLLECTION",
+                "url": "/collections/toiletborstelhouders",
+                "items": []
+              },
+              {
+                "title": "Reserverolhouders",
+                "type": "COLLECTION",
+                "url": "/collections/reserverolhouders",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Zeepaccessoires",
+            "type": "COLLECTION",
+            "url": "/collections/zeepaccessoires",
+            "items": [
+              {
+                "title": "Zeepdispensers",
+                "type": "COLLECTION",
+                "url": "/collections/zeepdispensers",
+                "items": []
+              },
+              {
+                "title": "Zeephouders",
+                "type": "COLLECTION",
+                "url": "/collections/zeephouders",
+                "items": []
+              }
+            ]
+          },
+          {
+            "title": "Planchetten",
+            "type": "COLLECTION",
+            "url": "/collections/planchetten",
+            "items": []
+          },
+          {
+            "title": "Glashouders",
+            "type": "COLLECTION",
+            "url": "/collections/glashouders",
+            "items": []
+          },
+          {
+            "title": "Badkamernissen",
+            "type": "COLLECTION",
+            "url": "/collections/inbouw-opbouw-nissen",
+            "items": []
+          },
+          {
+            "title": "Douchewissers",
+            "type": "COLLECTION",
+            "url": "/collections/douchewissers",
+            "items": []
+          },
+          {
+            "title": "Badkamerkrukjes",
+            "type": "COLLECTION",
+            "url": "/collections/badkrukjes",
+            "items": []
+          },
+          {
+            "title": "Afvalemmers",
+            "type": "COLLECTION",
+            "url": "/collections/afvalemmers",
+            "items": []
+          },
+          {
+            "title": "Onderhoudsmiddelen",
+            "type": "COLLECTION",
+            "url": "/collections/onderhouds-en-schoonmaakmiddelen",
+            "items": []
+          },
+          {
+            "title": "Badaccessoires",
+            "type": "HTTP",
+            "url": "/collections/bad-accessoires",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "calls": 1
+  },
+  "redirects": {
+    "nodes": [
+      {
+        "path": "/begrippenlijst/rimless",
+        "target": "/pages/rimless"
+      },
+      {
+        "path": "/begrippenlijst/achter-onder-ao",
+        "target": "/pages/achter-onder-ao"
+      },
+      {
+        "path": "/begrippenlijst/acrylglas",
+        "target": "/pages/acrylglas"
+      },
+      {
+        "path": "/begrippenlijst/afdichtrubber",
+        "target": "/pages/afdichtrubber"
+      },
+      {
+        "path": "/begrippenlijst/afvoermanchet",
+        "target": "/pages/afvoermanchet"
+      },
+      {
+        "path": "/begrippenlijst/anodiseren",
+        "target": "/pages/anodiseren"
+      },
+      {
+        "path": "/begrippenlijst/anti-plaque",
+        "target": "/pages/anti-plaque"
+      },
+      {
+        "path": "/begrippenlijst/anticondens",
+        "target": "/pages/anticondens"
+      },
+      {
+        "path": "/begrippenlijst/antikalk",
+        "target": "/pages/antikalk"
+      },
+      {
+        "path": "/begrippenlijst/antislip",
+        "target": "/pages/antislip"
+      },
+      {
+        "path": "/begrippenlijst/antraciet",
+        "target": "/pages/antraciet"
+      },
+      {
+        "path": "/begrippenlijst/bedieningsmogelijkheden",
+        "target": "/pages/bedieningsmogelijkheden"
+      },
+      {
+        "path": "/begrippenlijst/blindflens",
+        "target": "/pages/blindflens"
+      },
+      {
+        "path": "/begrippenlijst/blindstop",
+        "target": "/pages/blindstop"
+      },
+      {
+        "path": "/begrippenlijst/bodemventiel",
+        "target": "/pages/bodemventiel"
+      },
+      {
+        "path": "/begrippenlijst/borstelen",
+        "target": "/pages/borstelen"
+      },
+      {
+        "path": "/begrippenlijst/buffers-toilet",
+        "target": "/pages/buffers-toilet"
+      },
+      {
+        "path": "/begrippenlijst/capillair",
+        "target": "/pages/capillair"
+      },
+      {
+        "path": "/begrippenlijst/ceramic",
+        "target": "/pages/ceramic"
+      },
+      {
+        "path": "/begrippenlijst/ceramicplus",
+        "target": "/pages/ceramicplus"
+      },
+      {
+        "path": "/begrippenlijst/coldstart",
+        "target": "/pages/coldstart"
+      },
+      {
+        "path": "/begrippenlijst/comfortzone",
+        "target": "/pages/comfortzone"
+      },
+      {
+        "path": "/begrippenlijst/composiet",
+        "target": "/pages/composiet"
+      },
+      {
+        "path": "/begrippenlijst/conisch",
+        "target": "/pages/conisch"
+      },
+      {
+        "path": "/begrippenlijst/coolstart",
+        "target": "/pages/coolstart"
+      },
+      {
+        "path": "/begrippenlijst/cooltouch",
+        "target": "/pages/cooltouch"
+      },
+      {
+        "path": "/begrippenlijst/diepspoel",
+        "target": "/pages/diepspoel"
+      },
+      {
+        "path": "/begrippenlijst/doorstroom-begrenzer",
+        "target": "/pages/doorstroom-begrenzer"
+      },
+      {
+        "path": "/begrippenlijst/doorstroomcapaciteit",
+        "target": "/pages/doorstroomcapaciteit"
+      },
+      {
+        "path": "/begrippenlijst/draadmaat",
+        "target": "/pages/draadmaat"
+      },
+      {
+        "path": "/begrippenlijst/droogbouw",
+        "target": "/pages/droogbouw"
+      },
+      {
+        "path": "/begrippenlijst/drukstiften",
+        "target": "/pages/drukstiften"
+      },
+      {
+        "path": "/begrippenlijst/dual-flush",
+        "target": "/pages/dual-flush"
+      },
+      {
+        "path": "/begrippenlijst/duofresh",
+        "target": "/pages/duofresh"
+      },
+      {
+        "path": "/begrippenlijst/easypool",
+        "target": "/pages/easypool"
+      },
+      {
+        "path": "/begrippenlijst/ecosmart",
+        "target": "/pages/ecosmart"
+      },
+      {
+        "path": "/begrippenlijst/eloxeren",
+        "target": "/pages/eloxeren"
+      },
+      {
+        "path": "/begrippenlijst/facetrand",
+        "target": "/pages/facetrand"
+      },
+      {
+        "path": "/begrippenlijst/fitting",
+        "target": "/pages/fitting"
+      },
+      {
+        "path": "/begrippenlijst/flaconhouder",
+        "target": "/pages/flaconhouder"
+      },
+      {
+        "path": "/begrippenlijst/flens",
+        "target": "/pages/flens"
+      },
+      {
+        "path": "/begrippenlijst/glazuren",
+        "target": "/pages/glazuren"
+      },
+      {
+        "path": "/begrippenlijst/greeploos",
+        "target": "/pages/greeploos"
+      },
+      {
+        "path": "/begrippenlijst/greepmontage",
+        "target": "/pages/greepmontage"
+      },
+      {
+        "path": "/begrippenlijst/gummi",
+        "target": "/pages/gummi"
+      },
+      {
+        "path": "/begrippenlijst/hart-op-hart-hoh",
+        "target": "/pages/hart-op-hart-hoh"
+      },
+      {
+        "path": "/begrippenlijst/hartafstand",
+        "target": "/pages/hartafstand"
+      },
+      {
+        "path": "/begrippenlijst/hygrometer",
+        "target": "/pages/hygrometer"
+      },
+      {
+        "path": "/begrippenlijst/inregelventiel",
+        "target": "/pages/inregelventiel"
+      },
+      {
+        "path": "/begrippenlijst/inzet",
+        "target": "/pages/inzet"
+      },
+      {
+        "path": "/begrippenlijst/jet",
+        "target": "/pages/jet"
+      },
+      {
+        "path": "/begrippenlijst/keratect",
+        "target": "/pages/keratect"
+      },
+      {
+        "path": "/begrippenlijst/kermiclean",
+        "target": "/pages/kermiclean"
+      },
+      {
+        "path": "/begrippenlijst/klikwaste",
+        "target": "/pages/klikwaste"
+      },
+      {
+        "path": "/begrippenlijst/koolstoffilter",
+        "target": "/pages/koolstoffilter"
+      },
+      {
+        "path": "/begrippenlijst/loofah",
+        "target": "/pages/loofah"
+      },
+      {
+        "path": "/begrippenlijst/mantel",
+        "target": "/pages/mantel"
+      },
+      {
+        "path": "/begrippenlijst/mdf",
+        "target": "/pages/mdf"
+      },
+      {
+        "path": "/begrippenlijst/mineraalcomposiet",
+        "target": "/pages/mineraalcomposiet"
+      },
+      {
+        "path": "/begrippenlijst/monolith",
+        "target": "/pages/monolith"
+      },
+      {
+        "path": "/begrippenlijst/multijet",
+        "target": "/pages/multijet"
+      },
+      {
+        "path": "/begrippenlijst/muurprofiel",
+        "target": "/pages/muurprofiel"
+      },
+      {
+        "path": "/begrippenlijst/nano-coating",
+        "target": "/pages/nano-coating"
+      },
+      {
+        "path": "/begrippenlijst/nisdeur",
+        "target": "/pages/nisdeur"
+      },
+      {
+        "path": "/begrippenlijst/ommanteling",
+        "target": "/pages/ommanteling"
+      },
+      {
+        "path": "/begrippenlijst/omstel",
+        "target": "/pages/omstel"
+      },
+      {
+        "path": "/begrippenlijst/onderstel",
+        "target": "/pages/onderstel"
+      },
+      {
+        "path": "/begrippenlijst/opaalglas",
+        "target": "/pages/opaalglas"
+      },
+      {
+        "path": "/begrippenlijst/overloop",
+        "target": "/pages/overloop"
+      },
+      {
+        "path": "/begrippenlijst/perlator",
+        "target": "/pages/perlator"
+      },
+      {
+        "path": "/begrippenlijst/pijp-kort-pk",
+        "target": "/pages/pijp-kort-pk"
+      },
+      {
+        "path": "/begrippenlijst/polijsten",
+        "target": "/pages/polijsten"
+      },
+      {
+        "path": "/begrippenlijst/profielloos",
+        "target": "/pages/profielloos"
+      },
+      {
+        "path": "/begrippenlijst/quaryl",
+        "target": "/pages/quaryl"
+      },
+      {
+        "path": "/begrippenlijst/quickrelease",
+        "target": "/pages/quickrelease"
+      },
+      {
+        "path": "/begrippenlijst/radius",
+        "target": "/pages/radius"
+      },
+      {
+        "path": "/begrippenlijst/rapowash",
+        "target": "/pages/rapowash"
+      },
+      {
+        "path": "/begrippenlijst/reukslot",
+        "target": "/pages/reukslot"
+      },
+      {
+        "path": "/begrippenlijst/rookglas",
+        "target": "/pages/rookglas"
+      },
+      {
+        "path": "/begrippenlijst/rozet",
+        "target": "/pages/rozet"
+      },
+      {
+        "path": "/begrippenlijst/rubit",
+        "target": "/pages/rubit"
+      },
+      {
+        "path": "/begrippenlijst/rvs",
+        "target": "/pages/rvs"
+      },
+      {
+        "path": "/begrippenlijst/satineren",
+        "target": "/pages/satineren"
+      },
+      {
+        "path": "/begrippenlijst/schachtplug",
+        "target": "/pages/schachtplug"
+      },
+      {
+        "path": "/begrippenlijst/sensowash",
+        "target": "/pages/sensowash"
+      },
+      {
+        "path": "/begrippenlijst/showerstep",
+        "target": "/pages/showerstep"
+      },
+      {
+        "path": "/begrippenlijst/silkmove",
+        "target": "/pages/silkmove"
+      },
+      {
+        "path": "/begrippenlijst/slangwartel",
+        "target": "/pages/slangwartel"
+      },
+      {
+        "path": "/begrippenlijst/smc",
+        "target": "/pages/smc"
+      },
+      {
+        "path": "/begrippenlijst/soft-closing",
+        "target": "/pages/soft-closing"
+      },
+      {
+        "path": "/begrippenlijst/solid-surface",
+        "target": "/pages/solid-surface"
+      },
+      {
+        "path": "/begrippenlijst/spoeltechniek",
+        "target": "/pages/spoeltechniek"
+      },
+      {
+        "path": "/begrippenlijst/styropordrager",
+        "target": "/pages/styropordrager"
+      },
+      {
+        "path": "/begrippenlijst/thermobegrenzer",
+        "target": "/pages/thermobegrenzer"
+      },
+      {
+        "path": "/begrippenlijst/topfix",
+        "target": "/pages/topfix"
+      },
+      {
+        "path": "/begrippenlijst/trafo",
+        "target": "/pages/trafo"
+      },
+      {
+        "path": "/begrippenlijst/trekwaste",
+        "target": "/pages/trekwaste"
+      },
+      {
+        "path": "/begrippenlijst/turbostat",
+        "target": "/pages/turbostat"
+      },
+      {
+        "path": "/begrippenlijst/univerticalscharnier",
+        "target": "/pages/univerticalscharnier"
+      },
+      {
+        "path": "/begrippenlijst/veiligheidsglas",
+        "target": "/pages/veiligheidsglas"
+      },
+      {
+        "path": "/begrippenlijst/vlakspoel",
+        "target": "/pages/vlakspoel"
+      },
+      {
+        "path": "/begrippenlijst/vlotter",
+        "target": "/pages/vlotter"
+      },
+      {
+        "path": "/begrippenlijst/wartel",
+        "target": "/pages/wartel"
+      },
+      {
+        "path": "/begrippenlijst/waste",
+        "target": "/pages/waste"
+      },
+      {
+        "path": "/begrippenlijst/waterslot",
+        "target": "/pages/waterslot"
+      },
+      {
+        "path": "/begrippenlijst/wondergliss",
+        "target": "/pages/wondergliss"
+      },
+      {
+        "path": "/begrippenlijst/zijdeglans",
+        "target": "/pages/zijdeglans"
+      },
+      {
+        "path": "/begrippenlijst/zuiger",
+        "target": "/pages/zuiger"
+      },
+      {
+        "path": "/begrippenlijst/zuil",
+        "target": "/pages/zuil"
+      },
+      {
+        "path": "/begrippenlijst/hygro-meter",
+        "target": "/pages/hygro-meter"
+      },
+      {
+        "path": "/collections/douche",
+        "target": "/collections/baden"
+      },
+      {
+        "path": "/collections/spiegels",
+        "target": "/collections/accessoires"
+      },
+      {
+        "path": "/collections/badkamerverlichting",
+        "target": "/collections/verwarming"
+      },
+      {
+        "path": "/collections/douche-1",
+        "target": "/collections/douches"
+      },
+      {
+        "path": "/collections/spiegels-1",
+        "target": "/collections/badkamer-verlichting"
+      },
+      {
+        "path": "/collections/spiegels-2",
+        "target": "/collections/spiegels-en-spiegelkasten"
+      },
+      {
+        "path": "/collections/zeep-accessoires",
+        "target": "/collections/wastafel-accessoires"
+      },
+      {
+        "path": "/collections/zeep-accessoires-1",
+        "target": "/collections/zeepaccessoires"
+      },
+      {
+        "path": "/collections/badmeubel-met-wastafel",
+        "target": "/collections/badmeubel-met-waskom"
+      },
+      {
+        "path": "/collections/badmeubel-met-wastafel-1",
+        "target": "/collections/badkamermeubel-met-wastafel"
+      }
+    ],
+    "calls": 3
+  },
+  "apps": {
+    "nodes": [
+      {
+        "app": {
+          "title": "Messaging",
+          "handle": "shopify-messaging",
+          "shopifyDeveloped": true,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "Metafields Guru",
+          "handle": "256-metafields-editor",
+          "shopifyDeveloped": false,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "Badkamercity Glossary Upload",
+          "handle": "badkamercity-glossary-upload",
+          "shopifyDeveloped": false,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "Shopify CLI Connector App",
+          "handle": "shopify-cli-connector-app",
+          "shopifyDeveloped": true,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "Shopify ChatGPT MCP App",
+          "handle": "shopify-chatgpt-mcp-app",
+          "shopifyDeveloped": true,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "BadkamerCity Collection Images",
+          "handle": "badkamercity-collection-images",
+          "shopifyDeveloped": false,
+          "isPostPurchaseAppInUse": false
+        }
+      },
+      {
+        "app": {
+          "title": "Mollie - in3",
+          "handle": "mollie-in3",
+          "shopifyDeveloped": false,
+          "isPostPurchaseAppInUse": false
+        }
+      }
+    ],
+    "calls": 1
+  },
+  "markets": {
+    "nodes": [
+      {
+        "handle": "nl",
+        "name": "Nederland",
+        "status": "ACTIVE",
+        "type": "REGION"
+      }
+    ],
+    "calls": 1
+  },
+  "locales": [
+    {
+      "locale": "nl",
+      "primary": true,
+      "published": true
+    }
+  ],
+  "shop": {
+    "currencyCode": "EUR",
+    "taxesIncluded": true,
+    "customerAccounts": "OPTIONAL",
+    "shipsToCountries": [
+      "NL"
+    ],
+    "enabledPresentmentCurrencies": [
+      "EUR"
+    ]
+  },
+  "policies": [
+    {
+      "type": "PRIVACY_POLICY",
+      "bodyBytes": 18800,
+      "bodySha256": "3575fbcc257d46328bfc8ece16c2ae26d8cc5c4e220de4445c5a4ec406b52865",
+      "styleBlocks": 0,
+      "scriptBlocks": 0
+    }
+  ],
+  "consent": [
+    {
+      "countryCode": "NL",
+      "regionCode": null,
+      "consentRequired": true,
+      "dataSaleOptOutRequired": false
+    }
+  ],
+  "deliveryProfiles": [
+    {
+      "default": true,
+      "activeMethodDefinitionsCount": 4,
+      "coversAllItems": false,
+      "zoneCountryCount": 41,
+      "locationsWithoutRatesCount": 0
+    }
+  ],
+  "checkoutConfiguration": {
+    "status": "BLOCKED_ACCESS_DENIED",
+    "field": "checkoutAndAccountsConfigurations"
+  },
+  "deliveryRules": [
+    {
+      "countries": [
+        "NL"
+      ],
+      "methodDefinitions": [
+        {
+          "name": "Standaard",
+          "active": true,
+          "rateProvider": {
+            "price": {
+              "amount": "0.0",
+              "currencyCode": "EUR"
+            }
+          },
+          "methodConditions": [
+            {
+              "field": "TOTAL_PRICE",
+              "operator": "GREATER_THAN_OR_EQUAL_TO",
+              "conditionCriteria": {
+                "__typename": "MoneyV2",
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Standaard",
+          "active": true,
+          "rateProvider": {
+            "price": {
+              "amount": "6.95",
+              "currencyCode": "EUR"
+            }
+          },
+          "methodConditions": [
+            {
+              "field": "TOTAL_PRICE",
+              "operator": "GREATER_THAN_OR_EQUAL_TO",
+              "conditionCriteria": {
+                "__typename": "MoneyV2",
+                "amount": "0.0",
+                "currencyCode": "EUR"
+              }
+            },
+            {
+              "field": "TOTAL_PRICE",
+              "operator": "LESS_THAN_OR_EQUAL_TO",
+              "conditionCriteria": {
+                "__typename": "MoneyV2",
+                "amount": "100.0",
+                "currencyCode": "EUR"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "countries": [
+        "AT",
+        "BE",
+        "BG",
+        "HR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "EE",
+        "FI",
+        "FR",
+        "GR",
+        "HU",
+        "IE",
+        "IT",
+        "LV",
+        "LT",
+        "LU",
+        "MT",
+        "PL",
+        "PT",
+        "RO",
+        "SK",
+        "SI",
+        "ES",
+        "SE"
+      ],
+      "methodDefinitions": [
+        {
+          "name": "Standard",
+          "active": true,
+          "rateProvider": {
+            "price": {
+              "amount": "12.95",
+              "currencyCode": "EUR"
+            }
+          },
+          "methodConditions": [
+            {
+              "field": "TOTAL_PRICE",
+              "operator": "GREATER_THAN_OR_EQUAL_TO",
+              "conditionCriteria": {
+                "__typename": "MoneyV2",
+                "amount": "0.0",
+                "currencyCode": "EUR"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "countries": [
+        "AE",
+        "AU",
+        "CA",
+        "CH",
+        "GB",
+        "HK",
+        "IL",
+        "JP",
+        "KR",
+        "MY",
+        "NO",
+        "NZ",
+        "SG",
+        "US"
+      ],
+      "methodDefinitions": [
+        {
+          "name": "Standard",
+          "active": true,
+          "rateProvider": {
+            "price": {
+              "amount": "19.95",
+              "currencyCode": "EUR"
+            }
+          },
+          "methodConditions": [
+            {
+              "field": "TOTAL_PRICE",
+              "operator": "GREATER_THAN_OR_EQUAL_TO",
+              "conditionCriteria": {
+                "__typename": "MoneyV2",
+                "amount": "0.0",
+                "currencyCode": "EUR"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "supportedDigitalWallets": []
+}

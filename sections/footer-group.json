@@ -36,7 +36,8 @@
         "service_4": {
           "type": "service",
           "settings": {
-            "label": "Retourneren"
+            "label": "Retour aanmelden",
+            "url": "/pages/retour-aanmelden"
           }
         },
         "service_5": {
@@ -115,7 +116,8 @@
         "info_4": {
           "type": "info",
           "settings": {
-            "label": "Onze merken"
+            "label": "Onze merken",
+            "url": "/collections?view=merken"
           }
         },
         "info_5": {
@@ -183,7 +185,10 @@
         "contact_button_link": "/pages/contact",
         "info_heading": "BadkamerCity",
         "contact_subtitle": "Een vraag over je badkamer of bestelling?",
-        "showroom_link_label": "Bekijk de showroom"
+        "showroom_link_label": "Bekijk de showroom",
+        "compact_homepage": true,
+        "quote_link_enabled": false,
+        "quote_link_preview": true
       }
     }
   },

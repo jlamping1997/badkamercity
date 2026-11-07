@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "bc-sunshower-landing",
+      "settings": {
+        "hero_image": "shopify://shop_images/bc-sunshower-beleving-uv-hero-v2.png",
+        "one_product": "sunshower-round-one-medium-inbouw-white",
+        "plus_product": "sunshower-round-plus-medium-inbouw-white",
+        "one_image": "shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png",
+        "plus_image": "shopify://shop_images/bc-sunshower-beleving-uv-hero-v2.png",
+        "inbouw_image": "shopify://shop_images/sunshower-oneplus_m_white_inbouw_ir_geheel-1.jpg",
+        "opbouw_image": "shopify://shop_images/sunshower-oneplus_m_white_opbouw_ir_geheel-1.jpg",
+        "advice_url": "/pages/contact",
+        "installation_image": "shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png",
+        "configurator_url": "/products/sunshower-round-one-medium-inbouw-white#sunshower-configurator"
+      },
+      "blocks": {
+        "cleaning": {
+          "type": "accessory",
+          "settings": {
+            "kind": "cleaning",
+            "product": "sunshower-cleaning-set"
+          }
+        },
+        "sunseat": {
+          "type": "accessory",
+          "settings": {
+            "kind": "seat",
+            "product": "sunshower-sunseat-douchekruk-sand-white",
+            "product_white": "sunshower-sunseat-douchekruk-white",
+            "product_black": "sunshower-sunseat-douchekruk-black",
+            "product_grey": "sunshower-sunseat-douchekruk-organic-grey",
+            "product_sand": "sunshower-sunseat-douchekruk-sand-white",
+            "image_override": "shopify://shop_images/bc-sunshower-sunseat-sand-white-highres.jpg"
+          }
+        },
+        "sunswipe": {
+          "type": "accessory",
+          "settings": {
+            "kind": "wiper",
+            "product": "sunshower-sunswipe-douchewisser-sand-white",
+            "product_white": "sunshower-sunswipe-douchewisser-white",
+            "product_black": "sunshower-sunswipe-douchewisser-black",
+            "product_grey": "sunshower-sunswipe-douchewisser-organic-grey",
+            "product_sand": "sunshower-sunswipe-douchewisser-sand-white"
+          }
+        }
+      },
+      "block_order": [
+        "cleaning",
+        "sunseat",
+        "sunswipe"
+      ]
+    },
+    "sunshower_advice": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Infrarood of ook uv?",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Twijfel je tussen Sunshower ONE en PLUS? Lees het verschil tussen infrarood en uv en ontdek waar je vóór aankoop op moet letten.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lees de keuzehulp",
+            "button_link": "/blogs/nieuws/sunshower-infrarood-of-uv",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sunshower_advice"
+  ]
+}

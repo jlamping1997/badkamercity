@@ -1,0 +1,27 @@
+{
+  "main": {
+    "id": "gid://shopify/OnlineStoreTheme/195974824202",
+    "role": "MAIN",
+    "count": 1355,
+    "changes": []
+  },
+  "concept": {
+    "id": "gid://shopify/OnlineStoreTheme/195947036938",
+    "name": "BadkamerCity - Compact menu en tegelinformatie",
+    "role": "UNPUBLISHED",
+    "count": 1356,
+    "differences": [
+      "assets/bc-porcelanosa-buybox.css",
+      "assets/bc-porcelanosa-buybox.js",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/header.liquid",
+      "snippets/bc-porcelanosa-buybox.liquid",
+      "snippets/bc-category-overflow.liquid"
+    ]
+  },
+  "allFeatureChecksumsMatch": true,
+  "qaRestored": true,
+  "baselineParityBeforeFeatures": 1355
+}
+

@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-19",
+  "status": "IMPLEMENTED_PREVIEW",
+  "scope": "Cart design leading to existing native Shopify one-page checkout; no native checkout styling/layout changes",
+  "shopPlan": "Basic",
+  "baseline": {
+    "id": "195392143626",
+    "name": "BadkamerCity - Sunshower fotogalerij",
+    "role": "MAIN",
+    "files": 500
+  },
+  "draft": {
+    "id": "195388080394",
+    "name": "BadkamerCity - Winkelwagen vernieuwd",
+    "role": "UNPUBLISHED",
+    "files": 501,
+    "processing": false
+  },
+  "rebase": {
+    "reusedDraft": true,
+    "filesCopied": 8,
+    "checksumsIdenticalBeforeFeature": 500
+  },
+  "final": {
+    "changedExisting": 4,
+    "added": 1,
+    "otherFilesIdentical": 496,
+    "productionBodiesExact": true,
+    "qaTemplateRestored": true,
+    "mainChecksumsUnchanged": 500,
+    "published": false
+  },
+  "files": [
+    {
+      "filename": "assets/bc-cart-page.css",
+      "md5": "37cb6cd6e9f6d2671c2e65250f18baee",
+      "sha256": "aab98907afb8fa685043efaabd5c577ead0e4bf5fe30ab2952a0a363e62fa61b",
+      "bytes": 14978
+    },
+    {
+      "filename": "sections/main-cart-items.liquid",
+      "md5": "930810ff1b454c90ea059587d91ef70b",
+      "sha256": "6380cd9e0dab9b5e0b6ca876bf6abc0d96cbd4ccbab544537e705f5854f8d003",
+      "bytes": 26385
+    },
+    {
+      "filename": "sections/main-cart-footer.liquid",
+      "md5": "3530ea832b957719812608f10bcca407",
+      "sha256": "99dffd32c245b7959fd386b3ff5f47a124d459e6d59deed63a5c29a5974e0f49",
+      "bytes": 8334
+    },
+    {
+      "filename": "locales/nl.json",
+      "md5": "14b2be3bbfb78f5a1051314c03e3dd9b",
+      "sha256": "15caeab936dcade62892e4ef8e60bc89fb271ac25f069ffb619d24845f307d6b",
+      "bytes": 54741
+    },
+    {
+      "filename": "locales/en.default.json",
+      "md5": "6e962f92b2d0ca0db0fa8659de795e8f",
+      "sha256": "b2f29eb213375beeb57b53d8a38ff41bd700f4251d955b9b93c00480ac80a1b7",
+      "bytes": 51980
+    }
+  ],
+  "validation": {
+    "admin": "2026-07 schema validation passed",
+    "theme": "bc-cart-page-20261019 R2 all five files SUCCESS; R4 final CSS SUCCESS",
+    "qa": "bc-cart-qa-20261019 R4 SUCCESS; fixture removed afterward",
+    "independentReview": "No material handler, scope, discount or form regressions found"
+  },
+  "browser": {
+    "desktop": {
+      "viewport": "1348 × 936",
+      "url": "https://badkamercity.nl/cart",
+      "quantityIncrease": {
+        "from": 1,
+        "to": 2,
+        "totalBefore": "€325,01 EUR",
+        "totalAfter": "€650,02 EUR",
+        "countsAndSubtotalRefreshed": true,
+        "error": ""
+      },
+      "quantityDecrease": {
+        "from": 2,
+        "to": 1,
+        "total": "€325,01 EUR"
+      },
+      "remove": {
+        "rows": 0,
+        "isEmpty": true,
+        "summaryHidden": true,
+        "noOverflow": true
+      },
+      "checkout": {
+        "nativeOnePageAlreadyEnabled": true,
+        "contactDeliveryPaymentOnSamePageBeforeAndAfterDesign": true,
+        "noAddressOrPaymentDataEntered": true,
+        "orderPlaced": false
+      }
+    },
+    "mobile": {
+      "kind": "Isolated rendered cart component with actual production CSS and DOM; no header/express wallet; static display",
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "horizontalOverflow": false,
+      "at320": {
+        "quantityBottom": 447.78125,
+        "totalTop": 467.78125,
+        "separateRows": true
+      },
+      "checkoutButtonWidths": {
+        "390": 308,
+        "430": 348
+      },
+      "fixtureItemQuantity": 2,
+      "total": "€650,02 EUR"
+    }
+  },
+  "patch": {
+    "path": "docs/patches/BC-cart-page-2026-10-19.patch",
+    "bytes": 24035,
+    "sha256": "f07231af42fffca1a9d737a6c132d58031b478890738535c6bb77aa2d8844992",
+    "forwardReverseExact": true,
+    "nativeControlTagsUnchanged": 11,
+    "unchangedDependencies": 8,
+    "localeChangesOnly": "bc_cart_page",
+    "crlfPreserved": true,
+    "whitespaceCheckPassed": true
+  },
+  "screenshots": [
+    "docs/cart-desktop-2026-10-19.jpg",
+    "docs/cart-mobile-2026-10-19.jpg"
+  ],
+  "notTested": [
+    "Physical phone/touch and complete mobile header/footer",
+    "Discounted/bundled/subscription cart runtime cases (native markup retained)",
+    "Shipping calculation after entering address; payment submission",
+    "Sticky summary with a long multi-product cart and reappearing sticky header",
+    "Native checkout branding changes (not made)",
+    "Windows local state",
+    "GitHub-Shopify integration"
+  ],
+  "rollback": "Do not publish concept; if already published reverse the five-file patch after checking later changes, restoring four files and removing the new CSS.",
+  "next": "Owner reviews BadkamerCity - Winkelwagen vernieuwd on phone and decides whether to publish."
+}

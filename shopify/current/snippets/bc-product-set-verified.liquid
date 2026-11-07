@@ -1,0 +1,48 @@
+{% doc %}
+  Renders verified set contents with live component prices and images.
+  @param {product} product - The complete shower set.
+  @param {string} section_id - The parent section identifier.
+{% enddoc %}
+{%- liquid
+  assign components = product.metafields.bc_data.set_components.value
+  assign linked_products = product.metafields.bc_data.component_products.value
+  assign verified_count = 0
+  assign accepted_statuses = 'VERIFIED_CATALOG_ED18,VERIFIED_DESCRIPTION' | split: ','
+-%}
+{%- capture component_rows -%}
+  {%- for component in components -%}
+    {%- liquid
+      assign matched_product = nil
+      assign matched_variant = nil
+      assign quantity = component.quantity | plus: 0
+    -%}
+    {%- if accepted_statuses contains component.status and quantity > 0 -%}
+      {%- for linked_product in linked_products -%}
+        {%- assign linked_gid = linked_product.id | prepend: 'gid://shopify/Product/' -%}
+        {%- if linked_gid == component.product_id and linked_product.vendor == product.vendor -%}
+          {%- for linked_variant in linked_product.variants -%}
+            {%- assign variant_gid = linked_variant.id | prepend: 'gid://shopify/ProductVariant/' -%}
+            {%- if linked_variant.sku == component.sku and variant_gid == component.variant_id -%}
+              {%- assign matched_product = linked_product -%}
+              {%- assign matched_variant = linked_variant -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if matched_product != blank and matched_variant != blank -%}
+        {%- assign verified_count = verified_count | plus: 1 -%}
+        {%- assign component_title = component.short_title | default: matched_product.title -%}
+        {%- render 'bc-product-set-item', component_product: matched_product, component_variant: matched_variant, quantity: quantity, name: component_title, sku: component.sku, show_commerce: true -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if verified_count > 0 and verified_count == components.size -%}
+  <section class="bc-product-set bc-product-set--verified" aria-labelledby="ProductSetTitle-{{ section_id }}" data-set-sku="{{ product.selected_or_first_available_variant.sku | escape }}">
+    <h2 id="ProductSetTitle-{{ section_id }}">{{ 'bc_set.heading' | t }}</h2>
+    <p class="bc-product-set__intro">{{ 'bc_set.included_note' | t }}</p>
+    <ul class="bc-product-set__list" role="list">{{ component_rows }}</ul>
+  </section>
+{%- endif -%}

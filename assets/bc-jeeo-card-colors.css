@@ -1,0 +1,11 @@
+.bc-jeeo-card-colors { display: flex; flex-wrap: wrap; gap: 6px; position: relative; z-index: 3; }
+.bc-jeeo-card-swatch { box-sizing: border-box; display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; padding: 3px; border: 1px solid #cbd5dc; border-radius: 50%; background: #fff; text-decoration: none; }
+.bc-jeeo-card-swatch img { display: block; width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+.bc-jeeo-card-swatch[aria-current="true"] { border-color: #102c44; box-shadow: 0 0 0 1px #102c44; }
+.bc-jeeo-card-swatch:hover { border-color: #102c44; }
+.bc-jeeo-card-swatch:focus-visible { outline: 2px solid #102c44; outline-offset: 3px; }
+.bc-standard-card .bc-jeeo-card-colors { margin: 8px 0 12px; }
+.bc-search-card--jeeo-colors { display: flex; flex-direction: column; }
+.template-search .bc-search-card--jeeo-colors > .bc-search-card__link { height: auto; flex: 1; }
+.bc-search-card--jeeo-colors > .bc-jeeo-card-colors { padding: 0 18px 18px; }
+@media screen and (max-width: 749px) { .bc-search-card--jeeo-colors > .bc-jeeo-card-colors { padding: 0 12px 12px; } }

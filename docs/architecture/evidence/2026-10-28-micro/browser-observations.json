@@ -1,0 +1,13 @@
+{
+  "cases": [
+    {"case":"collection-desktop","observedAt":"2026-10-28T10:29:23.439Z","url":"https://badkamercity.nl/collections/wastafelkranen","viewport":{"width":1363,"height":936},"renderer":"external","cta":{"display":"flex","text":"Bekijk product →","visible":true},"source":"read-only DOM/computed-style observation","mobile":false},
+    {"case":"sunshower-help-escape","observedAt":"2026-10-28T10:30:00.590Z","url":"https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white","viewport":{"width":1363,"height":936},"opened":true,"dialogTitle":"Uitvoering","afterEscape":{"dialogOpen":false,"focusedLabel":"Maathulp"},"cartActions":false},
+    {"case":"sunshower-gallery-next","observedAt":"2026-10-28T10:30:22.846Z","url":"https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white","viewport":{"width":1363,"height":936},"before":{"index":"1","previousDisabled":true,"slides":5},"after":{"settledIndex":"2","activeSlideAriaHidden":"false","viewportScrollLeft":564},"cartActions":false,"intermediateObservation":{"index":"1","previousDisabled":true},"note":"First observation preceded the asynchronous scroll settlement; no timing or mobile claim."}
+  ],
+  "limitations": [
+    "Existing browser session with preview UI; not claimed anonymous.",
+    "Observed desktop viewport 1363x936. No supported viewport resize was available; mobile NOT_TESTED.",
+    "No cart contents read, cart mutation or checkout action.",
+    "Screenshots are not persisted."
+  ]
+}

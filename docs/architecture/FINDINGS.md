@@ -1,0 +1,94 @@
+# Bevindingen en onderzoekswachtrij
+
+**Peildatum 28 oktober 2026.** Alleen onderstaande bron-/documentatiebevindingen zijn in deze ronde onderzocht. Geen algemene verklaring over webshopkwaliteit of koopgereedheid.
+
+## Vastgesteld en gemeld
+
+| ID | Status / impact | Waarneming en bewijs | Volgende actie |
+| --- | --- | --- | --- |
+| DOC-F01 | VERIFIED_SOURCE · blokkeert betrouwbare actuele codeaudit | Git-root op `4a85d063` heeft 441 themabestanden; vers MAIN-manifest 1.262. 384 gelijk, 57 afwijkend, 821 alleen live, 0 alleen root. [Rootscan](evidence/2026-10-28/repository-root/README.md) | Snapshot opgehaald; 384 root-bytegelijk, 84 elders gevolgd, 794 zonder bytegelijke kandidaat. Zie DOC01_SOURCE_MAP.md; geen blinde root-sync |
+| DOC-F02 | VERIFIED_SOURCE · overdrachtsrisico | Oud centraal statusbestand bevat 1.209 regels en meerdere historische “volgende stappen”. Archief is exact behouden, nieuwe status is kort | Beheer één actuele taak/volgende handeling; historie in archief/dossier |
+| DOC-F03 | VERIFIED_SOURCE · oude status ingehaald | `195818389770` staat nu MAIN; `195805085962` UNPUBLISHED. De vorige chat leverde de popup als concept op | Vastgelegd in bronregister; bij iedere nieuwe taak rollen opnieuw lezen |
+| DOC-F04 | VERIFIED_SOURCE · dekkingsgrens | Nulmeting: 15 actuele live bestanden. Vervolg DOC-01: alle 1.262 ontvangen en statisch gescand, waarvan 1.261 bytegelijk | Settings-pariteit open; statische volledigheid is geen handmatige/runtime-audit |
+| DOC-F05 | VERIFIED_SOURCE · pariteitsvrijgave open | config/settings_data.json: ontvangen tekst wijkt af van Shopify-metadata; voor-/namanifest gelijk. Harde controle exitcode 2 | Read-only verklaring/exacte bron vaststellen; geen ontvangen tekst of metadata aanpassen om controle te omzeilen |
+| DATA-F02 | VERIFIED_ADMIN · exportbasis aanwezig | 11.343 producten/varianten, 241.064 metafields en 32.065 mediarecords privé vastgelegd; lagen, tellingen, paginering en SQLite-integriteit gecontroleerd | Gebruikersfuncties aan veldconsumptie koppelen; API-scope en niet-atomaire uitlezing behouden |
+| UI-F01 | USER_CONFIRMED_SCOPE / VERIFIED_RUNTIME · galerijbediening | Eigenaar verduidelijkt: **pijlen bij productfoto’s**. Sunshower heeft overlaypijlen; native PDP pijlen in lager gelegen thumbnailrail. Gedeelde drie-fileconceptcorrectie met15 lokale controles en echte desktop-/Spacecontrole; [concept-/browserstatus](../ui-consistency/2026-10-28/README.md) | PREVIEW_READY in concept195850764554; drie bedoelde verschillen, MAIN ongewijzigd. Mobiele iframecontrole geweigerd; eigenaar beoordeelt vóór publicatie. Oude CTA-pijlhypothese is geen vastgestelde gebruikersbedoeling |
+| UI-F02 | VERIFIED_SOURCE / STATIC_CANDIDATE · meerdere renderpaden | Huidige `card-product.liquid`, `bc-card-product-search.liquid` en externe filter-JS zijn verschillende renderingangen; Sunshower heeft eigen sectie/bediening | DOC-02A route-/kaartmatrix vastgelegd; DOC-02B moet zichtbaarheid na JS/cascade bevestigen |
+| UI-F03 | VERIFIED_SOURCE / UNKNOWN · bevestigingsbeleid | Gewone PDP/externe kaart kan popup renderen; Sunshower-shopkaart heeft inline succes + badge; inbouw/set/wishlist navigeren rechtstreeks. Zie [cartfeedback](components/CART_AND_FEEDBACK.md) | Gewenste bevestiging per ingang bepalen; geen globale submit-interceptor of dubbele POST |
+| DATA-F03 | VERIFIED_HTML / STATIC_CANDIDATE · P2 | Hotbath SDS1-response gebruikt volledige product-switcher-data.json; groep bestaat maar revisieguard matcht niet. Alle 656 afgeleide groepsbytes zijn correct. Zie [datapijplijnen](components/DATA_PIPELINES.md) | Actuele bronrevisies in passend concept controleren; geen algemene performance-/datacorruptieclaim |
+| DOC-F06 | VERIFIED_SOURCE · rebuildvoorwaarde | Generator in Git heeft geen gevolgde datasets/-invoer op broncommit. Originele assets staan privé/exporteerbaar en de reconstructie is gedocumenteerd | Invoer uit benoemde bron halen en valideren vóór rebuild; niet lege generatorrun als succes registreren |
+| OPS-F02 | VERIFIED_SOURCE / NOT_TESTED · activering | Huidige externe-filtercode probeert runSearch automatisch na DOM-guards, zonder bcfilters=1-check. Oude opt-instatus is historisch | Werkelijk actieve renderer/API/index in DOC-02B/latere backendtak verifiëren; dit is geen servergezondheidsclaim |
+| CART-F01 | VERIFIED_ISOLATED · P1-kandidaat | Bij key B + ontbrekende/null productsection behoudt cart-notification eerdere productinhoud A en opent. Twee stimuli met ongewijzigde bron gereproduceerd; productievoorkomen onbekend | Kleinste veilige missing-section-afhandeling in concept ontwerpen; geen automatische tweede add. [Microanalyse](components/micro/CART_NOTIFICATION.md) |
+| SS-F01 | VERIFIED_ISOLATED · P1-kandidaat | Tijdens pending Sunshower-setadd blijven gewone submit en kleur enabled; een kleurklik kan vóór response productnavigatie aanvragen. Geen echte cart-/dubbele bestelling getest | Afgesproken actieblokkering/uncertain-contract als kleine conceptfix ontwerpen. [Microanalyse](components/micro/SUNSHOWER_ACTIONS.md) |
+| DATA-F01 | HISTORICAL / NOT_TESTED · mogelijk lanceringsrelevant | Index-/Shopifyverschillen en een offline voorbereide sync zijn historisch gedocumenteerd in `scripts/filter-sync/README.md` | Verse read-only vergelijking van IDs, publicatie, prijs en filters; niet aannemen dat oud verschil nog exact bestaat |
+| OPS-F01 | NOT_TESTED · mogelijke deploy-impact | Actieve branch en main wijken af; werkende Shopify-Git-autodeploykoppeling is in deze ronde niet vastgesteld | Voor rootwijzigingen deploymentkoppeling en releasepad bewijzen |
+
+## Brede winkelcontrole DOC-02C
+
+| ID | Status / impact | Waarneming en bewijs | Volgende actie |
+| --- | --- | --- | --- |
+| FOOTER-F01 | VERIFIED_THEME / VERIFIED_HTML / beperkt VERIFIED_RUNTIME · configuratie | Tien footerblocks hebben geen URL en tonen tekst; bron, 35-route-HTTP-set en desktopwaarneming passen. [Footer](components/FOOTER.md) | Per label juiste bestaande bestemming of verwijderen kiezen; geen pagina's/bedrijfsinfo verzinnen |
+| GLOSS-F01 | VERIFIED_ADMIN / VERIFIED_HTML · P1-kandidaat | Hygro(meter) → /begrippenlijst/hygrometer → /pages/hygrometer geeft 404; 108 overige termdoelen gepubliceerd. [Bewijs](evidence/2026-10-28-complete/glossary-links.json) | Juiste bestaande inhoudsbestemming kiezen, daarna gerichte redirectcorrectie; geen automatische nieuwe Page |
+| HOME-F01 | VERIFIED_THEME / VERIFIED_HTML · configuratie, geen defect | Hero uitgeschakeld; populaire-productencollectie leeg; guard laat inhoud weg ondanks sectionwrapper. [Homepage](components/HOMEPAGE.md) | Alleen activeren/vullen wanneer dat gewenst is; geen CSS-fix voor lege datacontext |
+| CONTENT-F01 | VERIFIED_ADMIN / NOT_VERIFIED · toewijzingssignaal | Zes Pages hebben suffix page maar page.page.json ontbreekt; vijf gepubliceerd. Buffers-HTTP is 200, dus geen algemene 404-claim. [Content](components/CONTENT_AND_FORMS.md) | Effectieve template/bedoeling controleren; geen bulk-normalisatie |
+| OPS-F03 | BLOCKED_ACCESS_DENIED · bron ontbreekt | Checkout/accountconfiguratie-query expliciet geweigerd; classic thematemplates vervangen de gehoste bron niet | Bevoegde configuratiebron nodig; geen alternatieve route om rechten te omzeilen |
+| SOURCE-F01 | STATIC_CANDIDATE · P2 | Drie inline_asset_content-verwijzingen missen een exacte manifestnaam: icon-error in passwordheader; icon-3d-model tweemaal in product-media. SVG-namen bestaan wel. [Bronregels](evidence/2026-10-28-complete/reference-anomalies.json) | Passwordfout/3D-route gecontroleerd reproduceren; geen bewezen actuele klantfout of automatische verwijdering |
+| DOC-F07 | VERIFIED_SOURCE · documentatiedrift gecorrigeerd | state.json stond nog DOC-00 met 15 onderzochte bestanden terwijl centrale status DOC-03A meldde | Machine-status in DOC-02C gelijkgetrokken; handoffcheck voortaan status/bron/volgende stap vergelijken |
+| OPS-F04 | VERIFIED_ADMIN / NOT_TESTED · scopeverschil | Shop meldt alleen NL als shipsToCountries, profiel bevat 41 zonelanden; NL-rates vers gelezen | Geen internationale leverbelofte afleiden; productdekking/effectieve offerte apart beoordelen |
+
+Positief nieuw bewijs: vier publieke zoekreads 200; Wastafelkranen 573 en Inloopdouches 305 matchen de huidige HTML-context. De eerdere precieze indexverschillen zijn historische signalen, niet blind herhaald als huidige aantallen. De begrippenzoekcyclus en één redirect/TOC zijn op desktop bevestigd. [Bewijs en grenzen](evidence/2026-10-28-complete/README.md).
+
+## Verdere methodencontrole DOC-03B
+
+| ID / onderwerp | Status | Uitkomst / onderhoud |
+| --- | --- | --- |
+| UI-F04 · gefilterde A–Z-link | VERIFIED_ISOLATED / BOUNDARY · P2-kandidaat | GL-02: een letter voor een verborgen groep houdt href; aria-disabled=true voorkomt klikken niet. Echte keyboard-/scrolluitkomst nog toetsen. [Contentcontract](components/micro/CONTENT_DOM_CONTRACTS.md) |
+| DATA-F04 · corrupte keuzehandoff | VERIFIED_ISOLATED / BOUNDARY · onderhoud | IBX-24: JSON-parsefout wordt opgevangen, maar de kapotte sessionStoragewaarde blijft staan. Geen live voorkomen/dataverlies aangetoond. [Herstelketen](components/micro/INBOUW_RECOVERY.md) |
+| INPUT-TOC-01 · mogelijke ID-botsing | SYNTHETIC_BOUNDARY, geen huidige live fout | TOC-04 maakt een botsing tussen bestaand en gegenereerd ID. Verse 109-page-structuurmeting vindt nul zulke gevallen; geen actieve contentcorrectie nodig op basis van deze fixture |
+
+Positief bewijs: de volledige product-form/inbouwclientketen blokkeert onready/ongeldige/uncertain submits en dubbele pending submits; footerlisteners worden bij section-unload verwijderd; disclosure bewaakt oude animatiepromises en herstelt tabindex. De mapping heeft 715 unieke productcases naar 44 bodies zonder structurele conflictsignalen; 109 gepubliceerde begripspagina's hebben 655 directe H2's, zonder geneste H2's of voorspelde ID-botsing. Geen nieuwe live fix of checkoutcontrole. [39 cases en bronmetingen](evidence/2026-10-28-transitions/README.md).
+
+## Filterketen DOC-03C
+
+| ID | Status / impact | Waarneming en vervolg |
+| --- | --- | --- |
+| FILTER-F01 | VERIFIED_ISOLATED · P1-kandidaat | FX-37: na fallback loopt native popstate/gridvervanging naast een nieuwe externe read. De latere externe successafhandeling gebruikt oude losse nodes, zet active=true, maar het live grid blijft native en de toolbar ontbreekt. Eén gekozen eigenaar/teardown- of fallbackbeleid ontwerpen; echte browserregressie nog nodig. [Analyse](components/micro/FILTER_STATE_AND_FALLBACK.md) |
+| FILTER-F02 | VERIFIED_ISOLATED · conditionele P2-kandidaat | FX-22: visible_values=2 wordt na Meer/Minder zes. De twee gelezen live profielen gebruiken allebei zes, dus geen actuele fout op die twee routes aangetoond. [Controls](components/micro/FILTER_VALUES_AND_CONTROLS.md) |
+| FILTER-B01 | BOUNDARY_CONFIRMED | Gelijk count met verkeerde collectiehandle wordt geaccepteerd; native URL-parameters worden niet vertaald; omgekeerde range wordt doorgestuurd; searchable/section-metadata heeft uitzonderingen. Geen bewezen live backend-/dataprobleem. Contractkeuzes apart vastleggen |
+
+Positief: nieuwste zoek-/kleurintentie wint, een oude fout triggert geen nieuwe fallback, gewone fouten herstellen oorspronkelijke nodes/displays, afwijkend Shopify-kaart-ID activeert toevoegen niet en falende section-cache kan opnieuw worden gelezen. [41 cases en grenzen](evidence/2026-10-28-filters/README.md). Geen productiecorrectie uitgevoerd.
+
+## Verlanglijst en opslag DOC-03D
+
+| ID | Status / impact | Waarneming en vervolg |
+| --- | --- | --- |
+| WISH-F01 | VERIFIED_ISOLATED · P2-kandidaat, verlies van selectie | WL-23: twee closures met gedeelde synthetische opslag; de tweede schrijft vóór eventbezorging zijn oude geheugenarray en overschrijft de eerste toevoeging. Geen echt bezoekersincident of native timing gemeten. Identity-operaties/conflictbeleid ontwerpen; opnieuw lezen alleen bewijst geen atomiciteit. [Opslag](components/micro/WISHLIST_STORAGE.md) |
+| WISH-F02 | VERIFIED_ISOLATED · P2-kandidaat, zichtbare/aangekondigde status | WL-43: echte Sunshower-shopcommit wisselt handle/variant, maar hartje houdt is-saved/aria-pressed van vorige kleur. Volgende hartklik bewaart correct. Gedeelde refresh na bevestigde commit onderzoeken, met behoud van preload-/raceguards. [Identity](components/micro/WISHLIST_IDENTITY.md) |
+| WISH-B01 | BOUNDARY_CONFIRMED | Malformed/ander schema en leesweigering ogen leeg zonder herstel; duplicaten blijven; unavailable bewaren mag; succesvolle productcache heeft geen TTL en geen requesttimeout. Geen zeven extra live bugs of voorraad-/prijsfreezeclaim. [Render/cache](components/micro/WISHLIST_RENDER_AND_ADD.md) |
+
+Positief: mislukte opslag meldt geen succes, eigen pendingbutton blokkeert dubbelklik, verdwenen variant krijgt geen koopbutton, oude productresponse herstelt geen verwijderde kaart en synthetische add gebruikt de exacte toegestane variant. [43 cases, 34 controles, twee reproducties, zeven grenzen](evidence/2026-10-28-wishlist/README.md). Geen productiecorrectie.
+
+## Zichtbare eenheid UI-01
+
+[Gedateerde vergelijking](../ui-consistency/2026-10-28/README.md): UI-C01 beschrijvingstoggle Lees/Toon meer; UI-C02 primaire knophoogte/radius; UI-C03 tekst versus iconen bij Ja/Nee. Alle drie in desktopbrowser vastgesteld, nog niet aangepast. Dit zijn gerichte harmonisatiekeuzes; geen onbewezen inhoudelijke product-/voorraadfouten. UI-S01 dubbele native no-image-heading blijft kandidaat omdat de settled collectie extern rendert. De bestaande uitgebreide fotoviewer heeft werkende pijlen/Escape.
+
+## Sjabloon voor iedere nieuwe bevinding
+
+Gebruik een vast ID en leg vast: bronversie/datum; klantdoel; exacte URL/paginatype/product; viewport/browser; actuele/toekomstige staat; herhaalstappen; verwacht contract; werkelijke uitkomst; betrokken bestanden/regelnummers en data-eigenaar; bewijsstatus; klantimpact; prioriteit; voorgestelde kleinste fix; afhankelijke componenten; test/rollback; eigenaar en besluit.
+
+Het register bevat geen secrets of volledige klant-/orderrecords. Registreer screenshots alleen wanneer relevant en toegestaan; een opname van één scherm is geen bewijs voor alle routes.
+
+## Beslisregels
+
+- **BUG:** functie of aantoonbaar gegevenscontract is fout; correctie op klantimpact prioriteren.
+- **INCONSISTENCY:** dezelfde functie werkt/toont onbedoeld anders; referentievariant kiezen en documenteren.
+- **INTENTIONAL_VARIANT:** verschil is nodig; reden en toepassingsgebied vastleggen.
+- **UNKNOWN:** onvoldoende bron, toegang of reproductie; onderzoeksvraag laten staan.
+
+Een statische kandidaat wordt pas een bewezen defect na inhoudelijke controle. Een bevinding wordt pas gesloten met het exacte gerealiseerde resultaat, passende regressie en actuele bron-/runtimegrens. “Code aangepast” alleen is geen volledige sluiting.
+
+## Eerstvolgende verbeteringen bepalen
+
+DOC-01 en DOC-02 leveren eerst de actuele bron en matrix. Daarna een kleine gerichte vergelijking van keuzebediening, kaartacties/pijlen, galerijbediening, leverinformatie en modalgedrag. Koop-/dataproblemen die tijdens dat werk worden aangetoond krijgen direct voorrang boven cosmetische afwerking.
+
+Korte titels en de eerder geparkeerde bijbehorende filteroptimalisatie worden door deze documentatieopdracht niet stil als nieuwe implementatietaak geactiveerd. Nieuwe ideeën krijgen een ID en reden, geen losse ongeregistreerde herbouw.

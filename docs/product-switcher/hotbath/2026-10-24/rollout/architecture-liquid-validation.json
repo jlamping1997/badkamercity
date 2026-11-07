@@ -1,0 +1,37 @@
+{
+  "validator": "official Shopify validate.mjs --api liquid",
+  "mode": "stateless individual file",
+  "files_checked": 4,
+  "success": true,
+  "errors": 0,
+  "validation_responses": [
+    {
+      "result": "inform",
+      "resultDetail": "main-product.liquid passed all checks (with 3 non-error finding(s)):\nWARNING [line 1395, col 122]: Liquid complexity is 227, which exceeds the maximum of 120. The decision at line 1395 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.\nWARNING [line 2210, col 9]: The variable 'seo_media' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'seo_media'.\nWARNING [line 1857, col 45]: Unknown object 'continue' used.",
+      "artifactId": "artifact-71f821c6-8f0e-4755-8a16-b05b2c83ec56",
+      "artifactRevision": 1
+    },
+    {
+      "result": "inform",
+      "resultDetail": "bc-hotbath-menu-route.liquid passed all checks (with 1 non-error finding(s)):\nWARNING [line 243, col 5]: Liquid complexity is 227, which exceeds the maximum of 120. The decision at line 243 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.",
+      "artifactId": "artifact-545fcc8c-c4bb-4f70-a868-5cc1adb6c02c",
+      "artifactRevision": 1
+    },
+    {
+      "result": "success",
+      "resultDetail": "bc-hotbath-menu-source.liquid passed all checks.",
+      "artifactId": "artifact-65d403a8-d2a6-482e-bd17-f20886e8754a",
+      "artifactRevision": 1
+    },
+    {
+      "result": "inform",
+      "resultDetail": "bc-hotbath-menu-source-00.liquid passed all checks (with 1 non-error finding(s)):\nWARNING [line 243, col 5]: Liquid complexity is 227, which exceeds the maximum of 120. The decision at line 243 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.",
+      "artifactId": "artifact-95174d86-7870-4891-bcd1-1aef6c6e5b41",
+      "artifactRevision": 1
+    }
+  ],
+  "dependency_check_scope": "Unchanged assets/locales are absent from rollout diff; browser and server readback remain root acceptance.",
+  "source_docset": "Validator used cached official theme-liquid-docs after upstream update connection timed out.",
+  "input_groups": 605,
+  "input_unique_product_handles": 7165
+}

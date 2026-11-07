@@ -1,0 +1,2875 @@
+{
+  "metadata": {
+    "schema": "hotbath-colour-groups-v1",
+    "basis_snapshot": "2026-10-24",
+    "contains_existing_groups": true,
+    "exclusive_config_models": [
+      "IBS1",
+      "IBS12",
+      "IBS12A",
+      "IBS1A",
+      "IBS20",
+      "IBS20A",
+      "IBS70",
+      "IBS7009"
+    ],
+    "spom_excluded": true,
+    "counts": {
+      "baseline_groups": 433,
+      "original_records_preserved": 3383,
+      "base_groups_after_pilot_overlay": 435,
+      "new_colour_or_book_groups": 113,
+      "new_title_config_groups": 9,
+      "total_output_groups": 582,
+      "fixed_config_colour_only_groups": 25,
+      "fixed_config_colour_only_models": 7,
+      "fixed_config_colour_only_records": 72,
+      "total_output_records": 4903,
+      "new_records_vs_original": 1520,
+      "augmented_existing_groups": 52,
+      "appended_records_vs_pilot": 139,
+      "excluded_spom_catalogue": 697,
+      "old_records_with_additive_colour_option": 7,
+      "excluded_existing_records": 0,
+      "review_entries": 53
+    },
+    "title_config_models": [
+      "Hotbath IBS2 doucheset",
+      "Hotbath IBS21 doucheset",
+      "Hotbath IBS22 doucheset",
+      "Hotbath IBS23 doucheset",
+      "Hotbath IBS24 doucheset",
+      "Hotbath IBS5 doucheset",
+      "Hotbath IBS5A doucheset",
+      "Hotbath IBSX70 doucheset",
+      "Hotbath M538 doucheset"
+    ],
+    "fixed_config_colour_only_models": [
+      "IBS25",
+      "IBS26",
+      "IBS34",
+      "IBS40",
+      "IBS40A",
+      "IBS7",
+      "IBS73"
+    ],
+    "limits": [
+      "No manufacturer inventory claim.",
+      "Unresolved family/title contradictions remain excluded from new groups.",
+      "Only literal title fields or explicit book member mappings create dimensions."
+    ]
+  },
+  "excluded_products": {
+    "hotbath-spom357-hb-schroefje-perlator-f004-3c-f7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom500-hb-schroef-tbv-buddy-knop": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom501-hb-schroef-tbv-laddy-therm-knop": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom505-hb-schroef-tbv-laddy-omstel-stopkr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-o-ring-tbv-messing-ringtbv-063-065-fluhs": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom502-hb-schroefje-tbv-omstel-chap": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom484-hb-inbus-tbv-chap-greep": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekdopje-cr-sds-70-range": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom450-hb-inbusje-tbv-omstelknop-b009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom504-hb-schroef-tbv-laddy-005-006-greep": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom89gn-hb-afdekdopje-q-b-gn-i16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom99-hb-stelschroef-zwart-tbv-p033-c24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-wit-kunststof-bevestigingsklip-tbv-m193-interne-slang": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom100-hb-lipafdichtingsring-tbv-p710": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom364-hb-rubber-ring-kroon-60-s-50-s-f14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom573-hb-afdekdopje-tbv-friendo-007-009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom94-hb-schroef-plat-wtk-hendels-c20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1542-hb-borgmoer-tbv-b005cr-b005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1544-hb-borgmoer-tbv-l005cr-l005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom555-hb-moer-tbv-wateruitlaat-p033": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom37-flexibele-aansluitslangen-set-b5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1563gn-hb-kroon-tbv-cb006gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-glijmof-m400-m425-m431-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1520gn-hb-houder-tbv-handdouche-q061gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom2-therm-rev-cartridge-b-q-c-009-7-a2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom430gn-rozet-tbv-b006gn-g20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom727gn-hb-omstelknop-compleet-tbv-c009extgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1594-cb005t-cartridge-rechtsdraaiend1-2g-90": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom88gn-hb-rozet-p60-rond-gn-h35": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom374-hb-kap-tbv-bovenaansluiting-m305-f22": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1517-hb-set-van-2-sticks-tbv-b022cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom511-hb-hendel-tbv-f004-c-cr-o23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom62-therm-ring-009-007-chroom-b25": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-therm-7001-tbv-066-067-71-72-bbp": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-met-inzet-tbv-cb027wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom320gn-hb-rozet-tbv-f009gn-l14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-therm-reverse-cartridge-42mm-new-007-009-012-013-en-pb-range-50-en-60": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-vervanging-omstel-voor-b063-065cr-compleet-met-fluhs-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-006-rozet-verouderd-ijzer": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom465-hb-uitloop-tbv-l004cr-k28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom487-hb-onderplaat-tbv-m100gn-a-k14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-onderplaat-tbv-m100-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1506-hb-rozet-tbv-thermostaat-br007cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-cb026cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-tbv-l004-044cr-k28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-thermostaat-br007cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom412-hb-uitloop-tbv-b077cr-g4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom116gn-hb-verlenging-therm-laddy-friendo": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom373gn-hb-laddy-009-rozet-4kant-165x120-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom431-hb-ver-hendel-f-l005-006-g21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom522-hb-rozet-tbv-thermostaat-a007cr-l23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom726gn-hb-thermostaatknop-compleet-tbv-c009extgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-f004-c-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-messing-ring-tbv-063-065-fluhs": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-tbv-cb004": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1512-hb-green-key-perlator-tbv-b004cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom358-hb-rozet-tbv-m177cr-f8": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom474-hb-green-key-perlator-tbv-cb-l-003-005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom475-hb-perlator-tbv-b005j-006j-coinslot": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom476-hb-green-key-perlator-tbv-b005j-l30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom63gn-hb-therm-ring-50-s-60-s-gn-h26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom90-hb-restrictor-hoofddouches-9ltr-c16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom92-perlator": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-therm-ring-009-007-chroom-model-2008-2011": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom135-hb-stick-hendel-laddy007-009-012": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-basering-l003gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-tbv-cb026": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom119gn-hb-basering-c004gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom135gn-hb-stick-hendel-laddy007-009-012gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom425-hb-bus-1-2-binnen-g16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-stick-tbv-hendel-laddy007-009-012": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005t-cb010-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1521-hb-wateraansluiting-tbv-m305": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom172cr-hb-rozet-voor-q063-065cr-aangepast-voor-fl-sh-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom705gn-hb-verlengset-tbv-hb009gn-m29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom413-hb-rozet-tbv-q061cr-g5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom722-hb-verlengset-tbv-hb012cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-glijmof-m431-bl0": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom153-hb-uitloop-b017-cr-d21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1502-hb-glijstuk-tbv-m201cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom165gn-rozet-b051-b052gn-blanco-d26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom49gn-hb-rozet-007-vergroot-19-5cm-gn-h21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom97-hb-rozet-tbv-q066cr-355x60-c12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-b017-cr-d21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom78-hb-pal-draaiknop-p033cr-c10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1546-hb-cartridge-tbv-fkm8-fkm10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1547-hb-cartridge-tbv-fkm12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom374gn-hb-kap-bovenaansluiting-m305gn-o11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom7gn-buddy-chap-rozet-thermost-gn-h2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-vervanger-omstel-063-065-fluhs-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-gn-tbv-007-vierkant": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-b052-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom706gn-hb-verlengset-tbv-hb007gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1603-thermostaat-element-70-range-let-op-samen-met-spom63-plus-kleur": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom328gn-hb-rozet-l009rgn-170mm-i17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom421b-hb-rozet-tbv-c061cr-blanco": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom74gn-hb-verlengset-tbv-b005-b006-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1500-hb-cartouche-fp-b005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-glijmof-tbv-amice-sds5cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-glijstuk-tbv-m426bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom311-hb-rozet-tbv-b013cr-e7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-br009cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom300-hb-rozet-tbv-m140cr-d28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom521-hb-rozet-tbv-a009cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom564-hb-inbouwdeel-tbv-a030fm-o20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom722gn-hb-verlengset-tbv-hb012gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekkap-thermostaat-transparant": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-stopkraan-50-s-60-s-en-007-009-verouderd-ijzer": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-50-s-60-s-en-007-geborsteld-messing": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-50-s-60-s-en-007-mat-wit": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-50-s-60-s-en-007-verouderd-messing": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-50-s-60-s-en-007-9-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb452-453-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1510-hb-bodyhuls-tbv-cb005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1514-binnenwerk-voor-cb003": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom329-hb-rozet-tbv-m122cr-e20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom420-kogelgewr-zonder-air-g11-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom424-hb-muurplaat-3-4-buiten-g15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom491gn-hb-rozet-tbv-m455gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom542-hb-rozet-vierkant-tbv-m135cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom568-hb-cartridge-tbv-q003s": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-stick-tbv-stopkraan-omstel-2020-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom172gn-hb-rozet-voor-q063-065gn-aangepast-voor-fl-sh-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom408-hb-uitloop-tbv-f004ccr-g1": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom20-hb-rozet-wandarm-m450-a19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom21-hb-rozet-wandarm-m451-60mm-a19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom360-kruisgreep-c008-009-007-f10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom524-fixing-set-tbv-m160": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1559gn-hb-rozet-tbv-p034gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom326-hb-omstelmechanisme-f-b077cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom488gn-hb-uitloop-tbv-q004gn-l35": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom706-hb-verlengset-tbv-hb007cr-m30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1560-hb-inbouwdeel-tbv-l005jgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelmechanisme-cb-f-b077-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom355-hb-omstelmechanisme-tbv-b077cr-f6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom11-buddy-1-stickgreep-008-007-009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-buddy-stickgreep-008-007-009-021-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-omstelladdy-friendo-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom350-hb-perlator-tbv-f003-004-005c-f3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom53-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-therm-huls-50-61-62-66-67-70-s-en-007-9-2020-ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom114-verlengde-kroon-laddy-friendo-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom13-kroon-omst-en-stopk-b-c-q-007-009-a11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1515-hb-rozet-tbv-cb011cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom365-hb-rozet-tbv-uitloop-c005cr-f15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom479-hb-menghuis-tbv-b073cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom98gn-hb-rozet-tbv-b062gn-445x60-c23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom46gn-hb-rozet-tbv-b061gn-h20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1552-hb-uitloop-tbv-b073cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-tbv-b073cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-omst-en-stopk-b-c-q-007-009-a11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-messing-huls-voor-diverter-cb011-029-2e-uitvoering": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb011bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb011cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-c005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom14-verlengde-kroon-b-c-q-007-009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom3-hb-binnenwerk-008-011-020-a3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom42-hb-chap-binnenwerk-004-030-b10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-kroon-laddy-friendo-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1507-hb-uitlaat-extern-p033cr-nieuw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitlaat-extern-p033cr-nieuw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom26-hb-basering-4kant-q003-a24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom366-hb-rozet-bedieningsknop-c005cr-f16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom535-hb-bodyhuls-tbv-c005cr-m7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-thermostaat-007-mat-zwart": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom44gn-hb-rozet-b009-c009gn-h18": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom45gn-hb-rozet-q009-gn-h19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom710-hb-rozetten-tbv-q007extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom440-hb-vloerplaat-tbv-b017cr-g29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-vloerplaat-tbv-b017cr-g29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom417gn-hb-rozet-tbv-q006gn-i24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-basering-vierkant-q003-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuls-c005cr-m7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-g50-uitlopend-ponsi-binnenwerk-1-2-180-spom3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-bedieningsknop-c005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb-b008-016-020-cr2016-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-cb005t-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom117-hb-verl-stopkr-omst-laddy-friendo": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom20gn-hb-rozet-wandarm-m450gn-h13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom400gn-hb-rozet-tbv-m130gn-f24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom459-hb-draadeind-omstel-009-l2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom520-hb-basering-tbv-l003cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom542gn-hb-rozet-vierkant-tbv-m135gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom62gn-hb-therm-ring-b-q-c007-009gn-h25": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom91-perlator-b004-040-nieuw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom11gn-buddy-1-stickgreep-008-007-009-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom21gn-hb-rozet-wandarm-m451gn-h14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1554-hb-rozet-tv-hendel-cb005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom39-hb-wartelset-opbouwthermst-2st-b7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom517gn-hb-rozet-tbv-q061gn-i33": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom401-hb-buis-tbv-b077cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom445-hb-schroef-tbv-knop-a007-009-k32": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom466-hb-kunststof-adapter-tbv-e001-k33": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom472-hb-afdekdopjes-tbv-m146cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekdopje-friendo-007-009-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-foam-strip-tbv-rozet": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom68-hb-therm-blokkadering-b-q-c-c1": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom69-hb-knop-adapters-met-schroef-c2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-basering-l044cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-handdouche-houder-voorzijde-behorendbij-glijstukb-tbv-m305-m306-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-stopkraan-50-s-60-s-en-007-009-geborsteld-messing-pvd": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-stopkraan-50-s-60-s-en-007-9-202-geborsteld-koper-pvd": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-puntstuk-tbv-universele-uitloop-cb095-ar095": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom361-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom414-glijstuk-tbv-m305-306-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom5-verl-set-b-q-c-omstel-stopkr-a5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom303-hb-hendel-tbv-f009ncr-d30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-tbv-b016cr-b008cr-model-t-m-2015": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom717-hb-huls-tbv-stopkr-oms-007-009-o26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-cb005t-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom25-hb-basering-rond-b003-a23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom468-cartridge-tbv-m145-m110": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-ibs20a-inbouw-doucheset-staafhanddouche-30cm-hoofddouche-30cm-plafondbuis-glijstang-geborsteld-nikkel": "SOURCE_CONFLICT_HELD_FOR_REVIEW",
+    "hotbath-spom478-hb-omstel-body-tbv-b063cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-basering-rond-b003-018cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-binnenwerk-stopkraan-cb70": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-a005cr-per-stuk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005nb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-m385gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1555-hb-rozet-tbv-uitloop-cb005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom13-2cm-gn-hb-kroon-stopkr-omst-2cm-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-reversed-cartridge-hb010": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-cb005bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom404-hb-thermostaat-knop-tbv-b022cr-f27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-rozet-uitloop-005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom143-hb-laddy-rozet-mengdeel-005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom126-basering-l-f-004cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567-hb-rozet-tbv-uw001cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-dude-e001-eh001-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uw001cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom114gn-hb-laddy-friendo-verlengde-kroon-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom14gn-kroon-b-q-c007-9-verlengd": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom721-hb-koppeling-tbv-m426cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuls-mengknop-cb005-006-026-027-029-031-bl-2e-uitvoering": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-high-flow-stopkraan-binnenwerk-3-4ook-oud-model-a030": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom19-hb-vergrote-rozet-tbv-m501-6cm-a17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-knijphanddouche-tbv-khdscr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-slang-tbv-khdscr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom13gn-hb-kroon-gn-007-9-b-q-c": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom557gn-hb-kroon-tbv-l009gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitlaat-extern-p033bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-b050-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom421-hb-knop-tbv-l004cr-g12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom353-ring-achter-hendel-q-b-wtk-f5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom482-hb-stopkraan-tbv-b008cr-k5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom84-hb-pal-plug-met-schroef-p033cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-aan-uit-knop-b008-020cr-2011-2015": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyring-cb005-006-026-027-029-031-cr-1e-uitvoering": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kogelgewricht-zonder-air-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstel-tbv-026": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom303gn-hb-friendo-hendel-omstel-f009gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom314-hb-rozet-tbv-universele-uitloop-e9": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom414gn-glijstuk-tbv-m305-306-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567bb-hb-rozet-tbv-uw001bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-therm-huls-50-61-62-66-67-70-s-en-007-9-2020-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitlaat-extern-p033wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-30mm-voor-uitloop-handdouche-tbv-cb-gl-ar-70-range": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-high-flow-stopkraanvierkant-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom211-hb-brug-inbouwdeel-tbv-b005-l005-f005-en-br005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1540-hb-rozet-tbv-f005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom440gn-hb-vloerplaat-tbv-b017gn-g29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb-b008-016-020-bl2016-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom105-knop-stopkraan-61-62-66-67-50-s": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom127-hb-hendel-friendo-003-005-006": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom144-hb-laddy-hendel-003-005-006": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom29-hb-hendel-buddy-b003-b005-a27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom301bl-verlengde-duikpijp-30cm-p034-35bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35bc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom718-hb-huls-tbv-thermostaat-007-009-o27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-thermostaat-007-009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom126gn-hb-basering-l-f-004gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom380-hb-cartouche-25keukenkranen-1tm4-n6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom39gn-hb-wartelset-tbv-opbouwtherm-gn-h16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom415-thermostaatknop-tbv-l016cr-g7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567gn-hb-rozet-tbv-uw001gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom343-hb-rozet-thermostaat-q073-075-e29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom53gn-hb-verlengset-tbv-stopkr-61-62-63-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom518gn-hb-uitloop-tbv-c004gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom463-hb-externe-body-tbv-m160cr-k27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom561-hb-cartridge-tbv-m111-n5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuls-mengknop-cb005-006-026-027-029-031-ai-2e-uitvoering": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-mixer-cb026-027-029-031-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-met-anti-scratch-insert-m440-m443-m514-515": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-hendel-045-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom106bl-set-rozetten-met-s-koppelingen-2020-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom106-rozetten-plus-skopp016-008-022-021": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom15-hb-knop-buddy007-009-stopkr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1513-hb-omstelknop-tbv-b021cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1523-hb-knop-inclusief-stick-tbv-cb003cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom154-hb-laddy-omstel-stopkraanknop": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom352-hb-knop-t-b-v-therm-new-f009-007cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom368-hb-knop-tbv-p033gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom477-hb-thermostaatknop-tbv-b021cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom480-hb-omstelknop-tbv-b063cr-k3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom481-hb-thermostaatknop-tbv-b008cr-k4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom483-hb-omstelknop-tbv-b016cr-k6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cb004-005-006-hendel-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-knop-buddy007-009-stopkr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelknop-tbv-b021cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom331-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom332-rozet-omstel-rond-063-065cr-e23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom433-hb-rozet-universele-uitloop-6cm-g23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-tbv-b021cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-oms-007-009-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom301-hb-verlengde-duikpijp-30cm-p034-35cr-d29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom309-hb-hendel-t-b-v-b075-073-e5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom434-hb-afstandbediening-g24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-15mm-staafhanddouche-geborsteld-gunmetal-pvd": "SOURCE_CONFLICT_HELD_FOR_REVIEW",
+    "hotbath-o-ring-tbv-spom1626": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-sleutel-grijs-24mm-tbv-b004": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-sleutel-groen-18mm-tbv-cobber": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-sleutel-rood-21mm-tbv-b005j-004-005-y-u-uw001": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1666-perlatorsleutel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom302-hb-bevestigingsmoer-plus-afsluitplugner-voor-p033": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-dopje-flow-tbv-amice-serie": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1529-hb-borgmoer-tbv-cartouche-cb005-006": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1550-hb-perlator-tbv-fkm12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom441-hb-dopje-h-tbv-amice-serie": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom442-hb-dopje-c-tbv-amice-serie": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom444-hb-dopje-temp-tbv-amice-serie": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom540-hb-blokkadering-thermostaat-sds7-m12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom87gn-hb-afdekdopje-505-501-301gn-h34": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-adapter-hoog-voor-065-063": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1543-hb-bodyring-tbv-b005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1553-hb-afdekdopje-tbv-voet-b-f077cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1533-hb-puntstuk-tbv-m305": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1549-hb-perlator-tbv-fkm2-fkm3-fkm4-fkm8": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-t-b-v-b075-073-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstel-tbv-b019cr-sds6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelknop-tbv-b017-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032bk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005t-cb010-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005t-cb010-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom416-omstelknop-tbv-l016cr-g8": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom469-hb-puntstuk-tbv-062": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom52-hb-verl-uitll-handdhdr-061-62-b17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-15mm-thermostaat-cr-50-6070-range-b-c-cb-q-gal-70-range": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom473-hb-ontvanger-tbv-m173": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom142-hb-laddy-rozet-uitloop-005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-rozet-mengdeel-005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstel-cb026-b030": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb011wh-60mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1515bl-hb-rozet-tbv-cb011bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom306-chap-stoprkr-omstel-compleet-e2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567bc-hb-rozet-tbv-uw001bc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-knoppenset-ar009ix": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-095-uitlooprozet-verouderd-messing": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb452bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-knop-f005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom72gn-laddy-rozet-l007gn-stopkraan-rond-h29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1516-hb-cartridge-tbv-m109": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-buddy-cobber-thermostaatknop-066-067-71-72-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-high-flow-therm-rond": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-u001-y001-uw001-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-knop-tbv-cb003c-s-mc-ms-hc-hs-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032-ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032-ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032-bc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032-wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1528gn-hb-bodyring-cb005-006gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1548-hb-cartridge-tbv-fkm1-fkm2-fkm3-fkm4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1554gn-hb-rozet-tv-hendel-cb005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1561bk-hb-rozet-tbv-cb450bk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1562gn-hb-hendel-tbv-cb006gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom404gn-hb-therm-knop-tbv-b022gn-i23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom453-omstelknop-stopkraantbv-a007-009-g27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom458-hb-fixing-set-tbv-m150": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom494-hb-set-korte-flex-slangen-b077l33-34": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom530-hb-set-flexibele-slangen-tbv-b017-l5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom724-hb-filters-tbv-hb007-009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-tbv-b017-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-hendel-cb005ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-cb005ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567ab-hb-rozet-tbv-uw001ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-greep-chap-50-60-thermostaat-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom323-omstelknop-b073-075cr-e16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelknop-b073-075cr-e16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom463gn-hb-externe-body-tbv-m160gn-k27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom156-laddy-thermostaatknop-cr-d23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom429-hb-thermostaatknop-tbv-b066cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom528-hb-bodyhuis-tbv-l006-j-cr-o22": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom712-hb-thermostaatknop-tbv-sds1-n18": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom713-hb-omstelknop-tbv-sds1-n13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom725-hb-omstelknop-tbv-b009extcr-hb009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom75-hb-laddy-rozet-stopkraan-4kant-60mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuis-f-l-005-006jcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-buddy-004-flower-power": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-buddy-b031cr-b032cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-dude-e001-eh001-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-hendel-005-006": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-rozet-stopkraan-4kant-60mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstel-stopkr-knop-tbv-b009-007extcr-hb009-007-chroom-2016-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom118-hb-omstel-laddy-016": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom144b-laddy-hendel-wtk-blanco": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1501-hb-cartouche-cb005": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom24-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom28b-hb-hendel-stick-blanco-q003s-l21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom29b-hb-hendel-buddy-b003-b005-blanco": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom29bgn-hb-hendel-tbv-b005-j-gn-blanco": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom29f-hb-hendel-buddy-flower-power-g30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom301gn-hb-verlengde-duikpijp-30cm-p034-035gn-d29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom325-rozet-handdouche-rond-063-065-e18": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom352gn-hb-friendo-hendel-therm-f009gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom370-hb-cartridge-tbv-m100-m206-ar100": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom378-hb-hendel-tbv-l004cr-o30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom422-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom428-rozet-tbv-omstelknop-b075cr-g19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom485-hb-omstelknop-tbv-b016cr-oud-l29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom51-verl-kroon61-62-66-67-051-052-b16": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom57-hb-hendel-met-korte-stick-b004cr-b20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom72-laddy-stopkraan-rozet-rond-60mm-c5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom79-hb-uitlaat-extern-p033cr-oud-c11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35nb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032bcp": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-plug-met-schroef-p033-032nbp": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom340-hb-rozet-handdouche-q073-075-e26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-blokkade-ring-vernet-cartridge": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom746-blokkade-ring-tbv-vernet-cartridge": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rubber-tbv-plug-p032-p033": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1551-hb-perlator-tbv-a040": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1556-hb-perlator-tbv-fkm11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom536-hb-adapter-tbv-b022-m8": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom552-hb-set-o-ring-met-zeefje-o6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom711-hb-blokkadering-nieuw-model-n17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1528-hb-bodyring-cb005-006cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1565-hb-vulring-s-koppeling-tbv-b030cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom600-hb-adapter-tbv-knop-hb009-m2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-omstelknop-met-hendel-068-tbv-007-009-066-067-71-72-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-l004gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-anti-scratch-insert-sds-wh-2020": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelknop-tbv-b021gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-handdouche-q073-075-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-thermostaat-q073-075-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom142gn-hb-laddy-rozet-uitloop-005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom143gn-hb-laddy-rozet-mengdeel-005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom342-hb-rozet-omstel-q063-065cr-e28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom345-hb-rozet-5-5cm-tbv-m502-m503cr-f2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-borgmoer-baddoorvoerset": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-m515-rozet-gn-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-cb450wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-high-flow-stopkraan-rond-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-slang-tbv-khdsgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-archie-ibs33-inbouw-doucheset-rvs-316-geborsteld-messing-pvd-staaf-handdouche-30cm-hoofddouche-1-5cm-wandarm": "SOURCE_CONFLICT_HELD_FOR_REVIEW",
+    "hotbath-rozet-tbv-hendel-cb005ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-uitloop-cb005ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom306gn-chap-stoprkr-omstel-compleet-e2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1519bgn-hb-blanco-hendel-tbv-f031gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom720-hb-wartelset-tbv-b016cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-m515-rozet-wh-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-high-flow-therm-rond-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyring-q005-006gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-tbv-sds1-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-tbv-sds1-wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom319-hb-rozet-stopkraan-f007cr-e12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom411-bodyhuis-b005-b006-g3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuis-b005-b006-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuis-br005-006cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-buddy-cobber-thermostaatknop-066-067-71-72-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-fluhs-binnenwerk-tbv-gal-002-003-003h-018": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-stopkraan-f007cr-e12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1545-hb-handdouche-tbv-fkm13cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom308-hb-rozet-tbv-thermostaat-063-065-e4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom495-hb-wandbevestiging-tbv-sds7cr-n14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom523-hb-rozet-tbv-stopkraan-a007cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom531-hb-omstelmechanisme-tbv-sds7-m3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom567ai-hb-rozet-tbv-uw001ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengde-duikpijp-30cm-p034-35bk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom402-hb-rozet-tbv-uitloop-f005ccr-f25": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom709-hb-rozet-tbv-b009extcr-n10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-greep-chap-50-60-stop-omstel-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-tbv-cb026-027-029-031-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cartridge-cover-diverter-mat-zwart-spom717bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-ai": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-bc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-bk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-huls-tbv-stopkr-omst-007-009-nb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom717gn-hb-huls-tbv-stopkr-omst-007-009gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-buddy-thermostaatknop-007-009-a15-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cb004-005-006-hendel-geborsteld-koper": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cb004-005-006-hendel-mat-wit": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-handdouche-tbv-fkm10cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-hendel-cb077-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-pal-draaiknop-p033-032bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom492-hb-kruisgreep-tbv-therm-c009cr-l10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom78gn-hb-pal-draaiknop-p033gn-h32": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom707bl-hb-rozet-b007extbl-stopkraan-n3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom41-hb-buddy005-rozet-hendel-en-uitloop-b9": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom426-hb-rozet-tbv-knop-f005-g17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom67-hb-buddy-therm-knop-61-62-50-s-b30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom723-hb-bevestiging-tbv-m426cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom9-buddy-rozet-stopkr-b007-rond-a8": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bevestigingsset-m307bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-bodyhuis-br005-006gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-031-rozet-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstel-stopkr-knop-tbv-b009-007extbl-hb009-007-wh-2016-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-omstelknop-tbv-sds1-wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom104-hb-rozet-4kant-q011-008-5x5-18hg": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom127gn-hb-hendel-friendo-003-005-006": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom144gn-hb-knop-tbv-l005-006-l003gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom411gn-bodyring-b005-b006-gn-g3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom507-hb-thermostaatknop-tbv-b065cr-k7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom528gn-hb-bodyhuis-tbv-l006-j-gn-o22": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom707cr-hb-rozet-b007extcr-stopkraan-n3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom725gn-hb-omstelknop-tbv-b009extgn-hb009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verzwaarde-bevestiging-tbv-m426cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kunststof-draadeind-voor-pushbutton-2-stuks": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-perlator-tbv-b018gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom23-hb-bev-set-wastafelkraan-a21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom363-hb-afdekdopje-stang-m301-f13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom423-hb-muurplaat-1-2-binnen-g14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom556-hb-omstelknopje-tbv-spom32": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1564gn-hb-schroef-tbv-m111gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom30-perlator-fonteinkraan-e-p-q-v-a28-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-keerklep-met-filter-set-hb007-012-009-2020": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-los-zeeppompje-tbv-cba09-10-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-high-flow-therm-vierkant-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom15gn-hb-knop-buddy-stopkraan-omstel-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom493-hb-cartridge-tbv-m200-n1": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom514-hb-cartridge-tbv-m140cr-k3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-stopkraan-068-tbv-066-067-71-72-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-tbv-a040gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom136-handdouchehouder-tbv-b062-b061": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-handdouchehouder-tbv-b062-b061": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom17gn-hb-buddy-therm-knop-gn-007-h11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1504-hb-rubbermat-tbv-m111": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1558-hb-cartouche-sproeikop-tbv-m130": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1621-omstel-adapter": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1641gn-verlengset-15mm-thermostaat-geborsteld-nikkel": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom454-hb-thermostaatknop-tbv-a007-009cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom430-rozet-tbv-b006-cr-g20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-031-rozet-mat-zwart": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom741-hb-verlengset-30mm-tbv-cb005-cb006-voor-alle-finishes-te-gebruiken": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cb004-005-006-hendel-verouderd-ijzer": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-2cm-tbv-cb005t-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom515-hb-uitloop-tbv-l018cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom537-hb-rozet-tbv-thermostaat-br063cr-m7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom538-hb-rozet-tbv-omstel-br063cr-m10": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-tbv-omstel-br063-065cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-tbv-thermostaat-br063-065cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1527-hb-rozet-tbv-uitloop-br005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom341-hb-rozet-uitloop-q063-065cr-e27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom353gn-ring-achter-hendel-gn-q-b004-5-i19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom402gn-hb-rozetten-set-f005cgn-i21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom439-hb-rozet-tbv-uitloop-q005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom447-hb-rozet-tbv-bediening-q005cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom59-hb-glijmof-tbv-m301cr-18mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom700-hb-diverter-tbv-hb009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom9gn-hb-buddy-rozet-stopkr-gn-h4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom367-hb-perlator-a003-f17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom452-hb-adaptor-tbv-uitloop-f005c": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom506-hb-adapter-1-2-3-4-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-thermostaatknop-tbv-066-067-71-72-bbp": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-los-zeeppompje-tbv-cba09-10-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom115gn-hb-uitloop-b004-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1602-omstel-binnenwerk-vanaf-2016": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom345gn-hb-rozet-5-5cm-tbv-m502-m503gn-i18": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom451-hb-koppeling-tbv-b019-choice-per-2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-15mm-thermostaat-bb-tbv-066-67-71-72": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom319gn-hb-rozet-stopkr-friendo-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom305-3-weg-omstel-cartridge-tbv-b052-e1": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom703-hb-therm-knop-b007n-b009n-m27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom320-hb-rozet-f009cr-e13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cartridge-tbv-m105": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom106gn-hb-rozetten-s-kopp-016-008-022-021": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom372-hb-afdekkap-tbv-voet-b017cr-f20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-voor-handdouche-cb026cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom115-hb-uitloop-b004": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom318-hb-rozet-thermostaa-f007cr-e11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-high-flow-therm-vierkant-gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-thermostaat-b007extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-thermostaa-f007cr-e11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom120-omstel-cartr-laddy-friendo": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom122-binnenwerk-adapter-en-omstel-blauw-inbouw-2007-2010": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom123-hb-adapter-plus-omstel-groen-opbouw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1537-hb-rozet-tbv-m193cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom32-hb-trekomstelinrichting-sds-oud-a30": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom534-hb-handdouchehouder-tbv-sds7-m6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom571-hb-kroon-16-plus-17-tbv-c065gn-blauw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom707gn-hb-rozet-b007extgn-stopkraan-n3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom71gn-hb-rozet-therm-tbv-l007rgn-h27": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom716-hb-rozet-tbv-thermostaat-b007extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom716b-hb-rozet-tbv-therm-b007extcr-blanco": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom551-inzet-zwart-kunststof-tbv-fluhs-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom499-hb-bodyring-tbv-l006-j-cr-m22": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekdopje-voet-b-f077-geborsteld-nikkel-set-3-stuks": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-handdouche-fkm19bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom41gn-hb-buddy005-rozet-hendel-en-uitl-gn-h17": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom708-hb-knop-tbv-c009extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-15mm-thermostaat-bcp-tbv-066-67-71-72": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom525-inbouwdeel-tbv-vrijstaande-badmengkraan": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom136gn-handdouchehouder-tbv-062-b061": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1530-hb-rozet-tbv-b031cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom372gn-hb-afdekkap-tbv-voet-b017gn-i20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom75gn-hb-laddy-rozet-stopkraan-4kant-60mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-30mm-therm-tbv-cobber-70cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom171cr-hb-rozet-voor-b-c-063-065cr-aangepast-voor-fl-sh-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-cb031qgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom438-hb-b005jcr-flower-power-kit-g28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-b005jcr-flower-power-kit-g28": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom437-hb-rozet-tbv-f006ccr-k20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom726-hb-thermostaatknop-compleet-tbv-c009extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-glijmof-tbv-m301-18mm": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-b007extai-stopkraan": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom116-hb-verlenging-therm-laddy-friendo": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom124-hb-adapter-plus-omstel-groen-inbouw": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1525-hb-verlengset-tbv-mhf-thermostaat": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom4-verl-set-therm-b-q-c007-9-a4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom455-hb-rozet-tbv-b032cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom462-hb-rozet-tbv-m160cr-k26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-cb007-b009-bc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-compleet-tbv-c009extcr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-high-flow-filter-rvs-plus-keerklep": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom516gn-hb-basering-tbv-l044gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1543gn-hb-bodyring-tbv-b005gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekdopje-voet-b-f077-verouderd-ijzer-set-3-stuks": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom541-hb-borg-ring-tbv-omstel-sds7-m13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom569-hb-rozet-tbv-m508cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom490-hb-kroon-tbv-50-s-en-60-s-l15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom565-hb-perlator-tbv-f005-o9": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-tbv-omstel-br063-065gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-cobber-rozet-tbv-thermostaat-br063-065gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-15mm-thermostaat-bc-tbv-066-67-71-72": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom704-hb-rozet-tbv-q009extcr-m29": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-stopkraan-br007cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-tbv-cb004cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-handdouche-tbv-fkm10gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-thermostaatknop-b007-b009-bl": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom701-hb-glijstuk-tbv-m426cr-m1": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom98-hb-rozet-tbv-b062-445x60-c23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-b-c062-cr-445x60": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1-thermostatisch-binnenwerk-2011-2015": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom129-thermostatisch-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom322-rozet-blanco-c-b066-067-e15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom512-hb-uitloop-tbv-a005cr-incl-perl-o4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom716gn-hb-rozet-tbv-thermostaat-b007extgn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom745-thermostatisch-binnenwerk-en-adapter-2016-2019": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom95-hb-therm-cart-q008-11-l008-16-022c21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom313-hb-rozet-tbv-b066cr-e7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom371-laddy-007-rozet-vierkant-12x12-f19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom373-laddy-009-rozet-4kant-165x120-f21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom46-hb-rozet-b061-cr-435x60-b14": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom61-hb-rozet-355x600-b067-c067cr-b24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom7-buddy-rozet-thermost-rond-b007-a6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom71-laddy-007r-rond-rozet-120mm-c4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom73-hb-laddy-009-rozet-rond-145mm-c6": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kroon-tbv-stopkraan-50-s-60-s-en-007-9-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom449-hb-losse-sifon-tbv-p033cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom470-wartelset-tbv-b030-k34": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom499gn-hb-bodyring-tbv-l006-j-gn-m22": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom56-binnenwerk-linksdraaiend-90-graden": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom119-hb-basering-c004cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom467-hb-kniegewr-incl-air-k12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom63-hb-therm-ring-61-62-66-67-50-s-b26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-afdekkap-stopkraan-transparant": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-kniegewr-incl-air-k12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-set-drukstiften-tbv-cba320": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom375-hb-kap-tbv-onderaansluiting-m305-f23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom381-hb-basering-tbv-b002cr-o3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom532-hb-omstelknop-tbv-sds7-m4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom533-hb-thermostaatknop-tbv-sds7-m5": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom549-hb-fixing-kit-tbv-b019cr-m20": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom702-hb-seal-tbv-hb009-m26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-therm-huls-50-61-62-66-67-70-s-en-007-9-2020-cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-buddy-rozet-thermostaat-rond-b007-a6-chroom": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-met-inzet-tbv-cb026ab": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-houder-met-inzet-tbv-cb026wh": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-007-rozet-vierkant-12x12-f19": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-007r-rond-rozet-120mm-c4": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-laddy-009-rozet-4kant-165x120-f21": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-f009cr-e13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-b066cr-e7": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom1526-hb-verlengset-tbv-mhf-stopkraan": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom409-hb-rozet-blanco-b054-055cr-g2": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom44-hb-rozet-b009-c009-195mm-b12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom45-hb-rozet-q009-200mm-b13": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-push-button-cartridge-pb009-q-050-06": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom165-rozet-b051-b052cr-blanco-d26": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-b009extbc": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom318gn-hb-rozet-thermostaat-f007gn-i12": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom60-hb-glijmof-tbv-m302-17mm-b23": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-30mm-therm-tbv-cobber-70bb": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom171gn-hb-rozet-voor-b-c-063-065gn-aangepast-voor-fl-sh-binnenwerk": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom307-rozet-b052-verticaal-e3": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom103-hb-rozet-vergroot-tbv-q009": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom529-hb-rozet-tbv-l006-j-cr-l24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-rozet-tbv-l006-j-cr-l24": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom488-hb-uitloop-tbv-q004cr-l11": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom49-b007-rozet-vergroot-195mm-b15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom497-hb-uitloop-tbv-q003cr": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-spom544-hb-rozet-tbv-f006cr-m15": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-uitloop-tbv-cb004gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-verlengset-30mm-therm-tbv-cobber-70gn": "SPOM_EXCLUDED_BY_USER",
+    "hotbath-ibs20bbp": "SOURCE_CONFLICT_HELD_FOR_REVIEW",
+    "hotbath-ibs20bcp": "SOURCE_CONFLICT_HELD_FOR_REVIEW",
+    "test-pdp-badkamercity-hotbath-laddy-lh003-wastafelmengkraan-hoog-zonder-waste-geborsteld-nikkel": "TEST_EXCLUDED",
+    "bc-pilot-ibs70cr347-v1": "TEST_EXCLUDED"
+  },
+  "removed_existing": [],
+  "reviews": [
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ar021",
+      "model": "AR021",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-b095-15",
+      "model": "B095/15",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-b095-15j",
+      "model": "B095/15J",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-b095-25",
+      "model": "B095/25",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-b098",
+      "model": "B098",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-gl7009ext",
+      "model": "GL7009EXT",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-mhf011",
+      "model": "MHF011",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-mhf012",
+      "model": "MHF012",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-mhf013",
+      "model": "MHF013",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-mhf014",
+      "model": "MHF014",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-mhf015",
+      "model": "MHF015",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarh50-1",
+      "model": "RARH50-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarh50-2",
+      "model": "RARH50-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarh50-3",
+      "model": "RARH50-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarv135-1",
+      "model": "RARV135-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarv135-2",
+      "model": "RARV135-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rarv135-3",
+      "model": "RARV135-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras50-1",
+      "model": "RAS50-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras50-2",
+      "model": "RAS50-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras50-3",
+      "model": "RAS50-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras50-4",
+      "model": "RAS50-4",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras80-1",
+      "model": "RAS80-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras80-2",
+      "model": "RAS80-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras80-3",
+      "model": "RAS80-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras80-4",
+      "model": "RAS80-4",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-ras8050",
+      "model": "RAS8050",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass50-1",
+      "model": "RASS50-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass50-2",
+      "model": "RASS50-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass50-3",
+      "model": "RASS50-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass50-4",
+      "model": "RASS50-4",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass80-1",
+      "model": "RASS80-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass80-2",
+      "model": "RASS80-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass80-3",
+      "model": "RASS80-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass80-4",
+      "model": "RASS80-4",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rass8050",
+      "model": "RASS8050",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rasv135-1",
+      "model": "RASV135-1",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rasv135-2",
+      "model": "RASV135-2",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-rasv135-3",
+      "model": "RASV135-3",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-sds32",
+      "model": "SDS32",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "SKU_TITLE_COLOUR_CONFLICT"
+      ]
+    },
+    {
+      "type": "COLOUR_PROPOSAL_REVIEW",
+      "proposal_id": "colour-sds9-1",
+      "model": "SDS9",
+      "reason_flags": [
+        "COLOUR_NOT_CORROBORATED_IN_EVERY_TITLE",
+        "TITLE_WORDING_VARIATION_REQUIRES_REVIEW"
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS25",
+      "product_count": 2,
+      "problems": [
+        {
+          "sku": "IBS25CR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS25GN",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS26",
+      "product_count": 2,
+      "problems": [
+        {
+          "sku": "IBS26CR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS26GN",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS27",
+      "product_count": 16,
+      "problems": [
+        {
+          "sku": "IBS27CR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27CR7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27CR1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27CR17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27GN",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27GN1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27GN7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27GN17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27BCP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27BBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27BBP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27BCP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS27BCP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27BBP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27BCP17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS27BBP17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath cobber thermostatische douche inbouwset 3 stopkranen vierkante": 15,
+            "hotbath cobber thermostatische douche inbouwset 3 stopkranen": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS30A",
+      "product_count": 6,
+      "problems": [
+        {
+          "sku": "IBS30AIX5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS30AIX1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS30AIX15",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS30AIX4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS30AIX6",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS30AIX16",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath archie inbouw doucheset 2 weg omstel 8mm": 2,
+            "hotbath archie inbouw doucheset 2 weg omstel handddouche": 1,
+            "hotbath archie inbouw doucheset 2 weg omstel handdouche 8mm": 2,
+            "hotbath archie inbouw doucheset 2 weg omstel": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS31",
+      "product_count": 4,
+      "problems": [
+        {
+          "sku": "IBS31IX",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS31IX4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS31IX1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS31IX14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS32",
+      "product_count": 4,
+      "problems": [
+        {
+          "sku": "IBS32IX",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS32IX4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS32IX1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS32IX14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS33",
+      "product_count": 95,
+      "problems": [
+        {
+          "sku": "IBS33IX2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX3",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX35",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX12",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX13",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX125",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX135",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX24",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX34",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX15",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX26",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX36",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX6",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX124",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX134",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX126",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX136",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33IX16",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP3",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP3",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP3",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP35",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP35",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP35",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP12",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP15",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP12",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP12",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP13",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP13",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP125",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP125",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP125",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP135",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP135",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP134",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP13",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP15",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP15",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP24",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP24",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP34",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP34",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP6",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP34",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP26",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP36",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP36",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP36",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP4",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP16",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP6",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP6",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP124",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP124",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP124",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP24",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP134",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP135",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP134",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP126",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP126",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP126",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP26",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP136",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP136",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP136",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BGP26",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP16",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BCP14",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS33BBP16",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath archie inbouw doucheset geborsteld 1 5cm": 12,
+            "hotbath archie inbouw doucheset geborsteld 0 8cm": 12,
+            "hotbath archie inbouw doucheset 1 5cm": 33,
+            "hotbath archie inbouw doucheset 0 8cm": 38
+          }
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS34",
+      "product_count": 4,
+      "problems": [
+        {
+          "sku": "IBS34IX",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS34BGP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS34BCP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS34BBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath archie inbouw doucheset mengkraan beam hoofddouche geborsteld": 1,
+            "hotbath archie inbouw doucheset mengkraan beam hoofddouche": 3
+          }
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS40",
+      "product_count": 24,
+      "problems": [
+        {
+          "sku": "IBS40CR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40CR257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BGP57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40BBP57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath gal inbouw doucheset high flow 2 stopkranen": 6,
+            "hotbath gal inbouw doucheset high flow 2 stopkranen plafondbuis": 6,
+            "hotbath gal inbouw doucheset high flow 2 stopkranen gl106": 6,
+            "hotbath gal inbouw doucheset high flow 2 stopkranen plafondbuis gl106": 6
+          }
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS40A",
+      "product_count": 24,
+      "problems": [
+        {
+          "sku": "IBS40ACR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ACR257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP25",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP5",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP27",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP257",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABGP57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS40ABBP57",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche",
+            "type_handdouche"
+          ]
+        },
+        {
+          "issue": "UNEXPLAINED_RESIDUAL_TITLE_DIFFERENCES",
+          "signatures": {
+            "hotbath gal inbouw doucheset 2 weg stop omstel": 6,
+            "hotbath gal inbouw doucheset 2 weg stop omstel plafondbuis": 6,
+            "hotbath gal inbouw doucheset 2 weg stop omstel gl106": 6,
+            "hotbath gal inbouw doucheset 2 weg stop omstel plafondbuis gl106": 6
+          }
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS6A",
+      "product_count": 3,
+      "problems": [
+        {
+          "sku": "IBS6ACR2",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS6ACR3",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS6ACR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_handdouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS7",
+      "product_count": 8,
+      "problems": [
+        {
+          "sku": "IBS7CR1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7CR",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7CR17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7CR7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7GN1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7GN",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7GN17",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        },
+        {
+          "sku": "IBS7GN7",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "breedte_diameter_hoofddouche",
+            "type_bevestiging_hoofddouche"
+          ]
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    },
+    {
+      "type": "TITLE_CONFIG_FAMILY_REVIEW",
+      "model": "IBS73",
+      "product_count": 8,
+      "problems": [
+        {
+          "sku": "IBS73IX",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73IX1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BGP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BCP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BBP",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BGP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BCP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        },
+        {
+          "sku": "IBS73BBP1",
+          "issue": "MISSING_LITERAL_CHOICES",
+          "fields": [
+            "type_bevestiging_hoofddouche",
+            "bevestiging_handdouche"
+          ]
+        }
+      ],
+      "configuration_review_status": "COLOUR_ONLY_FALLBACK_CREATED; FULL_CONFIGURATION_CHOICES_NOT_VERIFIED"
+    }
+  ]
+}

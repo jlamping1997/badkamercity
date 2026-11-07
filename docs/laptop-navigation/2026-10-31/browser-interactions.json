@@ -1,0 +1,71 @@
+{
+  "interactions": [
+    {
+      "test": "laptop keyboard open",
+      "expanded": "true",
+      "focus": "Wastafelkranen",
+      "navBottom": 216.59375,
+      "open": 1,
+      "panelTop": 217
+    },
+    {
+      "test": "Escape closes and restores focus",
+      "focus": "Kranen",
+      "focusTag": "A",
+      "open": 0
+    },
+    {
+      "test": "second-row category opens below whole bar",
+      "category": "Spiegels en verlichting",
+      "focus": "Badkamerspiegels",
+      "navBottom": 216.59375,
+      "open": 1,
+      "panelTop": 217
+    },
+    {
+      "test": "mobile menu opens after desktop resize",
+      "ariaExpanded": "true",
+      "bodyLocked": true,
+      "open": true
+    }
+  ],
+  "resize": [
+    {
+      "width": 1280,
+      "headerVar": "",
+      "height": 218,
+      "menuOpen": false,
+      "nav": "block",
+      "rows": [
+        120.59375,
+        168.59375
+      ],
+      "scroll": 1280,
+      "viewport": 1280
+    },
+    {
+      "width": 989,
+      "bodyLocked": false,
+      "headerVar": "142px",
+      "height": 142,
+      "menuOpen": false,
+      "nav": "none",
+      "scroll": 989,
+      "viewport": 989
+    },
+    {
+      "width": 1366,
+      "bodyLocked": false,
+      "headerVar": "",
+      "height": 170,
+      "menuOpen": false,
+      "nav": "block",
+      "rows": [
+        120.59375
+      ],
+      "scroll": 1366,
+      "viewport": 1366
+    }
+  ],
+  "frameNavigation": "Shopify destination refused iframe embedding; top-level click tested separately."
+}

@@ -1,0 +1,303 @@
+{
+  "status": "PARTIALLY_APPLIED_BLOCKED",
+  "date": "2026-10-20",
+  "sku": "24.3710",
+  "series": "304",
+  "authorization": "Owner explicitly approved content, visual proposal and one-product application; no further product or theme publication authorized.",
+  "product_id": "gid://shopify/Product/10657256210698",
+  "product_url": "https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+  "product_updated_at_before": "2026-10-12T15:49:11Z",
+  "product_updated_at_after": "2026-10-20T14:58:30Z",
+  "main_theme_before_and_after": "195449651466",
+  "branch": "fix/product-cards-2026-10-14",
+  "start_commit": "90637e412c586be6dc6df7f0d2c7aff4af096b8e",
+  "applied": {
+    "title": true,
+    "description_html": true,
+    "seo_title_and_description": true,
+    "custom.card_title": true,
+    "custom.complete_specificaties": {
+      "rows": 33,
+      "stored": true,
+      "full_rendering": false
+    },
+    "custom.categoriepad": true,
+    "existing_media_alt_texts": 2,
+    "custom.garantie": "Removed unconfirmed five-year claim from this product only",
+    "collections": "All three required memberships already present; verified and preserved. Extra Wastafels retained as approved.",
+    "technical_documents": "No visible document section/links after own description; existing document metafield and approved dimension image preserved."
+  },
+  "unchanged_verified": [
+    "price",
+    "inventory",
+    "inventory_policy",
+    "compare_at_price",
+    "handle",
+    "status",
+    "publications",
+    "collections",
+    "variant_id",
+    "sku",
+    "existing_barcode",
+    "template_suffix",
+    "technical_document_metafield",
+    "filter_manifest",
+    "11 freshly read theme files including wishlist"
+  ],
+  "tests": {
+    "admin_mutations": "Four validated mutations; userErrors empty; full read-after-write matches approved fields",
+    "backup": "Original product/media/metafields/publications and fresh theme files saved BEFORE writes; per-file SHA256 plus Shopify MD5; concrete rollback payload retained privately",
+    "fresh_theme_patch": "Four-file patch still applies to current MAIN bytes; candidate only; 14 Liquid test groups PASS",
+    "live_pdp": [
+      {
+        "viewport": "1440x1000",
+        "horizontal_overflow": false,
+        "rows": 8,
+        "visible_ean_labels": 0,
+        "visible_document_links": 0,
+        "category_breadcrumb_links": 0
+      },
+      {
+        "viewport": "390x1000",
+        "horizontal_overflow": false,
+        "rows": 8,
+        "visible_ean_labels": 0,
+        "visible_document_links": 0,
+        "category_breadcrumb_links": 0
+      }
+    ],
+    "description": "Own text visibly verified at 1440 and 390; screenshot inspected; no technical-document section",
+    "wishlist": [
+      {
+        "width": 1440,
+        "addAndRemove": "PASS"
+      },
+      {
+        "width": 390,
+        "addAndRemove": "PASS"
+      }
+    ],
+    "image_alt_texts": "Both media verified in Admin and actual PDP DOM",
+    "short_title": "Visible on actual external-filter collection card after Shopify HTML hydration",
+    "collections": "Kranen and Wastafelkranen browser HTTP200 and correct heading; Opbouw wastafelkranen 1440/390 active with target present under series304/RVS",
+    "other_products": [
+      {
+        "sku": "29.1617",
+        "url": "https://badkamercity.nl/products/wiesbaden-style-wastafelkraan-geborsteld-staal-pvd-29-1617",
+        "viewport": "1440x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      },
+      {
+        "sku": "29.1617",
+        "url": "https://badkamercity.nl/products/wiesbaden-style-wastafelkraan-geborsteld-staal-pvd-29-1617",
+        "viewport": "390x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      },
+      {
+        "sku": "900-1776",
+        "url": "https://badkamercity.nl/products/jee-o-cone-twee-gats-opbouw-wastafelkraan-rvs-met-eengreepsmengkraan-hoog-gun-metal-900-1776-5a1fee18",
+        "viewport": "1440x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      },
+      {
+        "sku": "900-1776",
+        "url": "https://badkamercity.nl/products/jee-o-cone-twee-gats-opbouw-wastafelkraan-rvs-met-eengreepsmengkraan-hoog-gun-metal-900-1776-5a1fee18",
+        "viewport": "390x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      },
+      {
+        "sku": "CB033AI",
+        "url": "https://badkamercity.nl/products/hotbath-cobber-cb033-wastafelkraan-3-gats-verouderd-ijzer",
+        "viewport": "1440x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      },
+      {
+        "sku": "CB033AI",
+        "url": "https://badkamercity.nl/products/hotbath-cobber-cb033-wastafelkraan-3-gats-verouderd-ijzer",
+        "viewport": "390x1000",
+        "title_and_specifications": "identical to before",
+        "horizontal_overflow": false
+      }
+    ],
+    "api_filters": [
+      {
+        "label": "matching",
+        "found": 1,
+        "skus": [
+          "24.3710"
+        ]
+      },
+      {
+        "label": "one_tap_hole",
+        "found": 0,
+        "skus": []
+      },
+      {
+        "label": "two_tap_holes",
+        "found": 0,
+        "skus": []
+      }
+    ],
+    "one_tap_hole_browser": {
+      "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcr_f_aantal_kraangaten_min=1&bcr_f_aantal_kraangaten_max=1",
+      "request": {
+        "collection": "opbouw-wastafelkranen",
+        "q": "*",
+        "page": 1,
+        "per_page": 24,
+        "sort": "relevance",
+        "filters": {
+          "f_serie": [
+            "304"
+          ]
+        },
+        "ranges": {
+          "f_aantal_kraangaten": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      },
+      "found": 0,
+      "productPresent": false,
+      "status": "FAIL_TARGET_NOT_FOUND"
+    },
+    "seo_title_dom": "Wiesbaden 304 wastafelkraan RVS coldstart | BadkamerCity – Badkamercity"
+  },
+  "blockers": [
+    {
+      "component": "MAIN theme",
+      "reason": "Shopify connector explicitly blocks theme file writes to MAIN. No prohibited mutation attempted and no alternate route used. No theme published.",
+      "consequence": "PDP still renders 8 existing confirmed rows; full 33-row table and three category links await existing reviewed four-file patch."
+    },
+    {
+      "component": "Filter index",
+      "reason": "Owner now confirms interactive SSH, sudo and index reads work. Targeted correction script is prepared and has 17 passing offline tests; server execution awaits the owner. The unknown Shopify manifest hash is not required for a direct single-document Typesense PATCH.",
+      "consequence": "No index write performed by Codex. Fresh public API baseline finds target; one-hole range still finds zero. Both post-correction inclusion and incompatible-selection exclusion remain unverified until the prepared script runs. See 24.3710-filter-correction.md."
+    }
+  ],
+  "test_limitations": [
+    "Mobile is Edge device viewport 390px, not physical phone.",
+    "Only three other products compared, not entire catalog.",
+    "Native Shopify render of full 33-row candidate NOT_TESTED/BLOCKED; no live theme write allowed by connector.",
+    "One direct collection HTTP probe returned429; browser navigation subsequently returned200 for both parent collections.",
+    "Initial range-browser test captured a response from previous navigation; exact request predicate fixed and remaining test passed with found0.",
+    "Existing theme appends shop name to approved SEO title; resulting document title recorded, no shared theme alteration.",
+    "No checkout, payment or inventory mutation/test."
+  ],
+  "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-apply/",
+  "backup_manifest_sha256": "f4d453da9b6852b73a83df869193a0133306915481aecd3d487212e2658e6914",
+  "rollback": "Use private rollback.json and originals. Fresh-read before restoring only the changed product fields/media/metafields; CAS with current digest. Remove newly created metafields only if still equal to this run. No theme/index rollback needed: neither changed.",
+  "next_action": "Owner runs the PowerShell transfer/inspect/apply/verify block in 24.3710-filter-correction.md and shares sanitized result JSON. Current scope is only the index correction for SKU 24.3710. Theme rendering remains a separate parked item; no product import.",
+  "follow_up_diagnosis": {
+    "date": "2026-10-20",
+    "instructions": "24.3710.unblock.md",
+    "acceptance": {
+      "time": "2026-10-20T15:45:38.881Z",
+      "sku": "24.3710",
+      "specifications": {
+        "rows": 8,
+        "theme": 195449651466,
+        "categoryLinks": 0,
+        "url": "https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+        "status": "BLOCKED"
+      },
+      "oneTapHole": {
+        "http": 200,
+        "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcr_f_aantal_kraangaten_min=1&bcr_f_aantal_kraangaten_max=1",
+        "found": 0,
+        "request": {
+          "collection": "opbouw-wastafelkranen",
+          "q": "*",
+          "page": 1,
+          "per_page": 24,
+          "sort": "relevance",
+          "filters": {
+            "f_serie": [
+              "304"
+            ]
+          },
+          "ranges": {
+            "f_aantal_kraangaten": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        },
+        "skuInResponse": false,
+        "productLinkVisible": false,
+        "status": "BLOCKED"
+      }
+    },
+    "shopify_scopes_verified": [
+      "read_themes",
+      "write_themes"
+    ],
+    "connector_policy_quote": "Theme file writes (themeFilesCopy, themeFilesUpsert) are allowed on unpublished themes only — writes that target the live/MAIN theme are blocked.",
+    "shopify_write_error": null,
+    "forbidden_mutation_attempted": false,
+    "project_approval": "Still valid for this product and minimal current-theme files; not a blocker",
+    "ssh_actual_error": "ubuntu@57.129.175.195: Permission denied (publickey,password).",
+    "ssh_exit_code": 255,
+    "ssh_failure_stage": "AUTHENTICATION",
+    "ssh_password_tested": false,
+    "ssh_batch_mode": true,
+    "ssh_agent_service": "Stopped",
+    "server_docker_sudo_permissions": "NOT_VERIFIED: no authenticated shell",
+    "local_archives_inspected": 33,
+    "local_sync_code": "Static 11050-document index import and read-only API; no one-SKU Shopify sync or values_sha256 calculation found",
+    "index_payload_sha256_verified": "874e415c150dd7a4750c6e1042a0f871a540e0a674b8b2380a68464369f368c9",
+    "manifest_sha256": "a3289b4d3f8d9c353e7b104572bb2f982a89f39ef72ca7324a70b29ae81b2c2e",
+    "ordinary_canonical_values_sha256": "a65a21230973f2e7dbba2cff488f9695919faed261572407bba091daf22f567c",
+    "serialization_variants_checked": 216,
+    "manifest_hash_contract": "NOT_VERIFIED; do not infer hash corruption or replace it",
+    "source_values_equal_current_manifest": true,
+    "fresh_theme_files_unchanged": 11,
+    "prepared": "Two byte-identical reviewed snippet files plus exact locale insertion instructions; read-only VPS diagnostic with five offline safety tests",
+    "server_diagnostic_executed": false,
+    "product_or_index_writes_this_follow_up": false,
+    "private_evidence_directory": "docs/_codex_runs/BC-WIESBADEN-243710_20261020-unblock/"
+  },
+  "latest_acceptance_recheck": {
+    "time": "2026-10-20T16:14:08.535Z",
+    "sku": "24.3710",
+    "specifications": {
+      "rows": 8,
+      "theme": 195449651466,
+      "categoryLinks": 0,
+      "url": "https://badkamercity.nl/products/wiesbaden-304-wastafelkraan-met-coldstart-geborsteld-rvs-24-3710",
+      "status": "BLOCKED"
+    },
+    "oneTapHole": {
+      "http": 200,
+      "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcr_f_aantal_kraangaten_min=1&bcr_f_aantal_kraangaten_max=1",
+      "found": 0,
+      "request": {
+        "collection": "opbouw-wastafelkranen",
+        "q": "*",
+        "page": 1,
+        "per_page": 24,
+        "sort": "relevance",
+        "filters": {
+          "f_serie": [
+            "304"
+          ]
+        },
+        "ranges": {
+          "f_aantal_kraangaten": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      },
+      "skuInResponse": false,
+      "productLinkVisible": false,
+      "status": "BLOCKED"
+    }
+  }
+}

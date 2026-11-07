@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-18",
+  "baseline": {
+    "id": "gid://shopify/OnlineStoreTheme/195386278154",
+    "name": "BadkamerCity - Sunshower direct shoppen",
+    "role": "MAIN",
+    "files": 497
+  },
+  "preview": {
+    "id": "gid://shopify/OnlineStoreTheme/195388080394",
+    "name": "BadkamerCity - Sunshower direct en sneller",
+    "role": "UNPUBLISHED"
+  },
+  "identityBeforeWrite": {
+    "processing": false,
+    "identicalChecksums": 497,
+    "files": 497
+  },
+  "final": {
+    "draft": "gid://shopify/OnlineStoreTheme/195388080394",
+    "role": "UNPUBLISHED",
+    "total": 497,
+    "changed": [
+      "assets/bc-sunshower-landing.css",
+      "assets/bc-sunshower-mobile.js",
+      "sections/bc-sunshower-landing.liquid"
+    ],
+    "exact": [
+      {
+        "file": "sections/bc-sunshower-landing.liquid",
+        "exact": true
+      },
+      {
+        "file": "assets/bc-sunshower-landing.css",
+        "exact": true
+      },
+      {
+        "file": "assets/bc-sunshower-mobile.js",
+        "exact": true
+      }
+    ],
+    "untouched": 494,
+    "qaRestored": true,
+    "mainRole": "MAIN",
+    "mainUnchanged": true
+  },
+  "productionFiles": [
+    "assets/bc-sunshower-landing.css",
+    "assets/bc-sunshower-mobile.js",
+    "sections/bc-sunshower-landing.liquid"
+  ],
+  "routes": {
+    "infrared": "/products/sunshower-round-one-medium-inbouw-white#sunshower-configurator",
+    "uv": "/products/sunshower-round-plus-medium-inbouw-white#sunshower-configurator",
+    "behavior": "native direct links; no intermediate panels/click interception; correct one/plus seed even with generic CTA override; old detail hashes do not hide cards"
+  },
+  "images": {
+    "method": "CDN region crop width=min(round(sourceHeight*0.9),sourceWidth), full height, x=(sourceWidth-cropWidth)*focal. Existing CSS object-position retained. No quality override due actual Liquid PNG restriction.",
+    "focalPercent": {
+      "infrared": 58,
+      "uv": 78
+    },
+    "sizes": "(max-width:337px)261px,(max-width:465px)77.4vw,360px",
+    "loading": "eager; fetchpriority high; mobile-only picture source; desktop blank fallback"
+  },
+  "cdnMeasurements": [
+    {
+      "kind": "infrared",
+      "mode": "final_crop_native_max",
+      "url": "https://badkamercity.nl/cdn/shop/files/bc-sunshower-beleving-infrarood-v2.png?v=1792336752&crop=region&crop_left=402&crop_top=0&crop_width=893&crop_height=992&width=893",
+      "bytes": 90422,
+      "dimensions": [
+        893,
+        992
+      ],
+      "format": "WEBP",
+      "contentType": "image/webp",
+      "accept": "image/webp",
+      "qualityOverride": null,
+      "baselineRequestedWidth": 1500,
+      "baselineBytes": 150630,
+      "byteReductionPercent": 40.0,
+      "notMeasured": "Browser cold-load or total page speed"
+    },
+    {
+      "kind": "uv",
+      "mode": "final_crop_native_max",
+      "url": "https://badkamercity.nl/cdn/shop/files/bc-sunshower-beleving-uv-hero-v2.png?v=1792336743&crop=region&crop_left=1186&crop_top=0&crop_width=652&crop_height=724&width=652",
+      "bytes": 52916,
+      "dimensions": [
+        652,
+        724
+      ],
+      "format": "WEBP",
+      "contentType": "image/webp",
+      "accept": "image/webp",
+      "qualityOverride": null,
+      "baselineRequestedWidth": 1800,
+      "baselineBytes": 119662,
+      "byteReductionPercent": 55.8,
+      "notMeasured": "Browser cold-load or total page speed"
+    }
+  ],
+  "combinedImageBytes": {
+    "before": 270292,
+    "after": 143338,
+    "reductionPercent": 47.0,
+    "limits": "Actual maximum WebP CDN image bytes, no cold browser load/page-speed benchmark."
+  },
+  "tests": {
+    "themeCheck": "3 production files revision1 VALID; actual Shopify render exposed quality:80 PNG failure missed by ThemeCheck. Removed override; final section revision3 VALID and actual server error-free. Final QA fixture revision6 VALID using bundled fallback.",
+    "contracts": "17 route/controller/NL/EN/photo groups; 8 quickshop Liquid groups; 15 unchanged quickshop JS groups; node syntax",
+    "browserDesktop": {
+      "viewport": [
+        1363,
+        936
+      ],
+      "landingErrors": false,
+      "horizontalOverflow": false,
+      "detailPanels": 0,
+      "quickshopForms": 3,
+      "actualDestinationsVisited": [
+        "ONE",
+        "PLUS"
+      ],
+      "configuratorAnchorTopPx": [
+        0,
+        0
+      ],
+      "selected": [
+        "correct ONE/PLUS",
+        "White",
+        "Medium",
+        "Inbouw"
+      ]
+    },
+    "browserMobileComponent": {
+      "method": "LiquidJS actual latest production section/catalog data with deployed production CSS/JS in srcdoc frames; no full header/footer/device",
+      "widths": [
+        320,
+        390,
+        430,
+        749
+      ],
+      "dpr": 1,
+      "allEightImagesLoaded": true,
+      "allDirectLinksCorrect": true,
+      "horizontalOverflow": false,
+      "modelDisclosureInitiallyClosedAll": true,
+      "modelOpenedAt390": true,
+      "seatBlackImageAndSelectionAt390": true,
+      "POSTs": "capture blocked; none submitted"
+    },
+    "temporaryQaTemplate": "existing template restored exact; no new QA file",
+    "patch": {
+      "status": "passed",
+      "scope": {
+        "existing_changed": [
+          "sections/bc-sunshower-landing.liquid",
+          "assets/bc-sunshower-landing.css",
+          "assets/bc-sunshower-mobile.js"
+        ],
+        "new": [],
+        "total": 3
+      },
+      "patch": {
+        "path": "/workspace/scratch/87a9ff83233e/direct-git/docs/patches/BC-sunshower-direct-speed-2026-10-18.patch",
+        "bytes": 22184,
+        "sha256": "7295fcb611b2e32a91c74db5ecaa2037fd418b0764f0f276a7035fe9dbf04bb1",
+        "md5": "74dd1c5f5b977a77e865c43bfd5f37fd"
+      },
+      "checks": {
+        "isolated_temporary_git_repository": true,
+        "git_diff_check": true,
+        "forward_apply_check": true,
+        "forward_apply_exact_bytes_and_file_set": true,
+        "reverse_apply_check": true,
+        "reverse_apply_exact_bytes_and_file_set": true
+      },
+      "baseline": {
+        "sections/bc-sunshower-landing.liquid": {
+          "bytes": 21707,
+          "sha256": "fab251e7c5053edfa7fcaa096902301165604f5fe8f9f96137af32951deddf43",
+          "md5": "8c350f7a5a2c298aa438d01a4691398a"
+        },
+        "assets/bc-sunshower-landing.css": {
+          "bytes": 26125,
+          "sha256": "a495cf63af75a6ae698e1750c1b2e65365bf4a60d3f7495d06811533da0c476c",
+          "md5": "0e0341d7a3ae84fd5e1028ea30225bc6"
+        },
+        "assets/bc-sunshower-mobile.js": {
+          "bytes": 7613,
+          "sha256": "4d27cdff2527e6eb0283ed211ba14acaf1328e0e901242d6c4814c57bf0a167e",
+          "md5": "af8aecf74c7396a3412e5680e235e038"
+        }
+      },
+      "desired": {
+        "sections/bc-sunshower-landing.liquid": {
+          "bytes": 18773,
+          "sha256": "8ca203f94f2ed2ba75df5a41d6a5b95bb62b4313cc0fa0cd4f1d3b9360908920",
+          "md5": "d1ee724ee3b8361bfa578749606f8ae4"
+        },
+        "assets/bc-sunshower-landing.css": {
+          "bytes": 23482,
+          "sha256": "cc2d6d2591f4914b5975dd45dd1fe8648cc14850e76f3d74372ad584327c5a4a",
+          "md5": "1ab8f488e1ee3cb1285a9d8a30e5548e"
+        },
+        "assets/bc-sunshower-mobile.js": {
+          "bytes": 4839,
+          "sha256": "eeaed62bb64f685186c22554decc4c57d9ba0b29ba685c013933970f948e5ccf",
+          "md5": "755f05979ba89f799a56cc7cca211030"
+        }
+      },
+      "limits": "This verifies a three-file source patch against the supplied three-file baseline. It does not verify Shopify theme roles, deployment, browser behavior, remote Git storage, cart persistence or checkout."
+    }
+  },
+  "screenshot": "docs/sunshower-direct-mobile-2026-10-18.jpg",
+  "notTested": [
+    "Physical iOS/Android",
+    "Complete mobile header/footer integration",
+    "Real mobile configurator page",
+    "Cold cache/throttling/Core Web Vitals",
+    "Cart/checkout/payment this turn",
+    "Windows local sync"
+  ],
+  "adminMutations": "Theme only; no product/media/price/stock/page/menu changes; MAIN unchanged",
+  "rollback": "Do not publish draft or restore only three changed baseline files; previous theme if no later changes."
+}

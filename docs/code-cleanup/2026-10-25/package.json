@@ -1,0 +1,13 @@
+{
+  "name": "bc-shared-choice-cleanup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test-position.mjs && node test-switcher.mjs && node test-purchase.mjs && node test-observer.mjs && node test-sunshower.mjs && node test-data.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4",
+    "liquidjs": "10.30.0",
+    "postcss": "8.5.31"
+  }
+}

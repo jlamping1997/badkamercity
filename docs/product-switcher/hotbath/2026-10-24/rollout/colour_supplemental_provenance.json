@@ -1,0 +1,72 @@
+{
+  "hotbath-colour-raar": {
+    "basis": "EXACT_LETTER_MODEL_CATALOGUE_TITLE_AND_BOOK_COMPONENT_IDENTITY",
+    "model": "RAAR",
+    "literal_identity_signature": "hotbath ronde haak voor rarv135 rarvm135 rails",
+    "book_source": {
+      "printed_page": 478,
+      "pdf_page": 480
+    },
+    "finish_mapping_source": {
+      "printed_page": 7,
+      "pdf_page": 9,
+      "basis": "Exact SKU finish suffix to official finish-code palette; current catalogue variants only."
+    },
+    "component_scope": "Accessory/component only; never grouped with complete rails or mirrored product.",
+    "notes": [
+      "RAAR heading identifies round hook; its book price-table row says RAAS, recorded as book typo, not used to rename SKU."
+    ]
+  },
+  "hotbath-colour-raas": {
+    "basis": "EXACT_LETTER_MODEL_CATALOGUE_TITLE_AND_BOOK_COMPONENT_IDENTITY",
+    "model": "RAAS",
+    "literal_identity_signature": "hotbath rechthoekige haak voor rasv135 rails",
+    "book_source": {
+      "printed_page": 475,
+      "pdf_page": 477
+    },
+    "finish_mapping_source": {
+      "printed_page": 7,
+      "pdf_page": 9,
+      "basis": "Exact SKU finish suffix to official finish-code palette; current catalogue variants only."
+    },
+    "component_scope": "Accessory/component only; never grouped with complete rails or mirrored product.",
+    "notes": []
+  },
+  "hotbath-colour-swirou": {
+    "basis": "EXACT_LETTER_MODEL_CATALOGUE_TITLE_AND_BOOK_COMPONENT_IDENTITY",
+    "model": "SWIROU",
+    "literal_identity_signature": "hotbath temperatuur timer schakelaar rond tbv rails afbouwset",
+    "book_source": {
+      "printed_page": 464,
+      "pdf_page": 466
+    },
+    "finish_mapping_source": {
+      "printed_page": 7,
+      "pdf_page": 9,
+      "basis": "Exact SKU finish suffix to official finish-code palette; current catalogue variants only."
+    },
+    "component_scope": "Accessory/component only; never grouped with complete rails or mirrored product.",
+    "notes": []
+  },
+  "hotbath-archie-sds32-opbouw-doucheset-keuzes": {
+    "basis": "CATALOG_LITERAL_DIAMETER_THICKNESS_AND_COLOUR_WITH_BOOK_MODEL",
+    "model": "SDS32",
+    "book_source": {
+      "printed_page": 74,
+      "pdf_page": 76
+    },
+    "literal_identity_signature": "hotbath archie sds32 opbouw regendouche",
+    "literal_fields": [
+      "diameter_hoofddouche",
+      "dikte_hoofddouche",
+      "kleur"
+    ],
+    "replaces_group_ids": [
+      "hotbath-colour-sds32-config-4",
+      "hotbath-colour-sds32-config-5",
+      "hotbath-colour-sds32-config-6"
+    ],
+    "fixed_component_scope": "Same residual catalogue title for normal set; three different round-handshower titles are excluded. No unknown handshower model inferred."
+  }
+}

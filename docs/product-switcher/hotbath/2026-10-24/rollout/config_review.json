@@ -1,0 +1,196 @@
+{
+  "schema": "hotbath-config-review-v1",
+  "excluded": [],
+  "cases": [
+    {
+      "family": "IBS20A",
+      "sku": "IBS20AGN357",
+      "handle": "hotbath-cobber-ibs20a-inbouw-doucheset-staafhanddouche-30cm-hoofddouche-30cm-plafondbuis-glijstang-geborsteld-nikkel",
+      "reason": "SKU_TITLE_CONFLICT",
+      "findings": [
+        "TITLE_OVERHEAD_DIAMETER_CONFLICT"
+      ],
+      "title": "Hotbath Cobber IBS20A inbouw doucheset – staafhanddouche – 25cm hoofddouche – 30cm plafondbuis – glijstang – geborsteld nikkel – IBS20AGN357",
+      "decoded_options": {
+        "kleur": "Geborsteld nikkel",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Staafmodel",
+        "bevestiging_handdouche": "Glijstang"
+      }
+    },
+    {
+      "family": "IBS20",
+      "sku": "IBS20BBP",
+      "handle": "hotbath-ibs20bbp",
+      "reason": "SKU_TITLE_CONFLICT",
+      "findings": [
+        "TITLE_COLOR_MISSING",
+        "TITLE_EMBEDDED_COMPONENT_COLOR_CONFLICT",
+        "TITLE_CONTROL_CONFLICT",
+        "TITLE_OVERHEAD_DIAMETER_MISSING",
+        "TITLE_OVERHEAD_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MISSING"
+      ],
+      "title": "Hotbath Complete thermostatische douche InBouwSe CB009BCP met 2-weg-stop-omstel - IBS20BBP",
+      "decoded_options": {
+        "kleur": "Geborsteld messing PVD",
+        "breedte_diameter_hoofddouche": "20 cm",
+        "type_bevestiging_hoofddouche": "Wandarm",
+        "type_handdouche": "Staafmodel",
+        "bevestiging_handdouche": "Wandhouder"
+      }
+    },
+    {
+      "family": "IBS20",
+      "sku": "IBS20BCP",
+      "handle": "hotbath-ibs20bcp",
+      "reason": "SKU_TITLE_CONFLICT",
+      "findings": [
+        "TITLE_COLOR_MISSING",
+        "TITLE_CONTROL_CONFLICT",
+        "TITLE_OVERHEAD_DIAMETER_MISSING",
+        "TITLE_OVERHEAD_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MISSING"
+      ],
+      "title": "Hotbath Complete thermostatische douche InBouwSe CB009BCP met 2-weg-stop-omstel - IBS20BCP",
+      "decoded_options": {
+        "kleur": "Geborsteld koper PVD",
+        "breedte_diameter_hoofddouche": "20 cm",
+        "type_bevestiging_hoofddouche": "Wandarm",
+        "type_handdouche": "Staafmodel",
+        "bevestiging_handdouche": "Wandhouder"
+      }
+    }
+  ],
+  "family_metrics": [
+    {
+      "family": "IBS70",
+      "group_id": "hotbath-cobber-ibs70-inbouw-doucheset",
+      "status": "READY",
+      "products": 359,
+      "colors": 10,
+      "book_sources": [
+        {
+          "printed_page": 200,
+          "pdf_page": 202
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS7009",
+      "group_id": "hotbath-cobber-ibs7009-inbouw-doucheset",
+      "status": "READY",
+      "products": 360,
+      "colors": 10,
+      "book_sources": [
+        {
+          "printed_page": 199,
+          "pdf_page": 201
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS20",
+      "group_id": "hotbath-cobber-ibs20-inbouw-doucheset",
+      "status": "READY",
+      "products": 194,
+      "colors": 6,
+      "book_sources": [
+        {
+          "printed_page": 202,
+          "pdf_page": 204
+        }
+      ],
+      "partial_title_corroboration": 34,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS20A",
+      "group_id": "hotbath-cobber-ibs20a-inbouw-doucheset",
+      "status": "READY",
+      "products": 192,
+      "colors": 6,
+      "book_sources": [
+        {
+          "printed_page": 203,
+          "pdf_page": 205
+        }
+      ],
+      "partial_title_corroboration": 17,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS1",
+      "group_id": "hotbath-buddy-ibs1-inbouw-doucheset",
+      "status": "READY",
+      "products": 71,
+      "colors": 2,
+      "book_sources": [
+        {
+          "printed_page": 286,
+          "pdf_page": 288
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS1A",
+      "group_id": "hotbath-buddy-ibs1a-inbouw-doucheset",
+      "status": "READY",
+      "products": 72,
+      "colors": 2,
+      "book_sources": [
+        {
+          "printed_page": 287,
+          "pdf_page": 289
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS12",
+      "group_id": "hotbath-buddy-ibs12-inbouw-doucheset",
+      "status": "READY",
+      "products": 144,
+      "colors": 4,
+      "book_sources": [
+        {
+          "printed_page": 288,
+          "pdf_page": 290
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    },
+    {
+      "family": "IBS12A",
+      "group_id": "hotbath-buddy-ibs12a-inbouw-doucheset",
+      "status": "READY",
+      "products": 144,
+      "colors": 4,
+      "book_sources": [
+        {
+          "printed_page": 289,
+          "pdf_page": 291
+        }
+      ],
+      "partial_title_corroboration": 0,
+      "existing_records_preserved": 0
+    }
+  ],
+  "limits": [
+    "Only exact source-confirmed family option grammars are decoded.",
+    "No article, stock or price is invented; product records retain current handles.",
+    "Missing title descriptions can be filled by explicit book options; contradictory descriptions are excluded.",
+    "SPOM in title, SKU or handle is excluded independently of prefix."
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "checkedAt": "2026-10-28T15:51:05.359283+00:00",
+  "scope": "Two read-only public search POSTs, facet settings only; no product rows or index writes.",
+  "results": [
+    {
+      "collection": "wastafelkranen",
+      "status": 200,
+      "facets": [
+        {
+          "field": "f_kraanmontage",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "primary",
+            "default_open": true,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_kleur",
+          "type": "string",
+          "ui": {
+            "control": "color",
+            "section": "primary",
+            "default_open": true,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false,
+            "group_source": "f_kleurgroep",
+            "preserve_exact_values": true,
+            "text_labels": true
+          }
+        },
+        {
+          "field": "price_cents",
+          "type": "number_decimal",
+          "ui": {
+            "control": "price_range",
+            "section": "primary",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "numeric",
+            "display_unit": "€",
+            "display_divisor": 100,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "vendor",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "primary",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_serie",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_met_inbouwdeel",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_aantal_kraangaten",
+          "type": "number_decimal",
+          "ui": {
+            "control": "single_select",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "numeric",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false,
+            "request_mode": "exact_range",
+            "multi_select": false,
+            "numeric_values": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "field": "f_hoogte_uitloop_mm",
+          "type": "number_decimal",
+          "ui": {
+            "control": "range",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "numeric",
+            "display_unit": "cm",
+            "display_divisor": 10,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_diepte_uitloop_mm",
+          "type": "number_decimal",
+          "ui": {
+            "control": "range",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "numeric",
+            "display_unit": "cm",
+            "display_divisor": 10,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_coldstart",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        }
+      ]
+    },
+    {
+      "collection": "inloopdouches",
+      "status": 200,
+      "facets": [
+        {
+          "field": "f_breedte_mm",
+          "type": "number_decimal",
+          "ui": {
+            "control": "single_select",
+            "section": "primary",
+            "default_open": true,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "numeric",
+            "display_unit": "cm",
+            "display_divisor": 10,
+            "unknown_is_false": false,
+            "request_mode": "exact_range",
+            "multi_select": false,
+            "numeric_values": [
+              500.0,
+              600.0,
+              700.0,
+              750.0,
+              800.0,
+              850.0,
+              900.0,
+              950.0,
+              1000.0,
+              1050.0,
+              1100.0,
+              1200.0,
+              1300.0,
+              1400.0,
+              1600.0
+            ]
+          }
+        },
+        {
+          "field": "f_productsoort",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "primary",
+            "default_open": true,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false,
+            "option_groups": [
+              {
+                "label": "Glasplaat voor inloopdouche",
+                "exact_values": [
+                  "Glasplaat voor inloopdouche"
+                ]
+              },
+              {
+                "label": "Inloopdouche",
+                "exact_values": [
+                  "Inloopdouche"
+                ]
+              }
+            ],
+            "request_mode": "or_exact_values"
+          }
+        },
+        {
+          "field": "f_glaskleur",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "primary",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_kleur",
+          "type": "string",
+          "ui": {
+            "control": "color",
+            "section": "primary",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false,
+            "group_source": "f_kleurgroep",
+            "preserve_exact_values": true,
+            "text_labels": true
+          }
+        },
+        {
+          "field": "price_cents",
+          "type": "number_decimal",
+          "ui": {
+            "control": "price_range",
+            "section": "primary",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "numeric",
+            "display_unit": "€",
+            "display_divisor": 100,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_serie",
+          "type": "string",
+          "ui": {
+            "control": "checkbox",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": true,
+            "value_sort": "alphabetical",
+            "display_unit": null,
+            "display_divisor": 1,
+            "unknown_is_false": false
+          }
+        },
+        {
+          "field": "f_glasdikte_mm",
+          "type": "number_decimal",
+          "ui": {
+            "control": "single_select",
+            "section": "more",
+            "default_open": false,
+            "visible_values": 6,
+            "searchable": false,
+            "value_sort": "numeric",
+            "display_unit": "mm",
+            "display_divisor": 1,
+            "unknown_is_false": false,
+            "request_mode": "exact_range",
+            "multi_select": false,
+            "numeric_values": [
+              8.0,
+              10.0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

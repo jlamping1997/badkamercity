@@ -1,0 +1,78 @@
+{% doc %}
+  Removes only the known imported Wiesbaden specification table when every row is represented by matching product data.
+  @param {product} product - Current product.
+{% enddoc %}
+{%- liquid
+  assign description = product.description
+  assign vendor = product.vendor | strip | downcase
+  assign marker = '<h2>Specificaties</h2><table>'
+  assign parts = description | split: marker
+  if vendor == 'wiesbaden' and parts.size == 2
+    assign table_parts = parts.last | split: '</table>'
+    if parts.last contains '</table>'
+      assign table = table_parts.first
+      assign rows = table | split: '<tr>'
+      assign safe_to_replace = true
+      assign row_prefix = rows.first | strip
+      assign matched_article = false
+      if row_prefix != '<tbody>' or rows.size < 2
+        assign safe_to_replace = false
+      endif
+      assign mappings = 'Serie:serie|Kleur en uitvoering:kleur|Afwerking:afwerking|Materiaal:materiaal|Vorm:vorm|Afmetingen volgens bron:afmetingen_original|Breedte (mm):breedte_mm|Hoogte (mm):hoogte_mm|Diepte (mm):diepte_mm|Lengte (mm):lengte_mm|Glasdikte (mm):glasdikte_mm|Glaskleur:glaskleur|Nano coating:nano_coating|Garantie:garantie|Met overloop:met_overloop|Montage:montage|Softclose:softclose|Quick release:quick_release|Zonder spoelrand:rimless|Aantal laden:aantal_laden|Met verlichting:met_verlichting|Met verwarming:met_verwarming|Dimbaar:dimbaar|Vermogen (W):vermogen_w|Coldstart:coldstart|Thermostatisch:thermostatisch' | split: '|'
+      for row in rows offset: 1
+        assign cells = row | split: '<td>'
+        assign row_valid = false
+        if cells.size == 2 and row contains '<th scope="row">'
+          assign label = cells.first | split: '<th scope="row">' | last | split: '</th>' | first | strip
+          assign old_value = cells.last | split: '</td>' | first | strip_html | strip
+          if label == 'Artikelnummer'
+            if old_value == product.selected_or_first_available_variant.sku
+              assign row_valid = true
+              assign matched_article = true
+            endif
+          elsif label == 'EAN' or label == 'EAN-code'
+            assign row_valid = true
+          else
+            for mapping in mappings
+              assign pair = mapping | split: ':'
+              if pair.first == label
+                assign key = pair.last
+                assign spec = product.metafields.custom[key]
+                case spec.type
+                  when 'boolean'
+                    if spec.value == true and old_value == 'Ja'
+                      assign row_valid = true
+                    elsif spec.value == false and old_value == 'Nee'
+                      assign row_valid = true
+                    endif
+                  when 'number_decimal', 'number_integer'
+                    assign non_numeric = old_value | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: '.' | remove: ',' | remove: '-'
+                    assign old_number = old_value | replace: ',', '.' | plus: 0
+                    assign current_number = spec.value | plus: 0
+                    if old_value != blank and non_numeric == blank and old_number == current_number
+                      assign row_valid = true
+                    endif
+                  when 'single_line_text_field', 'multi_line_text_field'
+                    assign current_value = spec.value | append: '' | strip
+                    if current_value != blank and old_value == current_value
+                      assign row_valid = true
+                    endif
+                endcase
+                break
+              endif
+            endfor
+          endif
+        endif
+        if row_valid == false
+          assign safe_to_replace = false
+        endif
+      endfor
+      if safe_to_replace and matched_article
+        assign imported_table = marker | append: table | append: '</table>'
+        assign description = description | remove: imported_table
+      endif
+    endif
+  endif
+-%}
+{{- description -}}
+

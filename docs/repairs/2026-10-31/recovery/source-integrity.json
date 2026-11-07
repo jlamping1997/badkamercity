@@ -1,0 +1,175 @@
+{
+  "sourceCommit": "d510fc2167240009e2d0edf478f745ed022ab112",
+  "featureFiles": 21,
+  "allMatch": true,
+  "files": [
+    {
+      "path": "locales/nl.json",
+      "bytes": 73777,
+      "sha256": "6f9ba54232d900b409fd6b3d9397ca1a2d4a69be37722f177fd8730d38541b53",
+      "expectedSha256": "6f9ba54232d900b409fd6b3d9397ca1a2d4a69be37722f177fd8730d38541b53",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "locales/en.default.json",
+      "bytes": 70174,
+      "sha256": "6ce48cd0df2fc8368502e61b96a59c2816499796bab813d2c3177053478018bb",
+      "expectedSha256": "6ce48cd0df2fc8368502e61b96a59c2816499796bab813d2c3177053478018bb",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "layout/theme.liquid",
+      "bytes": 23030,
+      "sha256": "dc6c0fe287b1a1ae822ed29a4a299bcbaea8d68fcea19549d200ebef7f0bbde6",
+      "expectedSha256": "dc6c0fe287b1a1ae822ed29a4a299bcbaea8d68fcea19549d200ebef7f0bbde6",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "bytes": 5349,
+      "sha256": "67d1800319a7fc221a12ba8ccdc02a306bab55e2887fca3013fd8319fbcfe23f",
+      "expectedSha256": "67d1800319a7fc221a12ba8ccdc02a306bab55e2887fca3013fd8319fbcfe23f",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "sections/footer-group.json",
+      "bytes": 5430,
+      "sha256": "06f4315e9076578ee3f538eb64c1c539b84bfcd53b7988ee20d92fc95de08582",
+      "expectedSha256": "06f4315e9076578ee3f538eb64c1c539b84bfcd53b7988ee20d92fc95de08582",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "bytes": 29830,
+      "sha256": "4902a6a26ed6d26d4816956100048ffdffbe3b7084e8fb14720e620f89dd7efd",
+      "expectedSha256": "4902a6a26ed6d26d4816956100048ffdffbe3b7084e8fb14720e620f89dd7efd",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "sections/footer.liquid",
+      "bytes": 34581,
+      "sha256": "1fc34bab485ebf2e4d6890a165177a3a6ad77f1b54d4af7813ead56f862a2c58",
+      "expectedSha256": "1fc34bab485ebf2e4d6890a165177a3a6ad77f1b54d4af7813ead56f862a2c58",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "bytes": 13931,
+      "sha256": "db0139ce9a1e6024d80e7dff0ae3217891c0874befb2110ff75e61faa7275363",
+      "expectedSha256": "db0139ce9a1e6024d80e7dff0ae3217891c0874befb2110ff75e61faa7275363",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "bytes": 24266,
+      "sha256": "464944a150d847b82aebb8b56dd07d014826cc7497e49c61ea95915bf0382bdd",
+      "expectedSha256": "464944a150d847b82aebb8b56dd07d014826cc7497e49c61ea95915bf0382bdd",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "bytes": 48187,
+      "sha256": "a37b08f070acbe72a52f425cbd3986088b0a14a5e8eec884dbfc0a085a53a6f8",
+      "expectedSha256": "a37b08f070acbe72a52f425cbd3986088b0a14a5e8eec884dbfc0a085a53a6f8",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "bytes": 21087,
+      "sha256": "7b8dd5b065ef358db7799e59ad3a4f987e5f1ac109002a70db4ede8fa904eff4",
+      "expectedSha256": "7b8dd5b065ef358db7799e59ad3a4f987e5f1ac109002a70db4ede8fa904eff4",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-mobile-compact-list.css",
+      "bytes": 8085,
+      "sha256": "d6dd98216624af38600ac238cf946713fa72fea4aa1977b915b3db1039ea2ec1",
+      "expectedSha256": "d6dd98216624af38600ac238cf946713fa72fea4aa1977b915b3db1039ea2ec1",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "bytes": 21221,
+      "sha256": "c94278c0e9e15b83af3b2665015631a59d9497b893086f0eba7f3b1f8c858a4c",
+      "expectedSha256": "c94278c0e9e15b83af3b2665015631a59d9497b893086f0eba7f3b1f8c858a4c",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "bytes": 4030,
+      "sha256": "e3fe86840e5cf051ba477315f48afe547d936114f3eb8839a032de83a5c3f4dd",
+      "expectedSha256": "e3fe86840e5cf051ba477315f48afe547d936114f3eb8839a032de83a5c3f4dd",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "bytes": 34879,
+      "sha256": "177457e702eae008e56949aa8e129508d5212227cccc0d654d7842fd413e5f4f",
+      "expectedSha256": "177457e702eae008e56949aa8e129508d5212227cccc0d654d7842fd413e5f4f",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "bytes": 1714,
+      "sha256": "2384896dbd96798b8a30da8dfc218da29580a665e7972c385220ac3c38b33dbe",
+      "expectedSha256": "2384896dbd96798b8a30da8dfc218da29580a665e7972c385220ac3c38b33dbe",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/bc-card-tile-price.liquid",
+      "bytes": 1285,
+      "sha256": "cb694178b8389b24e6ec4bdae437aed1fb8401fc76fa788fa690f7f3e2495c1c",
+      "expectedSha256": "cb694178b8389b24e6ec4bdae437aed1fb8401fc76fa788fa690f7f3e2495c1c",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "bytes": 922,
+      "sha256": "99536833838aa96e6f22f659594d12905d157cdb887488658719b8d0e5cdad93",
+      "expectedSha256": "99536833838aa96e6f22f659594d12905d157cdb887488658719b8d0e5cdad93",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "bytes": 6310,
+      "sha256": "b68296cef698d364e0402197e85a9e874ad9e2e02422dcffd402b0da09c044fb",
+      "expectedSha256": "b68296cef698d364e0402197e85a9e874ad9e2e02422dcffd402b0da09c044fb",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "bytes": 9372,
+      "sha256": "e55bb877a564d01fd8de09e6c657f795153bdf51ef41b1cecc6e58fc25fceec1",
+      "expectedSha256": "e55bb877a564d01fd8de09e6c657f795153bdf51ef41b1cecc6e58fc25fceec1",
+      "sha256Match": true,
+      "md5Match": true
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "bytes": 2271,
+      "sha256": "a69f47aa93eb19f284a10ba35b9aa24c70e3351c3655a145d36cac657b1ee80c",
+      "expectedSha256": "a69f47aa93eb19f284a10ba35b9aa24c70e3351c3655a145d36cac657b1ee80c",
+      "sha256Match": true,
+      "md5Match": true
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "updated_on": "2026-10-28",
+  "task": "UI-01",
+  "status": "PREVIEW_READY_DESKTOP_TESTED_MOBILE_OPEN_NOT_PUBLISHED",
+  "active_branch": "fix/product-cards-2026-10-14",
+  "source_commit": "521c487b9c58b49f5de36fb16de210170f24d4d8",
+  "main_source_commit": "178d55292a25f93a2c2639e97cfe18680dba72e0",
+  "main_theme_at_capture": "195818389770",
+  "audit_complete": false,
+  "documentation_complete": false,
+  "live_manifest_files": 1262,
+  "current_reconstruction": {
+    "files": 557,
+    "byte_match": 556,
+    "byte_mismatch": 1,
+    "manifest_only": 705
+  },
+  "http_routes_checked": 35,
+  "public_search_reads": 4,
+  "current_browser_scope": "Desktop1363x936: original comparisons, real preview gallery clicks on Wiesbaden/Hotbath, Space previous on Wiesbaden. 320/390/1024 iframe test refused; not mobile proof.",
+  "next_task": "UI-01-OWNER-REVIEW",
+  "next_action": "Owner reviews concept BadkamerCity - gelijke fotopijlen on desktop and mobile before publication; other UI-C01/C02/C03 changes remain proposed.",
+  "open_blockers": [
+    "settings_data_byte_parity",
+    "checkout_configuration_access_denied",
+    "fresh_authorized_vps_and_custom_app_sources",
+    "mobile_browser_and_operational_verification",
+    "google_and_deployment_state"
+  ],
+  "background_worker_active": false,
+  "glossary_links_checked": 109,
+  "glossary_published_targets": 108,
+  "glossary_confirmed_404": 1,
+  "current_targeted_source_files": 29,
+  "current_executed_source_files": 2,
+  "current_isolated_cases": 15,
+  "current_isolated_classifications": {
+    "CONTROL_PASSED": 15,
+    "DEFECT_REPRODUCED": 0,
+    "BOUNDARY_CONFIRMED": 0
+  },
+  "excluded_scopes": [
+    "checkout"
+  ],
+  "mapping_structure": {
+    "rows": 715,
+    "unique_body_variants": 44
+  },
+  "glossary_body_structure": {
+    "published_pages": 109,
+    "direct_h2": 655,
+    "nested_h2_pages": 0,
+    "predicted_duplicate_id_pages": 0
+  },
+  "current_public_search_reads": 0,
+  "current_source_method": "Fresh complete Shopify metadata; 29 existing captured source files matched MD5/size; no new full body download.",
+  "preview_theme": "195850764554",
+  "preview_name": "BadkamerCity - gelijke fotopijlen",
+  "parked_tasks": [
+    "DOC-03E header/predictive-search"
+  ],
+  "preview_initial_matching_files": 1262,
+  "preview_final_changed_files": 3,
+  "preview_final_unchanged_files": 1259,
+  "main_final_changed_files": 0,
+  "qa_template_restored_exactly": true,
+  "native_mobile_browser_verified": false,
+  "platform_copy_processing": false
+}

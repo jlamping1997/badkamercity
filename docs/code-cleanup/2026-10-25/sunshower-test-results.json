@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "valid",
+    "expired",
+    "different route",
+    "no token",
+    "wheel cancels",
+    "pointerdown cancels",
+    "touchstart cancels",
+    "keydown cancels",
+    "Remembered position avoids competing native hash scroll",
+    "Blocked storage retains anchor fallback"
+  ]
+}

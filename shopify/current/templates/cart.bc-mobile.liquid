@@ -1,0 +1,8 @@
+{% layout none %}
+{%- capture mobile_document -%}
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+{{ 'base.css' | asset_url | stylesheet_tag }}
+<style>:root{--color-foreground:15,39,64;--color-background:255,255,255;--color-button:15,39,64;--color-button-text:255,255,255;--font-body-family:system-ui;--font-body-style:normal;--font-body-weight:400;--font-body-scale:1;--font-heading-family:system-ui;--font-heading-style:normal;--font-heading-weight:700;--font-heading-scale:1;--inputs-border-width:1px;--inputs-radius:6px;--inputs-border-opacity:0.5;--inputs-shadow-opacity:0;--buttons-radius:6px;--buttons-border-width:0;--buttons-shadow-opacity:0}html{font-size:62.5%}body{margin:0;font:1.5rem system-ui;color:#0f2740}*{box-sizing:border-box}</style>
+</head><body><main id="MainContent">{% section 'main-cart-items' %}{% section 'main-cart-footer' %}</main></body></html>
+{%- endcapture -%}
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Mobiele winkelwagen — controle</title><style>body{margin:0;padding:24px;background:#edf2f7;font:14px system-ui;color:#0f2740}main{width:390px;margin:auto}p{margin:0 0 16px}iframe{display:block;width:390px;height:1000px;border:1px solid #d9e2ec;background:#fff;border-radius:8px}</style></head><body><main><p>Winkelwagen · 390 px · dezelfde productregels</p><iframe title="Mobiele winkelwagen" srcdoc="{{ mobile_document | escape }}"></iframe></main></body></html>

@@ -1,0 +1,28 @@
+{% doc %}
+  Returns reviewed or pilot only for matching, reviewed Wiesbaden product data.
+  @param {product} product - Current product.
+{% enddoc %}
+{%- liquid
+  assign vendor = product.vendor | strip | downcase
+  assign sku = product.selected_or_first_available_variant.sku
+  assign product_id = product.id | append: ''
+  assign spec = product.metafields.custom.complete_specificaties
+  assign review = product.metafields.bc_data.content_review
+  assign matched_article = false
+  if vendor == 'wiesbaden' and product.has_only_default_variant and spec.type == 'json'
+    for group in spec.value
+      for item in group.items
+        if item.key == 'fabrikantnummer' and item.value == sku
+          assign matched_article = true
+        endif
+      endfor
+    endfor
+    if matched_article
+      if review.type == 'json' and review.value.schema == 'wiesbaden-content-v1' and review.value.status == 'ready' and review.value.sku == sku and review.value.product_id == product_id and review.value.spec_keys.size > 0
+        echo 'reviewed'
+      elsif sku == '24.3710'
+        echo 'pilot'
+      endif
+    endif
+  endif
+-%}

@@ -1,0 +1,62 @@
+{% doc %}
+Renders verified Fabriecio product destinations through the shared product switcher.
+@param {product} product - The current single-SKU product.
+@param {section} section - The containing section.
+{% enddoc %}
+{%- capture json_open_tag_escape -%}\u003c{%- endcapture -%}
+{%- liquid
+  assign choice_vendor = product.vendor | strip | downcase
+  assign supported_vendor = false
+  if choice_vendor == 'fabriecio' or choice_vendor == 'verlavio'
+    assign supported_vendor = true
+  endif
+  assign choice_data = product.metafields.custom.fabriecio_choices.value
+  assign choice_group = choice_data.groups | first
+  assign includes_current = false
+  assign valid_destinations = true
+  assign distinct_handles = choice_group.products | map: 'handle' | uniq
+  assign product_chunk_count = choice_group.products.size | plus: 49 | divided_by: 50
+  assign product_last_chunk = product_chunk_count | minus: 1
+  if choice_group.id == blank or distinct_handles.size != choice_group.products.size
+    assign valid_destinations = false
+  endif
+  for chunk_index in (0..product_last_chunk)
+    assign product_offset = chunk_index | times: 50
+    for choice in choice_group.products limit: 50 offset: product_offset
+      assign expected_url = choice.handle | prepend: '/products/'
+      if choice.url != expected_url or choice.handle == blank
+        assign valid_destinations = false
+      endif
+      if choice.handle == product.handle
+        assign includes_current = true
+      endif
+    endfor
+  endfor
+-%}
+{%- if supported_vendor and product.variants.size == 1 and includes_current and valid_destinations and choice_group.products.size > 1 and choice_group.menus.size > 0 -%}
+  {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
+  {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
+  <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
+    data-bc-compact-colors="true"
+    data-bc-preserve-position="true"
+    data-switch-group="{{ choice_group.id | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+    data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}"
+    data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}"
+  >
+    <script type="application/json" data-bc-switcher-inline>{"groups":[{"id":{{ choice_group.id | json | replace: '<', json_open_tag_escape }},"menus":{{ choice_group.menus | json | replace: '<', json_open_tag_escape }},"products":{{ choice_group.products | json | replace: '<', json_open_tag_escape }}}]}</script>
+    <noscript>
+      <ul>
+        {%- for chunk_index in (0..product_last_chunk) -%}
+          {%- assign product_offset = chunk_index | times: 50 -%}
+          {%- for choice in choice_group.products limit: 50 offset: product_offset -%}
+            <li><a href="{{ choice.url | escape }}"{% if choice.handle == product.handle %} aria-current="page"{% endif %}>{{ choice.title | escape }}</a></li>
+          {%- endfor -%}
+        {%- endfor -%}
+      </ul>
+    </noscript>
+  </div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

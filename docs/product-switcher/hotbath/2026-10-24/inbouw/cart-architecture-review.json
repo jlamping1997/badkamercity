@@ -1,0 +1,221 @@
+{
+  "schema": "hotbath-inbouw-cart-architecture-review-v1",
+  "date": "2026-10-24",
+  "scope": "READ_ONLY_DESIGN_NO_IMPLEMENTATION_NO_STORE_WRITES",
+  "sources": [
+    {
+      "path": "assets/product-form.js",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 7131,
+      "lines": 170,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/assets/product-form.js",
+      "md5": "b74d795feb9131f50120f4b7cb5f47c4"
+    },
+    {
+      "path": "snippets/buy-buttons.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 7218,
+      "lines": 164,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/buy-buttons.liquid",
+      "md5": "37f486a7a082b93e91eabe132d60aa50"
+    },
+    {
+      "path": "snippets/bc-product-accessories-data.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 1140,
+      "lines": 15,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/bc-product-accessories-data.liquid",
+      "md5": "b6d2f26bd6d2d96db0d1375b2335a5a3"
+    },
+    {
+      "path": "snippets/bc-product-accessories.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 4346,
+      "lines": 71,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/bc-product-accessories.liquid",
+      "md5": "d1b82e807ecc7821c27432c9525410b0"
+    },
+    {
+      "path": "snippets/bc-product-accessory-item.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 2521,
+      "lines": 39,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/bc-product-accessory-item.liquid",
+      "md5": "24f94bdcbf17d1d8eee01f1f438ba719"
+    },
+    {
+      "path": "assets/bc-product-accessories.js",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 5155,
+      "lines": 115,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/assets/bc-product-accessories.js",
+      "md5": "302ea7cdcb2a0c889b515024ed0572a2"
+    },
+    {
+      "path": "snippets/bc-product-set-components.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 4131,
+      "lines": 79,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/bc-product-set-components.liquid",
+      "md5": "5efbbd3819a4babd91502c5f2058de3b"
+    },
+    {
+      "path": "snippets/bc-product-set-data.liquid",
+      "basis": "Current Admin source bytes savedandverified byroot; read bythisreviewer",
+      "bytes": 16617,
+      "lines": 248,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/snippets/bc-product-set-data.liquid",
+      "md5": "2728c9f7e8cbede07647cc090a8c7e40"
+    },
+    {
+      "path": "assets/cart-drawer.js",
+      "basis": "GitHub main read-only; current Shopify theme bytes still to be compared by root",
+      "bytes": 4358,
+      "lines": 137,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/assets/cart-drawer.js"
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "basis": "GitHub main read-only; current Shopify theme bytes still to be compared by root",
+      "bytes": 2367,
+      "lines": 84,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/assets/cart-notification.js"
+    },
+    {
+      "path": "templates/product.json",
+      "basis": "GitHub main read-only; current Shopify theme bytes still to be compared by root",
+      "bytes": 2699,
+      "lines": 103,
+      "url": "https://github.com/jlamping1997/badkamercity/blob/main/templates/product.json"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Existing product section loads product-form.js and bc-product-accessories.js",
+      "evidence": "rollout-theme/sections/main-product.liquid:933-935; accessories render2059"
+    },
+    {
+      "claim": "Main purchase handler posts one variant using FormData(this.form)",
+      "evidence": "assets/product-form.js:22-57"
+    },
+    {
+      "claim": "Current accessory panel adds only chosen accessories with its own button and cart-page redirect",
+      "evidence": "snippets/bc-product-accessories.liquid:58-60; assets/bc-product-accessories.js:65-105"
+    },
+    {
+      "claim": "Accessory matching already validates exact SKU, Hotbath vendor, non-self relation, Shopify variant price/availability",
+      "evidence": "Current Admin snippets/bc-product-accessories.liquid:21-35; bc-product-accessory-item.liquid:8-39"
+    },
+    {
+      "claim": "Current real accessory relation scope is fifteen ACE SKUs -> HB001 optional cleaner; no CB105/HBCB105 binding",
+      "evidence": "snippets/bc-product-accessories-data.liquid:11-14"
+    },
+    {
+      "claim": "Set display distinguishes included, required and optional component statuses",
+      "evidence": "Current Admin snippets/bc-product-set-components.liquid:38-68"
+    },
+    {
+      "claim": "Current V2 switcher performs full product-page navigation with buying/navigation locks; it restores scroll only, not a new inbouw choice",
+      "evidence": "source-theme/assets/bc-product-switcher.js:500-553"
+    },
+    {
+      "claim": "Cart notification expects a single response.key; multi-item responses require explicit integration or cart-page fallback",
+      "evidence": "assets/cart-notification.js:38-57"
+    },
+    {
+      "claim": "Default product template disables accelerated checkout, but buy-buttons can enable it",
+      "evidence": "Git templates/product.json:49-53 (currenttemplate not separately reread); currentAdmin snippets/buy-buttons.liquid:22-24,109-110"
+    },
+    {
+      "claim": "CurrentAdmin set/accessory renderers add Sunshowerdelegation; buy-buttons usesexistingwishlistbutton. These differencesfromGitmainmustbepreserved.",
+      "evidence": "Current snippets/bc-product-accessories.liquid:1-3;bc-product-set-components.liquid:1-3;buy-buttons.liquid:108"
+    },
+    {
+      "claim": "CurrentHotbath setrenderer usescurated bc-product-set-data; bc_data.set_components metadataisnot automaticallyconsumedhere. EXACT_TARGET_UNVERIFIED_COMPATIBILITY labelsdonotprovebookcompatibility.",
+      "evidence": "Current snippets/bc-product-set-components.liquid:11;root freshIBS70CRmetadata read"
+    }
+  ],
+  "recommended_contract": {
+    "identity": "Exact source-verified trim model and concrete eligible SKU list, resolved to exact Shopify component product and variant; never EXT->HB string replacement",
+    "fields": [
+      "relationship_id",
+      "trim_product_id",
+      "trim_sku",
+      "component_product_id",
+      "component_variant_id",
+      "component_sku",
+      "component_quantity_per_parent",
+      "status: separately_required|included|optional",
+      "source_book_edition",
+      "source_printed_page",
+      "source_pdf_page",
+      "source_claim",
+      "verification_status",
+      "reviewed_at"
+    ],
+    "display": "Benodigd inbouwdeel meebestellen? Ja, HBCB105 toevoegen (+ actuele Shopifyprijs) / Nee, ik heb dit inbouwdeel al.",
+    "default_choice": "Recommend explicit choice; never silently preselect a paid add-on. Decision not yet implemented.",
+    "placement": "Within the main product purchase flow; use existing accessory validation/style but not its separate accessory-only button.",
+    "deduplication": "One authoritative component binding; do not offer samebody twice in inbouwselector andaccessory panel. Never skip requestedbody merely becauseone isalreadyincart.",
+    "ibsexclusion": "Use explicit included-set status / verified complete set scope. No extra body on complete IBS70.",
+    "prices": "Use current selected trimvariant and resolved componentvariant Shopify prices, display subtotal consistently includingtax/currency; book verifies compatibility, not checkoutprice.",
+    "quantities": "parent quantity q; body quantity q * verified quantity_per_parent. Checkmin/max/increment for bothvariants.",
+    "availability": "If componentmissing/unpublished/notpurchasable, Jaunavailable with explanation; customer canexplicitly chooseNee ifthey ownit. Never silentlyturnJa intoNee."
+  },
+  "implementation_plan": [
+    "Compile verified mapping into one data source; generate both buybox add-on data and the existing 'Apart nodig' informational component from this same source.",
+    "Opt-in main product form to a selected body; add exact parent andbodyvariantIDs together in one locale-aware cart/add.js items[] request. Ordinary unaffectedproducts keep theircurrentFormData path.",
+    "Preserve Ja/Nee across color/length page navigation only within sameverified relationship+switchgroup+componentvariant; revalidatemappingandavailabilityondestination. Keepcurrent bcNavigating / busy locks.",
+    "Use current cartdrawer bundledsections whenverified; adaptcartnotification'ssingleitemshape orredirecttocart. Handle nullsections without retrying add.",
+    "Keep acceleratedcheckoutdisabled for mappedproducts inpilot unless multi-productform integration is separatelyimplementedandtested. Reviewquick-add entrypoints so theydo notfalsely implybodyincluded.",
+    "Optionally evaluate Shopify native nestedcartlines with parent_id for visibleparent-child grouping/removal; thisiscurrentplatformfeature, notrequiredtodeliver basicJa/Nee. Do notpromisequantity synchronizationwithoutproof."
+  ],
+  "risks": [
+    "An items[] add is one request, not an all-or-nothing transaction guarantee. Official docs allow maximum-stock partialquantity with422 andsections400afterdatachanges.",
+    "Do not auto-retry ambiguousnetwork/server/sectionresponses; show check-cart guidanceandretain shopperchoice.",
+    "Existingcartproducts are legitimate separatepurchases; do not dedupe bySKU or removeexistingbodywhenparentchanges.",
+    "Do not infer verifiedcompatibility from existing curatedBOMalonewithoutmanufacturerbookevidence.",
+    "Native nestedcartlines are immutable, onelevel, notsupported withcertainbundleparents/Scripts; currenttheme renderingsupportmustbechecked. Cartquantitysyncnotproven."
+  ],
+  "test_plan": [
+    "Jaaddsselectedtrimpluscorrectbody;Neeaddsselectedtrimonly",
+    "2parentadds2bodiesfor1:1mapping",
+    "Change18->25andcolorspreservessamebodyandchoice",
+    "IBS70neveraddsbodyagain",
+    "Existingbodyincartdoesnotsuppressnewrequest",
+    "Missing/unavailablebodycannotbeaddedwithJa",
+    "WrongSKU/vendor/relationshipfailsclosed",
+    "Doubletapandoptionchangeinflightdo notduplicateoruseoldparent",
+    "422/networkuncertainty/nullsectionsdoesnotauto-retry",
+    "Cartdrawer/notificationbothitemsandpricecorrect",
+    "NoJSoracceleratedcheckoutcannotbypassselectedbody",
+    "Reallayoutmobileanddesktoppluscleanupowncartlinesonly"
+  ],
+  "docs": [
+    "https://shopify.dev/docs/api/ajax/reference/cart",
+    "https://shopify.dev/docs/apps/build/product-merchandising/nested-cart-lines",
+    "https://shopify.dev/docs/apps/build/product-merchandising/nested-cart-lines/create-nested-cart-lines"
+  ],
+  "limits": [
+    "No production implementation generated",
+    "No Shopify/Git write",
+    "No browser/cart interaction",
+    "Missing referenced docs/PDP_ACCESSORIES.md returned404",
+    "Drawer/notification/defaulttemplate still readfromGitmain,notindependentlyreadfromcurrentAdmin"
+  ],
+  "current_theme": {
+    "id": "195649929482",
+    "role": "MAIN",
+    "basis": "Root fresh Admin read: owner published approved532file Hotbath rollout,allchecksumsunchanged"
+  },
+  "verified_pilot_by_root": {
+    "component_sku": "HBCB105",
+    "product_id": "10534319489290",
+    "variant_id": "53187364356362",
+    "price_eur": "174.00",
+    "availableForSale": true,
+    "scope": "Root Adminread; noCartAPItestyet",
+    "trim_spec": "20 CB105EXT18/25 trims met_inbouwdeel false",
+    "set_spec": "IBS70CR met_inbouwdeel true andbodycomponentpresent,manufacturerbookproofstillrequired"
+  }
+}

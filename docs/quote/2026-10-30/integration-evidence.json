@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-30",
+  "status": "CONCEPT_CONNECTED_CUSTOMER_ACTIVATION_DISABLED",
+  "form_id": "263018521531044",
+  "notification_recipient": "info@badkamercity.nl",
+  "main_theme": "195915448586",
+  "draft_theme": "195916628234",
+  "main_files_unchanged": 1349,
+  "draft_files": 1350,
+  "changed_theme_files": [
+    "sections/bc-quote.liquid",
+    "assets/bc-quote.css",
+    "templates/page.offerte-vergelijken.json"
+  ],
+  "qa_template_restored": true,
+  "local_render_cases_passed": 17,
+  "themecheck_files_passed": 3,
+  "live_integration_enabled": false,
+  "unpublished_preview_enabled": true,
+  "page_published": false,
+  "provider_tests": {
+    "invalid_txt_rejected": true,
+    "pdf_upload_and_submission_succeeded": true,
+    "test_submission_read_back": true,
+    "authorized_pdf_download_identical": true,
+    "test_pdf_bytes": 781,
+    "require_login_to_submissions_checked": true,
+    "require_login_to_uploaded_files_checked": true,
+    "anonymous_access": "NOT_VERIFIED_EXTERNAL_RETRIEVAL_UNAVAILABLE",
+    "mailbox_delivery": "NOT_CONFIRMED",
+    "autoresponder": "DISABLED_PENDING_ACCOUNT_VERIFICATION",
+    "deletion": "NOT_TESTED",
+    "size_and_count_boundary_rejection": "NOT_TESTED",
+    "native_phone": "NOT_TESTED"
+  },
+  "desktop_embed": {
+    "width": 569,
+    "form_height": 1270.78125,
+    "horizontal_overflow": false
+  }
+}

@@ -1,0 +1,5 @@
+{% doc %}
+  Displays a specification value with accessible boolean icons.
+  @param {object} value - Specification value.
+{% enddoc %}
+{%- if value == true -%}<span class="ss-check" role="img" aria-label="{{ 'ss.yes' | t }}">✓</span>{%- elsif value == false -%}<span class="ss-cross" role="img" aria-label="{{ 'ss.no' | t }}">×</span>{%- else -%}{{ value | escape }}{%- endif -%}

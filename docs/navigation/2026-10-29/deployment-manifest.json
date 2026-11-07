@@ -1,0 +1,33 @@
+{
+  "task": "NAV-01",
+  "source_main": "195910795530",
+  "target_draft": "195913482506",
+  "status": "preview_ready_not_published",
+  "deploy_files": [
+    {
+      "filename": "sections/header.liquid",
+      "md5": "541b93c1ba9d938144d95f57f7d4fbeb",
+      "sha256": "12dd9b48075308f1411f7f9cb837b69ad993779a22401a2435ed229203fdba23"
+    },
+    {
+      "filename": "snippets/header-drawer.liquid",
+      "md5": "39801555859e8e0a6b3704c159eaa36a",
+      "sha256": "c373ffd8af482e6a16cff4f18c8c5dfdb636eef44d7d3aa9deba556233126734"
+    }
+  ],
+  "unchanged_dependency_in_git": [
+    "snippets/bc-mobile-category-icon.liquid"
+  ],
+  "qa_template": "templates/index.bc-homepage-review.liquid",
+  "qa_cleanup": "Original inert QA template restored exactly",
+  "baseline_archive": "LF-normalized source in baseline; Shopify checksums in verification",
+  "source_file_count": 1337,
+  "code_checkpoint": "9048bff16f540ef9ec7f0f3ff14e776ab4a31f2f",
+  "doc_checkpoint": "d2683980d30e9103aa178bca47127a3d3cfe61ef",
+  "clone_parity": "1337/1337 checksum equal before writes",
+  "final_delta": [
+    "sections/header.liquid",
+    "snippets/header-drawer.liquid"
+  ],
+  "main_final": "1337/1337 unchanged"
+}

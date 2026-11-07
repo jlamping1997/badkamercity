@@ -1,0 +1,131 @@
+{
+  "verification_date": "2026-10-24",
+  "timezone": "Europe/Amsterdam",
+  "status": "PASS_FOR_EXECUTED_DESKTOP_SAMPLES",
+  "domain": "https://badkamercity.nl",
+  "browser": "Chrome via supported CUA browser interface",
+  "theme": {
+    "id": "195649929482",
+    "name": "BadkamerCity - Hotbath keuzemenus 24 okt",
+    "role": "unpublished",
+    "observed_from_dom": true,
+    "preview_preserved_across_product_navigation": true,
+    "preview_note": "Cookie retained preview after preview_theme_id disappeared from URL; exact theme identity and role were rechecked."
+  },
+  "viewport": {
+    "observed_document_client_width_css_px": 1348,
+    "height_css_px": "NOT_RECORDED",
+    "device_pixel_ratio": "NOT_RECORDED",
+    "mobile_status": "mobile_NOT_TESTED",
+    "viewport_resized": false
+  },
+  "menus": {
+    "IBS70": {
+      "status": "PASS",
+      "field_count": 5,
+      "color_option_count": 10,
+      "other_options": {
+        "diameter_cm": [20, 25, 30],
+        "mount": ["Wandarm", "Plafondbuis 15 cm", "Plafondbuis 30 cm"],
+        "hand_shower": ["Staafmodel", "Rond model"],
+        "holder": ["Wandhouder", "Glijstang"]
+      },
+      "observed_sequence": [
+        {"selection": "Chroom / 20 cm / wandarm / staafmodel / wandhouder", "sku": "IBS70CR", "price_eur": "1541.01"},
+        {"selection": "Geborsteld nikkel", "sku": "IBS70GN", "price_eur": "1937.02"},
+        {"selection": "25 cm", "sku": "IBS70GN4", "price_eur": "2066.01"},
+        {"selection": "Plafondbuis 15 cm", "sku": "IBS70GN24", "price_eur": "2120.02"},
+        {"selection": "Rond model", "sku": "IBS70GN124", "price_eur": "2304.01"},
+        {"selection": "Glijstang", "sku": "IBS70GN1247", "price_eur": "2619.01"},
+        {"selection": "Wandhouder", "sku": "IBS70GN124", "price_eur": "2304.01"}
+      ],
+      "other_selected_attributes_preserved": true,
+      "all_combinations_tested": false
+    },
+    "BAA03": {
+      "status": "PASS", "color_option_count": 12,
+      "from": {"sku": "BAA03AB", "price_eur": "49.01"},
+      "to": {"sku": "BAA03BGP", "price_eur": "99.00"}
+    },
+    "BAA09": {
+      "status": "PASS", "color_option_count": 12,
+      "from": {"sku": "BAA09CR", "price_eur": "149.00"},
+      "to": {"sku": "BAA09BGP", "price_eur": "334.00"},
+      "type_preserved": "wandmodel", "observed_mount": "Wand", "observed_depth_cm": "11.2"
+    },
+    "BAA10": {
+      "status": "PASS", "color_option_count": 12,
+      "from": {"sku": "BAA10CR", "price_eur": "99.00"},
+      "to": {"sku": "BAA10BGP", "price_eur": "199.00"},
+      "type_preserved": "vrijstaand", "observed_depth_cm": "7.2"
+    },
+    "CB003_regression": {
+      "status": "PASS",
+      "tested_fields": ["Kleur", "Hoogte", "Type uitloop"],
+      "observed_sequence": [
+        {"sku": "CB003CCR", "price_eur": "199.00"},
+        {"sku": "CB003CGN", "price_eur": "244.00"},
+        {"sku": "CB003HCGN", "price_eur": "386.99"},
+        {"sku": "CB003HSGN", "price_eur": "386.99"}
+      ],
+      "preserve_position_attribute": null,
+      "all_family_products_tested": false
+    }
+  },
+  "cart": {
+    "status": "PASS",
+    "add_method": "normal product page purchase button",
+    "lines": [
+      {"sku": "IBS70GN124", "variant_id": "53187618275594", "quantity": 1, "unit_price_eur": "2304.01", "line_total_eur": "2304.01"},
+      {"sku": "BAA10BGP", "variant_id": "53187487531274", "quantity": 1, "unit_price_eur": "199.00", "line_total_eur": "199.00"},
+      {"sku": "BAA09BGP", "variant_id": "53795146694922", "quantity": 1, "unit_price_eur": "334.00", "line_total_eur": "334.00"},
+      {"sku": "BAA03BGP", "variant_id": "53795345826058", "quantity": 1, "unit_price_eur": "99.00", "line_total_eur": "99.00"}
+    ],
+    "observed_items_total_eur": "2936.01",
+    "observed_netherlands_shipping_eur": "0.00",
+    "observed_grand_total_eur": "2936.01",
+    "vat_display": "Inclusief btw",
+    "arithmetic_matches": true,
+    "single_BAA03BGP_check": {"items_eur": "99.00", "shipping_eur": "6.95", "total_eur": "105.95"},
+    "cleanup": {
+      "status": "PASS",
+      "only_own_test_lines_removed": true,
+      "method": "normal per-line remove links",
+      "observed_remaining_item_counts": [3, 2, 1, 0],
+      "final_visible_text": "Je winkelwagen is leeg"
+    },
+    "checkout_tested": false,
+    "payment_executed": false,
+    "order_created": false
+  },
+  "scroll": {
+    "before_patch": {"case": "IBS70 Glijstang to Wandhouder", "scroll_top_before_px": 439, "scroll_top_after_px": 0, "button_viewport_y_before_approx_px": 446},
+    "after_patch": {
+      "script_src_observed": "//badkamercity.nl/cdn/shop/t/61/assets/bc-product-switcher.js?v=15449299392565020281792835443",
+      "opt_in_true_observed_on": ["IBS70", "BAA03", "BAA09"],
+      "cases": [
+        {"case": "IBS70 first color CR to GN", "status": "PASS", "before": {"scroll_top_px": 439, "container_top_px": 100.6875}, "settled_after": {"scroll_top_px": 439, "container_top_px": 100.6875}, "transient_after": {"scroll_top_px": 446, "container_top_px": 99.72738647460938}},
+        {"case": "BAA03 first color AB to BGP", "status": "PASS", "before": {"scroll_top_px": 310, "container_top_px": 193.71875}, "settled_after": {"scroll_top_px": 310, "container_top_px": 193.71875}},
+        {"case": "BAA09 first color CR to BGP", "status": "PASS", "before": {"scroll_top_px": 442, "container_top_px": 35.328125}, "settled_after": {"scroll_top_px": 478, "container_top_px": 35.296875}, "container_delta_px": -0.03125},
+        {"case": "IBS70 subsequent diameter and holder selections", "status": "PASS_VISUAL_USABILITY", "result": "Configurator remained in view", "additional_exact_settled_measurement": "NOT_RECORDED_UNAFFECTED_BY_FOCUS_AUTOSCROLL"},
+        {"case": "Own PageDown after diameter navigation", "status": "PASS_FOR_EXECUTED_KEY_INPUT", "settled_scroll_top_px": 1258, "reversion_observed": false, "note": "Native smooth scrolling produced intermediate readings."},
+        {"case": "CB003 excluded from opt-in", "status": "PASS", "preserve_position_attribute": null}
+      ]
+    }
+  },
+  "specification_heading": {"before": "Translation missing: nl.bc_specs.heading", "after": "Specificaties", "status": "PASS"},
+  "known_content_issues": [
+    {"sku": "BAA03BGP", "issue": "Product photo absent in inspected gallery and cart", "introduced_by_menu_change": "NOT_ESTABLISHED_EXISTING_PRODUCT_CONTENT"},
+    {"sku": "BAA09BGP", "issue": "Product photo absent in inspected gallery and cart", "introduced_by_menu_change": "NOT_ESTABLISHED_EXISTING_PRODUCT_CONTENT"}
+  ],
+  "limitations": [
+    "mobile_NOT_TESTED",
+    "No exhaustive product-family or combination traversal",
+    "No fresh supplier price-list audit in this browser task",
+    "No checkout, payment, order email or order fulfilment test",
+    "No guarantee about mobile touch or scroll behavior"
+  ],
+  "screenshots": {"scope": "Internal tool output only", "local_files_created": false, "library_items_created": false},
+  "browser_store_settings_modified": false,
+  "theme_published_by_browser": false
+}

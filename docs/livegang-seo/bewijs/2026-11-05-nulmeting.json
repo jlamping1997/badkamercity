@@ -1,0 +1,610 @@
+{
+  "task_id": "LAUNCH-01",
+  "compiled_at": "2026-11-05T10:48:54.343946+01:00",
+  "sitemap_capture_at": "2026-11-05T09:39:46.697647+00:00",
+  "method": [
+    "Read-only Shopify Admin GraphQL, schema-discovered and execution-validated by the connector",
+    "Read-only GitHub default/code branch inspection",
+    "Public HTTPS GETs; XML/HTML and JSON-LD parsed; no JavaScript executed"
+  ],
+  "shopify": {
+    "checked_date": "2026-11-05",
+    "shop": {
+      "myshopify_domain": "fpa9hu-i3.myshopify.com",
+      "primary_domain": {
+        "url": "https://badkamercity.nl",
+        "sslEnabled": true
+      },
+      "taxes_included": true,
+      "ships_to_countries": [
+        "NL"
+      ],
+      "returned_policy_types": [
+        "PRIVACY_POLICY"
+      ],
+      "policy_bodies_nonempty": [
+        {
+          "type": "PRIVACY_POLICY",
+          "nonempty": true
+        }
+      ]
+    },
+    "main_theme": {
+      "id": "gid://shopify/OnlineStoreTheme/196116087050",
+      "name": "BadkamerCity - Lagoo foto's en productkeuzes",
+      "role": "MAIN"
+    },
+    "app_installations": {
+      "records_returned": 7,
+      "has_next_page": false,
+      "google_youtube_found": false
+    },
+    "merchant_center": {
+      "id": "5898992928",
+      "evidence": "USER_REPORTED",
+      "reported_date": "2026-11-04",
+      "current_access_and_setup": "NOT_VERIFIED"
+    },
+    "search_console": "NOT_VERIFIED",
+    "ga4": "NOT_VERIFIED"
+  },
+  "git_before": {
+    "repository": "jlamping1997/badkamercity",
+    "documentation_branch": "main",
+    "main_head": "eb97dbc5028aa96205ca7ca920468b6a382a4933",
+    "code_branch": "fix/product-cards-2026-10-14",
+    "code_head": "2ef5feae867e710140887c4402fcc01bfe240317",
+    "theme_source": "shopify/current/",
+    "windows_local_state": "NOT_VERIFIED"
+  },
+  "sitemap": {
+    "index_http_status": 200,
+    "child_sitemaps": [
+      {
+        "url": "https://badkamercity.nl/sitemap_agentic_discovery.xml",
+        "http_status": 200,
+        "url_count": 1
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_1.xml?from=10530922660106&to=10534254641418",
+        "http_status": 200,
+        "url_count": 1001
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_2.xml?from=10534254739722&to=10534338920714",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_3.xml?from=10534338986250&to=10534418579722",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_4.xml?from=10534418809098&to=10534545490186",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_5.xml?from=10534545588490&to=10534651330826",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_6.xml?from=10534651429130&to=10534919766282",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_7.xml?from=10534919799050&to=10534993297674",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_8.xml?from=10534993330442&to=10640794026250",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_9.xml?from=10640794288394&to=10657301266698",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_10.xml?from=10657301332234&to=10657354449162",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_11.xml?from=10657354481930&to=10657497874698",
+        "http_status": 200,
+        "url_count": 1000
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_products_12.xml?from=10657498071306&to=10699697389834",
+        "http_status": 200,
+        "url_count": 887
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_pages_1.xml?from=160794411274&to=166668894474",
+        "http_status": 200,
+        "url_count": 119
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_collections_1.xml?from=569194971402&to=585794093322",
+        "http_status": 200,
+        "url_count": 225
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_blogs_1.xml",
+        "http_status": 200,
+        "url_count": 1
+      },
+      {
+        "url": "https://badkamercity.nl/sitemap_articles_1.xml",
+        "http_status": 200,
+        "url_count": 1
+      }
+    ],
+    "product_path_count": 11887,
+    "unique_product_path_count": 11887,
+    "non_product_counts": {
+      "collections": 225,
+      "pages": 119,
+      "blogs": 1,
+      "articles": 1
+    },
+    "product_sitemap_other_urls": [
+      "https://badkamercity.nl/"
+    ],
+    "fabriecio_handle_matches_in_product_sitemaps": 0,
+    "coverage_note": "Counts describe this sitemap capture only, not total Admin product records, Google indexed URLs or buyable/approved products."
+  },
+  "public_responses": [
+    {
+      "path": "/",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/",
+      "x_robots_tag": null,
+      "bytes": 259132,
+      "title": [
+        "\n      Badkamercity\n"
+      ],
+      "meta": [],
+      "canonical": [
+        "https://badkamercity.nl/"
+      ],
+      "policy_links": [
+        "/pages/contact",
+        "/pages/retour-aanmelden",
+        "/pages/sunshower",
+        "/pages/verlanglijst",
+        "/policies/privacy-policy"
+      ],
+      "product_links": [],
+      "schema_types": [
+        "Organization",
+        "WebSite",
+        "SearchAction"
+      ],
+      "google_tag_candidates": [],
+      "h1_text": [
+        "",
+        "Kleine update. \nGroot verschil."
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/robots.txt",
+      "x_robots_tag": null,
+      "bytes": 3693,
+      "h1_text": [],
+      "interpretation": "Sitemap directive present; general public routes allowed; no blanket disallow. No instructions from comments applied.",
+      "response_sha256": "fa936ed980ce8c504fc8d799f1fecd318d18095b7e8971a9b423218ac45cb372"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/sitemap.xml",
+      "x_robots_tag": null,
+      "bytes": 2386,
+      "h1_text": [],
+      "response_sha256": "361c40c083ee3ebd183335b6007c253f841677466acb288fab2bdb17a34803ae"
+    },
+    {
+      "path": "/collections/wastafelkranen",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/collections/wastafelkranen",
+      "x_robots_tag": null,
+      "bytes": 487053,
+      "title": [
+        "\n      Wastafelkranen\n &ndash; Badkamercity"
+      ],
+      "meta": [
+        {
+          "name": "description",
+          "content": "Bekijk Wastafelkranen bij Badkamercity. Ontdek het assortiment en de productinformatie of neem contact op voor persoonlijk advies."
+        }
+      ],
+      "canonical": [
+        "https://badkamercity.nl/collections/wastafelkranen"
+      ],
+      "policy_links": [
+        "/pages/contact",
+        "/pages/retour-aanmelden",
+        "/pages/sunshower",
+        "/pages/verlanglijst",
+        "/policies/privacy-policy"
+      ],
+      "product_links": [
+        "/products/fabriecio-gm-1002",
+        "/products/fabriecio-bg-1003",
+        "/products/fabriecio-ckk-1001",
+        "/products/fabriecio-bkk-1004",
+        "/products/fabriecio-gm-1001",
+        "/products/fabriecio-bg-1002"
+      ],
+      "schema_types": [
+        "Organization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem",
+        "ListItem"
+      ],
+      "google_tag_candidates": [],
+      "h1_text": [
+        "Wastafelkranen"
+      ]
+    },
+    {
+      "path": "/collections/tegels",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/collections/tegels",
+      "x_robots_tag": null,
+      "bytes": 345893,
+      "title": [
+        "\n      Tegels voor badkamer vloer en wand\n &ndash; Badkamercity"
+      ],
+      "meta": [
+        {
+          "name": "description",
+          "content": "Vergelijk vloer- en wandtegels, mozaïek en keramisch parket. Kies een formaat en uitstraling die passen bij je badkamer, keuken of woonkamer."
+        }
+      ],
+      "canonical": [
+        "https://badkamercity.nl/collections/tegels"
+      ],
+      "policy_links": [
+        "/pages/contact",
+        "/pages/retour-aanmelden",
+        "/pages/sunshower",
+        "/pages/verlanglijst",
+        "/policies/privacy-policy"
+      ],
+      "product_links": [],
+      "schema_types": [
+        "Organization",
+        "BreadcrumbList",
+        "ListItem",
+        "ListItem"
+      ],
+      "google_tag_candidates": [],
+      "h1_text": [
+        "Tegels"
+      ]
+    },
+    {
+      "path": "/collections/merken",
+      "error": "HTTP Error 404: Not Found",
+      "note": "Guessed route; not evidence of a broken existing customer link."
+    },
+    {
+      "path": "/pages/contact",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/pages/contact",
+      "x_robots_tag": null,
+      "bytes": 256310,
+      "title": [
+        "\n      Contact\n &ndash; Badkamercity"
+      ],
+      "meta": [],
+      "canonical": [
+        "https://badkamercity.nl/pages/contact"
+      ],
+      "policy_links": [
+        "/pages/contact",
+        "/pages/retour-aanmelden",
+        "/pages/sunshower",
+        "/pages/verlanglijst",
+        "/policies/privacy-policy"
+      ],
+      "product_links": [],
+      "schema_types": [
+        "Organization"
+      ],
+      "google_tag_candidates": [],
+      "h1_text": [
+        "Contact"
+      ]
+    },
+    {
+      "path": "/pages/retourneren",
+      "error": "HTTP Error 404: Not Found",
+      "note": "Guessed route; not evidence of a broken existing customer link."
+    },
+    {
+      "url": "https://badkamercity.nl/products/hotbath-cobber-x-cx078w-wastafelkraan-vloermontage-chroom",
+      "final_url": "https://badkamercity.nl/products/hotbath-cobber-x-cx078w-wastafelkraan-vloermontage-chroom",
+      "http_status": 200,
+      "title": [
+        "Hotbath Cobber X CX078W wastafelkraan vloermontage - chroom – Badkamercity"
+      ],
+      "h1": [
+        "Hotbath Cobber X wastafelkraan vloermontage – chroom"
+      ],
+      "meta_description": [
+        "Hotbath Cobber X CX078W wastafelkraan vloermontage chroom met hoge draaibare C-uitloop en coldstart functie."
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/hotbath-cobber-x-cx078w-wastafelkraan-vloermontage-chroom"
+      ],
+      "schema_summary": [
+        {
+          "@type": "Product",
+          "name": "Hotbath Cobber X wastafelkraan vloermontage – chroom",
+          "sku": "CX078WCR",
+          "url": "https://badkamercity.nl/products/hotbath-cobber-x-cx078w-wastafelkraan-vloermontage-chroom",
+          "image": "https://badkamercity.nl/cdn/shop/files/CX078WCR_02.jpg?v=1780944151&width=1920"
+        },
+        {
+          "@type": "Offer",
+          "price": "1091.00",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/InStock",
+          "url": "https://badkamercity.nl/products/hotbath-cobber-x-cx078w-wastafelkraan-vloermontage-chroom?variant=53175621026058"
+        }
+      ],
+      "response_sha256": "e3207a64070cba9fc5319109529f7103a1f7f31d3c6bd39343a267e1d4a622a5"
+    },
+    {
+      "url": "https://badkamercity.nl/products/jee-o-flow-opbouw-wastafelkraan-met-eengreepsmengkraan-geborsteld-rvs-hoog-41cm-500-1750-76e99d10",
+      "final_url": "https://badkamercity.nl/products/jee-o-flow-opbouw-wastafelkraan-met-eengreepsmengkraan-geborsteld-rvs-hoog-41cm-500-1750-76e99d10",
+      "http_status": 200,
+      "title": [
+        "JEE-O Flow Opbouw wastafelkraan geborsteld RVS 500-1750 – Badkamercity"
+      ],
+      "h1": [
+        "JEE-O flow hoge wastafelkraan Geborsteld RVS"
+      ],
+      "meta_description": [
+        "JEE-O Flow opbouw wastafelkraan in geborsteld RVS, met ééngreepsmengkraan, hoog 41 cm. Artikel 500-1750. Bekijk productdetails en bestel bij BadkamerCity."
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/jee-o-flow-opbouw-wastafelkraan-met-eengreepsmengkraan-geborsteld-rvs-hoog-41cm-500-1750-76e99d10"
+      ],
+      "schema_summary": [
+        {
+          "@type": "Product",
+          "name": "JEE-O flow hoge wastafelkraan Geborsteld RVS",
+          "sku": "500-1750",
+          "url": "https://badkamercity.nl/products/jee-o-flow-opbouw-wastafelkraan-met-eengreepsmengkraan-geborsteld-rvs-hoog-41cm-500-1750-76e99d10",
+          "image": "https://badkamercity.nl/cdn/shop/files/jee-o-500-1750-0.jpg?v=1791215803&width=1920"
+        },
+        {
+          "@type": "Offer",
+          "price": "925.00",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/InStock",
+          "url": "https://badkamercity.nl/products/jee-o-flow-opbouw-wastafelkraan-met-eengreepsmengkraan-geborsteld-rvs-hoog-41cm-500-1750-76e99d10?variant=53859955114250"
+        }
+      ],
+      "response_sha256": "95eb01cf0dc3c22b72bfc7f83363efc6b7ac86c7b1c1af7195ef497f358db347"
+    },
+    {
+      "url": "https://badkamercity.nl/products/lagoo-re9012",
+      "final_url": "https://badkamercity.nl/products/lagoo-re9012",
+      "http_status": 200,
+      "title": [
+        "Lagoo RE9012 clean & Care reiniger 750 ml – Badkamercity"
+      ],
+      "h1": [
+        "Lagoo RE9012 clean & Care reiniger 750 ml"
+      ],
+      "meta_description": [
+        "Lagoo RE9012 clean &amp;amp; Care reiniger 750 ml. Kies de gewenste uitvoering in het keuzemenu."
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/lagoo-re9012"
+      ],
+      "schema_summary": [
+        {
+          "@type": "Product",
+          "name": "Lagoo RE9012 clean & Care reiniger 750 ml",
+          "sku": "RE9012",
+          "url": "https://badkamercity.nl/products/lagoo-re9012"
+        },
+        {
+          "@type": "Offer",
+          "price": "18.00",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/InStock",
+          "url": "https://badkamercity.nl/products/lagoo-re9012?variant=54041745457418"
+        }
+      ],
+      "response_sha256": "0d505869cd2f536063c96b65327c2f57b442d6b39ea39f8f49a9bcae146f2c88"
+    },
+    {
+      "url": "https://badkamercity.nl/products/porcelanosa-adda-bone-mat-120-x-120-cm",
+      "final_url": "https://badkamercity.nl/products/porcelanosa-adda-bone-mat-120-x-120-cm",
+      "http_status": 200,
+      "title": [
+        "Porcelanosa Adda Bone vloertegel mat – 120 × 120 cm – Badkamercity"
+      ],
+      "h1": [
+        "Porcelanosa Adda Bone vloertegel mat – 120 × 120 cm"
+      ],
+      "meta_description": [],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/porcelanosa-adda-bone-mat-120-x-120-cm"
+      ],
+      "schema_summary": [
+        {
+          "@type": "ProductGroup",
+          "name": "Porcelanosa Adda Bone vloertegel mat – 120 × 120 cm",
+          "url": "https://badkamercity.nl/products/porcelanosa-adda-bone-mat-120-x-120-cm"
+        },
+        {
+          "@type": "Product",
+          "name": "Porcelanosa Adda Bone vloertegel mat – 120 × 120 cm - Doos",
+          "sku": "PO100309458",
+          "image": "https://badkamercity.nl/cdn/shop/files/porcelanosa-kogros-389e3ba31c8db3a7c4c4.jpg?v=1793208373&width=1920"
+        },
+        {
+          "@type": "Offer",
+          "price": "158.33",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/InStock",
+          "url": "https://badkamercity.nl/products/porcelanosa-adda-bone-mat-120-x-120-cm?variant=54000376152330"
+        }
+      ],
+      "response_sha256": "ee77b01e8ce2b95dc614e4c1bb3caacf873a5c51b9805a27b083b566aa7f11d2"
+    },
+    {
+      "url": "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white",
+      "final_url": "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white",
+      "http_status": 200,
+      "title": [
+        "Sunshower Round ONE Medium – Inbouw – White – Badkamercity"
+      ],
+      "h1": [
+        "Sunshower Round ONE Medium – Inbouw – White"
+      ],
+      "meta_description": [
+        "De Sunshower Round ONE Medium in White biedt infraroodwarmte zonder UV-licht. Deze uitvoering is samengesteld voor inbouw in de wand.Eigenschappen Functies: Infrarood, zonder UV Formaat: 33 cm breed × 140 cm hoog Kleur: White Plaatsing: inbouw in de wand Bediening: Touchscreen Vermogen: 2050 W Sessietijd: 10 min Besche"
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white"
+      ],
+      "schema_summary": [
+        {
+          "@type": "Product",
+          "name": "Sunshower Round ONE Medium – Inbouw – White",
+          "sku": "M0500-M0101",
+          "url": "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white",
+          "image": "https://badkamercity.nl/cdn/shop/files/sunshower-oneplus_m_white_inbouw_ir_geheel-1.jpg?v=1792067640&width=1920"
+        },
+        {
+          "@type": "Offer",
+          "price": "2725.00",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/InStock",
+          "url": "https://badkamercity.nl/products/sunshower-round-one-medium-inbouw-white?variant=53916276916490"
+        }
+      ],
+      "response_sha256": "013f0fa74d96956fcf332b0d0f66c19786bb41955fb68b6954bcf502f96aaed0"
+    },
+    {
+      "url": "https://badkamercity.nl/products/fabriecio-gm-1002",
+      "final_url": "https://badkamercity.nl/products/fabriecio-gm-1002",
+      "http_status": 200,
+      "title": [
+        "Fabriecio Wastafelkraan Valencia Gun Metal – Badkamercity"
+      ],
+      "h1": [
+        "Fabriecio Wastafelkraan Valencia Gun Metal"
+      ],
+      "meta_description": [
+        "Wastafelkraan Inbouw, Rond, Uitloop 210MmSpecificaties Kleur Gun Metal Materiaal Messing Serie Future Garantie 2 jaar Artikelnummer GM_1002 EAN 6095510230294"
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/products/fabriecio-gm-1002"
+      ],
+      "schema_summary": [
+        {
+          "@type": "Product",
+          "name": "Fabriecio Wastafelkraan Valencia Gun Metal",
+          "sku": "GM_1002",
+          "url": "https://badkamercity.nl/products/fabriecio-gm-1002",
+          "image": "https://badkamercity.nl/cdn/shop/files/GM_1002-1-scaled-1.jpg?v=1793871365&width=1920"
+        },
+        {
+          "@type": "Offer",
+          "price": "326.70",
+          "priceCurrency": "EUR",
+          "availability": "http://schema.org/OutOfStock",
+          "url": "https://badkamercity.nl/products/fabriecio-gm-1002?variant=54059547853066"
+        }
+      ],
+      "response_sha256": "e9b28df477977af0a7d81fcb226a7c6d2c014ac41eccaaa2dd4bf73d0206187c"
+    },
+    {
+      "url": "https://badkamercity.nl/pages/retour-aanmelden",
+      "final_url": "https://badkamercity.nl/pages/retour-aanmelden",
+      "http_status": 200,
+      "title": [
+        "Retour aanmelden – Badkamercity"
+      ],
+      "h1": [
+        "Retour aanmelden"
+      ],
+      "meta_description": [
+        "Wil je iets retourneren, omruilen of een probleem met je bestelling melden? Via deze pagina geef je de producten, aantallen en eventuele retourreden door.We behandelen je melding per e-mail en sturen passende retourinstructies en, als dat is afgesproken, een retourlabel. Je kunt ook rechtstreeks mailen naar info@badkam"
+      ],
+      "robots": [],
+      "canonical": [
+        "https://badkamercity.nl/pages/retour-aanmelden"
+      ],
+      "schema_summary": [],
+      "response_sha256": "8e0c97ad58e1f3c2a96da02b54fbef8d031e9b59692318b59c53596ed9ff64b7"
+    },
+    {
+      "url": "https://badkamercity.nl/policies/refund-policy",
+      "http_status": 404,
+      "schema_summary": []
+    },
+    {
+      "url": "https://badkamercity.nl/policies/terms-of-service",
+      "http_status": 404,
+      "schema_summary": []
+    },
+    {
+      "url": "https://badkamercity.nl/policies/shipping-policy",
+      "http_status": 404,
+      "schema_summary": []
+    }
+  ],
+  "preserved_constraints": [
+    "Lagoo product images remain removed by explicit owner instruction; no reimport/relink authorized.",
+    "No Google Ads budget/campaign activation.",
+    "No changes to Shopify theme, product data, policies, stock, payment or shipping settings during this documentation task."
+  ],
+  "not_tested": [
+    "Google account authentication and account ownership",
+    "Merchant Center current feed/approval/destination state",
+    "Search Console verification, indexing reports or rankings",
+    "GA4 property, runtime pixels, consent and conversion events",
+    "Browser-rendered/computed visibility, mobile device behavior or image loading",
+    "Real cart/checkout/payment/order emails",
+    "Contact or return form submission/mailbox receipt",
+    "PageSpeed/Core Web Vitals or Rich Results Test",
+    "Windows local Git state"
+  ],
+  "first_next_action": "BC-LIVE-001: verify actual seller identity, contact and shipping/return business terms.",
+  "document_validation": {
+    "json": "PASS",
+    "new_relative_links": "PASS",
+    "all_relative_link_occurrences_checked": 472,
+    "new_errors": [],
+    "unchanged_pre_existing_unresolved_main_link_occurrences": 14,
+    "pre_existing_scope_note": "Historical main handoff/status links point to dossiers present on code branch; outside this documentation addition. Original content retained.",
+    "public_data_and_credential_pattern_review": "PASS",
+    "theme_changes": 0
+  }
+}
