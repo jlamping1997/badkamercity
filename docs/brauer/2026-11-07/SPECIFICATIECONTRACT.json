@@ -1,0 +1,14 @@
+{
+  "version": "BRAUER-20",
+  "mode": "OFFLINE_ONLY",
+  "group_order": ["Algemeen", "Afmetingen", "Uitvoering", "Meegeleverd"],
+  "shape": "[{group,items:[{key,label,value}]}]",
+  "manufacturer_identity_key": "fabrikantnummer",
+  "empty_groups": "OMIT",
+  "unknown_values": "OMIT_AND_REGISTER_MISSING",
+  "supplier_field_conflict": "WITHHOLD_CUSTOMER_VALUE_KEEP_INTERNAL_HOLD",
+  "previous_exact_audit": "EXACT_SKU_AND_EAN_ONLY_NO_SIBLING_INHERITANCE",
+  "nominal_model_values": "INTERNAL_NOT_PHYSICAL_DIMENSIONS",
+  "existing_theme_router_integrated": false,
+  "shopify_import_allowed": false
+}
