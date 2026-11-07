@@ -1,5 +1,21 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-22 - verdere specificaties en concrete open vragen · 7 november 2026
+
+500 verdere openbare productpagina’s uit34typen gelezen; alle500 exact op fabrikant-SKU, EAN en merk. Cumulatief905pagina’s /892bron-SKU’s /902exacte merk-SKU-EAN-pagina’s. Drie pagina’s zonderEAN alleen vergelijkingsbewijs. **Deze batch2.264extra klantvelden; cumulatief3.985nieuwe velden bij871artikelen**, zeven oudere externe waarden ingehouden. Totaal139.344feiten;10.089artikelen missen één of meer gekozen kernvelden. De volledige catalogus is nog niet uit alle bronnen onderzocht;4.968verdere URL-kandidaten staan klaar zonder achtergrondtaak.
+
+Collision GS-CLI1H100200CE helder glas bevestigd door leverancier plus tweede winkel bij exact hetzelfde SKU/EAN. Afwijkende Brons rook-waarde blijft in de historie, maar wordt voor dit artikel verworpen. Geen PDF-maatbesluit of mediaontvangst daarvoor geclaimd. Door extra kleuronderzoek nu28openveldverschillen bij24artikelen, vooral dezelfde RVS/messing-tegenspraak. Veertien verdachte15cm-slanglengtes blijven ingehouden; geen gok naar150cm. Oorspronkelijke42dataholds behouden:27leveranciersverschillen,12uitvoeringsambiguïteiten en3maatbronconflicten.
+
+**84concrete vragen bij80artikelen** met SKU, EAN, veld, waarden en bronlinks in het privévoorbereidingspakket en Excelblad Bronverschillen. Tellingen overlappen; niet optellen bij aantallen ontbrekende kernvelden. Geen bericht naar leverancier verstuurd. Huidige fabrikant-handleiding inbouwwastafelkranen noemt328–335, dus geen onbewezen toepassing op004. Niet visueel raadpleegbare winkelbijlagen/alleen metadata lossen geen fysieke maat op.
+
+**Controle:** elf retailtests + zes specificatietests + negen voorbereidingstests PASS. Alle13.161artikelrecords buiten specificaties/review exact gelijk aan BRAUER-21; prijs/BTW, titels, SKU/EAN, families, opties, notities en163toekomstige artikelen behouden. Definitieve nativeXLSX:13.161artikelregels,3.985aanvullingen en84vragen exact vergeleken;12EAN-voorbeelden strings, nul native foutcellen. Vijf bladen gerenderd/gecontroleerd; recalc13.161/10.089correct. Privépakket70entries,69manifesthashes en alle oorspronkelijke bestanden behouden. Bestaande Excel en ZIP vervangen met behoud van hun identiteit; één Excel-versieconflict via verse ongewijzigde bron herladen en opnieuw toegepast.
+
+**Geen Shopify-writes, DRAFT-import, media-upload of thema/publicatiewrite.** MAIN voor/na196246372618. Alle vrijgavevlaggenfalse, preflight terecht exit2. Volledige officiële afbeeldingen/PDF-aanlevering nog niet ontvangen. Daarna inventarisatie/exacte koppeling en volledige representatieve pagina-/keuzeproef vóór enige import. Codecheckpoint **0b4d067233fc76de0abeaa4cda56f1d124233837** op fix/product-cards-2026-10-14. Connector/remote-werk; lokale scratch is geen Git-checkout, geen Windows/Excel-app- of livewinkeltest geclaimd. [Onderzoek en open werk](brauer/2026-11-07/RETAILSPECIFICATIES.md), [dekking](brauer/2026-11-07/RETAILDEKKING.json).
+
+**Eén volgende handeling:** resterende openbare bronkandidaten exact op merk/SKU/EAN onderzoeken en bewezen ontbrekende kernvelden aanvullen; de84concrete uitzonderingsvragen apart laten bevestigen aan actuele artikelgegevens. Media afwachten; import blijft geblokkeerd.
+
+---
+
 ## BRAUER-21 - retaileronderzoek en eerste brede technische verrijking · 7 november 2026
 
 Eigenaar staat gegevensonderzoek bij BadkamerXXL en Sanitairwinkel expliciet toe. Alle170Brauer-overzichtspagina’s gelezen;10.148uniekeURL-kandidaten en5.827letterlijke codesuffix-kandidaten geregistreerd. Dit zijn zoekkandidaten, geen artikelidentiteitsbewijs. Eerste brede selectie351artikelen uit39typen plus54vergelijkingspagina’s, allemaal vers opnieuw gelezen:405openbare productpagina’s /392bron-SKU’s;402pagina’s exact op merk + fabrikant-SKU + EAN. Drie pagina’s zonderEAN alleen als vergelijking, niet zelfstandig voor een nieuwe waarde. Geen overerving naar kleuren, maten of andere serieleden.

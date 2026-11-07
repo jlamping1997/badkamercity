@@ -1,19 +1,29 @@
 {
   "checked_on": "2026-11-07",
-  "source_pages": 405,
-  "unique_source_skus": 392,
-  "exact_sku_ean_pages": 402,
-  "articles_with_additions": 379,
-  "new_fields": 1721,
+  "source_pages": 905,
+  "unique_source_skus": 892,
+  "exact_sku_ean_pages": 902,
+  "articles_with_additions": 871,
+  "new_fields": 3985,
   "withheld_previous_external_fields": 7,
-  "open_field_conflicts": 17,
-  "open_conflict_articles": 13,
+  "open_field_conflicts": 28,
+  "open_conflict_articles": 24,
   "import_allowed": false,
   "all_catalogue_scraped": false,
   "direct_http": "403 in this environment; cause not established; no bypass attempted",
-  "live_public_pages": 405,
+  "live_public_pages": 905,
   "unusual_hose_values_withheld": 14,
   "listing_pages": 170,
   "candidate_urls": 10148,
-  "code_suffix_candidates": 5827
+  "code_suffix_candidates": 5827,
+  "remaining_url_candidates": 4968,
+  "supplier_question_rows": 84,
+  "supplier_question_articles": 80,
+  "supplier_question_status_counts": {
+    "ACTUELE_MAATTEKENING_NODIG": 3,
+    "UITVOERING_BEVESTIGEN": 12,
+    "LEVERANCIERSLIJSTEN_VERSCHILLEN": 27,
+    "BRONVERSCHIL": 28,
+    "AFWIJKENDE_SLANGLENGTE": 14
+  }
 }
