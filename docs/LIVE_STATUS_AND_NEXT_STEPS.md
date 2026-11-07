@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-06 - offline Hotbath-menuvoorbeeld en gerichte verrijking · 7 november 2026
+
+Eigenaar vraagt zichtbaar artikelnummer, Hotbath-opzet en één BadkamerXXL-proef. Voor het verrijkte voorbeeld is exact 5-CE-001-HD1 / EAN 4260483798535 gekoppeld aan [de dealerpagina](https://www.badkamerxxl.nl/brauer-chrome-edition-wastafelmengkraan-opbouw-round-energy-saving-chroom-550001cs-hd1). Fabrikantlijst noemt model E, dealer noemt hendel Type 2. Dealer-ID 899558 blijft uitsluitend bronidentificatie. Twaalf technische velden als dealerinformatie vastgelegd, alleen voor deze SKU: hoogte 16,5 cm, uitloophoogte 8,5 cm, diepte 10,4 cm, vaste I-uitloop, hendel Type 2/glad, 1-gats/eengreeps, aanvoer 1/2 inch, warm/koud, Brauer ColdStart. Niet als fabrikantbevestiging aangemerkt. De eerdere model-A-proef 5-CE-001 is hiermee niet technisch verrijkt.
+
+Klikbaar gesprekvoorbeeld gebruikt de bestaande compacte Hotbath-opzet: ronde indicatieve kleurstalen, vier zichtbaar, alle zes uitklappen, actieve kleur zichtbaar bij inklappen. Zes echte model-E-kleurartikelen uit eigen bron; artikelnummer/titel/EAN/adviesbasis incl btw wisselen mee. Dealerprijs/voorraad/leverbeloften/reviews/garantie niet overgenomen; bronprijzen behouden. Niet-gecontroleerde kleuren krijgen de twaalf technische velden niet automatisch. Gevonden PDF-bronlink nog niet gekoppeld: documentdekking niet gecontroleerd (metadata noemt andere kleur).
+
+Zes keuzestaten, prijs/identiteit en terugwisselen zonder achterblijvende specs getest; nul fouten. Geen browserlayout-/live product-/URL-/carttest en geen werkende Shopify-integratie geclaimd. Voorbeeld blijft gesprekspreview; productbasis-XLSX versie 1 ongewijzigd. MAIN read-only bevestigd als 196246372618. Geen Shopify-writes, import of publicatie. Volledig aangekondigd media-/PDF-pakket blijft af te wachten.
+
+**Exact één volgende handeling:** eigenaar beoordeelt het offline Hotbath-menuvoorbeeld; daarna alleen exact gematchte dealerinformatie verder verrijken. Officiële bestanden en technische bevestiging blijven apart van deze bronproef. Geen actieve schrijver na dit checkpoint.
+
+
 ## BRAUER-05 - offline kleurrelaties voorbereid · 7 november 2026
 
 13.161 exacte artikelidentiteiten in het koppelregister.1.355 kandidaatkleurfamilies met9.697SKU's;3.464SKU's afzonderlijk gehouden. Alleen gelijke bronmodeltekst na expliciet kleur-/afwerkingsverschil, met gelijk producttype/serie/uitvoering/materiaal, unieke kleur per kandidaatcombinatie. Alle27SKU's met materiaal-/afwerkingsconflict buiten groepen. Pilots bevestigen kleurrelatieCE001/GG001;20/30cm,Carving/Stripe,links/rechts en0/1kraangat blijven gescheiden. Relaties zijn wederzijds; geen technische compatibiliteit of leveranciersstuklijst afgeleid.
