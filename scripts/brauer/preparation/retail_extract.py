@@ -92,7 +92,7 @@ def parse(page):
  if re.search(r'\binclusief inbouwdeel\b',page['title'],re.I):
   found.append({'label':'Inbouwdeel inbegrepen','value':'Ja','source_label':'Met inbouwdeel','source_value':'inclusief inbouwdeel (producttitel)','line':None})
  brand=next((v['value'] for v in found if v['source_label']=='Merk'),None)
- return {'sku':sku,'ean':ean,'brand':brand,'title':page['title'],'requested_sku':page.get('requested_sku'),'url':page['url'],'ref':page['ref'],'checked_on':'2026-11-07','source_snapshot_note':page.get('source_snapshot_note','Search-service snapshot; source revision not guaranteed'),'retrieval':page.get('retrieval','public_web_page_excerpt'),'linked_documents':page.get('linked_documents',[]),'fields':[v for v in found if v['source_label'] in LENGTHS or v['source_label'] in COUNTS or v['source_label'] in ENUMS or v['source_label'] in BOOLS]}
+ return {'sku':sku,'ean':ean,'brand':brand,'title':page['title'],'requested_sku':page.get('requested_sku'),'requested_url':page.get('requested_url',page['url']),'url':page['url'],'ref':page['ref'],'checked_on':'2026-11-07','source_snapshot_note':page.get('source_snapshot_note','Search-service snapshot; source revision not guaranteed'),'retrieval':page.get('retrieval','public_web_page_excerpt'),'linked_documents':page.get('linked_documents',[]),'fields':[v for v in found if v['source_label'] in LENGTHS or v['source_label'] in COUNTS or v['source_label'] in ENUMS or v['source_label'] in BOOLS]}
 if __name__=='__main__':
  pages=[p for file in sorted(Path('research/brauer-retail').glob('table-excerpts*.json')) for p in json.loads(file.read_text())]
  unique={}

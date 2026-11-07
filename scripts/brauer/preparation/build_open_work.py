@@ -27,7 +27,7 @@ def main():
  for d in retail['scope_rejections']:
   if not d['reason'].startswith('Afwijkende'):continue
   add(by[d['sku']],d['label'],'AFWIJKENDE_SLANGLENGTE',d['source_value'],'Welke lengte heeft de daadwerkelijk meegeleverde doucheslang? De winkeltabel noemt 15 cm. Graag bevestigen met dit setartikelnummer en het artikelnummer van de meegeleverde slang. Geen automatische omzetting naar 150 cm.',[d['url']])
- observed={r['url'] for r in json.loads((root/'retail-observations.json').read_text())}
+ observed={url for r in json.loads((root/'retail-observations.json').read_text()) for url in [r['url'],r.get('requested_url')] if url}
  queue=json.loads((root/'retail-next-batch-queue.json').read_text());queue['items']=[x for x in queue['items'] if x['url'] not in observed]
  (root/'retail-next-batch-queue.json').write_text(json.dumps(queue,ensure_ascii=False,indent=2)+'\n')
  out={'checked_on':'2026-11-07','questions':questions,'question_rows':len(questions),'question_articles':len({q['sku'] for q in questions}),'question_status_counts':dict(Counter(q['status'] for q in questions)),
