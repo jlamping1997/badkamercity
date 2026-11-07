@@ -1,5 +1,27 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-18 - greepdetails, kleur eerst en voorwaardelijke deurkeuzes · 7 november 2026
+
+Expliciete gebruikerscorrecties op de offline proef verwerkt. Eerdere BRAUER-16-kleurenregel krijgt een gerichte uitzondering voor spiegelkastdecorstalen; BRAUER-17 gecombineerde120/160cm-kast en breedte/deurmenu zijn vervangen.
+
+**Uitgevoerd:**
+- Kleur/decor staat als eerste beschikbare keuze in alle23voorbeeldfamilies (14eerdere +9bijgewerkte). Eén vaste kleur wordt geen nutteloze keuzeknop. Consumentenlabel Edition vervangen door Standaard; originele leveranciersidentiteit/SKU’s/EANs blijven brondata.
+- Greepafwerking toont drie daadwerkelijke detailfoto’s: Standaard/glad, Carving/gekarteld en Stripe/gestreept. Foto’s uit de bestaande BadkamerXXL-uitleg Afwerking greep opgehaald, hashes gecontroleerd en visueel bekeken. Expliciet structuurvoorbeeld in RVS-kleur, geen exacte gekozen SKU-/kleurfoto. Zeven bestaande standaard-lage001artikelen toegevoegd naast de12Carving/Stripe-artikelen, waaronder toekomstigeCoffee alleen waar een echte SKU bestaat.
+- Hoofd-/kleurfoto’s en overige fotokeuzes blijven eerste beeld exact gekoppeld product; de vijf bestaande losse A-E-hendelvormfoto’s blijven behouden.
+- Aurora heet wastafel voor onderkast; montage/omschrijving verduidelijkt. Bakpositie gebruikt de eerste foto van de bij breedte/kraangaten passende SKU. Geen onbewezen wastafel/onderkastcombinatie aangemaakt.
+- Adore MFC120cm is nu afzonderlijk halfhoge kast30artikelen;160cm afzonderlijk hoge kast15artikelen. Geen hoogtemenu tussen beide.
+- Impress Deluxe heeft kleurstalen, breedtedropdown en een dynamische deurrichting. De Links/Rechts-keuze verschijnt alleen wanneer meer dan één echte richting bij gekozen breedte én decor bestaat; in deze90artikelen alleen bij60cm. Algoritme leest werkelijke kandidaten, geen hardcoded60cm. Eerste bezoek aan een onbesliste60cm-uitvoering vraagt richting en kiest niet stil een SKU. Reeds expliciet gekozen richting blijft bij terugschakelen bewaard.80cm en breder verbergen de keuze.
+- Spiegelkastkleuren zijn benoemde decorstalen, steeds zes zichtbaar plus Bekijk meer kleuren. Hoofdfoto blijft het exacte product.
+
+**Validatie:** nieuwe9families/469unieke artikelen: werkelijke preview-JS met DOM-stub,8.294geldige /573geweigerde transities PASS;120overgangen bewust onbeslist (60afvoer,60deurrichting). Alle artikelen bereikbaar; SKU/EAN/prijs, behoud overige keuzes, eerste-image add/append/reorder/remove, identiteitbescherming, afvoerbehoud, deurzichtbaarheid/onthouden en decorstalen PASS.469prijzen onafhankelijk met Decimal×1,21 half-up tegen originele bron vergeleken. Positie-spoelbakfoto reageert op wijziging van het eerste beeld van exact het kandidaatartikel terwijl de huidige SKU gelijk blijft.
+Eerdere14families/876records opnieuw getest:13.488geldige /1.489geweigerde transities; kleur-eerst en de vijf A-E-vormbeelden PASS. Totaal23families,1.345voorbeeldrecords /1.326uniekeSKU’s (bewuste overlap). Geen browserlayout/native touch/live PDP/cart-test geclaimd. Nieuwe proef984.763bytes,104exacte tijdelijke productbeelden plus3structuurclose-ups. Oorspronkelijke98voorbeeldbeelden aangevuld met6bestaande standaard-kraanfoto’s; Coffee nog zonder beeld.
+
+[Correctiecontract, beeldbronnen en controles](brauer/2026-11-06/UX_CORRECTIES_CONTRACT.json). Geteste offline generator-/template-/conditionele provider-/testcode op bestaande actieve branch fix/product-cards-2026-10-14 onder scripts/brauer/prototypes/ux-refinement/. Publieke Git bevat geen private volledige bron-/prijslijsten of derdenbeeldbytes. Geen Shopify-thema-integratie. Productbasis-XLSX versie1 en oorspronkelijke leveranciersdata ongewijzigd.
+
+MAIN read-only vóór/na bevestigd als196246372618 — BadkamerCity - Groene voorraadmelding. Geen Shopify-writes, import (ook geen DRAFT), media-upload, voorraadwijziging of publicatie. Volledig aangekondigd officieel beelden-/PDF-pakket blijft vereist vóór import; tijdelijke dealerbeelden tellen niet als pakketontvangst. Drie eerdere maatconflicten en Liquid ThemeCheck-blokkade blijven open. Scratch geen Git-werkboom; geen Windows-lokale controleclaim. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** eigenaar beoordeelt de aangepaste proef, vooral greepdetails, spiegelkast60→80cm en de losse120/160cm-kasten.
+
 ## BRAUER-17 - acht andere productgroepen als offline proef · 7 november 2026
 
 Eigenaar wil de overige voorgestelde producten daadwerkelijk kunnen proberen. Alleen offline gesprekproef, geen import- of publicatievrijgave.
