@@ -1,5 +1,25 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-12 - aparte meubeldieptes, Breedte-labels en gecontroleerde afmetingen · 7 november 2026
+
+Eigenaar vraagt de dieptekeuze te verwijderen en standaard/ondiep niet in hetzelfde menu te groeperen; Meubelmaat en Meubelmaat uit prijslijst worden Breedte. Breedte/diepte/hoogte en verdere specificaties aanvullen. De visuele glasopstellingen zijn door eigenaar positief beoordeeld. Eerst dit aangepaste voorbeeld beoordelen; pas daarna een nieuwe steekproef met verschillende productfamilies uit kranen, glas en meubels.
+
+**Uitgevoerd in het offline voorbeeld:**
+- Joy MFC opgesplitst in twee afgebakende families: 120 standaard artikelen en 45 ondiepe artikelen, ieder met eigen selectie. Geen diepte-as of dieptewissel binnen een menu. Bij ondiep vervalt ook de eenkeuzeknop voor twee lades; het aantal blijft als specificatie aanwezig.
+- Het keuzelabel en de specificatie heten Breedte. Weergave gebruikt gecontroleerde buitenbreedte; bronmaatklasse blijft interne joinwaarde. Bijvoorbeeld bronklasse 120 → 119 cm; 140 → 138,8 cm. Artikelnummer/EAN/btw-prijs behouden.
+- Per exacte SKU/EAN Breedte, Diepte, Hoogte en Montage toegevoegd; materiaal, ladeaantal, uitsparingen, greeploos, softclose en decor behouden. Alle 165 actuele dealerartikelregels gelezen en met de bronidentiteit vergeleken: nul mismatches. Standaarddiepte 455 mm, ondiep 386 mm, hoogte 500 mm; breedtes niet uit nominale artikelcodes gegokt.
+- Drie getoonde fabrikanttekeningen visueel vergeleken: OK-JY80CH, OK-JY120-4CH en OK-JYO80CH. Dit is steekproefbewijs voor tekeningen, geen claim dat alle 165 officiële tekeningen zijn ontvangen/gecontroleerd. Overige verrijking is expliciet exacte dealer-SKU/EAN-data.
+- De vijftien decorstalen, de afzonderlijke afvoerafstemming bij de ambigue standaard 119 cm / twee lades en de bestaande bescherming tegen stille andere keuzes blijven. Geen automatische wastafelcompatibiliteit afgeleid.
+- Doucheset en glas: bronartikelen/inhoud ongewijzigd; dezelfde goedgekeurde glasdiagrammen en keuzelogica.
+
+**Duurzame gegevens:** [Joy-maten en menucontract](brauer/2026-11-06/JOY_MATEN_MENUCONTRACT.json) bevat uitsluitend publieke maatfeiten, exacte bron-URL/hash en de menuregels; 165 records in elf geometriegroepen, in beide branches exact teruggelezen. Geen volledige prijslijsten, advies-/inkoopprijzen of derdenbeelden in deze Git-toevoeging. Productbasis-XLSX actueel gelezen als versie 1 en niet vervangen; deze gegevens zijn een aanvullende overlay voor de latere importvoorbereiding.
+
+**Controle:** werkelijke ingebedde JavaScript in VM/DOM-stub: 465 toestanden, 8.070 geldige hoofdkeuzetransities, 696 ontbrekende combinaties geweigerd, 60 meubeltransities correct onbeslist tot afvoerkeuze. Alle 165 meubelafmetingen in de specificaties tegen exact-SKU-bronrecord gecontroleerd. Aparte selectiestaat voor beide meubelfamilies, geen diepteknop, zichtbare buitenbreedtes, artikel/EAN/prijzen, kleurdropdown/Escape/buitenklikhandlers en glasdiagrammen PASS. Browserlayout en echte touch/toetsenbordbediening NOT_TESTED; geen browserexecutable. Gesprekfragment 391.469 bytes; alleen review, geen Shopify-integratie.
+
+MAIN opnieuw read-only bevestigd als 196246372618; geen Shopify-writes, import (ook geen DRAFT), media-import of publicatie. De beloofde complete leveranciersmedia/PDF-ontvangst blijft voorwaarde vóór alle import. Scratch is geen Git-werkboom; geen uitspraak over Windows-lokale status. Eerder gesprekvoorbeeld blijft beschikbaar als referentie/herstel. Geen actieve schrijver na overdracht.
+
+**Exact één volgende handeling:** eigenaar beoordeelt dit aangepaste voorbeeld, inclusief de twee aparte Joy-menu's en de specificaties. Daarna volgt de gevraagde volgende steekproef met twee andere productfamilies per categorie (kranen, glas, meubels); deze nog niet als vervanging voor de eigenaarreview uitvoeren.
+
 ## BRAUER-11 - eenvoudiger meubelkeuze en visuele glasopstellingen · 7 november 2026
 
 Eigenaar beoordeelt de doucheset positief, vindt het meubelmenu te technisch en vraagt om kleurdropdowns bij veel kleuren en plaatjes voor zijwanden. Alleen het offline gesprekvoorbeeld aangepast; geen Shopify-productimport (ook geen DRAFT), media-import, themawrite of publicatie.
