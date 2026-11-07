@@ -1,5 +1,14 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-05 - offline kleurrelaties voorbereid · 7 november 2026
+
+13.161 exacte artikelidentiteiten in het koppelregister.1.355 kandidaatkleurfamilies met9.697SKU's;3.464SKU's afzonderlijk gehouden. Alleen gelijke bronmodeltekst na expliciet kleur-/afwerkingsverschil, met gelijk producttype/serie/uitvoering/materiaal, unieke kleur per kandidaatcombinatie. Alle27SKU's met materiaal-/afwerkingsconflict buiten groepen. Pilots bevestigen kleurrelatieCE001/GG001;20/30cm,Carving/Stripe,links/rechts en0/1kraangat blijven gescheiden. Relaties zijn wederzijds; geen technische compatibiliteit of leveranciersstuklijst afgeleid.
+
+Productbasis uitgebreid met Koppelingen-tab. Exacte privérelaties blijven buiten publieke Git. Ontvangen media/PDF's:0; werkelijke mediakoppelingen:0; bevestigde onderdeelcompatibiliteit:0. Geen Shopify-writes/import, ook geenDRAFT. Volledige aangekondigde bestandenontvangst blijft harde voorwaarde vóór import.
+
+Volgende handeling: kleurfamilievoorstellen gericht controleren en ontvangen afbeeldingen/PDF's later op exactSKU inventariseren/koppelen; ontbrekende technische onderdeelrelaties door leverancier laten bevestigen. Geen productpublicatievrijgave.
+
+
 ## BRAUER-04 - volledig offline productwerkbestand · 7 november 2026
 
 Alle 13.161 SKU's in een aparte productbasis voorbereid: brongetrouwe opgeschoonde titels/omschrijving, unieke handlevoorstellen met SKU-suffix, producttypevoorstel, bronbevestigde specs, btw-prijsbasis, toekomstige datum, bronconflicten en vier lege aanvulkolommen. De 31 eerder inhoudelijk uitgewerkte voorbeelden blijven herkenbaar; de overige 13.130 omschrijvingen zijn bronbasis en geen volledig verrijkte tekst. Techniek/media nog aanvullen; 27 materiaalconflicten en twee afwerkingsvelden blijven open. Volledige gegevens blijven privé.
