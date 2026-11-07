@@ -1,5 +1,13 @@
 # BadkamerCity — actuele werkstatus
 
+## BRAUER-20 - duidelijke productspecificaties offline · 7 november 2026
+
+Alle 13.161 artikelen / 76 producttypen hebben nu een klantgerichte specificatietabel: Algemeen, Afmetingen, Uitvoering en Meegeleverd. Alle 135.366 veldwaarden hebben bronbewijs; dit totaal bevat ook merk/artikelnummer/EAN. Elke unieke fabrikant-SKU behoudt zijn eigen tabel; 64 eerdere exacte SKU/EAN-controles behouden zonder uitbreiding naar andere kleuren. Geen onbekende Nee-waarden, geen fysieke cm-maten uit unitloze modelnummers. De 27 materiaal-/afwerkingsconflicten en drie maatconflicten leveren geen betwiste klantwaarden meer op.12niet-unieke keuzeartikelen en163toekomstige artikelen blijven apart;42dataholds behouden. Prijzen incl.btw, artikelidentiteit, opties, families, eigen aanvullingen en media onveranderd.
+
+Voor10.552artikelen ontbreken nog gekozen technische kernvelden. Dit is geen foutpercentage; ook2.609artikelen met gekozen kernvelden zijn nog niet technisch of commercieel vrijgegeven. Nieuwe review-XLSX met Overzicht, Voorbeelden en Artikelen; volledige tabellen/provenance en reproduceerbare scripts in bestaande privé-ZIP bijgewerkt. Zes nieuwe specificatietests en negen voorbereidingstests PASS; elke zichtbare waarde heeft bewijs, bestaande bedrijfsdata fingerprintgelijk. Bestands-/recalc-/visuele controles vastgelegd bij [specificaties](brauer/2026-11-07/SPECIFICATIES.md). Huidige Brauer-theme-router nog niet op het nieuwe tabelformaat aangesloten; latere UNPUBLISHED-integratie en winkelproef verplicht.
+
+**Geen Shopify-writes/import, ook geen DRAFT/media-upload/publicatie.** Volledige officiële afbeeldingen/PDF’s ontbreken. MAIN voor en na read-only196246372618 (BadkamerCity - Groene voorraadmelding). Geen lokale Windows/Git- of Excel-appcontrole geclaimd. Actieve codebranchfix/product-cards-2026-10-14; codecheckpoint is de commit die dit blok en scripts invoert, remote teruglezen vereist. **Eén volgende handeling:** ontbrekende fysieke maten en aansluitgegevens per exact artikel verrijken met officiële technische productdata. Mediaontvangst/inventarisatie en latere beoordeelde proef blijven importvoorwaarden.
+
 ## BRAUER-19 - volledige catalogus offline voorbereid na UX-goedkeuring · 7 november 2026
 
 Eigenaar keurt de aangepaste voorbeelden goed en geeft opdracht de goedgekeurde regels op het hele bestand voor te bereiden voor latere import. **Geen opdracht om nu te importeren.** Volledige officiële media-/PDF-ontvangst en de daaropvolgende proef blijven voorwaarden.

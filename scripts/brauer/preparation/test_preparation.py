@@ -67,7 +67,8 @@ class Tests(unittest.TestCase):
   duplicate={p['sku'] for p in catalog if 'KEUZECOMBINATIE_NIET_UNIEK' in p['data_issues']};self.assertEqual(len(duplicate),12)
   for sku in critical|duplicate:self.assertEqual(by_sku[sku]['group_status'],'CONTROLEREN')
   self.assertEqual(sum('MAATBRONCONFLICT' in p['data_issues'] for p in catalog),3)
-  self.assertTrue(by_sku['5-CE-001']['specifications']['Hoogte kraan'].startswith('Te bevestigen'))
+  # A held value is internal; customers never see an uncertain measurement.
+  self.assertNotIn('Hoogte kraan',by_sku['5-CE-001']['specifications'])
  def test_exact_filename_matching(self):
   skus={'5-CE-001','5-CE-001-HD1','HK-AD120LCH','HK-AD120RCH'}
   self.assertEqual(article_for_name('5-CE-001-HD1_01',skus),'5-CE-001-HD1');self.assertEqual(article_for_name('5-ce-001_T',skus),'5-CE-001');self.assertIsNone(article_for_name('5-CE-001-HD99',skus));self.assertIsNone(article_for_name('5-CE-0010',skus));self.assertEqual(article_for_name('HK-AD120RCH_1',skus),'HK-AD120RCH')
