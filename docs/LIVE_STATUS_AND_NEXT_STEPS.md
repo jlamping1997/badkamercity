@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## BESTEL-01 — alle winkelproducten doorverkoop toegestaan · 8 november 2026
+
+De eigenaar bepaalt expliciet dat alle aangeboden producten besteld moeten kunnen worden. **767 bestaande gevolgde DENY-varianten live naar CONTINUE; 73 daadwerkelijke uitverkocht-blokkades opgeheven.** Alle 851 gevolgde varianten volledig teruggelezen: 851 availableForSale=true, 851 CONTINUE, nul DENY. Voorraad, tracking, productidentiteit, status en webshop-URL exact behouden; 84 bestaande CONTINUE-varianten ongewijzigd. Veertig foutloze mutatieresponses dekken 767 unieke varianten; onafhankelijke controle PASS.
+
+Scope: 15.897 ACTIVE + Online Store en 24 bestaande UNLISTED + Online Store. De 15.070 producten zonder tracking waren qua voorraad al onbeperkt bestelbaar en zijn niet onnodig geschreven. Exacte aantallen vóór/na gelijk. Geen DRAFT-, ARCHIVED-, import-, publicatie-, foto-, prijs-, voorraadaantal-, btw- of verzendwijziging. Nul bundel- of compositeproducten in de gepubliceerde scope. Bewijs voor niet-gevolgde producten bestaat uit exacte aantallen plus voorraadgedrag; geen 15.000 individuele winkelwagenproeven.
+
+Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop toegevoegd. Cotto RR6001 via 1 m² → één doos van 1,44 m² voor €99,29 toegevoegd. Correcte variant en aantal bevestigd, alleen eigen proefartikelen verwijderd, winkelwagen weer leeg. Geen checkout, betaling of fysieke telefoon getest. **Menurelease 196341825802 is nu MAIN**, vijf menufiles byte-identiek aan de voorbereide versie; geen themawrite of publicatie door deze uitvoering. De tijdelijke tekst Op voorraad is behouden; de bestelinstelling volgt nu de eigenaarafspraak.
+
+[Vaste bestelafspraak](orderability/POLICY.md) geldt voortaan voor imports en feeds: geen DENY automatisch vanwege N of nulvoorraad, geen voorraad verzinnen. Geen nieuwe automatische bewaker of achtergrondtaak geïnstalleerd. [Uitvoering en herstel](orderability/2026-11-08/README.md) en [bewijs](orderability/2026-11-08/verification.json); volledige herstelwaarden privé. **Volgende handeling:** deze vaste bestelregel toepassen bij de eerstvolgende goedgekeurde productimport. De huidige winkelbrede toepassing is afgerond; na overdracht is er geen actieve schrijver. Afzonderlijke BRAUER-holds hieronder blijven gelden.
+
+---
+
 ## BRAUER-24 — OVERGEDRAGEN, geen actieve schrijver · 8 november 2026
 
 Uitvoering op verzoek van de eigenaar gestopt voor een nieuwe chat. Geen achtergrondleescel of schrijver meer actief. **Catalogus163.461feiten /19.383extra velden sinds BRAUER-23;4748nieuwe technische bronrecords bewaard.** Nog220bronaanvragen zonder bewaarde tabel, waaronder laatste18niet afgerond. Nog geen herhaalronde. Excel/open-work zijn oudere gecontroleerde stage2; eerst bronmerge en eindcontroles. Geen Shopify-writes/import/media-upload/publicatie. Officiële complete media nog afwachten.
