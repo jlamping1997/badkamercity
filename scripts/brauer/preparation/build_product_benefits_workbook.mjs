@@ -4,9 +4,10 @@ import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
 
 const root=path.resolve(process.argv[2]);
 const source=path.resolve(process.argv[3]);
-const outputDir=path.join(root,'outputs','brauer-27-benefits');
+const outputDir=path.join(root,'outputs',process.argv[4]||'brauer-28-benefits');
 const catalog=JSON.parse(await fs.readFile(path.join(root,'prepared/catalog.json'),'utf8'));
 const records=JSON.parse(await fs.readFile(path.join(root,'prepared/product-benefits.json'),'utf8'));
+const definitions=JSON.parse(await fs.readFile(path.join(root,'prepared/manufacturer-features.json'),'utf8')).definitions;
 console.log('Approved benefit records loaded');
 const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(source));
 console.log('Source workbook imported');
@@ -14,10 +15,7 @@ const proofs=new Map(records.map(r=>[r.sku,r]));
 let s,existing=false;
 try{s=wb.worksheets.getItem('Pluspunten');existing=Boolean(s);}catch{}
 if(!s)s=wb.worksheets.add('Pluspunten');
-if(existing){
- for(const t of s.tables.items)t.delete();
- s.getUsedRange()?.clear({applyTo:'all'});
-}
+if(existing&&!s.tables.items.some(t=>t.name==='BrauerProductBenefits'))throw new Error('Unknown benefits worksheet; preserve it for review');
 console.log('Benefits sheet selected');
 s.showGridLines=false;
 const font={name:'Arial',size:10,color:'#213647'};
@@ -25,7 +23,10 @@ const rows=catalog.map(p=>{
  const items=proofs.get(p.sku).items;
  if(proofs.get(p.sku).ean!==p.ean)throw new Error('Benefits identity differs: '+p.sku);
  const fields=[...new Set(items.flatMap(x=>x.basis.map(b=>b.field+' = '+b.value)))].join('\n');
- const sources=[...new Set(items.flatMap(x=>x.basis.flatMap(b=>b.evidence.url?[b.evidence.url]:b.evidence.source_refs.map(r=>r.file+' | '+r.sheet+':'+r.row))))].join('\n');
+ const sources=[...new Set(items.flatMap(x=>[
+  ...x.basis.flatMap(b=>b.evidence.url?[b.evidence.url]:b.evidence.source_refs.map(r=>r.file+' | '+r.sheet+':'+r.row)),
+  ...(x.definition_refs||[]).map(key=>definitions[key].primary_url)
+ ]))].join('\n');
  return [p.sku,p.ean,p.product_type,p.title,...Array.from({length:4},(_,i)=>items[i]?.text||''),fields,sources];
 });
 const end=rows.length+5;
@@ -54,7 +55,7 @@ for(let i=1;i<=heights.length;i++)if(i===heights.length||heights[i]!==heights[st
  start=i;
 }
 console.log(JSON.stringify({formatted_height_runs:heightRuns}));
-s.tables.add(`A5:J${end}`,true,'BrauerProductBenefits');
+if(!existing)s.tables.add(`A5:J${end}`,true,'BrauerProductBenefits');
 s.freezePanes.freezeRows(5);s.freezePanes.freezeColumns(1);
 wb.recalculate();
 console.log((await wb.inspect({kind:'table',range:'Pluspunten!A5:H7',tableMaxRows:3,tableMaxCols:8,maxChars:2200})).ndjson);
@@ -66,6 +67,9 @@ for(const [name,selector] of [
  ['Draaibare-uitloop',p=>p.sku==='5-CE-003'],
  ['Doucheglas',p=>p.product_type==='Douchecabines'&&proofs.get(p.sku).items.length>0],
  ['Meubel',p=>p.product_type==='Onderkasten'&&proofs.get(p.sku).items.length>0],
+ ['Profielvrij',p=>proofs.get(p.sku).items.some(i=>i.rule==='frameless_glass')],
+ ['Schuifdeur',p=>proofs.get(p.sku).items.some(i=>i.rule==='sliding_door')],
+ ['Verlichting',p=>proofs.get(p.sku).items.some(i=>i.rule==='adjustable_light_colour')],
 ]){
  const idx=catalog.findIndex(selector);if(idx<0)throw new Error('Missing review example '+name);selections.push([name,idx]);
 }

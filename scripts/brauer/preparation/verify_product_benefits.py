@@ -6,6 +6,7 @@ from pathlib import Path
 import posixpath
 import xml.etree.ElementTree as E
 import zipfile
+from build_product_benefits import approved_definition
 
 NS = {'s': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 
@@ -66,11 +67,14 @@ class NativeBook:
 
 def verify(root, workbook, source):
     old, new = NativeBook(source), NativeBook(workbook)
-    assert old.names == new.names[:len(old.names)]
-    assert new.names == old.names + ['Pluspunten']
+    if 'Pluspunten' in old.names:
+        assert new.names == old.names
+    else:
+        assert new.names == old.names + ['Pluspunten']
     styles_old, styles_new = {}, {}
     cells_compared = 0
-    for i in range(len(old.names)):
+    unchanged = [i for i, name in enumerate(old.names) if name != 'Pluspunten']
+    for i in unchanged:
         assert old.cell_records(i) == new.cell_records(i), old.names[i]+' values/formulas/types changed'
         a, b = old.sheet(i), new.sheet(i)
         for address, ac, bc in zip(old.cell_records(i), a.findall('.//s:c', NS), b.findall('.//s:c', NS)):
@@ -86,6 +90,7 @@ def verify(root, workbook, source):
 
     catalog = json.loads((root/'prepared/catalog.json').read_text())
     evidence = json.loads((root/'prepared/specification-evidence.json').read_text())
+    definitions = json.loads((root/'prepared/manufacturer-features.json').read_text())['definitions']
     records = json.loads((root/'prepared/product-benefits.json').read_text())
     by = {p['sku']: p for p in catalog}
     assert len(records) == len(catalog) == 13161
@@ -100,11 +105,20 @@ def verify(root, workbook, source):
             assert 'compleet' not in item['text'].lower()
             assert item['basis']
             rules[item['rule']] += 1
+            for key in item.get('definition_refs', []):
+                assert approved_definition(definitions, key), (p['sku'], key)
             for f in item['basis']:
-                assert p['specifications'][f['field']] == f['value']
-                assert evidence[p['sku']]['facts'][f['field']] == f['evidence']
+                if f.get('source') == 'supplier_record':
+                    assert p['source'][f['field']] == f['value']
+                    assert p['source']['Merk'] == 'BRAUER'
+                    assert p['source']['Artikelcode'] == p['sku'] and p['source']['EAN'] == p['ean']
+                    assert f['evidence']['source_refs'] == p['source_refs']
+                    assert f['evidence']['fragment'] == f['value']
+                else:
+                    assert p['specifications'][f['field']] == f['value']
+                    assert evidence[p['sku']]['facts'][f['field']] == f['evidence']
                 assert f['field'] not in p.get('retail_review', {}).get('open_fields', [])
-    rows = new.sheet(len(old.names)).findall('s:sheetData/s:row', NS)
+    rows = new.sheet(new.names.index('Pluspunten')).findall('s:sheetData/s:row', NS)
     rows = [r for r in rows if int(r.get('r')) >= 6]
     assert len(rows) == len(catalog)
     eans = 0
@@ -119,7 +133,7 @@ def verify(root, workbook, source):
         eans += 1
     errors = sum(c.get('t')=='e' for i in range(len(new.names)) for c in new.sheet(i).findall('.//s:c', NS))
     assert errors == 0
-    return {'status': 'PASS', 'worksheets': len(new.names), 'original_sheets_preserved': len(old.names),
+    return {'status': 'PASS', 'worksheets': len(new.names), 'original_sheets_preserved': len(unchanged),
             'original_cells_compared': cells_compared, 'original_cell_styles_and_native_tables_preserved': True,
             'benefit_article_rows_exact': len(rows), 'benefits_exact': sum(rules.values()),
             'articles_with_benefits': sum(bool(r['items']) for r in records), 'by_rule': dict(rules),

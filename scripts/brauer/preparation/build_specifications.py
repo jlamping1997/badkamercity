@@ -129,7 +129,9 @@ def build(p, audit):
   match(r'\b(helder|brons|rook|mat) glas\b','Glas',opt.get('glazing') or None)
   match(r'\bincl\. glascoating\b','Glascoating',True)
   match(r'\bomkeerbaar\b','Montage','Links of rechts te monteren')
-  if re.search(r'\bschuifdeur\b',low):add('Deursysteem','Schuifdeur',fragment='schuifdeur')
+  if p['source'].get('Productgroep') in {'Douchecabine met draai-schuifdeur met profiel','Nisdeur 2-delig met draai-schuifdeur met profiel','Nisdeur met draai-schuifdeur met profiel'}:
+   add('Deursysteem','Draai-schuifdeur',field='Productgroep',fragment='draai-schuifdeur')
+  elif re.search(r'\bschuifdeur\b',low):add('Deursysteem','Schuifdeur',fragment='schuifdeur')
   elif re.search(r'\bdraaiend\b',low):add('Deursysteem','Draaideur',fragment='draaiend')
   match(r'\b(enkelzijdige|tweezijdige) uitsparingen\b','Uitsparingen in glas')
   match(r'\bzonder uitsparingen\b','Uitsparingen in glas','Geen')
