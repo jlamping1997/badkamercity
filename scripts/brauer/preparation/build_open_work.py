@@ -21,7 +21,7 @@ def main():
   if d['status']!='OPEN':continue
   p=by[d['sku']];values=([d['existing']] if d['existing'] else [])+[x['value'] for x in d['candidates']]
   question=f"Bevestig {d['field'].lower()} voor dit exacte artikel. Graag technische tekening of artikelblad met artikelnummer/EAN en revisie. Bij maten aangeven of dit nominale maat, fysieke maat of stelbereik is."
-  if d['field']=='Materiaal':question='Bevestig het basismateriaal van dit exacte artikelnummer/EAN: RVS of messing? Graag materiaal apart van kleur/coating vermelden en een actueel artikelblad meesturen.'
+  if d['field']=='Materiaal':question='Bevestig het materiaal voor dit exacte artikelnummer/EAN. Bronnen noemen: '+ ' / '.join(dict.fromkeys(values))+'. Vermeld het materiaal apart van kleur, coating of decor en stuur een actueel artikelblad mee.'
   elif d['field']=='Aansluitmaat watertoevoer':question='Bevestig de draadaansluiting van de warm-/koudwatertoevoer voor dit exacte artikelnummer/EAN. Bronnen noemen 1/2 en 3/8 inch. Graag actuele aansluittekening; doucheslangaansluiting apart houden.'
   add(p,d['field'],'BRONVERSCHIL', ' / '.join(dict.fromkeys(values)),question,sorted({x['url'] for x in d['candidates']}))
  for d in retail['scope_rejections']:
