@@ -1,0 +1,1784 @@
+{
+  "date": "2026-11-08",
+  "method": "Public HTTP with fresh preview-cookie jars; no JavaScript execution",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/products/wiesbaden-ribbd-eenhendel-wastafelkraan-inbouw-compleet-chroom-29-5330",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/collections/wastafelkranen",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/collections/badkamermeubels",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/pages/contact",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/pages/retour-aanmelden",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/policies/refund-policy",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/search?q=hotbath&type=product",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/collections?view=merken",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/pages/sunshower",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/pages/begrippenlijst",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/products/sunshower-round-one-medium-inbouw-white",
+      "status": 200,
+      "expected_status": 200,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    },
+    {
+      "path": "/footer-audit-niet-bestaand-20261108",
+      "status": 404,
+      "expected_status": 404,
+      "theme_id": 196354474250,
+      "footer_count": 1,
+      "footer_class": "bcf-v2 bcf-v3",
+      "links": [
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Bezorgen en afhalen",
+          "href": "/#HomeDelivery"
+        },
+        {
+          "label": "Retour aanmelden",
+          "href": "/pages/retour-aanmelden"
+        },
+        {
+          "label": "Zoeken",
+          "href": "/search"
+        },
+        {
+          "label": "Laagsteprijsgarantie – Offerte uploaden",
+          "href": "/pages/contact?view=offerte-vergelijken"
+        },
+        {
+          "label": "Kranen",
+          "href": "/collections/kranen"
+        },
+        {
+          "label": "Douches",
+          "href": "/collections/douches"
+        },
+        {
+          "label": "Baden",
+          "href": "/collections/baden"
+        },
+        {
+          "label": "Wastafels",
+          "href": "/collections/wastafels"
+        },
+        {
+          "label": "Badkamermeubels",
+          "href": "/collections/badkamermeubels"
+        },
+        {
+          "label": "Spiegels en verlichting",
+          "href": "/collections/spiegels-en-verlichting"
+        },
+        {
+          "label": "Toiletten",
+          "href": "/collections/toiletten"
+        },
+        {
+          "label": "Tegels",
+          "href": "/collections/tegels"
+        },
+        {
+          "label": "Accessoires",
+          "href": "/collections/accessoires"
+        },
+        {
+          "label": "Verwarming en ventilatie",
+          "href": "/collections/verwarming-en-ventilatie"
+        },
+        {
+          "label": "Bekijk alles",
+          "href": "/collections/all"
+        },
+        {
+          "label": "Onze merken",
+          "href": "/collections?view=merken"
+        },
+        {
+          "label": "3D-advies op afspraak",
+          "href": "/#HomeAdvice"
+        },
+        {
+          "label": "Badkamerinspiratie",
+          "href": "/#HomeInspiration"
+        },
+        {
+          "label": "06 85887536",
+          "href": "tel:0685887536"
+        },
+        {
+          "label": "info@badkamercity.nl",
+          "href": "mailto:info@badkamercity.nl"
+        },
+        {
+          "label": "Neem contact op",
+          "href": "/pages/contact"
+        },
+        {
+          "label": "Privacybeleid",
+          "href": "/policies/privacy-policy"
+        },
+        {
+          "label": "Terugbetalingsbeleid",
+          "href": "/policies/refund-policy"
+        },
+        {
+          "label": "Contactgegevens",
+          "href": "/policies/contact-information"
+        },
+        {
+          "label": "Algemene voorwaarden",
+          "href": "/policies/terms-of-service"
+        },
+        {
+          "label": "Wettelijke kennisgeving",
+          "href": "/policies/legal-notice"
+        }
+      ],
+      "phone": true,
+      "email": true,
+      "contact_return_label": true,
+      "public_address": true,
+      "footer_sha256": "76e48cc9e1c3312d8365133e75b9f5a4d37f167f4c8275631bf95f8f57136784"
+    }
+  ]
+}

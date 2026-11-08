@@ -6,19 +6,19 @@
       "id": "BC-AUD-001",
       "priority": "P1",
       "evidence": "VERIFIED_HTML",
-      "status": "OPEN",
+      "status": "OPEN_BLOCKED_SCOPE",
       "finding": "Algemene voorwaarden tonen letterlijke HTML-tags",
       "scope": "/policies/terms-of-service",
-      "next_action": "Correcte HTML-opmaak opslaan en publieke leesbaarheid teruglezen; inhoud alleen gericht aanpassen."
+      "next_action": "shopPolicyUpdate requires write_legal_policies; no policy write applied."
     },
     {
       "id": "BC-AUD-002",
       "priority": "P1",
       "evidence": "VERIFIED_HTML",
-      "status": "OPEN",
+      "status": "OPEN_BLOCKED_SCOPE",
       "finding": "Wettelijke kennisgeving toont letterlijke HTML-tags",
       "scope": "/policies/legal-notice",
-      "next_action": "HTML-opmaak herstellen en publieke leesbaarheid teruglezen."
+      "next_action": "shopPolicyUpdate requires write_legal_policies; no policy write applied."
     },
     {
       "id": "BC-AUD-003",
@@ -51,10 +51,10 @@
       "id": "BC-AUD-006",
       "priority": "P1",
       "evidence": "VERIFIED_THEME_AND_HTML",
-      "status": "PROPOSED_NOT_APPLIED",
+      "status": "PREVIEW_IMPLEMENTED_NOT_PUBLISHED",
       "finding": "Homepage en overige routes gebruiken verschillende footerrenderers",
       "scope": "/ versus alle overige onderzochte routes",
-      "next_action": "Bestaande standaardfooter hergebruiken met één volledige inhoudsset; 17 blokken binnen maximum18, bestaande lege placeholders hergebruiken. Eerst MAIN-paritair UNPUBLISHED concept."
+      "next_action": "Owner reviews UNPUBLISHED196354474250 on laptop/phone and publishes in Shopify when satisfied."
     },
     {
       "id": "BC-AUD-007",
@@ -69,19 +69,21 @@
       "id": "BC-AUD-008",
       "priority": "P2",
       "evidence": "VERIFIED_HTML",
-      "status": "OPEN",
+      "status": "RESOLVED_LIVE",
       "finding": "RapoWash deelt SEO-titel en beschrijving met Reukslot",
       "scope": "/pages/rapowash; /pages/reukslot",
-      "next_action": "Eigen relevante SEO-titel en beschrijving voor RapoWash instellen; body/canonical zijn al RapoWash."
+      "next_action": "Geen herhaalde write; bewijs in docs/repairs/2026-11-08/footer-and-content/",
+      "resolution": "FOOTER-FIX-01: readback in Admin and public HTML,8November2026"
     },
     {
       "id": "BC-AUD-009",
       "priority": "P2",
       "evidence": "VERIFIED_HTML",
-      "status": "OPEN",
+      "status": "RESOLVED_LIVE",
       "finding": "Antikalk heeft twee H1-koppen",
       "scope": "/pages/antikalk",
-      "next_action": "Eén paginatitel behouden; inhoudelijke tussenkop aanpassen en H1 teruglezen."
+      "next_action": "Geen herhaalde write; bewijs in docs/repairs/2026-11-08/footer-and-content/",
+      "resolution": "FOOTER-FIX-01: readback in Admin and public HTML,8November2026"
     },
     {
       "id": "BC-AUD-010",
@@ -110,5 +112,6 @@
       "scope": "main-password-header / product-media",
       "next_action": "Gericht password-error- en 3D-media-pad onderzoeken. Geen drie bewezen klantfouten uit statische analyse afleiden."
     }
-  ]
+  ],
+  "last_followup": "FOOTER-FIX-01; original capture date/evidence retained"
 }

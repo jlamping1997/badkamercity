@@ -22,15 +22,17 @@
           }
         },
         "service_2": {
-          "type": "service",
+          "type": "category",
           "settings": {
-            "label": "Veelgestelde vragen"
+            "label": "Baden",
+            "url": "/collections/baden"
           }
         },
         "service_3": {
           "type": "service",
           "settings": {
-            "label": "Bezorgen & afhalen"
+            "label": "Bezorgen en afhalen",
+            "url": "/#HomeDelivery"
           }
         },
         "service_4": {
@@ -41,9 +43,10 @@
           }
         },
         "service_5": {
-          "type": "service",
+          "type": "category",
           "settings": {
-            "label": "Garantie & service"
+            "label": "Spiegels en verlichting",
+            "url": "/collections/spiegels-en-verlichting"
           }
         },
         "service_6": {
@@ -96,21 +99,24 @@
           }
         },
         "info_1": {
-          "type": "info",
+          "type": "category",
           "settings": {
-            "label": "Over ons"
+            "label": "Accessoires",
+            "url": "/collections/accessoires"
           }
         },
         "info_2": {
           "type": "info",
           "settings": {
-            "label": "Badkamerinspiratie"
+            "label": "Badkamerinspiratie",
+            "url": "/#HomeInspiration"
           }
         },
         "info_3": {
           "type": "info",
           "settings": {
-            "label": "Badkameradvies"
+            "label": "3D-advies op afspraak",
+            "url": "/#HomeAdvice"
           }
         },
         "info_4": {
@@ -121,37 +127,31 @@
           }
         },
         "info_5": {
-          "type": "info",
+          "type": "category",
           "settings": {
-            "label": "Showroom"
-          }
-        },
-        "info_6": {
-          "type": "info",
-          "settings": {
-            "label": "Zakelijk"
+            "label": "Verwarming en ventilatie",
+            "url": "/collections/verwarming-en-ventilatie"
           }
         }
       },
       "block_order": [
         "service_1",
-        "service_2",
         "service_3",
         "service_4",
-        "service_5",
         "service_6",
-        "category_1",
         "category_2",
         "category_3",
-        "category_4",
+        "service_2",
         "category_5",
+        "category_1",
+        "service_5",
+        "category_4",
         "category_6",
         "info_1",
-        "info_2",
-        "info_3",
-        "info_4",
         "info_5",
-        "info_6"
+        "info_4",
+        "info_3",
+        "info_2"
       ],
       "settings": {
         "placeholder_mode": false,
@@ -173,8 +173,8 @@
         "category_heading": "Ons assortiment",
         "all_label": "Bekijk alles",
         "contact_heading": "We helpen je graag",
-        "contact_address": "",
-        "contact_phone": "",
+        "contact_address": "Contact- en retouradres (op afspraak)\nBadkamercity – bij Harry Suiker\nZichtenburglaan 150\n2544 EB Den Haag",
+        "contact_phone": "06 85887536",
         "opening_hours": "",
         "contact_email": "info@badkamercity.nl",
         "contact_button_text": "Neem contact op",
@@ -186,7 +186,7 @@
         "info_heading": "BadkamerCity",
         "contact_subtitle": "Een vraag over je badkamer of bestelling?",
         "showroom_link_label": "Bekijk de showroom",
-        "compact_homepage": true,
+        "compact_homepage": false,
         "quote_link_enabled": false,
         "quote_link_preview": true
       }

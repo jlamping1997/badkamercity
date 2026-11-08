@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-08",
+  "live_content": "APPLIED_VERIFIED_ADMIN_AND_PUBLIC_HTML",
+  "footer": "PREVIEW_VERIFIED_DESKTOP_NOT_PUBLISHED",
+  "theme_parity": {
+    "main_files": 1387,
+    "preview_files": 1387,
+    "equal": 1385,
+    "different": [
+      "sections/footer-group.json",
+      "sections/footer.liquid"
+    ],
+    "missing": [],
+    "extra": [],
+    "main_changed_since_capture": 0
+  },
+  "section_checks": {
+    "footer-group.json": "PASS",
+    "footer.liquid": "PASS",
+    "method": "Shopify Liquid toolkit full-theme validation using bundled fallback resources after upstream docs fetch timed out"
+  },
+  "admin_graphql_validation": "Schema discovered through connector; operations validated by connector. Standalone helper could not find bundled Admin schema and is not claimed PASS.",
+  "policy_update": {
+    "status": "BLOCKED_SCOPE",
+    "required_scope": "write_legal_policies",
+    "applied": false,
+    "attempted_policy": "LEGAL_NOTICE",
+    "terms_update_attempted_after_denial": false
+  },
+  "theme_file_upload": {
+    "initial_batch": "Footer schema succeeded but dependent group failed against old per-type limit6",
+    "recovery": "Read back schema limit10, then separately wrote section group and independently verified both exact contents",
+    "errors_remaining": 0,
+    "main_writes": 0
+  },
+  "native_policy_bodies_changed": false,
+  "new_theme_publication": false,
+  "contact_information_scope": "Added to review-theme footer only; native Contact policy and /pages/contact body were not changed",
+  "shopify_settings_data_writes": 0,
+  "extra_duplicate": "196368531722 — Reservekopie live8nov, unmodified file contents; no features, not review target",
+  "mobile": "NOT_TESTED",
+  "next_action": "Owner reviews desktop/phone in existing Eenduidige footer8nov preview and publishes that theme in Shopify if satisfied."
+}

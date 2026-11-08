@@ -1,6 +1,6 @@
 # Taken — livegang, Google en SEO
 
-**Stand: 8 november 2026 — DOC-LIVE-01.** Deze matrix vervangt de actuele statusclaims van LAUNCH-01/02/03; het [logboek](LOGBOEK.md) en oude bewijsbestanden behouden hun meetmoment. [Diepe audit en bevindingen](../audits/2026-11-08/README.md). Jackson beslist over bedrijfsgegevens, accounts en echte bedrijfsafhandeling; uitvoering levert controleerbare technische wijzigingen/bewijzen.
+**Stand: 8 november 2026 — DOC-LIVE-01, aangevuld met FOOTER-FIX-01.** Deze matrix vervangt de actuele statusclaims van LAUNCH-01/02/03; het [logboek](LOGBOEK.md) en oude bewijsbestanden behouden hun meetmoment. [Diepe audit en bevindingen](../audits/2026-11-08/README.md). Jackson beslist over bedrijfsgegevens, accounts en echte bedrijfsafhandeling; uitvoering levert controleerbare technische wijzigingen/bewijzen.
 
 Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = deel bewezen; IN_PROGRESS_USER = eigenaar werkt eraan; TO_VERIFY = actuele werking of vereiste nog gericht toetsen; LATER = na de basis. P0 = voor betrouwbare verkoop/promotie; P1 = voor het betreffende Google-/SEO-spoor; P2 = verdere groei. Een blokkade voor één product houdt de rest niet automatisch tegen.
 
@@ -18,15 +18,15 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = de
 | BC-LIVE-006 | P1 | Producten klaarzetten voor Google | OPEN | [Batchcontrole](GOOGLE_PRODUCTCONTROLE.md), circa tien uiteenlopende items en Merchant-readback; ACTIVE is geen feedvrijgave | Uitvoering |
 | BC-LIVE-007 | P1 | Verlavio-beelden en Google-geschiktheid controleren | PARTIAL | Rebrand/gericht koopbaarheidsherstel FAB-03/04 behouden; juiste beelden, identifiers en huidige Google-bestemming per batch | Jackson + uitvoering |
 | BC-LIVE-008 | P1 | Productfoto's en foute beeldweergave nalopen | IN_PROGRESS_USER | Echte requests/zichtbaarheid per relevante renderer; Lagoo-fotoverbod behouden | Jackson + uitvoering |
-| BC-LIVE-009 | P1 | Eén standaardfooter winkelbreed gebruiken | OPEN | [Bewezen oorzaak en voorstel](FOOTER_EN_BELEID.md); 17 blocks binnen max. 18, tien hoofdgroepen/contact/policies en responsive bediening; eerst MAIN-paritair UNPUBLISHED | Uitvoering |
+| BC-LIVE-009 | P1 | Eén standaardfooter winkelbreed gebruiken | PARTIAL | FOOTER-FIX-01: [concept geïmplementeerd](FOOTER_EN_BELEID.md) in UNPUBLISHED 196354474250 na 1.387/1.387 pariteit; precies twee footerfiles gewijzigd. 17 blocks (4/10/3), category.limit 6→10, contactgegevens en winkelbrede homeankers; eigenaarreview/publicatie en publieke nacontrole open | Uitvoering + Jackson |
 | BC-LIVE-010 | P0 | Dertig-dagenretourpolicy op website | DONE | Live policy volledig gelezen: 30 dagen aanmelden + 14 terugsturen, €75 incl. btw standaard NL-palletraming, afgeven op afspraak, fout/defect apart; Google gelijkzetten blijft BC-GOOGLE-004 | Jackson + uitvoering |
 | BC-LIVE-011 | P0 | Online herroepingsfunctie en directe klantbevestiging | OPEN | Native POST-formulier alleen is onvoldoende bewijs; toegankelijke functie, definitieve stap en onmiddellijke bewaarbare bevestiging met aankoop/datum/tijd testen | Uitvoering + Jackson |
 | BC-LIVE-012 | P0 | Modelformulier herroeping beschikbaar | DONE | Volledig formulier met lege velden staat leesbaar in live retourpolicy; gebruik niet verplicht. Geen afzonderlijke PDF als extra eis; dit sluit BC-LIVE-011 niet | Uitvoering |
-| BC-LIVE-013 | P0 | HTML-opmaak voorwaarden en kennisgeving herstellen | OPEN | BC-AUD-001/002: letterlijke tags weg, koppen/alinea's/links correct, verse publieke readback | Uitvoering |
+| BC-LIVE-013 | P0 | HTML-opmaak voorwaarden en kennisgeving herstellen | OPEN | BC-AUD-001/002 blijven open: geen policywrite, `shopPolicyUpdate` mist `write_legal_policies`. Via bevoegde policybewerking correcte HTML opslaan en publiek teruglezen | Uitvoering + Jackson |
 | BC-LIVE-014 | P0 | Verzendbeleid en echte tarieven vastleggen | OPEN | BC-AUD-003/010: werkelijke pakket-/pallet-/regioregels, levering en eventuele afhaalafspraak; één locatie zonder rates onderzoeken; €75 retour is geen heenprijs | Jackson + uitvoering |
 | BC-LIVE-015 | P0 | Actuele garantie-informatieplicht toetsen | TO_VERIFY | [ACM/EU-bronnen, opnieuw geraadpleegd 8 november](BRONNEN.md): toepasselijk EU-garantiebericht zichtbaar aanbieden, order-/winkelinformatie toetsen; geen uniforme Nederlandse wettelijke termijn van twee jaar claimen | Jackson + uitvoering |
 | BC-LIVE-016 | P0 | Productveiligheidsinformatie bij online aanbod toetsen | TO_VERIFY | [NVWA/GPSR](BRONNEN.md): gerichte producttype-/batchcontrole op fabrikantcontact, eventuele EU-verantwoordelijke, identificatie en toepasselijke veiligheidsinformatie; ontbrekende productdata opvragen, geen catalogusbrede overtredingsclaim | Jackson + uitvoering |
-| BC-LIVE-017 | P2 | Gerichte content-/navigatieafwijkingen herstellen | OPEN | BC-AUD-008/009: eigen RapoWash-metadata en één H1 op Antikalk; retour-FAQ gelijk aan policy; geen vier kapotte klantreizen uit vier verschillende 404-probes afleiden | Uitvoering |
+| BC-LIVE-017 | P2 | Gerichte content-/navigatieafwijkingen herstellen | PARTIAL | BC-AUD-008/009 en CONTENT-F03/F04 DONE: eigen RapoWash-metadata met compare-and-set en body-H1→H2 op Antikalk live toegepast; publieke HTML-readback PASS. Reukslot, identiteiten, statussen en overige bodies behouden. Retour-FAQ/policy-afstemming blijft apart te controleren | Uitvoering |
 
 ## Google en meten
 
@@ -62,6 +62,6 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = de
 
 ## Volgende handeling en andere werkstromen
 
-Binnen dit consistentiedossier: één volledige standaardfooter voorbereiden in een bewezen MAIN-paritair ongepubliceerd concept en daarna de benoemde route-/mobielregressie uitvoeren. Btw-identiteit en policycorrecties blijven afzonderlijke taken.
+Binnen dit consistentiedossier: eigenaar bekijkt het bestaande concept **BadkamerCity - Eenduidige footer 8 nov (196354474250)** en publiceert na review via de afgesproken releaseprocedure; daarna publieke footer-/routecontrole. De actuele testgrenzen staan in [het reparatiedossier](../repairs/2026-11-08/footer-and-content/README.md). Antikalk/RapoWash zijn al live gecorrigeerd. Btw-identiteit, policyopmaak en overige koop-/meetchecks blijven afzonderlijke taken.
 
 Het eigen filterdossier is leidend: **FILTER-SIMPLE-02v2 APPLIED_VERIFIED / PUBLIC_API_VERIFIED / DESKTOP_UI_VERIFIED** volgens de parallelle overdracht van 8 november; installer niet herhalen. **FILTER-ACERO-01 APPLIED_VERIFIED / PUBLIC_API_VERIFIED** is volgens de latere parallelle overdracht live gecontroleerd; niet opnieuw installeren. Praktijkreview en het Cottoceramix-merkprofiel blijven apart vervolgwerk. Deze audit heeft geen nieuwe filtertest uitgevoerd en wijzigt die volgorde niet.

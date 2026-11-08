@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Latere correctie8 november:** [FOOTER-FIX-01](repairs/2026-11-08/footer-and-content/README.md): Antikalk/RapoWash live opgelost; gedeelde footer klaar als getoetst desktopconcept, nog niet gepubliceerd.
+
 **Bijgewerkt: 8 november 2026 · DOC-LIVE-01.** Begin bij [de actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md) en [de live- en eenheidscontrole](audits/2026-11-08/README.md). Oudere themarollen, aantallen en conceptinstructies in het boek van 31 oktober zijn geen actuele deployopdracht.
 
 | Vraag | Actuele bron |
