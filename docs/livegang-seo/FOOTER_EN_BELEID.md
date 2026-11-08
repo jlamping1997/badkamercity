@@ -1,6 +1,16 @@
 # Eén footer en één beleidsbron
 
-**Stand: 8 november 2026 — DOC-LIVE-01. Status: PROPOSED_NOT_APPLIED.** Het verschil is opnieuw in live configuratie en HTML aangetoond. Deze documentatie voert geen footer-, policy- of themapublicatie uit. [Volledig bewijs en routeoverzicht](../audits/2026-11-08/README.md).
+**Stand: 8 november 2026 — FOOTER-FIX-01. Status: PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** De gedeelde footer staat in **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov**. MAIN **196328685834** is ongewijzigd. [Reparatie en actuele bewijsgrenzen](../repairs/2026-11-08/footer-and-content/README.md); [oorspronkelijke audit en routeoverzicht](../audits/2026-11-08/README.md).
+
+Eerst zijn zes actuele SEO-/headerbestanden uit MAIN overgenomen en is **1.387/1.387 pariteit** bevestigd. Daarna zijn precies `sections/footer.liquid` en `sections/footer-group.json` aangepast; **1.385 overige bestanden blijven gelijk**. `compact_homepage=false` kiest de standaardfooter winkelbreed. De inhoud telt **17 blocks: 4 service, 10 categorie, 3 informatie**; de afzonderlijke schemawaarde **category.limit is van 6 naar 10** verhoogd. Schema eerst uploaden, section group daarna.
+
+De conceptfooter bevat de bevestigde tijdelijke telefoon **06 85887536**, e-mail en het gelabelde contact-/retouradres **Zichtenburglaan 150, 2544 EB Den Haag, bij Harry Suiker**. Bezorgen, advies en inspiratie linken winkelbreed naar `/#HomeDelivery`, `/#HomeAdvice` en `/#HomeInspiration`. Bestaande retour-/offerteguards, CSS, JavaScript en policy-/betaalbronnen zijn behouden. Dit is nog geen live footerpublicatie.
+
+Twee afzonderlijke contentproblemen zijn **wel live hersteld en publiek teruggelezen**: Antikalk heeft één H1 na omzetting van de body-H1 naar H2; RapoWash heeft eigen SEO-titel en beschrijving na compare-and-set-correctie van `global.title_tag` en `global.description_tag`. Reukslot, identiteiten, statussen en overige bodyinhoud zijn behouden.
+
+De native voorwaarden/kennisgeving zijn **niet gewijzigd**: de connector mist voor `shopPolicyUpdate` de scope `write_legal_policies`. Die opmaakcorrectie en het ontbrekende verzendbeleid blijven afzonderlijke open taken.
+
+## Historische voorbereiding DOC-LIVE-01 — vóór implementatie in concept
 
 ## Bewezen oorzaak
 
@@ -46,7 +56,7 @@ Er bestaan 18 blocks bij een maximum van 18. Acht URL-loze placeholders zijn doo
 3. Maak de gekozen linkset compleet, vul contactgegevens in en zet `compact_homepage=false`. Native policies inhoudelijk/opmaakmatig apart corrigeren.
 4. Controleer homepage, collectie, gewone PDP, tegel, Sunshower, cart, zoekresultaat, Contact, Retour, policy en 404: precies één footer, dezelfde tien hoofdgroepen en geldige bestemmingen.
 5. Controleer desktop en 390 px mobiel; grens 749↔750 px, touch, toetsenbord/focus, reduced motion en section load/unload. Geen verloren categorieën, dubbele policies, URL-loze placeholders of ongeldige lokale ankers.
-6. Eigenaarreview/publicatie via de afgesproken releaseprocedure; daarna verse publieke route-/HTML-/bedieningscontrole. Dit voorstel is nog niet toegepast.
+6. Eigenaarreview/publicatie via de afgesproken releaseprocedure; daarna verse publieke route-/HTML-/bedieningscontrole. De voorbereiding hierboven is later in het concept geïmplementeerd; de live footer is nog niet gepubliceerd.
 
 ## Huidige policybron en open correcties
 

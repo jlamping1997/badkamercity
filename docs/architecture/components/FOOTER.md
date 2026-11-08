@@ -1,4 +1,17 @@
-# Footer: huidige renderers, inhoud en voorstel voor eenheid
+# Footer: livebron en eenduidig concept
+
+
+**Actuele reparatie — 8 november 2026 · FOOTER-FIX-01 · PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** Het bestaande **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov** bevat de gedeelde standaardfooter. MAIN **196328685834** is ongewijzigd. [Reparatie, bronbewijs en testgrenzen](../../repairs/2026-11-08/footer-and-content/README.md).
+
+Eerst zijn zes actuele SEO-/headerbestanden uit verse MAIN exact overgenomen; daarna was het concept **1.387/1.387 bestanden paritair**. De footerwijziging raakt vervolgens precies twee bestanden: `sections/footer.liquid` en `sections/footer-group.json`; **1.385 overige bestanden blijven gelijk**.
+
+In het concept staat `compact_homepage=false`, met **17 blocks: 4 service, 10 categorie en 3 info**. Naast het totale maximum van 18 bleek de oorspronkelijke `category.limit=6` een afzonderlijke schemabeperking; die is gericht naar **10** gezet. Eerst het schema uploaden, daarna de section group: de nieuwe group is vóór die schemawijziging niet geldig. De bestaande CSS, JavaScript, retour-/offerteguards en echte policy-/betaalbron zijn behouden.
+
+De conceptfooter gebruikt winkelbrede homeverwijzingen `/#HomeDelivery`, `/#HomeAdvice` en `/#HomeInspiration`. Tijdelijke telefoon **06 85887536**, e-mail en het duidelijk gelabelde contact-/retouradres **Zichtenburglaan 150, 2544 EB Den Haag, bij Harry Suiker** zijn via de bestaande instellingen ingevuld. Dit is geen claim over de geregistreerde juridische vestiging. De live footer blijft tot publicatie de hieronder beschreven oorspronkelijke configuratie gebruiken.
+
+De afzonderlijke live inhoudscorrecties zijn wel uitgevoerd: **Antikalk heeft publiek één H1** na omzetting van de body-H1 naar H2; **RapoWash heeft eigen `global.title_tag` en `global.description_tag`** na compare-and-set-correctie. De publieke HTML-readback slaagt. Reukslot, pagina-identiteiten, publicatiestatussen en overige bodyinhoud zijn behouden. Native policies zijn niet gewijzigd: `shopPolicyUpdate` mist de vereiste `write_legal_policies`-scope. Footerpublicatie en de resterende policy-/runtimechecks blijven apart.
+
+## Historische live-audit — DOC-LIVE-01, vóór de conceptreparatie
 
 **Bronmoment: 8 november 2026 · VERIFIED_THEME / VERIFIED_HTML.** MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov**, gelezen met `updatedAt=2026-11-08T11:49:21Z`. [Centraal auditrapport](../../audits/2026-11-08/README.md), [bron-/configuratieregister](../../audits/2026-11-08/safe-footer-register.json) en [14 routeprobes](../../audits/2026-11-08/footer-route-matrix.json). Deze actualisering veranderde geen themacode, instellingen of publicatie. Nieuwe mobiele-/runtimecontrole is niet uitgevoerd.
 
@@ -24,7 +37,7 @@ De linktotalen zijn **25 op home** en **19 op de standaardfooter**, inclusief lo
 
 ## Vier verse bronbestanden passen exact bij Git
 
-Deze vier kernbestanden zijn bytegelijk aan `shopify/current/` op de actieve codebranch. Dat is gerichte footerpariteit, **geen** volledige themepariteit: globaal blijven 15 afwijkende en 9 alleen live aanwezige bestanden over.
+Op het oorspronkelijke auditmoment waren deze vier kernbestanden bytegelijk aan `shopify/current/` op broncommit `1b5108a2`. De twee latere footerwijzigingen hierboven horen bij het ongepubliceerde concept. Dat is gerichte footerpariteit, **geen** volledige themepariteit: globaal blijven 15 afwijkende en 9 alleen live aanwezige bestanden over.
 
 | Themebestand | Live MD5 | Git blob SHA |
 | --- | --- | --- |
@@ -47,7 +60,7 @@ Placeholdermodus en betaalvoorbeelden staan uit; `payment_enable` en `show_polic
 
 De vijf bestaande policies zijn privacy, terugbetaling, contactgegevens, voorwaarden en wettelijke kennisgeving. **`/policies/shipping-policy` geeft 404**; geen werkende verzendbeleidslink suggereren. Voorwaarden en wettelijke kennisgeving tonen in de verse response ge-escapete HTML: policybestaan is geen bewijs van bruikbare opmaak.
 
-## Canoniek footercontract — PROPOSED, niet geïmplementeerd
+## Historisch voorgesteld footercontract — inmiddels in concept geïmplementeerd
 
 Hergebruik de bestaande **standaard `.bcf-v3`** voor alle gewone storefront-paginatypen. In een brongecontroleerd **UNPUBLISHED** concept kan `compact_homepage=false` beide routes naar deze renderer leiden. Bouw geen derde footer. Werk tegelijk de inhoud bij, zodat de vier ontbrekende hoofdcategorieën en advies/inspiratie niet verdwijnen.
 
@@ -81,6 +94,6 @@ De semantische voetervingerafdrukken van de gerichte set zijn home `190dbaf8025c
 
 - **28 oktober — FOOTER-F01:** tien URL-loze labels werden als tekst getoond; historische meting en desktopwaarneming blijven in het [toenmalige bewijs](../evidence/2026-10-28-complete/README.md).
 - **31 oktober — FIX-01:** lege bestemmingen buiten editor verbergen en bestaande merkengids koppelen; [gedateerd dossier](../../repairs/2026-10-31/README.md). Die configuratiegrens is op 8 november opnieuw inhoudelijk gelezen, nu met acht lege slots.
-- **8 november — FOOTER-F02:** twee werkelijke renderers en verschillende linkdekking bewezen; harmonisatie **OPEN / PROPOSED**.
+- **8 november — FOOTER-F02:** twee werkelijke live renderers en verschillende linkdekking bewezen; de latere harmonisatie staat als **FOOTER-FIX-01 / PREVIEW_IMPLEMENTED_NOT_PUBLISHED** bovenaan. De oorspronkelijke live-audit blijft gedateerd bewijs.
 
 [Footerlifecycle](micro/FOOTER_LIFECYCLE.md) · [historische instellingenreferentie](../reference/sections/footer.md) · [eenheidskaart](../CONSISTENCY.md) · [bevindingen](../FINDINGS.md).
