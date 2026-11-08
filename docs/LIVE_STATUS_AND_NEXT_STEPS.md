@@ -161,7 +161,29 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-30 — specificaties, bronverschillen en winkelcontrole · 8 november 2026
+
+**1.999 specificatievelden toegevoegd uit letterlijke oorspronkelijke leveranciersrijen van exact hetzelfde BRAUER-artikelnummer en EAN**: 1.502 keer ‘Hoofddouche inbegrepen: Ja’ en 497 deurmechanismen. Geen fysieke maten uit modelcodes, ontbrekende iconen of variantovererving. **55 montageverschillen onderbouwd afgehandeld**, alle 150 eerdere verschilrecords met kandidaten en historie behouden; 95 veldverschillen bij 76 artikelen blijven open.
+
+Definitieve stand **13.161 artikelen / 180.197 specificatievelden / 44.868 cumulatieve aanvullingen / 425 vragen bij 406 artikelen**. 38.569 retailaanvullingen en 6.299 leveranciersaanvullingen. **6.622 artikelen missen nog minstens één gekozen kerngegeven**; dit aantal blijft gelijk doordat dezelfde artikelen andere maten of aansluitgegevens missen. 288 verdachte slangwaarden, oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen behouden. Alle eerdere technische waarden/bewijzen, prijzen inclusief 21% btw, SKU/EAN, titels, goedgekeurde keuzes en eigen invoer behouden.
+
+De **13.728 korte pluspunten bij 7.993 artikelen blijven byte-identiek aan BRAUER-29**, maximaal drie per product; ook het eerdere Pluspunten-blad met native stijlen/tabellen/instellingen behouden. Geen extra complete-setclaims door de nieuwe hoofddouchevelden. De 143 bestaande complete-setteksten en letterlijk bewezen meubelmaterialen blijven gelijk.
+
+**Alle 13.161 artikelen winkelbreed vergeleken op SKU, EAN en voorgestelde handle, zonder merkfilter: nul bestaande identifier- of handlematches.** 264 complete querybatches/pagina’s; positieve, negatieve en zoekstaartcontroles PASS. Momentopname 8 november 2026, 21:45–21:51 UTC; volledige private werklijst, antwoorden, controles en resultaten met hashes aan het offline plan gekoppeld. Geen Shopify-ID’s toegewezen. Deze controle onmiddellijk vóór een ooit toegestane import verversen; geen importvrijgave.
+
+De 4.748 oude pendingrecords waren al volledig verwerkt. De actuele retailmaster bevat ook twee nieuwere gerichte controles; oude pendingrecords mogen deze niet overschrijven. Die controles leveren nul nieuwe externe artikelfeiten door ontbrekende EAN respectievelijk tegenstrijdige setinformatie. Een gemelde toegangsbeperking beëindigde verdere openbare ontdekking; nul onbevestigde browser-URL’s of aantallen als bewijs geaccepteerd. `retail_extract.py` niet op een lege/niet meegeleverde researchmap uitvoeren.
+
+**93 tests PASS**, herhaalcontrole van 17 voorbereide bestanden PASS, preflight terecht **exit 2**. Native XLSXcontrole: alle 13.161 artikelregels, 44.868 cumulatieve aanvullingen en 425 vragen exact. Zes tabbladen; 433.956 cellen van de opnieuw opgebouwde vijf kernbladen behouden bij toevoegen van Pluspunten. De vijf kernbladen zijn nu bijgewerkt; alleen het eerdere Pluspunten-blad is ongewijzigd tegenover de vorige ronde. Alle pluspuntregels/EAN’s/teksten exact, EAN’s als tekst, nul foutcellen. Twaalf actuele previews bekeken. Alle **13.161 offline importregels / 39.483 voorbereide veldwaarden** exact gecontroleerd en geblokkeerd.
+
+**Bestaande privébestanden bevestigd vervangen: importpakket versie 14, specificatie-XLSX versie 11.** ZIP behoudt alle 291 eerdere items en bevat nu 347; manifest, CRC en embedded XLSX exact. Lees eerst privé `prepared/HANDOFF_BRAUER30.json`; [overdracht](brauer/2026-11-08/HANDOFF_BRAUER30.md), [broncontrole](brauer/2026-11-08/SOURCE_REVIEW_BRAUER30.md) en [aggregate controlecijfers](brauer/2026-11-08/SOURCE_REVIEW_BRAUER30.json). Generieke codecheckpoint `deb8b1d638a614dfbc4710dc8d91c8b6638d6593` op `fix/product-cards-2026-10-14`; zeven codebestanden exact teruggelezen. Main alleen documentatie. Grote XLSX-herbouw via primaire Node-runtime met `--max-old-space-size=6144`.
+
+**Alle imports, ook DRAFT, blijven geblokkeerd.** Nul Shopify-product-, media-, thema-, definitie- of publicatiewrites. Volledige officiële afbeeldingen/PDF’s, offline inventarisatie, resterende gegevensbeoordeling, renderer-integratie en beoordeelde product-/keuzeproef ontbreken nog. Geen fysieke Excel-app-, Windows-Git- of liveproducttest en geen volledige technische vrijgave/importgereedheid. Geen actieve BRAUER-bronlezer, browseropdracht of schrijver na overdracht. **Volgende handeling:** bij ontvangst van het volledige officiële mediapakket exact per artikel inventariseren en resterende betwiste gegevens met de fabrikant bevestigen vóór een beoordeelde proef.
+
+---
+
 ## BRAUER-29 — korte, selectieve productpluspunten · 8 november 2026
+
+> Historisch checkpoint; de actuele gegevens en winkelvergelijking staan bij BRAUER-30 hierboven.
 
 Eigenaar wil eenvoudige menselijke teksten, één punt voor de inhoud van een set en materiaalvoordelen bij meubels. De korte lijst bevat nu **maximaal drie verschillende koopredenen per artikel**, zonder opvulling. Voorbeelden: **Complete doucheset**, **Thermostaatkraan**, **Massief eiken**, **Gelakt MDF**, **Softclose lades**. Dimmen en kleurkeuze waar mogelijk één punt. Losse LED-vermelding, glasdikte en MFC blijven gewone specificaties; bij losse inbouwthermostaten geen herhaling van de productsoort als voordeel.
 

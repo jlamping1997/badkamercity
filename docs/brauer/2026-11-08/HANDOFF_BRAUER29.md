@@ -1,3 +1,5 @@
+> Historisch checkpoint. Actuele stand: [BRAUER-30](HANDOFF_BRAUER30.md); lees privé `prepared/HANDOFF_BRAUER30.json`.
+
 # BRAUER-29 — overdracht, 8 november 2026
 
 De pluspunten zijn opnieuw geselecteerd en korter geformuleerd op verzoek van de eigenaar. **Maximaal drie echte koopredenen per product**, zonder opvultekst. Douchesetinhoud wordt één punt; meubels noemen bewezen materiaal en praktische functies. Lees [de regels en voorbeelden](CURATIE_BRAUER29.md) en privé `prepared/HANDOFF_BRAUER29.json`.
