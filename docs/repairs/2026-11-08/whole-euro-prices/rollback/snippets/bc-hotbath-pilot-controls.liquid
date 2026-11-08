@@ -1,0 +1,32 @@
+{% doc %}
+  Pilot introduction and price. Quantity and buy buttons are the native section blocks.
+  @param {product} product - Pilot product.
+  @param {string} section_id - Product section ID.
+{% enddoc %}
+{%- if product.metafields.bc_pilot.is_pilot.value == true -%}
+  {%- assign presentation = product.metafields.bc_pilot.presentation.value -%}
+  <div class="bc-pilot-controls" data-bc-pilot-live="true">
+    <p class="bc-pilot-controls__intro">{{ presentation.intro | escape }}</p>
+    <div class="bc-buybox__price-wrap" id="price-{{ section_id }}" role="status">
+      <strong class="bc-buybox__price-current">{{ product.selected_or_first_available_variant.price | money }}</strong>
+      <p class="bc-pilot-controls__caption">Inclusief btw</p>
+    </div>
+    <p class="bc-pilot-controls__note">Levertijd op aanvraag</p>
+  </div>
+  {% style %}
+    #MainProduct-{{ section_id }} .bc-pilot-controls { color: var(--bc-pdp-ink); }
+    #MainProduct-{{ section_id }} .bc-pilot-controls__intro { margin: 0 0 2rem; font-size: 1.6rem; line-height: 1.65; }
+    #MainProduct-{{ section_id }} .bc-pilot-controls__caption { margin: .4rem 0 1.6rem; font-size: 1.3rem; }
+    #MainProduct-{{ section_id }} .bc-pilot-controls__note { margin: 0 0 1.6rem; font-size: 1.3rem; line-height: 1.6; color: var(--bc-pdp-muted); }
+    #MainProduct-{{ section_id }} .bc-pilot-components { list-style: none; margin: 0; padding: 0; }
+    #MainProduct-{{ section_id }} .bc-pilot-components__row { display: grid; grid-template-columns: 3rem minmax(0,1fr) auto; gap: 1.2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--bc-pdp-line); font-size: 1.4rem; line-height: 1.5; }
+    #MainProduct-{{ section_id }} .bc-pilot-components__quantity { font-weight: 600; }
+    #MainProduct-{{ section_id }} .bc-pilot-components__code { margin-top: .4rem; overflow-wrap: anywhere; }
+    #MainProduct-{{ section_id }} .bc-pilot-components__code a { color: inherit; text-underline-offset: .3rem; }
+    #MainProduct-{{ section_id }} .bc-pilot-components__included { font-size: 1.2rem; color: var(--bc-pdp-green); }
+    @media (max-width: 749px) {
+      #MainProduct-{{ section_id }} .bc-pilot-components__row { grid-template-columns: 2.8rem minmax(0,1fr); }
+      #MainProduct-{{ section_id }} .bc-pilot-components__included { grid-column: 2; }
+    }
+  {% endstyle %}
+{%- endif -%}

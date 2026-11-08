@@ -1,0 +1,21 @@
+{% doc %}
+  Product intro and price only. The section keeps its native quantity and cart blocks.
+  @param {product} product - Current product.
+  @param {string} section_id - Current section ID.
+{% enddoc %}
+<div class="bc-data-controls">
+  {%- if product.metafields.custom.korte_omschrijving.value != blank -%}
+    <p class="bc-data-controls__intro">{{ product.metafields.custom.korte_omschrijving.value | escape }}</p>
+  {%- endif -%}
+  <div id="price-{{ section_id }}" class="bc-buybox__price-wrap" role="status">
+    <strong class="bc-buybox__price-current">{{ product.selected_or_first_available_variant.price | money }}</strong>
+    <p class="bc-data-controls__caption">Inclusief btw</p>
+  </div>
+  <p class="bc-data-controls__note">{{ 'bc_delivery.lead_time_on_request' | t }}</p>
+</div>
+{% style %}
+  #MainProduct-{{ section_id }} .bc-data-controls { color: var(--bc-pdp-ink); }
+  #MainProduct-{{ section_id }} .bc-data-controls__intro { margin: 0 0 2rem; font-size: 1.6rem; line-height: 1.65; }
+  #MainProduct-{{ section_id }} .bc-data-controls__caption { margin: .4rem 0 1.6rem; font-size: 1.3rem; }
+  #MainProduct-{{ section_id }} .bc-data-controls__note { margin: 0 0 1.6rem; font-size: 1.3rem; line-height: 1.6; color: var(--bc-pdp-muted); }
+{% endstyle %}

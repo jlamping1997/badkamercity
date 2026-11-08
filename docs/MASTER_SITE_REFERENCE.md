@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Actuele publicatie 8 november — PRICE-ROUND-01 / MOBILE-CARDS-01:** MAIN196354474250 bevat de eigenaar-gepubliceerde mobiele productlijst; die publicatie hoeft niet opnieuw. 3.335 verkoopprijzen zijn al live afgerond. Het aparte prijs-/pictogramconcept196368531722 is UNPUBLISHED en heet **Hele europrijzen8nov**. Oudere Klantenservice-rollen hieronder zijn gedateerde historie. [Prijsafspraak](PRICING_POLICY.md) · [Verse bron-/prijs-/previewcontrole](repairs/2026-11-08/whole-euro-prices/README.md).
+
 > **Nieuwste vervolg — CATEGORY-COPY-01:** negen inhoudslinks naar publiek bevestigde lege lijsten uit acht categoriepagina’s hersteld, direct live. Volledige226-omschrijvingsread; SEO/identiteit/overige inhoud en drie meubelstijlblokken behouden. Tegeltoebehoren blijft de bestaande lege/ongepubliceerde collectie zonder menuverwijzing. [Bewijs en vervolg](repairs/2026-11-08/category-content-links/README.md).
 
 > **Nieuwste vervolg — SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** effectieve NL-verzending via Markets, beide oorsprongen aanwezig; acht aanvullende cartquotes PASS. Legacy-profielsignaal is verklaard, geen tarief-/voorraadwrite. Oude blogroute geeft nu301→200. [Nieuw dossier](repairs/2026-11-08/shipping-and-blog/README.md). Native policies en complete order-/mail-/meetketen blijven open.
@@ -21,9 +23,10 @@
 | Waarom verschilt de footer? | [Footercontract](architecture/components/FOOTER.md) en [eenheidsplan](livegang-seo/FOOTER_EN_BELEID.md) |
 | Welke winkel- en Googlezaken ontbreken? | [Livegangdossier](livegang-seo/README.md) en [taken](livegang-seo/TAKEN.md) |
 | Welke code is de bron? | Bestaande branch `fix/product-cards-2026-10-14`, map `shopify/current`; [verse bronvergelijking](audits/2026-11-08/source-parity.json) |
+| Welke prijsafspraak geldt? | [Verkoopprijs, opmaak en tegeluitzondering](PRICING_POLICY.md) |
 | Hoe neem ik het over? | [Start hier](HANDOVER_START_HERE.md), [functionele overdracht](AI_HANDOFF_CURRENT.md), [AGENTS](../AGENTS.md) |
 
-Actuele MAIN in CONTENT-ENCODING-02: **196368531722 — Klantenservice 8 nov**, door de eigenaar gepubliceerd. Zes bekende featurefiles komen exact overeen met de preview en Git; veertien publieke routes tonen de uniforme footer. De volledige manifestcontrole van 1.387 bestanden per thema hoort bij de voorafgaande DELIVERY-INFO-01-ronde en is nu niet opnieuw uitgevoerd. Verse Page-inventaris: **122 totaal/120 gepubliceerd**. De tellingen van collecties/menu’s en de bronvergelijking 1.363 gelijk/15 afwijkend/9 alleen live blijven bij de eerdere brede audit. Geen blinde themadeploy vanuit Git.
+Actuele MAIN bij PRICE-ROUND-01: **196354474250 — Mobiele productlijst8nov**; vijf mobiele bronhashes bevestigd. Prijsconcept **196368531722 — Hele europrijzen8nov** blijft UNPUBLISHED. Volledige nieuwe manifestcontrole: MAIN1.388 ongewijzigd, concept1.390/exact24bedoelde verschillen. De eerdere Page-inventaris122/120, collecties/menu’s en brede Git/live-nulmeting behouden hun eigen meetmoment. Geen blinde themadeploy vanuit Git.
 
 Homepage-SEO, retourpolicy, gedeelde footer, Contact, bezorgpagina, retourcopy, Antikalk-H1 en RapoWash-correcties zijn live. Dertien overige uitlegpagina’s hebben nu juiste accenttekens/geen voorloop-BOM, met SEO, links en structuur behouden. Open blijven native policyopmaak/verzend-/contactbeleid, btw-identiteit, product-/locatiedekking van tarieven en de echte koop-, mail-, meet- en mobiele klantreis. CONTINUE blijft de eigenaarafspraak en bewijst geen fysieke voorraad. Filter-/Cotto-/BRAUER-werkstromen volgen hun eigen nieuwste checkpoint; oude installatieblokken niet herhalen.
 

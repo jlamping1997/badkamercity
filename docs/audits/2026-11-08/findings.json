@@ -109,11 +109,13 @@
     {
       "id": "BC-AUD-012",
       "priority": "P2",
-      "evidence": "STATIC_CANDIDATE",
-      "status": "NOT_RUNTIME_REPRODUCED",
+      "evidence": "VERIFIED_LITERAL_ASSET_DEPENDENCIES;THEME_CHECK_PASS",
+      "status": "FIXED_UNPUBLISHED",
       "finding": "Drie letterlijke inline_asset_content-verwijzingen missen overeenkomstige assetnaam",
       "scope": "main-password-header / product-media",
-      "next_action": "Gericht password-error- en 3D-media-pad onderzoeken. Geen drie bewezen klantfouten uit statische analyse afleiden."
+      "next_action": "Owner reviews/publishes Hele europrijzen8nov; then confirm these source files on MAIN. Real password-error/3D product paths remain NOT_TESTED.",
+      "resolution": "Three missing .svg filename suffixes corrected in UNPUBLISHED196368531722. All literal inline_asset_content dependencies resolve; no live password-error/3D runtime reproduction claimed.",
+      "follow_up": "docs/repairs/2026-11-08/whole-euro-prices/README.md"
     },
     {
       "id": "BC-AUD-013",

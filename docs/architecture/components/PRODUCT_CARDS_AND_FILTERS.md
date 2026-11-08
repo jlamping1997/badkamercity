@@ -1,10 +1,12 @@
 # Productkaarten, zoeken en filters
 
-> **8 november2026 — MOBILE-CARDS-01, UNPUBLISHED196354474250:** gedeelde mobiele lijst-CSS in bc-mobile-product-list.css, alleen collectie-/zoekroutes en max749px. Native/externe kaarten gebruiken dezelfde bestaande kenmerkenbron; bc-card-specs heeft een extra JSON-datamodus voor bc-card-data. Echte native componentbreedtes320/390/430 en desktopbediening gecontroleerd; volledige mobiele filterflow/telefoon nog open. MAIN niet geschreven/gepubliceerd. [Actueel bewijs en herstel](../../repairs/2026-11-08/mobile-product-list/README.md). Oudere bronregels/checkpoints hieronder blijven historie.
+> **8 november 2026 — PRICE-ROUND-01:** het prijsconcept gebruikt bc-money.liquid/bc-money.js voor werkelijk hele EUR-bedragen vanaf €100. Fractionele bedragen en m²/doosberekeningen blijven exact; Shopify-kaartverrijking blijft de prijs-/koopidentiteit bewaken. Externe kaart, kleurwissel en wishlist in echte desktoppreview gecontroleerd. De request-time-out hieronder is op de huidige bron gecorrigeerd naar zes seconden. [Prijscontract](../../PRICING_POLICY.md) · [Bewijs en grenzen](../../repairs/2026-11-08/whole-euro-prices/README.md).
+
+> **8 november2026 — MOBILE-CARDS-01, OWNER_PUBLISHED / MAIN196354474250:** gedeelde mobiele lijst-CSS in bc-mobile-product-list.css, alleen collectie-/zoekroutes en max749px. Native/externe kaarten gebruiken dezelfde bestaande kenmerkenbron; bc-card-specs heeft een extra JSON-datamodus voor bc-card-data. Echte native componentbreedtes320/390/430 en desktopbediening gecontroleerd; volledige mobiele filterflow/telefoon nog open. Eigenaarspublicatie opnieuw bevestigd; geen publicatie door uitvoerder. [Actueel bewijs en herstel](../../repairs/2026-11-08/mobile-product-list/README.md). Oudere bronregels/checkpoints hieronder blijven historie.
 
 > **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Gedeelde tegelhelper maakt doosinhoud en m²prijs expliciet op native/custom/externe cards en voorkomt dubbele nativeunitregel. Nieuwe Sunshowerkaart synchroniseert wishlist direct. Alleen geverifieerde positieve doosoppervlakte krijgt tegelcaption. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
 
-**Klantdoel:** producten vinden, herkennen, vergelijken en de juiste uitvoering openen of toevoegen. **Eigenaarrol:** storefront voor kaart/gedrag; catalogus/indexbeheer voor data en dekking. Status VERIFIED_THEME + twee native lijst-HTML-responses; externe API, computed styles en interacties NOT_TESTED.
+**Klantdoel:** producten vinden, herkennen, vergelijken en de juiste uitvoering openen of toevoegen. **Eigenaarrol:** storefront voor kaart/gedrag; catalogus/indexbeheer voor data en dekking. Status van de eerdere nulmeting: VERIFIED_THEME + twee native lijst-HTML-responses; externe API, computed styles en interacties NOT_TESTED.
 
 **Aanvulling DOC-02C:** vier publieke API-reads en verse lijst-HTML zijn gecontroleerd; Wastafelkranen 573 en Inloopdouches 305 sluiten op de HTML-context aan. De beperkte eerdere desktopkaartwaarneming blijft apart. Zie [filterketen](FILTER_ENGINE.md); geen volledige index-/prijs-/browserfallback-/mobielvrijgave.
 
@@ -51,7 +53,7 @@ De oorspronkelijke native nodes en inline displaywaarden worden bewaard. De exte
 | --- | --- | --- |
 | Eerste laadpoging | runSearch; native inhoud bestaat al | Native inhoud blijft bruikbaar tot een geldig resultaat |
 | Nieuwe filter/zoekterm | Request-ID omhoog, vorige AbortController stoppen | Verouderde response mag de laatste keuze niet overschrijven |
-| Traag / timeout | 12 seconden per request | Geen oneindige spinner; native terugval zichtbaar |
+| Traag / timeout | 6 seconden per request in de op8november gecontroleerde bron | Geen oneindige spinner; native terugval zichtbaar |
 | Geldig antwoord | Render filters/cards/count/pagination; active class aan | Dezelfde q/filters/sort/page in UI en URL |
 | Netwerk/schema/tellingfout | setExternalMode(false), foutmelding, oorspronkelijke native nodes herstellen | Native URL-staat en eigen paginering blijven begrijpelijk |
 | Drawer | Breakpoint max-width:989px | Focus, scrolllock, Escape, sluiting en triggerherstel moeten kloppen |
