@@ -1,3 +1,5 @@
+> **Actuele contentlinks — CATEGORY-COPY-01:** negen verwijzingen naar lege productlijsten uit acht collectieomschrijvingen verwijderd.226gepubliceerdeomschrijvingen compleet vergeleken, negen menu’s ongewijzigd; geen categorisatie-/product-/themawrite. [Bewijs](../repairs/2026-11-08/category-content-links/README.md).
+
 > **Actuele verzendbron — 8 november:** marketDrivenShipping=true: lees Market.delivery.shipping vóór conclusies uit het oude DeliveryProfile. Beide NL-oorsprongen aanwezig; acht nieuwe quotes PASS, cart leeg. Blog-news-404 via één redirect opgelost. [Bewijs](../repairs/2026-11-08/shipping-and-blog/README.md). Geen theme- of tariefwijziging.
 
 > **Nieuwste stand — CONTENT-ENCODING-02:** MAIN 196368531722 is door eigenaar gepubliceerd; zes featurefiles exact, gedeelde footer op veertien publieke routes. Dertien Page-bodies gericht op tekencodering opgeschoond; 122 Pages/120 gepubliceerd vers gelezen. [Actueel dossier](../repairs/2026-11-08/glossary-encoding/README.md). Geen theme- of productwrite. Oudere conceptrollen/bronmetingen hieronder behouden hun datum.

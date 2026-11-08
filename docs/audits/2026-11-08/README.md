@@ -1,5 +1,7 @@
 # Live- en documentatiecontrole — 8 november 2026
 
+> **Nieuwste vervolg CATEGORY-COPY-01:** lege/ongepubliceerde Tegeltoebehoren-route verklaard; negen echte links naar lege lijsten uit acht collectieomschrijvingen live gecorrigeerd. [Nieuwe gerichte bewijslaag](../../repairs/2026-11-08/category-content-links/README.md). De eerdere brede routetelling behoudt haar meetmoment; geen willekeurige404redirect.
+
 > **Nieuwste vervolg — SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** de oude verzendprofielwaarschuwing is verklaard: actieve NL-Market omvat beide locaties,851leveranciersvarianten en acht cartquotes gecontroleerd. De echte blog-news-404 is met één301redirect naar bestaandnieuws opgelost. [Bewijs](../../repairs/2026-11-08/shipping-and-blog/README.md). De eerdere brede audit houdt zijn meetmoment.
 
 > **Nieuwste vervolg — CONTENT-ENCODING-02:** MAIN 196368531722 is eigenaar-gepubliceerd; zes bronfiles/veertien footerproeven gecontroleerd. Dertien Page-tekstreparaties live; 122 Pages/120 gepubliceerd opnieuw gelezen en 109 termlinks op gepubliceerde doelen gemapt. [Bewijs en grenzen](../../repairs/2026-11-08/glossary-encoding/README.md). De brede eerdere nulmeting hieronder behoudt haar meetmoment.

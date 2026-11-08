@@ -1,5 +1,7 @@
 # SHIPPING-COVERAGE-01 en BLOG-ROUTE-01 — actieve verzending gecontroleerd, blog-404 hersteld
 
+> **Volgend onderzoek afgerond — CATEGORY-COPY-01:** Tegeltoebehoren is leeg/ongepubliceerd en niet gelinkt in menu’s/collectiecopy; de404 is verklaard. Negen echte verwijzingen naar andere lege lijsten zijn op acht categoriepagina’s hersteld. [Nieuwste bewijs en vervolg](../category-content-links/README.md). De eerdere volgende handeling hieronder is daarmee afgehandeld.
+
 **8 november 2026 · EFFECTIVE_NL_SHIPPING_VERIFIED_WITH_LIMITS / BLOG_REDIRECT_APPLIED_VERIFIED.** De eerder gemelde locatie zonder tarieven is verklaard door de actieve Markets-configuratie. Die waarschuwing is niet als bewezen checkoutdefect blijven staan. Daarnaast is één echte 404 met een gerichte redirect hersteld.
 
 ## Effectieve bron: Markets
