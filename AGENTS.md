@@ -57,6 +57,8 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 
 ## 5. Vaste correctheidswaarschuwingen
 
+- **8 november 2026, PRICE-ROUND-01:** gewone EUR-verkoopprijzen boven €100 volgen normale hele-euroafronding; m²-/doosgeprijsde tegels zijn in deze ronde uitgesloten. Lees vóór prijsimport of opmaakwijziging [het prijscontract](docs/PRICING_POLICY.md). Alleen werkelijk hele EUR-bedragen vanaf €100 zonder lege centen tonen; echte centen en bronprijzen behouden. Dit is geen zelfstandige opdracht voor een nieuwe massamutatie.
+
 - `docs/MASTERPLAN.md` versie 0.26.3 beschrijft september 2026; de huidige gepubliceerde theme-code is sindsdien ver ontwikkeld. Historische gegevens behouden, actuele stand in nieuw dossier.
 - **8 november 2026, FURNITURE-STANDARD-01:** Badkamermeubels gebruikt op expliciet eigenaarverzoek `category-landing`, zoals de andere hoofdcategorieën. Drie oude inline style-blokken zijn uit de Admin-omschrijving verwijderd. De oude `bc-meubelhub`-bestanden blijven alleen beschikbaar als historische bron/rollback; herstel die toewijzing of CSS niet automatisch. Zie [bewijs en herstel](docs/repairs/2026-11-08/furniture-standard/README.md).
 - De actuele `main` bevat een geverifieerde theme-snapshot, niet de volledige Shopify-productdatabase/menu-instellingen/externe VPS.

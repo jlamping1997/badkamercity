@@ -1,12 +1,14 @@
 # Mobiele productlijst volgens het gekozen ontwerp
 
-8 november 2026 · MOBILE-CARDS-01 · READY_FOR_OWNER_REVIEW · UNPUBLISHED
+8 november 2026 · MOBILE-CARDS-01 · OWNER_PUBLISHED · LIVE_SOURCE_VERIFIED
 
 Eigenaar koos de open horizontale lijst: productbeeld links, titel en echte kenmerken rechts, voorraad-/leverlabel en prijs eronder; dunne scheidingslijnen, geen grote knoppen of kaartkaders. Alleen collectie-/zoekproductlijsten onder750px wijzigen. Desktop, homepagekaarten, related-products en Sunshowercomponenten behouden hun bestaande presentatie.
 
-## Huidig reviewdoel
+## Huidige publicatie en eerder reviewdoel
 
-**196354474250 — BadkamerCity - Mobiele productlijst 8 nov**, UNPUBLISHED. **MAIN196368531722 — Klantenservice8nov blijft ongewijzigd.** Bekijk het concept via Shopify → Webshop → Thema’s, controleer op telefoon en publiceer daar bij akkoord. De verbinding staat geen automatische MAIN-filewrites of themapublicatie toe; er is niet geprobeerd dit te omzeilen.
+**196354474250 — BadkamerCity - Mobiele productlijst 8 nov is nu MAIN**, gepubliceerd door de eigenaar. De vijf oorspronkelijke mobiele checksums zijn in de verse volledige MAIN-read bevestigd; de nieuwe prijsronde heeft MAIN niet geschreven. Dit vervangt de oude opdracht om dit mobiele concept nog te publiceren. [Publicatiebewijs](publication-2026-11-08.json).
+
+Het eerdere MAIN196368531722 is inmiddels hergebruikt als **UNPUBLISHED BadkamerCity - Hele europrijzen 8 nov** en bevat ook deze mobiele lijst. Het is geen onaangeroerd mobiel rollbackdoel meer. De actuele opvolging staat in [het prijsdossier](../whole-euro-prices/README.md).
 
 Er is eerst een native duplicaat196381114634 gestart. Dat bleef tijdens voorbereiding verwerken en is niet als reviewdoel gebruikt; het heet nu **Reserve - kopie klantenservice 8 nov**, UNPUBLISHED. De eindread meldt processing=false/processingFailed=false; geen volledige manifestvergelijking of featurewrite op die reserve. Publiceer deze reserve niet voor dit ontwerp.
 
@@ -39,8 +41,8 @@ Fysieke telefoon, volledige mobiele externe filterdrawer/interactie, betaal-/pur
 
 ## Herstellen en opnieuw controleren
 
-Voor publicatie: concept niet publiceren; MAIN is intact. Na publicatie zo nodig terug naar het dan vorige MAIN196368531722, na een verse vergelijking met latere wijzigingen. Gerichte rollback gebruikt uitsluitend de vier oude files in rollback/; de nieuwe CSS hoeft niet geladen te worden zodra de oude layout terugstaat. Geen blind volledige thema-/settingsupload en geen productmutaties.
+Voor een gerichte terugzetting eerst de huidige MAIN en latere wijzigingen vergelijken. Het vroegere MAIN196368531722 is nu hergebruikt voor het prijsconcept; publiceer dat niet als oude mobiele rollback. Gerichte rollback gebruikt uitsluitend de vier oude files in rollback/; de nieuwe CSS hoeft niet geladen te worden zodra de oude layout terugstaat. Geen blind volledige thema-/settingsupload en geen productmutaties.
 
 De herhaalbare offline controles staan in contract-checks.mjs en css-checks.mjs. Gebruik de actieve codebranch, installeer de twee vastgepinde devDependencies uit package.json met npm install --ignore-scripts en voer npm test uit. De resultaten beschrijven de genoemde inputgrenzen. component-review-template.liquid is uitsluitend een gearchiveerde controlefixture, geen blijvende themefeature.
 
-**Eén volgende handeling:** eigenaar beoordeelt dit huidige concept op telefoon en publiceert het via Shopify bij akkoord. Daarna verse MAIN/5-file/live nacontrole. Geen actieve schrijver na overdracht.
+**MOBILE-CARDS-01 is gepubliceerd en de vijf bronhashes zijn opnieuw bevestigd.** Volledige fysieke telefoon-/mobiele interactiecontrole blijft open. De volgende actuele handeling volgt het prijsdossier; geen tweede mobiele publicatie nodig. Geen actieve mobiele schrijver.

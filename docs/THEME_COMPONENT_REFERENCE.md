@@ -1,5 +1,7 @@
 # BadkamerCity — complete thema-component- en instellingenreferentie
 
+> **8 november 2026 — mobiele lijst en prijsopmaak:** de mobiele lijst is gepubliceerd op MAIN196354474250. Het nieuwe prijsconcept196368531722 gebruikt snippets/bc-money.liquid en assets/bc-money.js, geladen vóór de bestaande deferred consumenten. Alleen werkelijk hele EUR-bedragen vanaf €100 verliezen lege decimalen; data-afronding en m²-uitzondering staan in [het prijscontract](PRICING_POLICY.md). [Actuele uitvoering en grenzen](repairs/2026-11-08/whole-euro-prices/README.md).
+
 > **Actuele correctie 8 november 2026:** Badkamermeubels is nu `category-landing` → `main-category-landing` + advies, met zeven bestaande menukinderen. De oude hub en drie inline Admin-stijlblokken worden niet meer gebruikt; de drie blokken zijn verwijderd op eigenaarverzoek. Onderstaande oude hubtoewijzing/CSS-afhankelijkheid is historische broninformatie. [Bewijs en rollback](repairs/2026-11-08/furniture-standard/README.md).
 
 > **Automatisch samengesteld op 7 oktober 2026 uit de werkelijk live Shopify-theme-code #194864677130.** Dit is een code-index, geen bewijs dat iedere sectie ingeschakeld is of alle instellingen ingevuld zijn. Raadpleeg voor feitelijke waarden van actieve JSON-templates, de Shopify Theme Editor en Admin. De broncode blijft leidend. Aangemaakte referenties zijn statisch uit Liquid gedetecteerd en kunnen aanroepen binnen comments bevatten.

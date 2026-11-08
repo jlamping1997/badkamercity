@@ -1,0 +1,22 @@
+{
+  "status": "SAMPLE_REFRESHED",
+  "health": {
+    "ok": true,
+    "service": "badkamercity-filter-api-verified-candidate",
+    "version": "0.4.0",
+    "typesense_collection": "bc_sync_20261108t230100_d4a460",
+    "profiles": 227
+  },
+  "sampleSku": "CB011EXTGN",
+  "shopifyPriceCents": 10900,
+  "indexSamples": [
+    {
+      "id": "10531427516682",
+      "sku": "CB011EXTGN",
+      "price_cents": 10900
+    }
+  ],
+  "serverMutation": false,
+  "ssh": "Network is unreachable; no server command executed",
+  "scope": "Single public SKU sample; no full index or Google feed verification"
+}
