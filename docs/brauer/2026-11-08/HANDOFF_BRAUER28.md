@@ -1,3 +1,5 @@
+> Historisch checkpoint. De actuele selectie en formulering staan in [HANDOFF_BRAUER29.md](HANDOFF_BRAUER29.md); onderstaande cijfers beschrijven ronde 28.
+
 # BRAUER-28 — fabrikantonderzoek en offline importvoorbereiding · 8 november 2026
 
 **12.132 onderbouwde pluspunten bij 7.220 artikelen** voorbereid. Deze ronde voegt 3.920 teksten toe, herformuleert 1.081 eerdere teksten en behoudt alle 8.212 bestaande pluspuntregels. Maximaal vier per artikel. **Alle imports, ook DRAFT, blijven geblokkeerd.** Er is niets naar Shopify geschreven.

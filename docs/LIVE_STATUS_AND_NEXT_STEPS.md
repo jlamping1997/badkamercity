@@ -159,7 +159,27 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-29 — korte, selectieve productpluspunten · 8 november 2026
+
+Eigenaar wil eenvoudige menselijke teksten, één punt voor de inhoud van een set en materiaalvoordelen bij meubels. De korte lijst bevat nu **maximaal drie verschillende koopredenen per artikel**, zonder opvulling. Voorbeelden: **Complete doucheset**, **Thermostaatkraan**, **Massief eiken**, **Gelakt MDF**, **Softclose lades**. Dimmen en kleurkeuze waar mogelijk één punt. Losse LED-vermelding, glasdikte en MFC blijven gewone specificaties; bij losse inbouwthermostaten geen herhaling van de productsoort als voordeel.
+
+‘Complete doucheset’ alleen bij **143 inbouwsets** met positieve bevestiging van hoofd- en handdouche, slang én inbouwdeel. Geen losse setonderdelen als extra punten of installatiebrede ‘alles inbegrepen’-claim. **1.872 materiaalteksten** voor complete kasten: 445 massief eiken en 1.427 gelakt MDF; geen afleiding uit eikenkleur, geen kastclaim op losse fronten of extra vochtbestendigheidsbelofte. 391 spiegelkasten met bewezen verlichting. Per gewijzigd artikel zijn vorige/nieuwe tekst en rule privé bewaard.
+
+Huidige selectie **13.728 korte teksten bij 7.993 artikelen**. 5.168 artikelen zonder gekozen pluspunt, 3.658 met één, 2.935 met twee en 1.400 met drie; dit zegt niets over ontbrekende producten of technische vrijgave. 7.162 artikelregels anders geselecteerd/geformuleerd. Onderliggende catalogus en al het technische bewijs **byte-identiek aan BRAUER-28**, inclusief prijzen met 21% btw, titels, SKU/EAN, goedgekeurde keuzegroepen, eigen invoer, vragen, historische bronverschillen en gate. Nul nieuwe individuele externe feiten of gelezen productpagina’s.
+
+Technische stand ongewijzigd: **13.161 artikelen / 178.198 velden / 6.622 met ontbrekende gekozen kerngegevens**. 150 open retailveldverschillen, 288 verdachte slangwaarden, 480 vragen bij 461 artikelen, oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen. De 24 eerdere leveranciersdeurverfijningen en historie behouden.
+
+**44 tests PASS**, herhaalcontrole PASS, preflight terecht **exit 2**. Native XLSXcontrole: zes tabbladen; eerste vijf bladen/421.953 cellen inclusief native stijlen, tabellen en instellingen behouden. Alle 13.161 pluspuntregels/EAN’s en 13.728 teksten exact vergeleken, EAN’s als tekst, nul foutcellen. Negen nieuwe previews bekeken, inclusief bewust lege lijsten. Oude native retailcontrole bevestigt 42.869 cumulatieve aanvullingen en 480 vragen. Alle **13.161 offline importregels / 39.483 veldwaarden** exact gecontroleerd en geblokkeerd.
+
+**Bestaande privébestanden bevestigd vervangen: importpakket versie 13, specificatie-XLSX versie 10.** ZIP behoudt alle 264 eerdere items en bevat nu 291; manifest, CRC en embedded XLSX exact. Lees eerst privé `prepared/HANDOFF_BRAUER29.json`; [overdracht](brauer/2026-11-08/HANDOFF_BRAUER29.md) en [tekstregels/voorbeelden](brauer/2026-11-08/CURATIE_BRAUER29.md). Generieke codecheckpoint `be541a97f78d57549e36f431a4411bf589a43380` op `fix/product-cards-2026-10-14`; main alleen documentatie. Voor de grote XLSX de primaire Node-runtime met `--max-old-space-size=6144` gebruiken.
+
+**Alle imports, ook DRAFT, blijven geblokkeerd.** Geen Shopify-product-, media-, thema-, definitie- of publicatiewrites. MAIN opnieuw alleen gelezen: `196368531722`; drie bestaande velddefinities/types/validaties gelijk. Officiële complete media, inventarisatie, gegevensbeoordeling, winkelbrede identiteit/handle-controle, renderer-integratie en beoordeelde product-/keuzeproef blijven open. Geen fysieke Excel-app-, Windows-Git-, liveproducttest of volledige technische vrijgave. Geen actieve BRAUER-bronlezer/schrijver na overdracht. **Eén volgende handeling:** bij ontvangst van de volledige officiële media de offline exacte inventarisatie uitvoeren en onduidelijke koppelingen beoordelen.
+
+---
+
 ## BRAUER-28 — fabrikantonderzoek, pluspunten en offline importvoorbereiding · 8 november 2026
+
+> Historisch checkpoint; de actuele tekstselectie en stand zijn BRAUER-29 hierboven.
 
 **12.132 onderbouwde pluspunten bij 7.220 artikelen**: 3.920 nieuwe teksten, 1.081 preciezere formuleringen, alle 8.212 eerdere pluspuntregels behouden; maximaal vier per artikel. 17 officiële BRAUER-bronnen en de openbare Topa-catalogusindex gecontroleerd. Topa-downloads vragen login en zijn niet geopend. Algemene fabrikantdefinities verduidelijken bestaande exacte artikelkenmerken; geen nieuwe individuele externe productfeiten of variantovererving. Geen algemene dunne-profielen-, kalkvrij- of fabrieksbehandelingsclaim.
 
