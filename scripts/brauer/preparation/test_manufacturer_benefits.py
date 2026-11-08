@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 from build_product_benefits import derive, approved_definition, build as build_benefits
-from build_import_preparation import record
+from build_import_preparation import record, validate_targets, EXPECTED_TARGETS
 from build_specifications import build as build_specs
 from refine_supplier_door_mechanisms import refine
 from test_product_benefits import sample
@@ -16,6 +16,8 @@ KEYS = ['hydrophobic_glass','cold_start','pvd_finish','frameless_glass',
 DEFS = {k:{'brand':'BRAUER','status':'VERIFIED_DEFINITION',
            'sources':['https://www.brauerkranen.nl/site/test'],
            'primary_url':'https://www.brauerkranen.nl/site/test'} for k in KEYS}
+TARGETS = {role:dict(zip(('namespace','key','type'),value),validations=[])
+           for role,value in EXPECTED_TARGETS.items()}
 
 
 def exact(values, typ='Nisdeuren', group='Nisdeur met draaideur profielloos'):
@@ -121,14 +123,28 @@ class ManufacturerTests(unittest.TestCase):
                  data_issues=[],specification_review={'missing_essential_fields':[]},future_available_date=None,import_allowed=False,
                  user_additions={'Jouw aanvulling techniek':'Eigen gecontroleerde aanvulling'})
         b={'sku':p['sku'],'ean':p['ean'],'items':[]}
-        r=record(p,b)
+        r=record(p,b,TARGETS)
         self.assertEqual(r['product_data']['price_incl_vat'],'121.00');self.assertFalse(r['import_allowed'])
         self.assertEqual(r['review']['user_additions'],p['user_additions'])
         self.assertNotIn('status',r['product_data']);self.assertNotIn('inventory_quantity',r['product_data'])
+        fields={m['key']:m for m in r['metafield_values']}
+        self.assertEqual(fields['pluspunten']['type'],'list.single_line_text_field')
+        self.assertEqual(json.loads(fields['pluspunten']['value']),[])
+        self.assertEqual(json.loads(fields['complete_specificaties']['value']),p['customer_specifications'])
+        self.assertEqual(fields['switch_group']['value'],p['family_id'])
         b['ean']='9999999999999'
-        with self.assertRaises(ValueError):record(p,b)
+        with self.assertRaises(ValueError):record(p,b,TARGETS)
         b['ean']=p['ean'];p['import_allowed']=True
-        with self.assertRaises(ValueError):record(p,b)
+        with self.assertRaises(ValueError):record(p,b,TARGETS)
+
+    def test_existing_target_schema_change_requires_a_new_review(self):
+        snapshot={'status':'READ_ONLY_DEFINITIONS_VERIFIED','owner_type':'PRODUCT','targets':copy.deepcopy(TARGETS)}
+        self.assertEqual(validate_targets(snapshot),TARGETS)
+        for role,field,value in [('benefits','type','single_line_text_field'),
+                                 ('specifications','validations',[{'name':'max','value':'1'}]),
+                                 ('choice_group','key','different_group')]:
+            changed=copy.deepcopy(snapshot);changed['targets'][role][field]=value
+            with self.assertRaises(ValueError):validate_targets(changed)
 
 
 if __name__ == '__main__':
