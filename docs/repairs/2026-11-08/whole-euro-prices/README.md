@@ -38,7 +38,8 @@ BC-AUD-012: één verwijzing naar icon-error in main-password-header en twee naa
 - [31 prijscontroles](checks.json): daadwerkelijke Liquid-helper/native prijssnippet, 168 JS-valuta-/grenscombinaties en volledige externe JS met synthetische netwerkdata; hele bedragen, echte centen, Vanaf-label, adviesprijs, m²/doos en veilige fallback. Shopify money-filters in de offline Liquid-fixture zijn met Intl nagebootst.
 - 26 bestaande mobiele kaartcontractcontroles opnieuw PASS; [officiële Shopify-validator](theme-check.json) zonder errors en JS-syntax PASS. Waarschuwingen staan volledig in het resultaat; geen algemene nul-waarschuwingenclaim.
 - [Echte Chrome-preview](browser-checks.json): 24 externe onderkastkaarten zonder ,00; kleur Mat zwart → Licht eiken met passende productlink/€820; wishlist 0→1→0 en €820; CB011EXTGN €109, optioneel onderdeel €89,60, totaal €198,60 en na uitzetten terug €109. Geen cart-/orderwrite. Previewbalk bevestigde het juiste concept. Screenshot hieronder.
-- Externe indexprijsverversing en Google-feedovername worden apart beoordeeld; verse kaartverrijking bewijst geen volledig vernieuwde index. Geen nieuwe volledige telefoon-, checkout-, payment-, purchase-, consent-, mailbox- of echte 3D/password-errorproef.
+- [Volledige openbare prijsindexcontrole](index-price-check.json): 253 pagina’s, 15.155 unieke producten, nul verschillen met de actuele Shopify-minimumverkoopprijzen. Generatie bc_sync_20261108t230100_d4a460 vóór/na gelijk; 3.315 afgeronde producten in deze bestaande zoekscope, twintig daarbuiten. Die twintig hebben wel de bewezen juiste Shopify-prijs; geen automatische wijziging van hun zoekdekking. Geen serverwrite; een eerdere oude proefprijs is na de reguliere indexverversing correct.
+- Google-feedovername, volledige fysieke telefoon-, checkout-, payment-, purchase-, consent-, mailbox- en echte 3D/password-errorproef blijven NOT_TESTED.
 
 ![Afgeronde prijs in de echte Shopify-preview](browser-price-review.jpg)
 

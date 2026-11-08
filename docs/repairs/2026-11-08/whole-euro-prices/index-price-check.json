@@ -1,22 +1,23 @@
 {
-  "status": "SAMPLE_REFRESHED",
-  "health": {
-    "ok": true,
-    "service": "badkamercity-filter-api-verified-candidate",
-    "version": "0.4.0",
-    "typesense_collection": "bc_sync_20261108t230100_d4a460",
-    "profiles": 227
+  "status": "PASS",
+  "generation": "bc_sync_20261108t230100_d4a460",
+  "profiles": 227,
+  "indexedProductsChecked": 15155,
+  "uniqueIds": 15155,
+  "pages": 253,
+  "sameGenerationBeforeAfter": true,
+  "priceMismatches": 0,
+  "roundedProductsVerifiedInIndex": 3315,
+  "roundedProductsOutsidePublicShoppingScope": 20,
+  "sourceShopifyProducts": 15897,
+  "publicShoppingScope": {
+    "handle": "__all__",
+    "title": "Alle producten",
+    "profile_products": 15897,
+    "shopping_products": 15155
   },
-  "sampleSku": "CB011EXTGN",
-  "shopifyPriceCents": 10900,
-  "indexSamples": [
-    {
-      "id": "10531427516682",
-      "sku": "CB011EXTGN",
-      "price_cents": 10900
-    }
-  ],
   "serverMutation": false,
   "ssh": "Network is unreachable; no server command executed",
-  "scope": "Single public SKU sample; no full index or Google feed verification"
+  "googleFeed": "NOT_TESTED",
+  "scope": "Public __all__ shopping search compared with current Shopify minimum selling price for every returned ID; no broader Google-feed claim"
 }
