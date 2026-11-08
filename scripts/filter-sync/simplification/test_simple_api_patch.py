@@ -34,11 +34,13 @@ def namespace(source, enabled=True):
                'filters': definitions[:2], 'service_category': False}
     snapshot = {'profiles': {'tegels': profile}, 'collection': 'stage', 'exact': ['other-sku'],
                 'variant_aliases_v1': True, 'filter_simplification_v1': enabled,
+                'tile_format_codes_v1': enabled,
+                'tile_format_codes': {'60 × 60 cm':1,'60 × 120 cm':2,'60 × 150 cm':3},
                 'filter_color_aliases': {'Mat goud': 'Goud', 'Geborsteld goud PVD': 'Goud',
                                         'RVS': 'RVS', 'Geborsteld RVS': 'RVS',
                                         'Geborsteld RVS PVD': 'RVS', 'Copper Green': 'Groen'}}
     selected = [n for n in ast.parse(source).body if isinstance(n, ast.FunctionDef)
-                and n.name in {'quote', 'plan', '_bc_simple_request', '_bc_simple_facet_limit'}]
+                and n.name in {'quote', 'plan', '_bc_simple_request', '_bc_simple_facet_limit', '_bc_simple_choice_clause'}]
     ns = {'_bc_snapshot': lambda: snapshot, 'HTTPException': HttpError}
     exec(compile(ast.Module(body=selected, type_ignores=[]), '<planner-test>', 'exec'), ns)
     return ns, snapshot
@@ -78,9 +80,9 @@ class ApiTests(unittest.TestCase):
     def test_or_colors_and_tile_pair_are_combined_with_and(self):
         ns, _ = namespace(self.patched)
         query = ns['plan'](body(filters={'f_kleur': ['Mat goud', 'Groen'],
-                                        'f_tegel_formaat': ['60 × 60']}))[2][0]
+                                        'f_tegel_formaat': ['60 × 60 cm']}))[2][0]
         self.assertIn('f_kleur:=[`Goud`,`Groen`]', query['filter_by'])
-        self.assertIn(' && f_tegel_formaat:=`60 × 60`', query['filter_by'])
+        self.assertIn(' && f_tegel_formaat_code:=1', query['filter_by'])
 
     def test_exact_variant_lookup_and_price_sort_are_preserved(self):
         ns, _ = namespace(self.patched)
@@ -92,10 +94,54 @@ class ApiTests(unittest.TestCase):
 
     def test_disjunctive_facet_excludes_own_selection(self):
         ns, _ = namespace(self.patched)
-        result = ns['plan'](body(filters={'f_kleur': ['Mat goud'], 'f_tegel_formaat': ['60 × 60']}))
+        result = ns['plan'](body(filters={'f_kleur': ['Mat goud'], 'f_tegel_formaat': ['60 × 60 cm']}))
         color_facet = next(q for q in result[2][1:] if q['facet_by'] == 'f_kleur')
         self.assertNotIn('f_kleur:=', color_facet['filter_by'])
-        self.assertIn('f_tegel_formaat:=', color_facet['filter_by'])
+        self.assertIn('f_tegel_formaat_code:=1', color_facet['filter_by'])
+        format_facet = next(q for q in result[2][1:] if q['facet_by'] == 'f_tegel_formaat')
+        self.assertNotIn('f_tegel_formaat_code:', format_facet['filter_by'])
+        self.assertIn('f_kleur:=`Goud`', format_facet['filter_by'])
+
+    def test_three_similar_formats_use_distinct_numeric_equality(self):
+        ns, _ = namespace(self.patched)
+        for label, code in [('60 × 60 cm',1),('60 × 120 cm',2),('60 × 150 cm',3)]:
+            query = ns['plan'](body(filters={'f_tegel_formaat':[label]}))[2][0]['filter_by']
+            self.assertIn('f_tegel_formaat_code:='+str(code),query)
+            self.assertNotIn('f_tegel_formaat:=',query)
+            self.assertNotIn(label,query)
+
+    def test_format_or_uses_numeric_exact_union(self):
+        ns, _ = namespace(self.patched)
+        query = ns['plan'](body(filters={'f_tegel_formaat':['60 × 60 cm','60 × 120 cm']}))[2][0]['filter_by']
+        self.assertIn('f_tegel_formaat_code:[1,2]',query)
+        self.assertNotIn('3',query)
+
+    def test_unknown_format_is_an_impossible_reserved_code(self):
+        ns, _ = namespace(self.patched)
+        query = ns['plan'](body(filters={'f_tegel_formaat':['not a format']}))[2][0]['filter_by']
+        self.assertIn('f_tegel_formaat_code:=0',query)
+
+    def test_code_map_is_generation_local(self):
+        ns, snapshot = namespace(self.patched)
+        request = body(filters={'f_tegel_formaat':['60 × 60 cm']})
+        self.assertIn('f_tegel_formaat_code:=1',ns['plan'](request)[2][0]['filter_by'])
+        snapshot['tile_format_codes']['60 × 60 cm']=40
+        self.assertIn('f_tegel_formaat_code:=40',ns['plan'](request)[2][0]['filter_by'])
+        self.assertEqual(request.filters['f_tegel_formaat'],['60 × 60 cm'])
+
+    def test_missing_or_corrupt_format_map_is_rejected(self):
+        for mapping in [None, {'60 × 60 cm': True}, {'a':1,'b':1}, {'x':0}, {'x':2147483648}]:
+            ns,snapshot=namespace(self.patched)
+            snapshot['tile_format_codes']=mapping
+            with self.assertRaises(RuntimeError):ns['plan'](body(filters={'f_tegel_formaat':['60 × 60 cm']}))
+        ns,snapshot=namespace(self.patched)
+        snapshot['tile_format_codes_v1']=False
+        with self.assertRaises(RuntimeError):ns['plan'](body(filters={'f_tegel_formaat':['60 × 60 cm']}))
+
+    def test_private_code_field_is_not_publicly_allowlisted(self):
+        ns,_=namespace(self.patched)
+        with self.assertRaises(HttpError) as e:ns['plan'](body(filters={'f_tegel_formaat_code':['1']}))
+        self.assertEqual(e.exception.status_code,400)
 
     def test_complete_tile_format_facets_use_larger_bounded_limit(self):
         ns, _ = namespace(self.patched)

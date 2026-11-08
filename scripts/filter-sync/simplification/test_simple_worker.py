@@ -52,7 +52,24 @@ class SimpleWorkerTests(unittest.TestCase):
         self.assertEqual(fields['f_kleur']['type'], 'string[]')
         self.assertEqual(fields['price_cents'], original['fields'][1])
         self.assertTrue(fields['f_tegel_formaat']['facet'])
+        self.assertEqual(fields['f_tegel_formaat_code'], {'name':'f_tegel_formaat_code','type':'int32','facet':False,'optional':True})
         with self.assertRaises(RuntimeError): self.m._bc_simple_schema({'fields':[]})
+
+    def test_format_codes_are_deterministic_unique_and_missing_safe(self):
+        docs = [{'f_tegel_formaat':'60 × 60 cm'}, {'f_tegel_formaat':'60 × 120 cm'},
+                {'f_tegel_formaat':'60 × 150 cm'}, {}]
+        codes = self.m._bc_simple_tile_code_map(docs)
+        self.assertEqual(codes, self.m._bc_simple_tile_code_map(list(reversed(docs))))
+        self.assertEqual(set(codes.values()), {1,2,3})
+        for doc in docs:
+            if doc.get('f_tegel_formaat'):doc['f_tegel_formaat_code'] = codes[doc['f_tegel_formaat']]
+        self.assertTrue(self.m._bc_simple_check_tile_codes(docs,codes))
+        bad = copy.deepcopy(docs);bad[0]['f_tegel_formaat_code']=codes['60 × 120 cm']
+        self.assertFalse(self.m._bc_simple_check_tile_codes(bad,codes))
+        bad = copy.deepcopy(docs);bad[-1]['f_tegel_formaat_code']=0
+        self.assertFalse(self.m._bc_simple_check_tile_codes(bad,codes))
+        badcodes = dict(codes);badcodes['60 × 60 cm']=badcodes['60 × 120 cm']
+        self.assertFalse(self.m._bc_simple_check_tile_codes(docs,badcodes))
 
     def test_actual_pair_only_and_special_exact(self):
         tile = {'f_tegel_breedte_mm':596,'f_tegel_lengte_mm':596,'title':'Matte wandtegel'}
@@ -98,18 +115,20 @@ class SimpleWorkerTests(unittest.TestCase):
         class Body(SimpleNamespace):
             def copy(self,update): return Body(**{**vars(self),**update})
         docs = [dict(id='1',f_kleur=['Wit','Beige'],f_kleur_exact='Everest',vendor='Cottoceramix',f_serie='Himalayas',collection_handles=['tegels'],general_shopping=True,sku_exact='a',f_tegel_formaat='60 × 60 cm'),dict(id='2',f_kleur=['Zilver'],f_kleur_exact='Geborsteld RVS PVD',collection_handles=['kranen'],general_shopping=True,sku_exact='b')]
+        docs[0]['f_tegel_formaat_code'] = self.m._bc_simple_tile_code_map(docs)[docs[0]['f_tegel_formaat']]
         defs = [{'field':'f_kleur','type':'choice','data_type':'string'},{'field':'f_tegel_formaat','type':'choice','data_type':'string'}]
         snapshot = {'profiles':{'__all__':{'allowed_filters':defs,'filters':defs,'service_category':False}},'exact':[],'collection':'stage_only','variant_aliases_v1':True}
         self.m._bc_simple_snapshot(snapshot,docs)
         source = patch_simple_api((Path(os.environ.get('BC_FILTER_RUNTIME_DIR', '/not-configured'))/'app.py').read_text())
         tree = ast.parse(source)
-        functions = [n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name in {'quote','plan','_bc_simple_request','_bc_simple_facet_limit'}]
+        functions = [n for n in tree.body if isinstance(n,ast.FunctionDef) and (n.name in {'quote','plan'} or n.name.startswith('_bc_simple_'))]
         ns = {'_bc_snapshot':lambda:snapshot,'HTTPException':HttpError}
         exec(compile(ast.Module(body=functions,type_ignores=[]),'<composed-planner>', 'exec'),ns)
         request = Body(collection='__all__',filters={'f_kleur':['Everest','Beige'],'f_tegel_formaat':['60 × 60 cm']},ranges={},q='*',sort='relevance',page=1,per_page=24,include_facets=True)
         plan = ns['plan'](request)
         self.assertIn('f_kleur:=[`Wit`,`Beige`]',plan[2][0]['filter_by'])
-        self.assertIn('f_tegel_formaat:=`60 × 60 cm`',plan[2][0]['filter_by'])
+        self.assertIn('f_tegel_formaat_code',plan[2][0]['filter_by'])
+        self.assertNotIn('f_tegel_formaat:=',plan[2][0]['filter_by'])
         self.assertEqual([d['id'] for d in self.m.selected(docs,snapshot,vars(request))],['1'])
         request.filters = {'f_kleur':['RVS']}
         self.assertIn('f_kleur:=`Zilver`',ns['plan'](request)[2][0]['filter_by'])
@@ -135,6 +154,8 @@ class SimpleWorkerTests(unittest.TestCase):
         self.assertEqual(len(docs),3496)
         self.assertEqual(sum('f_tegel_formaat' in d for d in docs),3490)
         self.assertEqual(len({d['f_tegel_formaat'] for d in docs if 'f_tegel_formaat' in d}),132)
+        self.assertEqual(len({d['f_tegel_formaat_code'] for d in docs if 'f_tegel_formaat' in d}),132)
+        self.assertTrue(all('f_tegel_formaat_code' not in d for d in docs if 'f_tegel_formaat' not in d))
         for before,after in zip(original,docs):
             for field in ('id','title','vendor','price_cents','f_tegel_breedte_mm','f_tegel_lengte_mm'):
                 self.assertEqual(before.get(field),after.get(field))
@@ -143,6 +164,14 @@ class SimpleWorkerTests(unittest.TestCase):
         profiles = self.m.make_profiles(docs,cats,{},defs)
         snapshot = {'profiles':profiles,'exact':['fixture']}
         self.m._bc_simple_snapshot(snapshot,docs)
+        self.assertTrue(snapshot['tile_format_codes_v1'])
+        self.assertEqual(len(snapshot['tile_format_codes']),132)
+        format_docs = {label:{d['id'] for d in docs if d.get('f_tegel_formaat_code')==snapshot['tile_format_codes'][label]}
+                       for label in ['60 × 60 cm','60 × 120 cm','60 × 150 cm']}
+        self.assertEqual({label:len(ids) for label,ids in format_docs.items()},
+                         {'60 × 60 cm':159,'60 × 120 cm':58,'60 × 150 cm':92})
+        self.assertFalse(format_docs['60 × 60 cm'] & (format_docs['60 × 120 cm'] | format_docs['60 × 150 cm']))
+        self.assertEqual(len(set.union(*format_docs.values())),309)
         checks = self.m.check_b2c_profiles(docs,snapshot)
         self.assertTrue(all(c['passed'] for c in checks),checks)
         fields = [f['field'] for f in profiles['tegels']['filters']]
@@ -151,6 +180,13 @@ class SimpleWorkerTests(unittest.TestCase):
         self.assertLessEqual(max(f['coverage_pct'] for p in profiles.values() for f in p['filters']),100)
         self.assertLessEqual(len(snapshot['simple_color_counts']),19)
         cases,facets = self.m.make_cases(docs,snapshot)
+        format_cases = [c for c in cases if c['name'].startswith('Afgeleide keuze: tegels/') and c['body'].get('filters',{}).get('f_tegel_formaat')]
+        self.assertEqual(len(format_cases),132)
+        exact_case = next(c for c in format_cases if c['body']['filters']['f_tegel_formaat']==['60 × 60 cm'])
+        self.assertEqual(set(exact_case['expected_ids']),format_docs['60 × 60 cm'])
+        union_case = next(c for c in cases if c['name']=='Exacte formaatcodes met OF-selectie: tegels')
+        self.assertEqual(set(union_case['expected_ids']),set.union(*format_docs.values()))
+        self.assertTrue(any(c['name']=='Exact formaat en basiskleur met EN-selectie: tegels' for c in cases))
         count_case = next(c for c in facets if c['field']=='f_tegel_formaat')
         self.assertEqual(sum(count_case['expected_counts'].values()),3490)
         summary = {'published_tiles':len(docs),'tile_formats':len(snapshot['simple_tile_counts']),

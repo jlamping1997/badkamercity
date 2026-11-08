@@ -33,7 +33,8 @@ class RepairLifecycleTests(unittest.TestCase):
         self.old_app, self.new_app = b'old API', b'new API'
         self.old_snapshot = json.dumps({'generation': 'old', 'collection': 'old_index'}).encode()
         self.new_snapshot = json.dumps({'generation': 'new', 'collection': 'new_index',
-                                        'variant_aliases_v1': True, 'filter_simplification_v1': True}).encode()
+                                        'variant_aliases_v1': True, 'filter_simplification_v1': True,
+                                        'tile_format_codes_v1': True}).encode()
         self.worker_path.write_bytes(self.old_worker)
         self.app_path.write_bytes(self.old_app)
         self.snapshot_path.write_bytes(self.old_snapshot)
@@ -314,10 +315,47 @@ class RepairLifecycleTests(unittest.TestCase):
         self.worker.activate.assert_not_called()
         self.assert_original_live()
 
+    def test_missing_exact_format_code_flag_stops_before_activation(self):
+        value = json.loads(self.new_snapshot)
+        value.pop('tile_format_codes_v1')
+        self.new_snapshot = json.dumps(value).encode()
+        with self.assertRaises(RuntimeError):
+            self.run_repair()
+        self.worker.activate.assert_not_called()
+        self.assert_original_live()
+        self.assertEqual(self.worker_path.read_bytes(), self.old_worker)
+        self.assertEqual(self.timer_state, 'active')
+
+    def test_already_applied_without_exact_format_codes_is_not_accepted(self):
+        value = json.loads(self.new_snapshot)
+        value.pop('tile_format_codes_v1')
+        self.snapshot_path.write_text(json.dumps(value))
+        with patch.object(M, 'TARGET_WORKER_SHA256', M.sha256(self.old_worker)), \
+                patch.object(M, 'TARGET_API_AST_SHA256', 'reviewed-api-ast'), \
+                patch.object(M, 'ast_digest', return_value='reviewed-api-ast'):
+            with self.assertRaisesRegex(RuntimeError, 'bevestigde filterindex'):
+                self.run_repair()
+        self.factory.assert_not_called()
+        self.worker.prepare.assert_not_called()
+        self.assertEqual(self.system_calls, [])
+
+    def test_active_generation_without_exact_format_flag_restores_previous_live(self):
+        def activate_without_flag(shop, ts, staged):
+            result = self.activate(shop, ts, staged)
+            result.pop('tile_format_codes_v1')
+            return result
+        self.worker.activate.side_effect = activate_without_flag
+        with self.assertRaises(RuntimeError):
+            self.run_repair()
+        self.assert_original_live()
+        self.assertEqual(self.worker_path.read_bytes(), self.old_worker)
+        self.assertEqual(self.timer_state, 'active')
+
     def test_success_preserves_variant_support_and_records_filter_flag(self):
         result = self.run_repair()
         self.assertIs(result['variant_aliases_v1'], True)
         self.assertIs(result['filter_simplification_v1'], True)
+        self.assertIs(result['tile_format_codes_v1'], True)
 
 
 class ApiSourceGuards(unittest.TestCase):

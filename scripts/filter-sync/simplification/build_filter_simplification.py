@@ -48,7 +48,7 @@ def build(worker_path, api_path, worker_patch_path, api_patch_path, output):
         'target_api_ast_sha256': base.ast_digest(patched_api),
         'deadline_seconds': base.DEADLINE_SECONDS,
         'recovery_seconds': base.RECOVERY_SECONDS,
-        'required_snapshot_flags': ['variant_aliases_v1', 'filter_simplification_v1'],
+        'required_snapshot_flags': ['variant_aliases_v1', 'filter_simplification_v1', 'tile_format_codes_v1'],
         'private_runtime_sources_embedded': False,
         'transport_ascii': text.isascii(),
     }

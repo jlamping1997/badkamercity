@@ -208,7 +208,8 @@ def repair(root=ROOT, live=LIVE, patch_sources=None, worker_factory=load_worker)
             TARGET_API_AST_SHA256 and ast_digest(original_app) == TARGET_API_AST_SHA256):
         snapshot = json.loads(read_regular(snapshot_path))
         if (snapshot.get('variant_aliases_v1') is not True or
-                snapshot.get('filter_simplification_v1') is not True):
+                snapshot.get('filter_simplification_v1') is not True or
+                snapshot.get('tile_format_codes_v1') is not True):
             raise RuntimeError('Gepatchte code gevonden zonder bevestigde filterindex')
         current = worker_factory(original_worker)
         health, _ = current.probe('http://127.0.0.1:8082/health')
@@ -304,11 +305,14 @@ def repair(root=ROOT, live=LIVE, patch_sources=None, worker_factory=load_worker)
                 raise RuntimeError('Voorbereide index mist de volledige variantondersteuning')
             if candidate_snapshot.get('filter_simplification_v1') is not True:
                 raise RuntimeError('Voorbereide index mist de vereenvoudigde filterlaag')
+            if candidate_snapshot.get('tile_format_codes_v1') is not True:
+                raise RuntimeError('Voorbereide index mist de exacte tegelformaatcodes')
             phase[0] = 'gecontroleerde index activeren'
             snapshot = worker.activate(shop, ts, staged)
             if (snapshot.get('variant_aliases_v1') is not True or
-                    snapshot.get('filter_simplification_v1') is not True):
-                raise RuntimeError('Actieve generatie mist vereiste variant-/filtervlaggen')
+                    snapshot.get('filter_simplification_v1') is not True or
+                    snapshot.get('tile_format_codes_v1') is not True):
+                raise RuntimeError('Actieve generatie mist vereiste variant-/filter-/formaatvlaggen')
             report = json.loads((staged / 'RESULTAAT.json').read_text())
             if report.get('passed') is not True or report.get('active_changes') is not True:
                 raise RuntimeError('Activatierapport bevestigt geen volledige reparatie')
@@ -332,7 +336,7 @@ def repair(root=ROOT, live=LIVE, patch_sources=None, worker_factory=load_worker)
                        'products': report['products'], 'profiles': report['profiles'],
                        'backup': str(backup), 'worker_sha256': sha256(patched_worker),
                        'api_sha256': sha256(expected_api), 'variant_aliases_v1': True,
-                       'filter_simplification_v1': True}
+                       'filter_simplification_v1': True, 'tile_format_codes_v1': True}
             write_atomic(backup / 'REPAIR_RESULT.json', json.dumps(summary, indent=2).encode())
             say('FILTERS VEREENVOUDIGD | ' + str(report['products']) + ' producten | ' + str(report['profiles']) + ' profielen')
             return summary
