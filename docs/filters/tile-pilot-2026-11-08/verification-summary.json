@@ -176,7 +176,7 @@
   "review_core_tests": 8,
   "review_cards": 15,
   "embedded_actual_images": 15,
-  "pending_color_cards": 13,
+  "pending_color_cards": 0,
   "owner_caliza_rule": {
     "vendor": "Porcelanosa",
     "exact_color": "Caliza",
@@ -203,5 +203,22 @@
   "review_actual_download_test": false,
   "source_catalog_unchanged": true,
   "bulk_result_url_blocked_not_retrieved": true,
-  "next_action": "Owner reviews13pendingcolorcards; thenboundedpilotwithVPSschema/workerreadandlive-parityUNPUBLISHEDtests."
+  "next_action": "Owner reviews13pendingcolorcards; thenboundedpilotwithVPSschema/workerreadandlive-parityUNPUBLISHEDtests.",
+  "owner_approved_color_cards": 15,
+  "owner_approval_date": "2026-11-08",
+  "owner_approval_scope": "Exactly the fifteen displayed proposals and their existing primary/additional colors; no blanket approval of all807tilecolor terms.",
+  "compact_overview": {
+    "library_version": 1,
+    "cards": 15,
+    "embedded_actual_images": 15,
+    "bytes": 545791,
+    "sha256": "c025be9b34cf750aa060585406f57e49391b81d25d25f4f637c4d1fc655fb6a8",
+    "original_version_0_bytes": 7412200,
+    "source_image_cdn_width": 320,
+    "production_applied": false,
+    "structural_check": "PASS_15_IMAGES_AND_15_APPROVALS",
+    "browser_layout_test": "NOT_TESTED",
+    "mobile_browser_test": "NOT_TESTED",
+    "full_preparation_snapshot": "Retained privately in existing report version0"
+  }
 }

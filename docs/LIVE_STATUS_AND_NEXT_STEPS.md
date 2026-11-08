@@ -2,15 +2,15 @@
 
 ## TILE-FILTER-01 — tegelformaten en kleurkaarten voorbereid · 8 november 2026
 
-**OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_PENDING / NOT_APPLIED.** Eigenaar staat 59,6→60 toe in tegelfilters en wil meerdere zichtbare basiskleuren per tegel; exacte specs behouden. Alle 4.100 Admin-tegelleden en hun publicatie gelezen: 3.496 ACTIVE+OnlineStore, 604 uitgesloten. Geen product-/thema-/server-/indexwrite.
+**OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_APPROVED_15 / NOT_APPLIED.** Eigenaar staat 59,6→60 toe in tegelfilters en wil meerdere zichtbare basiskleuren per tegel; exacte specs behouden. Alle 4.100 Admin-tegelleden en hun publicatie gelezen: 3.496 ACTIVE+OnlineStore, 604 uitgesloten. Geen product-/thema-/server-/indexwrite.
 
 302 gewijzigde formaatvoorstellen uit 18 bronparen. Binnen dezelfde scope 3.370 producten/143 bronparen→126 labels; 120 vorm-/matnaamcontroles en zes ontbrekende maten apart. 36 Python-tests PASS, bron ongewijzigd; alle productie-/contextflags false. Alleen filterlabels, geen m²-/doos-/prijsafronding.
 
-807 kleurnamen, 561 zonder gestructureerde kleur. Caliza→Beige36 en Cevica Waves Copper Green→Groen4 onderbouwd voorbereid. Privé 15 foto-reviewkaarten met 13 open voorstellen, bestaande akkoord-/bronstatus en JSON-export; acht coretests/syntax PASS, echte browserdownload/mobiel NOT_TESTED. Nieuwe API-generatie 20261108T130100_bc1233 waargenomen; geen directe timer-/restartpolicytest.
+807 kleurnamen, 561 zonder gestructureerde kleur. Caliza→Beige36 en Cevica Waves Copper Green→Groen4 onderbouwd voorbereid. Eigenaar keurt alle 15 getoonde kleurvoorstellen expliciet goed; hoofd- en aanvullende kleuren bewaard, geen blanket-akkoord op alle 807 kleurnamen. Privéoverzicht versie 1 vereenvoudigd tot kleine foto met kleur eronder: 15 ingebedde CDN-miniaturen, 545.791 bytes (circa 93% kleiner). Versie 0 bewaart de volledige voorbereidingssnapshot. Structurele controle van 15 beelden en 15 akkoorden PASS; echte browserweergave/mobiel NOT_TESTED. Nieuwe API-generatie 20261108T130100_bc1233 waargenomen; geen directe timer-/restartpolicytest.
 
 [Uitwerking en grenzen](filters/tile-pilot-2026-11-08/README.md), [verificatie](filters/tile-pilot-2026-11-08/verification-summary.json). Offline code scripts/filters/ op bestaande branch; data/foto's privé. MAIN196328685834; vóór latere wijziging verse live-pariteit behouden.
 
-**Exact één volgende handeling:** eigenaar beoordeelt 13 open kleurkaarten; Caliza/Groen niet opnieuw vragen. Daarna begrensde tegelpilot met bevoegde VPS-bronread en staging/UNPUBLISHED-tests. Overige holds behouden; geen actieve schrijver na checkpoint.
+**Exact één volgende handeling:** bevoegde VPS-bronread uitvoeren voor schema, actieve allowlist, API-planner en syncworker; daarna de begrensde tegelpilot voorbereiden met verse live-pariteit en staging/UNPUBLISHED-tests. Kleuren van deze 15 kaarten niet opnieuw ter goedkeuring voorleggen. Overige holds behouden; geen actieve schrijver na checkpoint.
 
 
 ## FILTER-SIMPLE-01 — volledige filteranalyse en eenvoudig kleurenvoorstel · 8 november 2026

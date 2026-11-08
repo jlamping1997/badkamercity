@@ -1,6 +1,6 @@
 # Tegelfilters: nominale formaten en meerdere kleuren
 
-8 november 2026. TILE-FILTER-01 / OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_PENDING / NOT_APPLIED.
+8 november 2026. TILE-FILTER-01 / OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_APPROVED_15 / NOT_APPLIED.
 
 De eigenaar staat expliciet kleine tegelmaatverschillen als 59,6 naar 60 cm toe voor filtergroepering. Exacte specificaties, oppervlakte, doosinhoud, prijs en calculators blijven onaangetast. Dit vervangt de eerdere terughoudendheid over 59,6 naar 60 voor deze afgeleide filterlaag. Tegels mogen meerdere zichtbare basiskleuren krijgen; kleur op de tegel zelf, geen achtergrond/voeg/reflex.
 
@@ -40,9 +40,11 @@ Bronnen:
 
 Eén tegel kan Beige, Wit en Grijs dragen. OR binnen kleur en binnen formaat, AND tussen kleur/formaat/categorie; tellingen via unieke productIDs. Exacte fabrikantkleur en koopbare uitvoering behouden.
 
-Privébestand Badkamercity-tegelfilters-kleurbeoordeling-2026-11-08.html: **15 kaarten met 15 onveranderde ingebedde productfoto's**; 12 beelden visueel gelezen in deze ronde. 13 open voorstellen, bestaand Caliza-akkoord en bronbevestigd Groen apart. Kleurcheckboxen, hoofdkleur, correctie/opmerking, bevestiging en JSON-export. Een voorgestelde selectie is geen akkoord; wijzigen trekt akkoord in. Drie serie-identiteiten gecorrigeerd tegen Admin (Etnia, Portofino, Strand). Scope per leverancier/fabrikant+serie+exacte kleur, geen globale Natural/Bone-regels. Acht core-state/exporttests en JS-syntax PASS; echte browserklik/download/mobiel NOT_TESTED. Eigenaar kan ook correcties per kaartnummer doorgeven.
+Privébestand Badkamercity-tegelfilters-kleurbeoordeling-2026-11-08.html, versie 1: **15 kleine productfoto's met de gekozen kleuren eronder**, zonder beoordelingsformulieren of volledige catalogus in deze weergave. Shopify-CDN-miniaturen op breedte 320; geen kleurwijziging of uitsnede. Bestand 545.791 bytes tegenover 7.412.200 bytes voor versie 0 (circa 93% kleiner). Alle 15 oorspronkelijke kleurselecties en hoofd-/aanvullende kleuren zijn op 8 november expliciet goedgekeurd door de eigenaar. De private JSON in het compacte bestand bewaart de exacte 15 scopes, representatieve identiteit, bronstatus en eigenaargoedkeuring. Geen akkoord afleiden voor overige kleurnamen, leveranciers of series. Geen product-/indexwrite.
 
-Het private rapport bevat volledige bron-/voorbereidingssnapshot voor herstel. Geen catalogus, foto's of volledige kleurbesluiten in publieke Git.
+Scope blijft leverancier/fabrikant + serie + exacte kleur; geen globale Natural/Bone-regels. Bestaand breder Porcelanosa exact Caliza-akkoord blijft afzonderlijk bewaard. Drie serie-identiteiten waren al tegen Admin gecorrigeerd (Etnia, Portofino, Strand). De 15 beelden en akkoordrecords zijn structureel gecontroleerd; echte browserweergave/mobiel NOT_TESTED. De acht core-state/exporttests uit versie 0 zijn historisch en bewijzen geen browsertest van versie 1.
+
+Versie 0 blijft via de bestaande private bestandsversie beschikbaar met volledige bron-/voorbereidingssnapshot. Geen catalogus, foto's of volledige kleurbesluiten in publieke Git.
 
 ## Implementatiegrens en volgende handeling
 
@@ -50,4 +52,4 @@ MAIN 196328685834 bevestigd. Live filterfiles wijken af van Git; toekomstig UNPU
 
 API accepteert ruwe maatbereiken (596..600 × 596..600: HTTP200, 89 resultaten), maar weigert f_kleurgroep=Groen in het tegelprofiel (HTTP400). Dat bewijst niet dat het indexveld ontbreekt. Bevoegde VPS-read nodig voor schema, actieve allowlist, API-planner en syncworker. Eén afgeleide nominale formaatwaarde en meerdere basiskleuren in dezelfde index/sync; bestaand f_kleurgroep hergebruiken waar type/dekking kloppen. Geen losse patch die sync overschrijft. Gepaard OR-formaat, backend-unietellingen, bestaande exacte URLs, één keuze/één chip, refresh/back/wissen en fallback testen op staging/UNPUBLISHED. Eigenaar publiceert.
 
-**Exact één volgende handeling:** eigenaar beoordeelt 13 open kleurkaarten; Caliza/Groen niet opnieuw vragen. Daarna begrensde tegelpilot met bovenstaande bron-/runtimechecks. Andere import-/BRAUER-/bestelafspraken en apart restartpolicybewijs behouden. Geen actieve schrijver na dit checkpoint.
+**Exact één volgende handeling:** bevoegde VPS-bronread uitvoeren voor schema, actieve allowlist, API-planner en syncworker; daarna de begrensde tegelpilot voorbereiden met verse live-pariteit en staging/UNPUBLISHED-tests. Geen nieuwe goedkeuring vragen voor deze 15 kleuren. Andere import-/BRAUER-/bestelafspraken en apart restartpolicybewijs behouden. Geen actieve schrijver na dit checkpoint.
