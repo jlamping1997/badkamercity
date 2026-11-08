@@ -1,13 +1,13 @@
 {
   "task": "FILTER-SIMPLE-02",
   "date": "2026-11-08",
-  "status": "RELEASE_READY_NOT_DEPLOYED",
+  "status": "STAGING_FAILED_SAFE_NOT_DEPLOYED",
   "owner_authorization": "Autonomous colors and allfilter simplification; reasonable nameconfidence; no further colorapproval required",
   "code_commit": "135ada92366349cbc29ea080894a8e0f5e434fad",
   "main_theme_id": 196328685834,
   "theme_write": false,
   "shopify_product_writes": false,
-  "server_write": false,
+  "server_write": "OWNER_STAGED_NEW_INDEX_ONLY; noactivation; previousworkerandAPIpreserved",
   "ssh": "NETWORK_UNREACHABLE",
   "python_tests": {
     "release_api_worker": 41,
@@ -40,8 +40,25 @@
     "variant_aliases_v1",
     "filter_simplification_v1"
   ],
-  "runtime_and_browser_tests": "NOT_TESTED_PENDING_OWNER_EXECUTION",
+  "runtime_and_browser_tests": "REAL_STAGING_API_EXECUTED_ONE_FAILURE; newlivebrowserNOT_TESTED",
   "source_private": true,
   "source_and_specs_preserved": true,
-  "next_action": "Execute pinned PowerShell installer; report output; verify publicAPI and actualstorefront"
+  "next_action": "Run read-only staged60x60diagnostic andinspect expectedactualID/count difference before correctedrelease",
+  "owner_server_execution": {
+    "stage_generation": "20261108T142600_81ee36",
+    "products": 15897,
+    "full_index_readback": "PASS",
+    "format_facet_counts": "PASS",
+    "failed_check": "Afgeleide keuze: tegels/60 × 60 cm",
+    "activation": false,
+    "previous_live_preserved_reported": true,
+    "timer_resumed_reported": true
+  },
+  "runtime_after_failure": {
+    "ok": true,
+    "profiles": 227,
+    "typesense_collection": "bc_sync_20261108t130100_bc1233"
+  },
+  "failure_cause": "NOT_YET_PROVEN",
+  "diagnostic_commit": "cfdd2225fe8863b626b82e4f453c6f60fe32c222"
 }

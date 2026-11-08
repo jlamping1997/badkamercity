@@ -1,12 +1,31 @@
 # Vereenvoudigde filters — installatie gereed
 
-8 november 2026. FILTER-SIMPLE-02 / RELEASE_READY / NOT_DEPLOYED.
+8 november 2026. FILTER-SIMPLE-02 / STAGING_FAILED_SAFE / NOT_DEPLOYED.
 
 De eigenaar wil zelfstandig handelen op redelijke naamzekerheid en test daarna zelf. Geen nieuwe toestemming voor kleurvoorstellen vragen. De release wijzigt de afgeleide filters, inclusief maat- en enumgroepering, met exact gebleven Shopify-productinformatie. [Eén inhoudelijke code-/herstelbeschrijving](https://github.com/jlamping1997/badkamercity/tree/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification/README.md).
 
 Codecheckpoint: 135ada92366349cbc29ea080894a8e0f5e434fad. MAIN196328685834 ongewijzigd; geen thema-aanpassing/publicatie nodig. Runtimebron geverifieerd tegen bekende hashes; actuele serverhash wordt vóór installatie gecontroleerd. De uitvoeromgeving bereikt SSH niet. Deze installatie is daarom nog niet uitgevoerd.
 
-## PowerShell
+## Read-only diagnose na de gestopte stagingcontrole
+
+**8 november 2026 — installatieresultaat: STAGING_FAILED_SAFE / NOT_APPLIED / DIAGNOSTIC_PENDING.** Eigenaar voerde release135ada92366349cbc29ea080894a8e0f5e434fad uit. 15.897 producten geëxporteerd, nieuwe index volledig teruggelezen, profielen/IDsets/kleur- en formaatfacetten gecontroleerd. Eén echte staging-APIcontrole faalde: Afgeleide keuze tegels/60 × 60 cm. De volledige formaatfacettellingen slaagden. Geen bewezen oorzaak; geen controle omzeilen of speculatieve correctie installeren.
+
+Geen activatie: eigenaaruitvoer bevestigt vorige liveversie behouden/hersteld en timer hervat. Onafhankelijke publieke health ok=true,227profielen,oude collectiebc_sync_20261108t130100_bc1233. Geen nieuwe storefront-/reboot-/timerproef. Stage20261108T142600_81ee36 en RESULTAAT.json bewaren. Niet het oude installatieblok opnieuw uitvoeren voordat het verschil is uitgelezen.
+
+**Eén volgende handeling:** eigenaar voert het read-only diagnoseblok hieronder uit en deelt de uitvoer. Het leest failed checks, verwacht/gevonden aantal, unieke/dubbele/ontbrekende IDs en uitsluitend aggregaten van teruggevonden formaatlabels uit de aparte proefindex. Geen productie-/indexwrite, geen sleutels of volledige productregels in de uitvoer. De uitvoeromgeving heeft nog steeds geen SSH-route.
+
+```powershell
+& {
+    $ErrorActionPreference = "Stop"
+    $bestand = Join-Path $env:TEMP "badkamercity-filtercontrole.py"
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/cfdd2225fe8863b626b82e4f453c6f60fe32c222/scripts/filter-sync/simplification/diagnose_staged_tile_format.py" -OutFile $bestand
+    if ((Get-FileHash -LiteralPath $bestand -Algorithm SHA256).Hash.ToLowerInvariant() -ne "7449b2625da970f7ff7c7d5276f2b8fcc8f2f276302f980db54fc47339cfba6e") { throw "Bestandscontrole mislukt." }
+    Get-Content -Raw -LiteralPath $bestand | ssh ubuntu@57.129.175.195 "sudo -n python3 -"
+    if ($LASTEXITCODE -ne 0) { throw "Uitlezen niet voltooid. Deel de uitvoer." }
+}
+```
+
+## Historisch installatieblok — niet opnieuw uitvoeren vóór diagnose
 
 Dit volledige blok downloadt exact het vastgezette script, controleert de inhoud en voert het via de bestaande SSH-toegang uit. De installer maakt de serverback-up; geen lokale catalogusbestanden worden verplaatst. Laat de uitvoering afronden; voortgang verschijnt iedere 20 seconden.
 
@@ -29,4 +48,4 @@ Succes wordt uitsluitend als applied_verified gemeld na staging, volledige index
 
 Dit zijn offline bron-/fixturetests. Nieuwe Typesense-import, FastAPI/ASGI, livebrowser/mobiel, serverreboot en een toekomstige uurlijkse sync blijven NOT_TESTED totdat de serveruitvoer en publieke nacontrole binnen zijn. Baseline vóór deze release: healthok=true,227profielen,bc_sync_20261108t130100_bc1233. Geen nieuwe productieclaim op basis van Git-opslag.
 
-**Eén volgende handeling:** eigenaar voert bovenstaand blok uit en deelt de uitvoer, daarna publieke API en storefrontfilterkeuzes testen.
+**Eén volgende handeling:** eigenaar voert het nieuwe read-only diagnoseblok uit en deelt de uitvoer; oorzaak vaststellen vóór een gecorrigeerde release.

@@ -1,8 +1,18 @@
 # BadkamerCity — actuele werkstatus
 
+## FILTER-SIMPLE-02 — stagingcontrole gestopt, bestaande filters behouden · 8 november 2026
+
+**8 november 2026 — installatieresultaat: STAGING_FAILED_SAFE / NOT_APPLIED / DIAGNOSTIC_PENDING.** Eigenaar voerde release135ada92366349cbc29ea080894a8e0f5e434fad uit. 15.897 producten geëxporteerd, nieuwe index volledig teruggelezen, profielen/IDsets/kleur- en formaatfacetten gecontroleerd. Eén echte staging-APIcontrole faalde: Afgeleide keuze tegels/60 × 60 cm. De volledige formaatfacettellingen slaagden. Geen bewezen oorzaak; geen controle omzeilen of speculatieve correctie installeren.
+
+Geen activatie: eigenaaruitvoer bevestigt vorige liveversie behouden/hersteld en timer hervat. Onafhankelijke publieke health ok=true,227profielen,oude collectiebc_sync_20261108t130100_bc1233. Geen nieuwe storefront-/reboot-/timerproef. Stage20261108T142600_81ee36 en RESULTAAT.json bewaren. Niet het oude installatieblok opnieuw uitvoeren voordat het verschil is uitgelezen.
+
+**Eén volgende handeling:** eigenaar voert het read-only diagnoseblok hieronder uit en deelt de uitvoer. Het leest failed checks, verwacht/gevonden aantal, unieke/dubbele/ontbrekende IDs en uitsluitend aggregaten van teruggevonden formaatlabels uit de aparte proefindex. Geen productie-/indexwrite, geen sleutels of volledige productregels in de uitvoer. De uitvoeromgeving heeft nog steeds geen SSH-route.
+
+[Diagnoseblok](filters/simplification-release-2026-11-08/README.md). Voorbereide code en overige afspraken hieronder blijven behouden; nieuwe release is nog niet live.
+
 ## FILTER-SIMPLE-02 — kleuren, tegelformaten en synoniemen geïmplementeerd · 8 november 2026
 
-**IMPLEMENTED_OFFLINE / RELEASE_READY / OWNER_EXECUTION_PENDING / NOT_DEPLOYED.** Eigenaar geeft expliciet opdracht alle filters zelfstandig te vereenvoudigen met redelijke naamzekerheid, zonder nieuwe bevestigingen. Dit vervangt de eerdere wacht op het algemene 18-kleurenvoorstel; de 15 concrete tegelkeuzes waren al goedgekeurd.
+**IMPLEMENTED_OFFLINE / STAGING_FAILED_SAFE / NOT_DEPLOYED.** Eigenaar geeft expliciet opdracht alle filters zelfstandig te vereenvoudigen met redelijke naamzekerheid, zonder nieuwe bevestigingen. Dit vervangt de eerdere wacht op het algemene 18-kleurenvoorstel; de 15 concrete tegelkeuzes waren al goedgekeurd.
 
 Backendrelease op bestaande codebranch: 18 basiskleuren plus Overige kleuren, meerdere kleuren per product, oorspronkelijke bronkleur apart; gepaard nominaal tegelformaat en exact gebleven technische maten. Soort-/materiaal-/plaatsingssynoniemen via exact-OR. Bestaande Shopify-specificaties en koopbare uitvoering behouden. Backendvelden passen in huidige UI: **geen themawijziging of publicatie nodig**; MAIN196328685834 opnieuw gelezen.
 
@@ -10,7 +20,7 @@ Backendrelease op bestaande codebranch: 18 basiskleuren plus Overige kleuren, me
 
 Codecheckpoint **135ada92366349cbc29ea080894a8e0f5e434fad**, tien publieke code-/test-/uitlegbestanden exact teruggelezen. Privéserverbron uit bestaand herstelbestand gereconstrueerd naar bekende 5-novemberhashes; niet openbaar gemaakt. SSH vanuit uitvoeromgeving: Network is unreachable. Publieke bestaande API ok=true,227profielen,collectiebc_sync_20261108t130100_bc1233; geen server- of Shopifywrite. Installercontrole vóór wijzigingen, private back-up, nieuwe index, bronhashguard en eigen-generatieherstel; volgende synchronisaties gebruiken dezelfde regels.
 
-[Installatieblok en controlegrenzen](filters/simplification-release-2026-11-08/README.md), [verificatie](filters/simplification-release-2026-11-08/verification.json), [code en herstelprocedure](https://github.com/jlamping1997/badkamercity/tree/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification). **Exact één volgende handeling:** eigenaar voert het vastgezette PowerShell-installatieblok uit en deelt de uitvoer; daarna publieke API en de echte filters controleren. Geen nieuwe inhoudelijke goedkeuring vragen. Andere import-/BRAUER-/bestelafspraken behouden; geen actieve schrijver na deze overdracht.
+[Installatieblok en controlegrenzen](filters/simplification-release-2026-11-08/README.md), [verificatie](filters/simplification-release-2026-11-08/verification.json), [code en herstelprocedure](https://github.com/jlamping1997/badkamercity/tree/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification). **Vervolgactie vervangen door de stagingdiagnose bovenaan:** eerst het 60 × 60-selectieverschil uitlezen; geen nieuwe installatie vóór gerichte correctie. Geen nieuwe inhoudelijke goedkeuring vragen. Andere import-/BRAUER-/bestelafspraken behouden; geen actieve schrijver na deze overdracht.
 
 ## TILE-FILTER-01 — tegelformaten en kleurkaarten voorbereid · 8 november 2026
 
