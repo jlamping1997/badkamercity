@@ -1,0 +1,85 @@
+{
+  "shop": {
+    "features": {
+      "marketDrivenShipping": true
+    },
+    "shipsToCountries": [
+      "NL"
+    ],
+    "currencyCode": "EUR"
+  },
+  "market": {
+    "id": "gid://shopify/Market/94864998666",
+    "name": "Nederland",
+    "status": "ACTIVE",
+    "delivery": {
+      "shipping": {
+        "isEnabled": true,
+        "optionDefinitions": {
+          "nodes": [
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "isActive": true,
+              "currency": "EUR",
+              "freeDeliveryMinimumValue": {
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              },
+              "includedLocations": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/Location/106665476362"
+                  },
+                  {
+                    "id": "gid://shopify/Location/110481572106"
+                  }
+                ]
+              },
+              "includedCollections": {
+                "nodes": []
+              },
+              "name": "Standaard",
+              "rateGroups": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                    "conditions": {
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ]
+                      },
+                      "collectionsCount": null
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "6.95",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

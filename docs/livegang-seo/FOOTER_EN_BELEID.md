@@ -1,5 +1,7 @@
 # Eén footer en één beleidsbron
 
+> **Actuele tariefbron — SHIPPING-COVERAGE-01:** €6,95/gratis vanaf €100,01 opnieuw in de actieve Nederlandse Market gelezen; beide oorsprongen opgenomen en acht cartquotes PASS. Het oude DeliveryProfile-signaal vereist geen locatie-/tariefwijziging. [Bewijs](../repairs/2026-11-08/shipping-and-blog/README.md). Gewone bezorgpagina/links blijven live; native policy-toegang blijft afzonderlijk open.
+
 > **Actueel CONTENT-ENCODING-02 — 8 november:** eigenaar heeft **Klantenservice 8 nov (196368531722)** gepubliceerd. Nieuwe bezorglink op homepage en gedeelde footer publiek bevestigd; veertien footerproeven gelijk. Retourcopy en bezorgverwijzingen hoeven niet opnieuw gepubliceerd. [Bewijs](../repairs/2026-11-08/glossary-encoding/README.md). Native policies/scope en technische klantketen blijven apart open.
 
 **Stand: 8 november 2026 — bezorginformatie en gecombineerd klantenserviceconcept. Footer: OWNER_PUBLISHED / PUBLIC_HTML_VERIFIED.** **MAIN 196354474250 — BadkamerCity - Eenduidige footer 8 nov** is door de eigenaar gepubliceerd en vers bevestigd (`updatedAt=2026-11-08T16:37:38Z`). Twee footer-MD5's komen exact overeen; veertien publieke routes zonder preview tonen dezelfde footer, inclusief tijdelijke telefoon, e-mail en duidelijk contact-/retouradres. De eerdere footerpublicatieactie is afgerond. Geen nieuwe desktop-/mobiele runtimeproef uit deze HTTP-nacontrole afleiden. [Actuele reparatieronde](../repairs/2026-11-08/contact-and-returns/README.md).

@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-08",
+  "status": "PASS",
+  "method": "Fresh isolated cart; documented Ajax add/change and prepare/async shipping rates; one public NL business postcode",
+  "rows": [
+    {
+      "label": "Wiesbaden klein artikel",
+      "items": [
+        {
+          "id": 53859734847754,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 2900,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95"
+        }
+      ],
+      "expected_rate": "6.95"
+    },
+    {
+      "label": "Verlavio onder drempel",
+      "items": [
+        {
+          "id": 54059547394314,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 5218,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95"
+        }
+      ],
+      "expected_rate": "6.95"
+    },
+    {
+      "label": "Gemengd twee locaties onder drempel",
+      "items": [
+        {
+          "id": 53859734847754,
+          "quantity": 1
+        },
+        {
+          "id": 54059547394314,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 8118,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95"
+        }
+      ],
+      "expected_rate": "6.95"
+    },
+    {
+      "label": "Gemengd twee locaties boven drempel",
+      "items": [
+        {
+          "id": 53859735601418,
+          "quantity": 1
+        },
+        {
+          "id": 54059547394314,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 14833,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00"
+        }
+      ],
+      "expected_rate": "0.00"
+    },
+    {
+      "label": "Verlavio kraan boven drempel",
+      "items": [
+        {
+          "id": 54059484381450,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 32670,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00"
+        }
+      ],
+      "expected_rate": "0.00"
+    },
+    {
+      "label": "Verlavio nulvoorraad doorbestellen",
+      "items": [
+        {
+          "id": 54059594875146,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 107690,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00"
+        }
+      ],
+      "expected_rate": "0.00"
+    },
+    {
+      "label": "Cotto een doos",
+      "items": [
+        {
+          "id": 54061689209098,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 9929,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95"
+        }
+      ],
+      "expected_rate": "6.95"
+    },
+    {
+      "label": "Cotto twee dozen",
+      "items": [
+        {
+          "id": 54061689209098,
+          "quantity": 2
+        }
+      ],
+      "cart_total_cents": 19858,
+      "currency": "EUR",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00"
+        }
+      ],
+      "expected_rate": "0.00"
+    }
+  ],
+  "own_cart_cleaned": true,
+  "checkout_or_order_created": false,
+  "emails_or_customer_data_submitted": false,
+  "limits": [
+    "Eight sample carts at one NL destination, not every SKU/address/quantity",
+    "No physical delivery, payment, order mail or mobile/browser journey tested"
+  ]
+}

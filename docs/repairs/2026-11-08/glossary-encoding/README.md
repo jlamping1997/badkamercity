@@ -1,5 +1,7 @@
 # CONTENT-ENCODING-02 — tekstfouten hersteld, klantenservicepublicatie gecontroleerd
 
+> **Volgend onderzoek afgerond — SHIPPING-COVERAGE-01:** de verzendprofielwaarschuwing is verklaard door de actieve Market met beide oorsprongen; acht tariefcarts PASS. /blogs/news is tevens live via301→200 hersteld. [Nieuwste bewijs en volgende taak](../shipping-and-blog/README.md). De vorige tekst hieronder bewaart het oorspronkelijke overdrachtsmoment.
+
 **8 november 2026 · OWNER_PUBLICATION_VERIFIED / CONTENT_APPLIED_VERIFIED.** De eigenaar heeft Klantenservice 8 nov gepubliceerd. De volgende concrete verbetering is rechtstreeks in de bestaande uitlegpagina’s uitgevoerd: negentien kapotte accentcombinaties en vier voorlooptekens verwijderd. Geen nieuwe themapublicatie nodig voor deze Page-inhoud.
 
 ## Publicatie bevestigd
