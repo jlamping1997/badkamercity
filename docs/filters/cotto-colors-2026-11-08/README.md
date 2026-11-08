@@ -1,6 +1,6 @@
 # Cottoceramix — basiskleuren per serie
 
-8 november 2026. **PUBLIC_MAPPING_OBSERVED; Bone-aanvulling voorbereid.**
+8 november 2026. **APPLIED_VERIFIED_VIA_BONE_RELEASE / PUBLIC_API_VERIFIED.**
 
 De eigenaar wil duidelijke basiskleuren en heeft zelfstandige indeling op basis van productbeelden toegestaan. Deze batch bevat 207 beoordeelde serie/kleurcombinaties (202 unieke sleutels na normalisatie). De zekerheid per vastgelegde keuze is minimaal 0,76. De indelingen zijn visuele afleidingen; ze worden niet als afzonderlijk door de eigenaar bevestigde kleuren opgeslagen.
 
@@ -37,10 +37,14 @@ De installer gebruikt de bestaande volledige Shopify-export en gecontroleerde in
 
 Nieuwe vlag: `cotto_visual_colors_v1`, naast de vier bestaande vlaggen. Het resultaat meldt `cotto_visual_color_products`; op de huidige fixture zijn dat 353 producten. De exacte oorspronkelijke fabrikantkleur blijft behouden. Workerdoel SHA256 `cc13abd05c87a490bf06d0a7358ef36bc700edc0a736a48714d704df62f8dcc2`; API blijft `3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094`.
 
-Serverstaging, nieuwe activatie, publieke nacontrole, browserproef en toekomstige automatische verversing zijn **nog niet uitgevoerd** voor deze batch. De bestaande Acero-release blijft de laatst bewezen liveversie. Het ontbrekende tegelformaatfilter op het Cottoceramix-merkprofiel blijft apart vervolgwerk.
+Serverstaging en nieuwe activering zijn inmiddels bevestigd via de uitgevoerde Bone-upgrade; de publieke nacontrole vindt de bedoelde kleuren ook in een nieuwere index. Een nieuwe browser-, mobiele of rebootproef is niet uitgevoerd; de oorzaak van de nieuwere verversing is niet via systemd gecontroleerd. Het ontbrekende tegelformaatfilter op het Cottoceramix-merkprofiel blijft apart vervolgwerk.
 
-**Eén volgende handeling:** voer het nieuwe vastgepinde Bone-installatieblok uit; de oorspronkelijke Cotto-installer niet herhalen. Zie de [Bone-aanvulling](../bone-correction-2026-11-08/README.md).
+**Eén volgende handeling:** eigenaar test de live filters en noteert gerichte productcorrecties. De [Bone-aanvulling](../bone-correction-2026-11-08/README.md) is inmiddels met succes uitgevoerd; de installatie hoeft niet opnieuw te worden uitgevoerd.
 
 ## Latere meting en eigenaarcorrectie: Bone
 
-De publieke generatie `bc_sync_20261108t164313_f87c29` geeft Cotto Overige 99, Silver Mist met Grijs 11 en Clear met Beige twee. Dit past bij de voorbereide Cotto-indelingen. Het oorspronkelijke installatieverslag en de workerbron zijn niet teruggelezen, dus deze waarneming is geen serverhash- of volledige activeringsbevestiging. De nieuwste eigenaarcorrectie is Bone → Beige, inclusief de oudere Malaga-uitzondering. Daarvoor staat een afzonderlijke, geteste upgrade klaar; alle 207 oorspronkelijke Cotto-regels blijven behouden. Gebruik voortaan het [Bone-dossier](../bone-correction-2026-11-08/README.md). Het compacte overzicht bevat nu 208 Cotto-kaarten.
+De publieke generatie `bc_sync_20261108t164313_f87c29` geeft Cotto Overige 99, Silver Mist met Grijs 11 en Clear met Beige twee. Dit past bij de voorbereide Cotto-indelingen. Het oorspronkelijke installatieverslag en de workerbron zijn niet teruggelezen, dus deze waarneming is geen serverhash- of volledige activeringsbevestiging. De nieuwste eigenaarcorrectie is Bone → Beige, inclusief de oudere Malaga-uitzondering. De afzonderlijke, geteste Bone-upgrade is inmiddels uitgevoerd; alle 207 oorspronkelijke Cotto-regels blijven behouden. Gebruik voortaan het [Bone-dossier](../bone-correction-2026-11-08/README.md). Het compacte overzicht bevat nu 208 Cotto-kaarten.
+
+## Laatste status: Cotto en Bone bevestigd via uitgevoerde upgrade
+
+De eigenaar heeft daarna de Bone-upgrade succesvol uitgevoerd: 240 servercontroles goed, nul fout, 15.897 producten en 227 profielen. Workerhash `a8dd54597a2a372a7b0fcce9357a6bcc31a406fca2631cb9b24918f5fea0ff17`, met alle zes vlaggen true, inclusief `cotto_visual_colors_v1` en 353 Cotto-regelproducten. De bestaande Cotto-regels zijn dus meegenomen in de gecontroleerde verse index en geïnstalleerde worker. De publieke nacontrole op generatie `bc_sync_20261108t170044_7f6504` behoudt Cotto Overige 99 en bevestigt alle 12 Cotto Bone-producten onder Beige. Het eerdere ontbreken van een installatieverslag is hiermee opgevolgd door bewijs van de gecombineerde Bone-release. Zie het [actuele Bone-dossier](../bone-correction-2026-11-08/README.md). De 561 ontbrekende kleurbronnen en het ontbrekende Cotto-formaatfilter blijven open.

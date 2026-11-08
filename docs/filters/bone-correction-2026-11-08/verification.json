@@ -1,5 +1,5 @@
 {
-  "status": "READY_FOR_OWNER_EXECUTION_NOT_LIVE_VERIFIED",
+  "status": "APPLIED_VERIFIED_PUBLIC_API_VERIFIED",
   "tests_passed": 50,
   "installer_tests": 38,
   "worker_tests": 12,
@@ -29,7 +29,7 @@
   "format_codes_unchanged": 132,
   "api_byte_identical": true,
   "standalone_ascii_roundtrip": "PASS",
-  "server_activation": "NOT_EXECUTED",
+  "server_activation": "APPLIED_VERIFIED",
   "public_before": {
     "generation": "bc_sync_20261108t164313_f87c29",
     "profiles": 227,
@@ -42,5 +42,40 @@
     "owner_install_output": "NOT_PROVIDED",
     "new_bone_activation": "NOT_EXECUTED"
   },
-  "main_theme_id": 196354474250
+  "main_theme_id": 196354474250,
+  "server_checks_passed": 240,
+  "server_checks_failed": 0,
+  "products": 15897,
+  "profiles": 227,
+  "owner_install_generation": "bc_sync_20261108t165802_30078e",
+  "all_six_flags": true,
+  "acero_gray_products": 27,
+  "cotto_visual_color_products": 353,
+  "tile_bone_beige_products": 65,
+  "timer_resumed_reported": true,
+  "backup": "/opt/badkamercity/filter-sync/filter-simplification-backups/20261108T165801-51a38f",
+  "owner_output_private_sha256": "6ae17b93992c592047f29eb1cc87211c7e76bb28f38a20f5b62a9446d8ef014d",
+  "public_after": {
+    "status": "PASS",
+    "generation": "bc_sync_20261108t170044_7f6504",
+    "owner_install_generation": "bc_sync_20261108t165802_30078e",
+    "profiles": 227,
+    "bone_exact_expected": 65,
+    "bone_beige_found": 65,
+    "bone_ids_equal_expected": true,
+    "bone_in_white": 0,
+    "bone_in_other": 0,
+    "cotto_bone_beige": 12,
+    "porcelanosa_bone_beige": 53,
+    "cotto_other": 99,
+    "acero_gray": 27,
+    "format_60x60": 159,
+    "generation_stable": true,
+    "titles_preserve_bone": true
+  },
+  "newer_generation_preserves_rule": true,
+  "newer_generation_cause": "NOT_VERIFIED_BY_SYSTEMD",
+  "new_browser_test": "NOT_TESTED",
+  "new_mobile_test": "NOT_TESTED",
+  "reboot_test": "NOT_TESTED"
 }
