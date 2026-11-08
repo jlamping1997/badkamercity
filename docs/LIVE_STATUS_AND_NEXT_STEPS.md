@@ -1,12 +1,24 @@
 # BadkamerCity — actuele werkstatus
 
+## FILTER-SIMPLE-02 v2 — exact tegelformaat gecorrigeerd · 8 november 2026
+
+**CAUSE_CONFIRMED / V2_READY / NOT_DEPLOYED.** Eigenaardiagnose bewijst de afwijking: 60 × 60 verwacht159, tekstselectie vond309 =159van60×60 +58van60×120 +92van60×150. Geen ontbrekende/dubbele IDs en geen searchcutoff. De eerste release bleef vóór activatie gestopt; de bronmaten en formaatfacetten waren correct.
+
+V2 selecteert via intern int32 f_tegel_formaat_code; de menselijke formaatlabels, URLs en facetweergave blijven behouden. Eén code per label in dezelfde generatie/snapshot, code0 voor onbekend (nul resultaten). Publieke clausulesleutel behouden voor disjunctieve facetten; private veld niet allowlisted. Geen terugval op tekstselectie bij ontbrekende kaart. Alle132formaatselecties krijgen volledige ID-settests, plus OF-, kleur-EN-formaat- en onbekend-formaattests. Alle drie bekende formaten afzonderlijk in lokale/publieke livechecks. Installer vereist nu tile_format_codes_v1 naast bestaande twee vlaggen.
+
+**51 release-/worker-/API-/installertests PASS** (23lifecycle,19API,9worker), op3.496bestaandetegelrecords;159/58/92 gescheiden. Regels voor kleur, exacte specs en overige filters behouden. Nieuwe echte Typesense-/ASGI-/activeringstest vanv2 nog PENDING; de installer voert deze uit vóór succes. Geen nieuwe Shopify-, server- of themawrite door uitvoerder; MAIN196328685834 opnieuw read-only bevestigd.
+
+Codecheckpoint **c7d83b88cdb703532b1746aa2db217176b21b273**; tien code-/test-/uitlegbestanden exact teruggelezen. Publieke baseline inmiddels legacygeneratiebc_sync_20261108t150044_583414,ok=true,227profielen; Tegels toont nog twee oorspronkelijke maatvelden, geen simplificationflag. Nieuwe filters zijn nog niet live. Geen serverSSH-route vanuit deze omgeving.
+
+[Actueel v2-installatieblok](filters/simplification-release-2026-11-08/README.md), [bewijs](filters/simplification-release-2026-11-08/verification.json). **Exact één volgende handeling:** eigenaar voert het nieuwe vastgezette v2-PowerShellblok uit en deelt uitvoer; daarna publieke API en werkelijke filters controleren. Geen nieuwe inhoudelijke goedkeuring nodig; oude diagnose-/v1-installatieactie hieronder is historisch vervangen. Overige afspraken/holds behouden; geen actieve schrijver na overdracht.
+
 ## FILTER-SIMPLE-02 — stagingcontrole gestopt, bestaande filters behouden · 8 november 2026
 
 **8 november 2026 — installatieresultaat: STAGING_FAILED_SAFE / NOT_APPLIED / DIAGNOSTIC_PENDING.** Eigenaar voerde release135ada92366349cbc29ea080894a8e0f5e434fad uit. 15.897 producten geëxporteerd, nieuwe index volledig teruggelezen, profielen/IDsets/kleur- en formaatfacetten gecontroleerd. Eén echte staging-APIcontrole faalde: Afgeleide keuze tegels/60 × 60 cm. De volledige formaatfacettellingen slaagden. Geen bewezen oorzaak; geen controle omzeilen of speculatieve correctie installeren.
 
 Geen activatie: eigenaaruitvoer bevestigt vorige liveversie behouden/hersteld en timer hervat. Onafhankelijke publieke health ok=true,227profielen,oude collectiebc_sync_20261108t130100_bc1233. Geen nieuwe storefront-/reboot-/timerproef. Stage20261108T142600_81ee36 en RESULTAAT.json bewaren. Niet het oude installatieblok opnieuw uitvoeren voordat het verschil is uitgelezen.
 
-**Eén volgende handeling:** eigenaar voert het read-only diagnoseblok hieronder uit en deelt de uitvoer. Het leest failed checks, verwacht/gevonden aantal, unieke/dubbele/ontbrekende IDs en uitsluitend aggregaten van teruggevonden formaatlabels uit de aparte proefindex. Geen productie-/indexwrite, geen sleutels of volledige productregels in de uitvoer. De uitvoeromgeving heeft nog steeds geen SSH-route.
+**Historisch vervolg vervangen door v2 bovenaan:** de diagnose is ontvangen; gebruik het gecorrigeerde v2-installatieblok. Het leest failed checks, verwacht/gevonden aantal, unieke/dubbele/ontbrekende IDs en uitsluitend aggregaten van teruggevonden formaatlabels uit de aparte proefindex. Geen productie-/indexwrite, geen sleutels of volledige productregels in de uitvoer. De uitvoeromgeving heeft nog steeds geen SSH-route.
 
 [Diagnoseblok](filters/simplification-release-2026-11-08/README.md). Voorbereide code en overige afspraken hieronder blijven behouden; nieuwe release is nog niet live.
 

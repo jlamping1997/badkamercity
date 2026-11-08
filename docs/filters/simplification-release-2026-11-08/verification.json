@@ -1,17 +1,20 @@
 {
   "task": "FILTER-SIMPLE-02",
   "date": "2026-11-08",
-  "status": "STAGING_FAILED_SAFE_NOT_DEPLOYED",
+  "status": "V2_EXACT_FORMAT_CODES_READY_NOT_DEPLOYED",
   "owner_authorization": "Autonomous colors and allfilter simplification; reasonable nameconfidence; no further colorapproval required",
-  "code_commit": "135ada92366349cbc29ea080894a8e0f5e434fad",
+  "code_commit": "c7d83b88cdb703532b1746aa2db217176b21b273",
   "main_theme_id": 196328685834,
   "theme_write": false,
   "shopify_product_writes": false,
   "server_write": "OWNER_STAGED_NEW_INDEX_ONLY; noactivation; previousworkerandAPIpreserved",
   "ssh": "NETWORK_UNREACHABLE",
   "python_tests": {
-    "release_api_worker": 41,
-    "color": 6
+    "release_api_worker": 51,
+    "installer_lifecycle": 23,
+    "api": 19,
+    "worker": 9,
+    "color_previous_unchanged": 6
   },
   "javascript": {
     "color_assertions": 46,
@@ -35,15 +38,16 @@
     "profiles": 227,
     "typesense_collection": "bc_sync_20261108t130100_bc1233"
   },
-  "installer_sha256": "7ac33496f818e0c2ee70fb47ce54ba5d63a32e5d583274281d863703cc5dc727",
+  "installer_sha256": "a0ad2c0bea3d19b0964f7ff86a2904efe9e880449070a36b627a855280c66c2f",
   "required_flags": [
     "variant_aliases_v1",
-    "filter_simplification_v1"
+    "filter_simplification_v1",
+    "tile_format_codes_v1"
   ],
-  "runtime_and_browser_tests": "REAL_STAGING_API_EXECUTED_ONE_FAILURE; newlivebrowserNOT_TESTED",
+  "runtime_and_browser_tests": "V2_REAL_TYPESENSE_ASGI_ACTIVATION_PENDING; FRONTEND_NOT_TESTED",
   "source_private": true,
   "source_and_specs_preserved": true,
-  "next_action": "Run read-only staged60x60diagnostic andinspect expectedactualID/count difference before correctedrelease",
+  "next_action": "Execute pinnedv2PowerShell installer, reportoutput, verifypublicAPIandstorefront",
   "owner_server_execution": {
     "stage_generation": "20261108T142600_81ee36",
     "products": 15897,
@@ -59,6 +63,40 @@
     "profiles": 227,
     "typesense_collection": "bc_sync_20261108t130100_bc1233"
   },
-  "failure_cause": "NOT_YET_PROVEN",
-  "diagnostic_commit": "cfdd2225fe8863b626b82e4f453c6f60fe32c222"
+  "failure_cause": "CONFIRMED: humanstringexactfilter60x60alsomatched60x120and60x150",
+  "diagnostic_commit": "cfdd2225fe8863b626b82e4f453c6f60fe32c222",
+  "owner_diagnostic": {
+    "expected_count": 159,
+    "actual_count": 309,
+    "returned_unique_ids": 309,
+    "duplicates": 0,
+    "missing": 0,
+    "extra": 150,
+    "format_counts": {
+      "60 × 60 cm": 159,
+      "60 × 120 cm": 58,
+      "60 × 150 cm": 92
+    },
+    "search_cutoff": false
+  },
+  "fix": {
+    "selection_field": "f_tegel_formaat_code",
+    "selection_type": "int32",
+    "public_facet": "f_tegel_formaat",
+    "generation_map": "tile_format_codes",
+    "unknown_code": 0,
+    "required_flags": [
+      "variant_aliases_v1",
+      "filter_simplification_v1",
+      "tile_format_codes_v1"
+    ],
+    "stage_full_format_idsets": 132
+  },
+  "runtime_before_v2": {
+    "ok": true,
+    "profiles": 227,
+    "typesense_collection": "bc_sync_20261108t150044_583414",
+    "simplification_flag": false,
+    "original_tile_ranges_present": true
+  }
 }
