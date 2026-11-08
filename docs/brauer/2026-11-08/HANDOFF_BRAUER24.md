@@ -1,3 +1,5 @@
+> **Actuele stand is BRAUER-25.** Lees [de nieuwe overdracht](HANDOFF_BRAUER25.md) en privé `prepared/HANDOFF_BRAUER25.json`. Onderstaande BRAUER-24-gegevens zijn historie.
+
 # BRAUER-24 — actuele overdracht, afgerond op 8 november 2026
 
 De hieronder bewaarde beginstand is historie. De hervatting is afgerond; er draait geen bronlezer of schrijver. Lees [de definitieve ronde](FINAL_BRAUER24.md) en de actuele privé-ZIP, daarin `prepared/HANDOFF_BRAUER24.json`.
