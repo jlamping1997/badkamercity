@@ -12,15 +12,26 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
-## BRAUER-24 — OVERGEDRAGEN, geen actieve schrijver · 8 november 2026
+## BRAUER-24 — specificatieronde afgerond, import blijft geblokkeerd · 8 november 2026
 
-Uitvoering op verzoek van de eigenaar gestopt voor een nieuwe chat. Geen achtergrondleescel of schrijver meer actief. **Catalogus163.461feiten /19.383extra velden sinds BRAUER-23;4748nieuwe technische bronrecords bewaard.** Nog220bronaanvragen zonder bewaarde tabel, waaronder laatste18niet afgerond. Nog geen herhaalronde. Excel/open-work zijn oudere gecontroleerde stage2; eerst bronmerge en eindcontroles. Geen Shopify-writes/import/media-upload/publicatie. Officiële complete media nog afwachten.
+De overgedragen ronde is volledig afgewerkt. **13.161 artikelen, 173.785 specificatievelden; 10.324 extra sinds stage3 en 29.707 extra sinds BRAUER-23.** Alle 220 resterende aanvragen leverden een technische tabel met exact BRAUER/fabrikantartikelnummer/EAN op. De oorspronkelijke werklijst van 4.968 bronkandidaten is nu geheel behandeld; totaal 5.873 bronrecords / 5.870 exacte identiteiten. Geen volledige broncontrole van iedere catalogus-SKU geclaimd.
 
-**Eén volgende taak:** herstel het bijgewerkte privévoorbereidingspakket en volg [de volledige overdracht](brauer/2026-11-08/HANDOFF_BRAUER24.md):220resterende kandidaten, getypeerde bronmerge, verrijking, vragen, tests en definitieve Excel/nativecontrole. Lees prepared/HANDOFF_BRAUER24.json; niet opnieuw4748pagina’s raadplegen en retail_extract.py niet op een lege research-map uitvoeren.
+**Catalogus, open-work en definitieve Excel zijn gelijkgetrokken.** Native vergelijking: alle 13.161 artikelregels, 38.426 cumulatieve aanvullingen en 361 vragen exact gelijk; vijf bladen gerenderd/gecontroleerd, 12 EAN-voorbeelden als tekst, nul native foutcellen. 38 tests PASS; herhaalde verrijking behoudt catalogus, veldherkomst, cumulatieve aanvullingen en historische verschillen exact. Preflight geeft terecht exitcode 2 met inhoudelijk gecontroleerd JSON-blokkeerresultaat.
+
+Nog 7.005 artikelen met ontbrekende gekozen kernvelden; 31 open retailveldverschillen en 288 verdachte slangwaarden blijven apart. Alle eerdere 28 verschillen/233 slangwaarden en de oorspronkelijke 42 gegevensblokkades/163 toekomstige artikelen behouden. Prijzen inclusief 21% btw, SKU/EAN, titels, goedgekeurde keuzegroepen, eigen aanvullingen, oorspronkelijke bestanden en media ongewijzigd. Geen eerdere specificatie gewijzigd/verwijderd; geen correctie van 15 naar 150 cm, ontbrekend icoon als Nee of fysieke maat uit een unitloze code.
+
+**Bestaande privé-ZIP versie 7 en specificatie-XLSX versie 5 opgeslagen, dezelfde bestandsidentiteiten behouden.** Pakket met 121 bestanden en 120 gecontroleerde manifesthashes; alle 88 oorspronkelijke bestanden behouden. Eén ZIP-versieconflict opgelost door de actuele, byte-identieke bron opnieuw te laden en de wijzigingen daarop toe te passen; geen tussentijdse wijzigingen overschreven. Getypeerde bronnen volledig bewaard; geen 4.748 pagina’s opnieuw gelezen. Extractie uit een lege bronmap is nu beveiligd en gedeeltelijke extracten behouden andere bronrecords.
+
+**Geen Shopify-writes, DRAFT-import, media-upload, themawrite of publicatie.** MAIN alleen qua rol voor en na gelezen: 196341825802. Alle vrijgavevlaggen false; volledige officiële afbeeldingen/PDF’s ontbreken nog. Geen volledige technische vrijgave of importgereedheid. Geen actieve bronlezer/schrijver, geen Windows-Git-, Excel-desktop- of livewinkeltest geclaimd.
+
+Codecheckpoint **419b9104e0d699f739a58cb39c60e5dcc50db13c**, zes codepaden remote exact bevestigd op fix/product-cards-2026-10-14; main krijgt uitsluitend documentatie. [Definitieve ronde](brauer/2026-11-08/FINAL_BRAUER24.md), [actuele overdracht](brauer/2026-11-08/HANDOFF_BRAUER24.md) en privé prepared/HANDOFF_BRAUER24.json.
+
+**Eén volgende taak:** de 361 concrete vragen controleren op actuele officiële artikelbladen/tekeningen zodra beschikbaar. Officiële media daarna inventariseren en exact koppelen; een beoordeelde volledige representatieve product-/keuzeproef blijft verplicht vóór iedere import.
+
 
 ---
 
-## BRAUER-24 — brononderzoek loopt; gecontroleerd tussenresultaat · 7 november 2026
+## BRAUER-24 — HISTORISCHE gecontroleerde tussenstand · 7 november 2026
 
 Actieve offline taak: resterende 4.968 openbare bronkandidaten exact op merk/SKU/EAN toetsen. Gecontroleerde tussenstand na 2.110 nieuwe pagina’s: **11.809 extra velden**, totaal155.887feiten. Nog9.100artikelen met ontbrekende gekozen kerngegevens,989minder dan BRAUER-23. Dataset en nativeXLSX gecontroleerd op dezelfde stand:13.161artikelregels,20.528cumulatieve aanvullingen,178vragen exact gelijk;12EAN-voorbeelden strings, nul native foutcellen, vijf bladen gerenderd/gecontroleerd.32tests PASS.
 
