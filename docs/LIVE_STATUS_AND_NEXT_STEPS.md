@@ -1,5 +1,18 @@
 # BadkamerCity — actuele werkstatus
 
+## TILE-FILTER-01 — tegelformaten en kleurkaarten voorbereid · 8 november 2026
+
+**OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_PENDING / NOT_APPLIED.** Eigenaar staat 59,6→60 toe in tegelfilters en wil meerdere zichtbare basiskleuren per tegel; exacte specs behouden. Alle 4.100 Admin-tegelleden en hun publicatie gelezen: 3.496 ACTIVE+OnlineStore, 604 uitgesloten. Geen product-/thema-/server-/indexwrite.
+
+302 gewijzigde formaatvoorstellen uit 18 bronparen. Binnen dezelfde scope 3.370 producten/143 bronparen→126 labels; 120 vorm-/matnaamcontroles en zes ontbrekende maten apart. 36 Python-tests PASS, bron ongewijzigd; alle productie-/contextflags false. Alleen filterlabels, geen m²-/doos-/prijsafronding.
+
+807 kleurnamen, 561 zonder gestructureerde kleur. Caliza→Beige36 en Cevica Waves Copper Green→Groen4 onderbouwd voorbereid. Privé 15 foto-reviewkaarten met 13 open voorstellen, bestaande akkoord-/bronstatus en JSON-export; acht coretests/syntax PASS, echte browserdownload/mobiel NOT_TESTED. Nieuwe API-generatie 20261108T130100_bc1233 waargenomen; geen directe timer-/restartpolicytest.
+
+[Uitwerking en grenzen](filters/tile-pilot-2026-11-08/README.md), [verificatie](filters/tile-pilot-2026-11-08/verification-summary.json). Offline code scripts/filters/ op bestaande branch; data/foto's privé. MAIN196328685834; vóór latere wijziging verse live-pariteit behouden.
+
+**Exact één volgende handeling:** eigenaar beoordeelt 13 open kleurkaarten; Caliza/Groen niet opnieuw vragen. Daarna begrensde tegelpilot met bevoegde VPS-bronread en staging/UNPUBLISHED-tests. Overige holds behouden; geen actieve schrijver na checkpoint.
+
+
 ## FILTER-SIMPLE-01 — volledige filteranalyse en eenvoudig kleurenvoorstel · 8 november 2026
 
 **READ_ONLY_AUDIT / PROPOSAL_READY / NOT_APPLIED.** Alle227profielen uitgelezen, nul fouten, generatie20261107T080100_ca321b;34verschillende filtervelden.1.002exacte kleurnamen, waarvan Tegels807/Cottoceramix792/Wastafelkranen29. Bestaande13kleurgroepen dekken36namen;966ongesorteerd, en LIVEJS gebruikt die groepen niet. Geen Shopify-, server-, index- of themawrite.
