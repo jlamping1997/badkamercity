@@ -1,5 +1,7 @@
 # Live- en documentatiecontrole — 8 november 2026
 
+> **Nieuwste vervolg, 8 november:** footer is gepubliceerd en live gecontroleerd; Contact is aangevuld en RapoWash-tekencodering hersteld. [Contact- en retourvervolg](../../repairs/2026-11-08/contact-and-returns/README.md). Oudere auditregels hieronder blijven bij hun meetmoment.
+
 > **Vervolg8 november:** Antikalk enRapoWash zijn inmiddels live gecorrigeerd; de footer is als getoetst desktopconcept voorbereid. [Actuele reparatiestatus](../../repairs/2026-11-08/footer-and-content/README.md). De metingen hieronder behouden hun oorspronkelijke auditmoment.
 
 **DOC-LIVE-01 · READ_ONLY_AUDIT / DOCS_UPDATED / LIVE_FIXES_PENDING.** De winkel is openbaar en de homepage-SEO is live. Dit dossier actualiseert de bestaande documentatie met verse Shopify-, bron- en HTML-controles. Het is geen volledige vrijgave voor advertenties of alle koopflows.

@@ -1,6 +1,20 @@
 # Eén footer en één beleidsbron
 
-**Stand: 8 november 2026 — FOOTER-FIX-01. Status: PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** De gedeelde footer staat in **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov**. MAIN **196328685834** is ongewijzigd. [Reparatie en actuele bewijsgrenzen](../repairs/2026-11-08/footer-and-content/README.md); [oorspronkelijke audit en routeoverzicht](../audits/2026-11-08/README.md).
+**Stand: 8 november 2026 — CONTACT-RETURNS-01. Footer: OWNER_PUBLISHED / PUBLIC_HTML_VERIFIED.** **MAIN 196354474250 — BadkamerCity - Eenduidige footer 8 nov** is door de eigenaar gepubliceerd en vers bevestigd (`updatedAt=2026-11-08T16:37:38Z`). Twee footer-MD5's komen exact overeen; veertien publieke routes zonder preview tonen dezelfde footer, inclusief tijdelijke telefoon, e-mail en duidelijk contact-/retouradres. De eerdere footerpublicatieactie is afgerond. Geen nieuwe desktop-/mobiele runtimeproef uit deze HTTP-nacontrole afleiden. [Actuele reparatieronde](../repairs/2026-11-08/contact-and-returns/README.md).
+
+De Contactpagina zelf bevat nu ook de bevestigde gegevens en retour-/beleidslinks; het native contactformulier is behouden en twee eigen SEO-waarden zijn toegevoegd. Dit is live publiek teruggelezen. De native Contact policy is hiermee niet automatisch gewijzigd; policybewerking blijft afzonderlijk geblokkeerd door de ontbrekende `write_legal_policies`-scope. Het contact-/retouradres bewijst geen geregistreerde juridische vestiging en er is geen btw-cijfer geraden.
+
+## Retourinformatie — voorbereid in volgend concept
+
+**PREVIEW_IMPLEMENTED_NOT_PUBLISHED:** UNPUBLISHED **196368531722 — BadkamerCity - Retourinformatie 8 nov** is eerst volledig gelijkgetrokken met de nieuwe MAIN (1.387/1.387), daarna op precies vier bestanden aangepast: `sections/bc-returns.liquid`, `locales/nl.json`, `locales/en.default.json` en `templates/index.json`. Vier Liquid-controles (revisie 2) en exacte bronreadback zijn geslaagd. Publiek previewbewijs en review/publicatie staan in het nieuwe reparatiedossier; deze inhoud is nog niet live verklaard.
+
+De tekst brengt de aanmeldroute in lijn met de bestaande native retourpolicy: 30 dagen aanmelden plus 14 dagen terugsturen; rechtstreekse beleidslink; andere uitvoering via retour en nieuwe bestelling; vast contact-/retouradres met afgeven op afspraak; klantbetaalde spijtretour, €75 incl. btw als raming per standaard NL-retourpallet en kosteloze noodzakelijke afhandeling bij een terechte fout/garantie. De homepage noemt het bestelnummer alleen indien bekend. Er worden geen nieuwe commerciële voorwaarden toegevoegd.
+
+De retour-Page-body is bewust niet gewijzigd: deze route rendert de eigen `bc-returns`-sectie en locales. Formactie, veldnamen en formuliercontract zijn behouden; geen nieuwe JavaScript toegevoegd en geen bericht verstuurd. Deze copycorrectie sluit de open verificatie van de herroepingsfunctie of onmiddellijke bewaarbare klantbevestiging niet af.
+
+## Historische voorbereiding en conceptreparatie — vóór eigenaarspublicatie
+
+**Historisch conceptcheckpoint: 8 november 2026 — FOOTER-FIX-01, toen PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** De gedeelde footer staat in **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov**. MAIN **196328685834** is ongewijzigd. [Reparatie en actuele bewijsgrenzen](../repairs/2026-11-08/footer-and-content/README.md); [oorspronkelijke audit en routeoverzicht](../audits/2026-11-08/README.md).
 
 Eerst zijn zes actuele SEO-/headerbestanden uit MAIN overgenomen en is **1.387/1.387 pariteit** bevestigd. Daarna zijn precies `sections/footer.liquid` en `sections/footer-group.json` aangepast; **1.385 overige bestanden blijven gelijk**. `compact_homepage=false` kiest de standaardfooter winkelbreed. De inhoud telt **17 blocks: 4 service, 10 categorie, 3 informatie**; de afzonderlijke schemawaarde **category.limit is van 6 naar 10** verhoogd. Schema eerst uploaden, section group daarna.
 

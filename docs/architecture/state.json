@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "updated_on": "2026-11-08",
-  "task": "DOC-LIVE-01",
-  "status": "DOCS_UPDATED_READ_ONLY_AUDIT_LIVE_FIXES_PENDING",
+  "task": "CONTACT-RETURNS-01",
+  "status": "FOOTER_OWNER_PUBLISHED_CONTACT_ENCODING_LIVE_RETURNS_PREVIEW",
   "active_branch": "fix/product-cards-2026-10-14",
   "current_audit": "../audits/2026-11-08/README.md",
-  "main_theme_at_capture": "196328685834",
+  "main_theme_at_capture": "196354474250",
   "live_manifest_files": 1387,
   "git_theme_paths": 1378,
   "live_git_parity": {
@@ -22,28 +22,30 @@
     "category_landing_collections": 16,
     "furniture_hubs": 1
   },
-  "http_routes_checked": 364,
+  "http_routes_checked": 14,
   "http_status_counts": {
-    "200": 360,
-    "404": 4
+    "200": 13,
+    "404": 1
   },
-  "http_scope": "Server responses; includes deliberate 404 probe; no claim of 364 browser flows.",
+  "http_scope": "14 current public footer routes, plus separate two-page content readback and three preview routes; no new browser/mobile interaction.",
   "audit_complete": false,
   "documentation_complete": false,
   "footer": {
     "finding": "FOOTER-F02",
-    "status": "OPEN_PROPOSED",
+    "status": "OWNER_PUBLISHED_LIVE_HTML_VERIFIED",
     "current_renderers": [
-      "bch-footer",
       "bcf-v2 bcf-v3"
     ],
     "core_files_live_git_exact": 4,
     "targeted_html_routes": 14,
-    "configured_blocks": 18,
+    "configured_blocks": 17,
     "max_blocks": 18,
-    "empty_url_blocks": 8,
+    "empty_url_blocks": 0,
     "proposed_blocks": 17,
-    "live_changes": false
+    "live_changes": true,
+    "published_main": "196354474250",
+    "category_limit": 10,
+    "owner_published": true
   },
   "open_verifications": [
     "theme_parity_drift",
@@ -55,7 +57,7 @@
     "ga4_purchase_value_currency_deduplication",
     "authorized_external_backend_app_sources"
   ],
-  "next_action": "Prepare the existing standard footer and complete link set in a proven source-parity unpublished preview; keep proposal status until implementation and regression evidence exist.",
+  "next_action": "Owner reviews Retourinformatie8nov on desktop/phone and publishes that existing candidate if satisfied; other open legal/checkout/measurement tasks remain.",
   "background_worker_active": false,
   "historical_capture_2026_10_28": {
     "schema_version": 2,
@@ -129,5 +131,21 @@
   },
   "current_refresh_scope_complete": true,
   "overall_site_release_complete": false,
-  "completion_scope": "DOC-LIVE-01 evidence capture and documentation refresh complete; overall product/runtime/release verification remains open."
+  "completion_scope": "DOC-LIVE-01 evidence capture and documentation refresh complete; overall product/runtime/release verification remains open.",
+  "latest_followup": "../repairs/2026-11-08/contact-and-returns/README.md",
+  "returns_preview": {
+    "theme": "196368531722",
+    "status": "NOT_PUBLISHED",
+    "feature_files": 4,
+    "equal_other_files": 1383
+  },
+  "previous_http_capture_2026_11_08": {
+    "main_theme_at_capture": "196328685834",
+    "http_routes_checked": 364,
+    "http_status_counts": {
+      "200": 360,
+      "404": 4
+    },
+    "http_scope": "Server responses; includes deliberate 404 probe; no claim of 364 browser flows."
+  }
 }

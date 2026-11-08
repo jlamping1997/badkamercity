@@ -17,6 +17,14 @@ Onafhankelijke publieke API-controle met volledige paginering en unieke IDs:60×
 [Livebewijs en grenzen](filters/simplification-release-2026-11-08/README.md), [verificatie](filters/simplification-release-2026-11-08/verification.json). [Concrete livekleur+formaatproef](https://badkamercity.nl/collections/betonlook-tegels?bcf_f_tegel_formaat=60+%C3%97+60+cm&bcf_f_kleur=Beige). **Exact één volgende handeling:** eigenaar loopt de livefilters praktisch door en noteert productlinks voor gewenste kleurcorrecties; Cottoceramix-profiel staat apart open voor vervolgronde. Geen nieuw inhoudelijk akkoord nodig. Andere import-/BRAUER-/bestelafspraken behouden; geen actieve schrijver na overdracht.
 
 
+## CONTACT-RETURNS-01 — footer live, contact aangevuld en retourteksten voorbereid · 8 november 2026
+
+**FOOTER_OWNER_PUBLISHED / CONTACT_ENCODING_APPLIED_VERIFIED / RETURNS_PREVIEW_NOT_PUBLISHED.** Verse MAIN 196354474250 — Eenduidige footer 8 nov; beide footerfiles exact, 14 publieke routes met één uniforme footer. Contact Page 160794411274 aangevuld met bevestigde telefoon, e-mail, contact-/retouradres en retour-/beleidslinks; native formulier behouden. Twee nieuwe SEO-waarden met CAS-null. Vier kapotte tekenplaatsen in RapoWash gericht hersteld, met SEO, identiteit en publicatie behouden. Publieke readbacks PASS.
+
+**UNPUBLISHED 196368531722 — Retourinformatie 8 nov:** reserve eerst 1.387/1.387 gelijk aan actuele MAIN na twee footerfiles; daarna exact vier bedoelde files (bc-returns, nl, en.default, index), 1.383 overige gelijk en MAIN ongewijzigd. Bestaande 30 + 14 dagen, retourkosten, adres en beleidslink afgestemd. De omruilkeuze verwijst naar retour + nieuwe bestelling; bestelnummer en reden blijven optioneel. Geen nieuwe voorwaarden, JavaScript of formulierverzending. Vier Liquid-checks op revisie 2 en drie HTTP-previewroutes PASS. De onzichtbare Retour Page-body is niet gewijzigd.
+
+[Uitvoering, bewijs en herstel](repairs/2026-11-08/contact-and-returns/README.md). **Volgende handeling binnen dit dossier:** eigenaar beoordeelt Retourinformatie 8 nov op laptop en telefoon en publiceert dat bestaande concept bij akkoord; daarna nieuwe livecontrole. Native policy-scope, verzendbeleid, btw-identiteit en betaal-/mail-/purchase-/consentbewijs blijven open. Afzonderlijke Cotto-/filterstatus en importholds behouden; geen actieve schrijver na overdracht.
+
 ## FOOTER-FIX-01 — twee contentfouten live, gedeelde footer ter review · 8 november2026
 
 **CONTENT_APPLIED_VERIFIED / FOOTER_PREVIEW_VERIFIED_DESKTOP / NOT_PUBLISHED.** Antikalk toont na gerichte body-H1→H2 nog één H1. RapoWash heeft eigen SEO-titel/beschrijving via twee bestaande globalvelden met compareDigest; publieke head en onveranderde Reukslot/identiteiten/publicaties/bodies teruggelezen.

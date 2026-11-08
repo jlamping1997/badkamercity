@@ -1,7 +1,17 @@
-# Footer: livebron en eenduidig concept
+# Footer: live standaard en broncontract
+
+**Actuele stand — 8 november 2026 · CONTACT-RETURNS-01. FOOTER-FIX-01: OWNER_PUBLISHED / PUBLIC_HTML_VERIFIED.** De eigenaar heeft **BadkamerCity - Eenduidige footer 8 nov (196354474250)** gepubliceerd. Verse Admin-rol: MAIN, `updatedAt=2026-11-08T16:37:38Z`. Beide gewijzigde footerfiles zijn exact op MD5 teruggelezen. **Veertien publieke HTTP-routes zonder previewparameter** tonen één identieke standaardfooter met telefoon, e-mail en gelabeld contact-/retouradres. Dit is nieuwe bron-/HTML-nacontrole, geen nieuwe desktop-, mobiele of fysieke telefoonproef. [Actuele publicatie- en reparatiestatus](../../repairs/2026-11-08/contact-and-returns/README.md).
+
+Het huidige contract blijft: `compact_homepage=false`; **17 blocks (4 service, 10 categorie, 3 informatie)** binnen maximum 18, met `category.limit=10`. De gewone footer gebruikt dezelfde renderer, bestaande CSS/JavaScript en retour-/offerte-/policy-/betaalguards. De eerdere vraag om deze footer te publiceren is hiermee afgehandeld.
+
+De **Contact Page is nu ook live aangevuld** met telefoon `+31685887536`, info@badkamercity.nl, Zichtenburglaan 150, 2544 EB Den Haag als contact-/retouradres op afspraak, en retour-/beleidslinks. Twee contact-SEO-waarden zijn met null-compare-and-set toegevoegd; het native formulier blijft behouden. De vier kapotte tekencoderingen in de RapoWash-body zijn gericht hersteld met behoud van SEO, status en identiteit. Beide wijzigingen zijn publiek teruggelezen.
+
+**Volgend concept:** UNPUBLISHED **196368531722 — BadkamerCity - Retourinformatie 8 nov**. Eerst 1.387/1.387 paritair met de nieuwe MAIN na overname van de twee footerfiles; daarna precies vier retour-/homepage-/localebestanden gewijzigd. Status **PREVIEW_IMPLEMENTED_NOT_PUBLISHED**. Vier Liquid-controles en exacte readback zijn geslaagd; aanvullende publieke previewcontrole volgt in het nieuwe dossier. Dit concept wijzigt de footer niet en mag niet als gepubliceerd worden beschreven. Native policyopmaak blijft geblokkeerd op `write_legal_policies`; btw-identiteit, verzending, mail en aankoopmeting blijven afzonderlijk open.
+
+## Historische conceptopbouw — FOOTER-FIX-01 vóór eigenaarspublicatie
 
 
-**Actuele reparatie — 8 november 2026 · FOOTER-FIX-01 · PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** Het bestaande **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov** bevat de gedeelde standaardfooter. MAIN **196328685834** is ongewijzigd. [Reparatie, bronbewijs en testgrenzen](../../repairs/2026-11-08/footer-and-content/README.md).
+**Historisch conceptcheckpoint — 8 november 2026 · FOOTER-FIX-01 · toen PREVIEW_IMPLEMENTED_NOT_PUBLISHED.** Het bestaande **UNPUBLISHED 196354474250 — BadkamerCity - Eenduidige footer 8 nov** bevat de gedeelde standaardfooter. MAIN **196328685834** is ongewijzigd. [Reparatie, bronbewijs en testgrenzen](../../repairs/2026-11-08/footer-and-content/README.md).
 
 Eerst zijn zes actuele SEO-/headerbestanden uit verse MAIN exact overgenomen; daarna was het concept **1.387/1.387 bestanden paritair**. De footerwijziging raakt vervolgens precies twee bestanden: `sections/footer.liquid` en `sections/footer-group.json`; **1.385 overige bestanden blijven gelijk**.
 
@@ -46,7 +56,7 @@ Op het oorspronkelijke auditmoment waren deze vier kernbestanden bytegelijk aan 
 | `sections/footer.liquid` | `7e413995480f5066044e3e43805b5388` | `3ad0e8372c0e2b558a1e258b97d49135c3e3632a` |
 | `snippets/bc-home-footer.liquid` | `63943bf38ac942f65e342cc0348cb992` | `dd7f653d8d2be745051288198792cdf4a0b2901f` |
 
-## Huidige configuratie: 18 blokken, 8 lege bestemmingen
+## Historische auditconfiguratie: 18 blokken, 8 lege bestemmingen
 
 De sectie heeft **18 blocks bij schema-maximum 18**. Actuele code verbergt blocks zonder URL buiten `request.design_mode`; de oude tien zichtbare tekstlabels uit FOOTER-F01 zijn dus geen actuele telling.
 
@@ -60,7 +70,7 @@ Placeholdermodus en betaalvoorbeelden staan uit; `payment_enable` en `show_polic
 
 De vijf bestaande policies zijn privacy, terugbetaling, contactgegevens, voorwaarden en wettelijke kennisgeving. **`/policies/shipping-policy` geeft 404**; geen werkende verzendbeleidslink suggereren. Voorwaarden en wettelijke kennisgeving tonen in de verse response ge-escapete HTML: policybestaan is geen bewijs van bruikbare opmaak.
 
-## Historisch voorgesteld footercontract — inmiddels in concept geïmplementeerd
+## Historisch voorgesteld footercontract — inmiddels gepubliceerd
 
 Hergebruik de bestaande **standaard `.bcf-v3`** voor alle gewone storefront-paginatypen. In een brongecontroleerd **UNPUBLISHED** concept kan `compact_homepage=false` beide routes naar deze renderer leiden. Bouw geen derde footer. Werk tegelijk de inhoud bij, zodat de vier ontbrekende hoofdcategorieën en advies/inspiratie niet verdwijnen.
 
@@ -94,6 +104,6 @@ De semantische voetervingerafdrukken van de gerichte set zijn home `190dbaf8025c
 
 - **28 oktober — FOOTER-F01:** tien URL-loze labels werden als tekst getoond; historische meting en desktopwaarneming blijven in het [toenmalige bewijs](../evidence/2026-10-28-complete/README.md).
 - **31 oktober — FIX-01:** lege bestemmingen buiten editor verbergen en bestaande merkengids koppelen; [gedateerd dossier](../../repairs/2026-10-31/README.md). Die configuratiegrens is op 8 november opnieuw inhoudelijk gelezen, nu met acht lege slots.
-- **8 november — FOOTER-F02:** twee werkelijke live renderers en verschillende linkdekking bewezen; de latere harmonisatie staat als **FOOTER-FIX-01 / PREVIEW_IMPLEMENTED_NOT_PUBLISHED** bovenaan. De oorspronkelijke live-audit blijft gedateerd bewijs.
+- **8 november — FOOTER-F02:** twee werkelijke live renderers en verschillende linkdekking bewezen; de harmonisatie is later door de eigenaar gepubliceerd; de actuele bron-/HTML-nacontrole staat bovenaan. De oorspronkelijke live-audit blijft gedateerd bewijs.
 
 [Footerlifecycle](micro/FOOTER_LIFECYCLE.md) · [historische instellingenreferentie](../reference/sections/footer.md) · [eenheidskaart](../CONSISTENCY.md) · [bevindingen](../FINDINGS.md).

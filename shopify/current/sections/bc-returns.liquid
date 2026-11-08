@@ -5,7 +5,7 @@
 <section class="bcr" aria-labelledby="ReturnHeading-{{ section.id }}">
   <div class="bcr-shell">
     <nav class="bcr-crumb" aria-label="{{ 'bc_assortment.breadcrumb' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'bc_assortment.home' | t }}</a><span aria-hidden="true">›</span><span>{{ 'bc_returns.heading' | t }}</span></nav>
-    <div class="bcr-intro"><p class="bcr-eyebrow">{{ 'bc_returns.eyebrow' | t }}</p><h1 id="ReturnHeading-{{ section.id }}">{{ 'bc_returns.heading' | t }}</h1><p>{{ 'bc_returns.intro' | t }}</p></div>
+    <div class="bcr-intro"><p class="bcr-eyebrow">{{ 'bc_returns.eyebrow' | t }}</p><h1 id="ReturnHeading-{{ section.id }}">{{ 'bc_returns.heading' | t }}</h1><p>{{ 'bc_returns.intro' | t }}{% if shop.refund_policy != blank %} <a href="{{ shop.refund_policy.url | escape }}">{{ shop.refund_policy.title | escape }}</a>{% endif %}</p></div>
     <div class="bcr-grid">
 
       <div class="bcr-panel">
