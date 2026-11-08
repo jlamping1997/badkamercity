@@ -1,5 +1,7 @@
 # Metadata, structured data, redirects en talen
 
+> **Actueel CATEGORY-COPY-01:** negen collectie-SEOtekstlinks naar bevestigde lege lijsten verwijderd, zonder meta description/titel/handle/canonical/H1 te veranderen. Geen redirect van de ongepubliceerde lege Tegeltoebehoren-collectie naar een andere zoekintentie. [Bewijs](../../repairs/2026-11-08/category-content-links/README.md). Geen ranking-/indexatie-effect geclaimd.
+
 > **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Alleen lege collectie-page_description krijgt titelgebonden gelokaliseerde fallback van max160tekens, met escape_once en expliciete meta-snippetparameters. Bestaande SEO behouden; geen stylelekkage in gemeten pagina’s. Zoekstatus/titel volgen actieve bron; verzendcopy€100 consistent zonder onbewezen zelfde-dagbelofte. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
 
 Bronmoment **28 oktober 2026**. Dit dossier beschrijft de technische uitvoer en beheerlocaties. Het is geen verklaring van ranking, indexatie, juridische juistheid of Core Web Vitals.

@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "updated_on": "2026-11-08",
-  "task": "SHIPPING-COVERAGE-01 / BLOG-ROUTE-01",
-  "status": "EFFECTIVE_NL_SHIPPING_VERIFIED_BLOG_REDIRECT_APPLIED",
+  "task": "CATEGORY-COPY-01",
+  "status": "CATEGORY_DESCRIPTION_LINK_REPAIRS_APPLIED_VERIFIED",
   "active_branch": "fix/product-cards-2026-10-14",
-  "current_audit": "../repairs/2026-11-08/glossary-encoding/README.md",
+  "current_audit": "../repairs/2026-11-08/category-content-links/README.md",
   "main_theme_at_capture": "196368531722",
   "live_manifest_files": 1387,
   "git_theme_paths": 1378,
@@ -24,12 +24,12 @@
     "furniture_hubs": 1,
     "scope": "Pages freshly complete; collection counts retain preceding broad audit timestamp"
   },
-  "http_routes_checked": 14,
+  "http_routes_checked": 18,
   "http_status_counts": {
-    "200": 13,
+    "200": 17,
     "404": 1
   },
-  "http_scope": "14publicfooter routes,13publicPagebefore-after pairs,and5targetedpublication/hygro routes; no browser/JS/mobile claim",
+  "http_scope": "Recorded category QA:8parentbefore-afterpairs plus9confirmedemptytargets and1expecteddormant404;18uniquepaths/26responses. ServerHTMLonly; noJS/browser/mobile claim.",
   "audit_complete": false,
   "documentation_complete": false,
   "footer": {
@@ -61,7 +61,7 @@
     "ga4_purchase_value_currency_deduplication",
     "authorized_external_backend_app_sources"
   ],
-  "next_action": "Investigate /collections/tegeltoebehoren identity/publication and actual references before choosing a bounded correction.",
+  "next_action": "Check same-site collection links in published Pages and blog content against actual target visibility and offering before any edits.",
   "background_worker_active": false,
   "historical_capture_2026_10_28": {
     "schema_version": 2,
@@ -135,8 +135,8 @@
   },
   "current_refresh_scope_complete": true,
   "overall_site_release_complete": false,
-  "completion_scope": "Active NL shipping config and8samplecartquotes verified; one blogredirect live. Overall checkout/payment/mail/mobile/measurement release still open.",
-  "latest_followup": "../repairs/2026-11-08/shipping-and-blog/README.md",
+  "completion_scope": "Eight targeted collectiondescription repairs and nine emptylistlinks verified; dormant unpublished route explained. Overall product/runtime/mobile/checkout/legal/measurement work remains open.",
+  "latest_followup": "../repairs/2026-11-08/category-content-links/README.md",
   "returns_preview": {
     "theme": "196368531722",
     "status": "OWNER_PUBLISHED_PUBLIC_HTML_VERIFIED",
@@ -188,5 +188,20 @@
       301,
       200
     ]
+  },
+  "category_content_links": {
+    "published_descriptions_read": 226,
+    "changed_descriptions": 8,
+    "removed_links": 9,
+    "exact_final_admin_readbacks": 8,
+    "public_parents_before_after": 8,
+    "confirmed_empty_targets": 9,
+    "furniture_inline_styleblocks_preserved": 3,
+    "menus_unchanged": 9,
+    "new_collections_published": 0,
+    "redirects_created": 0,
+    "product_writes": 0,
+    "theme_writes": 0,
+    "published_collection_inventory_scope": "226publishedcollections completely read; total/other admin inventory fields retain their original stated capture."
   }
 }

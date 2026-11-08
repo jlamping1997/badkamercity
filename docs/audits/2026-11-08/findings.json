@@ -142,7 +142,25 @@
       "finding": "Legacy /blogs/news route404 while existing blog is /blogs/nieuws",
       "resolution": "One new redirect689424761098; no blog/article/theme/SEO mutation. Initial propagation404 then bare source301toexisting200target verified.",
       "next_action": "Retain redirect; rollback only this new record after current path/target guard."
+    },
+    {
+      "id": "BC-AUD-016",
+      "priority": "P2",
+      "evidence": "COMPLETE226DESCRIPTION_SCAN_AND_PUBLIC_PARENT_TARGET_BEFORE_AFTER",
+      "status": "RESOLVED_LIVE",
+      "finding": "Nine description links on eight category pages lead to confirmed empty published product lists",
+      "resolution": "Only descriptionHtml changed;9links removed,1tile sentence replaced; SEO/identity/template/publications/counts/otherlinks and3furniturestyleblocks preserved",
+      "next_action": "Check collection links in published Pages/blog content with actual target verification before edits."
+    },
+    {
+      "id": "BC-AUD-017",
+      "priority": "P2",
+      "evidence": "CURRENT_ADMIN_PUBLICATION_PRODUCTCOUNT_MENU_AND_HTTP",
+      "status": "EXPLAINED_EXPECTED_UNPUBLISHED_ROUTE",
+      "finding": "/collections/tegeltoebehoren returns404",
+      "resolution": "Existing collection584286306570 has0products/0publications; no reference in9menus or226publishedcollectiondescriptions. No collection publish, redirect, rename or product reassignment.",
+      "next_action": "Retain identity; evaluate only if real assortment and a corresponding navigation scope are introduced. Page/blog link scope checked separately."
     }
   ],
-  "last_followup": "SHIPPING-COVERAGE-01 effective Markets configuration verified and8samplecartsPASS; BLOG-ROUTE-01 redirect301to200"
+  "last_followup": "CATEGORY-COPY-01; dormant tileaccessories404 explained;9links to confirmedemptylists removed from8collection descriptions"
 }

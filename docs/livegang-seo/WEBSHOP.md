@@ -1,5 +1,7 @@
 # Webshop — actuele basis en resterende verkoopcontrole
 
+> **Actueel CATEGORY-COPY-01:** negen nutteloze productkeuzes uit acht categorieteksten gehaald, direct live; SEO/structuur/stijlblokken behouden.226gepubliceerdeomschrijvingen gecontroleerd, alle negen menu’s ongewijzigd. [Bewijs](../repairs/2026-11-08/category-content-links/README.md). Geen collectie of product gepubliceerd/verplaatst.
+
 > **Actueel SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** beide locaties zijn in de effectieve NL-Market opgenomen. Acht cartoffertes kloppen en zijn opgeruimd; legacy-waarschuwing verklaard. /blogs/news verwijst met301 naar bestaand /blogs/nieuws (200). [Bewijs](../repairs/2026-11-08/shipping-and-blog/README.md). Native verzendpolicy en echte betaal-/mail-/meetketen blijven apart open.
 
 > **Actueel CONTENT-ENCODING-02 — 8 november:** MAIN 196368531722 is eigenaar-gepubliceerd; klantenservice-/bezorg-/retourverwijzingen publiek gecontroleerd. Dertien uitlegpagina’s opgeschoond: negentien accenten en vier voorlooptekens; SEO/links/structuur gelijk. Verse telling 122 Pages/120 gepubliceerd; 109 termlinks op gepubliceerde doelen gemapt. [Nieuw dossier](../repairs/2026-11-08/glossary-encoding/README.md). Geen product-/tarief-/policywrite of algemene checkoutvrijgave.

@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Nieuwste vervolg — CATEGORY-COPY-01:** negen inhoudslinks naar publiek bevestigde lege lijsten uit acht categoriepagina’s hersteld, direct live. Volledige226-omschrijvingsread; SEO/identiteit/overige inhoud en drie meubelstijlblokken behouden. Tegeltoebehoren blijft de bestaande lege/ongepubliceerde collectie zonder menuverwijzing. [Bewijs en vervolg](repairs/2026-11-08/category-content-links/README.md).
+
 > **Nieuwste vervolg — SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** effectieve NL-verzending via Markets, beide oorsprongen aanwezig; acht aanvullende cartquotes PASS. Legacy-profielsignaal is verklaard, geen tarief-/voorraadwrite. Oude blogroute geeft nu301→200. [Nieuw dossier](repairs/2026-11-08/shipping-and-blog/README.md). Native policies en complete order-/mail-/meetketen blijven open.
 
 > **Actuele stand 8 november — CONTENT-ENCODING-02:** MAIN is **196368531722 — Klantenservice 8 nov**; geen publicatie van dat concept meer nodig. Negentien kapotte accenten en vier voorlooptekens op dertien Pages live hersteld, publieke/SEO-/structuurcontroles PASS. De 109 begrippenlinks mappen op gepubliceerde doelen. [Laatste bewijs en vervolg](repairs/2026-11-08/glossary-encoding/README.md). Oudere conceptrollen hieronder zijn gedateerde checkpoints.
