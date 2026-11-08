@@ -1,5 +1,13 @@
 # Logboek — livegang, Google en SEO
 
+## 8 november 2026 — SEO-HOME-01 / Search Console en homepageconcept
+
+Eigenaarsbeelden bevestigen DNS-eigendom, verwerking van de hoofdsitemap, homepage in Google en een geslaagde live-test. Wastafelkranen had status onbekend, slaagt live en heeft een bevestigde indexeringsaanvraag. Opname/posities zijn niet bevestigd.
+
+Homepageverbeteringen gecontroleerd in UNPUBLISHED196328685834; MAIN196341825802 exact behouden. Vooraf1.387/1.387 checksumpariteit na acht alignments; finale zes featureverschillen, geen overige. Zes validators/14HTTP-responses/desktop1363×936 gecontroleerd. Mobiel beperkt door browsermogelijkheden; testtemplate exact hersteld. Geen publicatie, product-, voorraad- of globale SEO-Admin-write. [Uitvoering, grenzen en herstel](seo/homepage-2026-11-08/README.md), code b10cb844eedc75817f66054f4d897b19d04f30e0.
+
+Volgende handeling: eigenaarreview laptop/telefoon en eigen publicatie; na publicatie verse openbare controle. Reservekopie196354474250 is niet het publicatiedoel.
+
 ## 5 november 2026 — LAUNCH-03: bedrijfsadres en retourontvangst bevestigd
 
 Eigenaar bevestigt dat Badkamercity onder zijn eenmanszaak op Hengelolaan70 valt, maar vanuit Harry Suiker op Zichtenburglaan150 opereert. Retouren gaan naar Zichtenburglaan150. Postcode2544EB gecontroleerd op de officiële Harry Suiker-contactpagina; de retourafspraak zelf komt van de eigenaar.

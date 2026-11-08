@@ -1,5 +1,7 @@
 # SEO-roadmap
 
+> **8 november2026:** de Search Console-basis is via eigenaarsscreenshots bevestigd. Homepageverbeteringen staan gecontroleerd in **BadkamerCity - Homepage SEO 8 nov (196328685834)**; eigenaarreview en publicatie zijn nog nodig. [Actuele uitvoering](homepage-2026-11-08/README.md). Indexeringsaanvraag Wastafelkranen ingediend; indexopname en effect blijven apart te meten.
+
 SEO verbetert gewone zoekresultaten voor producten, categorieën en nuttige inhoud. Merchant Center voegt productgegevens toe, maar maakt categorieën niet automatisch sterk.
 
 ## Volgorde

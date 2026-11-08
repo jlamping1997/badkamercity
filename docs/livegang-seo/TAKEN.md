@@ -29,7 +29,7 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 | --- | --- | --- | --- | --- | --- |
 | BC-GOOGLE-001 | P1 | Bestaande Google-toegang en eigendom vastleggen | TO_VERIFY | Toegang tot bestaande Merchant Center 5898992928 en beheer via info@ bevestigd; geen dubbel account of onbedoelde e-mailmigratie | Jackson |
 | BC-GOOGLE-002 | P1 | Google & YouTube installeren en verbinden | OPEN | Juist account en bestaande Merchant geselecteerd; domeinclaim en eerdere databronnen gecontroleerd; koppeling teruggelezen | Jackson + uitvoering |
-| BC-GOOGLE-003 | P1 | Search Console-eigendom en sitemap | TO_VERIFY | Bestaande property hergebruikt of domeinproperty via DNS bevestigd; sitemap https://badkamercity.nl/sitemap.xml verwerkt | Jackson + uitvoering |
+| BC-GOOGLE-003 | P1 | Search Console-eigendom en sitemap | DONE | 8 november: eigenaarsscreenshots bevestigen DNS-domeinproperty en hoofdsitemap verwerkt. Homepage geïndexeerd/live bereikbaar; Wastafelkranen indexering aangevraagd, nog geen opnameclaim. [Bewijs en grenzen](seo/homepage-2026-11-08/README.md) | Jackson + uitvoering |
 | BC-GOOGLE-004 | P1 | Google-verzending en retouren inrichten | OPEN | NL/EUR, pakket/pallet/zware goederen, kosten en werkelijke doorlooptijden komen overeen met website en checkout | Jackson + uitvoering |
 | BC-GOOGLE-005 | P1 | Kleine productfeedproef | OPEN | Circa tien uiteenlopende varianten in Merchant teruggelezen op prijs/foto/GTIN/MPN/voorraad en correcte bestemmingen | Uitvoering |
 | BC-GOOGLE-006 | P1 | Gratis vermeldingen en geschikte batches uitbreiden | OPEN | Gratis vermeldingen gecontroleerd; batchaantallen, afkeuringen en uitsluitingen geregistreerd; beeldloos Lagoo uitgesloten van die productbestemming | Uitvoering |
@@ -43,7 +43,7 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 
 | ID | Prio | Taak | Status | Gereed wanneer | Eigenaarrol |
 | --- | --- | --- | --- | --- | --- |
-| BC-SEO-001 | P1 | Homepagezoekvermelding verbeteren | OPEN | Relevante titel/beschrijving en duidelijk winkelonderwerp; feitelijke claims; actuele head teruggelezen | Uitvoering |
+| BC-SEO-001 | P1 | Homepagezoekvermelding verbeteren | PARTIAL | SEO-HOME-01: titel/beschrijving/H1/deelafbeelding gecontroleerd in concept196328685834; MAIN behouden. Eigenaar controleert telefoon en publiceert; daarna openbare head teruglezen | Uitvoering + Jackson |
 | BC-SEO-002 | P1 | Technische SEO-steekproef uitbreiden | PARTIAL | Canonicals/head/schema op homepage, categorie en zes producten gelezen; crawlen/renderen, rich results, paginering en echte indexatie nog toetsen | Uitvoering |
 | BC-SEO-003 | P1 | Mobiele kernroutes en snelheid meten | TO_VERIFY | Echte mobiele bediening en benoemde PageSpeed/veldmetingen; concrete problemen prioriteren | Jackson + uitvoering |
 | BC-SEO-004 | P1 | Eerste categoriecluster kiezen | OPEN | Werkelijk assortiment, koopintentie en overlap gecontroleerd; keuze in paginaregister met meetpunt | Jackson + uitvoering |
@@ -54,7 +54,11 @@ Status: DONE = binnen benoemde scope bewezen; OPEN = nog uitvoeren; PARTIAL = ee
 | BC-DOC-001 | P1 | Vast livegang-/Google-/SEO-dossier maken | DONE | LAUNCH-01: structuur, taken, bronnen, nulmeting en URL-register in Git; eigenaarsaanvulling en nieuwe controles in LAUNCH-02 | Uitvoering |
 | BC-DOC-002 | P1 | Eigenaarsaanvulling en concrete vervolgstappen vastleggen | DONE | LAUNCH-02: gegevens, retourconcept, twee-persoonsbestelcheck, mailproef, Google-uitleg en hergebruik van footer gedocumenteerd; geen winkel-/Google-mutaties | Uitvoering |
 
-## Nu eerst
+## Eerstvolgende homepagehandeling
+
+Open het Voorbeeld van **BadkamerCity - Homepage SEO 8 nov (196328685834)**, controleer laptop/telefoon en publiceer zelf bij akkoord. De technische proef en het herstel staan in [SEO-HOME-01](seo/homepage-2026-11-08/README.md). De algemene winkel-/Google-productvereisten hieronder blijven apart open; deze taak wijzigt ze niet.
+
+## Bestaand ontbrekend winkelgegevenspakket
 
 **BC-LIVE-001 — het ontbrekende gegevenspakket aanvullen:** volledig btw-id/juridische identiteit en raming van grote retourzendingen. Eigen telefoonnummer volgt later; bedrijfs- en retouradres zijn bevestigd. Adres/KvK/IBAN en de keuze voor jaarrond30dagen hoeven niet opnieuw verzameld te worden.
 De eigenaar wil de bestaande verkoopklare producten vindbaar maken; ontbrekende toekomstige merken en algemene afwerking blijven parallel groeiproject. Sluit de bewezen winkel-/feedproblemen binnen de gekozen scope of houd de betreffende producten uit die promotiebestemming.
