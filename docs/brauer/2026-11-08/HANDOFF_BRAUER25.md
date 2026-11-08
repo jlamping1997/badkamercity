@@ -1,3 +1,5 @@
+> **Historisch checkpoint:** de actuele overdracht is [BRAUER-26](HANDOFF_BRAUER26.md). De tellingen hieronder beschrijven uitsluitend de afgeronde BRAUER-25-ronde.
+
 # BRAUER-25 — actuele overdracht, 8 november 2026
 
 De gerichte Sanitairwinkel-ronde is afgerond. Geen actieve bronlezer/schrijver. Lees [de uitwerking](FINAL_BRAUER25.md) en in de actuele privé-ZIP `prepared/HANDOFF_BRAUER25.json`.
