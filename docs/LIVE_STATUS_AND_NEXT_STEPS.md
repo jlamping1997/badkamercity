@@ -1,11 +1,12 @@
 # BadkamerCity — actuele werkstatus
 
-## FILTER-RESTORE-01 — filterdienst na OVH-verlenging niet beschikbaar · 8 november 2026
+## FILTER-RESTORE-01 — filters weer zichtbaar en getest · 8 november 2026
 
-**DIAGNOSED / BLOCKED_SSH_ACCESS.** MAIN is nu **196328685834 — BadkamerCity - Homepage SEO 8 nov**, door eigenaar gepubliceerd. Wastafelkranen HTTP200 met bestaande filtermarkup/615 native producten; dezelfde VPS-DNS. Oude API /health HTTP200 en Typesense ok, maar de werkelijk gebruikte **/verified/health en /verified/api/v1/search geven HTTP502**. Uitval van de verified-route bewezen; gestopte kandidaatcontainer nog niet bewezen. SSH vanuit deze uitvoering: Network is unreachable; geen serveropdracht uitgevoerd. Geen Shopify- of serverwrite, geen herinstallatie, geen indexherbouw.
+**PUBLIC_API_RECOVERED / LIVE_UI_VERIFIED.** Eigenaaruitvoer bevestigde dat alleen badkamercity-filter-api-verified-candidate gestopt was (Exited 0 / 27 uur); Caddy, oudere API's en Typesense draaiden. Herstelblok verstrekt voor de bestaande container plus restartbeleid unless-stopped. De eigenaar deelde daarna het commando zonder uitvoer. **Onafhankelijk rond 12:02 UTC: verified-health HTTP 200 / ok=true**, juiste kandidaat, versie 0.4.0, generatie 20261107T080100_ca321b en 227 profielen. Zoek-API en CORS-preflight werken. Restartbeleid/timerstand nog niet op server teruggelezen.
 
-**Exact één volgende handeling:** eigenaar voert de alleen-lezen Docker-inventarisatie uit vanuit PowerShell en deelt de output; [diagnose en exact commando](filters/recovery-2026-11-08/README.md). Daarna het getroffen onderdeel herstellen en publiek/API/browser/fallback testen vóór filterverbeteringen. Eerdere homepageconceptstatus hieronder is historie voor de publicatierol; feature-/testgrenzen blijven behouden. Andere werkzaamheden/BRAUER-holds behouden. Geen actieve schrijver na overdracht.
+**Echte Chrome-desktopproef op MAIN 196328685834:** 615 wastafelkranen → Inbouw 200 → Inbouw + Chroom 26 → Alles wissen 615; filters, kaarten en URL-selecties zichtbaar. API-/native profielaantallen Wastafelkranen 615/615 en Inloopdouches 358/358 gelijk. Geen nieuwe mobiele, serverreboot-, checkout- of geforceerde fallbacktest. Geen Shopify-/serverwrite door uitvoerder; eigenaaruitvoering en publieke nacontrole gescheiden.
 
+**Exact één volgende handeling:** eigenaar deelt de uitvoer van het reeds gegeven herstelblok, zodat restartbeleid kan worden bevestigd; daarna Wastafelkranen als eerste verbeterpilot. [Herstel, tests en concrete verbeterpunten](filters/recovery-2026-11-08/README.md). Geen oude installer herhalen/index herimporteren. Andere werkzaamheden/BRAUER-holds behouden. Geen actieve schrijver na dit checkpoint.
 
 ## SEO-HOME-01 — homepageconcept gecontroleerd · 8 november 2026
 
