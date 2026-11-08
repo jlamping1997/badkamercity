@@ -1,5 +1,17 @@
 # BadkamerCity — actuele werkstatus
 
+## FILTER-SIMPLE-02 — kleuren, tegelformaten en synoniemen geïmplementeerd · 8 november 2026
+
+**IMPLEMENTED_OFFLINE / RELEASE_READY / OWNER_EXECUTION_PENDING / NOT_DEPLOYED.** Eigenaar geeft expliciet opdracht alle filters zelfstandig te vereenvoudigen met redelijke naamzekerheid, zonder nieuwe bevestigingen. Dit vervangt de eerdere wacht op het algemene 18-kleurenvoorstel; de 15 concrete tegelkeuzes waren al goedgekeurd.
+
+Backendrelease op bestaande codebranch: 18 basiskleuren plus Overige kleuren, meerdere kleuren per product, oorspronkelijke bronkleur apart; gepaard nominaal tegelformaat en exact gebleven technische maten. Soort-/materiaal-/plaatsingssynoniemen via exact-OR. Bestaande Shopify-specificaties en koopbare uitvoering behouden. Backendvelden passen in huidige UI: **geen themawijziging of publicatie nodig**; MAIN196328685834 opnieuw gelezen.
+
+41 release-/worker-/API-tests PASS, zes kleurtests en 46 JS-asserties plus acht maat-/enumtests PASS. Getest op alle 3.496 bestaande tegelrecords: 3.490 formaatparen naar 132 labels; 2.412 herkenbare kleur, 523 Overige, 561 zonder bronkleur, 117 meervoudig. Naamdekking786/1.002 is geen waarschijnlijkheidsscore. Nieuwe echte VPS-/Typesense-/ASGI-/browser-/reboot-/timerproeven nog NOT_TESTED; installer behoudt volledige serverstaging, readback en activatiechecks.
+
+Codecheckpoint **135ada92366349cbc29ea080894a8e0f5e434fad**, tien publieke code-/test-/uitlegbestanden exact teruggelezen. Privéserverbron uit bestaand herstelbestand gereconstrueerd naar bekende 5-novemberhashes; niet openbaar gemaakt. SSH vanuit uitvoeromgeving: Network is unreachable. Publieke bestaande API ok=true,227profielen,collectiebc_sync_20261108t130100_bc1233; geen server- of Shopifywrite. Installercontrole vóór wijzigingen, private back-up, nieuwe index, bronhashguard en eigen-generatieherstel; volgende synchronisaties gebruiken dezelfde regels.
+
+[Installatieblok en controlegrenzen](filters/simplification-release-2026-11-08/README.md), [verificatie](filters/simplification-release-2026-11-08/verification.json), [code en herstelprocedure](https://github.com/jlamping1997/badkamercity/tree/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification). **Exact één volgende handeling:** eigenaar voert het vastgezette PowerShell-installatieblok uit en deelt de uitvoer; daarna publieke API en de echte filters controleren. Geen nieuwe inhoudelijke goedkeuring vragen. Andere import-/BRAUER-/bestelafspraken behouden; geen actieve schrijver na deze overdracht.
+
 ## TILE-FILTER-01 — tegelformaten en kleurkaarten voorbereid · 8 november 2026
 
 **OFFLINE_PREPARATION / OWNER_COLOR_REVIEW_APPROVED_15 / NOT_APPLIED.** Eigenaar staat 59,6→60 toe in tegelfilters en wil meerdere zichtbare basiskleuren per tegel; exacte specs behouden. Alle 4.100 Admin-tegelleden en hun publicatie gelezen: 3.496 ACTIVE+OnlineStore, 604 uitgesloten. Geen product-/thema-/server-/indexwrite.
@@ -21,7 +33,7 @@
 
 **Verse MAIN196328685834; drie filterfiles wijken af van Git.** Nieuwe implementatie eerst uit echte live-pariteit opUNPUBLISHED, bestaande changes behouden. Geen nieuwe mobiele/conversietest. [Analyse en exacte vervolggrenzen](filters/simplification-2026-11-08/README.md), [verificatiesamenvatting](filters/simplification-2026-11-08/verification-summary.json). Gebruikersrapportprivé, volledige mapping niet publiek.
 
-**Exact één volgende handeling:** eigenaar beoordeelt18kleuren; daarna vier onduidelijke Wastafelkranen-namen gericht classificeren voor één pilot. Filters blijven hersteld; restartbeleid-/timerbewijs afzonderlijk open. Andere werkzaamheden/houdgrenzen behouden. Geen actieve schrijver na checkpoint.
+**Historische vervolgactie vervangen door FILTER-SIMPLE-02:** zelfstandig vereenvoudigen is expliciet geautoriseerd; geen nieuw 18-kleurenakkoord vragen. Filters blijven hersteld; restartbeleid-/timerbewijs afzonderlijk open. Andere werkzaamheden/houdgrenzen behouden. Geen actieve schrijver na checkpoint.
 
 
 ## FILTER-RESTORE-01 — filters weer zichtbaar en getest · 8 november 2026
