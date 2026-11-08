@@ -155,7 +155,27 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-28 — fabrikantonderzoek, pluspunten en offline importvoorbereiding · 8 november 2026
+
+**12.132 onderbouwde pluspunten bij 7.220 artikelen**: 3.920 nieuwe teksten, 1.081 preciezere formuleringen, alle 8.212 eerdere pluspuntregels behouden; maximaal vier per artikel. 17 officiële BRAUER-bronnen en de openbare Topa-catalogusindex gecontroleerd. Topa-downloads vragen login en zijn niet geopend. Algemene fabrikantdefinities verduidelijken bestaande exacte artikelkenmerken; geen nieuwe individuele externe productfeiten of variantovererving. Geen algemene dunne-profielen-, kalkvrij- of fabrieksbehandelingsclaim.
+
+Bij **24 artikelen** is de eerdere generieke leveranciersparse Draaideur verfijnd tot het expliciete Draai-schuifdeur; de oorspronkelijke leveranciersrij noemt dit mechanisme. Oude waarde en bewijs behouden. Nul technische velden toegevoegd of verwijderd. Overige cataloguseigenschappen, prijzen inclusief 21% btw, SKU/EAN, titels, goedgekeurde keuzes, eigen invoer, bronverschillen, vragen en oorspronkelijke blokkades behouden.
+
+Technische stand **13.161 artikelen / 178.198 velden / 6.622 artikelen met ontbrekende gekozen kerngegevens**. 150 open retailveldverschillen, 288 verdachte slangwaarden, 480 vragen bij 461 artikelen, oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen. Geen volledige technische vrijgave.
+
+De offline importvoorbereiding bundelt alle **13.161 artikelen**, inclusief specificaties, pluspunten, opties en eigen aanvullingen. Bestaande definities `custom.pluspunten` (tekstlijst), `custom.complete_specificaties` (JSON) en `custom.switch_group` (tekst) alleen gelezen, type/validaties gecontroleerd; **39.483 voorbereide veldwaarden exact vergeleken**. Geen definities aangemaakt, geen API-importer, voorraadgetallen of publicatieopdrachten. Elk artikel blijft expliciet geblokkeerd. Renderer, winkelbrede identiteit/handle-controle, overige veld-/collectieregels en productproef blijven open.
+
+**37 tests PASS**, native XLSX- en herhaalcontrole PASS, preflight terecht **exit 2**. Vijf oorspronkelijke bladen/421.953 cellen plus native stijlen/tabellen/instellingen behouden; Pluspunten exact vergeleken op 13.161 artikelregels/EAN’s en 12.132 teksten. Nul foutcellen, acht previews bekeken. Oude retailcontrole bevestigt 42.869 cumulatieve technische aanvullingen en 480 vragen. Geen fysieke Excel-app-, Windows-Git- of liveproducttest.
+
+**Bestaande privébestanden bevestigd vervangen: importpakket versie 12 en specificatie-XLSX versie 9.** De ZIP behoudt alle 229 eerdere bestanden en bevat nu 264 items; manifest/CRC/embedded XLSX exact gecontroleerd. Lees eerst privé `prepared/HANDOFF_BRAUER28.json`; [overdracht](brauer/2026-11-08/HANDOFF_BRAUER28.md) en [fabrikantonderzoek](brauer/2026-11-08/FABRIKANT_BRAUER28.md). Generieke codecheckpoint `902a729525131352d1de06050c4781adb73c0ba3` op `fix/product-cards-2026-10-14`; main alleen documentatie. Volledige catalogus, leveranciersrijen, eigen aanvullingen en per-SKU-bewijs blijven privé.
+
+**Alle Shopify-imports, ook DRAFT, blijven geblokkeerd** tot volledige officiële media, inventarisatie en beoordeelde representatieve product-/keuzeproef. Geen product-, media-, thema- of publicatiewrites. MAIN alleen qua rol gelezen: `196368531722` (BadkamerCity - Klantenservice 8 nov). Geen actieve BRAUER-bronlezer/schrijver na overdracht. **Eén volgende handeling:** bij ontvangst van de volledige officiële media de offline inventarisatie op exacte artikelnummers uitvoeren en onduidelijke koppelingen beoordelen. De gevonden openbare handleidingen gelden als onderzoek, niet als ontvangst van de complete media.
+
+---
+
 ## BRAUER-27 — duidelijke productpluspunten voorbereid · 8 november 2026
+
+> Historisch checkpoint; de actuele stand is BRAUER-28 hierboven. De onderstaande cijfers beschrijven ronde 27.
 
 Eigenaar vraagt korte pluspunten op basis van bekende kenmerken, waaronder inbegrepen inbouwdeel en draaibare uitloop. **8.212 onderbouwde pluspunten bij 6.366 artikelen voorbereid**, maximaal vier toegestaan; huidige records bevatten maximaal drie. Samengestelde douchesettekst noemt precies de bevestigde onderdelen: hoofd- en handdouche, slang en waar bewezen inbouwdeel. Geen onbegrensde complete-setclaim. Geen positief pluspunt bij ontbrekende/negatieve/conflicterende waarden of overerving tussen varianten.
 
