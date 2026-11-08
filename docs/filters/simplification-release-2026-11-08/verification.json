@@ -1,0 +1,47 @@
+{
+  "task": "FILTER-SIMPLE-02",
+  "date": "2026-11-08",
+  "status": "RELEASE_READY_NOT_DEPLOYED",
+  "owner_authorization": "Autonomous colors and allfilter simplification; reasonable nameconfidence; no further colorapproval required",
+  "code_commit": "135ada92366349cbc29ea080894a8e0f5e434fad",
+  "main_theme_id": 196328685834,
+  "theme_write": false,
+  "shopify_product_writes": false,
+  "server_write": false,
+  "ssh": "NETWORK_UNREACHABLE",
+  "python_tests": {
+    "release_api_worker": 41,
+    "color": 6
+  },
+  "javascript": {
+    "color_assertions": 46,
+    "size_enum_tests": 8
+  },
+  "private_color_term_count": 1002,
+  "classifiable_terms": 786,
+  "other_terms": 216,
+  "tiles": {
+    "published_active": 3496,
+    "valid_formats": 3490,
+    "format_labels": 132,
+    "missing_format": 6,
+    "classifiable_color": 2412,
+    "other_color": 523,
+    "missing_color": 561,
+    "multiple_colors": 117
+  },
+  "runtime_before": {
+    "ok": true,
+    "profiles": 227,
+    "typesense_collection": "bc_sync_20261108t130100_bc1233"
+  },
+  "installer_sha256": "7ac33496f818e0c2ee70fb47ce54ba5d63a32e5d583274281d863703cc5dc727",
+  "required_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1"
+  ],
+  "runtime_and_browser_tests": "NOT_TESTED_PENDING_OWNER_EXECUTION",
+  "source_private": true,
+  "source_and_specs_preserved": true,
+  "next_action": "Execute pinned PowerShell installer; report output; verify publicAPI and actualstorefront"
+}
