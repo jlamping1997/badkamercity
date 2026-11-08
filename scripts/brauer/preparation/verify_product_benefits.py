@@ -6,7 +6,7 @@ from pathlib import Path
 import posixpath
 import xml.etree.ElementTree as E
 import zipfile
-from build_product_benefits import approved_definition
+from build_product_benefits import approved_definition, FURNITURE, FURNITURE_MATERIALS
 
 NS = {'s': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 
@@ -99,10 +99,25 @@ def verify(root, workbook, source):
         p = by[r['sku']]
         assert r['ean'] == p['ean'] == evidence[p['sku']]['ean']
         assert r['product_type'] == p['product_type']
-        assert len(r['items']) <= 4
+        assert len(r['items']) <= 3
         assert len(set(x['text'] for x in r['items'])) == len(r['items'])
+        selected = {x['rule'] for x in r['items']}
+        assert not selected.intersection({'shower_bundle', 'shower_bundle_with_body', 'shower_bundle_with_hose', 'led_light', 'glass_thickness'})
+        if 'complete_shower_set' in selected:
+            assert p['product_type'] == 'Inbouwdouchesets'
+            assert 'included_body' not in selected
+        if 'adjustable_dimmable_light' in selected:
+            assert not selected.intersection({'dimmable_light', 'adjustable_light_colour', 'included_cabinet_light'})
         for item in r['items']:
-            assert 'compleet' not in item['text'].lower()
+            assert len(item['text']) <= 60
+            if 'compleet' in item['text'].lower() or 'complete' in item['text'].lower():
+                assert item['rule'] == 'complete_shower_set' and item['text'] == 'Complete doucheset'
+                assert {f['field']:f['value'] for f in item['basis']} == {
+                    'Hoofddouche inbegrepen':'Ja', 'Handdouche inbegrepen':'Ja',
+                    'Doucheslang inbegrepen':'Ja', 'Inbouwdeel inbegrepen':'Ja'}
+            if item['rule'] == 'furniture_material':
+                assert p['product_type'] in FURNITURE
+                assert item['text'] == FURNITURE_MATERIALS[p['specifications']['Materiaal']]
             assert item['basis']
             rules[item['rule']] += 1
             for key in item.get('definition_refs', []):
@@ -118,6 +133,8 @@ def verify(root, workbook, source):
                     assert p['specifications'][f['field']] == f['value']
                     assert evidence[p['sku']]['facts'][f['field']] == f['evidence']
                 assert f['field'] not in p.get('retail_review', {}).get('open_fields', [])
+                assert f['field'] not in p.get('source_conflicts', {})
+                assert f['field'] not in p.get('measurement_hold', {}).get('fields', [])
     rows = new.sheet(new.names.index('Pluspunten')).findall('s:sheetData/s:row', NS)
     rows = [r for r in rows if int(r.get('r')) >= 6]
     assert len(rows) == len(catalog)

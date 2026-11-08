@@ -1,6 +1,6 @@
 """Derive short customer benefits from approved facts of the same exact article.
 
-No research, variant inheritance, complete-set promise or Shopify writes.
+No research, variant inheritance, installation-wide promises or Shopify writes.
 """
 import argparse
 from collections import Counter
@@ -9,8 +9,8 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-VERSION = 'brauer-benefits-2'
-MAX_BENEFITS = 4
+VERSION = 'brauer-benefits-3-curated'
+MAX_BENEFITS = 3
 TAPS = {
     'Inbouwdouchesets', 'Inbouwbadkranen', 'Opbouwbadkranen',
     'Opbouwdouchekranen', 'Inbouwwastafelkranen', 'Opbouwwastafelkranen',
@@ -30,6 +30,13 @@ PIVOT_SLIDING_GROUPS = {'Douchecabine met draai-schuifdeur met profiel',
                        'Nisdeur 2-delig met draai-schuifdeur met profiel',
                        'Nisdeur met draai-schuifdeur met profiel'}
 LIGHTS = {'Spiegels', 'Spiegelkasten', 'Lichtlijsten voor spiegelkasten', 'Opbouwverlichting'}
+FURNITURE = {'Onderkasten', 'Fonteinkasten', 'Halfhoge kasten', 'Hoge kasten', 'Bijkasten', 'Spiegelkasten'}
+FURNITURE_MATERIALS = {
+    'MDF gelakt': 'Gelakt MDF',
+    'Massief eiken doorlopende lamellen': 'Massief eiken',
+    'Massief eiken vingerlas': 'Massief eiken',
+    'Massief eiken doorlopende vingerlas': 'Massief eiken',
+}
 REQUIRED_DEFINITIONS = {'hydrophobic_glass', 'cold_start', 'pvd_finish', 'frameless_glass',
                         'sliding_door', 'pivot_sliding_door', 'glass_thickness', 'anti_slip'}
 
@@ -102,13 +109,8 @@ def derive(product, evidence, definitions=None, limit=MAX_BENEFITS):
     bundle_has_body = False
     if typ == 'Inbouwdouchesets':
         core = [('Hoofddouche inbegrepen', yes), ('Handdouche inbegrepen', yes)]
-        bundle_has_body = add('shower_bundle_with_body',
-                             'Inclusief hoofd- en handdouche, slang en inbouwdeel',
+        bundle_has_body = add('complete_shower_set', 'Complete doucheset',
                              core + [('Doucheslang inbegrepen', yes), ('Inbouwdeel inbegrepen', yes)])
-        if not bundle_has_body:
-            if not add('shower_bundle_with_hose', 'Hoofd- en handdouche met doucheslang',
-                       core + [('Doucheslang inbegrepen', yes)]):
-                add('shower_bundle', 'Met hoofd- en handdouche', core)
     if typ in TAPS:
         if not bundle_has_body:
             add('included_body', 'Inclusief inbouwdeel', [('Inbouwdeel inbegrepen', yes)])
@@ -119,34 +121,42 @@ def derive(product, evidence, definitions=None, limit=MAX_BENEFITS):
         if not negative and not blocked.intersection(outlet_fields):
             if not add('rotating_outlet', 'Draaibare uitloop', [('Draaibare uitloop', yes)]):
                 add('rotating_outlet', 'Draaibare uitloop', [('Uitvoering uitloop', {'Draaibaar', 'Draaibare uitloop'})])
-        add('thermostatic', 'Thermostatische bediening', [('Thermostatisch', yes)])
+        if typ != 'Losse inbouwthermostaten':
+            add('thermostatic', 'Thermostaatkraan', [('Thermostatisch', yes)])
     if typ in TAPS or typ == 'Handdouches en houders':
         modes = specifications.get('Aantal straalstanden handdouche')
         if modes in {'2', '3', '4', '5', '6'}:
-            add('handshower_modes', f'Handdouche met {modes} straalstanden',
+            add('handshower_modes', f'Handdouche met {modes} standen',
                 [('Handdouche inbegrepen', yes), ('Aantal straalstanden handdouche', {modes})]
                 if typ == 'Inbouwdouchesets' else [('Aantal straalstanden handdouche', {modes})])
     if typ in TAPS:
         if approved_definition(definitions, 'cold_start'):
-            add('cold_start', 'Coldstart: koud water in de middenstand', [('Koudestartfunctie', yes)], 'cold_start')
+            add('cold_start', 'Koud water in de middenstand', [('Koudestartfunctie', yes)], 'cold_start')
         else:
             add('cold_start', 'Met koudestartfunctie', [('Koudestartfunctie', yes)])
     if typ in GLASS:
         if approved_definition(definitions, 'hydrophobic_glass'):
-            add('glass_coating', 'Met water- en vuilafstotende glascoating', [('Glascoating', yes)], 'hydrophobic_glass')
+            add('glass_coating', 'Water- en vuilafstotende coating', [('Glascoating', yes)], 'hydrophobic_glass')
         else:
             add('glass_coating', 'Met glascoating', [('Glascoating', yes)])
         add('reversible_glass', 'Links of rechts te monteren',
             [('Montage', {'Links/rechts', 'Links of rechts te monteren'})])
-    if typ in {'Onderkasten', 'Spiegelkasten'}:
-        add('soft_close', 'Softclose sluiting', [('Softclose', yes)])
-    # The original benefits retain their position; new features follow them.
+    if typ in FURNITURE:
+        material = specifications.get('Materiaal')
+        if material in FURNITURE_MATERIALS:
+            add('furniture_material', FURNITURE_MATERIALS[material], [('Materiaal', {material})])
+        if typ == 'Onderkasten' and fact('Aantal lades', {'1', '2', '3', '4'}):
+            add('soft_close', 'Softclose lades', [('Softclose', yes), ('Aantal lades', {'1', '2', '3', '4'})])
+        elif typ == 'Spiegelkasten' and fact('Aantal deuren', {'1', '2', '3', '4'}):
+            add('soft_close', 'Softclose deuren', [('Softclose', yes), ('Aantal deuren', {'1', '2', '3', '4'})])
+        else:
+            add('soft_close', 'Zachte sluiting', [('Softclose', yes)])
     if typ in GLASS:
         profile_holds = {'Type profiel/bevestiging', 'Bevestiging glas', 'Productgroep'}
         if (not blocked.intersection(profile_holds)
                 and specifications.get('Type profiel/bevestiging') != 'Met profiel'
                 and specifications.get('Bevestiging glas') != 'Muurprofiel'):
-            add('frameless_glass', 'Profielloze uitvoering', [], 'frameless_glass',
+            add('frameless_glass', 'Profielloos', [], 'frameless_glass',
                 [('Productgroep', FRAMELESS_GROUPS)])
         door_holds = {'Productgroep', 'Deursysteem', 'Type deur', 'Draairichting deur'}
         if typ in {'Nisdeuren', 'Douchecabines'} and not blocked.intersection(door_holds):
@@ -158,16 +168,35 @@ def derive(product, evidence, definitions=None, limit=MAX_BENEFITS):
                 add('pivot_sliding_door', 'Draai-schuifdeur', [], 'pivot_sliding_door',
                     [('Productgroep', PIVOT_SLIDING_GROUPS)])
     add('pvd_finish', 'PVD-afwerking', [('Coating', {'PVD'})], 'pvd_finish')
-    if typ in GLASS:
-        add('glass_thickness', 'Glas van 8 mm dik', [('Glasdikte', {'8 mm'})], 'glass_thickness')
     if typ in LIGHTS and specifications.get('Verlichting') != 'Nee':
-        add('dimmable_light', 'Dimbare verlichting', [('Dimbaar', yes)])
-        add('adjustable_light_colour', 'Instelbare lichtkleur', [('Lichtkleur instelbaar', yes)])
-        add('led_light', 'LED-verlichting', [('Verlichting', {'Directe verlichting (LED)', 'Indirecte LED-verlichting'})])
+        lighting = add('adjustable_dimmable_light', 'Dimbare verlichting met kleurkeuze',
+                       [('Dimbaar', yes), ('Lichtkleur instelbaar', yes)])
+        if not lighting:
+            lighting = add('dimmable_light', 'Dimbare verlichting', [('Dimbaar', yes)])
+            lighting = add('adjustable_light_colour', 'Instelbare lichtkleur', [('Lichtkleur instelbaar', yes)]) or lighting
+        if typ == 'Spiegelkasten' and not lighting:
+            add('included_cabinet_light', 'Verlichting inbegrepen',
+                [('Verlichting', {'Ja', 'Directe verlichting', 'Binnen- en buitenverlichting',
+                                  'Directe verlichting (LED)', 'Indirecte LED-verlichting'})])
     if typ == 'Douchebakken':
         add('anti_slip', 'Antislip douchebak', [('Antislip', yes)], 'anti_slip')
     if typ == 'Opbouwnissen':
         add('hidden_storage', 'Verborgen opbergruimte', [('Verborgen opbergruimte', yes)])
+    # A small fixed order expresses the buying decision; never fill empty slots.
+    if typ == 'Inbouwdouchesets':
+        order = ['complete_shower_set', 'thermostatic', 'pvd_finish', 'handshower_modes',
+                 'included_body', 'cold_start', 'rotating_outlet']
+    elif typ in FURNITURE:
+        order = ['furniture_material', 'soft_close', 'adjustable_dimmable_light',
+                 'dimmable_light', 'adjustable_light_colour', 'included_cabinet_light']
+    elif typ in GLASS:
+        order = ['frameless_glass', 'sliding_door', 'pivot_sliding_door', 'glass_coating', 'reversible_glass']
+    else:
+        order = ['included_body', 'rotating_outlet', 'cold_start', 'thermostatic', 'pvd_finish',
+                 'handshower_modes', 'adjustable_dimmable_light', 'dimmable_light',
+                 'adjustable_light_colour', 'anti_slip', 'hidden_storage']
+    rank = {rule: i for i, rule in enumerate(order)}
+    items.sort(key=lambda item: rank.get(item['rule'], len(order)))
     return items[:limit] if limit is not None else items
 
 
@@ -198,7 +227,10 @@ def build(root):
                'eligible_by_rule': dict(sorted(eligible_counts.items())),
                'manufacturer_definition_count': len(definitions),
                'new_external_facts': 0, 'benefit_generator_specification_writes': 0,
-               'complete_set_claims': 0, 'shopify_writes': 0, 'import_allowed': False}
+               'complete_set_claims': counts['complete_shower_set'],
+               'complete_set_policy': 'Complete doucheset only when head shower, hand shower, hose and inbuilt body are positively proved for that exact inbuilt set. No promise that every installation accessory is included.',
+               'display_policy': 'At most three short distinct buying reasons; fewer or none allowed. One set-content point, combined lighting functions; generic LED, thickness and MFC remain specifications.',
+               'shopify_writes': 0, 'import_allowed': False}
     for path, obj in [('product-benefits.json', records),
                       ('product-benefits-summary.json', summary)]:
         (prepared / path).write_text(json.dumps(obj, ensure_ascii=False, indent=2)+'\n')

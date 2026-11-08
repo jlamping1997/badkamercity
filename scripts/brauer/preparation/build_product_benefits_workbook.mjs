@@ -4,7 +4,7 @@ import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
 
 const root=path.resolve(process.argv[2]);
 const source=path.resolve(process.argv[3]);
-const outputDir=path.join(root,'outputs',process.argv[4]||'brauer-28-benefits');
+const outputDir=path.join(root,'outputs',process.argv[4]||'brauer-29-curated-benefits');
 const catalog=JSON.parse(await fs.readFile(path.join(root,'prepared/catalog.json'),'utf8'));
 const records=JSON.parse(await fs.readFile(path.join(root,'prepared/product-benefits.json'),'utf8'));
 const definitions=JSON.parse(await fs.readFile(path.join(root,'prepared/manufacturer-features.json'),'utf8')).definitions;
@@ -32,7 +32,7 @@ const rows=catalog.map(p=>{
 const end=rows.length+5;
 s.getRange('A2').values=[['Pluspunten per artikel']];
 s.getRange('A2').format.font={...font,size:14};
-s.getRange('A3').values=[['Alleen bevestigde kenmerken van het exacte artikel. Lege vakken blijven open. Shopify-import geblokkeerd.']];
+s.getRange('A3').values=[['Maximaal drie korte pluspunten per artikel. Lege vakken blijven open. Shopify-import geblokkeerd.']];
 s.getRange('A3').format.font={...font,italic:true};
 s.getRange('A5:J5').values=[['Artikelnummer','EAN','Producttype','Product','Pluspunt 1','Pluspunt 2','Pluspunt 3','Pluspunt 4','Bewijsvelden','Bronbestand of pagina']];
 s.getRange(`A6:J${end}`).values=rows;
@@ -63,13 +63,14 @@ console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#N
 await fs.mkdir(outputDir,{recursive:true});
 const selections=[['Eerste-pluspunten',0]];
 for(const [name,selector] of [
- ['Doucheset',p=>p.sku==='5-GM-077'],
- ['Draaibare-uitloop',p=>p.sku==='5-CE-003'],
+ ['Doucheset',p=>proofs.get(p.sku).items.some(i=>i.rule==='complete_shower_set')],
+ ['Draaibare-uitloop',p=>proofs.get(p.sku).items.some(i=>i.rule==='rotating_outlet')],
  ['Doucheglas',p=>p.product_type==='Douchecabines'&&proofs.get(p.sku).items.length>0],
- ['Meubel',p=>p.product_type==='Onderkasten'&&proofs.get(p.sku).items.length>0],
- ['Profielvrij',p=>proofs.get(p.sku).items.some(i=>i.rule==='frameless_glass')],
- ['Schuifdeur',p=>proofs.get(p.sku).items.some(i=>i.rule==='sliding_door')],
- ['Verlichting',p=>proofs.get(p.sku).items.some(i=>i.rule==='adjustable_light_colour')],
+ ['Eiken-meubel',p=>p.product_type==='Onderkasten'&&proofs.get(p.sku).items.some(i=>i.text==='Massief eiken')&&proofs.get(p.sku).items.some(i=>i.rule==='soft_close')],
+ ['MDF-meubel',p=>p.product_type==='Onderkasten'&&proofs.get(p.sku).items.some(i=>i.text==='Gelakt MDF')&&proofs.get(p.sku).items.some(i=>i.rule==='soft_close')],
+ ['Spiegelkast',p=>p.product_type==='Spiegelkasten'&&proofs.get(p.sku).items.length===3],
+ ['Geen-opvulling',p=>p.product_type==='Onderkasten'&&proofs.get(p.sku).items.length===0],
+ ['Verlichting',p=>proofs.get(p.sku).items.some(i=>i.rule==='adjustable_dimmable_light')],
 ]){
  const idx=catalog.findIndex(selector);if(idx<0)throw new Error('Missing review example '+name);selections.push([name,idx]);
 }

@@ -35,8 +35,8 @@ def record(product, benefits, targets):
             or product['ean'] != benefits['ean'] or product['import_allowed'] is not False):
         raise ValueError('Exact BRAUER/SKU/EAN and blocked article state required')
     texts = [b['text'] for b in benefits['items']]
-    if len(texts) > 4 or len(texts) != len(set(texts)):
-        raise ValueError('At most four distinct approved benefits required')
+    if len(texts) > 3 or len(texts) != len(set(texts)):
+        raise ValueError('At most three distinct approved benefits required')
     price = product['price_incl_vat']
     if not isinstance(price, str) or Decimal(price).quantize(Decimal('0.01')) != Decimal(price):
         raise ValueError('Preserve the supplied VAT-inclusive decimal price string')
@@ -76,12 +76,16 @@ def build(root):
     targets = validate_targets(json.loads((prepared/'field-targets28.json').read_text()))
     products = json.loads((prepared/'catalog.json').read_text())
     benefits = json.loads((prepared/'product-benefits.json').read_text())
+    policy = json.loads((prepared/'product-benefits-summary.json').read_text())
+    if policy.get('maximum_per_article') != 3:
+        raise ValueError('Import preparation requires the reviewed three-benefit policy')
     by = {r['sku']:r for r in benefits}
     if len(by) != len(benefits) or set(by) != {p['sku'] for p in products}:
         raise ValueError('Benefit identities do not partition the catalogue')
     rows = [record(p, by[p['sku']], targets) for p in products]
     paths = ['catalog.json','specification-evidence.json','product-benefits.json',
-             'manufacturer-features.json','families.json','release-gate.json','field-plan.json','field-targets28.json']
+             'manufacturer-features.json','families.json','release-gate.json','field-plan.json','field-targets28.json',
+             'product-benefits-summary.json']
     hashes = {p:hashlib.sha256((prepared/p).read_bytes()).hexdigest() for p in paths}
     payload = ''.join(json.dumps(r,ensure_ascii=False,separators=(',',':'))+'\n' for r in rows)
     destination = prepared/'import-preparation.jsonl'
@@ -91,6 +95,7 @@ def build(root):
         'articles':len(rows),'unique_skus':len(by),'unique_eans':len({r['identity']['ean'] for r in rows}),
         'sku_per_product':1,'articles_with_benefits':sum(bool(r['product_data']['benefits']) for r in rows),
         'benefits':sum(len(r['product_data']['benefits']) for r in rows),
+        'maximum_benefits_per_article':3,'benefit_policy_version':policy['version'],
         'price_policy':'Exact supplier-derived price incl. 21% VAT retained; no extra VAT multiplication',
         'inventory_quantities_assigned':False,'shopify_writes':0,'executable_importer_included':False,
         'product_benefit_destination':'custom.pluspunten',

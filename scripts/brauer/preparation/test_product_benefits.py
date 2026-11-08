@@ -14,11 +14,11 @@ def sample(values, typ='Inbouwdouchesets'):
 
 
 class BenefitsTests(unittest.TestCase):
-    def test_bundle_lists_exact_components_without_unbounded_complete_claim(self):
+    def test_complete_set_is_one_point_and_keeps_component_proof(self):
         p, e = sample({k: 'Ja' for k in ['Hoofddouche inbegrepen', 'Handdouche inbegrepen',
                                         'Doucheslang inbegrepen', 'Inbouwdeel inbegrepen']})
         result = derive(p, e)
-        self.assertEqual([x['text'] for x in result], ['Inclusief hoofd- en handdouche, slang en inbouwdeel'])
+        self.assertEqual([x['text'] for x in result], ['Complete doucheset'])
         self.assertEqual(len(result[0]['basis']), 4)
 
     def test_unknown_or_negative_inclusion_never_becomes_complete_bundle(self):
@@ -26,7 +26,7 @@ class BenefitsTests(unittest.TestCase):
             p, e = sample({'Hoofddouche inbegrepen': 'Ja', 'Handdouche inbegrepen': 'Ja',
                            'Doucheslang inbegrepen': 'Ja', 'Inbouwdeel inbegrepen': value})
             texts = [r['text'] for r in derive(p, e)]
-            self.assertEqual(texts, ['Hoofd- en handdouche met doucheslang'])
+            self.assertEqual(texts, [])
 
     def test_explicit_rotating_enum_and_boolean_and_conflicts(self):
         for values in [{'Draaibare uitloop': 'Ja'}, {'Uitvoering uitloop': 'Draaibaar'}]:
@@ -41,7 +41,7 @@ class BenefitsTests(unittest.TestCase):
     def test_field_holds_are_respected_and_unrelated_facts_retained(self):
         p, e = sample({'Inbouwdeel inbegrepen': 'Ja', 'Thermostatisch': 'Ja'})
         p['retail_review'] = {'open_fields': ['Inbouwdeel inbegrepen']}
-        self.assertEqual([r['text'] for r in derive(p, e)], ['Thermostatische bediening'])
+        self.assertEqual([r['text'] for r in derive(p, e)], ['Thermostaatkraan'])
 
     def test_no_variant_title_or_option_inheritance_and_no_identity_guess(self):
         p, e = sample({})
@@ -63,19 +63,19 @@ class BenefitsTests(unittest.TestCase):
         p, e = sample(values, 'Nisdeuren')
         self.assertEqual([r['rule'] for r in derive(p, e)], ['glass_coating', 'reversible_glass'])
         p['product_type'] = 'Onderkasten'
-        self.assertEqual([r['text'] for r in derive(p, e)], ['Softclose sluiting'])
+        self.assertEqual([r['text'] for r in derive(p, e)], ['Zachte sluiting'])
         p['product_type'] = 'Ladefronten'
         self.assertEqual(derive(p, e), [])
 
-    def test_maximum_four_and_no_duplicate_body_benefit(self):
+    def test_maximum_three_and_no_duplicate_body_benefit(self):
         p, e = sample({**{k: 'Ja' for k in ['Hoofddouche inbegrepen', 'Handdouche inbegrepen',
                                            'Doucheslang inbegrepen', 'Inbouwdeel inbegrepen',
                                            'Thermostatisch', 'Koudestartfunctie']},
                        'Aantal straalstanden handdouche': '3', 'Draaibare uitloop': 'Ja'})
         result = derive(p, e)
-        self.assertEqual(len(result), 4)
+        self.assertEqual(len(result), 3)
         self.assertNotIn('included_body', [x['rule'] for x in result])
-        self.assertEqual(len(set(x['text'] for x in result)), 4)
+        self.assertEqual(len(set(x['text'] for x in result)), 3)
 
 
 if __name__ == '__main__':

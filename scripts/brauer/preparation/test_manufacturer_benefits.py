@@ -36,7 +36,7 @@ class ManufacturerTests(unittest.TestCase):
         p,e = exact({'Glascoating':'Ja'})
         r = derive(p,e,DEFS)
         point = next(x for x in r if x['rule']=='glass_coating')
-        self.assertEqual(point['text'],'Met water- en vuilafstotende glascoating')
+        self.assertEqual(point['text'],'Water- en vuilafstotende coating')
         self.assertEqual(point['definition_refs'],['hydrophobic_glass'])
         for val in ['Nee','',None]:
             p,e = exact({'Glascoating':val})
@@ -73,15 +73,15 @@ class ManufacturerTests(unittest.TestCase):
 
     def test_lighting_functions_do_not_infer_led_or_heating(self):
         p,e = exact({'Dimbaar':'Ja','Lichtkleur instelbaar':'Ja'},'Spiegels')
-        self.assertEqual([x['rule'] for x in derive(p,e,DEFS)],['dimmable_light','adjustable_light_colour'])
+        self.assertEqual([x['text'] for x in derive(p,e,DEFS)],['Dimbare verlichting met kleurkeuze'])
         p['specifications']['Verlichting']='Nee'
         self.assertEqual(derive(p,e,DEFS),[])
 
-    def test_known_six_mm_is_not_promoted_to_eight_mm(self):
+    def test_thickness_stays_a_specification_instead_of_filling_benefits(self):
         p,e = exact({'Glasdikte':'6 mm'})
         self.assertNotIn('glass_thickness',[x['rule'] for x in derive(p,e,DEFS)])
         p,e = exact({'Glasdikte':'8 mm'})
-        self.assertIn('glass_thickness',[x['rule'] for x in derive(p,e,DEFS)])
+        self.assertNotIn('glass_thickness',[x['rule'] for x in derive(p,e,DEFS)])
 
     def test_missing_registry_preserves_prepared_benefits(self):
         with tempfile.TemporaryDirectory() as d:
@@ -110,11 +110,11 @@ class ManufacturerTests(unittest.TestCase):
         e['facts']['Deursysteem']['kind']='retailer_exact_sku_ean'
         with self.assertRaises(ValueError):refine(p,e)
 
-    def test_display_limit_keeps_original_benefits_first(self):
+    def test_display_prioritizes_distinct_benefits_instead_of_filling_slots(self):
         p,e = exact({'Glascoating':'Ja','Montage':'Links of rechts te monteren','Coating':'PVD','Glasdikte':'8 mm'})
         all_points=derive(p,e,DEFS,limit=None);visible=derive(p,e,DEFS)
-        self.assertEqual(len(all_points),5);self.assertEqual(len(visible),4)
-        self.assertEqual([x['rule'] for x in visible[:2]],['glass_coating','reversible_glass'])
+        self.assertEqual(len(all_points),4);self.assertEqual(len(visible),3)
+        self.assertEqual([x['rule'] for x in visible],['frameless_glass','glass_coating','reversible_glass'])
 
     def test_import_record_preserves_price_and_never_sets_release_or_stock(self):
         p,e=exact({})
