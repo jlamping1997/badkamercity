@@ -27,8 +27,8 @@
       "status": "PARTIALLY_RESOLVED_INFORMATION_PAGE_NATIVE_POLICY_OPEN",
       "finding": "Native verzendbeleid ontbreekt; policy-URL geeft 404",
       "scope": "/policies/shipping-policy",
-      "next_action": "Native SHIPPING_POLICY still absent and write_legal_policies unavailable; investigate product/location coverage, then update native policy through authorized admin and verify.",
-      "resolution": "Published Page /pages/bezorgen-en-afhalen; actual NL rate configuration and two isolated cart quotes verified. Theme references in same unpublished candidate."
+      "next_action": "Authorized native policy update and public readback; write_legal_policies still unavailable. Do not equate the information Page with native checkout policy.",
+      "resolution": "Delivery Page and theme links live; effective NL Market includes both origins and8newcartquotesPASS. Native SHIPPING_POLICY still absent."
     },
     {
       "id": "BC-AUD-004",
@@ -118,11 +118,12 @@
     {
       "id": "BC-AUD-013",
       "priority": "P1",
-      "evidence": "VERIFIED_ADMIN_CONFIGURATION_SIGNAL; TWO_CART_QUOTES_PASS",
-      "status": "TARGETED_COVERAGE_CHECK_PENDING",
+      "evidence": "COMPLETE_ACTIVE_MARKET_CONFIG;851SUPPLIER_VARIANTS;8CART_QUOTES_PASS",
+      "status": "RESOLVED_DIAGNOSTIC_MARKETS_CONFIG_VERIFIED",
       "finding": "DeliveryProfile coversAllItems=false; one location without rates",
       "scope": "Algemeen profiel / NL shipping",
-      "next_action": "Identify uncovered products and the no-rate location before treating shipping as fully verified; two passing sample quotes do not prove catalog-wide coverage."
+      "next_action": "Do not flip coversAllItems or duplicate origins from this legacy signal. Other destinations/discounts/physical delivery remain separately untested.",
+      "resolution": "marketDrivenShipping=true; both locations already included in active NL option and rate group. Legacy profile signal is not a current missing-rate defect; no shipping write."
     },
     {
       "id": "BC-AUD-014",
@@ -132,7 +133,16 @@
       "finding": "19broken accent sequences across9glossaryPages and4leadingBOMs across4otherPages",
       "resolution": "Only Page.body changed,13exactfinalreadbacks; title/metadata/canonical/H1/links/structure preserved; known-pattern scan120publishedbodies no remaining matches",
       "next_action": "Do not repeat writes; retain targeted body rollback values in glossary-encoding dossier. General content factcheck remains separate."
+    },
+    {
+      "id": "BC-AUD-015",
+      "priority": "P2",
+      "status": "RESOLVED_LIVE",
+      "evidence": "ADMIN_READBACK_AND_PUBLIC_HTTP301_TO200",
+      "finding": "Legacy /blogs/news route404 while existing blog is /blogs/nieuws",
+      "resolution": "One new redirect689424761098; no blog/article/theme/SEO mutation. Initial propagation404 then bare source301toexisting200target verified.",
+      "next_action": "Retain redirect; rollback only this new record after current path/target guard."
     }
   ],
-  "last_followup": "CONTENT-ENCODING-02; owner publication196368531722 verified,13Page encoding repairs live,109glossary link mappings valid"
+  "last_followup": "SHIPPING-COVERAGE-01 effective Markets configuration verified and8samplecartsPASS; BLOG-ROUTE-01 redirect301to200"
 }

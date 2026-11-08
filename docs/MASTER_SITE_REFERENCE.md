@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Nieuwste vervolg — SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** effectieve NL-verzending via Markets, beide oorsprongen aanwezig; acht aanvullende cartquotes PASS. Legacy-profielsignaal is verklaard, geen tarief-/voorraadwrite. Oude blogroute geeft nu301→200. [Nieuw dossier](repairs/2026-11-08/shipping-and-blog/README.md). Native policies en complete order-/mail-/meetketen blijven open.
+
 > **Actuele stand 8 november — CONTENT-ENCODING-02:** MAIN is **196368531722 — Klantenservice 8 nov**; geen publicatie van dat concept meer nodig. Negentien kapotte accenten en vier voorlooptekens op dertien Pages live hersteld, publieke/SEO-/structuurcontroles PASS. De 109 begrippenlinks mappen op gepubliceerde doelen. [Laatste bewijs en vervolg](repairs/2026-11-08/glossary-encoding/README.md). Oudere conceptrollen hieronder zijn gedateerde checkpoints.
 
 > **Actuele aanvulling 8 november — DELIVERY-INFO-01:** [Bezorgpagina en gerichte controles](repairs/2026-11-08/delivery-information/README.md) zijn live; Contact verwijst ernaar. Het bestaande concept 196368531722 heet nu Klantenservice 8 nov en behoudt vier retourfiles plus twee bezorglinkfiles. Native verzendpolicy en volledige koopketen blijven open; eigenaarpublicatie nog nodig.

@@ -1,6 +1,8 @@
 # Checkout, verzending, betaling en operationele grenzen
 
-**Actuele aanvulling: 8 november 2026 — bezorginformatie en tariefproef.** MAIN is `196354474250 — BadkamerCity - Eenduidige footer 8 nov`. [Het actuele bezorgdossier](../../repairs/2026-11-08/delivery-information/README.md) en [de gedateerde centrale audit](../../audits/2026-11-08/README.md) onderscheiden nieuwe proeven en eerdere bronstand. De thematische winkelwagen en de door Shopify gehoste checkout zijn afzonderlijke systemen. Goede cartfeedback bewijst geen betaling, ordercommunicatie of fulfilment.
+> **Nieuwste controle — SHIPPING-COVERAGE-01:** actieve NL-Market met beide oorsprongen exact teruggelezen; acht nieuwe cartoffertes PASS en cart leeg. Het oude locatie-/coversAllItems-signaal is binnen deze scope verklaard. [Bewijs](../../repairs/2026-11-08/shipping-and-blog/README.md). Geen verzendconfiguratie, voorraad, betaling of mail gewijzigd/verstuurd.
+
+**Actuele aanvulling: 8 november 2026 — bezorginformatie en tariefproef.** MAIN is `196368531722 — BadkamerCity - Klantenservice 8 nov`. [Het actuele bezorgdossier](../../repairs/2026-11-08/delivery-information/README.md) en [de gedateerde centrale audit](../../audits/2026-11-08/README.md) onderscheiden nieuwe proeven en eerdere bronstand. De thematische winkelwagen en de door Shopify gehoste checkout zijn afzonderlijke systemen. Goede cartfeedback bewijst geen betaling, ordercommunicatie of fulfilment.
 
 ## Wat op 8 november is vastgesteld
 
@@ -8,7 +10,7 @@
 | --- | --- | --- |
 | Gastcheckout | Beperkte desktopbrowserproef eerder op 8 november: Wiesbaden Ribbd van €245, twee stuks voor €490, van product via cart tot gastcheckout | Geen adres ingevoerd, betaling, bestelling of ordermail; de latere routecrawler heeft deze flow niet opnieuw uitgevoerd |
 | NL-verzendtarieven | Verse Admin-regels: €6,95 t/m €100; €0 vanaf €100,01. AJAX-cartquotes €96,15 → €6,95 en €109,00 → €0; eigen geïsoleerde cart daarna leeg | Alleen het geteste NL-scenario; geen volledige product-/regio-/kortingsmatrix, checkoutbestelling of configuratiewijziging |
-| Productdekking verzending | Admin meldt `coversAllItems=false` en één locatie zonder tarieven | Dit wijst op te onderzoeken dekking; het bewijst geen verzendfout voor ieder product of de bezochte proefcart |
+| Effectieve product-/locatiedekking | marketDrivenShipping=true; actieve NL-optie én tariefgroep omvatten winkel- en leverancierslocatie, geen collectiebeperking. Alle 851 actieve/gepubliceerde leveranciersvarianten gelezen; acht cartquotes PASS | Legacy coversAllItems=false/één locatie zonder rates is hier geen actueel checkoutdefect. Andere adressen/extreme hoeveelheden/kortingen/fysieke levering blijven apart |
 | Betaalmethoden | Payments-leesscope ontbreekt; de footer-HTML toont geen betaaliconen | Geen actuele lijst of geslaagde betaling bewezen; dit betekent niet dat betalingen uitstaan |
 | Bezorginformatie en native policies | Page 166963937546 /pages/bezorgen-en-afhalen live; Contact, privacy, terugbetaling, voorwaarden en wettelijke kennisgeving als native policy aanwezig | Native SHIPPING_POLICY blijft afwezig; voorwaarden/kennisgeving tonen escaped HTML. write_legal_policies ontbreekt; een gewone Page vervangt die native bron niet |
 | Retourafspraak | Gepubliceerd beleid: aanmelden binnen 30 dagen, daarna 14 dagen terugsturen; gewone spijtretour voor klant, fout/defect apart opgelost; afgeven op afspraak | €75 incl. btw is de raming per standaardpallet voor retourvervoer, geen heenzendtarief of universeel buitenlandtarief |
@@ -20,7 +22,13 @@ De beperkte browserproef en de latere geïsoleerde tariefcart zijn elk opgeruimd
 
 De live Page [Bezorgen en afhalen](https://badkamercity.nl/pages/bezorgen-en-afhalen) gebruikt de gecontroleerde NL-tarieven en de afspraak dat afhalen bij Zichtenburglaan 150 alleen na bevestiging en op afspraak kan. Geen vaste leverdoorlooptijd, vervoerder, bezorgniveau of uitgaand pallettarief wordt uit de configuratie afgeleid. De Contacttekst linkt naar deze Page en vraagt het bestelnummer indien bekend.
 
-Footer-/homepageverwijzingen staan in het bestaande **UNPUBLISHED 196368531722 — BadkamerCity - Klantenservice 8 nov**, samen met de eerdere retourcopy. De twee nieuwe files zijn exact teruggelezen en slagen voor Liquid; vier previewroutes PASS. Finale manifests: 1.387 bestanden per thema, 1.381 gelijk en zes bedoelde verschillen. De vier eerdere retourfiles zijn checksum-ongewijzigd; MAIN 196354474250 blijft ongewijzigd. Eigenaarreview/publicatie blijft nodig. De eerdere vier-file-retourdiff is een gedateerd checkpoint, geen actuele einddiff na de uitbreiding.
+Footer-/homepageverwijzingen en retourcopy zijn door de eigenaar gepubliceerd op MAIN 196368531722. De publicatienacontrole en tekstreparaties staan in [CONTENT-ENCODING-02](../../repairs/2026-11-08/glossary-encoding/README.md). Geen nieuwe themapublicatie nodig.
+
+## Actieve verzending — SHIPPING-COVERAGE-01
+
+De oude DeliveryProfile-laag alleen is onvoldoende bij marketDrivenShipping=true. De actieve Nederlandse Market-optie en haar tariefgroep bevatten beide locaties. FAB-04 had deze leveranciersoorsprong eerder al toegevoegd; de configuratie is opnieuw exact bevestigd en niet geschreven. Alle 851 huidige actieve/gepubliceerde Verlavio-varianten zijn via de leverancierslocatie gelezen: CONTINUE, requiresShipping, default profiel. De profielvlag coversAllItems is niet op true gezet.
+
+Acht daadwerkelijke Ajax-carts geven het huidige tarief: gemengd €81,18→€6,95 en €148,33→€0; ook één/twee tegeldozen en een nulvoorraad-CONTINUE-item hebben de verwachte optie. Alleen eigen geïsoleerde artikelen gebruikt en verwijderd, cart leeg; geen checkout/order/mail. [Market-bron, proeven en grenzen](../../repairs/2026-11-08/shipping-and-blog/README.md). Niet elke SKU/postcode/korting of fysieke levering is getest.
 
 ## Historisch configuratiebewijs — 28 oktober 2026
 
@@ -50,7 +58,7 @@ Checkout bevat adres-/contactinvoer, leveropties, betaling, orderbevestiging en 
 
 ## Open acceptatie en overdracht
 
-Voor afronding moeten de verzendregels aan daadwerkelijke productdekking en adresoffertes worden gekoppeld, de ene locatie zonder tarieven worden verklaard en de werkelijke betaalmethoden worden vastgesteld. Daarna volgt een afgesproken scenario voor korting, levering, betaling, bevestiging, fulfilment, retour en terugbetaling. Ordermail, contact-/retourmail, echte mobiele bediening en GA4-aankoopmeting blijven open. Geen algemene testbetaalmodus in de openbare winkel activeren om alleen deze documentatie af te sluiten.
+De legacy-locatiewaarschuwing is verklaard door de actieve Markets-configuratie en acht gerichte NL-offertes. Voor verdere afronding blijven andere adressen, bijzondere leveringen/kortingen, daadwerkelijke betaalmethoden en de echte orderketen te toetsen. Daarna volgt een afgesproken scenario voor korting, levering, betaling, bevestiging, fulfilment, retour en terugbetaling. Ordermail, contact-/retourmail, echte mobiele bediening en GA4-aankoopmeting blijven open. Geen algemene testbetaalmodus in de openbare winkel activeren om alleen deze documentatie af te sluiten.
 
 De operationele keten is: betaald/afgewezen/afgebroken → bevestiging → voorraad-/leverancierhandeling → fulfilment/track&trace → klantenservice → retour/terugbetaling. Vertrouwelijke ontvangers, leveranciersafspraken en rollen horen in een private operationele aanvulling. Publieke documentatie bevat geen checkoutreferenties, klant-/orderdata of betaalgegevens.
 

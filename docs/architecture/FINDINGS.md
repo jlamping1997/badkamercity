@@ -1,5 +1,7 @@
 # Bevindingen en onderzoekswachtrij
 
+> **Actueel SHIPPING-COVERAGE-01 / BLOG-ROUTE-01:** oude locatie-/coversAllItems-waarschuwing verklaard door de actieve Market, beide oorsprongen inbegrepen; acht gerichte carts PASS. /blogs/news nu301naar/blogs/nieuws200. [Nieuw bewijs](../repairs/2026-11-08/shipping-and-blog/README.md). Geen tarief-/voorraad-/themamutatie; /collections/tegeltoebehoren blijft gericht vervolgonderzoek.
+
 > **CONTENT-ENCODING-02 — nieuwste vervolg:** klantenservicethema is gepubliceerd. Dertien Page-tekstreparaties live bevestigd; GLOSS-F01 was al opgelost en is hieronder actueel gemarkeerd. [Bewijs en grenzen](../repairs/2026-11-08/glossary-encoding/README.md). Native policy- en koopketentaken blijven open.
 
 > **Actueel DELIVERY-INFO-01 — 8 november:** bezorg-Page en Contact-link live; retourcopy + twee bezorglinkfiles samen in bestaand UNPUBLISHED 196368531722 — Klantenservice 8 nov. Zes verschillen/1.381 gelijk; vier eerdere retourfiles behouden, MAIN ongewijzigd. Native shippingpolicy blijft afwezig; profieldekking en één locatie zonder rates vragen afzonderlijke verificatie. [Nieuw bewijs en herstel](../repairs/2026-11-08/delivery-information/README.md). Oudere retourdifftellingen hieronder zijn het voorgaande checkpoint.

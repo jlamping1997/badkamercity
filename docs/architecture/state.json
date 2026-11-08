@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "updated_on": "2026-11-08",
-  "task": "CONTENT-ENCODING-02",
-  "status": "OWNER_PUBLICATION_VERIFIED_CONTENT_REPAIRS_APPLIED",
+  "task": "SHIPPING-COVERAGE-01 / BLOG-ROUTE-01",
+  "status": "EFFECTIVE_NL_SHIPPING_VERIFIED_BLOG_REDIRECT_APPLIED",
   "active_branch": "fix/product-cards-2026-10-14",
   "current_audit": "../repairs/2026-11-08/glossary-encoding/README.md",
   "main_theme_at_capture": "196368531722",
@@ -61,7 +61,7 @@
     "ga4_purchase_value_currency_deduplication",
     "authorized_external_backend_app_sources"
   ],
-  "next_action": "Investigate product/location coverage of general shipping profile without inventing rates or delivery promises.",
+  "next_action": "Investigate /collections/tegeltoebehoren identity/publication and actual references before choosing a bounded correction.",
   "background_worker_active": false,
   "historical_capture_2026_10_28": {
     "schema_version": 2,
@@ -135,8 +135,8 @@
   },
   "current_refresh_scope_complete": true,
   "overall_site_release_complete": false,
-  "completion_scope": "CONTENT-ENCODING-02 targeted content/publication checks complete; overall technical/product/runtime/release verification remains open.",
-  "latest_followup": "../repairs/2026-11-08/glossary-encoding/README.md",
+  "completion_scope": "Active NL shipping config and8samplecartquotes verified; one blogredirect live. Overall checkout/payment/mail/mobile/measurement release still open.",
+  "latest_followup": "../repairs/2026-11-08/shipping-and-blog/README.md",
   "returns_preview": {
     "theme": "196368531722",
     "status": "OWNER_PUBLISHED_PUBLIC_HTML_VERIFIED",
@@ -169,5 +169,24 @@
     "status": "NOT_PUBLISHED",
     "feature_files": 4,
     "equal_other_files": 1383
+  },
+  "shipping_effective": {
+    "marketDrivenShipping": true,
+    "market": "94864998666",
+    "active_option": "1251671343370",
+    "origin_locations": 2,
+    "supplier_variants_read": 851,
+    "cart_quotes": 8,
+    "legacy_location_warning": "EXPLAINED_BY_MARKETS",
+    "shipping_mutations": 0
+  },
+  "blog_redirect": {
+    "id": "689424761098",
+    "source": "/blogs/news",
+    "target": "/blogs/nieuws",
+    "public_status_chain": [
+      301,
+      200
+    ]
   }
 }
