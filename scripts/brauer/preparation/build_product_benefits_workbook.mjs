@@ -38,6 +38,7 @@ s.getRange(`A6:J${end}`).values=rows;
 console.log('Benefit rows written');
 s.getRange(`A5:J${end}`).format={font,rowHeight:48,verticalAlignment:'center'};
 s.getRange(`A6:B${end}`).setNumberFormat('@');
+s.getRange(`B6:B${end}`).setNumberFormat('0000000000000');
 s.getRange(`C6:J${end}`).format.wrapText=true;
 s.getRange('A5:J5').format={fill:'#15374F',font:{...font,color:'#FFFFFF',bold:true},rowHeight:38,wrapText:true,horizontalAlignment:'center'};
 for(const [i,w] of [25,22,32,88,40,40,40,40,62,100].entries()){
