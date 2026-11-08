@@ -1,5 +1,16 @@
 # BadkamerCity — actuele werkstatus
 
+## FILTER-SIMPLE-01 — volledige filteranalyse en eenvoudig kleurenvoorstel · 8 november 2026
+
+**READ_ONLY_AUDIT / PROPOSAL_READY / NOT_APPLIED.** Alle227profielen uitgelezen, nul fouten, generatie20261107T080100_ca321b;34verschillende filtervelden.1.002exacte kleurnamen, waarvan Tegels807/Cottoceramix792/Wastafelkranen29. Bestaande13kleurgroepen dekken36namen;966ongesorteerd, en LIVEJS gebruikt die groepen niet. Geen Shopify-, server-, index- of themawrite.
+
+**Voorstel:**18basiskleuren winkelbreed, alleen relevante per categorie; exacte fabrikantkleur/afwerking bij product behouden. Volledige privékaart1.002namen:335duidelijke naam-/vertalingen,160tintvoorstellen,486broncontroles,21zonder specifieke kleur.495voorstellen/507open; geen productgewogen dekking of automatische migratie. Beperkte goud-/messing-OR-proef93found/93uniekeIDs; messingindeling nog niet goedgekeurd. Ook soortsynoniemen, Meerfilters, maattoepassing en tegelprijseenheid beoordeeld.
+
+**Verse MAIN196328685834; drie filterfiles wijken af van Git.** Nieuwe implementatie eerst uit echte live-pariteit opUNPUBLISHED, bestaande changes behouden. Geen nieuwe mobiele/conversietest. [Analyse en exacte vervolggrenzen](filters/simplification-2026-11-08/README.md), [verificatiesamenvatting](filters/simplification-2026-11-08/verification-summary.json). Gebruikersrapportprivé, volledige mapping niet publiek.
+
+**Exact één volgende handeling:** eigenaar beoordeelt18kleuren; daarna vier onduidelijke Wastafelkranen-namen gericht classificeren voor één pilot. Filters blijven hersteld; restartbeleid-/timerbewijs afzonderlijk open. Andere werkzaamheden/houdgrenzen behouden. Geen actieve schrijver na checkpoint.
+
+
 ## FILTER-RESTORE-01 — filters weer zichtbaar en getest · 8 november 2026
 
 **PUBLIC_API_RECOVERED / LIVE_UI_VERIFIED.** Eigenaaruitvoer bevestigde dat alleen badkamercity-filter-api-verified-candidate gestopt was (Exited 0 / 27 uur); Caddy, oudere API's en Typesense draaiden. Herstelblok verstrekt voor de bestaande container plus restartbeleid unless-stopped. De eigenaar deelde daarna het commando zonder uitvoer. **Onafhankelijk rond 12:02 UTC: verified-health HTTP 200 / ok=true**, juiste kandidaat, versie 0.4.0, generatie 20261107T080100_ca321b en 227 profielen. Zoek-API en CORS-preflight werken. Restartbeleid/timerstand nog niet op server teruggelezen.
