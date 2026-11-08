@@ -1,13 +1,13 @@
 {
   "task": "FILTER-SIMPLE-02",
   "date": "2026-11-08",
-  "status": "V2_EXACT_FORMAT_CODES_READY_NOT_DEPLOYED",
+  "status": "APPLIED_VERIFIED_PUBLIC_API_AND_DESKTOP_UI_VERIFIED",
   "owner_authorization": "Autonomous colors and allfilter simplification; reasonable nameconfidence; no further colorapproval required",
   "code_commit": "c7d83b88cdb703532b1746aa2db217176b21b273",
   "main_theme_id": 196328685834,
   "theme_write": false,
   "shopify_product_writes": false,
-  "server_write": "OWNER_STAGED_NEW_INDEX_ONLY; noactivation; previousworkerandAPIpreserved",
+  "server_write": "OWNER_EXECUTED_STAGING_ACTIVATION_WORKER_INSTALL; ASSISTANT_READ_ONLY_AFTER",
   "ssh": "NETWORK_UNREACHABLE",
   "python_tests": {
     "release_api_worker": 51,
@@ -44,19 +44,25 @@
     "filter_simplification_v1",
     "tile_format_codes_v1"
   ],
-  "runtime_and_browser_tests": "V2_REAL_TYPESENSE_ASGI_ACTIVATION_PENDING; FRONTEND_NOT_TESTED",
+  "runtime_and_browser_tests": "SERVER_STAGING_AND_ACTIVATION_PASS; PUBLIC_API_PASS; LIVE_DESKTOP_PASS; MOBILE_NOT_TESTED",
   "source_private": true,
   "source_and_specs_preserved": true,
-  "next_action": "Execute pinnedv2PowerShell installer, reportoutput, verifypublicAPIandstorefront",
+  "next_action": "Owner practicalreview withproductlinksforcolorcorrections; Cottoceramixprofile remainsseparatefollowup",
   "owner_server_execution": {
-    "stage_generation": "20261108T142600_81ee36",
+    "status": "applied_verified",
     "products": 15897,
+    "profiles": 227,
+    "all_good_checks": 237,
+    "failed_checks": 0,
+    "full_format_selections": 132,
     "full_index_readback": "PASS",
-    "format_facet_counts": "PASS",
-    "failed_check": "Afgeleide keuze: tegels/60 × 60 cm",
-    "activation": false,
-    "previous_live_preserved_reported": true,
-    "timer_resumed_reported": true
+    "activation": true,
+    "worker_installed": true,
+    "timer_resumed_reported": true,
+    "worker_sha256": "25e8c3b1763171875bebd5b85e7099b26f87e36f3ece0b9f1f21e1d37b56dbe3",
+    "api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+    "backup": "/opt/badkamercity/filter-sync/filter-simplification-backups/20261108T152017-5182a6",
+    "source_private_sha256": "7d555798d5aa4f83999842867c5906b7e2f229ef9ad4147d485c8368a5c43d30"
   },
   "runtime_after_failure": {
     "ok": true,
@@ -90,7 +96,8 @@
       "filter_simplification_v1",
       "tile_format_codes_v1"
     ],
-    "stage_full_format_idsets": 132
+    "stage_full_format_idsets": 132,
+    "applied": true
   },
   "runtime_before_v2": {
     "ok": true,
@@ -98,5 +105,61 @@
     "typesense_collection": "bc_sync_20261108t150044_583414",
     "simplification_flag": false,
     "original_tile_ranges_present": true
+  },
+  "runtime_generation": "bc_sync_20261108t152018_664bbe",
+  "public_api_after": {
+    "passed": true,
+    "profiles": 227,
+    "generation": "bc_sync_20261108t152018_664bbe",
+    "exact_formats": [
+      159,
+      58,
+      92
+    ],
+    "format_or_unique": 309,
+    "format_and_beige": 27,
+    "tile_color_or_unique": 722,
+    "color_overlap": 2,
+    "unknown_format": 0,
+    "private_field_status": 400,
+    "waf_gold": 93,
+    "waf_gold_aliases_same_ids": true,
+    "tile_format_values": 132,
+    "tile_color_groups": 19
+  },
+  "desktop_browser": {
+    "browser": "Chrome",
+    "viewport": {
+      "width": 1348,
+      "height": 936
+    },
+    "wastafelkranen": [
+      615,
+      93,
+      615
+    ],
+    "betonlook": [
+      46,
+      9,
+      2
+    ],
+    "gold_group_chip": true,
+    "format_and_color_chips": true,
+    "reload_preserved": true,
+    "visual_screenshot_inspected": true,
+    "cart_mutation": false,
+    "forced_fallback_test": "NOT_TESTED"
+  },
+  "remaining": {
+    "cottoceramix": {
+      "products": 3159,
+      "group": "general",
+      "missing_tile_format_filter": true
+    },
+    "mobile_test": "NOT_TESTED",
+    "physical_phone_test": "NOT_TESTED",
+    "checkout_test": "NOT_TESTED",
+    "reboot_test": "NOT_TESTED",
+    "future_v2_timer_execution": "NOT_OBSERVED"
   }
 }
