@@ -1,5 +1,12 @@
 # BadkamerCity — actuele werkstatus
 
+## FILTER-RESTORE-01 — filterdienst na OVH-verlenging niet beschikbaar · 8 november 2026
+
+**DIAGNOSED / BLOCKED_SSH_ACCESS.** MAIN is nu **196328685834 — BadkamerCity - Homepage SEO 8 nov**, door eigenaar gepubliceerd. Wastafelkranen HTTP200 met bestaande filtermarkup/615 native producten; dezelfde VPS-DNS. Oude API /health HTTP200 en Typesense ok, maar de werkelijk gebruikte **/verified/health en /verified/api/v1/search geven HTTP502**. Uitval van de verified-route bewezen; gestopte kandidaatcontainer nog niet bewezen. SSH vanuit deze uitvoering: Network is unreachable; geen serveropdracht uitgevoerd. Geen Shopify- of serverwrite, geen herinstallatie, geen indexherbouw.
+
+**Exact één volgende handeling:** eigenaar voert de alleen-lezen Docker-inventarisatie uit vanuit PowerShell en deelt de output; [diagnose en exact commando](filters/recovery-2026-11-08/README.md). Daarna het getroffen onderdeel herstellen en publiek/API/browser/fallback testen vóór filterverbeteringen. Eerdere homepageconceptstatus hieronder is historie voor de publicatierol; feature-/testgrenzen blijven behouden. Andere werkzaamheden/BRAUER-holds behouden. Geen actieve schrijver na overdracht.
+
+
 ## SEO-HOME-01 — homepageconcept gecontroleerd · 8 november 2026
 
 **PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Eigenaar vraagt na Search Console verder te gaan met homepage-SEO. **MAIN 196341825802 blijft ongewijzigd: 1.387 bestanden, nul checksumverschillen. UNPUBLISHED 196328685834 — BadkamerCity - Homepage SEO 8 nov** is eerst op acht paden gelijkgetrokken; daarna 1.387/1.387 checksumpariteit. Zes bedoelde featurepaden toegepast en exact teruggelezen; einddiff precies zes, nul overige/ontbrekende bestanden. Config/settings_data.json niet geschreven; historische API-bodyuitzondering en uploadguard blijven behouden.
