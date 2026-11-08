@@ -8,6 +8,7 @@ from decimal import Decimal
 import hashlib
 import json
 from pathlib import Path
+from build_shop_identity_review import identities, identity_hash
 
 
 EXPECTED_TARGETS = {
@@ -75,6 +76,19 @@ def build(root):
         raise ValueError('This builder only handles blocked offline preparation')
     targets = validate_targets(json.loads((prepared/'field-targets28.json').read_text()))
     products = json.loads((prepared/'catalog.json').read_text())
+    shop_path=prepared/'shop-identity-review30.json'
+    shop_review=None
+    if shop_path.exists():
+        checked=json.loads(shop_path.read_text())
+        if (checked.get('status')!='COMPLETE_READ_ONLY' or checked.get('articles_compared')!=len(products)
+            or checked.get('catalog_identity_sha256')!=identity_hash(identities(products))
+            or checked.get('shopify_writes')!=0 or checked.get('import_allowed') is not False
+            or checked.get('search_controls')!='PASS' or checked.get('linked_product_ids_assigned') is not False):
+            raise ValueError('Shop identity review is incomplete or does not match these article identities')
+        shop_review={k:checked[k] for k in ['status','store_domain','articles_compared','query_batches','query_pages',
+            'articles_with_existing_identity_or_handle','review_required_articles','status_counts',
+            'catalog_identity_sha256','started_on','finished_on','refresh_required_before_import','linked_product_ids_assigned']}
+        shop_review['file']='shop-identity-review30.json'
     benefits = json.loads((prepared/'product-benefits.json').read_text())
     policy = json.loads((prepared/'product-benefits-summary.json').read_text())
     if policy.get('maximum_per_article') != 3:
@@ -87,6 +101,10 @@ def build(root):
              'manufacturer-features.json','families.json','release-gate.json','field-plan.json','field-targets28.json',
              'product-benefits-summary.json']
     hashes = {p:hashlib.sha256((prepared/p).read_bytes()).hexdigest() for p in paths}
+    if shop_review:
+        for name in ['shop-identity-review30.json','shop-identity-controls30.json',
+                     'shop-identity-worklist30.json','shop-identity-responses30.jsonl']:
+            hashes[name]=hashlib.sha256((prepared/name).read_bytes()).hexdigest()
     payload = ''.join(json.dumps(r,ensure_ascii=False,separators=(',',':'))+'\n' for r in rows)
     destination = prepared/'import-preparation.jsonl'
     destination.write_text(payload)
@@ -102,6 +120,7 @@ def build(root):
         'benefit_mapping_status':'EXISTING_DEFINITION_TYPE_VERIFIED_RENDERER_PENDING',
         'existing_field_targets':targets,'metafield_values_prepared':3*len(rows),
         'definition_check_is_not_renderer_or_import_approval':True,
+        'shop_identity_comparison':shop_review,
         'data_plan':'import-preparation.jsonl','data_plan_sha256':hashlib.sha256(destination.read_bytes()).hexdigest(),
         'source_sha256':hashes,'release_gate_preserved':True,
         'blocking_steps':['Receive complete official media','Inventory and review exact media links',

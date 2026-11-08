@@ -9,7 +9,7 @@ from collections import defaultdict,Counter
 from urllib.parse import urlparse
 from build_specifications import key,essentials,DIMENSIONS,GROUPS,INCLUDED,TAPS,GLASS,CABINETS,ALIASES
 
-def normalized(label,value):
+def normalized(label,value,*,product_type=None):
  v=value.strip().lower().replace('–','-').replace('&','en')
  # Compare measurements as millimetres without discarding a range.
  m=re.fullmatch(r'(\d+(?:[.,]\d+)?)(?:\s*-\s*(\d+(?:[.,]\d+)?))?\s*(cm|mm)',v)
@@ -18,6 +18,9 @@ def normalized(label,value):
   return tuple(round(float(x.replace(',','.'))*unit,6) for x in [m[1],m[2]] if x is not None)
  v=re.sub(r'\s+',' ',v)
  if label=='Montage':
+  # The broader retailer verb is compatible with the literal supplier term
+  # for suspended top boards. This comparison never supplies a missing fact.
+  if product_type=='Topbladen' and v in {'ophangen','vrijhangend aan de wand'}:return 'vrijhangend'
   if v in {'wand','hangend','wandmontage'}:return 'wand'
   if v in {'links/rechts','links of rechts te monteren'}:return 'links/rechts'
  if label=='Draairichting deur' and v in {'links of rechts','links of rechts te monteren','links/rechts'}:return 'links/rechts'
@@ -106,19 +109,20 @@ def main():
  candidates,rejected,scope=collect(catalog,records,resolutions);changes=[];conflicts=[];unchanged=0
  for p in catalog:
   sku=p['sku'];flat=p['specifications'];held={ALIASES.get(x,x) for x in p.get('measurement_hold',{}).get('fields',[])}|set(p['source_conflicts']);review=[]
+  norm=lambda label,value:normalized(label,value,product_type=p['product_type'])
   # Retain previous run's additions on a repeated application; no duplicate rows.
   for label,values in candidates.get(sku,{}).items():
    primary=[v for v in values if v['identity']=='SKU_EAN_MERK']
    variants=defaultdict(list)
-   for v in values:variants[str(normalized(label,v['value']))].append(v)
-   base=flat.get(label);base_ev=evidence[sku]['facts'].get(label);base_key=str(normalized(label,base)) if base is not None else None
-   primary_variants={str(normalized(label,v['value'])) for v in primary}
+   for v in values:variants[str(norm(label,v['value']))].append(v)
+   base=flat.get(label);base_ev=evidence[sku]['facts'].get(label);base_key=str(norm(label,base)) if base is not None else None
+   primary_variants={str(norm(label,v['value'])) for v in primary}
    resolution=resolutions.get(sku,{}).get(label)
    # SKU-only pages cannot introduce a fact, but counterevidence must still be reviewed.
    comparison=set(variants)
    if base is not None:comparison.add(base_key)
    historic=previous_open.get((sku,label),{}).get('existing')
-   if historic is not None:comparison.add(str(normalized(label,historic)))
+   if historic is not None:comparison.add(str(norm(label,historic)))
    if not primary:
     if len(variants)>1 or base is not None and any(k!=base_key for k in variants):
      conflicts.append({'sku':sku,'field':label,'status':'SECONDARY_SOURCE_DIFFERENCE','existing':base,'candidates':values,'action':'Geen zelfstandige wijziging zonder EAN'})
@@ -128,7 +132,7 @@ def main():
    if label in held:
     conflicts.append({'sku':sku,'field':label,'status':'EXISTING_HOLD_RETAINED','existing':base,'candidates':values,'action':'Actuele leveranciersbevestiging nodig'});continue
    if resolution:
-    target=normalized(label,resolution['value']);selected=[v for v in primary if normalized(label,v['value'])==target]
+    target=norm(label,resolution['value']);selected=[v for v in primary if norm(label,v['value'])==target]
     assert selected,(sku,label,'Resolution must select an observed primary fact')
     chosen=selected[0];conflict=False
     if resolution.get('basis')=='SUPPLIER_AND_EXACT_RETAILER':
@@ -155,7 +159,7 @@ def main():
    flat[label]=chosen['value']
    evidence[sku]['facts'][label]={'kind':'retailer_exact_sku_ean','field':chosen['source_label'],'fragment':chosen['source_value'],'source_refs':[],
     'url':chosen['url'],'ref':chosen['ref'],'source_line':chosen.get('line'),'source_section':chosen.get('source_section'),'identity':{'sku':sku,'ean':p['ean'],'brand':'BRAUER'},
-    'checked_on':chosen['checked_on'],'verification':status,'corroborating_urls':sorted({v['url'] for v in primary if normalized(label,v['value'])==normalized(label,chosen['value'])}),
+    'checked_on':chosen['checked_on'],'verification':status,'corroborating_urls':sorted({v['url'] for v in primary if norm(label,v['value'])==norm(label,chosen['value'])}),
     'drawing_resolution':resolution}
    changes.append({'sku':sku,'field':label,'old':'','new':chosen['value'],'action':'AANGEVULD','url':chosen['url'],'ref':chosen['ref']})
   if sku in candidates:p['retail_review']={'checked_on':max(v['checked_on'] for values in candidates[sku].values() for v in values),'open_fields':sorted(set(review)),'source_urls':sorted({v['url'] for values in candidates[sku].values() for v in values})}

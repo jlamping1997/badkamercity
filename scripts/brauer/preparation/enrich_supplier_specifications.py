@@ -5,8 +5,24 @@ from collections import Counter
 from build_specifications import TAPS,CABINETS,BASINS,GLASS,ALIASES
 from enrich_retail_specifications import normalized
 
+DOOR_GROUPS={
+ 'Nisdeur 2-delig met draaideur profielloos':'Draaideur',
+ 'Nisdeur met draaideur profielloos':'Draaideur',
+ 'Douchecabine met draaideur met profiel':'Draaideur',
+ 'Douchecabine met draaideur profielloos':'Draaideur',
+ 'Pendeldeuren profielloos':'Pendeldeur',
+ 'Nisdeur 2-delig met schuifdeur met profiel':'Schuifdeur',
+ 'Douchecabine met schuifdeur met profiel':'Schuifdeur',
+ 'Douchecabine met draai-schuifdeur met profiel':'Draai-schuifdeur',
+ 'Nisdeur 2-delig met draai-schuifdeur met profiel':'Draai-schuifdeur',
+ 'Nisdeur met draai-schuifdeur met profiel':'Draai-schuifdeur',
+}
+
 def candidates(p):
  s=p['source'];text=s['Productomschrijving'];typ=p['product_type'];out=[]
+ exact=(p.get('vendor')=='BRAUER' and s.get('Merk')=='BRAUER'
+        and s.get('Artikelcode')==p.get('sku') and s.get('EAN')==p.get('ean')
+        and bool(p.get('ean')) and bool(p.get('source_refs')))
  def add(label,value,fragment,rule,field='Productomschrijving'):
   out.append({'label':label,'value':value,'fragment':fragment,'rule':rule,'field':field})
  def match(pattern,label,value,rule):
@@ -25,6 +41,13 @@ def candidates(p):
   match(r'\bvaste uitloop\b','Uitvoering uitloop','Vast','explicit_fixed_outlet')
   match(r'\bplatte uitloop\b','Doorsnede uitloop','Plat','explicit_flat_outlet_section')
   match(r'\b(\d+)-standen handdouche\b','Aantal straalstanden handdouche',lambda m:m[1],'explicit_handshower_spray_count')
+ if (typ=='Inbouwdouchesets' and exact
+     and not re.search(r'\b(?:zonder|exclusief|excl\.)\s+(?:\d+(?:[.,]\d+)?\s*cm\s+)?(?:douchekop|hoofddouche)\b',text,re.I)):
+  match(r'\ben\s+(?:\d+(?:[.,]\d+)?\s*cm\s+douchekop|[2-6]-standen\s+(?:(?:cilindervormige|wandmodel)\s+douchekop|inbouw\s+plafond\s+douche))\b',
+        'Hoofddouche inbegrepen','Ja','explicit_set_component_headshower')
+ if typ in {'Nisdeuren','Douchecabines'} and exact and s.get('Productgroep') in DOOR_GROUPS:
+  add('Deursysteem',DOOR_GROUPS[s['Productgroep']],s['Productgroep'],
+      'explicit_supplier_door_system','Productgroep')
  if typ in CABINETS|{'Spiegels'}:
   match(r'\bmet klok\b','Klok','Ja','explicit_clock')
   match(r'\bdim- en kleurfunctie\b','Dimbaar','Ja','explicit_combined_dimming')
@@ -38,7 +61,7 @@ def candidates(p):
 def main():
  root=Path('prepared');catalog=json.loads((root/'catalog.json').read_text());evidence=json.loads((root/'specification-evidence.json').read_text());added=[];differences=[]
  for p in catalog:
-  held=set(p['source_conflicts'])|{ALIASES.get(x,x) for x in p.get('measurement_hold',{}).get('fields',[])}
+  held=set(p['source_conflicts'])|{ALIASES.get(x,x) for x in p.get('measurement_hold',{}).get('fields',[])}|set(p.get('retail_review',{}).get('open_fields',[]))
   for f in candidates(p):
    label=f['label'];value=f['value'];current=p['specifications'].get(label)
    if label in held:continue
