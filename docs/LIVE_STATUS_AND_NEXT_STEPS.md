@@ -28,6 +28,26 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-26 — inbouwkranen en doucheglas verder aangevuld · 8 november 2026
+
+Vervolgronde op verzoek van de eigenaar afgerond. **333 nieuwe Sanitairwinkel-productpagina’s gelezen: 325 exact op merk/fabrikantartikelnummer/EAN, acht zonder EAN uitsluitend vergelijkingsbewijs.** Chrome Edition/Carving gericht op gepubliceerde inbouw-URL’s, Stellar op alle gepubliceerde serie-URL’s. Van 416 ontdekte URL’s zijn 335 geselecteerd; vier eerder verwerkte overgeslagen en alle 331 nieuwe geselecteerde plus twee pilots gelezen. Tijdelijke fouten maximaal eenmaal herhaald; nul resterende leesfouten en limiet 150 URL’s/minuut gerespecteerd. Geen blokkades omzeild. Geteste hashfilters werden door de fetchroute genegeerd; rechtstreeks gepubliceerde seriepagina’s gebruikt.
+
+**1.931 nieuwe specificaties; 36 eerdere externe maten bij bronverschil ingehouden. Netto 1.895 extra: 178.198 velden bij 13.161 artikelen.** Geen oude waarde door een alternatieve maat vervangen. Netto 130 artikelen meer met alle gekozen kernvelden aanwezig; nog 6.622 met ontbrekende kernvelden. Geen volledige technische vrijgave. Alle 72 eerdere open verschillen/historische waarden behouden, evenals de oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen. Prijzen inclusief 21% btw, SKU/EAN, titels, keuzes, eigen invoer en drie oorspronkelijke leveranciersbestanden behouden.
+
+Eindstand **150 open retailveldverschillen, 288 verdachte slangwaarden en 480 concrete vragen bij 461 artikelen**. Expliciete tabelwaarden voor Inbouwdeel/Inclusief inbouwdeel herkend; geen ontbrekend icoon als Nee. Generieke vorm/uitloop zonder componentcontext bij complete inbouwsets niet toegepast; inbouwdeelveld tot passende kraantypen beperkt. Geen maten uit modelcodes, geen overerving tussen varianten of automatische 15→150-correctie.
+
+**46 tests PASS** (24 specificatie/retail/leverancier, 9 voorbereiding, 6 hervatting, 7 bronextractie). Herhaalrun catalogus/bewijs/samenvatting/cumulatieve aanvullingen/historische verschillen exact behouden. Native XLSX alle **13.161 artikelregels, 42.869 cumulatieve aanvullingen en 480 vragen** gelijk; alle 545 EAN-cellen in het vragenblad tekst, 12 EAN-voorbeelden tekst, nul foutcellen. Vijf bladen en drie aanvullende ranges bekeken. Preflight inhoudelijk gecontroleerd, terecht exit 2 en import_allowed false. Geen fysieke Excel-desktop-, Windows-Git- of livewinkeltest geclaimd.
+
+**Bestaande privé-ZIP versie 10 en specificatie-XLSX versie 7 opgeslagen, identiteiten behouden.** 200 pakketbestanden / 199 manifesthashes gecontroleerd; alle 163 eerdere bestanden behouden, ingebedde XLSX exact gelijk aan de actuele zelfstandige XLSX. Versieconflicten bij XLSX en ZIP opgelost na herladen en bytevergelijking van de ongewijzigde actuele bron; gevalideerde wijzigingen opnieuw toegepast, geen tussentijdse wijzigingen overschreven. Bronbestand nu **6.643 records, waarvan 6.601 exacte identiteiten**. Broninhoud blijft privé; getypeerde records en letterlijke tabeluittreksels bewaard, ruwe fetchresponses niet gebundeld. Geen voltooide duizenden pagina’s opnieuw lezen. Oude werklijsten en de 335-kandidaten-/331-aanvragenlijst van deze ronde zijn voltooide input.
+
+**Geen Shopify-writes, DRAFT-imports, media-uploads, themawrites of publicatie.** Alle vrijgavevlaggen blijven false; volledige officiële afbeeldingen/PDF’s ontbreken nog. MAIN uitsluitend read-only qua rol bevestigd: **196341825802**. Geen actieve bronlezer/schrijver na overdracht.
+
+Codecheckpoint **14c893fef895bde189a78813f92bd6afb543c2d1** op fix/product-cards-2026-10-14; vijf gewijzigde codeblobs remote exact bevestigd. Main uitsluitend documentatie. [Uitwerking](brauer/2026-11-08/FINAL_BRAUER26.md), [actuele overdracht](brauer/2026-11-08/HANDOFF_BRAUER26.md) en privé prepared/HANDOFF_BRAUER26.json; BRAUER-25 is als historie gemarkeerd. Overige gelijktijdige projectupdates behouden.
+
+**Eén volgende taak:** gericht andere series/kleuren van resterende inbouwdouchesets en resterend glas onderzoeken bij de toegestane winkels, exact op merk/SKU/EAN. Volledige officiële mediainventarisatie, exacte koppeling en beoordeelde representatieve product-/keuzeproef blijven verplicht vóór iedere import.
+
+---
+
 ## BRAUER-25 — verdere specificaties via Sanitairwinkel afgerond · 8 november 2026
 
 Eigenaar vraagt beide toegestane winkels verder te benutten. De vorige ronde omvatte vooral BadkamerXXL; daarom nu zes gerichte Sanitairwinkel-series onderzocht. **450 nieuwe productpagina’s gelezen: 406 exact op fabrikantartikelnummer/EAN/merk, 31 zonder EAN alleen vergelijkingsbewijs, 13 niet zelfstandig bruikbaar.** Alle 449 nieuwe geselecteerde URL’s plus één identiteitstest afgewerkt; vijf eerdere URL’s overgeslagen. Tijdelijke fouten eenmaal herhaald, nul resterende leesfouten. Geen blokkade omzeild of limiet-/tariefuitbreiding.
