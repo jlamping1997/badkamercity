@@ -1,5 +1,7 @@
 # Collecties, categoriehubs en merken
 
+> **Actuele correctie 8 november 2026:** Badkamermeubels is nu `category-landing` → `main-category-landing` + advies, met zeven bestaande menukinderen. De oude hub en drie inline Admin-stijlblokken worden niet meer gebruikt; de drie blokken zijn verwijderd op eigenaarverzoek. Onderstaande oude hubtoewijzing/CSS-afhankelijkheid is historische broninformatie. [Bewijs en rollback](../../repairs/2026-11-08/furniture-standard/README.md).
+
 > **Actueel CATEGORY-COPY-01 — 8 november:** collectie-SEOtekst is een afzonderlijke linkbron naast de menu’s. Negen verwijzingen naar publiek bevestigde lege productlijsten uit acht descriptionHtml-bodies weggehaald.226omscrijvingen volledig gecontroleerd; negen menu’s bleven exact gelijk. De drie inline Badkamermeubels-stijlblokken, SPLIT-markers, SEO en templates zijn exact behouden. [Voor/na, guards en herstel](../../repairs/2026-11-08/category-content-links/README.md). Tegeltoebehoren is leeg/ongepubliceerd, niet een actieve menu-404; geen nieuwe collectie/redirect gemaakt. Geen nieuwe browser-/mobielvrijgave.
 
 Bronmoment **28 oktober 2026**. De verse Admin-read bevat **226 collecties**: 209 zonder suffix, 16 `category-landing`, één `bc-meubelhub`. De templatekeuze is een Admin-toewijzing; de boomstructuur komt grotendeels uit menu's, niet uit een ingebouwd parentveld van Shopify-collecties.
