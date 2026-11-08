@@ -22,10 +22,10 @@ ENUMS={'Montagewijze':'Montage','Montage':'Montage','Type deur':'Deursysteem','T
  'Materiaal profiel/bevestiging':'Materiaal profiel/bevestiging','Afwerking front':'Afwerking front','Vorm':'Vorm',
  'Type handdouche':'Type handdouche','Maat aansluiting aanvoer':'Aansluitmaat watertoevoer','Maat draadaansluiting (inch)':'Aansluitmaat watertoevoer',
  'Maat draadaansluiting doucheslang':'Aansluitmaat doucheslang','Type bevestiging stabilisatiestang':'Bevestiging stabilisatiestang',
- 'Lichtkleur':'Kleurtemperatuur','Afzetplateau':'Plaats afzetplateau','Leverwijze':'Leverwijze'}
+ 'Lichtkleur':'Kleurtemperatuur','Afzetplateau':'Plaats afzetplateau','Leverwijze':'Leverwijze','Inbouwdeel':'Inbouwdeel inbegrepen'}
 BOOLS={'Met verlichting':'Verlichting','Met lichtschakelaar':'Lichtschakelaar','Met schakelaar':'Lichtschakelaar','Met stopcontact':'Stopcontact','Wandcontactdoos':'Stopcontact',
  'Met handdouche':'Handdouche inbegrepen','Met doucheslang':'Doucheslang inbegrepen','Met glijstang':'Glijstang inbegrepen','Met hoofddouche':'Hoofddouche inbegrepen','Met uitloop':'Uitloop inbegrepen','Inkortbaar':'Inkortbaar',
- 'Met softclose':'Softclose','Softclose':'Softclose','Met inbouwdeel':'Inbouwdeel inbegrepen','Met afvoerplug':'Afvoerplug inbegrepen',
+ 'Met softclose':'Softclose','Softclose':'Softclose','Met inbouwdeel':'Inbouwdeel inbegrepen','Inclusief inbouwdeel':'Inbouwdeel inbegrepen','Met afvoerplug':'Afvoerplug inbegrepen',
  'Met plug':'Afvoerplug inbegrepen','Met sifon':'Sifon inbegrepen','Met wastafel/blad':'Wastafel of blad inbegrepen','Overloop':'Overloop',
  'Inclusief douchebak':'Douchebak inbegrepen','Met bevestigingsmateriaal':'Bevestigingsmateriaal inbegrepen',
  'Met koude start':'Koudestartfunctie','ColdStart':'Koudestartfunctie','Thermostatisch':'Thermostatisch','Thermostaatkraan':'Thermostatisch',
@@ -78,6 +78,10 @@ def parse(page):
   elif label in ENUMS:
    if len(value)>90 or value.startswith(('Image:','*','##')):continue
    target=ENUMS[label];norm=value
+   if target=='Inbouwdeel inbegrepen':
+    explicit={'ja':'Ja','nee':'Nee','inclusief inbouwdeel':'Ja','met inbouwdeel':'Ja','exclusief inbouwdeel':'Nee','zonder inbouwdeel':'Nee'}
+    if value.lower() not in explicit:continue
+    norm=explicit[value.lower()]
    allowed={'Plaats bediening':{'Links','Rechts','Links en rechts'},'Wandafwerking':{'Met rozetten','Met achterplaat'},'Vorm rozet':{'Rond','Vierkant','Rechthoekig','Ovaal'},'Bediening aan/uit':{'Draaigreep','Drukknop','Sensor'}}
    if target in allowed and value not in allowed[target]:continue
    if target=='Wandafwerking':norm={'Met rozetten':'Rozetten','Met achterplaat':'Afdekplaat'}[value]

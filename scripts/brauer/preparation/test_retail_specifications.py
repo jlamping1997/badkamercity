@@ -25,6 +25,8 @@ class RetailTests(unittest.TestCase):
   self.assertEqual(normalized('Aantal grepen','Eengreeps'),normalized('Aantal grepen','1'))
   self.assertEqual(normalized('Wandafwerking','Met achterplaat'),normalized('Wandafwerking','Afdekplaat'))
  def test_set_dimensions_and_outlier_hose_are_not_applied(self):
+  self.assertFalse(applicable(by['5-GM-077'],{'label':'Vorm','value':'Rond'})[0])
+  self.assertFalse(applicable(by['5-GM-077'],{'label':'Uitvoering uitloop','value':'Niet draaibaar'})[0])
   p=by['5-CE-403'];self.assertNotIn('Diameter',p['specifications']);self.assertNotIn('Lengte doucheslang',p['specifications'])
   self.assertEqual(p['specifications']['Diameter handdouche'],'2,4 cm')
   self.assertEqual(p['specifications']['Diameter hoofddouche'],'25 cm')
@@ -32,6 +34,11 @@ class RetailTests(unittest.TestCase):
  def test_boolean_absence_is_not_false_and_section_is_scoped(self):
   page={'url':'https://www.badkamerxxl.nl/test','title':'Brauer test','ref':'fixture','lines':[{'line':i+1,'text':t} for i,t in enumerate(['Fabrikantnummer','5-CE-403','EAN','8720724565693','Merk','Brauer','Met verlichting','Handdouche','Breedte/diameter douchekop','2,4 cm','Hoofddouche','Breedte/diameter hoofddouche','25 cm','Bijlagen'])]}
   fields=parse(page)['fields'];self.assertNotIn('Verlichting',[f['label'] for f in fields]);self.assertIn('Diameter handdouche',[f['label'] for f in fields]);self.assertIn('Diameter hoofddouche',[f['label'] for f in fields])
+ def test_explicit_inbouwdeel_table_aliases_and_unknown_values(self):
+  for label,value,expected in [('Inbouwdeel','inclusief inbouwdeel','Ja'),('Inbouwdeel','exclusief inbouwdeel','Nee'),('Inclusief inbouwdeel','Ja','Ja'),('Inclusief inbouwdeel','Nee','Nee'),('Inbouwdeel','Onbekend',None),('Inclusief inbouwdeel','',None)]:
+   page={'url':'https://www.sanitairwinkel.nl/test','title':'Brauer product','ref':'fixture','retrieval':'public_live_fetch_html','lines':[{'line':1,'text':label+' | '+value}]}
+   fields=parse(page)['fields'];actual=[x['value'] for x in fields if x['label']=='Inbouwdeel inbegrepen'];self.assertEqual(actual,[expected] if expected else [])
+  self.assertFalse(applicable(by['GS-CLI1H100200CE'],{'label':'Inbouwdeel inbegrepen','value':'Nee'})[0])
  def test_html_child_labels_are_not_generic_field_values(self):
   page={'url':'https://www.sanitairwinkel.nl/test','title':'Brauer test','ref':'fixture','retrieval':'public_live_fetch_html','lines':[{'line':i+1,'text':t} for i,t in enumerate(['Leveranciernummer','5-CE-403','EAN','8720724565693','Merk','Brauer','Vorm handdouche','Staafmodel','Materiaal deur','Glas','Technische documenten'])]}
   fields=parse(page)['fields'];self.assertNotIn(('Vorm','handdouche'),[(f['label'],f['value']) for f in fields]);self.assertNotIn(('Materiaal','deur'),[(f['label'],f['value']) for f in fields])

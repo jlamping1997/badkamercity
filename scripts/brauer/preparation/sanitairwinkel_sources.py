@@ -1,5 +1,6 @@
 """Read literal retailer table cells; identity is never inferred from a URL."""
 import json
+import argparse
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -81,10 +82,18 @@ def extract(result):
 
 
 def main():
+    args = argparse.ArgumentParser()
+    args.add_argument('--research-directory', default='research/brauer25')
+    args.add_argument('--output-suffix', default='25')
+    options = args.parse_args()
+    if not re.fullmatch(r'\d+', options.output_suffix):
+        args.error('output-suffix must be a numeric round identifier')
+    suffix = options.output_suffix
+    research = Path(options.research_directory)
     root = Path('prepared')
-    response_files = sorted(Path('research/brauer25').glob('*fetch*.json'), key=lambda f: f.stat().st_mtime_ns)
+    response_files = sorted(research.glob('*fetch*.json'), key=lambda f: f.stat().st_mtime_ns)
     if not response_files:
-        if (root / 'sanitairwinkel-observations25.json').exists():
+        if (root / f'sanitairwinkel-observations{suffix}.json').exists():
             print(json.dumps({'saved_typed_records_retained': True, 'raw_responses': 0}))
             return
         raise SystemExit('Geen ruwe fetchresponses; bestaande getypeerde bronbestanden blijven behouden.')
@@ -130,9 +139,9 @@ def main():
             if not re.match(r'https://www\.sanitairwinkel\.nl/p/\d+/', error.get('url', '')):
                 continue
             outcomes[error.get('url', file.name)] = {'url': error.get('url'), 'state': 'FETCH_ERROR', 'error': error}
-    for name, value in [('sanitairwinkel-observations25.json', list(records.values())), ('sanitairwinkel-outcomes25.json', list(outcomes.values()))]:
+    for name, value in [(f'sanitairwinkel-observations{suffix}.json', list(records.values())), (f'sanitairwinkel-outcomes{suffix}.json', list(outcomes.values()))]:
         (root / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
-    Path('research/brauer25/table-excerpts25.json').write_text(json.dumps(pages, ensure_ascii=False, indent=2) + '\n')
+    (research / f'table-excerpts{suffix}.json').write_text(json.dumps(pages, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'exact_records': sum(x['state'] == 'EXACT_IDENTITY' for x in outcomes.values()), 'comparison_records': sum(x['state'] == 'SKU_ONLY_COMPARISON' for x in outcomes.values()), 'identity_not_proven': sum(x['state'] == 'IDENTITY_NOT_PROVEN' for x in outcomes.values()), 'fetch_errors': sum(x['state'] == 'FETCH_ERROR' for x in outcomes.values())}))
 
 

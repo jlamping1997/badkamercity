@@ -54,6 +54,23 @@ class SanitairwinkelTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(target.read_bytes(), original)
 
+    def test_separate_round_does_not_overwrite_saved_previous_round(self):
+        script = Path(__file__).with_name('sanitairwinkel_sources.py').resolve()
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'prepared').mkdir()
+            (root / 'new-sources').mkdir()
+            previous = root / 'prepared/sanitairwinkel-observations25.json'
+            previous.write_text('[{"round":25}]')
+            (root / 'prepared/catalog.json').write_text(json.dumps([{'sku': 'EXACT', 'ean': '0123456789012'}]))
+            result = page('<section><table><tr><td>Leveranciernummer</td><td>EXACT</td></tr><tr><td>EAN</td><td>0123456789012</td></tr><tr><td>Merk</td><td>Brauer</td></tr><tr><td>Hoogte</td><td>42 cm</td></tr></table></section>')
+            (root / 'new-sources/product-fetch.json').write_text(json.dumps({'results': [result]}))
+            run = subprocess.run([sys.executable, str(script), '--research-directory', 'new-sources', '--output-suffix', '26'], cwd=root, capture_output=True)
+            self.assertEqual(run.returncode, 0, run.stderr)
+            self.assertEqual(previous.read_text(), '[{"round":25}]')
+            self.assertEqual(json.loads((root / 'prepared/sanitairwinkel-observations26.json').read_text())[0]['sku'], 'EXACT')
+            self.assertTrue((root / 'new-sources/table-excerpts26.json').is_file())
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

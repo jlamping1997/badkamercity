@@ -44,6 +44,8 @@ def material_compatible(left,right):
 
 def applicable(p,f):
  typ=p['product_type'];label=f['label'];s=p['source']['Productomschrijving'].lower()
+ if label=='Inbouwdeel inbegrepen' and typ not in TAPS:return False,'Inbouwdeel niet als kraanonderdeel voor deze productsoort gebruiken'
+ if typ=='Inbouwdouchesets' and label in {'Vorm','Uitvoering uitloop'}:return False,'Algemeen kenmerk zonder bewezen onderdeelcontext; niet als kenmerk van de complete doucheset gebruiken'
  if label=='Hartafstand' and typ not in TAPS|{'Meubelgrepen','Spiegeldeurgrepen'}:return False,'Hartafstand niet zonder passende aansluit-/bevestigingscontext gebruiken'
  if label=='Diameter plug' and typ!='Afvoerpluggen':return False,'Plugdiameter hoort bij een afzonderlijke afvoerplug'
  if label=='Aansluitmaat sifon' and typ not in {'Afvoerpluggen','Sifons','Fonteinen','Meubelwastafels','Waskommen','Vrijhangende wastafels'}:return False,'Sifonaansluiting niet als wateraanvoer gebruiken'
