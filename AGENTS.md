@@ -58,7 +58,7 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 ## 5. Vaste correctheidswaarschuwingen
 
 - `docs/MASTERPLAN.md` versie 0.26.3 beschrijft september 2026; de huidige gepubliceerde theme-code is sindsdien ver ontwikkeld. Historische gegevens behouden, actuele stand in nieuw dossier.
-- De Badkamermeubels-mobiel/desktopweergave leunt op **drie inline style-blokken in Shopify collection descriptionHtml**. Alleen code uit Git inspecteren kan die afhankelijkheid missen.
+- **8 november 2026, FURNITURE-STANDARD-01:** Badkamermeubels gebruikt op expliciet eigenaarverzoek `category-landing`, zoals de andere hoofdcategorieën. Drie oude inline style-blokken zijn uit de Admin-omschrijving verwijderd. De oude `bc-meubelhub`-bestanden blijven alleen beschikbaar als historische bron/rollback; herstel die toewijzing of CSS niet automatisch. Zie [bewijs en herstel](docs/repairs/2026-11-08/furniture-standard/README.md).
 - De actuele `main` bevat een geverifieerde theme-snapshot, niet de volledige Shopify-productdatabase/menu-instellingen/externe VPS.
 - `custom.*` in bepaalde PDP-code komt niet altijd overeen met de actuele `specs.*`-definities; verifieer echte waarden vóór migratie.
 - De opt-in-filterstatus uit 7 oktober is historisch. Lees de actuele status en controleer de werkelijk gebruikte route; een publicatie bewijst niet dat alle filters opnieuw zijn getest.

@@ -1,5 +1,7 @@
 # Routes → renderers → data → interacties
 
+> **Actuele correctie 8 november 2026:** Badkamermeubels is nu `category-landing` → `main-category-landing` + advies, met zeven bestaande menukinderen. De oude hub en drie inline Admin-stijlblokken worden niet meer gebruikt; de drie blokken zijn verwijderd op eigenaarverzoek. Onderstaande oude hubtoewijzing/CSS-afhankelijkheid is historische broninformatie. [Bewijs en rollback](../repairs/2026-11-08/furniture-standard/README.md).
+
 ## Actuele aanvulling — 8 november 2026
 
 [Centraal auditrapport](../audits/2026-11-08/README.md), MAIN **196328685834**. De brede set omvat 364 responses (360×200, 4×404 inclusief bewuste probe), geen 364 interactieve flows. Admin: 227 collecties, waarvan 210 standaard, 16 categoriehubs en 1 meubelhub; 121 Pages waarvan 119 gepubliceerd. De onderstaande productaantallen en JS-rendererwaarnemingen van 28 oktober zijn niet als nieuwe telling herbevestigd.
