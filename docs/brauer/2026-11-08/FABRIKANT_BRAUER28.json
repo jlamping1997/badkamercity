@@ -1,0 +1,406 @@
+{
+  "task": "BRAUER-28",
+  "date": "2026-11-08",
+  "status": "FINAL_CHECKED_OFFLINE_BLOCKED",
+  "articles": 13161,
+  "specification_fields": 178198,
+  "articles_missing_chosen_essential_fields": 6622,
+  "benefits": 12132,
+  "articles_with_benefits": 7220,
+  "new_benefits": 3920,
+  "reworded_existing_benefits": 1081,
+  "prior_benefits_retained": 8212,
+  "maximum_benefits_per_article": 4,
+  "by_rule": {
+    "adjustable_light_colour": 28,
+    "anti_slip": 30,
+    "cold_start": 25,
+    "dimmable_light": 86,
+    "frameless_glass": 564,
+    "glass_coating": 1056,
+    "glass_thickness": 72,
+    "handshower_modes": 1029,
+    "hidden_storage": 7,
+    "included_body": 177,
+    "led_light": 86,
+    "pivot_sliding_door": 24,
+    "pvd_finish": 2999,
+    "reversible_glass": 489,
+    "rotating_outlet": 63,
+    "shower_bundle_with_body": 143,
+    "shower_bundle_with_hose": 47,
+    "sliding_door": 24,
+    "soft_close": 2977,
+    "thermostatic": 2206
+  },
+  "supplier_door_values_refined": 24,
+  "previous_supplier_values_and_evidence_retained": true,
+  "technical_fields_added": 0,
+  "technical_fields_removed": 0,
+  "new_external_individual_product_facts": 0,
+  "selected_official_sources_read": 17,
+  "topa_public_index_login_boundary": 1,
+  "verified_scoped_definitions": 8,
+  "held_claim_types": 7,
+  "retail_open_fields": 150,
+  "suspicious_hose_values": 288,
+  "question_rows": 480,
+  "question_articles": 461,
+  "original_data_holds": 42,
+  "future_articles": 163,
+  "retail_additions_cumulative": 38569,
+  "supplier_additions_cumulative": 4300,
+  "technical_additions_cumulative": 42869,
+  "tests": {
+    "benefit_manufacturer_and_mapping": 22,
+    "specifications": 6,
+    "preparation": 9
+  },
+  "tests_total": 37,
+  "repeat_check": "PASS",
+  "preflight_exit": 2,
+  "native_excel_check": "PASS",
+  "worksheets": 6,
+  "original_sheets_preserved": 5,
+  "original_cells_compared": 421953,
+  "benefit_article_rows_exact": 13161,
+  "benefit_eans_as_text": 13161,
+  "native_error_cells": 0,
+  "visual_views_reviewed": 8,
+  "offline_import_records_exact": 13161,
+  "offline_metafield_values_exact": 39483,
+  "read_only_verified_existing_targets": {
+    "custom.pluspunten": "list.single_line_text_field",
+    "custom.complete_specificaties": "json",
+    "custom.switch_group": "single_line_text_field"
+  },
+  "shopify_writes": 0,
+  "new_metafield_definitions_created": false,
+  "import_allowed": false,
+  "draft_import_allowed": false,
+  "official_complete_media_received": false,
+  "product_pilot_reviewed": false,
+  "renderer_integration_verified": false,
+  "code_checkpoint": "902a729525131352d1de06050c4781adb73c0ba3",
+  "active_code_branch": "fix/product-cards-2026-10-14",
+  "main_docs_only": true,
+  "theme_main_read": "196368531722",
+  "theme_name_read": "BadkamerCity - Klantenservice 8 nov",
+  "background_reader_running": false,
+  "background_writer_running": false,
+  "not_tested": [
+    "Windows Git/worktree",
+    "Physical Excel application",
+    "Live product/selector rendering",
+    "Shopify import",
+    "Complete official media inventory",
+    "Reviewed representative product pilot"
+  ],
+  "source_registry": {
+    "version": "manufacturer-feature-definitions-2026-11-08",
+    "brand": "BRAUER",
+    "checked_on": "2026-11-08",
+    "article_identity_gate": "Exact BRAUER + manufacturer SKU + EAN on each existing approved catalogue/supplier row. General manufacturer definitions do not provide missing product identity or inclusion.",
+    "new_individual_external_product_facts": 0,
+    "definitions": {
+      "hydrophobic_glass": {
+        "id": "hydrophobic_glass",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Met water- en vuilafstotende glascoating",
+        "article_gate": "Existing exact-article Glascoating = Ja",
+        "sources": [
+          "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+          "https://www.brauerkranen.nl/site/5B8EB9D4B1B133EBC1258CB9003908E7/$FILE/07-BRAUER%20Handleiding%20Void%20douchecabine.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+        "notes": "Describes the coating function. Does not assert factory application, maintenance-free glass or absence of limescale. Void manual applies coating after installation.",
+        "provides_individual_article_identity": false
+      },
+      "cold_start": {
+        "id": "cold_start",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Coldstart: koud water in de middenstand",
+        "article_gate": "Existing exact-article Koudestartfunctie = Ja",
+        "sources": [
+          "https://www.brauerkranen.nl/site/00061E9EDA24D4A3C1258704003E8771/$FILE/BRAUER%20handleiding%20opbouw%20hoge%20wastafelkraan%20%28003%29.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/00061E9EDA24D4A3C1258704003E8771/$FILE/BRAUER%20handleiding%20opbouw%20hoge%20wastafelkraan%20%28003%29.pdf",
+        "notes": "Explains the named mechanism only; no saving percentage or new function inferred for other taps.",
+        "provides_individual_article_identity": false
+      },
+      "pvd_finish": {
+        "id": "pvd_finish",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "PVD-afwerking",
+        "article_gate": "Existing exact-article Coating = PVD",
+        "sources": [
+          "https://www.brauerkranen.nl/site/onderhoud-handleidingen",
+          "https://www.brauerkranen.nl/site/C3296361F7951757C1258704003F4639/$FILE/Onderhoudsvoorschrift-brushed-RVS-kleurig.pdf",
+          "https://www.brauerkranen.nl/site/6A176074B524B396C1258704003FA804/$FILE/Onderhoudsvoorschrift-copper-koper.pdf",
+          "https://www.brauerkranen.nl/site/995DC88A9C0CACF7C1258704003FBC91/$FILE/Onderhoudsvoorschrift-gold-goud.pdf",
+          "https://www.brauerkranen.nl/site/2A934730EA39BE4DC12587E500486220/$FILE/Onderhoudsvoorschrift-gunmetal.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/onderhoud-handleidingen",
+        "notes": "Colour alone never proves PVD. Applied text makes no scratchproof, acid-resistant or lifetime promise; maintenance instructions still apply.",
+        "provides_individual_article_identity": false
+      },
+      "frameless_glass": {
+        "id": "frameless_glass",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Profielloze uitvoering",
+        "article_gate": "Literal original supplier Productgroep says profielloos for the same brand/SKU/EAN",
+        "sources": [
+          "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+          "https://www.brauerkranen.nl/site/5B8EB9D4B1B133EBC1258CB9003908E7/$FILE/07-BRAUER%20Handleiding%20Void%20douchecabine.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+        "notes": "No claim that all glass has slim profiles. No profile dimensions inferred.",
+        "provides_individual_article_identity": false
+      },
+      "sliding_door": {
+        "id": "sliding_door",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Schuifdeur zonder draaicirkel",
+        "article_gate": "Literal original supplier Productgroep is a sliding cabin/niche; no contradictory or held door field",
+        "sources": [
+          "https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma",
+          "https://www.brauerkranen.nl/site/F96529C22D16361CC1258E620044D57F/$FILE/Handleiding%20Galactic%20Douchecabine.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma",
+        "notes": "Manufacturer describes a sliding Galactic door. The exact supplier record must already confirm the mechanism.",
+        "provides_individual_article_identity": false
+      },
+      "pivot_sliding_door": {
+        "id": "pivot_sliding_door",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Draai-schuifdeur",
+        "article_gate": "Literal original supplier Productgroep explicitly says draai-schuifdeur",
+        "sources": [
+          "https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma",
+          "https://www.brauerkranen.nl/site/648F560B67BF3D0FC1258E62004684C3/$FILE/Handleiding%20Luminis%20Douchecabines%20%282-%20en%203-delig%29.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma",
+        "notes": "No conversion of ordinary hinged doors to sliding doors and no new clearance dimensions.",
+        "provides_individual_article_identity": false
+      },
+      "glass_thickness": {
+        "id": "glass_thickness",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Glas van 8 mm dik",
+        "article_gate": "Existing exact-article Glasdikte = 8 mm",
+        "sources": [
+          "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+        "notes": "Not applied to unknown thickness or the existing 6 mm article. Does not infer thickness from model code or broad series copy.",
+        "provides_individual_article_identity": false
+      },
+      "anti_slip": {
+        "id": "anti_slip",
+        "brand": "BRAUER",
+        "status": "VERIFIED_DEFINITION",
+        "label": "Antislip douchebak",
+        "article_gate": "Existing exact-article Antislip = Ja and type Douchebakken",
+        "sources": [
+          "https://www.brauerkranen.nl/site/EC7ABEEAEFC60282C1258CB9003A5746/$FILE/BRAUER%20Handleiding%20Asteroid%20douchebak.pdf"
+        ],
+        "primary_url": "https://www.brauerkranen.nl/site/EC7ABEEAEFC60282C1258CB9003A5746/$FILE/BRAUER%20Handleiding%20Asteroid%20douchebak.pdf",
+        "notes": "R10 is noted in the manual, but no new R10 article rating is populated from a prefix-only manual.",
+        "provides_individual_article_identity": false
+      }
+    },
+    "sources": [
+      {
+        "id": "glass_overview",
+        "url": "https://www.brauerkranen.nl/site/brauer-glasprogramma-brauer",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "glass_new",
+        "url": "https://www.brauerkranen.nl/site/nieuwe-doucheopstellingen-brauer-glasprogramma",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "glass_manuals",
+        "url": "https://www.brauerkranen.nl/site/installatie-handleidingen-glas",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "care_index",
+        "url": "https://www.brauerkranen.nl/site/onderhoud-handleidingen",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "topa_catalogue",
+        "url": "https://topa-import.com/products/21/nl/Verkoopmateriaal",
+        "publisher": "Topa Bathroom Products",
+        "checked_on": "2026-11-08",
+        "status": "PUBLIC_INDEX_LOGIN_REQUIRED_FOR_CATALOGUES",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "stellar_manual",
+        "url": "https://www.brauerkranen.nl/site/D6A195357F3C65D5C1258CB900385F32/$FILE/BRAUER%20Handleiding%20Stellar%20douchecabine.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "void_manual",
+        "url": "https://www.brauerkranen.nl/site/5B8EB9D4B1B133EBC1258CB9003908E7/$FILE/07-BRAUER%20Handleiding%20Void%20douchecabine.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "galactic_manual",
+        "url": "https://www.brauerkranen.nl/site/F96529C22D16361CC1258E620044D57F/$FILE/Handleiding%20Galactic%20Douchecabine.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "collision_manual",
+        "url": "https://www.brauerkranen.nl/site/FA1545063FED45B2C1258E620043B8DC/$FILE/Handleiding%20Collision%20Inloopdouche.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "luminis_manual",
+        "url": "https://www.brauerkranen.nl/site/648F560B67BF3D0FC1258E62004684C3/$FILE/Handleiding%20Luminis%20Douchecabines%20%282-%20en%203-delig%29.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "asteroid_manual",
+        "url": "https://www.brauerkranen.nl/site/EC7ABEEAEFC60282C1258CB9003A5746/$FILE/BRAUER%20Handleiding%20Asteroid%20douchebak.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "coldstart_manual",
+        "url": "https://www.brauerkranen.nl/site/00061E9EDA24D4A3C1258704003E8771/$FILE/BRAUER%20handleiding%20opbouw%20hoge%20wastafelkraan%20%28003%29.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "pvd_brushed",
+        "url": "https://www.brauerkranen.nl/site/C3296361F7951757C1258704003F4639/$FILE/Onderhoudsvoorschrift-brushed-RVS-kleurig.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "pvd_copper",
+        "url": "https://www.brauerkranen.nl/site/6A176074B524B396C1258704003FA804/$FILE/Onderhoudsvoorschrift-copper-koper.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "pvd_gold",
+        "url": "https://www.brauerkranen.nl/site/995DC88A9C0CACF7C1258704003FBC91/$FILE/Onderhoudsvoorschrift-gold-goud.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "pvd_gunmetal",
+        "url": "https://www.brauerkranen.nl/site/2A934730EA39BE4DC12587E500486220/$FILE/Onderhoudsvoorschrift-gunmetal.pdf",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "furniture_overview",
+        "url": "https://www.brauerkranen.nl/site/nieuw-meubelprogramma",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      },
+      {
+        "id": "furniture_manuals",
+        "url": "https://www.brauerkranen.nl/site/3920190D50F1C9A3C1258C37003DEEB8",
+        "publisher": "BRAUER",
+        "checked_on": "2026-11-08",
+        "status": "READ",
+        "scope": "General manufacturer context; individual article eligibility must be separately proved."
+      }
+    ],
+    "held_candidates": [
+      {
+        "feature": "Dunne/slanke profielen",
+        "status": "NOT_APPLIED",
+        "reason": "No exact per-article profile dimensions verified; the manufacturer uses multiple profile and frameless systems."
+      },
+      {
+        "feature": "Kalkvrij / onderhoudsvrij glas",
+        "status": "NOT_APPLIED",
+        "reason": "Manufacturer describes water/dirt repellence and ongoing cleaning; coating does not justify an absolute no-limescale promise."
+      },
+      {
+        "feature": "Alle glas al in de fabriek behandeld",
+        "status": "NOT_APPLIED",
+        "reason": "Current Void installation instructions include application after installation. The safe benefit describes coating without claiming factory treatment."
+      },
+      {
+        "feature": "Alle glas 8 mm gehard",
+        "status": "NOT_APPLIED",
+        "reason": "Only known per-article thickness can be used; the catalogue also includes an exact 6 mm value."
+      },
+      {
+        "feature": "R10 per douchebak",
+        "status": "HELD_FOR_EXACT_ARTICLE_CONFIRMATION",
+        "reason": "Asteroid manual supports a series-level rating but does not list every complete SKU/EAN. Existing Antislip = Ja is sufficient for a neutral antislip benefit."
+      },
+      {
+        "feature": "Vijf jaar garantie op de coating",
+        "status": "NOT_APPLIED",
+        "reason": "Official manuals distinguish coating coverage from general product coverage; no warranty promise added."
+      },
+      {
+        "feature": "Algemene bescherming tegen verbranding",
+        "status": "NOT_APPLIED",
+        "reason": "Thermostatic operation alone does not prove a specific temperature stop or CoolTouch feature for each article."
+      }
+    ],
+    "official_complete_media_received": false,
+    "import_allowed": false
+  },
+  "next_action": "When the complete official media package arrives, run the offline exact-article media inventory and review unmatched or ambiguous links; keep all imports blocked."
+}

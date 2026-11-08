@@ -1,3 +1,5 @@
+> Historisch checkpoint. De actuele stand staat in [HANDOFF_BRAUER28.md](HANDOFF_BRAUER28.md); de onderstaande cijfers beschrijven ronde 27.
+
 # BRAUER-27 — actuele overdracht, 8 november 2026
 
 De pluspuntenronde is afgerond. Lees [de uitwerking](PLUSPUNTEN_BRAUER27.md) en privé `prepared/HANDOFF_BRAUER27.json`. Geen actieve lezer/schrijver na overdracht.
