@@ -1,5 +1,7 @@
 # FOOTER-FIX-01 — footerconcept en twee live contentcorrecties
 
+> **Latere publicatiecontrole, 8 november:** de eigenaar heeft dit footerconcept gepubliceerd als MAIN 196354474250. Veertien publieke routes en exacte footerbron bevestigen de toepassing. De oude preview-/publicatie-instructies hieronder beschrijven het eerdere checkpoint. [Huidig vervolg en retourconcept](../contact-and-returns/README.md); 196368531722 heet inmiddels Retourinformatie 8 nov.
+
 **8 november 2026. Content: APPLIED_VERIFIED. Footer: PREVIEW_VERIFIED_DESKTOP / NOT_PUBLISHED.** Op de opdracht “Los iets op” zijn twee concrete contentfouten live hersteld en is de gedeelde footer in een gecontroleerd Shopify-concept toegepast.
 
 ## Live opgelost

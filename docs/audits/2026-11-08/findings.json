@@ -33,10 +33,11 @@
       "id": "BC-AUD-004",
       "priority": "P1",
       "evidence": "VERIFIED_ADMIN_AND_HTML",
-      "status": "OPEN",
+      "status": "PARTIALLY_RESOLVED_LIVE",
       "finding": "Contactpagina heeft alleen formulier; native contactbeleid mist telefoon",
       "scope": "/pages/contact; /policies/contact-information",
-      "next_action": "Tijdelijke eigenaartelefoon en bevestigde contact-/retourgegevens consistent toevoegen, zonder juridische vestiging te raden."
+      "next_action": "Native contact policy requires write_legal_policies; retain current Contact Page.",
+      "resolution": "Contact Page and footer contain confirmed phone/email/contact-return address; native Contact policy still separate."
     },
     {
       "id": "BC-AUD-005",
@@ -51,10 +52,11 @@
       "id": "BC-AUD-006",
       "priority": "P1",
       "evidence": "VERIFIED_THEME_AND_HTML",
-      "status": "PREVIEW_IMPLEMENTED_NOT_PUBLISHED",
+      "status": "RESOLVED_LIVE_HTML",
       "finding": "Homepage en overige routes gebruiken verschillende footerrenderers",
       "scope": "/ versus alle overige onderzochte routes",
-      "next_action": "Owner reviews UNPUBLISHED196354474250 on laptop/phone and publishes in Shopify when satisfied."
+      "next_action": "Mobile/runtime remains a separate check; current follow-up in CONTACT-RETURNS-01.",
+      "resolution": "Owner published196354474250;14publicroutes and exactfooterfiles confirmed"
     },
     {
       "id": "BC-AUD-007",
@@ -113,5 +115,5 @@
       "next_action": "Gericht password-error- en 3D-media-pad onderzoeken. Geen drie bewezen klantfouten uit statische analyse afleiden."
     }
   ],
-  "last_followup": "FOOTER-FIX-01; original capture date/evidence retained"
+  "last_followup": "CONTACT-RETURNS-01; footer now owner-published, Contact/encoding live and return copy in preview"
 }
