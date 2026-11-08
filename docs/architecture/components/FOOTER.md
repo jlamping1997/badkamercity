@@ -1,5 +1,7 @@
 # Footer: live standaard en broncontract
 
+> **Nieuwste publicatienacontrole — 8 november:** MAIN **196368531722 — Klantenservice 8 nov** is eigenaar-gepubliceerd. Veertien actuele publieke routes hebben dezelfde gedeelde footer én /pages/bezorgen-en-afhalen; zes featurefiles exact gelijk aan de getoetste preview/Git. Geen nieuwe theme-write of publicatie. [Actueel bewijs](../../repairs/2026-11-08/glossary-encoding/README.md). De eerdere vraag om dit concept te publiceren vervalt; geen nieuwe mobiele/runtimevrijgave.
+
 **Actuele stand — 8 november 2026 · CONTACT-RETURNS-01. FOOTER-FIX-01: OWNER_PUBLISHED / PUBLIC_HTML_VERIFIED.** De eigenaar heeft **BadkamerCity - Eenduidige footer 8 nov (196354474250)** gepubliceerd. Verse Admin-rol: MAIN, `updatedAt=2026-11-08T16:37:38Z`. Beide gewijzigde footerfiles zijn exact op MD5 teruggelezen. **Veertien publieke HTTP-routes zonder previewparameter** tonen één identieke standaardfooter met telefoon, e-mail en gelabeld contact-/retouradres. Dit is nieuwe bron-/HTML-nacontrole, geen nieuwe desktop-, mobiele of fysieke telefoonproef. [Actuele publicatie- en reparatiestatus](../../repairs/2026-11-08/contact-and-returns/README.md).
 
 Het huidige contract blijft: `compact_homepage=false`; **17 blocks (4 service, 10 categorie, 3 informatie)** binnen maximum 18, met `category.limit=10`. De gewone footer gebruikt dezelfde renderer, bestaande CSS/JavaScript en retour-/offerte-/policy-/betaalguards. De eerdere vraag om deze footer te publiceren is hiermee afgehandeld.

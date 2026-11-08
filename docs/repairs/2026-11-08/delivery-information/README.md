@@ -1,5 +1,7 @@
 # DELIVERY-INFO-01 — bezorginformatie live en gedeelde verwijzingen voorbereid
 
+> **Eigenaarpublicatie bevestigd — CONTENT-ENCODING-02:** Klantenservice 8 nov is nu MAIN **196368531722**. Zes featurefiles exact; nieuwe footer-/homepagebezorglinks publiek gecontroleerd, veertien routes dezelfde footer. [Laatste nacontrole en vervolg](../glossary-encoding/README.md). Onderstaande preview- en herstelmetingen bewaren hun oorspronkelijke moment; dat publicatieverzoek is afgehandeld.
+
 **8 november 2026 · PAGES_APPLIED_VERIFIED / THEME_PREVIEW_VERIFIED_NOT_PUBLISHED.** Een eigen informatiepagina maakt de bestaande Nederlandse verzendkosten en afhaalafspraak vindbaar. Er zijn geen tarieven, leverbeloftes of voorraadinstellingen gewijzigd.
 
 ## Live aangepast

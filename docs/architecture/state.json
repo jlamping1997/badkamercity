@@ -1,33 +1,35 @@
 {
   "schema_version": 3,
   "updated_on": "2026-11-08",
-  "task": "CONTACT-RETURNS-01",
-  "status": "FOOTER_OWNER_PUBLISHED_CONTACT_ENCODING_LIVE_RETURNS_PREVIEW",
+  "task": "CONTENT-ENCODING-02",
+  "status": "OWNER_PUBLICATION_VERIFIED_CONTENT_REPAIRS_APPLIED",
   "active_branch": "fix/product-cards-2026-10-14",
-  "current_audit": "../audits/2026-11-08/README.md",
-  "main_theme_at_capture": "196354474250",
+  "current_audit": "../repairs/2026-11-08/glossary-encoding/README.md",
+  "main_theme_at_capture": "196368531722",
   "live_manifest_files": 1387,
   "git_theme_paths": 1378,
   "live_git_parity": {
     "byte_equal": 1363,
     "different": 15,
     "live_only": 9,
-    "git_only": 0
+    "git_only": 0,
+    "scope": "Historical broad audit source comparison; not re-enumerated in CONTENT-ENCODING-02"
   },
   "admin_inventory": {
-    "pages": 121,
-    "published_pages": 119,
+    "pages": 122,
+    "published_pages": 120,
     "collections": 227,
     "standard_collections": 210,
     "category_landing_collections": 16,
-    "furniture_hubs": 1
+    "furniture_hubs": 1,
+    "scope": "Pages freshly complete; collection counts retain preceding broad audit timestamp"
   },
   "http_routes_checked": 14,
   "http_status_counts": {
     "200": 13,
     "404": 1
   },
-  "http_scope": "14 current public footer routes, plus separate two-page content readback and three preview routes; no new browser/mobile interaction.",
+  "http_scope": "14publicfooter routes,13publicPagebefore-after pairs,and5targetedpublication/hygro routes; no browser/JS/mobile claim",
   "audit_complete": false,
   "documentation_complete": false,
   "footer": {
@@ -43,21 +45,23 @@
     "empty_url_blocks": 0,
     "proposed_blocks": 17,
     "live_changes": true,
-    "published_main": "196354474250",
+    "published_main": "196368531722",
     "category_limit": 10,
-    "owner_published": true
+    "owner_published": true,
+    "delivery_page_link_live": true,
+    "core_files_live_git_exact_scope": "Retained earlier footer-core comparison; current round verifies six customer-service featurefiles separately."
   },
   "open_verifications": [
     "theme_parity_drift",
     "mobile_runtime_and_focus",
-    "public_contact_and_policy_rendering",
+    "native_policy_rendering_and_scope",
     "address_dependent_delivery_and_product_coverage",
     "payment_order_and_mail",
     "consent_network_behavior",
     "ga4_purchase_value_currency_deduplication",
     "authorized_external_backend_app_sources"
   ],
-  "next_action": "Owner reviews Retourinformatie8nov on desktop/phone and publishes that existing candidate if satisfied; other open legal/checkout/measurement tasks remain.",
+  "next_action": "Investigate product/location coverage of general shipping profile without inventing rates or delivery promises.",
   "background_worker_active": false,
   "historical_capture_2026_10_28": {
     "schema_version": 2,
@@ -131,13 +135,14 @@
   },
   "current_refresh_scope_complete": true,
   "overall_site_release_complete": false,
-  "completion_scope": "DOC-LIVE-01 evidence capture and documentation refresh complete; overall product/runtime/release verification remains open.",
-  "latest_followup": "../repairs/2026-11-08/contact-and-returns/README.md",
+  "completion_scope": "CONTENT-ENCODING-02 targeted content/publication checks complete; overall technical/product/runtime/release verification remains open.",
+  "latest_followup": "../repairs/2026-11-08/glossary-encoding/README.md",
   "returns_preview": {
     "theme": "196368531722",
-    "status": "NOT_PUBLISHED",
-    "feature_files": 4,
-    "equal_other_files": 1383
+    "status": "OWNER_PUBLISHED_PUBLIC_HTML_VERIFIED",
+    "feature_files": 6,
+    "previous_return_feature_files": 4,
+    "scope": "Six feature MD5s match previous preview/Git; published home/return content and14footer routes checked. No full manifest recount thisround."
   },
   "previous_http_capture_2026_11_08": {
     "main_theme_at_capture": "196328685834",
@@ -147,5 +152,22 @@
       "404": 4
     },
     "http_scope": "Server responses; includes deliberate 404 probe; no claim of 364 browser flows."
+  },
+  "live_manifest_files_scope": "Previous full DELIVERY-INFO-01 manifest; this round rechecked only six featurefiles",
+  "content_encoding": {
+    "status": "APPLIED_VERIFIED",
+    "pages": 13,
+    "accent_repairs": 19,
+    "leading_boms_removed": 4,
+    "exact_admin_readbacks": 13,
+    "public_before_after_pass": 13,
+    "glossary_links_mapped": 109,
+    "redirect_writes": 0
+  },
+  "historical_returns_preview": {
+    "theme": "196368531722",
+    "status": "NOT_PUBLISHED",
+    "feature_files": 4,
+    "equal_other_files": 1383
   }
 }

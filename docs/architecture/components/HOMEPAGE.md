@@ -1,5 +1,7 @@
 # Homepage: volgorde, inhoud en eigen kaarttypen
 
+> **Publicatienacontrole 8 november:** MAIN **196368531722 — Klantenservice 8 nov**. HomeDelivery verwijst publiek naar de bezorg-Page; HomeReturns heeft de eerdere 30 + 14-dagentekst en optioneel bestelnummer. De gedeelde footer is op veertien routes bevestigd. Geen nieuwe themacode/publicatie door uitvoerder. [Bewijs](../../repairs/2026-11-08/glossary-encoding/README.md). Oudere conceptinstructies hieronder zijn uitgevoerd door de eigenaar; mobiel/JS blijven apart.
+
 > **Actueel DELIVERY-INFO-01 — 8 november:** MAIN 196354474250 gebruikt de gedeelde standaardfooter. Bestaand UNPUBLISHED 196368531722 — Klantenservice 8 nov heeft de eerdere retourcopy plus een gerichte HomeDelivery-link naar de live bezorg-Page zolang native shipping_policy ontbreekt. Native policy krijgt voorrang; Contact blijft fallback. Twee nieuwe files gevalideerd/readback, vier previewroutes PASS; eerdere vier returnfiles checksumgelijk. [Dossier](../../repairs/2026-11-08/delivery-information/README.md). De rendererstand hieronder hoort bij de eerdere brede audit; geen nieuwe mobiele/performancevrijgave.
 
 ## Eerdere brede meting — 8 november 2026

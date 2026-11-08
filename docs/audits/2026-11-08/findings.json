@@ -57,7 +57,7 @@
       "finding": "Homepage en overige routes gebruiken verschillende footerrenderers",
       "scope": "/ versus alle overige onderzochte routes",
       "next_action": "Mobile/runtime remains a separate check; current follow-up in CONTACT-RETURNS-01.",
-      "resolution": "Owner published196354474250;14publicroutes and exactfooterfiles confirmed"
+      "resolution": "Owner published196368531722;14publicroutes same footer including delivery Page link; six featurefiles exact; mobile/runtime separate."
     },
     {
       "id": "BC-AUD-007",
@@ -123,7 +123,16 @@
       "finding": "DeliveryProfile coversAllItems=false; one location without rates",
       "scope": "Algemeen profiel / NL shipping",
       "next_action": "Identify uncovered products and the no-rate location before treating shipping as fully verified; two passing sample quotes do not prove catalog-wide coverage."
+    },
+    {
+      "id": "BC-AUD-014",
+      "priority": "P2",
+      "evidence": "VERIFIED_ADMIN_AND_PUBLIC_HTML_BEFORE_AFTER",
+      "status": "RESOLVED_LIVE",
+      "finding": "19broken accent sequences across9glossaryPages and4leadingBOMs across4otherPages",
+      "resolution": "Only Page.body changed,13exactfinalreadbacks; title/metadata/canonical/H1/links/structure preserved; known-pattern scan120publishedbodies no remaining matches",
+      "next_action": "Do not repeat writes; retain targeted body rollback values in glossary-encoding dossier. General content factcheck remains separate."
     }
   ],
-  "last_followup": "DELIVERY-INFO-01; delivery Page and Contact link live; combined six-file unpublished customer service theme verified"
+  "last_followup": "CONTENT-ENCODING-02; owner publication196368531722 verified,13Page encoding repairs live,109glossary link mappings valid"
 }

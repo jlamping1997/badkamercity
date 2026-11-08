@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-08",
+  "method": "Public HTTP without preview; no JavaScript or form submission",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/",
+      "h1_count": 1,
+      "theme_id": 196368531722,
+      "home_delivery_link": true,
+      "home_return_copy": true
+    },
+    {
+      "path": "/pages/retour-aanmelden",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/pages/retour-aanmelden",
+      "h1_count": 1,
+      "theme_id": 196368531722,
+      "return_copy": true,
+      "native_form": true,
+      "refund_link": true
+    },
+    {
+      "path": "/begrippenlijst/hygrometer",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/pages/hygro-meter",
+      "h1_count": 1,
+      "theme_id": 196368531722,
+      "correct_destination": true
+    },
+    {
+      "path": "/pages/hygrometer",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/pages/hygro-meter",
+      "h1_count": 1,
+      "theme_id": 196368531722,
+      "correct_destination": true
+    },
+    {
+      "path": "/pages/hygro-meter",
+      "status": 200,
+      "final_url": "https://badkamercity.nl/pages/hygro-meter",
+      "h1_count": 1,
+      "theme_id": 196368531722,
+      "correct_destination": true
+    }
+  ],
+  "hygro_redirect_writes_in_this_round": 0
+}

@@ -1,5 +1,7 @@
 # Pagina's, begrippen, advies, blog en formulieren
 
+> **Actueel CONTENT-ENCODING-02 — 8 november:** MAIN 196368531722 is live; 122 Pages/120 gepubliceerd volledig gelezen. Negentien kapotte accenten op negen uitlegpagina’s plus vier voorloop-BOM’s op vier andere Pages hersteld. Dertien exacte Admin-readbacks en publieke voor/na-controles; titel, SEO, canonical, H1, links en structuur behouden. Alle 109 actuele termlinks mappen op gepubliceerde Pages, nul loops. Hygrometerketen publiek 200, al vóór deze taak correct; nul redirectwrites. [Bewijs en herstel](../../repairs/2026-11-08/glossary-encoding/README.md). Native policies, technische factcheck, JS/mobiel/mail/herroepingsbevestiging behouden hun aparte grenzen.
+
 > **Actueel 8 november — DELIVERY-INFO-01:** Contactbody/SEO en RapoWash-tekens zijn live hersteld; Antikalk heeft één H1 en RapoWash eigen SEO. Nieuwe gepubliceerde Page 166963937546 /pages/bezorgen-en-afhalen heeft één H1, NL-tariefinformatie en afhalen na bevestiging/op afspraak. Contact behoudt zijn native formulier, bestelnummer is expliciet indien bekend en de bezorg-Page is gelinkt. Retourcopy staat nog in hetzelfde concept 196368531722 — Klantenservice 8 nov. [Actuele uitvoering](../../repairs/2026-11-08/delivery-information/README.md). De aantallen en open-contentregels in de eerdere nulmeting hieronder behouden hun bronmoment; native policyopmaak/scope en mail-/herroepingsbevestiging blijven apart open.
 
 ## Eerdere brede inhoudsmeting — 8 november 2026
@@ -40,7 +42,7 @@ De lijst komt uit **templateblocks**, niet automatisch uit alle Pages met suffix
 
 Zoeken in de lijst is lokale filtering van reeds aanwezige DOM: Nederlandse lowercase + trim, match op term/keywords, lege groepen verbergen, A–Z-toestand bijwerken, live resultaatstext en nulresultaat tonen. Er is geen Typesense-request voor dit zoekveld. Zonder JavaScript blijven de lijst en anchors bestaan. Dit is een andere zoekfunctie dan de header of productfilters; uniforme veldstyling kan wel gedeeld worden.
 
-### Alle 109 verbindingen gecontroleerd
+### Historische verbindingstest — 28 oktober; opgevolgd door CONTENT-ENCODING-02
 
 De 109 werkelijk gerenderde termlinks zijn gekoppeld aan alle 120 redirects en 119 Page-records. **108** komen bij gepubliceerde Pages met aanwezige begripstemplate uit; er zijn geen loops in deze ketens. **GLOSS-F01:** Hygro(meter) linkt naar `/begrippenlijst/hygrometer`, redirect naar `/pages/hygrometer`; dat Page-record ontbreekt en een gerichte GET bevestigt **404**. Er bestaat wel een andere hygro-gerelateerde Page, maar het juiste inhoudelijke doel moet vóór correctie worden gekozen. Geen redirect of Page gewijzigd. [Verbindingsbewijs](../evidence/2026-10-28-complete/glossary-links.json).
 
