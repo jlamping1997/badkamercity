@@ -26,14 +26,15 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
-  assign money_price = price | money
-  assign money_price_min = price_min | money
-  assign money_price_max = price_max | money
-  if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
-    assign money_price_min = price_min | money_with_currency
-    assign money_price_max = price_max | money_with_currency
-  endif
+  capture money_price
+    render 'bc-money', amount: price, with_currency: settings.currency_code_enabled
+  endcapture
+  capture money_price_min
+    render 'bc-money', amount: price_min, with_currency: settings.currency_code_enabled
+  endcapture
+  capture money_price_max
+    render 'bc-money', amount: price_max, with_currency: settings.currency_code_enabled
+  endcapture
 
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
@@ -67,11 +68,7 @@
               </span>
               <span>
                 <s class="price-item price-item--regular variant-item__old-price">
-                  {% if settings.currency_code_enabled %}
-                    {{ compare_at_price | money_with_currency }}
-                  {% else %}
-                    {{ compare_at_price | money }}
-                  {% endif %}
+                  {% render 'bc-money', amount: compare_at_price, with_currency: settings.currency_code_enabled %}
                 </s>
               </span>
             {%- endunless -%}
@@ -95,11 +92,7 @@
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
             <s class="price-item price-item--regular">
-              {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency }}
-              {% else %}
-                {{ compare_at_price | money }}
-              {% endif %}
+              {% render 'bc-money', amount: compare_at_price, with_currency: settings.currency_code_enabled %}
             </s>
           </span>
         {%- endunless -%}

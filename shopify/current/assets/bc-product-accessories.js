@@ -7,9 +7,7 @@ if (!customElements.get('bc-product-accessories')) {
       this.button = this.querySelector('[data-accessory-submit]');
       this.error = this.querySelector('[data-accessory-error]');
       this.cartLink = this.querySelector('[data-accessory-cart-link]');
-      this.money = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {
-        style: 'currency', currency: this.dataset.currency || 'EUR'
-      });
+      this.money = (window.BCMoney?.createFormatter(document.documentElement.lang || 'nl-NL', this.dataset.currency || 'EUR') || new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { style: 'currency', currency: this.dataset.currency || 'EUR' }));
       const options = { signal: this.controller.signal };
       this.addEventListener('change', () => this.sync(), options);
       this.addEventListener('input', () => this.sync(), options);

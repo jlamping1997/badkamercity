@@ -21,9 +21,12 @@
   if card_product.compare_at_price > card_product.price
     assign is_on_sale = true
   endif
-
-  assign display_price = card_product.price | money
-  assign display_compare_at_price = card_product.compare_at_price | money
+  capture display_price
+    render 'bc-money', amount: card_product.price
+  endcapture
+  capture display_compare_at_price
+    render 'bc-money', amount: card_product.compare_at_price
+  endcapture
 
   assign spec_1 = card_product.metafields.custom.search_card_spec_1.value | default: card_product.metafields.custom.search_card_spec_1
   assign spec_2 = card_product.metafields.custom.search_card_spec_2.value | default: card_product.metafields.custom.search_card_spec_2

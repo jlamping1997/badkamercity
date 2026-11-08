@@ -329,7 +329,7 @@
       fitDescription();
       const quantity = page.querySelector('[data-ss-quantity]');
       const extras = [...page.querySelectorAll('[data-ss-extra]')];
-      const money = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL',{style:'currency',currency:page.dataset.currency || 'EUR'});
+      const money = (window.BCMoney?.createFormatter(document.documentElement.lang || 'nl-NL', page.dataset.currency || 'EUR') || new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { style: 'currency', currency: page.dataset.currency || 'EUR' }));
       const parentQuantity = () => { const value = Number(quantity.value); return Number.isSafeInteger(value) && value > 0 ? value : 1; };
       const updateTotal = () => {
         const extraTotal = extras.filter(input => input.checked).reduce((sum,input) => sum + Number(input.closest('[data-ss-extra-row]').dataset.price),0);

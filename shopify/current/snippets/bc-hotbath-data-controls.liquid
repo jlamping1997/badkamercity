@@ -8,7 +8,7 @@
     <p class="bc-data-controls__intro">{{ product.metafields.custom.korte_omschrijving.value | escape }}</p>
   {%- endif -%}
   <div id="price-{{ section_id }}" class="bc-buybox__price-wrap" role="status">
-    <strong class="bc-buybox__price-current">{{ product.selected_or_first_available_variant.price | money }}</strong>
+    <strong class="bc-buybox__price-current">{% render 'bc-money', amount: product.selected_or_first_available_variant.price %}</strong>
     <p class="bc-data-controls__caption">Inclusief btw</p>
   </div>
   <p class="bc-data-controls__note">{{ 'bc_delivery.lead_time_on_request' | t }}</p>

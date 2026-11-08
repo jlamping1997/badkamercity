@@ -84,7 +84,7 @@
                 </a>
                 <p class="bc-accessories__reason">{{ item.description | escape }}</p>
                 <div class="bc-accessories__choice">
-                  <strong class="bc-accessories__price">{{ accessory_price | money }} <span>{{ 'bc_sunshower.per_piece' | t }}</span></strong>
+                  <strong class="bc-accessories__price">{% render 'bc-money', amount: accessory_price %} <span>{{ 'bc_sunshower.per_piece' | t }}</span></strong>
                   {%- if accessory_variant != blank and accessory_variant.available == false -%}
                     <span class="bc-accessories__unavailable">{{ 'bc_sunshower.unavailable' | t }}</span>
                   {%- else -%}

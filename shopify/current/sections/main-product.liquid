@@ -375,8 +375,12 @@
                 {%- liquid
                   assign selected_variant = product.selected_or_first_available_variant
                   assign savings_amount = 0
-                  assign money_price = selected_variant.price | money
-                  assign money_compare_at_price = selected_variant.compare_at_price | money
+                  capture money_price
+                    render 'bc-money', amount: selected_variant.price
+                  endcapture
+                  capture money_compare_at_price
+                    render 'bc-money', amount: selected_variant.compare_at_price
+                  endcapture
                   if selected_variant.compare_at_price > selected_variant.price
                     assign savings_amount = selected_variant.compare_at_price | minus: selected_variant.price
                   endif
@@ -407,7 +411,9 @@
                       {%- capture bc_hotbath_article_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
                       {%- assign bc_hotbath_article_scope = bc_hotbath_article_scope | strip -%}
                       {%- assign bc_delivery_vendor = product.vendor | strip | downcase -%}
-                      {%- if bc_fabriecio_supplier_product -%}
+                      {%- if settings.bc_temporary_in_stock -%}
+                        <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}"><span class="bc-buybox__delivery-title">{{ 'bc_delivery.temporary_in_stock' | t }}</span></aside>
+                      {%- elsif bc_fabriecio_supplier_product -%}
                         {%- render 'bc-fabriecio-delivery', product: product -%}
                       {%- elsif bc_delivery_vendor == 'wiesbaden' -%}
                         {%- liquid
@@ -447,6 +453,9 @@
                   </div>
                 {%- endcapture -%}
               {%- when 'inventory' -%}
+                {%- if settings.bc_temporary_in_stock -%}
+                  <p class="product__inventory" id="Inventory-{{ section.id }}" role="status" {{ block.shopify_attributes }}>{{ 'bc_delivery.temporary_in_stock' | t }}</p>
+                {%- else -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                   {{ block.shopify_attributes }}
@@ -497,6 +506,7 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+                {%- endif -%}
               {%- when 'description' -%}
                 
               {%- when 'sku' -%}
@@ -1314,7 +1324,7 @@
             <a href="#ProductInfo-{{ section.id }}" class="bc-product-sticky__title">{{ product.title | escape }}</a>
             <span class="bc-product-sticky__subtitle">{{ product.vendor | escape }}</span>
           </div>
-          <strong class="bc-product-sticky__price" data-sticky-price>{{ product.selected_or_first_available_variant.price | money }}</strong>
+          <strong class="bc-product-sticky__price" data-sticky-price>{% render 'bc-money', amount: product.selected_or_first_available_variant.price %}</strong>
           <div class="bc-product-sticky__quantity" role="group" aria-label="Aantal">
             <button type="button" data-sticky-minus aria-label="Aantal verlagen">−</button>
             <input type="number" data-sticky-quantity aria-label="Aantal producten" value="{{ product.selected_or_first_available_variant.quantity_rule.min }}" min="{{ product.selected_or_first_available_variant.quantity_rule.min }}">
@@ -2913,6 +2923,7 @@
   ]
 }
 {% endschema %}
+
 
 
 

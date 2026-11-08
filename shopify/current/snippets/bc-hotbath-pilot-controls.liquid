@@ -8,7 +8,7 @@
   <div class="bc-pilot-controls" data-bc-pilot-live="true">
     <p class="bc-pilot-controls__intro">{{ presentation.intro | escape }}</p>
     <div class="bc-buybox__price-wrap" id="price-{{ section_id }}" role="status">
-      <strong class="bc-buybox__price-current">{{ product.selected_or_first_available_variant.price | money }}</strong>
+      <strong class="bc-buybox__price-current">{% render 'bc-money', amount: product.selected_or_first_available_variant.price %}</strong>
       <p class="bc-pilot-controls__caption">Inclusief btw</p>
     </div>
     <p class="bc-pilot-controls__note">Levertijd op aanvraag</p>

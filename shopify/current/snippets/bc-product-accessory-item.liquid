@@ -22,7 +22,7 @@
   </a>
   <p class="bc-accessories__reason">{{ explanation | escape }}</p>
   <div class="bc-accessories__choice">
-    <strong class="bc-accessories__price">{{ accessory_variant.price | money }} <span>per stuk</span></strong>
+    <strong class="bc-accessories__price">{% render 'bc-money', amount: accessory_variant.price %} <span>per stuk</span></strong>
     {%- if purchasable -%}
       <label class="bc-accessories__select" for="AccessorySelect-{{ row_id }}">
         <input id="AccessorySelect-{{ row_id }}" type="checkbox" data-accessory-select aria-label="Selecteer {{ accessory_product.title | escape }}" disabled>

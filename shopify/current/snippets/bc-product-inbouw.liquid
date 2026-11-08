@@ -80,7 +80,7 @@
               disabled
             >
             <span class="bc-inbouw__choice-text">{{ 'bc.inbouw.yes' | t }}</span>
-            <span class="bc-inbouw__price">+ {{ bc_inbouw_variant.price | money }}</span>
+            <span class="bc-inbouw__price">+ {% render 'bc-money', amount: bc_inbouw_variant.price %}</span>
           </label>
           <label class="bc-inbouw__choice" for="{{ bc_inbouw_id }}-no">
             <input
@@ -108,7 +108,7 @@
             >
             <span>{{ 'bc_hotbath_mobile.inbouw_add' | t }}</span>
           </label>
-          <span id="{{ bc_inbouw_id }}-toggle-price" class="bc-inbouw__toggle-price">+ {{ bc_inbouw_variant.price | money }}</span>
+          <span id="{{ bc_inbouw_id }}-toggle-price" class="bc-inbouw__toggle-price">+ {% render 'bc-money', amount: bc_inbouw_variant.price %}</span>
         </div>
         {%- unless bc_inbouw_body_available -%}
           <p class="bc-inbouw__notice">{{ 'bc.inbouw.unavailable' | t }}</p>

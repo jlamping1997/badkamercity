@@ -270,7 +270,7 @@
   function formatPrice(cents) {
     const price = Number(cents);
     if (!Number.isFinite(price)) return 'Prijs op aanvraag';
-    return new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(price / 100);
+    return (window.BCMoney?.createFormatter('nl-NL', 'EUR') || new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' })).format(price / 100);
   }
   function imageSource(product, variant, item) {
     const image = variant?.featured_image?.src || product?.featured_image ||

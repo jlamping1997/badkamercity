@@ -67,7 +67,7 @@ Renders a Sunshower accessory with inline colour choices and a product form.
       <p class="bcsse-shop-color"><span class="visually-hidden">{{ 'ss_quick_shop.color' | t }}: </span><span data-bcsse-shop-color>{{ selected_label }}</span></p>
       {%- if accessory_kind == 'wiper' -%}<p class="bcsse-shop-image-note">{{ 'ss_quick_shop.color_overview' | t }}</p>{%- endif -%}
     {%- endif -%}
-    <p class="bcsse-accessory__price" data-bcsse-shop-price>{{ accessory_variant.price | money }}</p>
+    <p class="bcsse-accessory__price" data-bcsse-shop-price>{% render 'bc-money', amount: accessory_variant.price %}</p>
     {%- form 'product', accessory_product, id: shop_form_id, class: 'bcsse-shop-form', data-bcsse-shop-form: '' -%}
       <input type="hidden" name="id" value="{{ accessory_variant.id }}">
       <input type="hidden" name="quantity" value="1">
@@ -117,7 +117,7 @@ Renders a Sunshower accessory with inline colour choices and a product form.
             endfor
           endif
         -%}
-        {{- choice_separator -}}{"key":{{ choice_key | json }},"id":{{ choice_variant.id | append: '' | json }},"available":{{ choice_variant.available | json }},"url":{{ choice_product.url | json }},"title":{{ choice_product.title | json }},"label":{{ choice_label | json }},"price":{{ choice_variant.price | money | json }},"image":{"src":{{ choice_image_url | json }},"srcset":{{ choice_srcset | json }},"sizes":{{ accessory_image_sizes | json }},"width":{{ choice_image.width | default: 1 | json }},"height":{{ choice_image.height | default: 1 | json }},"alt":{{ choice_product.title | json }},"mode":{{ image_mode | json }}}}
+        {%- capture choice_money_price -%}{%- render 'bc-money', amount: choice_variant.price -%}{%- endcapture -%}{{- choice_separator -}}{"key":{{ choice_key | json }},"id":{{ choice_variant.id | append: '' | json }},"available":{{ choice_variant.available | json }},"url":{{ choice_product.url | json }},"title":{{ choice_product.title | json }},"label":{{ choice_label | json }},"price":{{ choice_money_price | json }},"image":{"src":{{ choice_image_url | json }},"srcset":{{ choice_srcset | json }},"sizes":{{ accessory_image_sizes | json }},"width":{{ choice_image.width | default: 1 | json }},"height":{{ choice_image.height | default: 1 | json }},"alt":{{ choice_product.title | json }},"mode":{{ image_mode | json }}}}
         {%- assign choice_separator = ',' -%}
       {%- endif -%}
     {%- endfor -%}

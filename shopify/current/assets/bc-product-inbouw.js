@@ -186,9 +186,7 @@ if (!customElements.get('bc-inbouw-addon')) {
       total.hidden = this.choice() !== 'yes' || !quantities || !Number.isFinite(price) || price < 0;
       if (total.hidden) return;
       try {
-        total.textContent = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {
-          style: 'currency', currency: this.dataset.currency || 'EUR'
-        }).format(price * quantities.bodyQuantity / 100);
+        total.textContent = (window.BCMoney?.createFormatter(document.documentElement.lang || 'nl-NL', this.dataset.currency || 'EUR') || new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { style: 'currency', currency: this.dataset.currency || 'EUR' })).format(price * quantities.bodyQuantity / 100);
       } catch (_) { total.hidden = true; }
     }
 

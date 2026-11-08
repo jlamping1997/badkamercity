@@ -135,9 +135,7 @@
       const total = parentPrice * quantity + bodyTotal;
       if (!Number.isSafeInteger(total) || !Number.isSafeInteger(bodyTotal)) return { state: 'invalid' };
       try {
-        const formatted = new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {
-          style: 'currency', currency
-        }).format(total / 100);
+        const formatted = (window.BCMoney?.createFormatter(document.documentElement.lang || 'nl-NL', currency) || new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', { style: 'currency', currency: currency })).format(total / 100);
         return { state: 'ready', formatted, total };
       } catch (_) {
         return { state: 'invalid' };

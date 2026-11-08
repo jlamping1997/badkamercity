@@ -40,7 +40,7 @@
   {%- if show_commerce and component_variant != blank -%}
     <span class="bc-product-set__price">
       <span class="bc-product-set__price-label">{{ 'bc_set.individual_price' | t }}</span>
-      <span>{{ component_variant.price | money }}</span>
+      <span>{% render 'bc-money', amount: component_variant.price %}</span>
     </span>
   {%- endif -%}
 {%- endcapture -%}

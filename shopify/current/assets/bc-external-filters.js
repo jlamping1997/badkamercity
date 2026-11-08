@@ -991,10 +991,7 @@
         return 'Prijs op aanvraag';
       }
 
-      return new Intl.NumberFormat('nl-NL', {
-        style: 'currency',
-        currency: 'EUR'
-      }).format(Number(cents) / 100);
+      return (window.BCMoney?.createFormatter('nl-NL', 'EUR') || new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' })).format(Number(cents) / 100);
     }
 
     function productPath(product) {
