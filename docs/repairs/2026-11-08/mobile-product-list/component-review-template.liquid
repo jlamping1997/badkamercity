@@ -1,0 +1,64 @@
+{% layout none %}
+{%- assign review_collection = collections['losse-onderkasten'] -%}
+{%- capture review_markup -%}
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'component-card.css' | asset_url | stylesheet_tag }}
+    {{ 'component-price.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-product-cards.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-collection.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-external-filters.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-wishlist.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-mobile-product-list.css' | asset_url | stylesheet_tag }}
+    <style>
+      :root { --font-body-scale: 1; --font-body-family: system-ui, sans-serif; --font-heading-family: system-ui, sans-serif; --font-body-weight: 400; --font-heading-weight: 650; --color-foreground: 15, 39, 64; --color-background: 255, 255, 255; }
+      html { font-size: 10px; }
+      body { margin: 0; padding: 0 16px; font: 14px/1.5 system-ui, sans-serif; background: #fff; color: #0f2740; }
+      h1 { margin: 20px 0 12px; font-size: 22px; }
+      ul { margin: 0; padding: 0; list-style: none; }
+    </style>
+  </head>
+  <body>
+    <h1>Losse onderkasten</h1>
+    <main id="MainContent">
+      <section class="bc-collection">
+        <div id="ProductGridContainer">
+          <ul id="product-grid" class="grid product-grid" role="list">
+            {%- for review_product in review_collection.products limit: 4 -%}
+              <li class="grid__item">{% render 'card-product', card_product: review_product, skip_styles: true, section_id: 'mobile-list-review', show_card_delivery: true, quick_add: 'none' %}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+{%- endcapture -%}
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Productkaartcomponent controleren</title>
+    <style>
+      body { margin: 0; padding: 16px; background: #e9eef3; color: #0f2740; font: 14px/1.5 system-ui, sans-serif; }
+      h1 { margin: 0 0 12px; font-size: 20px; }
+      main { display: flex; align-items: start; gap: 16px; }
+      figure { flex: none; margin: 0; }
+      figcaption { margin-bottom: 8px; font-weight: 600; }
+      iframe { display: block; height: 800px; border: 1px solid #aebfcd; background: #fff; }
+    </style>
+  </head>
+  <body>
+    <h1>Productkaartcomponent — echte Liquid-rendering, zonder JavaScript</h1>
+    <main>
+      <figure><figcaption>320 px</figcaption><iframe title="320 px" srcdoc="{{ review_markup | escape }}" width="320" sandbox="allow-same-origin"></iframe></figure>
+      <figure><figcaption>390 px</figcaption><iframe title="390 px" srcdoc="{{ review_markup | escape }}" width="390" sandbox="allow-same-origin"></iframe></figure>
+      <figure><figcaption>430 px</figcaption><iframe title="430 px" srcdoc="{{ review_markup | escape }}" width="430" sandbox="allow-same-origin"></iframe></figure>
+    </main>
+  </body>
+</html>

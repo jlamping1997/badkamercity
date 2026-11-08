@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-08",
+  "browser": "Chrome",
+  "native_components": [
+    {
+      "viewport": 320,
+      "client_width": 305,
+      "scroll_width": 305,
+      "card_width": 273,
+      "border": "0px none",
+      "border_radius": "0px",
+      "photo_loaded": true,
+      "cta_display": "none"
+    },
+    {
+      "viewport": 390,
+      "client_width": 375,
+      "scroll_width": 375,
+      "card_width": 343,
+      "border": "0px none",
+      "border_radius": "0px",
+      "photo_loaded": true,
+      "cta_display": "none"
+    },
+    {
+      "viewport": 430,
+      "client_width": 415,
+      "scroll_width": 415,
+      "card_width": 383,
+      "border": "0px none",
+      "border_radius": "0px",
+      "photo_loaded": true,
+      "cta_display": "none"
+    }
+  ],
+  "component_scope": "Real Liquid-rendered card-product and real Sulora products in sandboxed srcdoc documents without JavaScript, using candidate assets and 320/390/430px document viewports. Not the full mobile storefront or external filter runtime. Test font variables are explicit system-ui defaults.",
+  "desktop_ui": {
+    "viewport": "1348x936",
+    "wishlist_added_then_removed": true,
+    "first_card_black_to_light_oak": true,
+    "price_eur": 820,
+    "product_link_opened_correct_sku": "38.4052",
+    "product_link_opened_correct_light_oak_title_and_photo_alt": true,
+    "cart_write": false
+  },
+  "not_tested": [
+    "Physical phone/touch",
+    "Full mobile page and mobile external filter drawer",
+    "Live mobile dynamic product interaction",
+    "Checkout/purchase/consent"
+  ],
+  "temporary_template_restored": true
+}

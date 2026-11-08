@@ -1,5 +1,7 @@
 # Productkaarten, zoeken en filters
 
+> **8 november2026 — MOBILE-CARDS-01, UNPUBLISHED196354474250:** gedeelde mobiele lijst-CSS in bc-mobile-product-list.css, alleen collectie-/zoekroutes en max749px. Native/externe kaarten gebruiken dezelfde bestaande kenmerkenbron; bc-card-specs heeft een extra JSON-datamodus voor bc-card-data. Echte native componentbreedtes320/390/430 en desktopbediening gecontroleerd; volledige mobiele filterflow/telefoon nog open. MAIN niet geschreven/gepubliceerd. [Actueel bewijs en herstel](../../repairs/2026-11-08/mobile-product-list/README.md). Oudere bronregels/checkpoints hieronder blijven historie.
+
 > **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Gedeelde tegelhelper maakt doosinhoud en m²prijs expliciet op native/custom/externe cards en voorkomt dubbele nativeunitregel. Nieuwe Sunshowerkaart synchroniseert wishlist direct. Alleen geverifieerde positieve doosoppervlakte krijgt tegelcaption. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
 
 **Klantdoel:** producten vinden, herkennen, vergelijken en de juiste uitvoering openen of toevoegen. **Eigenaarrol:** storefront voor kaart/gedrag; catalogus/indexbeheer voor data en dekking. Status VERIFIED_THEME + twee native lijst-HTML-responses; externe API, computed styles en interacties NOT_TESTED.
