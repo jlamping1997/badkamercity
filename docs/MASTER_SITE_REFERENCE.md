@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Actuele aanvulling 8 november — DELIVERY-INFO-01:** [Bezorgpagina en gerichte controles](repairs/2026-11-08/delivery-information/README.md) zijn live; Contact verwijst ernaar. Het bestaande concept 196368531722 heet nu Klantenservice 8 nov en behoudt vier retourfiles plus twee bezorglinkfiles. Native verzendpolicy en volledige koopketen blijven open; eigenaarpublicatie nog nodig.
+
 > **Actuele aanvulling 8 november:** [CONTACT-RETURNS-01](repairs/2026-11-08/contact-and-returns/README.md): footer gepubliceerd, Contact en RapoWash-tekens live hersteld; retourinformatie in een apart getoetst concept.
 
 > **Latere correctie8 november:** [FOOTER-FIX-01](repairs/2026-11-08/footer-and-content/README.md): Antikalk/RapoWash live opgelost; gedeelde footer klaar als getoetst desktopconcept, nog niet gepubliceerd.
@@ -15,9 +17,9 @@
 | Welke code is de bron? | Bestaande branch `fix/product-cards-2026-10-14`, map `shopify/current`; [verse bronvergelijking](audits/2026-11-08/source-parity.json) |
 | Hoe neem ik het over? | [Start hier](HANDOVER_START_HERE.md), [functionele overdracht](AI_HANDOFF_CURRENT.md), [AGENTS](../AGENTS.md) |
 
-Vers gelezen MAIN: **196328685834**. Admin: 15.897 ACTIVE + Online Store, 121 Pages waarvan 119 gepubliceerd, 227 collecties en 9 menu's. De audit omvat 364 HTTP-responses; dat zijn geen 364 interactieve koopproeven. Er staan 1.387 bestanden live tegenover 1.378 in Git: 1.363 gelijk, 15 verschillend en 9 alleen live. Voer geen blinde deploy uit vanuit de root of de bronkopie.
+Actuele MAIN in DELIVERY-INFO-01: **196354474250**; bestaand concept **196368531722 — Klantenservice 8 nov** is ongepubliceerd. Complete manifests tellen 1.387 bestanden per thema, met precies zes bedoelde verschillen; dit bewijst geen volledige actuele Git-mirror. De brede audit van eerder op 8 november telde 121 Pages/119 gepubliceerd, 227 collecties, 9 menu's en 364 HTTP-responses. Daarna is één bezorg-Page aangemaakt; er is geen nieuwe volledige catalogustelling uitgevoerd. De bronvergelijking 1.363 gelijk/15 afwijkend/9 alleen live hoort bij die eerdere audit. Voer geen blinde deploy uit vanuit de root of de bronkopie.
 
-De homepage-SEO en het retourbeleid van 30 dagen zijn gepubliceerd; de Google-tagconfiguratie is aanwezig. Open staan twee policies met zichtbare HTML-tags, een ontbrekend verzendbeleid, onvolledige contactpublicatie, het btw-idformaat, twee footervarianten, RapoWash-metadata, de dubbele H1 van Antikalk en de volledige koop-, meet- en mobiele klantreis. De voorraadinstelling CONTINUE blijft volgens eigenaarafspraak behouden; dit bewijst geen fysieke voorraad. Het afzonderlijke filtertraject volgt zijn nieuwste centrale checkpoint; eerdere installatieblokken niet herhalen.
+Homepage-SEO, retourbeleid, gedeelde footer, Contact, Antikalk-H1 en RapoWash-SEO/tekencodering zijn live hersteld; bezorginformatie staat op een eigen Page. Retourcopy en nieuwe footer-/homepageverwijzingen staan samen in het getoetste concept. Open blijven native policyopmaak, native verzend-/contactbeleid, btw-identiteit, product-/locatiedekking van tarieven en de volledige koop-, meet- en mobiele klantreis. De voorraadinstelling CONTINUE blijft volgens eigenaarafspraak behouden; dit bewijst geen fysieke voorraad. Het afzonderlijke filtertraject volgt zijn nieuwste centrale checkpoint; eerdere installatieblokken niet herhalen.
 
 Het volledige eerdere naslagwerk is **ongewijzigd bewaard** in [MASTER_SITE_REFERENCE_2026-10-31.md](MASTER_SITE_REFERENCE_2026-10-31.md). Alle 80 oude hoofdstuktitels hieronder behouden hun GitHub-anker en verwijzen naar hetzelfde gedateerde hoofdstuk. Voor actuele keuzes gaan de bronnen hierboven voor. De historische HTML-generator leest expliciet dit archief; de praktische compiler schrijft alleen naar een opgegeven uitvoerbestand buiten de canonieke index en het archief.
 

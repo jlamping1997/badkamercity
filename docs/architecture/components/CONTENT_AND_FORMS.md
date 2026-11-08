@@ -1,6 +1,8 @@
 # Pagina's, begrippen, advies, blog en formulieren
 
-## Actuele inhoudslaag — 8 november 2026
+> **Actueel 8 november — DELIVERY-INFO-01:** Contactbody/SEO en RapoWash-tekens zijn live hersteld; Antikalk heeft één H1 en RapoWash eigen SEO. Nieuwe gepubliceerde Page 166963937546 /pages/bezorgen-en-afhalen heeft één H1, NL-tariefinformatie en afhalen na bevestiging/op afspraak. Contact behoudt zijn native formulier, bestelnummer is expliciet indien bekend en de bezorg-Page is gelinkt. Retourcopy staat nog in hetzelfde concept 196368531722 — Klantenservice 8 nov. [Actuele uitvoering](../../repairs/2026-11-08/delivery-information/README.md). De aantallen en open-contentregels in de eerdere nulmeting hieronder behouden hun bronmoment; native policyopmaak/scope en mail-/herroepingsbevestiging blijven apart open.
+
+## Eerdere brede inhoudsmeting — 8 november 2026
 
 [Centraal auditrapport](../../audits/2026-11-08/README.md), MAIN **196328685834**. Verse Admin-inventaris telt **121 Pages: 119 gepubliceerd en 2 ongepubliceerd**. Toewijzingen: 109 `begrip`, 6 `page`, 1 `contact`, 1 `begrippenlijst`, 1 `bc-sunshower`, 1 `bc-wishlist`, 1 `offerte-vergelijken` en 1 `retour-aanmelden`. Alle 119 gepubliceerde Page-routes zijn opgenomen in de brede 364 HTML-checks; dit is geen volledige tekstuele factcheck of formulierproef.
 

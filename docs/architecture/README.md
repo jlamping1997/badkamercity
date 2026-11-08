@@ -1,3 +1,5 @@
+> **Nieuwste stand 8 november — DELIVERY-INFO-01:** MAIN 196354474250 heeft de gedeelde footer al live. Bezorg-Page en Contact-link zijn live; bestaand concept 196368531722 — Klantenservice 8 nov behoudt vier retourfiles plus footer-/homepagebezorglinks. 1.381/1.387 bestanden gelijk, precies zes verschillen, MAIN ongewijzigd. [Nieuw dossier](../repairs/2026-11-08/delivery-information/README.md). De brede tellingen hieronder zijn het eerdere auditmoment, geen actuele open-footerclaim. Native policy- en koopketentaken blijven apart.
+
 > **8 november 2026 — actuele architectuuringang:** MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov** is opnieuw gelezen. Gebruik het [centrale auditrapport](../audits/2026-11-08/README.md) voor het huidige bron-/routemoment en open livegangtaken. De metingen van 28–31 oktober hieronder blijven historisch bewijs; hun oude MAIN-IDs, aantallen en conceptstatus gelden niet als de huidige liveversie.
 
 > **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
@@ -6,7 +8,7 @@
 
 # BadkamerCity — architectuur, documentatie en eenheid
 
-## Actuele bron- en dekkingsgrens — 8 november
+## Brede bron- en dekkingsmeting — eerder op 8 november
 
 - De live manifestkaart telt **1.387 bestanden**. `shopify/current/` op `fix/product-cards-2026-10-14` telt **1.378** paden: **1.363 bytegelijk**, **15 afwijkend**, **9 alleen live**, **0 alleen Git**. De snapshot van 31 oktober is een gedateerde referentie, geen volledige actuele livecode of deployvrijgave.
 - De nieuwe publieke HTML-set omvat **364 routes: 360×200, 4×404**, inclusief één bewuste 404-probe. Dit zijn responses, geen 364 uitgevoerde gebruikersflows. Admin telt **121 Pages (119 gepubliceerd)** en **227 collecties** (210 standaard, 16 categoriehubs, 1 meubelhub).

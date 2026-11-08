@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-08",
+  "currency": "EUR",
+  "taxesIncluded": true,
+  "shipsToCountries": [
+    "NL"
+  ],
+  "profile": {
+    "id": "gid://shopify/DeliveryProfile/132488659210",
+    "name": "Algemeen profiel",
+    "default": true,
+    "coversAllItems": false,
+    "locationsWithoutRatesCount": 1
+  },
+  "nlRates": [
+    {
+      "name": "Standaard",
+      "price": "6.95",
+      "minTotal": "0.00",
+      "maxTotal": "100.00"
+    },
+    {
+      "name": "Standaard",
+      "price": "0.00",
+      "minTotal": "100.01",
+      "maxTotal": null
+    }
+  ],
+  "readOnly": true,
+  "limits": [
+    "Not a verification of every product/profile/location/address",
+    "No outbound pallet fee, fixed lead time, courier or inside delivery commitment inferred",
+    "Native SHIPPING_POLICY still absent; information Page is not a native checkout policy"
+  ]
+}
+

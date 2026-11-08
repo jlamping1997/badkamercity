@@ -1,5 +1,7 @@
 # Bevindingen en onderzoekswachtrij
 
+> **Actueel DELIVERY-INFO-01 — 8 november:** bezorg-Page en Contact-link live; retourcopy + twee bezorglinkfiles samen in bestaand UNPUBLISHED 196368531722 — Klantenservice 8 nov. Zes verschillen/1.381 gelijk; vier eerdere retourfiles behouden, MAIN ongewijzigd. Native shippingpolicy blijft afwezig; profieldekking en één locatie zonder rates vragen afzonderlijke verificatie. [Nieuw bewijs en herstel](../repairs/2026-11-08/delivery-information/README.md). Oudere retourdifftellingen hieronder zijn het voorgaande checkpoint.
+
 ## Actualisering — 8 november 2026
 
 [Centraal auditrapport](../audits/2026-11-08/README.md) bewaart de nulmeting; [FOOTER-FIX-01](../repairs/2026-11-08/footer-and-content/README.md) bewaart de eerdere conceptopbouw. **CONTACT-RETURNS-01** bevat de [actuele publicatie- en reparatiestatus](../repairs/2026-11-08/contact-and-returns/README.md). MAIN is nu **196354474250 — Eenduidige footer 8 nov** (`updatedAt=2026-11-08T16:37:38Z`). Historische bevindingen hieronder blijven bij hun oorspronkelijke bronmoment; nieuwe HTTP-nacontrole is geen nieuwe mobiele/runtimevrijgave.

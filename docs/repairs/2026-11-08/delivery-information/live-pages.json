@@ -1,0 +1,41 @@
+[
+  {
+    "path": "/pages/bezorgen-en-afhalen",
+    "status": 200,
+    "title": "\n      Verzending, bezorgen en afhalen\n – Badkamercity",
+    "h1_count": 1,
+    "phone": true,
+    "email": true,
+    "address": true,
+    "canonical": "https://badkamercity.nl/pages/bezorgen-en-afhalen",
+    "table_rows": [
+      [
+        "Bestelbedrag",
+        "Verzendkosten"
+      ],
+      [
+        "Tot en met €100,00",
+        "€6,95"
+      ],
+      [
+        "Vanaf €100,01",
+        "Gratis"
+      ]
+    ],
+    "pickup_confirmation": true,
+    "returns_link": true
+  },
+  {
+    "path": "/pages/contact",
+    "status": 200,
+    "title": "\n      Contact en klantenservice\n – Badkamercity",
+    "h1_count": 1,
+    "phone": true,
+    "email": true,
+    "address": true,
+    "canonical": "https://badkamercity.nl/pages/contact",
+    "delivery_link": true,
+    "order_number_optional": true,
+    "native_form": true
+  }
+]

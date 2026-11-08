@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-08",
+  "method": "HTTP with isolated preview cookie jar; no JavaScript or form submission",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "theme_id": 196368531722,
+      "h1_count": 1,
+      "footer_count": 1,
+      "footer_delivery_link": true,
+      "footer_phone_email_address": true,
+      "home_delivery_page_link": true,
+      "prior_return_copy_preserved": true
+    },
+    {
+      "path": "/pages/contact",
+      "status": 200,
+      "theme_id": 196368531722,
+      "h1_count": 1,
+      "footer_count": 1,
+      "footer_delivery_link": true,
+      "footer_phone_email_address": true
+    },
+    {
+      "path": "/pages/retour-aanmelden",
+      "status": 200,
+      "theme_id": 196368531722,
+      "h1_count": 1,
+      "footer_count": 1,
+      "footer_delivery_link": true,
+      "footer_phone_email_address": true,
+      "return_terms_preserved": true,
+      "native_return_form": true,
+      "refund_link": true
+    },
+    {
+      "path": "/pages/bezorgen-en-afhalen",
+      "status": 200,
+      "theme_id": 196368531722,
+      "h1_count": 1,
+      "footer_count": 1,
+      "footer_delivery_link": true,
+      "footer_phone_email_address": true
+    }
+  ]
+}
