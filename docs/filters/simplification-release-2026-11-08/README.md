@@ -1,51 +1,36 @@
-# Vereenvoudigde filters — installatie gereed
+# Filtervereenvoudiging v2 — exacte formaatselectie
 
-8 november 2026. FILTER-SIMPLE-02 / STAGING_FAILED_SAFE / NOT_DEPLOYED.
+8 november 2026. FILTER-SIMPLE-02 / CAUSE_CONFIRMED / V2_READY / NOT_DEPLOYED.
 
-De eigenaar wil zelfstandig handelen op redelijke naamzekerheid en test daarna zelf. Geen nieuwe toestemming voor kleurvoorstellen vragen. De release wijzigt de afgeleide filters, inclusief maat- en enumgroepering, met exact gebleven Shopify-productinformatie. [Eén inhoudelijke code-/herstelbeschrijving](https://github.com/jlamping1997/badkamercity/tree/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification/README.md).
+De eerste installatie stopte veilig vóór activatie. Eigenaardiagnose: 60 × 60 cm verwacht159, query309:159juiste plus58van60×120 en92van60×150. Alle309IDs uniek,geenontbrekendeIDs,searchcutoff=false. Formaatfacettellingen en bronmaten klopten; de tekstselectie gaf extra rechthoekige formaten.
 
-Codecheckpoint: 135ada92366349cbc29ea080894a8e0f5e434fad. MAIN196328685834 ongewijzigd; geen thema-aanpassing/publicatie nodig. Runtimebron geverifieerd tegen bekende hashes; actuele serverhash wordt vóór installatie gecontroleerd. De uitvoeromgeving bereikt SSH niet. Deze installatie is daarom nog niet uitgevoerd.
+V2 gebruikt een intern numeriek formaatveld. De getoonde tekst en URLs blijven menselijk. [Gedrag, code en herstelprocedure](https://github.com/jlamping1997/badkamercity/tree/c7d83b88cdb703532b1746aa2db217176b21b273/scripts/filter-sync/simplification). Bestaande kleur-/maat-/enumregels blijven behouden; geen Shopify-productmutatie of themapublicatie nodig. Exacte specificaties blijven onaangetast.
 
-## Read-only diagnose na de gestopte stagingcontrole
+## Actueel PowerShellblok
 
-**8 november 2026 — installatieresultaat: STAGING_FAILED_SAFE / NOT_APPLIED / DIAGNOSTIC_PENDING.** Eigenaar voerde release135ada92366349cbc29ea080894a8e0f5e434fad uit. 15.897 producten geëxporteerd, nieuwe index volledig teruggelezen, profielen/IDsets/kleur- en formaatfacetten gecontroleerd. Eén echte staging-APIcontrole faalde: Afgeleide keuze tegels/60 × 60 cm. De volledige formaatfacettellingen slaagden. Geen bewezen oorzaak; geen controle omzeilen of speculatieve correctie installeren.
-
-Geen activatie: eigenaaruitvoer bevestigt vorige liveversie behouden/hersteld en timer hervat. Onafhankelijke publieke health ok=true,227profielen,oude collectiebc_sync_20261108t130100_bc1233. Geen nieuwe storefront-/reboot-/timerproef. Stage20261108T142600_81ee36 en RESULTAAT.json bewaren. Niet het oude installatieblok opnieuw uitvoeren voordat het verschil is uitgelezen.
-
-**Eén volgende handeling:** eigenaar voert het read-only diagnoseblok hieronder uit en deelt de uitvoer. Het leest failed checks, verwacht/gevonden aantal, unieke/dubbele/ontbrekende IDs en uitsluitend aggregaten van teruggevonden formaatlabels uit de aparte proefindex. Geen productie-/indexwrite, geen sleutels of volledige productregels in de uitvoer. De uitvoeromgeving heeft nog steeds geen SSH-route.
-
-```powershell
-& {
-    $ErrorActionPreference = "Stop"
-    $bestand = Join-Path $env:TEMP "badkamercity-filtercontrole.py"
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/cfdd2225fe8863b626b82e4f453c6f60fe32c222/scripts/filter-sync/simplification/diagnose_staged_tile_format.py" -OutFile $bestand
-    if ((Get-FileHash -LiteralPath $bestand -Algorithm SHA256).Hash.ToLowerInvariant() -ne "7449b2625da970f7ff7c7d5276f2b8fcc8f2f276302f980db54fc47339cfba6e") { throw "Bestandscontrole mislukt." }
-    Get-Content -Raw -LiteralPath $bestand | ssh ubuntu@57.129.175.195 "sudo -n python3 -"
-    if ($LASTEXITCODE -ne 0) { throw "Uitlezen niet voltooid. Deel de uitvoer." }
-}
-```
-
-## Historisch installatieblok — niet opnieuw uitvoeren vóór diagnose
-
-Dit volledige blok downloadt exact het vastgezette script, controleert de inhoud en voert het via de bestaande SSH-toegang uit. De installer maakt de serverback-up; geen lokale catalogusbestanden worden verplaatst. Laat de uitvoering afronden; voortgang verschijnt iedere 20 seconden.
+Dit blok vervangt het eerdere installatie- en diagnoseblok. Het downloadt codecheckpointc7d83b88cdb703532b1746aa2db217176b21b273, controleert de inhoud en voert de bestaande veilige staging-/activatieroute uit. De uitvoeromgeving bereikt serverSSH niet; eigenaar voert het blok via bestaande toegang uit.
 
 ```powershell
 & {
     $ErrorActionPreference = "Stop"
     $bestand = Join-Path $env:TEMP "badkamercity-filterupdate.py"
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/135ada92366349cbc29ea080894a8e0f5e434fad/scripts/filter-sync/simplification/repair_filter_simplification.py" -OutFile $bestand
-    if ((Get-FileHash -LiteralPath $bestand -Algorithm SHA256).Hash.ToLowerInvariant() -ne "7ac33496f818e0c2ee70fb47ce54ba5d63a32e5d583274281d863703cc5dc727") { throw "Bestandscontrole mislukt; niets uitgevoerd." }
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/jlamping1997/badkamercity/c7d83b88cdb703532b1746aa2db217176b21b273/scripts/filter-sync/simplification/repair_filter_simplification.py" -OutFile $bestand
+    if ((Get-FileHash -LiteralPath $bestand -Algorithm SHA256).Hash.ToLowerInvariant() -ne "a0ad2c0bea3d19b0964f7ff86a2904efe9e880449070a36b627a855280c66c2f") { throw "Bestandscontrole mislukt; niets uitgevoerd." }
     Get-Content -Raw -LiteralPath $bestand | ssh ubuntu@57.129.175.195 "sudo -n python3 -"
     if ($LASTEXITCODE -ne 0) { throw "Update niet voltooid. Deel de uitvoer." }
 }
 ```
 
-Succes wordt uitsluitend als applied_verified gemeld na staging, volledige indexreadback, lokale/publieke tests en worker-teruglezing. Geef bij een stop de uitvoer door; geen hashes overslaan of oude installer herhalen. Bij bronverschil blijft de huidige service behouden en moet de actuele wijziging eerst worden bekeken. Bestaand veilig eigen-generatieherstel en timerstand blijven behouden. Back-ups onder /opt/badkamercity/filter-sync/filter-simplification-backups/.
+De installer maakt een nieuwe private back-up en index, leest de index volledig terug en controleert alle132formaatselecties op de volledige ID-set. Daarna volgen combinaties, bestaand variant-/filtergedrag en lokale/publieke livechecks. Hij vereist variant_aliases_v1,filter_simplification_v1,tile_format_codes_v1 vóór/na activatie en bij herhaling. Pas na geslaagde activering wordt de worker voor volgende synchronisaties geschreven. Bestaande synchronisatielock, bronhashguard, eigen-generatieherstel en timerstand blijven behouden. Geen historische cleanup of v1-installatie herhalen.
 
-## Aangetoonde voorbereiding
+## Getest en nog open
 
-41 release-/worker-/API-tests PASS; zes kleurtests, 46 JS-asserties en acht maat-/enumtests PASS. 786/1.002 namen ingedeeld; 216 onduidelijke namen naar Overige kleuren. De 3.496 tegelrecords: 3.490 maatparen, 132 labels, zes zonder maatpaar; 2.412 herkenbare basiskleur,523Overige,561zonderbron,117meervoudig. Geen vrije titelinferentie voor ontbrekende bronkleur.
+51testsPASS:23installerlifecycle,19API,9worker. Op3.496tegelrecords3.490maten/132labels, exacte maten behouden. De codes houden159van60×60,58van60×120 en92van60×150gescheiden, inclusiefherhaalpatch/codekaart/OR/AND/onbekende labels enprivateveldweigering. Volledige formaten worden ook tijdens echte serverstaging opnieuw getest; offlinecorrectie is nog geen nieuwe productieclaim.
 
-Dit zijn offline bron-/fixturetests. Nieuwe Typesense-import, FastAPI/ASGI, livebrowser/mobiel, serverreboot en een toekomstige uurlijkse sync blijven NOT_TESTED totdat de serveruitvoer en publieke nacontrole binnen zijn. Baseline vóór deze release: healthok=true,227profielen,bc_sync_20261108t130100_bc1233. Geen nieuwe productieclaim op basis van Git-opslag.
+Baseline vóórv2: healthok=true,227profielen,bc_sync_20261108t150044_583414. Tegels heeft nog f_tegel_breedte_mm/f_tegel_lengte_mm en geenfilter_simplification_v1. Reguliere legacygeneratievernieuwing waargenomen; specifieke timerunit niet rechtstreeks teruggelezen. MAIN196328685834 bevestigd; geen thema-/Shopifywrite.
 
-**Eén volgende handeling:** eigenaar voert het nieuwe read-only diagnoseblok uit en deelt de uitvoer; oorzaak vaststellen vóór een gecorrigeerde release.
+Nieuwev2Typesense-/FastAPI/ASGI-/activeringstests, echtefrontend/mobiel en toekomstigev2timeruitvoering blijvenPENDING/NOT_TESTED totdat de uitvoering en nacontrole zijn ontvangen. Back-upmap:/opt/badkamercity/filter-sync/filter-simplification-backups/. Deadline900s, aparteherstelgrens240s,voortgangiedere20s. Bij fout alleen uitvoer delen, geen guards overslaan.
+
+Historisch eerste stage:20261108T142600_81ee36. Diagnosecode:cfdd2225fe8863b626b82e4f453c6f60fe32c222; geenproductiedata gewijzigd. Bestaande oude index/API bleven volgensinstallerbehouden en zijn publiek teruggezien.
+
+**Eén volgende handeling:** eigenaar voert bovenstaand v2blok uit en deelt de uitvoer; daarna publieke API en echte filterkeuzes controleren. Geen nieuwe inhoudelijke goedkeuring vragen.
