@@ -1,7 +1,7 @@
 import unittest,json,copy
 from pathlib import Path
 from retail_extract import parse
-from enrich_retail_specifications import normalized,applicable,collect
+from enrich_retail_specifications import normalized,applicable,collect,material_compatible
 from preflight import check,REQUIRED
 
 catalog=json.loads(Path('prepared/catalog.json').read_text());by={p['sku']:p for p in catalog};report=json.loads(Path('prepared/retail-enrichment-report.json').read_text());observations=json.loads(Path('prepared/retail-observations.json').read_text());ev=json.loads(Path('prepared/specification-evidence.json').read_text())
@@ -17,6 +17,9 @@ class RetailTests(unittest.TestCase):
    self.assertEqual(p['specifications'][x['field']],x['new']);self.assertEqual(e['identity'],{'sku':p['sku'],'ean':p['ean'],'brand':'BRAUER'})
    self.assertTrue(any(r['sku']==p['sku'] and r['ean']==p['ean'] and r['brand']=='Brauer' and r['url']==e['url'] for r in observations))
  def test_units_and_synonyms_do_not_create_false_conflicts(self):
+  self.assertTrue(material_compatible('Massief eiken doorlopende lamellen','Hout'))
+  self.assertFalse(material_compatible('Massief eiken doorlopende lamellen','MDF'))
+  self.assertFalse(material_compatible('MFC','Massief eiken'))
   self.assertEqual(normalized('Lengte','150 cm'),normalized('Lengte','1500 mm'))
   self.assertEqual(normalized('Uitvoering uitloop','Vaste uitloop'),normalized('Uitvoering uitloop','Vast'))
   self.assertEqual(normalized('Aantal grepen','Eengreeps'),normalized('Aantal grepen','1'))

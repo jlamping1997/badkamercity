@@ -32,6 +32,16 @@ def normalized(label,value):
  if label=='Verlichting' and ('verlichting' in v or 'led' in v):return 'ja'
  return v
 
+def material_compatible(left,right):
+ a=normalized('Materiaal',left).replace('-kunststof','').replace(',',' ').split()
+ b=normalized('Materiaal',right).replace('-kunststof','').replace(',',' ').split()
+ if set(a).issubset(set(b)) or set(b).issubset(set(a)):return True
+ # An explicit supplier oak specification is compatible with a retailer's
+ # broader "wood" wording. Never infer oak or solid wood from that generic word.
+ if a==['hout'] and 'eiken' in b and not {'mdf','mfc','spaanplaat'}.intersection(b):return True
+ if b==['hout'] and 'eiken' in a and not {'mdf','mfc','spaanplaat'}.intersection(a):return True
+ return False
+
 def applicable(p,f):
  typ=p['product_type'];label=f['label'];s=p['source']['Productomschrijving'].lower()
  if label=='Hartafstand' and typ not in TAPS|{'Meubelgrepen','Spiegeldeurgrepen'}:return False,'Hartafstand niet zonder passende aansluit-/bevestigingscontext gebruiken'
@@ -132,8 +142,7 @@ def main():
    elif conflict:
     # More general material wording is not an alternative physical composition.
     if label=='Materiaal' and base:
-     b=normalized(label,base).replace('-kunststof','').replace(',',' ').split()
-     if all(set(normalized(label,v['value']).replace('-kunststof','').replace(',',' ').split()).issubset(set(b)) or set(b).issubset(set(normalized(label,v['value']).replace('-kunststof','').replace(',',' ').split())) for v in primary):unchanged+=1;continue
+     if all(material_compatible(base,v['value']) for v in primary):unchanged+=1;continue
     item={'sku':sku,'field':label,'status':'OPEN','existing':base if base is not None else historic,'candidates':values,'action':'Betwiste externe waarde niet invullen; reeds externe waarde inhouden bij tegenspraak'}
     conflicts.append(item);review.append(label)
     if base_ev and base_ev['kind']!='supplier':
