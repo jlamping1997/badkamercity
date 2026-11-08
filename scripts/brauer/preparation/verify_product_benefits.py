@@ -3,6 +3,7 @@ import argparse
 from collections import Counter
 import json
 from pathlib import Path
+import posixpath
 import xml.etree.ElementTree as E
 import zipfile
 
@@ -45,6 +46,23 @@ class NativeBook:
         result['children'] = [E.tostring(c).decode() for c in x]
         return result
 
+    def tables(self, index):
+        parts = self.sheet(index).find('s:tableParts', NS)
+        if parts is None:
+            return []
+        rels = E.fromstring(self.z.read(f'xl/worksheets/_rels/sheet{index+1}.xml.rels'))
+        targets = {r.get('Id'): r.get('Target') for r in rels}
+        result = []
+        for part in parts:
+            rid = part.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id')
+            target = targets[rid]
+            name = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join('xl/worksheets', target))
+            table = E.fromstring(self.z.read(name))
+            # Package-local IDs may be regenerated; compare resolved native tables.
+            table.attrib.pop('id', None)
+            result.append(E.canonicalize(E.tostring(table).decode()))
+        return result
+
 
 def verify(root, workbook, source):
     old, new = NativeBook(source), NativeBook(workbook)
@@ -61,13 +79,10 @@ def verify(root, workbook, source):
             if bi not in styles_new: styles_new[bi] = new.style(bi)
             assert styles_old[ai] == styles_new[bi], (old.names[i], address, 'style changed')
             cells_compared += 1
-        for tag in ['sheetViews', 'sheetFormatPr', 'cols', 'mergeCells', 'conditionalFormatting', 'dataValidations', 'autoFilter', 'tableParts']:
+        for tag in ['sheetViews', 'sheetFormatPr', 'cols', 'mergeCells', 'conditionalFormatting', 'dataValidations', 'autoFilter']:
             assert [E.tostring(x) for x in a.findall('s:'+tag, NS)] == [E.tostring(x) for x in b.findall('s:'+tag, NS)], (old.names[i], tag)
         assert [r.attrib for r in a.findall('s:sheetData/s:row', NS)] == [r.attrib for r in b.findall('s:sheetData/s:row', NS)], old.names[i]+' row settings'
-    # All original tables retain their native names, ranges and filters.
-    for name in old.z.namelist():
-        if name.startswith('xl/tables/') and name.endswith('.xml'):
-            assert E.tostring(E.fromstring(old.z.read(name))) == E.tostring(E.fromstring(new.z.read(name))), name
+        assert old.tables(i) == new.tables(i), old.names[i]+' native tables changed'
 
     catalog = json.loads((root/'prepared/catalog.json').read_text())
     evidence = json.loads((root/'prepared/specification-evidence.json').read_text())
