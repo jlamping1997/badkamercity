@@ -1,4 +1,9 @@
 import unittest
+import json
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
 from sanitairwinkel_sources import extract
 
 
@@ -36,6 +41,18 @@ class SanitairwinkelTests(unittest.TestCase):
         source['url'] = 'https://not-an-allowed-source.example/product'
         with self.assertRaises(ValueError):
             extract(source)
+
+    def test_empty_raw_folder_preserves_saved_typed_records(self):
+        script = Path(__file__).with_name('sanitairwinkel_sources.py').resolve()
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'prepared').mkdir()
+            target = root / 'prepared/sanitairwinkel-observations25.json'
+            original = json.dumps([{'url': 'https://www.sanitairwinkel.nl/p/1/exact', 'sku': 'EXACT'}]).encode()
+            target.write_bytes(original)
+            result = subprocess.run([sys.executable, str(script)], cwd=root, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(target.read_bytes(), original)
 
 
 if __name__ == '__main__':

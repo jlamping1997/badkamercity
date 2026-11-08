@@ -82,10 +82,16 @@ def extract(result):
 
 def main():
     root = Path('prepared')
+    response_files = sorted(Path('research/brauer25').glob('*fetch*.json'), key=lambda f: f.stat().st_mtime_ns)
+    if not response_files:
+        if (root / 'sanitairwinkel-observations25.json').exists():
+            print(json.dumps({'saved_typed_records_retained': True, 'raw_responses': 0}))
+            return
+        raise SystemExit('Geen ruwe fetchresponses; bestaande getypeerde bronbestanden blijven behouden.')
     catalog = {p['sku']: p for p in json.loads((root / 'catalog.json').read_text())}
     by_ean = {p['ean']: p for p in catalog.values()}
     pages, records, outcomes = [], {}, {}
-    for file in sorted(Path('research/brauer25').glob('*fetch*.json'), key=lambda f: f.stat().st_mtime_ns):
+    for file in response_files:
         response = json.loads(file.read_text())
         for result in response.get('results', []):
             if not re.match(r'https://www\.sanitairwinkel\.nl/p/\d+/', result['url']):
