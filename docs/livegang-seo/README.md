@@ -1,46 +1,63 @@
 # BadkamerCity — Livegang & SEO
 
-Startpunt voor verantwoord verkopen, Google-vindbaarheid en verdere groei.
-Aangemaakt op **5 november 2026**. Laatste aanvulling **LAUNCH-03**: bedrijfsadres Hengelolaan70 en retouradres Zichtenburglaan150 bij Harry Suiker zijn apart bevestigd; eigen telefoonnummer volgt later. LAUNCH-02: bedrijfsgegevens ontvangen, eigen retourconcept met jaarrond30dagen, concrete bestel-/mailchecks en een eenvoudiger Google-/footerplan. Google-inrichting en deze winkelcorrecties zijn nog niet uitgevoerd.
+Actuele ingang voor winkelbasis, Google en SEO. **Stand: 8 november 2026 — DOC-LIVE-01.** De winkel is openbaar, de homepage-SEO en het retourbeleid staan live en de Google-meetconfiguratie is aanwezig. Er zijn concrete informatie- en consistentieproblemen; betaling, mail, mobiele koopreis en omzetmeting zijn nog niet volledig bewezen.
 
-## Aanpak
+De [gedateerde diepe audit](../audits/2026-11-08/README.md) bevat het actuele route-, footer-, bron- en bevindingenregister. [TAKEN.md](TAKEN.md) bewaart de uitvoeringsstatus. Oudere meetmomenten blijven hieronder en in het [logboek](LOGBOEK.md) als geschiedenis herkenbaar.
 
-We bouwen verder aan de openbare winkel met het assortiment dat correct en leverbaar is. Een compleet assortiment, alle merken en een volledig contentprogramma zijn geen voorwaarden om te beginnen. Wel moeten klanten vóór aankoop kunnen zien wat ze kopen, betalen en ontvangen, en moet de bestelafhandeling werken.
+## Actuele stand en grenzen
 
-Google heeft verschillende sporen:
+| Onderdeel | Stand op 8 november | Bewijsgrens |
+| --- | --- | --- |
+| Live thema | MAIN 196328685834 — BadkamerCity - Homepage SEO 8 nov | Vers Shopify- en publiek HTML-bewijs; oude themarollen niet als schrijfdoel gebruiken |
+| Catalogus | 15.897 ACTIVE + Online Store; 121 Pages waarvan 119 gepubliceerd; 227 collecties | Geen individuele controle van alle producten of harde leverbeloften |
+| Routecontrole | 364 responses: 360 × 200 en 4 × 404 | Server-HTML, geen 364 interactieve klantreizen. Eén 404 is bewust, één een gegiste blogroute; zie audit |
+| Beleid | Retour, contact, privacy, voorwaarden en wettelijke kennisgeving aanwezig | Voorwaarden/kennisgeving tonen letterlijke HTML-tags; verzendbeleid ontbreekt |
+| Retouren | 30 dagen aanmelden + 14 dagen terugsturen; €75 incl. btw raming per standaard NL-retourpallet; afgeven op afspraak | Websitebeleid gelezen; Merchant-instellingen en werkelijke retourmail nog niet teruggelezen |
+| Footer | Homepage gebruikt een andere renderer, inhoud en bediening dan overige routes | Oorzaak bewezen in live configuratie; eenheid nog niet uitgevoerd |
+| Google/meten | G-H9YFB5TC6N in Google & YouTube-config; eigenaar meldt Realtime | Geen purchase-, waarde-, ontdubbelings- of technisch consentbewijs |
+| Bestellen | Beperkte desktopproef tot gastcheckout, twee kranen van €245 = €490 | Geen adresafhankelijke verzending, betaling, ordermail of volledige telefoontest |
+
+## Wat eerst moet worden afgerond
+
+Correcte HTML-opmaak van voorwaarden en kennisgeving; één volledige contactset met geverifieerde bedrijfsidentiteit/btw-id; een echt verzendbeleid; één bestaande standaardfooter met volledige linkdekking. De gekozen contact-/retourlocatie is Zichtenburglaan 150. De juridische KvK-vestiging is daarmee niet vastgesteld. Het tijdelijke telefoonnummer is bekend maar ontbreekt op contactbeleid en footer.
+
+Binnen dit consistentiedossier is de volgende uitvoeringshandeling één gedeelde footerinhoud voorbereiden in een bewezen MAIN-paritair ongepubliceerd concept, daarna routebreed desktop en mobiel testen. Informatie-/policycorrecties blijven afzonderlijke taken. FILTER-SIMPLE-02v2 is volgens de actuele overdracht toegepast en gecontroleerd; installer niet herhalen. FILTER-ACERO-01 is volgens de latere parallelle overdracht eveneens toegepast en publiek gecontroleerd; ook die installer niet herhalen. Praktijkreview en het Cottoceramix-merkprofiel blijven apart vervolgwerk.
+
+## Google-sporen
 
 | Spoor | Doel | Beheer |
 | --- | --- | --- |
 | Gewone zoekresultaten | Vindbare categorieën, producten en advies | Website + Search Console |
-| Gratis productvermeldingen | Producten met prijs en foto op Google | Shopify → Google & YouTube → Merchant Center |
-| Betaalde advertenties | Extra bereik met advertentiebudget | Google Ads, later afzonderlijk besluiten |
-| Meten | Bezoeken, winkelwagen en omzet begrijpen | GA4 + Shopify, met passende privacy-instellingen |
+| Gratis productvermeldingen | Geschikte producten met prijs en foto op Google | Shopify → Google & YouTube → Merchant Center |
+| Betaalde advertenties | Extra bereik met afgesproken budget | Google Ads; eigenaar is met onboarding begonnen, activatie niet onafhankelijk gelezen |
+| Meten | Bezoeken, winkelwagen en omzet begrijpen | GA4 + Shopify, met geteste privacy-instellingen |
 
-Meer producten toevoegen en SEO verbeteren kan daarna per kleine groep doorgaan. Goedkeuring of sitemapinzending garandeert geen vertoning of positie.
+Een geïnstalleerde integratie, gekoppeld account, geschikt feeditem en echte conversie zijn verschillende resultaten. Sitemapinzending en geschiktheid garanderen geen vertoning of positie.
 
 ## Dossier
 
 | Onderdeel | Vaste plek |
 | --- | --- |
-| Wat moet nu, wat is bewezen en wie doet het? | [Taken en acceptatie](TAKEN.md) |
-| Winkelbasis en verkoopcontrole | [Webshop](WEBSHOP.md) |
-| Opgegeven bedrijfsgegevens en wat nog ontbreekt | [Bedrijfsgegevens](BEDRIJFSGEGEVENS.md) |
-| Dertig-dagenbeleid om af te maken | [Retourconcept](retouren/RETOURBELEID_CONCEPT.md) |
-| Korte bestel-/contact-/retourchecks voor ons allebei | [Controles](CONTROLES.md) |
-| Producten voor Google in gewone taal | [Google-productcontrole](GOOGLE_PRODUCTCONTROLE.md) |
-| Eén bestaande footer en policybron hergebruiken | [Footer en beleid](FOOTER_EN_BELEID.md) |
-| Accounts, eigendom en gegevensstromen | [Accounts en koppelingen](google/ACCOUNTS_EN_KOPPELINGEN.md) |
-| Zoekresultaten, sitemap en indexering | [Search Console](google/SEARCH_CONSOLE.md) |
-| Productfeed en gratis vermeldingen | [Merchant Center](google/MERCHANT_CENTER.md) |
+| Gedateerd actueel bewijs en open bevindingen | [Diepe audit 8 november](../audits/2026-11-08/README.md) |
+| Taken, acceptatie en eigenaar | [Taken](TAKEN.md) |
+| Winkelbasis en product-/verkoopcontrole | [Webshop](WEBSHOP.md) |
+| Contactgegevens en ontbrekende verificatie | [Bedrijfsgegevens](BEDRIJFSGEGEVENS.md) |
+| Actueel beleid en één footer | [Footer en beleid](FOOTER_EN_BELEID.md) |
+| Bestel-, contact- en retourproeven | [Controles](CONTROLES.md) |
+| Producten voor Google | [Google-productcontrole](GOOGLE_PRODUCTCONTROLE.md) |
+| Accounts en gegevensstromen | [Accounts en koppelingen](google/ACCOUNTS_EN_KOPPELINGEN.md) |
+| Sitemap en indexering | [Search Console](google/SEARCH_CONSOLE.md) |
+| Feed, eenheden en gratis vermeldingen | [Merchant Center](google/MERCHANT_CENTER.md) |
 | GA4, gebeurtenissen en toestemming | [Metingen](google/METINGEN.md) |
-| Welke SEO-pagina's eerst en waarom? | [SEO-roadmap](seo/ROADMAP.md) |
-| Bestaande ingangen en voorstellen | [Paginaregister](seo/PAGINAREGISTER.md) |
-| Alle niet-product-URL's uit de sitemap | [Gedateerd URL-register](seo/url-register-2026-11-05.json) |
-| Wat is besloten, gemaakt en gecontroleerd? | [Logboek](LOGBOEK.md) |
-| Read-only nulmeting met meetgrenzen | [Bewijs 5 november](bewijs/2026-11-05-nulmeting.json) |
+| SEO-volgorde en bestaande pagina's | [Roadmap](seo/ROADMAP.md) · [Paginaregister](seo/PAGINAREGISTER.md) |
+| Homepage-SEO en beperkt Search Console-bewijs | [SEO-HOME-01](seo/homepage-2026-11-08/README.md) |
+| Historisch retourconcept | [Concept 5 november — niet als actuele policy gebruiken](retouren/RETOURBELEID_CONCEPT.md) |
+| Besluiten en bewijs op oudere meetmomenten | [Logboek](LOGBOEK.md) · [Nulmeting 5 november](bewijs/2026-11-05-nulmeting.json) · [URL-register 5 november](seo/url-register-2026-11-05.json) |
 | Officiële informatie | [Bronnen](BRONNEN.md) |
 
-## Nulmeting LAUNCH-01 — eerder op 5 november
+## Historische nulmeting LAUNCH-01 — 5 november 2026
+
+**Geschiedenis, geen actuele winkelstatus.** Onderstaande bevindingen zijn inmiddels op onderdelen gewijzigd, waaronder policies, Google-integratie, catalogusomvang en live homepage-SEO.
 
 De volgende punten bewaren hun oorspronkelijke meetmoment. Latere product-/themapublicaties, waaronder FAB-03/04 en COTTO, staan in de centrale status en gelden vóór oude momentopnamen.
 
@@ -52,14 +69,8 @@ De volgende punten bewaren hun oorspronkelijke meetmoment. Latere product-/thema
 - De opdracht om Lagoo zonder productfoto's te houden blijft gelden. Het bezochte Lagoo-product heeft ook geen schema-afbeelding. Dit vraagt een feeduitzondering, geen automatische fototerugplaatsing.
 - Merchant Center, Search Console, GA4, DNS-eigendom, echte betalingen en formulierontvangst zijn niet in die accounts of processen gecontroleerd.
 
-## Eerstvolgende handeling
-
-**BC-LIVE-001:** alleen het ontbrekende [gegevenspakket](BEDRIJFSGEGEVENS.md) aanvullen: volledig btw-id/juridische naam en grote-retourkosten. Bedrijfs- en retouradres zijn bevestigd; eigen telefoon volgt later. De aangeleverde gegevens en jaarrond30dagen zijn al verwerkt; algemene uitsluiting van speciaal bestelde standaardartikelen niet overgenomen. Zie de [takenlijst](TAKEN.md). De overige Google-voorbereiding kan onafhankelijk worden voorbereid.
-
 ## Onderhoud en overdracht
 
-De takenlijst bewaart de actuele taakstatus; het logboek bewaart de geschiedenis. Zet een taak pas op DONE met datum en passend bewijs. Een geïnstalleerde app is geen gekoppeld account; een gekoppeld account is geen goedgekeurde productfeed.
+Werk taakstatus en gedateerd bewijs samen bij. DONE geldt alleen binnen de genoemde scope. Bewaar oude auditbestanden en logs; voeg een nieuw meetmoment toe in plaats van geschiedenis stil te wijzigen. Publiceer geen wachtwoorden, tokens, klant-/ordergegevens, checkoutreferenties, privé-adres of bankrekening in dit dossier.
 
-Na iedere uitvoering: taakstatus, betrokken instellingen/URL's, resultaat, ontbrekende tests en precies één eerstvolgende handeling bijwerken. Voeg accountidentificatie alleen toe als die nodig en niet geheim is. Geen wachtwoorden, herstelcodes, API-tokens, klant-/orderdata of privécontracten in deze publieke repository.
-
-[Globale projectstatus](../LIVE_STATUS_AND_NEXT_STEPS.md) blijft de ingang voor het hele project. Themabron: shopify/current/ op fix/product-cards-2026-10-14. Dit dossier bevat geen theme-deploy of Shopify-datamutaties.
+[Globale projectstatus](../LIVE_STATUS_AND_NEXT_STEPS.md) blijft de ingang voor het hele project. `shopify/current/` op `fix/product-cards-2026-10-14` is de onderzochte codebron; de audit registreert 15 verschillen met live. Geen blinde bronoverschrijving of themadeploy uit deze documentatieactualisatie afleiden.

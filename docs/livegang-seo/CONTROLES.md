@@ -1,51 +1,62 @@
-# Kleine controles — bestellen, contact en retourneren
+# Gerichte controles — bestellen, contact, retouren en meting
 
-LAUNCH-02, 5 november 2026. We doen dezelfde korte proef onafhankelijk: Jackson voor de ervaring/werkelijke bedrijfsafhandeling, uitvoering voor artikel/bedragen/gegevens en technische werking. “Lijkt te werken” blijft USER_REPORTED tot de betreffende stappen echt zijn gecontroleerd.
+**Stand: 8 november 2026 — DOC-LIVE-01.** [Gedateerd auditbewijs](../audits/2026-11-08/README.md). Een status geldt alleen voor de beschreven stap. “Lijkt te werken” blijft USER_REPORTED tot de betreffende werking echt is gecontroleerd.
 
-## Bestellen: twee controles naast elkaar
+## Al uitgevoerd en nog open
 
-Kies een normale kraan, een product met kleur/uitvoering/onderdeelkeuze en een tegel die per doos wordt verkocht. Geen echte bestelling of geldbetaling uitvoeren zonder het afgesproken testscenario. Zet de openbare winkel niet globaal in testbetaalmodus. Verwijder alleen eigen proefregels, nooit een bestaande winkelwagen.
+| Controle | Bewijs 8 november | Nog nodig |
+| --- | --- | --- |
+| Publieke routes | 364 serverresponses en metadata-/footercontrole | Geen vervanging voor interactieve bediening |
+| Zoeken en filteren desktop | Eerdere browserproef: Wiesbaden zoeken; Wastafelkranen Inbouw + Chroom | Andere relevante keuze-/productrenderers en telefoon |
+| Gewone kraan / cart | Wiesbaden Ribbd SKU 29.5330 €245; twee stuks €490, gastcheckout bereikbaar; eigen testcart opgeruimd | Adres-/verzendquote, betaling en mail |
+| Tegelprijs / doos | RR6001: 1,44 m² voor €99,29; RR1001: 2 m² €159,90; VP8002: 1,28 m² €102,34, serverweergave | Dynamische calculator, hele-dozenafronding en gekozen aantal tot checkout gericht testen |
+| Cookiekeuzes | Accepteren, weigeren en heropenen als UI bedienbaar | Werkelijk opslag-/netwerk-/taggedrag bij iedere keuze |
+| GA4 | G-H9YFB5TC6N in appconfig; eigenaar meldt Realtime | Events, value/currency, purchase, ontdubbeling en consent |
+| Retourinformatie | Live policy + leeg modelformulier volledig gelezen | Finale online herroepingsstap, directe klantbevestiging en mailboxbewijs |
+| Contact / retourmail | Formulieren/POST-route aanwezig; niets ingezonden in de audit | Werkelijke ontvangst, reply-to, spam en antwoord |
+| Betaling / ordermail | Niet getest | Afgesproken proef met passende betalingsmethode |
+| Mobiel / snelheid | Geen volledige echte telefoontest of nieuwe prestatiemeting | Touch, keuzes, footer, cart, checkout en meetrapport |
 
-| Controle | Waar letten we op? | Jackson | Uitvoering |
-| --- | --- | --- | --- |
-| Juiste artikel | Titel, merk, SKU, kleur en maat blijven dezelfde van product tot cart | OPEN | OPEN |
-| Keuze wisselen | Andere uitvoering toont juiste foto/prijs; optionele onderdelen niet stil toegevoegd | OPEN | OPEN |
-| Hoeveelheid | Aantal verhogen/verlagen/verwijderen geeft precies de bedoelde artikelen | OPEN | OPEN |
-| Tegels | m²/calculator → hele dozen, juiste doosinhoud, doosprijs en totaal incl.btw | OPEN | OPEN |
-| Voorraad/levering | Bestelbaar klopt; de juiste actuele levertijd reist mee | OPEN | OPEN |
-| Winkelwagen | Juiste artikelregels, aantallen, kortingen en totaal; geen dubbele toevoeging | OPEN | OPEN |
-| Verzendkosten | Afgesproken NL-testadres en producttype krijgen juiste kosten/opties, inclusief zware goederen | OPEN | OPEN |
-| Mobiel | Keuzes, knoppen en checkout leesbaar/bedienbaar op telefoon | OPEN | OPEN |
-| Checkout | Juiste klant-/adresgegevens en echte beschikbare betaalmethoden; fouten bruikbaar | OPEN | OPEN |
-| Betaling en ordermail | Alleen afgesproken proef: één transactie/order, juiste bedragen, bevestiging bij klant én beheerder | OPEN | OPEN |
-| Afronden | Eigen testregels weg; eventuele proeforder/terugbetaling als aparte geautoriseerde actie | OPEN | OPEN |
+FAB-04/COTTO-01 en het afzonderlijke filterdossier hebben hun eigen gedateerde tests. Hergebruik passend bewijs zonder er een volledige actuele checkout-/mobielvrijgave van te maken.
 
-De latere FAB-04/COTTO-01-dossiers bevatten al specifieke winkelwagenproeven. Die worden hergebruikt met hun bronmoment, maar bewijzen geen volledige adresafhankelijke checkout, betaling of mobiele test.
+## Bestelproef voor Jackson en uitvoering
 
-## Klantcontact: wat bedoelen we met “ontvangst controleren”?
+Kies een normale kraan, een product met kleur/onderdeelkeuze en een tegel per doos. Jackson beoordeelt ervaring en werkelijke bedrijfsafhandeling; uitvoering controleert artikel, bedragen en technische gegevens. Geen echte klantdata in Git. Geen betaling/proeforder zonder overeengekomen scenario; geen globale testbetaalmodus in de openbare winkel.
 
-Een formulier kan op de website zeggen “verzonden” terwijl het bericht niet in de juiste mailbox aankomt. Daarom testen we de hele route, zonder echte klantgegevens in Git.
+| Stap | Acceptatie |
+| --- | --- |
+| Artikel / uitvoering | Titel, merk, SKU, kleur, maat en inbegrepen onderdelen blijven correct van product tot checkout |
+| Keuze / aantal | Juiste foto/prijs na wisselen; geen stil toegevoegde onderdelen of dubbele regels; verhogen/verlagen/verwijderen klopt |
+| Tegels | Hele dozen, doosinhoud, m², doosprijs en totaal incl. btw; kaart/PDP/cart/checkout blijven dezelfde koopbare eenheid |
+| Levering | Bron voor bestelbaarheid/levertijd; pakket én pallet op representatieve NL-bestemmingen; één locatie zonder rates onderzoeken |
+| Checkout | Gasttoegang, validatie en daadwerkelijk aangeboden betaalmiddelen; niet uit ontbrekende API-scope afleiden |
+| Betaling / mail | Eén overeengekomen transactie/order met juiste bedragen; bevestiging bij klant én beheerder; eventuele refund apart |
+| Mobiel | Touch, knoppen, foutmeldingen, keuzevelden en checkout leesbaar/bedienbaar op echte telefoon |
+| Opruimen | Alleen eigen proefregels verwijderen; status van eventuele proeforder/terugbetaling vastleggen |
 
-1. Jackson verstuurt vanaf een eigen bereikbaar testadres een kort bericht met herkenbaar onderwerp, bijvoorbeeld BC-CONTACT-PROEF met datum/tijd.
-2. Controleer de succesmelding op de website.
-3. Kijk in de bedoelde winkelmailbox, inclusief spam: klopt afzender/reply-to en is het hele bericht leesbaar?
-4. Antwoord vanuit de winkelmail en controleer dat het antwoord het eigen testadres bereikt.
-5. Noteer alleen datum/tijd, paginaroute, PASS/FAIL en eventuele fout; geen naam, e-mailadres of berichtinhoud in publieke Git.
+## Contactmail: hele route controleren
 
-Uitvoering controleert formulierroute, verplichte velden, foutmelding en afhandeling; Jackson bevestigt echte ontvangst/antwoord. Deze inzendingen zijn in LAUNCH-02 niet uitgevoerd.
+1. Verstuur vanaf een eigen bereikbaar testadres een herkenbaar proefbericht via de contactpagina.
+2. Controleer de paginasuccesmelding.
+3. Controleer ontvangst in de bedoelde info@-mailbox én spam: afzender, reply-to en volledige velden.
+4. Antwoord vanuit de winkelmail en controleer aankomst op het eigen testadres.
+5. Noteer alleen datum/tijd, route en PASS/FAIL met foutomschrijving. Geen testmailadres, naam, berichtinhoud of ordergegevens in publieke Git.
 
-## Retour/herroeping: afzonderlijke proef
+De audit heeft geen formulier ingezonden. Een werkend mailto-linkje of succesmelding sluit deze proef niet af.
 
-1. Kies een duidelijk als proef gemarkeerde aankoopreferentie uit het afgesproken scenario.
-2. Retour/herroepen moet zonder verplicht account, retourreden of toestemming bereikbaar zijn.
-3. Test zonder bestelnummer; de aankoop moet ook op een andere heldere manier kunnen worden omschreven.
-4. Controleer dat verzoek, producten en aantallen correct aankomen.
-5. Toets de definitieve herroepingsstap en onmiddellijke bewaarbare bevestiging met aankoop, datum en tijd. Een succesmelding alleen sluit deze taak niet.
-6. Jackson bevestigt de beheerdermail en een antwoord met correcte retourinstructies; geen label/refund stil automatisch aanmaken.
-7. Test dat ongeldige invoer niet als succes wordt gemeld en dat de footerlinks op mobiel werken.
+## Herroeping: afzonderlijke functie- en mailproef
 
-## Werkelijke ontvangstverwerking
+1. Gebruik een als proef gemarkeerde aankoopreferentie in het afgesproken scenario. Toegang zonder account, verplichte retourreden of voorafgaande toestemming.
+2. Test ook zonder bestelnummer; de aankoop moet op een andere duidelijke manier kunnen worden omschreven.
+3. Controleer een toegankelijke herroepingsfunctie, heldere definitieve stap en correcte aankoop/producten/aantallen.
+4. Controleer de onmiddellijke bewaarbare klantbevestiging met aankoop, datum en tijd. Het live modelformulier en een native contact-POST bewijzen dit niet.
+5. Jackson bevestigt beheerdermail en antwoord met juiste retourinstructies. Geen betaald label, afhaling of refund stil aanmaken.
+6. Controleer validatiefouten, toetsenbord/focus en mobiele footer-/functiebediening.
 
-Ontvangen → aankoop vinden → melding schriftelijk bevestigen → juiste adres/methode/kosten uitleggen → retourontvangst vastleggen → afhandeling/terugbetaling binnen de toepasselijke termijnen.
+## Meetproef na juiste toestemming
 
-[Retourconcept](retouren/RETOURBELEID_CONCEPT.md) · [Footer/publicatie](FOOTER_EN_BELEID.md) · [Taken](TAKEN.md)
+Test toestaan, weigeren en intrekken/heropenen technisch, vervolgens view_item, add_to_cart en begin_checkout. Controleer purchase pas bij de overeengekomen bestelproef: één transactie, juiste variant/aantal, value/currency en transaction_id. Een herladen bevestigingspagina mag geen dubbele omzet geven. Geen e-mail, telefoon, adres of vrije formuliertekst in analytics/logs opnemen.
+
+Ontvangen retour → aankoop vinden → melding schriftelijk bevestigen → adres/methode/kosten uitleggen → ontvangst vastleggen → tijdige passende afhandeling/terugbetaling. De termijn voor spijtretour en rechten bij gebreken apart houden.
+
+[Actueel retourbeleid](https://badkamercity.nl/policies/refund-policy) · [Footer en beleid](FOOTER_EN_BELEID.md) · [Metingen](google/METINGEN.md) · [Taken](TAKEN.md)

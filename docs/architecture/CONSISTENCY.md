@@ -1,5 +1,18 @@
 # Eenheidskaart: dezelfde functie, herkenbare bediening
 
+## Actuele afwijking — 8 november 2026
+
+**FOOTER-F02 · VERIFIED_THEME / VERIFIED_HTML · OPEN.** Op MAIN **196328685834** kiest `compact_homepage=true` op home `bc-home-footer` en elders de standaard `bcf-v3`. De verschillen in kolommen, bestemmingen, trust-/contactopbouw en bronstijl zijn daadwerkelijk uit code en 14 publieke responses gelezen; de brede 364-set bevestigt de classverdeling. Dit is meer dan een vermoedelijke CSS-afwijking. [Exacte bron, linkmatrix en voorstel](components/FOOTER.md) · [centrale audit](../audits/2026-11-08/README.md).
+
+| Te harmoniseren | Huidige concrete varianten | Voorgesteld contract | Status |
+| --- | --- | --- | --- |
+| Storefrontfooter | Home `.bch-footer`; overige `.bcf-v2.bcf-v3` | Bestaande standaardrenderer op alle gewone storefront-routes | PROPOSED; geen code-/instellingswijziging |
+| Linkdekking | Home tien hoofdcategorieën + advies/inspiratie; elders zes categorieblocks en merkengids | 17 blocks: 4 service, 10 categorie, 3 info; acht lege slots herbestemmen/verwijderen, het maximum van 18 respecteren | PROPOSED; verzendlink pas na bestaande juiste openbare bestemming |
+| Contact / policies | Geen telefoon/adres in beide footers; vijf policies, twee met zichtbare HTML | Correcte eigenaargegevens en leesbare bestaande policies; beleidslinks uit `shop.policies` | OPEN; geen juridische/bedrijfsgegevens afleiden |
+| Detailsbediening | Home native gesloten markup; standaard desktop-open/mobielcontroller | Eén gedocumenteerde lifecycle met keyboard/touch/focus en 749↔750px-regressie | Nieuwe runtimecontrole open |
+
+Checkout en extern gehoste accounts blijven afzonderlijke Shopify-shells. De footerharmonisatie is geen globale CSS-refactor of redesign van die systemen. De oudere vergelijkingen hieronder behouden **28 oktober** als bronmoment.
+
 Bronmoment **28 oktober 2026**. Dit is de koppeling tussen [componentafspraken](COMPONENT_CONTRACTS.md), bestaande implementaties en nog uit te voeren vergelijkingen. Bronverschillen zijn vastgesteld; een visuele afwijking is pas bevestigd bij dezelfde functie/staat/viewport. Het register autoriseert geen blinde globale CSS-refactor.
 
 | Functie | Huidige varianten | Te behouden / gelijk te trekken | Status |

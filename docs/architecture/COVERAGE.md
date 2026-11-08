@@ -1,6 +1,26 @@
-> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
-
 # Documentatiedekking: wat compleet is en wat nog niet
+
+> **8 november 2026 — actuele dekkingslaag:** [Centraal auditrapport](../audits/2026-11-08/README.md), MAIN **196328685834**. De tabellen en testresultaten van 28–31 oktober hieronder behouden hun historische bronmoment; ze zijn geen actuele telling of volledige livevrijgave.
+
+## Actuele aanvullende dekking — 8 november
+
+| Onderdeel | Nieuw gecontroleerd bewijs | Open grens / volgende afsluiting |
+| --- | --- | --- |
+| Thema / Git | 1.387 livepaden; 1.378 Gitpaden in `shopify/current/`; 1.363 gelijk, 15 afwijkend, 9 alleen live, 0 alleen Git | Volledige actuele bytepariteit en verklaring per afwijking; 31-oktobersnapshot niet blind terugzetten |
+| Routes / inventaris | 364 publieke responses: 360×200, 4×404 incl. bewuste probe; 121 Pages, 119 gepubliceerd; 227 collecties | Responses zijn geen interactieve flows; 404-doelen onderscheiden van werkelijk gebroken inkomende links |
+| Footer | Vier kernbestanden exact live/Git; 14 gerichte HTML-routes plus brede classverdeling | FOOTER-F02: twee renderers; één standaardfooter met 17 blokken is PROPOSED; mobiel/resize/cookie-runtime nog open |
+| Homepage | Home live op de nieuwe MAIN; één `bc-homepage`-sectie in de huidige werkbron; home-HTML bevat compacte footer | Afwijkende bronbestanden niet als volledig liveparitair claimen; actuele browser-/responsivevergelijking |
+| Content / headings | Alle 119 gepubliceerde Pages in de routecontrole; Antikalk twee H1's; Rapowash deelt reukslot-metadata | Inhoudelijke redactie en gerichte heading-/metadatacorrecties; geen volledige factcheck |
+| Beleid / contact | Vijf policies bereikbaar; terms/legal ge-escapete HTML; shippingpolicy 404; contactroute alleen formulier | Leesbare policies, juiste contactpublicatie, werkende verzendinformatie en aantoonbare formulierbezorging |
+| Collecties | 227 toewijzingen: 210 standaard, 16 category-landing, 1 meubelhub; geen menu-ingang naar een lege collectie in de geteste menuset | Werkelijke JS-renderers, filter-/voorraaddata en mobiel blijven apart |
+| Checkout / verzending | Beperkte eerdere gastcheckoutproef op 8 november; actuele deliverymetadata wijkt af van 28 oktober | Adresafhankelijke tarieven, productdekking, betaling, order/mail en mobiel niet afgesloten |
+| Google / consent | Google & YouTube / GA4-configuratie aangetroffen; cookie-UI eerder beperkt gezien | Toestemmingsafhankelijk netwerkgedrag, purchase/value/currency/ontdubbeling en account-/feedstatus niet bewezen |
+
+De [footer](components/FOOTER.md), [content](components/CONTENT_AND_FORMS.md), [bestelketen](components/CHECKOUT_AND_OPERATIONS.md) en [apps/privacy](components/APPS_PRIVACY_AND_EXTERNAL_SYSTEMS.md) verklaren deze grenzen. Oudere geïsoleerde cases zijn niet opnieuw uitgevoerd en worden niet als huidige runtime-PASS hergebruikt.
+
+## Historische dekking — 28–31 oktober
+
+> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
 
 **28 oktober 2026 · DOC-02C brede winkelbeschrijving.** De eigenaar vraagt volledige documentatie vóór verdere stapsgewijze verbetering. De scope is de huidige BadkamerCity-winkel: storefront, product-/contentdata, beheerinstellingen, integraties, bestelketen en onderhoud. De [centrale status](../LIVE_STATUS_AND_NEXT_STEPS.md) noemt de actuele volgende handeling.
 
@@ -17,7 +37,7 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 
 **Volledige documentatie** vereist bron + uitleg voor ieder toepasselijk onderdeel, met concrete praktijkresultaten óf nog open verificaties. **100% completion van de webshop** vereist daarnaast de passende praktijk- en bedrijfscontroles; het ene percentage vervangt het andere niet. Een expliciete open verificatie mag niet worden gepresenteerd als een afgeronde controle.
 
-## Dekkingsmatrix
+## Historische dekkingsmatrix — 28 oktober
 
 | Onderdeel | Uitleg / ingang | Bronstand | Resterende afsluiting |
 | --- | --- | --- | --- |
@@ -48,7 +68,7 @@ Een dossier kan bestaan terwijl broncontrole of praktijkcontrole ontbreekt. Daar
 | Checkout, shipping en payments | [Bestelketen](components/CHECKOUT_AND_OPERATIONS.md) | Shop/markt/rates/app metadata; checkoutread geweigerd | Buiten deze verdieping op eigenaarsverzoek; eerdere controlegrens blijft staan |
 | Uitrol, backups, monitoring en overdracht | [Onderhoud](MAINTENANCE.md) | Git-/releasewerkwijze beschreven | Werkelijke deploykoppeling, externe backups/restore/monitoring |
 
-## Open bronblokkades
+## Bronblokkades van de historische meting
 
 1. **config/settings_data.json:** ontvangen body wijkt van metadata af; niet normaliseren om een groene check te maken.
 2. **Checkout/accountconfiguratie:** expliciete API-toegangsweigering; een aanwezige classic template vervangt die bron niet.

@@ -4,7 +4,7 @@
 
 ## Ingang en stand
 
-[Vergelijking, verbeterregister en implementatie](ui-consistency/2026-10-28/README.md). De bestaande [architectuur](architecture/README.md) en microdossiers blijven behouden.
+[Vergelijking, verbeterregister en implementatie](../../ui-consistency/2026-10-28/README.md). De bestaande [architectuur](../../architecture/README.md) en microdossiers blijven behouden.
 
 - MAIN: **195818389770 — Smooth winkelwagen pop-up**; deze uitvoering schrijft of publiceert niet naar MAIN.
 - Concept: **195850764554 — BadkamerCity - gelijke fotopijlen**, rol UNPUBLISHED.

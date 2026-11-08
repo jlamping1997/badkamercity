@@ -1,6 +1,14 @@
-> **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../../MASTER_SITE_REFERENCE.md), [verse bronkaart](../../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
+> **8 november 2026 — actuele componentingang:** [centrale audit](../../audits/2026-11-08/README.md), MAIN **196328685834**. De oudere bronmomenten en conceptstatussen hieronder zijn historie; de actuele aanvullingen staan vooraan bij de betrokken dossiers.
+
+> **Historische ingang 31 oktober 2026 — DOC-04:** [80 hoofdstukken met praktische beheertaken](../../MASTER_SITE_REFERENCE.md), [verse bronkaart](../../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
 
 # Componentdossiers — zo vind je de juiste bouwsteen
+
+## Actuele aanvulling — 8 november 2026
+
+MAIN **196328685834**, live **1.387 bestanden**; [centrale audit](../../audits/2026-11-08/README.md). [Footer](FOOTER.md) is opnieuw gebaseerd op echte code/configuratie en 14 route-responses: twee renderers, 18 blokken, 8 lege bestemmingen en een voorstel voor 17 blokken dat nog niet is uitgevoerd. [Homepage](HOMEPAGE.md), [content](CONTENT_AND_FORMS.md), [bestelketen](CHECKOUT_AND_OPERATIONS.md) en [apps/privacy](APPS_PRIVACY_AND_EXTERNAL_SYSTEMS.md) hebben een gedateerde actuele laag.
+
+De bron-/regelnummers in de oudere dossiers blijven van 28 oktober tenzij expliciet 8 november vermeld. De technische naslag en snapshot van 31 oktober zijn historische hulpmiddelen; controleer voor huidige code eerst MAIN, manifest en inhoud. Globale live/Git-pariteit blijft open: 15 afwijkende en 9 alleen live aanwezige bestanden. Deze actualisering voerde geen footerharmonisatie, testorder of publicatie uit. Het afzonderlijke filtertraject volgt het nieuwste [centrale checkpoint](../../LIVE_STATUS_AND_NEXT_STEPS.md); FILTER-SIMPLE-02v2 is inmiddels LIVE/VERIFIED en de eerdere installer mag niet worden herhaald.
 
 **DOC-02A/02C · 28 oktober 2026.** Dit is de verdiepte uitleg van de op deze datum gelezen productiecode. De [centrale werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) blijft leidend voor de actieve taak en bron. Geen nieuwe feature of UI-correctie is in deze ronde uitgevoerd.
 

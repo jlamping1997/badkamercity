@@ -3,10 +3,10 @@
   "date": "2026-11-05",
   "owner_inputs": {
     "business_name_as_given": "Badkamercity.nl",
-    "business_address": "Hengelolaan 70, 2545 JR 's-Gravenhage",
+    "business_address": "[AFGESCHERMD: historisch privé-vestigingsadres; geen actuele openbare contact-/retourlocatie]",
     "kvk": "42094775",
     "vat_id_as_given": "NL00548932B64",
-    "iban_as_given": "NL19 BUNQ 2201 7165 87",
+    "iban_as_given": "[AFGESCHERMD: bankrekening uitsluitend voor bevoegde bedrijfsvoering]",
     "return_notification_days": 30,
     "november_extension": false,
     "evidence": "OWNER_PROVIDED"
@@ -86,5 +86,15 @@
     "https://consument.acm.nl/aankoop-dienst-annuleren/verplichte-informatie-bij-koop-product-dienst",
     "https://support.google.com/merchants/answer/14011730?hl=nl",
     "https://www.belastingdienst.nl/wps/wcm/connect/nl/btw/content/btw-identificatienummer-en-omzetbelastingnummer"
-  ]
+  ],
+  "public_redaction_2026_11_08": {
+    "reason": "Historical private address and bank-account values removed from current public document; measurement date and other evidence retained",
+    "fields": [
+      "owner_inputs.business_address",
+      "owner_inputs.iban_as_given"
+    ],
+    "original_git_blob": "8d5cfeb52aeecb989a1ac29376090cdc8ed5bb6d",
+    "current_contact_reference": "../BEDRIJFSGEGEVENS.md",
+    "not_a_new_measurement": true
+  }
 }

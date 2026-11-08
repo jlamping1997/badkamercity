@@ -1,10 +1,10 @@
 # BadkamerCity — actuele werkstatus
 
-**29 oktober 2026 · HOME-01 — gekozen homepage met negen rondjes en actiebanners geïmplementeerd in concept.** De eigenaar geeft in de huidige conversatie expliciet opdracht om het goedgekeurde ontwerp functioneel uit te voeren. Eerdere UI-01-review blijft bewaard en geparkeerd in [de vorige werkstatus](homepage/2026-10-29/previous-work-status.md).
+**29 oktober 2026 · HOME-01 — gekozen homepage met negen rondjes en actiebanners geïmplementeerd in concept.** De eigenaar geeft in de huidige conversatie expliciet opdracht om het goedgekeurde ontwerp functioneel uit te voeren. Eerdere UI-01-review blijft bewaard en geparkeerd in [de vorige werkstatus](../../homepage/2026-10-29/previous-work-status.md).
 
 ## Actuele uitvoering
 
-[Implementatie, bronnen, bediening, tests en terugzetten](homepage/2026-10-29/README.md).
+[Implementatie, bronnen, bediening, tests en terugzetten](../../homepage/2026-10-29/README.md).
 
 - MAIN: **195876815114 — BadkamerCity - Compact mobiel zoeken**, ongewijzigd door deze uitvoering.
 - Concept: **195910795530 — BadkamerCity - Homepage rondjes en acties**, **UNPUBLISHED**.

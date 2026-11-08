@@ -1,4 +1,6 @@
-# Retouren — bronnen en keuzes
+# Retouren — historische bronnen en keuzes
+
+> **HISTORICAL — conceptbesluiten van 5 november 2026.** Kosten, contactafspraken en publicatiestatus hieronder beschrijven die voorbereiding. Gebruik de [live retourpolicy](https://badkamercity.nl/policies/refund-policy), [actuele taken](../TAKEN.md), [bedrijfsgegevens](../BEDRIJFSGEGEVENS.md) en de op 8 november aangevulde [broninventaris](../BRONNEN.md). €75 incl. btw is inmiddels vastgelegd als raming per standaard NL-retourpallet; de juridische vestiging is nog niet onafhankelijk geverifieerd.
 
 LAUNCH-02, 5 november 2026. De upload Retourneren.html is als commerciële referentie gelezen; de upload is geen juridische bron en wordt niet als concurrentkopie in Git opgenomen.
 
@@ -13,14 +15,14 @@ LAUNCH-02, 5 november 2026. De upload Retourneren.html is als commerciële refer
 | Staat/verpakking | Beoordelen toegestaan; aantoonbare waardevermindering mogelijk | Geen eis die wettelijk beoordelen/herroepen onmogelijk maakt |
 | Restocking/50% | Niet overnemen | Geen vaste boete in plaats van onderbouwde waardevermindering |
 | Retouradres | Bevestigd in LAUNCH-03: Zichtenburglaan150, bij Harry Suiker | Eigenaarbevestiging; postcode2544EB via officiële Harry Suiker-contactpagina |
-| Bedrijfsadres | Eenmanszaak op Hengelolaan70 | Apart van retouradres houden; Harry Suiker wordt niet de verkoper |
+| Juridische vestiging | Toenmalige privé-adresopgave hier niet opnieuw uitgeschreven | Apart verifiëren; contact-/retouradres maakt Harry Suiker niet de verkoper |
 | Persoonlijk afgeven/afhalen | Alleen na vooraf afstemmen, geen vrije inloop beloofd | Retouradres geeft niet automatisch afhaal-/inlooprechten |
 | Digitaal herroepen | Duidelijke functie + definitieve bevestiging + directe bevestiging per bewaarbare drager | Huidige voorwaarden; gewoon contactformulier niet als volledig aftekenen |
 | Google | Openbare duidelijke policy, zelfde30dagen/methode/kosten als Merchant | Geen speciale custom-API of extra schema nodig om de tekst openbaar leesbaar te maken |
 
 Het bestaande retourformulier gebruikt native Shopify-contactafhandeling. De bron toont een succesmelding op de pagina; er is geen eigen directe klantbevestigingsmail in aangetroffen. Werkelijke mailboxontvangst en eventuele platformmail zijn nog niet end-to-end gecontroleerd. De bestaande functie wordt daarom niet als volledig conform afgetekend.
 
-## Actuele primaire bronnen
+## Primaire bronnen bij het historische concept
 
 - [ACM — Bedenktijd en online herroepen](https://www.acm.nl/nl/verkoop-aan-consumenten/klantenservice/bedenktijd): standaardopties/maatwerk, terugsturen, terugbetalen en functie-eisen.
 - [ACM ConsuWijzer — Bedenktijd](https://consument.acm.nl/aankoop-dienst-annuleren/bedenktijd): beoordelen, verpakking en terugbetaling.

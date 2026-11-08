@@ -1,0 +1,68 @@
+{
+  "requested": 364,
+  "completed": 364,
+  "status_counts": {
+    "200": 360,
+    "404": 4
+  },
+  "footer_variants": {
+    "bch-footer": 1,
+    "bcf-v2 bcf-v3": 363
+  },
+  "non200": [
+    {
+      "path": "/collections/tegeltoebehoren",
+      "status": 404,
+      "error": null
+    },
+    {
+      "path": "/policies/shipping-policy",
+      "status": 404,
+      "error": null
+    },
+    {
+      "path": "/blogs/news",
+      "status": 404,
+      "error": null
+    },
+    {
+      "path": "/dit-is-een-controle-404",
+      "status": 404,
+      "error": null
+    }
+  ],
+  "missing_h1": [],
+  "multiple_h1": [
+    {
+      "path": "/pages/antikalk",
+      "h1": [
+        "Antikalk",
+        "Antikalk: betekenis en uitleg voor je badkamer"
+      ]
+    }
+  ],
+  "short_content_pages": [
+    {
+      "path": "/pages/contact",
+      "chars": 68,
+      "preview": "Contact Contactformulier Naam E‑mail * Telefoonnummer Reactie Sturen"
+    }
+  ],
+  "escaped_html": [
+    "/policies/terms-of-service",
+    "/policies/legal-notice"
+  ],
+  "jsonld_errors": [],
+  "pages_with_missing_local_anchors": [],
+  "old_private_address_matches": [],
+  "duplicate_titles": [
+    {
+      "value": "Waarom een reukslot belangrijk is tegen rioollucht – Badkamercity",
+      "paths": [
+        "/pages/rapowash",
+        "/pages/reukslot"
+      ]
+    }
+  ],
+  "duplicate_h1": []
+}

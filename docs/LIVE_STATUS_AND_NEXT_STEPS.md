@@ -14,6 +14,19 @@ Onafhankelijke publieke API-controle met volledige paginering en unieke IDs:60×
 
 [Livebewijs en grenzen](filters/simplification-release-2026-11-08/README.md), [verificatie](filters/simplification-release-2026-11-08/verification.json). [Concrete livekleur+formaatproef](https://badkamercity.nl/collections/betonlook-tegels?bcf_f_tegel_formaat=60+%C3%97+60+cm&bcf_f_kleur=Beige). **Exact één volgende handeling:** eigenaar loopt de livefilters praktisch door en noteert productlinks voor gewenste kleurcorrecties; Cottoceramix-profiel staat apart open voor vervolgronde. Geen nieuw inhoudelijk akkoord nodig. Andere import-/BRAUER-/bestelafspraken behouden; geen actieve schrijver na overdracht.
 
+
+## DOC-LIVE-01 — actuele winkel- en eenheidscontrole · 8 november 2026
+
+**READ_ONLY_AUDIT / DOCS_UPDATED / LIVE_FIXES_PENDING.** MAIN 196328685834 is vers gelezen. Volledige Admin-paginering: 121 Pages, waarvan 119 gepubliceerd, 227 collecties en 9 menu's; daarnaast 364 publieke HTTP-responses en metadata van 1.387 live bestanden. De homepage gebruikt bch-footer en de overige routes bcf-v3. De oorzaak — `compact_homepage=true` met een afzonderlijke renderer — is bewezen. De native voorwaarden en kennisgeving tonen HTML-tags; verzendbeleid ontbreekt en contactpublicatie en btw-idformaat blijven open. RapoWash-metadata en de dubbele H1 van Antikalk zijn vastgelegd. `shopify/current` op 1b5108a2: 1.363 gelijk, 15 verschillend en 9 alleen live; geen blinde deploy.
+
+Homepage-SEO en retourbeleid zijn live; Google-pixelconfiguratie is aanwezig, Realtime is alleen door de eigenaar gemeld. Betaling, mail, purchase, technisch consentgedrag en fysieke mobiele werking zijn niet vrijgegeven. Bestaande documentatie, masterindex en componentcontracten zijn bijgewerkt; het volledige boek van 31 oktober is behouden als archief. [Audit, registers en concrete herstelvolgorde](audits/2026-11-08/README.md). Geen winkel-, product-, thema- of servermutatie of publicatie.
+
+**Volgende handeling binnen dit consistentiedossier:** één gedeelde footerinhoud en renderer voorbereiden in een UNPUBLISHED concept dat aantoonbaar gelijk is aan MAIN, en deze op alle relevante paginatypen testen. **Het afzonderlijke filtertraject volgt zijn nieuwste centrale checkpoint; deze audit voert geen installatie uit en eerdere installatieblokken mogen niet worden herhaald.** Oudere checkpointrollen blijven historisch; de verse bron gaat voor.
+
+
+
+
+
 ## FILTER-SIMPLE-02 — stagingcontrole gestopt, bestaande filters behouden · 8 november 2026
 
 **8 november 2026 — installatieresultaat: STAGING_FAILED_SAFE / NOT_APPLIED / DIAGNOSTIC_PENDING.** Eigenaar voerde release135ada92366349cbc29ea080894a8e0f5e434fad uit. 15.897 producten geëxporteerd, nieuwe index volledig teruggelezen, profielen/IDsets/kleur- en formaatfacetten gecontroleerd. Eén echte staging-APIcontrole faalde: Afgeleide keuze tegels/60 × 60 cm. De volledige formaatfacettellingen slaagden. Geen bewezen oorzaak; geen controle omzeilen of speculatieve correctie installeren.
@@ -557,7 +570,7 @@ Geen functionele blokkade gevonden in deze steekproef. Verbeteringen geparkeerd:
 
 ## LAUNCH-03 — eenmanszaakadres en retourlocatie apart bevestigd · 5 november 2026
 
-**OWNER_CONFIRMED / DOCS_UPDATED / NOT_PUBLISHED.** Bedrijfsadres van de eenmanszaak blijft **Hengelolaan70,2545JR 's-Gravenhage**. Werk-/retourontvangstlocatie is **bij Harry Suiker, Zichtenburglaan150,2544EB 's-Gravenhage**. Eigenaar bevestigt de retourafspraak; postcode via officiële contactpagina gecontroleerd. Harry Suiker wordt niet de verkoper.
+**OWNER_CONFIRMED / DOCS_UPDATED / NOT_PUBLISHED.** Bedrijfsadres van de eenmanszaak blijft **[privé-adres niet opgenomen; zie actuele contact-/retourgegevens]**. Werk-/retourontvangstlocatie is **bij Harry Suiker, Zichtenburglaan150,2544EB 's-Gravenhage**. Eigenaar bevestigt de retourafspraak; postcode via officiële contactpagina gecontroleerd. Harry Suiker wordt niet de verkoper.
 
 [Bedrijfsgegevens](livegang-seo/BEDRIJFSGEGEVENS.md), [retourconcept](livegang-seo/retouren/RETOURBELEID_CONCEPT.md), modelformulier, footerplan en taken bijgewerkt. **BC-LIVE-001A DONE**; eigen zakelijk telefoonnummer volgt later, geen Harry Suiker-nummer overnemen. Geen algemene vrije-inloop-/afhaalbelofte. Oudere LAUNCH-02-opmerkingen dat retouradres nog onbekend is, zijn hiermee historisch.
 

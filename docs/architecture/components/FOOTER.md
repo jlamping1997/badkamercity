@@ -1,47 +1,86 @@
-# Footer: opbouw, beheer en gedrag
+# Footer: huidige renderers, inhoud en voorstel voor eenheid
 
-> **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Echte bestemmingen tonen, lege placeholders alleen in editor. Onze merken naar bestaande gids; adresafwezigheid en retourroute behouden. Geen nieuwe beleids-/bedrijfsinformatie verzonnen. [Actueel bewijs en rollback](../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
+**Bronmoment: 8 november 2026 · VERIFIED_THEME / VERIFIED_HTML.** MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov**, gelezen met `updatedAt=2026-11-08T11:49:21Z`. [Centraal auditrapport](../../audits/2026-11-08/README.md), [bron-/configuratieregister](../../audits/2026-11-08/safe-footer-register.json) en [14 routeprobes](../../audits/2026-11-08/footer-route-matrix.json). Deze actualisering veranderde geen themacode, instellingen of publicatie. Nieuwe mobiele-/runtimecontrole is niet uitgevoerd.
 
-Bronmoment **28 oktober 2026**. De actuele `sections/footer-group.json` en `sections/footer.liquid` zijn bytegelijk aan het verse MAIN-manifest. De footer is maatwerk, met classes `bcf-v2 bcf-v3`; de naam Dawn van het basisthema beschrijft deze implementatie niet volledig.
+## Bewezen oorzaak: twee renderpaden
 
-## Route en gegevens
+`layout/theme.liquid:339` rendert na `content_for_layout` globaal `{% sections 'footer-group' %}`. In `sections/footer-group.json:189` staat **`compact_homepage: true`**. `sections/footer.liquid:1–2` kiest daardoor bij `request.page_type == 'index'` het snippet **`bc-home-footer`**; de `else` rendert de standaardfooter **`.bcf-v2.bcf-v3`**. De home-afwijking komt uit deze expliciete branch.
 
-`layout/theme.liquid` rendert na `content_for_layout` de sectiegroep `footer-group`. Die groep bevat één footersectie met 18 geordende blocks. De footer leest **geen footermenu uit Shopify Navigatie** voor die drie kolommen: hij selecteert de eigen blocks op type `service`, `category` en `info`. Een wijziging in een menu met de naam footer hoeft hier dus niets te veranderen.
+De standaardkolommen lezen eigen `service`-, `category`- en `info`-blocks. Het compacte home-assortiment leest **`linklists['main-menu']`**; de andere homelinks komen uit vaste routes/lokalisatietekst en lokale homepageanchors. Een wijziging in Shopify-menu **Voettekstmenu** verandert die standaardkolommen dus niet automatisch. Beide renderers halen de onderste beleidslinks uit **`shop.policies`**.
 
-| Gebied | Bron | Voorwaarde / terugval |
+| Onderdeel | Homepage | Overige onderzochte storefront-routes |
 | --- | --- | --- |
-| Vier servicebeloften bovenaan | `trust_title_1..4`, `trust_text_1..4` | Vaste icoonvolgorde grid/headset/sparkles/shield |
-| Logo en introductie | Globale `settings.logo`, sectie `brand_text` | Zonder logo: tekstwoordmerk en optionele tagline |
-| Sociale links | Globale `social_*_link`, `show_social` | Alleen ingevulde links; voorbeeldmodus kan niet-klikbare voorbeelden tonen |
-| Drie linkkolommen | Blocks met `label` en `url` | Zonder URL een `span`, geen dode `href="#"` |
-| Contact | Sectievelden voor e-mail, telefoon, adres, openingstijden en CTA | Lege velden worden niet getoond; echte tel/mail-links buiten voorbeeldmodus |
-| Showroom | `showroom_link` + label | Beide nodig; label alleen maakt geen bestemming |
-| Beleidslinks | `shop.policies`, `show_policy` | Alleen bestaande niet-lege Shopify-policies |
-| Betaaliconen | `shop.enabled_payment_types`, `payment_enable` | Voorbeeldiconen alleen bij `payment_examples` én Theme Editor |
-| Copyright | Huidig jaar, winkelnaam, `bottom_text` | Geen jaarlijks handmatig jaartal nodig |
+| Renderer / class | `snippets/bc-home-footer.liquid` / `.bch-footer` | `sections/footer.liquid` / `.bcf-v2.bcf-v3` |
+| Linkkolommen | Klantenservice 4; Assortiment 11; Over Badkamercity 3 | Klantenservice 3; Ons assortiment 7; BadkamerCity 1 |
+| Assortiment | Tien hoofdgroepen + `/collections` | Zes categorieblocks + `/collections/all` |
+| Extra homebestemmingen | `#HomeDelivery`, `#HomeAdvice`, `#HomeInspiration` | Deze advies-/inspiratie-/bezorglinks ontbreken |
+| Merk / contactopbouw | Compact logo, e-mail | Trustbar, merkintro, e-mail en contact-CTA |
+| Telefoon / adres / betaaliconen in gelezen HTML | Geen / geen / 0 | Geen / geen / 0 |
+| Beleidslinks | Vijf | Dezelfde vijf |
+| Bronstijl | Achtergrond `#102b43`, basis 14px, logo 185px | Achtergrond `#1a253f`, basis 16px, logo 240px |
+| Details | Geen server-`open`; native details, geen standaardfootercontroller | Server-`open`; controller synchroniseert mobiel/desktop |
 
-Huidige sectieconfiguratie: placeholdermodus en betaalvoorbeelden staan uit. E-mail en contact-CTA zijn ingevuld. Telefoon, adres en openingstijden zijn leeg. Dat is een configuratiewaarneming, geen opdracht om gegevens te verzinnen. De geconfigureerde categorieblokken verwijzen naar zes collecties; daarnaast wordt de algemene productcollectie via Shopify `routes` toegevoegd.
+De linktotalen zijn **25 op home** en **19 op de standaardfooter**, inclusief logo, mail, CTA en policies. De stijlwaarden zijn bronwaarden; er is geen nieuwe computed-style- of contrastmeting. Nul betaaliconen bewijst niet dat betaalmethoden uitstaan. Cookievoorkeuren ontbreken in de servermarkup van de voetertest; runtime-injectie door de privacylaag is daarmee niet uitgesloten. De eerdere browserwaarneming van cookieknoppen blijft apart gedateerd bewijs.
 
-## Concrete ontbrekende bestemmingen: FOOTER-F01
+## Vier verse bronbestanden passen exact bij Git
 
-Tien van de achttien blocks hebben geen URL: **Veelgestelde vragen, Bezorgen & afhalen, Retourneren, Garantie & service, Over ons, Badkamerinspiratie, Badkameradvies, Onze merken, Showroom en Zakelijk**. De Liquid-code rendert ze als gewone tekst met een voorbeeld-title. Dit is een bevestigde configuratiegrens; de labels zijn geen werkende navigatie. De eigenaar moet per label een bestaande juiste bestemming kiezen of besluiten het label weg te laten. Geen automatische pagina's of links naar willekeurige zoekresultaten aanmaken.
+Deze vier kernbestanden zijn bytegelijk aan `shopify/current/` op de actieve codebranch. Dat is gerichte footerpariteit, **geen** volledige themepariteit: globaal blijven 15 afwijkende en 9 alleen live aanwezige bestanden over.
 
-## Desktop, mobiel en lifecycle
+| Themebestand | Live MD5 | Git blob SHA |
+| --- | --- | --- |
+| `layout/theme.liquid` | `21a1c2db077ec6ebe5c5cd41161ca187` | `f5e6b33ee61e461876cfa308c08ff92a8f62d236` |
+| `sections/footer-group.json` | `f57d42afd9dbbc8faac64d21bda9bfff` | `e47adf599847391c081b1e369fa413c6684421c8` |
+| `sections/footer.liquid` | `7e413995480f5066044e3e43805b5388` | `3ad0e8372c0e2b558a1e258b97d49135c3e3632a` |
+| `snippets/bc-home-footer.liquid` | `63943bf38ac942f65e342cc0348cb992` | `dd7f653d8d2be745051288198792cdf4a0b2901f` |
 
-De navigatiekolommen gebruiken native `details`/`summary`. Bij maximaal 749px sluit de controller ze bij initialisatie; de gebruiker kan ze vervolgens zelf openen. Vanaf 750px zet hij ze open, haalt summaries uit de tabvolgorde en voorkomt desktopklikken die het paneel zouden sluiten. Een mediaquerychange voert deze synchronisatie opnieuw uit: de eerdere mobiele openkeuze is geen blijvende voorkeur.
+## Huidige configuratie: 18 blokken, 8 lege bestemmingen
 
-De controller initialiseert bestaande roots, ondersteunt `shopify:section:load` en verwijdert listeners bij `shopify:section:unload`. `root.bcfCleanup` beschermt tegen dubbele initialisatie. De CSS biedt desktop ook zichtbare inhoud als een details-element gesloten zou zijn. Zonder JavaScript staat de servermarkup aanvankelijk open; dat is een bruikbare inhoudsterugval, met mogelijk een open→gesloten wijziging op mobiel na initialisatie.
+De sectie heeft **18 blocks bij schema-maximum 18**. Actuele code verbergt blocks zonder URL buiten `request.design_mode`; de oude tien zichtbare tekstlabels uit FOOTER-F01 zijn dus geen actuele telling.
 
-De gridindeling verandert rond 1280, 990 en 750px. Op kleine schermen komen de kolommen onder elkaar en verdwijnen de kleine service-onderteksten. De footer heeft eigen kleuren via `--bcf-*`, zichtbare focusregels en schakelt transitions bij reduced motion uit. Deze bronregels zijn geen contrastmeting of bewijs van soepelheid op een telefoon.
+| Type | Bestaande werkende blokken | Lege blok-ID's en labels |
+| --- | --- | --- |
+| service | `service_1` Contact → `/pages/contact`; `service_4` Retour aanmelden → `/pages/retour-aanmelden`; `service_6` Zoeken → `/search` | `service_2` Veelgestelde vragen; `service_3` Bezorgen & afhalen; `service_5` Garantie & service |
+| category | `category_1..6`: Badkamermeubels, Kranen, Douches, Toiletten, Wastafels, Tegels → gelijknamige bestaande collecties | Geen |
+| info | `info_4` Onze merken → `/collections?view=merken` | `info_1` Over ons; `info_2` Badkamerinspiratie; `info_3` Badkameradvies; `info_5` Showroom; `info_6` Zakelijk |
 
-## Onderhoud en acceptatie
+Placeholdermodus en betaalvoorbeelden staan uit; `payment_enable` en `show_policy` staan aan; `quote_link_enabled` staat uit. Telefoon, adres en openingstijden zijn leeg; e-mail en contact-CTA zijn ingesteld. Contactgegevens niet uit een oud bronbestand terugplaatsen. De door de eigenaar opgegeven tijdelijke telefoon en het contact-/retouradres vragen een bewuste, juiste publicatie; een retouradres is niet automatisch het geregistreerde vestigingsadres.
 
-Pas labels/bestemmingen aan in de **footersectie van het juiste conceptthema**; logo/socials bij globale theme-instellingen; policies in Shopify-instellingen; betaalmethoden in het daarvoor bedoelde beheer. Gebruik geen CSS om ontbrekende bedrijfsinformatie op te lossen. De hele footer vervangen vanuit een oude Git-root kan nieuw maatwerk verliezen.
+De vijf bestaande policies zijn privacy, terugbetaling, contactgegevens, voorwaarden en wettelijke kennisgeving. **`/policies/shipping-policy` geeft 404**; geen werkende verzendbeleidslink suggereren. Voorwaarden en wettelijke kennisgeving tonen in de verse response ge-escapete HTML: policybestaan is geen bewijs van bruikbare opmaak.
 
-Acceptatie: alle bedoelde links bereikbaar; lege URL herkenbaar/weggehaald; geen voorbeeldgegevens live; mobiel openen/sluiten via toetsenbord/touch; 749↔750px; lange labels; ontbrekend logo; geen sociale links; lege/bestaande policies; echte betaaliconen; section load/unload; reduced motion. De desktopbrowser bevestigt de drie open panelen met samenvattingen buiten de tabvolgorde en de tien niet-linklabels. Werkelijke mobiele focus-/resizecontrole blijft open.
+## Canoniek footercontract — PROPOSED, niet geïmplementeerd
 
-[Alle footerinstellingen en blockvelden](../reference/sections/footer.md) · [Sectiegroep](../reference/TEMPLATES.md) · [Bronhashes](../reference/source-index.json) · [Bevindingen](../FINDINGS.md).
+Hergebruik de bestaande **standaard `.bcf-v3`** voor alle gewone storefront-paginatypen. In een brongecontroleerd **UNPUBLISHED** concept kan `compact_homepage=false` beide routes naar deze renderer leiden. Bouw geen derde footer. Werk tegelijk de inhoud bij, zodat de vier ontbrekende hoofdcategorieën en advies/inspiratie niet verdwijnen.
 
-## Lifecycle verdiept
+Een concrete indeling heeft **17 geconfigureerde blocks**: 4 service, 10 categorie, 3 info. Daarvoor de acht huidige lege slots herbestemmen of verwijderen; niets toevoegen boven het schema-maximum van 18. Mogelijke hergebruikmapping:
 
-[FOOTER_LIFECYCLE](micro/FOOTER_LIFECYCLE.md) beschrijft exact wat bij 749px-querywissels, repeated section load, unload en cleanup gebeurt. Twee nieuwe bronreplays bevestigen het contract; geen extra mobiele browserclaim.
+| Gewenste groep | Blocks / bron |
+| --- | --- |
+| Service 4 | Bestaande `service_1`, `service_4`, `service_6`; `service_3` pas vullen met een bestaande openbare, inhoudelijk juiste verzend-/afhaalbestemming |
+| Categorie 10 | `category_1..6` behouden; lege `service_2`, `service_5`, `info_1`, `info_5` omzetten naar category voor Baden, Spiegels en verlichting, Accessoires, Verwarming en ventilatie |
+| Info 3 | `info_4` Onze merken; `info_3` advies → `/#HomeAdvice`; `info_2` inspiratie → `/#HomeInspiration` |
+| Overtollig | Leeg `info_6` verwijderen; totaal 17 |
+
+Een ongebruikte servicebestemming blijft verborgen totdat de juiste openbare informatie bestaat. Homeanchors moeten bij gedeeld gebruik vanaf de winkelroot verwijzen; een lokale `#HomeAdvice` op een productpagina is geen correcte route. Gebruik bij eventuele implementatie de bestaande Shopify-rootroute voor locale-/subpadgedrag. Houd de algemene assortimentlink consistent en controleer categorievolgorde tegen `main-menu`.
+
+Beleidslinks blijven automatisch uit `shop.policies`; geen duplicaten in de drie kolommen. Alleen echte ingeschakelde betaalmethoden tonen. Bewaar de guards **`bc-returns-url`** en **`bc-footer-quote`** en de huidige editor-/cleanupbescherming. Native checkout en extern gehoste accountpagina's hebben een aparte Shopify-shell; één storefrontfooter betekent geen identieke checkoutmarkup.
+
+## Gecontroleerde routes en open regressie
+
+De gerichte voetertest las **12 representatieve routes + 2 grensgevallen**: home; algemene PDP; standaardcollectie; meubelhub; contact; retouraanmelding; refundpolicy; zoeken; lege cart via GET; merkengids; Sunshowerlanding; begrippenlijst; Sunshower-PDP; bewuste 404. Elke response bevat één footer. Alleen home heeft `.bch-footer`; de andere dertien hebben dezelfde standaardstructuur. De bredere 364-routeset bevestigt deze classverdeling: 1 home en 363 standaardresponses, inclusief foutpagina's.
+
+| Testlaag | Huidig bewijs | Nog nodig bij voorstel |
+| --- | --- | --- |
+| HTML / routes | 14 gerichte responses; publieke linkset, groups, policies en hashes | Dezelfde routes in concept; geen verloren links, geen dode lokale anchors |
+| Desktop / mobiel | Actuele bronbeslissing; oude beperkte desktopwaarneming en geïsoleerde FT-01/02 | Echte desktop en 390px; 749↔750px; touch, keyboard, focus, lange labels |
+| Lifecycle | Standaardcontroller heeft init/cleanup en section load/unload | Concept met herhaalde load/unload en reduced motion; homepage-/standaardpad na wijziging |
+| Commerce / privacy | Lege cart gelezen; geen cartmutatie in voetertest | Ook gevulde cart na afgesproken test; cookievoorkeuren na runtime-injectie; echte betaaliconen |
+
+De semantische voetervingerafdrukken van de gerichte set zijn home `190dbaf8025cd312bf8b68e7a426c46ac432ccd6623bb06f711a880cf6e63023` en standaard `25359a8109c6ff6f9e3e8b4b865195ffa1bc8daaccb7b082cbc5901197dee178`. Ze dekken de gemeten structuur en linkinhoud, geen browsergedrag.
+
+## Historie en technische verdieping
+
+- **28 oktober — FOOTER-F01:** tien URL-loze labels werden als tekst getoond; historische meting en desktopwaarneming blijven in het [toenmalige bewijs](../evidence/2026-10-28-complete/README.md).
+- **31 oktober — FIX-01:** lege bestemmingen buiten editor verbergen en bestaande merkengids koppelen; [gedateerd dossier](../../repairs/2026-10-31/README.md). Die configuratiegrens is op 8 november opnieuw inhoudelijk gelezen, nu met acht lege slots.
+- **8 november — FOOTER-F02:** twee werkelijke renderers en verschillende linkdekking bewezen; harmonisatie **OPEN / PROPOSED**.
+
+[Footerlifecycle](micro/FOOTER_LIFECYCLE.md) · [historische instellingenreferentie](../reference/sections/footer.md) · [eenheidskaart](../CONSISTENCY.md) · [bevindingen](../FINDINGS.md).

@@ -1,5 +1,7 @@
 # Eén herkenbare bediening per functie
 
+> **8 november 2026 — concrete footerafspraak toegevoegd:** [FOOTER-F02 en canoniek voorstel](components/FOOTER.md) legt de bewezen twee renderpaden en de nog ongeïmplementeerde richting van 17 blokken vast. De ontwerpregels hieronder blijven het gedateerde raamwerk van 28 oktober; dit is geen winkelbrede vrijgave of autorisatie tot globale refactor. [Huidige audit](../audits/2026-11-08/README.md).
+
 **28 oktober 2026 · raamwerk en voorgestelde afspraken.** De eigenaar vraagt eenheid, bestaande stijlen behouden en soepele bediening. Onderstaande concrete uitwerking is een audit-/besliskader; niet alle getallen, iconen en componentvarianten zijn al als ontwerp goedgekeurd.
 
 ## 1. Eenheid zonder verschillende functies gelijk te maken

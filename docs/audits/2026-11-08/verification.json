@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-08",
+  "status": "PASS_WITH_EXPLICIT_LIVE_TEST_LIMITS",
+  "documentation": {
+    "status": "PASS",
+    "date": "2026-11-08",
+    "changed_files_checked": 58,
+    "markdown_documents_checked": 334,
+    "broken_local_file_links": 0,
+    "historical_archive_blob": "88d044b4c6ddbdfeb9517112b990cffa38132ef4",
+    "historical_chapter_anchors_preserved": 80,
+    "unrelated_theme_changes_between_source_and_latest_filter_branch": 0,
+    "private_values_in_changed_files": 0,
+    "route_register": {
+      "total": 364,
+      "http200": 360,
+      "http404": 4
+    },
+    "scope": "Documentation and historical generator checks only; no new live storefront flow execution"
+  },
+  "historical_reader": {
+    "status": "PASS",
+    "date": "2026-11-08T15:50:14.203Z",
+    "artifact": "handbook-historical.html",
+    "counts": {
+      "chapters": 80,
+      "tasks": 50,
+      "diagnoses": 40,
+      "acceptanceCases": 50,
+      "products": 11679
+    },
+    "method": "Offline jsdom DOM execution and static parsing only",
+    "limits": [
+      "No visual browser or physical phone/laptop claim",
+      "No Windows workspace check",
+      "No storefront JavaScript/mail/cart/checkout execution",
+      "Product identity catalog is the 30 October snapshot"
+    ],
+    "checks": [
+      "80 sequential chapter headings; one H1; 81 contents links",
+      "Version 2.0, date and live/concept/mail boundaries",
+      "50 embedded task definitions and first 12 cards",
+      "Task term, role and state filters combine",
+      "All task targets resolve; catalog snapshot contains 11679 records",
+      "Catalog vendor 337 Porcelanosa; three Verona Cubik; empty result",
+      "Catalog pagination and return preserve first page",
+      "Text search returns chapter links",
+      "New practical text searchable",
+      "No-result search and Escape reset",
+      "Contents toggle and chapter click update aria state",
+      "Unique IDs, valid internal anchors and standalone external links",
+      "No external scripts, styles, execution errors or network requests",
+      "No-script document retains chapters and complete task table"
+    ],
+    "errors": [],
+    "network": []
+  },
+  "historical_compiler": {
+    "status": "PASS",
+    "rebuilt_chapters": 80,
+    "tasks": 50,
+    "diagnoses": 40,
+    "acceptance_cases": 50,
+    "guard_cases": [
+      "missing --output rejected",
+      "current master overwrite rejected",
+      "immutable archive overwrite rejected"
+    ],
+    "guard_exit_codes": [
+      2,
+      2,
+      2
+    ],
+    "protected_files_unchanged": true
+  },
+  "last_role_readback": {
+    "theme_id": "196328685834",
+    "role": "MAIN",
+    "updatedAt": "2026-11-08T11:49:21Z",
+    "unchanged_from_capture": true
+  },
+  "private_history_redactions": {
+    "private_address_references_removed_from_current_status": 1,
+    "other_unrelated_history_preserved": true,
+    "historical_evidence_fields_redacted": 2
+  },
+  "live_mutations": false,
+  "new_browser_flow_tests": false,
+  "pending": [
+    "Policy/contact/shipping fixes",
+    "Footer implementation and route/mobile regression",
+    "Payment/order/mail test",
+    "Technical consent and purchase event validation",
+    "Physical mobile journey",
+    "VAT identity owner verification"
+  ],
+  "storage_readback": "Commit and exact remote blob verification performed separately by parent executor after this file was written"
+}

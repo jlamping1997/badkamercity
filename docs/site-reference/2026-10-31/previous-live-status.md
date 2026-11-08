@@ -4,7 +4,7 @@
 
 ## Begin hier
 
-[Het volledige naslagwerk](MASTER_SITE_REFERENCE.md) brengt de actuele website, functies, desktop/mobielverschillen, alle pagina-/template-/menu-/instellingenregisters en 36 technische brondossiers samen. De bijbehorende [gedateerde bron en controles](site-reference/2026-10-30/baseline-and-checks.json) scheiden Admin, broncode, server-HTML, desktopgedrag, eerder componentbewijs en open controles.
+[Het volledige naslagwerk](../../MASTER_SITE_REFERENCE.md) brengt de actuele website, functies, desktop/mobielverschillen, alle pagina-/template-/menu-/instellingenregisters en 36 technische brondossiers samen. De bijbehorende [gedateerde bron en controles](../2026-10-30/baseline-and-checks.json) scheiden Admin, broncode, server-HTML, desktopgedrag, eerder componentbewijs en open controles.
 
 ## Verse bronstand
 
@@ -22,13 +22,13 @@ Centrale repository jlamping1997/badkamercity; bestaande uitvoeringsbranch **fix
 
 ## Bestaande open uitvoering
 
-**BC-QUOTE-001: FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED.** [Integratie](quote/2026-10-30/INTEGRATION.md), [design](quote/2026-10-30/DESIGN.md), [branding](quote/2026-10-30/BRANDING.md). Page offerte-vergelijken is ongepubliceerd; integration_enabled=false, integration_preview=true alleen bij unpublished, show_preview=false. Header/footer-klantlinks en homepage-teaser blijven uit. Mailontvangst/verificatie, klantmail, privétoegang, bewaartermijn, verwijderen en fysieke telefooncontrole zijn nog open. De publicatie-/themarollen in oudere offertedossiers zijn hun historische opleverstand.
+**BC-QUOTE-001: FORM_CREATED / CONCEPT_CONNECTED / EMAIL_VERIFICATION_AND_DELIVERY_PENDING / CUSTOMER_ACTIVATION_DISABLED.** [Integratie](../../quote/2026-10-30/INTEGRATION.md), [design](../../quote/2026-10-30/DESIGN.md), [branding](../../quote/2026-10-30/BRANDING.md). Page offerte-vergelijken is ongepubliceerd; integration_enabled=false, integration_preview=true alleen bij unpublished, show_preview=false. Header/footer-klantlinks en homepage-teaser blijven uit. Mailontvangst/verificatie, klantmail, privétoegang, bewaartermijn, verwijderen en fysieke telefooncontrole zijn nog open. De publicatie-/themarollen in oudere offertedossiers zijn hun historische opleverstand.
 
 QC-04 blijft een afzonderlijke privétool op branch quality-control: notities, alle merken/willekeurig, checkpoints en dag/nacht; geen automatische Shopify-mutatie. [Overdracht](https://github.com/jlamping1997/badkamercity/blob/quality-control/quality-control/README.md). Deze documentatieronde heeft geen privébeoordelingen gelezen of gewijzigd.
 
 ## Actieve uitvoering
 
-**NAV-02 — PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** [Categorieën zonder schuiven](laptop-navigation/2026-10-31/README.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**,1354files, behouden. Bestaand UNPUBLISHED **195947036938** hergebruikt en hernoemd naar **BadkamerCity - Categorieen zonder schuiven**; eerst alleen de achterlopende header gesynchroniseerd, daarna1354/1354pariteit bewezen. Geen nieuwe volledige themakopie of branch.
+**NAV-02 — PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** [Categorieën zonder schuiven](../../laptop-navigation/2026-10-31/README.md). Actuele MAIN **195948839178 — BadkamerCity - Retourknop in header**,1354files, behouden. Bestaand UNPUBLISHED **195947036938** hergebruikt en hernoemd naar **BadkamerCity - Categorieen zonder schuiven**; eerst alleen de achterlopende header gesynchroniseerd, daarna1354/1354pariteit bewezen. Geen nieuwe volledige themakopie of branch.
 
 Alle elf desktopcategorieën bereikbaar zonder scrollbalk of schuifpijlen.990–1359CSS-px twee gebalanceerde rijen6+5; vanaf1360één rij, CSS-wrap als vangnet. Mobiel tot989behoudt bestaand menu. Exact één blijvend pad sections/header.liquid; finaleMAIN1354/1354gelijk, concept1354/exactéénheaderafwijking, bodyexact. ThemeCheckR1 en JS-syntaxPASS; twaalf breedteframes390–1920zonderoverloop, alle11linkszichtbaar, nulschuifknoppen. Dropdown/focus/Escape, tweede rij, breedtewissel en mobielmenu→desktopherstel gecontroleerd; Merken echt via gewone website geopend. QA-templateexacthersteld. Geen MAIN-write/publicatie.
 
@@ -42,4 +42,4 @@ Alle elf desktopcategorieën bereikbaar zonder scrollbalk of schuifpijlen.990–
 
 Het naslagwerk registreert onder meer tien ontbrekende grote-footerbestemmingen, de Hygro(meter)-404, collectiemetadata, de €75/€100-verzendtekstafwijking in de native fallback, native/externe zoektellingen en tegelprijseenheden. Eerdere geïsoleerde cart/filter/wishlistbevindingen blijven met hun eigen bron-/testgrens bestaan. Mobiele bron/componentanalyse vervangt geen volledige fysieke telefoon-/koopronde; backend, Google en bedrijfsprocessen blijven expliciet begrensd.
 
-De [vorige centrale status is exact gearchiveerd](site-reference/2026-10-30/previous-live-status.md). [Categorisatiebeleid](CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen schrijver of achtergrondworker actief na deze oplevering.
+De [vorige centrale status is exact gearchiveerd](../2026-10-30/previous-live-status.md). [Categorisatiebeleid](../../CATEGORIZATION_AND_SEO_POLICY.md), [toekomstprojecten](../../FUTURE_CONTENT_AND_PRODUCT_PROJECTS.md) en de historische architectuurdossiers blijven geldige achtergrond binnen hun eigen datum. Geen schrijver of achtergrondworker actief na deze oplevering.

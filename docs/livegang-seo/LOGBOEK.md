@@ -1,5 +1,27 @@
 # Logboek — livegang, Google en SEO
 
+## 8 november 2026 — DOC-LIVE-01: livebasis en documentatie gereconcilieerd
+
+**Scope:** verse Shopify-/HTML-/broncontrole plus documentatieactualisatie. MAIN 196328685834 — BadkamerCity - Homepage SEO 8 nov is live. Volledige Admin-inventaris: 121 Pages (119 openbaar), 227 collecties; catalogus 15.897 ACTIVE + Online Store. Routecontrole: 364 responses, 360 × 200 en 4 verschillende 404-probes. Geen 364 interactieve browsertests. [Audit, route-/bronregister en bevindingen](../audits/2026-11-08/README.md).
+
+**Gewijzigde actuele stand:** retourbeleid en modelformulier live; voorwaarden/contact/privacy/kennisgeving aanwezig, verzending ontbreekt; voorwaarden en kennisgeving tonen letterlijke HTML. Google & YouTube-config bevat G-H9YFB5TC6N; Realtime is eigenaarsmelding, geen purchasebewijs. Homepage-SEO is inmiddels gepubliceerd; de volgende-handelingstekst van het eerdere SEO-HOME-01-moment hieronder is geschiedenis.
+
+**Contact-/retourafspraken:** Zichtenburglaan 150, 2544 EB Den Haag, en tijdelijk eigenaartelefoonnummer 06 85887536. Juridische KvK-naam/vestiging en volledig btw-id nog verifiëren; de btw-formatfout niet automatisch corrigeren. De actuele publieke documenten schrijven geen privé-adres of bankrekening meer uit. Historische retourvoorbereiding is als HISTORICAL gemarkeerd en verwijst naar de live policy. Retour: 30 dagen aanmelden + 14 terugsturen, €75 incl. btw raming per standaard NL-retourpallet, afgeven op afspraak; geen heenzendtarief of blanket productuitsluiting.
+
+**Eenheid:** twee footerrenderers bewezen door `compact_homepage=true`; homepage 25 links, standaard 19. Vier kernfiles exact gelijk aan verse MAIN. Bestaande standaardfooter met volledige inhoudsset is het voorstel; geen live fix uitgevoerd. Algemene bronvergelijking: 1.387 live files, 1.378 in Git, 1.363 gelijk, 15 verschillend en 9 alleen live; verschillen geregistreerd, niet blind overschreven.
+
+**Bewijsgrenzen:** eerdere beperkte desktopproef tot gastcheckout en cookie-UI hergebruikt met datum. Betaling, ordermail, contact-/retourontvangst, bestemmingsafhankelijke tarieven, technisch consentgedrag, GA4-purchase en volledige telefoonreis blijven open. Product-/garantie-informatieplichten zijn gerichte TO_VERIFY-taken met opnieuw gecontroleerde primaire bronnen, geen catalogusbrede juridische vrijgave.
+
+**Parallelle filterwerkstroom:** volgens actuele overdracht FILTER-SIMPLE-02v2 APPLIED_VERIFIED / PUBLIC_API_VERIFIED / DESKTOP_UI_VERIFIED; installer niet herhalen. FILTER-ACERO-01 is volgens de latere parallelle overdracht APPLIED_VERIFIED / PUBLIC_API_VERIFIED; niet opnieuw installeren. Geen nieuwe filtertest in deze audit en geen wijziging van die eigenaarvolgorde.
+
+**Mutatiegrens:** documentatie bijgewerkt; geen Shopify-policy/Page-/product-/voorraad-/prijs-/thema-/servermutatie, geen publicatie, formulierinzending of betaling in deze diepe audit. Remote documentatieopslag/branchkoppen afzonderlijk na de bundel controleren; geen claim over de lokale Windows-pc.
+
+**Volgende handeling binnen dit consistentiedossier:** één volledige standaardfooter voorbereiden in een bewezen MAIN-paritair ongepubliceerd concept, inclusief contact-/beleidslinkdekking en routebrede desktop-/mobielregressie. Policycorrecties en geverifieerd btw-id blijven aparte taken.
+
+---
+
+**Historische meetmomenten hieronder.** Ze beschrijven wat toen bekend/uitgevoerd was; gebruik TAKEN.md en de audit van 8 november voor de actuele status.
+
 ## 8 november 2026 — SEO-HOME-01 / Search Console en homepageconcept
 
 Eigenaarsbeelden bevestigen DNS-eigendom, verwerking van de hoofdsitemap, homepage in Google en een geslaagde live-test. Wastafelkranen had status onbekend, slaagt live en heeft een bevestigde indexeringsaanvraag. Opname/posities zijn niet bevestigd.
@@ -10,7 +32,7 @@ Volgende handeling: eigenaarreview laptop/telefoon en eigen publicatie; na publi
 
 ## 5 november 2026 — LAUNCH-03: bedrijfsadres en retourontvangst bevestigd
 
-Eigenaar bevestigt dat Badkamercity onder zijn eenmanszaak op Hengelolaan70 valt, maar vanuit Harry Suiker op Zichtenburglaan150 opereert. Retouren gaan naar Zichtenburglaan150. Postcode2544EB gecontroleerd op de officiële Harry Suiker-contactpagina; de retourafspraak zelf komt van de eigenaar.
+Eigenaar onderscheidt destijds het opgegeven privévestigingsadres van de werk-/retourlocatie bij Harry Suiker op Zichtenburglaan 150. Het eerdere privé-adres is hier niet opnieuw uitgeschreven; de actuele openbare instructie en registratiegrens staan in BEDRIJFSGEGEVENS.md. Retouren gaan naar Zichtenburglaan150. Postcode2544EB gecontroleerd op de officiële Harry Suiker-contactpagina; de retourafspraak zelf komt van de eigenaar.
 
 Bedrijfsgegevens, retourconcept, modelformulier, footerplan en taken op dit onderscheid bijgewerkt. BC-LIVE-001A DONE; BC-LIVE-001 blijft PARTIAL wegens andere open gegevens. Eigen zakelijk telefoonnummer komt later; geen Harry Suiker-nummer overgenomen. Harry Suiker is retourontvangstlocatie, geen nieuwe juridische verkoper. Persoonlijk afgeven/afhalen niet als vrije inloop beloofd.
 

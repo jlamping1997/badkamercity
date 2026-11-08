@@ -1,10 +1,18 @@
-> **29 oktober2026 — HOME-01:** gekozen homepage met negen cirkels, configureerbare banners en 3D-afspraakaanvraag staat in concept195910795530. Zie [actuele werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) en het HOME-01-dossier. Oudere homepagevolgordes hieronder zijn historische bronnen; MAIN is niet aangepast.
-
 # Homepage: volgorde, inhoud en eigen kaarttypen
+
+## Actuele ingang — 8 november 2026
+
+Homepage is live op MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov**; de conceptstatus van 29 oktober verderop is historisch. De huidige werkbron `shopify/current/templates/index.json` heeft één actieve sectie **`bc_homepage` → `bc-homepage`**. Deze bronverwijzing is geen zelfstandige claim van volledige live/Git-pariteit; het centrale manifest heeft nog 15 afwijkende bestanden. De verse home-HTML toont de huidige homecontent en **`.bch-footer`**, gekozen via `compact_homepage=true`.
+
+De aparte homefooter leest zijn assortiment uit `main-menu` en verwijst lokaal naar `#HomeDelivery`, `#HomeAdvice` en `#HomeInspiration`; de standaardfooter op andere paginatypen heeft deze linkdekking niet. [Oorzaak en voorstel](FOOTER.md) · [centrale audit](../../audits/2026-11-08/README.md). Alle hieronder genoemde negen secties/guards zijn de opbouw van 28 oktober, geen huidige homepagevolgorde. Geen nieuwe responsive-/performance- of conversievrijgave.
+
+## Historische homepageanalyse — 28 oktober
+
+> **Historisch checkpoint 29 oktober 2026 — HOME-01:** gekozen homepage met negen cirkels, configureerbare banners en 3D-afspraakaanvraag staat in concept195910795530. Zie [actuele werkstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) en het HOME-01-dossier. Oudere homepagevolgordes hieronder zijn historische bronnen; MAIN is niet aangepast.
 
 Bronmoment **28 oktober 2026**. `templates/index.json` kiest de volgorde; de inhoud komt uit de sectieconfiguratie, menu's, Shopify-resources en beeldbestanden. Een niet-uitgeschakelde sectie is niet automatisch zichtbaar: Liquid kan op ontbrekende data stoppen.
 
-## Actuele opbouw
+## Opbouw op 28 oktober
 
 | Volgorde | Sectie | Gegevens / werking |
 | ---: | --- | --- |
