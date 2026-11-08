@@ -12,6 +12,26 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-25 — verdere specificaties via Sanitairwinkel afgerond · 8 november 2026
+
+Eigenaar vraagt beide toegestane winkels verder te benutten. De vorige ronde omvatte vooral BadkamerXXL; daarom nu zes gerichte Sanitairwinkel-series onderzocht. **450 nieuwe productpagina’s gelezen: 406 exact op fabrikantartikelnummer/EAN/merk, 31 zonder EAN alleen vergelijkingsbewijs, 13 niet zelfstandig bruikbaar.** Alle 449 nieuwe geselecteerde URL’s plus één identiteitstest afgewerkt; vijf eerdere URL’s overgeslagen. Tijdelijke fouten eenmaal herhaald, nul resterende leesfouten. Geen blokkade omzeild of limiet-/tariefuitbreiding.
+
+**2.523 nieuwe specificaties; vijf oudere externe maten bij tegenspraak ingehouden. Netto 2.518 extra, totaal 176.303 velden bij 13.161 artikelen.** Voor 253 artikelen zijn de gekozen kernvelden nu ingevuld; nog 6.752 artikelen missen zulke gegevens. Geen volledige technische vrijgave. Alle 31 oudere open verschillen/historische waarden, 42 oorspronkelijke gegevensblokkades en 163 toekomstige artikelen behouden. Prijzen inclusief 21% btw, SKU/EAN, titels, keuzes, eigen invoer en originele bestanden ongewijzigd.
+
+Eindstand: **72 open retailveldverschillen, 288 verdachte slangwaarden en 402 concrete vragen bij 398 artikelen.** Algemeen hout geeft geen conflict met een bestaande expliciete leverancierswaarde massief eiken; er wordt geen eiken/massief hout uit een algemene bronwaarde afgeleid. Echte afwijkingen, waaronder massief eiken versus MDF en verschillende maten, blijven open. Materiaalvragen noemen de werkelijke bronwaarden.
+
+**44 tests PASS**, herhaalrun catalogus/provenance/cumulatieve aanvullingen/historische verschillen exact behouden. Native Excel: alle 13.161 artikelregels, 40.944 cumulatieve aanvullingen en 402 vragen gelijk; alle 459 EAN-cellen in het vragenblad tekst, 12 EAN-voorbeelden tekst, nul foutcellen. Vijf bladen en drie extra ranges bekeken. Preflight terecht exitcode 2 met inhoudelijk gecontroleerd JSON-resultaat. Geen Windows-/Excel-desktop- of livewinkeltest geclaimd.
+
+**Bestaande privé-ZIP versie 8 en specificatie-XLSX versie 6 opgeslagen, bestandsidentiteiten behouden.** Pakket met 163 bestanden en 162 manifesthashes gecontroleerd; alle 121 eerdere bestanden behouden. Eén XLSX-versieconflict opgelost na herladen van de byte-identieke huidige bron; geen tussentijdse wijzigingen overschreven. Samengevoegde getypeerde bronnen bevatten 6.310 records, waarvan 6.276 exacte identiteiten. Broninhoud blijft privé; ruwe fetchresponses niet gebundeld. Geen voltooide pagina’s opnieuw lezen.
+
+**Geen Shopify-writes, DRAFT-import, media-upload, themawrite of publicatie.** MAIN alleen qua rol gelezen: 196341825802. Alle vrijgavevlaggen false; volledige officiële afbeeldingen/PDF’s ontbreken nog. Geen actieve bronlezer/schrijver na overdracht.
+
+Codecheckpoint **84396d58aac120b9ba359c47e5fcbabb7a9dd5af** op fix/product-cards-2026-10-14; vijf codepaden remote exact bevestigd. Main alleen documentatie. [Uitwerking](brauer/2026-11-08/FINAL_BRAUER25.md), [actuele overdracht](brauer/2026-11-08/HANDOFF_BRAUER25.md) en privé prepared/HANDOFF_BRAUER25.json; BRAUER-24 is als historie gemarkeerd.
+
+**Eén volgende taak:** gericht verder onderzoeken voor resterende inbouwdouchesets en glas bij de toegestane winkels, telkens exact op merk/SKU/EAN. Volledige officiële mediainventarisatie, exacte koppeling en een beoordeelde representatieve product-/keuzeproef blijven verplicht vóór iedere import.
+
+---
+
 ## BRAUER-24 — specificatieronde afgerond, import blijft geblokkeerd · 8 november 2026
 
 De overgedragen ronde is volledig afgewerkt. **13.161 artikelen, 173.785 specificatievelden; 10.324 extra sinds stage3 en 29.707 extra sinds BRAUER-23.** Alle 220 resterende aanvragen leverden een technische tabel met exact BRAUER/fabrikantartikelnummer/EAN op. De oorspronkelijke werklijst van 4.968 bronkandidaten is nu geheel behandeld; totaal 5.873 bronrecords / 5.870 exacte identiteiten. Geen volledige broncontrole van iedere catalogus-SKU geclaimd.
