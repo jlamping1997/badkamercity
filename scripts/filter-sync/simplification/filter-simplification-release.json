@@ -1,0 +1,19 @@
+{
+  "installer": "repair_filter_simplification.py",
+  "installer_bytes": 72880,
+  "installer_sha256": "7ac33496f818e0c2ee70fb47ce54ba5d63a32e5d583274281d863703cc5dc727",
+  "base_worker_sha256": "e5f3c4103266c3df1f03b855395d0d6c1711b7452a7626c91889cfc9b3ab280c",
+  "base_api_sha256": "7fe0b7faa2f5bf83af40edfa8d409dc382ba25453c15f6ebea4115c76e29f3b3",
+  "base_api_ast_sha256": "76a5ab7e741528d0aa5327b64988fd57d5f3b5fb7f54e952f76ce2bd50e0a938",
+  "target_worker_sha256": "685fc0d2341ae0022fabdea9877faf615bcab0153789745d0add981e84162e88",
+  "target_api_sha256": "5907143f05c12f51c9257d1a5637d2ef3b12577f71fb02e9d4a398a84def5953",
+  "target_api_ast_sha256": "976a4547bc21b23104e6b2034081940d2bd2dc337d2980b0ef665429cd9701ad",
+  "deadline_seconds": 900,
+  "recovery_seconds": 240,
+  "required_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1"
+  ],
+  "private_runtime_sources_embedded": false,
+  "transport_ascii": true
+}
