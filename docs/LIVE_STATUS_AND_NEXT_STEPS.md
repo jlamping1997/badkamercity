@@ -1,5 +1,21 @@
 # BadkamerCity — actuele werkstatus
 
+## SEO-HOME-01 — homepageconcept gecontroleerd · 8 november 2026
+
+**PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.** Eigenaar vraagt na Search Console verder te gaan met homepage-SEO. **MAIN 196341825802 blijft ongewijzigd: 1.387 bestanden, nul checksumverschillen. UNPUBLISHED 196328685834 — BadkamerCity - Homepage SEO 8 nov** is eerst op acht paden gelijkgetrokken; daarna 1.387/1.387 checksumpariteit. Zes bedoelde featurepaden toegepast en exact teruggelezen; einddiff precies zes, nul overige/ontbrekende bestanden. Config/settings_data.json niet geschreven; historische API-bodyuitzondering en uploadguard blijven behouden.
+
+Nieuwe titel **Badkamerproducten, tegels en kranen – Badkamercity**, eigen beschrijving van153tekens, één H1 **Alles voor jouw badkamer.**, bestaand homepagebeeld als HTTPS-deelafbeelding. Native eigen SEO-waarden blijven voorgaan. Zes syntax-/schemacontroles zonder fouten, één bestaande layoutwaarschuwing. **Veertien HTTP-responses / zeven geverifieerde MAIN-conceptparen**: juiste theme-ID, canonical gelijk; zes niet-homepageroutes behouden titel/beschrijving/H1 en wishlist-noindex. Echte desktoppreview1363×936 bekeken, geen documentoverloop. Tijdelijk controletemplate exact hersteld.
+
+**Mobiel NOT_TESTED:** frameweergave geweigerd; lokale snapshotnavigatie niet toegestaan door browser-URL-policy en niet omzeild. Telefoonreview vóór publicatie nodig. Geen cart-/checkout-/formulier-/performance-/rankingvrijgave of productmutatie. De trage reservekopie196354474250 bevat geen features en is niet het reviewdoel.
+
+Search Console via eigenaarsscreenshots: DNS-domeineigendom bevestigd, hoofdsitemap succesvol verwerkt, homepage geïndexeerd en live bereikbaar. Wastafelkranen live indexeerbaar en indexering aangevraagd; daadwerkelijke opname nog onbewezen. Geen verificatiecode of accountgeheimen in Git.
+
+Codecheckpoint **b10cb844eedc75817f66054f4d897b19d04f30e0** op fix/product-cards-2026-10-14; themabron shopify/current/. [Uitvoering en herstel](livegang-seo/seo/homepage-2026-11-08/README.md), [controles](livegang-seo/seo/homepage-2026-11-08/verification.json) en [volledig checksumregister](livegang-seo/seo/homepage-2026-11-08/theme-manifest.json). Geen actieve homepage-schrijver na overdracht.
+
+**Eén volgende handeling:** Jackson opent Webshop→Thema’s→**BadkamerCity - Homepage SEO 8 nov**→Voorbeeld, controleert laptop én telefoon en publiceert zelf bij akkoord. Vóór publicatie verse MAIN en tussentijdse wijzigingen controleren; daarna pas openbare homepage als live aftekenen. De afzonderlijke BRAUER-holds en vaste bestelafspraak blijven gelden.
+
+---
+
 ## BESTEL-01 — alle winkelproducten doorverkoop toegestaan · 8 november 2026
 
 De eigenaar bepaalt expliciet dat alle aangeboden producten besteld moeten kunnen worden. **767 bestaande gevolgde DENY-varianten live naar CONTINUE; 73 daadwerkelijke uitverkocht-blokkades opgeheven.** Alle 851 gevolgde varianten volledig teruggelezen: 851 availableForSale=true, 851 CONTINUE, nul DENY. Voorraad, tracking, productidentiteit, status en webshop-URL exact behouden; 84 bestaande CONTINUE-varianten ongewijzigd. Veertig foutloze mutatieresponses dekken 767 unieke varianten; onafhankelijke controle PASS.

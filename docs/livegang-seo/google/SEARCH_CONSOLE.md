@@ -1,5 +1,11 @@
 # Search Console — gewone Google-zoekresultaten
 
+## Bevestigde voortgang — 8 november2026
+
+Eigenaarsscreenshots bevestigen: domeinproperty via DNS geverifieerd; hoofdsitemap verwerkt; homepage geïndexeerd en live indexeerbaar. Wastafelkranen was onbekend in de index, slaagt live en heeft Indexing requested. Een aanvraag is geen indexopname. Overige indexdekking en zoekprestaties zijn nog niet gecontroleerd. Verificatierecord behouden; geen code of persoonlijke accountgegevens in Git.
+
+[Homepageconcept en bewijsgrenzen](../seo/homepage-2026-11-08/README.md). De beginstand hieronder is de historische nulmeting van5november; eigendom/sitemap zijn later via de genoemde beelden bevestigd.
+
 Search Console helpt eigendom, sitemapverwerking, indexatie en zoekprestaties te controleren. Merchant Center vervangt dit niet.
 
 ## Beginstand
