@@ -1,0 +1,13 @@
+# BRAUER-27 — actuele overdracht, 8 november 2026
+
+De pluspuntenronde is afgerond. Lees [de uitwerking](PLUSPUNTEN_BRAUER27.md) en privé `prepared/HANDOFF_BRAUER27.json`. Geen actieve lezer/schrijver na overdracht.
+
+**8.212 korte pluspunten bij 6.366 artikelen**, maximaal vier toegestaan, momenteel maximaal drie gevuld. Expliciete onderdelenlijsten voor douchesets; geen onbegrensde complete-setclaim. Overige teksten: inbegrepen inbouwdeel, draaibare uitloop, thermostatische bediening, straalstanden, koudestart, glascoating, links/rechts montage en softclose. Alleen bevestigd bij het exacte artikel, met bewijs per veld. Geen variantovererving of nieuwe externe feiten. Leeg/onbekend/conflict geeft geen positief pluspunt.
+
+De catalogus blijft byte-identiek aan BRAUER-26. De nieuwe afgeleide teksten en bewijzen staan in `prepared/product-benefits.json`; geen schemawijziging in `catalog.json`. De bestaande XLSX bevat het extra tabblad **Pluspunten**: alle 13.161 artikelen/EAN’s, teksten, bewijsvelden en bronnen. Alle vijf oorspronkelijke tabbladen behouden, 421.953 cellen plus stijlen/tabellen/instellingen native gecontroleerd. Nieuwe 13.161 rijen/8.212 pluspunten exact vergeleken; 13.161 EAN’s als tekst, nul foutcellen. Vijf views bekeken. **23 actuele tests PASS**, herhaalcontrole PASS en preflight terecht exit 2. De oude nativecontrole bevestigt nogmaals 13.161 artikelen, 42.869 technische aanvullingen en 480 vragen. Geen fysieke Excel-app- of livewinkeltest.
+
+Technische stand ongewijzigd: **13.161 artikelen / 178.198 velden / 6.622 met ontbrekende gekozen kerngegevens**. 150 open retailveldverschillen, 288 verdachte slangwaarden, 480 vragen bij 461 artikelen, oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen behouden. Prijzen inclusief btw, SKU/EAN, titels, goedgekeurde keuzes, eigen invoer en originele bestanden ongewijzigd.
+
+**Alle imports, ook DRAFT, blijven geblokkeerd.** Volledige officiële media en beoordeelde product-/keuzeproef ontbreken. Geen Shopify-/media-/thema-/publicatiewrites. MAIN alleen qua rol gelezen: 196354474250. Codecheckpoint `b7bebe707714676f56cbcf43ba0d186b98a43a3a`, actieve branch `fix/product-cards-2026-10-14`; main alleen documentatie. Centrale status noemt de bevestigde bestandsversies. Geen Windows-Git- of volledige technische vrijgaveclaim.
+
+**Eén volgende taak:** gericht verdere series/kleuren van resterende inbouwdouchesets en glas onderzoeken, exact op merk/SKU/EAN bij de toegestane winkels. Afgeronde werklijsten niet opnieuw uitlezen. Na gewijzigde bewezen feiten de pluspunten offline opnieuw genereren; behoud historische bronverschillen, onbekende booleans en slangholds.

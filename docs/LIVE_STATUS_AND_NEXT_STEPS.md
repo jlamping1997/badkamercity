@@ -141,6 +141,24 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-27 — duidelijke productpluspunten voorbereid · 8 november 2026
+
+Eigenaar vraagt korte pluspunten op basis van bekende kenmerken, waaronder inbegrepen inbouwdeel en draaibare uitloop. **8.212 onderbouwde pluspunten bij 6.366 artikelen voorbereid**, maximaal vier toegestaan; huidige records bevatten maximaal drie. Samengestelde douchesettekst noemt precies de bevestigde onderdelen: hoofd- en handdouche, slang en waar bewezen inbouwdeel. Geen onbegrensde complete-setclaim. Geen positief pluspunt bij ontbrekende/negatieve/conflicterende waarden of overerving tussen varianten.
+
+Teksten omvatten inbegrepen inbouwdeel, draaibare uitloop, thermostatische bediening, handdouchestralen, koudestart, glascoating, links/rechts montage en softclose. **Afzonderlijke exact-SKU/EAN-dataset prepared/product-benefits.json met bestaand bronbewijs per tekst.** Geen nieuwe externe feiten of broncrawl. Catalogus, oorspronkelijke specificaties/bewijs, prijzen inclusief 21% btw, SKU/EAN, titels, keuzes, eigen invoer en bronbestanden byte-identiek behouden. Technische stand blijft **178.198 velden / 13.161 artikelen**; 6.622 artikelen met ontbrekende gekozen kerngegevens, 150 retailveldverschillen, 288 verdachte slangwaarden en 480 vragen bij 461 artikelen. Oorspronkelijke 42 gegevensblokkades en 163 toekomstige artikelen behouden.
+
+Bestaande specificatie-XLSX uitgebreid met tabblad **Pluspunten**: alle 13.161 artikelen/EAN’s, maximaal vier teksten, bewijsvelden en bronnen. **23 actuele tests PASS** (8 pluspuntregels, 6 specificaties, 9 voorbereiding); herhaalcontrole PASS. Native **421.953 oorspronkelijke cellen** inclusief waarden/formules/types/stijlen en instellingen/tabellen/filters behouden; vijf oorspronkelijke bladen gelijk. Alle **13.161 nieuwe regels / 8.212 pluspunten** exact vergeleken, 13.161 EAN’s als tekst, zes bladen, nul foutcellen. Vijf nieuwe views bekeken. Oude nativecontrole bevestigt opnieuw 13.161 artikelen / 42.869 technische aanvullingen / 480 vragen. Preflight inhoudelijk gecontroleerd, terecht exit 2 en import_allowed false. Geen fysieke Excel-app-, Windows-Git- of livewinkeltest geclaimd.
+
+**Bestaande privé-ZIP versie 11 en specificatie-XLSX versie 8 opgeslagen, identiteiten behouden.** Alle 229 pakketbestanden / 228 manifesthashes gecontroleerd, alle 200 eerdere bestanden behouden; ingebedde XLSX byte-identiek aan de opgeslagen zelfstandige versie. Pakketversieconflict opgelost door de ongewijzigde huidige versie 10 opnieuw te laden, bytegelijkheid te bevestigen en de gevalideerde wijzigingen daarop toe te passen. Broninhoud en eigen invoer blijven privé; geen tussentijdse wijzigingen overschreven.
+
+**Alle imports blijven geblokkeerd, ook DRAFT. Geen Shopify-, media-, thema- of publicatiewrites.** Volledige officiële afbeeldingen/PDF’s en beoordeelde product-/keuzeproef ontbreken nog. MAIN alleen qua rol read-only bevestigd: **196354474250**. Geen actieve bronlezer/schrijver na overdracht; geen volledige technische vrijgave of importgereedheid.
+
+Codecheckpoint **b7bebe707714676f56cbcf43ba0d186b98a43a3a** op fix/product-cards-2026-10-14; vier nieuwe generieke codeblobs remote exact bevestigd. Main uitsluitend documentatie; andere projectupdates behouden. [Uitwerking](brauer/2026-11-08/PLUSPUNTEN_BRAUER27.md), [actuele overdracht](brauer/2026-11-08/HANDOFF_BRAUER27.md) en privé prepared/HANDOFF_BRAUER27.json. BRAUER-26 is als technisch historisch checkpoint gemarkeerd.
+
+**Eén volgende taak:** gericht overige series/kleuren van resterende inbouwdouchesets en glas onderzoeken bij de toegestane winkels, exact op merk/SKU/EAN. Afgeronde URL’s niet opnieuw lezen. Pluspunten na gewijzigde gecontroleerde feiten offline opnieuw opbouwen; onbekende booleans, historische bronverschillen en slangholds behouden.
+
+---
+
 ## BRAUER-26 — inbouwkranen en doucheglas verder aangevuld · 8 november 2026
 
 Vervolgronde op verzoek van de eigenaar afgerond. **333 nieuwe Sanitairwinkel-productpagina’s gelezen: 325 exact op merk/fabrikantartikelnummer/EAN, acht zonder EAN uitsluitend vergelijkingsbewijs.** Chrome Edition/Carving gericht op gepubliceerde inbouw-URL’s, Stellar op alle gepubliceerde serie-URL’s. Van 416 ontdekte URL’s zijn 335 geselecteerd; vier eerder verwerkte overgeslagen en alle 331 nieuwe geselecteerde plus twee pilots gelezen. Tijdelijke fouten maximaal eenmaal herhaald; nul resterende leesfouten en limiet 150 URL’s/minuut gerespecteerd. Geen blokkades omzeild. Geteste hashfilters werden door de fetchroute genegeerd; rechtstreeks gepubliceerde seriepagina’s gebruikt.

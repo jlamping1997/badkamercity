@@ -1,3 +1,5 @@
+> **Historisch checkpoint:** actuele overdracht [BRAUER-27](HANDOFF_BRAUER27.md), met afgeleide productpluspunten. De technische tellingen van BRAUER-26 hieronder zijn ongewijzigd.
+
 # BRAUER-26 — actuele overdracht, 8 november 2026
 
 Deze vervolgronde is afgerond. Geen actieve bronlezer/schrijver. Lees [de uitwerking](FINAL_BRAUER26.md) en in de actuele privé-ZIP eerst `prepared/HANDOFF_BRAUER26.json`.
