@@ -1,42 +1,59 @@
 # Eén footer en één beleidsbron
 
-LAUNCH-02, 5 november 2026. Dit is het concrete uitvoeringsplan; geen nieuwe footer gebouwd en geen live footerwijziging uitgevoerd.
+**Stand: 8 november 2026 — DOC-LIVE-01. Status: PROPOSED_NOT_APPLIED.** Het verschil is opnieuw in live configuratie en HTML aangetoond. Deze documentatie voert geen footer-, policy- of themapublicatie uit. [Volledig bewijs en routeoverzicht](../audits/2026-11-08/README.md).
 
-## Er bestaat al een kortere route
+## Bewezen oorzaak
 
-Alle normale paginatypen laden footer-group vanuit layout/theme.liquid. Binnen sections/footer.liquid wordt op de homepage, bij compact_homepage=true, de aparte snippet bc-home-footer gebruikt. Andere pagina's gebruiken de bestaande bcf-v3-footer.
+`layout/theme.liquid` laadt één `footer-group`. In `sections/footer-group.json` staat `compact_homepage=true`. `sections/footer.liquid` kiest daardoor op de homepage `snippets/bc-home-footer.liquid`; overige routes gebruiken de bestaande standaardfooter `bcf-v2 bcf-v3`. Deze vier bestanden zijn vers byte-exact gelijk tussen MAIN 196328685834 en de onderzochte Git-bron. Dit is een gevonden renderer-/configuratieverschil.
 
-Gebruik de bestaande standaardfooter op alle pagina's. Daarvoor hoeft geen nieuw componentsysteem te worden gebouwd. De centrale instelling en inhoud staan in **shopify/current/sections/footer-group.json** op de bestaande codebranch.
+De 364-routecontrole vindt één `bch-footer` (homepage) en 363 standaardfooters, ook op de gecontroleerde 404-responses. Een aparte gerichte matrix bevat 14 representatieve routes. Dit zijn HTML-/broncontroles; er is geen nieuwe mobiele layoutproef uit af te leiden.
 
-Beide renderers tonen al shop.policies. Zodra het juiste Shopify-retourbeleid is ingevuld en show_policy aanstaat, kan de footer de policy naast privacy tonen. Een aparte handmatig gedupliceerde retourbeleidslink/tekst is niet nodig.
+| Onderdeel | Homepage | Standaardfooter |
+| --- | --- | --- |
+| Totaal links | 25 | 19 |
+| Service / assortiment / info | 4 / 11 / 3 | 3 / 7 / 1 |
+| Categorie-ingangen | Tien hoofdgroepen + `/collections` | Zes hoofdgroepen + `/collections/all` |
+| Extra inhoud | Bezorgen/afhalen, 3D, inspiratie, meer categorieën | Trustitems, merkintro, contact-CTA, uitgebreidere contactkolom |
+| Stijl in bron | Achtergrond #102b43, tekst 14 px, logo 185 px | Achtergrond #1a253f, tekst 16 px, logo 240 px |
+| Uitklappen | Native details aanvankelijk gesloten | Eigen controller sluit tot en met 749 px en opent vanaf 750 px |
+| Contact | E-mail/contactlink; geen telefoon of volledig adres | E-mail/contactlink; geen telefoon of volledig adres |
+| Policies | Vijf automatische policies via `shop.policies` | Dezelfde primaire policybron |
 
-## Eerst één inhoudsset kiezen
+De drie themakolommen worden door **section blocks** beheerd, niet door het Shopify-menu “Voettekstmenu” met handle `footer`. Checkout en klantaccount zijn afzonderlijke platformschillen; ze krijgen niet automatisch deze themefooter.
+
+## Eén inhoudsset voorbereiden
+
+Gebruik de **bestaande standaardfooter** winkelbreed. Een nieuwe derde footer is niet nodig. Alleen `compact_homepage` uitschakelen verliest nu categorie-/informatiedekking; inhoud eerst gelijk trekken.
+
+Er bestaan 18 blocks bij een maximum van 18. Acht URL-loze placeholders zijn door de huidige guards verborgen; ze zijn geen acht zichtbare kapotte klantlinks. Hergebruik of vervang ze. Voorstel: **4 service + 10 categorie + 3 informatie = 17 blocks**. Vier extra blocks toevoegen boven de bestaande 18 overschrijdt de schemalimiet.
 
 | Onderdeel | Afspraak |
 | --- | --- |
-| Klantenservice | Contact, bezorgen, retourbeleid, retourneren/koop ongedaan maken, voorwaarden; alleen echte openbare bestemmingen |
-| Assortiment | Dezelfde bedoelde hoofdgroepen op alle pagina's; huidige homepage heeft meer hoofdingangen dan de zes standaardfooterblocks, dus dekking bewaren |
-| Contact/verkoper | Eenmanszaak/Badkamercity.nl op Hengelolaan70; info@badkamercity.nl, KvK; eigen telefoon volgt later, geen Harry Suiker-nummer |
-| Retouradres | Zichtenburglaan150 bij Harry Suiker, 2544EB 's-Gravenhage, duidelijk als retourontvangst; geen vrije inloop-/afhaalclaim |
-| Beleid | shop.policies als primaire bron; geen losse tweede policyversie onderhouden |
-| Retourfunctie | Bestaande veilige bc-returns-url-guard behouden; niet naar een verborgen of kapotte Page linken |
-| Offerte | Bestaande bc-footer-quote-guard behouden; uploadfunctie niet onbedoeld activeren |
-| Onbekende link | Niet vullen met #, nepbestemming of “binnenkort”; ontbrekende informatie als taak afronden |
+| Service | Contact, echte verzend-/afhaalinformatie, retour aanmelden/herroepen, zoeken; alleen bestaande openbare bestemmingen |
+| Assortiment | Tien bedoelde hoofdgroepen winkelbreed behouden; huidige homepagecategorieën niet verliezen |
+| Informatie | Merken, 3D-advies, inspiratie; gebruik voor homeankers `/#HomeAdvice` en `/#HomeInspiration` |
+| Contact | Badkamercity, info@badkamercity.nl, tijdelijk 06 85887536 en duidelijk gelabeld contact-/retouradres Zichtenburglaan 150, 2544 EB Den Haag |
+| Juridische identiteit | KvK-opgave en btw-id eerst verifiëren; geen juridische vestiging afleiden uit de retourlocatie |
+| Policies | `shop.policies` als primaire bron; geen tweede handmatig gekopieerde retour-/voorwaardentekst onderhouden |
+| Retourfunctie | Bestaande `bc-returns-url`-guard behouden; geen verborgen of kapotte Page linken |
+| Offerte | Bestaande `bc-footer-quote`-guard behouden; uploadfunctie niet activeren |
+| Ontbrekende bestemming | Eerst echte inhoud publiceren; geen `#`, nepbestemming of “binnenkort” |
 
-## Uitvoering zodra gegevens compleet zijn
+## Uitvoering en acceptatie
 
-1. Lees opnieuw actuele MAIN en het bestaande concept. Tijdens LAUNCH-02 veranderde de eigenaarsrol van196227170570 naar **MAIN196238639370 — BadkamerCity - Re-Bel tegelkeuze**. Dat thema is dus geen schrijfbaar concept meer.
-2. Gebruik de bestaande releasewerkwijze: een gecontroleerd ongepubliceerd concept vanaf de dan actuele MAIN; geen live filewrite, geen oude preview alsnog publiceren.
-3. Zet compact_homepage uit en breng de categorie-/serviceblocks op de afgesproken volledige inhoud. Geen categorieën verliezen bij de simpele schakelaar.
-4. Vul correcte contactgegevens; foutief/onbevestigd btw-id niet in de klanttekst zetten.
-5. Vul het definitieve retourbeleid in de Shopify-policy, met bevestigd retouradres en kosten. Voorwaarden en verzending apart afmaken; de retourpolicy vervangt die niet.
-6. Controleer homepage, categorie, gewone PDP, Sunshower, cart, Contact, Retour en policy: één footer, juiste links, geen dubbel privacy/retourbeleid.
-7. Test mobiel en toetsenbord; pas daarna eigenaarreview/publicatie en publieke readback.
+1. Lees actuele MAIN en de beoogde ongepubliceerde kopie opnieuw. De diepe audit registreert 15 algemene Git/live-verschillen; alleen deze vier footerfiles zijn exact-paritair bewezen. Geen blind deploy vanaf een verouderde bronkopie.
+2. Gebruik de bestaande releasewerkwijze met een bewezen MAIN-paritair **UNPUBLISHED** concept. Geen directe live filewrite en geen oude preview alsnog publiceren.
+3. Maak de gekozen linkset compleet, vul contactgegevens in en zet `compact_homepage=false`. Native policies inhoudelijk/opmaakmatig apart corrigeren.
+4. Controleer homepage, collectie, gewone PDP, tegel, Sunshower, cart, zoekresultaat, Contact, Retour, policy en 404: precies één footer, dezelfde tien hoofdgroepen en geldige bestemmingen.
+5. Controleer desktop en 390 px mobiel; grens 749↔750 px, touch, toetsenbord/focus, reduced motion en section load/unload. Geen verloren categorieën, dubbele policies, URL-loze placeholders of ongeldige lokale ankers.
+6. Eigenaarreview/publicatie via de afgesproken releaseprocedure; daarna verse publieke route-/HTML-/bedieningscontrole. Dit voorstel is nog niet toegepast.
 
-## Google kan dit lezen zodra het echt openbaar staat
+## Huidige policybron en open correcties
 
-De definitieve policy krijgt één openbare URL, bij voorkeur de Shopify-route **/policies/refund-policy**. Geen login, formulierinvulling, uitklapactie of PDF als enige toegang nodig om de tekst te lezen.
+De [retourpolicy](https://badkamercity.nl/policies/refund-policy) is live: 30 dagen aanmelden + 14 dagen terugsturen, klant betaalt gewone spijtretour, €75 incl. btw raming per standaard NL-retourpallet, afgeven op afspraak en modelformulier in dezelfde HTML. Verkeerd/ondeugdelijk geleverd heeft een afzonderlijke kosteloze passende afhandeling.
 
-Controleer HTTP200, de echte zichtbare inhoud en een gewone footerlink. Laat in Merchant Center de NL-retourtermijn, methode, kosten, terugbetaling en eventuele geldige uitzonderingen aansluiten op dezelfde tekst. Een losse mooie HTML-pagina is geen bewijs dat Merchant juist is ingesteld.
+Contact-, privacy-, voorwaarden- en kennisgevingspolicy bestaan eveneens. **Voorwaarden en kennisgeving tonen letterlijke HTML-tags** en hebben geen werkende links in die body. **Verzendpolicy ontbreekt** en geeft 404. De automatische footer kan alleen tonen wat als policy bestaat; een menu toevoegen lost de opmaak of ontbrekende verzendinformatie niet op.
 
-[Retourconcept](retouren/RETOURBELEID_CONCEPT.md) · [Controles](CONTROLES.md) · [Bedrijfsgegevens](BEDRIJFSGEGEVENS.md)
+Het retourconcept van 5 november is historische voorbereiding. Werk alleen de huidige native policy als gezaghebbende klantbron bij. Merchant Center moet dezelfde daadwerkelijke termijnen, methoden en kosten teruglezen; die accountinstellingen zijn nog niet onafhankelijk gecontroleerd.
+
+[Bedrijfsgegevens](BEDRIJFSGEGEVENS.md) · [Controles](CONTROLES.md) · [Taken](TAKEN.md) · [Historisch retourconcept](retouren/RETOURBELEID_CONCEPT.md)

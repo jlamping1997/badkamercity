@@ -1,5 +1,13 @@
 # Systemen, bronnen en de daadwerkelijke opbouw
 
+## Actuele bronlaag — 8 november 2026
+
+[Centraal auditrapport](../audits/2026-11-08/README.md). Shopify MAIN **196328685834** is de huidige bronrol. Live manifest **1.387**; actieve Gitbron `shopify/current/` **1.378** paden, waarvan 1.363 bytegelijk, 15 afwijkend, 9 alleen live en 0 alleen Git. De snapshot van 31 oktober en onderstaande bronnen van 28 oktober blijven bij hun oorspronkelijke datum. Ze mogen niet als volledige actuele livecode worden uitgerold.
+
+De actuele Adminstand omvat 121 Pages (119 gepubliceerd) en 227 collecties (210 standaard, 16 categoriehubs, 1 meubelhub). De 364 publieke HTML-responses leveren 360×200 en 4×404 inclusief een bewuste probe. Footerroutebeslissing en vier kernbestanden zijn gericht actueel bewezen; andere componentreplays zijn niet stil opnieuw uitgevoerd. Google-/privacy-, delivery- en beperkte checkoutfeiten staan bij hun componentdossiers. Geen nieuwe VPS-/appbron, actieve gateway, ordermail of purchase-event bewezen. Het afzonderlijke filtertraject volgt het nieuwste [centrale checkpoint](../LIVE_STATUS_AND_NEXT_STEPS.md); de historische serverstatus hieronder is geen actuele uitrolstatus.
+
+## Historische systeembasis — 28 oktober
+
 **Bronmoment: 28 oktober 2026.** Dit register maakt onderscheid tussen vers gelezen code, bestandsmetadata en historische operationele beschrijvingen. Het bevat geen tokens, klantdata of privéserverconfiguratie.
 
 **Vervolg DOC-01/02A:** volledige broninventaris + private productexport zijn vastgelegd. [Componentdossiers](components/README.md), [fundament/tooling](components/FOUNDATIONS_AND_TOOLING.md) en [routematrix](ROUTE_RENDERER_MATRIX.md) geven de actuele verdieping. De vroegere nulmeting is daarmee aangevuld, niet een nieuwe volledige runtimevrijgave.

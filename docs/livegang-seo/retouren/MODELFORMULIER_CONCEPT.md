@@ -1,12 +1,14 @@
-# Modelformulier voor herroeping — concept
+# Modelformulier voor herroeping — historisch concept
+
+> **HISTORICAL — sjabloon van 5 november 2026.** Het model staat inmiddels als leesbare HTML in de [live retourpolicy](https://badkamercity.nl/policies/refund-policy); beschikbaarheid is op 8 november gecontroleerd. Dit Git-concept is geen tweede klantbron en bewijst geen volledige online herroepingsfunctie/directe bevestiging. [Actuele controles](../CONTROLES.md).
 
 **Leeg sjabloon. Nog als bewaarbaar formulier in de webshop beschikbaar maken; dit Git-bestand is geen afgeronde klantintegratie.** Gebruik van dit formulier is niet verplicht. Een andere duidelijke herroepingsverklaring mag ook. Geen ingevulde klantformulieren in publieke Git opslaan.
 
 Aan: Badkamercity.nl  
-Correspondentieadres: Hengelolaan70, 2545JR 's-Gravenhage  
+Contact-/retouradres: Zichtenburglaan 150, 2544 EB Den Haag<br>
 E-mail: info@badkamercity.nl
 
-Dit is het correspondentie-/bedrijfsadres. Retourgoederen gaan naar: Badkamercity.nl — retourontvangst bij Harry Suiker, Zichtenburglaan150, 2544EB 's-Gravenhage. Persoonlijk afgeven vooraf per e-mail afstemmen.
+De juridische vestiging is niet in dit sjabloon geverifieerd. Retourgoederen gaan naar: Badkamercity.nl — retourontvangst bij Harry Suiker, Zichtenburglaan150, 2544EB 's-Gravenhage. Persoonlijk afgeven vooraf per e-mail afstemmen.
 
 Hierbij laat ik/wij weten dat ik/wij de overeenkomst voor de volgende aankoop geheel of gedeeltelijk wil/willen herroepen:
 

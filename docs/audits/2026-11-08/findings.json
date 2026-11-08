@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-08",
+  "status": "AUDIT_COMPLETE_WITH_EXPLICIT_LIMITS; LIVE_REPAIRS_PENDING",
+  "findings": [
+    {
+      "id": "BC-AUD-001",
+      "priority": "P1",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN",
+      "finding": "Algemene voorwaarden tonen letterlijke HTML-tags",
+      "scope": "/policies/terms-of-service",
+      "next_action": "Correcte HTML-opmaak opslaan en publieke leesbaarheid teruglezen; inhoud alleen gericht aanpassen."
+    },
+    {
+      "id": "BC-AUD-002",
+      "priority": "P1",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN",
+      "finding": "Wettelijke kennisgeving toont letterlijke HTML-tags",
+      "scope": "/policies/legal-notice",
+      "next_action": "HTML-opmaak herstellen en publieke leesbaarheid teruglezen."
+    },
+    {
+      "id": "BC-AUD-003",
+      "priority": "P1",
+      "evidence": "VERIFIED_ADMIN_AND_HTML",
+      "status": "OPEN",
+      "finding": "Native verzendbeleid ontbreekt; policy-URL geeft 404",
+      "scope": "/policies/shipping-policy",
+      "next_action": "Eén verzendbeleid schrijven op basis van werkelijke tarieven en leverafspraken; daarna native policy publiceren en linken."
+    },
+    {
+      "id": "BC-AUD-004",
+      "priority": "P1",
+      "evidence": "VERIFIED_ADMIN_AND_HTML",
+      "status": "OPEN",
+      "finding": "Contactpagina heeft alleen formulier; native contactbeleid mist telefoon",
+      "scope": "/pages/contact; /policies/contact-information",
+      "next_action": "Tijdelijke eigenaartelefoon en bevestigde contact-/retourgegevens consistent toevoegen, zonder juridische vestiging te raden."
+    },
+    {
+      "id": "BC-AUD-005",
+      "priority": "P1",
+      "evidence": "VERIFIED_FORMAT",
+      "status": "OWNER_INPUT_REQUIRED",
+      "finding": "Btw-id heeft acht cijfers vóór B; vereist Nederlands formaat heeft negen",
+      "scope": "Actuele bedrijfs-/beleidstekst",
+      "next_action": "Eigenaar controleert oorspronkelijke Belastingdienstbrief. Geen ontbrekend cijfer verzinnen; KvK-naam en juridische vestiging apart verifiëren."
+    },
+    {
+      "id": "BC-AUD-006",
+      "priority": "P1",
+      "evidence": "VERIFIED_THEME_AND_HTML",
+      "status": "PROPOSED_NOT_APPLIED",
+      "finding": "Homepage en overige routes gebruiken verschillende footerrenderers",
+      "scope": "/ versus alle overige onderzochte routes",
+      "next_action": "Bestaande standaardfooter hergebruiken met één volledige inhoudsset; 17 blokken binnen maximum18, bestaande lege placeholders hergebruiken. Eerst MAIN-paritair UNPUBLISHED concept."
+    },
+    {
+      "id": "BC-AUD-007",
+      "priority": "P1",
+      "evidence": "VERIFIED_MANIFEST_COMPARISON",
+      "status": "OPEN",
+      "finding": "shopify/current wijkt op15 gedeelde bestanden af van live",
+      "scope": "shopify/current/",
+      "next_action": "Gericht bronverschil reconciliëren vóór theme-deploy; beschermde settings_data-uitzondering en live-only backups behouden. Geen blind root-deploy."
+    },
+    {
+      "id": "BC-AUD-008",
+      "priority": "P2",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN",
+      "finding": "RapoWash deelt SEO-titel en beschrijving met Reukslot",
+      "scope": "/pages/rapowash; /pages/reukslot",
+      "next_action": "Eigen relevante SEO-titel en beschrijving voor RapoWash instellen; body/canonical zijn al RapoWash."
+    },
+    {
+      "id": "BC-AUD-009",
+      "priority": "P2",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN",
+      "finding": "Antikalk heeft twee H1-koppen",
+      "scope": "/pages/antikalk",
+      "next_action": "Eén paginatitel behouden; inhoudelijke tussenkop aanpassen en H1 teruglezen."
+    },
+    {
+      "id": "BC-AUD-010",
+      "priority": "P1",
+      "evidence": "LIMITED_BROWSER_AND_ADMIN",
+      "status": "NOT_FULLY_TESTED",
+      "finding": "Betaling, ordermail en bestemmingsafhankelijke tarieven nog niet end-to-end bewezen",
+      "scope": "Gastcheckout en verzending",
+      "next_action": "Gecontroleerde testbestelling met overeengekomen testmethode; orderbevestiging, fulfilmentlocatie, retourmail en representatieve pakket-/palletbestemmingen controleren."
+    },
+    {
+      "id": "BC-AUD-011",
+      "priority": "P1",
+      "evidence": "VERIFIED_CONFIG_AND_USER_REPORTED",
+      "status": "NOT_FULLY_TESTED",
+      "finding": "GA4-config aanwezig; purchase en technisch consentgedrag nog onbewezen",
+      "scope": "G-H9YFB5TC6N",
+      "next_action": "Consent toestaan/weigeren/heropenen technisch controleren, daarna purchase/value/currency en ontdubbeling met echte testflow. Geen extra tag blind toevoegen."
+    },
+    {
+      "id": "BC-AUD-012",
+      "priority": "P2",
+      "evidence": "STATIC_CANDIDATE",
+      "status": "NOT_RUNTIME_REPRODUCED",
+      "finding": "Drie letterlijke inline_asset_content-verwijzingen missen overeenkomstige assetnaam",
+      "scope": "main-password-header / product-media",
+      "next_action": "Gericht password-error- en 3D-media-pad onderzoeken. Geen drie bewezen klantfouten uit statische analyse afleiden."
+    }
+  ]
+}

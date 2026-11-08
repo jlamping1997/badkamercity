@@ -1,5 +1,22 @@
 # Pagina's, begrippen, advies, blog en formulieren
 
+## Actuele inhoudslaag — 8 november 2026
+
+[Centraal auditrapport](../../audits/2026-11-08/README.md), MAIN **196328685834**. Verse Admin-inventaris telt **121 Pages: 119 gepubliceerd en 2 ongepubliceerd**. Toewijzingen: 109 `begrip`, 6 `page`, 1 `contact`, 1 `begrippenlijst`, 1 `bc-sunshower`, 1 `bc-wishlist`, 1 `offerte-vergelijken` en 1 `retour-aanmelden`. Alle 119 gepubliceerde Page-routes zijn opgenomen in de brede 364 HTML-checks; dit is geen volledige tekstuele factcheck of formulierproef.
+
+| Actuele route / onderwerp | Vastgesteld | Open vervolg |
+| --- | --- | --- |
+| `/pages/contact` | HTTP 200; alleen contactformulier, 68 tekens hoofdinhoud; geen volledige contactpresentatie | Correcte openbare contactgegevens zichtbaar maken; geen verzonden formulier of mailbezorging bewezen |
+| `/pages/retour-aanmelden` | HTTP 200; eigen Page/toewijzing aanwezig | Geen bewezen complete herroepingsfunctie of ontvangstbevestiging; policy, formulier en mailketen apart toetsen |
+| `/policies/terms-of-service`, `/policies/legal-notice` | HTTP 200; ge-escapete HTML in hoofdinhoud | Opmaak als echte richtext/HTML herstellen en opnieuw controleren |
+| `/pages/antikalk` | Twee H1's | Eén paginatitel behouden zonder de begrippen-DOM te breken |
+| `/pages/rapowash` | Titel/beschrijving gekopieerd van reukslot | Inhoudelijk passende eigen SEO-metadata |
+| `/pages/hygro-meter` | HTTP 200 met H1 Hygro(meter) | Oude GLOSS-F01-keten naar `/pages/hygrometer` is in deze meting niet als geheel opnieuw vrijgegeven |
+
+De actuele voetertest vindt vijf policy-links; native shippingpolicy ontbreekt. Contact-/retouradres niet gelijkstellen aan geregistreerde vestiging; btw/KvK-validatie volgt het livegangdossier. Lokale anchors hebben in de brede responsecontrole geen ontbrekende doelen; dat bewijst geen correcte native keyboard-/scrollbediening. De gedateerde inventaris van 28 oktober, de 109-termketen en DOM-replays hieronder blijven historisch bewijs.
+
+## Historische inhoudsanalyse — 28 oktober
+
 Bronmoment **28 oktober 2026**. Verse Admin-inventaris: **119 Pages, 118 gepubliceerd**, één blog `nieuws`, één artikel. Alle ontvangen page-/collectiebodies zijn op inline style/script onderzocht; geen pagebody bevat die tags. Dit is geen inhoudelijke factcheck van iedere uitlegtekst.
 
 ## Paginafamilies en bronnen

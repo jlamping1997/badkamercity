@@ -1,5 +1,19 @@
 # Routes → renderers → data → interacties
 
+## Actuele aanvulling — 8 november 2026
+
+[Centraal auditrapport](../audits/2026-11-08/README.md), MAIN **196328685834**. De brede set omvat 364 responses (360×200, 4×404 inclusief bewuste probe), geen 364 interactieve flows. Admin: 227 collecties, waarvan 210 standaard, 16 categoriehubs en 1 meubelhub; 121 Pages waarvan 119 gepubliceerd. De onderstaande productaantallen en JS-rendererwaarnemingen van 28 oktober zijn niet als nieuwe telling herbevestigd.
+
+| Routeklasse | Actueel bewezen footerpad | Bewijsgrens |
+| --- | --- | --- |
+| Homepage | `footer-group` → `footer.liquid`; compact_homepage + index → `bc-home-footer` | Verse bron en 25 HTML-links; geen computed-style-/mobiele meting |
+| Product, collectie, Page, policy, zoek, lege cart, merkengids, 404 | Dezelfde globale groep → standaard `.bcf-v2.bcf-v3` | Dertien gerichte andere HTML-responses en de volledige brede classverdeling; geen nieuwe JS-flowtest |
+| Native checkout / externe accounts | Eigen Shopify-shell | Niet via het gewone footercontract uniform maken |
+
+[Footerbron, linkdekking, vier checksums en voorstel voor 17 blokken](components/FOOTER.md). Huidige werkbron `index.json` bevat één actieve `bc-homepage`-sectie; de oude homeblokken hieronder zijn historisch. Globale pariteit blijft open: 15 Git/liveverschillen en 9 alleen live aanwezige bestanden.
+
+## Historische routematrix — 28 oktober
+
 **DOC-02A · 28 oktober 2026 · VERIFIED_THEME, deels VERIFIED_HTML.** Lees de [dossieringang](components/README.md) voor bron-/bewijsregels. Thema MAIN 195818389770; het complete manifest is gelijk aan DOC-01. De open settings-bytecontrole verhindert geen uitleg van checksumgelijke code, maar verhindert wel een volledige deployvrijgave.
 
 ## Aanvulling DOC-02C

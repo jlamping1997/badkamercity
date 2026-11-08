@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
-"""Compile only practical chapters 48–79; retain all other master content."""
+"""Rebuild historical chapters 48–79 to an explicit, separate output file."""
+import argparse
 import json
 from pathlib import Path
 import re
 import sys
 
-repo = Path(sys.argv[1] if len(sys.argv) > 1 else '.').resolve()
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('repo', nargs='?', default='.')
+parser.add_argument('--output', required=True, help='Separate rebuilt Markdown file; never the current index or immutable archive')
+args = parser.parse_args()
+repo = Path(args.repo).resolve()
 source = repo / 'docs/handbook/2026-10-31'
-master = repo / 'docs/MASTER_SITE_REFERENCE.md'
+master = repo / 'docs/MASTER_SITE_REFERENCE_2026-10-31.md'
+target = Path(args.output).resolve()
+protected = {master.resolve(), (repo / 'docs/MASTER_SITE_REFERENCE.md').resolve()}
+if target in protected:
+    parser.error('The current index and historical source archive are protected; choose a separate --output')
 
 
 def table(headers, rows):
@@ -51,6 +60,7 @@ if count != 1:
 numbers = [int(x) for x in re.findall(r'^## (\d+) ', content, re.M)]
 if numbers != list(range(1, 81)):
     raise ValueError('Master chapter sequence must be exactly 1–80')
-master.write_text(content)
+target.parent.mkdir(parents=True, exist_ok=True)
+target.write_text(content)
 print(json.dumps({'chapters': len(numbers), 'tasks': len(tasks),
                   'diagnoses': len(diagnoses), 'cases': len(cases)}))

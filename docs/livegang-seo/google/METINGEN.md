@@ -1,38 +1,46 @@
 # Metingen — GA4 en winkelresultaten
 
-## Beginstand
+**Stand: 8 november 2026 — DOC-LIVE-01.** [Bewijs en grenzen](../../audits/2026-11-08/README.md). De eerdere 5-novemberclaim “Google & YouTube niet aangetroffen” is historisch en geldt niet meer als actuele inrichting.
 
-Geen GA4-property, webstream of Google-conversierapport gelezen. In de gelezen initiële HTML zijn geen herkenbare G-, GTM- of AW-tag-ID's gevonden; dat bewijst niet dat via pixels of toestemming geen meting bestaat. Google & YouTube is niet in de zeven app-installaties aangetroffen.
+## Wat nu bekend is
 
-## Inrichting
+| Onderdeel | Bewijsstatus | Betekenis |
+| --- | --- | --- |
+| Meet-ID | G-H9YFB5TC6N in live Google & YouTube-app/pixelconfig | VERIFIED_CONFIG; integratie heeft checkout-/e-commerceconfiguratie |
+| GA4-property / stream / beheer | Eigenaar heeft GA4 aangemaakt en gekoppeld | USER_REPORTED; exacte accountrollen en rapportconfiguratie niet onafhankelijk gelezen |
+| Realtime | Eigenaar meldt dat het lijkt te werken | USER_REPORTED; geen aankoop-/omzetbewijs |
+| Cookiekeuzes | Accepteren, weigeren, heropenen bedienbaar in beperkte desktopbrowserproef | VERIFIED_UI; geen technische consentvrijgave |
+| Aankoop en omzet | Geen purchase-test of rapportreadback | OPEN: value/currency, transaction_id en ontdubbeling |
 
-1. Zoek de bestaande GA4-property en juiste webstream voordat een nieuwe wordt gemaakt.
-2. Gebruik bij voorkeur de ondersteunde Google & YouTube-koppeling en Shopify-privacyintegratie. Controleer eerst eventuele bestaande aangepaste pixels/GTM/andere tags; voorkom dubbele meetroutes.
-3. Leg zakelijke property-/streamidentificatie en beheerrol vast zodra bevestigd. Geen klantidentiteiten, privéaccountgegevens of herstelcodes in Git.
-4. Test toestaan, weigeren en intrekken. Toestemmingsplichtige tracking start pas na geldige toestemming; weigeren mag de normale winkel niet onbruikbaar maken. Consent Mode is geen vervanging voor een juiste toestemmingskeuze.
-5. Valideer gebeurtenissen met passend runtimebewijs; alleen een geïnstalleerde tag is onvoldoende.
+Geen extra `gtag`/GTM-pixel in thema of HTML toevoegen zolang de bestaande integratie niet is onderzocht. Meerdere Google-container-ID's binnen de appconfig zijn op zichzelf geen bewijs van dubbele handmatige tags. Ontbreken in initiële server-HTML bewijst evenmin dat pixels niet worden geladen.
+
+## Eerst valideren
+
+1. Lees de huidige GA4-property, webstream en bevoegde beheerrollen terug; controleer dat de bedoelde stream G-H9YFB5TC6N is. Geen nieuwe property maken omdat een rapport nog leeg is.
+2. Inventariseer Google & YouTube, eventuele custom pixels, GTM en thematags. Kies één bedoelde meetroute per gebeurtenis en controleer de feitelijke runtime.
+3. Test toestaan, weigeren en intrekken/heropenen met passende opslag-/netwerk-/tagbewijzen. Consent Mode vervangt geen juiste toestemmingskeuze. Weigeren mag de gewone winkel niet onbruikbaar maken.
+4. Controleer hieronder de echte gebeurtenissen met DebugView/Realtime of passend runtimebewijs. Configuratie is geen ontvangen event.
+5. Valideer purchase bij de afgesproken bestelproef en vergelijk met Shopify; benoem testverkeer/testorders en attributie-/toestemmingsgrenzen.
 
 ## Gebeurtenissen
 
-| Gebeurtenis | Wat moet kloppen? |
+| Gebeurtenis | Acceptatie |
 | --- | --- |
-| view_item | Werkelijk bekeken artikel/uitvoering, valuta en prijs |
-| add_to_cart | Gekozen variant, aantal en eventuele toegevoegde onderdelen |
-| begin_checkout | Werkelijke winkelwagen en bedrag |
-| purchase | Eén bevestigde transactie, correcte transaction_id, value en currency |
-| Contact/retour | Alleen nuttige niet-inhoudelijke gebeurtenis; geen formuliertekst/e-mail meesturen |
+| view_item | Werkelijk bekeken artikel/uitvoering, valuta en koopbare prijs |
+| add_to_cart | Juiste variant, aantal en eventuele gekozen onderdelen; geen dubbel event |
+| begin_checkout | Werkelijke cart en bedrag |
+| purchase | Eén bevestigde transactie, juiste transaction_id, value/currency; geen dubbele omzet bij herladen |
+| Contact / retour | Alleen zo nodig een niet-inhoudelijke gebeurtenis; geen formuliertekst of contactgegevens |
 
-Een geslaagde consenttest, tagtest en betaling zijn drie verschillende bewijzen. Een herladen bedankpagina mag geen dubbele omzet geven. Leg ook vast of testverkeer/testorders uit gewone rapportage worden gehouden.
+Een cookie-UI-test, technische consenttest, eventtest en betaling zijn afzonderlijke bewijzen. Verstuur geen namen, e-mail, telefoon, adres, ordernotities of vrije tekst naar analytics.
 
 ## Eerste meetoverzicht
 
 | Bron | Volgen | Betekenis |
 | --- | --- | --- |
-| Search Console | Indexatie, zoektermen, vertoningen, klikken, CTR | Organische zoekvindbaarheid |
-| Merchant Center | Geschikte/afgekeurde items, gratis vertoningen/klikken | Productfeed en productbereik |
-| GA4 | Sessies, winkelwagen, checkout, omzet | Gedrag binnen de meetgrenzen |
-| Shopify | Bestellingen en werkelijke omzet | Operationele verkoopcontrole |
+| Search Console | Indexatie, zoektermen, vertoningen, klikken, CTR | Organische vindbaarheid |
+| Merchant Center | Geschikte/beperkte/afgekeurde items, vertoningen/klikken | Productfeed en productbereik |
+| GA4 | Sessies, winkelwagen, checkout, aankopen/omzet | Gedrag binnen technische en privacygrenzen |
+| Shopify | Bestellingen, werkelijke bedragen en refunds | Operationele verkoopcontrole |
 
-Controleer dit in het begin handmatig regelmatig en vergelijk na wijzigingen opnieuw. Dit dossier maakt geen automatische rapportage of geplande taak aan.
-
-[Shopify GA4 en privacy, AP-toestemmingsinformatie](../BRONNEN.md) · [Taken](../TAKEN.md)
+Dit dossier richt geen geplande rapportage in. [Controles](../CONTROLES.md) · [Accounts](ACCOUNTS_EN_KOPPELINGEN.md) · [Officiële bronnen](../BRONNEN.md) · [Taken](../TAKEN.md)

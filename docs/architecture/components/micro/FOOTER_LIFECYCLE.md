@@ -1,5 +1,13 @@
 # Footer: schermwissel, herinitialisatie en cleanup
 
+## Actuele toepassingsgrens — 8 november 2026
+
+De vier kernfooterbestanden op MAIN **196328685834** zijn opnieuw gelezen en bytegelijk aan de actieve werkbron. **Deze controller beheert alleen `.bcf-v3`.** Home gebruikt door `compact_homepage=true` het aparte `.bch-footer`-snippet: native details zonder server-`open`, eigen CSS en zonder deze desktop-opencontroller. De home-JavaScript opent lokale homepagepanelen voor navigatie, niet deze standaardfooterpanelen.
+
+De 14 verse HTML-probes bevestigen twee markupcontracten; er is geen nieuwe desktop-/mobiele lifecycletest uitgevoerd. FT-01/FT-02 hieronder blijven geïsoleerd bewijs van 28 oktober. Nu zijn 8 lege bestemmingen buiten de editor verborgen; de oude tien zichtbare labels zijn historisch. Voor de voorgestelde gedeelde renderer moeten beide huidige paden, 749↔750px, focus, section-load/unload en cookie-runtime opnieuw worden gecontroleerd. [Actueel footercontract](../FOOTER.md) · [centrale audit](../../../audits/2026-11-08/README.md).
+
+## Historische controlleranalyse — 28 oktober
+
 > **31 oktober 2026 — FIX-01, UNPUBLISHED195948839178:** Lege bestemmingslabels worden buiten Theme Editor verborgen, placeholders blijven bewerkbaar. Bestaande merkengids gekoppeld; retourgate en verwijderd adres behouden. Echte browserfooter gecontroleerd. [Actueel bewijs en rollback](../../../repairs/2026-10-31/README.md). De bronregels/hashes en defectreplays hieronder beschrijven de eerdere nulmeting.
 
 **28 oktober 2026 · DOC-03B.** Hoofddossier: [footeropbouw en beheer](../FOOTER.md). Deze verdieping behandelt de JavaScript-lifecycle in de actuele `sections/footer.liquid`; inhoud/configuratie blijft eigendom van dat hoofddossier.

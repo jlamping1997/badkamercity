@@ -1,12 +1,27 @@
+> **8 november 2026 — actuele architectuuringang:** MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov** is opnieuw gelezen. Gebruik het [centrale auditrapport](../audits/2026-11-08/README.md) voor het huidige bron-/routemoment en open livegangtaken. De metingen van 28–31 oktober hieronder blijven historisch bewijs; hun oude MAIN-IDs, aantallen en conceptstatus gelden niet als de huidige liveversie.
+
 > **31 oktober 2026 — actuele ingang DOC-04:** [80 hoofdstukken met praktische beheertaken](../MASTER_SITE_REFERENCE.md), [verse bronkaart](../site-reference/2026-10-31/README.md). De tellingen en bronnen hieronder behouden hun oorspronkelijke datum. MAIN 195948839178; NAV-02 is concept, retourmailbewijs open.
 
 > **30 oktober 2026 — samengebracht en geactualiseerd:** [Badkamercity volledig naslagwerk](../MASTER_SITE_REFERENCE.md) bevat de huidige bronstand, alle registers en de gedateerde component-/methodedossiers in één document. Deze map blijft de oorspronkelijke technische bewijslaag; gebruik de verse registers voor actuele rollen/aantallen.
 
 # BadkamerCity — architectuur, documentatie en eenheid
 
-**Nieuwe onderzoeksbasis: 28 oktober 2026.** Eigenaar vraagt eerst een diep onderzoeks- en documentatieplan, daarna onderbouwde inconsistenties en kleine verbeteringen. Doel: verantwoord lanceren en vervolgens beheersbaar uitbreiden. Dit dossier verklaart niet dat de volledige audit al is uitgevoerd.
+## Actuele bron- en dekkingsgrens — 8 november
 
-## Actuele brede ingang: DOC-02C
+- De live manifestkaart telt **1.387 bestanden**. `shopify/current/` op `fix/product-cards-2026-10-14` telt **1.378** paden: **1.363 bytegelijk**, **15 afwijkend**, **9 alleen live**, **0 alleen Git**. De snapshot van 31 oktober is een gedateerde referentie, geen volledige actuele livecode of deployvrijgave.
+- De nieuwe publieke HTML-set omvat **364 routes: 360×200, 4×404**, inclusief één bewuste 404-probe. Dit zijn responses, geen 364 uitgevoerde gebruikersflows. Admin telt **121 Pages (119 gepubliceerd)** en **227 collecties** (210 standaard, 16 categoriehubs, 1 meubelhub).
+- De [footer](components/FOOTER.md) heeft bewezen twee renderers: `.bch-footer` op home en `.bcf-v2.bcf-v3` op overige onderzochte routes. Oorzaak en een voorstel voor één bestaande renderer met 17 blokken zijn vastgelegd; **geen harmonisatie uitgevoerd**.
+- Contact-/beleidsopmaak, de beperkte gastcheckoutcontrole en Google-/consentgrenzen staan bij [content](components/CONTENT_AND_FORMS.md), [bestelketen](components/CHECKOUT_AND_OPERATIONS.md) en [apps/privacy](components/APPS_PRIVACY_AND_EXTERNAL_SYSTEMS.md). Betaling, mailbezorging, mobiel, consentnetwerk en GA4-aankoopmeting blijven open.
+
+Het afzonderlijke filtertraject volgt het nieuwste [centrale checkpoint](../LIVE_STATUS_AND_NEXT_STEPS.md); FILTER-SIMPLE-02v2 is inmiddels LIVE/VERIFIED en de eerdere installer niet herhalen.
+
+Begin voor huidig werk bij [dekking](COVERAGE.md), [bevindingen](FINDINGS.md) en [de eenheidskaart](CONSISTENCY.md). De oudere bronhashes en geïsoleerde replays blijven bruikbaar voor hun benoemde versie; een gewijzigde bron vraagt gerichte hercontrole.
+
+## Historische onderzoeksbasis — 28 oktober 2026
+
+**Onderzoeksbasis op 28 oktober 2026.** Eigenaar vraagt eerst een diep onderzoeks- en documentatieplan, daarna onderbouwde inconsistenties en kleine verbeteringen. Doel: verantwoord lanceren en vervolgens beheersbaar uitbreiden. Dit dossier verklaart niet dat de volledige audit al is uitgevoerd.
+
+## Historische brede ingang: DOC-02C (28 oktober)
 
 Begin bij [documentatiedekking](COVERAGE.md): alle onderdelen met hun bron-, uitleg-, praktijk- en bedrijfsgrenzen. De [componentdossiers](components/README.md) omvatten nu ook footer, homepage, categoriehubs, content/formulieren, accounts/systemen, SEO/talen, apps/privacy, filterengine en checkout. De [technische naslag](reference/README.md) registreert alle 1.262 paden en geeft alle templates, 80 secties met instellingen/blocktypen, snippets, assets en Admin-toewijzingen. [Onderhoud](MAINTENANCE.md) en [eenheid](CONSISTENCY.md) verbinden documentatie aan toekomstige verbeteringen.
 
@@ -30,7 +45,7 @@ Begin bij [documentatiedekking](COVERAGE.md): alle onderdelen met hun bron-, uit
 
 ## Vervolgmeting DOC-01 en productexport
 
-Alle 1.262 themebestanden zijn ontvangen en statisch geïnventariseerd: 955 verwijzingen, 1.261 bytegelijk en één open settings-pariteitsuitzondering. Admin-toewijzingen en het private pakket met 11.343 producten zijn vastgelegd. Lees [DOC01_SOURCE_MAP.md](DOC01_SOURCE_MAP.md) en [PRODUCT_DATA.md](PRODUCT_DATA.md). Dit is de huidige bronkaart; de nulmeting hieronder blijft historisch bewijs. DOC-01 heeft nog geen volledige pariteitsvrijgave of runtime-audit.
+Alle 1.262 themebestanden zijn ontvangen en statisch geïnventariseerd: 955 verwijzingen, 1.261 bytegelijk en één open settings-pariteitsuitzondering. Admin-toewijzingen en het private pakket met 11.343 producten zijn vastgelegd. Lees [DOC01_SOURCE_MAP.md](DOC01_SOURCE_MAP.md) en [PRODUCT_DATA.md](PRODUCT_DATA.md). Dit was de bronkaart van 28 oktober; de nulmeting hieronder blijft historisch bewijs. DOC-01 heeft nog geen volledige pariteitsvrijgave of runtime-audit.
 
 ## Wat de voorafgaande nulmeting vaststelde
 

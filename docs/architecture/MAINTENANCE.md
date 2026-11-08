@@ -1,5 +1,13 @@
 # Onderhoud en overdracht voor een nieuwe ontwikkelaar of AI
 
+## Huidige bron kiezen — 8 november 2026
+
+Begin bij het [centrale auditrapport](../audits/2026-11-08/README.md). MAIN **196328685834** en `shopify/current/` verschillen nog op 15 paden; 9 livebestanden ontbreken in Git. Een oude snapshot van 31 oktober of repositoryroot is geen complete livebron. Haal vóór een conceptwijziging verse rol, manifest en bytes op en verklaar verschillen; behoud actuele liveaanpassingen.
+
+Volg voor footerwerk eerst de echte branch: `compact_homepage=true` → home `bc-home-footer`; andere storefront-routes → standaard `bcf-v3`. De kolommen zijn eigen blocks, niet Voettekstmenu. Het [canonieke voorstel voor 17 blokken](components/FOOTER.md) blijft PROPOSED; 18 blocks is het maximum en 8 huidige slots hebben lege URL's. Koppel een verzendlink pas aan een bestaande juiste openbare bestemming; behoud de return-/quoteguards. Vergelijk daarna de 14 routeklassen en relevante browserstaten. Een documentatieactualisering sluit de implementatie-/runtimecontroles niet.
+
+Het afzonderlijke filtertraject volgt het nieuwste [centrale checkpoint](../LIVE_STATUS_AND_NEXT_STEPS.md). FILTER-SIMPLE-02v2 is LIVE/VERIFIED; de Acero→Grijs-correctie heeft een eigen uitvoeringsstap. De v2-installer niet herhalen.
+
 Begin bij [actuele status](../LIVE_STATUS_AND_NEXT_STEPS.md) → [dekking](COVERAGE.md) → functioneel dossier → technische naslag → exact benoemde bron. De Git-root is geen automatisch actuele productiebron. Gebruik het theme-ID, de hash en de echte Admin-toewijzing, niet alleen een bestandsnaam uit een oud releaseverslag.
 
 ## Waar wijzig je wat?

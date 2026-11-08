@@ -1,5 +1,23 @@
 # Bevindingen en onderzoekswachtrij
 
+## Actualisering — 8 november 2026
+
+[Centraal auditrapport](../audits/2026-11-08/README.md) is de huidige bewijsingang; MAIN **196328685834**. De bevindingen vanaf het historische kopje hieronder blijven bij hun oorspronkelijke bron en status. Een oude geïsoleerde reproductie wordt niet automatisch een huidig bezoekersincident; een later voorstel is geen gerealiseerde correctie.
+
+| ID / onderwerp | Actuele bewijsstatus | Waarneming / kleinste vervolgactie |
+| --- | --- | --- |
+| FOOTER-F02 | VERIFIED_THEME / VERIFIED_HTML · OPEN | `compact_homepage=true` kiest een aparte homefooter. Home 25 links en 10 hoofdcategorieën; standaard 19 links en 6 categorieblocks. Vier kernfiles exact live/Git. [Eén bestaande renderer met 17 blocks](components/FOOTER.md) is PROPOSED; eerst brongecontroleerd concept en route-/mobielregressie |
+| FOOTER-F01 · actualisering | VERIFIED_THEME / VERIFIED_HTML | Historische tien tekstlabels zijn geen huidige telling. Nu 18 blocks, 8 lege URL's, buiten editor verborgen. Geen extra blocks boven de 18 toevoegen; acht slots herbestemmen/verwijderen binnen het maximum van 18 |
+| DOC-F08 · actuele bronpariteit | VERIFIED_SOURCE · OPEN | Live 1.387 versus Git 1.378: 1.363 gelijk, 15 afwijkend, 9 alleen live, 0 alleen Git. De snapshot van 31 oktober is historisch. Per afwijking herkomst vaststellen; geen blinde sync |
+| CONTENT-F02 · policyopmaak | VERIFIED_HTML · OPEN | `/policies/terms-of-service` en `/policies/legal-notice` tonen ge-escapete HTML. Publicatie aanwezig, bruikbare weergave niet. Inhoud als echte richtext/HTML corrigeren en opnieuw lezen |
+| CONTENT-F03 · dubbele paginakop | VERIFIED_HTML · OPEN | `/pages/antikalk` heeft twee H1's. Body-/template-eigenaar bepalen en één paginatitel behouden; DOM-contracten opnieuw controleren |
+| CONTENT-F04 · Rapowash-metadata | VERIFIED_HTML · OPEN | `/pages/rapowash` gebruikt dezelfde reukslot-titel/beschrijving als `/pages/reukslot`. Alleen de onjuiste paginametadata inhoudelijk corrigeren |
+| OPS-F05 · verzendinformatie | VERIFIED_HTML / VERIFIED_ADMIN · OPEN | Native shippingpolicy geeft 404; deliverymetadata bevat 1 locatie zonder tarieven en `coversAllItems=false`. Dit bewijst geen algemene checkoutuitval. Juiste openbare informatie en effectieve tarieven per toepasselijk product/adres controleren |
+
+De 364-routecontrole heeft vier 404-responses, waaronder één bewuste foutprobe. `/collections/tegeltoebehoren` is een lege Admin-collectie zonder gevonden inkomende klantlink; `/blogs/news` was een gegiste Engelse probe, terwijl `/blogs/nieuws` en het echte artikel HTTP 200 geven. Deze responses bewijzen geen vier gebroken klantreizen. Contactroute is een formulier, geen bewezen volledige contact-/retourafhandeling. Zie [content](components/CONTENT_AND_FORMS.md) en [bestelketen](components/CHECKOUT_AND_OPERATIONS.md).
+
+## Historische bevindingen — vanaf 28 oktober
+
 **Peildatum 28 oktober 2026.** Alleen onderstaande bron-/documentatiebevindingen zijn in deze ronde onderzocht. Geen algemene verklaring over webshopkwaliteit of koopgereedheid.
 
 ## Vastgesteld en gemeld
