@@ -1,6 +1,6 @@
 # Cottoceramix — basiskleuren per serie
 
-8 november 2026. **READY_FOR_OWNER_EXECUTION; nog niet live.**
+8 november 2026. **PUBLIC_MAPPING_OBSERVED; Bone-aanvulling voorbereid.**
 
 De eigenaar wil duidelijke basiskleuren en heeft zelfstandige indeling op basis van productbeelden toegestaan. Deze batch bevat 207 beoordeelde serie/kleurcombinaties (202 unieke sleutels na normalisatie). De zekerheid per vastgelegde keuze is minimaal 0,76. De indelingen zijn visuele afleidingen; ze worden niet als afzonderlijk door de eigenaar bevestigde kleuren opgeslagen.
 
@@ -39,4 +39,8 @@ Nieuwe vlag: `cotto_visual_colors_v1`, naast de vier bestaande vlaggen. Het resu
 
 Serverstaging, nieuwe activatie, publieke nacontrole, browserproef en toekomstige automatische verversing zijn **nog niet uitgevoerd** voor deze batch. De bestaande Acero-release blijft de laatst bewezen liveversie. Het ontbrekende tegelformaatfilter op het Cottoceramix-merkprofiel blijft apart vervolgwerk.
 
-**Eén volgende handeling:** eigenaar voert het vastgepinde PowerShell-installatieblok uit en deelt de volledige uitvoer; daarna publieke nacontrole van deze Cotto-kleurupdate.
+**Eén volgende handeling:** voer het nieuwe vastgepinde Bone-installatieblok uit; de oorspronkelijke Cotto-installer niet herhalen. Zie de [Bone-aanvulling](../bone-correction-2026-11-08/README.md).
+
+## Latere meting en eigenaarcorrectie: Bone
+
+De publieke generatie `bc_sync_20261108t164313_f87c29` geeft Cotto Overige 99, Silver Mist met Grijs 11 en Clear met Beige twee. Dit past bij de voorbereide Cotto-indelingen. Het oorspronkelijke installatieverslag en de workerbron zijn niet teruggelezen, dus deze waarneming is geen serverhash- of volledige activeringsbevestiging. De nieuwste eigenaarcorrectie is Bone → Beige, inclusief de oudere Malaga-uitzondering. Daarvoor staat een afzonderlijke, geteste upgrade klaar; alle 207 oorspronkelijke Cotto-regels blijven behouden. Gebruik voortaan het [Bone-dossier](../bone-correction-2026-11-08/README.md). Het compacte overzicht bevat nu 208 Cotto-kaarten.

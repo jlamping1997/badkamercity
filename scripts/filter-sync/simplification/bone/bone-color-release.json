@@ -1,0 +1,25 @@
+{
+  "installer": "repair_bone_color.py",
+  "installer_bytes": 26795,
+  "installer_sha256": "07f45676d6fb51981941b169c4cb1b7be8f63f0df6ff3fb0005084576a5e0621",
+  "base_worker_sha256": "cc13abd05c87a490bf06d0a7358ef36bc700edc0a736a48714d704df62f8dcc2",
+  "base_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "base_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "target_worker_sha256": "a8dd54597a2a372a7b0fcce9357a6bcc31a406fca2631cb9b24918f5fea0ff17",
+  "target_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "target_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "api_source_unchanged": true,
+  "preserved_cotto_rule_keys": 202,
+  "deadline_seconds": 900,
+  "recovery_seconds": 240,
+  "required_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1",
+    "tile_format_codes_v1",
+    "acero_gray_v1",
+    "cotto_visual_colors_v1",
+    "tile_bone_beige_v1"
+  ],
+  "private_runtime_sources_embedded": false,
+  "transport_ascii": true
+}
