@@ -22,6 +22,15 @@
       {%- assign page_description = 'bc_assortment.seo_description' | t -%}
     {%- endif -%}
 
+    {%- if request.page_type == 'index' -%}
+      {%- if page_title == blank or page_title == shop.name -%}
+        {%- assign page_title = 'bc_home.seo.title' | t -%}
+      {%- endif -%}
+      {%- if page_description == blank -%}
+        {%- assign page_description = 'bc_home.seo.description' | t -%}
+      {%- endif -%}
+    {%- endif -%}
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
