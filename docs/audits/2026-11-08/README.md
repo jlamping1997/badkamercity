@@ -1,5 +1,7 @@
 # Live- en documentatiecontrole — 8 november 2026
 
+> **Nieuwste vervolg — DELIVERY-INFO-01:** [bezorginformatie en tariefproeven](../../repairs/2026-11-08/delivery-information/README.md) vastgelegd: nieuwe Page en Contact-link live, twee geïsoleerde NL-cartoffertes juist en eigen cart leeg. Bestaand concept heet nu Klantenservice 8 nov; twee nieuwe bezorglinkfiles bovenop de vier behouden retourfiles, exact zes manifestverschillen. Native policy/scope en product-/locatiedekking blijven open. De brede nulmeting hieronder behoudt haar oorspronkelijke moment.
+
 > **Nieuwste vervolg, 8 november:** footer is gepubliceerd en live gecontroleerd; Contact is aangevuld en RapoWash-tekencodering hersteld. [Contact- en retourvervolg](../../repairs/2026-11-08/contact-and-returns/README.md). Oudere auditregels hieronder blijven bij hun meetmoment.
 
 > **Vervolg8 november:** Antikalk enRapoWash zijn inmiddels live gecorrigeerd; de footer is als getoetst desktopconcept voorbereid. [Actuele reparatiestatus](../../repairs/2026-11-08/footer-and-content/README.md). De metingen hieronder behouden hun oorspronkelijke auditmoment.

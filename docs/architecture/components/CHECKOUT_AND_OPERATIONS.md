@@ -1,19 +1,26 @@
 # Checkout, verzending, betaling en operationele grenzen
 
-**Actuele aanvulling: 8 november 2026.** MAIN is `196328685834 — BadkamerCity - Homepage SEO 8 nov`. [De centrale audit](../../audits/2026-11-08/README.md) bevat de huidige bronstand en bewijsgrenzen. De thematische winkelwagen en de door Shopify gehoste checkout zijn afzonderlijke systemen. Goede cartfeedback bewijst geen betaling, ordercommunicatie of fulfilment.
+**Actuele aanvulling: 8 november 2026 — bezorginformatie en tariefproef.** MAIN is `196354474250 — BadkamerCity - Eenduidige footer 8 nov`. [Het actuele bezorgdossier](../../repairs/2026-11-08/delivery-information/README.md) en [de gedateerde centrale audit](../../audits/2026-11-08/README.md) onderscheiden nieuwe proeven en eerdere bronstand. De thematische winkelwagen en de door Shopify gehoste checkout zijn afzonderlijke systemen. Goede cartfeedback bewijst geen betaling, ordercommunicatie of fulfilment.
 
 ## Wat op 8 november is vastgesteld
 
 | Onderdeel | Bewijs | Resterende grens |
 | --- | --- | --- |
 | Gastcheckout | Beperkte desktopbrowserproef eerder op 8 november: Wiesbaden Ribbd van €245, twee stuks voor €490, van product via cart tot gastcheckout | Geen adres ingevoerd, betaling, bestelling of ordermail; de latere routecrawler heeft deze flow niet opnieuw uitgevoerd |
+| NL-verzendtarieven | Verse Admin-regels: €6,95 t/m €100; €0 vanaf €100,01. AJAX-cartquotes €96,15 → €6,95 en €109,00 → €0; eigen geïsoleerde cart daarna leeg | Alleen het geteste NL-scenario; geen volledige product-/regio-/kortingsmatrix, checkoutbestelling of configuratiewijziging |
 | Productdekking verzending | Admin meldt `coversAllItems=false` en één locatie zonder tarieven | Dit wijst op te onderzoeken dekking; het bewijst geen verzendfout voor ieder product of de bezochte proefcart |
 | Betaalmethoden | Payments-leesscope ontbreekt; de footer-HTML toont geen betaaliconen | Geen actuele lijst of geslaagde betaling bewezen; dit betekent niet dat betalingen uitstaan |
-| Native policies | Contact, privacy, terugbetaling, voorwaarden en wettelijke kennisgeving aanwezig | Verzendbeleid ontbreekt; voorwaarden en kennisgeving tonen letterlijke HTML en vragen een opmaakcorrectie |
+| Bezorginformatie en native policies | Page 166963937546 /pages/bezorgen-en-afhalen live; Contact, privacy, terugbetaling, voorwaarden en wettelijke kennisgeving als native policy aanwezig | Native SHIPPING_POLICY blijft afwezig; voorwaarden/kennisgeving tonen escaped HTML. write_legal_policies ontbreekt; een gewone Page vervangt die native bron niet |
 | Retourafspraak | Gepubliceerd beleid: aanmelden binnen 30 dagen, daarna 14 dagen terugsturen; gewone spijtretour voor klant, fout/defect apart opgelost; afgeven op afspraak | €75 incl. btw is de raming per standaardpallet voor retourvervoer, geen heenzendtarief of universeel buitenlandtarief |
 | Operationele keten | Contact- en retourformulieren bereikbaar | Ontvangst, klantbevestiging, opvolging, terugbetaling en fulfilment niet end-to-end getest |
 
-De beperkte proefcart is na de eerdere browsercontrole opgeruimd. Er is in deze audit geen testorder geplaatst, betaling gedaan of klantenmail verstuurd. Adresafhankelijke leveropties en kortingen zijn nog afzonderlijk te controleren. De lege GET-cart in de footercontrole is alleen HTML-bewijs.
+De beperkte browserproef en de latere geïsoleerde tariefcart zijn elk opgeruimd. Er is geen testorder geplaatst, betaling gedaan of klantenmail verstuurd. De nieuwe verzendquotes geven aanvullend bewijs voor hun specifieke NL-scenario; overige afleveradressen, productcombinaties en kortingen blijven te controleren. De lege GET-cart in de footercontrole blijft alleen HTML-bewijs.
+
+## Publieke bezorginformatie en vindbaarheid
+
+De live Page [Bezorgen en afhalen](https://badkamercity.nl/pages/bezorgen-en-afhalen) gebruikt de gecontroleerde NL-tarieven en de afspraak dat afhalen bij Zichtenburglaan 150 alleen na bevestiging en op afspraak kan. Geen vaste leverdoorlooptijd, vervoerder, bezorgniveau of uitgaand pallettarief wordt uit de configuratie afgeleid. De Contacttekst linkt naar deze Page en vraagt het bestelnummer indien bekend.
+
+Footer-/homepageverwijzingen staan in het bestaande **UNPUBLISHED 196368531722 — BadkamerCity - Klantenservice 8 nov**, samen met de eerdere retourcopy. De twee nieuwe files zijn exact teruggelezen en slagen voor Liquid; vier previewroutes PASS. Finale manifests: 1.387 bestanden per thema, 1.381 gelijk en zes bedoelde verschillen. De vier eerdere retourfiles zijn checksum-ongewijzigd; MAIN 196354474250 blijft ongewijzigd. Eigenaarreview/publicatie blijft nodig. De eerdere vier-file-retourdiff is een gedateerd checkpoint, geen actuele einddiff na de uitbreiding.
 
 ## Historisch configuratiebewijs — 28 oktober 2026
 

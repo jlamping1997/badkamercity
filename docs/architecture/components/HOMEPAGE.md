@@ -1,6 +1,8 @@
 # Homepage: volgorde, inhoud en eigen kaarttypen
 
-## Actuele ingang — 8 november 2026
+> **Actueel DELIVERY-INFO-01 — 8 november:** MAIN 196354474250 gebruikt de gedeelde standaardfooter. Bestaand UNPUBLISHED 196368531722 — Klantenservice 8 nov heeft de eerdere retourcopy plus een gerichte HomeDelivery-link naar de live bezorg-Page zolang native shipping_policy ontbreekt. Native policy krijgt voorrang; Contact blijft fallback. Twee nieuwe files gevalideerd/readback, vier previewroutes PASS; eerdere vier returnfiles checksumgelijk. [Dossier](../../repairs/2026-11-08/delivery-information/README.md). De rendererstand hieronder hoort bij de eerdere brede audit; geen nieuwe mobiele/performancevrijgave.
+
+## Eerdere brede meting — 8 november 2026
 
 Homepage is live op MAIN **196328685834 — BadkamerCity - Homepage SEO 8 nov**; de conceptstatus van 29 oktober verderop is historisch. De huidige werkbron `shopify/current/templates/index.json` heeft één actieve sectie **`bc_homepage` → `bc-homepage`**. Deze bronverwijzing is geen zelfstandige claim van volledige live/Git-pariteit; het centrale manifest heeft nog 15 afwijkende bestanden. De verse home-HTML toont de huidige homecontent en **`.bch-footer`**, gekozen via `compact_homepage=true`.
 
