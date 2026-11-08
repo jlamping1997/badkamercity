@@ -144,10 +144,10 @@ def main():
    flat[label]=chosen['value']
    evidence[sku]['facts'][label]={'kind':'retailer_exact_sku_ean','field':chosen['source_label'],'fragment':chosen['source_value'],'source_refs':[],
     'url':chosen['url'],'ref':chosen['ref'],'source_line':chosen.get('line'),'source_section':chosen.get('source_section'),'identity':{'sku':sku,'ean':p['ean'],'brand':'BRAUER'},
-    'checked_on':'2026-11-07','verification':status,'corroborating_urls':sorted({v['url'] for v in primary if normalized(label,v['value'])==normalized(label,chosen['value'])}),
+    'checked_on':chosen['checked_on'],'verification':status,'corroborating_urls':sorted({v['url'] for v in primary if normalized(label,v['value'])==normalized(label,chosen['value'])}),
     'drawing_resolution':resolution}
    changes.append({'sku':sku,'field':label,'old':'','new':chosen['value'],'action':'AANGEVULD','url':chosen['url'],'ref':chosen['ref']})
-  if sku in candidates:p['retail_review']={'checked_on':'2026-11-07','open_fields':sorted(set(review)),'source_urls':sorted({v['url'] for values in candidates[sku].values() for v in values})}
+  if sku in candidates:p['retail_review']={'checked_on':max(v['checked_on'] for values in candidates[sku].values() for v in values),'open_fields':sorted(set(review)),'source_urls':sorted({v['url'] for values in candidates[sku].values() for v in values})}
   groups=[]
   for group in GROUPS:
    items=[]
@@ -174,9 +174,9 @@ def main():
   for label,e in evidence[p['sku']]['facts'].items():
    if e['kind']=='retailer_exact_sku_ean':cumulative.append({'sku':p['sku'],'field':label,'old':'','new':p['specifications'][label],'action':'AANGEVULD','url':e['url'],'ref':e['ref']})
  changes=cumulative+list(withheld.values())
- audit={'checked_on':'2026-11-07','fields_added_this_run':added_this_run,'source_pages':len(records),'unique_source_skus':len({r['sku'] for r in records}),'exact_sku_ean_pages':sum(r.get('ean')==next((p['ean'] for p in catalog if p['sku']==r['sku']),None) and r.get('ean') is not None for r in records),
+ audit={'checked_on':max(r['checked_on'] for r in records),'fields_added_this_run':added_this_run,'source_pages':len(records),'unique_source_skus':len({r['sku'] for r in records}),'exact_sku_ean_pages':sum(r.get('ean')==next((p['ean'] for p in catalog if p['sku']==r['sku']),None) and r.get('ean') is not None for r in records),
  'articles_with_additions':len({x['sku'] for x in changes if x['action']=='AANGEVULD'}),'new_fields':sum(x['action']=='AANGEVULD' for x in changes),'withheld_previous_external_fields':sum(x['action']!='AANGEVULD' for x in changes),
- 'open_field_conflicts':sum(x['status']=='OPEN' for x in conflicts),'open_conflict_articles':len({x['sku'] for x in conflicts if x['status']=='OPEN'}),'changes':changes,'differences':conflicts,'identity_notes':rejected,'scope_rejections':scope,'import_allowed':False,'all_catalogue_scraped':False,'direct_http':'403 in this environment; cause not established; no bypass attempted'}
+ 'open_field_conflicts':sum(x['status']=='OPEN' for x in conflicts),'open_conflict_articles':len({x['sku'] for x in conflicts if x['status']=='OPEN'}),'changes':changes,'differences':conflicts,'identity_notes':rejected,'scope_rejections':scope,'import_allowed':False,'all_catalogue_scraped':False,'direct_http':'Not attempted in this resumption; approved anonymous public content fetches used. Prior 403 note retained in historical reports; no bypass.'}
  audit['live_public_pages']=sum(r.get('retrieval')=='public_live_fetch_html' for r in records)
  audit['unusual_hose_values_withheld']=sum(x['reason'].startswith('Afwijkende') for x in scope)
  inventory_path=root/'retail-product-url-inventory.json'

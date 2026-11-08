@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {Workbook,SpreadsheetFile} from '@oai/artifact-tool';
 const root=process.argv[2],dir=path.join(root,'outputs',process.argv[3]||'brauer-20');
+const skipRenders=process.argv.includes('--skip-renders');
 const catalog=JSON.parse(await fs.readFile(path.join(root,'prepared/catalog.json'),'utf8'));
 const summary=JSON.parse(await fs.readFile(path.join(root,'prepared/specification-summary.json'),'utf8'));
 const evidence=JSON.parse(await fs.readFile(path.join(root,'prepared/specification-evidence.json'),'utf8'));
@@ -56,5 +57,5 @@ if(o.getRange('B4').values[0][0]!==13161||o.getRange('B6').values[0][0]!==summar
 console.log((await wb.inspect({kind:'table',range:'Overzicht!A4:C7',include:'values,formulas',tableMaxRows:4,tableMaxCols:3,maxChars:1800})).ndjson);
 console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:20},maxChars:1000})).ndjson);
 await fs.mkdir(dir,{recursive:true});
-for(const [s,r] of [['Overzicht','A2:C7'],['Voorbeelden','A1:F7'],['Artikelen','A1:F6'],...(retail?[['Aanvullingen','A1:F6'],['Bronverschillen','A1:F6']]:[])]){const b=await wb.render({sheetName:s,range:r,scale:1,format:'png'});await fs.writeFile(path.join(dir,s+'.png'),new Uint8Array(await b.arrayBuffer()));}
+if(!skipRenders)for(const [s,r] of [['Overzicht','A2:C7'],['Voorbeelden','A1:F7'],['Artikelen','A1:F6'],...(retail?[['Aanvullingen','A1:F6'],['Bronverschillen','A1:F6']]:[])]){const b=await wb.render({sheetName:s,range:r,scale:1,format:'png'});await fs.writeFile(path.join(dir,s+'.png'),new Uint8Array(await b.arrayBuffer()));}
 const file=await SpreadsheetFile.exportXlsx(wb);await file.save(path.join(dir,'Brauer-specificaties-2026-11-07.xlsx'));console.log(JSON.stringify({articles:catalog.length,exampleRows:erows.length,output:dir}));

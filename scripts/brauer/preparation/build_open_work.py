@@ -30,7 +30,7 @@ def main():
  observed={url for r in json.loads((root/'retail-observations.json').read_text()) for url in [r['url'],r.get('requested_url')] if url}
  queue=json.loads((root/'retail-next-batch-queue.json').read_text());queue['items']=[x for x in queue['items'] if x['url'] not in observed]
  (root/'retail-next-batch-queue.json').write_text(json.dumps(queue,ensure_ascii=False,indent=2)+'\n')
- out={'checked_on':'2026-11-07','questions':questions,'question_rows':len(questions),'question_articles':len({q['sku'] for q in questions}),'question_status_counts':dict(Counter(q['status'] for q in questions)),
+ out={'checked_on':retail['checked_on'],'questions':questions,'question_rows':len(questions),'question_articles':len({q['sku'] for q in questions}),'question_status_counts':dict(Counter(q['status'] for q in questions)),
  'remaining_url_candidates':len(queue['items']),'articles_missing_chosen_essential_fields':sum(bool(p['specification_review']['missing_essential_fields']) for p in catalog),
  'articles_by_missing_field':dict(Counter(f for p in catalog for f in p['specification_review']['missing_essential_fields'])),
  'media_status':'Wachten op volledige officiële afbeeldingen- en PDF-aanlevering; gevonden winkelbijlagen zijn alleen onderzoeksbronnen.',

@@ -92,12 +92,17 @@ def parse(page):
  if re.search(r'\binclusief inbouwdeel\b',page['title'],re.I):
   found.append({'label':'Inbouwdeel inbegrepen','value':'Ja','source_label':'Met inbouwdeel','source_value':'inclusief inbouwdeel (producttitel)','line':None})
  brand=next((v['value'] for v in found if v['source_label']=='Merk'),None)
- return {'sku':sku,'ean':ean,'brand':brand,'title':page['title'],'requested_sku':page.get('requested_sku'),'requested_url':page.get('requested_url',page['url']),'url':page['url'],'ref':page['ref'],'checked_on':'2026-11-07','source_snapshot_note':page.get('source_snapshot_note','Search-service snapshot; source revision not guaranteed'),'retrieval':page.get('retrieval','public_web_page_excerpt'),'linked_documents':page.get('linked_documents',[]),'fields':[v for v in found if v['source_label'] in LENGTHS or v['source_label'] in COUNTS or v['source_label'] in ENUMS or v['source_label'] in BOOLS]}
+ return {'sku':sku,'ean':ean,'brand':brand,'title':page['title'],'requested_sku':page.get('requested_sku'),'requested_url':page.get('requested_url',page['url']),'url':page['url'],'ref':page['ref'],'checked_on':page.get('checked_on','2026-11-07'),'source_snapshot_note':page.get('source_snapshot_note','Search-service snapshot; source revision not guaranteed'),'retrieval':page.get('retrieval','public_web_page_excerpt'),'linked_documents':page.get('linked_documents',[]),'fields':[v for v in found if v['source_label'] in LENGTHS or v['source_label'] in COUNTS or v['source_label'] in ENUMS or v['source_label'] in BOOLS]}
 if __name__=='__main__':
  pages=[p for file in sorted(Path('research/brauer-retail').glob('table-excerpts*.json')) for p in json.loads(file.read_text())]
+ if not pages:raise SystemExit('Geen ruwe technische tabellen; bestaand retail-observations.json blijft behouden. Gebruik de getypeerde overdrachtsrecords.')
  unique={}
  for p in pages:
   if p['url'] not in unique or p.get('retrieval')=='public_live_fetch_html':unique[p['url']]=p
- records=[parse(p) for p in unique.values()]
+ fresh=[parse(p) for p in unique.values()]
+ target=Path('prepared/retail-observations.json')
+ previous=json.loads(target.read_text()) if target.exists() else []
+ merged={r['url']:r for r in previous};merged.update({r['url']:r for r in fresh})
+ records=list(merged.values())
  Path('prepared/retail-observations.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')
- for r in records:print(r['sku'],r['ean'],r['ref'],[(f['label'],f['value']) for f in r['fields']])
+ print(json.dumps({'retained_or_refreshed_source_pages':len(records),'raw_source_pages':len(fresh)}))
