@@ -1,6 +1,7 @@
 {% doc %}
   Renders up to two confirmed product attributes with an article fallback.
   @param {product} product - The card product.
+  @param {string} [mode] - Use data for the same attributes as JSON.
 {% enddoc %}
 {%- liquid
   assign manifest = product.metafields.bc_data.filter_manifest.value
@@ -36,7 +37,14 @@
     assign value_2 = sku
   endif
 -%}
-{%- if value_1 != blank or value_2 != blank -%}
+{%- if mode == 'data' -%}
+  {%- capture json_less_than -%}\u003c{%- endcapture -%}
+  [
+    {%- if value_1 != blank -%}{"label":{{ label_1 | json | replace: '<', json_less_than }},"value":{{ value_1 | append: '' | json | replace: '<', json_less_than }}}{%- endif -%}
+    {%- if value_1 != blank and value_2 != blank -%},{%- endif -%}
+    {%- if value_2 != blank -%}{"label":{{ label_2 | json | replace: '<', json_less_than }},"value":{{ value_2 | append: '' | json | replace: '<', json_less_than }}}{%- endif -%}
+  ]
+{%- elsif value_1 != blank or value_2 != blank -%}
   <dl class="bc-card-specs">
     {%- if value_1 != blank -%}<div><dt>{{ label_1 | escape }}:</dt><dd>{{ value_1 | escape }}</dd></div>{%- endif -%}
     {%- if value_2 != blank -%}<div><dt>{{ label_2 | escape }}:</dt><dd>{{ value_2 | escape }}</dd></div>{%- endif -%}

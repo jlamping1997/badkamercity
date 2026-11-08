@@ -1,0 +1,12 @@
+{
+  "name": "badkamercity-mobile-product-list-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node contract-checks.mjs && node css-checks.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4",
+    "liquidjs": "10.21.1"
+  }
+}

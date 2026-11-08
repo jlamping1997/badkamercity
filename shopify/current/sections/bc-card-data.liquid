@@ -72,6 +72,10 @@
       assign card_delivery = 'bc_delivery.supplier_expected_from' | t: date: card_supplier_date_formatted
     endif
   endif
+  if settings.bc_temporary_in_stock
+    assign card_delivery = 'bc_delivery.temporary_in_stock' | t
+    assign card_delivery_in_stock = true
+  endif
   assign card_hover_image = product.images[1]
   assign card_can_add = false
   if product.variants.size == 1 and card_variant.quantity_rule.min == 1 and card_variant.quantity_rule.increment == 1 and product.requires_selling_plan == false
@@ -88,6 +92,7 @@
 "color":{{ card_color | json | replace: '<', '\u003c' }},
 "price_cents":{{ product.price_min | json }},
 "price_varies":{{ product.price_varies | json }},
+"specs":{% render 'bc-card-specs', product: product, mode: 'data' %},
 "tile_price":{% render 'bc-card-tile-price', product: product, mode: 'data' %},
 "variant_id":{{ card_variant.id | json }},
 "available":{{ card_variant.available | json }},

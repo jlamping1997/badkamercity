@@ -279,6 +279,9 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'bc-product-cards.css' | asset_url | stylesheet_tag }}
+    {% if request.page_type == 'collection' or request.page_type == 'search' %}
+      {{ 'bc-mobile-product-list.css' | asset_url | stylesheet_tag }}
+    {% endif %}
     {{ 'component-price.css' | asset_url | stylesheet_tag }}
     {% if request.page_type == 'collection' and template.suffix != 'bc-meubelhub' %}{{ 'bc-collection.css' | asset_url | stylesheet_tag }}{% endif %}
     {{ 'bc-typography.css' | asset_url | stylesheet_tag }}
