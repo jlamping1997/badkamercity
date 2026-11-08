@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "pages": 122,
+  "published": 120,
+  "scannedFields": [
+    "Page.body"
+  ],
+  "patterns": [
+    "\u00c3.",
+    "\u00c2.",
+    "\u00e2\u20ac",
+    "\u00ef\u00bb\u00bf",
+    "U+FFFD",
+    "U+FEFF"
+  ],
+  "remainingCandidates": [],
+  "status": "PASS",
+  "limits": "Finite character-pattern scan, not a complete factcheck or proof that every possible encoding error is absent"
+}

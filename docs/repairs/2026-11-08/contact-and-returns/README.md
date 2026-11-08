@@ -1,5 +1,7 @@
 # CONTACT-RETURNS-01 — contact aangevuld en retourinformatie gelijkgetrokken
 
+> **Eigenaarpublicatie bevestigd — CONTENT-ENCODING-02:** het gecombineerde klantenservicethema **196368531722** is live. De beschreven retourcopy, beleidslink en native formulier zijn publiek teruggelezen. [Nieuwste nacontrole](../glossary-encoding/README.md). Geen nieuwe publicatie van het oudere retourconcept nodig; mail/herroepingsbevestiging blijft apart.
+
 > **Opgevolgd door DELIVERY-INFO-01:** dit dossier bewaart het oorspronkelijke vier-file retourcheckpoint. Hetzelfde concept 196368531722 heet nu **Klantenservice 8 nov** en heeft twee bezorglinkfiles erbij; de vier hieronder beschreven retourfiles zijn checksumgelijk behouden. Nieuwe bezorg-Page en Contact-link zijn live. [Laatste status, zes-file eindmanifest en herstel](../delivery-information/README.md). Nog geen themapublicatie.
 
 **8 november 2026. Footer: OWNER_PUBLISHED / LIVE_HTML_VERIFIED. Contact en RapoWash: APPLIED_VERIFIED. Retourinformatie: PREVIEW_VERIFIED / NOT_PUBLISHED.** De eigenaar heeft het vorige footerconcept gepubliceerd. Daarna zijn de volgende concrete punten onderzocht en hersteld.

@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-08",
+  "ownerReportedPublished": true,
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/196368531722",
+    "role": "MAIN",
+    "files": {
+      "nodes": [
+        {
+          "filename": "locales/en.default.json",
+          "checksumMd5": "cf68420f3bb29821b374599dc9428c97"
+        },
+        {
+          "filename": "locales/nl.json",
+          "checksumMd5": "e2df474f96aa55a5a9e2f4c7300f7c3d"
+        },
+        {
+          "filename": "sections/bc-homepage.liquid",
+          "checksumMd5": "d32a554a0e4548bb937329857bfde004"
+        },
+        {
+          "filename": "sections/bc-returns.liquid",
+          "checksumMd5": "4497b839b3bab0169ef73a2719938fd5"
+        },
+        {
+          "filename": "sections/footer-group.json",
+          "checksumMd5": "abcaca20857230d1a79526dfba0dbd6d"
+        },
+        {
+          "filename": "templates/index.json",
+          "checksumMd5": "0b7027d29333241bd2defb76fc704f36"
+        }
+      ]
+    }
+  },
+  "sourceBranch": "fix/product-cards-2026-10-14",
+  "sourceCommitAtRead": "e814376235a59475d1445022c099ed700a33a857",
+  "sixSourceFilesMatchGitMd5": true,
+  "sixFilesMatchPreviousPreview": true,
+  "themeFilesWrittenThisRound": 0,
+  "themePublishedByExecutor": false,
+  "limits": "Six targeted source checks; full 1387-file manifest was not re-enumerated this round. Previous complete manifest remains in delivery-information/theme-parity.json."
+}

@@ -1,5 +1,7 @@
 # Bevindingen en onderzoekswachtrij
 
+> **CONTENT-ENCODING-02 — nieuwste vervolg:** klantenservicethema is gepubliceerd. Dertien Page-tekstreparaties live bevestigd; GLOSS-F01 was al opgelost en is hieronder actueel gemarkeerd. [Bewijs en grenzen](../repairs/2026-11-08/glossary-encoding/README.md). Native policy- en koopketentaken blijven open.
+
 > **Actueel DELIVERY-INFO-01 — 8 november:** bezorg-Page en Contact-link live; retourcopy + twee bezorglinkfiles samen in bestaand UNPUBLISHED 196368531722 — Klantenservice 8 nov. Zes verschillen/1.381 gelijk; vier eerdere retourfiles behouden, MAIN ongewijzigd. Native shippingpolicy blijft afwezig; profieldekking en één locatie zonder rates vragen afzonderlijke verificatie. [Nieuw bewijs en herstel](../repairs/2026-11-08/delivery-information/README.md). Oudere retourdifftellingen hieronder zijn het voorgaande checkpoint.
 
 ## Actualisering — 8 november 2026
@@ -51,7 +53,7 @@ De oorspronkelijke 364-routeaudit bevatte vier verschillende 404-uitkomsten; die
 | ID | Status / impact | Waarneming en bewijs | Volgende actie |
 | --- | --- | --- | --- |
 | FOOTER-F01 | VERIFIED_THEME / VERIFIED_HTML / beperkt VERIFIED_RUNTIME · configuratie | Tien footerblocks hebben geen URL en tonen tekst; bron, 35-route-HTTP-set en desktopwaarneming passen. [Footer](components/FOOTER.md) | Per label juiste bestaande bestemming of verwijderen kiezen; geen pagina's/bedrijfsinfo verzinnen |
-| GLOSS-F01 | VERIFIED_ADMIN / VERIFIED_HTML · P1-kandidaat | Hygro(meter) → /begrippenlijst/hygrometer → /pages/hygrometer geeft 404; 108 overige termdoelen gepubliceerd. [Bewijs](evidence/2026-10-28-complete/glossary-links.json) | Juiste bestaande inhoudsbestemming kiezen, daarna gerichte redirectcorrectie; geen automatische nieuwe Page |
+| GLOSS-F01 | RESOLVED_BEFORE_CURRENT_TASK / VERIFIED_ADMIN_AND_HTML | Beide oude hygrometerpaden komen publiek bij /pages/hygro-meter uit. Alle 109 actuele termlinks mappen op gepubliceerde Pages, nul loops; geen redirectwrite deze ronde. [Actueel bewijs](../repairs/2026-11-08/glossary-encoding/README.md) | Niet opnieuw repareren; oude 404-meting blijft historisch |
 | HOME-F01 | VERIFIED_THEME / VERIFIED_HTML · configuratie, geen defect | Hero uitgeschakeld; populaire-productencollectie leeg; guard laat inhoud weg ondanks sectionwrapper. [Homepage](components/HOMEPAGE.md) | Alleen activeren/vullen wanneer dat gewenst is; geen CSS-fix voor lege datacontext |
 | CONTENT-F01 | VERIFIED_ADMIN / NOT_VERIFIED · toewijzingssignaal | Zes Pages hebben suffix page maar page.page.json ontbreekt; vijf gepubliceerd. Buffers-HTTP is 200, dus geen algemene 404-claim. [Content](components/CONTENT_AND_FORMS.md) | Effectieve template/bedoeling controleren; geen bulk-normalisatie |
 | OPS-F03 | BLOCKED_ACCESS_DENIED · bron ontbreekt | Checkout/accountconfiguratie-query expliciet geweigerd; classic thematemplates vervangen de gehoste bron niet | Bevoegde configuratiebron nodig; geen alternatieve route om rechten te omzeilen |
