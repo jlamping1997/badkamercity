@@ -539,9 +539,22 @@
     }
 
     function productPrice(product) {
-      const price = formatPrice(product.price_cents);
-      if (product.price_varies !== true || product.price_cents == null || !Number.isFinite(Number(product.price_cents))) return price;
-      return uiText('labelPriceFrom', 'Vanaf __BC_PRICE__').replace('__BC_PRICE__', price);
+      const tile = product.tile_price;
+      const areaPrice = tile != null;
+      if (areaPrice && (!Number.isFinite(tile.box_area) || tile.box_area <= 0)) return null;
+      const cents = areaPrice ? tile.unit_price_cents : product.price_cents;
+      if (!Number.isSafeInteger(cents) || cents < 0) return null;
+      const amount = formatPrice(cents);
+      const varies = areaPrice ? tile.price_varies === true : product.price_varies === true;
+      const price = varies ? uiText('labelPriceFrom', 'Vanaf __BC_PRICE__').replace('__BC_PRICE__', amount) : amount;
+      return areaPrice ? `${price} ${uiText('labelTileArea', 'per m²')}` : price;
+    }
+
+    function unavailableCardPrice(card) {
+      const price = card.querySelector('.bc-filter-card__price');
+      price.textContent = uiText('labelPriceUnavailable', 'Bekijk prijs');
+      price.setAttribute('aria-busy', 'false');
+      price.dataset.bcPriceState = 'unavailable';
     }
 
     function renderProducts(products) {
@@ -554,7 +567,7 @@
           <h3 class="bc-filter-card__title"><a href="${attr(href)}" title="${attr(product.title)}">${escapeHtml(productTitle(product))}</a></h3>
           <dl class="bc-card-specs bc-card-specs--mobile" data-bc-card-specs hidden></dl>
           <p class="bc-card-color" aria-live="polite"></p><div class="bc-card-colors" data-bc-card-colors></div>
-          <div class="bc-card-buy"><div class="bc-filter-card__price">${escapeHtml(productPrice(product))}</div>${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax || 'incl. btw')}</span>` : ''}
+          <div class="bc-card-buy"><div class="bc-filter-card__price" aria-busy="true" data-bc-price-state="loading">${escapeHtml(uiText('labelPriceLoading', 'Prijs laden…'))}</div>${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax || 'incl. btw')}</span>` : ''}
           <p class="bc-card-delivery${root.dataset.temporaryInStock === 'true' ? ' bc-card-delivery--stock' : ''}" data-bc-card-delivery>${escapeHtml(root.dataset.cardDelivery || '')}</p>
           <div class="bc-card-actions"><a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">→</span></a><button type="button" class="bc-card-cart" data-bc-card-cart disabled aria-label="${attr(uiText('labelAdd','In winkelwagen'))}"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 3h3l2.3 12h11.5l2.2-9H6M9 20h.01M18 20h.01" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></button></div></div>
           <p class="bc-card-feedback" role="status"></p></div></article></li>`;
@@ -627,15 +640,14 @@
       delivery.classList.toggle('bc-card-delivery--stock',stockOverride || data.delivery_in_stock===true);
       card.querySelector('.bc-card-color').textContent = canonicalColor(data.color);
       const price = card.querySelector('.bc-filter-card__price');
-      price.textContent = productPrice(data);
-      const tile = data.tile_price;
-      if (Number.isFinite(tile?.box_area) && tile.box_area > 0 && Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
-        const amount = formatPrice(tile.unit_price_cents);
-        const areaPrice = tile.price_varies === true ? uiText('labelPriceFrom', 'Vanaf __BC_PRICE__').replace('__BC_PRICE__', amount) : amount;
-        price.textContent = `${areaPrice} ${uiText('labelTileArea', 'per m²')}`;
-      }
+      const priceLabel = productPrice(data);
+      if (priceLabel) {
+        price.textContent = priceLabel;
+        price.setAttribute('aria-busy', 'false');
+        price.dataset.bcPriceState = 'ready';
+      } else unavailableCardPrice(card);
       const cart = card.querySelector('[data-bc-card-cart]');
-      cart.disabled = !data.available;
+      cart.disabled = !data.available || !priceLabel;
       cart.setAttribute('aria-label', `${uiText('labelAdd','In winkelwagen')}: ${data.title}`);
       const wish = card.querySelector('[data-bc-wishlist-toggle]');
       if (wish) {
@@ -647,15 +659,15 @@
     }
 
     async function hydrateCardTitles(products, currentRequest) {
-      if (!root.dataset.cardDataSection) return;
       const cards = [...productGrid.querySelectorAll('.bc-filter-card')];
+      if (!root.dataset.cardDataSection) { cards.forEach(unavailableCardPrice); return; }
       const queue = cards.map((card,i) => ({card,product:products[i]}));
       const worker = async () => {
         while (queue.length && currentRequest === requestId) {
           const {card,product}=queue.shift();
           const data=await cardData(productPath(product));
-          if (currentRequest !== requestId || !card.isConnected || !data) continue;
-          if (String(data.id) !== String(product.shopify_product_id || product.id).split('/').pop()) continue;
+          if (currentRequest !== requestId || !card.isConnected) continue;
+          if (!data || String(data.id) !== String(product.shopify_product_id || product.id).split('/').pop()) { unavailableCardPrice(card); continue; }
           updateCard(card,data);
           loadCardColors(card,data).catch(() => {});
         }
