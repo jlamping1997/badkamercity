@@ -1,5 +1,7 @@
 # Tegels indelen op uitstraling
 
+> **9 november 2026 — TILE-LOOK-01 PILOT_APPLIED_VERIFIED / BOUNDED_BATCH_IN_PROGRESS:** tien SKU-gecontroleerde Cotto-proefartikelen zijn ingedeeld; lookveld, toevoegtags en werkelijke categorieplaats exact teruggelezen. Vijf bestaande lookcategorieën bewezen; Terrazzo behoudt zijn oude22handmatige leden en heeft één nieuwe ALL-tagbron (Tegels EN Terrazzo) voor onderhoudbare toevoegingen. Herstelkopie met alle3.496oorspronkelijke look-/tag-/collectierecords duurzaam bewaard vóór mutaties. De eerste2.003finite doelselecties (inclusief10pilot) worden in25-productbatches toegepast met verse identiteitread, compareDigest:null, tagsAdd en read-after-write; geen bestaande gevulde look overschreven. Native collectietoewijzingen zijn asynchroon; onafhankelijke latere read bevestigt inmiddels de juiste lidmaatschappen. Andere agents doen uitsluitend brononderzoek; deze sessie is de enige lookschrijver. **Eén volgende handeling:** de begrensde batches en eindcontrole afronden, daarna het nieuwe Uitstraling-filter als getest VPS-pakket aanbieden; nog geen live lookfacet claimen.143kleurloze tegels en Cotto-formaatfilter blijven DEFERRED op eigenaarverzoek. [Dossier](filters/tile-look-2026-11-09/README.md).
+
 9 november 2026 · TILE-LOOK-01 · IN_PROGRESS.
 
 ## Opdracht en uitgestelde punten
