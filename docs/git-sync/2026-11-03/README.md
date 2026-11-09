@@ -1,5 +1,7 @@
 # Git-broncontrole — 3 november 2026
 
+> **Vervolg 9 november 2026 — GIT-SYNC-02:** voor de huidige bron geldt [de nieuwe volledige publicatie-/broncontrole](../../repairs/2026-11-09/published-source-sync/README.md): MAIN196368531722, 1.390 files, 1.380 gedeelde files exact na tien gerichte Git-overames. settings_data-bodyuitzondering, .shopifyignore en negen live-only files blijven beschermd. De rollen en tellingen van 3 november hieronder zijn historische nulmetingen.
+
 Status: **CURRENT_SOURCE_CAPTURED / JEEO_LIVE_CONFIRMED / ONE_PROTECTED_API_EXCEPTION**.
 
 Broncodecheckpoint: **d4cc4bcf360d1f91d5a6ab8270a0ad7a188f0434**. De volledige sourcecommit is opnieuw uit Git opgehaald;1366/1366bronfiles exact gelijk aan de gecontroleerde capture, nul ontbrekende paden. [Git-verificatie](git-verification.json).

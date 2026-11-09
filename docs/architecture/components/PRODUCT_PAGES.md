@@ -1,5 +1,7 @@
 # Productpagina's, specificaties en documenten
 
+> **9 november 2026 — GIT-SYNC-02:** de reeds live tijdelijke voorraadpresentatie in bc-fabriecio-delivery, bc-porcelanosa-buybox.liquid en bc-porcelanosa-buybox.js staat nu exact op de codebranch. De Liquid-startstatus en JS-herberekening gebruiken dezelfde data-temporary-in-stock/data-in-stock-label-invoer. Hoeveelheden, m²-/doos-/stukberekeningen en koopidentiteit zijn niet gewijzigd; de presentatieschakelaar is geen voorraadbewijs. [Bronreview en bescherming](../../repairs/2026-11-09/published-source-sync/README.md).
+
 **Verdieping:** zie [de actierace-analyse voor Sunshower](micro/SUNSHOWER_ACTIONS.md). Het gedateerde bron-/HTML-bewijs hieronder blijft behouden; nieuwe replays zijn apart gelabeld.
 
 **Eigenaarrol:** storefrontontwikkeling voor rendering; assortiment/datahouder voor feiten en productrelaties. **Bronstatus:** VERIFIED_THEME, drie representatieve PDP's VERIFIED_HTML; interactieve/visuele staten NOT_TESTED. Zie [bronregels](README.md) en [routebeslissing](../ROUTE_RENDERER_MATRIX.md).

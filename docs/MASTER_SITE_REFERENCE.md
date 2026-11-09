@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **9 november 2026 — actuele gepubliceerde bron:** MAIN196368531722 — Hele europrijzen8nov, 1.390/1.390 hashes gelijk aan het geteste prijs-/zoekconcept. De tien overige bronverschillen zijn gericht in Git bijgewerkt; 1.380 gedeelde bronfiles exact, settings_data-bodyguard en negen live-only files behouden. Geen Shopify-write of nieuwe publicatie. [Bronreview en grenzen](repairs/2026-11-09/published-source-sync/README.md). Oudere bronmomenten hieronder blijven historie.
+
 > **Actueel vervolg 9 november — PREDICTIVE-PRICE-01:** prijsnotatie en Vanaf-label gelden nu ook voor zoeksuggesties; rijen zonder foto blijven leesbaar. Het bestaande prijsconcept196368531722 heeft nu 27 bedoelde featurepaden, nog UNPUBLISHED; MAIN196354474250 blijft behouden. [Uitvoering, broncontrole en huidige publicatiestap](repairs/2026-11-09/predictive-search-prices/README.md).
 
 > **Actuele publicatie 8 november — PRICE-ROUND-01 / MOBILE-CARDS-01:** MAIN196354474250 bevat de eigenaar-gepubliceerde mobiele productlijst; die publicatie hoeft niet opnieuw. 3.335 verkoopprijzen zijn al live afgerond. Het aparte prijs-/pictogramconcept196368531722 is UNPUBLISHED en heet **Hele europrijzen8nov**. Oudere Klantenservice-rollen hieronder zijn gedateerde historie. [Prijsafspraak](PRICING_POLICY.md) · [Verse bron-/prijs-/previewcontrole](repairs/2026-11-08/whole-euro-prices/README.md).
