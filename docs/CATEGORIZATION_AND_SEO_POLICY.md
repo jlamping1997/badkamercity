@@ -1,7 +1,7 @@
 # Categorisatie, productimports en SEO-landingspagina's
 
-Versie 0.1 · 29 oktober 2026 · TAX-01.
-**Vaste werkwijze voor toekomstige keuzes; de nieuwe indeling is nog niet geïmplementeerd.**
+Versie 0.2 · 9 november 2026 · TAX-01 / TILE-LOOK-01.
+**Vaste werkwijze; de afdelingsvoorstellen zijn nog niet integraal geïmplementeerd.** De afzonderlijke tegeluitstraling is op 9 november ingevuld; het bijbehorende filterpakket wacht op eigenaaruitvoering.
 Eigenaar: BadkamerCity. De eigenaar wil een efficiënt groeiend assortiment, consistente imports en gerichte toekomstige SEO- en serieonderzoeken.
 Dit document is het centrale contract. Bestaande technische dossiers blijven de implementatie beschrijven; historische masterplannen zijn geen actuele catalogus.
 
@@ -102,6 +102,14 @@ Deze tabel keurt geen nieuwe categorieën of producttoewijzingen automatisch goe
 
 Gebruik bestaande gecontroleerde productvelden/metafields en importregisters waar mogelijk. Eerst de mapping controleren; dit document schrijft geen nieuwe technische namespaces of tags voor.
 Automatische regels moeten exacte AND/OR-logica en verwachte voorbeeldartikelen hebben. Een regel als “titel bevat messing” is onvoldoende om PVD/Living Colour of compatibiliteit vast te stellen.
+
+### Tegeluitstraling bij een volgende import
+
+Sinds TILE-LOOK-01 (9 november 2026) is het bestaande merchantveld `tiles.look` de bron voor de primaire tegeluitstraling. De consumentwaarden zijn Steenlook, Marmerlook, Houtlook, Betonlook, Metaallook, Terrazzo, Effen, Decoratief, Handvormlook en Terracottalook. De bestaande bronwaarden Terrazzolook en Design/Patroontegels blijven behouden; de filteraliassen zijn Terrazzo en Decoratief. Zellige wordt Handvormlook. Uitstraling blijft gescheiden van materiaal, toepassing, afwerking en mozaïektype.
+
+Behoud bij feed-, CSV- en productupdates de bestaande lookwaarden en afgeleide tags. Vervang geen volledige taglijst door een bronlijst waarin die tags ontbreken. De gewone looktag is gelijk aan de consumentwaarde; Decoratief gebruikt de bestaande categorietag Decortegel en Terrazzo gebruikt tag Terrazzo. Behoud terechte secundaire categorieplaatsen. Er zijn geen nieuwe SEO-pagina's voor Effen, Handvormlook of Terracottalook gepubliceerd.
+
+Onderbouw aanvullingen met exacte SKU-/familiecontext en gecontroleerde productbeelden. Gebruik geen algemene titel- of BMNUni-regel. Noteer twijfelgevallen en schrijf een look niet als technische specificatie. De metadata zijn toegepast; het nieuwe VPS-filter staat klaar voor eigenaaruitvoering. [Resultaat, bron en grenzen](filters/tile-look-2026-11-09/README.md).
 
 ## 7. Nieuwe categorie of SEO-/seriepagina onderzoeken
 

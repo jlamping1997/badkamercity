@@ -1,5 +1,7 @@
 # Verdere tegelkleuren en ontbrekende kleurfilters
 
+> **9 november 2026 — vervolgkeuze eigenaar:** de 143 ontbrekende basiskleuren en het Cotto-merkformaatfilter zijn expliciet **DEFERRED**. De kleurrelease blijft live; geen nieuwe kleurwijzigingen in TILE-LOOK-01. De uitstralingindeling is inmiddels in Shopify toegepast. Zie [de huidige lookoverdracht](../tile-look-2026-11-09/README.md) voor het nog uit te voeren filterpakket.
+
 9 november 2026. **APPLIED_VERIFIED / PUBLIC_API_VERIFIED.** Voorbereid op 8 november, door de eigenaar geïnstalleerd en publiek nagecontroleerd op 9 november. De eigenaar heeft gevraagd om verder te gaan met duidelijke basiskleuren, zonder nieuwe bevestigingen voor iedere keuze.
 
 ## Wat deze batch toevoegt

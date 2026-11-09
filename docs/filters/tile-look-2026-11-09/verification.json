@@ -1,0 +1,62 @@
+{
+  "status": "ADMIN_APPLIED_VERIFIED_FILTER_READY_NOT_SERVER_INSTALLED",
+  "checked_utc": "2026-11-09T10:20:36.214955+00:00",
+  "eligible_tile_products": 3496,
+  "admin_tile_collection_products": 4100,
+  "excluded_unpublished_products": 604,
+  "classified_products": 3495,
+  "new_look_fields_written": 3137,
+  "prior_look_fields_preserved": 358,
+  "unclassified_products": 1,
+  "look_counts": {
+    "Marmerlook": 150,
+    "Steenlook": 216,
+    "Terrazzo": 180,
+    "Handvormlook": 1022,
+    "Betonlook": 146,
+    "Metaallook": 68,
+    "Houtlook": 74,
+    "Decoratief": 828,
+    "Effen": 661,
+    "Terracottalook": 150
+  },
+  "native_collection_counts": {
+    "stonelook-tegels": 216,
+    "marmerlook-tegels": 150,
+    "houtlook-tegels": 74,
+    "betonlook-tegels": 146,
+    "metaallook-tegels": 68,
+    "terrazzo-tegels": 180,
+    "decortegels": 839
+  },
+  "native_collection_id_sets_exact": true,
+  "all_primary_looks_in_matching_existing_category": true,
+  "native_source_contracts_valid": true,
+  "terrazzo_original_manual_ids_exact": 22,
+  "tag_only_repairs_existing_design_products": 5,
+  "semantic_tag_additions": 3142,
+  "original_tags_preserved": true,
+  "raw_prior_look_id_type_value_digest_exact": true,
+  "product_price_inventory_status_publication_theme_write": false,
+  "source": "tiles.look",
+  "new_api_field": "f_tegel_uitstraling",
+  "look_filter_server_activation": "NOT_EXECUTED",
+  "code_release_commit": "ff1c7c13d9ce5ef3aeec9408aa9e9dc1ff4db183",
+  "installer_sha256": "73088a72cafbfa895a047214e085eea5d0c2727749e6c63bf34f401c00ed30d5",
+  "local_tests_passed": 91,
+  "local_tests_skipped": 0,
+  "owner_deferred": [
+    "143 missing base colors",
+    "Cottoceramix tile-format profile"
+  ],
+  "unresolved": [
+    {
+      "sku": "WM2600",
+      "title": "A Piedi White100x100",
+      "reason": "Insufficient confidence for stone/concrete/plain distinction"
+    }
+  ],
+  "native_counts_note": "Decortegels839 includes11 preserved secondary memberships from other primary looks; no old membership was removed.",
+  "browser_mobile_reboot_tests": "NOT_EXECUTED",
+  "whole_catalog_atomic_lock": "NOT_CLAIMED"
+}
