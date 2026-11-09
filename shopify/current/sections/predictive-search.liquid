@@ -16,10 +16,11 @@
           >
             {%- for product in predictive_search.resources.products -%}
               {%- liquid
-                assign predictive_search_target = product.selected_or_first_available_variant
-                assign predictive_search_money_price = predictive_search_target.price | money
-                if settings.currency_code_enabled
-                  assign predictive_search_money_price = predictive_search_target.price | money_with_currency
+                capture predictive_search_money_price
+                  render 'bc-money', amount: product.price_min, with_currency: settings.currency_code_enabled
+                endcapture
+                if product.price_varies
+                  assign predictive_search_money_price = 'products.product.price.from_price_html' | t: price: predictive_search_money_price
                 endif
               -%}
               <li

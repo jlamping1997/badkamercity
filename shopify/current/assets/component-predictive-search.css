@@ -164,7 +164,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .predictive-search__product-row,
 .predictive-search__item--product {
   display: grid;
-  grid-template-columns: 7.2rem minmax(0, 1fr) 8.8rem;
+  grid-template-columns: 7.2rem minmax(0, 1fr) max-content;
   align-items: start;
   column-gap: 1.8rem;
   row-gap: 0;
@@ -330,7 +330,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
   .predictive-search__product-row,
   .predictive-search__item--product {
-    grid-template-columns: 5.6rem minmax(0, 1fr) 6.4rem;
+    grid-template-columns: 5.6rem minmax(0, 1fr) max-content;
     column-gap: 1.1rem;
     padding: 1rem 0;
   }
@@ -382,4 +382,16 @@ predictive-search[open] .predictive-search,
 predictive-search[loading] .predictive-search {
   margin-top: -0.1rem;
   clip-path: inset(0 0 0 0 round 0 0 1.4rem 1.4rem);
+}
+
+.predictive-search__product-row > .predictive-search__product-content {
+  grid-column: 2;
+}
+
+.predictive-search__product-row > .predictive-search__product-price {
+  grid-column: 3;
+}
+
+.predictive-search__product-row:has(> .predictive-search__product-media:empty) > .predictive-search__product-content {
+  grid-column: 1 / 3;
 }
