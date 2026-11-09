@@ -1,5 +1,7 @@
 # Checkout, verzending, betaling en operationele grenzen
 
+> **9 november 2026 — GIT-SYNC-02:** de al gepubliceerde bc-cart-delivery-vertakking voor settings.bc_temporary_in_stock staat nu exact in Git; alleen de bestaande levertekst wordt daardoor gekozen. Voorraad, fulfillment, verzendtarief, betaling, mails en checkout zijn door deze bronreconciliatie niet gewijzigd of end-to-end getest. [Bronreview](../../repairs/2026-11-09/published-source-sync/README.md).
+
 > **Nieuwste controle — SHIPPING-COVERAGE-01:** actieve NL-Market met beide oorsprongen exact teruggelezen; acht nieuwe cartoffertes PASS en cart leeg. Het oude locatie-/coversAllItems-signaal is binnen deze scope verklaard. [Bewijs](../../repairs/2026-11-08/shipping-and-blog/README.md). Geen verzendconfiguratie, voorraad, betaling of mail gewijzigd/verstuurd.
 
 **Actuele aanvulling: 8 november 2026 — bezorginformatie en tariefproef.** MAIN is `196368531722 — BadkamerCity - Klantenservice 8 nov`. [Het actuele bezorgdossier](../../repairs/2026-11-08/delivery-information/README.md) en [de gedateerde centrale audit](../../audits/2026-11-08/README.md) onderscheiden nieuwe proeven en eerdere bronstand. De thematische winkelwagen en de door Shopify gehoste checkout zijn afzonderlijke systemen. Goede cartfeedback bewijst geen betaling, ordercommunicatie of fulfilment.

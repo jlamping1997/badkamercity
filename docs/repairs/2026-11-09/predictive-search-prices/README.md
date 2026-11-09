@@ -1,5 +1,7 @@
 # Zoeksuggesties: duidelijke vanafprijs en leesbare titels
 
+> **Nacontrole 9 november — OWNER_PUBLISHED_VERIFIED:** eigenaar heeft 196368531722 gepubliceerd en zelf goed beoordeeld. Alle 1.390 MAIN-checksums zijn gelijk aan het geteste eindconcept; de 27 releasepaden zijn dus live bevestigd. De tien overige bronverschillen zijn daarna afzonderlijk beoordeeld en exact naar Git overgenomen. [Actuele publicatie-/broncontrole](../published-source-sync/README.md). De eerdere PREVIEW_VERIFIED-stand en publicatieactie hieronder zijn geschiedenis; telefoon-, koop- en meetgrenzen blijven behouden.
+
 9 november 2026 · PREDICTIVE-PRICE-01 / DOC-SEARCH-01 · FIXED_UNPUBLISHED / PREVIEW_VERIFIED
 
 Codecheckpoint: `4ad770d298506780957dc83f8e387c19f6a75964`.

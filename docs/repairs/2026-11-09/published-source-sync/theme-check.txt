@@ -1,0 +1,108 @@
+Failed to setup with the following error: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/latest.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Loaded resource from /root/.cache/theme-liquid-docs-nodejs/manifest_theme.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/theme_block.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/translations.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/theme_settings.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/section.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/strict_settings.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/settings.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/setting.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/default_setting_values.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/app_block_entry.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/theme_block_entry.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/preset.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/preset_blocks.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/local_block_entry.json
+Loaded schema from /root/.cache/theme-liquid-docs-nodejs/targetted_block_entry.json
+Loaded resource from /root/.cache/theme-liquid-docs-nodejs/tags.json
+Loaded resource from /root/.cache/theme-liquid-docs-nodejs/filters.json
+Loaded resource from /root/.cache/theme-liquid-docs-nodejs/shopify_system_translations.json
+Loaded resource from /root/.cache/theme-liquid-docs-nodejs/objects.json
+## Validation Summary
+
+**Overall Status:** ✅ VALID
+**Total Files:** 10
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-external-filters.css passed all checks.
+
+### File 2
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-porcelanosa-buybox.js passed all checks.
+
+### File 3
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/bc-product-cards.css passed all checks.
+
+### File 4
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** config/settings_schema.json passed all checks.
+
+### File 5
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-card-delivery.liquid passed all checks.
+
+### File 6
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-cart-delivery.liquid passed all checks.
+
+### File 7
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-external-filters.liquid passed all checks.
+
+### File 8
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-fabriecio-delivery.liquid passed all checks.
+
+### File 9
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-porcelanosa-buybox.liquid passed all checks.
+
+### File 10
+**Artifact ID:** source-reconciliation-2026-11-09
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/card-product.liquid passed all checks.
+
+

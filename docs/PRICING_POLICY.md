@@ -1,5 +1,7 @@
 # Verkoopprijzen en afronding
 
+> **9 november 2026 — publicatie bevestigd:** eigenaar heeft het prijs-/zoekconcept gepubliceerd; alle 1.390 MAIN-checksums gelijk aan het gecontroleerde eindconcept. De bronreconciliatie verandert geen verkoopprijs, centen, verkoopeenheid of tegelberekening. [Publicatie en Git-broncontrole](repairs/2026-11-09/published-source-sync/README.md).
+
 > **9 november 2026 — voorspellend zoeken aangevuld:** de zoeksuggesties gebruiken product.price_min, het bestaande Vanaf-label bij product.price_varies en dezelfde bc-money-helper. Geen echte centen of verkoopeenheden aangepast. [Controle en grenzen](repairs/2026-11-09/predictive-search-prices/README.md).
 
 8 november 2026 · PRICE-ROUND-01 · expliciete eigenaarafspraak

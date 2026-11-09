@@ -1,6 +1,6 @@
 {
   "date": "2026-11-08",
-  "status": "AUDIT_COMPLETE_WITH_EXPLICIT_LIMITS; LIVE_REPAIRS_PENDING",
+  "status": "AUDIT_WITH_OPEN_GATES; OWNER_PUBLISHED_SOURCE_VERIFIED",
   "findings": [
     {
       "id": "BC-AUD-001",
@@ -62,13 +62,14 @@
     {
       "id": "BC-AUD-007",
       "priority": "P1",
-      "evidence": "FRESH_2026_11_09_MANIFEST_COMPARISON_WITH_DRAFT_SCOPE",
-      "status": "OPEN_RECOUNTED_SOURCE_PARITY",
-      "finding": "Git/live-bronverschillen: tien overige gedeelde bestanden naast de bedoelde conceptwijzigingen",
+      "evidence": "FRESH_1390_FILE_MAIN_MANIFEST_AND_1380_SHARED_FILE_MD5_COMPARISON",
+      "status": "RESOLVED_SHARED_SOURCE_PARITY_WITH_EXPLICIT_EXCEPTIONS",
+      "finding": "Tien achterlopende gedeelde Git-bestanden individueel beoordeeld en exact uit gepubliceerde MAIN overgenomen",
       "scope": "shopify/current/",
-      "next_action": "Tien overige bronverschillen gericht reconciliëren; de 27 bedoelde conceptpaden, settings_data-bodyguard, .shopifyignore en negen live-only files behouden. Geen blind root-deploy.",
-      "follow_up": "docs/repairs/2026-11-09/predictive-search-prices/source-parity-summary.json",
-      "original_measurement": "8November2026: fifteen shared differences; historical count"
+      "next_action": "Behoud de expliciete uitzonderingen; gebruik verse rollen en manifestvergelijking vóór een volgende gerichte conceptwijziging. Geen blind root-deploy.",
+      "follow_up": "docs/repairs/2026-11-09/published-source-sync/README.md",
+      "original_measurement": "8November2026: fifteen shared differences; historical count",
+      "resolution": "1380/1380shared source files match MAIN; protected settings_data body excluded; .shopifyignore and9live-only backup/reviewfiles retained. No Shopify write."
     },
     {
       "id": "BC-AUD-008",
@@ -111,12 +112,12 @@
     {
       "id": "BC-AUD-012",
       "priority": "P2",
-      "evidence": "VERIFIED_LITERAL_ASSET_DEPENDENCIES;THEME_CHECK_PASS",
-      "status": "FIXED_UNPUBLISHED",
+      "evidence": "OWNER_PUBLISHED_AND_COMPLETE_PREVIEW_TO_MAIN_MANIFEST_EQUALITY",
+      "status": "RESOLVED_LIVE_SOURCE",
       "finding": "Drie letterlijke inline_asset_content-verwijzingen missen overeenkomstige assetnaam",
       "scope": "main-password-header / product-media",
-      "next_action": "Owner reviews/publishes Hele europrijzen8nov; then confirm these source files on MAIN. Real password-error/3D product paths remain NOT_TESTED.",
-      "resolution": "Three missing .svg filename suffixes corrected in UNPUBLISHED196368531722. All literal inline_asset_content dependencies resolve; no live password-error/3D runtime reproduction claimed.",
+      "next_action": "Geen herhaalde publicatie; password-error/3D product runtime blijft NOT_TESTED.",
+      "resolution": "MAIN196368531722 matches all1390tested preview checksums, including three corrected SVG references.",
       "follow_up": "docs/repairs/2026-11-08/whole-euro-prices/README.md"
     },
     {
@@ -168,14 +169,14 @@
     {
       "id": "BC-AUD-018",
       "priority": "P2",
-      "evidence": "VERIFIED_PREVIEW_UI;LIQUID_TESTS;DESKTOP_GEOMETRY",
-      "status": "FIXED_UNPUBLISHED",
+      "evidence": "OWNER_PUBLISHED_AND_VISUAL_REVIEW;1390_FILE_PREVIEW_TO_MAIN_PARITY",
+      "status": "RESOLVED_LIVE_SOURCE_AND_OWNER_REVIEW",
       "finding": "Zoeksuggesties missen Vanaf en gedeelde prijsopmaak; fotoloze titels gebruiken de smalle fotokolom",
       "scope": "header predictive-search; component-predictive-search.css",
-      "resolution": "Minimumprijs en Vanaf, gedeelde bc-money-opmaak en expliciete gridkolommen in bestaand UNPUBLISHED196368531722. Zeventien gerichte controles en tien desktoprijen PASS; MAIN behouden.",
-      "next_action": "Eigenaar beoordeelt/publiceert hetzelfde prijsconcept; daarna MAIN/27-file-readback. Fysieke telefoon en koopflow apart open.",
-      "follow_up": "docs/repairs/2026-11-09/predictive-search-prices/README.md"
+      "resolution": "MAIN196368531722 matches tested end-preview; minimum/Vanaf/shared formatting and photo-free grid fix published by owner.",
+      "next_action": "Geen herhaalde write; fysieke telefoon en koopflow blijven apart open.",
+      "follow_up": "docs/repairs/2026-11-09/published-source-sync/README.md"
     }
   ],
-  "last_followup": "CATEGORY-COPY-01; dormant tileaccessories404 explained;9links to confirmedemptylists removed from8collection descriptions"
+  "last_followup": "2026-11-09 GIT-SYNC-02; all1390published checksums match preview;10source diffs reconciled;1380shared sources equal with explicit exceptions"
 }

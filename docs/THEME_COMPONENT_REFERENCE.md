@@ -1,5 +1,7 @@
 # BadkamerCity — complete thema-component- en instellingenreferentie
 
+> **9 november 2026 — GIT-SYNC-02:** de actuele codebranch bevat nu de al gepubliceerde kaart-overlay, filter-CSS en tijdelijke voorraadpresentatie inclusief tegelkoopbox. De tien files zijn bytegelijk vanuit MAIN overgenomen, geen nieuw storefrontgedrag. settings.bc_temporary_in_stock stuurt presentatie in de kaart-, cart-, Verlavio- en tegelpaden; het is geen bron voor voorraad of bestelbaarheid. [Bestandsreview en actuele pariteit](repairs/2026-11-09/published-source-sync/README.md).
+
 > **8 november 2026 — mobiele lijst en prijsopmaak:** de mobiele lijst is gepubliceerd op MAIN196354474250. Het nieuwe prijsconcept196368531722 gebruikt snippets/bc-money.liquid en assets/bc-money.js, geladen vóór de bestaande deferred consumenten. Alleen werkelijk hele EUR-bedragen vanaf €100 verliezen lege decimalen; data-afronding en m²-uitzondering staan in [het prijscontract](PRICING_POLICY.md). [Actuele uitvoering en grenzen](repairs/2026-11-08/whole-euro-prices/README.md).
 
 > **Actuele correctie 8 november 2026:** Badkamermeubels is nu `category-landing` → `main-category-landing` + advies, met zeven bestaande menukinderen. De oude hub en drie inline Admin-stijlblokken worden niet meer gebruikt; de drie blokken zijn verwijderd op eigenaarverzoek. Onderstaande oude hubtoewijzing/CSS-afhankelijkheid is historische broninformatie. [Bewijs en rollback](repairs/2026-11-08/furniture-standard/README.md).
