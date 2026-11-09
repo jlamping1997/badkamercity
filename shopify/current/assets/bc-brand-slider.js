@@ -7,71 +7,74 @@
       this.controls = this.querySelector('[data-brand-controls]');
       this.previous = this.querySelector('[data-brand-previous]');
       this.next = this.querySelector('[data-brand-next]');
-      this.toggle = this.querySelector('[data-brand-toggle]');
       if (!this.track || !this.controls || !this.previous || !this.next) return;
 
       this.events?.abort();
       this.events = new AbortController();
       const options = { signal: this.events.signal };
       this.originals = [...this.track.children].filter(item => !item.hasAttribute('data-brand-clone'));
-      this.desktop = window.matchMedia('(min-width: 990px)');
       this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-      this.autoRequested = this.hasAttribute('data-brand-autoplay') && !!this.toggle;
-      this.userPaused ??= false;
-      this.manualMode = false;
-      this.hovered = false;
-      this.focused = this.contains(document.activeElement);
+      this.autoRequested = this.hasAttribute('data-brand-autoplay');
+      this.focused = false;
+      this.keyboardManual = false;
       this.inView = true;
       this.animationFrame = null;
       this.loopWidth = 0;
+      this.boost = 0;
+      this.drag = null;
+      this.suppressClick = false;
 
       this.previous.addEventListener('click', () => this.move(-1), options);
       this.next.addEventListener('click', () => this.move(1), options);
-      this.toggle?.addEventListener('click', () => {
-        this.userPaused = !this.userPaused;
-        if (!this.userPaused) {
-          this.manualMode = false;
-          this.focused = false;
-          this.configure();
-        } else {
-          this.syncMotion();
-          this.update();
-        }
-      }, options);
-
       this.track.addEventListener('scroll', () => {
         if (!this.loopWidth) this.scheduleUpdate();
       }, { ...options, passive: true });
-      this.track.addEventListener('pointerdown', event => {
-        if (event.pointerType === 'touch' || event.pointerType === 'pen') this.enterManual();
-      }, { ...options, passive: true });
+      this.track.addEventListener('pointerdown', event => this.startDrag(event), { ...options, passive: true });
+      this.track.addEventListener('pointermove', event => this.dragMove(event), { ...options, passive: true });
+      window.addEventListener('pointerup', event => this.endDrag(event), { ...options, passive: true });
+      window.addEventListener('pointercancel', event => this.endDrag(event, true), { ...options, passive: true });
+      this.track.addEventListener('lostpointercapture', event => this.endDrag(event, true), options);
+      this.track.addEventListener('dragstart', event => {
+        if (this.loopWidth) event.preventDefault();
+      }, options);
       this.track.addEventListener('mousedown', event => {
         if (event.target.closest('[data-brand-clone]')) event.preventDefault();
       }, options);
+      this.track.addEventListener('click', event => {
+        if (this.suppressClick && event.detail !== 0) {
+          this.suppressClick = false;
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }, { ...options, capture: true });
       this.track.addEventListener('keydown', event => {
-        if (event.target !== this.track) return;
-        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        if (event.target !== this.track || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
         event.preventDefault();
-        this.enterManual();
+        if (this.loopWidth) {
+          this.keyboardManual = true;
+          this.clearLoop();
+          this.update();
+        }
         const rtl = getComputedStyle(this.track).direction === 'rtl';
         if (event.key === 'Home' || event.key === 'End') {
           this.track.scrollTo({ left: event.key === 'Home' ? 0 : (rtl ? -1 : 1) * this.track.scrollWidth, behavior: this.behavior() });
-        } else {
-          this.move((event.key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1));
-        }
+        } else this.move((event.key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1));
       }, options);
-
-      this.addEventListener('mouseenter', () => { this.hovered = true; this.syncMotion(); }, options);
-      this.addEventListener('mouseleave', () => { this.hovered = false; this.syncMotion(); }, options);
-      this.addEventListener('focusin', () => { this.focused = true; this.syncMotion(); }, options);
-      this.addEventListener('focusout', event => {
-        this.focused = !!event.relatedTarget && this.contains(event.relatedTarget);
+      this.addEventListener('focusin', event => {
+        this.focused = event.target.matches(':focus-visible');
         this.syncMotion();
+      }, options);
+      this.addEventListener('focusout', event => {
+        if (event.relatedTarget && this.contains(event.relatedTarget)) return;
+        this.focused = false;
+        if (this.keyboardManual) {
+          this.keyboardManual = false;
+          this.configure();
+        } else this.syncMotion();
       }, options);
       document.addEventListener('visibilitychange', () => this.syncMotion(), options);
       const resize = () => this.scheduleLayout();
       window.addEventListener('resize', resize, options);
-      this.desktop.addEventListener?.('change', resize, options);
       this.reduced.addEventListener?.('change', resize, options);
       this.resizeObserver?.disconnect();
       if ('ResizeObserver' in window) {
@@ -91,20 +94,20 @@
     }
 
     eligible() {
-      return this.autoRequested && this.desktop.matches && !this.reduced.matches && this.originals.length > 1;
+      return this.autoRequested && !this.reduced.matches && this.originals.length > 1;
     }
 
     configure() {
       const position = this.loopWidth ? Math.abs(this.track.scrollLeft) % this.loopWidth : Math.abs(this.track.scrollLeft);
       this.clearLoop();
-      if (this.eligible() && !this.manualMode) {
+      if (this.eligible() && !this.keyboardManual) {
         const gap = parseFloat(getComputedStyle(this.track).columnGap) || 0;
         const width = this.originals.reduce((total, item) => total + item.getBoundingClientRect().width + gap, 0);
         if (width > 0 && this.track.clientWidth > 0) {
           this.loopWidth = width;
           this.setAttribute('data-brand-looping', '');
-          const copies = Math.ceil(this.track.clientWidth / width) + 1;
           const fragment = document.createDocumentFragment();
+          const copies = Math.ceil(this.track.clientWidth / width) + 1;
           for (let copy = 0; copy < copies; copy++) {
             for (const item of this.originals) {
               const clone = item.cloneNode(true);
@@ -118,16 +121,64 @@
           }
           this.track.appendChild(fragment);
           this.cyclePosition = position % width;
-          const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
-          this.track.scrollLeft = direction * this.cyclePosition;
+          this.shift(0);
         }
       }
       this.update();
       this.syncMotion();
     }
 
+    shift(pixels) {
+      if (!this.loopWidth) return;
+      const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+      this.cyclePosition = ((this.cyclePosition - direction * pixels) % this.loopWidth + this.loopWidth) % this.loopWidth;
+      this.track.scrollLeft = direction * this.cyclePosition;
+    }
+
+    startDrag(event) {
+      if (!this.loopWidth || this.drag || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+      this.suppressClick = false;
+      this.focused = false;
+      this.boost = 0;
+      this.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, lastX: event.clientX, time: event.timeStamp, velocity: 0, active: false, type: event.pointerType };
+      this.syncMotion();
+    }
+
+    dragMove(event) {
+      const drag = this.drag;
+      if (!drag || event.pointerId !== drag.id) return;
+      if (!drag.active) {
+        const x = event.clientX - drag.x, y = event.clientY - drag.y;
+        if (Math.max(Math.abs(x), Math.abs(y)) < 6) return;
+        if (drag.type !== 'mouse' && Math.abs(y) > Math.abs(x)) {
+          this.drag = null;
+          return;
+        }
+        drag.active = true;
+        this.suppressClick = true;
+        this.track.setPointerCapture?.(event.pointerId);
+        this.setAttribute('data-brand-dragging', '');
+      }
+      const pixels = event.clientX - drag.lastX;
+      const seconds = Math.max(8, event.timeStamp - drag.time) / 1000;
+      drag.velocity = Math.max(-1600, Math.min(1600, pixels / seconds));
+      drag.lastX = event.clientX;
+      drag.time = event.timeStamp;
+      this.shift(pixels);
+    }
+
+    endDrag(event, cancelled = false) {
+      const drag = this.drag;
+      if (!drag || event.pointerId !== drag.id) return;
+      this.drag = null;
+      this.removeAttribute('data-brand-dragging');
+      if (this.track.hasPointerCapture?.(event.pointerId)) this.track.releasePointerCapture(event.pointerId);
+      this.boost = !cancelled && drag.active && event.timeStamp - drag.time < 120 ? drag.velocity : 0;
+      this.syncMotion();
+    }
+
     canRun() {
-      return this.loopWidth > 0 && !this.userPaused && !this.hovered && !this.focused && this.inView && !document.hidden;
+      return this.loopWidth > 0 && !this.focused && this.inView && !document.hidden;
     }
 
     syncMotion() {
@@ -146,9 +197,10 @@
       if (!this.canRun()) { this.stopMotion(); return; }
       if (this.lastTime != null) {
         const seconds = Math.min(0.1, Math.max(0, (time - this.lastTime) / 1000));
-        const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
-        this.cyclePosition = ((this.cyclePosition - direction * 18 * seconds) % this.loopWidth + this.loopWidth) % this.loopWidth;
-        this.track.scrollLeft = direction * this.cyclePosition;
+        const decay = Math.exp(-5 * seconds);
+        this.shift(22 * seconds + this.boost * (1 - decay) / 5);
+        this.boost *= decay;
+        if (Math.abs(this.boost) < 0.1) this.boost = 0;
       }
       this.lastTime = time;
       this.animationFrame = requestAnimationFrame(next => this.animate(next));
@@ -158,11 +210,14 @@
       if (this.animationFrame != null) cancelAnimationFrame(this.animationFrame);
       this.animationFrame = null;
       this.lastTime = null;
+      this.boost = 0;
       this.removeAttribute('data-brand-moving');
     }
 
     clearLoop() {
       this.stopMotion();
+      this.drag = null;
+      this.removeAttribute('data-brand-dragging');
       if (!this.loopWidth) return;
       const position = Math.abs(this.track.scrollLeft) % this.loopWidth;
       const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
@@ -172,28 +227,24 @@
       this.track.scrollLeft = direction * Math.min(position, Math.max(0, this.track.scrollWidth - this.track.clientWidth));
     }
 
-    enterManual() {
-      if (this.autoRequested) {
-        this.userPaused = true;
-        this.manualMode = true;
-        this.clearLoop();
-        this.update();
-      }
-    }
-
     behavior() {
       return this.reduced.matches ? 'auto' : 'smooth';
     }
 
     move(direction) {
-      this.enterManual();
       const first = this.track.firstElementChild;
       if (!first) return;
       const gap = parseFloat(getComputedStyle(this.track).columnGap) || 0;
       const step = first.getBoundingClientRect().width + gap;
+      const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+      if (this.loopWidth) {
+        if (this.focused) this.shift(-direction * rtl * step);
+        else this.boost = -direction * rtl * step * 5;
+        this.syncMotion();
+        return;
+      }
       const visible = Math.max(1, Math.floor((this.track.clientWidth + gap) / Math.max(step, 1)));
-      const rtl = getComputedStyle(this.track).direction === 'rtl';
-      this.track.scrollBy({ left: direction * (rtl ? -1 : 1) * visible * step, behavior: this.behavior() });
+      this.track.scrollBy({ left: direction * rtl * visible * step, behavior: this.behavior() });
     }
 
     scheduleUpdate() {
@@ -213,12 +264,6 @@
       this.controls.hidden = !this.loopWidth && maximum <= 2;
       this.previous.disabled = !this.loopWidth && position <= 2;
       this.next.disabled = !this.loopWidth && position >= maximum - 2;
-      if (this.toggle) {
-        this.toggle.hidden = !this.eligible();
-        this.toggle.setAttribute('aria-label', this.userPaused ? this.toggle.dataset.labelPlay : this.toggle.dataset.labelPause);
-        const icon = this.toggle.querySelector('span');
-        if (icon) icon.textContent = this.userPaused ? '▶' : 'Ⅱ';
-      }
     }
 
     disconnectedCallback() {

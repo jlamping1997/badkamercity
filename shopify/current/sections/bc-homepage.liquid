@@ -71,7 +71,6 @@
         <div class="bc-brand-slider__actions">
           <a class="bc-brand-slider__all" href="{{ section.settings.brands_link | default: '/collections?view=merken' | escape }}">{{ section.settings.brands_label | escape }} <span aria-hidden="true">&rarr;</span></a>
           <div class="bc-brand-slider__controls" data-brand-controls hidden>
-            <button class="bc-brand-slider__button" type="button" data-brand-toggle hidden data-label-play="{{ 'bc_brands.play' | t | escape }}" data-label-pause="{{ 'bc_brands.pause' | t | escape }}" aria-label="{{ 'bc_brands.pause' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">Ⅱ</span></button>
             <button class="bc-brand-slider__button" type="button" data-brand-previous aria-label="{{ 'bc_brands.previous' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&larr;</span></button>
             <button class="bc-brand-slider__button" type="button" data-brand-next aria-label="{{ 'bc_brands.next' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&rarr;</span></button>
           </div>
