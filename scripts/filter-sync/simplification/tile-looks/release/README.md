@@ -1,6 +1,6 @@
 # Tegeluitstraling — standalone filteraanvulling
 
-**Lokaal releaseklaar; niet op de VPS uitgevoerd.** De eigenaar moet de vastgepinde standalone via zijn bestaande PowerShell/SSH-route uitvoeren nadat de Shopify-categorisering voltooid is. De publicatiecommit en download-URL worden pas door de hoofdsessie ingevuld; dit bestand bevat geen fictieve pin.
+**Lokaal releaseklaar; niet op de VPS uitgevoerd.** De eigenaar moet de vastgepinde standalone via zijn bestaande PowerShell/SSH-route uitvoeren nadat de Shopify-categorisering voltooid is. De gecontroleerde publicatiepin staat in `publication.json`; de standalone op dat checkpoint is exact teruggelezen.
 
 ## Bron en scope
 
@@ -44,7 +44,7 @@ De echte vóór-meting met 3.496 productidentiteiten bevestigt behoud van alle b
 
 Geen echte VPS-staging, nieuwe installatie, browser- of telefoonproef is uitgevoerd. De 143 resterende kleurloze tegels en het Cotto-formaatprofiel blijven expliciet uitgesteld; deze lookaanvulling lost die punten niet op.
 
-Testen vanuit de projectwerkmap:
+Uitgevoerde testcommando's in de private bewijswerkmap (de benodigde fixtures worden niet meegepubliceerd):
 
 ```bash
 python -m unittest discover -s tile-look-20261109/worker -p 'test_tile_look_worker_patch.py' -v
