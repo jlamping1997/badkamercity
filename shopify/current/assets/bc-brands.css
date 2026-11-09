@@ -21,3 +21,12 @@ bc-brand-slider{display:block;min-width:0}
 @media(min-width:750px){.bc-brand-slider__track{grid-auto-columns:calc((100% - 48px)/4);gap:16px}.bc-brand-directory{padding:40px 24px 64px}.bc-brand-directory__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
 @media(min-width:1100px){.bc-brand-slider__track{grid-auto-columns:calc((100% - 80px)/6)}.bc-brand-directory__grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.bc-brand-card{transition:none}}
+
+/* Full-width homepage rail; the brand directory keeps its existing grid. */
+.bch-brands--full{width:100%;max-width:none;padding-inline:0}
+.bc-brand-slider--marquee .bc-brand-slider__track{grid-auto-columns:150px;gap:24px;padding-inline:16px;scroll-padding-inline:16px}
+.bc-brand-slider--marquee .bc-brand-card{border-color:transparent;border-radius:0;background:transparent;padding-inline:10px}
+.bc-brand-slider__button[hidden]{display:none}
+bc-brand-slider[data-brand-looping] .bc-brand-slider__track{overflow-x:hidden;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;padding-inline:0;scroll-padding-inline:0}
+.bc-brand-slider__button[data-brand-toggle]{font-size:16px}
+@media(min-width:990px){.bc-brand-slider--marquee .bc-brand-slider__track{grid-auto-columns:200px;gap:48px}}

@@ -64,13 +64,14 @@
   </section>
   {{ 'bc-brands.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'bc-brand-slider.js' | asset_url }}" defer="defer"></script>
-  <section class="bch-shell bch-brands" aria-labelledby="HomeBrands-{{ section.id }}">
-    <bc-brand-slider>
-      <div class="bch-section-heading">
+  <section class="bch-brands bch-brands--full" aria-labelledby="HomeBrands-{{ section.id }}">
+    <bc-brand-slider class="bc-brand-slider--marquee" data-brand-autoplay>
+      <div class="bch-shell bch-section-heading">
         <h2 id="HomeBrands-{{ section.id }}">{{ section.settings.brands_heading | escape }}</h2>
         <div class="bc-brand-slider__actions">
           <a class="bc-brand-slider__all" href="{{ section.settings.brands_link | default: '/collections?view=merken' | escape }}">{{ section.settings.brands_label | escape }} <span aria-hidden="true">&rarr;</span></a>
           <div class="bc-brand-slider__controls" data-brand-controls hidden>
+            <button class="bc-brand-slider__button" type="button" data-brand-toggle hidden data-label-play="{{ 'bc_brands.play' | t | escape }}" data-label-pause="{{ 'bc_brands.pause' | t | escape }}" aria-label="{{ 'bc_brands.pause' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">Ⅱ</span></button>
             <button class="bc-brand-slider__button" type="button" data-brand-previous aria-label="{{ 'bc_brands.previous' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&larr;</span></button>
             <button class="bc-brand-slider__button" type="button" data-brand-next aria-label="{{ 'bc_brands.next' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&rarr;</span></button>
           </div>
