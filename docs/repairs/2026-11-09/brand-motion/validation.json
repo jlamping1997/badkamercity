@@ -4,10 +4,10 @@
   "codeBaseline": "4bf736c87e95323f5b15cb6e9f471767f8a6ce79",
   "mainThemeId": "196395073802",
   "draftThemeId": "196416504074",
-  "status": "LOCAL_VERIFIED_PREVIEW_COPY_PENDING",
+  "status": "PREVIEW_VERIFIED_OWNER_PUBLICATION_PENDING",
   "tests": {
     "motion": {
-      "passed": 22,
+      "passed": 23,
       "scope": "Actual component JavaScript; synthetic geometry/media/visibility"
     },
     "existingBrands": 20,
@@ -15,7 +15,11 @@
     "shopifyValidator": {
       "files": 5,
       "status": "SUCCESS",
-      "schemaSource": "Official cached schemas after network timeout"
+      "schemaSource": "Official cached schemas after network timeout",
+      "revisions": {
+        "1": "five featurefiles SUCCESS",
+        "2": "updated JavaScript SUCCESS"
+      }
     },
     "nodeSyntax": "PASS",
     "whitespace": "PASS"
@@ -23,7 +27,7 @@
   "features": [
     {
       "filename": "assets/bc-brand-slider.js",
-      "md5": "38590ad3ee2031a640386d89d08101f6"
+      "md5": "feeb9c3c7f488b5ec0d6b7f4ca0a3505"
     },
     {
       "filename": "assets/bc-brands.css",
@@ -54,5 +58,13 @@
     "physicalDevice": "NOT_TESTED"
   },
   "protectedSettingsBody": "NOT_READ_OR_WRITTEN",
-  "protectedSettingsChecksum": "d6a5642b02e3b8773a5e4e37aed01256"
+  "protectedSettingsChecksum": "d6a5642b02e3b8773a5e4e37aed01256",
+  "codeCheckpoint": "b18bff8d79f3942c9cd0af799893251586d97e61",
+  "preview": {
+    "browser": "VERIFIED_DESKTOP_PREVIEW",
+    "fullWidth": true,
+    "copyAll1401ExactBeforeUpload": true,
+    "finalDiffExactlyFive": true,
+    "mainAll1401Unchanged": true
+  }
 }

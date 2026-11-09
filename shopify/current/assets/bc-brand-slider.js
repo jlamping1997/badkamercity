@@ -95,6 +95,7 @@
     }
 
     configure() {
+      const position = this.loopWidth ? Math.abs(this.track.scrollLeft) % this.loopWidth : Math.abs(this.track.scrollLeft);
       this.clearLoop();
       if (this.eligible() && !this.manualMode) {
         const gap = parseFloat(getComputedStyle(this.track).columnGap) || 0;
@@ -116,7 +117,9 @@
             }
           }
           this.track.appendChild(fragment);
-          this.cyclePosition = Math.abs(this.track.scrollLeft) % width;
+          this.cyclePosition = position % width;
+          const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+          this.track.scrollLeft = direction * this.cyclePosition;
         }
       }
       this.update();
