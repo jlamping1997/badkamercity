@@ -3,6 +3,81 @@ Datum: 16 oktober 2026 (Europe/Amsterdam).
 Onderdeel van BC-02; vaste projectingang blijft LIVE_STATUS_AND_NEXT_STEPS.md.
 Opdracht: bestaande productgegevens combineren met gecontroleerde externe bronnen, eigen duidelijke productteksten maken en voortgang per merk/product in Git bijhouden.
 
+## Aanvulling 9 november 2026 — merken, titels en kleurvolgorde
+
+**PLANNED / eigenaarseisen vastgelegd; uitvoering nog niet gestart.** Deze aanvulling hoort bij het merkenplan uit de lopende chat. Zij vervangt geen uitgevoerde merkspecifieke verbeteringen of andere actieve werkstromen. Bestaande checkpoints verderop behouden hun eigen datum.
+
+### Volgorde
+
+| Stap | Resultaat | Eerst nodig |
+| --- | --- | --- |
+| 1. Merkenoverzicht | Eén onderhouden merkenlijst; alle werkelijk aangeboden merken alfabetisch met herkenbare logo’s en passende bestemmingen | Merklogo’s; werkelijk gepubliceerd assortiment per merk controleren |
+| 2. Homepage | Compacte logoslider, pijlen op desktop, swipen op mobiel en Alle merken-link; dezelfde merkgegevens hergebruiken | Logo’s en voorkeursvolgorde van eigenaar |
+| 3. Merkpagina’s | Hotbath als eerste proef met duidelijke productgroepen, waar passend inbouw/opbouw, series, filters en nuttige eigen inhoud; daarna per merk passend hergebruiken | Bestaande routes, aanbod, filterprofielen en zoekintentie beoordelen; sfeerbeelden waar beschikbaar |
+| 4. Korte en lange titels | Kort en begrijpelijk op kaarten; volledig en onderscheidend op productpagina’s | Kleine vergelijkingsproef per merk/producttype vanuit actuele, bevestigde gegevens |
+| 5. Kleurkeuzes op prijs | Alle bestaande productkleurkeuzes oplopend op de actuele verkoopprijs van de passende uitvoering | Kleurrelaties, prijsbron en overige configuratiekeuzes per renderer controleren; kleine proef |
+
+De titel- en kleurregels gelden winkelbreed; de invoering gebeurt per gecontroleerde productfamilie. Dit is planning, geen opdracht om nu alle producttitels, keuzedata of thema’s massaal te wijzigen. De concrete eerstvolgende stap blijft de logo’s en homepage-merkvolgorde verzamelen voor stappen 1 en 2. Nieuw werk sluit aan op het actuele gecombineerde thema.
+
+### Merken: bestaande basis en afbakening
+
+De read-only controle op 9 november vond negen echte merknamen: Cottoceramix, Hotbath, JEE-O, Lagoo, Porcelanosa, Sunshower, The Mosaic Factory, Verlavio en Wiesbaden. BadkamerCity Test hoort niet in het openbare merkenoverzicht. De huidige directory laat zes namen toe; Lagoo, Porcelanosa en Verlavio hebben ook publieke productlijsten. De actieve homepage gebruikt `sections/bc-homepage.liquid`; de oude losse `home-brand-rail` in index.json staat uit. Niet op de historische uitgeschakelde sectie implementeren.
+
+De huidige Hotbath-vendorlijst meldt 8.236 producten; de externe filtercontext is algemeen `vendors` en draagt geen afzonderlijke merkselectie over. Onderzoek bij de merklanding de bestaande filtervoorziening en het producttype-/merkprofiel. Een nieuwe URL alleen is geen bewezen filteroplossing. Hergebruik bestaande collectie-identiteiten waar passend; geen tweede SEO-pagina met dezelfde bedoeling. Zie [categorisatie- en SEO-beleid](CATEGORIZATION_AND_SEO_POLICY.md). De merkenpagina heeft nu een canonical naar /collections; bij de definitieve URL-keuze ook dit onderzoeken. Geen canonical-, redirect- of indexeringswijziging in deze planningsstap.
+
+### Titel short — productkaarten
+
+- Simpele, natuurlijke naam die duidelijk zegt wat het product is. Verlavio is de inhoudelijke referentie voor eenvoud; een kale serie-/modelnaam is onvoldoende als het producttype onduidelijk blijft.
+- Gebruik producttype plus serie/model waar dat helpt; alleen een essentiële maat of uitvoering toevoegen als artikelen anders niet te onderscheiden zijn.
+- Geen lange specificatiereeks, artikelnummer/EAN, verkoopclaims of keywordstapeling in de kaarttitel. Merk/kleur niet zinloos herhalen wanneer zij al duidelijk naast de titel staan.
+- De korte titel blijft inhoudelijk juist na wisselen van kleur of uitvoering. Bijvoorbeeld ‘Verlavio wastafelkraan’ als eenvoudige vorm; de feitelijke onderscheidende gegevens bepalen de definitieve titel.
+- Controleer native collectiekaarten, externe filterkaarten, zoekkaarten en suggesties/aanbevelingen waar zij producttitels tonen. Bepaal per gebruiksplaats de juiste korte weergave; behoud zoeken op artikelnummer en volledige productidentiteit.
+- Hergebruik het bestaande `custom.card_title` (`Korte productkaarttitel`). De gedeelde helper `snippets/bc-card-title.liquid` gebruikt dit veld met producttitel als terugval. Dit is broncodebewijs van het mechanisme, geen nieuwe winkelbrede inventarisatie van ingevulde waarden.
+
+### Titel long — productpagina
+
+- De zichtbare H1 moet een direct binnenkomende bezoeker duidelijk maken welk product hij bekijkt: merk, serie/model waar relevant, producttype en onderscheidende uitvoering.
+- Voeg bewezen relevante maten toe, bijvoorbeeld breedte/hoogte, diameter, lengte of tegelafmeting, met de juiste eenheid. Benoem kleur/afwerking en montage of compleetheid wanneer die de verkochte uitvoering bepalen.
+- Lengte volgt de informatiebehoefte. Een langere titel mag, maar geen volledige specificatietabel of herhalingen in de H1.
+- In de bestaande bron leest de PDP-H1 `product.title`. Gebruik de gewone producttitel als lange titel en `custom.card_title` voor de korte titel; maak niet automatisch nog een dubbel long-title-veld.
+- Alleen gecontroleerde gegevens gebruiken; ontbrekende maten, setinhoud of eigenschappen niet afleiden of verzinnen. Voor technisch verschillende artikelen ook met korte titel voldoende onderscheid houden.
+- Controleer vóór titelwijzigingen alle consumenten: keuzemenu-/groepsmatching, zoeken/index, sticky koopbalk, aanbevelingen, winkelwagen, feeds en structured data. Titelafhankelijke koppelingen mogen niet stukgaan; identificatie op product-/variant-ID en SKU behouden.
+- Shopify SEO-titel en metaomschrijving zijn eigen velden met een eigen doel; niet blind gelijkstellen aan de lange H1. Geen Google-ranking of exact getoonde zoekresultaattitel beloven.
+- Producthandles/URL’s niet automatisch met de titel wijzigen. Eerst circa 5–10 representatieve producten met huidig/kort/lang en bron vergelijken, daarna per merk/familie gericht verwerken en teruglezen.
+
+### Kleurkeuzes — oplopend op actuele prijs
+
+- Sorteer concrete kleuruitvoeringen binnen dezelfde productfamilie op **actuele verkoopprijs, laag naar hoog**. Er komt geen vaste winkelbrede volgorde van kleurnamen; welke kleur goedkoper is kan per artikel verschillen.
+- Vergelijk dezelfde gekozen maat, montage en overige configuratie. Een goedkopere andere maat of technisch ander model mag de kleurvolgorde niet bepalen. Bij iedere configuratiewijziging opnieuw de passende kleurprijzen bepalen.
+- Gebruik dezelfde actuele prijs, valuta, btw-context en verkoopeenheid als bij de betreffende keuze. Niet sorteren op adviesprijs, compare-at-prijs, oude indexprijs, gemiddelde of onvergelijkbare doos-/m²-bedragen.
+- Gelijke prijzen krijgen een vaste tweede sortering op zichtbare kleurnaam en zo nodig stabiele product-/variantidentiteit. Ontbrekende/ongeldige prijzen niet als nul behandelen; achter bevestigde prijzen plaatsen en de onzekerheid niet als goedkoopste prijs tonen.
+- De bestaande gekozen kleur blijft gekozen; de sortering selecteert of koopt niet automatisch de goedkoopste uitvoering. De selectie blijft herkenbaar en bereikbaar. Uitklappen/meer kleuren behoudt de oplopende reeks.
+- Winkelbrede scope: kleurknoppen, swatches en keuzelijsten op PDP’s en productkaarten, inclusief native zoek-/collectiekaarten en externe kaarten waar kleurkeuze bestaat. Gebruik dezelfde prijsregel via de bestaande merkadapters en variant-/configuratiestromen; geen los afwijkend merkbeleid.
+- Algemene kleurfilters over veel verschillende producten zijn geen keuze tussen uitvoeringen van één product en hebben geen enkele vergelijkbare kleurprijs. Houd die buiten deze uitvoeringensortering; onderzoek een eventuele andere filterordening afzonderlijk.
+- Sorteer alleen bestaande, bewezen passende koppelingen. Herstel van verkeerde of ontbrekende Wiesbaden-productfamilies blijft bij de afzonderlijke Wiesbaden-taak. Niet op kleur/prijs alsnog andere producten bij elkaar raden.
+- Voorbeeld uit de opdracht, rekenkundig gecorrigeerd:
+
+| Volgorde | Kleur | Voorbeeldprijs |
+| --- | --- | --- |
+| 1 | Chroom | €100 |
+| 2 | Mat zwart | €180 |
+| 3 | RVS | €200 |
+| 4 | Gunmetal | €240 |
+| 5 | Geborsteld koper | €250 |
+| 6 | Geborsteld goud | €320 |
+
+Dit zijn uitlegprijzen, geen actuele Shopify-productprijzen. Mat zwart staat vóór RVS omdat €180 lager is dan €200.
+
+### Uitvoerings- en acceptatiecriteria
+
+1. Voor titels eerst een kleine voor/na-proef met bron voor relevante maten/uitvoering; eigenaar beoordeelt duidelijkheid en stijl.
+2. Voor kleuren eerst enkele bestaande families met verschillende prijzen, gelijke prijzen, een duurder huidig product en verschillende maten/uitvoeringen. Controleer ook een ontbrekende prijs en gewijzigde prijs.
+3. Verifieer product-ID/SKU, foto, gekozen kleur, korte titel, lange H1, prijs, productlink en winkelwagenvariant als één samenhangend geheel. Test na wisselen van maat én kleur, op desktop en mobiel, met dezelfde volgorde op alle betreffende renderers.
+4. Behoud volledige assortiment-/uitvoeringskeuzes, bestaande tegelcalculator/m²-prijzen en overige merkuitzonderingen. Geen prijs-/voorraadmutatie nodig om alleen te sorteren.
+5. Voor uitvoering verse Shopify/Git-bron lezen, bestaande wijzigingen behouden en gericht in het afgesproken UNPUBLISHED-concept werken. Batches met herstelkopie, controle op tussentijdse wijzigingen en read-after-write; eigenaar publiceert na beoordeling.
+
+**Checkpoint van deze aanvulling:** uitsluitend documentatie. Titels, kleurvolgorde, filters en merkenpresentatie nog niet gewijzigd of als getest opgevoerd. Verse rolread: 196395073802 — BadkamerCity - Veilige kaartprijzen 9 nov is MAIN. Codebron gelezen op `034c31ee115089f06c0c2b8506831c2af513b2e9`; geen nieuwe integrale themepariteit of titel-/kleurenproef geclaimd. De hieronder beschreven oktoberuitvoering is historisch.
+
 ## Eerste uitvoeringsronde
 Wiesbaden: proef met 10 werkelijk aanwezige producten, verdeeld over verschillende producttypen en minstens één groep kleur-/maatvarianten. Exacte selectie volgt na een actuele read-only Shopify-inventaris. Geen aantallen of artikelcodes uit oude chats als actuele waarheid gebruiken.
 Doel: aantonen dat matching, bronkwaliteit, schrijfstijl en relevante interne links werken vóór merkbrede verwerking.
