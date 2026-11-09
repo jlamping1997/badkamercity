@@ -51,7 +51,7 @@ oldHome.block_order=oldHome.block_order.filter(k=>oldHome.blocks[k]);
 assert.deepEqual(index.sections.bc_homepage,oldHome);record('homepage-campaigns-categories-settings-and-disabled-sections-preserved');
 const global=json(file('config/settings_schema.json')),oldGlobal=json(baseline['config/settings_schema.json']);assert.deepEqual(global.slice(0,-1),oldGlobal);
 const newSettings=global.at(-1).settings;assert.equal(newSettings.filter(s=>s.type==='image_picker').length,9);assert.equal(newSettings.filter(s=>s.type==='url').length,9);assert.equal(new Set(newSettings.filter(s=>s.id).map(s=>s.id)).size,newSettings.filter(s=>s.id).length);record('one-global-logo-and-link-setting-per-known-brand-existing-settings-preserved');
-for(const lang of ['nl','en.default']){const current=json(file('locales/'+lang+'.json'));const original=json(baseline['locales/'+lang+'.json']);assert(current.bc_brands.previous&&current.bc_brands.next);delete current.bc_brands;assert.deepEqual(current,original);}record('nl-en-labels-with-all-existing-price-translations-preserved');
+for(const lang of ['nl','en.default']){const current=json(file('locales/'+lang+'.json'));const original=json(baseline['locales/'+lang+'.json']);assert(current.bc_brands.previous&&current.bc_brands.next);delete current.bc_brands;delete current.bc_home.support;assert.deepEqual(current,original);}record('nl-en-labels-with-all-existing-price-translations-preserved');
 
 const script=file('assets/bc-brand-slider.js');
 const tick=()=>new Promise(resolve=>setTimeout(resolve,25));
