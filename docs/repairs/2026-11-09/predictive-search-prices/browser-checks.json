@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Real Chrome desktop preview; physical phone NOT_TESTED",
+  "themeId": "196368531722",
+  "themeName": "BadkamerCity - Hele europrijzen 8 nov",
+  "query": "Nesso plafondbuis",
+  "before": {
+    "NessoPlafondbuis": "€78,00 EUR without Vanaf",
+    "N8275": "€145,00 EUR without Vanaf",
+    "missingPhotoTitleColumn": "Original first grid column (7.2rem declared in CSS); visually reproduced, not a separate pre-change geometry measurement"
+  },
+  "after": {
+    "NessoPlafondbuis": "Vanaf €78,00 EUR",
+    "N8275": "Vanaf €145 EUR",
+    "HotbathGL452": "€143 EUR",
+    "HotbathM456": "€95,00 EUR"
+  },
+  "adminExample": {
+    "product": "Lagoo Nesso plafondbuis",
+    "variants": 16,
+    "minimumEUR": "78.00",
+    "maximumEUR": "215.00",
+    "readOnly": true
+  },
+  "geometry": {
+    "rowsChecked": 10,
+    "rowsWithoutImage": 5,
+    "noImageTitleWidthPixels": [
+      280,
+      295
+    ],
+    "imageTitleWidthPixels": [
+      244,
+      247
+    ],
+    "titlePriceOverlap": false
+  },
+  "keyboard": {
+    "ArrowDown": "one option selected; aria-activedescendant matched option1",
+    "Escape": "aria-expanded=false"
+  },
+  "imagesAdded": 0,
+  "cartWrites": 0,
+  "productWrites": 0,
+  "screenshot": "browser-review.jpg",
+  "notTested": [
+    "physical phone",
+    "checkout",
+    "Google feed"
+  ]
+}

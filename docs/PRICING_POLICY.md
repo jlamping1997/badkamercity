@@ -1,5 +1,7 @@
 # Verkoopprijzen en afronding
 
+> **9 november 2026 — voorspellend zoeken aangevuld:** de zoeksuggesties gebruiken product.price_min, het bestaande Vanaf-label bij product.price_varies en dezelfde bc-money-helper. Geen echte centen of verkoopeenheden aangepast. [Controle en grenzen](repairs/2026-11-09/predictive-search-prices/README.md).
+
 8 november 2026 · PRICE-ROUND-01 · expliciete eigenaarafspraak
 
 Normale EUR-verkoopprijzen **strikt boven €100** afronden naar de dichtstbijzijnde hele euro. Een halve euro gaat omhoog: €149,49 → €149 en €149,50 → €150. Gebruik decimale bedragen met ROUND_HALF_UP. Prijzen tot en met €100 blijven gelijk. Adviesprijzen, inkoopprijzen, oorspronkelijke leveranciersdata en btw-grondslag worden hierdoor niet herschreven.

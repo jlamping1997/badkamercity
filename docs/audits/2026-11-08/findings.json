@@ -62,11 +62,13 @@
     {
       "id": "BC-AUD-007",
       "priority": "P1",
-      "evidence": "VERIFIED_MANIFEST_COMPARISON",
-      "status": "OPEN",
-      "finding": "shopify/current wijkt op15 gedeelde bestanden af van live",
+      "evidence": "FRESH_2026_11_09_MANIFEST_COMPARISON_WITH_DRAFT_SCOPE",
+      "status": "OPEN_RECOUNTED_SOURCE_PARITY",
+      "finding": "Git/live-bronverschillen: tien overige gedeelde bestanden naast de bedoelde conceptwijzigingen",
       "scope": "shopify/current/",
-      "next_action": "Gericht bronverschil reconciliëren vóór theme-deploy; beschermde settings_data-uitzondering en live-only backups behouden. Geen blind root-deploy."
+      "next_action": "Tien overige bronverschillen gericht reconciliëren; de 27 bedoelde conceptpaden, settings_data-bodyguard, .shopifyignore en negen live-only files behouden. Geen blind root-deploy.",
+      "follow_up": "docs/repairs/2026-11-09/predictive-search-prices/source-parity-summary.json",
+      "original_measurement": "8November2026: fifteen shared differences; historical count"
     },
     {
       "id": "BC-AUD-008",
@@ -162,6 +164,17 @@
       "finding": "/collections/tegeltoebehoren returns404",
       "resolution": "Existing collection584286306570 has0products/0publications; no reference in9menus or226publishedcollectiondescriptions. No collection publish, redirect, rename or product reassignment.",
       "next_action": "Retain identity; evaluate only if real assortment and a corresponding navigation scope are introduced. Page/blog link scope checked separately."
+    },
+    {
+      "id": "BC-AUD-018",
+      "priority": "P2",
+      "evidence": "VERIFIED_PREVIEW_UI;LIQUID_TESTS;DESKTOP_GEOMETRY",
+      "status": "FIXED_UNPUBLISHED",
+      "finding": "Zoeksuggesties missen Vanaf en gedeelde prijsopmaak; fotoloze titels gebruiken de smalle fotokolom",
+      "scope": "header predictive-search; component-predictive-search.css",
+      "resolution": "Minimumprijs en Vanaf, gedeelde bc-money-opmaak en expliciete gridkolommen in bestaand UNPUBLISHED196368531722. Zeventien gerichte controles en tien desktoprijen PASS; MAIN behouden.",
+      "next_action": "Eigenaar beoordeelt/publiceert hetzelfde prijsconcept; daarna MAIN/27-file-readback. Fysieke telefoon en koopflow apart open.",
+      "follow_up": "docs/repairs/2026-11-09/predictive-search-prices/README.md"
     }
   ],
   "last_followup": "CATEGORY-COPY-01; dormant tileaccessories404 explained;9links to confirmedemptylists removed from8collection descriptions"

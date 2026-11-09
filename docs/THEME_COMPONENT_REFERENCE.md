@@ -1166,9 +1166,9 @@ Elke sectie hieronder heeft een bestand in `sections/`. Aanroepen via snippets/a
 **Statische code-afhankelijkheden:** `assets/icon-close.svg`, `assets/icon-tick.svg`
 
 ### 62. `sections/predictive-search.liquid`
-**Geen direct parsebaar Theme Editor-schema in dit bestand** (mogelijk via vaste sectiegroep of legacy-code).
-**Aangeroepen door JSON-template(s):** Geen directe JSON-template-match aangetroffen — mogelijk sectiegroup/dynamisch/niet actief.
-**Statische code-afhankelijkheden:** `snippets/loading-spinner.liquid`
+**Actief gecontroleerd op 9 november 2026:** de header laadt deze AJAX-sectie via predictive-search.js en /search/suggest met section_id=predictive-search. Een directe JSON-template-aanroep is voor deze route niet nodig.
+**Geen eigen Theme Editor-schema:** dit is de vaste antwoordsectie van de snelle zoekfunctie.
+**Gedeelde afhankelijkheden:** snippets/bc-money.liquid, snippets/loading-spinner.liquid en assets/component-predictive-search.css. Minimumprijs + Vanaf wanneer prijzen variëren; fotoloze titels gebruiken twee gridkolommen. [Bewijs en testgrenzen](repairs/2026-11-09/predictive-search-prices/README.md).
 
 ### 63. `sections/product-description.liquid`
 **Shopify Theme Editor naam:** Product Description. **Settings:** 0. **Blocktypen:** 0.
