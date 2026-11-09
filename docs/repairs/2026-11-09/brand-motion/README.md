@@ -1,6 +1,6 @@
 # Doorlopende merkenbalk — 9 november 2026
 
-**BRAND-MOTION-01 LOCAL_VERIFIED / PREVIEW_COPY_PENDING.** Op eigenaarverzoek wordt de homepagebalk een langzaam naar rechts lopende, doorlopende rij over de volle paginabreedte. De bestaande gedeelde merkenlijst en officiële logo’s blijven de bron voor homepage en merkenoverzicht.
+**BRAND-MOTION-01 PREVIEW_VERIFIED / OWNER_PUBLICATION_PENDING.** Op eigenaarverzoek is de homepagebalk een langzaam naar rechts lopende, doorlopende rij over de volle paginabreedte. De bestaande gedeelde merkenlijst en officiële logo’s blijven de bron voor homepage en merkenoverzicht.
 
 ## Gedrag
 
@@ -18,16 +18,17 @@ Exact vijf productiefiles: `assets/bc-brand-slider.js`, `assets/bc-brands.css`, 
 
 ## Controles
 
-- **22 nieuwe gedragscontroles PASS:** echt component-JavaScript met synthetische geometrie, deterministische animatieframes, viewport-, voorkeur-, focus- en zichtbaarheidsgebeurtenissen. Inclusief 320/390/750/989px, desktop, ultrawide, RTL, stoppen/hervatten, native links, kopieën en editor-reconnect. [Resultaat](checks.json).
+- **23 nieuwe gedragscontroles PASS:** echt component-JavaScript met synthetische geometrie, deterministische animatieframes, viewport-, voorkeur-, focus- en zichtbaarheidsgebeurtenissen. Inclusief 320/390/750/989px, desktop, ultrawide, RTL, stoppen/hervatten, native links, kopieën en editor-reconnect. Een browsergevonden sprong bij hervatten is gecorrigeerd en met een regressiecheck afgedekt. [Resultaat](checks.json).
 - **20 bestaande merken-/slidercontroles en 13 logocontroles PASS.** Alleen de bestaande testzoeker voor de homepage-section is aangepast aan de extra class.
-- Node-syntaxis en whitespacecontrole PASS. **Shopify-validator: vijf featurefiles SUCCESS**, revisie1; na een netwerk-timeout zijn officiële gecachete schemas gebruikt. [Uitvoer](theme-check.txt).
-- Browsercontrole en volledige conceptpariteit volgen na voltooiing van Shopify’s achtergrondkopie. Dit checkpoint is geen preview- of livevrijgave.
+- Node-syntaxis en whitespacecontrole PASS. **Shopify-validator: vijf featurefiles SUCCESS**, revisie1, plus bijgewerkte JavaScript-revisie2 SUCCESS; na een netwerk-timeout zijn officiële gecachete schemas gebruikt. [Uitvoer](theme-check.txt) · [Revisie2](theme-check-revision2.txt).
+- **Volledige conceptpariteit gesloten:** alle 1.401 files waren vóór upload exact gelijk aan MAIN. Na upload staan er aan beide kanten 1.401 files: 1.396 gelijk en precies de vijf verwachte featurefiles verschillend. Alle vijf bodies en checksums exact teruggelezen; alle 1.401 MAIN-checksums ongewijzigd. settings_data-checksum aan beide kanten d6a5642b02e3b8773a5e4e37aed01256. [Bronvergelijking](theme-parity.json).
+- **Echte Chrome-desktoppreview gecontroleerd:** juiste Draft-naam, rail x0/breedte1.348px gelijk aan documentbreedte, acht geladen logo’s/negen originele links, achttien visuele kopieën. Rechtse beweging, pauze, hervatten zonder verspringen (2.219px blijft2.219px), handmatige pijlbediening en Home-terugkeer naar0 bevestigd. Geen horizontale documentoverloop. [Meetgegevens en grenzen](browser-check.json) · [Screenshot](homepage-preview.jpg). De ingestelde snelheid18px/s is met deterministische frames getest; geen browsersnelheidsbenchmark geclaimd.
 - Fysieke telefoon/tablet, echt aanraken en aangepaste merchantlogo-uploads zijn NOT_TESTED. De viewporttests zijn geen fysieke mobiele browsercontrole. Windows/Codex-wrappers zijn niet uitgevoerd.
 
 Tests herhalen met de dependencies in package.json en `npm test`; deze sessie gebruikte dezelfde versies via `BC_TEST_DEPENDENCIES`.
 
 ## Vervolg en herstel
 
-Volgende handeling: na voltooiing van de kopie alle bestandschecksums vergelijken, uitsluitend de vijf featurefiles in het concept plaatsen, exact teruglezen en de desktoppreview controleren.
+Volgende handeling: eigenaar beoordeelt en publiceert **BadkamerCity - Doorlopende merkenbalk 9 nov** via Shopify. Dit concept is volledig voorbereid en gecontroleerd; de koppeling heeft niet gepubliceerd. Codecheckpoint vóór preview: b18bff8d79f3942c9cd0af799893251586d97e61; de daaropvolgende commit bevat de hervatcorrectie en het definitieve bewijs.
 
 `rollback/` bevat de vijf exacte MAIN-bronfiles van vóór de wijziging. Gericht herstellen in UNPUBLISHED na controle op latere wijzigingen; MAIN niet overschrijven. De bestaande live versie blijft beschikbaar voor terugkeer na eventuele eigenaarpublicatie. Oude themanamen en rollen in eerdere dossiers zijn gedateerde historie.

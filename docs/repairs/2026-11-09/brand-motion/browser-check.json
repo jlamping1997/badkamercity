@@ -1,0 +1,73 @@
+{
+  "task": "BRAND-MOTION-01",
+  "status": "VERIFIED_DESKTOP_PREVIEW",
+  "date": "2026-11-09",
+  "themeId": "196416504074",
+  "previewBar": "BadkamerCity - Doorlopende merkenbalk 9 nov Draft",
+  "browser": "Cloud Chrome",
+  "url": "https://badkamercity.nl/",
+  "previewSelection": {
+    "method": "preview_theme_id",
+    "themeId": "196416504074",
+    "urlAfterShopifyRedirect": "https://badkamercity.nl/"
+  },
+  "viewport": {
+    "cssWidth": 1348,
+    "height": 936
+  },
+  "before": {
+    "viewport": 1348,
+    "documentWidth": 1348,
+    "rail": {
+      "x": 28,
+      "width": 1292,
+      "height": 120
+    },
+    "brands": 9
+  },
+  "after": {
+    "railX": 0,
+    "railWidth": 1348,
+    "railHeight": 110,
+    "documentWidth": 1348,
+    "originals": 9,
+    "visualCopies": 18,
+    "allEightOriginalLogosLoaded": true,
+    "movingAttribute": true,
+    "scrollLeft": 2230
+  },
+  "rightwardMovement": {
+    "scrollLeftSamples": [
+      2230,
+      2215
+    ],
+    "firstImageXSamples": [
+      -2219,
+      -2204
+    ],
+    "explanation": "Decreasing LTR scrollLeft moves the logo row visually rightward. These motion observations preceded the focused resume correction; final revision separately confirmed moving after reload."
+  },
+  "resumeRegression": {
+    "revision": 2,
+    "jsMd5": "feeb9c3c7f488b5ec0d6b7f4ca0a3505",
+    "pausedScrollLeft": 2219,
+    "resumedScrollLeft": 2219,
+    "exactPositionRetained": true
+  },
+  "manualNavigation": {
+    "afterNext": "Autoplay stopped; nine originals, zero copies; play label displayed",
+    "afterHomeSettled": {
+      "scrollLeft": 0,
+      "previousDisabled": true,
+      "nextDisabled": false
+    },
+    "afterPlay": "18 copies restored and moving state confirmed"
+  },
+  "screenshot": "homepage-preview.jpg",
+  "limits": [
+    "Physical mobile/tablet and touch gestures NOT_TESTED",
+    "Mobile breakpoint, reduced-motion and lifecycle behavior verified with synthetic viewport/media events only",
+    "Screenshot is static evidence of layout, not an animation recording",
+    "No actual-speed benchmark or broader performance claim"
+  ]
+}

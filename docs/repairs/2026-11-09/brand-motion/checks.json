@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checks": 22,
+  "checks": 23,
   "results": [
     {
       "test": "desktop-continuous-full-width-coverage-with-nine-original-brands",
@@ -20,6 +20,10 @@
     },
     {
       "test": "keyboard-focus-pauses-and-blur-resumes",
+      "result": "PASS"
+    },
+    {
+      "test": "resuming-near-cycle-end-preserves-position-instead-of-clamping-to-original-row",
       "result": "PASS"
     },
     {
