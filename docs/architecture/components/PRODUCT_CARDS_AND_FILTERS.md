@@ -1,5 +1,7 @@
 # Productkaarten, zoeken en filters
 
+> **9 november 2026 — PREDICTIVE-PRICE-01:** de actieve AJAX-zoeksuggesties gebruiken minimumprijs + Vanaf en gedeelde geldopmaak; fotoloze titels hebben een eigen gridbehandeling. Het section-argument van bc-jeeo-colors is alleen nodig buiten card-modus; de LiquidDoc is daarop gecorrigeerd. [Actueel bewijs en herstel](../../repairs/2026-11-09/predictive-search-prices/README.md).
+
 > **8 november 2026 — PRICE-ROUND-01:** het prijsconcept gebruikt bc-money.liquid/bc-money.js voor werkelijk hele EUR-bedragen vanaf €100. Fractionele bedragen en m²/doosberekeningen blijven exact; Shopify-kaartverrijking blijft de prijs-/koopidentiteit bewaken. Externe kaart, kleurwissel en wishlist in echte desktoppreview gecontroleerd. De request-time-out hieronder is op de huidige bron gecorrigeerd naar zes seconden. [Prijscontract](../../PRICING_POLICY.md) · [Bewijs en grenzen](../../repairs/2026-11-08/whole-euro-prices/README.md).
 
 > **8 november2026 — MOBILE-CARDS-01, OWNER_PUBLISHED / MAIN196354474250:** gedeelde mobiele lijst-CSS in bc-mobile-product-list.css, alleen collectie-/zoekroutes en max749px. Native/externe kaarten gebruiken dezelfde bestaande kenmerkenbron; bc-card-specs heeft een extra JSON-datamodus voor bc-card-data. Echte native componentbreedtes320/390/430 en desktopbediening gecontroleerd; volledige mobiele filterflow/telefoon nog open. Eigenaarspublicatie opnieuw bevestigd; geen publicatie door uitvoerder. [Actueel bewijs en herstel](../../repairs/2026-11-08/mobile-product-list/README.md). Oudere bronregels/checkpoints hieronder blijven historie.
@@ -16,6 +18,7 @@
 | --- | --- | --- | --- |
 | card-product.liquid | Standaard collectie, related-products en andere callers | bc-card-title, specs, delivery, price, wishlist; callerparameters | Quick-add kan none/standard/bulk zijn; caller bepaalt dit |
 | bc-card-product-search.liquid | Native main-search | Titel/specs/delivery/wishlist; eigen prijsmarkup en hele kaart als link | CTA-label is een span binnen de kaartlink; geen extra geneste link toevoegen |
+| predictive-search.liquid | Zoekveld in de header, AJAX-sectie | predictive-search.js → /search/suggest; bc-money + loading-spinner | Minimumprijs + Vanaf bij variatie; eigen listbox/toetsenbordcontract; geen externe filterindex |
 | JS renderProducts | Externe zoek-/collectielijst | bc-external-filters.js + CSS; verrijking via bc-card-data | Index geeft eerste lijst; Shopify-response bepaalt aanvullende kaartdetails en koop-ID |
 | Sunshower shopkaart | bc-sunshower-landing | bc-sunshower-shop-card + bc-sunshower-shop.js | Lokale kleurwissel, optionele lifestylefoto, eigen add/status |
 | Sunshower lichtkeuzekaart | Landingspagina | bc-sunshower-landing + bijbehorende CSS | Link naar configurator met decoratieve pijl; geen product-gridkaart of fotonavigatie |

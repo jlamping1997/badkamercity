@@ -1,5 +1,7 @@
 # Badkamercity — actuele documentatie-ingang
 
+> **Actueel vervolg 9 november — PREDICTIVE-PRICE-01:** prijsnotatie en Vanaf-label gelden nu ook voor zoeksuggesties; rijen zonder foto blijven leesbaar. Het bestaande prijsconcept196368531722 heeft nu 27 bedoelde featurepaden, nog UNPUBLISHED; MAIN196354474250 blijft behouden. [Uitvoering, broncontrole en huidige publicatiestap](repairs/2026-11-09/predictive-search-prices/README.md).
+
 > **Actuele publicatie 8 november — PRICE-ROUND-01 / MOBILE-CARDS-01:** MAIN196354474250 bevat de eigenaar-gepubliceerde mobiele productlijst; die publicatie hoeft niet opnieuw. 3.335 verkoopprijzen zijn al live afgerond. Het aparte prijs-/pictogramconcept196368531722 is UNPUBLISHED en heet **Hele europrijzen8nov**. Oudere Klantenservice-rollen hieronder zijn gedateerde historie. [Prijsafspraak](PRICING_POLICY.md) · [Verse bron-/prijs-/previewcontrole](repairs/2026-11-08/whole-euro-prices/README.md).
 
 > **Nieuwste vervolg — CATEGORY-COPY-01:** negen inhoudslinks naar publiek bevestigde lege lijsten uit acht categoriepagina’s hersteld, direct live. Volledige226-omschrijvingsread; SEO/identiteit/overige inhoud en drie meubelstijlblokken behouden. Tegeltoebehoren blijft de bestaande lege/ongepubliceerde collectie zonder menuverwijzing. [Bewijs en vervolg](repairs/2026-11-08/category-content-links/README.md).
@@ -26,7 +28,7 @@
 | Welke prijsafspraak geldt? | [Verkoopprijs, opmaak en tegeluitzondering](PRICING_POLICY.md) |
 | Hoe neem ik het over? | [Start hier](HANDOVER_START_HERE.md), [functionele overdracht](AI_HANDOFF_CURRENT.md), [AGENTS](../AGENTS.md) |
 
-Actuele MAIN bij PRICE-ROUND-01: **196354474250 — Mobiele productlijst8nov**; vijf mobiele bronhashes bevestigd. Prijsconcept **196368531722 — Hele europrijzen8nov** blijft UNPUBLISHED. Volledige nieuwe manifestcontrole: MAIN1.388 ongewijzigd, concept1.390/exact24bedoelde verschillen. De eerdere Page-inventaris122/120, collecties/menu’s en brede Git/live-nulmeting behouden hun eigen meetmoment. Geen blinde themadeploy vanuit Git.
+Actuele MAIN bij PRICE-ROUND-01: **196354474250 — Mobiele productlijst8nov**; vijf mobiele bronhashes bevestigd. Prijsconcept **196368531722 — Hele europrijzen8nov** blijft UNPUBLISHED. Volledige nieuwe manifestcontrole: MAIN1.388 ongewijzigd, concept1.390/exact27bedoelde verschillen na het vervolg van 9 november. De eerdere Page-inventaris122/120, collecties/menu’s en brede Git/live-nulmeting behouden hun eigen meetmoment. Geen blinde themadeploy vanuit Git.
 
 Homepage-SEO, retourpolicy, gedeelde footer, Contact, bezorgpagina, retourcopy, Antikalk-H1 en RapoWash-correcties zijn live. Dertien overige uitlegpagina’s hebben nu juiste accenttekens/geen voorloop-BOM, met SEO, links en structuur behouden. Open blijven native policyopmaak/verzend-/contactbeleid, btw-identiteit, product-/locatiedekking van tarieven en de echte koop-, mail-, meet- en mobiele klantreis. CONTINUE blijft de eigenaarafspraak en bewijst geen fysieke voorraad. Filter-/Cotto-/BRAUER-werkstromen volgen hun eigen nieuwste checkpoint; oude installatieblokken niet herhalen.
 

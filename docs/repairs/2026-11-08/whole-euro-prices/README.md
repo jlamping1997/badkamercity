@@ -1,5 +1,7 @@
 # Hele europrijzen en drie pictogramverwijzingen
 
+> **Vervolg 9 november:** het bestaande concept is uitgebreid met prijsopmaak en Vanaf in zoeksuggesties, leesbare fotoloze rijen en een gecorrigeerd JEE-O-LiquidDoc-contract. De huidige release heeft 27 bedoelde paden. De 24-padenmetingen hieronder beschrijven de oorspronkelijke prijsronde van 8 november. Volg voor de huidige publicatiestap en nacontrole [het nieuwe dossier](../../2026-11-09/predictive-search-prices/README.md).
+
 8 november 2026 · PRICE-ROUND-01 / BC-AUD-012 · ADMIN_APPLIED_VERIFIED / THEME_PREVIEW_VERIFIED
 
 Codecheckpoint: [`12a98b15a711f656e897ea5afcd99c0e270fcadf`](https://github.com/jlamping1997/badkamercity/commit/12a98b15a711f656e897ea5afcd99c0e270fcadf).

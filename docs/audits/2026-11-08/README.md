@@ -1,5 +1,7 @@
 # Live- en documentatiecontrole — 8 november 2026
 
+> **Vervolg 9 november — PREDICTIVE-PRICE-01 / DOC-SEARCH-01:** zoeksuggesties hebben een correcte Vanaf-prijs, gedeelde geldopmaak en leesbare fotoloze titels in het bestaande prijsconcept. BC-AUD-018 is FIXED_UNPUBLISHED. De oude vijftientelling in BC-AUD-007 is opnieuw gemeten: tien overige bronverschillen, naast 27 bedoelde conceptpaden; de overige tien zijn niet gesloten. [Bewijs en grenzen](../../repairs/2026-11-09/predictive-search-prices/README.md). De brede nulmeting hieronder houdt haar oorspronkelijke datum.
+
 > **Nieuwste vervolg — PRICE-ROUND-01 / BC-AUD-012:** 3.335 verkoopprijzen live afgerond en de volledige17.461-uitvoeringenreadback PASS. MAIN196354474250 bevestigt de eigenaarspublicatie van MOBILE-CARDS-01. Concept196368531722 bevat 24 bedoelde prijsopmaak-/pictogrampaden; drie ontbrekende SVG-uitgangen hersteld, nul ontbrekende letterlijke inline-assets na controle. **FIXED_UNPUBLISHED** voor BC-AUD-012; echte password-error/3D runtime niet geclaimd. [Actueel bewijs en herstel](../../repairs/2026-11-08/whole-euro-prices/README.md). Oudere brede metingen hieronder behouden hun oorspronkelijke moment.
 
 > **Nieuwste vervolg CATEGORY-COPY-01:** lege/ongepubliceerde Tegeltoebehoren-route verklaard; negen echte links naar lege lijsten uit acht collectieomschrijvingen live gecorrigeerd. [Nieuwe gerichte bewijslaag](../../repairs/2026-11-08/category-content-links/README.md). De eerdere brede routetelling behoudt haar meetmoment; geen willekeurige404redirect.
