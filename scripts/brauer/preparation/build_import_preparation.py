@@ -9,6 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 from build_shop_identity_review import identities, identity_hash
+from build_specification_display import build as build_display_audit
+from specification_display import POLICY as DISPLAY_POLICY, project as display_specifications
 
 
 EXPECTED_TARGETS = {
@@ -41,6 +43,7 @@ def record(product, benefits, targets):
     price = product['price_incl_vat']
     if not isinstance(price, str) or Decimal(price).quantize(Decimal('0.01')) != Decimal(price):
         raise ValueError('Preserve the supplied VAT-inclusive decimal price string')
+    display_groups, _ = display_specifications(product)
     return {
         'schema':'brauer-offline-import-preparation-2', 'import_allowed':False,
         'release_state':'PREPARED_BLOCKED',
@@ -48,12 +51,12 @@ def record(product, benefits, targets):
         'product_data':{'title':product['title'],'vendor':'BRAUER','product_type':product['product_type'],
                         'handle_proposal':product['handle_proposal'],'description':product['description'],
                         'price_incl_vat':price,'vat_rate':product['vat_rate'],
-                        'specifications':product['customer_specifications'],'benefits':texts},
+                        'specifications':display_groups,'benefits':texts},
         'configuration':{'family_id':product['family_id'],'option_values':product['options']},
         'metafield_values':[
             {**{k:targets[role][k] for k in ('namespace','key','type')},
              'value':json.dumps(value,ensure_ascii=False,separators=(',',':')) if role != 'choice_group' else value}
-            for role,value in [('specifications',product['customer_specifications']),
+            for role,value in [('specifications',display_groups),
                                ('benefits',texts),('choice_group',product['family_id'])]
         ],
         'media':product['media'],
@@ -96,11 +99,15 @@ def build(root):
     by = {r['sku']:r for r in benefits}
     if len(by) != len(benefits) or set(by) != {p['sku'] for p in products}:
         raise ValueError('Benefit identities do not partition the catalogue')
+    display_audit = build_display_audit(root)
     rows = [record(p, by[p['sku']], targets) for p in products]
     paths = ['catalog.json','specification-evidence.json','product-benefits.json',
              'manufacturer-features.json','families.json','release-gate.json','field-plan.json','field-targets28.json',
              'product-benefits-summary.json']
     hashes = {p:hashlib.sha256((prepared/p).read_bytes()).hexdigest() for p in paths}
+    for name in ['specification-display-summary31.json','specification-display-history31.json',
+                 'specification-display-review31.json']:
+        hashes[name] = hashlib.sha256((prepared/name).read_bytes()).hexdigest()
     if shop_review:
         for name in ['shop-identity-review30.json','shop-identity-controls30.json',
                      'shop-identity-worklist30.json','shop-identity-responses30.jsonl']:
@@ -114,6 +121,8 @@ def build(root):
         'sku_per_product':1,'articles_with_benefits':sum(bool(r['product_data']['benefits']) for r in rows),
         'benefits':sum(len(r['product_data']['benefits']) for r in rows),
         'maximum_benefits_per_article':3,'benefit_policy_version':policy['version'],
+        'specification_display_policy':DISPLAY_POLICY,
+        'specification_display':{k:v for k,v in display_audit.items() if k != 'source_sha256'},
         'price_policy':'Exact supplier-derived price incl. 21% VAT retained; no extra VAT multiplication',
         'inventory_quantities_assigned':False,'shopify_writes':0,'executable_importer_included':False,
         'product_benefit_destination':'custom.pluspunten',
