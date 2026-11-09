@@ -5,7 +5,7 @@ const require=createRequire(process.env.BC_TEST_DEPENDENCIES||new URL('package.j
 const { Window }=require('happy-dom');
 const source=fs.readFileSync(new URL('../../../../shopify/current/assets/bc-brand-slider.js',import.meta.url),'utf8');
 const results=[],record=test=>results.push({test,result:'PASS'});
-async function setup({width=1348,reduced=false,rtl=false,count=9,visible=true,autoplay=true}={}){
+async function setup({width=1348,reduced=false,rtl=false,count=9,visible=true,autoplay=true,controls=true}={}){
  const w=new Window({url:'https://example.invalid',width,height:936});
  let viewport=width,prefersReduced=reduced,hidden=false,scroll=0,clock=0,id=0,intersection;
  const frames=new Map(),media=[],captures=new Set(),calls=[];
@@ -14,7 +14,7 @@ async function setup({width=1348,reduced=false,rtl=false,count=9,visible=true,au
  w.matchMedia=()=>{const m=new w.EventTarget();Object.defineProperty(m,'matches',{get:()=>prefersReduced});media.push(m);return m;};
  w.ResizeObserver=class{observe(){}disconnect(){}};
  w.IntersectionObserver=class{constructor(cb){intersection=cb;}observe(){intersection([{isIntersecting:visible}]);}disconnect(){}};
- w.document.body.innerHTML='<bc-brand-slider '+(autoplay?'data-brand-autoplay':'')+'><div data-brand-controls hidden><button data-brand-previous></button><button data-brand-next></button></div><ul data-brand-track tabindex="0" style="column-gap:'+(width>=990?48:24)+'px;direction:'+(rtl?'rtl':'ltr')+'">'+Array.from({length:count},(_,n)=>'<li><a id="brand-'+n+'" href="/brand/'+n+'"><img alt="Brand '+n+'"></a></li>').join('')+'</ul></bc-brand-slider>';
+ w.document.body.innerHTML='<bc-brand-slider '+(autoplay?'data-brand-autoplay':'')+'>'+(controls?'<div data-brand-controls hidden><button data-brand-previous></button><button data-brand-next></button></div>':'')+'<ul data-brand-track tabindex="0" style="column-gap:'+(width>=990?48:24)+'px;direction:'+(rtl?'rtl':'ltr')+'">'+Array.from({length:count},(_,n)=>'<li><a id="brand-'+n+'" href="/brand/'+n+'"><img alt="Brand '+n+'"></a></li>').join('')+'</ul></bc-brand-slider>';
  const root=w.document.querySelector('bc-brand-slider'),track=root.querySelector('ul');
  const cell=()=>viewport>=990?200:150,gap=()=>parseFloat(track.style.columnGap),cycle=()=>count*(cell()+gap());
  Object.defineProperties(track,{clientWidth:{get:()=>viewport},scrollWidth:{get:()=>Math.max(0,track.children.length*(cell()+gap())-gap())},scrollLeft:{get:()=>scroll,set:value=>{const max=Math.max(0,track.scrollWidth-viewport);scroll=(rtl?-1:1)*Math.min(max,Math.max(0,Math.round(Math.abs(value))));track.dispatchEvent(new w.Event('scroll'));}}});
@@ -34,7 +34,7 @@ async function setup({width=1348,reduced=false,rtl=false,count=9,visible=true,au
 }
 let p;
 for(const width of [320,390,750,989,1348,4000]){
- p=await setup({width});assert(p.root.hasAttribute('data-brand-moving'));assert.equal(p.track.querySelectorAll(':scope > li:not([data-brand-clone])').length,9);assert(p.track.scrollWidth>=p.cycle()+width);const a=p.track.scrollLeft;p.run();assert(Math.abs(p.rightward(a,p.track.scrollLeft)-22)<=1);record('full-filled-infinite-autoplay-22px-per-second-'+width+'px');await p.close();
+ p=await setup({width,controls:false});assert(p.root.hasAttribute('data-brand-moving'));assert.equal(p.track.querySelectorAll(':scope > li:not([data-brand-clone])').length,9);assert(p.track.scrollWidth>=p.cycle()+width);const a=p.track.scrollLeft;p.run();assert(Math.abs(p.rightward(a,p.track.scrollLeft)-22)<=1);record('full-filled-infinite-autoplay-without-controls-22px-per-second-'+width+'px');await p.close();
 }
 p=await setup();p.root.dispatchEvent(new p.w.Event('mouseenter'));let a=p.track.scrollLeft;p.run();assert(p.root.hasAttribute('data-brand-moving'));assert(Math.abs(p.rightward(a,p.track.scrollLeft)-22)<=1);record('hover-keeps-autoplay-running');
 p.pointer('pointerdown');a=p.track.scrollLeft;p.run(1);assert(Math.abs(p.rightward(a,p.track.scrollLeft)-22)<=1);p.pointer('pointerup');record('holding-mouse-down-keeps-autoplay-running');
