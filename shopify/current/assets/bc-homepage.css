@@ -39,6 +39,26 @@
 .bch-brands{padding-block:10px 22px}
 .bch-section-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .bch-section-heading>a{display:inline-flex;align-items:center;min-height:44px;gap:8px;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.bch-discover{display:grid;gap:18px;padding-block:12px 40px;align-items:start}
+.bch-discover>section{min-width:0;overflow:hidden;border-radius:16px;scroll-margin-top:160px}
+.bch-inspire-card{background:#f5f3ef}
+.bch-inspire-card__image{min-width:0;aspect-ratio:1.8;overflow:hidden}
+.bch-inspire-card__copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:26px}
+.bch-inspire-card__copy .bch-eyebrow{font-size:10px;letter-spacing:.09em;color:#526574}
+.bch-home .bch-inspire-card h2{font-size:clamp(27px,3.1vw,36px);line-height:1.12;max-width:11ch}
+.bch-home .bch-discover-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;max-width:100%;padding:12px 21px;border:1px solid #102b43;border-radius:999px;background:#102b43;color:#fff;font-size:13px;font-weight:700;line-height:1.4;text-align:center}
+.bch-home .bch-discover-button:hover{background:#1b4c6a;border-color:#1b4c6a}
+.bch-help-card{padding:26px;background:#eaf7fc}
+.bch-home .bch-help-card h2{font-size:26px;line-height:1.2}
+.bch-home .bch-help-card__text{margin-block:12px 20px;color:#415b6d;font-size:15px;line-height:1.6;max-width:38ch}
+.bch-help-card__services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px;padding-top:14px;border-top:1px solid #cbdfe9}
+.bch-help-card__services a{display:flex;align-items:center;gap:8px;min-width:0;min-height:44px;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:3px;scroll-margin-top:170px}
+.bch-help-card__services .bch-icon{width:20px;height:20px;flex-basis:20px}
+.bch-help-card .bch-appointment--subtle{margin-top:0;border:0;border-radius:0}
+.bch-help-card .bch-appointment--subtle>summary,.bch-home .bch-help-card__appointment{display:flex;align-items:center;min-height:44px;padding:8px 0;font-size:12px;font-weight:500;color:#415b6d;list-style:none;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.bch-appointment--subtle>summary::-webkit-details-marker{display:none}
+.bch-help-card .bch-appointment__body{padding:10px 0 0}
+@media(min-width:990px){.bch-discover{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px;padding-block:20px 56px;align-items:stretch}.bch-inspire-card{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:390px;align-self:start}.bch-inspire-card__image{aspect-ratio:auto;min-height:100%}.bch-inspire-card__copy{justify-content:center;padding:32px;gap:24px}.bch-help-card{padding:30px}}
 .bch-inspiration{padding-bottom:12px}
 .bch-inspiration__link{display:block;overflow:hidden;border-radius:6px;background:var(--bch-navy);color:#fff!important}
 .bch-inspiration__image{aspect-ratio:2.5}

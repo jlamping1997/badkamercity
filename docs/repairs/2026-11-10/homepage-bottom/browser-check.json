@@ -1,0 +1,68 @@
+{
+  "task": "HOME-BOTTOM-01",
+  "status": "VERIFIED_DESKTOP_CONCEPT_PREVIEW",
+  "date": "2026-11-10",
+  "themeId": "196395073802",
+  "themeName": "BadkamerCity - Rustige homepage 10 nov",
+  "urlAfterRedirect": "https://badkamercity.nl/",
+  "viewport": {
+    "width": 1348,
+    "height": 936
+  },
+  "layout": {
+    "documentWidth": 1348,
+    "sectionWidth": 1348,
+    "sectionHeight": 466,
+    "cards": [
+      {
+        "type": "inspiration",
+        "width": 789.5,
+        "height": 390
+      },
+      {
+        "type": "support",
+        "width": 478.484375,
+        "height": 390
+      }
+    ],
+    "inspirationImageLoaded": true
+  },
+  "links": [
+    {
+      "label": "Stel je vraag",
+      "href": "/pages/contact"
+    },
+    {
+      "label": "Bezorgen en afhalen",
+      "href": "/pages/bezorgen-en-afhalen"
+    },
+    {
+      "label": "Retourinformatie",
+      "href": "/pages/retour-aanmelden"
+    }
+  ],
+  "appointment": {
+    "openedByMouseClick": true,
+    "closedWithEnter": true,
+    "closedForFinalScreenshot": true,
+    "nativeMethod": "post",
+    "nativeAction": "/contact#HomeAdviceForm-template--29594482442506__bc_homepage",
+    "requiredFields": [
+      "contact[name]",
+      "contact[email]",
+      "contact[body]"
+    ],
+    "submitted": false
+  },
+  "screenshot": "desktop-preview.jpg",
+  "notTested": [
+    "Physical mobile/tablet",
+    "Actual contact submission or mail delivery",
+    "Lighthouse/performance benchmark"
+  ],
+  "offlineTests": {
+    "renderAndFallbackChecks": 15,
+    "brandSliderChecks": 20,
+    "brandLogoChecks": 13
+  }
+}

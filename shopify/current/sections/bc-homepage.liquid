@@ -77,25 +77,35 @@
       </ul>
     </bc-brand-slider>
   </section>
-  <section class="bch-shell bch-inspiration" id="HomeInspiration" aria-labelledby="HomeInspirationTitle-{{ section.id }}">
-    <a href="{{ section.settings.inspiration_link | escape }}" class="bch-inspiration__link">
-      <div class="bch-inspiration__image">{% render 'bc-home-image', image: section.settings.inspiration_image, asset: 'bch-inspiration.webp', alt: '', width: 1440, height: 576 %}</div>
-      <div class="bch-inspiration__copy"><h2 id="HomeInspirationTitle-{{ section.id }}">{{ section.settings.inspiration_heading | escape }}</h2><span>{{ section.settings.inspiration_label | escape }} <span aria-hidden="true">&rarr;</span></span></div>
-    </a>
-  </section>
-  <section class="bch-shell bch-advice" id="HomeAdvice" aria-labelledby="HomeAdviceTitle-{{ section.id }}">
-    <div class="bch-advice__layout">
-      <div class="bch-advice__copy">
-        <p class="bch-eyebrow">{{ section.settings.showroom_usp | escape }}</p>
-        <h2 id="HomeAdviceTitle-{{ section.id }}">{{ section.settings.advice_heading | escape }}</h2>
-        <p>{{ section.settings.advice_text | escape }}</p>
-        {% if section.settings.booking_link != blank %}<a class="bch-button" href="{{ section.settings.booking_link | escape }}">{{ section.settings.booking_label | escape }} <span aria-hidden="true">&rarr;</span></a>{% else %}<a class="bch-button" href="#{{ request_id }}">{{ section.settings.request_label | escape }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+  {% liquid
+    assign delivery_url = pages['bezorgen-en-afhalen'].url | default: shop.shipping_policy.url | default: contact_url
+    assign returns_url = pages['retour-aanmelden'].url | default: shop.refund_policy.url | default: contact_url
+    assign inspiration_url = section.settings.inspiration_link | default: collections['tegels'].url | default: routes.all_products_collection_url
+    assign help_url = section.settings.help_link | default: contact_url
+    assign help_heading = 'bc_home.support.heading' | t
+    assign help_text = 'bc_home.support.text' | t
+    assign help_label = 'bc_home.support.contact' | t
+  %}
+  <div class="bch-shell bch-discover">
+    <section class="bch-inspire-card" id="HomeInspiration" aria-labelledby="HomeInspirationTitle-{{ section.id }}">
+      <div class="bch-inspire-card__image">{% render 'bc-home-image', image: section.settings.inspiration_image, asset: 'bch-inspiration.webp', alt: '', sizes: '(min-width: 990px) 440px, 100vw', width: 900, height: 720 %}</div>
+      <div class="bch-inspire-card__copy">
+        <p class="bch-eyebrow">{{ 'bc_home.support.inspiration' | t }}</p>
+        <h2 id="HomeInspirationTitle-{{ section.id }}">{{ section.settings.inspiration_heading | escape }}</h2>
+        <a class="bch-discover-button" href="{{ inspiration_url | escape }}">{{ section.settings.inspiration_label | escape }}</a>
       </div>
-      <div class="bch-advice__image">{% render 'bc-home-image', image: section.settings.advice_image, asset: 'bch-design.webp', alt: section.settings.advice_image_alt, width: 1080, height: 720 %}</div>
-    </div>
-    {% if section.settings.booking_link == blank %}
-      <details class="bch-appointment" id="{{ request_id }}">
-        <summary>{{ 'bc_home.form.heading' | t }}</summary>
+    </section>
+    <section class="bch-help-card" id="HomeAdvice" aria-labelledby="HomeAdviceTitle-{{ section.id }}">
+      <h2 id="HomeAdviceTitle-{{ section.id }}">{{ section.settings.help_heading | default: help_heading | escape }}</h2>
+      <p class="bch-help-card__text">{{ section.settings.help_text | default: help_text | escape }}</p>
+      <a class="bch-discover-button" href="{{ help_url | escape }}">{{ section.settings.help_label | default: help_label | escape }}</a>
+      <nav class="bch-help-card__services" aria-label="{{ 'bc_home.support.services_label' | t | escape }}">
+        <a id="HomeDelivery" href="{{ delivery_url | escape }}"><span class="bch-icon" aria-hidden="true">{{ 'icon-box.svg' | inline_asset_content }}</span><span>{{ 'bc_home.services.pickup' | t }}</span></a>
+        <a id="HomeReturns" href="{{ returns_url | escape }}"><span class="bch-icon" aria-hidden="true">{{ 'icon-return.svg' | inline_asset_content }}</span><span>{{ 'bc_home.services.returns' | t }}</span></a>
+      </nav>
+      {% if section.settings.booking_link == blank %}
+      <details class="bch-appointment bch-appointment--subtle" id="{{ request_id }}">
+        <summary>{{ 'bc_home.support.appointment' | t }}</summary>
         <div class="bch-appointment__body">
           <p>{{ 'bc_home.form.explanation' | t }}</p>
           {% form 'contact', id: form_id %}
@@ -116,11 +126,10 @@
           {% endform %}
         </div>
       </details>
-    {% endif %}
-  </section>
-  <div class="bch-shell bch-services">
-    <details id="HomeDelivery"><summary><span class="bch-icon" aria-hidden="true">{{ 'icon-box.svg' | inline_asset_content }}</span>{{ section.settings.pickup_usp | escape }}<span class="bch-plus" aria-hidden="true">+</span></summary><div class="bch-service-body"><p>{{ section.settings.delivery_text | escape }}</p><p>{{ section.settings.address | escape | newline_to_br }}</p>{% if shop.shipping_policy != blank %}<a href="{{ shop.shipping_policy.url }}">{{ 'bc_home.services.shipping' | t }} &rarr;</a>{% elsif pages['bezorgen-en-afhalen'] != blank %}<a href="{{ pages['bezorgen-en-afhalen'].url }}">{{ 'bc_home.services.shipping' | t }} &rarr;</a>{% else %}<a href="{{ contact_url }}">{{ 'bc_home.services.contact' | t }} &rarr;</a>{% endif %}</div></details>
-    <details id="HomeReturns"><summary><span class="bch-icon" aria-hidden="true">{{ 'icon-return.svg' | inline_asset_content }}</span>{{ section.settings.returns_heading | escape }}<span class="bch-plus" aria-hidden="true">+</span></summary><div class="bch-service-body"><p>{{ section.settings.returns_text | escape }}</p><p>{{ section.settings.address | escape | newline_to_br }}</p>{% if shop.refund_policy != blank %}<a href="{{ shop.refund_policy.url }}">{{ 'bc_home.services.returns' | t }} &rarr;</a>{% endif %}<a href="mailto:{{ shop.email | escape }}">{{ shop.email | escape }}</a></div></details>
+      {% else %}
+        <a class="bch-help-card__appointment" href="{{ section.settings.booking_link | escape }}">{{ 'bc_home.support.appointment' | t }}</a>
+      {% endif %}
+    </section>
   </div>
 </div>
 {% schema %}
@@ -231,6 +240,34 @@
       "id": "inspiration_link",
       "label": "Inspiratiebestemming"
     },
+      {
+        "type": "header",
+        "content": "Compact hulpblok"
+      },
+      {
+        "type": "text",
+        "id": "help_heading",
+        "label": "Hulptitel (optioneel)"
+      },
+      {
+        "type": "textarea",
+        "id": "help_text",
+        "label": "Hulptekst (optioneel)"
+      },
+      {
+        "type": "text",
+        "id": "help_label",
+        "label": "Contactknoptekst (optioneel)"
+      },
+      {
+        "type": "url",
+        "id": "help_link",
+        "label": "Contactbestemming (optioneel)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Zonder eigen teksten gebruikt het hulpblok de standaardteksten. De eerdere grote 3D-banner wordt niet getoond; de boekingslink of het aanvraagformulier blijft als kleine optie beschikbaar."
+      },
     {
       "type": "header",
       "content": "3D-afspraak"
