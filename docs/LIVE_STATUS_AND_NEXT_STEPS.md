@@ -165,7 +165,27 @@ Echte live browser: BC_2009, voorheen DENY en voorraad nul, via gewone koopknop 
 
 ---
 
+## BRAUER-31 — echte dubbele specs uit klantweergave · 9 november 2026
+
+**1.292 bewezen dubbele regels bij 1.292 artikelen uit de voorbereide klanttabellen gehaald**: 1.290 hoofddouchematen, één dubbele bediening en één deurmechanisme. Alleen exact gelijke niet-lege tekstwaarden bij passende productsoorten; geen samenvoeging van verschillende onderdelen of geblokkeerde velden. 180.197 canonieke bronfeiten en al het bewijs blijven byte-identiek behouden. De klantprojectie bevat nu 178.905 regels. Prijzen inclusief 21% btw, SKU/EAN, titels, keuzes, eigen invoer, 13.728 korte pluspunten bij 7.993 artikelen en bestaande omschrijvingen gelijk gebleven.
+
+Vier verschillende hoofddouchemaatparen behouden en afzonderlijk voor bronbeoordeling geregistreerd; geen keuze tussen de waarden gemaakt. 67 gelijke generieke Dikte/Glasdikteparen bewust behouden omdat het onderdeel bij de generieke dikte niet expliciet is. Breedte/diepte, arm/douchekop, aanvoer/slang en thermostaat/temperatuurregeling blijven afzonderlijke eigenschappen. De bestaande **425 vragen bij 406 artikelen** zijn ongewijzigd; de vier presentatieverschillen staan afzonderlijk in het private reviewbestand. **6.622 artikelen** missen nog kerngegevens. Bestaande 95 retailveldverschillen, 288 verdachte slangwaarden, 42 oorspronkelijke blokkades en 163 toekomstige artikelen behouden.
+
+**52 tests PASS**: acht nieuwe presentatiegrenzen, 29 pluspunt-/mappingtests, zes specificatietests en negen voorbereidingstests. Onafhankelijke vergelijking van alle **13.161 offline importregels / 39.483 veldwaarden** bevestigt dat alleen de bedoelde specificatieprojecties wijzigen. Alle artikelen geblokkeerd; vijf uitvoerbestanden bij herhaling exact, inputhashes geldig. Preflight terecht **exit 2**.
+
+**Importpakket bevestigd vervangen: versie 15. Specificatie-XLSX blijft versie 11 en byte-identiek.** Alle twaalf Excelvoorbeeldprojecties en hun bronnen onveranderd; daarom geen nieuwe XLSX-variant of render. Native controle opnieuw PASS: 13.161 artikelen, 44.868 cumulatieve aanvullingen, 425 vragen exact; nul foutcellen, alle zes tabbladen behouden. ZIP behoudt alle 347 eerdere items en bevat nu 370; manifest/CRC en embedded XLSX exact.
+
+Lees eerst privé `prepared/HANDOFF_BRAUER31.json`; [overdracht](brauer/2026-11-09/HANDOFF_BRAUER31.md), [specificatieregels en behoud](brauer/2026-11-09/SPEC_DISPLAY_BRAUER31.md), [aggregate cijfers](brauer/2026-11-09/SPEC_DISPLAY_BRAUER31.json) en [aanpak productomschrijvingen](brauer/2026-11-09/DESCRIPTION_APPROACH_BRAUER31.md). De huidige omschrijvingen zijn korte leverancierszinnen: mediaan 14 woorden, maximaal 28. In deze ronde geen tekst vervangen. Codecheckpoint `87463a67014bc8c17cbdcc05749942f7e6637e40` op `fix/product-cards-2026-10-14`; vier generieke bestanden exact teruggelezen, main alleen documentatie. `build_import_preparation.py ROOT` past voortaan automatisch dezelfde presentatieprojectie toe en bewaart de herkomst.
+
+**Alle imports, ook DRAFT, blijven geblokkeerd.** Nul Shopify-product-, media-, thema-, definitie- of publicatiewrites. MAIN tijdens deze ronde alleen gelezen: `196368531722` — BadkamerCity - Hele europrijzen 8 nov; dit is de verse rol, de ingang bovenaan bevat een eerder gedateerd previewcheckpoint. Volledige officiële media, inventarisatie, resterende bronbeoordeling, renderer-integratie en beoordeelde product-/keuzeproef ontbreken. De winkelidentiteitscontrole van BRAUER-30 blijft een gedateerde momentopname en moet vóór een latere import opnieuw. Geen fysieke Excel-app-, Windows-Git- of liveproducttest, geen volledige technische vrijgave/importgereedheid. Geen nieuwe bronpagina’s gelezen, geen actieve bronlezer/schrijver na overdracht.
+
+**Eén volgende handeling:** ongeveer tien representatieve offline productomschrijvingen met exact artikelbewijs voorbereiden en de tekstaanpak beoordelen voordat het volledige assortiment wordt uitgewerkt. Korte eigen uitleg over gebruik, materiaal en werkelijk meegeleverde onderdelen; geen herhaalde specificatietabel of onbewezen beloftes. De media-/importblokkades blijven gelden.
+
+---
+
 ## BRAUER-30 — specificaties, bronverschillen en winkelcontrole · 8 november 2026
+
+> Historisch checkpoint; de actuele presentatieprojectie en overdracht staan bij BRAUER-31 hierboven.
 
 **1.999 specificatievelden toegevoegd uit letterlijke oorspronkelijke leveranciersrijen van exact hetzelfde BRAUER-artikelnummer en EAN**: 1.502 keer ‘Hoofddouche inbegrepen: Ja’ en 497 deurmechanismen. Geen fysieke maten uit modelcodes, ontbrekende iconen of variantovererving. **55 montageverschillen onderbouwd afgehandeld**, alle 150 eerdere verschilrecords met kandidaten en historie behouden; 95 veldverschillen bij 76 artikelen blijven open.
 

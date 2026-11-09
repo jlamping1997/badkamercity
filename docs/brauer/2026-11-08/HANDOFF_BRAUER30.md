@@ -1,3 +1,5 @@
+> Historisch checkpoint. Actuele presentatie: [BRAUER-31](../2026-11-09/HANDOFF_BRAUER31.md); lees privé `prepared/HANDOFF_BRAUER31.json`.
+
 # BRAUER-30 — overdracht, 8 november 2026
 
 Lees privé eerst `prepared/HANDOFF_BRAUER30.json` en [de actuele gegevenscontrole](SOURCE_REVIEW_BRAUER30.md). Dit is de opvolger van BRAUER-29.
