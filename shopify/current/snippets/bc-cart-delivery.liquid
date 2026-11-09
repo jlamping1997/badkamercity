@@ -19,7 +19,9 @@
 <p class="bc-cart-delivery">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M2 5h12v12H2zM14 10h4l4 4v3h-8z" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
   <span>
-    {%- if source_delivery and tile_delivery.lead_time != blank -%}
+    {%- if settings.bc_temporary_in_stock -%}
+      {{- 'bc_delivery.temporary_in_stock' | t -}}
+    {%- elsif source_delivery and tile_delivery.lead_time != blank -%}
       {%- if tile_delivery.order_type != blank -%}
         {{ tile_delivery.order_type | escape }}<span class="bc-cart-delivery__detail">{{ tile_delivery.lead_time | escape }}</span>
       {%- else -%}
@@ -35,3 +37,4 @@
     {%- endif -%}
   </span>
 </p>
+

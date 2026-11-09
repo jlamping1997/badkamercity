@@ -238,8 +238,8 @@ html.bc-external-filters-active .pagination-wrapper {
 }
 
 .bc-filter-loading #product-grid {
-  opacity: .45;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .bc-filter-card {
@@ -456,7 +456,7 @@ html.bc-external-filters-active :is(.bc-collection,.template-search) #product-gr
 .bc-card-cart[aria-busy=true]{opacity:.7}
 .bc-card-feedback{font-size:1.2rem;line-height:1.4;margin:.7rem 0 0;color:#28613b}
 .bc-card-feedback:empty{display:none}
-html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card>.bc-wishlist-button{position:absolute;top:1.4rem;right:1.4rem;z-index:2;width:3.5rem;height:3.5rem;box-shadow:none}
+html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card>.bc-wishlist-button{position:absolute;top:1.4rem;right:1.4rem;z-index:4;width:3.5rem;height:3.5rem;box-shadow:none}
 html.bc-external-filters-active .bc-collection .product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.7rem}
 @media(min-width:990px){.bc-filter-panel__header{display:none}html.bc-external-filters-active .bc-collection .facets-vertical>.bc-external-filter-sidebar{width:24rem;flex:0 0 24rem;padding-right:2.6rem}}
 @media(max-width:989px){.bc-external-filter-sidebar .bc-filter-panel{height:100%;display:flex;flex-direction:column;padding:0 1.8rem}.bc-filter-panel__header{padding:1.6rem 0;border-bottom:1px solid #e8ebef}.bc-filter-groups{flex:1;overflow-y:auto;max-height:none}.bc-filter-panel__footer{flex:0 0 auto}.bc-filter-group__body{overflow:visible;max-height:none}}
@@ -476,3 +476,4 @@ html.bc-external-filters-active :is(.bc-collection,.template-search) #product-gr
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-color-more{display:inline-flex;align-items:center;justify-content:center;flex:0 0 3.8rem;height:2.8rem;border:1px solid #d4dae2;border-radius:.4rem;background:#fff;color:#193350;font-size:1.2rem;font-weight:600;line-height:1;text-decoration:none;cursor:pointer}
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-color-more:hover{background:#edf2f6;border-color:#8a9bb0}
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-color-more:focus-visible{outline:2px solid #193350;outline-offset:2px}
+

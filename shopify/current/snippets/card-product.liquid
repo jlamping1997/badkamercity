@@ -41,6 +41,7 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover bc-standard-card">
+    <a class="bc-card-link" href="{{ card_product.url }}" tabindex="-1" aria-hidden="true"></a>
     {% render 'bc-wishlist-button', product: card_product, class_name: 'bc-wishlist-button--card', source: 'card' %}
     <div
       class="
@@ -631,4 +632,5 @@
     </div>
   </div>
 {%- endif -%}
+
 

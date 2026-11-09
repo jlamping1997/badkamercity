@@ -114,12 +114,13 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       const increase = this.querySelector('[data-unit-step="1"]');
       if (decrease) decrease.disabled = !result || result.quantity <= 1;
       if (increase) increase.disabled = !result || !this.unitResult(result.quantity + 1);
-      const order = this.current.orderType || '';
-      const delivery = this.current.leadTime || this.dataset.deliveryUnknown;
+      const stockOverride = this.dataset.temporaryInStock === 'true';
+      const order = stockOverride ? '' : this.current.orderType || '';
+      const delivery = stockOverride ? this.dataset.inStockLabel : this.current.leadTime || this.dataset.deliveryUnknown;
       this.text('[data-tile-delivery-text]', [order, delivery].filter(Boolean).join(' · '));
       const deliveryElement = this.querySelector('[data-tile-delivery]');
       deliveryElement?.classList.toggle('is-order', order.toLowerCase().includes('bestel'));
-      deliveryElement?.classList.toggle('is-unknown', !order);
+      deliveryElement?.classList.toggle('is-unknown', !stockOverride && !order);
       this.page?.querySelectorAll('.bc-product-sticky__price').forEach(element => { element.textContent = result ? this.money.format(result.total / 100) : '—'; });
     }
     setupApplicationHelp() {
@@ -205,11 +206,12 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
       this.text('[data-tile-unit-price]', this.money.format(this.current.unitPriceCents / 100));
       this.text('[data-tile-box-price]', this.money.format(this.current.priceCents / 100));
       this.text('[data-tile-box-area]', this.number.format(this.current.boxUnits / this.core.scale));
-      const order = this.current.orderType || '';
-      const delivery = this.current.leadTime || this.dataset.deliveryUnknown;
-      this.text('[data-tile-delivery-text]', result.contact ? this.dataset.contactMessage : [order, delivery].filter(Boolean).join(' · '));
+      const stockOverride = this.dataset.temporaryInStock === 'true';
+      const order = stockOverride ? '' : this.current.orderType || '';
+      const delivery = stockOverride ? this.dataset.inStockLabel : this.current.leadTime || this.dataset.deliveryUnknown;
+      this.text('[data-tile-delivery-text]', stockOverride ? delivery : result.contact ? this.dataset.contactMessage : [order, delivery].filter(Boolean).join(' · '));
       this.querySelector('[data-tile-delivery]').classList.toggle('is-order', order.toLowerCase().includes('bestel'));
-      this.querySelector('[data-tile-delivery]').classList.toggle('is-unknown', !order);
+      this.querySelector('[data-tile-delivery]').classList.toggle('is-unknown', !stockOverride && !order);
       this.querySelector('[data-tile-contact]').hidden = !result.contact;
       this.querySelector('[data-tile-delivery]').classList.toggle('is-contact', result.contact);
       this.querySelector('[data-tile-property]').value = String(this.current.boxUnits / this.core.scale);
@@ -490,5 +492,6 @@ if (!customElements.get('bc-porcelanosa-buybox')) {
     }
   });
 }
+
 
 

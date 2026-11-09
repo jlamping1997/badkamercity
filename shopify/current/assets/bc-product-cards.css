@@ -360,3 +360,26 @@
   :is(.template-search, .bc-collection) .bc-filter-active:empty { margin: 0; }
   :is(.template-search, .bc-collection) .bc-filter-active:not(:empty) { margin: 12px 0 0; }
 }
+
+
+.bc-standard-card, .bc-filter-card { position: relative; isolation: isolate; }
+.bc-standard-card > .bc-card-link, .bc-filter-card > .bc-card-link { display: block; position: absolute; inset: 0; z-index: 2; border: 0; border-radius: inherit; cursor: pointer; }
+.bc-standard-card .bc-wishlist-button, .bc-filter-card .bc-wishlist-button, .bc-standard-card .quick-add, .bc-standard-card .quantity-popover-container, .bc-filter-card .bc-card-colors, .bc-filter-card .bc-card-actions { position: relative; z-index: 3; }
+.bc-standard-card > .bc-wishlist-button, .bc-filter-card > .bc-wishlist-button { position: absolute; z-index: 4; }
+body #MainContent .bc-card-delivery.bc-card-delivery--stock,
+body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-delivery.bc-card-delivery--stock {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #15803d;
+  font-weight: 600;
+}
+body #MainContent .bc-card-delivery.bc-card-delivery--stock::before {
+  content: "";
+  display: inline-block;
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}

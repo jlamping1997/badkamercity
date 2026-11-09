@@ -9,4 +9,5 @@
     assign card_supplier_lead = product.metafields.custom.bron_toelichtingen_json.value.tiles.lead_time | strip
   endif
 -%}
-<p class="bc-card-delivery">{% if card_supplier_lead != blank %}{{ card_supplier_lead | escape }}{% else %}{{ 'bc_delivery.lead_time_on_request' | t }}{% endif %}</p>
+<p class="bc-card-delivery{% if settings.bc_temporary_in_stock %} bc-card-delivery--stock{% endif %}">{% if settings.bc_temporary_in_stock %}{{ 'bc_delivery.temporary_in_stock' | t }}{% elsif card_supplier_lead != blank %}{{ card_supplier_lead | escape }}{% else %}{{ 'bc_delivery.lead_time_on_request' | t }}{% endif %}</p>
+

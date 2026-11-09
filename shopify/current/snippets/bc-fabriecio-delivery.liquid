@@ -15,7 +15,9 @@ Renders Fabriecio supplier availability without inventing a delivery promise.
   <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}">
     <div class="bc-buybox__delivery-meta">
       <span class="bc-buybox__delivery-title">
-        {%- if delivery_data.discontinued == true -%}
+        {%- if settings.bc_temporary_in_stock -%}
+          {{- 'bc_delivery.temporary_in_stock' | t -}}
+        {%- elsif delivery_data.discontinued == true -%}
           {{- 'bc_delivery.discontinued' | t -}}
         {%- elsif delivery_data.stock_conflict == true -%}
           {{- 'bc_delivery.verlavio_stock_on_request' | t -}}
@@ -29,7 +31,7 @@ Renders Fabriecio supplier availability without inventing a delivery promise.
       </span>
       <span class="bc-buybox__delivery-icon" aria-hidden="true">i</span>
     </div>
-    {%- unless delivery_data.discontinued == true or delivery_data.stock_conflict == true -%}
+    {%- unless settings.bc_temporary_in_stock or delivery_data.discontinued == true or delivery_data.stock_conflict == true -%}
       {%- if supplier_stock == true -%}
         <p class="bc-buybox__delivery-copy">{{ 'bc_delivery.verlavio_stock_lead_time' | t }}</p>
       {%- elsif supplier_expectation != blank -%}
@@ -38,3 +40,4 @@ Renders Fabriecio supplier availability without inventing a delivery promise.
     {%- endunless -%}
   </aside>
 {%- endif -%}
+

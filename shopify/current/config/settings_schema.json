@@ -1451,5 +1451,17 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Tijdelijke voorraadweergave",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "bc_temporary_in_stock",
+        "label": "Toon tijdelijk Op voorraad bij alle producten",
+        "info": "Wijzigt alleen de weergave van levertijden. Voorraadgegevens en bestelbaarheid blijven behouden.",
+        "default": false
+      }
+    ]
   }
 ]
