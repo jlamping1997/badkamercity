@@ -539,34 +539,6 @@
             "title": "Accessoires",
             "asset": "bch-accessoires.webp"
           }
-        },
-        "brand_hotbath": {
-          "type": "brand",
-          "settings": {
-            "title": "Hotbath",
-            "link": "/collections/vendors?q=Hotbath"
-          }
-        },
-        "brand_wiesbaden": {
-          "type": "brand",
-          "settings": {
-            "title": "Wiesbaden",
-            "link": "/collections/vendors?q=Wiesbaden"
-          }
-        },
-        "brand_jeeo": {
-          "type": "brand",
-          "settings": {
-            "title": "JEE-O",
-            "link": "/collections/vendors?q=JEE-O"
-          }
-        },
-        "brand_sunshower": {
-          "type": "brand",
-          "settings": {
-            "title": "Sunshower",
-            "link": "/collections/vendors?q=Sunshower"
-          }
         }
       },
       "block_order": [
@@ -580,11 +552,7 @@
         "category_spiegels",
         "category_wastafels",
         "category_baden",
-        "category_accessoires",
-        "brand_hotbath",
-        "brand_wiesbaden",
-        "brand_jeeo",
-        "brand_sunshower"
+        "category_accessoires"
       ],
       "settings": {
         "categories_link": "/collections",

@@ -1463,5 +1463,156 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "Merken",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Deze logo’s en links worden gebruikt op de homepage en het merkenoverzicht. Zonder logo blijft de merknaam zichtbaar. Alleen merken uit het winkelassortiment worden getoond."
+      },
+      {
+        "type": "text",
+        "id": "bc_brand_home_order",
+        "label": "Eerste merken op de homepage",
+        "default": "Hotbath, Wiesbaden, JEE-O, Sunshower",
+        "info": "Merknamen gescheiden door komma’s. Overige merken volgen automatisch alfabetisch."
+      },
+      {
+        "type": "header",
+        "content": "Cottoceramix"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_cottoceramix",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_cottoceramix",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Hotbath"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_hotbath",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_hotbath",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "JEE-O"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_jee_o",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_jee_o",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Lagoo"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_lagoo",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_lagoo",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Porcelanosa"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_porcelanosa",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_porcelanosa",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Sunshower"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_sunshower",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_sunshower",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "The Mosaic Factory"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_the_mosaic_factory",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_the_mosaic_factory",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Verlavio"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_verlavio",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_verlavio",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      },
+      {
+        "type": "header",
+        "content": "Wiesbaden"
+      },
+      {
+        "type": "image_picker",
+        "id": "bc_brand_logo_wiesbaden",
+        "label": "Logo"
+      },
+      {
+        "type": "url",
+        "id": "bc_brand_link_wiesbaden",
+        "label": "Merkpagina",
+        "info": "Leeg laten voor de bestaande merkbestemming."
+      }
+    ]
   }
 ]

@@ -1,4 +1,7 @@
 # Productteksten per merk — uitvoeringsplan
+
+> **Uitvoering 9 november 2026 — BRANDS-01 PREVIEW_VERIFIED:** stappen 1 en 2 staan nu in concept196354474250 — Merkenoverzicht en slider 9 nov: negen echte merken, gedeelde logo’s/links, alfabetisch overzicht en homepage-slider. Logo’s zijn nog niet aangeleverd; merknamen blijven zichtbaar. MAIN196395073802 is behouden. [Uitvoering en review](repairs/2026-11-09/brands-and-slider/README.md). Titels, kleurprijsvolgorde en individuele merklandingspagina’s zijn in deze ronde niet uitgevoerd. Volgende handeling: eigenaar beoordeelt het concept op desktop/telefoon en publiceert als de basis gewenst is.
+
 Datum: 16 oktober 2026 (Europe/Amsterdam).
 Onderdeel van BC-02; vaste projectingang blijft LIVE_STATUS_AND_NEXT_STEPS.md.
 Opdracht: bestaande productgegevens combineren met gecontroleerde externe bronnen, eigen duidelijke productteksten maken en voortgang per merk/product in Git bijhouden.

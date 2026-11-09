@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "checks": 20,
+  "results": [
+    {
+      "test": "all-nine-real-brands-alphabetical-test-brand-excluded",
+      "result": "PASS"
+    },
+    {
+      "test": "homepage-keeps-four-priority-brands-and-adds-rest",
+      "result": "PASS"
+    },
+    {
+      "test": "priority-whitespace-case-duplicates-and-unknown-names",
+      "result": "PASS"
+    },
+    {
+      "test": "future-real-brand-appears-with-text-fallback",
+      "result": "PASS"
+    },
+    {
+      "test": "empty-assortment-no-empty-links",
+      "result": "PASS"
+    },
+    {
+      "test": "locale-aware-encoded-vendor-and-escaped-label",
+      "result": "PASS"
+    },
+    {
+      "test": "missing-cotto-collection-keeps-vendor-destination",
+      "result": "PASS"
+    },
+    {
+      "test": "shared-custom-logo-and-brand-landing-override",
+      "result": "PASS"
+    },
+    {
+      "test": "actual-home-uses-shared-list",
+      "result": "PASS"
+    },
+    {
+      "test": "actual-directory-uses-shared-list",
+      "result": "PASS"
+    },
+    {
+      "test": "homepage-campaigns-categories-settings-and-disabled-sections-preserved",
+      "result": "PASS"
+    },
+    {
+      "test": "one-global-logo-and-link-setting-per-known-brand-existing-settings-preserved",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-en-labels-with-all-existing-price-translations-preserved",
+      "result": "PASS"
+    },
+    {
+      "test": "real-slider-js-buttons-keyboard-and-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "resize-hides-unneeded-controls-and-restores-them",
+      "result": "PASS"
+    },
+    {
+      "test": "no-overflow-controls-hidden-0-brands",
+      "result": "PASS"
+    },
+    {
+      "test": "no-overflow-controls-hidden-1-brands",
+      "result": "PASS"
+    },
+    {
+      "test": "reduced-motion-uses-instant-scroll",
+      "result": "PASS"
+    },
+    {
+      "test": "rtl-direction-and-boundary-state",
+      "result": "PASS"
+    },
+    {
+      "test": "theme-editor-reconnect-does-not-duplicate-handlers",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Actual shared Liquid renderer and slider JavaScript with synthetic data/layout. Real preview checked separately; no physical touch-device test."
+}
