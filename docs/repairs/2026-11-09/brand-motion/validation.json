@@ -1,0 +1,58 @@
+{
+  "task": "BRAND-MOTION-01",
+  "date": "2026-11-09",
+  "codeBaseline": "4bf736c87e95323f5b15cb6e9f471767f8a6ce79",
+  "mainThemeId": "196395073802",
+  "draftThemeId": "196416504074",
+  "status": "LOCAL_VERIFIED_PREVIEW_COPY_PENDING",
+  "tests": {
+    "motion": {
+      "passed": 22,
+      "scope": "Actual component JavaScript; synthetic geometry/media/visibility"
+    },
+    "existingBrands": 20,
+    "existingLogos": 13,
+    "shopifyValidator": {
+      "files": 5,
+      "status": "SUCCESS",
+      "schemaSource": "Official cached schemas after network timeout"
+    },
+    "nodeSyntax": "PASS",
+    "whitespace": "PASS"
+  },
+  "features": [
+    {
+      "filename": "assets/bc-brand-slider.js",
+      "md5": "38590ad3ee2031a640386d89d08101f6"
+    },
+    {
+      "filename": "assets/bc-brands.css",
+      "md5": "9c1e1933dfb4d2c89a015bd58dba60ba"
+    },
+    {
+      "filename": "sections/bc-homepage.liquid",
+      "md5": "316baf0cbd8854b86f84e1462b4cb3b2"
+    },
+    {
+      "filename": "locales/nl.json",
+      "md5": "281c8662a3f85c18b7ac8fa8208557f0"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "md5": "398971e0e42aeb418de5ab1232e4fcd2"
+    }
+  ],
+  "mobile": {
+    "autoplay": false,
+    "breakpoint": 990,
+    "testedSyntheticWidths": [
+      320,
+      390,
+      750,
+      989
+    ],
+    "physicalDevice": "NOT_TESTED"
+  },
+  "protectedSettingsBody": "NOT_READ_OR_WRITTEN",
+  "protectedSettingsChecksum": "d6a5642b02e3b8773a5e4e37aed01256"
+}

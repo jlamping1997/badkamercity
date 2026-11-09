@@ -27,7 +27,7 @@ async function render({mode='directory',settings={},list=vendors,collections={co
  });
  let sourceText=file('snippets/bc-brand-items.liquid'),context={mode};
  if(source==='directory'){sourceText=file('sections/bc-brand-directory.liquid');context={section:{settings:{heading:'Onze merken'}}};}
- if(source==='home'){sourceText=file('sections/bc-homepage.liquid').match(/<section class="bch-shell bch-brands"[\s\S]*?<\/section>/)[0];context={section:{id:'test',settings:{brands_heading:'Jouw favoriete merken',brands_label:'Alle merken',brands_link:'/collections?view=merken'}}};}
+ if(source==='home'){sourceText=file('sections/bc-homepage.liquid').match(/<section class="[^"]*\bbch-brands\b[^"]*"[\s\S]*?<\/section>/)[0];context={section:{id:'test',settings:{brands_heading:'Jouw favoriete merken',brands_label:'Alle merken',brands_link:'/collections?view=merken'}}};}
  const html=await e.parseAndRender(sourceText,context),w=new Window();w.document.body.innerHTML=html;
  const items=[...w.document.querySelectorAll('[data-bc-brand]')];
  const data=items.map(li=>({key:li.dataset.bcBrand,name:li.textContent.trim(),href:li.querySelector('a').getAttribute('href')}));
