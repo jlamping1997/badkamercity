@@ -1,0 +1,60 @@
+{% doc %}
+  Renders the shared storefront brand list using global logo and destination settings.
+  @param {string} [mode] - Use slider for homepage priority order; otherwise alphabetical.
+{% enddoc %}
+{%- liquid
+  assign sorted_vendors = shop.vendors | sort_natural
+  assign brand_source = sorted_vendors
+  if mode == 'slider'
+    assign priority_names = settings.bc_brand_home_order | default: 'Hotbath, Wiesbaden, JEE-O, Sunshower' | split: ','
+    assign brand_source = priority_names | concat: sorted_vendors
+  endif
+  assign rendered_vendors = '|'
+-%}
+{%- for requested_vendor in brand_source -%}
+  {%- liquid
+    assign requested_key = requested_vendor | strip | downcase
+    assign vendor = ''
+    for candidate in sorted_vendors
+      assign candidate_key = candidate | strip | downcase
+      if candidate_key == requested_key
+        assign vendor = candidate | strip
+        break
+      endif
+    endfor
+    assign vendor_token = '|' | append: requested_key | append: '|'
+  -%}
+  {%- if vendor != blank and requested_key != 'badkamercity test' -%}
+    {%- unless rendered_vendors contains vendor_token -%}
+      {%- liquid
+        assign rendered_vendors = rendered_vendors | append: requested_key | append: '|'
+        assign vendor_label = vendor
+        if requested_key == 'the mosaic factory'
+          assign vendor_label = 'The Mosaic Factory'
+        endif
+        assign settings_suffix = requested_key | handleize | replace: '-', '_'
+        assign logo_key = 'bc_brand_logo_' | append: settings_suffix
+        assign link_key = 'bc_brand_link_' | append: settings_suffix
+        assign brand_logo = settings[logo_key]
+        assign brand_link = settings[link_key]
+        if brand_link == blank
+          if requested_key == 'cottoceramix' and collections.cottoceramix != blank
+            assign brand_link = collections.cottoceramix.url
+          else
+            assign encoded_vendor = vendor | url_encode
+            assign brand_link = routes.collections_url | append: '/vendors?q=' | append: encoded_vendor
+          endif
+        endif
+      -%}
+      <li class="bc-brand-item" data-bc-brand="{{ requested_key | escape }}">
+        <a class="bc-brand-card" href="{{ brand_link | escape }}" aria-label="{{ vendor_label | escape }}">
+          {%- if brand_logo != blank -%}
+            {{- brand_logo | image_url: width: 360 | image_tag: class: 'bc-brand-card__image', alt: vendor_label, loading: 'lazy', widths: '180, 360', sizes: '180px' -}}
+          {%- else -%}
+            <span class="bc-brand-card__label">{{ vendor_label | escape }}</span>
+          {%- endif -%}
+        </a>
+      </li>
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}

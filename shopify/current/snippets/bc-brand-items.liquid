@@ -36,6 +36,25 @@
         assign logo_key = 'bc_brand_logo_' | append: settings_suffix
         assign link_key = 'bc_brand_link_' | append: settings_suffix
         assign brand_logo = settings[logo_key]
+        assign default_logo = ''
+        case requested_key
+          when 'hotbath'
+            assign default_logo = 'bc-brand-logo-hotbath.png'
+          when 'wiesbaden'
+            assign default_logo = 'bc-brand-logo-wiesbaden.svg'
+          when 'cottoceramix'
+            assign default_logo = 'bc-brand-logo-cottoceramix.svg'
+          when 'jee-o'
+            assign default_logo = 'bc-brand-logo-jee-o.svg'
+          when 'lagoo'
+            assign default_logo = 'bc-brand-logo-lagoo.svg'
+          when 'porcelanosa'
+            assign default_logo = 'bc-brand-logo-porcelanosa.svg'
+          when 'sunshower'
+            assign default_logo = 'bc-brand-logo-sunshower.svg'
+          when 'the mosaic factory'
+            assign default_logo = 'bc-brand-logo-the-mosaic-factory.svg'
+        endcase
         assign brand_link = settings[link_key]
         if brand_link == blank
           if requested_key == 'cottoceramix' and collections.cottoceramix != blank
@@ -50,6 +69,8 @@
         <a class="bc-brand-card" href="{{ brand_link | escape }}" aria-label="{{ vendor_label | escape }}">
           {%- if brand_logo != blank -%}
             {{- brand_logo | image_url: width: 360 | image_tag: class: 'bc-brand-card__image', alt: vendor_label, loading: 'lazy', widths: '180, 360', sizes: '180px' -}}
+          {%- elsif default_logo != blank -%}
+            <img src="{{ default_logo | asset_url }}" class="bc-brand-card__image" alt="{{ vendor_label | escape }}" width="180" height="48" loading="lazy" decoding="async">
           {%- else -%}
             <span class="bc-brand-card__label">{{ vendor_label | escape }}</span>
           {%- endif -%}

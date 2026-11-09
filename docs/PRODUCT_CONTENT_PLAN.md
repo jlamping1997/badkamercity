@@ -1,5 +1,8 @@
 # Productteksten per merk — uitvoeringsplan
 
+> **Uitvoering 9 november 2026 — BRAND-LOGOS-01 PREVIEW_VERIFIED:** acht fabrikantlogo’s gevonden en toegevoegd aan de gedeelde homepage-/merkenlijst in concept196395073802 — Merklogos 9 nov; globale logo-imagepickers behouden voorrang. Verlavio blijft tekst totdat het eigen logo beschikbaar is. De eerdere merkenbasis staat nu als MAIN196354474250; alle1.393files in deze ronde behouden. [Bronnen, review en herstel](repairs/2026-11-09/brand-logos/README.md). Volgende handeling: eigenaar beoordeelt/publiceert het logoconcept. Titels, kleurprijsvolgorde en merklandingspagina’s blijven aparte volgende stappen.
+
+
 > **Uitvoering 9 november 2026 — BRANDS-01 PREVIEW_VERIFIED:** stappen 1 en 2 staan nu in concept196354474250 — Merkenoverzicht en slider 9 nov: negen echte merken, gedeelde logo’s/links, alfabetisch overzicht en homepage-slider. Logo’s zijn nog niet aangeleverd; merknamen blijven zichtbaar. MAIN196395073802 is behouden. [Uitvoering en review](repairs/2026-11-09/brands-and-slider/README.md). Titels, kleurprijsvolgorde en individuele merklandingspagina’s zijn in deze ronde niet uitgevoerd. Volgende handeling: eigenaar beoordeelt het concept op desktop/telefoon en publiceert als de basis gewenst is.
 
 Datum: 16 oktober 2026 (Europe/Amsterdam).
