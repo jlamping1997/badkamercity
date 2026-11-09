@@ -100,7 +100,6 @@ Renders the reusable tile purchase controls inside the existing product page.
   {%- else -%}
   <div class="bc-tile__pricing">
     <p class="bc-tile__price"><span data-tile-unit-price>{{ tile_unit_cents | money }}</span><span class="bc-tile__per">{{ 'bc_tiles.per_m2' | t }}</span></p>
-    <p class="bc-tile__box-price"><span data-tile-box-price>{{ tile_variant.price | money }}</span> {{ 'bc_tiles.per_box' | t }} · <span data-tile-box-area>{{ tile.m2_per_box | replace: '.', ',' }}</span> m²</p>
     <p class="bc-tile__vat">{{ 'bc_tiles.vat' | t }}</p>
   </div>
   <div class="bc-tile__calculator">

@@ -112,6 +112,10 @@
       {% render 'bc-card-delivery', product: card_product %}
 
       <div class="bc-search-card__price-wrap">
+        {%- capture bc_area_price -%}{%- render 'bc-card-tile-price', product: card_product, mode: 'primary', price_class: 'bc-search-card__price' -%}{%- endcapture -%}
+        {%- if bc_area_price != blank -%}
+          {{- bc_area_price -}}
+        {%- else -%}
         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
           <div class="price__container">
             <div class="price__regular">
@@ -134,6 +138,7 @@
             {% endif %}
           </div>
         </div>
+        {%- endif -%}
       </div>
 
       {% render 'bc-card-tile-price', product: card_product %}

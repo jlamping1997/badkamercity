@@ -629,17 +629,10 @@
       const price = card.querySelector('.bc-filter-card__price');
       price.textContent = productPrice(data);
       const tile = data.tile_price;
-      if (Number.isFinite(tile?.box_area) && tile.box_area > 0) {
-        const box = document.createElement('span');
-        box.className = 'bc-card-unit';
-        box.textContent = `${uiText('labelTileBox','per doos')} · ${new Intl.NumberFormat(document.documentElement.lang || 'nl-NL', {maximumFractionDigits: 4}).format(tile.box_area)} m²`;
-        price.append(box);
-        if (data.price_varies !== true && Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
-          const area = document.createElement('span');
-          area.className = 'bc-card-unit';
-          area.textContent = `${formatPrice(tile.unit_price_cents)} ${uiText('labelTileArea','per m²')}`;
-          price.append(area);
-        }
+      if (Number.isFinite(tile?.box_area) && tile.box_area > 0 && Number.isFinite(tile.unit_price_cents) && tile.unit_price_cents > 0) {
+        const amount = formatPrice(tile.unit_price_cents);
+        const areaPrice = tile.price_varies === true ? uiText('labelPriceFrom', 'Vanaf __BC_PRICE__').replace('__BC_PRICE__', amount) : amount;
+        price.textContent = `${areaPrice} ${uiText('labelTileArea', 'per m²')}`;
       }
       const cart = card.querySelector('[data-bc-card-cart]');
       cart.disabled = !data.available;

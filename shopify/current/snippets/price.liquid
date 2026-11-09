@@ -1,3 +1,7 @@
+{%- capture bc_area_price -%}{%- render 'bc-card-tile-price', product: product, mode: 'primary', price_class: price_class, use_variant: use_variant -%}{%- endcapture -%}
+{%- if bc_area_price != blank -%}
+  {{- bc_area_price -}}
+{%- else -%}
 {% comment %}
   Renders a list of product's price (regular, sale)
 
@@ -116,3 +120,5 @@
     {%- endif -%}
   </div>
 {% endunless %}
+
+{%- endif -%}
