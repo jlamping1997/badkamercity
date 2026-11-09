@@ -1,5 +1,7 @@
 # Tegels indelen op uitstraling
 
+> **9 november 2026 — vervolgcontrole:** de eigenaar heeft de vastgepinde serverupdate uitgevoerd. De aangeleverde einduitvoer meldt applied_verified, alle acht vlaggen true en3.495lookproducten. Onafhankelijke live browserproef op MAIN196354474250 bevestigt het nieuwe Uitstraling-filter op Cottoceramix, Marmerlook3159→90 en kaarten met alleen de m²-prijs. De huidige MAIN bevat de eerdere prijsrelease volledig; er is geen themamerge nodig. [Bronvergelijking, uitvoerafbakening en browserbewijs](../../repairs/2026-11-09/tile-area-prices/integration-check.md). De eerdere wachtnotities hieronder beschrijven de oorspronkelijke overdracht vóór deze eigenaaruitvoering; dit vervolg bevat geen volledige herhaling van alle server-/catalogustests.
+
 9 november 2026 · TILE-LOOK-01 · **ADMIN_APPLIED_VERIFIED / FILTER_READY_FOR_OWNER_EXECUTION**.
 
 De eigenaar wil herkenbare uitstralingkeuzes zoals steenlook, marmerlook en houtlook. De bestaande Shopify-categorieën zijn aangevuld; het nieuwe generieke filterpakket staat klaar. De installatie van dat filter op de VPS is nog niet uitgevoerd.
