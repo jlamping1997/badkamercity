@@ -1,0 +1,62 @@
+{
+  "status": "VERIFIED_DESKTOP_PREVIEW",
+  "date": "2026-11-09",
+  "browser": "Cloud Chrome",
+  "themeId": "196395073802",
+  "themeName": "BadkamerCity - Oneindige merkenbalk 9 nov",
+  "urlAfterRedirect": "https://badkamercity.nl/",
+  "viewport": {
+    "width": 1348,
+    "height": 936
+  },
+  "layout": {
+    "railX": 0,
+    "railWidth": 1348,
+    "documentWidth": 1348,
+    "pauseControls": 0,
+    "originals": 9,
+    "visualCopies": 18,
+    "loadedOriginalLogos": 8,
+    "cursor": "grab",
+    "touchAction": "pan-y pinch-zoom"
+  },
+  "hover": {
+    "moving": true,
+    "scrollSamples": [
+      1888,
+      1835,
+      1812
+    ]
+  },
+  "mouseDrag": {
+    "from": [
+      800,
+      545
+    ],
+    "to": [
+      1100,
+      545
+    ],
+    "before": {
+      "time": 1794261609381,
+      "scrollLeft": 2208
+    },
+    "after": {
+      "time": 1794261618167,
+      "scrollLeft": 1888,
+      "moving": true,
+      "dragging": false,
+      "copies": 18,
+      "focusedTag": "MAIN"
+    },
+    "navigation": "Remained on homepage; no accidental brand-link activation"
+  },
+  "configuredSpeedPxPerSecond": 22,
+  "notTested": [
+    "Physical phone/tablet and real touch gestures",
+    "Actual-frame-rate or speed benchmark",
+    "Keyboard modality on a physical device"
+  ],
+  "syntheticCoverage": "31 passing JS/geometry/pointer/media checks including touch, vertical intent, momentum, cancellations, multiple cycles and mobile breakpoints",
+  "screenshot": "homepage-preview.jpg"
+}

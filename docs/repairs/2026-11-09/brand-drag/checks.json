@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "checks": 31,
+  "results": [
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-320px",
+      "result": "PASS"
+    },
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-390px",
+      "result": "PASS"
+    },
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-750px",
+      "result": "PASS"
+    },
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-989px",
+      "result": "PASS"
+    },
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-1348px",
+      "result": "PASS"
+    },
+    {
+      "test": "full-filled-infinite-autoplay-22px-per-second-4000px",
+      "result": "PASS"
+    },
+    {
+      "test": "hover-keeps-autoplay-running",
+      "result": "PASS"
+    },
+    {
+      "test": "holding-mouse-down-keeps-autoplay-running",
+      "result": "PASS"
+    },
+    {
+      "test": "holding-finger-keeps-autoplay-running",
+      "result": "PASS"
+    },
+    {
+      "test": "mouse-drag-follows-pointer-and-releases-with-momentum",
+      "result": "PASS"
+    },
+    {
+      "test": "momentum-decays-back-to-base-speed-without-permanent-pause",
+      "result": "PASS"
+    },
+    {
+      "test": "drag-blocks-accidental-link-click-but-next-intentional-click-works",
+      "result": "PASS"
+    },
+    {
+      "test": "touch-swipe-in-opposite-direction-returns-to-rightward-autoplay",
+      "result": "PASS"
+    },
+    {
+      "test": "vertical-touch-remains-page-scroll-and-does-not-pause-rail",
+      "result": "PASS"
+    },
+    {
+      "test": "cancelled-drag-cleans-up-and-continues-at-base-speed",
+      "result": "PASS"
+    },
+    {
+      "test": "held-drag-release-does-not-reuse-stale-throw-velocity",
+      "result": "PASS"
+    },
+    {
+      "test": "second-finger-does-not-replace-active-drag",
+      "result": "PASS"
+    },
+    {
+      "test": "multiple-complete-cycles-retain-filled-loop-and-autoplay",
+      "result": "PASS"
+    },
+    {
+      "test": "desktop-resize-preserves-cycle-position",
+      "result": "PASS"
+    },
+    {
+      "test": "offscreen-and-hidden-work-is-suspended-and-resumes",
+      "result": "PASS"
+    },
+    {
+      "test": "copies-have-no-duplicate-ids-or-screen-reader-tab-stops",
+      "result": "PASS"
+    },
+    {
+      "test": "arrow-button-keeps-loop-and-returns-to-base-speed",
+      "result": "PASS"
+    },
+    {
+      "test": "reduced-motion-preference-retains-static-native-scroll-fallback",
+      "result": "PASS"
+    },
+    {
+      "test": "keyboard-focus-remains-operable-and-blur-resumes",
+      "result": "PASS"
+    },
+    {
+      "test": "pointer-focus-does-not-pause-autoplay",
+      "result": "PASS"
+    },
+    {
+      "test": "editor-reconnect-cleans-and-recreates-only-needed-copies",
+      "result": "PASS"
+    },
+    {
+      "test": "rtl-autoplay-and-drag-move-physically-with-pointer",
+      "result": "PASS"
+    },
+    {
+      "test": "zero-or-one-brand-does-not-animate-0",
+      "result": "PASS"
+    },
+    {
+      "test": "zero-or-one-brand-does-not-animate-1",
+      "result": "PASS"
+    },
+    {
+      "test": "existing-manual-component-still-works-without-autoplay",
+      "result": "PASS"
+    },
+    {
+      "test": "no-pause-control-and-vertical-pan-and-pinch-remain-available",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Actual component JS with synthetic geometry, pointer capture/events, deterministic frames and media events; real desktop drag checked separately."
+}
