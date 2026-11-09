@@ -26,6 +26,10 @@ bc-brand-slider{display:block;min-width:0}
 .bch-brands--full{width:100%;max-width:none;padding-inline:0}
 .bc-brand-slider--marquee .bc-brand-slider__track{grid-auto-columns:150px;gap:24px;padding-inline:16px;scroll-padding-inline:16px}
 .bc-brand-slider--marquee .bc-brand-card{border-color:transparent;border-radius:0;background:transparent;padding-inline:10px}
+.bc-brand-slider--marquee .bc-brand-slider__all{justify-content:center;padding:10px 22px;border:1px solid #102b43;border-radius:999px;background:#102b43;color:#fff;font-weight:650;line-height:1.2;text-decoration:none;white-space:nowrap;transition:background-color .15s ease,border-color .15s ease}
+.bc-brand-slider--marquee .bc-brand-slider__all:hover{border-color:#1b4c6a;background:#1b4c6a}
+.bc-brand-slider--marquee .bc-brand-slider__all:focus-visible{outline:3px solid #176b9b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.bc-brand-slider--marquee .bc-brand-slider__all{transition:none}}
 .bc-brand-slider__button[hidden]{display:none}
 bc-brand-slider[data-brand-looping] .bc-brand-slider__track{overflow-x:hidden;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;padding-inline:0;scroll-padding-inline:0;touch-action:pan-y pinch-zoom;cursor:grab;user-select:none;-webkit-user-select:none}
 bc-brand-slider[data-brand-dragging] .bc-brand-slider__track{cursor:grabbing}

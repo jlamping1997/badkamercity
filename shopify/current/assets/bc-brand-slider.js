@@ -7,7 +7,7 @@
       this.controls = this.querySelector('[data-brand-controls]');
       this.previous = this.querySelector('[data-brand-previous]');
       this.next = this.querySelector('[data-brand-next]');
-      if (!this.track || !this.controls || !this.previous || !this.next) return;
+      if (!this.track) return;
 
       this.events?.abort();
       this.events = new AbortController();
@@ -24,8 +24,8 @@
       this.drag = null;
       this.suppressClick = false;
 
-      this.previous.addEventListener('click', () => this.move(-1), options);
-      this.next.addEventListener('click', () => this.move(1), options);
+      this.previous?.addEventListener('click', () => this.move(-1), options);
+      this.next?.addEventListener('click', () => this.move(1), options);
       this.track.addEventListener('scroll', () => {
         if (!this.loopWidth) this.scheduleUpdate();
       }, { ...options, passive: true });
@@ -261,9 +261,9 @@
     update() {
       const maximum = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
       const position = Math.min(maximum, Math.max(0, Math.abs(this.track.scrollLeft)));
-      this.controls.hidden = !this.loopWidth && maximum <= 2;
-      this.previous.disabled = !this.loopWidth && position <= 2;
-      this.next.disabled = !this.loopWidth && position >= maximum - 2;
+      if (this.controls) this.controls.hidden = !this.loopWidth && maximum <= 2;
+      if (this.previous) this.previous.disabled = !this.loopWidth && position <= 2;
+      if (this.next) this.next.disabled = !this.loopWidth && position >= maximum - 2;
     }
 
     disconnectedCallback() {

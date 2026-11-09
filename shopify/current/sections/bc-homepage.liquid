@@ -69,11 +69,7 @@
       <div class="bch-shell bch-section-heading">
         <h2 id="HomeBrands-{{ section.id }}">{{ section.settings.brands_heading | escape }}</h2>
         <div class="bc-brand-slider__actions">
-          <a class="bc-brand-slider__all" href="{{ section.settings.brands_link | default: '/collections?view=merken' | escape }}">{{ section.settings.brands_label | escape }} <span aria-hidden="true">&rarr;</span></a>
-          <div class="bc-brand-slider__controls" data-brand-controls hidden>
-            <button class="bc-brand-slider__button" type="button" data-brand-previous aria-label="{{ 'bc_brands.previous' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&larr;</span></button>
-            <button class="bc-brand-slider__button" type="button" data-brand-next aria-label="{{ 'bc_brands.next' | t | escape }}" aria-controls="BrandTrack-{{ section.id }}"><span aria-hidden="true">&rarr;</span></button>
-          </div>
+          <a class="bc-brand-slider__all" href="{{ section.settings.brands_link | default: '/collections?view=merken' | escape }}">{{ section.settings.brands_label | escape }}</a>
         </div>
       </div>
       <ul class="bc-brand-list bc-brand-slider__track" id="BrandTrack-{{ section.id }}" data-brand-track role="list" tabindex="0" aria-labelledby="HomeBrands-{{ section.id }}">
