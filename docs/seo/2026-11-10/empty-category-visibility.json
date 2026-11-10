@@ -1,6 +1,6 @@
 {
   "task": "EMPTY-CATEGORIES-01",
-  "status": "CONCEPT_VERIFIED_AWAITING_OWNER_PUBLICATION",
+  "status": "WITHDRAWN_BY_OWNER",
   "checked_at": "2026-11-10T08:43:40.250Z",
   "owner_override": true,
   "prior_membership_proposals_withdrawn": 5,
@@ -14,7 +14,48 @@
   },
   "empty_collections": 57,
   "already_unpublished": 1,
-  "noindex_handles": [
+  "main": {
+    "id": "196441932042",
+    "role": "MAIN",
+    "seo_unchanged": 4
+  },
+  "preview": {
+    "id": "196395073802",
+    "name": "Reserve - gelijk aan live 10 nov",
+    "role": "UNPUBLISHED",
+    "files": 1401,
+    "differences_from_main": 0
+  },
+  "source_baseline": {
+    "files_each": 1401,
+    "preexisting_reserve_differences": 4
+  },
+  "theme_files_written": 4,
+  "theme_files_readback_exact": 4,
+  "functional_difference_from_main": "layout/theme.liquid only",
+  "layout_checksum": "da90d8d7760316b49e2741d0bccd4707",
+  "validation": {
+    "official_errors": 0,
+    "preexisting_warning": "scheme_classes",
+    "noindex_render_cases": 119,
+    "metadata_regressions": 22,
+    "real_preview_checks": 71,
+    "real_preview_targets": 56,
+    "real_preview_controls": 15,
+    "all_pass": true
+  },
+  "native_collection_states_unchanged": 56,
+  "menu_links_to_targets": 0,
+  "description_links_to_targets": 0,
+  "public_links_to_targets_in_20_preflight_responses": 0,
+  "live_noindex": false,
+  "sitemap_changed": false,
+  "publication_pending": false,
+  "wiesbaden_concept_written": false,
+  "main_written": false,
+  "next": "Continue Wiesbaden QA on the combined concept; do not add the withdrawn noindex delta.",
+  "owner_index_choice": "Categories may remain indexable; no extra noindex",
+  "historical_noindex_handles": [
     {
       "id": "gid://shopify/Collection/569194971402",
       "handle": "frontpage"
@@ -240,42 +281,5 @@
       "handle": "ibs70-cobber-doucheset"
     }
   ],
-  "main": {
-    "id": "196441932042",
-    "role": "MAIN",
-    "seo_unchanged": 4
-  },
-  "preview": {
-    "id": "gid://shopify/OnlineStoreTheme/196395073802",
-    "name": "BadkamerCity - Lege categorieen tijdelijk uit",
-    "role": "UNPUBLISHED"
-  },
-  "source_baseline": {
-    "files_each": 1401,
-    "preexisting_reserve_differences": 4
-  },
-  "theme_files_written": 4,
-  "theme_files_readback_exact": 4,
-  "functional_difference_from_main": "layout/theme.liquid only",
-  "layout_checksum": "da90d8d7760316b49e2741d0bccd4707",
-  "validation": {
-    "official_errors": 0,
-    "preexisting_warning": "scheme_classes",
-    "noindex_render_cases": 119,
-    "metadata_regressions": 22,
-    "real_preview_checks": 71,
-    "real_preview_targets": 56,
-    "real_preview_controls": 15,
-    "all_pass": true
-  },
-  "native_collection_states_unchanged": 56,
-  "menu_links_to_targets": 0,
-  "description_links_to_targets": 0,
-  "public_links_to_targets_in_20_preflight_responses": 0,
-  "live_noindex": false,
-  "sitemap_changed": false,
-  "publication_pending": true,
-  "wiesbaden_concept_written": false,
-  "main_written": false,
-  "next": "Owner publishes same reviewed preview, then check 56 live robots and 15 controls. Later Wiesbaden release must preserve all four current SEO files."
+  "active_noindex_handles": []
 }
