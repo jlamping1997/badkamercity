@@ -1,6 +1,6 @@
 # Categorie-meta’s — 10 november 2026
 
-Status: CATEGORY-METADATA-01 / ADMIN_APPLIED_VERIFIED. Eigenaar gaf na reviewronde 5 expliciet opdracht: “Voeg ze toe”.
+Status: CATEGORY-METADATA-01 / ADMIN_APPLIED_VERIFIED; vervolg CATEGORY-METADATA-02 / PREVIEW_VERIFIED_AUDIT_COMPLETE. Eigenaar gaf na reviewronde 5 expliciet opdracht: “Voeg ze toe”.
 
 169 bestaande categorieën kregen de goedgekeurde eigen SEO-titel en metabeschrijving. De homepagevoorkeuren en de bestaande Sunshower-keuzehulp zijn eveneens bijgewerkt: 171 metaparen live. Bestaande categorie-identiteiten en de koopgerichte titelstijl zijn behouden. Er zijn geen nieuwe categorieën, routes, redirects of claims over voorraad of conversiewinst toegevoegd.
 
@@ -16,18 +16,16 @@ Status: CATEGORY-METADATA-01 / ADMIN_APPLIED_VERIFIED. Eigenaar gaf na reviewron
 
 Deze controles bewijzen geen gewijzigde Google-resultaten, indexatie, rankings, CTR of conversies. Google moet de gewijzigde pagina’s opnieuw crawlen en verwerken en kan zelf een titel of snippet kiezen. Campagnevelden zijn niet gewijzigd.
 
-## Tien aparte pagina’s blijven vervolg
+## Vervolg voltooid in SEO-concept
 
-Acht vendor-selecties hebben geen eigen native collectie-SEO-veld. Ook het algemene assortimentsoverzicht en het merkenoverzicht vereisen gerichte themalogica of vertaalwaarden. De goedgekeurde teksten staan in pending-theme-metadata.json.
-
-Verse bronvergelijking: MAIN 196395073802, 1.401 files; bestaand UNPUBLISHED 196416504074, 1.406 files. Zes bestaande verschillen betreffen keuzedata en de keuzedatabron. De drie SEO-bronbestanden layout/theme.liquid, locales/nl.json en locales/en.default.json zijn exact gelijk, maar het gehele concept is geen identieke basis. Er is geen overdracht van die andere uitvoering vastgelegd. Daarom geen theme-write, naamwijziging of publicatie in dit dossier; de zes verschillen blijven behouden. De merkenview heeft bovendien nog de canonical van /collections; die is niet stil gewijzigd.
+De tien aparte metaparen zijn nu in UNPUBLISHED 196441932042 toegepast en exact gecontroleerd. Alle 58 apart gehouden collecties zijn individueel opnieuw beoordeeld. Google Search en Search Console zijn werkelijk gecontroleerd; sitemap succesvol, herindexering van Wastafelkranen geaccepteerd, rapporten verwerken nog data. De volledige uitvoering, beperkingen en het samenvoegen met de uiteindelijke themarelease staan in [FOLLOWUP.md](FOLLOWUP.md). De nulmeting van het Wiesbaden-concept in het oorspronkelijke Admin-checkpoint is historisch; de andere uitvoering is sindsdien uitgebreid.
 
 ## Herstel en overdracht
 
 De oorspronkelijke waarden en het veldgerichte herstelplan zijn vóór elke betrokken live wijziging privé bewaard in Badkamercity-SEO-backup-2026-11-10.json. Herstel alleen de SEO-velden na controle dat ze nog gelijk zijn aan onze toegepaste waarden; geen volledige collectieobjecten terugzetten. De oorspronkelijke lege homepagevoorkeuren en de twee bestaande Sunshower-waarden zijn eveneens vastgelegd.
 
-GitHub/Shopify-connectoruitvoering; deze workspace bevat geen lokale Git-checkout. Geen Windows-, productkoop-, consent- of Google Ads-test geclaimd. Geen settings_data-body gelezen of geschreven. Codebranch fix/product-cards-2026-10-14, bron shopify/current; dit checkpoint bevat alleen documentatie en veilige metadatatekst.
+GitHub/Shopify-connectoruitvoering; deze workspace bevat geen lokale Git-checkout. Geen Windows-, productkoop-, consent- of Google Ads-test geclaimd. Geen settings_data-body gelezen of geschreven. Codebranch fix/product-cards-2026-10-14, bron shopify/current; het oorspronkelijke Admin-checkpoint bevatte alleen documentatie; het vervolg bevat vier gerichte themabestanden op de codebranch en documentatie op beide branches.
 
-Eén volgende handeling: eerst de gedeelde conceptstatus van het keuzemenuwerk overdragen of afronden; daarna de tien resterende teksten in een passend UNPUBLISHED concept toepassen en de echte preview-head controleren vóór eigenaarpublicatie. De 169 categorieën, homepage en Sunshower zijn al live en vereisen daarvoor geen themapublicatie. Andere filter-, Ads-, import- en keuzemenuwerkstromen blijven behouden.
+Eén volgende SEO-handeling: eigenaar beoordeelt het concept en neemt de vier SEO-wijzigingen na verse bronvergelijking mee in het definitieve releaseconcept. Behoud de ongepubliceerde Wiesbaden-aanpassingen wanneer die deel worden van dezelfde release; laat een later gepubliceerd ouder concept de SEO niet terugdraaien. De 169 categorieën, homepage en Sunshower blijven al live. Andere werkstromen behouden.
 
 Bronnen: [Shopify resource-SEO](https://shopify.dev/docs/apps/build/marketing/optimize-storefront-seo), [collectionUpdate](https://shopify.dev/docs/api/admin-graphql/2026-10/mutations/collectionUpdate), [Google titellinks](https://developers.google.com/search/docs/appearance/title-link).
