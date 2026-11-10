@@ -24,7 +24,7 @@ Less20.3200webbron noemt liftscharnierJa versus oud specificatierecordNee. Speci
 Deze Admin-data zijn winkelbreed:70nieuwe kleurverwijzingen kunnen direct door het bestaande MAIN-kleurmenu worden gebruikt. De uitgebreide maatkeuzes en nieuwe JSONrouters zitten uitsluitend in het ongepubliceerde concept. Geen claim dat alle wijzigingen alleen in een themadraft bestaan.
 Geen prijs-, voorraad-, specificatie-, productpublicatie- of indexeringsmutaties.
 
-Rollback: herstel section/router uit parent93c8d99aac9abaf08353e2825ce7f1fd330e9041. Verwijder alleen de112nieuw gecreëerde groepsvelden en70nieuw gecreëerde kleurverwijzingsvelden nadat actuele waarden overeenkomen met deze groepsassets en compatibele maatgenoten. Verwijder geen42vooraf bestaande verwijzingslijsten. ProductIDs en exacte combinaties staan in de vijf assets. Nieuwe ongebruikte assets mogen blijven.
+Rollback: herstel section/router uit parent93c8d99aac9abaf08353e2825ce7f1fd330e9041. Verwijder alleen de112nieuw gecreëerde groepsvelden en70nieuw gecreëerde kleurverwijzingsvelden nadat actuele waarden overeenkomen met deze groepsassets en compatibele maatgenoten. Verwijder geen42vooraf bestaande verwijzingslijsten. ProductIDs en exacte combinaties staan in de vijf assets. De182nieuw gecreëerde velden (inclusief exact welke70referentielijsten) staan in [BATCH7_ADMIN_CHANGES.json](BATCH7_ADMIN_CHANGES.json); gebruik uitsluitend die lijst voor rollback. Nieuwe ongebruikte assets mogen blijven.
 
 ## Bewijs
 - Zeven conceptbodies exact teruggelezen: vijf begrensdeJSONassets plus section/router. Sectiondiff: één regel vervangen; router: tien regels toegevoegd. Bestaande JSrenderer ongewijzigd.
@@ -32,10 +32,13 @@ Rollback: herstel section/router uit parent93c8d99aac9abaf08353e2825ce7f1fd330e9
 - Lokale strikte Liquid-AST: baseline en beide gewijzigde bestanden PASS. Geen externe validatie-/telemetriehelpers opnieuw uitgevoerd.
 - Werkelijke JSrenderer met DOMsubstitutie:112startstanden,886geldige aswissels,110ontbrekende combinaties afgewezen,660exacte kandidaatafbeeldingen,112prijsorders en112dubbele-combinatie-/identiteitsproeven PASS. Geen echtecartclaim.
 - Echte desktopbrowser1363px: Less20.3200 (100cm/geborsteldstaal) →20.3388 (80cm/geborsteldstaal) →20.3389 (80cm/matzwart). Eindtitel en actieve80cm/matzwart bevestigd, geen horizontale documentoverflow.
-- Publieke HTMLcontrole loopt nog; actuele resultaten zijn geen eindclaim. Oudere harness vereist onterecht >1kleurreferentie; enkelkleurige goten worden uitsluitend na exacte1-op-1vergelijking met runtimefeit, referentie en maatgenoten als geldig aangemerkt. Ruwe oorspronkelijke checkresultaten blijven lokaal bewaard.
+- Publieke HTMLcontrole112/112 PASS:106rechtstreeks en6enkelkleurige goten na correctie van de oude harness-aanname >1kleurreferentie. SKU’s33.4192/33.4191/33.4271/33.4277/33.4270/33.4276 hadden elk exact één compatibel runtimefeit, één referentie en één maatgenoot; alle overige checks waren al PASS. Geen productwijziging voor deze harnesscorrectie. Ruwe resultaten en gecontroleerde correcties lokaal apart bewaard. Vijf MAIN-kleursteekproeven PASS, inclusief112nieuwe groepvelden die MAIN niet via de conceptmaatrouter gebruikt.
 - NOT_TESTED: native mobiel, echte cartregels voor dezebatch, browserwissels voor rook/brons/roosters, volledige oudegroepenregressie/checkout. Geen Windowslokale clean/statusclaim.
 
 Vijf assets: assets/bc-choice-data-21aac6303c3a8022.json, assets/bc-choice-data-689fa1add423a2c1.json, assets/bc-choice-data-9de83fc984e162b7.json, assets/bc-choice-data-1fa4b8d80b8d7724.json, assets/bc-choice-data-b2a215c3b1677cfe.json.
 Lokale bewijsbestanden bevatten uitsluitend productdata en testmetingen; geen credentials/klantdata/inkoopprijzen in publieke documentatie.
 
-Actieve schrijver: deze sessie, afronden publieke HTMLcontrole en daarna centrale overdracht bijwerken. Geen publicatie.
+Volgende handeling: gerichte mobiele/cart-QA op hetzelfde concept vóór eigenaarpublicatie; verdere gecontroleerde producttypepartijen binnen eigenaaropdracht toegestaan. Geen actieve schrijver na overdracht. Geen publicatie.
+
+Codecheckpoint: [c3f0468](https://github.com/jlamping1997/badkamercity/commit/c3f046861e35713034395af40dca32069fdb91c1) op fix/product-cards-2026-10-14; shopify/current is conceptbron, geen MAIN-publicatie.
+
