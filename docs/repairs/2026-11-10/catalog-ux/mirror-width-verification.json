@@ -1,0 +1,41 @@
+{
+  "status": "ADMIN_APPLIED_VERIFIED_INDEX_PENDING",
+  "checked_at": "2026-11-10T00:26:34.397Z",
+  "records": [
+    {
+      "id": "gid://shopify/Product/10657346650378",
+      "sku": "38.4178",
+      "values": [
+        {
+          "namespace": "custom",
+          "value": "800.0",
+          "digest": "48ce418b66782b367f098faae0a29a2ff3afc9b3475ccd6d6bc6b975a0fdb3d6"
+        },
+        {
+          "namespace": "bc_filters",
+          "value": "800.0",
+          "digest": "48ce418b66782b367f098faae0a29a2ff3afc9b3475ccd6d6bc6b975a0fdb3d6"
+        }
+      ],
+      "other_fields_identical": true
+    },
+    {
+      "id": "gid://shopify/Product/10657324171530",
+      "sku": "38.4177",
+      "values": [
+        {
+          "namespace": "custom",
+          "value": "600.0",
+          "digest": "3c1514f030a090e87e38544b398af89799f016e9a7b4cb561cfed5c253381589"
+        },
+        {
+          "namespace": "bc_filters",
+          "value": "600.0",
+          "digest": "3c1514f030a090e87e38544b398af89799f016e9a7b4cb561cfed5c253381589"
+        }
+      ],
+      "other_fields_identical": true
+    }
+  ],
+  "manifest_unchanged": true
+}

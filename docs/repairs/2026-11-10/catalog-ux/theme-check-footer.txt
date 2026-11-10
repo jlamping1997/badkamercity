@@ -1,0 +1,141 @@
+Failed to load or transform loadLatestRevision with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/latest.json'
+Successfully downloaded latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/latest.json
+	> /home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/latest.json
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/filters.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/filters.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/filters.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/objects.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/objects.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/objects.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/tags.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/tags.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/tags.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/shopify_system_translations.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/shopify_system_translations.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/shopify_system_translations.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/schemas/manifest_theme.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/manifest_theme.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/schemas/manifest_theme.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to download latest resource:
+	https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/schemas/manifest_theme_app_extension.json to
+	/home/agent/.cache/theme-liquid-docs-nodejs.6.lbo5rjuye5.tmp/manifest_theme_app_extension.json
+FetchError: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/schemas/manifest_theme_app_extension.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to setup with the following error: request to https://raw.githubusercontent.com/Shopify/theme-liquid-docs/main/data/filters.json failed, reason: Connection to establish proxy tunnel timed out after 5000ms
+Failed to load or transform loadResource(manifest_theme) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/manifest_theme.json'
+Loaded fallback resource
+	manifest_theme from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/manifest_theme.json
+Failed to load or transform loadSchema(theme/translations.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/translations.json'
+Failed to load or transform loadSchema(theme/theme_block.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_block.json'
+Failed to load or transform loadSchema(theme/theme_settings.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_settings.json'
+Failed to load or transform loadSchema(theme/section.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/section.json'
+Failed to load or transform loadSchema(theme/settings.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/settings.json'
+Failed to load or transform loadSchema(theme/strict_settings.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/strict_settings.json'
+Failed to load or transform loadSchema(theme/setting.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/setting.json'
+Failed to load or transform loadSchema(theme/default_setting_values.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/default_setting_values.json'
+Failed to load or transform loadSchema(theme/app_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/app_block_entry.json'
+Failed to load or transform loadSchema(theme/theme_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_block_entry.json'
+Failed to load or transform loadSchema(theme/targetted_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/targetted_block_entry.json'
+Failed to load or transform loadSchema(theme/preset_blocks.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/preset_blocks.json'
+Failed to load or transform loadSchema(theme/preset.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/preset.json'
+Failed to load or transform loadSchema(theme/local_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/local_block_entry.json'
+Loaded fallback schema
+	theme/translations.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/translations.json
+Loaded fallback schema
+	theme/theme_settings.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/theme_settings.json
+Loaded fallback schema
+	theme/theme_block.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/theme_block.json
+Loaded fallback schema
+	theme/settings.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/settings.json
+Loaded fallback schema
+	theme/strict_settings.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/strict_settings.json
+Loaded fallback schema
+	theme/section.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/section.json
+Loaded fallback schema
+	theme/default_setting_values.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/default_setting_values.json
+Loaded fallback schema
+	theme/app_block_entry.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/app_block_entry.json
+Loaded fallback schema
+	theme/theme_block_entry.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/theme_block_entry.json
+Loaded fallback schema
+	theme/preset_blocks.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/preset_blocks.json
+Loaded fallback schema
+	theme/targetted_block_entry.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/targetted_block_entry.json
+Loaded fallback schema
+	theme/preset.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/preset.json
+Loaded fallback schema
+	theme/local_block_entry.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/local_block_entry.json
+Loaded fallback schema
+	theme/setting.json from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/setting.json
+Failed to load or transform loadResource(filters) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/filters.json'
+Failed to load or transform loadResource(tags) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/tags.json'
+Failed to load or transform loadResource(objects) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/objects.json'
+Failed to load or transform loadResource(shopify_system_translations) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/shopify_system_translations.json'
+Loaded fallback resource
+	tags from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/tags.json
+Loaded fallback resource
+	filters from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/filters.json
+Loaded fallback resource
+	shopify_system_translations from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/shopify_system_translations.json
+Loaded fallback resource
+	objects from
+	/workspace/scratch/6d3a54f8e84b/toolkit/node_modules/@shopify/theme-check-docs-updater/data/objects.json
+## Validation Summary
+
+**Overall Status:** ✅ VALID
+**Total Files:** 1
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** bc-catalog-ux-2026-11-10
+**Revision:** 4
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/footer-group.json passed all checks.
+
+

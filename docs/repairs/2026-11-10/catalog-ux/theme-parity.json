@@ -1,0 +1,85 @@
+{
+  "checked_at": "2026-11-10T00:33:52.701Z",
+  "parity": {
+    "files": 1401,
+    "equal": 1389,
+    "differences": [
+      "assets/bc-collection.css",
+      "assets/bc-external-filters.css",
+      "assets/bc-external-filters.js",
+      "assets/bc-homepage.css",
+      "assets/bc-product-cards.css",
+      "assets/component-card.css",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/bc-collection-advice.liquid",
+      "sections/bc-homepage.liquid",
+      "sections/footer-group.json",
+      "sections/main-search.liquid"
+    ],
+    "mainUnchanged": true,
+    "settingsDataBodyRead": false,
+    "main": {
+      "id": "gid://shopify/OnlineStoreTheme/196416504074",
+      "name": "BadkamerCity - Merkenbalk zonder pijlen",
+      "role": "MAIN"
+    },
+    "draft": {
+      "id": "gid://shopify/OnlineStoreTheme/196395073802",
+      "name": "BadkamerCity - Categorieverbeteringen 10 nov",
+      "role": "UNPUBLISHED"
+    }
+  },
+  "bodyReadbacks": [
+    {
+      "filename": "assets/bc-collection.css",
+      "checksumMd5": "3f08f2a3600ac7aabb5d334c8497f25e",
+      "bodyExact": true
+    },
+    {
+      "filename": "assets/bc-external-filters.css",
+      "checksumMd5": "4ee77d52e4a04991fd5a2541d332e5b0",
+      "bodyExact": true
+    },
+    {
+      "filename": "assets/bc-external-filters.js",
+      "checksumMd5": "c70d67837c2311b4e4fbcf50426d9044",
+      "bodyExact": true
+    },
+    {
+      "filename": "assets/bc-product-cards.css",
+      "checksumMd5": "2f6e14daab8d251949db9a1df88a610c",
+      "bodyExact": true
+    },
+    {
+      "filename": "assets/component-card.css",
+      "checksumMd5": "25e717509c141f74d5fb076aa17e9e14",
+      "bodyExact": true
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "e1deb7bd59f1b3e52d8f10fd446e7bf7",
+      "bodyExact": true
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "64619e8355e7b82f66265d0466b687b5",
+      "bodyExact": true
+    },
+    {
+      "filename": "sections/bc-collection-advice.liquid",
+      "checksumMd5": "e0d77e4cc3a1d61aa774e60415355688",
+      "bodyExact": true
+    },
+    {
+      "filename": "sections/footer-group.json",
+      "checksumMd5": "0fd7b8ce69f1138c3a91fb095cfe8eda",
+      "bodyExact": true
+    },
+    {
+      "filename": "sections/main-search.liquid",
+      "checksumMd5": "113f9d61dbdd0746aca9f35645518dc7",
+      "bodyExact": true
+    }
+  ]
+}

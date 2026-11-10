@@ -1,0 +1,38 @@
+{
+  "source": "Official Wiesbaden exact SKUs; 3 cm is band width, not mirror width",
+  "protected_manifest_unchanged": true,
+  "updates": [
+    {
+      "ownerId": "gid://shopify/Product/10657346650378",
+      "namespace": "custom",
+      "key": "breedte_mm",
+      "type": "number_decimal",
+      "value": "800.0",
+      "compareDigest": "fcb50f27819d796c0a2bdc33ee14d541375a2b1ce4d302f9a05cb857d5ac6019"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657346650378",
+      "namespace": "bc_filters",
+      "key": "breedte_mm",
+      "type": "number_decimal",
+      "value": "800.0",
+      "compareDigest": null
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324171530",
+      "namespace": "custom",
+      "key": "breedte_mm",
+      "type": "number_decimal",
+      "value": "600.0",
+      "compareDigest": "fcb50f27819d796c0a2bdc33ee14d541375a2b1ce4d302f9a05cb857d5ac6019"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324171530",
+      "namespace": "bc_filters",
+      "key": "breedte_mm",
+      "type": "number_decimal",
+      "value": "600.0",
+      "compareDigest": null
+    }
+  ]
+}
