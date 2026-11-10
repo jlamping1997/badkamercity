@@ -1,5 +1,31 @@
 # Nacontrole na publicatie en bestaande Google Ads-tag
 
+## 10 november 2026 — exacte campagnemelding uit eigenaarbeelden
+
+Status: **CAMPAIGN_WARNING_IDENTIFIED / CONVERSION_ACTION_STATUS_PENDING**.
+
+De twee door de eigenaar gedeelde beelden tonen de campagne-overzichtsmelding Setup measurement en vervolgens precies **Eligible (Misconfigured): Your website is missing a Google tag**. Het getoonde biedtype is Maximise conversions. Het budget, accountparameters en de volledige eigenaarbeelden zijn niet naar deze publieke repository gekopieerd.
+
+De officiële Google-uitleg voor campagnestatussen noemt voor precies deze melding expliciet dat de campagne vaak geen biedbare conversies in de afgelopen28dagen heeft geregistreerd. Deze campagnewaarschuwing is daarom geen zelfstandig bewijs dat de tagcode afwezig is. Dit is ook geen reden om zonder ontvangstbewijs te verklaren dat de meting werkt. Een private geaggregeerde ordertelling is alleen voor de eigenaarcontrole gebruikt; aantallen en overige zakelijke/ordergegevens zijn niet hier opgeslagen.
+
+Bronnen:
+
+- https://support.google.com/google-ads/answer/1722131?hl=en
+- https://support.google.com/google-ads/answer/16031492?hl=en
+- https://help.shopify.com/en/manual/promoting-marketing/pixels/app-pixels
+
+De Shopify-cookiebanner is via de bestaande knop Bekijken geopend, op de door Shopify geleverde publieke previewroute. Accepteren is uitsluitend als voorkeur van deze browsersessie gebruikt. De banner verdween. Daarna is de bestaande Hotbath-producttest herladen en de native helper opnieuw gelezen: **Google & YouTube / Loaded / Events received0**. Er is geen winkelbrede consentinstelling veranderd. Deze previewhandeling is geen afgeronde consentmodetest voor alle bezoekers. De controleafbeelding hieronder heeft dezelfde bytes als de eerdere helperopname; het UI-resultaat is ook na deze handeling onveranderd.
+
+![Onveranderd helperresultaat na bannerhandeling](pixel-helper.jpg)
+
+Een onafhankelijke standaarddebugpoging via de openbare Google Tag Assistant-site kon geen verbinding met het domein maken en eindigde in een time-out. Het voorlopige scherm meldde0tags, maar de verbinding mislukte: dit wordt **niet** gebruikt als afwezigheidsbewijs. De app draait in de Shopify-sandbox; verder ontvangstonderzoek is nodig. Er is geen extensie geïnstalleerd, geen privé-Ads-route opnieuw geprobeerd en geen extra headtag toegevoegd.
+
+De waarschuwing uit de eigenaarbeelden is nu bekend. Wat nog ontbreekt is de **Tracking status** van de afzonderlijke conversie **Google Shopping App Purchase**, de instelling **Primary/Secondary** en het werkelijke campagnedoel. Daarvoor is Goals → Conversions → Summary de gerichte volgende controle; een campagnewaarschuwing vervangt die actiecontrole niet. Google Ads heeft deze AI-browser expliciet toegang geweigerd. Vraag de eigenaar daarom alleen om deze specifieke regel of de exacte velden; geen nieuwe aanmeldpogingen of brede herinventarisatie.
+
+Een gecontroleerde purchase-/ontvangsttest blijft open. Geen gefingeerde purchase of order aangemaakt, geen betaalprovider in testmodus gezet en geen campagne/budget/biedstrategie gewijzigd. De native gekoppelde tag en alle overige winkelwijzigingen zijn behouden.
+
+---
+
 ## 10 november 2026 — native instellingen en Pixel Helper gecontroleerd
 
 Status: **NATIVE_SETTINGS_VERIFIED / MEASUREMENT_NOT_VERIFIED**. De eigenaar heeft de Shopify-aanmelding afgerond. Daarna zijn de bestaande instellingen read-only bekeken; er is niets opgeslagen of omgezet.
