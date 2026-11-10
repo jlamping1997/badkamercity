@@ -493,6 +493,18 @@ Resolves a product group to its generated, bounded data asset.
       endcase
       endif
     when "product-switcher-data.json"
+      case group
+        when "wiesbaden-maki-vouwdeur-helder-chroom-2000x8"
+          echo "bc-choice-data-67977096aadb3954.json"
+        when "wiesbaden-3e-generatie-goot-flens-rooster"
+          echo "bc-choice-data-e32f9b2e02f6e386.json"
+        when "wiesbaden-3e-generatie-goot-flens-zonder-rooster"
+          echo "bc-choice-data-bd0662318fe5b0f3.json"
+        when "wiesbaden-uovo-led-spiegelverwarming"
+          echo "bc-choice-data-c803df2d0321fb8c.json"
+        when "wiesbaden-304-handdoekhouder-enkel"
+          echo "bc-choice-data-83fe1c45eff7d20e.json"
+      endcase
       if revision == "v=59620540542018885331792955765"
       case group
         when "hotbath-ace-ac003-wastafelkraan"
