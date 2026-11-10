@@ -1,7 +1,7 @@
 {
   "task": "CATEGORY-METADATA-02",
   "checked_at": "2026-11-10T05:49:50.951497+00:00",
-  "status": "AUDIT_COMPLETE_NO_CATEGORY_MUTATIONS",
+  "status": "OWNER_ASSORTMENT_HOLD_NOINDEX_PREVIEW",
   "collections_checked": 227,
   "held_reviewed": 58,
   "public_results": {
@@ -22,25 +22,12 @@
   ],
   "description_links_to_held": 0,
   "decision_counts": {
-    "TECHNICAL_COLLECTION": 1,
+    "OWNER_HOLD_NO_READY_ASSORTMENT": 56,
     "HUB_NEEDS_DESTINATION": 1,
-    "NO_CONFIRMED_DISCOUNT_SELECTION": 1,
-    "SEARCH_INTENT_UNCLEAR": 1,
-    "NO_CONFIRMED_OFFER": 33,
-    "REUSE_EXISTING_CATEGORY": 2,
-    "MEMBERSHIP_REPAIR_PROPOSED": 5,
-    "VERIFY_CONSTRUCTION": 1,
-    "NO_CONFIRMED_MATCH": 1,
-    "DUPLICATE_SCOPE_REVIEW": 2,
-    "FALSE_POSITIVE_ONLY": 4,
-    "SCOPE_UNCLEAR": 2,
-    "REUSE_EXISTING_DESTINATION": 1,
-    "NEEDS_SELECTION_EVIDENCE": 1,
-    "REUSE_EXISTING_PRODUCT": 1,
     "UNPUBLISHED_ROUTE": 1
   },
-  "repair_collection_proposals": 5,
-  "repair_unique_product_ids": 64,
+  "repair_collection_proposals": 0,
+  "repair_unique_product_ids": 0,
   "limitations": [
     "Trefwoordmatches zijn kandidaten; nul matches bewijst niet dat een artikel nergens in de winkel bestaat.",
     "Geen ledenschaps-, menu-, redirect-, noindex- of productmutaties in deze audit.",
@@ -61,11 +48,18 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "TECHNICAL_COLLECTION",
-      "reason": "Technische Homepage-collectie; de echte homepage op / heeft al de juiste meta’s. Deze lege hulproute niet als extra SEO-homepage gebruiken.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
-      "catalog_search": null
+      "catalog_search": null,
+      "previous_proposal": {
+        "decision": "TECHNICAL_COLLECTION",
+        "reason": "Technische Homepage-collectie; de echte homepage op / heeft al de juiste meta’s. Deze lege hulproute niet als extra SEO-homepage gebruiken."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "meer",
@@ -97,8 +91,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_DISCOUNT_SELECTION",
-      "reason": "De kortingszoekopdracht vindt alleen een openbaar TESTPRODUCT. Dat is geen bruikbare outletselectie. Testartikel apart laten beoordelen; niet in deze SEO-ronde verwijderd.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -116,7 +110,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/testproduct-badkamercity-productpagina"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_DISCOUNT_SELECTION",
+        "reason": "De kortingszoekopdracht vindt alleen een openbaar TESTPRODUCT. Dat is geen bruikbare outletselectie. Testartikel apart laten beoordelen; niet in deze SEO-ronde verwijderd."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "decoratie-vintage",
@@ -129,8 +130,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "SEARCH_INTENT_UNCLEAR",
-      "reason": "74 trefwoordmatches bestaan onder meer uit Vintage-kleurnamen van mozaïek en lampseries. Dat bewijst geen algemene decoratie-/vintagecollectie. Scope eerst bepalen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -162,7 +163,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-led04bbp"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "SEARCH_INTENT_UNCLEAR",
+        "reason": "74 trefwoordmatches bestaan onder meer uit Vintage-kleurnamen van mozaïek en lampseries. Dat bewijst geen algemene decoratie-/vintagecollectie. Scope eerst bepalen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "textiel",
@@ -175,8 +183,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Er staat geen badkamertextiel in de collectie. Handdoekhouders zijn accessoires en bewijzen geen aanbod van handdoeken, badmatten of badjassen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -186,7 +194,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Er staat geen badkamertextiel in de collectie. Handdoekhouders zijn accessoires en bewijzen geen aanbod van handdoeken, badmatten of badjassen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "sanitaire-veiligheid",
@@ -199,8 +214,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "REUSE_EXISTING_CATEGORY",
-      "reason": "13 badgreep-kandidaten gevonden; de bestaande categorie Badgrepen heeft 12 leden. Gebruik de concrete productsoort, zonder algemene veiligheids- of draagkrachtclaims. Geen tweede identieke selectie vullen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/collections/badgrepen",
       "mutated": false,
       "catalog_search": {
@@ -232,7 +247,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-badgreep-verouderd-messing-baa16ab"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "REUSE_EXISTING_CATEGORY",
+        "reason": "13 badgreep-kandidaten gevonden; de bestaande categorie Badgrepen heeft 12 leden. Gebruik de concrete productsoort, zonder algemene veiligheids- of draagkrachtclaims. Geen tweede identieke selectie vullen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "toilet-accessoires-sets",
@@ -245,8 +267,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "MEMBERSHIP_REPAIR_PROPOSED",
-      "reason": "1 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -265,21 +287,28 @@
           }
         ]
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10699583291658",
-          "handle": "lagoo-g6115",
-          "title": "Lagoo Garda G6115 voordeel Set: toiletrolhouder, toiletborstelhouder, haak",
-          "vendor": "Lagoo",
-          "productType": "Toiletaccessoires",
-          "onlineStoreUrl": "https://badkamercity.nl/products/lagoo-g6115"
+      "previous_proposal": {
+        "decision": "MEMBERSHIP_REPAIR_PROPOSED",
+        "reason": "1 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10699583291658",
+            "handle": "lagoo-g6115",
+            "title": "Lagoo Garda G6115 voordeel Set: toiletrolhouder, toiletborstelhouder, haak",
+            "vendor": "Lagoo",
+            "productType": "Toiletaccessoires",
+            "onlineStoreUrl": "https://badkamercity.nl/products/lagoo-g6115"
+          }
+        ],
+        "conditional_meta": {
+          "title": "Toiletaccessoireset kopen: Garda | Badkamercity",
+          "description": "Maak je toilet af met de Lagoo Garda G6115-voordeelset. Toiletrolhouder, toiletborstelhouder en haak samen in één set. Bekijk de uitvoering bij Badkamercity.",
+          "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
         }
-      ],
-      "conditional_meta": {
-        "title": "Toiletaccessoireset kopen: Garda | Badkamercity",
-        "description": "Maak je toilet af met de Lagoo Garda G6115-voordeelset. Toiletrolhouder, toiletborstelhouder en haak samen in één set. Bekijk de uitvoering bij Badkamercity.",
-        "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
-      }
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "douchezitjes",
@@ -292,8 +321,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen douchezitjes gekoppeld. De Zita-krukjes elders zijn niet automatisch gelijkwaardig aan een aan de wand gemonteerd doucheklapzitje.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -303,7 +332,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen douchezitjes gekoppeld. De Zita-krukjes elders zijn niet automatisch gelijkwaardig aan een aan de wand gemonteerd doucheklapzitje."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badmeubel-sets",
@@ -316,8 +352,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "MEMBERSHIP_REPAIR_PROPOSED",
-      "reason": "39 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -350,325 +386,332 @@
           }
         ]
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10702601552138",
-          "handle": "fabriecio-md-915g",
-          "title": "Verlavio Badmeubelset Londen 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601584906",
-          "handle": "fabriecio-md-915h",
-          "title": "Verlavio Badmeubelset Londen 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601617674",
-          "handle": "fabriecio-md-915s",
-          "title": "Verlavio Badmeubelset Londen 60cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601650442",
-          "handle": "fabriecio-md-915b",
-          "title": "Verlavio Badmeubelset Londen 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601683210",
-          "handle": "fabriecio-md-915w",
-          "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601715978",
-          "handle": "fabriecio-md-916g",
-          "title": "Verlavio Badmeubelset Londen 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601748746",
-          "handle": "fabriecio-md-916h",
-          "title": "Verlavio Badmeubelset Londen 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601781514",
-          "handle": "fabriecio-md-916s",
-          "title": "Verlavio Badmeubelset Londen 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601814282",
-          "handle": "fabriecio-md-916b",
-          "title": "Verlavio Badmeubelset Londen 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601879818",
-          "handle": "fabriecio-md-916w",
-          "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601912586",
-          "handle": "fabriecio-md-917g",
-          "title": "Verlavio Badmeubelset Londen 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601945354",
-          "handle": "fabriecio-md-917h",
-          "title": "Verlavio Badmeubelset Londen 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602010890",
-          "handle": "fabriecio-md-917s",
-          "title": "Verlavio Badmeubelset Londen 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602043658",
-          "handle": "fabriecio-md-917b",
-          "title": "Verlavio Badmeubelset Londen 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602076426",
-          "handle": "fabriecio-md-917w",
-          "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602141962",
-          "handle": "fabriecio-dm-60g",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602174730",
-          "handle": "fabriecio-dm-60h",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602207498",
-          "handle": "fabriecio-dm-60b",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602240266",
-          "handle": "fabriecio-dm-60w",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602305802",
-          "handle": "fabriecio-dm-90g",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602338570",
-          "handle": "fabriecio-dm-90h",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602371338",
-          "handle": "fabriecio-dm-90s",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602404106",
-          "handle": "fabriecio-dm-90b",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602436874",
-          "handle": "fabriecio-dm-90w",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602469642",
-          "handle": "fabriecio-dm-120g",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602502410",
-          "handle": "fabriecio-dm-120h",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602535178",
-          "handle": "fabriecio-dm-120s",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602567946",
-          "handle": "fabriecio-dm-120b",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602600714",
-          "handle": "fabriecio-dm-120w",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602731786",
-          "handle": "fabriecio-dm-80b",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602797322",
-          "handle": "fabriecio-dm-80g",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602830090",
-          "handle": "fabriecio-dm-80h",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602862858",
-          "handle": "fabriecio-dm-80s",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602895626",
-          "handle": "fabriecio-dm-80w",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602928394",
-          "handle": "fabriecio-md-918b",
-          "title": "Verlavio Badmeubelset Londen 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602961162",
-          "handle": "fabriecio-md-918g",
-          "title": "Verlavio Badmeubelset Londen 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602993930",
-          "handle": "fabriecio-md-918h",
-          "title": "Verlavio Badmeubelset Londen 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
-        },
-        {
-          "id": "gid://shopify/Product/10702603059466",
-          "handle": "fabriecio-md-918s",
-          "title": "Verlavio Badmeubelset Londen 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
-        },
-        {
-          "id": "gid://shopify/Product/10702603092234",
-          "handle": "fabriecio-md-918w",
-          "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
+      "previous_proposal": {
+        "decision": "MEMBERSHIP_REPAIR_PROPOSED",
+        "reason": "39 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10702601552138",
+            "handle": "fabriecio-md-915g",
+            "title": "Verlavio Badmeubelset Londen 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601584906",
+            "handle": "fabriecio-md-915h",
+            "title": "Verlavio Badmeubelset Londen 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601617674",
+            "handle": "fabriecio-md-915s",
+            "title": "Verlavio Badmeubelset Londen 60cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601650442",
+            "handle": "fabriecio-md-915b",
+            "title": "Verlavio Badmeubelset Londen 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601683210",
+            "handle": "fabriecio-md-915w",
+            "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601715978",
+            "handle": "fabriecio-md-916g",
+            "title": "Verlavio Badmeubelset Londen 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601748746",
+            "handle": "fabriecio-md-916h",
+            "title": "Verlavio Badmeubelset Londen 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601781514",
+            "handle": "fabriecio-md-916s",
+            "title": "Verlavio Badmeubelset Londen 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601814282",
+            "handle": "fabriecio-md-916b",
+            "title": "Verlavio Badmeubelset Londen 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601879818",
+            "handle": "fabriecio-md-916w",
+            "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601912586",
+            "handle": "fabriecio-md-917g",
+            "title": "Verlavio Badmeubelset Londen 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601945354",
+            "handle": "fabriecio-md-917h",
+            "title": "Verlavio Badmeubelset Londen 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602010890",
+            "handle": "fabriecio-md-917s",
+            "title": "Verlavio Badmeubelset Londen 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602043658",
+            "handle": "fabriecio-md-917b",
+            "title": "Verlavio Badmeubelset Londen 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602076426",
+            "handle": "fabriecio-md-917w",
+            "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602141962",
+            "handle": "fabriecio-dm-60g",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602174730",
+            "handle": "fabriecio-dm-60h",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602207498",
+            "handle": "fabriecio-dm-60b",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602240266",
+            "handle": "fabriecio-dm-60w",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602305802",
+            "handle": "fabriecio-dm-90g",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602338570",
+            "handle": "fabriecio-dm-90h",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602371338",
+            "handle": "fabriecio-dm-90s",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602404106",
+            "handle": "fabriecio-dm-90b",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602436874",
+            "handle": "fabriecio-dm-90w",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602469642",
+            "handle": "fabriecio-dm-120g",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602502410",
+            "handle": "fabriecio-dm-120h",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602535178",
+            "handle": "fabriecio-dm-120s",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602567946",
+            "handle": "fabriecio-dm-120b",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602600714",
+            "handle": "fabriecio-dm-120w",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602731786",
+            "handle": "fabriecio-dm-80b",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602797322",
+            "handle": "fabriecio-dm-80g",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602830090",
+            "handle": "fabriecio-dm-80h",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602862858",
+            "handle": "fabriecio-dm-80s",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602895626",
+            "handle": "fabriecio-dm-80w",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602928394",
+            "handle": "fabriecio-md-918b",
+            "title": "Verlavio Badmeubelset Londen 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602961162",
+            "handle": "fabriecio-md-918g",
+            "title": "Verlavio Badmeubelset Londen 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602993930",
+            "handle": "fabriecio-md-918h",
+            "title": "Verlavio Badmeubelset Londen 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
+          },
+          {
+            "id": "gid://shopify/Product/10702603059466",
+            "handle": "fabriecio-md-918s",
+            "title": "Verlavio Badmeubelset Londen 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
+          },
+          {
+            "id": "gid://shopify/Product/10702603092234",
+            "handle": "fabriecio-md-918w",
+            "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
+          }
+        ],
+        "conditional_meta": {
+          "title": "Badmeubelsets kopen: wastafel en spiegel | Badkamercity",
+          "description": "Shop Verlavio-badmeubelsets met wastafel en spiegel of spiegelkast. Kies uit Londen en Birmingham, van 60 tot 120 cm breed, in de kleur voor jouw badkamer.",
+          "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
         }
-      ],
-      "conditional_meta": {
-        "title": "Badmeubelsets kopen: wastafel en spiegel | Badkamercity",
-        "description": "Shop Verlavio-badmeubelsets met wastafel en spiegel of spiegelkast. Kies uit Londen en Birmingham, van 60 tot 120 cm breed, in de kleur voor jouw badkamer.",
-        "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
-      }
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badmeubel-met-waskom",
@@ -681,8 +724,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "VERIFY_CONSTRUCTION",
-      "reason": "19 Birmingham-sets noemen Wastafel Kom. Dat kan een modelbenaming zijn en bewijst nog niet dat het een losse opzetwaskom is. Eerst foto of leveranciersspecificatie controleren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -693,160 +736,13 @@
         },
         "sample": []
       },
-      "candidates_to_verify": [
-        {
-          "id": "gid://shopify/Product/10702602141962",
-          "handle": "fabriecio-dm-60g",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602174730",
-          "handle": "fabriecio-dm-60h",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602207498",
-          "handle": "fabriecio-dm-60b",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602240266",
-          "handle": "fabriecio-dm-60w",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602305802",
-          "handle": "fabriecio-dm-90g",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602338570",
-          "handle": "fabriecio-dm-90h",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602371338",
-          "handle": "fabriecio-dm-90s",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602404106",
-          "handle": "fabriecio-dm-90b",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602436874",
-          "handle": "fabriecio-dm-90w",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602469642",
-          "handle": "fabriecio-dm-120g",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602502410",
-          "handle": "fabriecio-dm-120h",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602535178",
-          "handle": "fabriecio-dm-120s",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602567946",
-          "handle": "fabriecio-dm-120b",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602600714",
-          "handle": "fabriecio-dm-120w",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602731786",
-          "handle": "fabriecio-dm-80b",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602797322",
-          "handle": "fabriecio-dm-80g",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602830090",
-          "handle": "fabriecio-dm-80h",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602862858",
-          "handle": "fabriecio-dm-80s",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602895626",
-          "handle": "fabriecio-dm-80w",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
-        }
-      ]
+      "previous_proposal": {
+        "decision": "VERIFY_CONSTRUCTION",
+        "reason": "19 Birmingham-sets noemen Wastafel Kom. Dat kan een modelbenaming zijn en bewijst nog niet dat het een losse opzetwaskom is. Eerst foto of leveranciersspecificatie controleren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badmeubel-zonder-spiegel",
@@ -859,8 +755,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_MATCH",
-      "reason": "Alle 39 gecontroleerde meubelsets bevatten een spiegel of spiegelkast. Deze sets passen niet bij Zonder spiegel. Losse kasten niet stil als complete set presenteren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -870,7 +766,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_MATCH",
+        "reason": "Alle 39 gecontroleerde meubelsets bevatten een spiegel of spiegelkast. Deze sets passen niet bij Zonder spiegel. Losse kasten niet stil als complete set presenteren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badmeubel-met-spiegel",
@@ -883,8 +786,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "MEMBERSHIP_REPAIR_PROPOSED",
-      "reason": "19 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -895,165 +798,172 @@
         },
         "sample": []
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10702602141962",
-          "handle": "fabriecio-dm-60g",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602174730",
-          "handle": "fabriecio-dm-60h",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602207498",
-          "handle": "fabriecio-dm-60b",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602240266",
-          "handle": "fabriecio-dm-60w",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602305802",
-          "handle": "fabriecio-dm-90g",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602338570",
-          "handle": "fabriecio-dm-90h",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602371338",
-          "handle": "fabriecio-dm-90s",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602404106",
-          "handle": "fabriecio-dm-90b",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602436874",
-          "handle": "fabriecio-dm-90w",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602469642",
-          "handle": "fabriecio-dm-120g",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602502410",
-          "handle": "fabriecio-dm-120h",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602535178",
-          "handle": "fabriecio-dm-120s",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602567946",
-          "handle": "fabriecio-dm-120b",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602600714",
-          "handle": "fabriecio-dm-120w",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602731786",
-          "handle": "fabriecio-dm-80b",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602797322",
-          "handle": "fabriecio-dm-80g",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602830090",
-          "handle": "fabriecio-dm-80h",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602862858",
-          "handle": "fabriecio-dm-80s",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602895626",
-          "handle": "fabriecio-dm-80w",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
+      "previous_proposal": {
+        "decision": "MEMBERSHIP_REPAIR_PROPOSED",
+        "reason": "19 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10702602141962",
+            "handle": "fabriecio-dm-60g",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602174730",
+            "handle": "fabriecio-dm-60h",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602207498",
+            "handle": "fabriecio-dm-60b",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602240266",
+            "handle": "fabriecio-dm-60w",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602305802",
+            "handle": "fabriecio-dm-90g",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602338570",
+            "handle": "fabriecio-dm-90h",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602371338",
+            "handle": "fabriecio-dm-90s",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602404106",
+            "handle": "fabriecio-dm-90b",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602436874",
+            "handle": "fabriecio-dm-90w",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602469642",
+            "handle": "fabriecio-dm-120g",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602502410",
+            "handle": "fabriecio-dm-120h",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602535178",
+            "handle": "fabriecio-dm-120s",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602567946",
+            "handle": "fabriecio-dm-120b",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602600714",
+            "handle": "fabriecio-dm-120w",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602731786",
+            "handle": "fabriecio-dm-80b",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602797322",
+            "handle": "fabriecio-dm-80g",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602830090",
+            "handle": "fabriecio-dm-80h",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602862858",
+            "handle": "fabriecio-dm-80s",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602895626",
+            "handle": "fabriecio-dm-80w",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
+          }
+        ],
+        "conditional_meta": {
+          "title": "Badmeubel met spiegel kopen | Badkamercity",
+          "description": "Bekijk de Verlavio Birmingham-badmeubelsets met wastafel en spiegel. Kies een breedte van 60 tot 120 cm en de kleur die past bij jouw badkamer.",
+          "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
         }
-      ],
-      "conditional_meta": {
-        "title": "Badmeubel met spiegel kopen | Badkamercity",
-        "description": "Bekijk de Verlavio Birmingham-badmeubelsets met wastafel en spiegel. Kies een breedte van 60 tot 120 cm en de kleur die past bij jouw badkamer.",
-        "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
-      }
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badmeubel-met-spiegelkast",
@@ -1066,8 +976,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "MEMBERSHIP_REPAIR_PROPOSED",
-      "reason": "20 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1078,173 +988,180 @@
         },
         "sample": []
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10702601552138",
-          "handle": "fabriecio-md-915g",
-          "title": "Verlavio Badmeubelset Londen 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601584906",
-          "handle": "fabriecio-md-915h",
-          "title": "Verlavio Badmeubelset Londen 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601617674",
-          "handle": "fabriecio-md-915s",
-          "title": "Verlavio Badmeubelset Londen 60cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601650442",
-          "handle": "fabriecio-md-915b",
-          "title": "Verlavio Badmeubelset Londen 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601683210",
-          "handle": "fabriecio-md-915w",
-          "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601715978",
-          "handle": "fabriecio-md-916g",
-          "title": "Verlavio Badmeubelset Londen 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601748746",
-          "handle": "fabriecio-md-916h",
-          "title": "Verlavio Badmeubelset Londen 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601781514",
-          "handle": "fabriecio-md-916s",
-          "title": "Verlavio Badmeubelset Londen 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601814282",
-          "handle": "fabriecio-md-916b",
-          "title": "Verlavio Badmeubelset Londen 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601879818",
-          "handle": "fabriecio-md-916w",
-          "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601912586",
-          "handle": "fabriecio-md-917g",
-          "title": "Verlavio Badmeubelset Londen 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601945354",
-          "handle": "fabriecio-md-917h",
-          "title": "Verlavio Badmeubelset Londen 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602010890",
-          "handle": "fabriecio-md-917s",
-          "title": "Verlavio Badmeubelset Londen 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602043658",
-          "handle": "fabriecio-md-917b",
-          "title": "Verlavio Badmeubelset Londen 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602076426",
-          "handle": "fabriecio-md-917w",
-          "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602928394",
-          "handle": "fabriecio-md-918b",
-          "title": "Verlavio Badmeubelset Londen 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602961162",
-          "handle": "fabriecio-md-918g",
-          "title": "Verlavio Badmeubelset Londen 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602993930",
-          "handle": "fabriecio-md-918h",
-          "title": "Verlavio Badmeubelset Londen 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
-        },
-        {
-          "id": "gid://shopify/Product/10702603059466",
-          "handle": "fabriecio-md-918s",
-          "title": "Verlavio Badmeubelset Londen 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
-        },
-        {
-          "id": "gid://shopify/Product/10702603092234",
-          "handle": "fabriecio-md-918w",
-          "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
+      "previous_proposal": {
+        "decision": "MEMBERSHIP_REPAIR_PROPOSED",
+        "reason": "20 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10702601552138",
+            "handle": "fabriecio-md-915g",
+            "title": "Verlavio Badmeubelset Londen 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601584906",
+            "handle": "fabriecio-md-915h",
+            "title": "Verlavio Badmeubelset Londen 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601617674",
+            "handle": "fabriecio-md-915s",
+            "title": "Verlavio Badmeubelset Londen 60cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601650442",
+            "handle": "fabriecio-md-915b",
+            "title": "Verlavio Badmeubelset Londen 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601683210",
+            "handle": "fabriecio-md-915w",
+            "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601715978",
+            "handle": "fabriecio-md-916g",
+            "title": "Verlavio Badmeubelset Londen 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601748746",
+            "handle": "fabriecio-md-916h",
+            "title": "Verlavio Badmeubelset Londen 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601781514",
+            "handle": "fabriecio-md-916s",
+            "title": "Verlavio Badmeubelset Londen 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601814282",
+            "handle": "fabriecio-md-916b",
+            "title": "Verlavio Badmeubelset Londen 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601879818",
+            "handle": "fabriecio-md-916w",
+            "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601912586",
+            "handle": "fabriecio-md-917g",
+            "title": "Verlavio Badmeubelset Londen 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601945354",
+            "handle": "fabriecio-md-917h",
+            "title": "Verlavio Badmeubelset Londen 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602010890",
+            "handle": "fabriecio-md-917s",
+            "title": "Verlavio Badmeubelset Londen 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602043658",
+            "handle": "fabriecio-md-917b",
+            "title": "Verlavio Badmeubelset Londen 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602076426",
+            "handle": "fabriecio-md-917w",
+            "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602928394",
+            "handle": "fabriecio-md-918b",
+            "title": "Verlavio Badmeubelset Londen 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602961162",
+            "handle": "fabriecio-md-918g",
+            "title": "Verlavio Badmeubelset Londen 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602993930",
+            "handle": "fabriecio-md-918h",
+            "title": "Verlavio Badmeubelset Londen 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
+          },
+          {
+            "id": "gid://shopify/Product/10702603059466",
+            "handle": "fabriecio-md-918s",
+            "title": "Verlavio Badmeubelset Londen 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
+          },
+          {
+            "id": "gid://shopify/Product/10702603092234",
+            "handle": "fabriecio-md-918w",
+            "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
+          }
+        ],
+        "conditional_meta": {
+          "title": "Badmeubel met spiegelkast kopen | Badkamercity",
+          "description": "Een wastafel, laden en spiegelkast in één combinatie. Shop Verlavio Londen-badmeubelsets van 60 tot 120 cm breed en kies jouw favoriete kleur.",
+          "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
         }
-      ],
-      "conditional_meta": {
-        "title": "Badmeubel met spiegelkast kopen | Badkamercity",
-        "description": "Een wastafel, laden en spiegelkast in één combinatie. Shop Verlavio Londen-badmeubelsets van 60 tot 120 cm breed en kies jouw favoriete kleur.",
-        "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
-      }
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "halfhoge-kasten",
@@ -1257,8 +1174,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen halfhoge kasten in deze selectie. De bestaande hoge kolomkasten zijn een andere maat- en gebruikskeuze en niet vanzelf een passende vervanging.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1268,7 +1185,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen halfhoge kasten in deze selectie. De bestaande hoge kolomkasten zijn een andere maat- en gebruikskeuze en niet vanzelf een passende vervanging."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "badkamermeubel-met-wastafel",
@@ -1281,8 +1205,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "DUPLICATE_SCOPE_REVIEW",
-      "reason": "Dezelfde 39 bevestigde meubelsets als Badmeubel sets. Kies één primaire bestemming of een aantoonbaar andere selectie voordat beide pagina’s commerciële meta’s krijgen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/collections/badmeubel-sets",
       "mutated": false,
       "catalog_search": {
@@ -1293,320 +1217,327 @@
         },
         "sample": []
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10702601552138",
-          "handle": "fabriecio-md-915g",
-          "title": "Verlavio Badmeubelset Londen 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601584906",
-          "handle": "fabriecio-md-915h",
-          "title": "Verlavio Badmeubelset Londen 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601617674",
-          "handle": "fabriecio-md-915s",
-          "title": "Verlavio Badmeubelset Londen 60cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601650442",
-          "handle": "fabriecio-md-915b",
-          "title": "Verlavio Badmeubelset Londen 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601683210",
-          "handle": "fabriecio-md-915w",
-          "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601715978",
-          "handle": "fabriecio-md-916g",
-          "title": "Verlavio Badmeubelset Londen 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601748746",
-          "handle": "fabriecio-md-916h",
-          "title": "Verlavio Badmeubelset Londen 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
-        },
-        {
-          "id": "gid://shopify/Product/10702601781514",
-          "handle": "fabriecio-md-916s",
-          "title": "Verlavio Badmeubelset Londen 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
-        },
-        {
-          "id": "gid://shopify/Product/10702601814282",
-          "handle": "fabriecio-md-916b",
-          "title": "Verlavio Badmeubelset Londen 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
-        },
-        {
-          "id": "gid://shopify/Product/10702601879818",
-          "handle": "fabriecio-md-916w",
-          "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
-        },
-        {
-          "id": "gid://shopify/Product/10702601912586",
-          "handle": "fabriecio-md-917g",
-          "title": "Verlavio Badmeubelset Londen 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
-        },
-        {
-          "id": "gid://shopify/Product/10702601945354",
-          "handle": "fabriecio-md-917h",
-          "title": "Verlavio Badmeubelset Londen 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602010890",
-          "handle": "fabriecio-md-917s",
-          "title": "Verlavio Badmeubelset Londen 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602043658",
-          "handle": "fabriecio-md-917b",
-          "title": "Verlavio Badmeubelset Londen 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602076426",
-          "handle": "fabriecio-md-917w",
-          "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602141962",
-          "handle": "fabriecio-dm-60g",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602174730",
-          "handle": "fabriecio-dm-60h",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602207498",
-          "handle": "fabriecio-dm-60b",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602240266",
-          "handle": "fabriecio-dm-60w",
-          "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602305802",
-          "handle": "fabriecio-dm-90g",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602338570",
-          "handle": "fabriecio-dm-90h",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602371338",
-          "handle": "fabriecio-dm-90s",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602404106",
-          "handle": "fabriecio-dm-90b",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602436874",
-          "handle": "fabriecio-dm-90w",
-          "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602469642",
-          "handle": "fabriecio-dm-120g",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602502410",
-          "handle": "fabriecio-dm-120h",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602535178",
-          "handle": "fabriecio-dm-120s",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602567946",
-          "handle": "fabriecio-dm-120b",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602600714",
-          "handle": "fabriecio-dm-120w",
-          "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602731786",
-          "handle": "fabriecio-dm-80b",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602797322",
-          "handle": "fabriecio-dm-80g",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602830090",
-          "handle": "fabriecio-dm-80h",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
-        },
-        {
-          "id": "gid://shopify/Product/10702602862858",
-          "handle": "fabriecio-dm-80s",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
-        },
-        {
-          "id": "gid://shopify/Product/10702602895626",
-          "handle": "fabriecio-dm-80w",
-          "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
-        },
-        {
-          "id": "gid://shopify/Product/10702602928394",
-          "handle": "fabriecio-md-918b",
-          "title": "Verlavio Badmeubelset Londen 80cm Zwart",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
-        },
-        {
-          "id": "gid://shopify/Product/10702602961162",
-          "handle": "fabriecio-md-918g",
-          "title": "Verlavio Badmeubelset Londen 80cm Grijs",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
-        },
-        {
-          "id": "gid://shopify/Product/10702602993930",
-          "handle": "fabriecio-md-918h",
-          "title": "Verlavio Badmeubelset Londen 80cm Hout",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
-        },
-        {
-          "id": "gid://shopify/Product/10702603059466",
-          "handle": "fabriecio-md-918s",
-          "title": "Verlavio Badmeubelset Londen 80cm Steen",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
-        },
-        {
-          "id": "gid://shopify/Product/10702603092234",
-          "handle": "fabriecio-md-918w",
-          "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
-          "vendor": "Verlavio",
-          "productType": "Badmeubelsets",
-          "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
-        }
-      ]
+      "previous_proposal": {
+        "decision": "DUPLICATE_SCOPE_REVIEW",
+        "reason": "Dezelfde 39 bevestigde meubelsets als Badmeubel sets. Kies één primaire bestemming of een aantoonbaar andere selectie voordat beide pagina’s commerciële meta’s krijgen.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10702601552138",
+            "handle": "fabriecio-md-915g",
+            "title": "Verlavio Badmeubelset Londen 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601584906",
+            "handle": "fabriecio-md-915h",
+            "title": "Verlavio Badmeubelset Londen 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601617674",
+            "handle": "fabriecio-md-915s",
+            "title": "Verlavio Badmeubelset Londen 60cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601650442",
+            "handle": "fabriecio-md-915b",
+            "title": "Verlavio Badmeubelset Londen 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601683210",
+            "handle": "fabriecio-md-915w",
+            "title": "Verlavio Badmeubelset Londen 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-915w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601715978",
+            "handle": "fabriecio-md-916g",
+            "title": "Verlavio Badmeubelset Londen 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601748746",
+            "handle": "fabriecio-md-916h",
+            "title": "Verlavio Badmeubelset Londen 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916h"
+          },
+          {
+            "id": "gid://shopify/Product/10702601781514",
+            "handle": "fabriecio-md-916s",
+            "title": "Verlavio Badmeubelset Londen 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916s"
+          },
+          {
+            "id": "gid://shopify/Product/10702601814282",
+            "handle": "fabriecio-md-916b",
+            "title": "Verlavio Badmeubelset Londen 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916b"
+          },
+          {
+            "id": "gid://shopify/Product/10702601879818",
+            "handle": "fabriecio-md-916w",
+            "title": "Verlavio Badmeubelset Londen 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-916w"
+          },
+          {
+            "id": "gid://shopify/Product/10702601912586",
+            "handle": "fabriecio-md-917g",
+            "title": "Verlavio Badmeubelset Londen 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917g"
+          },
+          {
+            "id": "gid://shopify/Product/10702601945354",
+            "handle": "fabriecio-md-917h",
+            "title": "Verlavio Badmeubelset Londen 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602010890",
+            "handle": "fabriecio-md-917s",
+            "title": "Verlavio Badmeubelset Londen 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602043658",
+            "handle": "fabriecio-md-917b",
+            "title": "Verlavio Badmeubelset Londen 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602076426",
+            "handle": "fabriecio-md-917w",
+            "title": "Verlavio Badmeubelset Londen 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-917w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602141962",
+            "handle": "fabriecio-dm-60g",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602174730",
+            "handle": "fabriecio-dm-60h",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602207498",
+            "handle": "fabriecio-dm-60b",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602240266",
+            "handle": "fabriecio-dm-60w",
+            "title": "Verlavio Badmeubelset Birmingham 60cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-60w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602305802",
+            "handle": "fabriecio-dm-90g",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602338570",
+            "handle": "fabriecio-dm-90h",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602371338",
+            "handle": "fabriecio-dm-90s",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602404106",
+            "handle": "fabriecio-dm-90b",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602436874",
+            "handle": "fabriecio-dm-90w",
+            "title": "Verlavio Badmeubelset Birmingham 90cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-90w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602469642",
+            "handle": "fabriecio-dm-120g",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602502410",
+            "handle": "fabriecio-dm-120h",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602535178",
+            "handle": "fabriecio-dm-120s",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602567946",
+            "handle": "fabriecio-dm-120b",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602600714",
+            "handle": "fabriecio-dm-120w",
+            "title": "Verlavio Badmeubelset Birmingham 120cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-120w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602731786",
+            "handle": "fabriecio-dm-80b",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602797322",
+            "handle": "fabriecio-dm-80g",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602830090",
+            "handle": "fabriecio-dm-80h",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80h"
+          },
+          {
+            "id": "gid://shopify/Product/10702602862858",
+            "handle": "fabriecio-dm-80s",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80s"
+          },
+          {
+            "id": "gid://shopify/Product/10702602895626",
+            "handle": "fabriecio-dm-80w",
+            "title": "Verlavio Badmeubelset Birmingham 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-dm-80w"
+          },
+          {
+            "id": "gid://shopify/Product/10702602928394",
+            "handle": "fabriecio-md-918b",
+            "title": "Verlavio Badmeubelset Londen 80cm Zwart",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918b"
+          },
+          {
+            "id": "gid://shopify/Product/10702602961162",
+            "handle": "fabriecio-md-918g",
+            "title": "Verlavio Badmeubelset Londen 80cm Grijs",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918g"
+          },
+          {
+            "id": "gid://shopify/Product/10702602993930",
+            "handle": "fabriecio-md-918h",
+            "title": "Verlavio Badmeubelset Londen 80cm Hout",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918h"
+          },
+          {
+            "id": "gid://shopify/Product/10702603059466",
+            "handle": "fabriecio-md-918s",
+            "title": "Verlavio Badmeubelset Londen 80cm Steen",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918s"
+          },
+          {
+            "id": "gid://shopify/Product/10702603092234",
+            "handle": "fabriecio-md-918w",
+            "title": "Verlavio Badmeubelset Londen 80cm Hoogglans Wit",
+            "vendor": "Verlavio",
+            "productType": "Badmeubelsets",
+            "onlineStoreUrl": "https://badkamercity.nl/products/fabriecio-md-918w"
+          }
+        ]
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "urinoirspoelers",
@@ -1619,8 +1550,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen urinoirspoelers gekoppeld. Urinoirs en gewone toiletbedieningsplaten zijn andere producten; eerst exact aanbod en aansluiting vaststellen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1630,7 +1561,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen urinoirspoelers gekoppeld. Urinoirs en gewone toiletbedieningsplaten zijn andere producten; eerst exact aanbod en aansluiting vaststellen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "complete-toiletsets",
@@ -1643,8 +1581,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De complete-toiletsetcollectie is leeg. Een toiletpot met zitting is niet automatisch een volledige set met reservoir, plaat en alle installatieonderdelen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1654,7 +1592,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De complete-toiletsetcollectie is leeg. Een toiletpot met zitting is niet automatisch een volledige set met reservoir, plaat en alle installatieonderdelen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "staande-toiletten",
@@ -1667,8 +1612,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "FALSE_POSITIVE_ONLY",
-      "reason": "De ene titelmatch is een staande toiletborstelhouder, geen staand toilet. Geen passend toilet bevestigd.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1686,7 +1631,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/lagoo-g6102"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "FALSE_POSITIVE_ONLY",
+        "reason": "De ene titelmatch is een staande toiletborstelhouder, geen staand toilet. Geen passend toilet bevestigd."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "bidetten",
@@ -1699,8 +1651,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De bidetcollectie is leeg. Bidetkranen en toiletten met bidetfunctie zijn wel andere ingangen, maar geen bewijs voor een los bidet in deze selectie.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1710,7 +1662,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De bidetcollectie is leeg. Bidetkranen en toiletten met bidetfunctie zijn wel andere ingangen, maar geen bewijs voor een los bidet in deze selectie."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "urinoirs",
@@ -1723,8 +1682,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen urinoirs gekoppeld. Eerst controleren of er geschikte artikelen beschikbaar zijn; geen generieke toilettekst gebruiken om een lege urinoirpagina te vullen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1734,7 +1693,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen urinoirs gekoppeld. Eerst controleren of er geschikte artikelen beschikbaar zijn; geen generieke toilettekst gebruiken om een lege urinoirpagina te vullen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "duoblok-toilet",
@@ -1747,8 +1713,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen duobloktoiletten gekoppeld. Het eigen reservoir op een duoblok vraagt andere producten dan een hangtoilet of een los voorzetreservoir.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1758,7 +1724,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen duobloktoiletten gekoppeld. Het eigen reservoir op een duoblok vraagt andere producten dan een hangtoilet of een los voorzetreservoir."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "toilet-met-losse-stortbak",
@@ -1771,8 +1744,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Er is geen complete combinatie met losse stortbak gekoppeld. Het losse sensor-voorzetreservoir elders bewijst geen bijpassende toiletset.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1782,7 +1755,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Er is geen complete combinatie met losse stortbak gekoppeld. Het losse sensor-voorzetreservoir elders bewijst geen bijpassende toiletset."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "hangende-reservoirs",
@@ -1795,8 +1775,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Deze reservoirsoort heeft geen leden. Eerst bepalen welke montage en welk type wordt bedoeld; niet alleen op de term reservoir naar een ander systeem verwijzen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1806,7 +1786,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Deze reservoirsoort heeft geen leden. Eerst bepalen welke montage en welk type wordt bedoeld; niet alleen op de term reservoir naar een ander systeem verwijzen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "accessoires-sets",
@@ -1819,8 +1806,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "DUPLICATE_SCOPE_REVIEW",
-      "reason": "De ene bevestigde Lagoo Garda-set is een toiletaccessoireset. Geef die eerst een passende primaire categorie; de algemene setroute niet automatisch dupliceren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/collections/toilet-accessoires-sets",
       "mutated": false,
       "catalog_search": {
@@ -1830,7 +1817,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "DUPLICATE_SCOPE_REVIEW",
+        "reason": "De ene bevestigde Lagoo Garda-set is een toiletaccessoireset. Geef die eerst een passende primaire categorie; de algemene setroute niet automatisch dupliceren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "toiletblokhouder",
@@ -1843,8 +1837,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen toiletblokhouders gekoppeld. Toiletblokjes zijn verbruiksmiddelen en bewijzen niet dat er een passende houder of reservoirvoorziening wordt geleverd.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1854,7 +1848,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen toiletblokhouders gekoppeld. Toiletblokjes zijn verbruiksmiddelen en bewijzen niet dat er een passende houder of reservoirvoorziening wordt geleverd."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "vrijhangende-wastafels",
@@ -1867,8 +1868,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De vrijhangende-wastafelcollectie is leeg. Een losse meubelwastafel is niet zonder draag- en montagegegevens geschikt om vrij aan de wand te hangen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1878,7 +1879,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De vrijhangende-wastafelcollectie is leeg. Een losse meubelwastafel is niet zonder draag- en montagegegevens geschikt om vrij aan de wand te hangen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "gootstenen",
@@ -1891,8 +1899,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen gootstenen gekoppeld. Het bestaande aanbod keukenkranen mag niet worden gepresenteerd alsof hier ook spoelbakken worden verkocht.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1902,7 +1910,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen gootstenen gekoppeld. Het bestaande aanbod keukenkranen mag niet worden gepresenteerd alsof hier ook spoelbakken worden verkocht."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "overloopringen",
@@ -1915,8 +1930,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Er staan geen losse overloopringen in de selectie. Afvoerpluggen en clickmechanismen zijn andere onderdelen; compatibiliteit eerst per wastafel bepalen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1926,7 +1941,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Er staan geen losse overloopringen in de selectie. Afvoerpluggen en clickmechanismen zijn andere onderdelen; compatibiliteit eerst per wastafel bepalen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "vierkant",
@@ -1939,8 +1961,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "SCOPE_UNCLEAR",
-      "reason": "Lege vormcollectie zonder producttype in de naam. Eerst bedoelde douchecabines en hun maatvoering vaststellen; Vierkant alleen is geen duidelijke zoekbestemming.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1950,7 +1972,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "SCOPE_UNCLEAR",
+        "reason": "Lege vormcollectie zonder producttype in de naam. Eerst bedoelde douchecabines en hun maatvoering vaststellen; Vierkant alleen is geen duidelijke zoekbestemming."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "rechthoek",
@@ -1963,8 +1992,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "SCOPE_UNCLEAR",
-      "reason": "Lege vormcollectie zonder duidelijk producttype. Eerst bedoelde rechthoekige douchecabines vaststellen en de naam verduidelijken.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -1974,7 +2003,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "SCOPE_UNCLEAR",
+        "reason": "Lege vormcollectie zonder duidelijk producttype. Eerst bedoelde rechthoekige douchecabines vaststellen en de naam verduidelijken."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "sunshower",
@@ -1987,8 +2023,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "REUSE_EXISTING_DESTINATION",
-      "reason": "104 actieve gepubliceerde Sunshower-artikelen gevonden. Gebruik de bestaande Sunshower-keuzehulp of merkselectie; de lege extra collectie heeft nu geen voordeel.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/pages/sunshower",
       "mutated": false,
       "catalog_search": {
@@ -2020,7 +2056,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/sunshower-round-plus-medium-inbouw-organic-grey"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "REUSE_EXISTING_DESTINATION",
+        "reason": "104 actieve gepubliceerde Sunshower-artikelen gevonden. Gebruik de bestaande Sunshower-keuzehulp of merkselectie; de lege extra collectie heeft nu geen voordeel."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "inbouwbaden",
@@ -2033,8 +2076,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "FALSE_POSITIVE_ONLY",
-      "reason": "85 brede titelmatches zijn onder meer inbouwbadkranen. Die bewijzen geen aanbod inbouwbaden. Badkranen niet in een badencollectie opnemen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2066,7 +2109,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-cobber-cb7080ext-afbouwdeel-inbouw-2-weg-stop-omstel-chroom"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "FALSE_POSITIVE_ONLY",
+        "reason": "85 brede titelmatches zijn onder meer inbouwbadkranen. Die bewijzen geen aanbod inbouwbaden. Badkranen niet in een badencollectie opnemen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "1-delig",
@@ -2079,8 +2129,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De eendelige-badwandcollectie is leeg. Er staan badwanden elders, maar het aantal delen moet per artikel bevestigd worden voordat deze selectie daarmee wordt gevuld.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2090,7 +2140,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De eendelige-badwandcollectie is leeg. Er staan badwanden elders, maar het aantal delen moet per artikel bevestigd worden voordat deze selectie daarmee wordt gevuld."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "toiletspiegels",
@@ -2103,8 +2160,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "MEMBERSHIP_REPAIR_PROPOSED",
-      "reason": "24 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2137,205 +2194,212 @@
           }
         ]
       },
-      "confirmed_candidates": [
-        {
-          "id": "gid://shopify/Product/10534644220170",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld gunmetal PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534644318474",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-koper-pvd",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld koper PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-koper-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534644449546",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-messing-pvd",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld messing PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-messing-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534644580618",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-zwart-pvd",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld zwart PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-zwart-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534644678922",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-mat-wit",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – mat wit",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-mat-wit"
-        },
-        {
-          "id": "gid://shopify/Product/10534644809994",
-          "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-rvs-316",
-          "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – RVS",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-rvs-316"
-        },
-        {
-          "id": "gid://shopify/Product/10534882345226",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld gunmetal PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534882738442",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-koper-pvd",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld koper PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-koper-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534882869514",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-messing-pvd",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld messing PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-messing-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534883000586",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-zwart-pvd",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld zwart PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-zwart-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534883098890",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-mat-wit",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – mat wit",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-mat-wit"
-        },
-        {
-          "id": "gid://shopify/Product/10534883164426",
-          "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-rvs-316",
-          "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – RVS",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-rvs-316"
-        },
-        {
-          "id": "gid://shopify/Product/10534902202634",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld gunmetal PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534902268170",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld koper PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534902399242",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld messing PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534902432010",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld zwart PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534902563082",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – mat wit",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit"
-        },
-        {
-          "id": "gid://shopify/Product/10534902694154",
-          "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316",
-          "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – RVS",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316"
-        },
-        {
-          "id": "gid://shopify/Product/10534923108618",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld gunmetal PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534923174154",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld koper PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534923239690",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld messing PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534923305226",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld zwart PVD",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd"
-        },
-        {
-          "id": "gid://shopify/Product/10534923370762",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – mat wit",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit"
-        },
-        {
-          "id": "gid://shopify/Product/10534923436298",
-          "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316",
-          "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – RVS",
-          "vendor": "Hotbath",
-          "productType": "",
-          "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316"
+      "previous_proposal": {
+        "decision": "MEMBERSHIP_REPAIR_PROPOSED",
+        "reason": "24 passende actieve gepubliceerde artikelen bevestigd, terwijl deze collectie leeg is. Koppel eerst de bestaande IDs, controleer publieke selectie en filters; pas daarna de bijgevoegde meta toe.",
+        "candidate_products": [
+          {
+            "id": "gid://shopify/Product/10534644220170",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld gunmetal PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534644318474",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-koper-pvd",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld koper PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-koper-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534644449546",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-messing-pvd",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld messing PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-messing-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534644580618",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-zwart-pvd",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – geborsteld zwart PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-geborsteld-zwart-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534644678922",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-mat-wit",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – mat wit",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-mat-wit"
+          },
+          {
+            "id": "gid://shopify/Product/10534644809994",
+            "handle": "hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-rvs-316",
+            "title": "Hotbath &More toiletspiegel round 40 cm indirecte verlichting – RVS",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-round-toiletspiegel-40cm-indirecte-verlichting-rvs-316"
+          },
+          {
+            "id": "gid://shopify/Product/10534882345226",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld gunmetal PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534882738442",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-koper-pvd",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld koper PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-koper-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534882869514",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-messing-pvd",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld messing PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-messing-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534883000586",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-zwart-pvd",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – geborsteld zwart PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-geborsteld-zwart-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534883098890",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-mat-wit",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – mat wit",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-mat-wit"
+          },
+          {
+            "id": "gid://shopify/Product/10534883164426",
+            "handle": "hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-rvs-316",
+            "title": "Hotbath &More toiletspiegel contour 40 × 40 cm indirecte verlichting – RVS",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-contour-toiletspiegel-40x40cm-indirecte-verlichting-rvs-316"
+          },
+          {
+            "id": "gid://shopify/Product/10534902202634",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld gunmetal PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534902268170",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld koper PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534902399242",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld messing PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534902432010",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – geborsteld zwart PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534902563082",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – mat wit",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit"
+          },
+          {
+            "id": "gid://shopify/Product/10534902694154",
+            "handle": "hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316",
+            "title": "Hotbath &More toiletspiegel square 30 × 80 cm indirecte verlichting – RVS",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316"
+          },
+          {
+            "id": "gid://shopify/Product/10534923108618",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld gunmetal PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-gunmetal-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534923174154",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld koper PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-koper-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534923239690",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld messing PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-messing-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534923305226",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – geborsteld zwart PVD",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-geborsteld-zwart-pvd"
+          },
+          {
+            "id": "gid://shopify/Product/10534923370762",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – mat wit",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-mat-wit"
+          },
+          {
+            "id": "gid://shopify/Product/10534923436298",
+            "handle": "hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316",
+            "title": "Hotbath &More toiletspiegel soft square 30 × 80 cm indirecte verlichting – RVS",
+            "vendor": "Hotbath",
+            "productType": "",
+            "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-more-soft-square-toiletspiegel-30x80cm-indirecte-verlichting-rvs-316"
+          }
+        ],
+        "conditional_meta": {
+          "title": "Toiletspiegels kopen in jouw kleur | Badkamercity",
+          "description": "Shop Hotbath &More-toiletspiegels en kies de afwerking die past bij je fonteinkraan en accessoires. Bekijk de uitvoeringen voor jouw toiletruimte.",
+          "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
         }
-      ],
-      "conditional_meta": {
-        "title": "Toiletspiegels kopen in jouw kleur | Badkamercity",
-        "description": "Shop Hotbath &More-toiletspiegels en kies de afwerking die past bij je fonteinkraan en accessoires. Bekijk de uitvoeringen voor jouw toiletruimte.",
-        "status": "DRAFT_AFTER_MEMBERSHIP_REPAIR"
-      }
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "spiegelkast-met-verlichting",
@@ -2348,8 +2412,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen artikelen in deze verlichte-spiegelkastselectie. De algemene spiegelkasten hebben wel leden; eerst verlichte modellen daadwerkelijk afzonderen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2359,7 +2423,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen artikelen in deze verlichte-spiegelkastselectie. De algemene spiegelkasten hebben wel leden; eerst verlichte modellen daadwerkelijk afzonderen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "spiegelkast-zonder-verlichting",
@@ -2372,8 +2443,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen leden bij spiegelkasten zonder verlichting. De afwezigheid van verlichting niet uit een korte titel afleiden; eerst de productuitvoering bevestigen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2383,7 +2454,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen leden bij spiegelkasten zonder verlichting. De afwezigheid van verlichting niet uit een korte titel afleiden; eerst de productuitvoering bevestigen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "spiegelbevestiging",
@@ -2396,8 +2474,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen losse spiegelbevestiging gekoppeld. Een spiegelproduct bewijst niet dat hier montagebeugels, clips of plaksets apart worden aangeboden.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2407,7 +2485,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen losse spiegelbevestiging gekoppeld. Een spiegelproduct bewijst niet dat hier montagebeugels, clips of plaksets apart worden aangeboden."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "tegelstroken",
@@ -2420,8 +2505,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De tegelstrookcollectie is leeg. Houtlooktegels of lange wandtegels elders zijn niet automatisch dezelfde afgebakende productselectie.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2431,7 +2516,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De tegelstrookcollectie is leeg. Houtlooktegels of lange wandtegels elders zijn niet automatisch dezelfde afgebakende productselectie."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "populair",
@@ -2444,11 +2536,18 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NEEDS_SELECTION_EVIDENCE",
-      "reason": "Geen collectieleden. Zonder gecontroleerde verkoop- of selectiedata geen populaire producten of bestsellers beloven.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
-      "catalog_search": null
+      "catalog_search": null,
+      "previous_proposal": {
+        "decision": "NEEDS_SELECTION_EVIDENCE",
+        "reason": "Geen collectieleden. Zonder gecontroleerde verkoop- of selectiedata geen populaire producten of bestsellers beloven."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "tegellijm",
@@ -2461,8 +2560,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen tegellijm gekoppeld. De tegelpagina kan daardoor geen volledige tegelklus inclusief lijm beloven op basis van deze collectie.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2472,7 +2571,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen tegellijm gekoppeld. De tegelpagina kan daardoor geen volledige tegelklus inclusief lijm beloven op basis van deze collectie."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "voorstrijkmiddel",
@@ -2485,8 +2591,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Er staan geen voorstrijkmiddelen in deze selectie. Eerst de producten en ondergrondtoepassingen vaststellen, daarna een gerichte beschrijving.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2496,7 +2602,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Er staan geen voorstrijkmiddelen in deze selectie. Eerst de producten en ondergrondtoepassingen vaststellen, daarna een gerichte beschrijving."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "voegmortel",
@@ -2509,8 +2622,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen voegmortel gekoppeld. Niet op basis van de tegelkleuren een aanbod in voegkleuren of geschikte mortel suggereren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2520,7 +2633,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen voegmortel gekoppeld. Niet op basis van de tegelkleuren een aanbod in voegkleuren of geschikte mortel suggereren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "silicone-kit",
@@ -2533,8 +2653,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De siliconenkitcollectie is leeg. Geen leverbaar assortiment sanitairkit, kleuren of toepassing op alle materialen beloven.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2544,7 +2664,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De siliconenkitcollectie is leeg. Geen leverbaar assortiment sanitairkit, kleuren of toepassing op alle materialen beloven."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "leveling-systeem",
@@ -2557,8 +2684,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen tegelnivelleersystemen gekoppeld. Het bestaande Hotbath-montagegereedschap is kraangereedschap en geen vervanging voor een tegel-levelingsysteem.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2568,7 +2695,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen tegelnivelleersystemen gekoppeld. Het bestaande Hotbath-montagegereedschap is kraangereedschap en geen vervanging voor een tegel-levelingsysteem."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "opbouwspots",
@@ -2581,8 +2715,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen opbouwspots gekoppeld. De gecontroleerde selectie Spots/Inbouwspots bevat inbouwmodellen; die niet als opbouwverlichting presenteren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2592,7 +2726,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen opbouwspots gekoppeld. De gecontroleerde selectie Spots/Inbouwspots bevat inbouwmodellen; die niet als opbouwverlichting presenteren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "wandlampen",
@@ -2605,8 +2746,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen wandlampen gekoppeld. De bestaande hanglampen, plafondlampen en spiegellampen niet zonder montagespecificatie als wandlamp omschrijven.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2616,7 +2757,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen wandlampen gekoppeld. De bestaande hanglampen, plafondlampen en spiegellampen niet zonder montagespecificatie als wandlamp omschrijven."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "paneelradiatoren",
@@ -2629,8 +2777,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De paneelradiatorcollectie is leeg. Niet alleen uit een plat uiterlijk afleiden dat een design- of elektrische radiator tot deze categorie hoort.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2640,7 +2788,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De paneelradiatorcollectie is leeg. Niet alleen uit een plat uiterlijk afleiden dat een design- of elektrische radiator tot deze categorie hoort."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "lage-temperatuur-radiatoren",
@@ -2653,8 +2808,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen lage-temperatuurradiatoren gekoppeld. Geschiktheid voor lage aanvoertemperatuur vereist productspecificaties, geen algemene tekst over energiezuinig verwarmen.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2664,7 +2819,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen lage-temperatuurradiatoren gekoppeld. Geschiktheid voor lage aanvoertemperatuur vereist productspecificaties, geen algemene tekst over energiezuinig verwarmen."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "spiegelverwarming",
@@ -2677,8 +2839,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "REUSE_EXISTING_CATEGORY",
-      "reason": "66 brede matches betreffen onder meer complete verwarmde spiegels, geen bevestigde losse verwarmingsmatten. De bestaande categorie Spiegels met verwarming heeft 60 leden.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/collections/spiegels-met-verwarming",
       "mutated": false,
       "catalog_search": {
@@ -2710,7 +2872,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-rou100tb"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "REUSE_EXISTING_CATEGORY",
+        "reason": "66 brede matches betreffen onder meer complete verwarmde spiegels, geen bevestigde losse verwarmingsmatten. De bestaande categorie Spiegels met verwarming heeft 60 leden."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "onderblokken",
@@ -2723,8 +2892,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen losse onderblokken gekoppeld. Bij radiatoraansluitsets eerst vaststellen wat erin zit; geen los regel- of aansluitblok uit een setnaam afleiden.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2734,7 +2903,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen losse onderblokken gekoppeld. Bij radiatoraansluitsets eerst vaststellen wat erin zit; geen los regel- of aansluitblok uit een setnaam afleiden."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "radiatorkranen",
@@ -2747,8 +2923,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "De losse radiatorkraancollectie is leeg. Mogelijke kranen in aansluitsets eerst op type en leveringsinhoud controleren voordat ze hier als los aanbod worden omschreven.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2758,7 +2934,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "De losse radiatorkraancollectie is leeg. Mogelijke kranen in aansluitsets eerst op type en leveringsinhoud controleren voordat ze hier als los aanbod worden omschreven."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "voetventielen",
@@ -2771,8 +2954,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen voetventielen gekoppeld. Andere kraan- en radiatoronderdelen zijn niet automatisch gelijkwaardig qua regeling of aansluiting.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2782,7 +2965,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen voetventielen gekoppeld. Andere kraan- en radiatoronderdelen zijn niet automatisch gelijkwaardig qua regeling of aansluiting."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "thermostaatknoppen",
@@ -2795,8 +2985,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "FALSE_POSITIVE_ONLY",
-      "reason": "25 matches zijn onder meer douche-/badkraanknoppen. Dat is geen bevestigd assortiment radiatorthermostaatknoppen. Toepassing en aansluiting per onderdeel controleren.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2828,7 +3018,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-spom415-thermostaatknop-tbv-l016cr-g7"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "FALSE_POSITIVE_ONLY",
+        "reason": "25 matches zijn onder meer douche-/badkraanknoppen. Dat is geen bevestigd assortiment radiatorthermostaatknoppen. Toepassing en aansluiting per onderdeel controleren."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "knelsets",
@@ -2841,8 +3038,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen knelsets gekoppeld. Aansluiting, leidingdiameter en onderdelen van een set eerst verifiëren; geen universele montagebelofte op deze lege pagina.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2852,7 +3049,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen knelsets gekoppeld. Aansluiting, leidingdiameter en onderdelen van een set eerst verifiëren; geen universele montagebelofte op deze lege pagina."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "waterontharders",
@@ -2865,8 +3069,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "NO_CONFIRMED_OFFER",
-      "reason": "Geen waterontharders gekoppeld. Onderhoudsmiddelen of kraanonderdelen zijn geen bewijs voor een wateronthardingssysteem of een bewezen ontkalkingswerking.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2876,7 +3080,14 @@
           "precision": "EXACT"
         },
         "sample": []
-      }
+      },
+      "previous_proposal": {
+        "decision": "NO_CONFIRMED_OFFER",
+        "reason": "Geen waterontharders gekoppeld. Onderhoudsmiddelen of kraanonderdelen zijn geen bewijs voor een wateronthardingssysteem of een bewezen ontkalkingswerking."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "schakelmateriaal",
@@ -2889,8 +3100,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "FALSE_POSITIVE_ONLY",
-      "reason": "106 matches bestaan onder meer uit verlichting met een schakelaar. Geen bevestiging voor los wand-schakelmateriaal of stopcontacten.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": null,
       "mutated": false,
       "catalog_search": {
@@ -2922,7 +3133,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-rarh50-1pbp"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "FALSE_POSITIVE_ONLY",
+        "reason": "106 matches bestaan onder meer uit verlichting met een schakelaar. Geen bevestiging voor los wand-schakelmateriaal of stopcontacten."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "ibs70-cobber-doucheset",
@@ -2937,8 +3155,8 @@
       "http_status": 200,
       "public_main_product_links": 0,
       "in_collection_sitemap": true,
-      "decision": "REUSE_EXISTING_PRODUCT",
-      "reason": "Brede IBS70*-zoekopdracht telt ook andere modellen. De exacte modelzoekopdracht is volledig gepagineerd: 358 IBS70-uitvoeringen bevestigd. Gebruik een bestaande IBS70-productpagina met keuzemenu, tenzij een afzonderlijke campagnepagina een duidelijk eigen doel krijgt.",
+      "decision": "OWNER_HOLD_NO_READY_ASSORTMENT",
+      "reason": "Eigenaar bevestigt dat het bedoelde assortiment later komt. Niet vullen met eerdere catalogusmatches. Noindex in UNPUBLISHED concept; live publicatiestatus ongewijzigd.",
       "alternative_url": "https://badkamercity.nl/products/hotbath-cobber-ibs70-inbouw-doucheset-staafhanddouche-20cm-hoofddouche-wandarm-wandhouder-chroom",
       "mutated": false,
       "catalog_search": {
@@ -2970,7 +3188,14 @@
             "onlineStoreUrl": "https://badkamercity.nl/products/hotbath-cobber-ibs7009-inbouw-doucheset-staafhanddouche-20cm-hoofddouche-30cm-plafondbuis-wandhouder-chroom"
           }
         ]
-      }
+      },
+      "previous_proposal": {
+        "decision": "REUSE_EXISTING_PRODUCT",
+        "reason": "Brede IBS70*-zoekopdracht telt ook andere modellen. De exacte modelzoekopdracht is volledig gepagineerd: 358 IBS70-uitvoeringen bevestigd. Gebruik een bestaande IBS70-productpagina met keuzemenu, tenzij een afzonderlijke campagnepagina een duidelijk eigen doel krijgt."
+      },
+      "noindex_preview": true,
+      "noindex_live": false,
+      "owner_override": true
     },
     {
       "key": "tegeltoebehoren",
@@ -2996,5 +3221,7 @@
         "sample": []
       }
     }
-  ]
+  ],
+  "owner_instruction": "Lege categorieën tijdelijk onzichtbaar; geen producten voor deze categorieën beschikbaar volgens eigenaar.",
+  "historical_repair_proposals_withdrawn": 5
 }

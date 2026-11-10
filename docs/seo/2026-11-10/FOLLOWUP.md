@@ -1,5 +1,7 @@
 # SEO-afronding — 10 november 2026
 
+> **Nieuwere eigenaarinstructie:** het SEO-thema is inmiddels MAIN. De vijf invulvoorstellen hieronder zijn historisch en ingetrokken: het bedoelde categorie-assortiment komt later. Zie [EMPTY_CATEGORIES.md](EMPTY_CATEGORIES.md) voor de gerichte noindex-preview, de geblokkeerde native publicatiemutatie en de actuele vervolghandeling.
+
 Status: CATEGORY-METADATA-02 / PREVIEW_VERIFIED_AUDIT_COMPLETE. Vervolgopdracht eigenaar: “oke letsgo doe maar”.
 
 ## Resultaat en bereik

@@ -12,6 +12,12 @@
     {%- endif -%}
     <link rel="canonical" href="{{ bc_metadata_canonical | escape }}">
     {%- if page.handle == 'verlanglijst' -%}<meta name="robots" content="noindex,follow">{%- endif -%}
+    {%- if request.page_type == 'collection' and collection.all_products_count == 0 -%}
+      {%- assign bc_empty_category_handles = 'frontpage,outlet,decoratie-vintage,textiel,sanitaire-veiligheid,toilet-accessoires-sets,douchezitjes,badmeubel-sets,badmeubel-met-waskom,badmeubel-zonder-spiegel,badmeubel-met-spiegel,badmeubel-met-spiegelkast,halfhoge-kasten,badkamermeubel-met-wastafel,urinoirspoelers,complete-toiletsets,staande-toiletten,bidetten,urinoirs,duoblok-toilet,toilet-met-losse-stortbak,hangende-reservoirs,accessoires-sets,toiletblokhouder,vrijhangende-wastafels,gootstenen,overloopringen,vierkant,rechthoek,sunshower,inbouwbaden,1-delig,toiletspiegels,spiegelkast-met-verlichting,spiegelkast-zonder-verlichting,spiegelbevestiging,tegelstroken,populair,tegellijm,voorstrijkmiddel,voegmortel,silicone-kit,leveling-systeem,opbouwspots,wandlampen,paneelradiatoren,lage-temperatuur-radiatoren,spiegelverwarming,onderblokken,radiatorkranen,voetventielen,thermostaatknoppen,knelsets,waterontharders,schakelmateriaal,ibs70-cobber-doucheset' | split: ',' -%}
+      {%- if bc_empty_category_handles contains collection.handle -%}
+        <meta name="robots" content="noindex,follow">
+      {%- endif -%}
+    {%- endif -%}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
