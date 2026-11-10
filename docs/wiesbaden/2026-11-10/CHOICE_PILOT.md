@@ -1,5 +1,7 @@
 # Wiesbaden keuzemenu's — actuele uitvoering 10 november 2026
 
+> **THEME-CONSOLIDATION-01:** hetzelfde concept196416504074 heet nu **BadkamerCity - SEO + Wiesbaden concept**. Alle1.418files zijn behouden; vier SEO-files zijn al gelijk aan actuele MAIN. De eigenaar wil categorieën indexeerbaar houden: geen EMPTY-CATEGORIES-noindexdelta toevoegen. De bestaande110-artikelen-QA hieronder blijft open binnen de oorspronkelijke grenzen. [Actuele drie-thema-vergelijking](../../repairs/2026-11-10/theme-consolidation/README.md).
+
 **110 bestaande artikelen in 17 keuzegroepen staan in het bestaande ongepubliceerde concept. Deze ronde voegt 59 artikelen toe. Admin-readback en browsersteekproeven slagen; de volledige publieke nacontrole is door netwerktoegang onderbroken. Nog geen publicatievrijgave.**
 
 ## Actuele themabasis

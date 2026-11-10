@@ -1,0 +1,56 @@
+{
+  "task": "THEME-CONSOLIDATION-01",
+  "checked_at": "2026-11-10T09:34:06.800Z",
+  "owner_index_choice": "All category pages may remain indexable; withdraw empty-category noindex.",
+  "main": {
+    "id": "196441932042",
+    "name": "BadkamerCity - SEO afronding 10 nov",
+    "role": "MAIN",
+    "files": 1401
+  },
+  "combined": {
+    "id": "196416504074",
+    "name": "BadkamerCity - SEO + Wiesbaden concept",
+    "role": "UNPUBLISHED",
+    "files": 1418,
+    "seo_files_equal_main": 4,
+    "groups": 17,
+    "products": 110,
+    "feature_diff_count": 21,
+    "feature_bodies_changed_by_this_task": 0,
+    "publication_ready": false,
+    "pending": [
+      "Full 110-page public follow-up from Wiesbaden work",
+      "Mobile interaction",
+      "New real cart tests"
+    ]
+  },
+  "reserve": {
+    "id": "196395073802",
+    "name": "Reserve - gelijk aan live 10 nov",
+    "role": "UNPUBLISHED",
+    "files": 1401,
+    "differences_from_main": 0
+  },
+  "writes": {
+    "restored_reserve_layout": 1,
+    "renames": 2,
+    "main_writes": 0,
+    "published": false,
+    "new_themes": 0,
+    "collection_or_product_mutations": 0
+  },
+  "verification": {
+    "all_three_inventories_complete": true,
+    "main_unchanged": true,
+    "wies_feature_bodies_unchanged": true,
+    "reserve_identical": true,
+    "choice_structure_groups": 17,
+    "choice_structure_products": 110,
+    "js_syntax": "PASS",
+    "restored_layout_official_validation": "PASS with existing scheme_classes warning",
+    "http_checks": 18,
+    "http_result": "PASS",
+    "scope": "15 head comparisons across three themes plus three representative Wiesbaden PDP source checks. Not full 110 QA."
+  }
+}

@@ -1,6 +1,8 @@
 # Lege categorieën tijdelijk buiten Google — 10 november 2026
 
-Status: EMPTY-CATEGORIES-01 / CONCEPT_VERIFIED_AWAITING_OWNER_PUBLICATION.
+Status: EMPTY-CATEGORIES-01 / WITHDRAWN_BY_OWNER.
+
+> Nieuwere opdracht: alle categorieën mogen indexeerbaar blijven. Het noindexvoorstel hieronder is historisch en teruggedraaid; publiceer het niet. De reserve-layout is weer exact gelijk aan actuele MAIN en het thema heet Reserve - gelijk aan live 10 nov. [Actuele vergelijking](../../repairs/2026-11-10/theme-consolidation/README.md).
 
 ## Opdracht en correctie
 
@@ -40,7 +42,7 @@ Ten opzichte van de huidige MAIN verschilt het concept functioneel alleen in lay
 - Native publicatie, sitemap, leden en SEO blijven ongewijzigd. De 56 routes zijn dus nog live indexeerbaar totdat het concept wordt gepubliceerd. Sitemapverwijdering wordt niet geclaimd.
 - Geen Google-verwijdering, ranking/CTR-effect, mobiele koopflow of eigenaarpublicatie geclaimd. Geen browser- of Windows-uitvoering geclaimd.
 
-## Publicatie en later heropenen
+## Historisch publicatievoorstel — niet uitvoeren
 
 Eén volgende handeling: eigenaar beoordeelt/publiceert **BadkamerCity - Lege categorieen tijdelijk uit**. Daarna de echte live robotsmeta van de 56 routes en de 15 controles opnieuw nakijken. Google verwerkt noindex pas na opnieuw crawlen; geen onmiddellijk verdwijnen beloofd.
 
