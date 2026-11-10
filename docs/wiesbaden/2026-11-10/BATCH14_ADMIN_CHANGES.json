@@ -1,0 +1,509 @@
+{
+  "batch": "BATCH14",
+  "status": "VERIFIED_APPLIED",
+  "theme_id": "196441932042",
+  "created_fields": 50,
+  "changes": [
+    {
+      "ownerId": "gid://shopify/Product/10657343602954",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-glijstuk-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347168010",
+      "compare_digest_after": "8b9cf1bc1a353d936e4e44ac183c61ec1593a2416e9c1768b749e55f8b820eb1"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676288979210",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-glijstuk-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347135242",
+      "compare_digest_after": "8b9cf1bc1a353d936e4e44ac183c61ec1593a2416e9c1768b749e55f8b820eb1"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657343602954",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657343602954\",\"gid://shopify/Product/10676288979210\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658345038090",
+      "compare_digest_after": "558b9001394c9e2262083065410255087e1cc1846b472e7596c51f1b02eef45a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676288979210",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657343602954\",\"gid://shopify/Product/10676288979210\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658345005322",
+      "compare_digest_after": "558b9001394c9e2262083065410255087e1cc1846b472e7596c51f1b02eef45a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657284489482",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-thermostaatkraan-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347102474",
+      "compare_digest_after": "f9e2f8d02614702e34f6fd3e4b9a7c292ca273a30aa81e604a01e2237dddb3bd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657326989578",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-thermostaatkraan-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347069706",
+      "compare_digest_after": "f9e2f8d02614702e34f6fd3e4b9a7c292ca273a30aa81e604a01e2237dddb3bd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657284489482",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657284489482\",\"gid://shopify/Product/10657326989578\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344972554",
+      "compare_digest_after": "837fef3cd1dd74179bb68fe44191542bc10443d8846f60491b7d0d7c153516ec"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657326989578",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657284489482\",\"gid://shopify/Product/10657326989578\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344939786",
+      "compare_digest_after": "837fef3cd1dd74179bb68fe44191542bc10443d8846f60491b7d0d7c153516ec"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657302675722",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347036938",
+      "compare_digest_after": "ad6b8bf0efe31ba023ab3b884e7594d0e1daa2b7703243f8b8b1537dbcc8c316"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657343275274",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-voor-thermostatische-regendoucheset-opbouw-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347004170",
+      "compare_digest_after": "ad6b8bf0efe31ba023ab3b884e7594d0e1daa2b7703243f8b8b1537dbcc8c316"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657302675722",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657302675722\",\"gid://shopify/Product/10657343275274\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344907018",
+      "compare_digest_after": "3689386492c2948b1acc9875ec1b5d2df9ddd6a5cb5984c9be32a7021e2f7477"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657343275274",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657302675722\",\"gid://shopify/Product/10657343275274\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344874250",
+      "compare_digest_after": "3689386492c2948b1acc9875ec1b5d2df9ddd6a5cb5984c9be32a7021e2f7477"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657279836426",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-amador-schuimstraalbreker-fonteinkraan-met-muurbevestiging-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346971402",
+      "compare_digest_after": "7e9fa9b9989ca5e466fd8f3e52b39226ea041f351ecb900e001039b6e9f803e7"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657294942474",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-amador-schuimstraalbreker-fonteinkraan-met-muurbevestiging-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346938634",
+      "compare_digest_after": "7e9fa9b9989ca5e466fd8f3e52b39226ea041f351ecb900e001039b6e9f803e7"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657279836426",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657279836426\",\"gid://shopify/Product/10657294942474\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344841482",
+      "compare_digest_after": "38759fe2e46db43a06226d22e2f09904dc9bf8a011519e6a40510f4f638b320b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657294942474",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657279836426\",\"gid://shopify/Product/10657294942474\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344808714",
+      "compare_digest_after": "38759fe2e46db43a06226d22e2f09904dc9bf8a011519e6a40510f4f638b320b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657308049674",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-afstandhouder-voor-tegelroosters-kunststof-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346905866",
+      "compare_digest_after": "b5de27bddf1c6b5c74bed97c7ef75cb0275f58d8b8c467c94153df8d9ae0411c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657351827722",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-afstandhouder-voor-tegelroosters-kunststof-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346873098",
+      "compare_digest_after": "b5de27bddf1c6b5c74bed97c7ef75cb0275f58d8b8c467c94153df8d9ae0411c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657381712138",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-afstandhouder-voor-tegelroosters-kunststof-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346840330",
+      "compare_digest_after": "b5de27bddf1c6b5c74bed97c7ef75cb0275f58d8b8c467c94153df8d9ae0411c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657308049674",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308049674\",\"gid://shopify/Product/10657351827722\",\"gid://shopify/Product/10657381712138\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344775946",
+      "compare_digest_after": "abcb3f8a6fa6acceecf4c17a21b5ae29c8ca206ae08f855d057fbc8661622ef8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657351827722",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308049674\",\"gid://shopify/Product/10657351827722\",\"gid://shopify/Product/10657381712138\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344743178",
+      "compare_digest_after": "abcb3f8a6fa6acceecf4c17a21b5ae29c8ca206ae08f855d057fbc8661622ef8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657381712138",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308049674\",\"gid://shopify/Product/10657351827722\",\"gid://shopify/Product/10657381712138\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344710410",
+      "compare_digest_after": "abcb3f8a6fa6acceecf4c17a21b5ae29c8ca206ae08f855d057fbc8661622ef8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657290387722",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-sifon-rozet-x-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346807562",
+      "compare_digest_after": "f876ab63f8362cf592cafbee2456aaf6abd672e4ef420abe5101bae200e4df31"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657329479946",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-sifon-rozet-x-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346774794",
+      "compare_digest_after": "f876ab63f8362cf592cafbee2456aaf6abd672e4ef420abe5101bae200e4df31"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657290387722",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657290387722\",\"gid://shopify/Product/10657329479946\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344677642",
+      "compare_digest_after": "a6c33529b39bb80015f0f2ee2acd52d31af500506d07105f6303e87c5430ce84"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657329479946",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657290387722\",\"gid://shopify/Product/10657329479946\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344644874",
+      "compare_digest_after": "a6c33529b39bb80015f0f2ee2acd52d31af500506d07105f6303e87c5430ce84"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657308901642",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-schroevenset-voor-ophangbeugel-2-stuks-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346742026",
+      "compare_digest_after": "bb645a99526272da30f86699df4b2508c80e3318ea1dfb1e50e75f5d0e6e8961"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657328496906",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-schroevenset-voor-ophangbeugel-2-stuks-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346709258",
+      "compare_digest_after": "bb645a99526272da30f86699df4b2508c80e3318ea1dfb1e50e75f5d0e6e8961"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657330987274",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-schroevenset-voor-ophangbeugel-2-stuks-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346676490",
+      "compare_digest_after": "bb645a99526272da30f86699df4b2508c80e3318ea1dfb1e50e75f5d0e6e8961"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657308901642",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308901642\",\"gid://shopify/Product/10657328496906\",\"gid://shopify/Product/10657330987274\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344612106",
+      "compare_digest_after": "1acb8013430414fcfed6e08ca506acb393a43d1757962df6c01b4e869e9f78fd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657328496906",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308901642\",\"gid://shopify/Product/10657328496906\",\"gid://shopify/Product/10657330987274\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344579338",
+      "compare_digest_after": "1acb8013430414fcfed6e08ca506acb393a43d1757962df6c01b4e869e9f78fd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657330987274",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657308901642\",\"gid://shopify/Product/10657328496906\",\"gid://shopify/Product/10657330987274\"]",
+      "metafield_id_after": "gid://shopify/Metafield/71658344546570",
+      "compare_digest_after": "1acb8013430414fcfed6e08ca506acb393a43d1757962df6c01b4e869e9f78fd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657354744074",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-less-losse-glasplaat-vintage-brons-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346643722",
+      "compare_digest_after": "770c57de55600c78ac70e5d1a7e81c0c9f052e9d11db1df5cadd98f20f29e2c8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657385382154",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-less-losse-glasplaat-vintage-brons-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346610954",
+      "compare_digest_after": "770c57de55600c78ac70e5d1a7e81c0c9f052e9d11db1df5cadd98f20f29e2c8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657354678538",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-less-losse-glasplaat-vintage-brons-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346578186",
+      "compare_digest_after": "770c57de55600c78ac70e5d1a7e81c0c9f052e9d11db1df5cadd98f20f29e2c8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657385251082",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-less-losse-glasplaat-vintage-brons-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346545418",
+      "compare_digest_after": "770c57de55600c78ac70e5d1a7e81c0c9f052e9d11db1df5cadd98f20f29e2c8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657294582026",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346512650",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657295597834",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346479882",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657311817994",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346447114",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657329905930",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346414346",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657334427914",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658346381578",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657337147658",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347692298",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657279738122",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347659530",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657294680330",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347626762",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657322270986",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347593994",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657328824586",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347561226",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657332887818",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347528458",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657345896714",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347495690",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657346027786",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347462922",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657280098570",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-amador-fonteinkraan-uitvoering-keuze",
+      "metafield_id_after": "gid://shopify/Metafield/71658347430154",
+      "compare_digest_after": "eea65f9260d3503cc029bf81bd86ee0bf1d6c540cbb7aa0d77179fd4f4a28b1a"
+    }
+  ],
+  "rollback_rule": "Read fresh values first; remove only exact after matches from this manifest. Do not alter any preserved fields or any of the266 unchanged reviews. Restore section/router from code parent8d6aca1; nine unused assets may remain."
+}
