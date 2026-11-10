@@ -377,8 +377,9 @@
         } catch (_) { /* Keep the named-color fallback. */ }
       }
       const name = String(value || '').toLowerCase();
+      if (/(?:^|[^a-z])gun[\s_-]*metal(?:$|[^a-z])/.test(name)) return 'linear-gradient(120deg,#343e45,#7a8790,#455159)';
       if (/zwart|black/.test(name)) return 'linear-gradient(120deg,#1e2023,#45474a,#151719)';
-      if (/gun.?metal|verouderd ijzer/.test(name)) return 'linear-gradient(120deg,#747578,#43474c,#97999a)';
+      if (/verouderd ijzer/.test(name)) return 'linear-gradient(120deg,#747578,#43474c,#97999a)';
       if (/koper|copper|brons|bronze/.test(name)) return 'linear-gradient(120deg,#916647,#d7ac85,#78513e)';
       if (/messing|goud|gold|brass/.test(name)) return 'linear-gradient(120deg,#a98137,#dfc57d,#a27935)';
       if (/wit|white/.test(name)) return '#f8f8f6';

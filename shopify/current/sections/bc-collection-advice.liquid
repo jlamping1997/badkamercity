@@ -19,31 +19,45 @@
       endfor
     endif
   endfor
-  assign advice_family = 'general'
-  if is_faucet_category
-    assign advice_family = 'faucets'
-  endif
-  assign advice_prefix = 'bc_collection.' | append: advice_family
 -%}
-<section id="bc-category-advice-{{ collection.id }}" class="bc-collection-advice" aria-labelledby="bc-advice-title-{{ section.id }}">
+{%- liquid
+  assign description_parts = collection.description | replace: '<p>[SPLIT]</p>', '__BC_SPLIT__' | replace: '<p>[split]</p>', '__BC_SPLIT__' | replace: '[SPLIT]', '__BC_SPLIT__' | replace: '[split]', '__BC_SPLIT__' | split: '__BC_SPLIT__'
+  assign editorial_fallback = ''
+  case collection.handle
+    when 'bad-accessoires'
+      assign editorial_fallback = 'bath'
+    when 'badgrepen'
+      assign editorial_fallback = 'grab_rails'
+  endcase
+-%}
+{%- capture category_content -%}
+  {%- unless collection.template_suffix == 'category-landing' -%}
+    {%- for description_part in description_parts offset: 1 -%}
+      {{ description_part }}
+    {%- endfor -%}
+  {%- endunless -%}
+  {%- if section.settings.extra_content != blank -%}
+    {{ section.settings.extra_content }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign category_content_text = category_content | strip_html | strip -%}
+<section id="bc-category-advice-{{ collection.id }}" class="bc-collection-advice" aria-label="{{ 'bc_collection.editorial.about' | t: category: collection.title | escape }}">
   <div class="page-width">
-    <div class="bc-collection-advice__heading">
-      <p class="bc-collection-eyebrow">{{ 'bc_collection.choice_help' | t }}</p>
-      <h2 id="bc-advice-title-{{ section.id }}">{{ advice_prefix | append: '.heading' | t }}</h2>
-      <p>{{ advice_prefix | append: '.intro' | t }}</p>
-    </div>
-    <div class="bc-advice-grid">
-      {%- for index in (1..3) -%}
-        <article class="bc-advice-card">
-          <span class="bc-advice-card__number" aria-hidden="true">0{{ index }}</span>
-          <h3>{{ advice_prefix | append: '.title_' | append: index | t }}</h3>
-          <p>{{ advice_prefix | append: '.body_' | append: index | t }}</p>
-        </article>
-      {%- endfor -%}
-    </div>
-    {%- if section.settings.extra_content != blank -%}
-      <div class="bc-collection-advice__extra rte">{{ section.settings.extra_content }}</div>
-    {%- endif -%}
+    <div class="bc-category-editorial">
+      {%- if category_content_text != blank -%}
+        <div class="bc-category-editorial__text rte">{{ category_content }}</div>
+      {%- elsif editorial_fallback != blank -%}
+        {%- assign editorial_prefix = 'bc_collection.editorial.' | append: editorial_fallback -%}
+        <div class="bc-category-editorial__text rte">
+          <h2>{{ editorial_prefix | append: '.heading' | t }}</h2>
+          <p>{{ editorial_prefix | append: '.intro' | t }}</p>
+          <h3>{{ editorial_prefix | append: '.title' | t }}</h3>
+          <p>{{ editorial_prefix | append: '.body' | t }}</p>
+          {%- if editorial_fallback == 'bath' -%}
+            <p><a href="{{ routes.collections_url }}/badgrepen">{{ 'bc_collection.editorial.grab_rails_link' | t }}</a> · <a href="{{ routes.collections_url }}/badbruggen-badplanken">{{ 'bc_collection.editorial.bath_trays_link' | t }}</a></p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
     {%- if section.settings.show_faq and is_faucet_category -%}
       <div class="bc-category-faq">
         <h2>{{ 'bc_collection.faq_title' | t: category: collection.title }}</h2>
@@ -58,23 +72,21 @@
       </div>
     {%- endif -%}
     {%- if section.settings.show_contact and pages['contact'] != blank -%}
-      <div class="bc-category-help">
-        <div><h2>{{ 'bc_collection.help_title' | t }}</h2><p>{{ 'bc_collection.help_body' | t }}</p></div>
-        <a class="bc-collection-button" href="{{ pages['contact'].url }}">{{ 'bc_collection.contact' | t }}<span aria-hidden="true">→</span></a>
-      </div>
+      <p class="bc-category-editorial__contact">{{ 'bc_collection.help_title' | t }} <a href="{{ pages['contact'].url }}">{{ 'bc_collection.contact' | t }} <span aria-hidden="true">→</span></a></p>
     {%- endif -%}
+    </div>
   </div>
 </section>
 {% schema %}
 {
-  "name": "BadkamerCity keuzeadvies",
+  "name": "BC categorietekst",
   "settings": [
     {"type":"link_list","id":"navigation_menu","label":"Menu voor categorieboom","default":"main-menu"},
-    {"type":"richtext","id":"extra_content","label":"Aanvullend advies"},
+    {"type":"richtext","id":"extra_content","label":"Extra categorietekst"},
     {"type":"checkbox","id":"show_faq","label":"Toon veelgestelde vragen bij kranen","default":true},
-    {"type":"checkbox","id":"show_contact","label":"Toon contactblok","default":true}
+    {"type":"checkbox","id":"show_contact","label":"Toon compacte advieslink","default":true}
   ],
-  "presets": [{"name":"BadkamerCity keuzeadvies"}]
+  "presets": [{"name":"BC categorietekst"}]
 }
 {% endschema %}
 

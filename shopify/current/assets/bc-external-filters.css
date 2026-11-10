@@ -468,7 +468,7 @@ html.bc-external-filters-active :is(.bc-collection,.template-search) #product-gr
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card__media img:not([data-bc-card-hover]){transition:opacity .2s ease,transform .25s ease}
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-delivery{font-size:1.2rem;line-height:1.4;min-height:1.7rem;margin:.7rem 0 1rem;color:#69768c}
 html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-delivery--stock{color:#28613b}
-@media(hover:hover) and (pointer:fine){html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card:hover .bc-card-media--hover-ready [data-bc-card-hover]{opacity:1}html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card:hover .bc-card-media--hover-ready img:not([data-bc-card-hover]){opacity:0}}
+@media(hover:hover) and (pointer:fine){html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-media--hover-ready:hover [data-bc-card-hover]{opacity:1}html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-card-media--hover-ready:hover img:not([data-bc-card-hover]){opacity:0}}
 @media(prefers-reduced-motion:reduce){html.bc-external-filters-active :is(.bc-collection,.template-search) #product-grid .bc-filter-card__media img{transition:none}}
 
 

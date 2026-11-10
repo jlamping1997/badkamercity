@@ -366,6 +366,8 @@
 .bc-standard-card > .bc-card-link, .bc-filter-card > .bc-card-link { display: block; position: absolute; inset: 0; z-index: 2; border: 0; border-radius: inherit; cursor: pointer; }
 .bc-standard-card .bc-wishlist-button, .bc-filter-card .bc-wishlist-button, .bc-standard-card .quick-add, .bc-standard-card .quantity-popover-container, .bc-filter-card .bc-card-colors, .bc-filter-card .bc-card-actions { position: relative; z-index: 3; }
 .bc-standard-card > .bc-wishlist-button, .bc-filter-card > .bc-wishlist-button { position: absolute; z-index: 4; }
+/* Keep the image hit area above the full-card link. */
+.bc-standard-card .card__inner, .bc-filter-card .bc-filter-card__media { position: relative; z-index: 3; }
 body #MainContent .bc-card-delivery.bc-card-delivery--stock,
 body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-delivery.bc-card-delivery--stock {
   display: inline-flex;
