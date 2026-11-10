@@ -29,7 +29,8 @@ Zes nieuwe/gewijzigde conceptbodies exact teruggelezen. Bestaande JSrenderer her
 Lokale strikte Liquidparser baseline+beidegewijzigdebestanden PASS. Geen externe validatie-/telemetriehelpers opnieuw uitgevoerd.
 Bestaande JSrenderer met DOMsubstitutie:103startstanden,858geldigeaswissels,26ontbrekendecombinaties afgewezen,573exactekandidaatafbeeldingen,103prijsorders,103dubbelecombinatie- en identiteitsproeven PASS.
 Echte desktopbrowser:41.3566 (118,5×60cm glanswit) →41.3559 (76,6×45cm glanswit); actuele titel, actievekleur en exacte maat bevestigd; geen horizontale documentoverflow.
-Publieke103-paginacontrole loopt nog. Lokale nieuwe harness laat exact éénkleurgenoot toe indien dat het volledige bestaande maatsetje is; geen achteraf wijziging van productdata voor testuitslagen.
+Publieke103-paginacontrole103/103PASS: exact conceptthema, titel, SKU, prijs, eerste foto, cartformuliervariant, begrensdeasset en alle runtimekandidaatfeiten. Lokale nieuwe harness laat exact éénkleurgenoot toe indien dat het volledige bestaande maatsetje is; geen achteraf wijziging van productdata voor testuitslagen.
+MAIN:3/4kleursteekproeven exact naar nieuwe verwijzingenPASS. Elektrisch41.3566renderde5van6referenties; deextra41.3665heeft custom.kleur leeg (verse Adminread bevestigd) en bestaand MAIN-snippet slaat lege labels over. Gerichte nieuwe MAINcontrole tegen de5oorspronkelijke kleurartikelenPASS: bestaande titels/prijs/cart/kleuren intact. Dit is een zichtbare beperking van het bestaande MAIN-kleurmenu, geen claim dat daar6kleuren staan. Het nieuwe concept gebruikt expliciete JSONkleurlabels en toont de6kleuren correct; volledige103previewcontrole bevestigt runtimefeiten, desktop6kleurknoppen gezien. Geen custom.kleur-specificatievelden gewijzigd.
 NOT_TESTED: native mobiel, echte cart voor deze103, browserwissels van deandere3families en kleur/uitvoering binnen dezebatch, volledigeouderegroepenregressie/checkout. Geen Windowslokale clean/statusclaim.
 
 ## Herstel
@@ -38,4 +39,7 @@ Section/router uit parentc120d204e6e87ac82bbbef2174b6f468189906ee terugzetten in
 Nieuweassets: assets/bc-choice-data-3c21f5131341220f.json, assets/bc-choice-data-dad38812c183acba.json, assets/bc-choice-data-019324864dc27fc2.json, assets/bc-choice-data-01fe2176e73e6c8a.json.
 Geen klantdata, credentials, inkoopprijzen of settingsbody in publieke bestanden.
 
-Actieve schrijver: deze sessie. Volgende handeling: publieke HTMLcontrole afronden en centrale overdracht bijwerken. Geen publicatie.
+Volgende handeling: gerichte mobiele/cart-QA op vervolgconcept196441932042 vóór eigenaarpublicatie; verdere gecontroleerde producttypepartijen binnen bestaande eigenaaropdracht toegestaan. Geen actieve schrijver na overdracht. Geen publicatie.
+
+Codecheckpoint: [714e354](https://github.com/jlamping1997/badkamercity/commit/714e35438fb9610c8c146e7a4ea3c669181b436a) op fix/product-cards-2026-10-14; shopify/current is vervolgconceptbron, niet gelijk aan MAIN na batch8.
+
