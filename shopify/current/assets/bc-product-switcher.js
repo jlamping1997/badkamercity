@@ -655,7 +655,10 @@
         colorName.className = 'bc-hotbath-swatch__label';
         colorName.textContent = this.getValueLabel(menu, value);
         const url = swatchUrl(value, this.swatchUrls);
-        if (!url && this.choiceDisplay.exact_candidate_swatches === true) fallback.textContent = 'Productfoto volgt';
+        if (!url && this.choiceDisplay.exact_candidate_swatches === true) {
+          const candidate = findExactMatch(this.products, this.menus, { ...this.state, [menu.key]: value });
+          fallback.textContent = candidate ? 'Productfoto volgt' : 'Niet mogelijk';
+        }
         if (url) {
           const img = document.createElement('img');
           img.src = url;

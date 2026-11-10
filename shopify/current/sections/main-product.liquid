@@ -122,6 +122,7 @@
       echo product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group
     endcapture
     assign current_switch_group = current_switch_group | strip
+    assign bc_wiesbaden_v2_groups = 'wiesbaden-unimatch-douchearm-plafond|wiesbaden-loft-handdoekrek-formaat|wiesbaden-ribbd-wastafelkraan-vast-coldstart' | split: '|'
     assign bc_switcher_data_url = ''
     if bc_hotbath_menu_excluded
       assign current_switch_group = ''
@@ -801,7 +802,7 @@
                       {%- render 'bc-lagoo-choices', product: product, section: section -%}
                     {%- elsif bc_fabriecio_supplier_product and product.metafields.custom.fabriecio_choices.value != blank -%}
                       {%- render 'bc-fabriecio-choices', product: product, section: section -%}
-                    {%- elsif product.vendor == 'Wiesbaden' and current_switch_group == 'wiesbaden-unimatch-douchearm-plafond' -%}
+                    {%- elsif product.vendor == 'Wiesbaden' and bc_wiesbaden_v2_groups contains current_switch_group -%}
                       {% render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url, runtime_products: product.metafields.custom.color_variants.value, compact_product_choices: true %}
                     {%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants.value != blank -%}
                       {%- render 'bc-wiesbaden-colors', product: product, section: section -%}
