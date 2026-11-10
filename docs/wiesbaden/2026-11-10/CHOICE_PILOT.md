@@ -1,49 +1,75 @@
-# Wiesbaden keuzemenu's — overdracht 10 november 2026
+# Wiesbaden keuzemenu's — actuele uitvoering 10 november 2026
 
-**Status: zes keuzegroepen voor51artikelen aangebracht en gecontroleerd in het bestaande ongepubliceerde concept. Eén echte winkelwagenproef met handdoekhouder24.3820 geslaagd en testartikel verwijderd. UniMatch-winkelwagenproef en native mobiel staan nog open. Niet gepubliceerd.**
+**110 bestaande artikelen in 17 keuzegroepen staan in het bestaande ongepubliceerde concept. Deze ronde voegt 59 artikelen toe. Admin-readback en browsersteekproeven slagen; de volledige publieke nacontrole is door netwerktoegang onderbroken. Nog geen publicatievrijgave.**
 
-Het concept is bij de vorige ronde gelijkgetrokken met het actuele live thema. Deze uitbreiding behoudt die samengevoegde basis en alle vijf eerdere groepen. Geen extra thema aangemaakt.
+## Actuele themabasis
 
-| Familie | Artikelen | Keuzes | Conceptvoorbeeld |
+De eigenaar heeft het SEO-thema inmiddels gepubliceerd: **MAIN 196441932042 — BadkamerCity - SEO afronding 10 nov**. De vier nieuwe SEO-bestanden zijn na verse vergelijking gericht overgenomen in **UNPUBLISHED 196416504074**, hetzelfde Wiesbaden-concept. Ze waren daar nog exact gelijk aan de vorige MAIN-versie. Alle vier bodies zijn exact teruggelezen; 15 metadata-doelparen plus Maki- en UniMatch-PDP-headparen behouden de goedgekeurde titel, description, H1, canonical, og:url en robots.
+
+Geen extra thema gemaakt of gepubliceerd. Geen MAIN-file geschreven. De finale volledige inventaris telt 1.401 MAIN- en 1.418 conceptbestanden: 1.397 gedeeld identiek, vier gewijzigde keuzefiles en zeventien nieuwe begrensde groepsassets. De vier SEO-bestanden zijn nu gelijk aan de actuele MAIN. Alle MAIN-checksums zijn behouden.
+
+## Elf toegevoegde families
+
+| Familie | Artikelen | Menu's | Voorbeeld |
 |---|---:|---|---|
-| Maki vouwbare nisdeur, helder glas/chroom |6|Breedte80/90/100cm; scharnierzijde Links/Rechts|[Maki](https://badkamercity.nl/products/wiesbaden-maki-nisdeur-vouwbaar-links-800-x-2000-x-8-mm-nano-helder-glas-chroom-20-3720?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
-| Derde generatie douchegoot met flens en rooster |8|Lengte50t/m120cm, stappen10cm|[Met rooster](https://badkamercity.nl/products/wiesbaden-3e-generatie-douchegoot-met-flens-en-rooster-50-x-7-cm-rvs-33-4168?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
-| Derde generatie douchegoot met flens, zonder rooster |8|Lengte50t/m120cm, stappen10cm|[Zonder rooster](https://badkamercity.nl/products/wiesbaden-3e-generatie-douchegoot-met-flens-zonder-rooster-50-x-7-cm-rvs-33-4140?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
-| Uovo LED-spiegel, dimbaar en verwarmd |7|Formaat70/80/90/100/120/140/150cm|[Uovo](https://badkamercity.nl/products/wiesbaden-uovo-spiegel-ovaal-met-led-dimbaar-en-spiegelverwarming-70-cm-38-4163?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
-|304enkele handdoekhouder|2|Lengte25/60cm|[Handdoekhouder](https://badkamercity.nl/products/wiesbaden-304-handdoekhouder-enkel-25-cm-rvs-24-3822?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
-|UniMatch douchearm met plafondbevestiging|20|Kleur/afwerking; lengte15/20/30cm|[UniMatch](https://badkamercity.nl/products/wiesbaden-unimatch-douchearm-met-plafondbevestiging-20-cm-chroom-29-3810?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0)|
+| Between helder/chroom | 5 | Breedte: 60 cm / 70 cm / 80 cm / 90 cm / 100 cm | [Concept](https://badkamercity.nl/products/wiesbaden-between-nisdeur-600-x-2000-x-8-mm-nano-helder-glas-chroom-20-3829?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Between rook/chroom | 3 | Breedte: 80 cm / 90 cm / 100 cm | [Concept](https://badkamercity.nl/products/wiesbaden-between-nisdeur-800-x-2000-x-8-mm-nano-rookglas-chroom-20-3787?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Puerta nis-schuifdeur helder/chroom | 5 | Breedte: 90 cm / 100 cm / 110 cm / 120 cm / 140 cm | [Concept](https://badkamercity.nl/products/wiesbaden-puerta-nisdeur-met-1-schuifdeur-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3430?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Skyline nis-schuifdeur helder/mat zwart | 5 | Breedte: 100 cm / 110 cm / 120 cm / 130 cm / 140 cm | [Concept](https://badkamercity.nl/products/wiesbaden-skyline-nis-schuifdeur-1000-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3730?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| 3e generatie goot met muurflens en rooster | 4 | Lengte: 70 cm / 80 cm / 90 cm / 100 cm | [Concept](https://badkamercity.nl/products/wiesbaden-3e-generatie-douchegoot-met-muurflens-en-rooster-70-x-7-cm-rvs-33-4175?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| 3e generatie goot zonder flens, met rooster | 4 | Lengte: 70 cm / 80 cm / 90 cm / 100 cm | [Concept](https://badkamercity.nl/products/wiesbaden-3e-generatie-douchegoot-met-rooster-70-x-7-cm-rvs-33-4160?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Ambi One dimbaar en verwarmd | 6 | Formaat: 60 × 60 cm / 80 × 60 cm / 100 × 60 cm / 120 × 60 cm / 140 × 60 cm / 160 × 60 cm | [Concept](https://badkamercity.nl/products/wiesbaden-ambi-one-spiegel-vierkant-met-led-dimbaar-en-spiegelverwarming-60-x-60-cm-38-4120?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Quatro dimbaar en verwarmd | 4 | Formaat: 70 × 50 cm / 80 × 60 cm / 100 × 60 cm / 120 × 60 cm | [Concept](https://badkamercity.nl/products/wiesbaden-quatro-spiegel-rechthoek-met-led-dimbaar-en-spiegelverwarming-70-x-50-cm-38-4110?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Tigris basis-LED | 6 | Formaat: 60 × 80 cm / 80 × 80 cm / 100 × 80 cm / 120 × 80 cm / 140 × 80 cm / 160 × 80 cm | [Concept](https://badkamercity.nl/products/wiesbaden-tigris-spiegel-rechthoek-met-led-60-x-80-cm-38-3760?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Loft handdoekrek | 10 | Kleur/afwerking: Geborsteld brons koper PVD / Geborsteld messing PVD / Gunmetal PVD / Mat zwart / RVS; Formaat: 50 cm hoog / 95 cm hoog | [Concept](https://badkamercity.nl/products/wiesbaden-loft-handdoekrek-95-x-25-x-20-cm-rvs-28-7002?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
+| Ribbd vaste uitloop met coldstart | 7 | Kleur/afwerking: Chroom / Geborsteld staal PVD / Gunmetal PVD / Mat zwart; Uitvoering: Laag / Hoog | [Concept](https://badkamercity.nl/products/wiesbaden-ribbd-wastafelkraan-met-coldstart-chroom-29-5301?preview_theme_id=196416504074&_fd=0&_sc=1&_ab=0) |
 
-De twee gootfamilies houden hun verschillende leveringsinhoud. Uovo60cm zonder verwarming blijft buiten de verwarmde familie. Vaste eigenschappen krijgen geen menu. Bij Maki blijven Links/Rechts fabrikantbenamingen; kijkrichting en stelbereik zijn niet aangevuld.
+Glasfamilies houden vaste hoogte 200 cm en glasdikte 8 mm. Between helder en rook zijn afzonderlijk gehouden, evenals Puerta en Skyline. Losse zijwanden, cabine-sets en onderdelen zijn geen nisdeurkeuzes. Nominale breedte is een menulabel; artikelgebonden stel-/instapmaten blijven eigen gegevens.
 
-## UniMatch: kleine uitbreiding van het bestaande systeem
+De twee extra gootfamilies blijven apart op hun flens en leveringsinhoud. Spiegels gebruiken **Formaat** met beide afmetingen, omdat soms ook de hoogte verandert. Bij Tigris blijven uitvoeringen met stopcontact, scheerspiegel of andere techniek buiten de basisfamilie. Ambi One en Quatro blijven afzonderlijke dimbare/verwarmde families.
 
-Twintig bestaande artikelen vormen één plafondarmfamilie. De zeven exacte afwerkingen zijn Chroom, Geborsteld koper, Geborsteld messing PVD, Geborsteld staal PVD, Mat zwart, Geborsteld brons koper PVD en Gunmetal PVD.30cm/GeborsteldstaalPVD ontbreekt in de actuele winkelmatrix. Die combinatie is uitgeschakeld; dit is geen claim over wereldwijd fabrikantassortiment.
+De zes eerdere groepen met 51 artikelen zijn behouden: Maki6, goot met flens/rooster8, goot met flens zonder rooster8, Uovo verwarmd7, 304 enkele houder2 en UniMatch-plafondarm20. De gedateerde bewijsrun voor die 51 staat in het bestaande privéoverdrachtpakket onder `continuation-batch/`.
 
-De bestaande referenties bevatten per lengte zes of zeven actuele producten. Liquid gebruikt deze voor de actuele variantprijs en eerste foto; JavaScript controleert product-ID, variant-ID, SKU, handle en één variant voordat het de gegevens gebruikt. Alleen passende kleuren worden op de actuele prijs van dezelfde lengte geordend. Bij ontbrekende of ongeldige prijs blijft de oorspronkelijke gehele volgorde behouden. De groepsasset bevat geen vaste prijzen of foto's.
+## Bewezen resultaat in deze ronde
 
-Zes kleuren zijn direct zichtbaar; een geselecteerde zevende kleur blijft zichtbaar. Uitklappen toont alle afwerkingen. Ontbrekende en dubbele volledige combinaties blijven niet selecteerbaar. Een expliciete generieke groepsoptie activeert dit gedrag; bestaande Hotbath-/Verlavio- en de vijf eerdere Wiesbaden-groepen zijn behouden.
+- Alle 59 geselecteerde artikelen hadden vóór toepassing geen `custom.switch_group`. Ze zijn met `compareDigest:null` toegevoegd in drie atomaire verzoeken van 25/25/9. Alle 110 betrokken artikelen zijn actueel teruggelezen in drie ID-chunks: juiste groep, één echte variant/SKU/handle en behoud van de overige gecontroleerde productvelden. De eerdere 51 groepsrecords en de oorspronkelijke kleurreferenties zijn exact behouden.
+- Elf assets en twee gerichte Liquid-delta's zijn aangebracht en exact teruggelezen. De router bewaart alle 662 eerdere koppelingen; elf content-hashroutes staan vóór de oude gedeelde assetrevisievoorwaarde. Alleen UniMatch, Loft en Ribbd staan in de expliciete V2-prioriteitslijst vóór de oude Wiesbaden-kleurroute.
+- Loft en Ribbd gebruiken de bestaande referenties van dezelfde overige uitvoering voor actuele prijs en eerste kandidaatfoto. Er zijn geen nieuwe kleurreferenties aangemaakt en geen vaste prijzen/foto's aan de groepsassets toegevoegd.
+- Eén kleine generieke JavaScriptcorrectie geeft een onmogelijke of dubbelzinnige volledige combinatie het label **Niet mogelijk**. Een werkelijk artikel zonder geldige foto houdt **Productfoto volgt**. De correctie geldt alleen voor bestaande expliciete foto-opt-ins.
+- Echte Chrome-desktop: in alle elf nieuwe groepen is een wissel uitgevoerd, samen 14 aswissels en 25 bezochte productpagina's. Titel, prijs en geselecteerde maat/uitvoering volgden de gekozen bestemming. Loft95RVS→50RVS→50zwart en Ribbdlaagchroom→laagstaal→hoogstaal→hoogzwart behouden de overige keuze. Hoog/chroom binnen coldstart is uitgeschakeld. Enter, herladen en terug naar hoogstaal zijn gecontroleerd; geen horizontale overloop in de monsters bij 1363px.
+- De lokale bestaande renderer is getoetst op 59 nieuwe pagina's, 236 geldige wissels, vier onmogelijke Ribbd-wissels, dubbele matches, 75 kandidaatfoto's en 17 passende prijsvolgordes. De definitieve placeholderfix behoudt 866 oudere groepspagina's exact en verandert bij de vorige51 alleen de bedoelde zes W02-placeholders. Vier strikte Liquid-syntaxiscontroles en JS-syntaxis slagen.
 
-De eerste echte preview bracht een stijlprobleem aan het licht: foto's waren juist geladen maar met de oude300%-uitsnede vrijwel wit. Het conditionele attribuut `data-bc-compact-colors="true"` activeert nu de bestaande100%/contain-fotostijl. Geen nieuw stylesheet of afzonderlijke Wiesbaden-renderer gebouwd. Bij terugkomst vanuit bfcache herlaadt uitsluitend deze aangemelde groep de pagina om hoofdprijs en kandidaatfeiten samen te verversen.
+Dit is geen bewijs dat alle 110 pagina's, formulieren of afbeeldingen daadwerkelijk publiek na deze ronde volledig zijn gecontroleerd. Geen nieuwe winkelwagentoevoeging, checkout, bestelling of betaling uitgevoerd.
 
-## Bewijs en grenzen
+## Onderbroken publieke nacontrole
 
-- Deze ronde:20nieuwe `custom.switch_group`-velden beveiligd aangemaakt en exact teruggelezen; totaal51. Bestaande kleurreferenties en de overige vergeleken productidentiteiten, prijzen, foto's, publicatievelden en waarden bleven gelijk. Metafields zijn winkelbreed; de nieuwe weergaveroutes staan uitsluitend in het concept.
-- Alle51conceptpagina's leveren de juiste titel, artikelcode, prijs, formuliervariant en eerste afbeeldingsbestand/revisie. Alle20UniMatch-pagina's leveren de juiste begrensde asset en samen134exacte actuele kandidaatfeiten.
-- Echte Chrome-desktop:20cm chroom→20cm staal→15cm staal→15cm zwart→30cm zwart. De andere keuze bleef behouden. Ontbrekende staal/30cm-combinatie, uitklappen, Enter-keuze, zes zichtbare kleuren met gekozen zevende, herladen en terug naar15cm zwart gecontroleerd. Foto's geladen op juiste42px/contain-kadering; geen horizontale overloop bij1363px.
-- De echte winkelwagenproef geldt uitsluitend voor de60cmhouder24.3820: één artikel via de PDP-knop toegevoegd, variant53859770695946, juiste foto en €54,99. Daarna via de eigen verwijderlink weggehaald; lege beginstand hersteld. Geen bestelling of betaling.
-- Finale volledige themavergelijking: MAIN196395073802 telt1.401files, concept1964165040741.407;1.397gedeeld identiek, zes nieuwe assets en vier gewijzigde files. MAIN is ongewijzigd. Router-MD5 `e37073d63534dfff2f0175f1355ace11`; de zes groepsroutes staan vóór de oude gedeelde assetrevisievoorwaarde.
-- Lokale regressies:866oude groepspagina's,31eerder gebouwde pagina's en21Verlavio-gevallen identiek;20UniMatch-pagina's,152geldige wissels,8ongeldige en20dubbele combinaties gecontroleerd. De zes baseline/voorstel-Liquid-syntaxiscontroles slagen, inclusief de uiteindelijke stijlkoppeling.
+De geplande geautomatiseerde uitlezing van 110 productpagina's stopte na een netwerktoegangsprobleem. De tool meldde `network approval was cancelled before a decision was returned`; daarna gaven 85 verzoeken `Tunnel connection failed:403Forbidden`.
 
-**Open:** native mobiel/fysiek toestel, daadwerkelijke UniMatch-winkelwagentoevoeging en volledige eigenaarsreview vóór publicatie. De houderproef vervangt deze niet. De officiële externe codevalidator was eerder automatisch geweigerd wegens codeoverdracht en is niet opnieuw geprobeerd; geen ThemeCheck-PASS. Voorraad, levertijd en ontbrekende technische eigenschappen zijn niet ingevuld. Geen lokale Windows-Gitcontrole geclaimd.
+**25 PASS betreffen uitsluitend oudere artikelen:** Maki6, de twee bestaande gootgroepen16 en Uovo3. Geen van de nieuwe59 is via deze automatische servermeting bevestigd. Vier aparte MAIN-steekproeven kregen dezelfde transportfout. De geplande publieke hashcontrole van17assets en37kandidaatfoto-URL's is niet uitgevoerd. Admin-bodyreadback en de afzonderlijk geplande browserinteracties blijven eigen, beperkte bewijzen; zij worden niet als vervanging voor een110-server-PASS gepresenteerd.
 
-## Bronholds blijven apart
+Geen Shopify-productfout of website-botblokkade uit deze transportfout afgeleid. Geen andere client, proxy of netwerkroute geprobeerd. De eerdere volledige51-run blijft gedateerd bewijs. Native mobiel, echte winkelwagenproeven voor de nieuwe groepen en de UniMatch-cartproef blijven open. De eerdere succesvolle add/remove-proef geldt uitsluitend voor houder24.3820 en wordt niet uitgebreid tot deze groepen. De externe officiële validator was eerder automatisch geweigerd en is niet opnieuw geprobeerd; geen ThemeCheck-PASS.
 
-Alleen wiesbaden.nl en officiële Korver-gegevens zijn fabrikantbronnen. Onvolledige technische bronvelden van29.3852/29.3863 zijn niet van andere kleuren geleend. Caral vraagt exact setinhoud-/componentbewijs en correcte bestaande inbouwdeelpartners;29.4115bevat het deel al. Cadans heeft officiële hoge uitvoeringen, maar de drie onderzochte hoge SKU's ontbreken in de winkel; daarom geen fictieve laag/hoog-keuze. Slide houdt acht onopgeloste dubbele combinaties; geen willekeurige eerste SKU of verzonnen oud/nieuw-menu.
+## Bron- en familie-uitzonderingen
 
-## Gericht herstel en vervolg
+- **Ribbd hoog chroom29.5310 bestaat**, maar de afzonderlijk gelezen officiële tabel zegt Coldstart=Nee. Het artikel blijft buiten de zeven-delige coldstartfamilie. Een kleurwissel mag coldstart niet laten verdwijnen. Draaibare en inbouwkranen blijven aparte verkooptypen.
+- Loft95cm heeft een conflict tussen20cm in de titel/eigen tekening en20,5cm in de body. De bewezen nominale hoogte wordt als Formaat50cmhoog/95cmhoog getoond; titel, body en specificaties zijn niet gewijzigd.
+- Tigris38.3761 heeft een vormtabel die afwijkt van de vierkante titel. Formaat80×80cm blijft expliciet; geen bronveld overschreven. Het vierkante Ambi One-artikel heeft dezelfde functionele LED-/verwarmingsfamilie; wattage, lumen en verwarmingsmatmaten zijn niet als constante overgenomen.
+- Bij bredere gekleurde gootkandidaten ontbreekt een goedgekeurde actuele kandidaatfeitenbron. Binnen de tegelroosterverzameling verschillen RVS en gekleurd bovendien in aansluiting en afdichtingsflens. Die42kandidaten zijn niet blind samengevoegd.
+- Kunststofslang30.3532 heeft een afwijkend Met inlage-veld. Tivaro mist de benodigde referentiebron. Beide zijn apart gehouden.
+- Caral-setinhoud/inbouwdeelrelaties, Cadans-hoge artikelen die niet in de winkel staan en de acht Slide-dubbelcombinaties behouden hun eerdere bronholds.
 
-Lees actuele rollen, bronhashes en velden opnieuw. Voor W02 verwijder uitsluitend de twintig deze ronde aangemaakte groepsvelden als identiteit en waarde nog exact overeenkomen met het privébewijs; oorspronkelijke kleurreferenties behouden. Neem vervolgens alleen W02's twee routerregels en de begrensde asset weg. Zonder die twee regels is de router bytegelijk aan de voorafgaande vijf-groepenversie, MD5 `f4a640149ba4fe1198ad5d0b2162081d`.
+Exacte merk-/fabrikantnummer-/EAN-koppeling gebruikt. Bestaande officiële gegevens eerst; voor Loft/Ribbd18officiëlepagina's opnieuw gelezen. De actuele glassteekproef werd begrensd door429; de oude exacte officiële attribuutfeiten zijn met verse winkelidentiteit/EAN gecombineerd, zonder nieuwe attribuutcontrole te claimen. Alleen wiesbaden.nl en officiële Korver-bronnen gebruikt. Voorraad, levertijd en ontbrekende technische eigenschappen zijn niet ingevuld.
 
-De opt-in-hunks in drie bestaande weergavebestanden kunnen alleen gericht worden teruggedraaid als geen later werk ze gebruikt. Laat de vijf eerdere routes/31velden en twaalf samengevoegde basisbestanden intact. Een oude volledige themefile terugzetten is geen geschikt herstel. Product-, thema- en testbewijzen staan in het bestaande privéoverdrachtpakket onder `continuation-batch/`; de code staat in de actieve Git-branch `fix/product-cards-2026-10-14` onder `shopify/current/`.
+## Parallelle latere SEO-delta behouden
 
-**Volgende handeling:** de zes conceptgroepen gericht op mobiel en het UniMatch-winkelwagenartikel toetsen voordat de eigenaar publiceert. Daarna gericht verder met Caral-componentbewijs. Andere SEO-/Ads-werkstromen blijven behouden; geen actieve schrijver na overdracht.
+Tijdens de checkpointcommit is een nieuwe, afzonderlijke EMPTY-CATEGORIES-01-delta toegevoegd op de gedeelde codebranch. Reserveconcept196395073802 bevat daarvoor een robotsvoorwaarde voor56legecategorieën. Die latere layoutdelta is nog niet in het Wiesbaden-concept toegepast en heeft een eigen eigenaarsreview/publicatiepad. De Git-checkpoint van deze batch is daarom opnieuw op de verse branchbasis opgebouwd, met behoud van die layoutwijziging en bijbehorende documentatie. Een Git-sourcevergelijking van de14Wiesbaden-files bewijst geen volledige Git/Shopify-pariteit voor die latere SEO-layout. Neem de dan goedgekeurde noindexdelta bij een latere gecombineerde release gericht mee; een oudere themapublicatie mag ander werk niet terugdraaien.
+
+## Gericht herstel en volgende handeling
+
+Lees rollen, huidige waarden en bronhashes opnieuw. Verwijder bij afkeur uitsluitend de59deze ronde aangemaakte groepsvelden als de actuele identiteit en waarde exact overeenkomen met het privé-mutatiebewijs. Behoud de oorspronkelijke kleurreferenties en eerdere51velden. Verwijder alleen de elf nieuwe routercases en assets als later werk die niet gebruikt. De expliciete V2-lijst kan gericht naar alleen UniMatch terug; verwijder geen andere routes.
+
+De kleine generieke placeholdercorrectie kan gericht worden behouden of teruggedraaid na broncontrole; zet geen volledig oud JavaScriptbestand over latere wijzigingen. **Behoud de vier overgenomen actuele SEO-bestanden**, ook bij herstel van deze productbatch. Geen oude volledige themakopie terugzetten en geen publicatie als herstelhandeling.
+
+De actieve codebranch is `fix/product-cards-2026-10-14`, bron `shopify/current/`. Alle huidige bewijzen staan in het bestaande privéoverdrachtpakket onder `batch2/`. Main is alleen als documentatie-ingang bijgewerkt; geen lokale Windows-Gitcontrole geclaimd.
+
+**Volgende handeling:** eerst de geblokkeerde publieke110-paginanacontrole en17asset-/37kandidaatfotocontroles afronden wanneer netwerktoegang beschikbaar is. Daarna mobiel en daadwerkelijke cartartikelen toetsen vóór eigenaarpublicatie. Eerst geen nieuwe families op deze onbeëindigde controle stapelen. Geen actieve Wiesbaden-schrijver na overdracht.
