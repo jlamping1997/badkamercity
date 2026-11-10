@@ -4,6 +4,8 @@ Renders the existing V2 product switcher with an optional scoped preview source.
 @param {section} section - The containing section.
 @param {string} [switch_group] - Explicit group; defaults to the existing product field.
 @param {string} [data_url] - Explicit data URL; defaults to the existing shared asset.
+@param {array} [runtime_products] - Explicit current product references for exact candidate facts.
+@param {boolean} [compact_product_choices] - Reuse existing compact product-photo styles.
 @example
 {% render 'bc-product-switcher', product: product, section: section %}
 {% enddoc %}
@@ -25,6 +27,10 @@ Renders the existing V2 product switcher with an optional scoped preview source.
 -%}
 
 {%- if bc_switch_group != blank -%}
+  {%- if compact_product_choices -%}
+    {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
+    {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
+  {%- endif -%}
   {%- if bc_switcher_vendor == 'hotbath' -%}
     {%- assign bc_hotbath_swatch_codes = 'cr,gn,wh,bb,ab,ai,bbp,bcp,mbp,pbp,bgp,ix,tb' | split: ',' -%}
     {%- capture bc_hotbath_swatch_urls -%}
@@ -51,10 +57,27 @@ Renders the existing V2 product switcher with an optional scoped preview source.
     data-product-handle="{{ product.handle | escape }}"
     data-product-url="{{ product.url | escape }}"
     data-section-id="{{ section.id | escape }}"
-    {% if data_url != blank %}data-bc-preserve-position="true"{% endif %}
+    {% if compact_product_choices %}data-bc-compact-colors="true"{% endif %}
+    {% if data_url != blank or compact_product_choices %}data-bc-preserve-position="true"{% endif %}
     data-switcher-fallback-url="{{ bc_switcher_fallback_url | escape }}"
     data-switcher-data-url="{{ bc_switcher_data_url | escape }}"
-  ></div>
+  >
+    {%- if runtime_products != blank -%}
+      {%- capture bc_choice_facts -%}
+        {%- assign bc_choice_facts_count = 0 -%}
+        {%- for bc_choice_product in runtime_products -%}
+          {%- assign bc_choice_variant_count = bc_choice_product.variants | size -%}
+          {%- assign bc_choice_variant = bc_choice_product.variants | first -%}
+          {%- if bc_choice_variant_count == 1 and bc_choice_product.url != blank -%}
+            {%- if bc_choice_facts_count > 0 -%},{%- endif -%}
+            {%- assign bc_choice_facts_count = bc_choice_facts_count | plus: 1 -%}
+            {"product_id":{{ bc_choice_product.id | prepend: 'gid://shopify/Product/' | json }},"variant_id":{{ bc_choice_variant.id | prepend: 'gid://shopify/ProductVariant/' | json }},"sku":{{ bc_choice_variant.sku | json }},"handle":{{ bc_choice_product.handle | json }},"variant_count":1,"price_cents":{{ bc_choice_variant.price | json }},"first_image_url":{%- if bc_choice_product.images.first != blank -%}{{ bc_choice_product.images.first | image_url: width: 160 | json }}{%- else -%}""{%- endif -%}}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endcapture -%}
+      <script type="application/json" data-bc-choice-facts>[{{ bc_choice_facts | replace: '</', '<\/' }}]</script>
+    {%- endif -%}
+  </div>
   <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 

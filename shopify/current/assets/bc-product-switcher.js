@@ -270,6 +270,37 @@
     return matches.length === 1 ? matches[0] : undefined;
   }
 
+  function getExactProductFacts(product, facts) {
+    if (!product || !normalize(product.product_id) || !Array.isArray(facts)) return undefined;
+    const matches = facts.filter((fact) => fact &&
+      normalize(fact.product_id) === normalize(product.product_id));
+    if (matches.length !== 1 || matches[0].variant_count !== 1 ||
+        normalize(matches[0].variant_id) !== normalize(product.variant_id) ||
+        normalize(matches[0].sku) !== normalize(product.sku) ||
+        normalize(matches[0].handle) !== normalize(product.handle)) return undefined;
+    return matches[0];
+  }
+
+  function orderCompatibleColors(products, menus, state, menu, values, facts) {
+    const candidates = values.map((value, index) => {
+      const product = findExactMatch(products, menus, { ...state, [menu.key]: value });
+      const fact = getExactProductFacts(product, facts);
+      const price = fact?.price_cents;
+      return { value, index, product, price,
+        priced: Number.isSafeInteger(price) && price >= 0 };
+    });
+    if (candidates.some((candidate) => candidate.product && !candidate.priced)) return values;
+    return candidates.sort((a, b) => Number(Boolean(b.product)) - Number(Boolean(a.product)) ||
+      (a.product && b.product ? a.price - b.price : 0) || a.index - b.index)
+      .map((candidate) => candidate.value);
+  }
+
+  function getColorVisibleLimit(values, display, isVerlavio) {
+    if (isVerlavio) return values.length;
+    const limit = display?.visible_color_limit;
+    return Number.isInteger(limit) && limit > 0 && limit <= 24 ? limit : 4;
+  }
+
   function getDisplayType(menu, values) {
     const displayType = normalize(menu.display_type).toLowerCase();
     if (displayType === 'buttons' || displayType === 'dropdown') return displayType;
@@ -326,6 +357,15 @@
       this.group = this.findGroup();
       this.menus = getMenus(this.group);
       this.products = getProducts(this.group);
+      this.choiceDisplay = this.group?.choice_display && typeof this.group.choice_display === 'object'
+        ? this.group.choice_display : {};
+      this.runtimeFacts = [];
+      if (this.choiceDisplay.exact_candidate_swatches === true) {
+        try {
+          const facts = JSON.parse(this.root.querySelector('script[data-bc-choice-facts]')?.textContent || '[]');
+          if (Array.isArray(facts) && facts.length <= 1000) this.runtimeFacts = facts;
+        } catch (_) {}
+      }
       this.currentProduct = this.findCurrentProduct();
       this.state = {};
       this.productRoot = root.closest('product-info');
@@ -386,16 +426,22 @@
           if (labels && typeof labels === 'object' && !Array.isArray(labels)) this.choiceLabels = labels;
         } catch (_) {}
       }
-      this.compactChoices = this.root.dataset.hotbathMobileA === 'true' || this.root.dataset.bcCompactColors === 'true';
+      this.compactChoices = this.root.dataset.hotbathMobileA === 'true' || this.root.dataset.bcCompactColors === 'true' || this.choiceDisplay.compact_colors === true;
       try {
         this.swatchUrls = JSON.parse(this.root.dataset.hotbathSwatchUrls || '{}');
         if (!this.swatchUrls || typeof this.swatchUrls !== 'object') this.swatchUrls = {};
       } catch (_) {
         this.swatchUrls = {};
       }
-      if (this.root.dataset.bcCompactColors === 'true') {
+      if (this.root.dataset.bcCompactColors === 'true' || this.choiceDisplay.exact_candidate_swatches === true) {
         const colorMenu = this.menus.find(isColorMenu);
-        if (this.isVerlavio && colorMenu) {
+        if (this.choiceDisplay.exact_candidate_swatches === true && colorMenu) {
+          this.swatchUrls = Object.fromEntries(this.getMenuValues(colorMenu).map((value) => {
+            const destination = findExactMatch(this.products, this.menus, { ...this.state, [colorMenu.key]: value });
+            const fact = getExactProductFacts(destination, this.runtimeFacts);
+            return [value, typeof fact?.first_image_url === 'string' ? fact.first_image_url : ''];
+          }));
+        } else if (this.isVerlavio && colorMenu) {
           this.swatchUrls = Object.fromEntries(this.getMenuValues(colorMenu).map((value) => {
             const destination = findExactMatch(this.products, this.menus, { ...this.state, [colorMenu.key]: value });
             return [value, destination?.swatch_url || ''];
@@ -421,9 +467,13 @@
           requestAnimationFrame(()=>{if(target.isConnected){target.scrollIntoView({block:'center',behavior:'instant'});target.focus({preventScroll:true});}});
         }
       }else this.positionRestore?.activate();
-      this.onPageShow = () => {
+      this.onPageShow = (event) => {
         if (!this.root.isConnected) {
           window.removeEventListener('pageshow', this.onPageShow);
+          return;
+        }
+        if (event?.persisted && this.choiceDisplay.refresh_on_bfcache === true) {
+          window.location.reload();
           return;
         }
         if (!this.isNavigating) return;
@@ -464,6 +514,9 @@
 
     getMenuValues(menu) {
       const values = getValuesForMenu.call(menu, this.products, menu.key);
+      if (this.choiceDisplay.color_order === 'compatible_price_asc' && isColorMenu(menu)) {
+        return orderCompatibleColors(this.products, this.menus, this.state, menu, values, this.runtimeFacts);
+      }
       return this.isVerlavio && isMeasurementMenu(menu) ? [...values].sort(compareMeasurements) : values;
     }
 
@@ -575,7 +628,7 @@
       list.setAttribute('role', 'group');
       list.setAttribute('aria-label', this.getMenuLabel(menu));
       const selectedValue = normalize(this.state[menu.key]);
-      const visibleLimit = this.isVerlavio ? values.length : 4;
+      const visibleLimit = getColorVisibleLimit(values, this.choiceDisplay, this.isVerlavio);
       const visibleValues = new Set(values.slice(0, visibleLimit));
       if (!visibleValues.has(selectedValue) && values.includes(selectedValue)) {
         visibleValues.delete(values[visibleLimit - 1]);
@@ -602,6 +655,7 @@
         colorName.className = 'bc-hotbath-swatch__label';
         colorName.textContent = this.getValueLabel(menu, value);
         const url = swatchUrl(value, this.swatchUrls);
+        if (!url && this.choiceDisplay.exact_candidate_swatches === true) fallback.textContent = 'Productfoto volgt';
         if (url) {
           const img = document.createElement('img');
           img.src = url;
@@ -613,6 +667,7 @@
           img.addEventListener('load', () => button.classList.add('has-swatch-image'));
           img.addEventListener('error', () => {
             button.classList.remove('has-swatch-image');
+            if (this.choiceDisplay.exact_candidate_swatches === true) fallback.textContent = 'Productfoto volgt';
             img.remove();
           });
           surface.append(img);
@@ -721,7 +776,10 @@
         const field = button.dataset.switchField;
         const value = normalize(button.dataset.switchValue);
         const isActive = normalize(this.state[field]) === value;
-        const isEnabled = hasPartialMatch(this.products, { ...this.state, [field]: value });
+        const candidateState = { ...this.state, [field]: value };
+        const isEnabled = this.choiceDisplay.exact_candidate_swatches === true
+          ? Boolean(findExactMatch(this.products, this.menus, candidateState))
+          : hasPartialMatch(this.products, candidateState);
 
         button.classList.toggle('is-active', isActive);
         button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
@@ -736,7 +794,10 @@
         select.disabled = this.isNavigating;
 
         Array.from(select.options).forEach((option) => {
-          option.disabled = !hasPartialMatch(this.products, { ...this.state, [field]: normalize(option.value) });
+          const candidateState = { ...this.state, [field]: normalize(option.value) };
+          option.disabled = this.choiceDisplay.exact_candidate_swatches === true
+            ? !findExactMatch(this.products, this.menus, candidateState)
+            : !hasPartialMatch(this.products, candidateState);
         });
 
         if (currentValue && select.value !== currentValue) select.value = currentValue;
@@ -789,7 +850,7 @@
         return;
       }
 
-      if (this.isVerlavio) {
+      if (this.isVerlavio || this.choiceDisplay.exact_candidate_swatches === true) {
         const currentUrl = new URL(window.location.href);
         if (currentUrl.searchParams.has('preview_theme_id')) {
           ['preview_theme_id', '_fd', 'pb', '_ab', '_sc'].forEach((key) => {
