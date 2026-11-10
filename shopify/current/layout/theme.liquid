@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    {%- assign bc_metadata_canonical = canonical_url -%}
+    {%- if request.page_type == 'list-collections' and template.suffix == 'merken' -%}
+      {%- assign bc_metadata_canonical = canonical_url | append: '?view=merken' -%}
+    {%- endif -%}
+    <link rel="canonical" href="{{ bc_metadata_canonical | escape }}">
     {%- if page.handle == 'verlanglijst' -%}<meta name="robots" content="noindex,follow">{%- endif -%}
 
     {%- if settings.favicon != blank -%}
@@ -17,9 +21,26 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    {%- if request.page_type == 'list-collections' and template.suffix == blank -%}
-      {%- assign page_title = 'bc_assortment.seo_title' | t -%}
-      {%- assign page_description = 'bc_assortment.seo_description' | t -%}
+    {%- if request.page_type == 'list-collections' -%}
+      {%- if template.suffix == blank -%}
+        {%- assign page_title = 'bc_assortment.seo_title' | t -%}
+        {%- assign page_description = 'bc_assortment.seo_description' | t -%}
+      {%- elsif template.suffix == 'merken' -%}
+        {%- assign page_title = 'bc_brand_meta.overview.title' | t -%}
+        {%- assign page_description = 'bc_brand_meta.overview.description' | t -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if request.page_type == 'collection' and collection.current_vendor != blank -%}
+      {%- assign bc_brand_meta_key = collection.current_vendor | handleize | replace: '-', '_' -%}
+      {%- assign bc_brand_meta_keys = 'hotbath,jee_o,lagoo,porcelanosa,sunshower,the_mosaic_factory,verlavio,wiesbaden' | split: ',' -%}
+      {%- if bc_brand_meta_keys contains bc_brand_meta_key -%}
+        {%- assign bc_brand_meta_path = 'bc_brand_meta.' | append: bc_brand_meta_key -%}
+        {%- assign bc_brand_title_key = bc_brand_meta_path | append: '.title' -%}
+        {%- assign bc_brand_description_key = bc_brand_meta_path | append: '.description' -%}
+        {%- assign page_title = bc_brand_title_key | t -%}
+        {%- assign page_description = bc_brand_description_key | t -%}
+      {%- endif -%}
     {%- endif -%}
 
     {%- if request.page_type == 'index' -%}
@@ -46,7 +67,7 @@
       <meta name="description" content="{{ page_description | escape_once }}">
     {% endif %}
 
-    {% render 'meta-tags', page_title: page_title, page_description: page_description %}
+    {% render 'meta-tags', page_title: page_title, page_description: page_description, page_canonical_url: bc_metadata_canonical %}
 
     <script src="{{ 'bc-money.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -401,3 +422,4 @@
     {%- endif -%}
   </body>
 </html>
+

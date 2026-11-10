@@ -1,0 +1,95 @@
+{
+  "checks": 22,
+  "result": "PASS",
+  "cases": [
+    {
+      "name": "brand-Hotbath",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-JEE-O",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-Lagoo",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-Porcelanosa",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-Sunshower",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-THE MOSAIC FACTORY",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-Verlavio",
+      "result": "PASS"
+    },
+    {
+      "name": "brand-Wiesbaden",
+      "result": "PASS"
+    },
+    {
+      "name": "merken view",
+      "result": "PASS"
+    },
+    {
+      "name": "assortiment",
+      "result": "PASS"
+    },
+    {
+      "name": "wastafelkranen native unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "afvoerpluggen native unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "badkamermeubels native unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown vendor unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "other view unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "homepage preferences preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "homepage existing fallback",
+      "result": "PASS"
+    },
+    {
+      "name": "collection existing fallback",
+      "result": "PASS"
+    },
+    {
+      "name": "wishlist noindex retained",
+      "result": "PASS"
+    },
+    {
+      "name": "pagination retained",
+      "result": "PASS"
+    },
+    {
+      "name": "vendor case normalisation",
+      "result": "PASS"
+    },
+    {
+      "name": "english fallback",
+      "result": "PASS"
+    }
+  ],
+  "method": "LiquidJS rendering of the actual changed head and metadata snippet; Shopify drop values supplied as fixtures"
+}

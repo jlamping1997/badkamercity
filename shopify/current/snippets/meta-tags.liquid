@@ -2,10 +2,11 @@
   Renders search and social metadata with a homepage image fallback.
   @param {string} [page_title] - Effective page title.
   @param {string} [page_description] - Effective page description.
+  @param {string} [page_canonical_url] - Effective canonical URL.
 {% enddoc %}
 {%- liquid
   assign og_title = page_title | default: shop.name
-  assign og_url = canonical_url | default: request.origin
+  assign og_url = page_canonical_url | default: canonical_url | default: request.origin
   assign og_type = 'website'
   assign og_description = page_description | default: shop.description | default: shop.name
 
@@ -54,3 +55,4 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ og_title | escape }}">
 <meta name="twitter:description" content="{{ og_description | escape_once }}">
+
