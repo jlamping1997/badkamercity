@@ -1,5 +1,27 @@
 # Nacontrole na publicatie en bestaande Google Ads-tag
 
+## 10 november 2026 — native instellingen en Pixel Helper gecontroleerd
+
+Status: **NATIVE_SETTINGS_VERIFIED / MEASUREMENT_NOT_VERIFIED**. De eigenaar heeft de Shopify-aanmelding afgerond. Daarna zijn de bestaande instellingen read-only bekeken; er is niets opgeslagen of omgezet.
+
+De officiële Google & YouTube-app toont Conversiemeting Aan en Verbeterde conversies Aan. Het Google-tagscherm koppelt GTM-TD8PCWDJ aan Ads-bestemming **AW-18563606782**; GA4 en Merchant Center hebben hun eigen bestaande native tags. Afrekenen afgerond staat op **Selecteren uit het gekoppelde account → Google Shopping App Purchase**. De optie voor een aangepaste conversie-ID/label staat uit. Ook begin checkout, add to cart, page view, view item, search en add payment info zijn aan hun bestaande Google Shopping App-acties gekoppeld. Alleen inspectie: de bewerkmodus is geannuleerd, niet opgeslagen.
+
+Onder Klantgebeurtenissen is één Google & YouTube-apppixel aanwezig. Gegevenstoegang staat op Geoptimaliseerd en Toegang ingeschakeld. De privacy-instellingen tonen een geautomatiseerde cookiebanner voor Nederland. Geen privacyinstellingen aangepast, geen toestemming afgeleid uit alleen dit instellingenbeeld.
+
+De officiële Shopify Pixel Helper is via Meer acties → Testen geopend. Voor pixel4568023306 staat **Loaded** met **Events received 0**. Dat is op de homepage, na doorklikken naar Kranen en op het bestaande Hotbath-CB105EXT25CR-product teruggelezen. De productpagina gaf isMerchantRequest:false in de openbare bootstrap, een aanwezige native pixelconfiguratie en privacy-bannerscript; er stond geen cookiebanner in die testsessie. Geen 'awaiting consent'-melding in de helper waargenomen. De precieze toestemmingstoestand en het uitblijven van gebeurtenissen zijn hiermee nog niet verklaard. Geen testbestelling of gefingeerde purchase verstuurd. Browserlog bevatte in de gecontroleerde laatste regels uitsluitend extensiemetadatafouten, geen bewezen Google-pixeloorzaak.
+
+![Pixel Helper: geladen maar nul gebeurtenissen](pixel-helper.jpg)
+
+Dit is een beperkt runtimebewijs. **Loaded is geen bewijs dat Google Ads meetgegevens ontvangt.** Nul helpergebeurtenissen in deze sessie is evenmin voldoende om een algemene storing voor alle bezoekers of een specifieke consentfout vast te stellen.
+
+Google Ads zelf gaf na de aanmeldflow een expliciete weigering voor AI-agenttoegang. Deze browserroute is gestopt en de blokkade is gemeld. Er zijn geen alternatieve Ads-routes of andere accounts geprobeerd. De details van de eigenaarsmelding **Setup measurement**, de geselecteerde campagneconversie en de privé-ontvangststatus blijven daardoor onbekend.
+
+**Benodigde volgende input:** detailscherm onder Setup measurement, inclusief naam/bron/status van de bedoelde conversie. Een screenshot of exacte tekst volstaat. Pas daarna gericht de campagnebestemming, tagdiagnose en toestemming/ontvangst vergelijken; niet willekeurig een extra headtag plaatsen, de app opnieuw koppelen of privacybescherming verruimen.
+
+Officiële uitleg voor de uitgevoerde test: https://help.shopify.com/en/manual/promoting-marketing/pixels/app-pixels . Browserbeperking: https://help.openai.com/articles/20001280-using-cloud-browser-in-chatgpt#when-a-website-blocks-the-task .
+
+---
+
 Datum: 10 november 2026. Bron: verse Shopify-/GitHub-reads en echte Chrome DOM-controle, zonder thema-preview.
 
 ## Resultaat
