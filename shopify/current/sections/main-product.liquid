@@ -122,7 +122,7 @@
       echo product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group
     endcapture
     assign current_switch_group = current_switch_group | strip
-    assign bc_wiesbaden_v2_groups = 'wiesbaden-unimatch-douchearm-plafond|wiesbaden-loft-handdoekrek-formaat|wiesbaden-ribbd-wastafelkraan-vast-coldstart|wiesbaden-less-inloopdouche-helder-2000x8|wiesbaden-less-inloopdouche-rook-2000x8|wiesbaden-less-inloopdouche-vintage-brons-2000x8|wiesbaden-less-inloopdouche-spiegelrook-helder-2000x8' | split: '|'
+    assign bc_wiesbaden_v2_groups = 'wiesbaden-unimatch-douchearm-plafond|wiesbaden-loft-handdoekrek-formaat|wiesbaden-ribbd-wastafelkraan-vast-coldstart|wiesbaden-less-inloopdouche-helder-2000x8|wiesbaden-less-inloopdouche-rook-2000x8|wiesbaden-less-inloopdouche-vintage-brons-2000x8|wiesbaden-less-inloopdouche-spiegelrook-helder-2000x8|wiesbaden-demis-inbouwnis-formaat|wiesbaden-alvara-topblad-46cm|wiesbaden-sulora-topblad-48cm' | split: '|'
     assign bc_switcher_data_url = ''
     if bc_hotbath_menu_excluded
       assign current_switch_group = ''
