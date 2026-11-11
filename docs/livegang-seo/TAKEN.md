@@ -1,3 +1,5 @@
+> **11 november 2026 — SEO-PLAN-01:** [het SEO-stappenplan](seo/STAPPENPLAN.md) bepaalt vanaf nu de volgorde van het gezamenlijke SEO-traject en verwijst per stap naar de bestaande taak-ID's hieronder. **SEO-S01 / WAITING_USER**, 0/20 uitvoering DONE. Eerst Search Console-prestaties laatste drie maanden voor badkamercity.nl delen. De eerdere DONE/PARTIAL-statussen blijven binnen hun bewezen scope behouden; geen uitgevoerde account-/winkelcontrole in deze planstap. De oudere volgende-handelingstekst onderaan betreft het afzonderlijke consistentiedossier en is niet de nieuwe SEO-dagstart.
+
 # Taken — livegang, Google en SEO
 
 > **CATEGORY-COPY-01 — 8 november:** negen inhoudslinks naar lege productlijsten uit acht categoriepagina’s live hersteld.226gepubliceerdeomschrijvingen en negen menu’s gecontroleerd; geen categorie-indeling, producten of themacode gewijzigd. [Bewijs en grenzen](../repairs/2026-11-08/category-content-links/README.md).
