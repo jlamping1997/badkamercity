@@ -803,7 +803,10 @@
                     {%- elsif bc_fabriecio_supplier_product and product.metafields.custom.fabriecio_choices.value != blank -%}
                       {%- render 'bc-fabriecio-choices', product: product, section: section -%}
                     {%- elsif product.vendor == 'BRAUER' -%}
-                      {%- render 'bc-brauer-choices', product: product, section: section -%}
+                      {%- capture bc_brauer_choices_markup -%}
+                        {%- render 'bc-brauer-choices', product: product, section: section -%}
+                      {%- endcapture -%}
+                      {{- bc_brauer_choices_markup -}}
                     {%- elsif product.vendor == 'Wiesbaden' and bc_wiesbaden_v2_groups contains current_switch_group -%}
                       {% render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url, runtime_products: product.metafields.custom.color_variants.value, compact_product_choices: true %}
                     {%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants.value != blank -%}
@@ -1113,7 +1116,7 @@
             {%- render 'bc-porcelanosa-buybox', product: product, section: section, product_form_id: product_form_id, actions_markup: bc_buybox_actions_markup -%}
           {%- else -%}
           {%- if bc_hotbath_menu_excluded == false and bc_hotbath_menu_disabled == false -%}
-          {%- if product.metafields.custom.color_variants.value != blank or product.metafields.custom.fabriecio_choices.value != blank or product.metafields.bc_sunshower.configuration.value != blank or current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}
+          {%- if bc_brauer_choices_markup != blank or product.metafields.custom.color_variants.value != blank or product.metafields.custom.fabriecio_choices.value != blank or product.metafields.bc_sunshower.configuration.value != blank or current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}
             {{ bc_buybox_options_markup }}
           {%- endif -%}
           {%- endif -%}

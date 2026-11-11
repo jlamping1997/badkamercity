@@ -166,7 +166,9 @@
         const exact = candidates.length === 1 ? candidates[0] : null;
         if (exact?.image) {
           const image = make('img');
-          image.src = exact.image;
+          const photo = new URL(exact.image);
+          photo.searchParams.set('width', '160');
+          image.src = photo.href;
           image.alt = '';
           image.width = 80;
           image.height = 80;

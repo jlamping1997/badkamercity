@@ -98,7 +98,7 @@ assert(colourButtons.some(e => e.dataset.value === cabinetUI.current.options.col
 for (const button of colourButtons) {
   const prospective = matches(cabinet, nextState(cabinet, cabinetUI.state, 'colour', button.dataset.value));
   const images = descendants(button).filter(e => e.tagName === 'img');
-  if (images.length) { assert.equal(prospective.length, 1); assert.equal(images[0].dataset.photoSku, prospective[0].sku); assert.equal(images[0].src, prospective[0].image); }
+  if (images.length) { assert.equal(prospective.length, 1); assert.equal(images[0].dataset.photoSku, prospective[0].sku); assert.equal(new URL(images[0].src).pathname, new URL(prospective[0].image).pathname); assert.equal(new URL(images[0].src).searchParams.get('width'), '160'); }
 }
 report.six_colour_limit = true;
 assert.equal(report.groups, 827); assert.equal(report.products, 12142);
