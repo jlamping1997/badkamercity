@@ -1,3 +1,5 @@
+> **11 november 2026 — vaste uitvoeringsvolgorde:** begin bij [SEO-stappenplan en actuele voortgang](seo/STAPPENPLAN.md). Twintig stappen met taakverdeling, acceptatie, log en hervatopdracht. **Actief: SEO-S01 / WAITING_USER; 0/20 uitvoering DONE.** Volgende handeling: Search Console-prestaties laatste drie maanden delen. Het plan hergebruikt TAKEN.md en eerdere bewijzen; de onderstaande auditstanden blijven gedateerd, geen nieuwe livecontrole.
+
 # BadkamerCity — Livegang & SEO
 
 Actuele ingang voor winkelbasis, Google en SEO. **Stand: 8 november 2026 — DOC-LIVE-01.** De winkel is openbaar, de homepage-SEO en het retourbeleid staan live en de Google-meetconfiguratie is aanwezig. Er zijn concrete informatie- en consistentieproblemen; betaling, mail, mobiele koopreis en omzetmeting zijn nog niet volledig bewezen.
