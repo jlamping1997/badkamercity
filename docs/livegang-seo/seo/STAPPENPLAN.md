@@ -1,6 +1,6 @@
 # Badkamercity — SEO-stappenplan en hervatpunt
 
-Versie 1 · 11 november 2026 · eigenaar: Jackson · uitvoering: Jackson + assistent.
+Versie 1.1 · 11 november 2026 · eigenaar: Jackson · uitvoering: Jackson + assistent.
 Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-dossier, geen tweede SEO-project.
 [Projectstatus](../../LIVE_STATUS_AND_NEXT_STEPS.md) · [Bestaande taken](../TAKEN.md) · [Categorisatiebeleid](../../CATEGORIZATION_AND_SEO_POLICY.md).
 
@@ -12,13 +12,13 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S01 — Search Console-prestaties vastleggen |
 | Status | WAITING_USER |
-| Voortgang | 0/20 uitvoeringsstappen DONE; plan vastgelegd, SEO-uitvoering nog niet gestart |
-| Laatste afgeronde handeling | Bestaande Git-documentatie gelezen en dit uitvoeringsplan opgesteld |
-| Exact één volgende handeling voor Jackson | Open Search Console voor badkamercity.nl → Prestaties/Zoekresultaten → laatste 3 maanden → stuur een screenshot met periode, klikken en vertoningen |
-| Wat de assistent daarna doet | Controleert property/periode, noteert nulmeting, vraagt alleen de eerstvolgende ontbrekende rapportweergave en bereidt S02 voor |
-| Wat nog niet is bewezen | Nieuwe GSC-/GA4-/Merchant-data, huidige live themarol, actuele mobiele koopreis en recente cataloguskwaliteit |
+| Voortgang | 0/20 uitvoeringsstappen DONE; S01 deels uitgevoerd: GSC-overzicht ontvangen, detailrapport ontbreekt |
+| Laatste afgeronde handeling | GSC-eigenaarsbeeld gelezen: 2 klikken, 192 vertoningen, 1% CTR, gemiddelde positie 46,3; QC-uitbreiding gespecificeerd |
+| Exact één volgende handeling voor Jackson | Klik in hetzelfde Search Console-rapport op EXPORT → download als Excel en upload het bestand hier; laat de periode en filters gelijk |
+| Wat de assistent daarna doet | Leest de geëxporteerde zoekopdrachten/pagina's en exacte periode, maakt S01 compleet en gaat daarna naar S02 |
+| Wat nog niet is bewezen | Exacte GSC-datums/zoekopdrachten/pagina's, GA4-/Merchant-data, huidige live themarol, actuele koopreis en cataloguskwaliteit |
 | Schrijver na overdracht | Geen actieve schrijver; volgende sessie leest dit blok eerst |
-| Bewijsvorm nu | Repositorydocumentatie via GitHub gelezen; geen Windows-, Shopify-, browser- of Google-accounttest in deze documentatiestap |
+| Bewijsvorm nu | USER_PROVIDED_SCREENSHOT voor GSC-overzicht + Git-documentatie; geen zelfstandige Google-accountread of nieuwe runtimecontrole |
 
 Dit blok is de enige bron voor de actuele SEO-stap. Dezelfde taak-ID en volgende handeling staan in de centrale projectstatus. Historische overdrachten lager in bestanden mogen dit blok niet stil vervangen.
 
@@ -139,6 +139,8 @@ Een bestaande taak kan al deels DONE zijn; de stap toetst de ontbrekende scope e
 - **Output:** bestaand PAGINAREGISTER.md bijwerken. Geen tweede categorieboom.
 
 ### SEO-S06 — productdatagaten onderzoeken
+
+**Uitbreiding op eigenaarverzoek 11 november:** gebruik de bestaande QC-tool voor één productstatusoverzicht. Volg [Productkwaliteit — minimale eerste versie](PRODUCTKWALITEIT.md); aanwezigheid en inhoudelijke goedkeuring blijven apart. Dit is gepland, nog niet geïmplementeerd. Eerst private QC-bron/dekking inspecteren; bestaande oordelen/checkpoints behouden.
 
 - **Jackson:** beschikbare leveranciersexport/bron aanwijzen als die nog niet toegankelijk is.
 - **Assistent:** circa tien uiteenlopende artikelen uit de cluster lezen: compleet/los, kleur/maat, inbouw/afbouw, op voorraad/op aanvraag. Exact merk + fabrikantnummer als basis; EAN als kruiscontrole, dubbelingen onderzoeken.
@@ -284,3 +286,12 @@ Nieuwe ideeën hieronder met datum en reden toevoegen. Pas de actieve stap allee
 - **Volgende handeling:** SEO-S01 — Jackson deelt Search Console-prestatieoverzicht laatste drie maanden voor badkamercity.nl.
 - **Herstel:** alleen eigen documentatietoevoeging met behoud van latere wijzigingen terugdraaien; geen winkelherstel nodig.
 - **Git-bewijs:** commits en remote readbacks worden door de uitvoerder gecontroleerd; geen zelfverwijzende commit-SHA in eigen inhoud. S01 blijft WAITING_USER tot rapport is gelezen.
+
+### 11 november 2026 — SEO-S01 deelmeting / QC-SEO-01
+
+- Eigenaarsfoto van Search Console voor URL-prefixproperty https://badkamercity.nl/ ontvangen. Filter “3 months”, zoektype zichtbaar als “Web (text)”; geen extra actieve filterchip zichtbaar. Getoond: 2 klikken, 192 vertoningen, 1% CTR, gemiddelde positie 46,3. Rapport meldt laatste update 3,5 uur geleden; exacte kalendergrenzen niet zichtbaar.
+- Dit is een eerste kleine nulmeting, geen bewijs van drie maanden actieve indexering, volledige domeindekking, lage tekstkwaliteit of een penalty. Geen merksplitsing of paginadiagnose mogelijk zonder detailgegevens. CTR exact overgenomen zoals getoond, geen schijnprecisie.
+- S01 blijft WAITING_USER en niet DONE tot beschikbare zoekopdrachten/pagina's en exacte periode zijn vastgelegd; 0/20 uitvoering DONE.
+- Eigenaar wil bestaande productkwaliteitscheck uitbreiden tot overzicht per product: foto's, PDF, omschrijving, SEO-inhoud, specificaties en wat eerst moet worden opgelost. [Specificatie](PRODUCTKWALITEIT.md) toegevoegd als scope binnen S06–S08/S19, zonder de actieve SEO-stap te vervangen.
+- QC-README op bestaande quality-control-branch bevestigt privéapp, productchecklist en D1-opslag in gedateerde documentatie. Geen nieuwe live appinspectie, deployment of synchronisatie geclaimd.
+- Exact volgende handeling: EXPORT → Excel uit hetzelfde GSC-rapport delen. Geen extra Google-property, pixel of CRM aanmaken.
