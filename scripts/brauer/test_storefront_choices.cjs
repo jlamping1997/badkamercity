@@ -1,0 +1,106 @@
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
+const assert = require('assert/strict');
+const theme = path.resolve(process.argv[2] || 'shopify/current');
+const reportPath = process.argv[3];
+let code = fs.readFileSync(path.join(theme, 'assets/bc-brauer-choices.js'), 'utf8');
+code = code.replace('  function init(scope = document) {',
+  '  globalThis.qa = { active, matches, nextState, Choices, label };\n  function init(scope = document) {');
+class El {
+  constructor(tag = 'div') { this.tagName = tag; this.children = []; this.dataset = {}; this.attrs = {}; this.events = {}; this.disabled = false; this.hidden = false; this._text = ''; this.classes = new Set(); this.classList = { toggle: (k, v) => v ? this.classes.add(k) : this.classes.delete(k), add: k => this.classes.add(k), remove: k => this.classes.delete(k) }; }
+  set className(v) { this.classes = new Set(v.split(' ')); }
+  set textContent(v) { this._text = String(v); this.children = []; }
+  get textContent() { return this._text + this.children.map(x => x.textContent).join(''); }
+  setAttribute(k,v) { this.attrs[k] = String(v); }
+  append(...nodes) { this.children.push(...nodes); }
+  replaceChildren(...nodes) { this.children = nodes; }
+  addEventListener(k, fn) { this.events[k] = fn; }
+  removeEventListener(k) { delete this.events[k]; }
+  focus() { this.focused = true; }
+  closest() { return this.product || null; }
+  querySelector() { return null; }
+  querySelectorAll() { return this.buttons || []; }
+}
+const document = { readyState: 'loading', createElement: t => new El(t), createDocumentFragment: () => new El('fragment'), addEventListener() {}, removeEventListener() {} };
+const navigation = [];
+const sandbox = { document, URL, sessionStorage: { getItem() {return null;}, setItem() {}, removeItem() {} }, requestAnimationFrame: fn => fn(), window: { location: { origin: 'https://badkamercity.nl', href: 'https://badkamercity.nl/products/test?preview_theme_id=196542005514', assign: url => navigation.push(url) }, scrollY: 200, addEventListener() {}, scrollTo() {} } };
+vm.runInNewContext(code, sandbox);
+const { active, matches, nextState, Choices } = sandbox.qa;
+const groups = fs.readdirSync(path.join(theme, 'assets')).filter(n => /^bc-brauer-[a-f0-9]+(?:-[a-z0-9]+)*\.json$/.test(n)).map(n => JSON.parse(fs.readFileSync(path.join(theme, 'assets', n))));
+const report = { groups: groups.length, products: 0, exact_starts: 0, valid_choices: 0, unavailable_choices: 0, conditional_pending_choices: 0, reachable_products: 0, conditional_cart_guard: false, native_select: false, six_colour_limit: false };
+const allIds = new Set();
+for (const group of groups) {
+  report.products += group.products.length;
+  const graph = new Map();
+  for (const product of group.products) {
+    assert(!allIds.has(product.id)); allIds.add(product.id);
+    assert.equal(product.url, '/products/' + product.handle);
+    assert(!product.image || product.image.startsWith('https://cdn.shopify.com/'));
+    const starts = matches(group, product.options);
+    assert.equal(starts.length, 1, group.id + ':' + product.sku);
+    assert.equal(starts[0].sku, product.sku);
+    report.exact_starts++;
+    const reached = new Set();
+    for (const axis of group.axes) {
+      if (!active(group, axis, product.options)) continue;
+      for (const value of axis.values) {
+        const next = nextState(group, product.options, axis.key, value);
+        const targets = matches(group, next);
+        if (!targets.length) { report.unavailable_choices++; continue; }
+        report.valid_choices++;
+        assert.equal(next[axis.key], value);
+        for (const other of group.axes) {
+          if (other.key !== axis.key && !other.reset_on_change?.includes(axis.key)) assert.equal(next[other.key], product.options[other.key]);
+        }
+        if (targets.length > 1) {
+          report.conditional_pending_choices++;
+          assert(group.axes.some(a => a.depends_on && active(group, a, next) && !a.values.includes(next[a.key])));
+        }
+        for (const target of targets) reached.add(target.id);
+      }
+    }
+    graph.set(product.id, reached);
+  }
+  const visited = new Set([group.products[0].id]); const queue = [...visited];
+  for (let i = 0; i < queue.length; i++) for (const id of graph.get(queue[i])) if (!visited.has(id)) { visited.add(id); queue.push(id); }
+  assert.equal(visited.size, group.products.length, 'unreachable choices in ' + group.id);
+  report.reachable_products += visited.size;
+}
+function controller(group, sku) {
+  const product = group.products.find(p => p.sku === sku);
+  const root = new El(); root.product = new El('product-info'); root.product.buttons = [new El('button')];
+  Object.assign(root.dataset, { productHandle: product.handle, productId: product.id.split('/').pop(), variantId: product.variant_id.split('/').pop(), productSku: sku, choiceGroup: group.id });
+  return new Choices(root, group);
+}
+function descendants(node) { return node.children.flatMap(child => [child, ...descendants(child)]); }
+const mirror = groups.find(g => g.products.some(p => p.sku === 'SK-IMD100HW'));
+const ui = controller(mirror, 'SK-IMD100HW');
+assert.equal(descendants(ui.root).some(e => e.dataset.axisGroup === 'door'), false);
+ui.choose(mirror.axes.find(a => a.key === 'width'), '60');
+assert.equal(ui.root.dataset.pending, 'true');
+assert.equal(ui.navigating, false);
+assert.equal(ui.root.product.buttons[0].disabled, true);
+assert(ui.guard);
+assert(descendants(ui.root).some(e => e.dataset.axisGroup === 'door'));
+ui.choose(mirror.axes.find(a => a.key === 'door'), 'Rechts');
+assert.equal(new URL(navigation.at(-1)).pathname, '/products/' + mirror.products.find(p => p.sku === 'SK-IMD60RHW').handle);
+assert.equal(new URL(navigation.at(-1)).searchParams.get('preview_theme_id'), '196542005514');
+report.conditional_cart_guard = true;
+const cabinet = groups.find(g => g.products.some(p => p.sku === 'OK-AM100CH'));
+const cabinetUI = controller(cabinet, 'OK-AM100CH');
+const nodes = descendants(cabinetUI.root);
+assert(nodes.some(e => e.tagName === 'select' && e.dataset.axis === 'width'));
+report.native_select = true;
+const colourButtons = nodes.filter(e => e.tagName === 'button' && e.dataset.axis === 'colour');
+assert.equal(colourButtons.filter(e => !e.hidden).length, 6);
+assert(colourButtons.some(e => e.dataset.value === cabinetUI.current.options.colour && !e.hidden));
+for (const button of colourButtons) {
+  const prospective = matches(cabinet, nextState(cabinet, cabinetUI.state, 'colour', button.dataset.value));
+  const images = descendants(button).filter(e => e.tagName === 'img');
+  if (images.length) { assert.equal(prospective.length, 1); assert.equal(images[0].dataset.photoSku, prospective[0].sku); assert.equal(images[0].src, prospective[0].image); }
+}
+report.six_colour_limit = true;
+assert.equal(report.groups, 827); assert.equal(report.products, 12142);
+if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
+console.log(JSON.stringify(report));

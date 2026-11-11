@@ -1,0 +1,16 @@
+.bc-brauer-choices { display: grid; gap: 1.6rem; }
+.bc-brauer-choices[hidden], .bc-brauer-choices [hidden] { display: none !important; }
+.bc-brauer-choices .bc-hotbath-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bc-brauer-choices .bc-hotbath-swatch__chip { width: 64px; height: 64px; border-radius: .7rem; flex-basis: 64px; }
+.bc-brauer-choices .bc-hotbath-swatch__surface { border-radius: .45rem; }
+.bc-brauer-choices .bc-hotbath-swatch__surface img { width: 100%; height: 100%; object-fit: contain; }
+.bc-brauer-choices .bc-buybox__config-select { min-height: 4.6rem; width: 100%; font: inherit; color: inherit; border: 1px solid #cbd9e3; border-radius: .7rem; padding: .8rem 1.2rem; background: #fff; }
+.bc-brauer-choices .bc-buybox__config-button { min-height: 4.4rem; }
+.bc-brauer-choices .bc-buybox__config-button:disabled { opacity: .35; cursor: not-allowed; }
+.bc-brauer-choices .bc-buybox__switch-status { margin: 0; font-size: 1.3rem; line-height: 1.5; }
+.bc-brauer-choices .bc-buybox__switch-status:empty { display: none; }
+.bc-brauer-choices[data-pending="true"] .bc-buybox__switch-status { padding: 1rem 1.2rem; border-radius: .6rem; background: #fff4dc; color: #614709; }
+@media screen and (min-width: 990px) {
+  .bc-brauer-choices .bc-hotbath-swatches { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.2rem .6rem; }
+  .bc-brauer-choices .bc-hotbath-swatch__chip { width: 54px; height: 54px; flex-basis: 54px; }
+}
