@@ -1,8 +1,8 @@
 # Brauer-keuzemenu’s — 11 november 2026
 
-Status: RELEASE_READY, preview en native cart gecontroleerd; publicatie nog niet uitgevoerd.
+Status: VERIFIED_LIVE — gepubliceerd en daarna zonder preview gecontroleerd.
 
-De eigenaar heeft gevraagd de eerder voorbereide keuzemenu’s online te zetten. De bestaande livebasis is thema 196441932042 (Wiesbaden vervolg concept, nu MAIN). Een exacte Shopify-kopie wordt opgebouwd in UNPUBLISHED 196542005514 (BadkamerCity - Brauer keuzemenus 11 nov).
+De eigenaar heeft gevraagd de eerder voorbereide keuzemenu’s online te zetten. De gemeten livebasis vóór deze ingreep was thema196441932042 (Wiesbaden vervolg concept). De exacte Shopify-kopie196542005514 (BadkamerCity - Brauer keuzemenus 11 nov) is via de Shopify-beheerpagina gepubliceerd en heeft de vers gecontroleerde rolMAIN. De oude basis196441932042 is UNPUBLISHED en blijft het herstelpunt.
 
 ## Uitvoering
 
@@ -20,9 +20,9 @@ De lokale renderercontrole omvat alle 12.142 beginstanden, 151.274 geldige keuze
 
 Alle 838 nieuwe conceptbestanden zijn na upload op door Shopify geretourneerde MD5 gecontroleerd. De kopie is afgerond en alle2522bestanden zijn onafhankelijk teruggelezen:1684oudebronbestanden+838nieuwebestanden, nul verschillen. Daarna zijn uitsluitend de bedoelde sectie-aansluiting en thumbnailresizing bijgewerkt en teruggelezen. De eerste browserproef bracht een oude buybox-gate voor producten zonder metafield aan het licht; die is gecorrigeerd vóór publicatie.
 
-## Nog te bewijzen
+## Browser, native cart en publicatie
 
-Desktop: Amaze100Chateau→80Chateau→80Damascus; Collision100chroom→90chroom; StandaardA1gebogenrozettenchroom→Stripe5-CE-328. Spiegelkast100→60 geeft expliciet een onopgeloste draairichting met uitgeschakelde koopknop; Rechts opent exactSK-IMD60RHW. Nativecart:5-CE-328/variant54103527457034/€331,78, één regel. Testregel verwijderd en lege cart bevestigd. Responsieve controle op340CSS-px: scrollWidth337, menubreedte255; native breedtewissel100→80 correct. Zoom100% hersteld. Publicatie en verse publieke controle volgen; geen liveclaim op dit checkpoint.
+Desktop: Amaze100Chateau→80Chateau→80Damascus; Collision100chroom→90chroom; StandaardA1gebogenrozettenchroom→Stripe5-CE-328. Spiegelkast100→60 geeft expliciet een onopgeloste draairichting met uitgeschakelde koopknop; Rechts opent exactSK-IMD60RHW. Nativecart:5-CE-328/variant54103527457034/€331,78, één regel. Testregel verwijderd en lege cart bevestigd. Responsieve controle op340CSS-px: scrollWidth337, menubreedte255; native breedtewissel100→80 correct. Zoom100% hersteld. Publicatie via Shopify-beheerpagina voltooid. MAIN196542005514 en oude basisUNPUBLISHED196441932042 onafhankelijk teruggelezen. Vijftien cookie-vrije openbare pagina’s PASS: dertien menu-artikelen over alle acht routepartities, één hold en één enkelartikelgroep. Nativevariant en volledige geselecteerde groeps-JSON exact; geen Liquidfout. De browser is uit de preview gehaald en toont de publieke Amaze-keuzes. Zie PUBLIC_VERIFICATION.json.
 
 ## Herstel
 
@@ -30,4 +30,8 @@ Publiceer de ongewijzigde basis 196441932042 terug. Omdat uitsluitend themacode 
 
 ## Exact volgende handeling
 
-Publiceer het gecontroleerde concept196542005514 en controleer de nieuwe MAIN-rol en verse publieke pagina’s. De eigenaar heeft publicatie in deze sessie expliciet gevraagd.
+Deze publicatietaak is voltooid. De negen bestaande CONTROLEREN-groepen blijven geparkeerd; alleen na een nieuwe inhoudelijke opdracht oplossen. Voor aanpassingen aan artikelen/opties/foto’s de groepen opnieuw genereren uit het privébronpakket en een verse Shopify-identiteitsread met scripts/brauer/build_storefront_choices.py; geen nieuwe crawl of herimport nodig.
+
+## Bewijsgrenzen en opslag
+
+Broncode en publieke menu-assets staan op fix/product-cards-2026-10-14 onder shopify/current. Main krijgt uitsluitend dit dossier en actuele documentatie. De volledige private bron- en identiteitsbestanden zijn niet in Git opgenomen. De controles zijn uitgevoerd in een geïsoleerde Linux-checkout; de Windows-pc is niet gecontroleerd. Geen native telefoon-, volledige checkout-, alle12.142HTTP-pagina’s- of productieconversietest geclaimd. De algemene technische bronvragen en ontbrekende productmedia buiten deze menutaak zijn niet door deze publicatie opgelost. Geen actieve schrijver na overdracht.
