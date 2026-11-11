@@ -1,3 +1,11 @@
+# QC-SEO-01 — productstatusoverzicht gepland, nog niet gebouwd
+
+11 november 2026. Eigenaar wil één overzicht van alle producten met foto's/PDF's/omschrijving/SEO-inhoud/specificaties en opvolging: nu oplossen, binnenkort verbeteren of voorlopig behouden. **PLANNED_NOT_IMPLEMENTED.** Bouw voort op deze privé-QC en bestaande D1-reviews/notities/checkpoints; geen nieuw CRM of reset.
+
+De canonieke [specificatie en acceptatie](https://github.com/jlamping1997/badkamercity/blob/main/docs/livegang-seo/seo/PRODUCTKWALITEIT.md) is onderdeel van SEO-S06–S08/S19. Aanwezigheid is geen inhoudelijke goedkeuring; PDF mag onderbouwd NVT zijn; SEO-inhoud is geen rankingscore. Verse catalogusdekking en private broninspectie eerst; eerdere aantallen hieronder zijn momentopnamen. Geen code-, app-, deployment-, database- of Shopify-wijziging in deze planstap. De actieve SEO-stap en eigenaarhandeling staan in het [hervatpunt](https://github.com/jlamping1997/badkamercity/blob/main/docs/livegang-seo/seo/STAPPENPLAN.md); geen uitvoeringsovername door QC.
+
+---
+
 # QC-10 — officiële Lagoo-bron en klantdocumenten
 
 3 november2026.199fabrikantpagina's uitgelezen;1.823foto's en372PDF-kopieën READY in eigen Shopify Files. Geen3D/CAD-bestandsdownload. Nieuwe actieve fotowerkset uitsluitend fabrikantbron, met expliciet codebewijs of onzekere productgroep-kandidaten;24LVS1/2/3varianten en andere merken exact behouden. Oude400beoordelingen blijven historie en worden niet naar nieuwe foto-ID's gekopieerd.612niet-beschermde varianten hebben exacte codekoppeling voor importfoto's; overige importfoto's leeg/hold.254PDF-records in actuele paginalinks, overige kandidaat.48pagina's/314bestaande varianten met expliciete inbouwdeelcontext. [Scope, bewijs, rollback en beperkingen](LAGOO_OFFICIAL_SOURCE_2026-11-03.md).
