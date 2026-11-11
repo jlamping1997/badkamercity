@@ -1,3 +1,5 @@
+> **11 november 2026 — uitvoering en voortgang:** gebruik [STAPPENPLAN.md](STAPPENPLAN.md) voor de vaste twintig stappen, actuele stap, taakverdeling en acceptatie. **SEO-S01 / WAITING_USER**: Search Console-overzicht laatste drie maanden delen. De onderstaande roadmap blijft achtergrond. Het publicatieverzoek van 8 november is historisch: BC-SEO-001 staat in TAKEN.md DONE binnen de vastgelegde scope; homepage-SEO niet opnieuw als ontbrekend behandelen. Geen nieuwe productiecontrole in deze planstap.
+
 # SEO-roadmap
 
 > **8 november2026:** de Search Console-basis is via eigenaarsscreenshots bevestigd. Homepageverbeteringen staan gecontroleerd in **BadkamerCity - Homepage SEO 8 nov (196328685834)**; eigenaarreview en publicatie zijn nog nodig. [Actuele uitvoering](homepage-2026-11-08/README.md). Indexeringsaanvraag Wastafelkranen ingediend; indexopname en effect blijven apart te meten.
