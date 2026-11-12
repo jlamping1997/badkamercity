@@ -6,6 +6,8 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
+[Actuele GA4-proef, grenzen en herstel](2026-11-12-GA4.md). Geen Submit/publicatie bevestigd. Shopping-dubbelmeldingen geparkeerd; urgente containermelding nog onverklaard.
+
 Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bewezen blokkade; volledige technische/Google-rendercontrole niet uitgevoerd. Hervatten bij concrete crawl-/indexfout of latere indexatiereview. SEO-S03 nu actief om resterend gebruik te richten op de meetroute. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
 
 | Veld | Actuele waarde |
@@ -13,10 +15,10 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
-| Status | WAITING_USER |
+| Status | WAITING_USER — homepagefix alleen in Preview |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Salerno Indexing requested bevestigd; sitemap/categorielink en GSC-steekproeven vastgelegd |
-| Exact één volgende handeling voor Jackson | Open analytics.google.com en deel naam/ID van de bestaande Badkamercity-property; geen nieuwe property maken |
+| Laatste afgeronde handeling | GA4-koppeling en cookiebeelden gecontroleerd; send_page_view=false in werkruimte; Preview-homepage één Shopify-page_view PASS, nog niet gepubliceerd |
+| Exact één volgende handeling voor Jackson | Open in hetzelfde verbonden webshopvenster één product en deel Tag Assistant/Hits sent voor die pagina; één page_view plus juiste view_item controleren |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
