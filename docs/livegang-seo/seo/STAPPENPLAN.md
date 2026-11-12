@@ -15,10 +15,10 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
-| Status | IN_PROGRESS — dubbele homepage-page_view live hersteld en gecontroleerd; consentnetwerk open |
+| Status | IN_PROGRESS — live fix en beperkte consentproeven vastgelegd; urgente containermelding nog onderzoeken |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Version2 live; eigenaarproef buiten Preview bevestigt één Shopify-page_view naar juiste GA4-stream |
-| Exact één volgende handeling voor Jackson | Schoon incognito met Network collect vanaf eerste paginalaad opnemen; vóór keuze en na Afwijzen consent/netwerk beoordelen |
+| Laatste afgeronde handeling | Dubbele GA4-page_view live opgelost; eigenaarproef vóór keuze/na weigeren/na intrekken en herladen geen zichtbaar direct GA4-collect |
+| Exact één volgende handeling voor Jackson | Open GTM-WPNHKXXR Overview → View 1 issue en deel de urgente containermelding |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
