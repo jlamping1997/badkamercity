@@ -6,7 +6,7 @@
   "scope": "Exactly 644 Hotbath product IDs in CSV, verified live as vendor Hotbath, zero image media, one variant each. Lagoo and HB prefix item excluded from scope.",
   "googlePublication": "gid://shopify/Publication/301590184202",
   "webshopPublication": "gid://shopify/Publication/283427864842",
-  "state": "PREFLIGHT_VERIFIED_NOT_EXECUTED",
+  "state": "BLOCKED_BY_CONNECTOR_SAFETY_POLICY",
   "counts": {
     "targets": 644,
     "alreadyExcludedByOwner": 1,
@@ -8369,5 +8369,54 @@
         "gid://shopify/Publication/301590184202"
       ]
     }
-  ]
+  ],
+  "result": {
+    "aiUnpublished": 0,
+    "ownerAlreadyExcluded": 1,
+    "remainingGooglePublishedAtPreflight": 643,
+    "attemptedProduct": "gid://shopify/Product/10531430727946",
+    "attemptBlocked": true,
+    "reason": "publishableUnpublish refused by setup-mcp safety policy: Unpublishing is blocked to prevent accidental storefront catalog removal.",
+    "postRefusalReadback": "Attempted product still Google=true, Webshop=true, ACTIVE. No subsequent unpublish attempted.",
+    "manualSelectionChecks": [
+      {
+        "batch": 1,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 2,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 3,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 4,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 5,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 6,
+        "count": 100,
+        "exactApiMatch": true
+      },
+      {
+        "batch": 7,
+        "count": 43,
+        "exactApiMatch": true
+      }
+    ],
+    "googleMerchantSync": "NOT_VERIFIED",
+    "lagoo": "DEFERRED_IMAGE_RETRIEVAL",
+    "hbPrefixItem": "OUT_OF_SCOPE"
+  }
 }
