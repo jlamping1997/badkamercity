@@ -6,6 +6,8 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
+**12 november2026 — eigenaarprioriteit Merchant:** Hotbath zonder foto uitsluiten van uitsluitend Google & YouTube. Connector weigert de publicatiehandeling; nul AI-uitsluitingen. [Zeven voorbereide selecties en werkwijze](../merchant/2026-11-12-HOTBATH.md), exact643IDs via API getest. Eigenaaractie in Shopify nodig; UI en Merchant-sync nog niet bevestigd. Lagoo-foto's apart later ophalen. GA4-fix VERIFIED_LIVE behouden; S03-plaatsingsrestpunt open en Shopping-dubbele events apart geparkeerd.
+
 [Actuele GA4-proef, grenzen en herstel](2026-11-12-GA4.md). Publicatie Version2 bevestigd op12november14:30; homepage-runtime buiten Preview gecontroleerd; consent-netwerk/intrekken/purchase nog open. Shopping-dubbelmeldingen geparkeerd; urgente containermelding nog onverklaard.
 
 Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bewezen blokkade; volledige technische/Google-rendercontrole niet uitgevoerd. Hervatten bij concrete crawl-/indexfout of latere indexatiereview. SEO-S03 nu actief om resterend gebruik te richten op de meetroute. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
@@ -14,14 +16,14 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | --- | --- |
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
-| Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
-| Status | IN_PROGRESS — functionele GA4-herstelproeven PASS; plaatsingswaarschuwing blijft open |
+| Actieve stap | SEO-S12 — afgebakende Merchant-Hotbath-uitsluiting op eigenaarprioriteit; SEO-S03-restpunten open |
+| Status | BLOCKED_BY_CONNECTOR_POLICY / WAITING_OWNER_UI — publishableUnpublish geweigerd; nul AI-uitsluitingen |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Urgente melding gelezen: tagplaatsing op twee PDPs; Caral29.4114 live één gebundelde page_view+view_item met juiste variant/€139 bevestigd |
-| Exact één volgende handeling voor Jackson | Geen voor de geslaagde producteventcontrole; uitvoerder begrenst plaatsingsrestpunt via bestaande bron/diagnostiek, zonder extra thematag |
+| Laatste afgeronde handeling | 644Hotbathproducten live gecontroleerd; één al door eigenaar uitgesloten,643nogGoogle; zeven API-filters exact gecontroleerd |
+| Exact één volgende handeling voor Jackson | Open selectie1 in het Merchant-dossier (100producten) en sluit alle100 uitsluitend uit Google & YouTube uit; overige kanalen en Actief behouden |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
-| Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
+| Bewijsvorm | Eigenaarexport + actuele Shopify-API-reads en expliciete policyweigering; adminfilters via API getest, UI/Google-verwerking niet bevestigd |
 
 ### Hervatten in een andere chat of op een andere pc
 
@@ -296,3 +298,8 @@ Nieuwe ideeën hieronder met datum en reden toevoegen. Pas de actieve stap allee
 - Eigenaar wil bestaande productkwaliteitscheck uitbreiden tot overzicht per product: foto's, PDF, omschrijving, SEO-inhoud, specificaties en wat eerst moet worden opgelost. [Specificatie](PRODUCTKWALITEIT.md) toegevoegd als scope binnen S06–S08/S19, zonder de actieve SEO-stap te vervangen.
 - QC-README op bestaande quality-control-branch bevestigt privéapp, productchecklist en D1-opslag in gedateerde documentatie. Geen nieuwe live appinspectie, deployment of synchronisatie geclaimd.
 - Exact volgende handeling: EXPORT → Excel uit hetzelfde GSC-rapport delen. Geen extra Google-property, pixel of CRM aanmaken.
+
+
+### 12 november2026 — Merchant-Hotbath-eigenaarsprioriteit
+
+Zie [het Merchant-dossier](../merchant/2026-11-12-HOTBATH.md).644CSV-producten zonderfoto live gecontroleerd;643nogGoogle. Eén geweigerde proef, nulAI-uitsluitingen; publicatieblokkade niet omzeilen. Zeven exacte API-geverifieerde selecties voor eigenaarUI klaar. Geen Merchant-sync-/UI-uitvoeringsclaim,1/20DONE behouden. Na eigenaaractie eerst643kanaalstatussen teruglezen.
