@@ -1,5 +1,45 @@
 # Brauer — duidelijke productkeuzes
 
+12 november 2026 · BRAUER-VISUAL-CHOICES-01 · MIRROR_CABINETS_CONCEPT_VERIFIED / RELEASE_PENDING.
+
+## Actueel: 585 spiegelkasten
+
+Op vervolgopdracht 32 groepen /585 echte SK-spiegelkasten verfijnd. De 252 ODB-artikelen die alleen in de titelzoekopdracht spiegelkast voorkwamen zijn onderkasten en zijn buiten deze ronde gehouden.
+
+| Keuze | Presentatie |
+| --- | --- |
+| Kleur | Afwerking, eigen bestaande productfoto |
+| Breedte | 60 cm · 1 deur; 80/100/120 cm · 2 deuren; 140 cm · 3 deuren |
+| Deurrichting | Draairichting: Linksdraaiend / Rechtsdraaiend; alleen bij meerdere beschikbare richtingen |
+| Sorteervolgorde | Verse vergelijkbare EUR-artikelprijs oplopend; onmogelijke opties achteraan |
+
+De aantallen komen uit alle585 actuele brontitels:200 een-deurs,306 twee-deurs en79 drie-deurs. Bronrichting ook gecontroleerd. Optiewaarden, SKU's, variants, routes en afbeeldingen behouden. Cumulatief107groepen/4.060 verbeterde artikelen; bestaande totale menu-universe828groepen/12.292artikelen behouden.
+
+100→60cm behoudt een tussenstand totdat de richting is gekozen. Nieuwe hulptekst: “Kies de draairichting voor je spiegelkast.” De bestaande native koopknopblokkade blijft actief. Geen automatische keuze van links/rechts.
+
+## Verificatie en uitrolgrens
+
+- Volledige renderer:12.292 starts,152.902 geldige keuzes,9.346 onmogelijke keuzes,1.172 voorwaardelijke tussenstanden PASS.
+- Spiegelkasten:585 starts en18 groepen met ontbrekende richting/koopknopblokkade PASS.
+- Prijsvolgorde:107groepen/4.060artikelen/15.271asstanden PASS. Dit is een gedateerde snapshot; na prijswijzigingen opnieuw genereren met verse variants.
+- 33 gewijzigde bestanden Toolkit PASS; JS-syntax, Python-compile en diffcheck PASS.
+- 32 groepsassets + JS uitsluitend naar concept196578803978 geschreven. Alle33 MD5s exact teruggelezen; MAIN196542005514 dezelfde33 checksums onveranderd. Concept UNPUBLISHED.
+- Echte Chrome:100cm/2deuren verbergt richting;60cm/1deur vraagt richting en schakelt native kopen uit; Linksdraaiend navigeert naar SK-IMD60LCH, toont €882,09 en herstelt de koopknop. Productfoto en schermbewijs gecontroleerd.
+- Deze ronde geen nieuwe cart-/smalle-layout-/fysieke-mobiel-/checkout-/Windowsproef. Eerdere bewijzen hieronder blijven bij hun eigen scope.
+- Geen Admin-product-/prijs-/voorraad-/media-/metafield-/kanaalwijzigingen; geen publicatie.
+
+## Herstel en hervatten
+
+Codebranch fix/product-cards-2026-10-14 bouwt voort op22cb344e98fdc29c6de88ab1bcb78877b9d55784. Deze33 bestanden kunnen uit dat checkpoint worden teruggezet in uitsluitend het concept; MAIN niet beschrijven. Het testmanifest vermeldt oude/nieuwe checksums.
+
+Volgende uitvoering: onderkastgroepen beoordelen op begrijpelijke breedte/laden/uitsparingen zonder incompatibele producten te mengen. Uitbreiding is door eigenaar geautoriseerd. Publicatie blijft een afzonderlijke stap.
+
+---
+
+## Historie — voorgaande rondes
+
+# Brauer — duidelijke productkeuzes
+
 12 november 2026 · BRAUER-VISUAL-CHOICES-01 · BASINS_GLASS_CONCEPT_VERIFIED / RELEASE_PENDING.
 
 ## Actueel: 635 volgende artikelen
