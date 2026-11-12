@@ -6,6 +6,9 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
+**12 november2026 — Hotbath-uitsluiting bevestigd:** volledige Shopify-nacontrole644uniekeCSV-producten:644Google=false,644Webshop=true,644ACTIVE; overige publicaties en gecontroleerde voorraad behouden. Eigenaar voerde643resterende uitsluitingen uit; proefartikel al eerderuit. Lagoo-foto's lopen in andere chat; hier geen Lagoo-writes. Merchant Center-sync en resterende setup-/beleidsmeldingen nog niet beoordeeld. [Actueel resultaat](../merchant/2026-11-12-HOTBATH.md).
+
+
 **12 november2026 — eigenaarprioriteit Merchant:** Hotbath zonder foto uitsluiten van uitsluitend Google & YouTube. Connector weigert de publicatiehandeling; nul AI-uitsluitingen. [Zeven voorbereide selecties en werkwijze](../merchant/2026-11-12-HOTBATH.md), exact643IDs via API getest. Eigenaaractie in Shopify nodig; UI en Merchant-sync nog niet bevestigd. Lagoo-foto's apart later ophalen. GA4-fix VERIFIED_LIVE behouden; S03-plaatsingsrestpunt open en Shopping-dubbele events apart geparkeerd.
 
 [Actuele GA4-proef, grenzen en herstel](2026-11-12-GA4.md). Publicatie Version2 bevestigd op12november14:30; homepage-runtime buiten Preview gecontroleerd; consent-netwerk/intrekken/purchase nog open. Shopping-dubbelmeldingen geparkeerd; urgente containermelding nog onverklaard.
@@ -17,10 +20,10 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S12 — afgebakende Merchant-Hotbath-uitsluiting op eigenaarprioriteit; SEO-S03-restpunten open |
-| Status | BLOCKED_BY_CONNECTOR_POLICY / WAITING_OWNER_UI — publishableUnpublish geweigerd; nul AI-uitsluitingen |
+| Status | SEO-S12 PARTIAL — Hotbath-deelactie OWNER_APPLIED_VERIFIED_ADMIN; Merchant-sync/overige problemen nog niet beoordeeld |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | 644Hotbathproducten live gecontroleerd; één al door eigenaar uitgesloten,643nogGoogle; zeven API-filters exact gecontroleerd |
-| Exact één volgende handeling voor Jackson | Open selectie1 in het Merchant-dossier (100producten) en sluit alle100 uitsluitend uit Google & YouTube uit; overige kanalen en Actief behouden |
+| Laatste afgeronde handeling | Alle644CSV-Hotbathproducten onafhankelijk teruggelezen: Googleuit,Webshopaan,ACTIVE; overige kanalen en voorraad behouden |
+| Exact één volgende handeling voor Jackson | Merchant Center Needs attention opnieuw openen voor resterende meldingen/setup- en beleidsproblemen; uitsluitingen niet herhalen |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexport + actuele Shopify-API-reads en expliciete policyweigering; adminfilters via API getest, UI/Google-verwerking niet bevestigd |
@@ -303,3 +306,8 @@ Nieuwe ideeën hieronder met datum en reden toevoegen. Pas de actieve stap allee
 ### 12 november2026 — Merchant-Hotbath-eigenaarsprioriteit
 
 Zie [het Merchant-dossier](../merchant/2026-11-12-HOTBATH.md).644CSV-producten zonderfoto live gecontroleerd;643nogGoogle. Eén geweigerde proef, nulAI-uitsluitingen; publicatieblokkade niet omzeilen. Zeven exacte API-geverifieerde selecties voor eigenaarUI klaar. Geen Merchant-sync-/UI-uitvoeringsclaim,1/20DONE behouden. Na eigenaaractie eerst643kanaalstatussen teruglezen.
+
+
+### 12 november2026 — Hotbath volledig geverifieerd na eigenaaractie
+
+643resterende uitsluitingen door eigenaar plus1eerdereproef; volledige API-readback644/644Googleuit enWebshopaan/ACTIVE. Andere driepublicaties/totalevoorraad/status644/644behouden. Merchant Center-sync niet gecontroleerd; Lagoo loopt in andere chat. Eerdere WAITING_OWNER_UI-instructies zijn historie; geen nieuwe Hotbath-mutaties nodig.1/20DONE behouden.
