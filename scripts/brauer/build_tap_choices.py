@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import re
 
-from refine_visual_choices import HANDLE_LABELS, refine_group
+from refine_visual_choices import HANDLE_LABELS, GLASS_CHOICE_FAMILIES, refine_group
 
 OPBOUW = 'BRAUER-46A454F9A15BDAA9'
 COLOURS = {'CE': 'Chroom', 'S': 'Zwart', 'NG': 'RVS-kleurig', 'GM': 'Gunmetal',
@@ -20,13 +20,13 @@ def cents(value):
     return int(amount)
 
 
-def is_water_group(group):
-    return any(a['key'] in ('finish', 'handshower', 'arm') for a in group['axes'])
+def is_priced_group(group):
+    return group['id'] in GLASS_CHOICE_FAMILIES or any(a['key'] in ('finish', 'handshower', 'arm', 'tap_holes') for a in group['axes'])
 
 
 def attach_prices(group, variants, checked_at):
     result = copy.deepcopy(group)
-    if not is_water_group(result):
+    if not is_priced_group(result):
         return result
     for product in result['products']:
         source = variants[product['variant_id']]
@@ -104,20 +104,25 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('theme', type=Path)
     parser.add_argument('prices', type=Path)
-    parser.add_argument('opbouw_live', type=Path)
+    parser.add_argument('opbouw_live', type=Path, nargs='?')
     args = parser.parse_args()
     checked_at = datetime.now(timezone.utc).isoformat()
     variants = {p['id']: p for p in json.loads(args.prices.read_text())}
     changed = []
     for path in (args.theme / 'assets').glob('bc-brauer-*.json'):
         group = json.loads(path.read_text())
-        if not isinstance(group, dict) or 'axes' not in group or group['id'] == OPBOUW:
+        if not isinstance(group, dict) or 'axes' not in group or (group['id'] == OPBOUW and args.opbouw_live):
             continue
-        after = attach_prices(group, variants, checked_at)
+        if not any(p['variant_id'] in variants for p in group['products']):
+            continue
+        after = attach_prices(refine_group(group), variants, checked_at)
         if after != group:
             path.write_text(json.dumps(after, ensure_ascii=False, separators=(',', ':')) + '\n')
             changed.append(path.name)
-    opbouw = build_opbouw_group(json.loads(args.opbouw_live.read_text()), checked_at)
-    (args.theme / 'assets/bc-brauer-46a454f9a15bdaa9.json').write_text(json.dumps(opbouw, ensure_ascii=False, separators=(',', ':')) + '\n')
-    add_opbouw_routes(args.theme, opbouw)
-    print(json.dumps({'priced_groups': len(changed), 'priced_products': len(variants), 'opbouw_products': len(opbouw['products'])}))
+    opbouw_count = 0
+    if args.opbouw_live:
+        opbouw = build_opbouw_group(json.loads(args.opbouw_live.read_text()), checked_at)
+        (args.theme / 'assets/bc-brauer-46a454f9a15bdaa9.json').write_text(json.dumps(opbouw, ensure_ascii=False, separators=(',', ':')) + '\n')
+        add_opbouw_routes(args.theme, opbouw)
+        opbouw_count = len(opbouw['products'])
+    print(json.dumps({'priced_groups': len(changed), 'priced_products': len(variants), 'opbouw_products': opbouw_count}))

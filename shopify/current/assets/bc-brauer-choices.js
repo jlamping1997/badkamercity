@@ -161,7 +161,7 @@
       const candidates = matches(this.group, nextState(this.group, this.state, axis.key, value));
       const selected = same(this.state[axis.key], value);
       const handlePhoto = axis.kind === 'handle_detail_photo' ? axis.images?.[value] : null;
-      const productPhoto = ['spout', 'height_execution', 'handshower', 'arm'].includes(axis.key) && axis.kind === 'product_first_image';
+      const productPhoto = ['spout', 'height_execution', 'handshower', 'arm', 'bowl_position', 'hinge'].includes(axis.key) && axis.kind === 'product_first_image';
       const visual = Boolean(handlePhoto || productPhoto);
       const button = make('button', colour ? 'bc-hotbath-swatch' : visual
         ? 'bc-buybox__config-button bc-brauer-photo-choice' : 'bc-buybox__config-button');
@@ -214,7 +214,7 @@
         }
         const photoFrame = handlePhoto ? make('span', 'bc-brauer-photo-choice__crop') : frame;
         if (handlePhoto) frame.append(photoFrame);
-        const fallback = make('span', 'bc-brauer-photo-choice__fallback', 'Foto volgt');
+        const fallback = make('span', 'bc-brauer-photo-choice__fallback', candidates.length ? 'Foto volgt' : 'Niet beschikbaar');
         if (source?.image) {
           const photo = new URL(source.image);
           photo.searchParams.set('width', handlePhoto ? '400' : '200');
@@ -268,7 +268,7 @@
         } else {
           const colour = axis.key === 'colour';
           const visual = axis.kind === 'handle_detail_photo' ||
-            (['spout', 'height_execution', 'handshower', 'arm'].includes(axis.key) && axis.kind === 'product_first_image');
+            (['spout', 'height_execution', 'handshower', 'arm', 'bowl_position', 'hinge'].includes(axis.key) && axis.kind === 'product_first_image');
           const list = make('div', colour ? 'bc-hotbath-swatches' : visual
             ? 'bc-brauer-photo-choices' : 'bc-buybox__config-buttons');
           if (axis.kind === 'handle_detail_photo') list.classList.add('bc-brauer-photo-choices--handles');

@@ -1,4 +1,36 @@
-# Brauer — kraankeuzes en prijsvolgorde
+# Brauer — duidelijke productkeuzes
+
+12 november 2026 · BRAUER-VISUAL-CHOICES-01 · BASINS_GLASS_CONCEPT_VERIFIED / RELEASE_PENDING.
+
+## Actueel: 635 volgende artikelen
+
+Na goedkeuring van de kraanmenu’s vraagt de eigenaar om andere producten. Deze ronde omvat22 bestaande wastafelgroepen/299 artikelen en3 bestaande glasgroepen/336 artikelen, totaal **25 groepen /635 artikelen**. Cumulatief75 verbeterde groepen/3.475 artikelen; het totale bestaande Brauer-menuassortiment blijft828 groepen/12.292 artikelen. Geen claim dat alle overige Brauer-artikelen of merken zijn aangepast.
+
+- Wastafels: Kraangaten met Geen kraangat /1 kraangat /2 kraangaten; Spoelbakken met1 spoelbak /2 spoelbakken. De drie Aurora-/Glacier-groepen met spoelbakpositie (61 artikelen) krijgen exacte kandidaatfoto’s bij Links/Midden/Rechts of de bestaande Standaard-positie. Standaard niet zonder bewijs tot Midden hernoemd bij dubbele spoelbakken.
+- Twee Void-nisdeurgroepen (264 artikelen): Deurbevestiging met Aan de muur /Aan de glaswand en exacte foto’s van de overeenkomstige uitvoering. Alle264 fabrikanttitels in de actuele Admin-read bevestigen de gekozen bevestiging; de overeenkomstige foto’s verschillen in alle120 vergelijkbare paren.
+- Void-inloopdouches met zijwand (72 artikelen): Breedte zijwand,30 cm /40 cm als tekst. In alle36 vergelijkbare paren is de eerste productfoto identiek, dus geen schijnbare fotovergelijking toegevoegd voor die maat.
+- Alle25 groepen sorteren op verse vergelijkbare EUR-prijzen; bestaande selectie, andere assen en onmogelijke combinaties behouden. Niet-beschikbare fotokeuzes tonen Niet beschikbaar in plaats van Foto volgt. Laatste prijsread in de25assets vastgelegd; geen automatische runtimeprijsfeed.
+
+De299 huidige titels bevestigen de kraangatenaantallen; alle20 asymmetrische positieartikelen bevestigen Links/Rechts in hun titel. Geen aswaarden, soorten, SKU’s, IDs, routes of productopties gewijzigd. Bestaande productrecords identiek, afgezien van toegevoegde prijscenten; alleen labels en prijs-/fotopresentatie veranderen. Exacte groepslijst en MD5’s staan in VISUELE_KRAANKEUZES_TESTS.json.
+
+## Uitvoering en bewijs
+
+Zelfde **UNPUBLISHED196578803978**:25 bestaande JSON-assets en één bestaande renderer-JS =26 bestanden geschreven en exact teruggelezen. **MAIN196542005514** blijft MAIN en alle26 corresponderende checksums onveranderd. Geen publicatie; andere Brauer-specificatie-/Lagoo-werkstromen behouden. Geen Admin-product-, prijs-, voorraad-, media-, metafield- of kanaalmutaties. Codebranch fix/product-cards-2026-10-14, voortbouwend op9631cd34a5fba0f002eb8006b68b0ac5da922b85.
+
+- Volledige renderer828 groepen/12.292 exacte startstanden/152.902 geldige keuzes/9.346 onmogelijke keuzes/1.172 voorwaardelijke tussenstanden PASS; bereikbaarheid, cartguard, native select en zes zichtbare kleuren behouden.
+- Alle635 nieuwe UI-startstanden en609 exacte kandidaatfoto’s gecontroleerd;240 gerichte startstanden met twee verschillende bevestigingsfoto’s. Alle75 geprijsde groepen/3.475 artikelen/13.723 asstanden zonder prijsinversie. Zijwandmaten blijven tekst en behouden cm.26 files Toolkit PASS zonder fouten; JS-syntax/Python-compile/diffcheck PASS. Gebundelde docs-fallback na netwerk-time-out.
+- Echte Chrome: Aurora WT-AU1000HW → Links WT-AU1000LHW → Rechts WT-AU1000RHW, variant54104828707082,100cm/geen kraangat/€840,95 behouden. Nisdeur GS-VON2H6050200CE (muur) → GS-VON3H6050200CE (glas), variant54104165646602,110cm/Chroom behouden; eindprijs€1.153,13. Beide bevestigingsfoto’s geladen; zichtbare labels, selectie en native koopknop aanwezig. Screenshot in gesprek; geen previewcapability in publieke Git.
+- Deze ronde geen nieuwe cart-/checkout-/mobiele-/fysieke telefoon-/Windows-proef; eerdere cartbewijzen blijven apart historisch. Geen alle12.292pagina’s HTTP-/conversieclaim.
+
+## Herstel en exact vervolg
+
+Herstel deze ronde door uitsluitend de26 conceptassets terug te zetten naar9631cd34a5fba0f002eb8006b68b0ac5da922b85. Generator refine_visual_choices.py bewaart de labels; build_tap_choices.py kan nu een afgebakende verse prijsread zonder opbouw-input verwerken. De volledige build_storefront_choices.py hergebruikt dezelfde bron-/prijslogica.
+
+**Exact één volgende uitvoerdershandeling:** beoordeel bestaande Brauer-spiegelkastgroepen op draairichting/maat en ontbrekende begrijpelijke keuzes; behoud de voorwaardelijke deurkeuze en koopknopblokkade. Verdere productpartijen zijn door de eigenaar geautoriseerd; geen nieuwe algemene stijlgoedkeuring nodig. Publicatie blijft afzonderlijk en vereist een verse vergelijking met MAIN en gelijktijdig werk. Geen actieve schrijver na overdracht. Oude volgende handelingen hieronder zijn historie.
+
+---
+
+# Historie: kranen en eerdere reviews
 
 12 november 2026 · BRAUER-VISUAL-CHOICES-01 · ALL_TAPS_CONCEPT_VERIFIED / RELEASE_PENDING.
 

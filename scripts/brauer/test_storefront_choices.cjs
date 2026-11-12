@@ -232,5 +232,53 @@ report.price_order_products = pricedGroups.reduce((n, g) => n + g.products.lengt
 report.price_order_states = orderedStates;
 report.opbouw_starts = opbouw.products.length;
 report.opbouw_execution_photos = opbouwPhotos;
+const glassFamilies = new Set(['BRAUER-3C0BAEF46A48EBEB', 'BRAUER-05DF137B439F0639', 'BRAUER-27F77BA3CF0A2583']);
+const nextGroups = groups.filter(g => g.axes.some(a => a.key === 'tap_holes') || glassFamilies.has(g.id));
+let nextStarts = 0;
+let nextPhotos = 0;
+let hingePairs = 0;
+for (const group of nextGroups) {
+  for (const product of group.products) {
+    const ui = controller(group, product.sku);
+    assert.equal(ui.root.dataset.initialized, 'true');
+    const buttons = descendants(ui.root).filter(e => e.tagName === 'button');
+    for (const button of buttons.filter(e => ['hinge', 'bowl_position'].includes(e.dataset.axis))) {
+      const candidates = matches(group, nextState(group, ui.state, button.dataset.axis, button.dataset.value));
+      const photos = descendants(button).filter(e => e.tagName === 'img');
+      assert.equal(button.disabled, !candidates.length);
+      if (candidates.length === 1 && candidates[0].image) {
+        assert.equal(photos.length, 1);
+        assert.equal(photos[0].dataset.photoSku, candidates[0].sku);
+        assert.equal(new URL(photos[0].src).pathname, new URL(candidates[0].image).pathname);
+        nextPhotos++;
+      } else {
+        assert.equal(photos.length, 0);
+        if (!candidates.length) assert(button.textContent.includes('Niet beschikbaar'));
+      }
+    }
+    if (product.options.hinge) {
+      const options = buttons.filter(e => e.dataset.axis === 'hinge' && !e.disabled);
+      if (options.length === 2) {
+        const photos = options.map(b => descendants(b).find(e => e.tagName === 'img'));
+        assert.notEqual(new URL(photos[0].src).pathname, new URL(photos[1].src).pathname);
+        hingePairs++;
+      }
+    }
+    for (const button of buttons.filter(e => e.dataset.axis === 'side')) {
+      assert(!descendants(button).some(e => e.tagName === 'img'));
+      assert(button.textContent.includes(button.dataset.value + ' cm'));
+    }
+    for (const button of buttons.filter(e => e.dataset.axis === 'tap_holes')) {
+      assert(button.textContent.includes({0: 'Geen kraangat', 1: '1 kraangat', 2: '2 kraangaten'}[button.dataset.value]));
+    }
+    nextStarts++;
+  }
+}
+assert.equal(nextGroups.length, 25);
+assert.equal(nextStarts, 635);
+report.extra_groups = nextGroups.length;
+report.extra_starts = nextStarts;
+report.extra_exact_photos = nextPhotos;
+report.distinct_hinge_pairs = hingePairs;
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

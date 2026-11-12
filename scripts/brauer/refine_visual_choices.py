@@ -8,6 +8,7 @@ FINISH_LABELS = {'Stripe': 'Streepjes', 'Carving': 'Gekarteld', 'Standaard': 'Gl
 HANDLE_LABELS = {'A': 'Lang en smal', 'B': 'Kort en smal', 'C': 'Breed en plat',
                  'D': 'Smal en plat', 'E': 'Dikkere greep'}
 SPOUT_POSITION = {'1': 'Links', '2': 'Rechts'}
+GLASS_CHOICE_FAMILIES = {'BRAUER-3C0BAEF46A48EBEB', 'BRAUER-27F77BA3CF0A2583', 'BRAUER-05DF137B439F0639'}
 
 
 def original_products(group):
@@ -26,6 +27,18 @@ def original_products(group):
 def refine_group(group):
     group = copy.deepcopy(group)
     for axis in group['axes']:
+        if axis['key'] == 'tap_holes':
+            axis['label'] = 'Kraangaten'
+            axis['labels'] = {v: {'0': 'Geen kraangat', '1': '1 kraangat', '2': '2 kraangaten'}[v] for v in axis['values']}
+        if axis['key'] == 'bowls':
+            axis['label'] = 'Spoelbakken'
+            axis['labels'] = {v: v + (' spoelbak' if v == '1' else ' spoelbakken') for v in axis['values']}
+        if group['id'] in GLASS_CHOICE_FAMILIES and axis['key'] == 'hinge':
+            axis['label'] = 'Deurbevestiging'
+            axis['labels'] = {v: {'Scharnieren aan de muur': 'Aan de muur',
+                                  'Scharnieren aan de glaswand': 'Aan de glaswand'}[v] for v in axis['values']}
+        if group['id'] in GLASS_CHOICE_FAMILIES and axis['key'] == 'side':
+            axis['label'] = 'Breedte zijwand'
         if axis['key'] == 'finish':
             assert set(axis['values']) <= FINISH_LABELS.keys()
             axis['labels'] = {v: FINISH_LABELS[v] for v in axis['values']}
