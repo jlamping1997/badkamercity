@@ -15,10 +15,10 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
-| Status | IN_PROGRESS — live fix en beperkte consentproeven vastgelegd; urgente containermelding nog onderzoeken |
+| Status | IN_PROGRESS — functionele GA4-herstelproeven PASS; plaatsingswaarschuwing blijft open |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Dubbele GA4-page_view live opgelost; eigenaarproef vóór keuze/na weigeren/na intrekken en herladen geen zichtbaar direct GA4-collect |
-| Exact één volgende handeling voor Jackson | Open GTM-WPNHKXXR Overview → View 1 issue en deel de urgente containermelding |
+| Laatste afgeronde handeling | Urgente melding gelezen: tagplaatsing op twee PDPs; Caral29.4114 live één gebundelde page_view+view_item met juiste variant/€139 bevestigd |
+| Exact één volgende handeling voor Jackson | Geen voor de geslaagde producteventcontrole; uitvoerder begrenst plaatsingsrestpunt via bestaande bron/diagnostiek, zonder extra thematag |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
