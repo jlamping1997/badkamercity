@@ -312,7 +312,9 @@
       if (pending) {
         const axis = this.group.axes.find(item => item.depends_on && active(this.group, item, this.state) &&
           !item.values.some(value => same(value, this.state[item.key])));
-        this.status.textContent = `Kies ${axis ? axis.label.toLowerCase() : 'de volledige uitvoering'} om de nieuwe uitvoering te openen.`;
+        this.status.textContent = axis?.key === 'door' && this.group.mirror_choices
+          ? 'Kies de draairichting voor je spiegelkast.'
+          : `Kies ${axis ? axis.label.toLowerCase() : 'de volledige uitvoering'} om de nieuwe uitvoering te openen.`;
       } else if (this.navigating) this.status.textContent = 'De gekozen uitvoering wordt geopend…';
       fragment.append(this.status);
       this.root.replaceChildren(fragment);

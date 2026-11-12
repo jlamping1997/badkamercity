@@ -280,5 +280,50 @@ report.extra_groups = nextGroups.length;
 report.extra_starts = nextStarts;
 report.extra_exact_photos = nextPhotos;
 report.distinct_hinge_pairs = hingePairs;
+const mirrors = groups.filter(g => g.mirror_choices);
+let mirrorStarts = 0;
+let mirrorGuards = 0;
+for (const group of mirrors) {
+  const widthAxis = group.axes.find(a => a.key === 'width');
+  const doorAxis = group.axes.find(a => a.key === 'door');
+  if (widthAxis) {
+    for (const value of widthAxis.values) {
+      const count = value === '60' ? 1 : value === '140' ? 3 : 2;
+      assert.equal(widthAxis.labels[value], value + ' cm · ' + count + (count === 1 ? ' deur' : ' deuren'));
+    }
+  }
+  if (doorAxis) {
+    assert.equal(doorAxis.labels.Links, 'Linksdraaiend');
+    assert.equal(doorAxis.labels.Rechts, 'Rechtsdraaiend');
+  }
+  for (const product of group.products) {
+    const ui = controller(group, product.sku);
+    assert.equal(ui.root.dataset.initialized, 'true');
+    assert.equal(ui.root.dataset.pending, 'false');
+    assert.equal(ui.root.product.buttons[0].disabled, false);
+    mirrorStarts++;
+  }
+  const large = group.products.find(p => p.options.width === '100');
+  if (large && doorAxis && widthAxis.values.includes('60')) {
+    const ui = controller(group, large.sku);
+    const navigationBefore = navigation.length;
+    ui.choose(widthAxis, '60');
+    assert.equal(navigation.length, navigationBefore);
+    assert.equal(ui.root.dataset.pending, 'true');
+    assert(ui.guard);
+    assert.equal(ui.root.product.buttons[0].disabled, true);
+    assert(descendants(ui.root).some(e => e.textContent.includes('Kies de draairichting voor je spiegelkast.')));
+    ui.choose(doorAxis, 'Links');
+    const target = group.products.find(p => p.options.width === '60' && p.options.door === 'Links' && p.options.colour === large.options.colour);
+    assert(target);
+    assert.equal(new URL(navigation.at(-1)).pathname, target.url);
+    mirrorGuards++;
+  }
+}
+assert.equal(mirrors.length, 32);
+assert.equal(mirrorStarts, 585);
+report.mirror_groups = mirrors.length;
+report.mirror_exact_starts = mirrorStarts;
+report.mirror_pending_cart_guards = mirrorGuards;
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

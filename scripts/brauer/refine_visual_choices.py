@@ -26,7 +26,13 @@ def original_products(group):
 
 def refine_group(group):
     group = copy.deepcopy(group)
+    mirror = all(p['sku'].startswith('SK-') for p in group['products'])
     for axis in group['axes']:
+        if mirror and axis['key'] == 'colour':
+            axis['label'] = 'Afwerking'
+        if mirror and axis['key'] == 'door':
+            axis['label'] = 'Draairichting'
+            axis['labels'] = {v: {'Links': 'Linksdraaiend', 'Rechts': 'Rechtsdraaiend'}[v] for v in axis['values']}
         if axis['key'] == 'tap_holes':
             axis['label'] = 'Kraangaten'
             axis['labels'] = {v: {'0': 'Geen kraangat', '1': '1 kraangat', '2': '2 kraangaten'}[v] for v in axis['values']}

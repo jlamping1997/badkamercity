@@ -21,7 +21,7 @@ def cents(value):
 
 
 def is_priced_group(group):
-    return group['id'] in GLASS_CHOICE_FAMILIES or any(a['key'] in ('finish', 'handshower', 'arm', 'tap_holes') for a in group['axes'])
+    return all(p['sku'].startswith('SK-') for p in group['products']) or group['id'] in GLASS_CHOICE_FAMILIES or any(a['key'] in ('finish', 'handshower', 'arm', 'tap_holes') for a in group['axes'])
 
 
 def attach_prices(group, variants, checked_at):
@@ -34,6 +34,26 @@ def attach_prices(group, variants, checked_at):
         assert source['product']['id'] == product['id'] and source['product']['handle'] == product['handle']
         assert source['product']['vendor'].upper() == 'BRAUER' and source['product']['status'] == 'ACTIVE'
         product['price_cents'] = cents(source['price'])
+    if all(p['sku'].startswith('SK-') for p in result['products']):
+        widths = {}
+        for product in result['products']:
+            title = variants[product['variant_id']]['product']['title'].lower()
+            match = re.search(r'\b([123]) (?:[a-z-]+ ){0,4}spiegeldeur(?:en)?\b', title)
+            assert match, product['sku']
+            count = int(match[1])
+            width = product['options'].get('width')
+            if width is not None:
+                widths.setdefault(width, set()).add(count)
+            direction = product['options'].get('door')
+            if direction in ('Links', 'Rechts'):
+                assert direction.lower() + 'draaiend' in title, product['sku']
+        for axis in result['axes']:
+            if axis['key'] == 'width':
+                assert all(len(widths[value]) == 1 for value in axis['values'])
+                axis['labels'] = {value: value + ' cm · ' + str(next(iter(widths[value]))) +
+                                  (' deur' if next(iter(widths[value])) == 1 else ' deuren')
+                                  for value in axis['values']}
+        result['mirror_choices'] = True
     result.update(price_order=True, price_currency='EUR', price_checked_at=checked_at)
     return result
 

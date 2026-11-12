@@ -71,7 +71,7 @@ def build(prepared, live_path, theme, report_path):
             group = refine_group({'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products})
         if family['id'] != OPBOUW:
             variants = {p['variants']['nodes'][0]['id']: {**p['variants']['nodes'][0],
-                'product': {key: p[key] for key in ('id', 'handle', 'vendor', 'status')}}
+                'product': {key: p[key] for key in ('id', 'handle', 'vendor', 'status', 'title')}}
                 for p in by_sku.values()}
             group = attach_prices(group, variants, checked_at)
         filename = 'assets/bc-brauer-' + family['id'][7:].lower() + '.json'
