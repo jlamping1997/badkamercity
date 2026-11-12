@@ -6,21 +6,20 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
+Checkpoint12november2026. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
+
 | Veld | Actuele waarde |
 | --- | --- |
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
-| Actieve stap | SEO-S01 — Search Console-prestaties vastleggen |
-| Status | WAITING_USER |
-| Voortgang | 0/20 uitvoeringsstappen DONE; S01 deels uitgevoerd: GSC-overzicht ontvangen, detailrapport ontbreekt |
-| Laatste afgeronde handeling | GSC-eigenaarsbeeld gelezen: 2 klikken, 192 vertoningen, 1% CTR, gemiddelde positie 46,3; QC-uitbreiding gespecificeerd |
-| Exact één volgende handeling voor Jackson | Klik in hetzelfde Search Console-rapport op EXPORT → download als Excel en upload het bestand hier; laat de periode en filters gelijk |
-| Wat de assistent daarna doet | Leest de geëxporteerde zoekopdrachten/pagina's en exacte periode, maakt S01 compleet en gaat daarna naar S02 |
-| Wat nog niet is bewezen | Exacte GSC-datums/zoekopdrachten/pagina's, GA4-/Merchant-data, huidige live themarol, actuele koopreis en cataloguskwaliteit |
-| Schrijver na overdracht | Geen actieve schrijver; volgende sessie leest dit blok eerst |
-| Bewijsvorm nu | USER_PROVIDED_SCREENSHOT voor GSC-overzicht + Git-documentatie; geen zelfstandige Google-accountread of nieuwe runtimecontrole |
-
-Dit blok is de enige bron voor de actuele SEO-stap. Dezelfde taak-ID en volgende handeling staan in de centrale projectstatus. Historische overdrachten lager in bestanden mogen dit blok niet stil vervangen.
+| Actieve stap | SEO-S02 — indexatie en techniek |
+| Status | IN_PROGRESS |
+| Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
+| Laatste afgeronde handeling | GSC-exports gelezen; sitemap en Salerno categorieproductlink onafhankelijk bevestigd |
+| Exact één volgende handeling voor Jackson | Bevestig Salerno “Indexing requested”; alleen aanvragen als nog niet gedaan |
+| Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
+| Schrijver na overdracht | Geen actieve schrijver |
+| Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
 
 ### Hervatten in een andere chat of op een andere pc
 
@@ -77,7 +76,7 @@ De eerste maand is een richtvenster, geen deadline voor rankings of reden om con
 
 | Klaar | Stap | Prioriteit | Resultaat | Bestaande taken |
 | --- | --- | --- | --- | --- |
-| [ ] | SEO-S01 | P1 | Zoekprestaties als nulmeting | BC-GOOGLE-003/009 |
+| [x] | SEO-S01 | P1 | Zoekprestaties als nulmeting | BC-GOOGLE-003/009 |
 | [ ] | SEO-S02 | P1 | Indexatie en technische problemen ingedeeld | BC-SEO-002, BC-GOOGLE-009 |
 | [ ] | SEO-S03 | P0/P1 | Meetroute en consent gevalideerd | BC-GOOGLE-007 |
 | [ ] | SEO-S04 | P0/P1 | Mobiele koopreis, events en mails gecontroleerd | BC-LIVE-003/005, BC-GOOGLE-008 |
