@@ -8,6 +8,8 @@ import json
 from collections import Counter
 from pathlib import Path
 from refine_visual_choices import refine_group
+from build_tap_choices import OPBOUW, attach_prices, build_opbouw_group
+from datetime import datetime, timezone
 
 
 def write_json(path, value):
@@ -32,35 +34,46 @@ def build(prepared, live_path, theme, report_path):
     report = {'groups': 0, 'products': 0, 'held_groups': [], 'single_article_groups': 0,
               'files': [], 'identity_errors': 0, 'missing_first_images': 0}
     for family in families:
-        if family['status'] != 'VOORBEREID':
+        if family['status'] != 'VOORBEREID' and family['id'] != OPBOUW:
             report['held_groups'].append({'id': family['id'], 'articles': family['sku_count']})
             continue
         if family['sku_count'] < 2:
             report['single_article_groups'] += 1
             continue
-        assert family['axes']
-        keys = {axis['key'] for axis in family['axes']}
-        for axis in family['axes']:
-            keys.update(axis.get('depends_on', []))
-        signatures = Counter(tuple(catalog[s]['options'].get(a['key']) for a in family['axes'])
-                             for s in family['skus'])
-        assert all(count == 1 for count in signatures.values()), family['id']
-        products = []
-        for sku in family['skus']:
-            source, product = catalog[sku], by_sku[sku]
-            assert source['family_id'] == family['id']
-            assert source['handle_proposal'] == product['handle']
-            variant = product['variants']['nodes'][0]
-            assert variant['sku'] == sku
-            image = ((product.get('featuredMedia') or {}).get('preview') or {}).get('image') or {}
-            image_url = image.get('url', '')
-            assert not image_url or image_url.startswith('https://cdn.shopify.com/')
-            report['missing_first_images'] += not bool(image_url)
-            products.append({'id': product['id'], 'variant_id': variant['id'], 'sku': sku,
-                             'handle': product['handle'], 'url': '/products/' + product['handle'],
-                             'image': image_url,
-                             'options': {key: source['options'].get(key) for key in sorted(keys)}})
-        group = refine_group({'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products})
+        checked_at = datetime.now(timezone.utc).isoformat()
+        if family['id'] == OPBOUW:
+            group = build_opbouw_group([by_sku[sku] for sku in family['skus']], checked_at)
+            products = group['products']
+            assert {p['sku'] for p in products} == set(family['skus'])
+        else:
+            assert family['axes']
+            keys = {axis['key'] for axis in family['axes']}
+            for axis in family['axes']:
+                keys.update(axis.get('depends_on', []))
+            signatures = Counter(tuple(catalog[s]['options'].get(a['key']) for a in family['axes'])
+                                 for s in family['skus'])
+            assert all(count == 1 for count in signatures.values()), family['id']
+            products = []
+            for sku in family['skus']:
+                source, product = catalog[sku], by_sku[sku]
+                assert source['family_id'] == family['id']
+                assert source['handle_proposal'] == product['handle']
+                variant = product['variants']['nodes'][0]
+                assert variant['sku'] == sku
+                image = ((product.get('featuredMedia') or {}).get('preview') or {}).get('image') or {}
+                image_url = image.get('url', '')
+                assert not image_url or image_url.startswith('https://cdn.shopify.com/')
+                report['missing_first_images'] += not bool(image_url)
+                products.append({'id': product['id'], 'variant_id': variant['id'], 'sku': sku,
+                                 'handle': product['handle'], 'url': '/products/' + product['handle'],
+                                 'image': image_url,
+                                 'options': {key: source['options'].get(key) for key in sorted(keys)}})
+            group = refine_group({'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products})
+        if family['id'] != OPBOUW:
+            variants = {p['variants']['nodes'][0]['id']: {**p['variants']['nodes'][0],
+                'product': {key: p[key] for key in ('id', 'handle', 'vendor', 'status')}}
+                for p in by_sku.values()}
+            group = attach_prices(group, variants, checked_at)
         filename = 'assets/bc-brauer-' + family['id'][7:].lower() + '.json'
         write_json(theme / filename, group)
         report['files'].append(filename)

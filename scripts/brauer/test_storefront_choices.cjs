@@ -6,7 +6,7 @@ const theme = path.resolve(process.argv[2] || 'shopify/current');
 const reportPath = process.argv[3];
 let code = fs.readFileSync(path.join(theme, 'assets/bc-brauer-choices.js'), 'utf8');
 code = code.replace('  function init(scope = document) {',
-  '  globalThis.qa = { active, matches, nextState, Choices, label };\n  function init(scope = document) {');
+  '  globalThis.qa = { active, matches, nextState, Choices, label, orderedValues };\n  function init(scope = document) {');
 class El {
   constructor(tag = 'div') { this.tagName = tag; this.style = { setProperty() {} }; this.children = []; this.dataset = {}; this.attrs = {}; this.events = {}; this.disabled = false; this.hidden = false; this._text = ''; this.classes = new Set(); this.classList = { toggle: (k, v) => v ? this.classes.add(k) : this.classes.delete(k), add: k => this.classes.add(k), remove: k => this.classes.delete(k) }; }
   set className(v) { this.classes = new Set(v.split(' ')); }
@@ -26,7 +26,7 @@ const document = { readyState: 'loading', createElement: t => new El(t), createD
 const navigation = [];
 const sandbox = { document, URL, sessionStorage: { getItem() {return null;}, setItem() {}, removeItem() {} }, requestAnimationFrame: fn => fn(), window: { location: { origin: 'https://badkamercity.nl', href: 'https://badkamercity.nl/products/test?preview_theme_id=196542005514', assign: url => navigation.push(url) }, scrollY: 200, addEventListener() {}, scrollTo() {} } };
 vm.runInNewContext(code, sandbox);
-const { active, matches, nextState, Choices } = sandbox.qa;
+const { active, matches, nextState, Choices, orderedValues } = sandbox.qa;
 const groups = fs.readdirSync(path.join(theme, 'assets')).filter(n => /^bc-brauer-[a-f0-9]+(?:-[a-z0-9]+)*\.json$/.test(n)).map(n => JSON.parse(fs.readFileSync(path.join(theme, 'assets', n))));
 const report = { groups: groups.length, products: 0, exact_starts: 0, valid_choices: 0, unavailable_choices: 0, conditional_pending_choices: 0, reachable_products: 0, conditional_cart_guard: false, native_select: false, six_colour_limit: false };
 const allIds = new Set();
@@ -160,6 +160,77 @@ const positionExample = controller(taps, '5-S-331');
 positionExample.choose(taps.axes.find(a => a.key === 'spout_position'), 'Rechts');
 assert.equal(new URL(navigation.at(-1)).pathname, '/products/' + taps.products.find(p => p.sku === '5-S-335').handle);
 report.handle_reference_photos = 5;
-assert.equal(report.groups, 827); assert.equal(report.products, 12142);
+assert.equal(report.groups, 828); assert.equal(report.products, 12292);
+const pricedGroups = groups.filter(g => g.price_order);
+let orderedStates = 0;
+for (const group of pricedGroups) {
+  assert.equal(group.price_currency, 'EUR');
+  for (const product of group.products) {
+    assert(Number.isSafeInteger(product.price_cents));
+    for (const axis of group.axes) {
+      const ordered = orderedValues(group, axis, product.options);
+      assert.deepEqual([...ordered].sort(), [...axis.values].sort());
+      let previous = -Infinity;
+      let disabledStarted = false;
+      for (const value of ordered) {
+        const candidates = matches(group, nextState(group, product.options, axis.key, value));
+        if (!candidates.length) { disabledStarted = true; continue; }
+        assert(!disabledStarted, 'available choices must precede disabled choices');
+        const price = Math.min(...candidates.map(p => p.price_cents));
+        assert(price >= previous, group.id + ':' + product.sku + ':' + axis.key);
+        previous = price;
+      }
+      orderedStates++;
+    }
+  }
+}
+const exampleOrder = orderedValues(taps, taps.axes.find(a => a.key === 'colour'), example.state);
+assert.equal(exampleOrder[0], 'Chroom');
+assert.equal(exampleOrder[1], 'Zwart');
+const opbouw = groups.find(g => g.id === 'BRAUER-46A454F9A15BDAA9');
+assert.equal(opbouw.products.length, 150);
+let opbouwPhotos = 0;
+for (const product of opbouw.products) {
+  const ui = controller(opbouw, product.sku);
+  const buttons = descendants(ui.root).filter(e => e.tagName === 'button');
+  const handles = buttons.filter(e => e.dataset.axis === 'handle');
+  assert.equal(handles.length, 5);
+  assert(handles.every(b => descendants(b).some(e => e.tagName === 'img')));
+  assert(!buttons.some(e => e.dataset.axis === 'spout_position'));
+  assert.equal(buttons.filter(e => e.dataset.axis === 'height_execution').length, 4);
+  for (const button of buttons.filter(e => e.dataset.axis === 'height_execution')) {
+    const exact = matches(opbouw, nextState(opbouw, ui.state, button.dataset.axis, button.dataset.value));
+    const imgs = descendants(button).filter(e => e.tagName === 'img');
+    if (exact.length === 1 && exact[0].image) {
+      assert.equal(imgs.length, 1);
+      assert.equal(imgs[0].dataset.photoSku, exact[0].sku);
+      opbouwPhotos++;
+    } else assert.equal(imgs.length, 0);
+  }
+}
+const opbouwExample = controller(opbouw, '5-CE-001');
+opbouwExample.choose(opbouw.axes.find(a => a.key === 'height_execution'), 'Verhoogd');
+assert.equal(new URL(navigation.at(-1)).pathname, '/products/' + opbouw.products.find(p => p.sku === '5-CE-002').handle);
+let waterPhotoChecks = 0;
+for (const group of pricedGroups) {
+  const ui = controller(group, group.products[0].sku);
+  const buttons = descendants(ui.root).filter(e => e.tagName === 'button' && ['arm', 'handshower'].includes(e.dataset.axis));
+  for (const button of buttons) {
+    const candidates = matches(group, nextState(group, ui.state, button.dataset.axis, button.dataset.value));
+    const photos = descendants(button).filter(e => e.tagName === 'img');
+    if (candidates.length === 1 && candidates[0].image) {
+      assert.equal(photos.length, 1);
+      assert.equal(photos[0].dataset.photoSku, candidates[0].sku);
+      assert.equal(new URL(photos[0].src).pathname, new URL(candidates[0].image).pathname);
+      waterPhotoChecks++;
+    } else assert.equal(photos.length, 0);
+  }
+}
+report.water_photo_checks = waterPhotoChecks;
+report.price_order_groups = pricedGroups.length;
+report.price_order_products = pricedGroups.reduce((n, g) => n + g.products.length, 0);
+report.price_order_states = orderedStates;
+report.opbouw_starts = opbouw.products.length;
+report.opbouw_execution_photos = opbouwPhotos;
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

@@ -1,4 +1,45 @@
-# Brauer — visuele kraankeuzes herstellen
+# Brauer — kraankeuzes en prijsvolgorde
+
+12 november 2026 · BRAUER-VISUAL-CHOICES-01 · ALL_TAPS_CONCEPT_VERIFIED / RELEASE_PENDING.
+
+## Actueel na opdracht voor alle Brauer-kranen
+
+De eigenaar keurt de aparte hendelvorm/uitlooppositie goed en vraagt deze werkwijze passend uit te breiden, met opties links goedkoopst en rechts duurst. Scope: de 49 bestaande Brauer-watergroepen met greepafwerking, handdouche of douchearm (2.690 artikelen), plus de tot nu toe niet aangesloten opbouw-wastafelkraangroep BRAUER-46A454F9A15BDAA9 (150 artikelen). Totaal **50 groepen / 2.840 artikelen**. Dit is geen wijziging aan andere merken of alle overige Brauer-productgroepen.
+
+- De 338 inbouw-wastafelkranen behouden vijf hendelfoto’s, aparte Plaatsing uitloop Links/Rechts en Uitloop Recht/Gebogen. Wandafwerking blijft tekst.
+- Alle 150 actuele opbouw-wastafelkranen via exacte productType-read en drie volledige Admin-pagina’s opgehaald. Keuzes: kleur, Glad/Gekarteld/Streepjes, vijf hendelvormfoto’s en vier uitvoeringfoto’s (Laag, Verhoogd, Hoog ronde uitloop, Hoog platte uitloop). Geen fictieve uitloop-links/rechts bij opbouw.
+- Opbouwopties volgen exact de volledige huidige fabriekstitel; SKU-hoofdreeks001/002/003, modelletter, kleurtekst en unieke combinaties worden apart gecontroleerd. Geen universele modeldecoder. Vijf eigen actuele chromen lage referentiebeelden 5-CE-001 en -HD5/-HD3/-HD4/-HD1 visueel beoordeeld; CSS kadreert de feitelijke hendel. Er zijn geen nieuwe bewerkte/mirrored/generatieve afbeeldingen.
+- De bestaande handdouche-/douchearmassen krijgen de al verklaarde product_first_image-weergave: uitsluitend het exacte kandidaatartikel met alle andere keuzes behouden. Geen geleende/vervangende productfoto.
+- Alle opties in deze 50 groepen sorteren op de EUR-prijs van de vergelijkbare kandidaat met alle andere assen behouden, oplopend. Bij een voorwaardelijke meervoudige kandidaat geldt de laagste passende prijs; onmogelijke/ontbrekende prijzen komen achteraan. Bij gelijke kleurprijs komt Chroom eerst, daarna blijft de vaste bronvolgorde behouden. Een geselecteerde zevende kleur blijft zichtbaar; de zes zichtbare keuzes behouden oplopende prijsvolgorde.
+- Verse Admin-prijsread: 2.690 bestaande varianten plus150 opbouwvarianten, EUR. Publieke groepsdata bevatten prijscenten en price_checked_at; dit is een gedateerde momentopname, geen runtimeprijsfeed. Bij prijswijzigingen de betrokken groepsassets uit verse variantprijzen hergenereren. De generator verlangt die prijsdata en vernieuwt de tijdstempel. Verkoopprijzen zelf niet gewijzigd.
+
+Bij 5-S-331: Chroom €331,78; Zwart €421,56; Goud/Koper/Gunmetal/RVS-kleurig elk €466,58. De daadwerkelijke pagina toont die volgorde, Coffee is hier niet combineerbaar en staat achteraan. Actieve zwarte productpagina blijft zwart geselecteerd; sorteren verandert niet stil het artikel.
+
+## Nieuwe uitvoering en aantoonbare controles
+
+Zelfde **UNPUBLISHED196578803978 — BadkamerCity - Brauer visuele kraankeuzes**. Deze fase schrijft 50 groepsassets (49 bestaand, één nieuw), één bestaande renderer-JS en acht bestaande routepartities: **59 bestanden**, alle59 exacte MD5-readback. MAIN196542005514 blijft MAIN: alle58 bestaande corresponderende checksums behouden; nieuw opbouwasset ontbreekt nog in MAIN. Geen volledige nieuwe2.522-bestandenpariteitsclaim. Vorige bronvergelijking staat als historie hieronder. Brauer-specificatieconcept/Lagoo behouden. Geen Admin-product-/metafield-/prijs-/media-/voorraad-/kanaalwrites; nul publicatie.
+
+Bestaande productrecords en alle bestaande assen zijn vóór/na identiek, afgezien van de toegevoegde publieke prijsmetadata. De nieuwe150 routes zijn gecontroleerd tegen alle bestaande product-ID’s; geen botsing. Code op fix/product-cards-2026-10-14, voortbouwend op06288ca55a8c4967c0058d254b68e82a0fe2911d. Nieuwe build_tap_choices.py is geïntegreerd in build_storefront_choices.py, inclusief expliciete oplossing voor uitsluitend de vroegere opbouw-hold; andere holdgroepen blijven behouden. Gericht hergenereren via het eerdere CONTROLEREN-pad PASS.
+
+Bewijs:
+
+- Volledige renderer828 groepen /12.292 exacte startstanden /152.902 geldige keuzes /9.346 onmogelijke keuzes /1.172 voorwaardelijke tussenstanden PASS; alle12.292 artikelen bereikbaar. Cartguard, native select en zes zichtbare kleuren behouden.
+- Prijsvolgorde alle2.840 betrokken startstanden /11.763 asstanden zonder prijsinversie; alle beschikbare keuzes vóór onmogelijke keuzes.338 inbouwstartstanden,1.974 vorm-/plaatsingswissels,672 exacte uitloopfoto’s,150 opbouwstartstanden,528 exacte uitvoeringfoto’s en102 handdouche-/armfotoproeven PASS.
+-59 files Toolkit VALID met niet-blokkerende routecomplexiteitswaarschuwingen. De bestaande acht grote case-routepartities overschrijden de algemene complexiteitsdrempel;150 IDs voegen elk één gerichte case per gebruikte bucket toe. Geen validatorfout; gebundelde docs-fallback na netwerk-time-out. JS-syntax/Python-compile/diffcheck PASS.
+- Echte Chrome: bestaand5-S-331 toont Chroom vooraan en prijsvolgorde hierboven. Nieuw opbouwmenu5-CE-001 → Verhoogd5-CE-002 → Kort en smal5-CE-002-HD5 → Zwart5-S-002-HD5, gekozen uitvoering/vorm behouden. Vijf opbouwhendelbeelden en vier uitvoeringbeelden geladen en visueel beoordeeld.
+- Native koopknop geeft succesmelding en onafhankelijke cartread:5-S-002-HD5 / variant54103813587210 / €337,47 / aantal1. Cart vooraf leeg. WebMCP-opruimen gaf SFAPI404; daarna uitsluitend eigen regel via zichtbare cart-verwijderlink verwijderd, UI bevestigt lege winkelwagen. Geen checkout/aankoop.
+- Zes Coffee-opbouwartikelen hebben in deze read geen eerste foto: geen foto verzonnen of ander artikel gebruikt. Tekstkeuze blijft behouden. Dit is geen volledige media-aanvulling.
+- Deze fase geen nieuwe native smalle-layout-/fysieke telefoon-/touch-/alle-publieke-pagina’s-/checkout-/Windows-proef. Eerdere smalle inbouwlayoutproef staat afzonderlijk als historie. Geen generieke volledige release-QA claim.
+
+## Herstel en exact volgende handeling
+
+Herstel deze fase:59 gewijzigde conceptbestanden terugzetten op06288ca55a8c4967c0058d254b68e82a0fe2911d; het nieuw toegevoegde opbouwasset hoeft niet verwijderd te worden als de acht oude routes hersteld zijn. Geen runtimebereikbaarheid zonder route. Geen MAIN-writes of zelfstandig publiceren. Eerst actuele MAIN-/conceptverschillen en eventuele gelijktijdige specificatiewijzigingen controleren vóór een latere publicatie.
+
+**Exact één volgende handeling:** eigenaar bekijkt het uitgebreide gedeelde conceptvoorbeeld. De eerder goedgekeurde UX is verwerkt; publicatie blijft afzonderlijk. Geen actieve schrijver na overdracht. Oudere status en volgende handelingen hieronder zijn historie.
+
+---
+
+# Historie van de eerste en tweede review
 
 12 november 2026 · BRAUER-VISUAL-CHOICES-01 · PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.
 

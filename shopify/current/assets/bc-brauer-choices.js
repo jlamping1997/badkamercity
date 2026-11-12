@@ -30,6 +30,17 @@
     return next;
   }
 
+  function orderedValues(group, axis, state) {
+    if (!group.price_order) return axis.values;
+    return axis.values.map((value, index) => {
+      const candidates = matches(group, nextState(group, state, axis.key, value));
+      const prices = candidates.map(p => p.price_cents).filter(Number.isSafeInteger);
+      return { value, index, price: prices.length === candidates.length && prices.length ? Math.min(...prices) : Infinity };
+    }).sort((a, b) => a.price - b.price ||
+      (axis.key === 'colour' ? Number(b.value === 'Chroom') - Number(a.value === 'Chroom') : 0) || a.index - b.index)
+      .map(option => option.value);
+  }
+
   function make(tag, className, label) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -150,7 +161,7 @@
       const candidates = matches(this.group, nextState(this.group, this.state, axis.key, value));
       const selected = same(this.state[axis.key], value);
       const handlePhoto = axis.kind === 'handle_detail_photo' ? axis.images?.[value] : null;
-      const productPhoto = axis.key === 'spout' && axis.kind === 'product_first_image';
+      const productPhoto = ['spout', 'height_execution', 'handshower', 'arm'].includes(axis.key) && axis.kind === 'product_first_image';
       const visual = Boolean(handlePhoto || productPhoto);
       const button = make('button', colour ? 'bc-hotbath-swatch' : visual
         ? 'bc-buybox__config-button bc-brauer-photo-choice' : 'bc-buybox__config-button');
@@ -239,12 +250,13 @@
         const heading = make('p', 'form__label bc-buybox__option-label', axis.label + ': ');
         heading.append(make('strong', 'bc-hotbath-selected-color', label(axis, this.state[axis.key]) || 'Maak een keuze'));
         group.append(heading);
+        const values = orderedValues(this.group, axis, this.state);
         if (['width', 'depth', 'head_size'].includes(axis.key) && axis.values.length > 3) {
           const select = make('select', 'bc-buybox__config-select');
           select.dataset.axis = axis.key;
           select.setAttribute('aria-label', axis.label);
           select.disabled = this.navigating;
-          axis.values.forEach(value => {
+          values.forEach(value => {
             const option = make('option', '', label(axis, value));
             option.value = value;
             option.disabled = !matches(this.group, nextState(this.group, this.state, axis.key, value)).length;
@@ -256,16 +268,16 @@
         } else {
           const colour = axis.key === 'colour';
           const visual = axis.kind === 'handle_detail_photo' ||
-            (axis.key === 'spout' && axis.kind === 'product_first_image');
+            (['spout', 'height_execution', 'handshower', 'arm'].includes(axis.key) && axis.kind === 'product_first_image');
           const list = make('div', colour ? 'bc-hotbath-swatches' : visual
             ? 'bc-brauer-photo-choices' : 'bc-buybox__config-buttons');
           if (axis.kind === 'handle_detail_photo') list.classList.add('bc-brauer-photo-choices--handles');
           list.setAttribute('role', 'group');
           list.setAttribute('aria-label', axis.label);
-          const visible = axis.values.slice(0, 6);
-          const selected = axis.values.find(value => same(value, this.state[axis.key]));
+          const visible = values.slice(0, 6);
+          const selected = values.find(value => same(value, this.state[axis.key]));
           if (selected && !visible.includes(selected)) visible[5] = selected;
-          axis.values.forEach(value => {
+          values.forEach(value => {
             const button = this.option(axis, value, colour);
             button.hidden = colour && !this.expanded.has(axis.key) && !visible.includes(value);
             list.append(button);
@@ -273,7 +285,7 @@
           group.append(list);
           if (axis.kind === 'handle_detail_photo') {
             group.append(make('p', 'bc-brauer-choice-help',
-              'De foto toont de hendelvorm in chroom. Kleur en afwerking kies je hierboven; de plaatsing van de uitloop kies je hieronder. Grijze opties zijn niet combineerbaar met je andere keuzes.'));
+              axis.help || 'De foto toont de hendelvorm in chroom. Kleur en afwerking kies je hierboven; de plaatsing van de uitloop kies je hieronder. Grijze opties zijn niet combineerbaar met je andere keuzes.'));
           }
           if (colour && axis.values.length > 6) {
             const toggle = make('button', 'bc-hotbath-colors__toggle', this.expanded.has(axis.key) ? 'Minder kleuren' : 'Bekijk meer kleuren');
