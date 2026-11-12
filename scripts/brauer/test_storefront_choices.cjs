@@ -8,7 +8,7 @@ let code = fs.readFileSync(path.join(theme, 'assets/bc-brauer-choices.js'), 'utf
 code = code.replace('  function init(scope = document) {',
   '  globalThis.qa = { active, matches, nextState, Choices, label };\n  function init(scope = document) {');
 class El {
-  constructor(tag = 'div') { this.tagName = tag; this.children = []; this.dataset = {}; this.attrs = {}; this.events = {}; this.disabled = false; this.hidden = false; this._text = ''; this.classes = new Set(); this.classList = { toggle: (k, v) => v ? this.classes.add(k) : this.classes.delete(k), add: k => this.classes.add(k), remove: k => this.classes.delete(k) }; }
+  constructor(tag = 'div') { this.tagName = tag; this.style = { setProperty() {} }; this.children = []; this.dataset = {}; this.attrs = {}; this.events = {}; this.disabled = false; this.hidden = false; this._text = ''; this.classes = new Set(); this.classList = { toggle: (k, v) => v ? this.classes.add(k) : this.classes.delete(k), add: k => this.classes.add(k), remove: k => this.classes.delete(k) }; }
   set className(v) { this.classes = new Set(v.split(' ')); }
   set textContent(v) { this._text = String(v); this.children = []; }
   get textContent() { return this._text + this.children.map(x => x.textContent).join(''); }
@@ -101,6 +101,40 @@ for (const button of colourButtons) {
   if (images.length) { assert.equal(prospective.length, 1); assert.equal(images[0].dataset.photoSku, prospective[0].sku); assert.equal(new URL(images[0].src).pathname, new URL(prospective[0].image).pathname); assert.equal(new URL(images[0].src).searchParams.get('width'), '160'); }
 }
 report.six_colour_limit = true;
+const taps = groups.find(g => g.id === 'BRAUER-F3F2437BF3BB2A5C');
+const labels = taps.axes.find(a => a.key === 'finish').labels;
+assert.equal(labels.Stripe, 'Streepjes');
+assert.equal(labels.Carving, 'Gekarteld');
+assert.equal(labels.Standaard, 'Glad');
+let exactSpoutPhotos = 0;
+for (const product of taps.products) {
+  const tap = controller(taps, product.sku);
+  const elements = descendants(tap.root);
+  const handles = elements.filter(e => e.tagName === 'button' && e.dataset.axis === 'handle');
+  assert.equal(handles.length, 10);
+  assert(handles.every(button => descendants(button).some(e => e.tagName === 'img')));
+  assert(elements.some(e => e.textContent.includes('chroom; links of rechts')));
+  for (const button of elements.filter(e => e.tagName === 'button' && e.dataset.axis === 'spout')) {
+    const candidates = matches(taps, nextState(taps, tap.state, 'spout', button.dataset.value));
+    const photos = descendants(button).filter(e => e.tagName === 'img');
+    assert.equal(button.disabled, !candidates.length);
+    if (candidates.length === 1 && candidates[0].image) {
+      assert.equal(photos.length, 1);
+      assert.equal(photos[0].dataset.photoSku, candidates[0].sku);
+      assert.equal(new URL(photos[0].src).pathname, new URL(candidates[0].image).pathname);
+      exactSpoutPhotos++;
+    } else assert.equal(photos.length, 0);
+  }
+}
+const example = controller(taps, '5-S-331');
+const beforeNavigation = navigation.length;
+example.choose(taps.axes.find(a => a.key === 'handle'), 'B1');
+assert.equal(navigation.length, beforeNavigation);
+assert.equal(example.current.sku, '5-S-331');
+report.visual_tap_starts = taps.products.length;
+report.exact_spout_photos = exactSpoutPhotos;
+report.handle_choices = 10;
+report.handle_reference_photos = 5;
 assert.equal(report.groups, 827); assert.equal(report.products, 12142);
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

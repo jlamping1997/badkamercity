@@ -7,6 +7,7 @@ import argparse
 import json
 from collections import Counter
 from pathlib import Path
+from refine_visual_choices import refine_group
 
 
 def write_json(path, value):
@@ -59,7 +60,7 @@ def build(prepared, live_path, theme, report_path):
                              'handle': product['handle'], 'url': '/products/' + product['handle'],
                              'image': image_url,
                              'options': {key: source['options'].get(key) for key in sorted(keys)}})
-        group = {'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products}
+        group = refine_group({'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products})
         filename = 'assets/bc-brauer-' + family['id'][7:].lower() + '.json'
         write_json(theme / filename, group)
         report['files'].append(filename)

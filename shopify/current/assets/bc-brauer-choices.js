@@ -149,7 +149,11 @@
     option(axis, value, colour) {
       const candidates = matches(this.group, nextState(this.group, this.state, axis.key, value));
       const selected = same(this.state[axis.key], value);
-      const button = make('button', colour ? 'bc-hotbath-swatch' : 'bc-buybox__config-button');
+      const handlePhoto = axis.kind === 'handle_detail_photo' ? axis.images?.[value] : null;
+      const productPhoto = axis.key === 'spout' && axis.kind === 'product_first_image';
+      const visual = Boolean(handlePhoto || productPhoto);
+      const button = make('button', colour ? 'bc-hotbath-swatch' : visual
+        ? 'bc-buybox__config-button bc-brauer-photo-choice' : 'bc-buybox__config-button');
       button.type = 'button';
       button.dataset.axis = axis.key;
       button.dataset.value = value;
@@ -182,6 +186,42 @@
         surface.append(fallback);
         chip.append(surface, make('span', 'bc-hotbath-swatch__check', '✓'));
         button.append(chip, make('span', 'bc-hotbath-swatch__label', label(axis, value)));
+      } else if (visual) {
+        const exact = candidates.length === 1 ? candidates[0] : null;
+        const source = handlePhoto || exact;
+        const frame = make('span', 'bc-brauer-photo-choice__frame');
+        if (handlePhoto) frame.classList.add('bc-brauer-photo-choice__frame--handle');
+        if (handlePhoto?.crop) {
+          const crop = handlePhoto.crop;
+          const size = Math.max(crop.width, crop.height);
+          frame.style.setProperty('--crop-width', `${100 * crop.width / size}%`);
+          frame.style.setProperty('--crop-height', `${100 * crop.height / size}%`);
+          frame.style.setProperty('--photo-width', `${100 * crop.source_width / crop.width}%`);
+          frame.style.setProperty('--photo-height', `${100 * crop.source_height / crop.height}%`);
+          frame.style.setProperty('--photo-left', `${-100 * crop.x / crop.width}%`);
+          frame.style.setProperty('--photo-top', `${-100 * crop.y / crop.height}%`);
+        }
+        const photoFrame = handlePhoto ? make('span', 'bc-brauer-photo-choice__crop') : frame;
+        if (handlePhoto) frame.append(photoFrame);
+        const fallback = make('span', 'bc-brauer-photo-choice__fallback', 'Foto volgt');
+        if (source?.image) {
+          const photo = new URL(source.image);
+          photo.searchParams.set('width', handlePhoto ? '400' : '200');
+          const image = make('img');
+          image.src = photo.href;
+          image.alt = '';
+          image.width = 100;
+          image.height = 100;
+          image.loading = 'lazy';
+          image.decoding = 'async';
+          image.dataset.photoSku = source.sku;
+          image.addEventListener('load', () => { fallback.hidden = true; });
+          image.addEventListener('error', () => { image.remove(); fallback.hidden = false; });
+          photoFrame.append(image);
+        }
+        frame.append(fallback);
+        button.append(frame, make('span', 'bc-brauer-photo-choice__label', label(axis, value)),
+          make('span', 'bc-buybox__option-check', selected ? '✓' : ''));
       } else {
         button.append(make('span', 'bc-buybox__option-check', selected ? '✓' : ''),
                       make('span', 'bc-buybox__option-text', label(axis, value)));
@@ -215,7 +255,11 @@
           group.append(select);
         } else {
           const colour = axis.key === 'colour';
-          const list = make('div', colour ? 'bc-hotbath-swatches' : 'bc-buybox__config-buttons');
+          const visual = axis.kind === 'handle_detail_photo' ||
+            (axis.key === 'spout' && axis.kind === 'product_first_image');
+          const list = make('div', colour ? 'bc-hotbath-swatches' : visual
+            ? 'bc-brauer-photo-choices' : 'bc-buybox__config-buttons');
+          if (axis.kind === 'handle_detail_photo') list.classList.add('bc-brauer-photo-choices--handles');
           list.setAttribute('role', 'group');
           list.setAttribute('aria-label', axis.label);
           const visible = axis.values.slice(0, 6);
@@ -227,6 +271,10 @@
             list.append(button);
           });
           group.append(list);
+          if (axis.kind === 'handle_detail_photo') {
+            group.append(make('p', 'bc-brauer-choice-help',
+              'De foto toont de hendelvorm in chroom; links of rechts staat in het label. Kleur en afwerking kies je hierboven. Grijze opties zijn niet combineerbaar met je andere keuzes.'));
+          }
           if (colour && axis.values.length > 6) {
             const toggle = make('button', 'bc-hotbath-colors__toggle', this.expanded.has(axis.key) ? 'Minder kleuren' : 'Bekijk meer kleuren');
             toggle.type = 'button';
