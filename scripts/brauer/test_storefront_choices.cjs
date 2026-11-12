@@ -107,13 +107,32 @@ assert.equal(labels.Stripe, 'Streepjes');
 assert.equal(labels.Carving, 'Gekarteld');
 assert.equal(labels.Standaard, 'Glad');
 let exactSpoutPhotos = 0;
+let positionShapeChecks = 0;
 for (const product of taps.products) {
   const tap = controller(taps, product.sku);
   const elements = descendants(tap.root);
   const handles = elements.filter(e => e.tagName === 'button' && e.dataset.axis === 'handle');
-  assert.equal(handles.length, 10);
+  assert.equal(handles.length, 5);
   assert(handles.every(button => descendants(button).some(e => e.tagName === 'img')));
-  assert(elements.some(e => e.textContent.includes('chroom; links of rechts')));
+  assert(elements.some(e => e.textContent.includes('plaatsing van de uitloop')));
+  const positions = elements.filter(e => e.tagName === 'button' && e.dataset.axis === 'spout_position');
+  assert.equal(positions.length, 2);
+  assert.equal(product.options.spout_position, product.options.handle_code[1] === '1' ? 'Links' : 'Rechts');
+  for (const button of [...handles, ...positions]) {
+    const candidates = matches(taps, nextState(taps, tap.state, button.dataset.axis, button.dataset.value));
+    assert.equal(button.disabled, !candidates.length);
+    assert(candidates.length <= 1);
+    if (!candidates.length) continue;
+    const target = candidates[0];
+    const expectedCode = (button.dataset.axis === 'handle' ? button.dataset.value : product.options.handle) +
+      ((button.dataset.axis === 'spout_position' ? button.dataset.value : product.options.spout_position) === 'Links' ? '1' : '2');
+    assert.equal(target.options.handle_code, expectedCode);
+    assert.equal(target.options.colour, product.options.colour);
+    assert.equal(target.options.finish, product.options.finish);
+    assert.equal(target.options.spout, product.options.spout);
+    assert.equal(target.options.wall_finish, product.options.wall_finish);
+    positionShapeChecks++;
+  }
   for (const button of elements.filter(e => e.tagName === 'button' && e.dataset.axis === 'spout')) {
     const candidates = matches(taps, nextState(taps, tap.state, 'spout', button.dataset.value));
     const photos = descendants(button).filter(e => e.tagName === 'img');
@@ -128,12 +147,18 @@ for (const product of taps.products) {
 }
 const example = controller(taps, '5-S-331');
 const beforeNavigation = navigation.length;
-example.choose(taps.axes.find(a => a.key === 'handle'), 'B1');
+example.choose(taps.axes.find(a => a.key === 'handle'), 'B');
 assert.equal(navigation.length, beforeNavigation);
 assert.equal(example.current.sku, '5-S-331');
 report.visual_tap_starts = taps.products.length;
 report.exact_spout_photos = exactSpoutPhotos;
-report.handle_choices = 10;
+report.handle_choices = 5;
+report.spout_position_choices = 2;
+report.position_shape_checks = positionShapeChecks;
+assert.equal(taps.axes.find(a => a.key === 'spout').labels.Rechte, 'Recht');
+const positionExample = controller(taps, '5-S-331');
+positionExample.choose(taps.axes.find(a => a.key === 'spout_position'), 'Rechts');
+assert.equal(new URL(navigation.at(-1)).pathname, '/products/' + taps.products.find(p => p.sku === '5-S-335').handle);
 report.handle_reference_photos = 5;
 assert.equal(report.groups, 827); assert.equal(report.products, 12142);
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');

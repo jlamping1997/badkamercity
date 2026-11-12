@@ -7,6 +7,20 @@ FAMILY = 'BRAUER-F3F2437BF3BB2A5C'
 FINISH_LABELS = {'Stripe': 'Streepjes', 'Carving': 'Gekarteld', 'Standaard': 'Glad'}
 HANDLE_LABELS = {'A': 'Lang en smal', 'B': 'Kort en smal', 'C': 'Breed en plat',
                  'D': 'Smal en plat', 'E': 'Dikkere greep'}
+SPOUT_POSITION = {'1': 'Links', '2': 'Rechts'}
+
+
+def original_products(group):
+    products = copy.deepcopy(group['products'])
+    if group['id'] == FAMILY:
+        for product in products:
+            options = product['options']
+            if 'handle_code' in options:
+                code = options.pop('handle_code')
+                assert options['handle'] == code[0]
+                assert options.pop('spout_position') == SPOUT_POSITION[code[1]]
+                options['handle'] = code
+    return products
 
 
 def refine_group(group):
@@ -15,20 +29,32 @@ def refine_group(group):
         if axis['key'] == 'finish':
             assert set(axis['values']) <= FINISH_LABELS.keys()
             axis['labels'] = {v: FINISH_LABELS[v] for v in axis['values']}
+        if axis['key'] == 'spout':
+            axis.setdefault('labels', {}).update({v: 'Recht' if v == 'Rechte' else v
+                                                 for v in axis['values']})
         if group['id'] == FAMILY and axis['key'] == 'handle':
             photos = json.loads(Path(__file__).with_name('storefront_handle_photos.json').read_text())
-            assert set(photos) == set(axis['values'])
-            for code, photo in photos.items():
+            assert set(axis['values']) in (set(photos), set(HANDLE_LABELS))
+            for code in HANDLE_LABELS:
+                photo = photos[code + '1']
                 source = next(p for p in group['products'] if p['sku'] == photo['sku'])
                 assert source['image'] == photo['image']
-                assert source['options'] == {'colour': 'Chroom', 'finish': 'Standaard',
-                    'handle': code[0] + '1', 'spout': 'Rechte', 'wall_finish': 'Rozetten'}
+                expected = {'colour': 'Chroom', 'finish': 'Standaard', 'handle': code + '1',
+                            'spout': 'Rechte', 'wall_finish': 'Rozetten'}
+                assert next(p for p in original_products(group) if p['sku'] == photo['sku'])['options'] == expected
                 assert photo['represents'] == 'handle_shape_in_chrome'
-            axis['kind'] = 'handle_detail_photo'
-            axis['label'] = 'Hendel'
-            axis['labels'] = {code: HANDLE_LABELS[code[0]] + (' · links' if code[1] == '2' else ' · rechts')
-                              for code in axis['values']}
-            axis['images'] = photos
+            axis.update(kind='handle_detail_photo', label='Hendel', values=list(HANDLE_LABELS),
+                        labels=dict(HANDLE_LABELS), images={code: photos[code + '1'] for code in HANDLE_LABELS})
+    if group['id'] == FAMILY:
+        for product in group['products']:
+            options = product['options']
+            code = options.get('handle_code', options['handle'])
+            assert len(code) == 2 and code[0] in HANDLE_LABELS and code[1] in SPOUT_POSITION
+            options.update(handle=code[0], handle_code=code, spout_position=SPOUT_POSITION[code[1]])
+        if not any(axis['key'] == 'spout_position' for axis in group['axes']):
+            index = next(i for i, axis in enumerate(group['axes']) if axis['key'] == 'spout') + 1
+            group['axes'].insert(index, {'key': 'spout_position', 'label': 'Plaatsing uitloop',
+                                         'kind': 'text', 'values': ['Links', 'Rechts']})
     return group
 
 
@@ -44,7 +70,7 @@ if __name__ == '__main__':
             continue
         after = refine_group(before)
         if before != after:
-            assert before['products'] == after['products']
+            assert original_products(before) == original_products(after)
             path.write_text(json.dumps(after, ensure_ascii=False, separators=(',', ':')) + '\n')
             changed.append(path.name)
     print(json.dumps({'changed_groups': len(changed), 'files': changed}))

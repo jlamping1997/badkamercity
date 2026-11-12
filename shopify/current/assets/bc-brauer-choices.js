@@ -273,7 +273,7 @@
           group.append(list);
           if (axis.kind === 'handle_detail_photo') {
             group.append(make('p', 'bc-brauer-choice-help',
-              'De foto toont de hendelvorm in chroom; links of rechts staat in het label. Kleur en afwerking kies je hierboven. Grijze opties zijn niet combineerbaar met je andere keuzes.'));
+              'De foto toont de hendelvorm in chroom. Kleur en afwerking kies je hierboven; de plaatsing van de uitloop kies je hieronder. Grijze opties zijn niet combineerbaar met je andere keuzes.'));
           }
           if (colour && axis.values.length > 6) {
             const toggle = make('button', 'bc-hotbath-colors__toggle', this.expanded.has(axis.key) ? 'Minder kleuren' : 'Bekijk meer kleuren');
