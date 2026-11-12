@@ -170,6 +170,12 @@ for (const group of pricedGroups) {
     for (const axis of group.axes) {
       const ordered = orderedValues(group, axis, product.options);
       assert.deepEqual([...ordered].sort(), [...axis.values].sort());
+      if (axis.key !== 'colour') {
+        const expected = [...axis.values].sort((a, b) => sandbox.qa.label(axis, a).localeCompare(sandbox.qa.label(axis, b), 'nl', { numeric: true, sensitivity: 'base' }));
+        assert.deepEqual([...ordered], expected);
+        orderedStates++;
+        continue;
+      }
       let previous = -Infinity;
       let disabledStarted = false;
       for (const value of ordered) {
@@ -325,5 +331,39 @@ assert.equal(mirrorStarts, 585);
 report.mirror_groups = mirrors.length;
 report.mirror_exact_starts = mirrorStarts;
 report.mirror_pending_cart_guards = mirrorGuards;
+report.cabinet_groups = 0;
+report.cabinet_products = 0;
+report.glass_groups = 0;
+report.glass_products = 0;
+for (const group of groups) {
+  const cutouts = group.axes.find(a => a.key === 'cutouts');
+  if (cutouts) {
+    assert.equal(cutouts.label, 'Afvoeruitsparingen');
+    assert.equal(cutouts.labels['1'], '1 uitsparing');
+    assert.equal(cutouts.labels['2'], '2 uitsparingen');
+    assert.equal(cutouts.show_only_if_multiple, true);
+    assert(cutouts.help.includes('wastafel'));
+    report.cabinet_groups++;
+    report.cabinet_products += group.products.length;
+  }
+  if (group.products.every(p => p.sku.startsWith('GS-'))) {
+    const colour = group.axes.find(a => a.key === 'colour');
+    if (colour) assert.equal(colour.label, 'Kleur beslag');
+    for (const axis of group.axes.filter(a => ['width', 'depth'].includes(a.key))) {
+      assert(axis.label.includes('nominale maat'));
+      assert(axis.help.includes('inbouwmaat'));
+    }
+    if (group.products.some(p => p.sku.startsWith('GS-GTN'))) {
+      assert(group.glass_help.includes('schuifdeur'));
+      assert(!group.glass_help.includes('draaideur'));
+    }
+    report.glass_groups++;
+    report.glass_products += group.products.length;
+  }
+}
+assert.equal(report.cabinet_groups, 43);
+assert.equal(report.cabinet_products, 1712);
+assert.equal(report.glass_groups, 26);
+assert.equal(report.glass_products, 966);
 if (reportPath) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report));

@@ -31,13 +31,20 @@
   }
 
   function orderedValues(group, axis, state) {
-    if (!group.price_order) return axis.values;
+    const compare = (a, b) => {
+      if (['width', 'depth', 'head_size'].includes(axis.key)) {
+        const left = Number(String(a).replace(',', '.'));
+        const right = Number(String(b).replace(',', '.'));
+        if (Number.isFinite(left) && Number.isFinite(right)) return left - right;
+      }
+      return label(axis, a).localeCompare(label(axis, b), 'nl', { numeric: true, sensitivity: 'base' });
+    };
+    if (axis.key !== 'colour' || !group.price_order) return [...axis.values].sort(compare);
     return axis.values.map((value, index) => {
       const candidates = matches(group, nextState(group, state, axis.key, value));
       const prices = candidates.map(p => p.price_cents).filter(Number.isSafeInteger);
       return { value, index, price: prices.length === candidates.length && prices.length ? Math.min(...prices) : Infinity };
-    }).sort((a, b) => a.price - b.price ||
-      (axis.key === 'colour' ? Number(b.value === 'Chroom') - Number(a.value === 'Chroom') : 0) || a.index - b.index)
+    }).sort((a, b) => a.price - b.price || compare(a.value, b.value))
       .map(option => option.value);
   }
 
@@ -243,6 +250,7 @@
 
     render(focusKey) {
       const fragment = document.createDocumentFragment();
+      if (this.group.glass_help) fragment.append(make('p', 'bc-brauer-choice-help', this.group.glass_help));
       this.group.axes.forEach(axis => {
         if (!active(this.group, axis, this.state) || axis.values.length < 2) return;
         const group = make('div', 'bc-buybox__option-group bc-buybox__switcher-group');
@@ -300,6 +308,7 @@
             group.append(toggle);
           }
         }
+        if (axis.help && axis.kind !== 'handle_detail_photo') group.append(make('p', 'bc-brauer-choice-help', axis.help));
         fragment.append(group);
       });
       const candidates = matches(this.group, this.state);

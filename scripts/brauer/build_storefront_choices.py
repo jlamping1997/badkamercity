@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 from refine_visual_choices import refine_group
 from build_tap_choices import OPBOUW, attach_prices, build_opbouw_group
+from refine_cabinets_glass import refine as refine_cabinets_glass
 from datetime import datetime, timezone
 
 
@@ -30,6 +31,9 @@ def build(prepared, live_path, theme, report_path):
         assert variant['sku'] not in by_sku
         by_sku[variant['sku']] = product
     assert set(catalog) == set(by_sku)
+    variants = {p['variants']['nodes'][0]['id']: {**p['variants']['nodes'][0],
+        'product': {key: p[key] for key in ('id', 'handle', 'vendor', 'status', 'title')}}
+        for p in by_sku.values()}
     routes = [[] for _ in range(8)]
     report = {'groups': 0, 'products': 0, 'held_groups': [], 'single_article_groups': 0,
               'files': [], 'identity_errors': 0, 'missing_first_images': 0}
@@ -70,9 +74,6 @@ def build(prepared, live_path, theme, report_path):
                                  'options': {key: source['options'].get(key) for key in sorted(keys)}})
             group = refine_group({'version': 1, 'id': family['id'], 'axes': family['axes'], 'products': products})
         if family['id'] != OPBOUW:
-            variants = {p['variants']['nodes'][0]['id']: {**p['variants']['nodes'][0],
-                'product': {key: p[key] for key in ('id', 'handle', 'vendor', 'status', 'title')}}
-                for p in by_sku.values()}
             group = attach_prices(group, variants, checked_at)
         filename = 'assets/bc-brauer-' + family['id'][7:].lower() + '.json'
         write_json(theme / filename, group)
@@ -91,6 +92,7 @@ def build(prepared, live_path, theme, report_path):
         (theme / filename).write_text('{% doc %}\nRoutes verified Brauer product IDs to their prepared choice group.\n@param {product} product - Exact current product.\n{% enddoc %}\n{%- liquid\n  case product.id\n' + ''.join(cases) +
                                      '  endcase\n-%}\n')
         report['files'].append(filename)
+    report['cabinet_glass_refinement'] = refine_cabinets_glass(theme, list(variants.values()))
     write_json(report_path, report)
     return report
 

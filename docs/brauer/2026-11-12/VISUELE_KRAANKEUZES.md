@@ -1,3 +1,5 @@
+> Actuele vervolgstand: [onderkasten en glas — 173 groepen /6.402 verbeterde artikelen](CABINETS_GLASS.md). De eerdere spiegelkaststand hieronder is historie.
+
 # Brauer — duidelijke productkeuzes
 
 12 november 2026 · BRAUER-VISUAL-CHOICES-01 · MIRROR_CABINETS_CONCEPT_VERIFIED / RELEASE_PENDING.
