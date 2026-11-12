@@ -6,7 +6,7 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
-[Actuele GA4-proef, grenzen en herstel](2026-11-12-GA4.md). Publicatie Version2 bevestigd op12november14:30; live runtime nog te controleren. Shopping-dubbelmeldingen geparkeerd; urgente containermelding nog onverklaard.
+[Actuele GA4-proef, grenzen en herstel](2026-11-12-GA4.md). Publicatie Version2 bevestigd op12november14:30; homepage-runtime buiten Preview gecontroleerd; consent-netwerk/intrekken/purchase nog open. Shopping-dubbelmeldingen geparkeerd; urgente containermelding nog onverklaard.
 
 Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bewezen blokkade; volledige technische/Google-rendercontrole niet uitgevoerd. Hervatten bij concrete crawl-/indexfout of latere indexatiereview. SEO-S03 nu actief om resterend gebruik te richten op de meetroute. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
 
@@ -15,10 +15,10 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
 | Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
-| Status | IN_PROGRESS — Version2 gepubliceerd; live nacontrole open |
+| Status | IN_PROGRESS — dubbele homepage-page_view live hersteld en gecontroleerd; consentnetwerk open |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Previewhomepage/product/cartproef PASS; eigenaar publiceert GTM-WPNHKXXR Version2 om14:30; testtegels verwijderd volgens eigenaar |
-| Exact één volgende handeling voor Jackson | Nieuw incognito buiten Preview: na accepteren één homepageherlaad meten via Network collect; één page_view naar G-H9YFB5TC6N controleren |
+| Laatste afgeronde handeling | Version2 live; eigenaarproef buiten Preview bevestigt één Shopify-page_view naar juiste GA4-stream |
+| Exact één volgende handeling voor Jackson | Schoon incognito met Network collect vanaf eerste paginalaad opnemen; vóór keuze en na Afwijzen consent/netwerk beoordelen |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
