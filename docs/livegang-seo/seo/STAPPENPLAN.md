@@ -6,6 +6,8 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
+**12 november 2026 — nieuwe eigenaarprioriteit tijdens Lagoo:** verkennende SEO-S06-inhoudscontrole van negen wastafelkranen afgerond, nog geen technische bronvrijgave of correctie. [Steekproef en exact hervatpunt](2026-11-12-WASTAFELKRANEN.md). Geen Shopify-writes. Eerst de bestaande gegevens achter de lege publieke CB078WCR/CX078WCR-specificatietabellen onderzoeken; geen nieuwe scraper of modelwaarden kopiëren. BRAUER-specificaties en Lagoo blijven bij hun bestaande werkstromen. Oudere volgende handelingen hieronder zijn gedateerde checkpoints.
+
 **12 november2026 — Hotbath-uitsluiting bevestigd:** volledige Shopify-nacontrole644uniekeCSV-producten:644Google=false,644Webshop=true,644ACTIVE; overige publicaties en gecontroleerde voorraad behouden. Eigenaar voerde643resterende uitsluitingen uit; proefartikel al eerderuit. Lagoo-foto's lopen in andere chat; hier geen Lagoo-writes. Merchant Center-sync en resterende setup-/beleidsmeldingen nog niet beoordeeld. [Actueel resultaat](../merchant/2026-11-12-HOTBATH.md).
 
 
@@ -19,14 +21,14 @@ Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bew
 | --- | --- |
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
-| Actieve stap | SEO-S12 — afgebakende Merchant-Hotbath-uitsluiting op eigenaarprioriteit; SEO-S03-restpunten open |
-| Status | SEO-S12 PARTIAL — Hotbath-deelactie OWNER_APPLIED_VERIFIED_ADMIN; Merchant-sync/overige problemen nog niet beoordeeld |
+| Actieve stap | SEO-S06 — verkennende inhoudscontrole wastafelkranen op eigenaarprioriteit; SEO-S05-clusterkeuze nog open |
+| Status | SEO-S06 PARTIAL — negen pagina’s gelezen; bron-/metafieldvergelijking voor Hotbath open. S12 Hotbath-uitvoering behouden; Merchant-sync nog open |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | Alle644CSV-Hotbathproducten onafhankelijk teruggelezen: Googleuit,Webshopaan,ACTIVE; overige kanalen en voorraad behouden |
-| Exact één volgende handeling voor Jackson | Merchant Center Needs attention opnieuw openen voor resterende meldingen/setup- en beleidsproblemen; uitsluitingen niet herhalen |
+| Laatste afgeronde handeling | Negen kranen via Admin en publieke HTTP200/HTML gelezen; twee beperkte Hotbath-tabellen en tekst-/claimvragen vastgelegd, nul Shopify-writes |
+| Exact één volgende handeling | Assistent onderzoekt bestaande bron-/metafielddekking CB078WCR/CX078WCR; Jackson hoeft nu niets aan te klikken |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
-| Bewijsvorm | Eigenaarexport + actuele Shopify-API-reads en expliciete policyweigering; adminfilters via API getest, UI/Google-verwerking niet bevestigd |
+| Bewijsvorm | Actuele Shopify-API plus publieke server-HTML; geen browser-, technische fabrikant-, cart- of Google-verwerkingsvrijgave |
 
 ### Hervatten in een andere chat of op een andere pc
 
