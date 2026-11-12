@@ -1,6 +1,6 @@
 # Brauer — visuele kraankeuzes herstellen
 
-12 november 2026 · BRAUER-VISUAL-CHOICES-01 · IMPLEMENTED_TEST_ONLY / COPYING_DRAFT.
+12 november 2026 · BRAUER-VISUAL-CHOICES-01 · PREVIEW_VERIFIED / OWNER_REVIEW_PENDING.
 
 ## Opdracht en aangetoonde regressie
 
@@ -21,8 +21,9 @@ De huidige eigenaaropdracht bepaalt nu de labels: **Streepjes / Gekarteld / Glad
 
 Twee renderer-assets (bc-brauer-choices.js/.css) en veertig groeps-JSON’s onder shopify/current/assets. Generator build_storefront_choices.py, nieuwe refine_visual_choices.py en storefront_handle_photos.json, plus bestaande test_storefront_choices.cjs. Geen andere merken of MAIN-bestanden geschreven.
 
-Vers gelezen MAIN196542005514. Afzonderlijke native kopie aangevraagd: UNPUBLISHED196578803978, BadkamerCity - Brauer visuele kraankeuzes. Bestaand Brauer-specificatieconcept196557144330 blijft ongemoeid. Kopie nog in uitvoering; eerste 875 teruggelezen bestanden checksum-identiek met MAIN. Volledige MAIN-baseline2522bestanden gelezen; alle MD5’s aanwezig. Geen uploads naar de onvolledige kopie, geen publicatieclaim.
+MAIN **196542005514** is volledig vóór en na gelezen: alle 2.522 bestanden ongewijzigd. Nieuwe native kopie **UNPUBLISHED 196578803978 — BadkamerCity - Brauer visuele kraankeuzes** was vóór upload volledig 2.522/2.522 checksum-identiek. Daarna uitsluitend 42 bestaande assets geschreven en teruggelezen: exact 42 bedoelde verschillen, nul onverwachte verschillen, nul ontbrekende/verkeerde uploads. Eindrol UNPUBLISHED bevestigd. Bestaand Brauer-specificatieconcept 196557144330 blijft ongemoeid. Geen publicatie.
 
+Codecheckpoint a24ac9e455e3dfad1e9c49dc4a492e46abead180 bevat de implementatie. De aansluitende overdrachtscommit bevat de definitieve 70px-uitloopfotohoogte en onderstaande browserbewijzen. Actieve codebranch: fix/product-cards-2026-10-14. Geen actieve schrijver na overdracht.
 Herstel: de 42 assets uit de vóórmeting terugzetten in hetzelfde concept; bij ongepubliceerde oplevering blijft live onveranderd. Bij eventuele latere publicatie kan de eerdere MAIN als herstelpunt dienen, mits rollen en andere gelijktijdige wijzigingen eerst vers zijn gecontroleerd.
 
 ## Bewijs en grenzen
@@ -31,9 +32,13 @@ Herstel: de 42 assets uit de vóórmeting terugzetten in hetzelfde concept; bij 
 - Aanvullend 338 kraanstartstanden en672exacte kandidaat-uitloopfoto’s gecontroleerd; tien hendelkeuzes, vijf bronfoto’s; geblokkeerde Stripe→B1-wissel verandert niets. Zie VISUELE_KRAANKEUZES_TESTS.json.
 - Alle40gewijzigde groepsbestanden bewaren alle productrecords en aswaarden exact. Alleen presentatievelden wijzigen.
 - Toolkitvalidatie42files PASS na aanvullen van ontbrekende runtime-dependencies. Validator gebruikt gebundelde docs-fallback doordat ophalen actuele docs time-out gaf; geen onbewezen actuele documentatieclaim.
-- Lokale Chromium-layouttest kon niet starten door runtimebeperking (socket Operation not permitted). Cloud-browser opent de echte huidige productpagina; file-preview is beleidsmatig niet toegestaan en niet omzeild. Visuele browser-, responsive-, echte conceptcart-/checkout- en fysieke telefoonproef nog NOT_TESTED.
+- Echte Chrome-conceptpagina op desktop gecontroleerd. Zichtbare hendelvormen, eenvoudige finishlabels en kleine 70px-uitloopfoto’s bevestigd. Afzonderlijke deelbare Shopify-previewlink met exact dit product geopend en visueel gecontroleerd; schermbewijs in gesprek, geen previewcapability in publieke Git.
+- Echte navigatie: 5-S-331 → Gebogen → 5-S-328 → A2/links → 5-S-332, telkens zwart/Streepjes/rozetten behouden en €421,56. Vervolgens Glad en Kort en smal/links → 5-S-083-B5-65, €388,29. Onmogelijke Stripe-hendels blijven zichtbaar grijs.
+- Native winkelwagenknop op 5-S-083-B5-65 gebruikt: succesvolle modal met juiste titel/€388,29 en onafhankelijk cartread met variant 54103819026698, aantal 1. Vooraf leeg; uitsluitend eigen proefregel verwijderd; eindread nul regels. Geen checkout/aankoop.
+- Smalle layout met native Chromezoom 400%: 340 CSS-px viewport, documentbreedte 337px, drie kolommen, circa 79,66px brede hendelknoppen, alle tien vormbeelden geladen. Dit bewijst layout/overflow/afmetingen; mobiele klik/navigatie en fysiek telefoon-/touchgebruik NOT_TESTED. Zoom naar 100% hersteld.
+- De eerdere lokale Chromiumtest kon door een runtimebeperking niet starten. De uiteindelijke desktop-, smalle-layout- en cartbewijzen hierboven zijn in de echte cloudbrowser uitgevoerd. Geen algemene volledige smartphone-/alle-producten-/checkoutvrijgave.
 - Nul Admin-product-, media-, prijs-, voorraad- of kanaalmutaties. Lagoo en andere Brauer-specificatiewerkstroom niet gewijzigd. Geen lokale Windows-check.
 
 ## Exact volgende handeling
 
-Wacht de native conceptkopie af, bewijs volledige2522bestanden-pariteit, upload uitsluitend42bedoelde assets, lees alle checksums terug en controleer dan de echte conceptpagina op desktop/mobiel en exacte artikelnavigatie. Pas een gecontroleerd voorbeeld aan de eigenaar geven. Nog geen publicatie of volledige UX-vrijgave.
+Eigenaar opent het gedeelde conceptvoorbeeld en beoordeelt de herstelde keuzehulp. Nog geen eigenaar-UI-goedkeuring of publicatie. Vóór een eventuele latere release eerst actuele MAIN-rol en gelijktijdige wijzigingen vergelijken; andere Brauer-specificaties of Lagoo-werk niet overschrijven. Het huidige concept is een afzonderlijk gecontroleerd reviewresultaat.

@@ -15,6 +15,7 @@
 .bc-brauer-choices .bc-brauer-photo-choice { position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: .6rem; min-width: 0; padding: .8rem .5rem; white-space: normal; }
 .bc-brauer-choices .bc-brauer-photo-choice.is-active { padding: .8rem .5rem; }
 .bc-brauer-choices .bc-brauer-photo-choice__frame { position: relative; display: block; overflow: hidden; width: 100%; aspect-ratio: 1.2; background: #fff; border-radius: .4rem; }
+.bc-brauer-choices .bc-brauer-photo-choices:not(.bc-brauer-photo-choices--handles) .bc-brauer-photo-choice__frame { height: 7rem; aspect-ratio: auto; }
 .bc-brauer-choices .bc-brauer-photo-choice__frame img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
 .bc-brauer-choices .bc-brauer-photo-choice__frame--handle { aspect-ratio: 1; }
 .bc-brauer-choices .bc-brauer-photo-choice__crop { position: absolute; overflow: hidden; width: var(--crop-width); height: var(--crop-height); left: 50%; top: 50%; transform: translate(-50%, -50%); }
