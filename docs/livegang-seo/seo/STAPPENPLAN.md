@@ -6,17 +6,17 @@ Dit is de praktische uitvoeringsvolgorde binnen het bestaande livegang-/SEO-doss
 
 ## 1. Hier zijn we nu
 
-Checkpoint12november2026. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
+Checkpoint12november2026. SEO-S02 PARTIAL_DEFERRED: onderzochte scope zonder bewezen blokkade; volledige technische/Google-rendercontrole niet uitgevoerd. Hervatten bij concrete crawl-/indexfout of latere indexatiereview. SEO-S03 nu actief om resterend gebruik te richten op de meetroute. [Nulmeting en technisch bewijs](2026-11-12-GSC.md).
 
 | Veld | Actuele waarde |
 | --- | --- |
 | Werkstroom | SEO-TRAJECT-2026-11 |
 | Fase | A — nulmeting en betrouwbare basis |
-| Actieve stap | SEO-S02 — indexatie en techniek |
-| Status | IN_PROGRESS |
+| Actieve stap | SEO-S03 — bestaande GA4-meetroute en consent |
+| Status | WAITING_USER |
 | Voortgang | 1/20 DONE; S01 afgerond binnen geleverde tweedaagse nulmeting |
-| Laatste afgeronde handeling | GSC-exports gelezen; sitemap en Salerno categorieproductlink onafhankelijk bevestigd |
-| Exact één volgende handeling voor Jackson | Bevestig Salerno “Indexing requested”; alleen aanvragen als nog niet gedaan |
+| Laatste afgeronde handeling | Salerno Indexing requested bevestigd; sitemap/categorielink en GSC-steekproeven vastgelegd |
+| Exact één volgende handeling voor Jackson | Open analytics.google.com en deel naam/ID van de bestaande Badkamercity-property; geen nieuwe property maken |
 | Wat nog niet is bewezen | Salerno/Alvara opname in index, volledige SEO-S02-scope, analytics en koopreis |
 | Schrijver na overdracht | Geen actieve schrijver |
 | Bewijsvorm | Eigenaarexports/inspecties + publieke HTTP-reads; geen zelfstandige Google-accounttoegang |
