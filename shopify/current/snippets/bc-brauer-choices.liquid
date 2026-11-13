@@ -1,0 +1,42 @@
+{% doc %}
+Renders the prepared Brauer choices for the exact current product.
+@param {product} product - Current product with its native variant.
+@param {section} section - Product section.
+{% enddoc %}
+{%- liquid
+  assign bc_brauer_bucket = product.id | divided_by: 32768 | modulo: 8
+  capture bc_brauer_route
+    case bc_brauer_bucket
+      when 0
+        render 'bc-brauer-route-0', product: product
+      when 1
+        render 'bc-brauer-route-1', product: product
+      when 2
+        render 'bc-brauer-route-2', product: product
+      when 3
+        render 'bc-brauer-route-3', product: product
+      when 4
+        render 'bc-brauer-route-4', product: product
+      when 5
+        render 'bc-brauer-route-5', product: product
+      when 6
+        render 'bc-brauer-route-6', product: product
+      when 7
+        render 'bc-brauer-route-7', product: product
+    endcase
+  endcapture
+  assign bc_brauer_parts = bc_brauer_route | strip | split: '||'
+  assign bc_brauer_group = bc_brauer_parts[0] | strip
+  assign bc_brauer_asset = bc_brauer_parts[1] | strip
+-%}
+{%- if bc_brauer_group != blank and bc_brauer_asset != blank -%}
+  {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
+  {{ 'bc-brauer-choices.css' | asset_url | stylesheet_tag }}
+  <div class="bc-buybox__switcher-groups bc-hotbath-switcher--mobile bc-brauer-choices"
+    data-bc-brauer-choices data-choice-group="{{ bc_brauer_group | escape }}"
+    data-product-id="{{ product.id }}" data-variant-id="{{ product.variants.first.id }}"
+    data-product-sku="{{ product.variants.first.sku | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-choice-source="{{ bc_brauer_asset | asset_url }}" hidden></div>
+  <script src="{{ 'bc-brauer-choices.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

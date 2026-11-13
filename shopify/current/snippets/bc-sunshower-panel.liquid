@@ -1,0 +1,125 @@
+{% doc %}
+  Displays Sunshower data with the shared approved product page components.
+  @param {product} product - Current Sunshower product.
+  @param {string} section_id - Main section identifier.
+  @param {string} mode - specifications, components, accessories or pros.
+{% enddoc %}
+{%- case mode -%}
+  {%- when 'specifications' -%}
+    {{ 'bc-sunshower.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'bc-sunshower.js' | asset_url }}" defer="defer"></script>
+    {%- assign specifications = product.metafields.bc_sunshower.specifications.value -%}
+    <section class="bc-test-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="SunshowerSpecsTitle-{{ section_id }}">
+      <h2 class="bc-test-specs__title" id="SunshowerSpecsTitle-{{ section_id }}">{{ 'bc_sunshower.specifications' | t }}</h2>
+      {%- for group in specifications.groups -%}
+        {%- if group.items.size > 0 -%}
+          <h3 class="bc-test-specs__group-title">{{ group.group | escape }}</h3>
+          <dl class="bc-test-specs__list">
+            {%- for item in group.items -%}
+              <div class="bc-test-specs__row{% cycle 'sunshower-specs-zebra': '', ' bc-test-specs__row--shaded' %}"><dt>{{ item.name | escape }}</dt><dd>{% if item.value == true %}{{ 'bc_sunshower.yes' | t }}{% elsif item.value == false %}{{ 'bc_sunshower.no' | t }}{% else %}{{ item.value | escape }}{% endif %}</dd></div>
+            {%- endfor -%}
+          </dl>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign documents = product.metafields.bc_sunshower.documents.value -%}
+      {%- if documents.items.size > 0 -%}
+        <div class="bc-sunshower-documents">
+          <h3 class="bc-test-specs__group-title">{{ 'bc_sunshower.documents' | t }}</h3>
+          <ul role="list">
+            {%- for document in documents.items -%}
+              <li><a href="{{ document.url | escape }}" target="_blank" rel="noopener"><span class="bc-sunshower-documents__type">PDF</span><span>{{ document.caption | escape }}</span></a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    </section>
+  {%- when 'components' -%}
+    {%- assign components = product.metafields.bc_sunshower.components.value -%}
+    {%- if components.items.size > 0 -%}
+      <section class="bc-product-set" aria-labelledby="SunshowerSetTitle-{{ section_id }}">
+        <h2 id="SunshowerSetTitle-{{ section_id }}">{{ 'bc_sunshower.components' | t }}</h2>
+        <p class="bc-product-set__demo-note">{{ 'bc_sunshower.included_note' | t }}</p>
+        <ul class="bc-product-set__list" role="list">
+          {%- for item in components.items -%}
+            <li class="bc-product-set__item">
+              <a class="bc-product-set__row bc-product-set__link" href="{{ item.url | escape }}" data-sunshower-preview="{{ item.preview_url | escape }}" data-sunshower-source="{{ item.source_product_id | escape }}">
+                <span class="bc-product-set__media" aria-hidden="true">
+                  {%- if item.image_url != blank -%}<img class="bc-product-set__image" src="{{ item.image_url | append: '&width=160' | escape }}" alt="" width="80" height="80" loading="lazy">{%- endif -%}
+                </span>
+                <span class="bc-product-set__detail"><span class="bc-product-set__name">{{ item.title | escape }}</span><span class="bc-product-set__sku">{{ item.quantity | round }} × {{ item.manufacturer_number | escape }}</span></span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    {%- endif -%}
+  {%- when 'accessories' -%}
+    {%- assign accessories = product.metafields.bc_sunshower.accessories.value -%}
+    {%- if accessories.items.size > 0 -%}
+      <bc-product-accessories class="bc-accessories" data-currency="{{ cart.currency.iso_code | escape }}" data-parent-variant="{{ product.selected_or_first_available_variant.id }}" data-cart-url="{{ routes.cart_url }}" data-add-url="{{ routes.cart_add_url }}.js" aria-labelledby="SunshowerAccessoriesTitle-{{ section_id }}">
+        <span class="bc-accessories__eyebrow">{{ 'bc_sunshower.accessories_eyebrow' | t }}</span>
+        <h2 id="SunshowerAccessoriesTitle-{{ section_id }}">{{ 'bc_sunshower.accessories' | t }}</h2>
+        <p class="bc-accessories__intro">{{ 'bc_sunshower.accessories_note' | t }}</p>
+        <div class="bc-accessories__group">
+          <h3>{{ 'bc_sunshower.optional_extras' | t }}</h3>
+          <p>{{ 'bc_sunshower.optional_note' | t }}</p>
+          <ul class="bc-accessories__list" role="list">
+            {%- for item in accessories.items -%}
+              {%- liquid
+                assign row_id = section_id | append: '-' | append: item.variant_id
+                assign accessory_handle = item.url | remove: '/products/'
+                assign accessory_product = all_products[accessory_handle]
+                assign accessory_variant = accessory_product.selected_or_first_available_variant
+                assign accessory_price = item.price_cents
+                if accessory_variant != blank
+                  assign accessory_price = accessory_variant.price
+                endif
+              -%}
+              <li class="bc-accessories__item" data-accessory-row data-variant-id="{{ item.variant_id }}" data-price="{{ accessory_price }}">
+                <a class="bc-accessories__product" href="{{ item.url | escape }}" data-sunshower-preview="{{ item.preview_url | escape }}" data-sunshower-source="{{ item.source_product_id | escape }}">
+                  <span class="bc-accessories__image" aria-hidden="true">
+                    {%- if accessory_product.featured_image != blank -%}{{ accessory_product.featured_image | image_url: width: 160 | image_tag: widths: '80, 160', sizes: '80px', loading: 'lazy', alt: '' }}{%- elsif item.image_url != blank -%}<img src="{{ item.image_url | append: '&width=160' | escape }}" alt="" width="80" height="80" loading="lazy">{%- else -%}<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 9 12-6 12 6v14l-12 6-12-6V9Zm0 0 12 6 12-6M16 15v14M10 6l12 6"/></svg>{%- endif -%}
+                  </span>
+                  <span><span class="bc-accessories__name">{{ item.title | escape }}</span><span class="bc-accessories__sku">{{ 'bc_sunshower.article_number' | t }} {{ item.manufacturer_number | escape }}</span></span>
+                </a>
+                <p class="bc-accessories__reason">{{ item.description | escape }}</p>
+                <div class="bc-accessories__choice">
+                  <strong class="bc-accessories__price">{% render 'bc-money', amount: accessory_price %} <span>{{ 'bc_sunshower.per_piece' | t }}</span></strong>
+                  {%- if accessory_variant != blank and accessory_variant.available == false -%}
+                    <span class="bc-accessories__unavailable">{{ 'bc_sunshower.unavailable' | t }}</span>
+                  {%- else -%}
+                    <label class="bc-accessories__select" for="AccessorySelect-{{ row_id }}"><input id="AccessorySelect-{{ row_id }}" type="checkbox" data-accessory-select aria-label="{{ 'bc_sunshower.select_accessory' | t: title: item.title | escape }}" disabled><span>{{ 'bc_sunshower.add' | t }}</span></label>
+                    <label class="bc-accessories__quantity" for="AccessoryQuantity-{{ row_id }}"><span>{{ 'bc_sunshower.quantity' | t }}</span><input id="AccessoryQuantity-{{ row_id }}" type="number" data-accessory-quantity inputmode="numeric" value="1" min="1" step="1" required disabled aria-label="{{ 'bc_sunshower.accessory_quantity' | t: title: item.title | escape }}"></label>
+                  {%- endif -%}
+                </div>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        <noscript><p>{{ 'bc_sunshower.open_accessory' | t }}</p></noscript>
+        <div class="bc-accessories__summary" data-accessory-controls hidden>
+          <div class="bc-accessories__total" aria-live="polite" aria-atomic="true"><span data-accessory-count>{{ 'bc_sunshower.none_selected' | t }}</span><strong data-accessory-total>{{ 0 | money }}</strong><small>{{ 'bc_sunshower.accessory_total' | t }}</small></div>
+          <button type="button" class="bc-accessories__submit" data-accessory-submit disabled>{{ 'bc_sunshower.add_extras' | t }}</button>
+          <p class="bc-accessories__hint">{{ 'bc_sunshower.only_extras' | t }}</p>
+        </div>
+        <p class="bc-accessories__error" data-accessory-error role="alert" tabindex="-1" hidden></p>
+        <a href="{{ routes.cart_url }}" class="bc-accessories__cart-link" data-accessory-cart-link hidden>{{ 'bc_sunshower.cart' | t }}</a>
+      </bc-product-accessories>
+    {%- endif -%}
+  {%- when 'pros' -%}
+    {%- assign configuration = product.metafields.bc_sunshower.configuration.value -%}
+    <section class="bc-product-pros-cons" aria-labelledby="ProductProsConsTitle-{{ section_id }}"><div class="bc-product-pros-cons__inner">
+      <h2 id="ProductProsConsTitle-{{ section_id }}" class="bc-product-pros-cons__title">{{ 'bc_sunshower.pros_title' | t }}</h2>
+      <ul class="bc-product-pros-cons__list list-unstyled" role="list">
+        {%- assign plus_keys = 'pros_functions,pros_touch,pros_shape' | split: ',' -%}
+        {%- for key in plus_keys -%}
+          <li class="bc-product-pros-cons__item bc-product-pros-cons__item--plus"><span class="bc-product-pros-cons__icon" aria-hidden="true"><svg class="bc-product-pros-cons__icon-mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 8 3 3 5-6"/></svg></span><span class="bc-product-pros-cons__text">{%- if key == 'pros_functions' -%}{%- if configuration.selected.met_uv == 'true' -%}{{ 'bc_sunshower.pros_uv' | t }}{%- else -%}{{ 'bc_sunshower.pros_ir' | t }}{%- endif -%}{%- else -%}{%- assign translation = 'bc_sunshower.' | append: key -%}{{ translation | t }}{%- endif -%}</span></li>
+        {%- endfor -%}
+        {%- assign attention_keys = 'attention_installation,attention_extras' | split: ',' -%}
+        {%- for key in attention_keys -%}
+          {%- assign translation = 'bc_sunshower.' | append: key -%}
+          <li class="bc-product-pros-cons__item bc-product-pros-cons__item--attention"><span class="bc-product-pros-cons__icon" aria-hidden="true"><svg class="bc-product-pros-cons__icon-mark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m5 5 6 6m0-6-6 6"/></svg></span><span class="bc-product-pros-cons__text">{{ translation | t }}</span></li>
+        {%- endfor -%}
+      </ul>
+    </div></section>
+{%- endcase -%}

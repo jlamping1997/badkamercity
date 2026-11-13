@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-28T03:15:25.372Z",
+  "themeId": "gid://shopify/OnlineStoreTheme/195818389770",
+  "sameManifestAsDOC01": true,
+  "files": 1262,
+  "newOrDifferent": [],
+  "missing": [],
+  "repeatedBodyChecks": [
+    {
+      "path": "config/settings_data.json",
+      "md5Metadata": "56d82e286a3ff41931816a95b614a5cf",
+      "md5Received": "9fd7717c3e9eb0ab55c679cc1a753361",
+      "metadataBytes": "8651",
+      "receivedBytes": 11923,
+      "sameReceivedAsDOC01": true
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "md5Metadata": "29df7a0fcdae6aeb38233e5e3b562f1f",
+      "md5Received": "29df7a0fcdae6aeb38233e5e3b562f1f",
+      "metadataBytes": "139440",
+      "receivedBytes": 139440,
+      "sameReceivedAsDOC01": true
+    },
+    {
+      "path": "sections/main-sunshower.liquid",
+      "md5Metadata": "8de08df00ef54024133536351c6a55d6",
+      "md5Received": "8de08df00ef54024133536351c6a55d6",
+      "metadataBytes": "20387",
+      "receivedBytes": 20387,
+      "sameReceivedAsDOC01": true
+    }
+  ],
+  "independentSettingsCopyAvailable": false,
+  "settingsParityStatus": "OPEN; connector body repeated unchanged; no tracked file matches expected MD5"
+}

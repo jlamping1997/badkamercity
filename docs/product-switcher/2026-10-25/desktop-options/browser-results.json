@@ -1,0 +1,34 @@
+{
+  "desktop": {
+    "viewport": 1348,
+    "baseCents": 32201,
+    "withAddonCents": 49601,
+    "quantityTwoWithAddonCents": 99202,
+    "colorAfterNavigation": "Geborsteld nikkel",
+    "expandedAfterColor": 10,
+    "addonAfterColor": true,
+    "after18cmWithAddonCents": 48600
+  },
+  "responsive": [
+    {
+      "cssWidth": 320,
+      "scrollWidth": 305,
+      "width": 305,
+      "expanded": 10
+    },
+    {
+      "cssWidth": 1024,
+      "scrollWidth": 1009,
+      "width": 1009,
+      "expanded": 10,
+      "withAddonCents": "49601"
+    },
+    {
+      "cssWidth": 390,
+      "scrollWidth": 375,
+      "width": 375,
+      "expanded": 10,
+      "withAddonCents": "49601"
+    }
+  ]
+}

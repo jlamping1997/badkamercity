@@ -1,0 +1,19 @@
+## Validation Summary
+
+**Overall Status:** ⚠️ VALID (with warnings)
+**Total Files:** 1
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** bc-compact-pdp-main-product
+**Revision:** 2
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ⚠️ INFORM
+**Details:** main-product.liquid passed all checks (with 3 non-error finding(s)):
+WARNING [line 1422, col 116]: Liquid complexity is 229, which exceeds the maximum of 120. The decision at line 1422 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.
+WARNING [line 2237, col 9]: The variable 'seo_media' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'seo_media'.
+WARNING [line 1884, col 45]: Unknown object 'continue' used.
+
+

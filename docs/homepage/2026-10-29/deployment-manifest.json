@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-29",
+  "source_start_sha": "83b6ab9ab9a5adf22150232920cb88cf42af0974",
+  "baseline_theme_id": "195876815114",
+  "target_theme_id": "195910795530",
+  "target_role": "UNPUBLISHED",
+  "new_section_before_template": true,
+  "footer_schema_before_group": true,
+  "files": [
+    {
+      "path": "assets/bc-homepage.css",
+      "md5": "b61a396db1ccd3bcd8c184d1734a1b08",
+      "bytes": 10995,
+      "kind": "TEXT"
+    },
+    {
+      "path": "assets/bc-homepage.js",
+      "md5": "72cab386f63d79883d3574c66d1d868b",
+      "bytes": 1261,
+      "kind": "TEXT"
+    },
+    {
+      "path": "assets/bch-accessoires.webp",
+      "md5": "550e223659c559160a4413461ba69a85",
+      "bytes": 20672,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-baden.webp",
+      "md5": "2f671b268c4ebad951c73b2f9bcb9896",
+      "bytes": 28992,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-badkamermeubels.webp",
+      "md5": "f552f4f8263116f5d173e33c3c0ec5ab",
+      "bytes": 21246,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-design.webp",
+      "md5": "6253b0da14d350fe0f6f2952422b69c0",
+      "bytes": 138810,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-douches.webp",
+      "md5": "1dc2b1dbb85d698500db4377a5ef941b",
+      "bytes": 15372,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-inspiration.webp",
+      "md5": "7849407e6080af5f4128b3b8d32b03af",
+      "bytes": 90224,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-kranen.webp",
+      "md5": "807cd7ac4530eac1c119f06c4e2fb988",
+      "bytes": 13088,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-primary.webp",
+      "md5": "e9bca49f750b4408c846a0e9d62a044d",
+      "bytes": 39848,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-secondary.webp",
+      "md5": "9150f09a7161f9acf88c1ccee31bd3bc",
+      "bytes": 43412,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-spiegels.webp",
+      "md5": "6f3363222d1168b4c285ec9406daf73f",
+      "bytes": 16122,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-tegels.webp",
+      "md5": "1c9f6228d9330dc6ad168831670fc89f",
+      "bytes": 38782,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-toiletten.webp",
+      "md5": "0f8e48352ad6d875aa51fac55e5b23ed",
+      "bytes": 23634,
+      "kind": "BASE64"
+    },
+    {
+      "path": "assets/bch-wastafels.webp",
+      "md5": "440191502002f96f50ef113397bca294",
+      "bytes": 22448,
+      "kind": "BASE64"
+    },
+    {
+      "path": "locales/en.default.json",
+      "md5": "57479d3d0afc4a38408b566a9bc1a84c",
+      "bytes": 61656,
+      "kind": "TEXT"
+    },
+    {
+      "path": "locales/nl.json",
+      "md5": "d62fa28a4be8faceece00689140062d3",
+      "bytes": 64767,
+      "kind": "TEXT"
+    },
+    {
+      "path": "sections/bc-homepage.liquid",
+      "md5": "548f387a0f8d53637f6486319ec5c0f2",
+      "bytes": 14477,
+      "kind": "TEXT"
+    },
+    {
+      "path": "sections/footer-group.json",
+      "md5": "0c2c052fdf51f348ffd4ca85a0068800",
+      "bytes": 5296,
+      "kind": "TEXT"
+    },
+    {
+      "path": "sections/footer.liquid",
+      "md5": "4e1ce8e50d0d5c57657c8381bcdc4bc6",
+      "bytes": 33669,
+      "kind": "TEXT"
+    },
+    {
+      "path": "snippets/bc-home-footer.liquid",
+      "md5": "09cefc5e6aeeb74e94dee8984d7b5c9b",
+      "bytes": 2269,
+      "kind": "TEXT"
+    },
+    {
+      "path": "snippets/bc-home-image.liquid",
+      "md5": "d787be4b6ce3f386b47b84cd185e9fdb",
+      "bytes": 1202,
+      "kind": "TEXT"
+    },
+    {
+      "path": "templates/index.bc-homepage-review.liquid",
+      "md5": "c76529d094fb4d534f9cd3352c63f4b4",
+      "bytes": 290,
+      "kind": "TEXT"
+    },
+    {
+      "path": "templates/index.json",
+      "md5": "e314d7899b628b1d2473cc711388f598",
+      "bytes": 19361,
+      "kind": "TEXT"
+    }
+  ]
+}

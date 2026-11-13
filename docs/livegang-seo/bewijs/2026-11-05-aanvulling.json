@@ -1,0 +1,100 @@
+{
+  "task_id": "LAUNCH-02",
+  "date": "2026-11-05",
+  "owner_inputs": {
+    "business_name_as_given": "Badkamercity.nl",
+    "business_address": "[AFGESCHERMD: historisch privé-vestigingsadres; geen actuele openbare contact-/retourlocatie]",
+    "kvk": "42094775",
+    "vat_id_as_given": "NL00548932B64",
+    "iban_as_given": "[AFGESCHERMD: bankrekening uitsluitend voor bevoegde bedrijfsvoering]",
+    "return_notification_days": 30,
+    "november_extension": false,
+    "evidence": "OWNER_PROVIDED"
+  },
+  "format_checks": {
+    "vat_id_format_valid": false,
+    "vat_id_digits_before_B": 8,
+    "vat_id_digits_expected": 9,
+    "vat_id_modified": false,
+    "iban_length": 18,
+    "iban_mod97": 1,
+    "iban_account_holder_verified": false,
+    "kvk_registration_verified": false,
+    "telephone_provided": false
+  },
+  "reference_upload": {
+    "name": "Retourneren.html",
+    "sha256": "d89b07da136b23f15b764b2e3c931b760e0853f5e57b297679e0d1165c4898d1",
+    "bytes": 384660,
+    "role": "Commercial reference only; no copied competitor page committed"
+  },
+  "shopify": {
+    "policy_types_returned": [
+      "PRIVACY_POLICY"
+    ],
+    "initial_main": "196227170570",
+    "later_main": "196238639370",
+    "later_main_name": "BadkamerCity - Re-Bel tegelkeuze",
+    "publication_by_this_task": false,
+    "mutation_count": 0
+  },
+  "source_evidence": {
+    "footer": "CODE_SOURCE_READ_ONLY",
+    "footer_paths": [
+      "shopify/current/sections/footer-group.json",
+      "shopify/current/sections/footer.liquid",
+      "shopify/current/snippets/bc-home-footer.liquid"
+    ],
+    "native_contact_and_return_forms": "CODE_SOURCE_READ_ONLY; no submissions",
+    "customer_auto_acknowledgement": "No custom direct email implementation found in read source; runtime/platform verification pending",
+    "google_account_state": "NOT_VERIFIED"
+  },
+  "recorded_progress": {
+    "seller_task": "PARTIAL",
+    "return_policy": "DRAFT_READY_NOT_PUBLISHED",
+    "model_form": "DRAFT_READY_NOT_INTEGRATED",
+    "delivery_and_images": "IN_PROGRESS_USER",
+    "checkout": "USER_REPORTED_WITH_CHECKLIST_PENDING",
+    "fabriecio": "Now public brand Verlavio; FAB-03/04 evidence retained, photo/Google audit pending",
+    "lagoo_images": "NO_REIMPORT_NO_RELINK"
+  },
+  "blockers_before_publication": [
+    "Full/correct VAT ID, phone and legal trading identity",
+    "Confirmed Dutch physical return address",
+    "Actual cost/estimate for non-postal heavy/pallet returns",
+    "Functional online withdrawal and durable immediate acknowledgement",
+    "Model form customer integration",
+    "Policy/footer/Merchant configuration and readback"
+  ],
+  "git_base": {
+    "repository": "jlamping1997/badkamercity",
+    "main": "8985e20e1ef20eeb827342cd63cbb0ea9e4729e4",
+    "code_branch": "fix/product-cards-2026-10-14",
+    "code": "d06e122a9d6c379724c92601b458034d56b43c36"
+  },
+  "not_tested": [
+    "Mailbox reception/replies",
+    "Form submission",
+    "Cart/checkout/payment/order email in this task",
+    "Browser/mobile runtime",
+    "Merchant Center/Google account or indexing",
+    "Windows local Git"
+  ],
+  "source_urls": [
+    "https://www.acm.nl/nl/verkoop-aan-consumenten/klantenservice/bedenktijd",
+    "https://consument.acm.nl/aankoop-dienst-annuleren/bedenktijd",
+    "https://consument.acm.nl/aankoop-dienst-annuleren/verplichte-informatie-bij-koop-product-dienst",
+    "https://support.google.com/merchants/answer/14011730?hl=nl",
+    "https://www.belastingdienst.nl/wps/wcm/connect/nl/btw/content/btw-identificatienummer-en-omzetbelastingnummer"
+  ],
+  "public_redaction_2026_11_08": {
+    "reason": "Historical private address and bank-account values removed from current public document; measurement date and other evidence retained",
+    "fields": [
+      "owner_inputs.business_address",
+      "owner_inputs.iban_as_given"
+    ],
+    "original_git_blob": "8d5cfeb52aeecb989a1ac29376090cdc8ed5bb6d",
+    "current_contact_reference": "../BEDRIJFSGEGEVENS.md",
+    "not_a_new_measurement": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "installer": "repair_tile_look_filter.py",
+  "installer_bytes": 49441,
+  "installer_sha256": "73088a72cafbfa895a047214e085eea5d0c2727749e6c63bf34f401c00ed30d5",
+  "base_worker_sha256": "ecfc142a4fb15e66df297ec20884826be1bd4e8c491fb20bdb3e17cc281ba69a",
+  "base_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "base_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "target_worker_sha256": "79f676d035fdd6d250e2daec51b886d1aa54c117707718d7ea9695300c21c43d",
+  "target_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "target_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "api_source_unchanged": true,
+  "source": "tiles.look",
+  "field": "f_tegel_uitstraling",
+  "taxonomy": [
+    "Steenlook",
+    "Marmerlook",
+    "Houtlook",
+    "Betonlook",
+    "Metaallook",
+    "Terrazzo",
+    "Effen",
+    "Decoratief",
+    "Handvormlook",
+    "Terracottalook"
+  ],
+  "exact_aliases": 42,
+  "counts_are_dynamic_from_fresh_export": true,
+  "private_catalog_or_product_ids_embedded": false,
+  "deadline_seconds": 900,
+  "recovery_seconds": 240,
+  "required_existing_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1",
+    "tile_format_codes_v1",
+    "acero_gray_v1",
+    "cotto_visual_colors_v1",
+    "tile_bone_beige_v1",
+    "more_tile_colors_v1"
+  ],
+  "required_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1",
+    "tile_format_codes_v1",
+    "acero_gray_v1",
+    "cotto_visual_colors_v1",
+    "tile_bone_beige_v1",
+    "more_tile_colors_v1",
+    "tile_looks_v1"
+  ],
+  "private_runtime_sources_embedded": false,
+  "transport_ascii": true
+}

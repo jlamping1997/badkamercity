@@ -1,0 +1,9 @@
+{
+  "schema": "hotbath-numeric-tests-v1",
+  "tests_run": 10,
+  "passed": 10,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "output": "test_complete_current_rows_have_unique_real_choices (test_numeric_sets.NumericSetTests.test_complete_current_rows_have_unique_real_choices) ... ok\ntest_control_title_conflict_is_not_decoded_from_number (test_numeric_sets.NumericSetTests.test_control_title_conflict_is_not_decoded_from_number) ... ok\ntest_duplicate_tuple_blocks_family_instead_of_arbitrary_pick (test_numeric_sets.NumericSetTests.test_duplicate_tuple_blocks_family_instead_of_arbitrary_pick) ... ok\ntest_existing_membership_is_not_silently_overwritten (test_numeric_sets.NumericSetTests.test_existing_membership_is_not_silently_overwritten) ... ok\ntest_fixed_threeway_group_exposes_only_color (test_numeric_sets.NumericSetTests.test_fixed_threeway_group_exposes_only_color) ... ok\ntest_hidden_ace_fixed_model_term_blocks_five_choice_family (test_numeric_sets.NumericSetTests.test_hidden_ace_fixed_model_term_blocks_five_choice_family) ... ok\ntest_hidden_fixed_title_difference_cannot_become_color_choice (test_numeric_sets.NumericSetTests.test_hidden_fixed_title_difference_cannot_become_color_choice) ... ok\ntest_known_thermostat_and_mixer_compositions_stay_separate (test_numeric_sets.NumericSetTests.test_known_thermostat_and_mixer_compositions_stay_separate) ... ok\ntest_spom_in_title_excludes_product (test_numeric_sets.NumericSetTests.test_spom_in_title_excludes_product) ... ok\ntest_unpublished_color_never_enters_group (test_numeric_sets.NumericSetTests.test_unpublished_color_never_enters_group) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.973s\n\nOK\n"
+}

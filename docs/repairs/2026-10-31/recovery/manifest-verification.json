@@ -1,0 +1,151 @@
+{
+  "sourceCommit": "d510fc2167240009e2d0edf478f745ed022ab112",
+  "deletedThemeId": "gid://shopify/OnlineStoreTheme/195948839178",
+  "restoredThemeId": "gid://shopify/OnlineStoreTheme/195974824202",
+  "mainThemeId": "gid://shopify/OnlineStoreTheme/195947036938",
+  "mainRole": "MAIN",
+  "candidateRole": "UNPUBLISHED",
+  "mainFileCount": 1354,
+  "candidateFileCount": 1355,
+  "mainUnchanged": true,
+  "mainChanges": [],
+  "duplicateParityBeforeFeatureWrites": true,
+  "changedExisting": 20,
+  "added": 1,
+  "onlyExpected21Changes": true,
+  "allFeatureReadbacksMatch": true,
+  "features": [
+    {
+      "path": "locales/nl.json",
+      "checksumMd5": "77661423d7b74967176e8ee28a52a89b",
+      "expectedMd5": "77661423d7b74967176e8ee28a52a89b",
+      "match": true
+    },
+    {
+      "path": "locales/en.default.json",
+      "checksumMd5": "d456bc88732f6c2c436eb6b3b4b28b27",
+      "expectedMd5": "d456bc88732f6c2c436eb6b3b4b28b27",
+      "match": true
+    },
+    {
+      "path": "layout/theme.liquid",
+      "checksumMd5": "413a857c928c57f1315e4ce681d22b65",
+      "expectedMd5": "413a857c928c57f1315e4ce681d22b65",
+      "match": true
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "checksumMd5": "6bbfc201c43e503af8ea17dd364633f6",
+      "expectedMd5": "6bbfc201c43e503af8ea17dd364633f6",
+      "match": true
+    },
+    {
+      "path": "sections/footer-group.json",
+      "checksumMd5": "f57d42afd9dbbc8faac64d21bda9bfff",
+      "expectedMd5": "f57d42afd9dbbc8faac64d21bda9bfff",
+      "match": true
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "checksumMd5": "b647e71ebdcabefb709f2e912258a71b",
+      "expectedMd5": "b647e71ebdcabefb709f2e912258a71b",
+      "match": true
+    },
+    {
+      "path": "sections/footer.liquid",
+      "checksumMd5": "7e413995480f5066044e3e43805b5388",
+      "expectedMd5": "7e413995480f5066044e3e43805b5388",
+      "match": true
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "checksumMd5": "ca1654691aa993c3d542e2efa200e518",
+      "expectedMd5": "ca1654691aa993c3d542e2efa200e518",
+      "match": true
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "checksumMd5": "db1b13be1778d5b4e679dc755f7667f8",
+      "expectedMd5": "db1b13be1778d5b4e679dc755f7667f8",
+      "match": true
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "checksumMd5": "ae1f3629f216eb474479249346b56fbe",
+      "expectedMd5": "ae1f3629f216eb474479249346b56fbe",
+      "match": true
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "checksumMd5": "3e33d63c03a80c8e6423682e5f6d77bd",
+      "expectedMd5": "3e33d63c03a80c8e6423682e5f6d77bd",
+      "match": true
+    },
+    {
+      "path": "assets/bc-mobile-compact-list.css",
+      "checksumMd5": "8d7a8ea654a6c72adbcb3013f074ada1",
+      "expectedMd5": "8d7a8ea654a6c72adbcb3013f074ada1",
+      "match": true
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "checksumMd5": "0454629d2b341fc435d30351f5ddb7cb",
+      "expectedMd5": "0454629d2b341fc435d30351f5ddb7cb",
+      "match": true
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "checksumMd5": "cbae7b0df17ace03b85f2e9a430075bc",
+      "expectedMd5": "cbae7b0df17ace03b85f2e9a430075bc",
+      "match": true
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "checksumMd5": "4377040586d06a1b694632411aa406a1",
+      "expectedMd5": "4377040586d06a1b694632411aa406a1",
+      "match": true
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "checksumMd5": "ba4e93a774dd810e6c3be694ed8ede71",
+      "expectedMd5": "ba4e93a774dd810e6c3be694ed8ede71",
+      "match": true
+    },
+    {
+      "path": "snippets/bc-card-tile-price.liquid",
+      "checksumMd5": "14b7bca6fd71fd4999c8402995d43b42",
+      "expectedMd5": "14b7bca6fd71fd4999c8402995d43b42",
+      "match": true
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "checksumMd5": "64cf85748078a3ede0254a02f00fceb6",
+      "expectedMd5": "64cf85748078a3ede0254a02f00fceb6",
+      "match": true
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "checksumMd5": "f3aafce6bb9c722bef00a59b38c5bc1a",
+      "expectedMd5": "f3aafce6bb9c722bef00a59b38c5bc1a",
+      "match": true
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "checksumMd5": "a4485b36b1e0ae45db437744a62ecd92",
+      "expectedMd5": "a4485b36b1e0ae45db437744a62ecd92",
+      "match": true
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "checksumMd5": "ab3c8ef482b4f51e2063e72f4e3ce2dd",
+      "expectedMd5": "ab3c8ef482b4f51e2063e72f4e3ce2dd",
+      "match": true
+    }
+  ],
+  "knownBodyReadExceptionsPreserved": [
+    "config/settings_data.json",
+    "templates/page.retour-aanmelden.json"
+  ],
+  "scope": "Manifest checksum comparison; no independent exact-body read of the two known exceptions, no MAIN write or theme publication."
+}
+

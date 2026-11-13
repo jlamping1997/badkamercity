@@ -1,0 +1,157 @@
+diff --git a/assets/bc-sunshower-configurator.css b/assets/bc-sunshower-configurator.css
+index b4dc3938cc631db700e7598240d958882d200edc..532e9da8d3aa9fd1b1355d36639aa4a1e45935e9 100644
+--- a/assets/bc-sunshower-configurator.css
++++ b/assets/bc-sunshower-configurator.css
+@@ -1,5 +1,5 @@
+ .ss-config-page .ss-hero{gap:32px}
+-.ss-config-page .ss-gallery__main{display:block;height:auto;min-height:0;max-height:none;aspect-ratio:auto;border-radius:12px;overflow:hidden}
++.ss-config-page .ss-gallery__main{touch-action:pan-y pinch-zoom;display:block;height:auto;min-height:0;max-height:none;aspect-ratio:auto;border-radius:12px;overflow:hidden}
+ .ss-config-page .ss-gallery__main:disabled{min-height:280px;cursor:default}
+ .ss-config-page .ss-gallery__photo{width:100%;height:auto;max-height:760px;object-fit:contain}
+ .ss-config-page .ss-gallery__expand{left:auto;right:16px;bottom:16px;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:24px;box-shadow:0 2px 12px #0f274014}
+diff --git a/assets/bc-sunshower-page.js b/assets/bc-sunshower-page.js
+index e5a59ca668358cb0862fab19ce555b0460097f15..37d65f03d01a2ec6f62c2738a307dd1d9063de1a 100644
+--- a/assets/bc-sunshower-page.js
++++ b/assets/bc-sunshower-page.js
+@@ -58,8 +58,21 @@
+       }));
+       let mainPhoto = page.querySelector('.ss-gallery__photo');
+       const photoButtons = [...page.querySelectorAll('[data-ss-photo]')];
++      const photoSurface = page.querySelector('[data-ss-open-image]');
++      const photoStrip = page.querySelector('.ss-gallery__thumbs');
+       let photoRequest = 0;
+-      const selectPhoto = button => photoButtons.forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++      let pendingPhoto = null;
++      const selectedPhotoIndex = () => Math.max(0,photoButtons.findIndex(button => button.getAttribute('aria-pressed') === 'true'));
++      let desiredPhotoIndex = selectedPhotoIndex();
++      const selectPhoto = (button,reveal = false) => {
++        photoButtons.forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++        if (!reveal || !photoStrip) return;
++        const bounds = button.getBoundingClientRect();
++        const stripBounds = photoStrip.getBoundingClientRect();
++        const left = bounds.left < stripBounds.left ? bounds.left - stripBounds.left : bounds.right > stripBounds.right ? bounds.right - stripBounds.right : 0;
++        // Move only the thumbnail strip, without changing the page's scroll position.
++        if (left) photoStrip.scrollBy({left,behavior:'auto'});
++      };
+       const photoKey = source => {
+         try { const url = new URL(source,location.href); return url.origin + url.pathname; }
+         catch { return source; }
+@@ -68,23 +81,31 @@
+         if (!page.isConnected || !mainPhoto?.isConnected || !mainPhoto.complete || !mainPhoto.naturalWidth) return;
+         const shown = photoKey(mainPhoto.currentSrc || mainPhoto.src);
+         const button = photoButtons.find(other => photoKey(other.dataset.ssPhoto) === shown);
+-        if (button) selectPhoto(button);
++        if (button) {
++          selectPhoto(button);
++          if (!pendingPhoto) desiredPhotoIndex = photoButtons.indexOf(button);
++        }
+       };
+       mainPhoto?.addEventListener('load',reconcilePhoto);
+       reconcilePhoto();
+-      window.addEventListener('pageshow',event => {
+-        if (!event.persisted || !page.isConnected) return;
+-        ++photoRequest;
+-        reconcilePhoto();
+-      });
+-      photoButtons.forEach(button => button.addEventListener('click',() => {
++      const requestPhoto = (button,reveal = false) => {
+         const request = ++photoRequest;
++        pendingPhoto = null;
++        desiredPhotoIndex = photoButtons.indexOf(button);
+         if (!mainPhoto || button.getAttribute('aria-pressed') === 'true') return;
++        pendingPhoto = button;
+         const photo = new Image();
++        const failed = () => {
++          photo.onload = null;
++          photo.onerror = null;
++          if (request !== photoRequest) return;
++          pendingPhoto = null;
++          desiredPhotoIndex = selectedPhotoIndex();
++        };
+         photo.onload = async () => {
+           if (request !== photoRequest || !page.isConnected || !mainPhoto.isConnected) return;
+           try { if (typeof photo.decode === 'function') await photo.decode(); }
+-          catch { return; }
++          catch { failed(); return; }
+           if (request !== photoRequest || !page.isConnected || !mainPhoto.isConnected) return;
+           // Insert the decoded node, so the visible photo and thumbnail commit together.
+           for (const {name,value} of mainPhoto.attributes) {
+@@ -100,13 +121,74 @@
+           photo.onerror = null;
+           mainPhoto.replaceWith(photo);
+           mainPhoto = photo;
+-          selectPhoto(button);
++          pendingPhoto = null;
++          selectPhoto(button,reveal);
+         };
+-        photo.onerror = () => { photo.onload = null; };
++        photo.onerror = failed;
+         photo.src = button.dataset.ssPhoto;
+-      }));
++      };
++      photoButtons.forEach(button => button.addEventListener('click',() => requestPhoto(button)));
++      let photoGesture = null;
++      let suppressPhotoClick = false;
++      const activePhotoPointers = new Set();
++      document.addEventListener('pointerdown',event => {
++        if (!page.isConnected || !['touch','pen'].includes(event.pointerType)) return;
++        activePhotoPointers.add(event.pointerId);
++        if (activePhotoPointers.size > 1 || event.isPrimary === false || (photoGesture && photoGesture.id !== event.pointerId)) {
++          photoGesture = null;
++          suppressPhotoClick = true;
++        }
++      },true);
++      const forgetPhotoPointer = event => activePhotoPointers.delete(event.pointerId);
++      document.addEventListener('pointerup',forgetPhotoPointer,true);
++      document.addEventListener('pointercancel',forgetPhotoPointer,true);
++      photoSurface?.addEventListener('pointerdown',event => {
++        if (!page.isConnected || !mainPhoto || photoButtons.length < 2 || event.button !== 0 || event.isPrimary === false || activePhotoPointers.size > 1 || (activePhotoPointers.size && !activePhotoPointers.has(event.pointerId))) return;
++        suppressPhotoClick = false;
++        photoGesture = {id:event.pointerId,x:event.clientX,y:event.clientY};
++        try { photoSurface.setPointerCapture(event.pointerId); } catch {}
++      });
++      photoSurface?.addEventListener('pointerup',event => {
++        if (!photoGesture || photoGesture.id !== event.pointerId) return;
++        const dx = event.clientX - photoGesture.x;
++        const dy = event.clientY - photoGesture.y;
++        photoGesture = null;
++        // A drag is not a zoom tap, even when it does not meet the swipe threshold.
++        if (Math.hypot(dx,dy) >= 12) suppressPhotoClick = true;
++        if (Math.abs(dx) < 40 || Math.abs(dx) <= Math.abs(dy) * 1.25) return;
++        suppressPhotoClick = true;
++        const next = Math.max(0,Math.min(photoButtons.length - 1,desiredPhotoIndex + (dx < 0 ? 1 : -1)));
++        if (next !== desiredPhotoIndex) requestPhoto(photoButtons[next],true);
++      });
++      const cancelPhotoGesture = event => {
++        if (!photoGesture || photoGesture.id !== event.pointerId) return;
++        photoGesture = null;
++        suppressPhotoClick = true;
++      };
++      photoSurface?.addEventListener('pointercancel',cancelPhotoGesture);
++      photoSurface?.addEventListener('lostpointercapture',cancelPhotoGesture);
++      photoSurface?.addEventListener('dragstart',event => event.preventDefault());
++      window.addEventListener('pageshow',event => {
++        if (!event.persisted || !page.isConnected) return;
++        ++photoRequest;
++        pendingPhoto = null;
++        photoGesture = null;
++        activePhotoPointers.clear();
++        suppressPhotoClick = false;
++        reconcilePhoto();
++      });
+       const lightbox = page.querySelector('[data-ss-lightbox]');
+-      page.querySelector('[data-ss-open-image]')?.addEventListener('click',() => { if (!mainPhoto) return; lightbox.querySelector('img').src = mainPhoto.src || mainPhoto.currentSrc; lightbox.showModal(); });
++      photoSurface?.addEventListener('click',event => {
++        if (suppressPhotoClick && event.detail !== 0) {
++          suppressPhotoClick = false;
++          event.preventDefault();
++          event.stopPropagation();
++          return;
++        }
++        if (!mainPhoto) return;
++        lightbox.querySelector('img').src = mainPhoto.src || mainPhoto.currentSrc;
++        lightbox.showModal();
++      });
+       page.querySelector('[data-ss-close-image]').addEventListener('click',() => lightbox.close());
+       lightbox.addEventListener('click',event => { if (event.target === lightbox) lightbox.close(); });
+       const description = page.querySelector('[data-ss-description]');

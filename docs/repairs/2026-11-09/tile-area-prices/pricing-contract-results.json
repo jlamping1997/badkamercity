@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "tests": 31,
+  "results": [
+    {
+      "test": "real-js-formatter-nl-NL-EUR-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-nl-NL-GBP-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-nl-NL-USD-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-nl-NL-JPY-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-en-GB-EUR-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-en-GB-GBP-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-en-GB-USD-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-en-GB-JPY-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-de-DE-EUR-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-de-DE-GBP-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-de-DE-USD-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-js-formatter-de-DE-JPY-14-boundaries",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-9900-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-9999-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-10000-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-10049-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-14900-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-14949-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-helper-114700-with-and-without-currency",
+      "result": "PASS"
+    },
+    {
+      "test": "non-eur-liquid-uses-original-money-filter",
+      "result": "PASS"
+    },
+    {
+      "test": "real-native-price-snippet-9900-preserves-compare-at",
+      "result": "PASS"
+    },
+    {
+      "test": "real-native-price-snippet-14900-preserves-compare-at",
+      "result": "PASS"
+    },
+    {
+      "test": "real-native-price-snippet-14949-preserves-compare-at",
+      "result": "PASS"
+    },
+    {
+      "test": "native-price-varies-keeps-from-label",
+      "result": "PASS"
+    },
+    {
+      "test": "full-external-js-whole-price-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "full-external-js-whole-price-search",
+      "result": "PASS"
+    },
+    {
+      "test": "fractional-selling-price-is-never-hidden",
+      "result": "PASS"
+    },
+    {
+      "test": "under100-retains-two-decimals",
+      "result": "PASS"
+    },
+    {
+      "test": "fresh-shopify-hydration-replaces-older-index-price",
+      "result": "PASS"
+    },
+    {
+      "test": "missing-optional-helper-keeps-safe-existing-format",
+      "result": "PASS"
+    },
+    {
+      "test": "tile-area-only-amount-remains-exact",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Offline actual Liquid and full external-filter JS. Shopify money filters are stubbed with Intl; live preview is separate. No checkout, order, physical phone or real network claim."
+}

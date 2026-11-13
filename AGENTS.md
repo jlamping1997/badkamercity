@@ -1,9 +1,11 @@
 # BadkamerCity — instructies voor AI, Codex en ontwikkelaars
 
+> **Actuele bron sinds GIT-SYNC-01, 3 november 2026:** gebruik op de bestaande codebranch `shopify/current/` als themabron. Logische asset-/section-/snippetpaden in oude dossiers zijn relatief aan die map. De oude themamappen op repositoryniveau zijn historische bron; geen blind root-deploy. Historische MAIN op3november2026:196110090506; dit is geen huidige rolclaim. Lees de verse rol en bronvergelijking in [de actuele audit](docs/audits/2026-11-08/README.md). Eén beschermde API-bodyuitzondering: config/settings_data.json. Lees [de actuele broncontrole](docs/git-sync/2026-11-03/README.md) en behoud de .shopifyignore-guard. Main blijft documentatie-ingang; actuele code staat op fix/product-cards-2026-10-14.
+
 ## 1. Verplichte bronvolgorde
 
 Bij **elke** taak:
-1. Lees `docs/HANDOVER_START_HERE.md` en `docs/AI_HANDOFF_CURRENT.md`.
+1. Lees eerst de [centrale werkstatus op GitHub main](https://github.com/jlamping1997/badkamercity/blob/main/docs/LIVE_STATUS_AND_NEXT_STEPS.md), daarna `docs/HANDOVER_START_HERE.md` en de relevante `docs/AI_HANDOFF_CURRENT.md`. Volg de daar genoemde actieve codebranch; main is niet automatisch al gelijk aan Shopify live.
 2. Gebruik `docs/LIVE_STATUS_AND_NEXT_STEPS.md` voor de *gedateerde* status, `docs/THEME_COMPONENT_REFERENCE.md` / `docs/THEME_CODE_MAP_2026-10-07.json` voor bestandsafhankelijkheden, en `docs/SHOPIFY_ADMIN_STRUCTURE_2026-10-07.json` voor read-only Admin-context.
 3. Controleer in Shopify **welk thema NU MAIN is**; op 2026-10-07 was dat `194864677130`, maar na publicaties kan dat veranderen.
 4. Controleer werkelijke lokale Git-repo/origin/branch/worktree. Remote GitHub-commit bewijst **niet** dat Windows lokaal schoon is.
@@ -29,10 +31,19 @@ Bij **elke** taak:
 - Maak de vraag concreet: gebruikersdoel, beoogde URL, bestaande UX, scope, desktop/mobiel, SEO/data-impact en acceptatie.
 - Traceer de daadwerkelijke route: `templates/*.json → sections/*.liquid → snippets/*.liquid → assets/*` én Shopify Admin.
 - Scheid `VERIFIED_THEME`, `VERIFIED_ADMIN`, `USER_APPROVED_UI`, `IMPLEMENTED_TEST_ONLY`, `HISTORICAL` en `NOT_VERIFIED`.
-- Maak een kleine veilige wijziging op featurebranch/draft, doe tests en leg alleen bewezen resultaat vast.
+- Maak een kleine veilige wijziging binnen de geregistreerde actieve werkbranch/UNPUBLISHED preview. Geen nieuwe branch per chat; maximaal één actieve uitvoerende sessie. Doe passende tests en leg alleen bewezen resultaat vast.
 - Schrijf bij verandering van contract/architectuur ook de relevante actuele handoff bij.
 - Maak elke niet-uitgevoerde test zichtbaar als `NOT_TESTED/BLOCKED`; gebruik geen generieke “klaar”.
 - Controleer git status en theme ID na afloop, plus wat de volgende sessie als eerste moet doen.
+
+### Checkpoints en hervatten
+
+- Werk na iedere betekenisvolle deelstap de bestaande centrale status bij: taak, uitvoerder, branch, codecheckpoint, tests, blokkade en exact één volgende handeling.
+- Commit en push beoordeelde code plus voortgang; verifieer remote opslag. Een lokale stash/commit is geen overdracht naar een andere pc.
+- Als een nieuwe wens buiten de actieve taak valt, leg die vast in de parkeerplaats; wissel alleen na een expliciete prioriteitskeuze of een bewezen blokkade.
+- Houd de actuele status in de actieve branch en de vaste ingang op main gelijk. Updates aan main voor de dagstart mogen alleen documentatie bevatten; themacode en publicatie behouden hun bestaande release-/toestemmingsregels.
+- Een tweede sessie begint pas met schrijven nadat de vorige uitvoering is afgerond of expliciet overgedragen. Dit is een procedure, geen automatisch technisch slot.
+- Claim geen lokale Windows-controle, browsercheck, achtergrondopslag of synchronisatie die niet is uitgevoerd.
 
 ## 4. Codex lokaal: bestaand uitvoeringslogboek
 
@@ -46,11 +57,13 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 
 ## 5. Vaste correctheidswaarschuwingen
 
+- **8 november 2026, PRICE-ROUND-01:** gewone EUR-verkoopprijzen boven €100 volgen normale hele-euroafronding; m²-/doosgeprijsde tegels zijn in deze ronde uitgesloten. Lees vóór prijsimport of opmaakwijziging [het prijscontract](docs/PRICING_POLICY.md). Alleen werkelijk hele EUR-bedragen vanaf €100 zonder lege centen tonen; echte centen en bronprijzen behouden. Dit is geen zelfstandige opdracht voor een nieuwe massamutatie.
+
 - `docs/MASTERPLAN.md` versie 0.26.3 beschrijft september 2026; de huidige gepubliceerde theme-code is sindsdien ver ontwikkeld. Historische gegevens behouden, actuele stand in nieuw dossier.
-- De Badkamermeubels-mobiel/desktopweergave leunt op **drie inline style-blokken in Shopify collection descriptionHtml**. Alleen code uit Git inspecteren kan die afhankelijkheid missen.
+- **8 november 2026, FURNITURE-STANDARD-01:** Badkamermeubels gebruikt op expliciet eigenaarverzoek `category-landing`, zoals de andere hoofdcategorieën. Drie oude inline style-blokken zijn uit de Admin-omschrijving verwijderd. De oude `bc-meubelhub`-bestanden blijven alleen beschikbaar als historische bron/rollback; herstel die toewijzing of CSS niet automatisch. Zie [bewijs en herstel](docs/repairs/2026-11-08/furniture-standard/README.md).
 - De actuele `main` bevat een geverifieerde theme-snapshot, niet de volledige Shopify-productdatabase/menu-instellingen/externe VPS.
 - `custom.*` in bepaalde PDP-code komt niet altijd overeen met de actuele `specs.*`-definities; verifieer echte waarden vóór migratie.
-- Externe filters zijn opt-in bij `wastafelkranen?bcfilters=1`; niet sitebreed klaar.
+- De opt-in-filterstatus uit 7 oktober is historisch. Lees de actuele status en controleer de werkelijk gebruikte route; een publicatie bewijst niet dat alle filters opnieuw zijn getest.
 - Een Shopify `ACTIVE` productstatus is niet identiek aan aantoonbare Online Store-publicatie en voorraad.
 - GitHub is **publiek**. Verifieer privacy en rechten bij elk nieuw bestand.
 
@@ -59,3 +72,18 @@ De repository heeft een uitgebreid historisch, menselijk beoordeeld lokaal bewij
 Minimaal vastleggen: taak/reden, eerdere/current MAIN, branch/commit, betrokken codefiles en Admin-objecten, aangewezen review/merchant, tests met resultaat en viewport/URL, niet-geteste onderdelen, terugzetpad en actuele documentatie. Voor praktische scenario's: `docs/WORKED_EXAMPLES_AND_HANDOFF_TEST.md`, `docs/TROUBLESHOOTING.md` en `docs/RELEASE_AND_QA.md`.
 
 **Je doel is dat een volgende ontwikkelaar de volgende veilige stap kan zetten op basis van bewijs, niet op basis van aannames.**
+
+## 7. Architectuur en documentatie sinds 28 oktober 2026
+
+Lees voor inventarisatie, consistentie en overdracht ook docs/architecture/README.md, DEEP_SCAN_PLAN.md en COMPONENT_CONTRACTS.md. De actuele status bevat exact één volgende taak. Gebruik het oude 441-bestandenoverzicht niet als volledige huidige productiekaart: de volledige DOC-01-inventaris en de latere DOC-02A-componentindex hebben expliciete dekkingsgrenzen. De eerdere 15-bestandensteekproef is historisch.
+
+Documenteer dezelfde functie eenmaal, link alle gebruiksplaatsen en leg noodzakelijke merk-/productuitzonderingen vast. Een pijl voor fotonavigatie is niet automatisch dezelfde functie als een productlink. Een statisch signaal of ongebruikt-lijkend bestand is geen toestemming voor automatische correctie of verwijdering. Houd plan, bronmeting, runtimebewijs en eigenaargoedkeuring gescheiden.
+
+## 8. Verdiepte componentdocumentatie sinds DOC-02A
+
+Gebruik docs/architecture/components/README.md en ROUTE_RENDERER_MATRIX.md om de echte renderer, data en gewenste teststaat te vinden. Bronpaden/regelnummers horen bij de hashes in het gedateerde source-index.json, niet automatisch bij de Git-root. Registry/tooling vervangt geen inhoudelijke review. VERIFIED_HTML bewijst servermarkup, geen JavaScript, computed styles, focus, koopactie of performance. Houd de settings_data.json-pariteitsuitzondering zichtbaar tot een onafhankelijke exacte bron de vergelijking sluit.
+
+
+## 9. Categorisatie, imports en SEO-landingspagina's
+
+Lees bij een nieuw merk, productimport, categorie-/menuwijziging of merk-/serie-/SEO-pagina eerst [docs/CATEGORIZATION_AND_SEO_POLICY.md](docs/CATEGORIZATION_AND_SEO_POLICY.md). Hergebruik bestaande categorie-identiteiten; onderscheid producttype, filter, aanvullende navigatie en SEO-landingsscope. Een nieuw merk vraagt niet automatisch nieuwe productcategorieën. Zoekintentie, productdekking en bestaande overlap onderzoeken vóór nieuwe landingspagina's. De afdelingsvoorstellen in het contract zijn nog niet geïmplementeerd: controleer actuele Admin-data en volg preview-/publicatieregels vóór toepassing. Het contract vormt de vaste werkwijze; het gekoppelde bronregister is een gedateerde nulmeting.

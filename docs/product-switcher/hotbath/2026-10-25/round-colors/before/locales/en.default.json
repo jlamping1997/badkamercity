@@ -1,0 +1,1245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "bc": {
+    "inbouw": {
+      "title": "Add the rough-in part?",
+      "intro": "This rough-in part is required for installation:",
+      "yes": "Yes, add it",
+      "no": "No, I already have the rough-in part",
+      "quantity_note": "When you choose “Yes”, we add one rough-in part for each trim kit.",
+      "unavailable": "This rough-in part is currently unavailable. You can still order the trim kit on its own.",
+      "invalid": "This combination cannot be confirmed right now. Please contact us before ordering.",
+      "noscript": "This button adds only the trim kit. Order the matching rough-in part separately using this link.",
+      "body_link": "View rough-in part {{ sku }}",
+      "cart_link": "Check your cart",
+      "message_choice": "Choose whether to add the rough-in part.",
+      "message_unavailable": "This rough-in part is unavailable. Check your selection or contact us.",
+      "message_changed": "The selected product has changed. Reload the page and check the rough-in part.",
+      "message_quantity": "Enter a valid quantity.",
+      "message_uncertain": "We could not confirm the addition. Check your cart before adding these items again.",
+      "message_ready": "Choose an option for the rough-in part.",
+      "message_loading": "The rough-in option has not loaded yet. Reload the page and try again."
+    }
+  },
+  "bc_advice": {
+    "brand": "Sunshower",
+    "home": "Home",
+    "advice": "Advice & inspiration",
+    "eyebrow": "Sunshower · Buying guide",
+    "compare": "Compare the options",
+    "models": "Explore Sunshower",
+    "contents": "In this guide",
+    "read_time": "{{ minutes }} min read",
+    "one_name": "Round ONE",
+    "plus_name": "Round PLUS",
+    "one_function": "Infrared only",
+    "plus_function": "Infrared + UV",
+    "one_alt": "Sunshower Round ONE with warming infrared",
+    "plus_alt": "Sunshower Round PLUS with an additional UV function",
+    "help_heading": "Need a little advice?",
+    "help_text": "We can help you choose the function, size and installation.",
+    "help_link": "Ask us for advice",
+    "back": "Back to all articles",
+    "comparison_label": "Infrared and UV compared"
+  },
+  "bc_product_documents": {"drawing":"Technical drawing","manual":"Installation instructions","document":"Document"},
+  "bc_pilot_category": {"kranen":"Taps","wastafelkranen":"Basin taps","opbouw":"Deck-mounted basin taps"},
+  "bc_cart_page": {
+    "eyebrow": "Your bathroom starts here",
+    "intro": "Check your items and see your total at a glance.",
+    "continue_shopping": "Continue shopping",
+    "items_heading": "Your items",
+    "summary_eyebrow": "A final look",
+    "summary_heading": "Your summary",
+    "items_subtotal": {
+      "one": "Items ({{ count }})",
+      "other": "Items ({{ count }})"
+    },
+    "checkout": "Continue to checkout",
+    "secure_checkout": "Secure checkout",
+    "empty_intro": "Make room for something beautiful. Explore everything for your bathroom.",
+    "per_item": "each",
+    "product_costs": "Products",
+    "discounts": "Discount",
+    "products_after_discounts": "Products after discounts",
+    "shipping_nl": "Shipping (Netherlands)",
+    "shipping": "Shipping",
+    "free": "Free",
+    "calculated_at_checkout": "At checkout",
+    "no_shipping": "Not required",
+    "total": "Total",
+    "estimated_total": "Total for the Netherlands",
+    "free_shipping_rule": "Free shipping when the product total after discounts is above {{ amount }}.",
+    "shipping_estimate": "For a Dutch delivery address. Your final total is shown at checkout.",
+    "shipping_destination": "Shipping is calculated when you enter your delivery address at checkout.",
+    "shipping_none": "These items do not require shipping.",
+    "taxes_included": "Including taxes.",
+    "duties_taxes_included": "Including duties and taxes.",
+    "duties_included": "Including duties. Taxes are calculated at checkout.",
+    "taxes_at_checkout": "Taxes are calculated at checkout.",
+    "discount_label": "Have a discount code?",
+    "discount_placeholder": "Enter your code",
+    "discount_apply": "Apply",
+    "discount_no_js": "You can enter your discount code at checkout.",
+    "discount_invalid": "This code does not currently give a discount. Check the code and its conditions.",
+    "discount_success": "Your discount code has been applied.",
+    "discount_shipping": "Your shipping discount is calculated at checkout.",
+    "discount_error": "Your code could not be confirmed. Refresh your cart to see the current discount.",
+    "discount_removed": "The discount code has been removed.",
+    "discount_loading": "Checking your discount code…",
+    "discount_code_label": "Discount code",
+    "discount_remove": "Remove discount code [code]",
+    "discount_pending": "Code saved; it will be checked at checkout.",
+    "discount_empty": "Enter a discount code.",
+    "product_total": "Product total"
+  },
+  "general": {
+    "password_page": {
+      "login_form_heading": "Enter store using password:",
+      "login_password_button": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_error": "Wrong password!",
+      "login_form_submit": "Enter",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
+      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Share on X",
+        "share_on_pinterest": "Pin on Pinterest"
+      },
+      "links": {
+        "twitter": "X (Twitter)",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continue shopping",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Next page",
+      "previous": "Previous page"
+    },
+    "search": {
+      "search": "Search",
+      "reset": "Clear search term"
+    },
+    "cart": {
+      "view": "View cart ({{ count }})",
+      "view_empty_cart": "View cart",
+      "item_added": "Item added to your cart"
+    },
+    "share": {
+      "close": "Close share",
+      "copy_to_clipboard": "Copy link",
+      "share_url": "Link",
+      "success_message": "Link copied to clipboard"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left",
+      "name": "Slider"
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button_label": "Subscribe"
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content",
+    "complementary_products": "Complementary products"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Read more: {{ title }}",
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      },
+      "moderated": "Please note, comments need to be approved before they are published.",
+      "comment_form_title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Comment",
+      "post": "Post comment",
+      "back_to_blog": "Back to blog",
+      "share": "Share this article",
+      "success": "Your comment was posted successfully! Thank you!",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+    }
+  },
+  "onboarding": {
+    "product_title": "Example product title",
+    "collection_title": "Your collection's name"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "choose_options": "Choose options",
+      "choose_product_options": "Choose options for {{ product_name }}",
+      "description": "Description",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "In stock",
+      "sku": "SKU",
+      "on_sale": "Sale",
+      "product_variants": "Product variants",
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "load_image": "Load image {{ index }} in gallery view",
+        "load_model": "Load 3D Model {{ index }} in gallery view",
+        "load_video": "Play video {{ index }} in gallery view",
+        "image_available": "Image {{ index }} is now available in gallery view",
+        "open_media": "Open media {{ index }} in modal",
+        "play_model": "Play 3D Viewer",
+        "play_video": "Play video"
+      },
+      "nested_label": "{{ title }} for {{ parent_title }}",
+      "quantity": {
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Increments of {{ quantity }}",
+        "min_of": "Min {{ quantity }}",
+        "max_of": "Max {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
+        "in_cart_aria_label": "Quantity ({{ quantity }} in cart)",
+        "note": "View quantity rules"
+      },
+      "volume_pricing": {
+        "title": "Volume Pricing",
+        "note": "Volume pricing available",
+        "minimum": "{{ quantity }}+",
+        "price_at_each_html": "at {{ price }}/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "View store information",
+        "check_other_stores": "Check availability at other stores",
+        "pick_up_available": "Pickup available",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "unavailable": "Couldn't load pickup availability",
+        "refresh": "Refresh"
+      },
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
+      },
+      "share": "Share this product",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "vendor": "Vendor",
+      "value_unavailable": "{{ option_value }} - Unavailable",
+      "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
+      "video_exit_message": "{{ title }} opens full screen video in same window.",
+      "view_full_details": "View full details",
+      "card_view": "View product",
+      "card_material": "Material",
+      "card_colour": "Colour",
+      "card_mounting": "Installation",
+      "card_type": "Product type",
+      "card_sku": "Article number",
+      "card_tax": "incl. tax",
+      "xr_button": "View in your space",
+      "xr_button_label": "View in your space, loads item in augmented reality window",
+      "taxes_included": "Taxes included.",
+      "duties_included": "Duties included.",
+      "duties_and_taxes_included": "Duties and taxes included.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+    },
+    "modal": {
+      "label": "Media gallery"
+    },
+    "facets": {
+      "filter_and_operator_subtitle": "Match all",
+      "apply": "Apply",
+      "clear": "Clear",
+      "clear_all": "Remove all",
+      "from": "From",
+      "filter_and_sort": "Filter and sort",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} selected",
+        "other": "{{ count }} selected"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "max_price": "The highest price is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} of {{ count }} product",
+        "other": "{{ product_count }} of {{ count }} products"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "sort_by_label": "Sort by:",
+      "to": "To",
+      "clear_filter": "Remove filter"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
+      "results_pages_with_count": {
+        "one": "{{ count }} page",
+        "other": "{{ count }} pages"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggestion",
+        "other": "{{ count }} suggestions"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "results_with_count": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} results"
+      },
+      "results_with_count_and_term": {
+        "one": "{{ count }} result found for “{{ terms }}”",
+        "other": "{{ count }} results found for “{{ terms }}”"
+      },
+      "title": "Search results",
+      "search_for": "Search for “{{ terms }}”",
+      "suggestions": "Suggestions",
+      "pages": "Pages"
+    },
+    "cart": {
+      "cart": "Cart"
+    },
+    "contact": {
+      "form": {
+        "title": "Contact form",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number",
+        "comment": "Comment",
+        "send": "Send",
+        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "error_heading": "Please adjust the following:"
+      }
+    },
+    "404": {
+      "title": "Page not found",
+      "subtext": "404"
+    }
+  },
+  "sections": {
+    "announcements": {
+      "previous_announcement": "Previous announcement",
+      "next_announcement": "Next announcement",
+      "carousel": "Carousel",
+      "announcement": "Announcement",
+      "announcement_bar": "Announcement bar"
+    },
+    "header": {
+      "announcement": "Announcement",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
+    },
+    "cart": {
+      "title": "Your cart",
+      "caption": "Cart items",
+      "remove_title": "Remove {{ title }}",
+      "estimated_total": "Estimated total",
+      "new_estimated_total": "New estimated total",
+      "note": "Order special instructions",
+      "checkout": "Check out",
+      "empty": "Your cart is empty",
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Duties included. Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Duties included. Taxes, discounts and shipping calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
+      "headings": {
+        "product": "Product",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity",
+        "image": "Product image"
+      },
+      "update": "Update",
+      "login": {
+        "title": "Have an account?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+      }
+    },
+    "footer": {
+      "payment": "Payment methods"
+    },
+    "featured_blog": {
+      "view_all": "View all",
+      "onboarding_title": "Blog post",
+      "onboarding_content": "Give your customers a summary of your blog post"
+    },
+    "featured_collection": {
+      "view_all": "View all",
+      "view_all_label": "View all products in the {{ collection_name }} collection"
+    },
+    "collection_list": {
+      "view_all": "View all"
+    },
+    "collection_template": {
+      "empty": "No products found",
+      "title": "Collection",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+    },
+    "video": {
+      "load_video": "Load video: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Load slide",
+      "previous_slideshow": "Previous slide",
+      "next_slideshow": "Next slide",
+      "pause_slideshow": "Pause slideshow",
+      "play_slideshow": "Play slideshow",
+      "carousel": "Carousel",
+      "slide": "Slide"
+    },
+    "page": {
+      "title": "Page title"
+    },
+    "quick_order_list": {
+      "product_total": "Product subtotal",
+      "view_cart": "View cart",
+      "each": "{{ money }}/ea",
+      "product": "Product",
+      "variant": "Variant",
+      "variant_total": "Variant total",
+      "items_added": {
+        "one": "{{ quantity }} item added",
+        "other": "{{ quantity }} items added"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} item removed",
+        "other": "{{ quantity }} items removed"
+      },
+      "product_variants": "Product variants",
+      "total_items": "Total items",
+      "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
+      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
+      "remove_all": "Remove all",
+      "cancel": "Cancel",
+      "min_error": "This item has a minimum of {{ min }}",
+      "max_error": "This item has a maximum of {{ max }}",
+      "step_error": "You can only add this item in increments of {{ step }}"
+    }
+  },
+  "localization": {
+    "country_label": "Country/region",
+    "language_label": "Language",
+    "update_language": "Update language",
+    "update_country": "Update country/region",
+    "search": "Search",
+    "popular_countries_regions": "Popular countries/regions",
+    "country_results_count": "{{ count }} countries/regions found"
+  },
+  "customer": {
+    "account": {
+      "title": "Account",
+      "details": "Account details",
+      "view_addresses": "View addresses",
+      "return": "Return to Account details"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "Activate account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Activate account",
+      "cancel": "Decline invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add a new address",
+      "edit_address": "Edit address",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country/region",
+      "province": "Province",
+      "zip": "Postal/ZIP code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add address",
+      "update": "Update address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "log_in": "Log in",
+    "log_out": "Log out",
+    "login_page": {
+      "cancel": "Cancel",
+      "create_account": "Create account",
+      "email": "Email",
+      "forgot_password": "Forgot your password?",
+      "guest_continue": "Continue",
+      "guest_title": "Continue as a guest",
+      "password": "Password",
+      "title": "Login",
+      "sign_in": "Sign in",
+      "submit": "Submit",
+      "alternate_provider_separator": "or"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date_html": "Placed on {{ date }}",
+      "cancelled_html": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "total_refunded": "Refunded",
+      "fulfilled_at_html": "Fulfilled {{ date }}",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal",
+      "total_duties": "Duties"
+    },
+    "orders": {
+      "title": "Order history",
+      "order_number": "Order",
+      "order_number_link": "Order number {{ number }}",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "subtext": "We will send you an email to reset your password",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create"
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Reset password"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "Use the gift card code online or QR code in-store",
+      "title": "Here's your {{ value }} gift card balance for {{ shop }}!",
+      "subtext": "Your gift card",
+      "gift_card_code": "Gift card code",
+      "shop_link": "Visit online store",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "qr_image_alt": "QR code — scan to redeem gift card",
+      "copy_code": "Copy gift card code",
+      "expiration_date": "Expires {{ expires_on }}",
+      "copy_code_success": "Code copied successfully",
+      "expired": "Expired"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "I want to send this as a gift",
+      "expanded": "Gift card recipient form expanded",
+      "collapsed": "Gift card recipient form collapsed",
+      "email_label": "Recipient email",
+      "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
+      "email": "Email",
+      "name_label": "Recipient name (optional)",
+      "name": "Name",
+      "message_label": "Message (optional)",
+      "message": "Message",
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
+    }
+  },
+  "bc_collection": {
+    "intro": {
+      "kranen": "A tap shapes the style and everyday comfort of your bathroom. Choose where you need a tap and explore the matching models and finishes.",
+      "wastafelkranen": "Find a basin tap that suits your basin and bathroom style. Choose a deck-mounted or concealed model and refine the range by the features that matter to you.",
+      "opbouw": "A deck-mounted basin tap sits on your basin or countertop. Check its height, spout reach and the space around your basin.",
+      "inbouw": "A concealed basin tap has its spout and controls mounted on the wall. Check the spout reach, mounting position and required concealed body.",
+      "badkranen": "Choose a bath tap that suits your bath and connections. Explore exposed, concealed and freestanding models and choose a matching finish.",
+      "douchekranen": "Choose the controls and mounting that suit your shower. Compare exposed and concealed taps and check the connections and parts you need.",
+      "general": "Explore {{ category }} for your bathroom. Check the dimensions, mounting and finish to find a suitable model."
+    },
+    "selected_filters": "Selected filters",
+    "filters_and_sorting": "Filter and sort",
+    "empty": {
+      "title": "Looking for a suitable product?",
+      "body": "There are currently no products in {{ category }}. Contact us for help finding a suitable item.",
+      "filtered": "No products match this combination of filters. Remove a filter or clear your selection to continue browsing."
+    },
+    "choice_help": "Help choosing",
+    "faq_title": "Frequently asked questions about {{ category }}",
+    "help_title": "Need help choosing?",
+    "help_body": "We are happy to help you find a product that suits your bathroom.",
+    "contact": "Ask for advice",
+    "faucets": {
+      "heading": "The right tap starts with three choices.",
+      "intro": "Start with the mounting and where the tap will be used. Then choose a finish that suits the rest of your bathroom.",
+      "title_1": "Choose the mounting",
+      "body_1": "Exposed taps sit on the basin or wall. Concealed taps have a body inside the wall. Check the connections and available space first.",
+      "title_2": "Check the height and reach",
+      "body_2": "The spout should reach comfortably over the basin or bath. Measure the available space and allow for the height of any countertop basin.",
+      "title_3": "Match the finish",
+      "body_3": "Coordinate the tap with your shower, accessories and sanitaryware. Check the exact colour and finish: similar colours can differ between brands."
+    },
+    "general": {
+      "heading": "Choose what fits your bathroom.",
+      "intro": "These three checks help you find a model that suits your space and preferences.",
+      "title_1": "Measure your space",
+      "body_1": "Check the dimensions and allow enough room to use and maintain the product.",
+      "title_2": "Check the mounting",
+      "body_2": "Review the connections, mounting method and included components to see what you need for installation.",
+      "title_3": "Coordinate the details",
+      "body_3": "Match colour, material and finish to the rest of your bathroom. Review the specifications and images for your chosen model."
+    },
+    "faq": {
+      "question_1": "What is the difference between an exposed and a concealed tap?",
+      "answer_1": "An exposed tap is visible on the basin or wall. A concealed tap has its mechanism inside the wall, with the spout and controls visible. Always check which concealed body is required and whether it is included.",
+      "question_2": "Which tap suits a countertop basin?",
+      "answer_2": "A countertop basin needs enough height and reach between the spout and the bowl. A tall deck-mounted tap or a correctly positioned wall-mounted tap may suit it. Compare the tap dimensions with the height and position of your basin.",
+      "question_3": "Are the concealed body and other parts included?",
+      "answer_3": "This varies by product. A trim set is not automatically a complete tap. Check the product description and included components. Contact us if you are unsure whether you have everything needed for installation."
+    },
+    "directory_heading": "Explore more {{ category }}",
+    "read_advice": "Read more information and advice about {{ category }}"
+  },
+  "bc_delivery": {
+    "information": "Lead time and delivery information",
+    "supplier_in_stock": "In stock at supplier",
+    "contact_current_lead_time": "Contact us for the current lead time",
+    "supplier_expected_from": "Expected at supplier from {{ date }}",
+    "lead_time_on_request": "Lead time on request"
+  },
+  "bc_specs": {
+    "heading": "Specifications",
+    "title": "Specifications",
+    "yes": "Yes",
+    "no": "No",
+    "groups": {
+      "product": "Product",
+      "appearance": "Appearance and material",
+      "dimensions": "Dimensions",
+      "installation": "Installation and connections",
+      "features": "Features"
+    },
+    "fields": {
+      "artikelnummer": "Article number",
+      "merk": "Brand",
+      "serie": "Series",
+      "model": "Model",
+      "uitvoering": "Version",
+      "garantie": "Warranty",
+      "kleur": "Colour and finish",
+      "basiskleur": "Base colour",
+      "kleurgroep": "Colour group",
+      "glaskleur": "Glass colour",
+      "kleur_binnenzijde": "Interior colour",
+      "afwerking": "Finish",
+      "glansgraad": "Gloss level",
+      "materiaal": "Material",
+      "materiaal_inzet": "Insert material",
+      "vorm": "Shape",
+      "binnenvorm": "Interior shape",
+      "bladvorm": "Top shape",
+      "type_bad": "Bath type",
+      "vormgeving_stijlgroep": "Design / style",
+      "afwerking_greep": "Handle finish",
+      "afwerking_wand": "Wall finish",
+      "afmetingen_original": "Dimensions",
+      "afmeting": "Dimensions",
+      "lengte_mm": "Length (mm)",
+      "breedte_mm": "Width (mm)",
+      "breedte_diameter_mm": "Width / diameter (mm)",
+      "hoogte_mm": "Height (mm)",
+      "diepte_mm": "Depth (mm)",
+      "dikte_mm": "Thickness (mm)",
+      "glasdikte_mm": "Glass thickness (mm)",
+      "opbouwhoogte_totaal": "Overall height",
+      "hoogte_uitloop_mm": "Spout height (mm)",
+      "voorsprong_uitloop_mm": "Spout reach (mm)",
+      "diepte_uitloop": "Spout depth",
+      "inbouwdiepte": "Installation depth",
+      "breedte_diameter_hoofddouche": "Overhead shower width / diameter",
+      "dikte_hoofddouche": "Overhead shower thickness",
+      "breedte_diameter_douchekop": "Shower head width / diameter",
+      "diepte_douchekop": "Shower head depth",
+      "lengte_douchearm": "Shower arm length",
+      "lengte_doucheslang": "Shower hose length",
+      "gewicht": "Weight",
+      "inhoud": "Capacity",
+      "montage": "Installation",
+      "aantal_kraangaten": "Tap holes",
+      "aantal_grepen": "Handles",
+      "plaats_kraangat": "Tap hole position",
+      "kraangat": "Tap hole",
+      "plaats_afvoergat": "Drain position",
+      "plaats_bediening": "Control position",
+      "maat_aansluiting_aanvoer": "Supply connection size",
+      "maat_draadaansluiting_inch": "Thread connection size (inch)",
+      "warm_koud_aansluiting": "Hot / cold water connection",
+      "type_bevestiging_hoofddouche": "Overhead shower mounting",
+      "geschikt_voor_onderkast": "Suitable for vanity unit",
+      "geschikt_voor_vrijhangende_montage": "Suitable for wall-hung installation",
+      "met_bevestigingsmateriaal": "Mounting hardware included",
+      "verdekte_bevestiging": "Concealed mounting",
+      "inkortbaar": "Can be shortened",
+      "coldstart": "Cold start",
+      "thermostatisch": "Thermostatic",
+      "met_overloop": "With overflow",
+      "overloop": "Overflow",
+      "met_overloopgat": "With overflow hole",
+      "met_plug": "With waste",
+      "met_sifon": "With trap",
+      "met_afvoerplug": "With drain plug",
+      "met_badafvoer": "With bath waste",
+      "met_kraan": "Tap included",
+      "met_hoofddouche": "Overhead shower included",
+      "met_handdouche": "Hand shower included",
+      "met_doucheslang": "Shower hose included",
+      "met_douchearm": "Shower arm included",
+      "met_inbouwdeel": "Concealed body included",
+      "met_temperatuurregeling": "With temperature control",
+      "aantal_straalsoorten_hoofddouche": "Overhead shower spray modes",
+      "aantal_straalsoorten_handdouche": "Hand shower spray modes",
+      "met_watervalstraal": "With waterfall spray",
+      "vorm_uitloop": "Spout shape",
+      "type_handdouche": "Hand shower type",
+      "vorm_thermostaat": "Thermostat shape",
+      "aantal_uitgangen_tegelijk_bedienbaar": "Simultaneously controlled outlets",
+      "bediening_voor_aan_uit": "On / off control",
+      "softclose": "Soft close",
+      "quick_release": "Quick release",
+      "rimless": "Rimless",
+      "nano_coating": "Nano coating",
+      "vuilafstotend": "Dirt repellent",
+      "met_verlichting": "With lighting",
+      "met_verwarming": "With heating",
+      "dimbaar": "Dimmable",
+      "vermogen_w": "Power (W)",
+      "aantal_laden": "Drawers",
+      "aantal_waskommen": "Basins",
+      "aantal_glazen": "Glasses",
+      "met_bekers_glazen": "With cups / glasses",
+      "aantal_haken": "Hooks",
+      "aantal_handdoekstangen": "Towel rails",
+      "aantal_rollen": "Rolls",
+      "met_klep": "With cover",
+      "geschikt_voor_aantal_personen": "Suitable number of people",
+      "verstelbaar": "Adjustable",
+      "verstelbare_kop": "Adjustable head",
+      "zwenkbaar": "Swivelling",
+      "met_audio": "With audio",
+      "belgaqua_keurmerk": "Belgaqua certification",
+      "volumestroomklasse": "Flow rate class"
+    }
+  },
+  "bc_sunshower": {
+    "loading": "Uitvoering laden…",
+    "error": "De uitvoering kon niet worden geladen. Probeer opnieuw.",
+    "javascript": "Schakel JavaScript in om van uitvoering te wisselen.",
+    "specifications": "Specificaties",
+    "yes": "Ja",
+    "no": "Nee",
+    "documents": "Bijlagen en handleidingen",
+    "components": "Deze set bestaat uit",
+    "included_note": "Deze onderdelen zijn inbegrepen in de prijs van deze uitvoering.",
+    "included": "Inbegrepen",
+    "accessories": "Maak je set compleet",
+    "accessories_note": "Deze artikelen zijn aanvullende opties. Kies zelf wat je nodig hebt; ze worden apart berekend.",
+    "add_extras": "Voeg geselecteerde accessoires toe",
+    "added": "De geselecteerde accessoires zijn toegevoegd.",
+    "cart_error": "Deze accessoires konden niet worden toegevoegd. Probeer opnieuw of neem contact op.",
+    "cart": "Bekijk winkelwagen",
+    "choice_help": "Hulp bij je keuze",
+    "accessories_eyebrow": "Handig om mee te bestellen",
+    "optional_extras": "Optionele extra’s",
+    "optional_note": "Voeg naar wens iets extra’s toe aan je bestelling.",
+    "article_number": "Artikelnummer:",
+    "per_piece": "per stuk",
+    "unavailable": "Niet beschikbaar om toe te voegen",
+    "select_accessory": "Selecteer {{ title }}",
+    "add": "Toevoegen",
+    "quantity": "Aantal",
+    "accessory_quantity": "Aantal {{ title }}",
+    "open_accessory": "Open een accessoire via de productnaam om het aan je winkelwagen toe te voegen.",
+    "none_selected": "Geen accessoires geselecteerd",
+    "accessory_total": "Totaal accessoires · inclusief btw",
+    "only_extras": "Je voegt hiermee alleen de geselecteerde accessoires toe.",
+    "pros_title": "Plus- en aandachtspunten",
+    "pros_ir": "Infraroodwarmte zonder UV-licht.",
+    "pros_uv": "Infraroodwarmte en UV in één apparaat.",
+    "pros_touch": "Eenvoudig te bedienen met het touchscreen.",
+    "pros_shape": "Rechthoekige glasplaat met afgeronde hoeken.",
+    "attention_installation": "Controleer de benodigde ruimte en aansluitingen vóór montage.",
+    "attention_extras": "Aanvullende accessoires zijn niet inbegrepen in de setprijs."
+  },
+  "ss": {
+    "config": {
+      "title": "Configure your Sunshower",
+      "subtitle": "Choose the version that suits your bathroom.",
+      "met_uv": "Light function",
+      "kleur": "Colour",
+      "uitvoering": "Size",
+      "plaatsing": "Installation",
+      "help_met_uv": "What is the difference?",
+      "help_kleur": "Details",
+      "help_uitvoering": "Size guide",
+      "help_plaatsing": "Details",
+      "ir": "Infrared",
+      "ir_uv": "Infrared + UV",
+      "tax": "Including VAT",
+      "ask_delivery": "Ask about delivery",
+      "complete": "Complete your set"
+    },
+    "benefits": {
+      "ir_title": "Benefits of infrared",
+      "ir_warmth": "Comfortable warmth for your body",
+      "ir_relax": "Helps muscles and joints relax",
+      "ir_circulation": "Stimulates circulation",
+      "ir_tension": "Helps reduce muscle tension",
+      "ir_pain": "May relieve muscle and joint pain",
+      "uv_title": "Benefits of UV",
+      "uv_vitamin": "UVB stimulates vitamin D production",
+      "vitamin_intro": "Vitamin D supports:",
+      "uv_immune": "Normal immune system function",
+      "uv_bones": "The maintenance of strong bones and teeth",
+      "uv_muscles": "Normal muscle function"
+    },
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading configuration…",
+    "choice_error": "This configuration could not be loaded. Please try again.",
+    "cart_error": "Adding to the cart could not be confirmed. Check your cart before trying again.",
+    "adding": "Adding…",
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "article": "Product code:",
+    "enlarge": "Enlarge product photo",
+    "photos": "Product photos",
+    "photo_number": "View product photo {{ number }}",
+    "photo_error": "This photo could not be loaded.",
+    "explain": "Details",
+    "delivery": "Delivery time on request",
+    "delivery_note": "Contact us for the current delivery time.",
+    "quantity": "Quantity:",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "add_cart": "Add to cart",
+    "unavailable": "Unavailable",
+    "complete_link": "Complete your order",
+    "promise_prices": "Prices include VAT",
+    "promise_advice": "Personal advice",
+    "promise_parts": "Help finding compatible parts",
+    "short": "At a glance",
+    "show_more": "Show more",
+    "show_less": "Show less",
+    "specifications": "Specifications",
+    "all_specs": "View all specifications",
+    "components": "This set includes",
+    "included": "Included in this set",
+    "complete": "Complete your set",
+    "select_extra": "Select {{ title }}",
+    "installation_group": "Recommended for installation:",
+    "optional_group": "Optional extras:",
+    "total": "Total:",
+    "total_note": "Including VAT · product and selected extras",
+    "add_set": "Add set to cart",
+    "check_cart": "Check your cart",
+    "documents": "Documents",
+    "close": "Close",
+    "guide": {
+      "navigation": "Product information",
+      "nav_light": "Infrared & UV",
+      "nav_install": "Installation & recess dimensions",
+      "nav_pdf": "PDF documents",
+      "your_choice": "Your configuration",
+      "ir_uv": "Infrared + UV",
+      "ir_only": "Infrared only",
+      "functions_intro": "Both models have infrared. The difference is the additional UV function.",
+      "one_help": "Infrared warmth while showering. Choose ONE for warmth and relaxation without UV.",
+      "plus_help": "Infrared and a separate UV function. UVB can stimulate natural vitamin D production in the skin. Choose PLUS if you also want to use UV light.",
+      "uv_use": "Use UV responsibly. PLUS is for adults aged 18 and over. Wear the specified UV goggles and follow the exposure schedule and restrictions in the user manual.",
+      "colour_help": "The colour applies to the glass panel. Infrared and UV functions depend on ONE or PLUS and do not change with the colour.",
+      "colour_note": "Swatches are indicative. Screens and lighting can affect colour appearance.",
+      "size_help": "All Round models are 33 cm wide. Panel height and installation height determine which part of your body is illuminated.",
+      "coverage_small": "1/4 body",
+      "coverage_medium": "3/4 body",
+      "coverage_large": "Whole body",
+      "size_note": "These are glass dimensions, not recess dimensions. Maintain a user distance of 30–50 cm. Check the correct manual before installation.",
+      "inbouw": "Recessed installation",
+      "opbouw": "Flat wall installation",
+      "hoek": "Corner installation",
+      "mount_inbouw": "The body fits into a recess in the wall; the glass panel forms the visible finish. Check the recess and wiring before tiling.",
+      "mount_opbouw": "The Sunshower mounts on a flat wall. The matching wall mounting kit is included in this configuration. No wall recess is required.",
+      "mount_hoek": "The Sunshower mounts in the shower corner. The matching corner mounting kit is included in this configuration. No wall recess is required.",
+      "mount_help_note": "Changing the installation type changes the configuration, components and possibly the price. See the included components for the exact contents.",
+      "light_eyebrow": "Your daily moment",
+      "light_title": "Infrared, or infrared and UV?",
+      "light_intro": "You have selected Round {{ model }}. Here is what its light functions offer.",
+      "included_choice": "In your configuration",
+      "only_plus": "PLUS only",
+      "ir_title": "Infrared. Feel the warmth.",
+      "ir_text": "Turn your shower into a warm moment of relaxation. Infrared lamps provide directed warmth while you shower.",
+      "ir_benefit": "Infrared is included in ONE and PLUS.",
+      "ir_session": "A session lasts up to 10 minutes and can be stopped earlier.",
+      "uv_title": "UV. An additional light function.",
+      "uv_text": "Your PLUS adds low-dose UV light. UVB can stimulate natural vitamin D production in the skin. Select the desired light function using the controls.",
+      "no_uv_text": "Your ONE provides infrared warmth without UV. For the additional UV function, choose Yes under With UV.",
+      "uv_choice": "ONE: without UV · PLUS: with UV.",
+      "uv_manual": "Follow the exposure schedule in the user manual.",
+      "energy_eyebrow": "Understand consumption",
+      "energy_title": "What does a warm moment cost?",
+      "energy_intro": "Round {{ size }} has a maximum input power of {{ watts }} W. See an example for 10 minutes at that power.",
+      "rate": "Your electricity rate (€/kWh)",
+      "energy_result": "Example calculation",
+      "energy_time": "per 10 minutes",
+      "energy_usage": "{{ kwh }} kWh at maximum power",
+      "energy_note": "Calculation: power in kW × 10/60 hours × your rate. The prefilled rate is an example. Actual consumption depends on the light function and duration; cooling, water and other shower costs are excluded.",
+      "install_eyebrow": "For you & your installer",
+      "install_title": "Installation & PDF documents",
+      "install_intro": "These details apply to your selected Round {{ size }} · {{ mount }}.",
+      "glass": "Glass dimensions",
+      "width_height": "width × height",
+      "niche": "Recess without installation box",
+      "width_height_depth": "width × height × minimum depth",
+      "max_power": "Maximum power",
+      "distance": "User distance",
+      "niche_note": "Recess dimensions from Sunshower P6094 rev. I, without installation box. An installation box requires different dimensions. Check mounting height, load capacity and wiring space in the drawing before preparing the recess.",
+      "current_drawing": "Current Sunshower recessed installation drawing (PDF)",
+      "electric_note": "Electrical connection: 230 V, protected by 16 A. Have a qualified installer check the circuit and bathroom installation. Round is unsuitable for a steam cabin.",
+      "downloads": "Manuals for this configuration",
+      "download_note": "Open the installation manual for mounting and wiring, or the user manual for operation and maintenance.",
+      "faq_eyebrow": "Good to know",
+      "faq_title": "Sunshower Round questions",
+      "faq_difference_q": "What is the difference between Round ONE and PLUS?",
+      "faq_difference_a": "ONE has infrared. PLUS has infrared and an additional UV function. Select With UV above to open the matching configuration, price and components.",
+      "faq_contents_q": "Which components will I receive?",
+      "faq_contents_a": "The included components section lists the components and manufacturer numbers for your configuration. Wall and corner configurations include their matching mounting kit. Accessories are added only when you select them.",
+      "faq_dimensions_q": "Are glass and recess dimensions the same?",
+      "faq_dimensions_a": "No. The glass is the visible finish; the recess houses the body. An installation box requires different recess dimensions. Always use the appropriate installation drawing before tiling.",
+      "faq_steam_q": "Can Round be used in a steam cabin?",
+      "faq_steam_a": "No. Round is unsuitable for steam cabins. Follow the ventilation and installation instructions in the manual."
+    },
+    "redesign": {
+      "highlights": "Benefits & points to consider",
+      "description": "Description",
+      "parts": "Set components",
+      "accessories": "Accessories",
+      "pro_ir": "Directed infrared warmth while showering.",
+      "pro_one": "Infrared without UV: choose warmth only.",
+      "pro_plus": "Infrared and a separate UV function in one product.",
+      "pro_inbouw": "The body is recessed into the wall for a calm finish.",
+      "pro_mount": "The matching mounting kit is included with this complete configuration.",
+      "con_steam": "Unsuitable for a steam cabin.",
+      "con_inbouw": "Prepare the recess and wiring before tiling.",
+      "con_space": "Allow for space in front of the wall and a user distance of 30–50 cm.",
+      "con_uv": "UV requires the prescribed exposure schedule and UV goggles.",
+      "light_eyebrow": "Warmth & light · Sunshower Round",
+      "light_title": "Your shower. Your moment.",
+      "light_intro": "A moment of warmth in your own bathroom. Discover what your configuration adds to showering.",
+      "ir_title": "Infrared. Directed warmth.",
+      "ir_text": "Infrared lamps provide warmth while you shower. Infrared is included in Round ONE and Round PLUS.",
+      "uv_title": "PLUS. A separate UV function too.",
+      "uv_text": "Round PLUS adds low-dose UV light. UVB can stimulate vitamin D production in the skin. Follow the exposure schedule and wear the specified UV goggles.",
+      "one_title": "ONE. Infrared only.",
+      "one_text": "This configuration has no UV function. Choose infrared warmth without UV. For both light functions, choose Round PLUS.",
+      "energy_cost": "Approx. {{ cost }} electricity per shower*",
+      "energy_note": "* Example: 10 minutes at maximum power at €0.24/kWh. Excludes cooling and water; actual consumption depends on the light function and duration.",
+      "installation_specs": "Installation dimensions"
+    }
+  },
+  "ss_home": {
+    "eyebrow": "Sunshower",
+    "heading": "A warm moment. In your own shower.",
+    "intro": "Discover Sunshower ONE and PLUS.",
+    "cta": "Explore Sunshower",
+    "image_alt": "Sunshower in a warm bathroom"
+  },
+  "ss_landing": {
+    "hero": {
+      "eyebrow": "Sunshower",
+      "heading": "Sunshower for your shower",
+      "intro": "Compare ONE and PLUS, then choose your preferred configuration.",
+      "compare": "Explore the difference",
+      "image_alt": "Sunshower installed in a shower"
+    },
+    "models": {
+      "heading": "Choose your Sunshower",
+      "intro": "Infrared or infrared with UV? Start with your preferred model.",
+      "note": "Then choose the size, installation type and colour in the configurator."
+    },
+    "one": {
+      "heading": "Round ONE",
+      "badge": "Infrared",
+      "description": "Infrared warmth while you shower.",
+      "button": "Configure ONE",
+      "image_alt": "Sunshower Round ONE with infrared"
+    },
+    "plus": {
+      "heading": "Round PLUS",
+      "badge": "Infrared + UV",
+      "description": "Infrared warmth with an additional UV function.",
+      "button": "Configure PLUS",
+      "image_alt": "Sunshower Round PLUS with infrared and UV"
+    },
+    "explain": {
+      "eyebrow": "A quick introduction",
+      "heading": "What is a Sunshower?",
+      "intro": "A Sunshower is an infrared panel for your shower. Round PLUS also includes a UV function.",
+      "ir_heading": "Infrared",
+      "ir_text": "The heat lamps emit infrared warmth. Both ONE and PLUS offer this function.",
+      "uv_heading": "UV with PLUS",
+      "uv_text": "Round PLUS has UV lamps in addition to infrared. ONE offers infrared only."
+    },
+    "mount": {
+      "heading": "Which installation suits your shower?",
+      "intro": "Choose a configuration that suits your shower and the available space.",
+      "inbouw_heading": "Recessed",
+      "inbouw_text": "The panel is built into the wall.",
+      "inbouw_alt": "Sunshower recessed model",
+      "opbouw_heading": "Surface-mounted",
+      "opbouw_text": "The panel is mounted on the wall.",
+      "opbouw_alt": "Sunshower surface-mounted model",
+      "sizes": "Small · Medium · Large",
+      "note": "The configurator shows the available configurations."
+    },
+    "advice": {
+      "heading": "Need help choosing?",
+      "text": "We can help you choose a model and installation type for your shower.",
+      "button": "Ask us for advice"
+    },
+    "faq": {
+      "heading": "Good to know",
+      "difference_question": "What is the difference between ONE and PLUS?",
+      "difference_answer": "Round ONE has infrared lamps. Round PLUS combines infrared lamps with a UV function. Choose your model first, then select your preferred configuration.",
+      "size_question": "Which size fits my shower?",
+      "size_answer": "You can choose from Small, Medium and Large. The right size depends on your shower and the configuration you choose. Check the dimensions and installation information on the product page, and have the available space checked.",
+      "mount_question": "Which installation types can I choose?",
+      "mount_answer": "The configurator shows the available installation types, including recessed, surface-mounted and corner installation. The right configuration depends on your wall and shower layout.",
+      "install_question": "What do I need to arrange for installation?",
+      "install_answer": "Have a qualified installer check what is needed for your chosen configuration. Preparation, positioning and the electrical connection must meet the installation instructions for that model. Technical information is available on the product page."
+    }
+  },
+  "ss_home_v2": {
+    "eyebrow": "Sunshower",
+    "heading": "Warmth in your shower.",
+    "intro": "ONE with infrared. PLUS with infrared + UV.",
+    "cta": "Discover Sunshower",
+    "image_alt": "A Sunshower in a warm bathroom"
+  },
+  "ss_experience": {
+    "hero": {
+      "eyebrow": "Sunshower",
+      "heading": "More from your shower.",
+      "intro": "Infrared warmth, with or without UV.",
+      "button": "Open the configurator",
+      "accessories": "Shop accessories",
+      "image_alt": "Sunshower with blue UV light in a warm-toned bathroom"
+    },
+    "navigation": {
+      "label": "On this Sunshower page",
+      "models": "Models",
+      "accessories": "Accessories",
+      "installation": "Installation"
+    },
+    "models": {
+      "heading": "Which Sunshower suits you?",
+      "note": "Choose the size, colour and installation in the configurator."
+    },
+    "one": {
+      "heading": "Round ONE",
+      "badge": "Infrared",
+      "description": "Warmth while you shower.",
+      "button": "Configure ONE",
+      "image_alt": "Sunshower Round ONE with red infrared light"
+    },
+    "plus": {
+      "heading": "Round PLUS",
+      "badge": "Infrared + UV",
+      "description": "Choose warmth or UV light.",
+      "button": "Configure PLUS",
+      "image_alt": "Sunshower Round PLUS in blue UV mode"
+    },
+    "accessories": {
+      "heading": "Complete your Sunshower",
+      "intro": "For comfort and care.",
+      "cleaning_heading": "Cleaning set",
+      "cleaning_description": "Cleaner & coating",
+      "seat_heading": "Sunseat",
+      "seat_description": "Shower stool",
+      "wiper_heading": "Shower squeegee",
+      "wiper_description": "SunSwipe",
+      "product_button": "View product",
+      "color_button": "Choose your colour",
+      "colors_label": "Colours for {{ product }}",
+      "color_link": "View {{ product }} in {{ color }}"
+    },
+    "colors": {
+      "white": "White",
+      "black": "Black",
+      "grey": "Organic Grey",
+      "sand": "Sand White"
+    },
+    "installation": {
+      "heading": "Fits your plans.",
+      "options": "Built-in · Wall-mounted · Corner-mounted",
+      "intro": "Explore the options for your shower.",
+      "button": "Ask for installation advice",
+      "image_alt": "Sunshower integrated into a shower with warm natural-stone colours"
+    },
+    "faq": {
+      "heading": "Good to know",
+      "difference_question": "What is the difference between ONE and PLUS?",
+      "difference_answer": "Round ONE provides infrared warmth. Round PLUS has infrared and UV; you choose which function to use. Explore the configurations and options in the configurator.",
+      "size_question": "Which size fits my shower?",
+      "size_answer": "This depends on your space and installation method. Choose a size in the configurator, then check the dimensions and installation drawing on the product page. Ask us for advice if you are unsure.",
+      "install_question": "What does the installation require?",
+      "install_answer": "Space, ventilation and electrical requirements vary by model. Before buying, ask your installer to check the installation manual for your chosen model."
+    },
+    "closing": {
+      "heading": "Ready for your Sunshower?",
+      "button": "Start the configurator",
+      "mobile_button": "Configure your Sunshower"
+    }
+  },
+  "ss_mobile_light": {
+    "intro": "Discover infrared and UV.",
+    "back": "Infrared & UV",
+    "switch_label": "Explore infrared and UV",
+    "models_link": "Which Sunshower suits you?",
+    "accessories_link": "Shop accessories",
+    "configure": "Configure your Sunshower",
+    "function_note": "Choose infrared or UV separately. UV is available with Round PLUS.",
+    "swipe_hint": "Swipe for more",
+    "shelf_label": "Sunseat and shower squeegee",
+    "infrared": {
+      "label": "Infrared",
+      "teaser": "Warmth in the shower.",
+      "heading": "Warmth in your shower.",
+      "description": "Explore infrared for a warm moment while you shower."
+    },
+    "uv": {
+      "label": "UV",
+      "teaser": "Discover UV light.",
+      "heading": "UV in your shower.",
+      "description": "Explore the UV function of Sunshower Round PLUS."
+    },
+    "accessories_heading": "Complete your shower moment"
+  },
+  "ss_quick_shop": {
+      "add": "Add to cart",
+      "adding": "Adding…",
+      "loading_image": "Loading photo…",
+      "added": "{{ product }} was added.",
+      "error": "Adding could not be confirmed. Check your cart before trying again.",
+      "image_error": "This photo could not be loaded. Your previous colour selection is unchanged.",
+      "unavailable": "Unavailable",
+      "view_cart": "View cart",
+      "details": "Product details",
+      "color": "Colour",
+      "color_overview": "Photo shows all colours"
+  },
+  "bc_hotbath_mobile": {
+      "inbouw_add": "Add rough-in part",
+      "inbouw_subtle_note": "required if you do not already have it",
+      "more_colors": "+__COUNT__ colours",
+      "more_colors_one": "+1 colour",
+      "inbouw_title": "Add rough-in part",
+      "inbouw_yes": "Yes",
+      "inbouw_no": "No, already have it",
+      "inbouw_detail": "Required for installation:",
+      "inbouw_quantity_note": "With ‘Yes’: 1 rough-in part per tap.",
+      "all_colors": "View all colours",
+      "less_colors": "Fewer colours",
+      "total": "Total",
+      "vat": "Including VAT",
+      "choose_inbouw": "Choose above whether to include the rough-in part."
+  }
+}
+

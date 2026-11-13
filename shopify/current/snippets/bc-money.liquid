@@ -1,0 +1,22 @@
+{%- comment -%}
+  Formats Shopify cents. Whole EUR amounts from 100 display without decimals;
+  fractional amounts and other currencies retain Shopify's money formatting.
+  This snippet never changes a selling price or a tile's m²/box calculation.
+  Parameters: amount (cents), with_currency (optional boolean).
+{%- endcomment -%}
+{%- liquid
+  assign amount_in_cents = amount | plus: 0
+  assign cents_remainder = amount_in_cents | modulo: 100
+  assign currency = cart.currency.iso_code | default: shop.currency
+  if currency == 'EUR' and amount_in_cents >= 10000 and cents_remainder == 0
+    echo amount | money_without_trailing_zeros
+    if with_currency
+      echo ' '
+      echo currency
+    endif
+  elsif with_currency
+    echo amount | money_with_currency
+  else
+    echo amount | money
+  endif
+-%}

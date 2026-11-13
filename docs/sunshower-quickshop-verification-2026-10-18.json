@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-18",
+  "task": "Sunshower accessories inline colour/photo/price selection and add to cart without leaving landing page",
+  "baseline": {
+    "id": "gid://shopify/OnlineStoreTheme/195385753866",
+    "name": "BadkamerCity - Duidelijkere typografie",
+    "files": 495,
+    "role": "MAIN"
+  },
+  "preview": {
+    "id": "gid://shopify/OnlineStoreTheme/195386278154",
+    "name": "BadkamerCity - Sunshower direct shoppen",
+    "role": "UNPUBLISHED",
+    "files": 497
+  },
+  "identityBeforeWrite": {
+    "id": "gid://shopify/OnlineStoreTheme/195386278154",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "identical": 495
+  },
+  "finalManifest": {
+    "draft": "gid://shopify/OnlineStoreTheme/195386278154",
+    "role": "UNPUBLISHED",
+    "total": 497,
+    "changes": [
+      "assets/bc-sunshower-landing.css",
+      "assets/bc-sunshower-shop.js",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/bc-sunshower-landing.liquid",
+      "snippets/bc-sunshower-shop-card.liquid"
+    ],
+    "mainRole": "MAIN",
+    "mainUnchanged": true,
+    "untouched": 491,
+    "qaRestored": true
+  },
+  "readbackExact": [
+    {
+      "file": "sections/bc-sunshower-landing.liquid",
+      "exact": true
+    },
+    {
+      "file": "snippets/bc-sunshower-shop-card.liquid",
+      "exact": true
+    },
+    {
+      "file": "assets/bc-sunshower-landing.css",
+      "exact": true
+    },
+    {
+      "file": "assets/bc-sunshower-shop.js",
+      "exact": true
+    },
+    {
+      "file": "locales/nl.json",
+      "exact": true
+    },
+    {
+      "file": "locales/en.default.json",
+      "exact": true
+    }
+  ],
+  "behavior": {
+    "colours": "Eight colour choices map to nine exact existing variants including cleaning. Client never changes URL on ordinary colour/add actions. Native links/forms remain fallback.",
+    "photos": "Four genuine2500x2500 Sunseat colour photos; same verified bathroom framing. SunSwipe has only identical313x417 overlapping four-colour overview; full overview retained and captioned, selected colour/variant correct.",
+    "cart": "Locale-aware single id+quantity1 Ajax request, synchronous per-card lock and shared mutation queue. Current notification mode uses inline success and only cart-icon-bubble section refresh; native notification suppressed to keep browsing position. Drawer path supported but not production runtime-tested.",
+    "safety": "Image loaded before committing variant/price/photo. Failed load retains previous selection. Confirmed addition remains successful if sections are missing; ambiguous network failures tell customer to check cart and never automatically retry. Conditional focus restoration with preventScroll."
+  },
+  "tests": {
+    "themeCheck": "Six production files revision4 passed (existing unused hero_mobile_image warning), final JS revision5 passed, internal QA revision6 passed. Initial stale editor locale dependency fixed with fresh en.default.schema.json; bundled schema fallback.",
+    "liquid": "8 NL/EN grouped render contracts:3cards8swatches,1+4+4 valid JSON choice arrays, exact variants/prices/available flags, override, unique form IDs, native fallback, closing-script escaping, empty/unavailable/no-image cases, retained IR/UV hooks.",
+    "javascript": "15 jsdom scenario groups: atomic updates, selection races/image failures, class/ARIA, keyboard/modifiers, unavailable state, duplicate submit, queue order, cart contract, null/malformed sections, error responses, no notification scroll, focus restore and no focus stealing, editor lifecycle.",
+    "desktop": {
+      "viewport": [
+        1363,
+        936
+      ],
+      "allFourSeatPhotosLoaded": true,
+      "oneSelectedSwatch": true,
+      "bodyNoHorizontalOverflow": true,
+      "nativeCartTest": {
+        "initial": "empty",
+        "items": [
+          "Sunseat Black:1 at€325.01",
+          "SunSwipe Organic Grey:1 at€29",
+          "Cleaning set:1 at€40"
+        ],
+        "total": "€394.01",
+        "headerCounts": [
+          1,
+          2,
+          3
+        ],
+        "landingUrlUnchanged": true,
+        "inlineSuccess": true,
+        "nativeNotificationClosed": true,
+        "checkoutSubmitted": false,
+        "removedOnlyTestItems": true,
+        "final": "empty"
+      },
+      "keyboard": {
+        "key": "Space",
+        "item": "Cleaning set",
+        "focusRestored": true,
+        "notificationOpen": false,
+        "addedOnce": true,
+        "removedAfterTest": true
+      }
+    },
+    "mobile": {
+      "method": "LiquidJS render of actual production snippet with actual9product catalog and deployed CSS/JS in320/390/430 srcdoc component frames. Not actual Shopify server main or complete phone browser. POST disabled in fixture; actual network cart tested on desktop.",
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "root": "10px",
+      "noPageOverflow": true,
+      "noClippedButtons": true,
+      "seatBlackImageLoadedAndSelectedAllWidths": true,
+      "wiperGreySelectedAt390": true,
+      "shelfScrollAt390": 229
+    },
+    "qa": "Existing page.bc-mobile-qa.liquid restored byte-exact; no new QA file in preview."
+  },
+  "notTested": [
+    "Physical iOS/Android",
+    "Full mobile header and complete page integration",
+    "Mobile actual cart network",
+    "Checkout/payment",
+    "Real server422/outage",
+    "Drawer-mode live runtime",
+    "No-JavaScript actual cart browser",
+    "Windows local sync",
+    "Performance benchmark"
+  ],
+  "screenshots": "Browser captures could not synchronize to host within5seconds; no broken attachment link. Visuals inspected in browser.",
+  "adminMutations": "Theme-only; no product/media/price/stock/page/menu data changed.",
+  "rollback": "Before publication do not use preview; after publication restore only four existing changed files and remove two new files if unused, or previous theme if no later changes.",
+  "patch": {
+    "status": "passed",
+    "scope": {
+      "existing_changed": [
+        "sections/bc-sunshower-landing.liquid",
+        "assets/bc-sunshower-landing.css",
+        "locales/nl.json",
+        "locales/en.default.json"
+      ],
+      "new": [
+        "snippets/bc-sunshower-shop-card.liquid",
+        "assets/bc-sunshower-shop.js"
+      ],
+      "total": 6
+    },
+    "patch": {
+      "path": "/workspace/scratch/87a9ff83233e/quickshop-git/docs/patches/BC-sunshower-quickshop-2026-10-18.patch",
+      "bytes": 33269,
+      "sha256": "0a7d4bd3bd3053b84f2f9459cddad0ab9d37c80d5beb9b20d466d11003fc5147",
+      "md5": "172e9c4d1bc8964ae113acbf9e5339d6"
+    },
+    "checks": {
+      "isolated_temporary_git_repository": true,
+      "git_diff_check": true,
+      "forward_apply_check": true,
+      "forward_apply_exact_bytes_and_file_set": true,
+      "reverse_apply_check": true,
+      "reverse_apply_exact_bytes_and_file_set": true
+    },
+    "baseline": {
+      "sections/bc-sunshower-landing.liquid": {
+        "bytes": 25747,
+        "sha256": "b9cd2f4c90a5a5d569cf0d9425b9e062a2b19fdb42562f5d4536a84a14169b94",
+        "md5": "1f098af58cd4755afd05857d7d9eb2a6"
+      },
+      "assets/bc-sunshower-landing.css": {
+        "bytes": 24587,
+        "sha256": "d572d0f8c13136cbef230ab00134f4029474a84974bd3dc56cfeef0d7516a8ed",
+        "md5": "16b56cdad6476f1db97ee589f6c11e28"
+      },
+      "locales/nl.json": {
+        "bytes": 53534,
+        "sha256": "4617504c276cb63752b2f9da94510cbe5dbbe28c90f01fb4f61e9c2b192bf648",
+        "md5": "0217c6641564c2732df5928f8e9b353d"
+      },
+      "locales/en.default.json": {
+        "bytes": 50826,
+        "sha256": "86a55b6ee59b70884ba77325fc6c95b4bdf4082d8bbe7450d0efd3e42afce4c2",
+        "md5": "cf671debc03e1ab563da6da3d969e64a"
+      }
+    },
+    "desired": {
+      "sections/bc-sunshower-landing.liquid": {
+        "bytes": 21707,
+        "sha256": "fab251e7c5053edfa7fcaa096902301165604f5fe8f9f96137af32951deddf43",
+        "md5": "8c350f7a5a2c298aa438d01a4691398a"
+      },
+      "assets/bc-sunshower-landing.css": {
+        "bytes": 26125,
+        "sha256": "a495cf63af75a6ae698e1750c1b2e65365bf4a60d3f7495d06811533da0c476c",
+        "md5": "0e0341d7a3ae84fd5e1028ea30225bc6"
+      },
+      "locales/nl.json": {
+        "bytes": 54104,
+        "sha256": "8d0e5957da3886ba685759fa2d12b6d588e67e9eafa822aa176c341b36ded129",
+        "md5": "cd563a441c9b5e252c9483614f653ecc"
+      },
+      "locales/en.default.json": {
+        "bytes": 51361,
+        "sha256": "441db9167546f08ac14254358c8e145361786f8ba418a1e9563a3dcf566c16a9",
+        "md5": "ef584d2643df60c1d1a22becd47b8a49"
+      },
+      "snippets/bc-sunshower-shop-card.liquid": {
+        "bytes": 8584,
+        "sha256": "c837860f236025e3605ed64a178b569b9d7c5f2e3dec593e8d9911bf481c86fe",
+        "md5": "055b45f636531890dd40e98bd68c830f"
+      },
+      "assets/bc-sunshower-shop.js": {
+        "bytes": 13891,
+        "sha256": "704739cf6cb13c8224079612080a4f2e49bbbde8a677e98fa6dd2e4dbb5d03ac",
+        "md5": "d769df34404e1a69d949fabbf3291b7a"
+      }
+    },
+    "limits": "This verifies a six-file source patch against the supplied four-file baseline. It does not verify Shopify theme roles, deployment, browser behavior, remote Git storage, cart persistence or checkout."
+  },
+  "catalog": [
+    {
+      "handle": "sunshower-cleaning-set",
+      "variantId": "gid://shopify/ProductVariant/53916351758602",
+      "sku": "80000",
+      "price": "40.00"
+    },
+    {
+      "handle": "sunshower-sunseat-douchekruk-organic-grey",
+      "variantId": "gid://shopify/ProductVariant/53916352708874",
+      "sku": "Q1303",
+      "price": "325.01"
+    },
+    {
+      "handle": "sunshower-sunseat-douchekruk-black",
+      "variantId": "gid://shopify/ProductVariant/53916352741642",
+      "sku": "Q1302",
+      "price": "325.01"
+    },
+    {
+      "handle": "sunshower-sunseat-douchekruk-sand-white",
+      "variantId": "gid://shopify/ProductVariant/53916352807178",
+      "sku": "Q1306",
+      "price": "325.01"
+    },
+    {
+      "handle": "sunshower-sunseat-douchekruk-white",
+      "variantId": "gid://shopify/ProductVariant/53916352872714",
+      "sku": "Q1301",
+      "price": "325.01"
+    },
+    {
+      "handle": "sunshower-sunswipe-douchewisser-white",
+      "variantId": "gid://shopify/ProductVariant/53916353003786",
+      "sku": "Q1201",
+      "price": "29.00"
+    },
+    {
+      "handle": "sunshower-sunswipe-douchewisser-black",
+      "variantId": "gid://shopify/ProductVariant/53916353626378",
+      "sku": "Q1202",
+      "price": "29.00"
+    },
+    {
+      "handle": "sunshower-sunswipe-douchewisser-organic-grey",
+      "variantId": "gid://shopify/ProductVariant/53916353921290",
+      "sku": "Q1203",
+      "price": "29.00"
+    },
+    {
+      "handle": "sunshower-sunswipe-douchewisser-sand-white",
+      "variantId": "gid://shopify/ProductVariant/53916353954058",
+      "sku": "Q1206",
+      "price": "29.00"
+    }
+  ]
+}

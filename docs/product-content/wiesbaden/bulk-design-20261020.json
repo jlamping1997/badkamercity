@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-20",
+  "status": "VERIFIED_ADMIN_PUBLICATION_AND_BULK_DESIGN",
+  "theme": {
+    "id": "195491168522",
+    "name": "BadkamerCity - Wiesbaden proefgroep 2",
+    "role": "MAIN",
+    "files": 512,
+    "hasNextPage": false,
+    "identical_to_previous_verified_preview": true
+  },
+  "previous_main": {
+    "id": "195488317706",
+    "role": "UNPUBLISHED"
+  },
+  "user_approval": "User says the result looks good and requests an efficient bulk process.",
+  "scope_this_turn": "Read-only Shopify/source/code review and documented bulk design; no product/theme/index mutation.",
+  "bulk_processor": {
+    "status": "NOT_IMPLEMENTED",
+    "next": "Read-only 50-tap dry-run by extending existing source/plan tooling"
+  },
+  "new_mobile_agent_test": "NOT_TESTED",
+  "search_index": {
+    "status": "NOT_REVERIFIED_THIS_TURN",
+    "previous_open_issue": "New wording Barco ovale waskom returned zero; title-only script prepared, VPS execution not proven."
+  },
+  "source_snapshot_date": "2026-10-19",
+  "source_counts": {
+    "schema_version": 1,
+    "collector_version": "2026-10-19.3",
+    "built_at": "2026-10-19T11:59:55.308926+00:00",
+    "stage": "SOURCE_COLLECTION_COMPLETE",
+    "manufacturer_products": 2841,
+    "source_pagination_complete": true,
+    "product_pages_collected": 2841,
+    "product_pages_missing": 0,
+    "shopify_wiesbaden_products": 2265,
+    "global_sku_index_variants": 11157,
+    "comparison_counts": {
+      "EXISTING_WIESBADEN": 2240,
+      "NEW_CANDIDATE": 601
+    },
+    "new_candidate_brands": {
+      "Wiesbaden": 217,
+      "Xellanz": 379,
+      "Akemi": 2,
+      "Riko": 2,
+      "UNKNOWN_SOURCE_BRAND": 1
+    },
+    "existing_not_found_at_manufacturer": 25,
+    "manufacturer_categories": 173,
+    "specification_labels": 586,
+    "total_specification_values": 41899,
+    "source_brands": {
+      "Wiesbaden": 2457,
+      "Xellanz": 379,
+      "Akemi": 2,
+      "Riko": 2,
+      "UNKNOWN": 1
+    },
+    "products_with_photos": 2834,
+    "products_with_drawings": 2511,
+    "products_with_documents": 1646,
+    "price_differences": 2240,
+    "near_121_percent_price_differences": 2240,
+    "issues": {
+      "SOURCE_SERIES_DESCRIPTION_CONFLICT_REVIEW": 1,
+      "SOURCE_CATEGORY_MISSING": 978,
+      "SPARSE_SPECIFICATIONS_REVIEW": 415,
+      "ZERO_OR_NEGATIVE_SOURCE_PRICE_REVIEW": 36,
+      "SET_COMPONENTS_REQUIRE_REVIEW": 27,
+      "SOURCE_BRAND_REVIEW": 383,
+      "NO_REAL_PRODUCT_IMAGE_FOUND": 7,
+      "NO_PRODUCT_PHOTO_FOUND": 7,
+      "PREVIOUS_DIMENSION_CONFLICT_REVIEW": 1,
+      "SOURCE_BRAND_MISSING_REVIEW": 1
+    },
+    "source_price_tax_modes": {
+      "EXCL_TAX_SELECTED_BY_MANUFACTURER_COMPONENT": 2841
+    },
+    "tax_normalized_price_status": {
+      "MATCHES_CURRENT_STORE_PRICE": 2240,
+      "NEW_PRODUCT_PRICE_PROPOSAL_REVIEW": 565,
+      "ZERO_OR_MISSING_SOURCE_PRICE_REVIEW": 36
+    },
+    "store_mutations": 0,
+    "import_ready": false,
+    "remaining": [
+      "Review source/target category mapping and parts vs complete sets",
+      "Verify real Shopify field definitions and filter/index mapping",
+      "Review new-product price proposals and resolve zero-source-price candidates",
+      "Write/review own product content and image alt text",
+      "Validate new-product media, exact brand and publication readiness"
+    ]
+  },
+  "open_source_conflicts": [
+    "29.8007",
+    "41.3540"
+  ]
+}

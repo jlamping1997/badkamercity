@@ -1,0 +1,415 @@
+{
+  "groups": 828,
+  "products": 12292,
+  "exact_starts": 12292,
+  "valid_choices": 152902,
+  "unavailable_choices": 9346,
+  "conditional_pending_choices": 1172,
+  "reachable_products": 12292,
+  "conditional_cart_guard": true,
+  "native_select": true,
+  "six_colour_limit": true,
+  "visual_tap_starts": 338,
+  "exact_spout_photos": 672,
+  "handle_choices": 5,
+  "spout_position_choices": 2,
+  "position_shape_checks": 1974,
+  "handle_reference_photos": 5,
+  "water_photo_checks": 102,
+  "price_order_groups": 107,
+  "price_order_products": 4060,
+  "price_order_states": 15271,
+  "opbouw_starts": 150,
+  "opbouw_execution_photos": 528,
+  "extra_groups": 25,
+  "extra_starts": 635,
+  "extra_exact_photos": 609,
+  "distinct_hinge_pairs": 240,
+  "mirror_groups": 32,
+  "mirror_exact_starts": 585,
+  "mirror_pending_cart_guards": 18,
+  "status": "MIRROR_CABINETS_CONCEPT_VERIFIED_RELEASE_PENDING",
+  "draft_theme": "196578803978",
+  "main_theme": "196542005514",
+  "draft_unpublished": true,
+  "current_round_products": 585,
+  "current_round_groups": 32,
+  "cumulative_improved_products": 4060,
+  "cumulative_improved_groups": 107,
+  "updated_file_count": 33,
+  "readback_exact": 33,
+  "main_corresponding_checksums_unchanged": 33,
+  "source_door_count_titles": 585,
+  "source_door_count_distribution": {
+    "one": 200,
+    "two": 306,
+    "three": 79
+  },
+  "existing_option_values_and_records_preserved": true,
+  "toolkit_files_pass": 33,
+  "browser": {
+    "desktop": "PASS",
+    "large_to_single_requires_direction": true,
+    "native_buy_disabled_while_pending": true,
+    "left_direction_sku": "SK-IMD60LCH",
+    "selected_price_eur": "882.09",
+    "native_buy_reenabled": true,
+    "cart": "NOT_RETESTED",
+    "mobile": "NOT_RETESTED",
+    "checkout": "NOT_TESTED"
+  },
+  "price_order": "dated snapshot; refresh from current variants after price changes",
+  "files": [
+    {
+      "filename": "assets/bc-brauer-choices.js",
+      "md5_before": "28c4fa8210b199ca32c3b21fea8f72ba",
+      "md5_after": "00a1023dc960b61dc1fc652af86ed432"
+    },
+    {
+      "filename": "assets/bc-brauer-1c2205e0e1c74649.json",
+      "md5_before": "f84875396f5a6341084fdc4ac0ceac2a",
+      "md5_after": "66a389b8c8590f509614569f9cebc53b"
+    },
+    {
+      "filename": "assets/bc-brauer-ba45a91194166541.json",
+      "md5_before": "e8bcd1db0f53b6f359428a1b186c8a1f",
+      "md5_after": "396bb6c7085d6a13e7346e80dbaa3d8d"
+    },
+    {
+      "filename": "assets/bc-brauer-0629a4186d4c68a2.json",
+      "md5_before": "b212857bd551f358000ba9ce5fb85e00",
+      "md5_after": "f20d1e7194e3fe18245c42914af90bbb"
+    },
+    {
+      "filename": "assets/bc-brauer-f400282a3c26dc44.json",
+      "md5_before": "50764f0ad58f1bdbc2bbb82853db26e1",
+      "md5_after": "7f42f41154afce280a0dab1a854e500a"
+    },
+    {
+      "filename": "assets/bc-brauer-4ec39ff417670d85.json",
+      "md5_before": "fa5bbb817375e14a7e15d200d1dbec73",
+      "md5_after": "d956731141aede4c620a3d5cb061f849"
+    },
+    {
+      "filename": "assets/bc-brauer-7c1f51a60ac637a9.json",
+      "md5_before": "05ea02d75b1cb9333c000a97d074760d",
+      "md5_after": "221569f71cbeca30ee725c7616ec7d13"
+    },
+    {
+      "filename": "assets/bc-brauer-d487feea3b31049a.json",
+      "md5_before": "168a55746624502cb78a96bc54820754",
+      "md5_after": "9577b505e3bd571cc2b4e2500e4731d8"
+    },
+    {
+      "filename": "assets/bc-brauer-dc0edfbc8d1faad4.json",
+      "md5_before": "7c5aca44496e80a570ad05b9167792ce",
+      "md5_after": "d9e70df1d30c0c69bbe10bb590b4f35a"
+    },
+    {
+      "filename": "assets/bc-brauer-acd1c206c90ea7ef.json",
+      "md5_before": "a5562cbc7ca4af19ffbaf6585c02045a",
+      "md5_after": "3366360cbfb6ba09d51c3f9b5451a917"
+    },
+    {
+      "filename": "assets/bc-brauer-cc58dc65e7ace3b7.json",
+      "md5_before": "ee39c8ac25929d82c4bd8ef11de953e8",
+      "md5_after": "4ccf068d0b4a8a5c37abc74ac39351f7"
+    },
+    {
+      "filename": "assets/bc-brauer-8bd30107a697ca84.json",
+      "md5_before": "0a9ce29bbfc527c1883523a67c45c726",
+      "md5_after": "438f9d203304d6e6e4cf0ef421f4cf4b"
+    },
+    {
+      "filename": "assets/bc-brauer-51426f87cda07b2f.json",
+      "md5_before": "47e0004a79e12629354b9eb49b37ce25",
+      "md5_after": "b32212c7b5dbac7f56e04e2d5babae2e"
+    },
+    {
+      "filename": "assets/bc-brauer-b675bd9cb219d4c3.json",
+      "md5_before": "ae371301f9b54de7d068106a820adeb9",
+      "md5_after": "1fdfd0f38706130fe078d488621a2f7f"
+    },
+    {
+      "filename": "assets/bc-brauer-165676331aab6fe0.json",
+      "md5_before": "6a45b776c04a1391b8dbb68b0992ffca",
+      "md5_after": "3fc6d8409b8d801c0b382fd3b8e014f7"
+    },
+    {
+      "filename": "assets/bc-brauer-b7218bc03b00b80d.json",
+      "md5_before": "da713e2e3ad23afaa29945af24d9813b",
+      "md5_after": "c7d0223d8060481ebbcc755e1a1c33ca"
+    },
+    {
+      "filename": "assets/bc-brauer-e988d413cbca0254.json",
+      "md5_before": "dc18a0ecf52a6f3b907ae35e6a91733d",
+      "md5_after": "8edab647276b7691a121b29fb06575fb"
+    },
+    {
+      "filename": "assets/bc-brauer-2be7cfaa2f61b4b5.json",
+      "md5_before": "8133b0e064b2c3c51e9d66dd9bbb3efc",
+      "md5_after": "72125f6b9ab4a70532a48b418a0b1261"
+    },
+    {
+      "filename": "assets/bc-brauer-ffeedcf611c96a90.json",
+      "md5_before": "94671711cf2a561690acdf2181520723",
+      "md5_after": "f21f9686fc53ee99a56ebad847f89929"
+    },
+    {
+      "filename": "assets/bc-brauer-7bd1a88a3ef15710.json",
+      "md5_before": "52e4602865da35e54910cb9ed7734dc3",
+      "md5_after": "64f16b8e4b94c9b6e3fed93fb52be616"
+    },
+    {
+      "filename": "assets/bc-brauer-2d73d939b99e8e33.json",
+      "md5_before": "8c47b7c28528e1a0d12ec89a981e7b2e",
+      "md5_after": "7e35fcd727cfb352d22c98b03ee837d3"
+    },
+    {
+      "filename": "assets/bc-brauer-2ce4d9074537bed8.json",
+      "md5_before": "ca95bb4b4e6641f739035858f2bbfbf0",
+      "md5_after": "06bacba96c423a28ef6e267f9542dfe5"
+    },
+    {
+      "filename": "assets/bc-brauer-1080f7c60e6bc014.json",
+      "md5_before": "6ceba5e20f358e013cab158947c8a1ff",
+      "md5_after": "1e244c49efb75f7ebfc08abb9149360b"
+    },
+    {
+      "filename": "assets/bc-brauer-c05a5ec24dc50e85.json",
+      "md5_before": "98091fb61275d3893ce6c626dadb8b57",
+      "md5_after": "245a51f3692900e06190c9d49484b41a"
+    },
+    {
+      "filename": "assets/bc-brauer-9bc963494e315b4e.json",
+      "md5_before": "10af5fe5b9723bd87aa9d4290be3505f",
+      "md5_after": "f476cba38131291b7858f00fee7fdb83"
+    },
+    {
+      "filename": "assets/bc-brauer-36bee4e6bc18fac1.json",
+      "md5_before": "bf52c20d58384d3b9cff23d2df2cf620",
+      "md5_after": "0251a0fb6b6575b92c9778a9e1355b49"
+    },
+    {
+      "filename": "assets/bc-brauer-0ff13286f6e80efc.json",
+      "md5_before": "65273bb38bbe31608259093c89bb064f",
+      "md5_after": "2dd8ff871e49aabfa93ee09e6576a96b"
+    },
+    {
+      "filename": "assets/bc-brauer-3de75d3dc8bd71bb.json",
+      "md5_before": "e3cf3e25f30bd23f604ec46a3e506a57",
+      "md5_after": "ee00f57f8b4ef850e14db4f47a34908d"
+    },
+    {
+      "filename": "assets/bc-brauer-9c9b4a913dd67290.json",
+      "md5_before": "97a89f6c2fe2e9ade3e44da8105cbf69",
+      "md5_after": "9a5597f26469151ed2f6d20086943f22"
+    },
+    {
+      "filename": "assets/bc-brauer-b68b7e49e888b19f.json",
+      "md5_before": "a9117d5700d54bf89a39b840ea7975b9",
+      "md5_after": "3db41a6ec57e350afdc22762826aa4c9"
+    },
+    {
+      "filename": "assets/bc-brauer-70a0073f0ad54896.json",
+      "md5_before": "0fbc06d8f1c9ed87753ea583201ca63c",
+      "md5_after": "1af96ab9a96de683696352ebe54a67ed"
+    },
+    {
+      "filename": "assets/bc-brauer-d18723ba237416d9.json",
+      "md5_before": "a51d8682957f3d01f9abe28aa5fccd28",
+      "md5_after": "e1b8b1c4485de436fd5d7973d3ccc3b3"
+    },
+    {
+      "filename": "assets/bc-brauer-e93d301769e672a2.json",
+      "md5_before": "e58daba48052558cc1a199cf84877b45",
+      "md5_after": "43d3a62be12304f0013f88435d596284"
+    }
+  ],
+  "previous_round": {
+    "groups": 828,
+    "products": 12292,
+    "exact_starts": 12292,
+    "valid_choices": 152902,
+    "unavailable_choices": 9346,
+    "conditional_pending_choices": 1172,
+    "reachable_products": 12292,
+    "conditional_cart_guard": true,
+    "native_select": true,
+    "six_colour_limit": true,
+    "visual_tap_starts": 338,
+    "exact_spout_photos": 672,
+    "handle_choices": 5,
+    "spout_position_choices": 2,
+    "position_shape_checks": 1974,
+    "handle_reference_photos": 5,
+    "water_photo_checks": 102,
+    "price_order_groups": 75,
+    "price_order_products": 3475,
+    "price_order_states": 13723,
+    "opbouw_starts": 150,
+    "opbouw_execution_photos": 528,
+    "extra_groups": 25,
+    "extra_starts": 635,
+    "extra_exact_photos": 609,
+    "distinct_hinge_pairs": 240,
+    "status": "BASINS_GLASS_CONCEPT_VERIFIED_RELEASE_PENDING",
+    "draft_theme": "196578803978",
+    "main_theme": "196542005514",
+    "draft_unpublished": true,
+    "current_round_products": 635,
+    "current_round_groups": 25,
+    "basin_products": 299,
+    "glass_products": 336,
+    "updated_file_count": 26,
+    "readback_exact": 26,
+    "main_corresponding_checksums_unchanged": 26,
+    "source_title_checks": {
+      "tap_holes": 299,
+      "door_attachment": 264,
+      "asymmetric_position": 20
+    },
+    "side_comparisons_with_same_photo": 36,
+    "existing_option_values_and_records_preserved": true,
+    "validator": "PASS",
+    "desktop_basin_navigation": "PASS",
+    "desktop_door_attachment_navigation": "PASS",
+    "current_cart": "NOT_TESTED",
+    "current_mobile": "NOT_TESTED",
+    "physical_phone": "NOT_TESTED",
+    "checkout": "NOT_TESTED",
+    "windows": "NOT_TESTED",
+    "deployed_files": [
+      {
+        "filename": "assets/bc-brauer-choices.js",
+        "md5_before": "bcb33e2330aa825f80fabdb8766621d1",
+        "md5_after": "28c4fa8210b199ca32c3b21fea8f72ba"
+      },
+      {
+        "filename": "assets/bc-brauer-a60e2f793bc9ecc9.json",
+        "md5_before": "104499d3af51beab6e24eba5d7fb87b1",
+        "md5_after": "7ea90fac738d2264bb8fdad660db75b9"
+      },
+      {
+        "filename": "assets/bc-brauer-d8bfb3803fe22e2c-63f021.json",
+        "md5_before": "bc630cfd515d0bcda6d9208834a550d1",
+        "md5_after": "3fde17c5844844691f75f4f46e53f91e"
+      },
+      {
+        "filename": "assets/bc-brauer-591e616b98740927.json",
+        "md5_before": "4ac3f56d9e13d637cce430ccfb61ea68",
+        "md5_after": "12a95afe4773b8fa17e89c886881cef8"
+      },
+      {
+        "filename": "assets/bc-brauer-19339dd8ffc6fca2.json",
+        "md5_before": "08ed56c84fae1e89511d98e5a326c9d8",
+        "md5_after": "85454ba960f993bc7e9f23778872f6ed"
+      },
+      {
+        "filename": "assets/bc-brauer-06eb24b4a615e9f0.json",
+        "md5_before": "cea06bec4ecd928608c3c2015633858b",
+        "md5_after": "997d98c86fa85bf4893042936ba8f3e8"
+      },
+      {
+        "filename": "assets/bc-brauer-f12f274a0e91042c.json",
+        "md5_before": "3f418eb2347aa431622794166317fcb0",
+        "md5_after": "f4522e5cbfb9ff76dfa1927f22685cec"
+      },
+      {
+        "filename": "assets/bc-brauer-3aa513a477a32526.json",
+        "md5_before": "a0ea041db3c183d328a0ac64448582c8",
+        "md5_after": "70f2044a6ae30f86ac77b41ec11b7645"
+      },
+      {
+        "filename": "assets/bc-brauer-d8bfb3803fe22e2c-eea3b6.json",
+        "md5_before": "18e7c9f4100ae62880ddb49b064ff8b4",
+        "md5_after": "5905136c7230c52b45fd34bd96028bf1"
+      },
+      {
+        "filename": "assets/bc-brauer-945c22bf2c937839.json",
+        "md5_before": "beee18114be2c4565713cd791bdf3a3c",
+        "md5_after": "5eb728432391c8f03d9f0dde055f2fd6"
+      },
+      {
+        "filename": "assets/bc-brauer-e481fd037d643333.json",
+        "md5_before": "cf19a701364509d59664cf9d06174019",
+        "md5_after": "03e692d35c201b87f40339868afd1442"
+      },
+      {
+        "filename": "assets/bc-brauer-3c0baef46a48ebeb.json",
+        "md5_before": "adb335917f8c208ef3a2f656f0c49759",
+        "md5_after": "f77e093e816f907253d308974f81e236"
+      },
+      {
+        "filename": "assets/bc-brauer-645bdcaa0e8ac231.json",
+        "md5_before": "cbf4520987dc5c127a0be6cf4fc5e97f",
+        "md5_after": "fdfc285ed6549da5470daded5de7353f"
+      },
+      {
+        "filename": "assets/bc-brauer-07632f47ace94adc.json",
+        "md5_before": "bb0dfd9f90ef1d0ddf15442795d3c09f",
+        "md5_after": "1ce5e9f878a2fd845c347185d1fa5525"
+      },
+      {
+        "filename": "assets/bc-brauer-bedafedf67ee5b2d.json",
+        "md5_before": "d8dd06b79453e8297fcaa9a6a7e7e75a",
+        "md5_after": "4314a6c0ab8b9a21746ceefc2e3b003b"
+      },
+      {
+        "filename": "assets/bc-brauer-05df137b439f0639.json",
+        "md5_before": "45776be0517019c724e54babf2dbf0ae",
+        "md5_after": "f4f33c23ccb9048e05cb504dc8d1dc7d"
+      },
+      {
+        "filename": "assets/bc-brauer-3f1ec528af9417cf.json",
+        "md5_before": "6914d4f5d4a642b42b289b35b41adfcd",
+        "md5_after": "0e4587471214001628508f6dc78cdc32"
+      },
+      {
+        "filename": "assets/bc-brauer-63c1f809705e8143.json",
+        "md5_before": "34dfb5b09f696fb87cc71bb905d4382f",
+        "md5_after": "fac39eee5beef6ae5c577f1286e41649"
+      },
+      {
+        "filename": "assets/bc-brauer-27f77ba3cf0a2583.json",
+        "md5_before": "923a3c1dfbb426175fb192fe45b55720",
+        "md5_after": "0f5747816ed931fd030bdba105e3fd49"
+      },
+      {
+        "filename": "assets/bc-brauer-21a68df9b9c26e4d.json",
+        "md5_before": "f6eb1633f2d190013c85be249b8b08cb",
+        "md5_after": "f59322a184d852e7660ade83b226b3ba"
+      },
+      {
+        "filename": "assets/bc-brauer-6f74ea788e7f4788.json",
+        "md5_before": "40473fbe5203df934b32f75c59b373aa",
+        "md5_after": "cdb5ba1634c3e137e4596ec524e81680"
+      },
+      {
+        "filename": "assets/bc-brauer-103889257991d3e9.json",
+        "md5_before": "8e223eb190e33acbd2e630706a8761d9",
+        "md5_after": "217b59e2e81aeebed67f06eb0c61f237"
+      },
+      {
+        "filename": "assets/bc-brauer-d763963bd6a4dcbf.json",
+        "md5_before": "636933280fdf1a3410363767c525d41a",
+        "md5_after": "e829f442bf138389197ae1490548dec3"
+      },
+      {
+        "filename": "assets/bc-brauer-a1fcf2e4471e58d9.json",
+        "md5_before": "228217795a66d95997567109f6275f08",
+        "md5_after": "42304f340cd02193beeb048c49716d12"
+      },
+      {
+        "filename": "assets/bc-brauer-1d93a2d8ec8ceb49.json",
+        "md5_before": "56673fd1e64c9d0ad14c1b318f66898c",
+        "md5_after": "7eb1d052bfe1a8a95feb2cd8a483ead2"
+      },
+      {
+        "filename": "assets/bc-brauer-0bcfb564e5845dd9.json",
+        "md5_before": "aa3090ff8b34a7efa03f27c19ee392b1",
+        "md5_after": "a3a96b641a2963fe5ba169ae720eb0be"
+      }
+    ]
+  }
+}

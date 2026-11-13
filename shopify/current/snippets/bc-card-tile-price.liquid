@@ -1,0 +1,54 @@
+{% doc %}
+Renders the primary area price only for products using the tile calculator.
+@param {product} product - The card product.
+@param {string} [mode] - data returns JSON; primary returns the price component.
+@param {string} [price_class] - Additional class for the primary price.
+@param {boolean} [use_variant] - Show the selected variant rather than the lowest area price.
+{% enddoc %}
+{%- liquid
+  assign tile = product.metafields.custom.bron_toelichtingen_json.value.tiles
+  assign box_area = tile.m2_per_box | default: 0 | plus: 0
+  assign tile_variant = product.selected_or_first_available_variant
+  capture unit_mode
+    render 'bc-cotto-unit-mode', product: product
+  endcapture
+  assign unit_mode = unit_mode | strip
+  assign unit_cents = tile.price_per_m2.amount | default: 0 | times: 100 | round
+  assign area_price = false
+  assign area_varies = false
+  if unit_mode != 'unit' and box_area > 0
+    if tile_variant.unit_price > 0
+      assign unit_cents = tile_variant.unit_price
+    elsif unit_cents <= 0
+      assign unit_cents = tile_variant.price | divided_by: box_area | round
+    endif
+    if product.price_varies and use_variant != true
+      assign unit_cents = 0
+      for variant in product.variants
+        assign variant_unit_cents = variant.unit_price | default: 0 | plus: 0
+        if variant_unit_cents <= 0
+          assign variant_unit_cents = variant.price | divided_by: box_area | round
+        endif
+        if unit_cents > 0 and variant_unit_cents != unit_cents
+          assign area_varies = true
+        endif
+        if unit_cents <= 0 or variant_unit_cents < unit_cents
+          assign unit_cents = variant_unit_cents
+        endif
+      endfor
+    endif
+    if unit_cents > 0
+      assign area_price = true
+    endif
+  endif
+-%}
+{%- if mode == 'data' -%}
+  {%- if area_price -%}{"box_area":{{ box_area | json }},"unit_price_cents":{{ unit_cents | json }},"price_varies":{{ area_varies | json }}}{%- else -%}null{%- endif -%}
+{%- elsif mode == 'primary' -%}
+  {%- if area_price -%}
+    {%- capture area_money -%}{{ unit_cents | money }}{%- endcapture -%}
+    <div class="price{% if price_class != blank %} {{ price_class }}{% endif %}"><div class="price__container"><div class="price__regular"><span class="price-item price-item--regular">{% if area_varies %}{{ 'products.product.price.from_price_html' | t: price: area_money }}{% else %}{{ area_money }}{% endif %} {{ 'bc_listing.tile_area' | t }}</span></div></div></div>
+  {%- endif -%}
+{%- elsif unit_mode == 'unit' -%}
+  <span class="bc-card-unit">{%- case tile.sale_unit -%}{%- when 'stuk' -%}{{ 'bc_units.per_piece' | t }}{%- when 'pak' -%}{{ 'bc_units.per_pack' | t }}{%- when 'set' -%}{{ 'bc_units.per_set' | t }}{%- else -%}{{ 'bc_units.per_unit' | t }}{%- endcase -%}{% if tile.unit_count > 1 %} · {{ 'bc_units.pieces_many' | t: count: tile.unit_count }}{% endif %}</span>
+{%- endif -%}

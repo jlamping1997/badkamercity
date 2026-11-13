@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-08",
+  "status": "AUDIT_WITH_OPEN_GATES; OWNER_PUBLISHED_SOURCE_VERIFIED",
+  "findings": [
+    {
+      "id": "BC-AUD-001",
+      "priority": "P1",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN_BLOCKED_SCOPE",
+      "finding": "Algemene voorwaarden tonen letterlijke HTML-tags",
+      "scope": "/policies/terms-of-service",
+      "next_action": "shopPolicyUpdate requires write_legal_policies; no policy write applied."
+    },
+    {
+      "id": "BC-AUD-002",
+      "priority": "P1",
+      "evidence": "VERIFIED_HTML",
+      "status": "OPEN_BLOCKED_SCOPE",
+      "finding": "Wettelijke kennisgeving toont letterlijke HTML-tags",
+      "scope": "/policies/legal-notice",
+      "next_action": "shopPolicyUpdate requires write_legal_policies; no policy write applied."
+    },
+    {
+      "id": "BC-AUD-003",
+      "priority": "P1",
+      "evidence": "VERIFIED_ADMIN_AND_HTML",
+      "status": "PARTIALLY_RESOLVED_INFORMATION_PAGE_NATIVE_POLICY_OPEN",
+      "finding": "Native verzendbeleid ontbreekt; policy-URL geeft 404",
+      "scope": "/policies/shipping-policy",
+      "next_action": "Authorized native policy update and public readback; write_legal_policies still unavailable. Do not equate the information Page with native checkout policy.",
+      "resolution": "Delivery Page and theme links live; effective NL Market includes both origins and8newcartquotesPASS. Native SHIPPING_POLICY still absent."
+    },
+    {
+      "id": "BC-AUD-004",
+      "priority": "P1",
+      "evidence": "VERIFIED_ADMIN_AND_HTML",
+      "status": "PARTIALLY_RESOLVED_LIVE",
+      "finding": "Contactpagina heeft alleen formulier; native contactbeleid mist telefoon",
+      "scope": "/pages/contact; /policies/contact-information",
+      "next_action": "Native contact policy requires write_legal_policies; retain current Contact Page.",
+      "resolution": "Contact Page and footer contain confirmed phone/email/contact-return address; native Contact policy still separate."
+    },
+    {
+      "id": "BC-AUD-005",
+      "priority": "P1",
+      "evidence": "VERIFIED_FORMAT",
+      "status": "OWNER_INPUT_REQUIRED",
+      "finding": "Btw-id heeft acht cijfers vóór B; vereist Nederlands formaat heeft negen",
+      "scope": "Actuele bedrijfs-/beleidstekst",
+      "next_action": "Eigenaar controleert oorspronkelijke Belastingdienstbrief. Geen ontbrekend cijfer verzinnen; KvK-naam en juridische vestiging apart verifiëren."
+    },
+    {
+      "id": "BC-AUD-006",
+      "priority": "P1",
+      "evidence": "VERIFIED_THEME_AND_HTML",
+      "status": "RESOLVED_LIVE_HTML",
+      "finding": "Homepage en overige routes gebruiken verschillende footerrenderers",
+      "scope": "/ versus alle overige onderzochte routes",
+      "next_action": "Mobile/runtime remains a separate check; current follow-up in CONTACT-RETURNS-01.",
+      "resolution": "Owner published196368531722;14publicroutes same footer including delivery Page link; six featurefiles exact; mobile/runtime separate."
+    },
+    {
+      "id": "BC-AUD-007",
+      "priority": "P1",
+      "evidence": "FRESH_1390_FILE_MAIN_MANIFEST_AND_1380_SHARED_FILE_MD5_COMPARISON",
+      "status": "RESOLVED_SHARED_SOURCE_PARITY_WITH_EXPLICIT_EXCEPTIONS",
+      "finding": "Tien achterlopende gedeelde Git-bestanden individueel beoordeeld en exact uit gepubliceerde MAIN overgenomen",
+      "scope": "shopify/current/",
+      "next_action": "Behoud de expliciete uitzonderingen; gebruik verse rollen en manifestvergelijking vóór een volgende gerichte conceptwijziging. Geen blind root-deploy.",
+      "follow_up": "docs/repairs/2026-11-09/published-source-sync/README.md",
+      "original_measurement": "8November2026: fifteen shared differences; historical count",
+      "resolution": "1380/1380shared source files match MAIN; protected settings_data body excluded; .shopifyignore and9live-only backup/reviewfiles retained. No Shopify write."
+    },
+    {
+      "id": "BC-AUD-008",
+      "priority": "P2",
+      "evidence": "VERIFIED_HTML",
+      "status": "RESOLVED_LIVE",
+      "finding": "RapoWash deelt SEO-titel en beschrijving met Reukslot",
+      "scope": "/pages/rapowash; /pages/reukslot",
+      "next_action": "Geen herhaalde write; bewijs in docs/repairs/2026-11-08/footer-and-content/",
+      "resolution": "FOOTER-FIX-01: readback in Admin and public HTML,8November2026"
+    },
+    {
+      "id": "BC-AUD-009",
+      "priority": "P2",
+      "evidence": "VERIFIED_HTML",
+      "status": "RESOLVED_LIVE",
+      "finding": "Antikalk heeft twee H1-koppen",
+      "scope": "/pages/antikalk",
+      "next_action": "Geen herhaalde write; bewijs in docs/repairs/2026-11-08/footer-and-content/",
+      "resolution": "FOOTER-FIX-01: readback in Admin and public HTML,8November2026"
+    },
+    {
+      "id": "BC-AUD-010",
+      "priority": "P1",
+      "evidence": "LIMITED_BROWSER_AND_ADMIN",
+      "status": "NOT_FULLY_TESTED",
+      "finding": "Betaling, ordermail en bestemmingsafhankelijke tarieven nog niet end-to-end bewezen",
+      "scope": "Gastcheckout en verzending",
+      "next_action": "Gecontroleerde testbestelling met overeengekomen testmethode; orderbevestiging, fulfilmentlocatie, retourmail en representatieve pakket-/palletbestemmingen controleren."
+    },
+    {
+      "id": "BC-AUD-011",
+      "priority": "P1",
+      "evidence": "VERIFIED_CONFIG_AND_USER_REPORTED",
+      "status": "NOT_FULLY_TESTED",
+      "finding": "GA4-config aanwezig; purchase en technisch consentgedrag nog onbewezen",
+      "scope": "G-H9YFB5TC6N",
+      "next_action": "Consent toestaan/weigeren/heropenen technisch controleren, daarna purchase/value/currency en ontdubbeling met echte testflow. Geen extra tag blind toevoegen."
+    },
+    {
+      "id": "BC-AUD-012",
+      "priority": "P2",
+      "evidence": "OWNER_PUBLISHED_AND_COMPLETE_PREVIEW_TO_MAIN_MANIFEST_EQUALITY",
+      "status": "RESOLVED_LIVE_SOURCE",
+      "finding": "Drie letterlijke inline_asset_content-verwijzingen missen overeenkomstige assetnaam",
+      "scope": "main-password-header / product-media",
+      "next_action": "Geen herhaalde publicatie; password-error/3D product runtime blijft NOT_TESTED.",
+      "resolution": "MAIN196368531722 matches all1390tested preview checksums, including three corrected SVG references.",
+      "follow_up": "docs/repairs/2026-11-08/whole-euro-prices/README.md"
+    },
+    {
+      "id": "BC-AUD-013",
+      "priority": "P1",
+      "evidence": "COMPLETE_ACTIVE_MARKET_CONFIG;851SUPPLIER_VARIANTS;8CART_QUOTES_PASS",
+      "status": "RESOLVED_DIAGNOSTIC_MARKETS_CONFIG_VERIFIED",
+      "finding": "DeliveryProfile coversAllItems=false; one location without rates",
+      "scope": "Algemeen profiel / NL shipping",
+      "next_action": "Do not flip coversAllItems or duplicate origins from this legacy signal. Other destinations/discounts/physical delivery remain separately untested.",
+      "resolution": "marketDrivenShipping=true; both locations already included in active NL option and rate group. Legacy profile signal is not a current missing-rate defect; no shipping write."
+    },
+    {
+      "id": "BC-AUD-014",
+      "priority": "P2",
+      "evidence": "VERIFIED_ADMIN_AND_PUBLIC_HTML_BEFORE_AFTER",
+      "status": "RESOLVED_LIVE",
+      "finding": "19broken accent sequences across9glossaryPages and4leadingBOMs across4otherPages",
+      "resolution": "Only Page.body changed,13exactfinalreadbacks; title/metadata/canonical/H1/links/structure preserved; known-pattern scan120publishedbodies no remaining matches",
+      "next_action": "Do not repeat writes; retain targeted body rollback values in glossary-encoding dossier. General content factcheck remains separate."
+    },
+    {
+      "id": "BC-AUD-015",
+      "priority": "P2",
+      "status": "RESOLVED_LIVE",
+      "evidence": "ADMIN_READBACK_AND_PUBLIC_HTTP301_TO200",
+      "finding": "Legacy /blogs/news route404 while existing blog is /blogs/nieuws",
+      "resolution": "One new redirect689424761098; no blog/article/theme/SEO mutation. Initial propagation404 then bare source301toexisting200target verified.",
+      "next_action": "Retain redirect; rollback only this new record after current path/target guard."
+    },
+    {
+      "id": "BC-AUD-016",
+      "priority": "P2",
+      "evidence": "COMPLETE226DESCRIPTION_SCAN_AND_PUBLIC_PARENT_TARGET_BEFORE_AFTER",
+      "status": "RESOLVED_LIVE",
+      "finding": "Nine description links on eight category pages lead to confirmed empty published product lists",
+      "resolution": "Only descriptionHtml changed;9links removed,1tile sentence replaced; SEO/identity/template/publications/counts/otherlinks and3furniturestyleblocks preserved",
+      "next_action": "Check collection links in published Pages/blog content with actual target verification before edits."
+    },
+    {
+      "id": "BC-AUD-017",
+      "priority": "P2",
+      "evidence": "CURRENT_ADMIN_PUBLICATION_PRODUCTCOUNT_MENU_AND_HTTP",
+      "status": "EXPLAINED_EXPECTED_UNPUBLISHED_ROUTE",
+      "finding": "/collections/tegeltoebehoren returns404",
+      "resolution": "Existing collection584286306570 has0products/0publications; no reference in9menus or226publishedcollectiondescriptions. No collection publish, redirect, rename or product reassignment.",
+      "next_action": "Retain identity; evaluate only if real assortment and a corresponding navigation scope are introduced. Page/blog link scope checked separately."
+    },
+    {
+      "id": "BC-AUD-018",
+      "priority": "P2",
+      "evidence": "OWNER_PUBLISHED_AND_VISUAL_REVIEW;1390_FILE_PREVIEW_TO_MAIN_PARITY",
+      "status": "RESOLVED_LIVE_SOURCE_AND_OWNER_REVIEW",
+      "finding": "Zoeksuggesties missen Vanaf en gedeelde prijsopmaak; fotoloze titels gebruiken de smalle fotokolom",
+      "scope": "header predictive-search; component-predictive-search.css",
+      "resolution": "MAIN196368531722 matches tested end-preview; minimum/Vanaf/shared formatting and photo-free grid fix published by owner.",
+      "next_action": "Geen herhaalde write; fysieke telefoon en koopflow blijven apart open.",
+      "follow_up": "docs/repairs/2026-11-09/published-source-sync/README.md"
+    }
+  ],
+  "last_followup": "2026-11-09 GIT-SYNC-02; all1390published checksums match preview;10source diffs reconciled;1380shared sources equal with explicit exceptions"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "date": "2026-10-31T08:02:40.878Z",
+  "artifact": "Badkamercity-volledig-naslagwerk-2026-10-31.html",
+  "sha256": "446ec7dd8b07c89da5ad0d09dfeef4ac876c9cdcaff0dfd2e78e0b1b599aceae",
+  "bytes": 5866614,
+  "counts": {
+    "chapters": 80,
+    "tasks": 50,
+    "diagnoses": 40,
+    "acceptanceCases": 50,
+    "products": 11679
+  },
+  "method": "Offline jsdom DOM execution and static parsing only",
+  "limits": [
+    "No visual browser or physical phone/laptop claim",
+    "No Windows workspace check",
+    "No storefront JavaScript/mail/cart/checkout execution",
+    "Product identity catalog is the 30 October snapshot"
+  ],
+  "checks": [
+    "80 sequential chapter headings; one H1; 81 contents links",
+    "Version 2.0, date and live/concept/mail boundaries",
+    "50 embedded task definitions and first 12 cards",
+    "Task term, role and state filters combine",
+    "All task targets resolve; catalog snapshot contains 11679 records",
+    "Catalog vendor 337 Porcelanosa; three Verona Cubik; empty result",
+    "Catalog pagination and return preserve first page",
+    "Text search returns chapter links",
+    "New practical text searchable",
+    "No-result search and Escape reset",
+    "Contents toggle and chapter click update aria state",
+    "Unique IDs, valid internal anchors and standalone external links",
+    "No external scripts, styles, execution errors or network requests",
+    "No-script document retains chapters and complete task table",
+    "Rebuilding from repository source produces byte-identical HTML"
+  ],
+  "errors": [],
+  "network": [],
+  "masterSha256": "6c1884e8aa2b529bb523dbcf0a04143e9b36d5777936dd130cd372230d55ea2e"
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-17",
+  "scope": "first_seven_mobile_root_categories",
+  "baseline": {
+    "id": "195326247178",
+    "count": 473
+  },
+  "copyBeforeWrite": {
+    "id": "195334668554",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "identicalChecksums": 473
+  },
+  "finalReadback": {
+    "candidate": "gid://shopify/OnlineStoreTheme/195334668554",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "count": 481,
+    "sourceFiles": 10,
+    "bodyMismatches": [],
+    "changed": [
+      "sections/header.liquid",
+      "snippets/header-drawer.liquid",
+      "assets/bc-nav-baden.svg",
+      "assets/bc-nav-badkamermeubels.svg",
+      "assets/bc-nav-douches.svg",
+      "assets/bc-nav-kranen.svg",
+      "assets/bc-nav-spiegels.svg",
+      "assets/bc-nav-toiletten.svg",
+      "assets/bc-nav-wastafels.svg",
+      "snippets/bc-mobile-category-icon.liquid"
+    ],
+    "unexpected": [],
+    "liveRole": "MAIN",
+    "liveCount": 473,
+    "liveChanged": [],
+    "passed": true
+  },
+  "themeCheck": {
+    "passed": 10,
+    "files": 10,
+    "documentationSource": "bundled fallback after docs-updater network timeout"
+  },
+  "liquidJs": "PASS: approved SVGs, aliases, fallback, root routing and unchanged submenu/shared icons",
+  "patch": {
+    "forward": "PASS --ignore-space-change",
+    "reverse": "PASS --ignore-space-change"
+  },
+  "browser": {
+    "viewportWidth": 1348,
+    "previewNameVerified": true,
+    "rootSvgCount": 7,
+    "rootSvgViewBox": "0 0 32 32",
+    "liquidErrors": false,
+    "mobileRuntime": "NOT_TESTED",
+    "reason": "No supported mobile viewport control"
+  },
+  "reviewer": "Read-only diff review: no blocking findings",
+  "notTested": [
+    "real 360px browser",
+    "mobile open-close-reopen",
+    "mobile submenu runtime",
+    "mobile focus and scroll",
+    "Windows synchronization"
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "status": "IMPLEMENTED_PREVIEW",
+  "main": "gid://shopify/OnlineStoreTheme/195486253322",
+  "preview": "gid://shopify/OnlineStoreTheme/195488317706",
+  "integrity": {
+    "main": "gid://shopify/OnlineStoreTheme/195486253322",
+    "preview": "gid://shopify/OnlineStoreTheme/195488317706",
+    "liveFiles": 508,
+    "previewFiles": 509,
+    "unchanged": 507,
+    "changed": [
+      "assets/section-main-product.css",
+      "templates/product.bc-responsive-qa.liquid"
+    ],
+    "liveUnchanged": true
+  },
+  "measurement": {
+    "source": "Static current Shopify product markup, actual theme CSS, scripts disabled inside isolated frame",
+    "before": [
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 895,
+          "x": 20,
+          "y": 1265.171875
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 1094,
+          "width": 895,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 893,
+          "width": 893,
+          "x": 21,
+          "y": 148.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 950
+      },
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 695,
+          "x": 20,
+          "y": 1093.015625
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 888.25,
+          "width": 695,
+          "x": 20,
+          "y": 180.765625
+        },
+        "image": {
+          "height": 693,
+          "width": 693,
+          "x": 21,
+          "y": 181.765625
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 750
+      },
+      {
+        "buybox": {
+          "height": 512.59375,
+          "width": 343,
+          "x": 16,
+          "y": 745.828125
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 482.875,
+          "width": 343,
+          "x": 16,
+          "y": 238.953125
+        },
+        "image": {
+          "height": 337,
+          "width": 337,
+          "x": 17,
+          "y": 244.953125
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 390
+      },
+      {
+        "buybox": {
+          "height": 615.21875,
+          "width": 273,
+          "x": 16,
+          "y": 652.734375
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 389.78125,
+          "width": 273,
+          "x": 16,
+          "y": 238.953125
+        },
+        "image": {
+          "height": 267,
+          "width": 267,
+          "x": 17,
+          "y": 244.953125
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 320
+      },
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 934,
+          "x": 20,
+          "y": 1311.96875
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 1140.796875,
+          "width": 934,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 932,
+          "width": 932,
+          "x": 21,
+          "y": 148.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 989
+      },
+      {
+        "buybox": {
+          "height": 460,
+          "width": 437.265625,
+          "x": 517.71875,
+          "y": 147.171875
+        },
+        "columns": "473.719px 437.266px",
+        "gallery": {
+          "height": 586.453125,
+          "width": 473.71875,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 469.71875,
+          "width": 469.71875,
+          "x": 22,
+          "y": 149.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 990
+      }
+    ],
+    "after": [
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 479.0625,
+          "x": 435.9375,
+          "y": 147.171875
+        },
+        "buyboxInner": {
+          "height": 475.59375,
+          "width": 479.0625,
+          "x": 435.9375,
+          "y": 147.171875
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 355.0625,
+          "x": 464.9375,
+          "y": 372.796875
+        },
+        "columns": "391.938px 479.062px",
+        "gallery": {
+          "height": 490.3125,
+          "width": 391.9375,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 389.9375,
+          "width": 389.9375,
+          "x": 21,
+          "y": 148.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 950
+      },
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 369.0625,
+          "x": 345.9375,
+          "y": 180.765625
+        },
+        "buyboxInner": {
+          "height": 475.59375,
+          "width": 369.0625,
+          "x": 345.9375,
+          "y": 180.765625
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 245.0625,
+          "x": 374.9375,
+          "y": 406.390625
+        },
+        "columns": "301.938px 369.062px",
+        "gallery": {
+          "height": 396.921875,
+          "width": 301.9375,
+          "x": 20,
+          "y": 180.765625
+        },
+        "image": {
+          "height": 299.9375,
+          "width": 299.9375,
+          "x": 21,
+          "y": 181.765625
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 750
+      },
+      {
+        "buybox": {
+          "height": 512.59375,
+          "width": 343,
+          "x": 16,
+          "y": 745.828125
+        },
+        "buyboxInner": {
+          "height": 492.59375,
+          "width": 343,
+          "x": 16,
+          "y": 765.828125
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 227,
+          "x": 41,
+          "y": 1008.453125
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 482.875,
+          "width": 343,
+          "x": 16,
+          "y": 238.953125
+        },
+        "image": {
+          "height": 337,
+          "width": 337,
+          "x": 17,
+          "y": 244.953125
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 390
+      },
+      {
+        "buybox": {
+          "height": 615.21875,
+          "width": 273,
+          "x": 16,
+          "y": 652.734375
+        },
+        "buyboxInner": {
+          "height": 595.21875,
+          "width": 273,
+          "x": 16,
+          "y": 672.734375
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 157,
+          "x": 41,
+          "y": 936.359375
+        },
+        "columns": "none",
+        "gallery": {
+          "height": 389.78125,
+          "width": 273,
+          "x": 16,
+          "y": 238.953125
+        },
+        "image": {
+          "height": 267,
+          "width": 267,
+          "x": 17,
+          "y": 244.953125
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 320
+      },
+      {
+        "buybox": {
+          "height": 475.59375,
+          "width": 500.5,
+          "x": 453.5,
+          "y": 147.171875
+        },
+        "buyboxInner": {
+          "height": 475.59375,
+          "width": 500.5,
+          "x": 453.5,
+          "y": 147.171875
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 376.5,
+          "x": 482.5,
+          "y": 372.796875
+        },
+        "columns": "409.5px 500.5px",
+        "gallery": {
+          "height": 511.390625,
+          "width": 409.5,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 407.5,
+          "width": 407.5,
+          "x": 21,
+          "y": 148.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 989
+      },
+      {
+        "buybox": {
+          "height": 460,
+          "width": 437.265625,
+          "x": 517.71875,
+          "y": 147.171875
+        },
+        "buyboxInner": {
+          "height": 460,
+          "width": 437.265625,
+          "x": 517.71875,
+          "y": 147.171875
+        },
+        "cartButton": {
+          "height": 56,
+          "width": 159.265625,
+          "x": 700.71875,
+          "y": 355.171875
+        },
+        "columns": "473.719px 437.266px",
+        "gallery": {
+          "height": 586.453125,
+          "width": 473.71875,
+          "x": 20,
+          "y": 147.171875
+        },
+        "image": {
+          "height": 469.71875,
+          "width": 469.71875,
+          "x": 22,
+          "y": 149.171875
+        },
+        "overflow": false,
+        "specRows": 33,
+        "viewport": 990
+      }
+    ]
+  },
+  "testMethod": "Isolated static current Shopify product markup with production theme CSS; script execution disabled. Native interactive product DOM inspected at1363px.",
+  "templateCleanup": {
+    "deleteBlocked": true,
+    "alternateDeletionAttempted": false,
+    "materiallySaferResolution": "Replace only own QA content with noindex canonical redirect; file remains"
+  },
+  "published": false
+}

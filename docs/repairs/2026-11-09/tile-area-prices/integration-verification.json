@@ -1,0 +1,71 @@
+{
+  "status": "OWNER_PUBLISHED_VERIFIED_NO_THEME_MERGE_NEEDED",
+  "checked_utc": "2026-11-09T10:50:12.194Z",
+  "main_theme": "196354474250",
+  "reserve_theme": "196395073802",
+  "main_files": 1390,
+  "reserve_files": 1390,
+  "identical": 1385,
+  "differences": [
+    {
+      "filename": "assets/bc-external-filters.js",
+      "main": "ec23b0a0273f5fe21272762641e592b4",
+      "reserve": "e8a1985496287538d3c67959724cde7d"
+    },
+    {
+      "filename": "snippets/bc-card-product-search.liquid",
+      "main": "5c70eade3e9423f7340f9992c39fb1d9",
+      "reserve": "d51ab36fecd651844e81bc5b8d1c3b16"
+    },
+    {
+      "filename": "snippets/bc-card-tile-price.liquid",
+      "main": "4e9c1d8aae548fb71876a8e71cefe79d",
+      "reserve": "e045c7066a081e50844ba7dd92c36f18"
+    },
+    {
+      "filename": "snippets/bc-porcelanosa-buybox.liquid",
+      "main": "939efdf4f6b06ff0c3520f901d2a63fe",
+      "reserve": "b82624bacca20f3c8b854d0acdaeb585"
+    },
+    {
+      "filename": "snippets/price.liquid",
+      "main": "f0847c6cfd7693990832041e1a9e0337",
+      "reserve": "5e46e646fcc06f91bae91df28ee01f39"
+    }
+  ],
+  "main_exactly_matches_approved_price_release": true,
+  "reserve_exactly_matches_previous_base": true,
+  "settings_body_read": false,
+  "settings_write": false,
+  "theme_write": false,
+  "product_write": false,
+  "server_write": false,
+  "publication": false,
+  "browser": {
+    "live_preview_exited": true,
+    "collection": "cottoceramix",
+    "before": 3159,
+    "filter": "f_tegel_uitstraling",
+    "value": "Marmerlook",
+    "after": 90,
+    "prices": [
+      "53,03 per m²",
+      "89,95 per m²",
+      "159,95 per m²"
+    ],
+    "url": "https://badkamercity.nl/collections/cottoceramix?bcf_f_tegel_uitstraling=Marmerlook",
+    "search_card_vs4501": "63,95 per m²",
+    "physical_phone": "NOT_TESTED"
+  },
+  "server_evidence": {
+    "source": "USER_SUPPLIED_POWERSHELL_OUTPUT",
+    "status": "applied_verified",
+    "generation": "bc_sync_20261109t104047_352ae2",
+    "products": 15897,
+    "profiles": 227,
+    "tile_looks_v1": true,
+    "tile_look_products": 3495,
+    "tile_look_missing": 1,
+    "new_ssh_or_timer_read": "NOT_EXECUTED"
+  }
+}

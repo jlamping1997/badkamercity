@@ -1,0 +1,23 @@
+{% doc %}
+Renders the introduction from a collection description, with a category-specific fallback.
+@param {collection} current_collection - The collection to describe
+{% enddoc %}
+{%- liquid
+  assign description_parts = current_collection.description | replace: '<p>[SPLIT]</p>', '__BC_SPLIT__' | replace: '<p>[split]</p>', '__BC_SPLIT__' | replace: '[SPLIT]', '__BC_SPLIT__' | replace: '[split]', '__BC_SPLIT__' | split: '__BC_SPLIT__'
+  assign description_top = description_parts | first
+-%}
+{%- if description_top != blank -%}
+  {{ description_top }}
+{%- else -%}
+  <p>
+    {%- case current_collection.handle -%}
+      {%- when 'kranen' -%}{{ 'bc_collection.intro.kranen' | t }}
+      {%- when 'wastafelkranen' -%}{{ 'bc_collection.intro.wastafelkranen' | t }}
+      {%- when 'opbouw-wastafelkranen' -%}{{ 'bc_collection.intro.opbouw' | t }}
+      {%- when 'inbouw-wastafelkranen' -%}{{ 'bc_collection.intro.inbouw' | t }}
+      {%- when 'badkranen' -%}{{ 'bc_collection.intro.badkranen' | t }}
+      {%- when 'douchekranen' -%}{{ 'bc_collection.intro.douchekranen' | t }}
+      {%- else -%}{{ 'bc_collection.intro.general' | t: category: current_collection.title }}
+    {%- endcase -%}
+  </p>
+{%- endif -%}

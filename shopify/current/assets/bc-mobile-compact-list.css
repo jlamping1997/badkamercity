@@ -1,0 +1,224 @@
+@media (max-width: 749px) {
+  body #MainContent :is(.bc-collection, .template-search) #product-grid.product-grid,
+  body #MainContent .template-search #product-grid > .product-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .grid__item {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card, .card-wrapper, .bc-search-card__link) {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 14px 0;
+    border: 0;
+    border-bottom: 1px solid #dce4ed;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    overflow: visible;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card, .card-wrapper > .card, .bc-search-card__link) {
+    display: grid;
+    grid-template-columns: minmax(0, 33%) minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__media, .card__inner, .bc-search-card__media) {
+    display: block;
+    width: 100%;
+    height: clamp(130px, 38vw, 180px);
+    min-height: 0;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background: #f6f5f3;
+    overflow: hidden;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__media img, .card__media .media img, .bc-search-card__image) {
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__info, .bc-search-card__content, .card > .card__content > .card__information) {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    min-width: 0;
+    padding: 0;
+    gap: 3px;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__vendor, .bc-search-card__vendor, .bc-card-vendor) {
+    margin: 0;
+    padding-right: 34px;
+    color: #77849a;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: .025em;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__title, .bc-search-card__title, .card > .card__content .card__heading) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    min-height: 0;
+    margin: 0;
+    padding-right: 24px;
+    color: #0f2740;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+  }
+  body #MainContent .template-search #product-grid .bc-search-card__title-wrap { min-height: 0; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-color {
+    min-height: 0;
+    margin: 0;
+    color: #69768c;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-card-color, .bc-card-colors):empty { display: none; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-colors {
+    display: flex;
+    gap: 0;
+    min-height: 44px;
+    height: 44px;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 44px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    display: grid;
+    place-items: center;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #a6adb3;
+    border-radius: 50%;
+    background: var(--bc-swatch);
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch[aria-pressed=true]::before {
+    outline: 2px solid #0f2740;
+    outline-offset: 3px;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch:focus-visible {
+    outline: 2px solid #285e86;
+    outline-offset: -2px;
+    border-radius: 4px;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-color-more {
+    flex: 0 0 34px;
+    min-width: 34px;
+    height: 44px;
+    border: 0;
+    background: transparent;
+    color: #69768c;
+    font-size: 12px;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-card-buy, .bc-filter-card__price, .bc-search-card__price-wrap, .card-information > .price) {
+    margin: 0;
+    padding-top: 0;
+    border: 0;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__price, .card-information > .price, .bc-search-card__price:not(.price--on-sale) .price-item--regular, .bc-search-card__price .price-item--sale) {
+    color: #0f2740;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 750;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-tax {
+    margin: 0;
+    color: #77849a;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-delivery {
+    min-height: 0;
+    margin: 3px 24px 0 0;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-card-specs, .bc-card-cart, .quick-add, .card__inner > .card__content) { display: none; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-actions { display: block; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-view {
+    display: flex;
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    min-height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 0 !important;
+    gap: 0;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-view > span { font-size: 20px; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-wishlist-button--card {
+    top: 6px;
+    right: -8px;
+    width: 44px;
+    height: 44px;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+  }
+  body #MainContent .template-search #product-grid .bc-search-card > .bc-wishlist-button--card { top: 6px; }
+  body #MainContent .bc-collection #product-grid .card > .card__content { display: block; min-width: 0; padding: 0; }
+  body #MainContent .bc-collection #product-grid .card-information { gap: 3px; }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .bc-category-children__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    border: 0;
+  }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .bc-category-children__item { border: 0; }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .collection-category-landing__card {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    align-items: center;
+    gap: 6px;
+    min-height: 66px;
+    padding: 8px;
+    border: 1px solid #dce4ed;
+    border-radius: 5px;
+  }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .collection-category-landing__card-media {
+    width: 40px;
+    height: 44px;
+    aspect-ratio: auto;
+  }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .collection-category-landing__card-body { min-width: 0; text-align: left; }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .collection-category-landing__card-title { font-size: 12px; line-height: 1.35; }
+  body #MainContent .bc-collection-hero .bc-category-children--cards .bc-category-children__arrow { display: none; }
+}
+
+.bc-card-unit {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #526675;
+}

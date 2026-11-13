@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-10T05:52:30.009Z",
+  "main": {
+    "id": "196395073802",
+    "role": "MAIN",
+    "files": 1401,
+    "unchanged_from_baseline": true
+  },
+  "seo": {
+    "id": "196441932042",
+    "role": "UNPUBLISHED",
+    "files": 1401
+  },
+  "changes": [
+    {
+      "filename": "layout/theme.liquid",
+      "checksumMd5": "abc5ba016b9eaa6db486741c9701aeec"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "b53aa2c981d90ab75724cac1b0564ecf"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "a402877ab83f455c1f27e6ddd37f2cac"
+    },
+    {
+      "filename": "snippets/meta-tags.liquid",
+      "checksumMd5": "17d841cbcea7033a7df36600782d9cee"
+    }
+  ],
+  "exact_body_readback": true,
+  "http_preview": {
+    "checked": 15,
+    "exact_meta_matches": 15,
+    "theme_id_confirmed": 15,
+    "h1_unchanged": 15,
+    "canonical_changes": 1,
+    "canonical_scope": "brands-overview only"
+  },
+  "validation": {
+    "files": 4,
+    "errors": 0,
+    "preexisting_warnings": 1,
+    "warning": "layout/theme.liquid Unknown object scheme_classes, present in unchanged baseline"
+  },
+  "local_report_logic": "PASS; no local report browser render",
+  "not_tested": [
+    "Owner publication",
+    "Native mobile interaction",
+    "SEO concept cart flow",
+    "New CTR or conversion effect"
+  ]
+}

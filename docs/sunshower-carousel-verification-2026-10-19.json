@@ -1,0 +1,442 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Europe/Amsterdam",
+  "status": "IMPLEMENTED_PREVIEW",
+  "task": "Replace discrete Sunshower photo switching with a finger-following horizontal carousel, visible arrows/counter/thumbnails, and a synchronized swipeable zoom viewer.",
+  "baseline": {
+    "id": "gid://shopify/OnlineStoreTheme/195388080394",
+    "name": "BadkamerCity - Sunshower swipen",
+    "role": "MAIN",
+    "files": 497
+  },
+  "preview": {
+    "id": "gid://shopify/OnlineStoreTheme/195392143626",
+    "name": "BadkamerCity - Sunshower fotogalerij",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "reusedExistingDraft": true
+  },
+  "identityBeforeWrite": {
+    "method": "Reused draft first synchronized in its only two differing source assets to fresh MAIN, renamed, then verified before feature write",
+    "processing": false,
+    "files": 497,
+    "identicalChecksums": 497
+  },
+  "final": {
+    "draft": {
+      "id": "gid://shopify/OnlineStoreTheme/195392143626",
+      "name": "BadkamerCity - Sunshower fotogalerij",
+      "role": "UNPUBLISHED",
+      "processing": false,
+      "files": 500,
+      "changed": [
+        "assets/bc-sunshower-configurator.css",
+        "assets/bc-sunshower-page.js",
+        "locales/en.default.json",
+        "locales/nl.json",
+        "sections/main-sunshower.liquid"
+      ],
+      "added": [
+        "assets/bc-photoswipe-license.txt",
+        "assets/bc-photoswipe.css",
+        "assets/bc-photoswipe.esm.js"
+      ],
+      "untouched": 492
+    },
+    "main": {
+      "id": "gid://shopify/OnlineStoreTheme/195388080394",
+      "role": "MAIN",
+      "files": 497,
+      "identical": 497
+    },
+    "productionExact": true,
+    "qaRestoredExact": true,
+    "qaRedirectVerifiedInBrowser": "/pages/sunshower",
+    "mainUnchanged": true,
+    "publishedByAgent": false
+  },
+  "scope": {
+    "actualProductionReadback": "Eight production contents exact: five existing changed, three added; 492 baseline files unchanged",
+    "sourceAudit": {
+      "status": "passed",
+      "productionFiles": 8,
+      "existingChanged": 5,
+      "newVendorFiles": 3,
+      "unchangedFetchedDependencies": [
+        "assets/bc-sunshower-page.css",
+        "assets/component-slider.css",
+        "assets/global.js",
+        "templates/page.bc-mobile-qa.liquid",
+        "templates/product.sunshower.json"
+      ],
+      "javascriptOutsideGalleryByteExact": true,
+      "configuratorCssOutsideGalleryViewerSelectorLinesByteExact": true,
+      "localesOnlyPhotoErrorAdded": true,
+      "vendorLicenseByteExact": true
+    },
+    "productionFiles": [
+      "assets/bc-sunshower-page.js",
+      "assets/bc-sunshower-configurator.css",
+      "sections/main-sunshower.liquid",
+      "locales/nl.json",
+      "locales/en.default.json",
+      "assets/bc-photoswipe.esm.js",
+      "assets/bc-photoswipe.css",
+      "assets/bc-photoswipe-license.txt"
+    ],
+    "noProductOrOtherAdminDataChanges": true
+  },
+  "vendor": {
+    "name": "photoswipe",
+    "version": "5.4.4",
+    "license": "MIT",
+    "source_tarball": "https://registry.npmjs.org/photoswipe/-/photoswipe-5.4.4.tgz",
+    "npm_integrity": "sha512-WNFHoKrkZNnvFFhbHL93WDkW3ifwVOXSW3w1UuZZelSmgXpIGiZSNlZJq37rR8YejqME2rHs9EhH9ZvlvFH2NA==",
+    "tarball_sha1": "e045dc036453493188d5c8665b0e8f1000ac4d6e",
+    "tarball_integrity_verified": true,
+    "source_docs": [
+      "https://photoswipe.com/getting-started/",
+      "https://photoswipe.com/data-sources/#without-lightbox-module"
+    ],
+    "files": [
+      {
+        "source_member": "package/dist/photoswipe.esm.min.js",
+        "local_path": "assets/bc-photoswipe.esm.js",
+        "bytes": 54270,
+        "gzip_bytes": 16391,
+        "sha256": "542069771beb34dc461cdb9374da8af643c591ebf65d8ec36331dd9a0681ebd4",
+        "exact_vendor_bytes": true
+      },
+      {
+        "source_member": "package/dist/photoswipe.css",
+        "local_path": "assets/bc-photoswipe.css",
+        "bytes": 7423,
+        "gzip_bytes": 2358,
+        "sha256": "b0eaaae0b9de064d25e2f18517b9011a526d9b2142376e1c0febd096cebab9f3",
+        "exact_vendor_bytes": true
+      },
+      {
+        "source_member": "package/LICENSE",
+        "local_path": "docs/vendor/PhotoSwipe-5.4.4-LICENSE.txt",
+        "bytes": 1129,
+        "gzip_bytes": 688,
+        "sha256": "2c223af0b21d32240087ee189eb70fd315907b6ade8b561e24265baccd6a98e7",
+        "exact_vendor_bytes": true
+      },
+      {
+        "source_member": "package/LICENSE",
+        "local_path": "assets/bc-photoswipe-license.txt",
+        "bytes": 1129,
+        "sha256": "2c223af0b21d32240087ee189eb70fd315907b6ade8b561e24265baccd6a98e7",
+        "exact_vendor_bytes": true
+      }
+    ],
+    "js_imports": [],
+    "css_external_assets": [],
+    "standalone_core_no_imports": true,
+    "standalone_css_no_external_assets": true,
+    "esm_syntax_check": "node --input-type=module --check < assets/bc-photoswipe.esm.js: PASS",
+    "evidenceSource": "Official npm tarball integrity, exact vendor byte comparison, no installation scripts"
+  },
+  "implementation": {
+    "inlineGallery": "Native horizontal scroll container with CSS scroll-snap; images remain actual adjacent slides and touch is browser-owned. Main theme button-slider was evaluated but does not supply the complete requested interaction.",
+    "selection": "Nearest visible slide drives the single selected thumbnail, roving tab index and counter. Pending arrow target supports repeated clicks. Ends clamp without wrapping. Thumbnail reveal scrolls only the thumbnail strip.",
+    "controls": "44px round previous/next arrows remain visible with disabled boundary state; counter and expand button. Fixed 4:5 frame contains the full image without cropping.",
+    "touch": "touch-action:auto permits browser horizontal/vertical pan and pinch; no JS swipe-on-release substitution. Pointer tracking only suppresses accidental zoom click after movement. No claim of physical touch verification.",
+    "viewer": "Local PhotoSwipe core dynamically imported on open, CSS scoped to Sunshower PDP inclusion. Same real media index; changes immediately synchronize page carousel. Visible touch arrows, counter, zoom/close, keyboard and focus management, safe-area positioning and reduced-motion settings. allowPanToNext:false keeps zoomed pan from changing photos. Closing preserves index and restores focus.",
+    "fallback": "All slides are full-image anchor links. If dynamic module import fails, the selected full image opens via its actual URL. Photo load errors have NL/EN text.",
+    "preservation": "Only gallery JS block, gallery/viewer CSS rules, gallery Liquid/CSS inclusion/old dialog removal and one photo_error key in each locale changed; purchase/configurator/accessory code unchanged.",
+    "regressionGuards": "Late scrollend/fallback timers cannot erase a newer unarrived arrow intent; deliberate pointer input or horizontal wheel can cancel it. Scoped display:block preserves PhotoSwipe backdrop and placeholder against Dawn empty-div reset."
+  },
+  "tests": {
+    "syntax": "PASS, node syntax and first-party diff checks",
+    "behavior": {
+      "status": "passed",
+      "count": 39,
+      "checks": [
+        "initial/restored native position sets exactly matching thumbnail, count and focusable slide",
+        "arrow navigation keeps actual selection until native scroll crosses halfway",
+        "rapid arrows accumulate intent while selection follows rendered native position",
+        "a late scrollend from an interrupted smooth scroll cannot erase a newer arrow destination",
+        "settle fallback cannot erase an unarrived arrow destination",
+        "boundaries clamp and have disabled navigation rather than wrapping",
+        "thumbnail uses its actual slide and partial canceled scroll restores actual selection",
+        "manual input interrupts pending arrow intent and next arrow starts from actual position",
+        "scroll-end fallback reconciles actual geometry after deliberate manual cancellation",
+        "horizontal trackpad wheel cancels arrow intent while ordinary vertical wheel preserves it",
+        "Arrow keys work, unrelated keys preserve normal page behavior",
+        "reduced motion uses instant navigation and immediately matching selection",
+        "responsive resize preserves selected image without animating to another image",
+        "thumbnail reveal scrolls only its strip without scrolling the document",
+        "drag release suppresses enlargement, while next deliberate tap opens current image",
+        "vertical drags and native scroll displacement cannot accidentally open enlargement",
+        "cancelled gesture suppresses click but keyboard activation remains available",
+        "modified image clicks retain normal native link behavior",
+        "native image dragging is prevented but pointer movement is passive",
+        "an image failure has explicit per-slide state and a successful retry clears it",
+        "initial already-broken image is reported without another load event",
+        "viewer opens current image with responsive metadata and touch/navigation options",
+        "reduced-motion preference also removes custom viewer animation durations",
+        "viewer image changes sync page immediately and closing returns focus to selected image",
+        "expand-triggered viewer restores focus to expand control",
+        "multiple opens while module downloads create one viewer at latest requested index",
+        "existing viewer is reused and cached module is reused after close",
+        "viewer import failure keeps a real image fallback and permits retry",
+        "detached page cannot open a late viewer or navigate from late import failure",
+        "BFCache restoration reconciles actual position and clears old gesture suppression",
+        "zero photos safely skip enhancement; one photo opens zoom with no gallery navigation",
+        "nl: 0 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "nl: 1 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "nl: 5 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "en: 0 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "en: 1 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "en: 5 images: Liquid links/images, accessible controls, unique IDs, responsive/loading contract and no nested buttons",
+        "CSS retains native horizontal snap and does not disable all touch actions",
+        "PhotoSwipe empty background/placeholder remain visible despite Dawn empty-div reset"
+      ],
+      "limits": "Controlled DOM/scroll and PhotoSwipe API doubles plus LiquidJS image/translation adapters. Native browser paint, touch inertia, pinch/zoom, CDN responses and Shopify server rendering require separate browser/physical-device checks.",
+      "script": "scripts/test-sunshower-carousel.cjs"
+    },
+    "themeCheck": {
+      "artifactId": "bc-sunshower-carousel-20261019",
+      "revision3": "All eight production files SUCCESS",
+      "revision4": "Final JS and CSS SUCCESS",
+      "temporaryQa": "Passed with non-error unused-variable and section-scope fixture warnings"
+    },
+    "browser": {
+      "desktop": {
+        "method": "Actual Shopify unpublished preview, native mouse clicks",
+        "viewport": [
+          1363,
+          936
+        ],
+        "mainNext": [
+          1,
+          2
+        ],
+        "rapidTwoClicks": [
+          2,
+          4
+        ],
+        "rapidFinalCounter": 4,
+        "rapidSingleSelectedThumbnail": 4,
+        "scrollLeft": 1692,
+        "slideWidth": 564,
+        "viewerOpensCurrentImage": 4,
+        "backdrop": {
+          "display": "block",
+          "height": 936,
+          "opacity": 0.96
+        },
+        "arrowPixels": 44,
+        "visibleArrows": true,
+        "viewerNext": [
+          4,
+          5
+        ],
+        "viewerEndNextDisabled": true,
+        "viewerPrevious": [
+          5,
+          4
+        ],
+        "closeKeepsMainPhoto": 4,
+        "closeRestoresExpandFocus": true,
+        "viewerDestroyed": true,
+        "finalPrevious": [
+          4,
+          3
+        ],
+        "actualImageAnchorClickOpensViewer": 3,
+        "finalCloseKeepsMainAndSelectedThumbnail": 3,
+        "finalViewerRemoved": true
+      },
+      "mobileComponent": {
+        "method": "Exact production gallery markup/controller and actual deployed assets in 320/390/430px frames; not a physical phone or full mobile product page",
+        "widths": [
+          320,
+          390,
+          430
+        ],
+        "twoArrowClicksEach": [
+          1,
+          3
+        ],
+        "allFinalPhotoLoaded": true,
+        "allSingleSelectedThumbnailAndCounter": 3,
+        "horizontalPageOverflow": false,
+        "computedTouchAction": "auto",
+        "computedScrollSnap": "x mandatory",
+        "arrowPixels": 44,
+        "viewer390": {
+          "opens": 3,
+          "zoomButtonSetsZoomedInClass": true,
+          "nextArrow": [
+            3,
+            4
+          ],
+          "nextArrowResetsZoom": true,
+          "closeKeepsMainPhoto": 4
+        },
+        "nativeHorizontalWheel320": {
+          "sequence": [
+            3,
+            5
+          ],
+          "thumbnailAndCounterMatch": true,
+          "scriptedBrowserScrollMutation": false
+        }
+      },
+      "viewerDragLimitation": {
+        "twoPointNativeMouseDragAdvanced": false,
+        "sourceFinding": "PhotoSwipe first movement detects axis; following movement events plus animation frames produce translation. Insufficient continuous input is a possible explanation for this automated drag result; the exact native event path was not verified.",
+        "physicalSwipeProven": false
+      },
+      "physicalSwipePinchInertia": "NOT_TESTED",
+      "actualCartOrCheckoutAction": "None in this release"
+    },
+    "patch": {
+      "status": "passed",
+      "scope": {
+        "existing_changed": [
+          "assets/bc-sunshower-page.js",
+          "assets/bc-sunshower-configurator.css",
+          "sections/main-sunshower.liquid",
+          "locales/nl.json",
+          "locales/en.default.json"
+        ],
+        "new": [
+          "assets/bc-photoswipe.esm.js",
+          "assets/bc-photoswipe.css",
+          "assets/bc-photoswipe-license.txt"
+        ],
+        "total": 8
+      },
+      "patch": {
+        "path": "docs/patches/BC-sunshower-carousel-2026-10-19.patch",
+        "bytes": 99896,
+        "sha256": "a9566db2d321638e178d538ad9d62a049949ba7929ca0ffef97c827ac2dcfa24",
+        "md5": "792e38b4f10496f0e199e0e1178415fd"
+      },
+      "checks": {
+        "isolated_temporary_git_repository": true,
+        "git_diff_check_first_party_strict": true,
+        "git_diff_check_vendor_upstream_formatting_exemption": "CRLF and trailing blanks retained byte-exact from official npm package; checked with core.whitespace=cr-at-eol,-blank-at-eol",
+        "forward_apply_check": true,
+        "forward_apply_exact_bytes_and_file_set": true,
+        "reverse_apply_check": true,
+        "reverse_apply_exact_bytes_and_file_set": true
+      },
+      "baseline": {
+        "assets/bc-sunshower-page.js": {
+          "bytes": 17632,
+          "sha256": "f1fdd64580e1ce4a3f07788c7cc1bc48e4c7f467949d0a8094e2ecedfa5688a9",
+          "md5": "f1cedb5f3c18c697c1662874cbca3ca3"
+        },
+        "assets/bc-sunshower-configurator.css": {
+          "bytes": 10979,
+          "sha256": "f1505f10661557bf81767acaedfeaf95d26af239e5294428d4d30df68a71bd84",
+          "md5": "645cdc703ce1e3ae9d281c5a27077d92"
+        },
+        "sections/main-sunshower.liquid": {
+          "bytes": 16764,
+          "sha256": "7218b327f85c82abb197d29657772f14e135ba0bd5490db21904575492e5dc17",
+          "md5": "abbf0e708c49126e00882b4c3b6f6200"
+        },
+        "locales/nl.json": {
+          "bytes": 54104,
+          "sha256": "8d0e5957da3886ba685759fa2d12b6d588e67e9eafa822aa176c341b36ded129",
+          "md5": "cd563a441c9b5e252c9483614f653ecc"
+        },
+        "locales/en.default.json": {
+          "bytes": 51361,
+          "sha256": "441db9167546f08ac14254358c8e145361786f8ba418a1e9563a3dcf566c16a9",
+          "md5": "ef584d2643df60c1d1a22becd47b8a49"
+        }
+      },
+      "desired": {
+        "assets/bc-sunshower-page.js": {
+          "bytes": 21461,
+          "sha256": "02ebce2faca279c4c8abf68ef10191d5b191adb5b954616674603d736f652b4e",
+          "md5": "a51193ea839a6cebd8ac8b882d096464"
+        },
+        "assets/bc-sunshower-configurator.css": {
+          "bytes": 14823,
+          "sha256": "75df3d75cb3eed8d22c22e9111d00cff66e3923f62bb793ea80d1c90d99fd48e",
+          "md5": "babd95e7c11d3859ac2e6f8b4c9219d9"
+        },
+        "sections/main-sunshower.liquid": {
+          "bytes": 20176,
+          "sha256": "e58db0f9d025c904f4099beeaa29b3e39275b3ae8b48d0afb19d2f003e3eda45",
+          "md5": "e804f6a8062d7d14ffcf11b2ff27c389"
+        },
+        "locales/nl.json": {
+          "bytes": 54161,
+          "sha256": "6608e93622d9c17cf574fa0b4400c3205eef80be7f47b796e691a229663d73fd",
+          "md5": "3985027f4786096ee4b6b4424d287511"
+        },
+        "locales/en.default.json": {
+          "bytes": 51415,
+          "sha256": "d2fc2aca7f9fcda7ad7d84d01773268fda58e654b6db033a4ded382e829d30af",
+          "md5": "eda2c3e46a8d149c30454dd779c2dc21"
+        },
+        "assets/bc-photoswipe.esm.js": {
+          "bytes": 54270,
+          "sha256": "542069771beb34dc461cdb9374da8af643c591ebf65d8ec36331dd9a0681ebd4",
+          "md5": "97ca880233a37aa88ecd4e06b53c45bd"
+        },
+        "assets/bc-photoswipe.css": {
+          "bytes": 7423,
+          "sha256": "b0eaaae0b9de064d25e2f18517b9011a526d9b2142376e1c0febd096cebab9f3",
+          "md5": "2b4afa6133120037b6107d3f7147761f"
+        },
+        "assets/bc-photoswipe-license.txt": {
+          "bytes": 1129,
+          "sha256": "2c223af0b21d32240087ee189eb70fd315907b6ade8b561e24265baccd6a98e7",
+          "md5": "ca83af90c544a0463edd2542481c4f03"
+        }
+      },
+      "limits": "This verifies five modified files and three new vendor files against the supplied exact Shopify baseline. It does not verify Shopify theme roles, deployment, browser behavior, remote Git storage, cart persistence or checkout."
+    },
+    "schema": {
+      "status": "PASS",
+      "operations": 3,
+      "schema": "bundled 2026-07 fallback"
+    },
+    "independentReview": "PASS",
+    "temporaryQa": "Existing templates/page.bc-mobile-qa.liquid restored byte-exact to baseline and browser reload confirmed redirect to /pages/sunshower"
+  },
+  "notTested": [
+    "Physical iPhone/Safari finger-following swipe, inertia, pinch and zoomed panning",
+    "Physical Android finger-following swipe, inertia, pinch and zoomed panning",
+    "Continuous native viewer swipe: automated two-point mouse drag did not advance and does not prove real touch behavior",
+    "Full mobile header/footer/product page integration",
+    "Real phone BFCache navigation",
+    "Cart/checkout/payment",
+    "Windows local synchronization"
+  ],
+  "git": {
+    "branch": "fix/product-cards-2026-10-14",
+    "previousCheckpoint": "d287c11",
+    "mainDocumentationCheckpoint": "5e70f8e",
+    "githubShopifySync": "NOT_VERIFIED",
+    "delivery": "Applicable production patch, verification, tests and documentation only; no theme source paths pushed"
+  },
+  "nextAction": "Owner reviews BadkamerCity - Sunshower fotogalerij on a real phone, including finger-following swipe, reversing a gesture, inertia, viewer navigation and pinch, then decides whether to publish",
+  "rollback": "Do not publish preview; after publication restore only five modified baseline files and remove the three new PhotoSwipe assets, preserving any later unrelated changes.",
+  "publishedByAgent": false,
+  "backgroundTask": false,
+  "screenshots": [
+    {
+      "path": "docs/sunshower-carousel-mobile-2026-10-19.jpg",
+      "bytes": 90954,
+      "sha256": "7127e63115bceeed1f7d57972c14ae62da99bf83c19461f46632a7af9d362b06",
+      "scope": "Mobile-width componentfixture, not a physical phone"
+    },
+    {
+      "path": "docs/sunshower-carousel-viewer-2026-10-19.jpg",
+      "bytes": 72428,
+      "sha256": "2395007e90d8a3e7c7a81ae3570cff222cf337816097105933990f544450e2e0",
+      "scope": "Actual PhotoSwipe viewer in cloud browser"
+    }
+  ]
+}

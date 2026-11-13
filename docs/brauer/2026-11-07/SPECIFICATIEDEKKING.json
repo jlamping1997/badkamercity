@@ -1,0 +1,774 @@
+{
+  "articles": 13161,
+  "product_types": 76,
+  "facts": 144078,
+  "articles_needing_essential_details": 10089,
+  "previous_exact_sku_audits": 64,
+  "physical_dimensions_never_inferred_from_nominal": true,
+  "shopify_writes": 0,
+  "import_allowed": false,
+  "types": [
+    {
+      "type": "Accessoiresets",
+      "articles": 7,
+      "facts": 47,
+      "missing": {
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Afvoerpluggen",
+      "articles": 14,
+      "facts": 114,
+      "missing": {
+        "Afmetingen": 14
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Afvoerroosters",
+      "articles": 62,
+      "facts": 394,
+      "missing": {
+        "Afmetingen": 62
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Badwanden",
+      "articles": 24,
+      "facts": 236,
+      "missing": {
+        "Breedte": 24,
+        "Hoogte": 23,
+        "Glasdikte": 23
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Bedieningsplaten",
+      "articles": 5,
+      "facts": 40,
+      "missing": {
+        "Afmetingen": 5
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Bijkasten",
+      "articles": 112,
+      "facts": 724,
+      "missing": {
+        "Breedte": 112,
+        "Diepte": 112,
+        "Hoogte": 112
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Binnenlades",
+      "articles": 112,
+      "facts": 784,
+      "missing": {},
+      "complete_essential_articles": 112
+    },
+    {
+      "type": "Bodemplaten",
+      "articles": 112,
+      "facts": 836,
+      "missing": {
+        "Geschikt voor": 112
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Deurfronten",
+      "articles": 326,
+      "facts": 2816,
+      "missing": {},
+      "complete_essential_articles": 326
+    },
+    {
+      "type": "Douchearmen",
+      "articles": 21,
+      "facts": 177,
+      "missing": {
+        "Lengte": 12,
+        "Aansluitmaat watertoevoer": 15
+      },
+      "complete_essential_articles": 6
+    },
+    {
+      "type": "Douchebakken",
+      "articles": 30,
+      "facts": 274,
+      "missing": {
+        "Diepte": 30,
+        "Breedte": 29,
+        "Hoogte": 29
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Douchebaksifons",
+      "articles": 1,
+      "facts": 3,
+      "missing": {
+        "Materiaal": 1,
+        "Afmetingen": 1
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Douchecabines",
+      "articles": 216,
+      "facts": 2278,
+      "missing": {
+        "Verstelbaarheid breedte": 216,
+        "Breedte": 215,
+        "Hoogte": 215,
+        "Glasdikte": 215,
+        "Deursysteem": 192
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Douchegoten",
+      "articles": 103,
+      "facts": 650,
+      "missing": {
+        "Breedte": 103,
+        "Hoogte": 103
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Douchepanelen",
+      "articles": 6,
+      "facts": 136,
+      "missing": {
+        "Aansluitmaat watertoevoer": 6
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Doucherekken",
+      "articles": 21,
+      "facts": 207,
+      "missing": {
+        "Afmetingen": 21
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Doucheslangen",
+      "articles": 14,
+      "facts": 120,
+      "missing": {
+        "Aansluitmaat watertoevoer": 14
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Douchewissers",
+      "articles": 7,
+      "facts": 42,
+      "missing": {
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Fonteinen",
+      "articles": 11,
+      "facts": 113,
+      "missing": {
+        "Breedte": 10,
+        "Diepte": 10,
+        "Hoogte": 10
+      },
+      "complete_essential_articles": 1
+    },
+    {
+      "type": "Fonteinkasten",
+      "articles": 331,
+      "facts": 3601,
+      "missing": {
+        "Breedte": 271,
+        "Diepte": 271,
+        "Hoogte": 271
+      },
+      "complete_essential_articles": 60
+    },
+    {
+      "type": "Glasbeslag",
+      "articles": 91,
+      "facts": 714,
+      "missing": {
+        "Geschikt voor": 73
+      },
+      "complete_essential_articles": 18
+    },
+    {
+      "type": "Glasbeslagpakketten",
+      "articles": 6,
+      "facts": 52,
+      "missing": {
+        "Geschikt voor": 6
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Halfhoge kasten",
+      "articles": 280,
+      "facts": 3079,
+      "missing": {
+        "Breedte": 219,
+        "Diepte": 219,
+        "Hoogte": 219
+      },
+      "complete_essential_articles": 61
+    },
+    {
+      "type": "Handdoekhaken",
+      "articles": 7,
+      "facts": 41,
+      "missing": {
+        "Afmetingen": 7,
+        "Materiaal": 5
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Handdoekhouders",
+      "articles": 8,
+      "facts": 51,
+      "missing": {
+        "Materiaal": 1,
+        "Afmetingen": 8
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Handdoekradiatoren",
+      "articles": 10,
+      "facts": 69,
+      "missing": {
+        "Breedte": 10,
+        "Hoogte": 10
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Handdoekrekken",
+      "articles": 31,
+      "facts": 241,
+      "missing": {
+        "Breedte": 31,
+        "Hoogte": 19
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Handdoekrekken met planchet",
+      "articles": 7,
+      "facts": 71,
+      "missing": {
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Handdouches en houders",
+      "articles": 48,
+      "facts": 367,
+      "missing": {
+        "Afmetingen": 48
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Hangtoiletten",
+      "articles": 1,
+      "facts": 8,
+      "missing": {
+        "Afmetingen": 1
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Hoekstopkranen",
+      "articles": 38,
+      "facts": 345,
+      "missing": {
+        "Afmetingen": 38
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Hoge kasten",
+      "articles": 163,
+      "facts": 1952,
+      "missing": {
+        "Breedte": 102,
+        "Diepte": 102,
+        "Hoogte": 102
+      },
+      "complete_essential_articles": 61
+    },
+    {
+      "type": "Hoofddouches",
+      "articles": 41,
+      "facts": 363,
+      "missing": {
+        "Diameter": 27,
+        "Aansluitmaat watertoevoer": 33
+      },
+      "complete_essential_articles": 8
+    },
+    {
+      "type": "Inbouwbadkranen",
+      "articles": 148,
+      "facts": 2452,
+      "missing": {
+        "Aansluitmaat watertoevoer": 148,
+        "Inbouwdeel inbegrepen": 147
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Inbouwdouchesets",
+      "articles": 1692,
+      "facts": 29663,
+      "missing": {
+        "Inbouwdeel inbegrepen": 1692,
+        "Aansluitmaat watertoevoer": 1692
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Inbouwfonteinkranen",
+      "articles": 19,
+      "facts": 240,
+      "missing": {
+        "Lengte uitloop": 13,
+        "Inbouwdiepte": 19,
+        "Inbouwdeel inbegrepen": 19,
+        "Wandafwerking": 19,
+        "Plaats bediening": 19
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Inbouwnissen",
+      "articles": 12,
+      "facts": 86,
+      "missing": {
+        "Breedte": 12,
+        "Diepte": 10,
+        "Hoogte": 12
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Inbouwwastafelkranen",
+      "articles": 338,
+      "facts": 4243,
+      "missing": {
+        "Lengte uitloop": 288,
+        "Inbouwdiepte": 288,
+        "Inbouwdeel inbegrepen": 335,
+        "Plaats bediening": 286
+      },
+      "complete_essential_articles": 2
+    },
+    {
+      "type": "Inloopdouches",
+      "articles": 390,
+      "facts": 3813,
+      "missing": {
+        "Breedte": 389,
+        "Hoogte": 387,
+        "Glasdikte": 387,
+        "Glas": 36
+      },
+      "complete_essential_articles": 1
+    },
+    {
+      "type": "Ladefronten",
+      "articles": 1818,
+      "facts": 15829,
+      "missing": {},
+      "complete_essential_articles": 1818
+    },
+    {
+      "type": "Lichtlijsten voor spiegelkasten",
+      "articles": 97,
+      "facts": 808,
+      "missing": {},
+      "complete_essential_articles": 97
+    },
+    {
+      "type": "Losse glasdelen",
+      "articles": 78,
+      "facts": 615,
+      "missing": {
+        "Breedte": 78,
+        "Hoogte": 78,
+        "Glasdikte": 78,
+        "Glas": 4
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Losse inbouwthermostaten",
+      "articles": 204,
+      "facts": 2753,
+      "missing": {
+        "Aansluitmaat watertoevoer": 200,
+        "Thermostatisch": 19,
+        "Inbouwdeel inbegrepen": 56
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Meubelgrepen",
+      "articles": 57,
+      "facts": 459,
+      "missing": {
+        "Hoogte": 57,
+        "Breedte": 33
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Meubelonderdelen",
+      "articles": 34,
+      "facts": 209,
+      "missing": {
+        "Geschikt voor": 4
+      },
+      "complete_essential_articles": 30
+    },
+    {
+      "type": "Meubelwastafels",
+      "articles": 306,
+      "facts": 3289,
+      "missing": {
+        "Breedte": 272,
+        "Diepte": 272,
+        "Hoogte": 272
+      },
+      "complete_essential_articles": 34
+    },
+    {
+      "type": "Nisdeuren",
+      "articles": 426,
+      "facts": 4750,
+      "missing": {
+        "Breedte": 426,
+        "Hoogte": 424,
+        "Glasdikte": 424,
+        "Verstelbaarheid breedte": 424,
+        "Deursysteem": 372
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Onderhoudsmiddelen",
+      "articles": 2,
+      "facts": 9,
+      "missing": {
+        "Materiaal": 1,
+        "Afmetingen": 2
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Onderkasten",
+      "articles": 2930,
+      "facts": 31054,
+      "missing": {
+        "Breedte": 2867,
+        "Diepte": 2867,
+        "Hoogte": 2867,
+        "Aantal lades": 216,
+        "Aantal sifonuitsparingen": 216,
+        "Softclose": 216
+      },
+      "complete_essential_articles": 63
+    },
+    {
+      "type": "Opbouwbadkranen",
+      "articles": 74,
+      "facts": 1205,
+      "missing": {
+        "Aansluitmaat watertoevoer": 50
+      },
+      "complete_essential_articles": 24
+    },
+    {
+      "type": "Opbouwdouchekranen",
+      "articles": 101,
+      "facts": 1645,
+      "missing": {
+        "Aansluitmaat watertoevoer": 76
+      },
+      "complete_essential_articles": 25
+    },
+    {
+      "type": "Opbouwfonteinkranen",
+      "articles": 38,
+      "facts": 483,
+      "missing": {
+        "Hoogte kraan": 22,
+        "Hoogte uitloop": 22,
+        "Lengte uitloop": 22,
+        "Watertoevoer": 22,
+        "Aansluitmaat watertoevoer": 22
+      },
+      "complete_essential_articles": 16
+    },
+    {
+      "type": "Opbouwnissen",
+      "articles": 17,
+      "facts": 142,
+      "missing": {
+        "Breedte": 17,
+        "Hoogte": 17,
+        "Diepte": 11
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Opbouwverlichting",
+      "articles": 3,
+      "facts": 13,
+      "missing": {
+        "Materiaal": 3,
+        "Afmetingen": 3
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Opbouwwastafelkranen",
+      "articles": 150,
+      "facts": 2059,
+      "missing": {
+        "Hoogte kraan": 106,
+        "Hoogte uitloop": 105,
+        "Lengte uitloop": 104,
+        "Watertoevoer": 115,
+        "Aansluitmaat watertoevoer": 115
+      },
+      "complete_essential_articles": 32
+    },
+    {
+      "type": "Overloopringen",
+      "articles": 7,
+      "facts": 47,
+      "missing": {
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Planchetten",
+      "articles": 39,
+      "facts": 364,
+      "missing": {
+        "Breedte": 39,
+        "Diepte": 26,
+        "Hoogte": 26
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Prullenbakken",
+      "articles": 14,
+      "facts": 122,
+      "missing": {
+        "Afmetingen": 14
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Setgebonden glasdelen",
+      "articles": 55,
+      "facts": 472,
+      "missing": {
+        "Breedte": 55,
+        "Hoogte": 55,
+        "Glasdikte": 55,
+        "Glas": 48
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Sifons",
+      "articles": 14,
+      "facts": 95,
+      "missing": {
+        "Afmetingen": 14
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Spiegeldeuren",
+      "articles": 199,
+      "facts": 1646,
+      "missing": {},
+      "complete_essential_articles": 199
+    },
+    {
+      "type": "Spiegeldeurgrepen",
+      "articles": 6,
+      "facts": 48,
+      "missing": {
+        "Breedte": 6,
+        "Hoogte": 6
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Spiegelkasten",
+      "articles": 589,
+      "facts": 6130,
+      "missing": {
+        "Breedte": 530,
+        "Diepte": 530,
+        "Hoogte": 530
+      },
+      "complete_essential_articles": 59
+    },
+    {
+      "type": "Spiegels",
+      "articles": 158,
+      "facts": 1369,
+      "missing": {
+        "Breedte": 143,
+        "Hoogte": 142,
+        "Verlichting": 72
+      },
+      "complete_essential_articles": 15
+    },
+    {
+      "type": "Spiegelverwarming",
+      "articles": 3,
+      "facts": 15,
+      "missing": {
+        "Materiaal": 3,
+        "Afmetingen": 3
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Toiletborstels",
+      "articles": 7,
+      "facts": 41,
+      "missing": {
+        "Materiaal": 6,
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Toiletonderdelen",
+      "articles": 3,
+      "facts": 20,
+      "missing": {},
+      "complete_essential_articles": 3
+    },
+    {
+      "type": "Toiletrolhouders",
+      "articles": 14,
+      "facts": 106,
+      "missing": {
+        "Materiaal": 12,
+        "Afmetingen": 14
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Toiletzittingen",
+      "articles": 1,
+      "facts": 7,
+      "missing": {
+        "Afmetingen": 1
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Topbladbeugels",
+      "articles": 5,
+      "facts": 35,
+      "missing": {
+        "Geschikt voor": 5
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Topbladen",
+      "articles": 742,
+      "facts": 5673,
+      "missing": {
+        "Hoogte": 742,
+        "Breedte": 688,
+        "Diepte": 691
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Uitlopen",
+      "articles": 21,
+      "facts": 152,
+      "missing": {
+        "Afmetingen": 21
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Vrijhangende wastafels",
+      "articles": 6,
+      "facts": 60,
+      "missing": {
+        "Breedte": 6,
+        "Diepte": 6,
+        "Hoogte": 6
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Vrijstaande badkranen",
+      "articles": 38,
+      "facts": 604,
+      "missing": {
+        "Thermostatisch": 38,
+        "Aansluitmaat watertoevoer": 25
+      },
+      "complete_essential_articles": 0
+    },
+    {
+      "type": "Waskommen",
+      "articles": 33,
+      "facts": 266,
+      "missing": {
+        "Breedte": 32,
+        "Diepte": 32,
+        "Hoogte": 32,
+        "Aantal kraangaten": 32
+      },
+      "complete_essential_articles": 1
+    },
+    {
+      "type": "Zeepdispensers",
+      "articles": 7,
+      "facts": 42,
+      "missing": {
+        "Afmetingen": 7
+      },
+      "complete_essential_articles": 0
+    }
+  ]
+}

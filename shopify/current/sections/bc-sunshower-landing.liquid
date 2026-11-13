@@ -1,0 +1,297 @@
+{{ 'bc-sunshower-landing.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-sunshower-mobile.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'bc-sunshower-shop.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign one_product = section.settings.one_product
+  assign plus_product = section.settings.plus_product
+  assign hero_image = section.settings.hero_image | default: plus_product.featured_image
+  assign one_image = section.settings.one_image | default: one_product.featured_image
+  assign plus_image = section.settings.plus_image | default: plus_product.featured_image
+  assign installation_image = section.settings.installation_image | default: section.settings.inbouw_image
+  assign advice_url = section.settings.advice_url | default: pages.contact.url
+  assign models_anchor = '#bcsse-models-' | append: section.id
+  assign one_configurator_url = one_product.url | append: '#sunshower-configurator'
+  assign plus_configurator_url = plus_product.url | append: '#sunshower-configurator'
+  assign configurator_url = section.settings.configurator_url
+  if configurator_url == blank
+    if one_product != blank
+      assign configurator_url = one_configurator_url
+    elsif plus_product != blank
+      assign configurator_url = plus_configurator_url
+    else
+      assign configurator_url = models_anchor
+    endif
+  endif
+  assign mobile_ir_configurator_url = configurator_url
+  if one_product != blank
+    assign mobile_ir_configurator_url = one_configurator_url
+  endif
+  assign mobile_uv_configurator_url = configurator_url
+  if plus_product != blank
+    assign mobile_uv_configurator_url = plus_configurator_url
+  endif
+  assign mobile_blank_image = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221%22 height=%221%22/%3E'
+  assign mobile_functions = 'infrared,uv' | split: ','
+  assign hero_alt = 'ss_experience.hero.image_alt' | t
+  assign one_alt = 'ss_experience.one.image_alt' | t
+  assign plus_alt = 'ss_experience.plus.image_alt' | t
+  assign installation_alt = 'ss_experience.installation.image_alt' | t
+  assign has_accessories = false
+  for block in section.blocks
+    if block.settings.product != blank
+      assign has_accessories = true
+    endif
+  endfor
+-%}
+
+<div class="bcsse-experience" data-bcsse-mobile-light data-bcsse-section-id="{{ section.id }}" data-bcsse-configurator-url="{{ configurator_url | escape }}" data-bcsse-uv-url="{{ mobile_uv_configurator_url | escape }}">
+  <section class="bcsse-hero" aria-labelledby="bcsse-title-{{ section.id }}">
+    {%- if hero_image != blank -%}
+      <picture class="bcsse-hero__media">
+        <source media="(max-width: 749px)" srcset="{{ mobile_blank_image }}" width="1" height="1">
+        {{- hero_image | image_url: width: 2400 | image_tag: class: 'bcsse-hero__image', widths: '750, 1100, 1500, 1800, 2400', sizes: '100vw', width: hero_image.width, height: hero_image.height, loading: 'eager', fetchpriority: 'high', alt: hero_alt -}}
+      </picture>
+    {%- endif -%}
+    <div class="bcsse-wrap bcsse-hero__inner">
+      <div class="bcsse-hero__copy">
+        <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+        <h1 class="bcsse-title" id="bcsse-title-{{ section.id }}" tabindex="-1">{{ 'ss_experience.hero.heading' | t }}</h1>
+        <p class="bcsse-hero__intro bcsse-desktop-intro">{{ 'ss_experience.hero.intro' | t }}</p>
+        <p class="bcsse-mobile-intro">{{ 'ss_mobile_light.intro' | t }}</p>
+        <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}">{{ 'ss_experience.hero.button' | t }} <span aria-hidden="true">→</span></a>
+        {%- if has_accessories -%}
+          <a class="bcsse-text-link bcsse-hero__accessories" href="#bcsse-accessories-{{ section.id }}">{{ 'ss_experience.hero.accessories' | t }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
+      </div>
+      <div class="bcsse-mobile-light" id="bcsse-lights-{{ section.id }}">
+        <div class="bcsse-light-overview" data-bcsse-light-overview>
+          <div class="bcsse-light-cards">
+            {%- for light in mobile_functions -%}
+              {%- liquid
+                assign light_image = one_image
+                assign light_alt = one_alt
+                assign light_configurator_url = mobile_ir_configurator_url
+                assign light_focal_percent = 58
+                if light == 'uv'
+                  assign light_image = plus_image
+                  assign light_alt = plus_alt
+                  assign light_configurator_url = mobile_uv_configurator_url
+                  assign light_focal_percent = 78
+                endif
+                assign light_label_key = 'ss_mobile_light.' | append: light | append: '.label'
+                assign light_teaser_key = 'ss_mobile_light.' | append: light | append: '.teaser'
+              -%}
+              <a class="bcsse-light-card bcsse-light-card--{{ light }}" href="{{ light_configurator_url | escape }}">
+                {%- if light_image != blank -%}
+                  {%- liquid
+                    assign light_crop_width = light_image.height | times: 0.9 | round | at_most: light_image.width
+                    assign light_crop_left = light_image.width | minus: light_crop_width | times: light_focal_percent | divided_by: 100.0 | round
+                    assign light_widths = '180,270,360,540' | split: ','
+                  -%}
+                  {%- capture light_srcset -%}
+                    {%- for candidate in light_widths -%}
+                      {%- assign candidate_width = candidate | plus: 0 -%}
+                      {%- if candidate_width < light_crop_width -%}
+                        {{- light_image | image_url: crop: 'region', crop_left: light_crop_left, crop_top: 0, crop_width: light_crop_width, crop_height: light_image.height, width: candidate_width }} {{ candidate_width }}w,
+                      {%- endif -%}
+                    {%- endfor -%}
+                    {{- light_image | image_url: crop: 'region', crop_left: light_crop_left, crop_top: 0, crop_width: light_crop_width, crop_height: light_image.height, width: light_crop_width }} {{ light_crop_width }}w
+                  {%- endcapture -%}
+                  <picture class="bcsse-light-card__media">
+                    <source media="(max-width: 749px)" srcset="{{ light_srcset | strip }}" sizes="(max-width: 337px) 261px, (max-width: 465px) 77.4vw, 360px">
+                    <img class="bcsse-light-card__image" src="{{ mobile_blank_image }}" width="450" height="750" loading="eager" fetchpriority="high" alt="{{ light_alt | escape }}">
+                  </picture>
+                {%- endif -%}
+                <span class="bcsse-light-card__copy"><strong>{{ light_label_key | t }}</strong><span>{{ light_teaser_key | t }}</span></span>
+                <span class="bcsse-light-card__arrow" aria-hidden="true">→</span>
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="bcsse-nav" aria-label="{{ 'ss_experience.navigation.label' | t | escape }}">
+    <a href="{{ models_anchor }}">{{ 'ss_experience.navigation.models' | t }}</a>
+    {%- if has_accessories -%}<a href="#bcsse-accessories-{{ section.id }}">{{ 'ss_experience.navigation.accessories' | t }}</a>{%- endif -%}
+    <a href="#bcsse-installation-{{ section.id }}">{{ 'ss_experience.navigation.installation' | t }}</a>
+  </nav>
+
+<details class="bcsse-model-disclosure" data-bcsse-model-disclosure open>
+    <summary class="bcsse-model-disclosure__summary">{{ 'ss_mobile_light.models_link' | t }} <span aria-hidden="true">+</span></summary>
+  <section class="bcsse-models bcsse-wrap bcsse-section" id="bcsse-models-{{ section.id }}" aria-labelledby="bcsse-models-title-{{ section.id }}">
+    <div class="bcsse-section-head">
+      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+      <h2 class="bcsse-heading" id="bcsse-models-title-{{ section.id }}">{{ 'ss_experience.models.heading' | t }}</h2>
+    </div>
+    <div class="bcsse-model-grid">
+      <article class="bcsse-model">
+        {%- if one_image != blank -%}
+          <div class="bcsse-model__media">
+            {{- one_image | image_url: width: 900 | image_tag: class: 'bcsse-model__image', widths: '200, 300, 450, 600, 900', sizes: '(min-width: 1440px) 300px, (min-width: 990px) 23vw, (min-width: 750px) 44vw, 46vw', width: one_image.width, height: one_image.height, loading: 'lazy', alt: one_alt -}}
+          </div>
+        {%- endif -%}
+        <div class="bcsse-model__body">
+          <h3 class="bcsse-model__title">{{ 'ss_experience.one.heading' | t }}</h3>
+          <p class="bcsse-badge bcsse-badge--ir">{{ 'ss_experience.one.badge' | t }}</p>
+          <p class="bcsse-model__description">{{ 'ss_experience.one.description' | t }}</p>
+          {%- if one_product != blank -%}<a class="bcsse-button bcsse-button--navy" href="{{ one_configurator_url }}">{{ 'ss_experience.one.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
+        </div>
+      </article>
+      <article class="bcsse-model">
+        {%- if plus_image != blank -%}
+          <div class="bcsse-model__media">
+            {{- plus_image | image_url: width: 900 | image_tag: class: 'bcsse-model__image', widths: '200, 300, 450, 600, 900', sizes: '(min-width: 1440px) 300px, (min-width: 990px) 23vw, (min-width: 750px) 44vw, 46vw', width: plus_image.width, height: plus_image.height, loading: 'lazy', alt: plus_alt -}}
+          </div>
+        {%- endif -%}
+        <div class="bcsse-model__body">
+          <h3 class="bcsse-model__title">{{ 'ss_experience.plus.heading' | t }}</h3>
+          <p class="bcsse-badge bcsse-badge--uv">{{ 'ss_experience.plus.badge' | t }}</p>
+          <p class="bcsse-model__description">{{ 'ss_experience.plus.description' | t }}</p>
+          {%- if plus_product != blank -%}<a class="bcsse-button bcsse-button--navy" href="{{ plus_configurator_url }}">{{ 'ss_experience.plus.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
+        </div>
+      </article>
+    </div>
+    <p class="bcsse-models__note">{{ 'ss_experience.models.note' | t }}</p>
+  </section>
+  </details>
+
+  {%- if has_accessories -%}
+    <section class="bcsse-accessories bcsse-section" id="bcsse-accessories-{{ section.id }}" aria-labelledby="bcsse-accessories-title-{{ section.id }}">
+      <div class="bcsse-wrap">
+        <div class="bcsse-section-head">
+          <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+          <h2 class="bcsse-heading" id="bcsse-accessories-title-{{ section.id }}"><span class="bcsse-accessory-heading-desktop">{{ 'ss_experience.accessories.heading' | t }}</span><span class="bcsse-accessory-heading-mobile">{{ 'ss_mobile_light.accessories_heading' | t }}</span></h2>
+          <p class="bcsse-intro">{{ 'ss_experience.accessories.intro' | t }}</p>
+        </div>
+        {%- assign accessory_seat_card = '' -%}
+        {%- assign accessory_wiper_card = '' -%}
+        {%- assign accessory_cleaning_card = '' -%}
+        {%- for block in section.blocks -%}
+            {%- liquid
+              assign accessory_product = block.settings.product
+              assign accessory_kind = block.settings.kind | default: 'cleaning'
+            -%}
+            {%- if accessory_product != blank -%}
+              {%- capture accessory_card -%}
+                {%- render 'bc-sunshower-shop-card', block: block, section_id: section.id -%}
+              {%- endcapture -%}
+              {%- case accessory_kind -%}
+                {%- when 'seat' -%}{%- assign accessory_seat_card = accessory_seat_card | append: accessory_card -%}
+                {%- when 'wiper' -%}{%- assign accessory_wiper_card = accessory_wiper_card | append: accessory_card -%}
+                {%- else -%}{%- assign accessory_cleaning_card = accessory_cleaning_card | append: accessory_card -%}
+              {%- endcase -%}
+            {%- endif -%}
+          {%- endfor -%}
+        <div class="bcsse-accessory-grid">
+          {{- accessory_cleaning_card -}}
+          {%- if accessory_seat_card != blank or accessory_wiper_card != blank -%}
+            <div class="bcsse-accessory-shelf-wrap">
+              <p class="bcsse-accessory-swipe-hint" id="bcsse-swipe-hint-{{ section.id }}">{{ 'ss_mobile_light.swipe_hint' | t }} <span aria-hidden="true">→</span></p>
+              <div class="bcsse-accessory-shelf" role="region" aria-label="{{ 'ss_mobile_light.shelf_label' | t | escape }}" aria-describedby="bcsse-swipe-hint-{{ section.id }}" tabindex="0" data-bcsse-accessory-shelf>
+                {{- accessory_seat_card -}}
+                {{- accessory_wiper_card -}}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </section>
+  {%- endif -%}
+
+  <section class="bcsse-installation bcsse-wrap bcsse-section" id="bcsse-installation-{{ section.id }}" aria-labelledby="bcsse-installation-title-{{ section.id }}">
+    {%- if installation_image != blank -%}
+      <div class="bcsse-installation__media">
+        {{- installation_image | image_url: width: 1400 | image_tag: class: 'bcsse-installation__image', widths: '300, 450, 700, 1000, 1400', sizes: '(min-width: 1440px) 640px, (min-width: 750px) 46vw, 40vw', width: installation_image.width, height: installation_image.height, loading: 'lazy', alt: installation_alt -}}
+      </div>
+    {%- endif -%}
+    <div class="bcsse-installation__copy">
+      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+      <h2 class="bcsse-heading" id="bcsse-installation-title-{{ section.id }}">{{ 'ss_experience.installation.heading' | t }}</h2>
+      <p class="bcsse-installation__options">{{ 'ss_experience.installation.options' | t }}</p>
+      <p class="bcsse-installation__intro">{{ 'ss_experience.installation.intro' | t }}</p>
+      {%- if advice_url != blank -%}<a class="bcsse-text-link" href="{{ advice_url }}">{{ 'ss_experience.installation.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
+    </div>
+  </section>
+
+  <section class="bcsse-faq bcsse-wrap bcsse-section" aria-labelledby="bcsse-faq-title-{{ section.id }}">
+    <div class="bcsse-section-head">
+      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+      <h2 class="bcsse-heading" id="bcsse-faq-title-{{ section.id }}">{{ 'ss_experience.faq.heading' | t }}</h2>
+    </div>
+    <div class="bcsse-faq__list">
+      <details class="bcsse-faq__item">
+        <summary>{{ 'ss_experience.faq.difference_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
+        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.difference_answer' | t }}</p></div>
+      </details>
+      <details class="bcsse-faq__item">
+        <summary>{{ 'ss_experience.faq.size_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
+        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.size_answer' | t }}</p></div>
+      </details>
+      <details class="bcsse-faq__item">
+        <summary>{{ 'ss_experience.faq.install_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
+        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.install_answer' | t }}</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="bcsse-closing" aria-labelledby="bcsse-closing-title-{{ section.id }}">
+    <div class="bcsse-wrap bcsse-closing__inner">
+      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
+      <h2 class="bcsse-closing__heading" id="bcsse-closing-title-{{ section.id }}">{{ 'ss_experience.closing.heading' | t }}</h2>
+      <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}">{{ 'ss_experience.closing.button' | t }} <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+  <div class="bcsse-mobile-cta">
+    <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}" data-bcsse-mobile-configurator>{{ 'ss_mobile_light.configure' | t }} <span aria-hidden="true">→</span></a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:ss_experience.name",
+  "tag": "section",
+  "class": "bcsse-section-root",
+  "max_blocks": 3,
+  "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "t:ss_experience.settings.hero_image" },
+    { "type": "image_picker", "id": "hero_mobile_image", "label": "t:ss_experience.settings.hero_mobile_image" },
+    { "type": "url", "id": "configurator_url", "label": "t:ss_experience.settings.configurator_url" },
+    { "type": "product", "id": "one_product", "label": "t:ss_experience.settings.one_product" },
+    { "type": "product", "id": "plus_product", "label": "t:ss_experience.settings.plus_product" },
+    { "type": "image_picker", "id": "one_image", "label": "t:ss_experience.settings.one_image" },
+    { "type": "image_picker", "id": "plus_image", "label": "t:ss_experience.settings.plus_image" },
+    { "type": "image_picker", "id": "installation_image", "label": "t:ss_experience.settings.installation_image" },
+    { "type": "image_picker", "id": "inbouw_image", "label": "t:ss_experience.settings.inbouw_image" },
+    { "type": "image_picker", "id": "opbouw_image", "label": "t:ss_experience.settings.opbouw_image" },
+    { "type": "url", "id": "advice_url", "label": "t:ss_experience.settings.advice_url" }
+  ],
+  "blocks": [
+    {
+      "type": "accessory",
+      "name": "t:ss_experience.accessory.name",
+      "settings": [
+        { "type": "select", "id": "kind", "label": "t:ss_experience.accessory.kind", "options": [
+          { "value": "cleaning", "label": "t:ss_experience.accessory.cleaning" },
+          { "value": "seat", "label": "t:ss_experience.accessory.seat" },
+          { "value": "wiper", "label": "t:ss_experience.accessory.wiper" }
+        ], "default": "cleaning" },
+        { "type": "product", "id": "product", "label": "t:ss_experience.accessory.product" },
+        { "type": "image_picker", "id": "image_override", "label": "t:ss_experience.accessory.image_override" },
+        { "type": "product", "id": "product_white", "label": "t:ss_experience.accessory.product_white" },
+        { "type": "product", "id": "product_black", "label": "t:ss_experience.accessory.product_black" },
+        { "type": "product", "id": "product_grey", "label": "t:ss_experience.accessory.product_grey" },
+        { "type": "product", "id": "product_sand", "label": "t:ss_experience.accessory.product_sand" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "t:ss_experience.name", "blocks": [
+    { "type": "accessory", "settings": { "kind": "cleaning" } },
+    { "type": "accessory", "settings": { "kind": "seat" } },
+    { "type": "accessory", "settings": { "kind": "wiper" } }
+  ] }],
+  "enabled_on": { "templates": ["page"] }
+}
+{% endschema %}

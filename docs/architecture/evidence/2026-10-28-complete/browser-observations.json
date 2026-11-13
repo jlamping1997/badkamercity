@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "method": "Read-only DOM observation and visible local search/navigation in Chrome CDP; no cart/form/account action.",
+  "context": "Existing browser session with Shopify preview UI. No claim of anonymous browser or mobile viewport; cart contents were not read.",
+  "viewport": {"width": 1363, "height": 936},
+  "cases": [
+    {
+      "id": "glossary_initial_and_footer_desktop",
+      "url": "https://badkamercity.nl/pages/begrippenlijst",
+      "observedAt": "2026-10-28T12:24:10.669Z",
+      "terms": 109,
+      "status": "109 begrippen beschikbaar.",
+      "footerPanels": [
+        {"open": true, "summaryDisabled": "true", "summaryTabindex": "-1"},
+        {"open": true, "summaryDisabled": "true", "summaryTabindex": "-1"},
+        {"open": true, "summaryDisabled": "true", "summaryTabindex": "-1"}
+      ],
+      "footerNonLinks": ["Veelgestelde vragen", "Bezorgen & afhalen", "Retourneren", "Garantie & service", "Over ons", "Badkamerinspiratie", "Badkameradvies", "Onze merken", "Showroom", "Zakelijk"]
+    },
+    {"id": "glossary_match", "observedAt": "2026-10-28T12:24:23.411Z", "input": "rimless", "visibleTerms": ["Rimless"], "status": "1 begrip gevonden.", "emptyVisible": false},
+    {"id": "glossary_zero", "observedAt": "2026-10-28T12:24:30.075Z", "input": "bc_documentatie_geen_begrip_47", "visibleTerms": 0, "status": "0 begrippen gevonden.", "emptyVisible": true},
+    {"id": "glossary_clear", "observedAt": "2026-10-28T12:24:30.384Z", "input": "", "visibleTerms": 109, "status": "109 begrippen beschikbaar."},
+    {"id": "glossary_link_and_content_settled", "observedAt": "2026-10-28T12:25:19.965Z", "url": "https://badkamercity.nl/pages/rimless", "heading": "Rimless", "pageRoot": true, "tocVisible": true, "tocEntries": 6, "contentCards": 6}
+  ],
+  "limitations": [
+    "Only this desktop state and term were tested; not every term, keyboard path or mobile state.",
+    "A first DOM read during navigation was intermediate and contained no page root; the settled result above is authoritative, no defect/timing inference.",
+    "No screenshot, private cart data, browser storage, login or submit payload was captured.",
+    "No supported viewport resizing capability was advertised; mobile remains NOT_TESTED."
+  ]
+}

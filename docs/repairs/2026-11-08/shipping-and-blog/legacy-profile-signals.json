@@ -1,0 +1,163 @@
+{
+  "id": "gid://shopify/DeliveryProfile/132488659210",
+  "name": "Algemeen profiel",
+  "default": true,
+  "coversAllItems": false,
+  "locationsWithoutRatesCount": 1,
+  "profileLocationGroups": [
+    {
+      "locationGroup": {
+        "id": "gid://shopify/DeliveryLocationGroup/134461358346",
+        "locations": {
+          "nodes": [
+            {
+              "id": "gid://shopify/Location/106665476362",
+              "isActive": true,
+              "fulfillsOnlineOrders": true,
+              "shipsInventory": true
+            }
+          ]
+        }
+      },
+      "locationGroupZones": {
+        "nodes": [
+          {
+            "zone": {
+              "id": "gid://shopify/DeliveryZone/611727081738",
+              "name": "Domestic"
+            },
+            "methodDefinitions": {
+              "nodes": [
+                {
+                  "id": "gid://shopify/DeliveryMethodDefinition/1142057009418",
+                  "name": "Standaard",
+                  "active": true,
+                  "rateProvider": {
+                    "id": "gid://shopify/DeliveryRateDefinition/1073759846666",
+                    "price": {
+                      "amount": "0.0",
+                      "currencyCode": "EUR"
+                    }
+                  },
+                  "methodConditions": [
+                    {
+                      "field": "TOTAL_PRICE",
+                      "operator": "GREATER_THAN_OR_EQUAL_TO",
+                      "conditionCriteria": {
+                        "amount": "100.01",
+                        "currencyCode": "EUR"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "gid://shopify/DeliveryMethodDefinition/1142057042186",
+                  "name": "Standaard",
+                  "active": true,
+                  "rateProvider": {
+                    "id": "gid://shopify/DeliveryRateDefinition/1073759879434",
+                    "price": {
+                      "amount": "6.95",
+                      "currencyCode": "EUR"
+                    }
+                  },
+                  "methodConditions": [
+                    {
+                      "field": "TOTAL_PRICE",
+                      "operator": "GREATER_THAN_OR_EQUAL_TO",
+                      "conditionCriteria": {
+                        "amount": "0.0",
+                        "currencyCode": "EUR"
+                      }
+                    },
+                    {
+                      "field": "TOTAL_PRICE",
+                      "operator": "LESS_THAN_OR_EQUAL_TO",
+                      "conditionCriteria": {
+                        "amount": "100.0",
+                        "currencyCode": "EUR"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "zone": {
+              "id": "gid://shopify/DeliveryZone/611727114506",
+              "name": "EU (Europeese Unie)"
+            },
+            "methodDefinitions": {
+              "nodes": [
+                {
+                  "id": "gid://shopify/DeliveryMethodDefinition/1142057074954",
+                  "name": "Standard",
+                  "active": true,
+                  "rateProvider": {
+                    "id": "gid://shopify/DeliveryRateDefinition/1073759912202",
+                    "price": {
+                      "amount": "12.95",
+                      "currencyCode": "EUR"
+                    }
+                  },
+                  "methodConditions": [
+                    {
+                      "field": "TOTAL_PRICE",
+                      "operator": "GREATER_THAN_OR_EQUAL_TO",
+                      "conditionCriteria": {
+                        "amount": "0.0",
+                        "currencyCode": "EUR"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "zone": {
+              "id": "gid://shopify/DeliveryZone/611727147274",
+              "name": "International"
+            },
+            "methodDefinitions": {
+              "nodes": [
+                {
+                  "id": "gid://shopify/DeliveryMethodDefinition/1142057107722",
+                  "name": "Standard",
+                  "active": true,
+                  "rateProvider": {
+                    "id": "gid://shopify/DeliveryRateDefinition/1073759944970",
+                    "price": {
+                      "amount": "19.95",
+                      "currencyCode": "EUR"
+                    }
+                  },
+                  "methodConditions": [
+                    {
+                      "field": "TOTAL_PRICE",
+                      "operator": "GREATER_THAN_OR_EQUAL_TO",
+                      "conditionCriteria": {
+                        "amount": "0.0",
+                        "currencyCode": "EUR"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "unassignedLocations": [
+    {
+      "id": "gid://shopify/Location/110481572106",
+      "name": "Fabriecio - leveranciersvoorraad",
+      "isActive": true,
+      "fulfillsOnlineOrders": true,
+      "shipsInventory": false
+    }
+  ]
+}

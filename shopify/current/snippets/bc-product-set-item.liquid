@@ -1,0 +1,54 @@
+{% doc %}
+  A linked component in a product set.
+  @param {product} component_product - The component product.
+  @param {variant} component_variant - The exact component variant.
+  @param {number} quantity - Included quantity.
+  @param {string} name - Short display title.
+  @param {string} sku - Exact article code.
+  @param {boolean} [show_commerce] - Show delivery information and standalone price.
+{% enddoc %}
+{%- liquid
+  assign component_image = component_variant.featured_image
+  if component_image == blank and component_product.variants.size == 1
+    assign component_image = component_product.featured_image
+  endif
+-%}
+{%- capture item_content -%}
+  <span class="bc-product-set__media"{% unless show_commerce and component_image == blank %} aria-hidden="true"{% endunless %}>
+    {%- if component_image != blank -%}
+      {{ component_image | image_url: width: 160 | image_tag: widths: '80, 160', sizes: '80px', loading: 'lazy', alt: '', class: 'bc-product-set__image' }}
+    {%- else -%}
+      <svg class="bc-product-set__placeholder" width="32" height="32" viewBox="0 0 32 32" fill="none" focusable="false"><path d="m16 3 12 6.5v13L16 29 4 22.5v-13L16 3Z M4 9.5 16 16l12-6.5M16 16v13M10 6.3l12 6.4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>{% if show_commerce %}<span class="bc-product-set__photo-missing">{{ 'bc_set.photo_missing' | t }}</span>{% endif %}
+    {%- endif -%}
+  </span>
+  <span class="bc-product-set__detail">
+    <span class="bc-product-set__name">{{ name | escape }}</span>
+    <span class="bc-product-set__sku"><span class="visually-hidden">Aantal: </span>{{ quantity }}<span aria-hidden="true"> × </span>{% if sku != blank %}<span class="visually-hidden">Artikelcode: </span>{{ sku | escape }}{% else %}<span class="visually-hidden">stuk</span>{% endif %}</span>
+    {%- if show_commerce -%}
+      <span class="bc-product-set__delivery">
+        {%- if component_product.metafields.custom.leverancier_voorraad.value == true -%}
+          {{ 'bc_delivery.supplier_in_stock' | t }}
+        {%- elsif component_product.metafields.custom.leverancier_verwachte_datum.value != blank -%}
+          {%- assign expected_date = component_product.metafields.custom.leverancier_verwachte_datum.value | date: '%d-%m-%Y' -%}
+          {{ 'bc_delivery.supplier_expected_from' | t: date: expected_date }}
+        {%- else -%}
+          {{ 'bc_delivery.lead_time_on_request' | t }}
+        {%- endif -%}
+      </span>
+    {%- endif -%}
+  </span>
+  {%- if show_commerce and component_variant != blank -%}
+    <span class="bc-product-set__price">
+      <span class="bc-product-set__price-label">{{ 'bc_set.individual_price' | t }}</span>
+      <span>{% render 'bc-money', amount: component_variant.price %}</span>
+    </span>
+  {%- endif -%}
+{%- endcapture -%}
+<li class="bc-product-set__item{% if show_commerce %} bc-product-set__item--commerce{% endif %}">
+  {%- if component_product != blank and component_variant != blank -%}
+    <a class="bc-product-set__row bc-product-set__link" href="{{ component_variant.url | escape }}">{{ item_content }}</a>
+  {%- else -%}
+    <div class="bc-product-set__row">{{ item_content }}</div>
+  {%- endif -%}
+</li>
+

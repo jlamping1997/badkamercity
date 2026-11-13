@@ -1,0 +1,275 @@
+{
+  "checkpoint": "BRAUER-18",
+  "date": "2026-11-07",
+  "status": "IMPLEMENTED_TEST_ONLY - gebruikerscorrecties verwerkt; nog offline",
+  "decisions": [
+    "Kleur/decor is de eerste beschikbare keuze in alle 23 gecontroleerde voorbeeldfamilies. Eén vaste kleur blijft een specificatie.",
+    "Consumentenlabel Edition vervangen door Standaard; oorspronkelijke leveranciersidentiteit en artikelcodes blijven brondata.",
+    "Greepafwerking toont close-ups: Standaard glad, Carving gekarteld, Stripe gestreept. Dit zijn structuurvoorbeelden in RVS-kleur, geen exacte product- of kleurbeelden.",
+    "Hoofdfoto en overige kleur-/configuratiebeelden blijven de eerste afbeelding van het exacte gekoppelde product.",
+    "Wastafel voor plaatsing op een onderkast; bakpositie blijft de eerste foto van de bij breedte/kraangat passende SKU. Geen vrije montage of onbewezen setcompatibiliteit toegevoegd.",
+    "Adore MFC standaard gesplitst: 120cm halfhoge kast30artikelen en160cm hoge kast15artikelen. Geen hoogtemenu tussen beide.",
+    "Draairichting dynamisch zichtbaar als meer dan één echte Links/Rechts-keuze bestaat bij gekozen breedte en decor. De90Impress Deluxe-artikelen laten dit alleen op60cm zien; geen hardcoded60cm-algoritme.",
+    "Eerste overgang naar een uitvoering met twee deurrichtingen blijft onbeslist tot keuze. Geen stil gekozen links/rechts. Eerdere expliciete richting blijft bij terugschakelen bewaard.",
+    "Spiegelkastkleuren zijn altijd benoemde decorstalen. Uitzondering op de productfoto-kleurregel voor deze productgroep. Zes zichtbaar / Bekijk meer kleuren blijft.",
+    "Oorspronkelijke vijf A-E-hendelvormfoto’s blijven ongewijzigd in eerdere proef."
+  ],
+  "new_sample_checks": {
+    "families": [
+      {
+        "id": "cabin",
+        "articles": 12,
+        "valid_transitions": 96,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable": 12
+      },
+      {
+        "id": "void-door",
+        "articles": 132,
+        "valid_transitions": 2508,
+        "rejected_transitions": 132,
+        "ambiguous_transitions": 0,
+        "reachable": 132
+      },
+      {
+        "id": "basin",
+        "articles": 13,
+        "valid_transitions": 91,
+        "rejected_transitions": 39,
+        "ambiguous_transitions": 0,
+        "reachable": 13
+      },
+      {
+        "id": "cabinet",
+        "articles": 120,
+        "valid_transitions": 2400,
+        "rejected_transitions": 360,
+        "ambiguous_transitions": 60,
+        "reachable": 120
+      },
+      {
+        "id": "tall-half",
+        "articles": 30,
+        "valid_transitions": 510,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable": 30
+      },
+      {
+        "id": "tall-high",
+        "articles": 15,
+        "valid_transitions": 225,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable": 15
+      },
+      {
+        "id": "mirror",
+        "articles": 90,
+        "valid_transitions": 1860,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 60,
+        "reachable": 90
+      },
+      {
+        "id": "design-tap",
+        "articles": 19,
+        "valid_transitions": 176,
+        "rejected_transitions": 14,
+        "ambiguous_transitions": 0,
+        "reachable": 19
+      },
+      {
+        "id": "fountain",
+        "articles": 38,
+        "valid_transitions": 428,
+        "rejected_transitions": 28,
+        "ambiguous_transitions": 0,
+        "reachable": 38
+      }
+    ],
+    "shopify_writes": 0,
+    "browser_layout": "NOT_TESTED: no browser execution",
+    "photo_checks": 1678,
+    "basin_position_uses_matching_product_first_image": "PASS",
+    "colour_first_all_families": true,
+    "mirror_direction_visibility_and_pending_state": "PASS",
+    "mirror_colour_decor_samples": "PASS",
+    "separate_halfhigh_high_cabinets": "PASS",
+    "finish_detail_photos": "PASS",
+    "total_example_records": 469,
+    "verified_photo_articles": 104,
+    "first_image_binding": "PASS: add/append/reorder/remove and identity guards",
+    "all_articles_reachable": true,
+    "six_colour_limit": true,
+    "btw_source_check": "PASS: Decimal 21% / half-up; matched prepared proposal",
+    "fragment_bytes": 984763
+  },
+  "earlier_sample_checks": {
+    "families": [
+      {
+        "id": "tap-height",
+        "articles": 18,
+        "valid_transitions": 162,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 18
+      },
+      {
+        "id": "tap-low",
+        "articles": 32,
+        "valid_transitions": 360,
+        "rejected_transitions": 24,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 32
+      },
+      {
+        "id": "tap-high",
+        "articles": 13,
+        "valid_transitions": 110,
+        "rejected_transitions": 7,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 13
+      },
+      {
+        "id": "tap-wall",
+        "articles": 40,
+        "valid_transitions": 440,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 40
+      },
+      {
+        "id": "bath-wall",
+        "articles": 26,
+        "valid_transitions": 272,
+        "rejected_transitions": 14,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 26
+      },
+      {
+        "id": "bath-floor",
+        "articles": 14,
+        "valid_transitions": 126,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 14
+      },
+      {
+        "id": "bath-inset",
+        "articles": 52,
+        "valid_transitions": 648,
+        "rejected_transitions": 28,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 52
+      },
+      {
+        "id": "shower",
+        "articles": 168,
+        "valid_transitions": 2688,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 168
+      },
+      {
+        "id": "glass-oblivion",
+        "articles": 168,
+        "valid_transitions": 2808,
+        "rejected_transitions": 720,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 168
+      },
+      {
+        "id": "glass-orion",
+        "articles": 36,
+        "valid_transitions": 396,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 36
+      },
+      {
+        "id": "glass-galactic",
+        "articles": 12,
+        "valid_transitions": 96,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 12
+      },
+      {
+        "id": "glass",
+        "articles": 132,
+        "valid_transitions": 2172,
+        "rejected_transitions": 336,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 132
+      },
+      {
+        "id": "cabinet",
+        "articles": 120,
+        "valid_transitions": 2400,
+        "rejected_transitions": 360,
+        "ambiguous_transitions": 60,
+        "reachable_articles": 120
+      },
+      {
+        "id": "cabinet-shallow",
+        "articles": 45,
+        "valid_transitions": 810,
+        "rejected_transitions": 0,
+        "ambiguous_transitions": 0,
+        "reachable_articles": 45
+      }
+    ],
+    "shopify_writes": 0,
+    "browser_layout": "NOT_TESTED - no browser executable",
+    "photos_byte_exact": 58,
+    "photo_candidate_matches_verified": true,
+    "inset_position_mapping_verified": 40,
+    "distinct_source_skus": 864,
+    "all_colour_choices_use_exact_linked_first_image": true,
+    "handle_images_restored": true,
+    "media_add_append_reorder_remove_verified": true,
+    "product_identity_guards_verified": true,
+    "automatic_first_image_binding": true,
+    "colour_first_all_families": true,
+    "total_example_records": 876,
+    "small_dimension_groups_use_buttons": true,
+    "six_colour_limit": true,
+    "all_articles_reachable": true,
+    "exact_only_enrichment": true
+  },
+  "detail_image_sources": [
+    {
+      "name": "glad",
+      "url": "https://cdn.projectxxl.nl/attributes/afwerking_greep/glad.jpg",
+      "sha256": "2571c92633b50d4cb89d0e31a8587b6e889eb8c8afadca8f2ce79e1dbe49dbc8",
+      "bytes": 21942
+    },
+    {
+      "name": "gekarteld",
+      "url": "https://cdn.projectxxl.nl/attributes/afwerking_greep/gekarteld.jpg",
+      "sha256": "d6d4db953d6b8721a8bbc4c3e2b901b79e439a5aea35e98c89ff87043bf89ca9",
+      "bytes": 25150
+    },
+    {
+      "name": "gestreept",
+      "url": "https://cdn.projectxxl.nl/attributes/afwerking_greep/gestreept.jpg",
+      "sha256": "6842a3cf6f2d189ceebd99341d97828c4cf455bdf803825853dbb8f5dd1cc3d1",
+      "bytes": 24359
+    }
+  ],
+  "primary_explanations": [
+    "https://www.brauerkranen.nl/site/brauer-stripe-kranen",
+    "https://www.brauerkranen.nl/site/collectie-carving"
+  ],
+  "limits": [
+    "Browserlayout/native touch en live Shopify-integratie NOT_TESTED.",
+    "Geen Shopify-write, import (ook geen DRAFT), media-upload of publicatie.",
+    "Volledig aangekondigd officieel beelden-/PDF-pakket nog nodig voordat import kan starten.",
+    "Drie eerdere maatbronconflicten en Liquid ThemeCheck-blokkade blijven open.",
+    "Alleen bronbevestigde exacte-SKU-maatverrijking; geen nieuwe seriebrede maten afgeleid.",
+    "Productbasis-XLSX versie1 en originele leverancierslijsten ongewijzigd."
+  ],
+  "next_action": "Eigenaar beoordeelt de bijgewerkte proef, met nadruk op greepdetail,60/80cm-spiegelkast en de losse120/160cm-kastproducten."
+}

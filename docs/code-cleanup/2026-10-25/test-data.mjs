@@ -1,0 +1,47 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {Window} from 'happy-dom';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const {Liquid}=require('liquidjs');
+const at=p=>new URL(p,import.meta.url);
+const read=p=>fs.readFileSync(at(p),'utf8');
+const manifest=JSON.parse(read('choice-data-manifest.json'));
+const engine=new Liquid();
+const lookup=read('theme/snippets/bc-choice-data-source.liquid').replace(/{% doc %}[\s\S]*?{% enddoc %}/,'');
+const ast=engine.parse(lookup);
+const sources=new Map();
+for(const m of manifest){
+ if(!sources.has(m.source))sources.set(m.source,JSON.parse(read('datasets/'+m.source)));
+ const src=sources.get(m.source), scoped=JSON.parse(read('theme/assets/'+m.asset));
+ assert.deepEqual(scoped,{...src,groups:src.groups.filter(g=>g.id===m.group)},m.asset);
+ assert.equal((await engine.render(ast,{source:m.source,group:m.group,revision:m.source_revision})).trim(),m.asset);
+}
+assert.equal((await engine.render(ast,{source:manifest[0].source,group:manifest[0].group,revision:'new-source-version'})).trim(),'');
+assert.equal((await engine.render(ast,{source:'unknown.json',group:'unknown'})).trim(),'');
+assert.equal((await engine.render(ast,{source:manifest[0].source,group:'unknown'})).trim(),'');
+const strip=read('theme/snippets/bc-content-without-styles.liquid').replace(/{% doc %}[\s\S]*?{% enddoc %}/,'');
+const html=read('collection-before.html');
+const rendered=await engine.parseAndRender(strip,{content:html});
+assert.equal(rendered,html.replace(/<style[\s\S]*?<\/style>/g,''));
+const script=read('theme/assets/bc-product-switcher.js');
+const load=script.slice(script.indexOf('  function loadSwitcherData('),script.indexOf('\n  function getProductOption('));
+let calls=[];let fail=false;
+const ctx=vm.createContext({dataPromises:new Map(),DEFAULT_DATA_URL:'/default',fetchJson:async url=>{calls.push(url);if(fail||url==='/broken')throw Error('network');return{url};}});
+vm.runInContext(load+'\nthis.load=loadSwitcherData;',ctx);
+await Promise.all([ctx.load('/a'),ctx.load('/a'),ctx.load('/b')]);assert.deepEqual(calls,['/a','/b']);
+assert.equal((await ctx.load('/broken','/original')).url,'/original');
+fail=true;await assert.rejects(ctx.load('/retry'));fail=false;assert.equal((await ctx.load('/retry')).url,'/retry');
+// Run the unmodified initializer with two different product groups and URLs.
+const groups=manifest.slice(0,2).map(m=>JSON.parse(read('theme/assets/'+m.asset)).groups[0]);
+const w=new Window({url:'https://badkamercity.nl/products/test'});let fetched=[];
+w.console.info=()=>{};
+w.document.body.innerHTML=groups.map((g,i)=>`<div data-bc-product-switcher-v2 data-switch-group="${g.id}" data-product-handle="${g.products[0].handle}" data-switcher-data-url="/group-${i}"></div>`).join('');
+w.fetch=async url=>{fetched.push(url);return{ok:true,json:async()=>({groups:[groups[Number(url.slice(-1))]]})}};
+w.eval(script);w.document.dispatchEvent(new w.Event('DOMContentLoaded'));await new Promise(r=>setTimeout(r,80));
+assert.deepEqual(fetched,['/group-0','/group-1']);
+for(const el of w.document.querySelectorAll('[data-bc-product-switcher-v2]'))assert.equal(el.dataset.bcProductSwitcherV2Initialized,'true');
+await w.happyDOM.abort();w.close();
+const result={status:'PASS',exactGroups:manifest.length,liquidMappings:manifest.length,unknownSourceFallback:true,contentPreserved:true,cachePerURL:true,networkFallback:true,retryAfterFailure:true,multipleRoots:true,staleSourceFallback:true};
+fs.writeFileSync(at('data-test-results.json'),JSON.stringify(result,null,2));console.log(result);

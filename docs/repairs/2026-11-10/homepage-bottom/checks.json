@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "checks": 15,
+  "results": [
+    {
+      "test": "header-campaigns-categories-brand-markup-byte-identical",
+      "result": "PASS"
+    },
+    {
+      "test": "native-contact-form-body-byte-identical",
+      "result": "PASS"
+    },
+    {
+      "test": "existing-merchant-settings-preserved-and-new-ids-unique",
+      "result": "PASS"
+    },
+    {
+      "test": "only-new-support-copy-added-nl",
+      "result": "PASS"
+    },
+    {
+      "test": "only-new-support-copy-added-en.default",
+      "result": "PASS"
+    },
+    {
+      "test": "two-clean-cards-practical-page-links-and-collapsed-small-appointment",
+      "result": "PASS"
+    },
+    {
+      "test": "all-existing-home-anchors-still-resolve",
+      "result": "PASS"
+    },
+    {
+      "test": "existing-hash-script-opens-relocated-appointment",
+      "result": "PASS"
+    },
+    {
+      "test": "configured-booking-link-retains-priority",
+      "result": "PASS"
+    },
+    {
+      "test": "native-policy-fallbacks-work-when-practical-pages-absent",
+      "result": "PASS"
+    },
+    {
+      "test": "contact-fallbacks-prevent-empty-destinations",
+      "result": "PASS"
+    },
+    {
+      "test": "merchant-help-overrides-are-escaped-and-linked",
+      "result": "PASS"
+    },
+    {
+      "test": "new-default-copy-localizes",
+      "result": "PASS"
+    },
+    {
+      "test": "form-errors-reopen-small-appointment-and-label-invalid-email",
+      "result": "PASS"
+    },
+    {
+      "test": "success-message-reopens-small-appointment",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Liquid rendering with synthetic page/policy/form contexts; native Shopify form wrapper simulated, original form body byte-identical. No form submission, email delivery or physical mobile claim."
+}

@@ -1,0 +1,10 @@
+--- a/sections/main-product.liquid
++++ b/sections/main-product.liquid
+@@ -760,7 +760,6 @@
+               {%- when 'variant_picker' -%}
+                 {%- capture bc_buybox_options_markup -%}
+                   <div class="bc-buybox__section bc-buybox__section--options">
+-                    <h2 class="bc-buybox__options-title">Kies je uitvoering</h2>
+                     {%- if product.metafields.bc_sunshower.configuration.value != blank -%}
+                       {%- render 'bc-sunshower-choices', product: product, section: section -%}
+                     {%- elsif current_switch_group != blank -%}

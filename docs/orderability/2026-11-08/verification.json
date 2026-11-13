@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-08",
+  "changedProducts": 767,
+  "changedVariants": 767,
+  "previouslyUnavailable": 73,
+  "allTrackedVariants": 851,
+  "trackedVariantsNowAvailable": 851,
+  "residualTrackedDeny": 0,
+  "exactFinalReadback": true,
+  "inventoryQuantitiesUnchanged": true,
+  "trackingUnchanged": true,
+  "productIdentityStatusPublicationUnchanged": true,
+  "changedFields": [
+    "inventoryPolicy",
+    "availableForSale (derived)"
+  ],
+  "writtenFields": [
+    "inventoryPolicy"
+  ],
+  "unchangedExistingContinue": 84,
+  "regularMutationBatches": 39,
+  "pilotMutations": 1,
+  "nonTrackedPublishedProducts": 15070,
+  "activePublishedProducts": 15897,
+  "unlistedPublishedProducts": 24,
+  "bundleProducts": 0,
+  "compositeProducts": 0,
+  "scope": "All existing ACTIVE and UNLISTED products published to Online Store; draft/archive remain outside storefront scope",
+  "mainTheme": "196341825802",
+  "themeFilesWritten": false,
+  "menuReleaseFiveFilesExact": true,
+  "browser": {
+    "verlavioActualButtonAddPassed": true,
+    "cottoActualCalculatorButtonAddPassed": true,
+    "eachTestAddedOneItem": true,
+    "ownTestItemsRemoved": true,
+    "checkoutTested": false
+  },
+  "independentReview": "851 full before/after records, 767 unique target receipts and 40 zero-error responses independently verified; no mismatches",
+  "limits": [
+    "15,070 untracked products are covered by exact aggregate counts and inventory semantics, not 15,070 individual cart tests",
+    "All 851 tracked variants individually read after mutation; publication evidence is status and onlineStoreUrl plus exact aggregate published counts",
+    "Only inventoryPolicy supplied in writes; prices and other fields not included in mutation input",
+    "No theme files, stock quantities or tracking flags written",
+    "No recurring automation or future-import enforcement installed"
+  ]
+}

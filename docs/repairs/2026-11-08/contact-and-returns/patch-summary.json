@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "file": "locales/nl.json",
+      "keys_changed": [
+        "bc_returns.intro",
+        "bc_returns.step_1_text",
+        "bc_returns.step_3_title",
+        "bc_returns.step_3_text",
+        "bc_returns.request_exchange",
+        "bc_returns.faq_label_answer",
+        "bc_returns.faq_address_answer",
+        "bc_returns.faq_cost_answer"
+      ]
+    },
+    {
+      "file": "locales/en.default.json",
+      "keys_changed": [
+        "bc_returns.intro",
+        "bc_returns.step_1_text",
+        "bc_returns.step_3_title",
+        "bc_returns.step_3_text",
+        "bc_returns.request_exchange",
+        "bc_returns.faq_label_answer",
+        "bc_returns.faq_address_answer",
+        "bc_returns.faq_cost_answer"
+      ]
+    },
+    {
+      "file": "sections/bc-returns.liquid",
+      "change": "Guarded native refund-policy link within existing intro paragraph; form/action/fields/CSS unchanged"
+    },
+    {
+      "file": "templates/index.json",
+      "change": "Only existing homepage section returns_text setting added; order number explicitly optional"
+    }
+  ],
+  "commercial_source": "Existing approved native REFUND_POLICY; no policy update",
+  "forms_submitted": false,
+  "js_changes": 0,
+  "locale_keys_added": 0,
+  "contact_and_rapowash_are_separate_live_page_fixes": true
+}

@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "claim": "native-card-cta",
+      "source": "snippets/card-product.liquid",
+      "line": 210,
+      "matches": true
+    },
+    {
+      "claim": "search-cta",
+      "source": "snippets/bc-card-product-search.liquid",
+      "line": 137,
+      "matches": true
+    },
+    {
+      "claim": "mobile-cta-hide",
+      "source": "assets/bc-product-cards.css",
+      "line": 283,
+      "matches": true
+    },
+    {
+      "claim": "mobile-hide-value",
+      "source": "assets/bc-product-cards.css",
+      "line": 285,
+      "matches": true
+    },
+    {
+      "claim": "auto-filter-request",
+      "source": "assets/bc-external-filters.js",
+      "line": 171,
+      "matches": true
+    },
+    {
+      "claim": "search-timeout",
+      "source": "assets/bc-external-filters.js",
+      "line": 272,
+      "matches": true
+    },
+    {
+      "claim": "popup-close-delay",
+      "source": "assets/cart-notification.js",
+      "line": 55,
+      "matches": true
+    },
+    {
+      "claim": "popup-open-motion",
+      "source": "assets/component-cart-notification.css",
+      "line": 30,
+      "matches": true
+    },
+    {
+      "claim": "sunshower-inline-feedback",
+      "source": "assets/bc-sunshower-shop.js",
+      "line": 258,
+      "matches": true
+    },
+    {
+      "claim": "sunshower-set-quantity",
+      "source": "assets/bc-sunshower-page.js",
+      "line": 358,
+      "matches": true
+    },
+    {
+      "claim": "sunshower-native-form",
+      "source": "sections/main-sunshower.liquid",
+      "line": 77,
+      "matches": true
+    },
+    {
+      "claim": "wiesbaden-adapter-priority",
+      "source": "sections/main-product.liquid",
+      "line": 767,
+      "matches": true
+    },
+    {
+      "claim": "v2-choice-priority",
+      "source": "sections/main-product.liquid",
+      "line": 769,
+      "matches": true
+    },
+    {
+      "claim": "spec-router",
+      "source": "snippets/bc-product-detail-specs.liquid",
+      "line": 12,
+      "matches": true
+    },
+    {
+      "claim": "document-guard",
+      "source": "snippets/bc-product-documents.liquid",
+      "line": 15,
+      "matches": true
+    },
+    {
+      "claim": "inbouw-default-off",
+      "source": "assets/bc-product-inbouw.js",
+      "line": 95,
+      "matches": true
+    },
+    {
+      "claim": "shared-position-settle",
+      "source": "assets/bc-choice-position.js",
+      "line": 6,
+      "matches": true
+    },
+    {
+      "claim": "shared-position-max",
+      "source": "assets/bc-choice-position.js",
+      "line": 7,
+      "matches": true
+    }
+  ],
+  "passed": 18,
+  "interpretation": "Checks exact cited source lines, not runtime behavior."
+}

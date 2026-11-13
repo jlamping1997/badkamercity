@@ -1,0 +1,12 @@
+{% doc %}
+Returns a local JEE-O finish swatch URL for a supported finish label.
+@param {string} color - The finish name.
+{% enddoc %}
+{%- liquid
+  assign swatch_key = color | handleize
+  assign swatch_keys = 'geborsteld-rvs,raw-rvs,hammercoat-zwart-mat,structuur-zwart,gun-metal,mat-goud,mat-chroom,dark-steel,terra-roze,brons,chroom,zwart,wit,goud,zilver' | split: ','
+  if swatch_keys contains swatch_key
+    assign swatch_asset = 'bc-jeeo-swatch-' | append: swatch_key | append: '.svg'
+    echo swatch_asset | asset_url
+  endif
+-%}

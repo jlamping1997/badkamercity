@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "service_1": {
+          "type": "service",
+          "settings": {
+            "label": "Contact",
+            "url": "/pages/contact"
+          }
+        },
+        "service_2": {
+          "type": "category",
+          "settings": {
+            "label": "Baden",
+            "url": "/collections/baden"
+          }
+        },
+        "service_3": {
+          "type": "service",
+          "settings": {
+            "label": "Bezorgen en afhalen",
+            "url": "/pages/bezorgen-en-afhalen"
+          }
+        },
+        "service_4": {
+          "type": "service",
+          "settings": {
+            "label": "Retour aanmelden",
+            "url": "/pages/retour-aanmelden"
+          }
+        },
+        "service_5": {
+          "type": "category",
+          "settings": {
+            "label": "Spiegels en verlichting",
+            "url": "/collections/spiegels-en-verlichting"
+          }
+        },
+        "service_6": {
+          "type": "service",
+          "settings": {
+            "label": "Zoeken",
+            "url": "/search"
+          }
+        },
+        "category_1": {
+          "type": "category",
+          "settings": {
+            "label": "Badkamermeubels",
+            "url": "/collections/badkamermeubels"
+          }
+        },
+        "category_2": {
+          "type": "category",
+          "settings": {
+            "label": "Kranen",
+            "url": "/collections/kranen"
+          }
+        },
+        "category_3": {
+          "type": "category",
+          "settings": {
+            "label": "Douches",
+            "url": "/collections/douches"
+          }
+        },
+        "category_4": {
+          "type": "category",
+          "settings": {
+            "label": "Toiletten",
+            "url": "/collections/toiletten"
+          }
+        },
+        "category_5": {
+          "type": "category",
+          "settings": {
+            "label": "Wastafels",
+            "url": "/collections/wastafels"
+          }
+        },
+        "category_6": {
+          "type": "category",
+          "settings": {
+            "label": "Tegels",
+            "url": "/collections/tegels"
+          }
+        },
+        "info_1": {
+          "type": "category",
+          "settings": {
+            "label": "Accessoires",
+            "url": "/collections/accessoires"
+          }
+        },
+        "info_2": {
+          "type": "info",
+          "settings": {
+            "label": "Badkamerinspiratie",
+            "url": "/#HomeInspiration"
+          }
+        },
+        "info_3": {
+          "type": "info",
+          "settings": {
+            "label": "3D-advies op afspraak",
+            "url": "/#HomeAdvice"
+          }
+        },
+        "info_4": {
+          "type": "info",
+          "settings": {
+            "label": "Onze merken",
+            "url": "/collections?view=merken"
+          }
+        },
+        "info_5": {
+          "type": "category",
+          "settings": {
+            "label": "Verwarming en ventilatie",
+            "url": "/collections/verwarming-en-ventilatie"
+          }
+        }
+      },
+      "block_order": [
+        "service_1",
+        "service_3",
+        "service_4",
+        "service_6",
+        "category_2",
+        "category_3",
+        "service_2",
+        "category_5",
+        "category_1",
+        "service_5",
+        "category_4",
+        "category_6",
+        "info_1",
+        "info_5",
+        "info_4",
+        "info_3",
+        "info_2"
+      ],
+      "settings": {
+        "placeholder_mode": false,
+        "payment_examples": false,
+        "footer_label": "BadkamerCity — informatie en contact",
+        "example_label": "Voorbeeld",
+        "trust_title_1": "Alles voor je badkamer",
+        "trust_text_1": "Van kraan tot complete inrichting",
+        "trust_title_2": "Persoonlijk advies",
+        "trust_text_2": "We denken graag met je mee",
+        "trust_title_3": "Zorgvuldig geselecteerd",
+        "trust_text_3": "Sanitair van bekende merken",
+        "trust_title_4": "Service bij je bestelling",
+        "trust_text_4": "Ook na je aankoop",
+        "brand_tagline": "Alles voor jouw badkamer",
+        "brand_text": "<p>Alles voor jouw badkamer, op één plek. Ontdek sanitair, meubels en tegels die bij jouw stijl passen.</p>",
+        "show_social": true,
+        "service_heading": "Klantenservice",
+        "category_heading": "Ons assortiment",
+        "all_label": "Bekijk alles",
+        "contact_heading": "We helpen je graag",
+        "contact_address": "Retouradres\nBadkamercity\nZichtenburglaan 150\n2544 EB Den Haag",
+        "contact_phone": "06 85887536",
+        "opening_hours": "",
+        "contact_email": "info@badkamercity.nl",
+        "contact_button_text": "Neem contact op",
+        "payment_enable": true,
+        "show_policy": true,
+        "payment_label": "Betaalmethoden",
+        "bottom_text": "Alle rechten voorbehouden.",
+        "contact_button_link": "/pages/contact",
+        "info_heading": "BadkamerCity",
+        "contact_subtitle": "Een vraag over je badkamer of bestelling?",
+        "showroom_link_label": "Bekijk de showroom",
+        "compact_homepage": false,
+        "quote_link_enabled": false,
+        "quote_link_preview": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

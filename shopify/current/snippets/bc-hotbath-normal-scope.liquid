@@ -1,0 +1,30 @@
+{% doc %}
+  Outputs ready only for identified single-article Hotbath records from known imports.
+  No product writes. No inferred identity or automatic approval of future batches.
+  @param {product} product - Current product.
+{% enddoc %}
+{%- liquid
+  assign bc_vendor = product.vendor | strip | downcase
+  assign bc_sku = product.selected_or_first_available_variant.sku | strip
+  assign bc_sku_upper = bc_sku | upcase
+  assign bc_article = product.metafields.custom.artikelnummer.value | strip
+  assign bc_batch = product.metafields.bc_data.import_batch.value
+  assign bc_allowed_batch = false
+  assign bc_excluded = false
+  if bc_batch == 'hotbath-20261006-batch1' or bc_batch == 'hotbath-20261006-batch2' or bc_batch == 'hotbath-20261006-doorimport-v5'
+    assign bc_allowed_batch = true
+  endif
+  if product.metafields.bc_pilot.is_pilot.value == true or bc_sku_upper contains 'TEST'
+    assign bc_excluded = true
+  endif
+  if product.tags contains 'bc-exclude-import' or product.tags contains 'bc-no-sync'
+    assign bc_excluded = true
+  endif
+  if bc_vendor == 'hotbath' and bc_allowed_batch and bc_excluded == false
+    if product.has_only_default_variant and bc_sku != blank and bc_sku == bc_article
+      if product.metafields.custom.complete_specificaties.type == 'json' and product.metafields.custom.complete_specificaties.value != blank
+        echo 'ready'
+      endif
+    endif
+  endif
+-%}

@@ -1,0 +1,51 @@
+{% doc %}
+  Renders one supported specification from the product's verified namespace.
+  @param {product} product - Current product.
+  @param {string} namespace - Source namespace.
+  @param {string} field - Public specification key.
+{% enddoc %}
+{%- liquid
+  assign source = product.metafields[namespace]
+  assign source_key = field
+  if namespace == 'specs'
+    case field
+      when 'coldstart'
+        assign source_key = 'met_koude_start'
+      when 'montage'
+        assign source_key = 'montagewijze'
+      when 'materiaal'
+        if source.materiaal.type == blank
+          assign source_key = 'materiaal_kraan'
+        endif
+    endcase
+  endif
+  assign spec = source[source_key]
+  assign label_key = 'bc_specs.fields.' | append: field
+  assign label = label_key | t
+  assign formatted = ''
+  case spec.type
+    when 'boolean'
+      if spec.value == true
+        assign formatted = 'bc_specs.yes' | t
+      elsif spec.value == false
+        assign formatted = 'bc_specs.no' | t
+      endif
+    when 'number_decimal', 'number_integer'
+      assign numeric_value = spec.value | plus: 0
+      assign integer_value = numeric_value | floor
+      if numeric_value == integer_value
+        assign formatted = integer_value | append: ''
+      else
+        assign formatted = numeric_value | append: ''
+        if request.locale.iso_code == 'nl'
+          assign formatted = formatted | replace: '.', ','
+        endif
+      endif
+  endcase
+-%}
+{%- if formatted != blank -%}
+  {%- render 'bc-product-detail-row', value: formatted, label: label -%}
+{%- elsif spec.type != blank -%}
+  {%- render 'bc-product-detail-row', metafield: spec, label: label -%}
+{%- endif -%}
+

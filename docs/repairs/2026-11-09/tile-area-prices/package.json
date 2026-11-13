@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node checks.mjs"},
+  "devDependencies": {"liquidjs": "10.21.1", "happy-dom": "21.0.4"}
+}

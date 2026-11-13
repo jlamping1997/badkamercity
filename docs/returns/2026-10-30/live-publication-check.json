@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://badkamercity.nl/",
+    "status": 200,
+    "theme": {
+      "id": 195948839178,
+      "role": "main"
+    },
+    "headerReturnLinks": [
+      "/pages/retour-aanmelden"
+    ],
+    "canonical": "https://badkamercity.nl/",
+    "robots": [],
+    "returnForm": [],
+    "previewParameter": false
+  },
+  {
+    "url": "https://badkamercity.nl/pages/retour-aanmelden",
+    "status": 200,
+    "theme": {
+      "id": 195948839178,
+      "role": "main"
+    },
+    "headerReturnLinks": [
+      "/pages/retour-aanmelden"
+    ],
+    "canonical": "https://badkamercity.nl/pages/retour-aanmelden",
+    "robots": [],
+    "returnForm": [
+      {
+        "action": "/contact#ReturnForm-template--29447124025610__main",
+        "method": "post"
+      }
+    ],
+    "previewParameter": false
+  }
+]

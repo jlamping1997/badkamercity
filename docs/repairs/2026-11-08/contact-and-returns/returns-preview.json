@@ -1,0 +1,50 @@
+{
+  "method": "HTTP with public preview-cookie jars; no form submitted or JavaScript execution",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "theme_id": 196368531722,
+      "footer_count": 1,
+      "h1": [
+        "Alles voor jouw\nbadkamer."
+      ],
+      "homepage_order_number_optional": true
+    },
+    {
+      "path": "/pages/retour-aanmelden",
+      "status": 200,
+      "theme_id": 196368531722,
+      "footer_count": 1,
+      "h1": [
+        "Retour aanmelden"
+      ],
+      "policy_links_in_main": [
+        "/policies/refund-policy"
+      ],
+      "has_30_and_14": true,
+      "has_return_address": true,
+      "has_75_estimate": true,
+      "exchange_option": [
+        "Maak een keuze",
+        "Ik wil retourneren / mijn aankoop herroepen",
+        "Andere uitvoering (retour + nieuwe bestelling)",
+        "Er is iets mis met mijn bestelling"
+      ],
+      "order_required": false,
+      "reason_required": false,
+      "form_method": "post",
+      "form_action": "/contact#ReturnForm-template--29586107040010__main"
+    },
+    {
+      "path": "/pages/contact",
+      "status": 200,
+      "theme_id": 196368531722,
+      "footer_count": 1,
+      "h1": [
+        "Contact"
+      ],
+      "contact_main_present": true
+    }
+  ]
+}

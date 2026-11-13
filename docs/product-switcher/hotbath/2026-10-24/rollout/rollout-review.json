@@ -1,0 +1,3218 @@
+{
+  "schema": "hotbath-independent-rollout-review-v1",
+  "reviewed_at_utc": "2026-10-24T10:14:12.930155+00:00",
+  "verdict": "READY",
+  "scope": "Content of8bookconfiguration families,5numeric families,9literal-titleconfiguration families,2newbooksize families and colour-only fixedconfiguration fallbacks. Not final production theme/live-store signoff.",
+  "input_sha256": {
+    "config_groups.json": "dcc40fa9d2a1f2615df8e175b8d509e4d9c424590cd780506af464373e2d1dfa",
+    "config_mapping.json": "48d54a8c84641888a1b10b86c541283f32533a15e057116787cdfcc3b03b26ef",
+    "numeric_set_analysis.json": "dcf6cb4624580c1112f36625100ef4ccfb17c01717b249a003fdb7750ca9c234",
+    "colour_groups.json": "c8930466eacbd14b099640173f7d2f21bd0ecc12b3bd9c436539f3a2c845e72e",
+    "colour_provenance.json": "1ac196d2fcae5768cf07c89a2a3cfea10fcd4d998c202a199269921f87ad1a5e"
+  },
+  "counts": {
+    "config_groups": 8,
+    "config_records": 1536,
+    "numeric_groups": 5,
+    "numeric_records": 465,
+    "title_config_groups": 9,
+    "book_size_groups": 2,
+    "fixed_config_colour_only_groups": 25
+  },
+  "checks": {
+    "config_numeric_integrity_problems": [],
+    "config_numeric_records": 2001,
+    "numeric_fixed_remainders": {
+      "hotbath-ace-numeric-2weg-mengkraan-inbouw-doucheset": {
+        "hotbath ace inbouw doucheset 2 weg omstel mengkraan": 216
+      },
+      "hotbath-ace-numeric-2weg-thermostatische-inbouw-doucheset": {
+        "hotbath ace inbouw doucheset 2 weg omstel thermostatisch": 216
+      }
+    },
+    "new_title_config_remainders": {
+      "hotbath-title-ibs2-doucheset": {
+        "hotbath ibs 2 get together inbouw doucheset laddy vierkant": 72
+      },
+      "hotbath-title-ibs21-doucheset": {
+        "hotbath cobber ibs21 inbouw doucheset": 48
+      },
+      "hotbath-title-ibs22-doucheset": {
+        "hotbath cobber ibs22 inbouw doucheset": 48
+      },
+      "hotbath-title-ibs23-doucheset": {
+        "hotbath cobber ibs23 inbouw doucheset": 48
+      },
+      "hotbath-title-ibs24-doucheset": {
+        "hotbath cobber ibs24 inbouw doucheset": 48
+      },
+      "hotbath-title-ibs5-doucheset": {
+        "hotbath ibs 5 get together inbouw doucheset friendo": 71
+      },
+      "hotbath-title-ibs5a-doucheset": {
+        "hotbath ibs 5a get together inbouw doucheset friendo": 71
+      },
+      "hotbath-title-ibsx70-doucheset": {
+        "hotbath cobber x ibsx70 inbouw doucheset": 252
+      },
+      "hotbath-title-m538-doucheset": {
+        "hotbath cobber m538 stortdoucheset mengkraan": 36
+      }
+    },
+    "colour_only_fixed_config_remainders": {
+      "hotbath-colour-ibs25-fixed-config-standaard": {
+        "hotbath mate ibs25 inbouw doucheset high flow met 2 stopkranen": 2
+      },
+      "hotbath-colour-ibs26-fixed-config-standaard": {
+        "hotbath mate ibs26 inbouw doucheset high flow met 3 stopkranen water pillar hoofddouche": 2
+      },
+      "hotbath-colour-ibs34-fixed-config-standaard": {
+        "hotbath archie ibs34 inbouw doucheset mengkraan met beam hoofddouche": 4
+      },
+      "hotbath-colour-ibs40-fixed-config-standaard": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-2": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met plafondbuis": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-25": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met plafondbuis en gl106": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-257": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met plafondbuis gl106 en glijstang": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-27": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met plafondbuis en glijstang": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-5": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met gl106": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-57": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met gl106 en glijstang": 3
+      },
+      "hotbath-colour-ibs40-fixed-config-7": {
+        "hotbath gal ibs40 inbouw doucheset high flow met 2 stopkranen met glijstang": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-standaard": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-2": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met plafondbuis": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-25": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met plafondbuis en gl106": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-257": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met plafondbuis gl106 en glijstang": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-27": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met plafondbuis en glijstang": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-5": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met gl106": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-57": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met gl106 en glijstang": 3
+      },
+      "hotbath-colour-ibs40a-fixed-config-7": {
+        "hotbath gal ibs40a inbouw doucheset met 2 weg stop omstel met glijstang": 3
+      },
+      "hotbath-colour-ibs7-fixed-config-standaard": {
+        "hotbath ibs 7 get together inbouw doucheset met cascade waterval hoofddouche met staafhanddouche wandsteun met uitlaat": 2
+      },
+      "hotbath-colour-ibs7-fixed-config-1": {
+        "hotbath ibs 7 get together inbouw doucheset met cascade waterval hoofddouche met ronde 3 standen handdouche wandsteun met uitlaat": 2
+      },
+      "hotbath-colour-ibs7-fixed-config-17": {
+        "hotbath ibs 7 get together inbouw doucheset met cascade waterval hoofddouche met ronde 3 standen handdouche glijstang": 2
+      },
+      "hotbath-colour-ibs7-fixed-config-7": {
+        "hotbath ibs 7 get together inbouw doucheset met cascade waterval hoofddouche met staafhanddouche glijstang": 2
+      },
+      "hotbath-colour-ibs73-fixed-config-standaard": {
+        "hotbath archie ibs73 inbouw doucheset 10cm hoofddouche staafhanddouche": 4
+      },
+      "hotbath-colour-ibs73-fixed-config-1": {
+        "hotbath archie ibs73 inbouw doucheset 10cm hoofddouche ronde handdouche": 4
+      }
+    },
+    "book_family_remainders": {
+      "hotbath-book-cb105ext-keuzes": {
+        "hotbath cobber afbouwdeel inbouw wastafelkraan": 20
+      },
+      "hotbath-book-cb105text-keuzes": {
+        "hotbath cobber afbouwdeel voor 3 gats inbouw wastafelkraan": 20
+      }
+    },
+    "partial_title_count": 51,
+    "spom_catalogue_count": 697,
+    "fixed_config_only_colour_menus": true,
+    "plain_colour_remainders": {
+      "hotbath-colour-ar001ext": {
+        "hotbath afbouwdeel inbouw fonteinkraan": 4
+      },
+      "hotbath-colour-ar004": {
+        "hotbath archie ar004 wastafelkraan": 1,
+        "hotbath wastafelmengkraan met draaibare uitloop zonder waste": 3
+      },
+      "hotbath-colour-ar076": {
+        "hotbath vrijstaande baduitloop": 4
+      },
+      "hotbath-colour-ar132": {
+        "hotbath archie ar132 badafvoer": 4
+      },
+      "hotbath-colour-ar133": {
+        "hotbath archie ar133 badafvoer vulcombinatie": 4
+      },
+      "hotbath-colour-ar183": {
+        "hotbath archie ar183 badrandcombinatie met uitloop 316": 4
+      },
+      "hotbath-colour-ar185": {
+        "hotbath archie ar185 badrandcombinatie zonder uitloop": 4
+      },
+      "hotbath-colour-ar305": {
+        "hotbath glijstang 800mm met geintegreerde water inlaat": 2
+      },
+      "hotbath-colour-ar318": {
+        "hotbath archie ar318 glijstang 90cm met handdouche en doucheslang": 2
+      },
+      "hotbath-colour-ar354": {
+        "hotbath archie ar354 handdouche": 4
+      },
+      "hotbath-colour-ar430": {
+        "hotbath archie ar430 handdouche set met wateraansluiting": 4
+      },
+      "hotbath-colour-ar433": {
+        "hotbath archie ar433 handdouche set": 4
+      },
+      "hotbath-colour-ar440": {
+        "hotbath archie ar440 handdouche set met watertoevoer": 1,
+        "hotbath archie handdoucheset t b v inbouw": 3
+      },
+      "hotbath-colour-ar443": {
+        "hotbath archie ar443 handdouche set": 1,
+        "hotbath archie handdoucheset t b v opbouw": 3
+      },
+      "hotbath-colour-ar470": {
+        "hotbath archie ar470 hoofddouche met 3 standen": 4
+      },
+      "hotbath-colour-ar472": {
+        "hotbath archie ar472 hoofddouche beam plafondmontage": 4
+      },
+      "hotbath-colour-ar515": {
+        "hotbath archie ar515 wandsteun uitlaat": 4
+      },
+      "hotbath-colour-ar517": {
+        "hotbath archie ar517 wanduitlaat rond": 4
+      },
+      "hotbath-colour-ar7171ext": {
+        "hotbath archie ar7171ext afbouwdeel inbouw bad douche thermostaat 2 stopkranen zonder uitloop rvs316": 4
+      },
+      "hotbath-colour-ar7172ext": {
+        "hotbath archie ar7172ext afbouwdeel inbouw bad thermostaat 2 stopkranen met uitloop rvs316": 4
+      },
+      "hotbath-colour-ara05": {
+        "hotbath toiletrolhouder dubbel bbp": 1,
+        "hotbath toiletrolhouder dubbel bcp": 1,
+        "hotbath toiletrolhouder dubbel bgp": 1,
+        "hotbath toiletrolhouder dubbel ix": 1
+      },
+      "hotbath-colour-b005": {
+        "hotbath buddy b005 inbouw wastafelmengkraan met rechte uitloop": 2
+      },
+      "hotbath-colour-b005j": {
+        "hotbath buddy b005j inbouw wastafelkraan met gebogen uitloop": 1,
+        "hotbath buddy b005j inbouw wastafelmengkraan met gebogen uitloop uitloop": 1
+      },
+      "hotbath-colour-b006": {
+        "hotbath buddy b006 inbouw wastafelkraan met rechte uitloop en achterplaat": 2
+      },
+      "hotbath-colour-b006j": {
+        "hotbath buddy b006j inbouw wastafelmengkraan met gebogen uitloop en achterplaat": 2
+      },
+      "hotbath-colour-b097": {
+        "hotbath hb buddy stand uitloop recht 05 06": 2
+      },
+      "hotbath-colour-baa26": {
+        "hotbath hoekplanchet zoals baa22 volledig gekleurd": 8
+      },
+      "hotbath-colour-baa27": {
+        "hotbath wandplanchet voor in de douche": 7
+      },
+      "hotbath-colour-baa28": {
+        "hotbath haak voor wisser wandmontage": 8
+      },
+      "hotbath-colour-bow480": {
+        "hotbath spiegel in alu frame bow incl direct ind": 7
+      },
+      "hotbath-colour-bow510": {
+        "hotbath spiegel in alu frame bow incl direct ind": 7
+      },
+      "hotbath-colour-bss01": {
+        "hotbath opbouw stortdoucheset buddy": 3
+      },
+      "hotbath-colour-c7070ext": {
+        "hotbath afbouw douche thermostaat met 3 stopkranen": 2
+      },
+      "hotbath-colour-cb001ext": {
+        "hotbath afbouwdeel inbouw fonteinkraan": 10
+      },
+      "hotbath-colour-cb127ext": {
+        "hotbath cobber cb127ext afbouwdeel voor inbouw badmengkraan": 9
+      },
+      "hotbath-colour-cb173": {
+        "hotbath cobber cb173 4 gats badrandcombinatie": 9
+      },
+      "hotbath-colour-cb175": {
+        "hotbath cobber cb175 3 gats badrandcombinatie": 9
+      },
+      "hotbath-colour-cb176": {
+        "hotbath cobber cb176 vrijstaande baduitloop": 10
+      },
+      "hotbath-colour-cb178wext": {
+        "hotbath cobber cb178w wastafelmengkraan vloermontage": 9
+      },
+      "hotbath-colour-cb7171ext": {
+        "hotbath cobber cb7171ext afbouwdeel voor inbouwthermostaat met 2 stopkranen": 9
+      },
+      "hotbath-colour-cb7172ext": {
+        "hotbath cobber cb7172ext afbouwdeel voor inbouw badthermostaat met 2 stopkranen en uitloop": 9
+      },
+      "hotbath-colour-cb7502": {
+        "hotbath cobber cb7502 handdoucheset met uitlaat": 9
+      },
+      "hotbath-colour-cba08": {
+        "hotbath cobber cba08 handdoekring": 3
+      },
+      "hotbath-colour-cba13": {
+        "hotbath cobber cba13 hoekdraadkorf": 8
+      },
+      "hotbath-colour-cba14": {
+        "hotbath cobber cba14 hoekdraadkorf dubbel": 8
+      },
+      "hotbath-colour-cba21": {
+        "hotbath cobber cba21 inbouw zeepdispenser": 10
+      },
+      "hotbath-colour-con100": {
+        "hotbath more spiegel contour 100x100cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con120": {
+        "hotbath more spiegel contour 120x120cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con40": {
+        "hotbath more toiletspiegel contour 40x40cm indirecte verlichting": 6
+      },
+      "hotbath-colour-con480": {
+        "hotbath more spiegel contour 40x80cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con510": {
+        "hotbath more spiegel contour 50x100cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con60": {
+        "hotbath more spiegel contour 60x60cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con80": {
+        "hotbath more spiegel contour 80x80cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-con812": {
+        "hotbath more spiegel contour 120x80cm directe indirecte verlichting": 6
+      },
+      "hotbath-colour-cw172": {
+        "hotbath cobber work cw172 badrandcombinatie": 2
+      },
+      "hotbath-colour-cw174": {
+        "hotbath cobber work cw174 badrandcombinatie": 2
+      },
+      "hotbath-colour-cw7171ext": {
+        "hotbath afbouw bad douche thermostaat met 2 stopkranen incl handdouche": 1,
+        "hotbath cobber work cw7171ext afbouwdeel inbouw douchethermostaat met 2 stopkranen zonder uitloop": 1
+      },
+      "hotbath-colour-cw7172ext": {
+        "hotbath cobber work cw7172ext afbouwdeel inbouw douchethermostaat met 2 stopkranen met uitloop": 2
+      },
+      "hotbath-colour-cx127ext": {
+        "hotbath cobber x cx127ext afbouwdeel voor inbouw badmengkraan": 6
+      },
+      "hotbath-colour-cx178wext": {
+        "hotbath cobber x cx178w wastafelkraan vloermontage": 5,
+        "hotbath wastafelkraan vloermontage": 1
+      },
+      "hotbath-colour-cx187ext": {
+        "hotbath cobber x cx187ext afbouwdeel voor vrijstaande badkraan": 7
+      },
+      "hotbath-colour-cx7171ext": {
+        "hotbath cobber x cx7171ext afbouwdeel inbouwthermostaat 2 stopkranen": 6
+      },
+      "hotbath-colour-cx7172ext": {
+        "hotbath cobber x cx7172ext afbouwdeel inbouw douchethermostaat 2 stopkranen met uitloop": 6
+      },
+      "hotbath-colour-db01": {
+        "hotbath prullenbak rond met push to open deksel": 10
+      },
+      "hotbath-colour-gl177ext": {
+        "hotbath gal gl177ext afbouwdeel voor vrijstaande badmengkraan": 3,
+        "hotbath badmengkraan met draaibare uitloop vloermontage": 1
+      },
+      "hotbath-colour-gy176": {
+        "hotbath vrijstaande baduitloop": 4
+      },
+      "hotbath-colour-gy7009dext": {
+        "hotbath guy diamond gy7009dext afbouwdeel voor inbouwthermostaat 2 weg stop omstel": 4
+      },
+      "hotbath-colour-gy7009rext": {
+        "hotbath guy row gy7009rext afbouwdeel voor inbouwthermostaat 2 weg stop omstel": 4
+      },
+      "hotbath-colour-gy7067dext": {
+        "hotbath guy diamond gy7067dext afbouwdeel voor inbouwthermostaat met 2 stopkranen": 4
+      },
+      "hotbath-colour-gy7067rext": {
+        "hotbath guy row gy7067rext afbouwdeel voor inbouwthermostaat met 2 stopkranen": 4
+      },
+      "hotbath-colour-gy7070dext": {
+        "hotbath afbouwdeel g7070d douchethermostaat 3 stopkranen diamond": 4
+      },
+      "hotbath-colour-gy7070rext": {
+        "hotbath afbouwdeel gy7070r 3 stopkranen row": 4
+      },
+      "hotbath-colour-gy7071dext": {
+        "hotbath guy diamond gy7071dext afbouwdeel voor inbouwthermostaat met 2 stopkranen": 4
+      },
+      "hotbath-colour-gy7071rext": {
+        "hotbath guy row gy7071rext afbouwdeel voor inbouwthermostaat met 2 stopkranen": 4
+      },
+      "hotbath-colour-gy7072dext": {
+        "hotbath guy diamond gy7072dext afbouwdeel voor inbouw badthermostaat met 2 stopkranen met uitloop": 4
+      },
+      "hotbath-colour-gy7072rext": {
+        "hotbath guy row gy7072rext afbouwdeel voor inbouw badthermostaat met 2 stopkranen met uitloop": 4
+      },
+      "hotbath-colour-khds4ext": {
+        "hotbath afbouwdeel bidet mengkraan met knijp handdouche": 5
+      },
+      "hotbath-colour-khds5ext": {
+        "hotbath afbouwdeel bidet mengkraan met knijp handdouche": 4
+      },
+      "hotbath-colour-l005j": {
+        "hotbath laddy l005j inbouw wastafelmengkraan met gebogen uitloop": 1,
+        "hotbath laddy l005j inbouw wastafelkraan gebogen uitloop": 1
+      },
+      "hotbath-colour-l006j": {
+        "hotbath laddy l006j inbouw wastafelmengkraan met gebogen uitloop op achterplaat": 2
+      },
+      "hotbath-colour-led01": {
+        "hotbath led hanglamp pendellampledgends 01 sphere": 7
+      },
+      "hotbath-colour-led02": {
+        "hotbath led hanglamp pendellampledgends 02 tube": 7
+      },
+      "hotbath-colour-led03": {
+        "hotbath led hanglamp pendellamplegends 03 flat": 7
+      },
+      "hotbath-colour-led04": {
+        "hotbath led hanglamp pendellamplegends 04 vintage": 7
+      },
+      "hotbath-colour-led05": {
+        "hotbath led plafond lamp ledgends05 globe 50cm": 7
+      },
+      "hotbath-colour-m021": {
+        "hotbath textiel design doucheslang 150cm": 8
+      },
+      "hotbath-colour-m317": {
+        "hotbath cobber m317 glijstangset 90cm staafhanddouche": 2
+      },
+      "hotbath-colour-m318": {
+        "hotbath cobber m318 glijstangset 90cm ronde handdouche": 2
+      },
+      "hotbath-colour-m378": {
+        "hotbath handdouche met push button 3 standen volledig in kleur": 6
+      },
+      "hotbath-colour-m447": {
+        "hotbath cobber m447 handdouche set": 9,
+        "hotbath handdoucheset incl m354 staafdouche t b v opbouwkraan": 1
+      },
+      "hotbath-colour-m448": {
+        "hotbath cobber m448 handdoucheset": 9,
+        "hotbath handdoucheset incl m355 handdouche t b v opbouwkraan": 1
+      },
+      "hotbath-colour-mhf021": {
+        "hotbath mate mhf021 afdekset high flow thermostaat met 1 stopkraan": 1,
+        "hotbath mate afdekset mhrq1 high flow thermostaat met 1 stopkraan": 1
+      },
+      "hotbath-colour-mhrq4": {
+        "hotbath mate mhrq4 high flow thermostaat met 4 stopkranen": 2
+      },
+      "hotbath-colour-mhrq5": {
+        "hotbath mate mhrq5 high flow thermostaat met 5 stopkranen": 2
+      },
+      "hotbath-colour-p060": {
+        "hotbath pal p060 baddoorvoerset": 2
+      },
+      "hotbath-colour-p708": {
+        "hotbath p708 niet afsluitbare plug": 12
+      },
+      "hotbath-colour-p710": {
+        "hotbath p710 klikplug": 11,
+        "hotbath klikplug": 1
+      },
+      "hotbath-colour-pb7071": {
+        "hotbath gal inbouw thermostaat met 2 stopkranen en handdouche": 2
+      },
+      "hotbath-colour-pb7071ext": {
+        "hotbath gal pb7071ext afbouwdeel inbouwthermostaat met 2 pushbuttons": 2,
+        "hotbath gal afbouwdeel inbouwthermostaat met 2 pushbuttons": 1
+      },
+      "hotbath-colour-ph60b": {
+        "hotbath inbouw nis borstelgarnituur 16x60x12 6 cm": 7
+      },
+      "hotbath-colour-q095/15": {
+        "hotbath hb standaard uitloop 15cm tbv q005 q006cr": 1,
+        "hotbath hb standaard uitloop 15cm tbv q005 q006gn": 1
+      },
+      "hotbath-colour-q095/25": {
+        "hotbath hb uitloop 25 cm tbv q005 q006cr": 1,
+        "hotbath hb uitloop 25 cm tbv q005 q006gn": 1
+      },
+      "hotbath-colour-sds3": {
+        "hotbath thermostatische stortdoucheset chap": 2
+      },
+      "hotbath-colour-sds3-config-1": {
+        "hotbath thermostatische stortdoucheset chap met m375 handdouche": 2
+      },
+      "hotbath-colour-sds3-config-14": {
+        "hotbath thermostatische stortdoucheset chap met m375 handdouche en 25cm hoofddouche": 2
+      },
+      "hotbath-colour-sds3-config-15": {
+        "hotbath thermostatische stortdoucheset chap met m375 handdouche en 30cm hoofddouche": 2
+      },
+      "hotbath-colour-sds3-config-4": {
+        "hotbath thermostatische stortdoucheset chap met 25cm hoofddouche": 2
+      },
+      "hotbath-colour-sds3-config-5": {
+        "hotbath thermostatische stortdoucheset chap met 30cm hoofddouche": 2
+      },
+      "hotbath-colour-sds32-config-4": {
+        "hotbath archie sds32 opbouw regendouche 30cm hoofdouche 15mm": 4
+      },
+      "hotbath-colour-sds32-config-5": {
+        "hotbath archie sds32 opbouw regendouche 20cm hoofdouche 8mm": 4
+      },
+      "hotbath-colour-sds32-config-6": {
+        "hotbath archie sds32 opbouw regendouche 30cm hoofdouche 8mm": 4
+      }
+    },
+    "plain_colour_manual_reviews": {
+      "hotbath-colour-ar004": {
+        "rest_signatures": {
+          "hotbath archie ar004 wastafelkraan": 1,
+          "hotbath wastafelmengkraan met draaibare uitloop zonder waste": 3
+        },
+        "verdict": "PASS",
+        "reason": "Exact AR004 model; compatible omission of rotating spout/without waste in shorter title."
+      },
+      "hotbath-colour-ar440": {
+        "rest_signatures": {
+          "hotbath archie ar440 handdouche set met watertoevoer": 1,
+          "hotbath archie handdoucheset t b v inbouw": 3
+        },
+        "verdict": "PASS",
+        "reason": "Exact AR440 model; inbouw handshower supply function compatible."
+      },
+      "hotbath-colour-ar443": {
+        "rest_signatures": {
+          "hotbath archie ar443 handdouche set": 1,
+          "hotbath archie handdoucheset t b v opbouw": 3
+        },
+        "verdict": "PASS",
+        "reason": "Exact AR443 model; opbouw function compatible."
+      },
+      "hotbath-colour-ara05": {
+        "rest_signatures": {
+          "hotbath toiletrolhouder dubbel bbp": 1,
+          "hotbath toiletrolhouder dubbel bcp": 1,
+          "hotbath toiletrolhouder dubbel bgp": 1,
+          "hotbath toiletrolhouder dubbel ix": 1
+        },
+        "verdict": "PASS",
+        "reason": "Exact ARA05; literal finishcodes BBP/BCP/BGP/IX are finish values, not new models. Source book PDF412."
+      },
+      "hotbath-colour-b005j": {
+        "rest_signatures": {
+          "hotbath buddy b005j inbouw wastafelkraan met gebogen uitloop": 1,
+          "hotbath buddy b005j inbouw wastafelmengkraan met gebogen uitloop uitloop": 1
+        },
+        "verdict": "PASS",
+        "reason": "wastafelkraan/mengkraan synonyms and repeated uitloop; same B005J model."
+      },
+      "hotbath-colour-cw7171ext": {
+        "rest_signatures": {
+          "hotbath afbouw bad douche thermostaat met 2 stopkranen incl handdouche": 1,
+          "hotbath cobber work cw7171ext afbouwdeel inbouw douchethermostaat met 2 stopkranen zonder uitloop": 1
+        },
+        "verdict": "PASS",
+        "reason": "PDF236 confirms trim without spout but including integrated handshower. Titles are compatible omissions."
+      },
+      "hotbath-colour-cx178wext": {
+        "rest_signatures": {
+          "hotbath cobber x cx178w wastafelkraan vloermontage": 5,
+          "hotbath wastafelkraan vloermontage": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same exact current model; code present versus omitted in title."
+      },
+      "hotbath-colour-gl177ext": {
+        "rest_signatures": {
+          "hotbath gal gl177ext afbouwdeel voor vrijstaande badmengkraan": 3,
+          "hotbath badmengkraan met draaibare uitloop vloermontage": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same exact current model; floor-standing bathmixer versus title with rotating-spout detail; compatible omission."
+      },
+      "hotbath-colour-l005j": {
+        "rest_signatures": {
+          "hotbath laddy l005j inbouw wastafelmengkraan met gebogen uitloop": 1,
+          "hotbath laddy l005j inbouw wastafelkraan gebogen uitloop": 1
+        },
+        "verdict": "PASS",
+        "reason": "wastafelkraan/mengkraan synonyms; same exact L005J."
+      },
+      "hotbath-colour-m447": {
+        "rest_signatures": {
+          "hotbath cobber m447 handdouche set": 9,
+          "hotbath handdoucheset incl m354 staafdouche t b v opbouwkraan": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same M447 handshower set; M354 staff detail omitted in other finish titles."
+      },
+      "hotbath-colour-m448": {
+        "rest_signatures": {
+          "hotbath cobber m448 handdoucheset": 9,
+          "hotbath handdoucheset incl m355 handdouche t b v opbouwkraan": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same M448 handshower set; M355 detail omitted in other finish titles."
+      },
+      "hotbath-colour-mhf021": {
+        "rest_signatures": {
+          "hotbath mate mhf021 afdekset high flow thermostaat met 1 stopkraan": 1,
+          "hotbath mate afdekset mhrq1 high flow thermostaat met 1 stopkraan": 1
+        },
+        "verdict": "PASS",
+        "reason": "Both current SKUs are MHF021 trim; MHRQ1 is full set alias in GN title. Indexed manufacturer2024 catalog pairs MHRQ1 with MHF001+MHF021. Menu offers colour only; no claim that inwall is included."
+      },
+      "hotbath-colour-p710": {
+        "rest_signatures": {
+          "hotbath p710 klikplug": 11,
+          "hotbath klikplug": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same exact P710 clickwaste; code omitted in one title."
+      },
+      "hotbath-colour-pb7071ext": {
+        "rest_signatures": {
+          "hotbath gal pb7071ext afbouwdeel inbouwthermostaat met 2 pushbuttons": 2,
+          "hotbath gal afbouwdeel inbouwthermostaat met 2 pushbuttons": 1
+        },
+        "verdict": "PASS",
+        "reason": "Same exact trim with2pushbuttons; code omitted in one title."
+      },
+      "hotbath-colour-q095/15": {
+        "rest_signatures": {
+          "hotbath hb standaard uitloop 15cm tbv q005 q006cr": 1,
+          "hotbath hb standaard uitloop 15cm tbv q005 q006gn": 1
+        },
+        "verdict": "PASS",
+        "reason": "Both exact Q095/15 model; terminal Q005/Q006 finish code matches product finish. Not a size/model choice."
+      },
+      "hotbath-colour-q095/25": {
+        "rest_signatures": {
+          "hotbath hb uitloop 25 cm tbv q005 q006cr": 1,
+          "hotbath hb uitloop 25 cm tbv q005 q006gn": 1
+        },
+        "verdict": "PASS",
+        "reason": "Both exact Q095/25 model; terminal Q005/Q006 finish code matches product finish. Not a size/model choice."
+      }
+    },
+    "colour_output_source_conflicts": []
+  },
+  "blockers": [],
+  "cases": [
+    {
+      "sku": "IBS70CR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond model",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        202
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS7009CR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond model",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        201
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS20CR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø10 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        204
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS20ACR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø10 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        205
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS1CR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø10 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        288
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS1ACR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø10 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        289
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS12CR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø13 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        290
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS12ACR1357",
+      "verdict": "PASS",
+      "options": {
+        "kleur": "Chroom",
+        "breedte_diameter_hoofddouche": "30 cm",
+        "type_bevestiging_hoofddouche": "Plafondbuis 30 cm",
+        "type_handdouche": "Rond, 3 standen (Ø13 cm)",
+        "bevestiging_handdouche": "Glijstang"
+      },
+      "pdf_pages": [
+        291
+      ],
+      "basis": "Book exact option1+3+5+7; literal title corroboration. Control family kept separate."
+    },
+    {
+      "sku": "IBS12CR / IBS12CR1",
+      "verdict": "PASS",
+      "pdf_pages": [
+        290,
+        365,
+        366
+      ],
+      "basis": "Visual: standard M360 round ABS diameter13cm; option1 M376 round3-jet diameter13cm."
+    },
+    {
+      "sku": "IBS-ACE1001 / IBS-ACE2001",
+      "verdict": "PASS",
+      "pdf_pages": [
+        309,
+        310
+      ],
+      "basis": "Literal title separates thermostatic/mixer. Book corroborates control components; numeric set-code scheme not claimed."
+    },
+    {
+      "sku": "IBS-ACE3001 / COBBER4001 / COBBER3001-3002",
+      "verdict": "PASS",
+      "pdf_pages": [],
+      "basis": "Literal title retains 3-wayVelvet / mixerBeam / staff-round slidebarset as separate identities or options."
+    },
+    {
+      "sku": "CB105EXT18CR / CB105EXT25CR / CB105TEXT18CR / CB105TEXT25CR",
+      "verdict": "PASS",
+      "pdf_pages": [
+        172,
+        173
+      ],
+      "basis": "Book and literal titles identify18/25cm spout; EXT versus TEXT kept separate."
+    }
+  ],
+  "explicit_exclusions": [
+    {
+      "sku": "IBS20AGN357",
+      "findings": [
+        "TITLE_OVERHEAD_DIAMETER_CONFLICT"
+      ]
+    },
+    {
+      "sku": "IBS20BBP",
+      "findings": [
+        "TITLE_COLOR_MISSING",
+        "TITLE_EMBEDDED_COMPONENT_COLOR_CONFLICT",
+        "TITLE_CONTROL_CONFLICT",
+        "TITLE_OVERHEAD_DIAMETER_MISSING",
+        "TITLE_OVERHEAD_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MISSING"
+      ]
+    },
+    {
+      "sku": "IBS20BCP",
+      "findings": [
+        "TITLE_COLOR_MISSING",
+        "TITLE_CONTROL_CONFLICT",
+        "TITLE_OVERHEAD_DIAMETER_MISSING",
+        "TITLE_OVERHEAD_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MOUNT_MISSING",
+        "TITLE_HANDSHOWER_MISSING"
+      ]
+    }
+  ],
+  "source_pdf": {
+    "path": "upload/Hotbath%20Catalogus%20Editie%2018.pdf",
+    "pages": 504,
+    "read_pages": [
+      172,
+      173,
+      201,
+      202,
+      204,
+      205,
+      288,
+      289,
+      290,
+      291,
+      309,
+      310,
+      365,
+      366
+    ],
+    "visually_read_pages": [
+      290,
+      365,
+      366
+    ]
+  },
+  "limits": [
+    "51shortIBS20/20A titles only partially corroborate options; remaining values are explicit book-family choices. Contradictions are held.",
+    "Numeric setmanufacturer code scheme not found inEdition18; options from literal title only. No price,stock,availability or missingproduct inference.",
+    "25fixedconfigfallbacks display colour only. They do not claim verified fullconfiguration menus.",
+    "PDF365M360 heading/drawing showsABSround130mm; price-tableM350footer appears copied. Component list,heading,drawing used together."
+  ],
+  "held_skus_checked_absent": [
+    "IBS20AGN357",
+    "IBS20BBP",
+    "IBS20BCP",
+    "IBS33BGP4",
+    "SDS32BGP"
+  ],
+  "numeric_builder_residual_gate": {
+    "families": 5,
+    "all_fixed_title_signature_counts_one": true,
+    "independent_ace432_check": "PASS"
+  },
+  "external_primary_source": {
+    "url": "https://www.hotbath.it/documents/WOCateg/158/Hotbath_catalogue_2024.pdf",
+    "retrieval": "Indexed manufacturer catalogue excerpt returned by search; direct PDF open gave404.",
+    "finding": "MHRQ1 paired with inwall MHF001 and trim MHF021. Used only as corroboration for compatible GN title alias; existing exact MHF021 current SKUs and trim wording remain identity basis."
+  },
+  "final_union_review": {
+    "verdict": "READY",
+    "groups": 605,
+    "records": 7165,
+    "unique_handles": 7165,
+    "original_groups_present": 433,
+    "original_records": 3383,
+    "existing_groups_augmented": 53,
+    "authorized_additive_option_exceptions": [
+      {
+        "sku": "AR105EXT18IX",
+        "group_id": "hotbath-archie-ar105ext-inbouw-wastafelmengkraan-rvs316",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": 69,
+        "model_claim": "Book exact model and finish corroborated"
+      },
+      {
+        "sku": "AR105EXT25IX",
+        "group_id": "hotbath-archie-ar105ext-inbouw-wastafelmengkraan-rvs316",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": 69,
+        "model_claim": "Book exact model and finish corroborated"
+      },
+      {
+        "sku": "ARHF011IX",
+        "group_id": "hotbath-archie-arhf-inbouwthermostaat-afbouwdeel",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": 88,
+        "model_claim": "Book exact model and finish corroborated"
+      },
+      {
+        "sku": "ARHF012IX",
+        "group_id": "hotbath-archie-arhf-inbouwthermostaat-afbouwdeel",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": 88,
+        "model_claim": "Book exact model and finish corroborated"
+      },
+      {
+        "sku": "ARHF013IX",
+        "group_id": "hotbath-archie-arhf-inbouwthermostaat-afbouwdeel",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": 88,
+        "model_claim": "Book exact model and finish corroborated"
+      },
+      {
+        "sku": "ARHF014IX",
+        "group_id": "hotbath-archie-arhf-inbouwthermostaat-afbouwdeel",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": null,
+        "model_claim": "Existing historical record retained; no present book-model claim"
+      },
+      {
+        "sku": "ARHF015IX",
+        "group_id": "hotbath-archie-arhf-inbouwthermostaat-afbouwdeel",
+        "only_options_kleur_added": true,
+        "old_colour_absent": true,
+        "source_sku_title_exact": true,
+        "book_finish_pdf_page": 63,
+        "book_model_pdf_page": null,
+        "model_claim": "Existing historical record retained; no present book-model claim"
+      }
+    ],
+    "pilot_group_count": 4,
+    "pilot_records": 395,
+    "pilot_checks": [
+      {
+        "group_id": "hotbath-more-handdoekhaak-verouderd-messing-baa03ab",
+        "records": 12,
+        "changed_or_missing_records": [],
+        "lost_choice_keys_or_values": []
+      },
+      {
+        "group_id": "hotbath-more-baa09-zeepdispenser-wandmodel",
+        "records": 12,
+        "changed_or_missing_records": [],
+        "lost_choice_keys_or_values": []
+      },
+      {
+        "group_id": "hotbath-more-baa10-zeepdispenser-vrijstaand",
+        "records": 12,
+        "changed_or_missing_records": [],
+        "lost_choice_keys_or_values": []
+      },
+      {
+        "group_id": "hotbath-cobber-ibs70-inbouw-doucheset",
+        "records": 359,
+        "changed_or_missing_records": [],
+        "lost_choice_keys_or_values": []
+      }
+    ],
+    "catalogue_products": 8237,
+    "spom_excluded": 697,
+    "test_excluded": 2,
+    "remaining_eligible_uncovered": 373,
+    "remaining_includes_held_five": true,
+    "remaining_excluding_held_five": 368,
+    "legacy_metafield_nonempty": 0,
+    "legacy_rows_scanned": 8237,
+    "issues": [],
+    "input_sha256": {
+      "groups-input.json": "469224315eca7232e5c38a7fe8f871182ab09245c15f7d554daac80d935ff3b6",
+      "colour_option_additions.json": "d43bf57e2c320c3e524edb8f559e740155716317a50be9e0e2871abc9eb7cc5e",
+      "legacy-groups.json": "451d3fd536e34db0162c5a646b92a225de07c529d97fc2d85efba072e6a9caa3",
+      "pilot-groups-input.json": "16fc5798e2c075963ea4105a95859bf3fac236bcc393393de445cb332f22c88c"
+    },
+    "existing_groups_augmented_since_prior_pilot": 52,
+    "notes": [
+      "53 original baseline groups gain products, including BAA03 already expanded in prior pilot;52 additional augmentations since pilot.",
+      "The supplied pilot-groups-input.json contains4 groups /395 records; all exact preserved.",
+      "373eligible uncovered includes5held conflicts;368other eligible products need classification, not automatically incomplete or ready."
+    ]
+  },
+  "supplemental_review": {
+    "verdict": "READY",
+    "supplemental_groups": 13,
+    "supplemental_record_count": 273,
+    "gent_records": 5,
+    "rails_records": 229,
+    "colour_supplemental_records": 39,
+    "group_counts": {
+      "hotbath-gent-gt003-wastafelmengkraan": 3,
+      "hotbath-gent-gt023-wastafelmengkraan": 2,
+      "hotbath-rails-rarh-sets": 12,
+      "hotbath-rails-rarv-sets": 22,
+      "hotbath-rails-ras-sets": 78,
+      "hotbath-rails-ras8050-sets": 8,
+      "hotbath-rails-rass-sets": 80,
+      "hotbath-rails-rass8050-sets": 7,
+      "hotbath-rails-rasv-sets": 22,
+      "hotbath-colour-raar": 9,
+      "hotbath-colour-raas": 9,
+      "hotbath-colour-swirou": 6,
+      "hotbath-archie-sds32-opbouw-doucheset-keuzes": 15
+    },
+    "fixed_title_remainders": {
+      "hotbath-gent-gt003-wastafelmengkraan": {
+        "hotbath wastafelmengkraan": 3
+      },
+      "hotbath-gent-gt023-wastafelmengkraan": {
+        "hotbath wastafelmengkraan 2 gats met draaibare uitloop": 2
+      },
+      "hotbath-rails-rarh-sets": {
+        "hotbath handdoekwarmerset round": 12
+      },
+      "hotbath-rails-rarv-sets": {
+        "hotbath handdoekwarmerset round": 22
+      },
+      "hotbath-rails-ras-sets": {
+        "hotbath handdoekwarmerset square": 78
+      },
+      "hotbath-rails-ras8050-sets": {
+        "hotbath set van 2 rails ras80 square 80 en ras50": 8
+      },
+      "hotbath-rails-rass-sets": {
+        "hotbath handdoekwarmerset soft square": 80
+      },
+      "hotbath-rails-rass8050-sets": {
+        "hotbath set van 2 rails rass80 soft square 80 en": 7
+      },
+      "hotbath-rails-rasv-sets": {
+        "hotbath handdoekwarmerset square": 22
+      },
+      "hotbath-colour-raar": {
+        "hotbath ronde haak voor rarv135 rarvm135 rails": 9
+      },
+      "hotbath-colour-raas": {
+        "hotbath rechthoekige haak voor rasv135 rails": 9
+      },
+      "hotbath-colour-swirou": {
+        "hotbath temperatuur timer schakelaar rond tbv rails afbouwset": 6
+      },
+      "hotbath-archie-sds32-opbouw-doucheset-keuzes": {
+        "hotbath archie sds32 opbouw regendouche": 15
+      }
+    },
+    "gent_source_checks": [
+      {
+        "sku": "GT003IX",
+        "height": "Laag",
+        "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+      },
+      {
+        "sku": "GT003MIX",
+        "height": "Medium",
+        "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+      },
+      {
+        "sku": "GT003HIX",
+        "height": "Hoog",
+        "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+      },
+      {
+        "sku": "GT023IX",
+        "height": "Laag",
+        "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+      },
+      {
+        "sku": "GT023HIX",
+        "height": "Hoog",
+        "source": "Exact book member height; IX finish only; without waste / two-hole family remains separate."
+      }
+    ],
+    "rails_source_checks": [
+      {
+        "sku": "RARH50-1MBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-2MBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-3MBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-1PBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-2PBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-3PBP",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-1WH",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-2WH",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-3WH",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-1IX",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-2IX",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARH50-3IX",
+        "family": "RARH",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-1CR",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2CR",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2BGP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-1BCP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2BCP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-3BCP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-1BBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2BBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-3BBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-1GN",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2GN",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-1MBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-2MBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-3MBP",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-1WH",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-2WH",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-3WH",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-1IX",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-2IX",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-3IX",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RARV135-1TB",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RARV135-2TB",
+        "family": "RARV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "round",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1CR",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2CR",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3CR",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4CR",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1CR",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2CR",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3CR",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4CR",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1BGP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2BGP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3BGP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4BGP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1BGP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2BGP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3BGP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4BGP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1BCP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2BCP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3BCP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4BCP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1BCP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2BCP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3BCP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4BCP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1BBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2BBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3BBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4BBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1BBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2BBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3BBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4BBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1GN",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2GN",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3GN",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4GN",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1GN",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2GN",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3GN",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4GN",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-1MBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-2MBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-3MBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-4MBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-1MBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-2MBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-3MBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-4MBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-1PBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-2PBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-3PBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-4PBP",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-1PBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-2PBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-3PBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-4PBP",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-2WH",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-4WH",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-1WH",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-2WH",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-3WH",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-4WH",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-1IX",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-2IX",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-3IX",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-4IX",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-1IX",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-2IX",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-3IX",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS80-4IX",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RAS50-1TB",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-2TB",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-3TB",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS50-4TB",
+        "family": "RAS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-1TB",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-2TB",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-3TB",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS80-4TB",
+        "family": "RAS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RAS8050BGP",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050BCP",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050GN",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050MBP",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050PBP",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050WH",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050IX",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RAS8050TB",
+        "family": "RAS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS50-1CR",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2CR",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3CR",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4CR",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1CR",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2CR",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3CR",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4CR",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-1BGP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2BGP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3BGP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4BGP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1BGP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2BGP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3BGP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4BGP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-1BCP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2BCP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3BCP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4BCP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1BCP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2BCP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3BCP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4BCP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-1BBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2BBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3BBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4BBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1BBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2BBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3BBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4BBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-1GN",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2GN",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3GN",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4GN",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1GN",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2GN",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3GN",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4GN",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-1MBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-2MBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-3MBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-4MBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-1MBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-2MBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-3MBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-4MBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-1PBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-2PBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-3PBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-4PBP",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-1PBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-2PBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-3PBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-4PBP",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-1WH",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-2WH",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-3WH",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-4WH",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-1WH",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-2WH",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-3WH",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-4WH",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-1IX",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-2IX",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-3IX",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-4IX",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-1IX",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-2IX",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-3IX",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS80-4IX",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASS50-1TB",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-2TB",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-3TB",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS50-4TB",
+        "family": "RASS",
+        "length_cm": "50",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-1TB",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 1,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-2TB",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 2,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-3TB",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 3,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS80-4TB",
+        "family": "RASS",
+        "length_cm": "80",
+        "count": 4,
+        "shape": "soft square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASS8050CR",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050BGP",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050BCP",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050MBP",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050PBP",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050WH",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASS8050IX",
+        "family": "RASS8050",
+        "length_cm": "80+50",
+        "count": 2,
+        "control": "Separate switch; exact book combination; no model-digit inference"
+      },
+      {
+        "sku": "RASV135-1CR",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-3CR",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-1BGP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-2BGP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-3BGP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-1BCP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-3BCP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-1BBP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-2BBP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-1GN",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-2GN",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-1MBP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-2MBP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-3MBP",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-1WH",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-2WH",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-3WH",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-1IX",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-2IX",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-3IX",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 3,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "legacy exact words"
+      },
+      {
+        "sku": "RASV135-1TB",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 1,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      },
+      {
+        "sku": "RASV135-2TB",
+        "family": "RASV",
+        "length_cm": "135",
+        "count": 2,
+        "shape": "square",
+        "control": "Separate switch; same trim/set class",
+        "title_style": "modern exact words"
+      }
+    ],
+    "authorized_removed_group_ids": [
+      "hotbath-colour-sds32-config-4",
+      "hotbath-colour-sds32-config-5",
+      "hotbath-colour-sds32-config-6"
+    ],
+    "removed_group_records": 12,
+    "replacement_checks": [
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-rvs-geborsteld",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-koper-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-gunmetal-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-15mm-staafhanddouche-geborsteld-messing-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-koper-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-rvs-geborsteld",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-messing-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-20cm-hoofddouche-8mm-staafhanddouche-geborsteld-gunmetal-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-messing-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-rvs-geborsteld",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-koper-pvd",
+        "old_identity_and_options_preserved": true
+      },
+      {
+        "handle": "hotbath-archie-sds32-opbouw-regendoucheset-30cm-hoofddouche-8mm-staafhanddouche-geborsteld-gunmetal-pvd",
+        "old_identity_and_options_preserved": true
+      }
+    ],
+    "previous_records_retained": 6904,
+    "new_handles": 261,
+    "final_groups": 605,
+    "final_unique_handles": 7165,
+    "source_book_pages_read": [
+      28,
+      29,
+      30,
+      76,
+      464,
+      466,
+      467,
+      469,
+      471,
+      473,
+      474,
+      477,
+      479,
+      480
+    ],
+    "issues": [],
+    "source_limitations": [
+      "Two exact Rails title styles are semantically normalized only after validating shape,length,count and separate control class.",
+      "Book has English integrated-switch wording on RARV135 while Dutch heading and separate SWIROU component confirm separate switch; RARVM remains excluded.",
+      "RASV135-3 heading/component list used rather than erroneous RASS80-3 price table; RAAR heading/hook used rather than erroneous RAAS price row.",
+      "Rails book set price includes inwall but ordering says request separately; menu does not add inwall nor change existing prices/titles.",
+      "SDS32 uses literal title diameter/thickness only; three special round-handshower titles remain outside.",
+      "Current book/model identity does not establish stock or present availability."
+    ],
+    "input_sha256": {
+      "supplemental_groups.json": "f6b2b6cce31b98253b4bba6d15f391aebee9a31cf0e044e3971a2ba566f1096f",
+      "colour_supplemental.json": "171e9ee3fcd81c54a23736f839b47b65f2f01bcb09deba0ca41c883ce427601c",
+      "groups-input.json": "469224315eca7232e5c38a7fe8f871182ab09245c15f7d554daac80d935ff3b6"
+    }
+  },
+  "final_scope": "Final605groups/7165unique handles, including supplemental Gent/Rails/hooks/controller/SDS32 source review. All433baseline groups preserved,7additive colour exceptions only. Content signoff, not shop-wide launch approval."
+}

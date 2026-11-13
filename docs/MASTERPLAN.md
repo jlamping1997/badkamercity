@@ -1,5 +1,7 @@
 # BadkamerCity Masterplan
 
+> **Historisch plan van september 2026.** Voor huidige bronversie, opdracht en volgende stap gelden [de actuele werkstatus](LIVE_STATUS_AND_NEXT_STEPS.md) en [het onderzoeksplan van 28 oktober](architecture/README.md). Oude theme-ID’s en implementation-blocked-status hieronder zijn geen nieuwe productieverificatie.
+
 > **Versie 0.26.3 - ACTIVE FOR DISCOVERY - IMPLEMENTATION BLOCKED.** Dagafsluiting: uitsluitend MASTERPLAN en RUNTIME_SMOKE_PILOT worden met expliciete toestemming als documentatietussenstand op GitHub opgeslagen. BC-TECH-007 blijft REVIEW; tests zijn niet geslaagd. Volgende sessie zijn een echte bezoekerspreviewlink en herstel van de Shopify-toegang nodig. Beide oorspronkelijke BLOCKED-sets, de niet-uitgevoerde previewcases en onvolledige cleanup blijven ongewijzigd.
 
 Markeringen in dit document:

@@ -1,0 +1,272 @@
+.bc-card-specs--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid:has(.bc-standard-card, .bc-filter-card, .bc-search-card),
+  .template-search #ProductGridContainer #product-grid > .product-grid:has(.bc-filter-card) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid > .grid__item,
+  .template-search #ProductGridContainer #product-grid > .product-grid > .grid__item {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-standard-card, .bc-filter-card, .bc-search-card__link) {
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #e1e7ed;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    overflow: visible;
+    color: #0f2740;
+    transform: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card, .bc-search-card__link),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card > .card {
+    display: grid;
+    grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    height: auto;
+    min-width: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card > .card {
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card > .card::after {
+    display: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card__media, .bc-search-card__media-wrapper),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__inner {
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    overflow: hidden;
+    align-self: start;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-search-card__media,
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__media {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__inner::before {
+    padding-bottom: 100%;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-filter-card__media img,
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-search-card__image,
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: normal;
+    transform: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card__info, .bc-search-card__content),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card > .card__content {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    min-width: 0;
+    padding: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card > .card__content > .card__information {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    padding: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card__vendor, .bc-search-card__vendor, .bc-card-vendor) {
+    margin: 0;
+    color: #607184;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: .04em;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card__title, .bc-search-card__title, .bc-search-card__title-wrap),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__heading {
+    display: block;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    color: #0f2740;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.4;
+    letter-spacing: 0;
+    overflow: visible;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    -webkit-line-clamp: unset;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-specs:not([hidden]) {
+    display: block;
+    min-height: 0;
+    margin: 2px 0;
+    color: #526575;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-specs > div {
+    position: relative;
+    display: block;
+    padding-inline-start: 12px;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-specs > div::before {
+    position: absolute;
+    inset-inline-start: 0;
+    content: "\2022";
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-specs :is(dt, dd) {
+    display: inline;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-specs dd {
+    display: inline-block;
+    max-width: 100%;
+    margin-inline-start: 4px;
+    vertical-align: top;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-color {
+    min-height: 0;
+    margin: 0;
+    color: #607184;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-card-colors, .bc-card-actions, .bc-card-view, .bc-jeeo-colors, .quick-add),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card__inner > .card__content {
+    display: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-buy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+    margin-top: 4px;
+    padding: 0;
+    min-width: 0;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-delivery {
+    min-height: 0;
+    margin: 4px 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-buy .bc-card-delivery {
+    order: -1;
+    flex-basis: 100%;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card__price, .bc-search-card__price-wrap),
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-standard-card .card-information > .price {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #0f2740;
+    font-size: 22px;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-search-card__price .price-item--sale,
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-search-card__price:not(.price--on-sale) .price-item--regular {
+    color: #0f2740;
+    font-size: 22px;
+    font-weight: 750;
+    line-height: 1.25;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-tax {
+    margin: 0;
+    color: #728091;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .card-information {
+    gap: 6px;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card, .bc-standard-card, .bc-search-card) > .bc-wishlist-button {
+    top: 20px;
+    left: 0;
+    right: auto;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: #ffffffed;
+    box-shadow: none;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid :is(.bc-filter-card, .bc-standard-card, .bc-search-card) > .bc-wishlist-button.is-saved {
+    color: #d93b4b;
+    background: #fff5f5;
+  }
+
+  :is(.bc-collection, .template-search) #ProductGridContainer #product-grid .bc-card-feedback {
+    margin: 0;
+  }
+}

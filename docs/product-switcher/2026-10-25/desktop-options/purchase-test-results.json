@@ -1,0 +1,19 @@
+{
+  "passed": 13,
+  "networkRequests": 0,
+  "results": [
+    "Unchecked desktop initialization selects only the unpaid no radio and notifies the earlier-loaded total enhancer",
+    "Unchecked checkbox delegates to the existing single-product submit path",
+    "Native checkbox click reaches the real two-item handler with exact IDs, quantity 2 + 2, and a busy double-submit guard",
+    "Unchecking after selecting yes restores the single-product path without a second bundle request",
+    "Explicit no and compact checkbox remain unchanged across viewport changes",
+    "Implicit unpaid no is not persisted as a user choice and remains unpaid after resize",
+    "Explicit yes restores only from the existing same-group/body storage contract and survives desktop switching",
+    "Wrong group, wrong body, and expired storage cannot preselect the paid checkbox",
+    "Other-brand scope and volume-priced products retain required radio behavior",
+    "Invalid identity blocks submission and unavailable optional bodies cannot be checked",
+    "A restored yes for a now-unavailable body can be unchecked; unavailable yes cannot submit or be reselected",
+    "Uncertain cart status disables the checkbox and retains the existing no-retry submit protection",
+    "320, 390, 750, 1024 and 1440: unpaid default, checkbox, quantity form association and totals verified"
+  ]
+}

@@ -1,0 +1,15 @@
+> **Historisch checkpoint:** actuele overdracht [BRAUER-27](HANDOFF_BRAUER27.md), met afgeleide productpluspunten. De technische tellingen van BRAUER-26 hieronder zijn ongewijzigd.
+
+# BRAUER-26 — actuele overdracht, 8 november 2026
+
+Deze vervolgronde is afgerond. Geen actieve bronlezer/schrijver. Lees [de uitwerking](FINAL_BRAUER26.md) en in de actuele privé-ZIP eerst `prepared/HANDOFF_BRAUER26.json`.
+
+**13.161 artikelen, 178.198 velden:** 1.931 nieuwe specificaties, 36 eerdere externe maten wegens bronverschil ingehouden; netto 1.895 extra. Nul alternatieve maten gegokt. 130 artikelen meer met de gekozen kernvelden ingevuld, nog 6.622 met ontbrekende kernvelden. 150 open retailveldverschillen, 288 verdachte slangwaarden en 480 concrete vragen bij 461 artikelen. Alle 72 eerdere open verschillen, 42 oorspronkelijke gegevensblokkades en 163 toekomstige artikelen behouden. Geen volledige technische vrijgave.
+
+**333 nieuwe productpagina’s gelezen:** 325 exact op merk/fabrikantartikelnummer/EAN, acht zonder EAN alleen vergelijking; nul resterende fouten. Chrome Edition/Carving alleen de gepubliceerde inbouw-URL’s, Stellar alle gepubliceerde serie-URL’s; vier eerder verwerkte URL’s overgeslagen. 6.643 samengevoegde records, 6.601 exacte identiteiten. De 335-kandidatenlijst en 331-aanvragenlijst zijn afgeronde input. Geen voltooide pagina’s opnieuw lezen. Ruwe fetchresponses ontbreken bewust; getypeerde records en letterlijke tabeluittreksels zijn bewaard. Gebruik voor een volgende ronde aparte `--research-directory` en numerieke `--output-suffix`; lege raw-input behoudt voorbereide records. Voer `retail_extract.py` niet blind uit.
+
+**46 tests PASS**, herhaalcontrole PASS, native XLSX exact gelijk voor 13.161 artikelen / 42.869 cumulatieve aanvullingen / 480 vragen. Alle 545 EAN-cellen van het vragenblad tekst, nul foutcellen. Vijf bladen en drie aanvullende ranges bekeken. Preflight terecht exit 2. Gebruik `controles/verify-retail-workbook.py` vanuit de pakketroot na aanmaken van `analysis`. De Excel is actueel en loopt niet meer achter op de catalogus.
+
+**Alle imports, ook DRAFT, blijven geblokkeerd.** Volledige officiële media nog niet ontvangen; geen Shopify-, media-, thema- of publicatiewrites. Prijzen inclusief btw, identiteit, titels, keuzes, eigen invoer en originele bestanden behouden. Geen Windows-Git-, fysieke Excel-app- of livewinkeltest geclaimd. Codecheckpoint `14c893fef895bde189a78813f92bd6afb543c2d1`, actieve codebranch `fix/product-cards-2026-10-14`; main alleen documentatie. Centrale status noemt de bevestigde bestandsversies.
+
+**Eén volgende taak:** gericht verdere series/kleuren van resterende inbouwdouchesets en resterend glas onderzoeken, uitsluitend exact op merk/SKU/EAN bij de toegestane winkels. Ontbrekende Ja/Nee-cellen blijven onbekend; geen maat uit modelcodes, geen overerving tussen varianten, geen 15→150-correctie. Historische bronverschillen blijven behouden. Volledige officiële mediainventarisatie, exacte koppeling en beoordeelde representatieve product-/keuzeproef blijven vereist vóór iedere import.

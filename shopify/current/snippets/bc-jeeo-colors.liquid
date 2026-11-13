@@ -1,0 +1,105 @@
+{% doc %}
+Renders the explicitly linked finishes of the same JEE-O model.
+@param {product} product - The current product.
+@param {section} [section] - Required for the product-page switcher; unused in card mode.
+@param {string} [mode] - Use card for native colour links without JavaScript.
+{% enddoc %}
+{%- liquid
+  assign color_products = product.metafields.custom.color_variants.value
+  assign anchor_product = color_products | first
+  assign color_group = anchor_product.id | prepend: 'jeeo-colors-'
+  assign current_sku = product.selected_or_first_available_variant.sku | strip | upcase
+  assign current_model = current_sku | split: '-' | first | strip
+  if current_model.size == 3 and current_sku.size == 8
+    assign current_model = current_sku | slice: 0, 7
+  endif
+  assign color_label = 'products.product.card_colour' | t
+  assign valid_count = 0
+  assign includes_current = false
+  assign seen_colors = '|'
+  assign duplicate_color = false
+  assign native_links = ''
+  capture product_json
+    for color_product in color_products
+      assign linked_anchor = color_product.metafields.custom.color_variants.value | first
+      assign color_name = color_product.metafields.custom.kleur.value | strip
+      assign linked_sku = color_product.selected_or_first_available_variant.sku | strip | upcase
+      assign linked_model = linked_sku | split: '-' | first | strip
+      if linked_model.size == 3 and linked_sku.size == 8
+        assign linked_model = linked_sku | slice: 0, 7
+      endif
+      if product.vendor == 'JEE-O' and color_product.vendor == 'JEE-O' and color_product.type == product.type and linked_model == current_model and current_model != blank and linked_anchor.id == anchor_product.id and color_name != blank and color_product.url != blank
+        assign color_key = color_name | downcase | prepend: '|' | append: '|'
+        if seen_colors contains color_key
+          assign duplicate_color = true
+        endif
+        assign seen_colors = seen_colors | append: color_key
+        if valid_count > 0
+          echo ','
+        endif
+        if color_product.id == product.id
+          assign includes_current = true
+        endif
+        assign valid_count = valid_count | plus: 1
+        capture color_image
+          render 'bc-jeeo-swatch-url', color: color_name
+        endcapture
+        if mode == 'card'
+          capture native_link
+            echo '<a class="bc-jeeo-card-swatch" href="'
+            echo color_product.url | escape
+            echo '" aria-label="'
+            echo color_name | escape
+            echo '" title="'
+            echo color_name | escape
+            echo '"'
+            if color_product.id == product.id
+              echo ' aria-current="true"'
+            endif
+            echo '><img src="'
+            echo color_image | strip | escape
+            echo '" alt="" width="28" height="28" loading="lazy"></a>'
+          endcapture
+          assign native_links = native_links | append: native_link
+        endif
+        echo '{"handle":'
+        echo color_product.handle | json
+        echo ',"url":'
+        echo color_product.url | json
+        echo ',"title":'
+        echo color_product.title | json
+        echo ',"sort_order":'
+        echo valid_count | json
+        echo ',"swatch_url":'
+        echo color_image | strip | json
+        echo ',"options":{"kleur":'
+        echo color_name | json
+        echo '}}'
+      endif
+    endfor
+  endcapture
+-%}
+{%- if product.vendor == 'JEE-O' and color_group != blank and valid_count > 1 and includes_current and duplicate_color == false -%}
+  {%- if mode == 'card' -%}
+    {{ 'bc-jeeo-card-colors.css' | asset_url | stylesheet_tag }}
+    <div class="bc-jeeo-card-colors" role="group" aria-label="{{ color_label | escape }}">{{ native_links }}</div>
+  {%- else -%}
+  {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
+  {{ 'bc-wiesbaden-colors.css' | asset_url | stylesheet_tag }}
+  <div class="bc-buybox__switcher-groups" data-bc-product-switcher-v2
+    data-bc-compact-colors="true"
+    data-bc-preserve-position="true"
+    data-switch-group="{{ color_group | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+    data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}"
+    data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}"
+  >
+    <script type="application/json" data-bc-switcher-inline>
+      {"groups":[{"id":{{ color_group | json | replace: '</', '<\/' }},"menus":[{"key":"kleur","label":{{ color_label | json | replace: '</', '<\/' }},"order":1,"display_type":"buttons"}],"products":[{{ product_json | replace: '</', '<\/' }}]}]}
+    </script>
+  </div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+{%- endif -%}

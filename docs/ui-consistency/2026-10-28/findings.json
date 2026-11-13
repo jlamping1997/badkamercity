@@ -1,0 +1,63 @@
+[
+  {
+    "id": "UI-F01",
+    "status": "USER_CONFIRMED_SCOPE / VERIFIED_RUNTIME / PREVIEW_READY_DESKTOP_TESTED_MOBILE_OPEN",
+    "function": "Previous/next product photo",
+    "observation": "Sunshower overlays 44px arrows on the main photo; native PDP puts arrows in the thumbnail rail below the main photo.",
+    "ownerDecision": "User explicitly chose photo arrows, not dropdown or product-card arrows.",
+    "change": "Three shared native gallery files; bounded previous/next, counter, existing thumbnail and zoom kept, 180ms cancellable desktop fade with reduced-motion guard.",
+    "liveChanged": false
+  },
+  {
+    "id": "UI-C01",
+    "status": "VERIFIED_RUNTIME / INCONSISTENCY",
+    "function": "Expand product description",
+    "observed": [
+      "Sunshower: Toon meer",
+      "Hotbath and Wiesbaden: Lees meer / Lees minder"
+    ],
+    "proposedStandard": "Use Lees meer / Lees minder with the existing independent controllers.",
+    "implemented": false
+  },
+  {
+    "id": "UI-C02",
+    "status": "VERIFIED_RUNTIME / DESIGN_VARIATION",
+    "function": "Primary add button",
+    "observed": [
+      "Hotbath: 56px high, 40px border radius",
+      "Sunshower: 49px high, 8px border radius"
+    ],
+    "proposedStandard": "Choose one primary button radius and minimum target; keep layout and disabled/pending semantics.",
+    "implemented": false
+  },
+  {
+    "id": "UI-C03",
+    "status": "VERIFIED_RUNTIME / PRESENTATION_VARIATION",
+    "function": "Boolean specification",
+    "observed": [
+      "Native specs: Ja / Nee text",
+      "Sunshower: check/cross icons labelled Ja / Nee"
+    ],
+    "proposedStandard": "Use visible Ja / Nee consistently, with optional matching icon and one accessible name.",
+    "implemented": false
+  },
+  {
+    "id": "UI-P01",
+    "status": "VERIFIED_RUNTIME / CONTROL",
+    "function": "Expanded media viewer",
+    "observed": [
+      "Hotbath media viewer has previous/next controls",
+      "Next changed counter from 1 / 3 to 2 / 3",
+      "Escape closed the viewer"
+    ],
+    "implemented": false
+  },
+  {
+    "id": "UI-S01",
+    "status": "STATIC_AND_INITIAL_HTML_CANDIDATE",
+    "function": "Native product card without image",
+    "observation": "Initial native AX snapshot listed a media heading and body heading for the same no-image product. The settled page used the external renderer, so no current external-card defect established.",
+    "nextVerification": "Inspect the native fallback renderer in a controlled fixture/browser state before calling this a live bug.",
+    "implemented": false
+  }
+]

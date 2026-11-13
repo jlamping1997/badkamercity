@@ -1,0 +1,28 @@
+{
+  "status": "DESKTOP_OBSERVED",
+  "date": "2026-11-08",
+  "provider": "TinyFish real browser",
+  "preview_theme": "196354474250",
+  "routes": [
+    "/",
+    "/collections/wastafelkranen",
+    "/pages/contact"
+  ],
+  "observed": [
+    "Draft preview bar and theme name confirmed",
+    "One standard dark bcf-v3 footer on all3routes",
+    "Same10main category links and all5existing policy links",
+    "Temporary phone, email and explicitly labelled contact/return address present",
+    "No horizontal footer overflow observed",
+    "Zoeken footer link navigation retained preview state"
+  ],
+  "viewport": "Provider reported approximately1024–1300px, no precise fixed viewport evidence",
+  "not_tested": [
+    "390px layout/touch",
+    "749/750px boundary",
+    "Physical phone",
+    "Completed purchase",
+    "Actual category destination click; reported navigation used Zoeken/search"
+  ],
+  "preview_only_quote_link": "Existing expected preview guard, not activated"
+}

@@ -1,0 +1,23 @@
+{
+  "installer": "repair_gunmetal_filter.py",
+  "installer_bytes": 51290,
+  "installer_sha256": "df5fc8dbc038ffa8bdac6c8f86a0ade7a089889b64e9a7a6e4cd2e71d1538e82",
+  "base_worker_sha256": "79f676d035fdd6d250e2daec51b886d1aa54c117707718d7ea9695300c21c43d",
+  "base_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "api_source_unchanged": true,
+  "target_worker_hash": "computed deterministically from the exactly hash-checked installed base and reviewed insertion; reverse-check on repeat",
+  "source": "f_kleur_exact",
+  "derived_field": "f_kleur",
+  "new_value": "Gunmetal",
+  "recommended_order": "image-then-data-completeness-with-vendor-type-series-round-robin-v1",
+  "internal_default_sorting_field": "bc_recommendation_rank",
+  "cinto_widths_required": {
+    "38.4177": 600,
+    "38.4178": 800
+  },
+  "raw_source_and_shopify_unchanged_by_installer": true,
+  "requires_existing_tile_looks": true,
+  "private_runtime_or_catalog_embedded": false,
+  "transport_ascii": true,
+  "lifecycle_source_sha256": "45dad41833acc6603c50868d69282186206efaa9ddbaa96f5729d96c0a408de3"
+}

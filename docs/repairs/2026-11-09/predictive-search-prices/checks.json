@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "tests": 17,
+  "results": [
+    {
+      "test": "nl-EUR-14900-14900-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-14900-14900-false-true",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-9900-9900-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-9999-9999-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-10000-10000-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-14949-14949-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-0-0-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-14900-24999-true-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-7800-17500-true-true",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-EUR-14900-14900-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "en-EUR-14900-24999-true-false",
+      "result": "PASS"
+    },
+    {
+      "test": "en-GBP-14900-14900-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "nl-USD-14900-14900-false-false",
+      "result": "PASS"
+    },
+    {
+      "test": "unperformed-search-emits-no-results",
+      "result": "PASS"
+    },
+    {
+      "test": "empty-search-keeps-announcement-without-price",
+      "result": "PASS"
+    },
+    {
+      "test": "product-title-remains-html-escaped",
+      "result": "PASS"
+    },
+    {
+      "test": "multiple-results-retain-unique-keyboard-option-ids",
+      "result": "PASS"
+    }
+  ],
+  "jeeoRuntimeBytesUnchanged": true,
+  "scope": "Actual predictive section and shared money snippet execute in LiquidJS; Shopify money filters are stubbed with Intl. Browser/Shopify preview evidence is separate."
+}

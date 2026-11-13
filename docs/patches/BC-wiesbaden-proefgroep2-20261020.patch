@@ -1,0 +1,139 @@
+diff --git a/snippets/bc-product-breadcrumbs.liquid b/snippets/bc-product-breadcrumbs.liquid
+--- a/snippets/bc-product-breadcrumbs.liquid
++++ b/snippets/bc-product-breadcrumbs.liquid
+@@ -1,16 +1,33 @@
+ {% doc %}
+-  Shows the reviewed category path above the 24.3710 pilot product heading.
++  Shows a reviewed category path above the product heading.
+   @param {product} product - Current product.
+ {% enddoc %}
+-{%- assign breadcrumb_vendor = product.vendor | strip | downcase -%}
+-{%- if breadcrumb_vendor == 'wiesbaden' and product.has_only_default_variant and product.selected_or_first_available_variant.sku == '24.3710' -%}
+-  <nav class="bc-product-breadcrumbs" aria-label="{{ 'ss.breadcrumb' | t | escape }}">
+-    <ol role="list">
+-      <li><a href="{{ routes.root_url }}">{{ 'ss.home' | t }}</a></li>
++{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
++{%- assign reviewed_scope = reviewed_scope | strip -%}
++{%- if reviewed_scope != blank -%}
++  {%- capture category_links -%}
++    {%- if reviewed_scope == 'pilot' -%}
+       <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/kranen">{{ 'bc_pilot_category.kranen' | t }}</a></li>
+       <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/wastafelkranen">{{ 'bc_pilot_category.wastafelkranen' | t }}</a></li>
+       <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/opbouw-wastafelkranen">{{ 'bc_pilot_category.opbouw' | t }}</a></li>
+-      <li><span aria-hidden="true">/</span><span aria-current="page">{{ product.title | escape }}</span></li>
+-    </ol>
+-  </nav>
++    {%- else -%}
++      {%- for handle in product.metafields.bc_data.content_review.value.category_handles -%}
++        {%- assign category = collections[handle] -%}
++        {%- assign memberships = product.collections | where: 'handle', handle -%}
++        {%- if category != blank and memberships.size > 0 -%}
++          <li><span aria-hidden="true">/</span><a href="{{ category.url | escape }}">{{ category.title | escape }}</a></li>
++        {%- endif -%}
++      {%- endfor -%}
++    {%- endif -%}
++  {%- endcapture -%}
++  {%- assign category_links = category_links | strip -%}
++  {%- if category_links != blank -%}
++    <nav class="bc-product-breadcrumbs" aria-label="{{ 'ss.breadcrumb' | t | escape }}">
++      <ol role="list">
++        <li><a href="{{ routes.root_url }}">{{ 'ss.home' | t }}</a></li>
++        {{ category_links }}
++        <li><span aria-hidden="true">/</span><span aria-current="page">{{ product.title | escape }}</span></li>
++      </ol>
++    </nav>
++  {%- endif -%}
+ {%- endif -%}
+diff --git a/snippets/bc-product-documents.liquid b/snippets/bc-product-documents.liquid
+--- a/snippets/bc-product-documents.liquid
++++ b/snippets/bc-product-documents.liquid
+@@ -1,13 +1,14 @@
+ {% doc %}
+-  Displays stored technical links for the reviewed 24.3710 pilot, using the Sunshower document layout.
++  Displays verified technical links for reviewed Wiesbaden products using the Sunshower document layout.
+   @param {product} product - Current product.
+   @param {string} section_id - Main product section identifier.
+ {% enddoc %}
+ {%- liquid
+-  assign documents_vendor = product.vendor | strip | downcase
+   assign documents = product.metafields.custom.technische_documenten
+ -%}
+-{%- if documents_vendor == 'wiesbaden' and product.has_only_default_variant and product.selected_or_first_available_variant.sku == '24.3710' and documents.type == 'list.url' -%}
++{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
++{%- assign reviewed_scope = reviewed_scope | strip -%}
++{%- if reviewed_scope != blank and documents.type == 'list.url' -%}
+   {%- capture document_rows -%}
+     {%- assign document_urls = documents.value | uniq -%}
+     {%- for document_url in document_urls -%}
+@@ -27,7 +28,7 @@
+         <li>
+           <a href="{{ document_url | escape }}" target="_blank" rel="noopener noreferrer">
+             <svg class="bc-product-documents__file{% if extension == 'pdf' %} bc-product-documents__file--pdf{% endif %}" viewBox="0 0 24 28" aria-hidden="true"><path d="M4 1h10l6 6v19H4V1Z M14 1v7h6"/><text x="5" y="21">{{ file_type | escape }}</text></svg>
+-            <span>{{ label_key | t }} {{ product.selected_or_first_available_variant.sku | escape }}</span>
++            <span>{{ label_key | t }} {{ product.selected_or_first_available_variant.sku | escape }}{% if extension != 'pdf' and forloop.index > 1 %} ({{ forloop.index }}){% endif %}</span>
+             <svg class="bc-product-documents__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 14v3h14v-3"/></svg>
+           </a>
+         </li>
+diff --git a/snippets/bc-wiesbaden-reviewed-scope.liquid b/snippets/bc-wiesbaden-reviewed-scope.liquid
+new file mode 100644
+--- /dev/null
++++ b/snippets/bc-wiesbaden-reviewed-scope.liquid
+@@ -0,0 +1,28 @@
++{% doc %}
++  Returns reviewed or pilot only for matching, reviewed Wiesbaden product data.
++  @param {product} product - Current product.
++{% enddoc %}
++{%- liquid
++  assign vendor = product.vendor | strip | downcase
++  assign sku = product.selected_or_first_available_variant.sku
++  assign product_id = product.id | append: ''
++  assign spec = product.metafields.custom.complete_specificaties
++  assign review = product.metafields.bc_data.content_review
++  assign matched_article = false
++  if vendor == 'wiesbaden' and product.has_only_default_variant and spec.type == 'json'
++    for group in spec.value
++      for item in group.items
++        if item.key == 'fabrikantnummer' and item.value == sku
++          assign matched_article = true
++        endif
++      endfor
++    endfor
++    if matched_article
++      if review.type == 'json' and review.value.schema == 'wiesbaden-content-v1' and review.value.status == 'ready' and review.value.sku == sku and review.value.product_id == product_id and review.value.spec_keys.size > 0
++        echo 'reviewed'
++      elsif sku == '24.3710'
++        echo 'pilot'
++      endif
++    endif
++  endif
++-%}
+diff --git a/snippets/bc-wiesbaden-reviewed-specs.liquid b/snippets/bc-wiesbaden-reviewed-specs.liquid
+--- a/snippets/bc-wiesbaden-reviewed-specs.liquid
++++ b/snippets/bc-wiesbaden-reviewed-specs.liquid
+@@ -1,18 +1,22 @@
+ {% doc %}
+-  Renders the reviewed 24.3710 pilot only; returns empty for all other products.
++  Renders reviewed Wiesbaden specifications; preserves the approved 24.3710 pilot.
+   @param {product} product - Current product.
+   @param {string} section_id - Main product section identifier.
+ {% enddoc %}
+ {%- liquid
+-  assign vendor = product.vendor | strip | downcase
+   assign spec = product.metafields.custom.complete_specificaties
+   assign matched_article = false
+   assign allowed_keys = 'fabrikantnummer,merk,serie,productsoort,zelfsluitend,type_temperatuurregeling,aantal_kraangaten,uitvoering_uitloop,type_uitloop,kraanmondstuk,uittrekbare_uitloop_met_kraanbeluchter_mousseur,uittrekbare_uitloop_met_handdouche,met_zijwaartse_douche,met_koppelingen,met_afvoerplug,temperatuurbegrenzing,coldstart,volumestroomklasse,programmering,materiaal_kraan,oppervlaktebescherming,oppervlaktebehandeling,materiaal_greep,basiskleur,montage,aansluiting_aanvoer,maat_aansluiting_aanvoer,met_rozetten_afdekplaat,hoogte_mm,hoogte_uitloop_mm,voorsprong_uitloop_mm,kraanhuisdiameter_mm,aantal_grepen' | split: ','
+ -%}
+-{%- if vendor == 'wiesbaden' and product.has_only_default_variant and product.selected_or_first_available_variant.sku == '24.3710' and spec.type == 'json' -%}
++{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
++{%- assign reviewed_scope = reviewed_scope | strip -%}
++{%- if reviewed_scope != blank -%}
++  {%- if reviewed_scope == 'reviewed' -%}
++    {%- assign allowed_keys = product.metafields.bc_data.content_review.value.spec_keys -%}
++  {%- endif -%}
+   {%- for group in spec.value -%}
+     {%- for item in group.items -%}
+-      {%- if item.key == 'fabrikantnummer' and item.value == '24.3710' -%}
++      {%- if item.key == 'fabrikantnummer' and item.value == product.selected_or_first_available_variant.sku -%}
+         {%- assign matched_article = true -%}
+       {%- endif -%}
+     {%- endfor -%}

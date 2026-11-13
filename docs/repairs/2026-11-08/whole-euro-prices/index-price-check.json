@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "generation": "bc_sync_20261108t230100_d4a460",
+  "profiles": 227,
+  "indexedProductsChecked": 15155,
+  "uniqueIds": 15155,
+  "pages": 253,
+  "sameGenerationBeforeAfter": true,
+  "priceMismatches": 0,
+  "roundedProductsVerifiedInIndex": 3315,
+  "roundedProductsOutsidePublicShoppingScope": 20,
+  "sourceShopifyProducts": 15897,
+  "publicShoppingScope": {
+    "handle": "__all__",
+    "title": "Alle producten",
+    "profile_products": 15897,
+    "shopping_products": 15155
+  },
+  "serverMutation": false,
+  "ssh": "Network is unreachable; no server command executed",
+  "googleFeed": "NOT_TESTED",
+  "scope": "Public __all__ shopping search compared with current Shopify minimum selling price for every returned ID; no broader Google-feed claim"
+}
