@@ -377,6 +377,7 @@
         } catch (_) { /* Keep the named-color fallback. */ }
       }
       const name = String(value || '').toLowerCase();
+      if (/multicolou?r|multi[\s_-]*colou?r|meerkleurig/.test(name)) return 'conic-gradient(#c76059 0deg 60deg,#df884b 60deg 120deg,#e6c64e 120deg 180deg,#81957b 180deg 240deg,#6f8ea7 240deg 300deg,#92739f 300deg 360deg)';
       if (/(?:^|[^a-z])gun[\s_-]*metal(?:$|[^a-z])/.test(name)) return 'linear-gradient(120deg,#343e45,#7a8790,#455159)';
       if (/zwart|black/.test(name)) return 'linear-gradient(120deg,#1e2023,#45474a,#151719)';
       if (/verouderd ijzer/.test(name)) return 'linear-gradient(120deg,#747578,#43474c,#97999a)';
@@ -390,6 +391,11 @@
       if (/blauw|blue/.test(name)) return '#6f8ea7';
       if (/groen|green/.test(name)) return '#81957b';
       if (/roze|pink/.test(name)) return '#d8aeb5';
+      if (/bruin|brown/.test(name)) return '#94745a';
+      if (/geel|yellow/.test(name)) return '#e6c64e';
+      if (/oranje|orange/.test(name)) return '#df884b';
+      if (/rood|(?:^|[^a-z])red(?:$|[^a-z])/.test(name)) return '#c76059';
+      if (/paars|purple|violet/.test(name)) return '#92739f';
       return 'linear-gradient(135deg,#e8e4df,#b7b2ad)';
     }
 
