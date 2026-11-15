@@ -43,6 +43,9 @@
     const nativeSearchHasResults = isSearch && !!productGrid.querySelector('.bc-search-card, .article-card-wrapper');
     const expectedCount = isSearch ? NaN : Number(root.dataset.productsCount);
     const cardDataCache = new Map();
+    const missingCardData = Object.freeze({ missing: true });
+    let catalogScope = '';
+    let catalogChanged = false;
     let externalActive = false;
     let nativeFallback = false;
     const nativeTitle = document.title;
@@ -175,6 +178,17 @@
       if (event.persisted) {
         requestController?.abort();
         setLoading(false);
+        if (externalActive) runSearch();
+      }
+    });
+    let hiddenAt = 0;
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        hiddenAt = Date.now();
+      } else if (hiddenAt) {
+        const refresh = Date.now() - hiddenAt >= 30000;
+        hiddenAt = 0;
+        if (refresh && externalActive && !productGrid.querySelector('[data-bc-card-cart][aria-busy="true"]')) runSearch();
       }
     });
     drawerMedia.addEventListener('change', () => { closeDrawer(); syncDrawerAccessibility(); });
@@ -338,6 +352,12 @@
         }
         const aliases = data.filter_policy?.color_value_aliases || {};
         if (state.filters.f_kleur) state.filters.f_kleur = [...new Set(state.filters.f_kleur.map(v => aliases[v] || v))];
+        const scope = JSON.stringify([collectionHandle, isSearch ? new URL(location.href).searchParams.get('q') : '*', state.filters, state.ranges, state.sort]);
+        if (scope !== catalogScope) {
+          catalogScope = scope;
+          catalogChanged = false;
+        }
+        cardDataCache.clear();
         renderFilters(data.facets);
         renderActiveFilters(data.facets);
         renderProducts(data.products);
@@ -567,7 +587,7 @@
     function renderProducts(products) {
       const cards = products.map(product => {
         const href = productPath(product);
-        return `<li class="grid__item"><article class="bc-filter-card" data-bc-card-handle="${attr(product.handle)}">
+        return `<li class="grid__item"><article class="bc-filter-card" data-bc-card-handle="${attr(product.handle)}" inert aria-busy="true">
           <a class="bc-card-link" href="${attr(href)}" tabindex="-1" aria-hidden="true"></a>
           <a class="bc-filter-card__media" href="${attr(href)}" tabindex="-1" aria-hidden="true">${product.image_url ? `<img src="${attr(product.image_url)}" alt="${attr(product.title)}" loading="lazy" width="600" height="600">` : ''}</a>
           <div class="bc-filter-card__info"><p class="bc-filter-card__vendor">${escapeHtml(product.vendor || '')}</p>
@@ -582,13 +602,17 @@
       const empty = `<li class="grid__item bc-filter-empty" role="status">${escapeHtml(root.dataset.emptyLabel || 'Geen producten gevonden.')}</li>`;
       productGrid.innerHTML = isSearch ? `<ul class="grid product-grid" role="list">${cards || empty}</ul>` : cards || empty;
       const elements = [...productGrid.querySelectorAll('.bc-filter-card')];
-      products.forEach((product,i) => cardModels.set(elements[i], {product, data:null, options:[], version:0}));
+      products.forEach((product,i) => cardModels.set(elements[i], {product, data:null, options:[], unavailableColors:new Set(), version:0}));
     }
 
     async function cardData(href) {
       if (!cardDataCache.has(href)) {
         if (cardDataCache.size >= 200) cardDataCache.delete(cardDataCache.keys().next().value);
-        cardDataCache.set(href, loadCardTitle(href).then(data => { if (!data) cardDataCache.delete(href); return data; }));
+        const pending = loadCardTitle(href).then(data => {
+          if ((!data || data === missingCardData) && cardDataCache.get(href) === pending) cardDataCache.delete(href);
+          return data;
+        });
+        cardDataCache.set(href, pending);
       }
       return cardDataCache.get(href);
     }
@@ -667,19 +691,40 @@
 
     async function hydrateCardTitles(products, currentRequest) {
       const cards = [...productGrid.querySelectorAll('.bc-filter-card')];
-      if (!root.dataset.cardDataSection) { cards.forEach(unavailableCardPrice); return; }
+      if (!root.dataset.cardDataSection) {
+        cards.forEach(card => { card.removeAttribute('inert'); card.removeAttribute('aria-busy'); unavailableCardPrice(card); });
+        return;
+      }
       const queue = cards.map((card,i) => ({card,product:products[i]}));
       const worker = async () => {
         while (queue.length && currentRequest === requestId) {
           const {card,product}=queue.shift();
           const data=await cardData(productPath(product));
           if (currentRequest !== requestId || !card.isConnected) continue;
+          if (data === missingCardData) {
+            removeMissingCard(card);
+            continue;
+          }
+          card.removeAttribute('inert');
+          card.removeAttribute('aria-busy');
           if (!data || String(data.id) !== String(product.shopify_product_id || product.id).split('/').pop()) { unavailableCardPrice(card); continue; }
           updateCard(card,data);
           loadCardColors(card,data).catch(() => {});
         }
       };
       await Promise.all(Array.from({length:Math.min(4,queue.length)},worker));
+    }
+
+    function removeMissingCard(card) {
+      card.closest('li.grid__item')?.remove();
+      cardModels.delete(card);
+      catalogChanged = true;
+      if (!productGrid.querySelector('.bc-filter-card')) {
+        const list = isSearch ? productGrid.querySelector('ul') : productGrid;
+        list.innerHTML = `<li class="grid__item bc-filter-empty" role="status">${escapeHtml(uiText('labelPageEmpty', 'Op deze pagina zijn geen beschikbare producten.'))}</li>`;
+      }
+      renderCount(state.lastData?.found || 0);
+      renderPagination(state.lastData?.found || 0);
     }
 
     async function loadCardColors(card,data) {
@@ -720,7 +765,7 @@
       if (!model || !card.isConnected) return;
       model.colorGroup=group.id;
       model.allColorsLabel=source.dataset.labelAllColors || '';
-      model.options=unique.length>1 ? unique : [];
+      model.options=unique.length>1 ? unique.filter(option => !model.unavailableColors.has(option.handle)) : [];
       renderCardColors(card);
     }
 
@@ -761,6 +806,7 @@
     productGrid.addEventListener('pointercancel',()=>{if(cardPointer)cardPointer.moved=true;},{passive:true});
     productGrid.addEventListener('click',async event=>{
       const card=event.target.closest('.bc-filter-card');if(!card)return;
+      if (card.hasAttribute('inert')) { event.preventDefault(); return; }
       if(cardPointer?.moved && event.detail){event.preventDefault();event.stopPropagation();cardPointer=null;return;}
       cardPointer=null;
       const model=cardModels.get(card);if(!model)return;
@@ -773,6 +819,11 @@
         card.querySelector('[data-bc-card-cart]').disabled=true;
         try {
           const data=await cardData(productPath(option));
+          if (data === missingCardData && model.version === version && card.isConnected) {
+            model.unavailableColors.add(option.handle);
+            model.options = model.options.filter(item => item.handle !== option.handle);
+            renderCardColors(card);
+          }
           if(!data || data.handle!==option.handle)throw new Error('Kleur niet beschikbaar');
           if(model.version===version && card.isConnected){updateCard(card,data);card.querySelector('.bc-card-feedback').textContent='';}
         }catch(_){if(model.version===version){card.querySelector('.bc-card-feedback').textContent=uiText('labelColorError','Deze kleur kon niet worden geladen. Probeer opnieuw.');if(model.data)updateCard(card,model.data);}}
@@ -812,14 +863,18 @@
         url.searchParams.set('sections', root.dataset.cardDataSection);
         const previewTheme = new URL(location.href).searchParams.get('preview_theme_id');
         if (previewTheme) url.searchParams.set('preview_theme_id', previewTheme);
-        const response = await fetch(url, { signal: controller.signal, credentials: 'same-origin' });
+        const response = await fetch(url, { signal: controller.signal, credentials: 'same-origin', cache: 'no-store' });
+        if (response.status === 404 || response.status === 410) return missingCardData;
         if (!response.ok) return null;
         const sections = await response.json();
         const html = sections[root.dataset.cardDataSection];
-        if (typeof html !== 'string') return null;
-        const doc = new DOMParser().parseFromString(html, 'text/html');
-        const data = doc.querySelector('[data-bc-card-data]');
-        return data ? JSON.parse(data.textContent) : null;
+        const doc = typeof html === 'string' ? new DOMParser().parseFromString(html, 'text/html') : null;
+        const data = doc?.querySelector('[data-bc-card-data]');
+        if (data) return JSON.parse(data.textContent);
+        url.pathname = url.pathname.replace(/\/$/, '') + '.js';
+        url.search = '';
+        const availability = await fetch(url, { signal: controller.signal, credentials: 'same-origin', cache: 'no-store' });
+        return availability.status === 404 || availability.status === 410 ? missingCardData : null;
       } catch (_) {
         return null;
       } finally {
@@ -828,9 +883,15 @@
     }
 
     function renderCount(found) {
-      if (isSearch && root.dataset.searchTitle) document.title = root.dataset.searchTitle.replace('__BC_COUNT__', String(found));
+      const count = catalogChanged ? productGrid.querySelectorAll('.bc-filter-card').length : found;
+      const suffix = catalogChanged ? ` ${uiText('labelPageCountSuffix', 'op deze pagina')}` : '';
+      if (isSearch && root.dataset.searchTitle) document.title = root.dataset.searchTitle.replace('__BC_COUNT__', String(count) + suffix);
       toolbar.querySelector('[data-bc-count]').textContent =
-        `${found} ${found === 1 ? 'product' : 'producten'}`;
+        `${count} ${count === 1 ? 'product' : 'producten'}${suffix}`;
+      if (catalogChanged) {
+        errorBox.textContent = uiText('labelCatalogUpdated', 'Het assortiment is gewijzigd. Deze pagina toont de beschikbare producten.');
+        errorBox.hidden = false;
+      }
     }
 
     function renderPagination(found) {
@@ -843,7 +904,7 @@
 
       pagination.innerHTML = `
         <button type="button" data-page="${state.page - 1}" ${state.page <= 1 ? 'disabled' : ''} aria-label="Vorige pagina">‹</button>
-        <span class="bc-filter-pagination__status">Pagina ${state.page} van ${totalPages}</span>
+        <span class="bc-filter-pagination__status">Pagina ${state.page}${catalogChanged ? '' : ` van ${totalPages}`}</span>
         <button type="button" data-page="${state.page + 1}" ${state.page >= totalPages ? 'disabled' : ''} aria-label="Volgende pagina">›</button>
       `;
     }
@@ -1034,3 +1095,4 @@
     }
   });
 })();
+
