@@ -1,0 +1,1066 @@
+{
+  "task": "THEME-CONSOLIDATION-01",
+  "date": "2026-11-15",
+  "status": "VERIFIED_PREVIEW_OWNER_PUBLICATION_PENDING",
+  "sourceCheckpoint": "9c8ec9844fb114d43a2c5e8e099b04ed4e0fa83d",
+  "main": {
+    "id": "196542005514",
+    "name": "BadkamerCity - bescherming oude productkaarten",
+    "role": "MAIN"
+  },
+  "candidate": {
+    "id": "196690379018",
+    "name": "BadkamerCity - complete Brauer productkeuzes",
+    "role": "UNPUBLISHED"
+  },
+  "baseline": {
+    "files": 2524,
+    "changed": [],
+    "missing": []
+  },
+  "final": {
+    "mainFiles": 2524,
+    "candidateFiles": 2525,
+    "intendedDifferences": 183,
+    "modifiedExisting": 182,
+    "newFiles": [
+      "assets/bc-brauer-46a454f9a15bdaa9.json"
+    ],
+    "missing": [],
+    "mainChanged": [],
+    "all183FeatureChecksumsExact": true
+  },
+  "oldDrafts": {
+    "wiesbaden": {
+      "changed": 7,
+      "extra": 0,
+      "missing": 840
+    },
+    "brauerSpecs": {
+      "changed": 7,
+      "extra": 0,
+      "missing": 2
+    },
+    "brauerChoices": {
+      "changed": 189,
+      "extra": 1,
+      "missing": 2
+    }
+  },
+  "validator": {
+    "success": true,
+    "files": 183,
+    "failures": 0,
+    "warnings": 8
+  },
+  "renderer": {
+    "groups": 828,
+    "products": 12292,
+    "exact_starts": 12292,
+    "valid_choices": 152902,
+    "unavailable_choices": 9346,
+    "conditional_pending_choices": 1172,
+    "reachable_products": 12292,
+    "conditional_cart_guard": true,
+    "native_select": true,
+    "six_colour_limit": true,
+    "visual_tap_starts": 338,
+    "exact_spout_photos": 672,
+    "handle_choices": 5,
+    "spout_position_choices": 2,
+    "position_shape_checks": 1974,
+    "handle_reference_photos": 5,
+    "water_photo_checks": 102,
+    "price_order_groups": 173,
+    "price_order_products": 6402,
+    "price_order_states": 23503,
+    "opbouw_starts": 150,
+    "opbouw_execution_photos": 528,
+    "extra_groups": 25,
+    "extra_starts": 635,
+    "extra_exact_photos": 609,
+    "distinct_hinge_pairs": 240,
+    "mirror_groups": 32,
+    "mirror_exact_starts": 585,
+    "mirror_pending_cart_guards": 18,
+    "cabinet_groups": 43,
+    "cabinet_products": 1712,
+    "glass_groups": 26,
+    "glass_products": 966
+  },
+  "cardTests": {
+    "passed": 30,
+    "failed": 0
+  },
+  "priceSnapshotDate": "2026-11-12",
+  "allPricesRefreshedThisTurn": false,
+  "browser": {
+    "surface": "real Chrome",
+    "width": 1348,
+    "height": 926,
+    "theme": "196690379018",
+    "cases": [
+      {
+        "startSku": "5-CE-001",
+        "action": "Kort en smal",
+        "endSku": "5-CE-001-HD5",
+        "result": "PASS"
+      },
+      {
+        "startSku": "5-CE-001-HD5",
+        "action": "Hoog, ronde uitloop",
+        "endSku": "5-CE-003-R2",
+        "priceEUR": "268.50",
+        "result": "PASS"
+      },
+      {
+        "startSku": "SK-IMD100HW",
+        "action": "60cm; no direction",
+        "cartDisabled": true,
+        "result": "PASS"
+      },
+      {
+        "startSku": "SK-IMD100HW",
+        "action": "60cm; Linksdraaiend",
+        "endSku": "SK-IMD60LHW",
+        "priceEUR": "882.09",
+        "cartEnabled": true,
+        "result": "PASS"
+      },
+      {
+        "startSku": "GS-VON2H6050200CE",
+        "action": "Aan de glaswand",
+        "endSku": "GS-VON3H6050200CE",
+        "priceEUR": "1153.13",
+        "result": "PASS"
+      }
+    ]
+  },
+  "notTested": [
+    "new cart add",
+    "checkout",
+    "physical mobile",
+    "public post-publication browser pass",
+    "VPS/index"
+  ],
+  "productWrites": 0,
+  "mainWrites": 0,
+  "published": false,
+  "featureFiles": [
+    {
+      "filename": "assets/bc-brauer-03c945392a61ef18.json",
+      "checksumMd5": "1d4da32486fd007de20595f52f1c168c",
+      "gitBlobSha": "c1697f3465f62414d391ad677c2260c11c289b99"
+    },
+    {
+      "filename": "assets/bc-brauer-05df137b439f0639.json",
+      "checksumMd5": "fef613a3657c1cc6d062865e47d6e386",
+      "gitBlobSha": "6b6fd6d3fb689d099d815b0da2380addbbf84fc9"
+    },
+    {
+      "filename": "assets/bc-brauer-0629a4186d4c68a2.json",
+      "checksumMd5": "f20d1e7194e3fe18245c42914af90bbb",
+      "gitBlobSha": "ab25237535f12ef07bd3978fad84c8cf539cb4e8"
+    },
+    {
+      "filename": "assets/bc-brauer-06eb24b4a615e9f0.json",
+      "checksumMd5": "997d98c86fa85bf4893042936ba8f3e8",
+      "gitBlobSha": "cb02dd618d3489604b627a1bb1f6357bd0101feb"
+    },
+    {
+      "filename": "assets/bc-brauer-07632f47ace94adc.json",
+      "checksumMd5": "1ce5e9f878a2fd845c347185d1fa5525",
+      "gitBlobSha": "aa2a9b1bfaa836ab5ee5043c6d47e236e1d13204"
+    },
+    {
+      "filename": "assets/bc-brauer-0872e543927b6fbd.json",
+      "checksumMd5": "54be3c48c28ee9bce243b24a5c13adf1",
+      "gitBlobSha": "cf03ef797beced34c6c84d54563ce48567239983"
+    },
+    {
+      "filename": "assets/bc-brauer-09368447555ced29.json",
+      "checksumMd5": "e969bf073c6941f7a053dda388c1c5f5",
+      "gitBlobSha": "87297e4038d3ed819d63ed0c47ebeb53adecfe94"
+    },
+    {
+      "filename": "assets/bc-brauer-0a14cd4386c2621b.json",
+      "checksumMd5": "8291ba341368d85420b1ff7e344f0b3c",
+      "gitBlobSha": "c0a5db0c3689fa5be295d867de2036a3cec30f03"
+    },
+    {
+      "filename": "assets/bc-brauer-0a5d262b33b59fb4.json",
+      "checksumMd5": "7b4631b538b876b600440090d868cf77",
+      "gitBlobSha": "b20b35235a96d4ddd9c5daa615a0f8f4b37dad22"
+    },
+    {
+      "filename": "assets/bc-brauer-0bcfb564e5845dd9.json",
+      "checksumMd5": "a3a96b641a2963fe5ba169ae720eb0be",
+      "gitBlobSha": "c70f05e08e8ff0fad477e41e199964cb0139181b"
+    },
+    {
+      "filename": "assets/bc-brauer-0e7b62d3caa3d82a.json",
+      "checksumMd5": "95ddb3f91c99ff555e070bc078e8dd9f",
+      "gitBlobSha": "d871ff8e1764e99f042bfb0981482830da9fd5ce"
+    },
+    {
+      "filename": "assets/bc-brauer-0ff13286f6e80efc.json",
+      "checksumMd5": "2dd8ff871e49aabfa93ee09e6576a96b",
+      "gitBlobSha": "1cc0ec1e15f042c8291da718b8503b49d1da1c36"
+    },
+    {
+      "filename": "assets/bc-brauer-103889257991d3e9.json",
+      "checksumMd5": "217b59e2e81aeebed67f06eb0c61f237",
+      "gitBlobSha": "4d91c0c752936d6500a42f380b9d2298406f4aff"
+    },
+    {
+      "filename": "assets/bc-brauer-1080f7c60e6bc014.json",
+      "checksumMd5": "1e244c49efb75f7ebfc08abb9149360b",
+      "gitBlobSha": "7044e3bd0152f0db87672bfe75ecc28942a60400"
+    },
+    {
+      "filename": "assets/bc-brauer-10f446656c4e6804.json",
+      "checksumMd5": "42ea29eccb0f5bb78633e149cdc0a02a",
+      "gitBlobSha": "0253cdfb2ae7d6957699836f63857d94cb329ac1"
+    },
+    {
+      "filename": "assets/bc-brauer-1420c0098b58d6a9.json",
+      "checksumMd5": "bae86e997462900877d758cfde8d2f4b",
+      "gitBlobSha": "dc311aaeb55bd228bce400f4038a9a6ce402bb98"
+    },
+    {
+      "filename": "assets/bc-brauer-1425a73a72a80749.json",
+      "checksumMd5": "eca3fafe249f84ad6fbfc94aedda8f24",
+      "gitBlobSha": "b1b641951725e75f440aee03fb088b2b2c6ec005"
+    },
+    {
+      "filename": "assets/bc-brauer-15d561209ffbc26e.json",
+      "checksumMd5": "325a5aa5bff5e28ac8a0f72b0e6db548",
+      "gitBlobSha": "1459303ca553c8c0e58babbbbdddda1b95005ac8"
+    },
+    {
+      "filename": "assets/bc-brauer-165676331aab6fe0.json",
+      "checksumMd5": "3fc6d8409b8d801c0b382fd3b8e014f7",
+      "gitBlobSha": "7f1a11dd8b9378314511ab7ef695942ba5eb7b97"
+    },
+    {
+      "filename": "assets/bc-brauer-16c9b8db9767817d.json",
+      "checksumMd5": "ab371d936b09b2852967f646c29feaea",
+      "gitBlobSha": "73a7d14bd115245a67df7d20e56694cad32a564e"
+    },
+    {
+      "filename": "assets/bc-brauer-16eb10f1ad6cb5c9.json",
+      "checksumMd5": "7968935b67d55159a21bb7b7b74bf0cd",
+      "gitBlobSha": "83794b6f9316ce7a43ccf6fb8e5e530286631664"
+    },
+    {
+      "filename": "assets/bc-brauer-19339dd8ffc6fca2.json",
+      "checksumMd5": "85454ba960f993bc7e9f23778872f6ed",
+      "gitBlobSha": "9044eca9f8a29ef07294f848215caaa74ee13cef"
+    },
+    {
+      "filename": "assets/bc-brauer-1951ced87a093e28.json",
+      "checksumMd5": "d6f8264d77df9da344b8f661b2c9bee5",
+      "gitBlobSha": "dff51c68aeccd7593d3e7858b292a2a02eea8d59"
+    },
+    {
+      "filename": "assets/bc-brauer-1bb5f362854cff87.json",
+      "checksumMd5": "5ae0d73119bc273e60e47127fd6245b4",
+      "gitBlobSha": "d7cce9f0cbe74169a424495b197adef357a3358b"
+    },
+    {
+      "filename": "assets/bc-brauer-1c2205e0e1c74649.json",
+      "checksumMd5": "66a389b8c8590f509614569f9cebc53b",
+      "gitBlobSha": "73922cb19404e615ba8ce96c176baecc0840f706"
+    },
+    {
+      "filename": "assets/bc-brauer-1d93a2d8ec8ceb49.json",
+      "checksumMd5": "7eb1d052bfe1a8a95feb2cd8a483ead2",
+      "gitBlobSha": "19e76ec81acbb6bc796b9df2e55116ae66eee24c"
+    },
+    {
+      "filename": "assets/bc-brauer-1f03e9fde568459b.json",
+      "checksumMd5": "9382433254920e3dbf2cde369e9cc6fe",
+      "gitBlobSha": "97ab29c5738c4957e760a604b4c54a22d19468f6"
+    },
+    {
+      "filename": "assets/bc-brauer-1f882276c152686c.json",
+      "checksumMd5": "e852567d2d8f253552f6dd2d2d09b46c",
+      "gitBlobSha": "07e7cb2ef9224cfebd3119347b5fe23b3094d5c0"
+    },
+    {
+      "filename": "assets/bc-brauer-202fc1c75134787e.json",
+      "checksumMd5": "4c597ed636d0961edb0e31b7b166ede1",
+      "gitBlobSha": "e4762e1b86e6bd7bbd09ad40e1e4eeba824a7806"
+    },
+    {
+      "filename": "assets/bc-brauer-21a68df9b9c26e4d.json",
+      "checksumMd5": "f59322a184d852e7660ade83b226b3ba",
+      "gitBlobSha": "e8a60da2cd3eff0f4cfbcd92ed91173417365414"
+    },
+    {
+      "filename": "assets/bc-brauer-2248df6a6a94a9d2.json",
+      "checksumMd5": "f45c0aa96a411d019a6a96897ea87ef4",
+      "gitBlobSha": "6aa986afc3ee83d4aac086dc4498100f1d14f043"
+    },
+    {
+      "filename": "assets/bc-brauer-250b9dfc2d542215.json",
+      "checksumMd5": "e6931fe73dcec361d1012b29b7feec8d",
+      "gitBlobSha": "c9ef52c60dd35ededb7e7aeb5fb8c24625fe7e9d"
+    },
+    {
+      "filename": "assets/bc-brauer-260858fc3ac3aa8c.json",
+      "checksumMd5": "ada465d41cf80ad750bfb6eb4ce25a05",
+      "gitBlobSha": "c9b94e6bb0e085f6da73dbd3fc668c1122156bc5"
+    },
+    {
+      "filename": "assets/bc-brauer-27f77ba3cf0a2583.json",
+      "checksumMd5": "3e7b216ebda4422051a2fc12cd70eb3f",
+      "gitBlobSha": "2cc44751e5e64dc43e19d9068e557101fb9ce93a"
+    },
+    {
+      "filename": "assets/bc-brauer-2be7cfaa2f61b4b5.json",
+      "checksumMd5": "72125f6b9ab4a70532a48b418a0b1261",
+      "gitBlobSha": "fd8bd3530ebef9ce72049cfc9d1e2cb21164f02d"
+    },
+    {
+      "filename": "assets/bc-brauer-2c3d143388ea1e5c.json",
+      "checksumMd5": "59adad5361c214ecd75baec94ab0d8be",
+      "gitBlobSha": "0cf358abc5b3f67467fa90fb1ffd54cba0da208e"
+    },
+    {
+      "filename": "assets/bc-brauer-2ce4d9074537bed8.json",
+      "checksumMd5": "06bacba96c423a28ef6e267f9542dfe5",
+      "gitBlobSha": "1ae73aa177f5e82799f0c0af411f1be1932df3a6"
+    },
+    {
+      "filename": "assets/bc-brauer-2d73d939b99e8e33.json",
+      "checksumMd5": "7e35fcd727cfb352d22c98b03ee837d3",
+      "gitBlobSha": "a112fbc26a98e09715c2808e7789262ceb3cfaa9"
+    },
+    {
+      "filename": "assets/bc-brauer-2dabb3762327f57e.json",
+      "checksumMd5": "db57a2091df6c3a2d221d84a62be2547",
+      "gitBlobSha": "4490e7657ec10b9706648bd6db0b4f94171d27d5"
+    },
+    {
+      "filename": "assets/bc-brauer-31f1de3cc01a63e7.json",
+      "checksumMd5": "6a737b23549518935686fa67fc95f17a",
+      "gitBlobSha": "c23fca60313bf80c583a95d1e670c72032964386"
+    },
+    {
+      "filename": "assets/bc-brauer-327f8880142c9da6.json",
+      "checksumMd5": "8d1fa909e97421131eb3aa1fc80e17f3",
+      "gitBlobSha": "0b44e350350337585aa2f8f813f878423580c496"
+    },
+    {
+      "filename": "assets/bc-brauer-347e5dfb56e95c24.json",
+      "checksumMd5": "d27c96fd2e33d77e3f700d751169ac7d",
+      "gitBlobSha": "1aee411b9806a0a640c8feb7238548be02fbb6c4"
+    },
+    {
+      "filename": "assets/bc-brauer-36bee4e6bc18fac1.json",
+      "checksumMd5": "0251a0fb6b6575b92c9778a9e1355b49",
+      "gitBlobSha": "f1888b79d75f7c2e7ae0a49bc5c43a71333d85ef"
+    },
+    {
+      "filename": "assets/bc-brauer-36cd1973a4605415-26f61a.json",
+      "checksumMd5": "f77eaaaad371ae4dac71264c7c94c981",
+      "gitBlobSha": "0e3d62fbf71c232238b81e5781f61d6fefdad285"
+    },
+    {
+      "filename": "assets/bc-brauer-36cd1973a4605415-ce3a8b.json",
+      "checksumMd5": "157229c20dbff8f1b45690d2c0bc3952",
+      "gitBlobSha": "44832c1c55700b0aaf8a692f1523d281a843113e"
+    },
+    {
+      "filename": "assets/bc-brauer-372c1d58a918da8c.json",
+      "checksumMd5": "f41b190881e14923b0a56fcd2a71162c",
+      "gitBlobSha": "a2dfd29f8b375b5306321b78c79cfe59c8ba938b"
+    },
+    {
+      "filename": "assets/bc-brauer-373f8fe6d3df1c0e.json",
+      "checksumMd5": "c1054b023e3eaae423ec262d1c2a462d",
+      "gitBlobSha": "aaa9abf8df9cd4d28c210e2191b27c804dfe0973"
+    },
+    {
+      "filename": "assets/bc-brauer-3851190df031d7ee.json",
+      "checksumMd5": "6ec52f56de0c053c22bd6cd3181e97a8",
+      "gitBlobSha": "2cbc3d125f614ceb9131727c13bac7e2571dd624"
+    },
+    {
+      "filename": "assets/bc-brauer-3aa513a477a32526.json",
+      "checksumMd5": "70f2044a6ae30f86ac77b41ec11b7645",
+      "gitBlobSha": "ca66343a7b5bc473c3b375aa3208ea926f932e9d"
+    },
+    {
+      "filename": "assets/bc-brauer-3b6f57aa69f4368d.json",
+      "checksumMd5": "4b5be9520876239ca3bdb608d6c70123",
+      "gitBlobSha": "75f2bacb0adaf734fcda02001f561e097c9f0ec9"
+    },
+    {
+      "filename": "assets/bc-brauer-3c0baef46a48ebeb.json",
+      "checksumMd5": "42c9d5562d4a0aae0a433ea6dfd79348",
+      "gitBlobSha": "ad7630953bf03c66f5ebb3eddbe6ac3bbac571c3"
+    },
+    {
+      "filename": "assets/bc-brauer-3d062a3039637dc0-5c1984.json",
+      "checksumMd5": "1a594478ffd0fb5a19e0c7c449b6b4ba",
+      "gitBlobSha": "d4c06276cb1f90175b15315211ea5ddc428002dc"
+    },
+    {
+      "filename": "assets/bc-brauer-3d062a3039637dc0-deb2f2.json",
+      "checksumMd5": "36e1eb235a50212ef9ab404f96bd5ac0",
+      "gitBlobSha": "d61db36daa1f4d5fa654c1efd71e341a3b6909db"
+    },
+    {
+      "filename": "assets/bc-brauer-3de75d3dc8bd71bb.json",
+      "checksumMd5": "ee00f57f8b4ef850e14db4f47a34908d",
+      "gitBlobSha": "c65adb22f8fa2b2d6513dfc27aab29e00fab820e"
+    },
+    {
+      "filename": "assets/bc-brauer-3f1ec528af9417cf.json",
+      "checksumMd5": "0e4587471214001628508f6dc78cdc32",
+      "gitBlobSha": "9ecac3048191fb97590ecb07bcdc48b3a0244320"
+    },
+    {
+      "filename": "assets/bc-brauer-434b5a4ad7be465f.json",
+      "checksumMd5": "55aad7bea04fbca01297c588d20afd56",
+      "gitBlobSha": "44155a25bc71201bb75653f56e6c9b8bf6a66b84"
+    },
+    {
+      "filename": "assets/bc-brauer-4645de1d8c3824e9.json",
+      "checksumMd5": "8ad041278806e66bae19724864967169",
+      "gitBlobSha": "3ab8478e058352b7fd024c00a570a76cf8102136"
+    },
+    {
+      "filename": "assets/bc-brauer-4654d1d94ab8fd3c.json",
+      "checksumMd5": "893ea6a24839f4b10c6446f8e5d627a8",
+      "gitBlobSha": "12c11ee67ae132ab572250ca636b850107f9c6fa"
+    },
+    {
+      "filename": "assets/bc-brauer-467d5725b3922d0f.json",
+      "checksumMd5": "1787025174485b3a3ca0c372e764543d",
+      "gitBlobSha": "26e0d01ba39e01532820d43089af0befa76d1d02"
+    },
+    {
+      "filename": "assets/bc-brauer-487b92b7a4fb5593.json",
+      "checksumMd5": "bd51708712274e93600989e8eed19b99",
+      "gitBlobSha": "f5d63d63144f9d19a5f5e206b92b6f2d724fa672"
+    },
+    {
+      "filename": "assets/bc-brauer-49e032f88b7778fa.json",
+      "checksumMd5": "24bd647badf317f4ca360856a8cbb5b8",
+      "gitBlobSha": "ed1992d10e5ceb3cff606ce5a01c7bea3a0bcdbe"
+    },
+    {
+      "filename": "assets/bc-brauer-4b1c22f6f2ef9e04.json",
+      "checksumMd5": "9c08bb5472cd2737ba04cb56a4c1b24c",
+      "gitBlobSha": "818d7451986ce2cd48e7daa0e242c2883f18a085"
+    },
+    {
+      "filename": "assets/bc-brauer-4b655f0abf85f1bd.json",
+      "checksumMd5": "d6cdf27aab8d5c7f15ad50a702cc8924",
+      "gitBlobSha": "ba2837ecf6033e174a34d37bc41989945065f2b2"
+    },
+    {
+      "filename": "assets/bc-brauer-4ec39ff417670d85.json",
+      "checksumMd5": "d956731141aede4c620a3d5cb061f849",
+      "gitBlobSha": "917d6390d493a70083c23d36c30af479bd42dd01"
+    },
+    {
+      "filename": "assets/bc-brauer-4f1c0d0941c724f5.json",
+      "checksumMd5": "2ec201921580576970ebe03f5be4284f",
+      "gitBlobSha": "97de370fc9960b80fd9fce4b8157258f5bcf19df"
+    },
+    {
+      "filename": "assets/bc-brauer-50195a9289525617.json",
+      "checksumMd5": "1e72557da1a8ec1f3ad20a7ae117c045",
+      "gitBlobSha": "7f2372c11178db2b5fc6bab30bc07321919ecc1b"
+    },
+    {
+      "filename": "assets/bc-brauer-51426f87cda07b2f.json",
+      "checksumMd5": "b32212c7b5dbac7f56e04e2d5babae2e",
+      "gitBlobSha": "85a43328e624ef7a29e920096c79d184390a6431"
+    },
+    {
+      "filename": "assets/bc-brauer-53ce8fb4552f49dd-88d6e5.json",
+      "checksumMd5": "f57e0fc42b402a1601ac256742426f1d",
+      "gitBlobSha": "1497904d329661ad47b1a32be4f743adea1b914c"
+    },
+    {
+      "filename": "assets/bc-brauer-53ce8fb4552f49dd-b38b8e.json",
+      "checksumMd5": "29ea529b5c66d08cd609ce59d09f7e9d",
+      "gitBlobSha": "9169983060e7dfcfc7b8f6268cb9f1fc8e3d04df"
+    },
+    {
+      "filename": "assets/bc-brauer-54609de41699e914.json",
+      "checksumMd5": "43ab62f53ee72d4d2fa621691451263c",
+      "gitBlobSha": "421fcbbb5ea7d2c6e11b4e2ada5e69efce5dae95"
+    },
+    {
+      "filename": "assets/bc-brauer-58076432fbec8819.json",
+      "checksumMd5": "c8f9bb8f6325bc2ad7144593d8f2dadb",
+      "gitBlobSha": "c89e1f080b3120054970b5385fcea265253a16b3"
+    },
+    {
+      "filename": "assets/bc-brauer-591e616b98740927.json",
+      "checksumMd5": "12a95afe4773b8fa17e89c886881cef8",
+      "gitBlobSha": "90227e50a173584b3f51ec758476bde6dae465d3"
+    },
+    {
+      "filename": "assets/bc-brauer-595b198742adc768.json",
+      "checksumMd5": "2e7d89c2a5bdbbbb088b75a699a70f11",
+      "gitBlobSha": "0c2d1eca2c30b2297733148a0bed6b69e9fe87b9"
+    },
+    {
+      "filename": "assets/bc-brauer-5b632615d6660597.json",
+      "checksumMd5": "10322eee7b025ae9d3b730855b022a4c",
+      "gitBlobSha": "59945170b26332099c7be85304465a019c563683"
+    },
+    {
+      "filename": "assets/bc-brauer-5cd675ce3b0fb981.json",
+      "checksumMd5": "141695672a43c2f49a6e72cdcc45f8f9",
+      "gitBlobSha": "50914d70d0bf55239c04b690c83e76d3743fbff5"
+    },
+    {
+      "filename": "assets/bc-brauer-63c1f809705e8143.json",
+      "checksumMd5": "fac39eee5beef6ae5c577f1286e41649",
+      "gitBlobSha": "13b5829ff23bdef39bb7ba5c6714de8a4200560e"
+    },
+    {
+      "filename": "assets/bc-brauer-645bdcaa0e8ac231.json",
+      "checksumMd5": "fdfc285ed6549da5470daded5de7353f",
+      "gitBlobSha": "85ff665d02d9f8cf732b88291559a97720db49fb"
+    },
+    {
+      "filename": "assets/bc-brauer-652bedad7ce27a1e.json",
+      "checksumMd5": "1964f6392249305d664d3f10ad051c35",
+      "gitBlobSha": "0e63064794a412b73ab09f8e29d2f84f603119d6"
+    },
+    {
+      "filename": "assets/bc-brauer-662f1fc271f32641.json",
+      "checksumMd5": "507d4ab7108a6897e9702c310ce27b63",
+      "gitBlobSha": "98776a5091bc3567c86164f7dd20019630558bae"
+    },
+    {
+      "filename": "assets/bc-brauer-67ad6b4cb459529a.json",
+      "checksumMd5": "a6d8957586ee6866dc19427a4bc2506f",
+      "gitBlobSha": "0d8b47f7ec0d5144345305f23203960c3dc42cec"
+    },
+    {
+      "filename": "assets/bc-brauer-67bd8f2cde1afa2e.json",
+      "checksumMd5": "7bfe78da71660a31c75e4a6ba2c15294",
+      "gitBlobSha": "fb33ffd68e83c4de75b2247521081656b1b72e7d"
+    },
+    {
+      "filename": "assets/bc-brauer-6962fb4dc319537e.json",
+      "checksumMd5": "414f0e6ba2369d1957b88ee0033c97c3",
+      "gitBlobSha": "e546b9994290d60682fcb9115a89cbdd87d12421"
+    },
+    {
+      "filename": "assets/bc-brauer-6d7d65ce0158407b.json",
+      "checksumMd5": "d04f5357024a04037fb336fd32873555",
+      "gitBlobSha": "1851dfb6695a1f849735fc0273389b178d87cd80"
+    },
+    {
+      "filename": "assets/bc-brauer-6f74ea788e7f4788.json",
+      "checksumMd5": "cdb5ba1634c3e137e4596ec524e81680",
+      "gitBlobSha": "c79ac3dd6797474cb1034b1742b47d4b568b7230"
+    },
+    {
+      "filename": "assets/bc-brauer-702ce7081f354464.json",
+      "checksumMd5": "6fb2aff376952246b07caf7284f7d443",
+      "gitBlobSha": "aebffd0964f56fe19979fba6731643156a540462"
+    },
+    {
+      "filename": "assets/bc-brauer-70a0073f0ad54896.json",
+      "checksumMd5": "1af96ab9a96de683696352ebe54a67ed",
+      "gitBlobSha": "88831da5f75b0cdeebf90671854245b7880e60ff"
+    },
+    {
+      "filename": "assets/bc-brauer-74495c0799f9bc79.json",
+      "checksumMd5": "daa06cbc30586d4369ca57ad41347dd9",
+      "gitBlobSha": "8637d8614ea8eddde7857715ea229c3061579bb5"
+    },
+    {
+      "filename": "assets/bc-brauer-74d951dfe4db1cc7.json",
+      "checksumMd5": "ea56f374efaa54c306a4bf4f68f7c8d9",
+      "gitBlobSha": "7ad7070b763cdf89e3d9b05766ac3c5669507891"
+    },
+    {
+      "filename": "assets/bc-brauer-760f45cd36b548bf.json",
+      "checksumMd5": "a65a7289fefd6c2d29f4e587670d0b1e",
+      "gitBlobSha": "97358ba62db70ea592366376b4f93cfa9a25e149"
+    },
+    {
+      "filename": "assets/bc-brauer-769e9a37a697569e.json",
+      "checksumMd5": "fc6a933d0ef32829c3541786c78a9d69",
+      "gitBlobSha": "519610d5410e1f72608fa6adb359748463fc2cf3"
+    },
+    {
+      "filename": "assets/bc-brauer-7b35980ed024f9c5.json",
+      "checksumMd5": "b29f2c5eca5ea398c6c63df0156a2550",
+      "gitBlobSha": "4eba2f3ef4221f573a77fc2b249d69568f98b434"
+    },
+    {
+      "filename": "assets/bc-brauer-7bd1a88a3ef15710.json",
+      "checksumMd5": "64f16b8e4b94c9b6e3fed93fb52be616",
+      "gitBlobSha": "3fcafdbb7767c0633d68d1069a4d5cbf89fec301"
+    },
+    {
+      "filename": "assets/bc-brauer-7c1f51a60ac637a9.json",
+      "checksumMd5": "221569f71cbeca30ee725c7616ec7d13",
+      "gitBlobSha": "2bb4dc9c6b8c47dfb34b9582d93276290260e305"
+    },
+    {
+      "filename": "assets/bc-brauer-7dd8ac246e9e9923.json",
+      "checksumMd5": "e53b9f9b5d497dd3618161196f8ad2a9",
+      "gitBlobSha": "7cec290171321d8f64a7e891888e646820e0c6c7"
+    },
+    {
+      "filename": "assets/bc-brauer-81314b92244cac2c.json",
+      "checksumMd5": "97c243ae9f8723ee4a6cc8cc74060766",
+      "gitBlobSha": "805eaf2bbc6fd50295bbccb50e6404458b1d4ac5"
+    },
+    {
+      "filename": "assets/bc-brauer-82c5e2a842adb4c8.json",
+      "checksumMd5": "2340edce14e7db8cd56046b73d94577a",
+      "gitBlobSha": "aaafdfff59683a3abb942618aa0c4eb747f4faca"
+    },
+    {
+      "filename": "assets/bc-brauer-860eb5c437ec047c.json",
+      "checksumMd5": "578bbee2a735b6495c53bfcc875cb61e",
+      "gitBlobSha": "ba937da58f08f30f3a9449c1d17a7bfa4dac7167"
+    },
+    {
+      "filename": "assets/bc-brauer-873478b10c47fd72-5130fa.json",
+      "checksumMd5": "6f1bcac89d223f6c44046872dd94157b",
+      "gitBlobSha": "1ce6df616f0bba4ad7785352a08c908f56f7a5c1"
+    },
+    {
+      "filename": "assets/bc-brauer-873478b10c47fd72-e28aa1.json",
+      "checksumMd5": "47bbf2861c8cc8ea4f3a1a9192d8663b",
+      "gitBlobSha": "15153479dc54cd3d0e6fcb28bb722e5fc524c8ed"
+    },
+    {
+      "filename": "assets/bc-brauer-8b31da7977e797a7.json",
+      "checksumMd5": "f6755e3b3b216eed6829bb4948850335",
+      "gitBlobSha": "7648567480488ac4c3e354f5b8fdb7e36927c3e3"
+    },
+    {
+      "filename": "assets/bc-brauer-8bd30107a697ca84.json",
+      "checksumMd5": "438f9d203304d6e6e4cf0ef421f4cf4b",
+      "gitBlobSha": "af60e4d5db36966cdb84c971945373a6da113437"
+    },
+    {
+      "filename": "assets/bc-brauer-8daef812a632656d-dcb785.json",
+      "checksumMd5": "547eb260e6c202417684969cbc9ccfbf",
+      "gitBlobSha": "f8471d792218c47b809f2fba0e8efe51d25f3db7"
+    },
+    {
+      "filename": "assets/bc-brauer-8daef812a632656d-dde4d8.json",
+      "checksumMd5": "856817488749fb04028b5b7c50e84eb7",
+      "gitBlobSha": "1f4f1e8ddcc25b01cca229209bd73f1eef77ce61"
+    },
+    {
+      "filename": "assets/bc-brauer-93b1ea8e9e206455.json",
+      "checksumMd5": "d247f08b5fb284749f87293a710be3a4",
+      "gitBlobSha": "bb8c64503cb0bef365181d627359875c9db42cb2"
+    },
+    {
+      "filename": "assets/bc-brauer-945c22bf2c937839.json",
+      "checksumMd5": "5eb728432391c8f03d9f0dde055f2fd6",
+      "gitBlobSha": "bdaea8a7b860531464dd31ec76cae5fddb71c566"
+    },
+    {
+      "filename": "assets/bc-brauer-94de73649fe220ca.json",
+      "checksumMd5": "545fef7d70441f4d3f6ac8ac8a002ec9",
+      "gitBlobSha": "f4c2e5534a10501c8a4702c89cab3a39b9f8a8d8"
+    },
+    {
+      "filename": "assets/bc-brauer-97c1daf098b807da.json",
+      "checksumMd5": "ea6a7926d797ce8943e0664a061b892e",
+      "gitBlobSha": "25655a3bf134b39f1a1bccfb853280e0b6f9b0f8"
+    },
+    {
+      "filename": "assets/bc-brauer-9bc963494e315b4e.json",
+      "checksumMd5": "f476cba38131291b7858f00fee7fdb83",
+      "gitBlobSha": "7e3ce250324b5027f9b210c49291ccae3a2ab3fa"
+    },
+    {
+      "filename": "assets/bc-brauer-9c6c3e371b0ed177.json",
+      "checksumMd5": "281fe665f3c7033a7448370ba71fd923",
+      "gitBlobSha": "cb0c8372de167ffacb702971c792e1018ac0a6cb"
+    },
+    {
+      "filename": "assets/bc-brauer-9c9b4a913dd67290.json",
+      "checksumMd5": "9a5597f26469151ed2f6d20086943f22",
+      "gitBlobSha": "84b0332aae5e13efcc710e0c4c036f36910d5b5c"
+    },
+    {
+      "filename": "assets/bc-brauer-9d53f643045eb314.json",
+      "checksumMd5": "c782fea18405f20570aee7dd2f71030a",
+      "gitBlobSha": "77494aebdfcf18028f8d6ddd59be678a59348112"
+    },
+    {
+      "filename": "assets/bc-brauer-9e5c111adefde7db.json",
+      "checksumMd5": "7fbbf9872dee1f74e2c86487f28a0af1",
+      "gitBlobSha": "af348f32ca6d00475201e2559d271e009d54180c"
+    },
+    {
+      "filename": "assets/bc-brauer-a0b4d438daae271a.json",
+      "checksumMd5": "03077d246ce33439a3922421804e6771",
+      "gitBlobSha": "f689d0ef75328fc3c0bb2f8ea3f74532dcbcba56"
+    },
+    {
+      "filename": "assets/bc-brauer-a1fcf2e4471e58d9.json",
+      "checksumMd5": "42304f340cd02193beeb048c49716d12",
+      "gitBlobSha": "7f7d9236b81d0126f01ffb6b0b0129c033520095"
+    },
+    {
+      "filename": "assets/bc-brauer-a32c8d8b559ff89a.json",
+      "checksumMd5": "dcad974fa7f4eb52f744e122634dc4bb",
+      "gitBlobSha": "9cd252773caa9e89abff4f7ee58697fc620c5253"
+    },
+    {
+      "filename": "assets/bc-brauer-a3c2583d2a575439.json",
+      "checksumMd5": "fb75b91e516d45148e03950248532abb",
+      "gitBlobSha": "6f3785c46990b36dc4873cd17a52187babdad33c"
+    },
+    {
+      "filename": "assets/bc-brauer-a3cb0bc4337d1622.json",
+      "checksumMd5": "ea604e4767ae2b0c94567a79dcb504b1",
+      "gitBlobSha": "7c04177da4276aecb2b4999b6da4c45f526d5b48"
+    },
+    {
+      "filename": "assets/bc-brauer-a3ff9dd2c7223202.json",
+      "checksumMd5": "a0ccf0a42c0874b3e97fb3dcf1fc8d6c",
+      "gitBlobSha": "0b40817df94e4d5af14f981a48b48c8103a93969"
+    },
+    {
+      "filename": "assets/bc-brauer-a60e2f793bc9ecc9.json",
+      "checksumMd5": "7ea90fac738d2264bb8fdad660db75b9",
+      "gitBlobSha": "571ea881a63bb5acf095df16c08e4a5f6e6ca7d6"
+    },
+    {
+      "filename": "assets/bc-brauer-acd1c206c90ea7ef.json",
+      "checksumMd5": "3366360cbfb6ba09d51c3f9b5451a917",
+      "gitBlobSha": "df11b8bfc391cc300c243034317200b78cd13d65"
+    },
+    {
+      "filename": "assets/bc-brauer-af59763333c08079.json",
+      "checksumMd5": "77bf06db294654bf60697068c684d1e6",
+      "gitBlobSha": "f3cb793a4f8d2f7436edac14c5a4ff84e9c77dcb"
+    },
+    {
+      "filename": "assets/bc-brauer-b381eb8c156a01a2.json",
+      "checksumMd5": "d5b423edb162d24ddb4a62a3ea7f4dec",
+      "gitBlobSha": "411b05f77db3739f2f5165376adb41a632ec78fe"
+    },
+    {
+      "filename": "assets/bc-brauer-b4e89ad30d8ac80f.json",
+      "checksumMd5": "ffefe919e2a8a91ef6c6d7f92c3e0b2a",
+      "gitBlobSha": "1ef6cc9a6f2af33a4253d332f33b22e5db2581cc"
+    },
+    {
+      "filename": "assets/bc-brauer-b675bd9cb219d4c3.json",
+      "checksumMd5": "1fdfd0f38706130fe078d488621a2f7f",
+      "gitBlobSha": "0a36f2ab0996dfcd31ad09033f9da021b877289a"
+    },
+    {
+      "filename": "assets/bc-brauer-b68b7e49e888b19f.json",
+      "checksumMd5": "3db41a6ec57e350afdc22762826aa4c9",
+      "gitBlobSha": "56646fe3bf93d3a0d846e69b9633643c1498bf96"
+    },
+    {
+      "filename": "assets/bc-brauer-b7218bc03b00b80d.json",
+      "checksumMd5": "c7d0223d8060481ebbcc755e1a1c33ca",
+      "gitBlobSha": "536781b6abe2f68da01248ebdcea3054d74cefc7"
+    },
+    {
+      "filename": "assets/bc-brauer-b72d0ec0d66f1c9a.json",
+      "checksumMd5": "c4ec3a8b6384a44a0c987b5b10f56b9e",
+      "gitBlobSha": "66161a0ebb2f7af9bee0cd54b52c38865242b89c"
+    },
+    {
+      "filename": "assets/bc-brauer-b798fdfc6c7eb31b.json",
+      "checksumMd5": "45c962bde0385df91ce42dc9b75804ae",
+      "gitBlobSha": "0eaa34657e188c61437ce49ca70ae3cec8a85f0f"
+    },
+    {
+      "filename": "assets/bc-brauer-ba45a91194166541.json",
+      "checksumMd5": "396bb6c7085d6a13e7346e80dbaa3d8d",
+      "gitBlobSha": "b24da452a237479ebdc8b09e4c4186afec84a5c1"
+    },
+    {
+      "filename": "assets/bc-brauer-bea34ea5bf2567f5.json",
+      "checksumMd5": "1a4367ebb4f996fbb0edac79e1b91b82",
+      "gitBlobSha": "e7ef57e648043013b18f4f5203281e6225ae6c0f"
+    },
+    {
+      "filename": "assets/bc-brauer-bedafedf67ee5b2d.json",
+      "checksumMd5": "4314a6c0ab8b9a21746ceefc2e3b003b",
+      "gitBlobSha": "1be47d5ca9faf16cfb8dcae3c250269da6e3a5ff"
+    },
+    {
+      "filename": "assets/bc-brauer-c001207e2ea098d7.json",
+      "checksumMd5": "ba6ec1b20383d1fe7d271e8aa29802d4",
+      "gitBlobSha": "5708fd6c3c408180880a8ad4adae0aef5e98a305"
+    },
+    {
+      "filename": "assets/bc-brauer-c046f229c2d7e15c.json",
+      "checksumMd5": "8767e127810bb2fb0b6713fa38c23c1b",
+      "gitBlobSha": "e68710648c8d39330ff386f320074a861fa1236c"
+    },
+    {
+      "filename": "assets/bc-brauer-c05a5ec24dc50e85.json",
+      "checksumMd5": "245a51f3692900e06190c9d49484b41a",
+      "gitBlobSha": "cdd48dc83b2551857452ce1c6fdb601aeeaa5a7c"
+    },
+    {
+      "filename": "assets/bc-brauer-cc58dc65e7ace3b7.json",
+      "checksumMd5": "4ccf068d0b4a8a5c37abc74ac39351f7",
+      "gitBlobSha": "d024c79c0e1837d76d83b205375a7df41ff663e9"
+    },
+    {
+      "filename": "assets/bc-brauer-cfcaa97eed623877-3fa3b9.json",
+      "checksumMd5": "753f9b942cc1cab3bbe2a7a7f9b19bd2",
+      "gitBlobSha": "3cbfa27b0320c603d825cb3e962e98d19d73cc33"
+    },
+    {
+      "filename": "assets/bc-brauer-cfcaa97eed623877-41b361.json",
+      "checksumMd5": "18ab8284c9a6ef8a0261e9b46867574a",
+      "gitBlobSha": "6fa654c249af5ce22861924dc93919652f80eff9"
+    },
+    {
+      "filename": "assets/bc-brauer-choices.css",
+      "checksumMd5": "bde733c2e05d60d1736dedccec6f012b",
+      "gitBlobSha": "be62bf354d4afa4f992a5bc7ae2213ca16f98de8"
+    },
+    {
+      "filename": "assets/bc-brauer-choices.js",
+      "checksumMd5": "b144d0a77a916ef0b58a15caf1630e1a",
+      "gitBlobSha": "8abad6b60ddaae1d6253dc7801d07c3a7ffdce7d"
+    },
+    {
+      "filename": "assets/bc-brauer-d18723ba237416d9.json",
+      "checksumMd5": "e1b8b1c4485de436fd5d7973d3ccc3b3",
+      "gitBlobSha": "3b342a4f0959438d16275866553ffa989b810468"
+    },
+    {
+      "filename": "assets/bc-brauer-d4495f7b3cb64e41-6bcf17.json",
+      "checksumMd5": "bb56752fccfa5f18fe5410a16f360f9f",
+      "gitBlobSha": "24ec98cbcbd3eae322d677024da122d75417c348"
+    },
+    {
+      "filename": "assets/bc-brauer-d4495f7b3cb64e41-a8b957.json",
+      "checksumMd5": "6405c816d07812bea7245def31e65c38",
+      "gitBlobSha": "5f35c886fb410c7d2f639b4b7af7337e83e74326"
+    },
+    {
+      "filename": "assets/bc-brauer-d487feea3b31049a.json",
+      "checksumMd5": "9577b505e3bd571cc2b4e2500e4731d8",
+      "gitBlobSha": "96f3f618d595888912c35b0f8ff47a33b097172a"
+    },
+    {
+      "filename": "assets/bc-brauer-d48fe8ed5abd9e40.json",
+      "checksumMd5": "c96e0f1049650b84c6b12ce5e4e7dd2b",
+      "gitBlobSha": "dcbfef047d5f0c5475bdb90c625b7117a085ff87"
+    },
+    {
+      "filename": "assets/bc-brauer-d763963bd6a4dcbf.json",
+      "checksumMd5": "e829f442bf138389197ae1490548dec3",
+      "gitBlobSha": "699b32adae2685a0465f13bcf47125fe25bb977c"
+    },
+    {
+      "filename": "assets/bc-brauer-d8bfb3803fe22e2c-63f021.json",
+      "checksumMd5": "3fde17c5844844691f75f4f46e53f91e",
+      "gitBlobSha": "fbea4936ab4f7c5410f21ba2d987a7fd2385ccc8"
+    },
+    {
+      "filename": "assets/bc-brauer-d8bfb3803fe22e2c-eea3b6.json",
+      "checksumMd5": "5905136c7230c52b45fd34bd96028bf1",
+      "gitBlobSha": "38d77c0d21733d12f5490cf8e9142c8b43fcf3b4"
+    },
+    {
+      "filename": "assets/bc-brauer-da4622276caed4bc.json",
+      "checksumMd5": "37b25307a52402ea33bdd2ea194a3cf6",
+      "gitBlobSha": "c75905b49af22917afc0ebb2f5d4c609ac6c565e"
+    },
+    {
+      "filename": "assets/bc-brauer-db6e00406c053da9.json",
+      "checksumMd5": "7a0fb9f78a146cadb7d899fb11654c70",
+      "gitBlobSha": "6c9995e5e548823e6c3f594087b4894206661bdb"
+    },
+    {
+      "filename": "assets/bc-brauer-dc0edfbc8d1faad4.json",
+      "checksumMd5": "d9e70df1d30c0c69bbe10bb590b4f35a",
+      "gitBlobSha": "7a96f68dd0cd052c8a71ae0395b81ddc02c8cd96"
+    },
+    {
+      "filename": "assets/bc-brauer-dd44665b351170e1-3f9550.json",
+      "checksumMd5": "edf78091a8eaa39b6c6303f5c69db394",
+      "gitBlobSha": "89ecd1c3be51aa4369066bcbf07e80bc2a85e9c3"
+    },
+    {
+      "filename": "assets/bc-brauer-dd44665b351170e1-6eba4c.json",
+      "checksumMd5": "d46e05070b11633c2d527d0258f8d9da",
+      "gitBlobSha": "50791f9560c43af5ce7e80ec7dd53ef7762a8f34"
+    },
+    {
+      "filename": "assets/bc-brauer-dd797dc7f471a7ca.json",
+      "checksumMd5": "868b4cd360bbe34cc9327835d2f21235",
+      "gitBlobSha": "c04bd92d25eed17bc1d49839d5afb0d09c5944a3"
+    },
+    {
+      "filename": "assets/bc-brauer-e1ae9eca393de68f.json",
+      "checksumMd5": "6b55d5d33db1df55caa924982e5afd7f",
+      "gitBlobSha": "83c59639835952de2bbabaad545c26ad678a9a2f"
+    },
+    {
+      "filename": "assets/bc-brauer-e2b43b7d050d908a.json",
+      "checksumMd5": "ac4e3d7005978f78f637eb35a6bf2246",
+      "gitBlobSha": "e6753ec0be4fa4655d0c10278df0d4954af9794c"
+    },
+    {
+      "filename": "assets/bc-brauer-e481fd037d643333.json",
+      "checksumMd5": "03e692d35c201b87f40339868afd1442",
+      "gitBlobSha": "b18a41b3d39cdb3c3e0e7243738b36d29e733594"
+    },
+    {
+      "filename": "assets/bc-brauer-e70604aae955dacf.json",
+      "checksumMd5": "91b08c2eadc48da24ea9201b7f98cb5a",
+      "gitBlobSha": "9d3e5ff541471ed8369d10dddcd3ba3785e299b8"
+    },
+    {
+      "filename": "assets/bc-brauer-e746b811ae38c543.json",
+      "checksumMd5": "6da3410c5746c4feace94a6f41525ef1",
+      "gitBlobSha": "123e80a99c7334604d59dfb10d7f23433f0188ac"
+    },
+    {
+      "filename": "assets/bc-brauer-e93d301769e672a2.json",
+      "checksumMd5": "43d3a62be12304f0013f88435d596284",
+      "gitBlobSha": "f53aadc3ae160eab8d0297b8a9e3c353e09aec2d"
+    },
+    {
+      "filename": "assets/bc-brauer-e988d413cbca0254.json",
+      "checksumMd5": "8edab647276b7691a121b29fb06575fb",
+      "gitBlobSha": "9b75c33f711e4cc0e225948d59d5fd7f07a864f8"
+    },
+    {
+      "filename": "assets/bc-brauer-ea8f1cfb2a23844f.json",
+      "checksumMd5": "56e6f4c2f176002a0ba75b6f8271d875",
+      "gitBlobSha": "dc55ab99f9130914005b4873b549c3ee4de6eafe"
+    },
+    {
+      "filename": "assets/bc-brauer-ec00fe9cbe4f5b37.json",
+      "checksumMd5": "15bc07fad973f29366740f8499e06720",
+      "gitBlobSha": "96fa5b41f2d716427a715cc9f13b167b03120657"
+    },
+    {
+      "filename": "assets/bc-brauer-efce48354d983b69.json",
+      "checksumMd5": "6a61605e8669a946907d41815bfa8eec",
+      "gitBlobSha": "4c60ba683a506d0278e9b8fdbc1385898b7f1ef4"
+    },
+    {
+      "filename": "assets/bc-brauer-f12f274a0e91042c.json",
+      "checksumMd5": "f4522e5cbfb9ff76dfa1927f22685cec",
+      "gitBlobSha": "6365d23b4a0a29de17b4ec9d8ef6e6fc03decef7"
+    },
+    {
+      "filename": "assets/bc-brauer-f3943d28fcbf1e26.json",
+      "checksumMd5": "efd397e36b794cac85ca9593766526bc",
+      "gitBlobSha": "780da66c5d6c873b3a62f5204e19c30cbd494462"
+    },
+    {
+      "filename": "assets/bc-brauer-f3f2437bf3bb2a5c.json",
+      "checksumMd5": "88a3e9320bc7a5c0b8f3be352e828eff",
+      "gitBlobSha": "0449c559a8ce6f861ad2a7c6e54aeaa0182bf0ae"
+    },
+    {
+      "filename": "assets/bc-brauer-f400282a3c26dc44.json",
+      "checksumMd5": "7f42f41154afce280a0dab1a854e500a",
+      "gitBlobSha": "63c57f692a90e311ef4c91e70f0440e5dd8fadb5"
+    },
+    {
+      "filename": "assets/bc-brauer-f9f6612b4da7afef.json",
+      "checksumMd5": "49e25924b212fbc1b0aba6264be05243",
+      "gitBlobSha": "9aeebb59360130385de0c9f8948c9ef6bc5275b2"
+    },
+    {
+      "filename": "assets/bc-brauer-fa39644694945ea7.json",
+      "checksumMd5": "fe42eaa746dd1ce48836ccff40ec601f",
+      "gitBlobSha": "40a48afc2ea41c68fea90d8455fd7b27cefc3ec2"
+    },
+    {
+      "filename": "assets/bc-brauer-fc948d95ea3ab200.json",
+      "checksumMd5": "16ae0bcc0bc5558522eac03337b0ea9f",
+      "gitBlobSha": "4f3c0cc92fa269ed5386e0d3266da752a7e13e4c"
+    },
+    {
+      "filename": "assets/bc-brauer-fd4e402806898f3a.json",
+      "checksumMd5": "3515f0908ab8c8e3ca966680c8e3b3e9",
+      "gitBlobSha": "d0b07a760c9ce0fe745216fe91c683d51170f361"
+    },
+    {
+      "filename": "assets/bc-brauer-fd5180b66f47fe2f.json",
+      "checksumMd5": "d990a5cba1f6a199695274b12b5dbe2a",
+      "gitBlobSha": "efc7ba10db61abe51f297df0b1c126de9c03432b"
+    },
+    {
+      "filename": "assets/bc-brauer-ff4815e2bdd8a0ae.json",
+      "checksumMd5": "7b6ed057161ca249bf8484d76d69054a",
+      "gitBlobSha": "61f7f1a98a55de0e0827549b9bedad0e632ff940"
+    },
+    {
+      "filename": "assets/bc-brauer-ffeedcf611c96a90.json",
+      "checksumMd5": "f21f9686fc53ee99a56ebad847f89929",
+      "gitBlobSha": "7270d1d117c962798dc0bdbcf64cd4ea5812866f"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-0.liquid",
+      "checksumMd5": "498e28ad6e0c443a7b5fdd7d830aa135",
+      "gitBlobSha": "46d8c78752cae8ce87fd44472dab948dc3aa81d7"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-1.liquid",
+      "checksumMd5": "7d738af0219dac0db2368fbd66eaf597",
+      "gitBlobSha": "3e932c4202bbbf527d679367e3639f83745ec5b0"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-2.liquid",
+      "checksumMd5": "090d1d5c0fbc3484ee8c12be68ec9f14",
+      "gitBlobSha": "c40583b0d19bbf0736843c1e4c4f7f6ec244df23"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-3.liquid",
+      "checksumMd5": "9e7c3786fa29de21c9e30b49806e19ce",
+      "gitBlobSha": "d136d9ff9ce2cf11c33b3dcdc638468a71c35f8b"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-4.liquid",
+      "checksumMd5": "23464316f17ec27d8e6e2668c2bc348f",
+      "gitBlobSha": "e2bc21329d356ac38a3dbf1f3e85c60e8ae45364"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-5.liquid",
+      "checksumMd5": "efff1e2ef1f33e50970763367cba23ae",
+      "gitBlobSha": "c8ed02654c7cc2ea7897b7a35a1d0b231d17a7fb"
+    },
+    {
+      "filename": "assets/bc-brauer-46a454f9a15bdaa9.json",
+      "checksumMd5": "72b82af71906b30082ece3636568ff82",
+      "gitBlobSha": "1d27c2db880180a39a8bfc5c4b667bb73ef76c1e"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-6.liquid",
+      "checksumMd5": "809ba293f0c300f5b7cc5b74b9e3b270",
+      "gitBlobSha": "33270fb5c4c7439bf1b1a4e71b9f1869441b66c4"
+    },
+    {
+      "filename": "snippets/bc-brauer-route-7.liquid",
+      "checksumMd5": "8c7cc9d365fb408755f6abe7f99571e7",
+      "gitBlobSha": "7a57aaaad05c1c1245f6e2eabc5b5c25b9413486"
+    }
+  ]
+}
