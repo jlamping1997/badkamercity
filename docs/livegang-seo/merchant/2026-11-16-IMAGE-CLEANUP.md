@@ -1,3 +1,5 @@
+> **16 november 2026 — SPOM1633BL / OWNER_COMPLETED_VERIFIED:** eigenaar heeft Google &YouTube uitgezet. Verse Shopify-readback bevestigt ACTIVE, Webshop en overige3kanalen gepubliceerd; Google-publicatie301590184202 ontbreekt. Deze handeling is **afgerond**; de oudere uitvoeringsblokkade en eigenaar-opdracht hieronder zijn historie en niet opnieuw uitvoeren. Google-verwerking kan nog achterlopen. **Volgende inhoudelijke controle:** eigenaar bevestigt of de huidige M444AB-foto werkelijk verouderd messing toont; anders uitsluitend een exacte bevestigde kleurfoto koppelen. Overige uitgevoerde foto-/titelcorrecties behouden. [Readback](https://github.com/jlamping1997/badkamercity/blob/main/docs/livegang-seo/merchant/2026-11-16-SPOM1633BL-COMPLETION.json).
+
 # Resterende beeldcorrecties en Google-meldingen — 16 november 2026
 
 Status: SEVEN_PRODUCTS_LIVE_VERIFIED / JEEO_REVIEW_REQUESTED / ONE_CHANNEL_CHANGE_BLOCKED.
