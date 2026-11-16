@@ -67,14 +67,24 @@
     "xxl": "€300 complete transport, never €75 + €300; threshold is €1000 instead of €500"
   },
   "unknownsNotToInvent": [
-    "Supported delivery-time ranges per product or manufacturer; owner confirms these vary",
+    "Processing/shipping/delivery days including weekends and holidays",
+    "Whether next-day service also applies to pallet/XXL transport",
     "Product-to-shipping-group assignments need checking before deploy",
-    "Product subtotal calculation after discounts is an implementation convention to verify against actual checkout"
+    "Product subtotal after discounts remains a technical convention to verify"
   ],
   "deployment": {
     "shopifyChanged": false,
     "googleMerchantChanged": false,
     "storefrontTextChanged": false,
     "realCheckoutRulesVerified": false
+  },
+  "delivery": {
+    "reference": "delivery.json",
+    "ownerDefaultAvailability": "in_stock",
+    "cutoff": "14:00 Europe/Amsterdam",
+    "beforeCutoff": "Morgen in huis",
+    "afterCutoff": "Overmorgen in huis",
+    "status": "WAITING_DELIVERY_CALENDAR_AND_PALLET_SCOPE",
+    "keepAllCurrentProductsInStock": true
   }
 }

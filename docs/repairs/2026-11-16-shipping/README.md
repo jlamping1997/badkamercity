@@ -1,5 +1,21 @@
 # Actueel verzendschema — 16 november 2026
 
+## Voorraad en levertijd — laatste eigenaarsinstructie
+
+De eigenaar bevestigt dat alle huidige artikelen op voorraad zijn en wil **Op voorraad** behouden totdat later echte voorraadstatussen en afwijkende termijnen worden gekoppeld. Gewenste Google-voorraadstatus: **in_stock**. Geen fictieve aantallen invullen.
+
+Gewenste dagbelofte, Nederlandse tijd:
+
+- Vóór 14:00 besteld: morgen in huis.
+- Vanaf 14:00: overmorgen in huis (exacte 14:00-grens als technische conventie).
+- Later product-/leveranciersspecifieke levertijden toevoegen op dezelfde basis.
+
+**Nog twee bedrijfsafspraken nodig:** welke dagen orders worden verwerkt/verzonden en bezorgd (vrijdag, weekend, feestdagen), en of dezelfde termijn ook voor tegels/baden/douchewanden/XXL geldt of dat die op afspraak/eigen termijn gaan. De nieuwe dagbelofte is daarom nog niet live gezet.
+
+Controle: twee publieke productpagina's tonen al Op voorraad en Offer.InStock in de gestructureerde gegevens. Dit bewijst geen volledige verwerking in Google Merchant Center; de eerder gelezen algemene Google-service van 2–5 werkdagen is niet aangepast. Geen voorraad-, kanaal- of themawijziging uitgevoerd.
+
+[Levertijdafspraken en controle](delivery.json). De vier onderstaande verzendtarieven blijven ongewijzigd.
+
 Status: **tarieven uitgewerkt en doorgerekend; productindeling, live instellingen en echte checkoutcontrole nog uitvoeren**. De onderstaande eigenaarsregels vervangen eerdere onvolledige bedragen en de limiet van 1–2 mozaïekdozen. Alles inclusief btw.
 
 | Groep | Producten | Tarief | Gratis bij totaal productbedrag |
@@ -39,7 +55,7 @@ Werkafspraak uit het gesprek: één keer het hoogste toepasselijke tarief bij ge
 2. Binnen de bestaande market-driven Shopify-opzet groepsstaffels uitwerken. De huidige algemene gratis-grens van €100,01 mag pallet/XXL niet blijven overrulen.
 3. Echte grens-/gemengde manden testen, inclusief verschillende merken, locaties en korting; geen modelberekening als live geslaagd rapporteren.
 4. Google productgroepen, tarieven, gratisdrempels en publieke bezorg-/verzendteksten gelijkzetten. Google kan de geldende betaalde verzending tonen voor een losse bestelling onder de drempel; geen belofte om €75 te verbergen.
-5. Werkelijke levertijden per product/merk nog onderbouwen; hiervoor zijn geen concrete termijnen aangeleverd.
+5. Voorraad en 14:00-dagbelofte zijn nu door eigenaar aangeleverd; bevestig alleen nog de verwerk-/bezorgkalender en pallet-/XXL-termijn. Latere product-/leverancierskoppelingen volgen apart.
 
 ## Specificatie en bewijs
 

@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-16",
+  "status": "OWNER_STOCK_AND_CUTOFF_DEFINED_WAITING_DELIVERY_CALENDAR_AND_PALLET_SCOPE",
+  "ownerConfirmedStock": {
+    "allCurrentlyOfferedProductsInStock": true,
+    "keepInStockUntilStockLinksAdded": true,
+    "source": "Owner explicitly states all products are in stock; inventory/lead-time integrations follow later",
+    "defaultWebsiteLabel": "Op voorraad",
+    "desiredGoogleAvailability": "in_stock",
+    "fabricatedStockQuantities": false
+  },
+  "cutoff": {
+    "time": "14:00",
+    "timezone": "Europe/Amsterdam",
+    "beforeCutoff": "Morgen in huis",
+    "afterCutoff": "Overmorgen in huis",
+    "exactCutoffConvention": "At 14:00 belongs to after-cutoff period; not yet deployed"
+  },
+  "proposedProductMessage": {
+    "before": "Op voorraad — vóór 14:00 besteld, morgen in huis",
+    "after": "Op voorraad — na 14:00 besteld, overmorgen in huis",
+    "liveApplied": false,
+    "calendarAwareLogicRequired": true
+  },
+  "missingOwnerFacts": [
+    {
+      "id": "delivery_calendar",
+      "question": "Op welke dagen worden orders verwerkt/verzonden en bezorgd, inclusief vrijdag, zaterdag, zondag en feestdagen?",
+      "why": "Tomorrow/day-after-tomorrow cannot safely be resolved from a cutoff alone"
+    },
+    {
+      "id": "large_goods_scope",
+      "question": "Geldt dezelfde bezorgbelofte voor tegels, baden, douchewanden en XXL, of gaat dit transport op afspraak/met eigen termijn?",
+      "why": "Stock status does not determine pallet-transit time"
+    }
+  ],
+  "liveVerification": {
+    "activePublishedProductCount": {
+      "count": 28977,
+      "precision": "EXACT"
+    },
+    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "publicPageChecks": [
+      {
+        "url": "https://badkamercity.nl/products/fabriecio-gm-1004",
+        "visibleStatus": "Op voorraad",
+        "structuredOfferAvailability": "http://schema.org/InStock",
+        "nextDayClaimFound": false,
+        "adminVariantAvailableForSale": true
+      },
+      {
+        "url": "https://badkamercity.nl/products/wiesbaden-rooster-voor-douchegoot-60-x-7-cm-rvs-33-4213",
+        "visibleStatus": "Op voorraad",
+        "structuredOfferAvailability": "http://schema.org/InStock",
+        "nextDayClaimFound": false
+      }
+    ],
+    "scope": "Two public product-page samples, one a tracked-zero but sellable variant; not an exhaustive catalog or processed Merchant Center feed audit",
+    "merchantCenterProcessedAvailabilityReadThisTurn": false,
+    "previousMerchantGlobalService": "Earlier audit observed generic 2–5 business days; not changed",
+    "liveWritesPerformed": false
+  },
+  "implementationAfterCalendarConfirmed": [
+    "Keep owner-confirmed default In stock and preserve valid sales/channel exclusions",
+    "Add calendar-aware 14:00 delivery copy to available products in Europe/Amsterdam; integrate later product-specific overrides without rebuilding",
+    "Use correct handling cutoff, handling business days and transit days for Google, with pallet-specific service labels if needed",
+    "Verify visible status, structured data, buyability and processed Google availability; do not treat InStock structured data as proof that Merchant Center already processed every offer",
+    "Check Friday/weekend/holiday and 13:59/14:00 boundary examples before publishing delivery promises"
+  ],
+  "preservation": {
+    "existingShippingRules": "Unchanged; rules.json still contains four agreed tariff groups",
+    "M444AB": "Keep published including Google",
+    "SPOM1633BL": "Preserve existing Google-only exclusion"
+  }
+}
