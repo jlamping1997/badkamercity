@@ -1,3 +1,7 @@
+> **16 november — actuele Google-proef:** de eigenaar heeft Advanced data source management geactiveerd en een nog niet opgeslagen/geactiveerde proefregel gemaakt: product type ‘wandtegels’ → shipping label ‘pallet’. Preview toont ‘No item found’; nog geen geslaagde regeltest. **Exact volgende actie:** Preview → Search → product-ID **shopify_ZZ_10687518703882_54000406331658** openen en Draft value controleren. Dit product is live in Google gelezen als Wandtegels.
+>
+> **Nieuwe bevinding:** deze gewone wandtegel krijgt via Shopify nog per product **shipping €6,95** en **free_shipping_threshold €100,01** mee. Alleen labels/accounttarieven instellen bewijst daarom niet dat de uiteindelijke kosten kloppen. Eerst bevestigen hoe de oude productoverschrijvingen verdwijnen of per groep worden aangepast. Handmatige kanaalinstelling na eigenaaractie nog niet vers bevestigd. [Productbewijs en precies vervolg](google-wall-tile-preview.json). Onderstaande eerdere setupstappen zijn daarmee nader uitgewerkt.
+
 # Verzendtarieven en teksten live; Google-inrichting volgt
 
 **Stand: 16 november 2026.** De vier tariefgroepen staan actief in de echte Nederlandse checkout. Alle 18 gecontroleerde tariefquotes zijn goed. De pagina [Bezorgen en afhalen](https://badkamercity.nl/pages/bezorgen-en-afhalen) is live bijgewerkt.
