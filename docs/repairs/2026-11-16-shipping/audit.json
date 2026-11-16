@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-16",
+  "status": "AUDITED_WAITING_OWNER_TRANSPORT_FEES_AND_DELIVERY_RANGES",
+  "ownerDecisions": {
+    "M444AB": "KEEP_PUBLISHED_INCLUDING_GOOGLE",
+    "largeGoodsShipping": "SEPARATE_TRANSPORT_TARIFF",
+    "leadTimes": "VARY_BY_PRODUCT"
+  },
+  "sourceEvidence": {
+    "shopify": "Connected Admin API readback",
+    "storefront": "Public HTML and fresh anonymous Ajax cart quotes",
+    "googleMerchant": "Signed-in service settings observed in UI; editor cancelled without saving"
+  },
+  "shopify": {
+    "country": "NL",
+    "currency": "EUR",
+    "marketId": "gid://shopify/Market/94864998666",
+    "marketDrivenShipping": true,
+    "standardPrice": "6.95",
+    "freeFromAmount": "100.01",
+    "largeGoodsExceptionConfigured": false,
+    "globalTransitTime": null
+  },
+  "googleMerchant": {
+    "accountId": "5902025216",
+    "serviceId": "1",
+    "name": "price_based_EUR_611727081738_Custom_rate_price_based",
+    "status": "Complete",
+    "countries": [
+      "NL"
+    ],
+    "products": "All products",
+    "flatPrice": "6.95",
+    "freeShippingOverValue": "100.00",
+    "handlingBusinessDays": {
+      "min": 1,
+      "max": 1,
+      "days": "Mon–Fri"
+    },
+    "transitBusinessDays": {
+      "min": 1,
+      "max": 4,
+      "days": "Mon–Fri"
+    },
+    "totalBusinessDays": {
+      "min": 2,
+      "max": 5
+    },
+    "productLevelOverridesExhaustivelyAudited": false,
+    "changesSaved": false,
+    "temporaryTimezoneSelection": "Amsterdam was selected only to continue reading the editor, then discarded with Cancel"
+  },
+  "publicInformation": {
+    "deliveryPage": "https://badkamercity.nl/pages/bezorgen-en-afhalen",
+    "standardRateMatchesShopify": true,
+    "largeGoodsText": "Contact before ordering; actual separate fees not stated",
+    "leadTimeText": "Varies by product and execution",
+    "homepageClaim": "Gratis verzending boven €100",
+    "shippingPolicyUrl": "https://badkamercity.nl/policies/shipping-policy",
+    "shippingPolicyHttpStatus": 404,
+    "nativeShippingPolicyPresent": false,
+    "returnPalletEstimateEUR": "75.00",
+    "returnPalletEstimateIsOutboundTariff": false
+  },
+  "verification": {
+    "quoteCount": 5,
+    "allMatchCurrentConfiguration": true,
+    "largeTileBox": {
+      "subtotal": "268.07",
+      "quotedShipping": "0.00",
+      "businessRequirement": "Owner requires separate transport tariff; amount and calculation not provided"
+    },
+    "ownAnonymousCartCleared": true,
+    "orderOrPaymentCreated": false,
+    "limitations": [
+      "Only NL public business postcode used; no all-postcode coverage claim",
+      "No real checkout/payment/order/email tested",
+      "No exact €100.01 basket; API threshold verified and €100.00/€112.00 quoted",
+      "Bath/furniture quotes not separately tested",
+      "No assumption that Google's wording implies a one-cent mismatch"
+    ]
+  },
+  "missingOwnerFacts": [
+    "Outbound transport charges including VAT for tiles, baths and furniture, and whether charged per order, pallet or delivery",
+    "Any destinations, quantity thresholds, free-shipping conditions and mixed-cart rules for those transport charges",
+    "Supported delivery ranges by stock/order/manufacturer group and source data"
+  ],
+  "writes": {
+    "shopify": false,
+    "googleMerchant": false,
+    "productPublication": false,
+    "documentationOnly": true
+  },
+  "next": [
+    "Collect concrete transport rates and lead-time ranges",
+    "Implement simplest supported shipping grouping in Shopify; confirm capability first",
+    "Align Google service/product labels and public delivery/shipping policy with actual checkout",
+    "Retest standard, large-goods and mixed baskets plus relevant boundary/discount cases; record readback"
+  ]
+}
