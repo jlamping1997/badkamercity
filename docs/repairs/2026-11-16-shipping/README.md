@@ -1,11 +1,15 @@
-# Verzendtarieven live; tekstconcept klaar
+# Verzendtarieven en teksten live; Google-inrichting volgt
 
 **Stand: 16 november 2026.** De vier tariefgroepen staan actief in de echte Nederlandse checkout. Alle 18 gecontroleerde tariefquotes zijn goed. De pagina [Bezorgen en afhalen](https://badkamercity.nl/pages/bezorgen-en-afhalen) is live bijgewerkt.
 
 ## Nu doen
 
-1. Eigenaar publiceert **BadkamerCity - verzendtarieven per productgroep**, thema **196690379018**, wanneer de tekstwijziging akkoord is. Dit concept zegt expliciet ‘Gratis pakketverzending boven €100’. De huidige MAIN blijft 196542005514 totdat de eigenaar publiceert. De gekoppelde publicatietool vereist apart akkoord voor dit benoemde thema.
-2. Daarna uitvoering: verse MAIN/publicatiecontrole, vervolgens Google-labels, groepskosten/gratisgrenzen en alleen de bevestigde PostNL-levertijd gelijkzetten. Niet opnieuw de tarieven uitvragen of de al werkende checkout opnieuw opbouwen.
+**Eigenaarpublicatie is voltooid.** Thema **196690379018 — BadkamerCity - verzendtarieven per productgroep** is vers als MAIN teruggelezen. Niet opnieuw om publicatie vragen.
+
+1. Eigenaar kiest in Shopify → Google & YouTube → Instellingen → Verzendgegevens: **Verzendgegevens handmatig instellen in Google Merchant Center** en slaat dit op. Productsynchronisatie aan laten. De dialoog staat open; automatische import is nu nog aan, er is niets opgeslagen.
+2. Daarna uitvoering: instelling teruglezen; shipping_label voor pakket/pallet/glas/XXL vanuit gecontroleerde brondata toevoegen of afleiden, op enkele actuele Google-aanbiedingen testen en vervolgens groepsstaffels plus alleen de bevestigde PostNL-termijn instellen.
+
+**Verse Google-controle:** account 5902025216 heeft nog één algemene service met €6,95 / gratis boven €100 en 2–5 werkdagen. Specific products toont geen selecteerbare labels en alleen aanleverinstructies. De service-editor is zonder opslaan geannuleerd. Shopify-interne collecties zijn geen automatisch aangemaakte Google-labels. Geen All-products-ééndagservice of vier overlappende algemene services opslaan. [Actuele Google-controle en hervatpunt](google-setup-check.json).
 
 ## Actieve tarieven
 

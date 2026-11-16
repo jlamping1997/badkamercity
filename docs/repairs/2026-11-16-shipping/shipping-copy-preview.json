@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "READY_UNPUBLISHED_OWNER_ACTION",
+  "status": "OWNER_PUBLISHED_MAIN_VERIFIED",
   "liveTheme": {
     "id": "196542005514",
     "name": "BadkamerCity - PostNL werkdagen 14u"
@@ -8,7 +8,7 @@
   "previewTheme": {
     "id": "gid://shopify/OnlineStoreTheme/196690379018",
     "name": "BadkamerCity - verzendtarieven per productgroep",
-    "role": "UNPUBLISHED"
+    "role": "MAIN"
   },
   "beforeManifestComparison": {
     "diff": [
@@ -85,5 +85,7 @@
   },
   "protectedCanonicalSettingsDataUnchanged": true,
   "assistantPublished": false,
-  "nextAction": "Owner publishes this named theme, then fresh MAIN/public check and Google group-specific alignment."
+  "nextAction": "In Shopify Google & YouTube > Instellingen > Verzendgegevens, select manual setup in Google Merchant Center and save; leave Productsynchronisatie enabled.",
+  "ownerPublicationVerifiedAt": "2026-11-16T16:27:29.649Z",
+  "latestGoogleSetupReference": "google-setup-check.json"
 }

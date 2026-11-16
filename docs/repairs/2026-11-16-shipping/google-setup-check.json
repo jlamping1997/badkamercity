@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-16",
+  "verifiedAt": "2026-11-16T16:27:29.649Z",
+  "status": "OWNER_PUBLICATION_VERIFIED_GOOGLE_MANUAL_SETUP_NEXT",
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/196690379018",
+    "name": "BadkamerCity - verzendtarieven per productgroep",
+    "role": "MAIN"
+  },
+  "shippingReadback": {
+    "id": "gid://shopify/Market/94864998666",
+    "delivery": {
+      "shipping": {
+        "optionDefinitions": {
+          "nodes": [
+            {
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "name": "Standaard",
+              "isActive": false,
+              "freeDeliveryMinimumValue": {
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              }
+            },
+            {
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+              "name": "Standaard",
+              "isActive": true,
+              "freeDeliveryMinimumValue": null
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  },
+  "google": {
+    "accountId": "5902025216",
+    "shippingPoliciesObserved": 1,
+    "existingService": {
+      "id": "1",
+      "name": "price_based_EUR_611727081738_Custom_rate_price_based",
+      "status": "Complete",
+      "visibility": "Show on Google",
+      "scope": "All products",
+      "productCountDisplayed": 11915,
+      "paidRateEUR": 6.95,
+      "freeShippingOverDisplayedEUR": 100,
+      "deliveryBusinessDays": {
+        "min": 2,
+        "max": 5
+      }
+    },
+    "shippingLabelsSelectable": false,
+    "labelEvidence": "Specific products showed only instructions to submit shipping_label and Continue was disabled. No labels available to select.",
+    "oldServiceEditorCancelledWithoutSaving": true,
+    "shippingWritesPerformed": false,
+    "allProductsOneDayRetry": false
+  },
+  "shopifyGoogleChannel": {
+    "productsSync": "ON",
+    "shippingSync": "AUTOMATIC_ON",
+    "manualOptionExactLabel": "Verzendgegevens handmatig instellen in Google Merchant Center",
+    "dialogOpened": true,
+    "selectionChanged": false,
+    "saved": false,
+    "settingsURL": "https://admin.shopify.com/store/fpa9hu-i3/apps/google/settings"
+  },
+  "nextOwnerAction": "In Shopify Google & YouTube > Instellingen > Verzendgegevens, select manual setup in Google Merchant Center and save; leave Productsynchronisatie enabled.",
+  "nextExecution": "After owner action, read the actual setting. Add/derive shipping_label for package, pallet, glass and XXL from verified source product types or exact product IDs; test sample products and preview coverage before applying. Then add mutually exclusive group-specific shipping costs and parcel-only working-day lead times. Do not attach multiple cheap all-products services.",
+  "unchanged": [
+    "Product prices",
+    "Inventory",
+    "Product publications",
+    "M444AB",
+    "Real Shopify checkout rates",
+    "Existing Google shipping costs and lead times"
+  ],
+  "googleSettingsURL": "https://merchants.google.com/mc/shipping/services?a=5902025216",
+  "limits": [
+    "No product labels applied yet",
+    "No Google shipping rate or delivery-time change saved",
+    "No current XXL product for a real cart or offer check",
+    "No new checkout tests; previous 18 passed checks retained",
+    "Protected canonical config/settings_data.json exception remains",
+    "No Windows local sync claimed"
+  ]
+}
