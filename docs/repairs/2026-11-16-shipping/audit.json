@@ -1,9 +1,9 @@
 {
   "date": "2026-11-16",
-  "status": "AUDITED_WAITING_OWNER_TRANSPORT_FEES_AND_DELIVERY_RANGES",
+  "status": "HISTORICAL_BASELINE_WITH_NEW_PRICING_RULES_NOT_DEPLOYED",
   "ownerDecisions": {
     "M444AB": "KEEP_PUBLISHED_INCLUDING_GOOGLE",
-    "largeGoodsShipping": "SEPARATE_TRANSPORT_TARIFF",
+    "largeGoodsShipping": "Group-specific rates defined in rules.json; furniture and all mosaics use parcel rules",
     "leadTimes": "VARY_BY_PRODUCT"
   },
   "sourceEvidence": {
@@ -68,7 +68,7 @@
     "largeTileBox": {
       "subtotal": "268.07",
       "quotedShipping": "0.00",
-      "businessRequirement": "Owner requires separate transport tariff; amount and calculation not provided"
+      "businessRequirement": "Owner confirms ordinary tiles €75 below €500; old live €0 quote remains a baseline mismatch"
     },
     "ownAnonymousCartCleared": true,
     "orderOrPaymentCreated": false,
@@ -81,8 +81,6 @@
     ]
   },
   "missingOwnerFacts": [
-    "Outbound transport charges including VAT for tiles, baths and furniture, and whether charged per order, pallet or delivery",
-    "Any destinations, quantity thresholds, free-shipping conditions and mixed-cart rules for those transport charges",
     "Supported delivery ranges by stock/order/manufacturer group and source data"
   ],
   "writes": {
@@ -92,9 +90,17 @@
     "documentationOnly": true
   },
   "next": [
-    "Collect concrete transport rates and lead-time ranges",
-    "Implement simplest supported shipping grouping in Shopify; confirm capability first",
-    "Align Google service/product labels and public delivery/shipping policy with actual checkout",
-    "Retest standard, large-goods and mixed baskets plus relevant boundary/discount cases; record readback"
-  ]
+    "Assign products to four shipping groups, including all mosaics and furniture to parcel",
+    "Implement group tiers without the old global €100.01 free-shipping override",
+    "Run real boundary, mixed-brand, mixed-group and discount quote tests",
+    "Align Google shipping and public policy with verified checkout",
+    "Obtain delivery-time ranges separately"
+  ],
+  "latestPricingRules": "rules.json",
+  "pricingExamples": {
+    "file": "rule-examples.json",
+    "count": 20,
+    "pureModelPass": true,
+    "liveCheckoutTest": false
+  }
 }

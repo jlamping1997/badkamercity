@@ -1,3 +1,59 @@
+# Actueel verzendschema — 16 november 2026
+
+Status: **tarieven uitgewerkt en doorgerekend; productindeling, live instellingen en echte checkoutcontrole nog uitvoeren**. De onderstaande eigenaarsregels vervangen eerdere onvolledige bedragen en de limiet van 1–2 mozaïekdozen. Alles inclusief btw.
+
+| Groep | Producten | Tarief | Gratis bij totaal productbedrag |
+| --- | --- | ---: | --- |
+| Pakket | Kranen, douchesets, meubels en alle mozaïek | €6,95 | Boven €100 |
+| Pallet | Gewone tegels behalve mozaïek/XXL, en baden | €75 | Vanaf €500 |
+| Douchewand | Douchewanden | €45 | Vanaf €500 |
+| XXL | XXL-tegels in genoemd bereik 120×250–320 cm | €300 totaal | Vanaf €1.000 |
+
+Mozaïek volgt de pakketregels per doos, matje of stuk, zonder de oude limiet van twee dozen. Meubels hebben geen apart groottransporttarief.
+
+XXL is **€300 volledig transport**, inclusief krat en vervoer; nooit €300 plus €75. De eigenaar noemt expliciet gratis vanaf €1.000.
+
+## Combinaties en grenzen
+
+Het **hele productbedrag** van de bestelling telt mee, ongeacht merk of productgroep. Leverancierstarieven zijn interne kosten en leveren geen aparte toeslag per merk op.
+
+Werkafspraak uit het gesprek: één keer het hoogste toepasselijke tarief bij gemengde groepen. Exact €100 blijft €6,95 zoals nu; pakket gratis vanaf €100,01. Voor gewone pallets en douchewanden wordt de voorgestelde grens vanaf exact €500 gebruikt. XXL is gratis vanaf exact €1.000, volgens de expliciete eigenaarsformulering. Als technische conventie producttotaal na korting en vóór verzendkosten gebruiken; nog verifiëren in de echte checkout.
+
+| Voorbeeld | Besteltotaal | Transport |
+| --- | ---: | ---: |
+| Eén mozaïekmatje | €45 | €6,95 |
+| Mozaïekdozen, ook meer dan twee | €180 | Gratis |
+| €400 tegels + €200 kranen | €600 | Gratis |
+| €250 tegels + €100 douchewand | €350 | €75 |
+| XXL | €400 | €300 totaal |
+| XXL met andere producten | €900 | €300 |
+| XXL | €999,99 | €300 |
+| XXL | €1.000 | Gratis |
+| €800 XXL + €250 kranen | €1.050 | Gratis |
+
+**20 rekenvoorbeelden PASS in het regelmodel. Dit zijn geen live checkoutproeven.** De oude actieve tarieven zijn niet gewijzigd.
+
+## Exact vervolg
+
+1. Producten betrouwbaar indelen in pakket, pallet, douchewand en XXL. Mozaïek en meubels expliciet naar pakket; nieuwe producten moeten dezelfde indeling krijgen.
+2. Binnen de bestaande market-driven Shopify-opzet groepsstaffels uitwerken. De huidige algemene gratis-grens van €100,01 mag pallet/XXL niet blijven overrulen.
+3. Echte grens-/gemengde manden testen, inclusief verschillende merken, locaties en korting; geen modelberekening als live geslaagd rapporteren.
+4. Google productgroepen, tarieven, gratisdrempels en publieke bezorg-/verzendteksten gelijkzetten. Google kan de geldende betaalde verzending tonen voor een losse bestelling onder de drempel; geen belofte om €75 te verbergen.
+5. Werkelijke levertijden per product/merk nog onderbouwen; hiervoor zijn geen concrete termijnen aangeleverd.
+
+## Specificatie en bewijs
+
+- [Regels en bron/conventies](rules.json)
+- [20 rekenvoorbeelden, geen live checkouttest](rule-examples.json)
+- [Technische nulmeting](audit.json)
+- [Vijf eerdere live mandproeven van de oude instelling](cart-quotes.json)
+
+BC-LIVE-014 blijft PARTIAL tot tarieven, productdekking en beleid echt zijn aangepast en gecontroleerd. BC-GOOGLE-004 blijft PARTIAL tot Google en checkout aansluiten. BC-LIVE-004 blijft IN_PROGRESS_USER voor de nog ontbrekende levertijdbronnen.
+
+---
+
+## Historische nulmeting vóór de tariefverduidelijking
+
 # Verzendkosten en levertijden — 16 november 2026
 
 Status: **controle afgerond; wachten op concrete transporttarieven en levertijden van eigenaar**. Er zijn geen live verzendinstellingen gewijzigd.

@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-16",
+  "status": "PURE_BUSINESS_RULE_CALCULATIONS_PASS",
+  "count": 20,
+  "liveShopifyCheckoutTest": false,
+  "rows": [
+    {
+      "label": "parcel under 100",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 9999,
+      "expectedMinor": 695,
+      "calculatedMinor": 695,
+      "passed": true
+    },
+    {
+      "label": "parcel exactly 100",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 10000,
+      "expectedMinor": 695,
+      "calculatedMinor": 695,
+      "passed": true
+    },
+    {
+      "label": "parcel above 100",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 10001,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "mosaic one mat",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 4500,
+      "expectedMinor": 695,
+      "calculatedMinor": 695,
+      "passed": true
+    },
+    {
+      "label": "mosaic boxes over 100, no quantity cap",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 18000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "furniture",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 9000,
+      "expectedMinor": 695,
+      "calculatedMinor": 695,
+      "passed": true
+    },
+    {
+      "label": "regular tiles below 500",
+      "groups": [
+        "pallet"
+      ],
+      "subtotalMinor": 49999,
+      "expectedMinor": 7500,
+      "calculatedMinor": 7500,
+      "passed": true
+    },
+    {
+      "label": "regular tiles exactly 500",
+      "groups": [
+        "pallet"
+      ],
+      "subtotalMinor": 50000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "bath below 500",
+      "groups": [
+        "pallet"
+      ],
+      "subtotalMinor": 45000,
+      "expectedMinor": 7500,
+      "calculatedMinor": 7500,
+      "passed": true
+    },
+    {
+      "label": "shower screen below 500",
+      "groups": [
+        "shower_screen"
+      ],
+      "subtotalMinor": 45000,
+      "expectedMinor": 4500,
+      "calculatedMinor": 4500,
+      "passed": true
+    },
+    {
+      "label": "shower screen exactly 500",
+      "groups": [
+        "shower_screen"
+      ],
+      "subtotalMinor": 50000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "400 tiles plus 200 taps",
+      "groups": [
+        "pallet",
+        "parcel"
+      ],
+      "subtotalMinor": 60000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "250 tiles plus 100 shower screen",
+      "groups": [
+        "pallet",
+        "shower_screen"
+      ],
+      "subtotalMinor": 35000,
+      "expectedMinor": 7500,
+      "calculatedMinor": 7500,
+      "passed": true
+    },
+    {
+      "label": "mixed-brand taps under 100",
+      "groups": [
+        "parcel"
+      ],
+      "subtotalMinor": 8000,
+      "expectedMinor": 695,
+      "calculatedMinor": 695,
+      "passed": true
+    },
+    {
+      "label": "XXL below 500, complete rate",
+      "groups": [
+        "xxl"
+      ],
+      "subtotalMinor": 40000,
+      "expectedMinor": 30000,
+      "calculatedMinor": 30000,
+      "passed": true
+    },
+    {
+      "label": "XXL plus parcel, below 1000",
+      "groups": [
+        "xxl",
+        "parcel"
+      ],
+      "subtotalMinor": 90000,
+      "expectedMinor": 30000,
+      "calculatedMinor": 30000,
+      "passed": true
+    },
+    {
+      "label": "XXL at 999.99",
+      "groups": [
+        "xxl"
+      ],
+      "subtotalMinor": 99999,
+      "expectedMinor": 30000,
+      "calculatedMinor": 30000,
+      "passed": true
+    },
+    {
+      "label": "XXL exactly 1000",
+      "groups": [
+        "xxl"
+      ],
+      "subtotalMinor": 100000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "800 XXL plus 250 taps",
+      "groups": [
+        "xxl",
+        "parcel"
+      ],
+      "subtotalMinor": 105000,
+      "expectedMinor": 0,
+      "calculatedMinor": 0,
+      "passed": true
+    },
+    {
+      "label": "XXL plus regular tiles below 1000",
+      "groups": [
+        "xxl",
+        "pallet"
+      ],
+      "subtotalMinor": 80000,
+      "expectedMinor": 30000,
+      "calculatedMinor": 30000,
+      "passed": true
+    }
+  ]
+}
