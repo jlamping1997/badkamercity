@@ -66,8 +66,8 @@
     "mediaId": "gid://shopify/MediaImage/50248425111818"
   },
   "productOrChannelMutationsPerformed": false,
-  "googleOnlyExclusion": "RECOMMENDED_TO_OWNER_NOT_PERFORMED",
-  "reason": "Prevent showing the owner-confirmed wrong finish in Google while correct colour content is unavailable.",
+  "googleOnlyExclusion": "DECLINED_BY_OWNER_KEEP_PUBLISHED",
+  "reason": "Owner explicitly decided to keep M444AB published, including Google & YouTube. Correct colour photo remains waiting on manufacturer; do not propose exclusion again.",
   "sourceHoldNextAction": "Resume only after exact correct M444AB verouderd messing content becomes available; do not ask owner to re-check this same known-wrong photo.",
   "spom1633bl": {
     "status": "GOOGLE_CHANNEL_EXCLUDED_VERIFIED",
@@ -117,5 +117,11 @@
       }
     }
   },
-  "followingWorkstream": "Shipping costs and delivery-time consistency; image-source hold does not block other work."
+  "followingWorkstream": "Shipping costs and delivery-time consistency; image-source hold does not block other work.",
+  "ownerPublicationDecision": {
+    "date": "2026-11-16",
+    "instruction": "Oke ik ga M444AB niet uitzetten.",
+    "action": "KEEP_PUBLISHED",
+    "scope": "All current channels including Google & YouTube"
+  }
 }
