@@ -1,7 +1,7 @@
 {
   "date": "2026-11-16",
   "verifiedAt": "2026-11-16T16:27:29.649Z",
-  "status": "OWNER_PUBLICATION_VERIFIED_GOOGLE_MANUAL_SETUP_NEXT",
+  "status": "OWNER_ATTRIBUTE_RULE_DRAFT_PREVIEW_PENDING",
   "theme": {
     "id": "gid://shopify/OnlineStoreTheme/196690379018",
     "name": "BadkamerCity - verzendtarieven per productgroep",
@@ -53,7 +53,7 @@
         "max": 5
       }
     },
-    "shippingLabelsSelectable": false,
+    "shippingLabelsSelectable": "Not rechecked after owner draft; single rule not yet applied",
     "labelEvidence": "Specific products showed only instructions to submit shipping_label and Continue was disabled. No labels available to select.",
     "oldServiceEditorCancelledWithoutSaving": true,
     "shippingWritesPerformed": false,
@@ -66,10 +66,11 @@
     "dialogOpened": true,
     "selectionChanged": false,
     "saved": false,
-    "settingsURL": "https://admin.shopify.com/store/fpa9hu-i3/apps/google/settings"
+    "settingsURL": "https://admin.shopify.com/store/fpa9hu-i3/apps/google/settings",
+    "latestModeVerification": "Owner was instructed to save manual mode; not freshly confirmed after that handoff"
   },
-  "nextOwnerAction": "In Shopify Google & YouTube > Instellingen > Verzendgegevens, select manual setup in Google Merchant Center and save; leave Productsynchronisatie enabled.",
-  "nextExecution": "After owner action, read the actual setting. Add/derive shipping_label for package, pallet, glass and XXL from verified source product types or exact product IDs; test sample products and preview coverage before applying. Then add mutually exclusive group-specific shipping costs and parcel-only working-day lead times. Do not attach multiple cheap all-products services.",
+  "nextOwnerAction": "Preview > Search > enter exact offerId shopify_ZZ_10687518703882_54000406331658, open it, inspect draft shipping_label. Expected pallet; result NOT YET VERIFIED.",
+  "nextExecution": "After positive/negative preview checks, extend mutually exclusive group labels. Before applying Google costs, verify the owner's manual shipping-mode save and how the old per-offer shipping/free_shipping_threshold data are removed or overridden for large goods. Do not promise correct transport costs based on labels alone.",
   "unchanged": [
     "Product prices",
     "Inventory",
@@ -86,5 +87,7 @@
     "No new checkout tests; previous 18 passed checks retained",
     "Protected canonical config/settings_data.json exception remains",
     "No Windows local sync claimed"
-  ]
+  ],
+  "latestVerification": "2026-11-16T16:53:33.382Z",
+  "latestOfferCheckReference": "google-wall-tile-preview.json"
 }
