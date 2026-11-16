@@ -1461,6 +1461,31 @@
         "label": "Toon tijdelijk Op voorraad bij alle producten",
         "info": "Wijzigt alleen de weergave van levertijden. Voorraadgegevens en bestelbaarheid blijven behouden.",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "bc_weekday_delivery_enabled",
+        "label": "Toon bezorgbelofte op werkdagen",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "bc_weekday_delivery_before",
+        "label": "Bezorgtekst vóór 14:00",
+        "default": "Op werkdagen vóór 14:00 besteld, volgende werkdag in huis."
+      },
+      {
+        "type": "text",
+        "id": "bc_weekday_delivery_after",
+        "label": "Bezorgtekst na 14:00 en in het weekend",
+        "default": "Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis."
+      },
+      {
+        "type": "textarea",
+        "id": "bc_weekday_delivery_product_types",
+        "label": "Productsoorten met PostNL-bezorgbelofte",
+        "info": "Eén productsoort per regel. Palletproducten en onbekende productsoorten krijgen deze belofte niet.",
+        "default": "Afbouwdeel voor badrandkraan\nAfbouwdeel voor douchekraan\nAfbouwdeel voor wastafelkraan\nBadkranen\nBadrandhanddoucheset\nBidetkraan\nBidetkranen\nDouchekranen\nDoucheset\nDouchesystemen\nElektronische inbouw wastafelkraan\nFonteinkraan\nFonteinkraanset\nFonteinkranen\nGlijstangset met handdouche\nHanddouche\nHanddouchehouder\nHanddouchehouders\nHanddouches\nHanddouches en houders\nHanddoucheset\nHoekstopkranen\nHoofddouche\nHoofddouchehouder\nHoofddouches\nInbouw badkraan\nInbouw douchemengkraan\nInbouw doucheset\nInbouw wastafelkraan\nInbouwbadkraan\nInbouwbadkranen\nInbouwdeel voor badrandkraan\nInbouwdeel voor douchekraan\nInbouwdeel voor vrijstaande badkraan\nInbouwdeel voor wastafelkraan\nInbouwdouchekraan\nInbouwdoucheset\nInbouwdouchesets\nInbouwfonteinkranen\nInbouwwastafelkraan\nInbouwwastafelkranen\nKeukenkraan\nKeukenkranen\nKraanbinnenwerk\nKraanonderdeel\nKraanrozet\nMozaiektegel\nMozaïektegels\nOpbouw badkraan\nOpbouw regendouches\nOpbouw wastafelkraan\nOpbouwbadkranen\nOpbouwdouchekranen\nOpbouwfonteinkranen\nOpbouwwastafelkraan\nOpbouwwastafelkranen\nRegendoucheset opbouw\nRegendouchesets\nThermostatische badkraan\nThermostatische douchekraan\nVerlengset voor kraan\nVrijstaande badkraan\nVrijstaande badkranen\nWandaansluitbocht met handdouchehouder\nWastafelkraan\nWastafelkranen"
       }
     ]
   },

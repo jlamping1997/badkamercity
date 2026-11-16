@@ -75,7 +75,9 @@
     "shopifyChanged": false,
     "googleMerchantChanged": false,
     "storefrontTextChanged": false,
-    "realCheckoutRulesVerified": false
+    "realCheckoutRulesVerified": false,
+    "productDeliveryMessageLive": true,
+    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196542005514"
   },
   "delivery": {
     "reference": "delivery.json",
@@ -85,7 +87,7 @@
     "beforeCutoff": "Next weekday",
     "afterCutoff": "Two weekdays",
     "weekend": "Tuesday",
-    "status": "PARCEL_DRAFT_SAVED_WAITING_PUBLICATION_GOOGLE_SAVE_REJECTED",
+    "status": "POSTNL_PRODUCT_MESSAGE_LIVE_VERIFIED_GOOGLE_PENDING",
     "largeGoodsDayPromiseConfirmed": false,
     "keepAllCurrentProductsInStock": true
   }

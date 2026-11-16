@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-16",
+  "verifiedAt": "2026-11-16T15:32:28.022Z",
+  "status": "OWNER_PUBLISHED_LIVE_VERIFIED",
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/196542005514",
+    "name": "BadkamerCity - PostNL werkdagen 14u",
+    "role": "MAIN"
+  },
+  "publicationRecordedAt": "2026-11-16T15:28:32Z",
+  "actionPerformedBy": "OWNER",
+  "assistantPublished": false,
+  "publicChecks": {
+    "method": "Fresh public HTTP without preview cookies or preview_theme_id",
+    "results": [
+      {
+        "kind": "kraan",
+        "url": "https://badkamercity.nl/products/fabriecio-bkk-1001",
+        "httpStatus": 200,
+        "inStock": true,
+        "structuredAvailability": "http://schema.org/InStock",
+        "beforeCutoffText": true,
+        "afterCutoffText": true,
+        "liquidError": false
+      },
+      {
+        "kind": "mozaiek",
+        "url": "https://badkamercity.nl/products/cottoceramix-mosaico-defense-natural-27x31-va2711",
+        "httpStatus": 200,
+        "inStock": true,
+        "structuredAvailability": "http://schema.org/InStock",
+        "beforeCutoffText": true,
+        "afterCutoffText": true,
+        "liquidError": false
+      },
+      {
+        "kind": "pallettegel",
+        "url": "https://badkamercity.nl/products/porcelanosa-matt-white-mat-150-x-59-6-cm",
+        "httpStatus": 200,
+        "inStock": true,
+        "structuredAvailability": "http://schema.org/InStock",
+        "beforeCutoffText": false,
+        "afterCutoffText": false,
+        "liquidError": false
+      }
+    ],
+    "checkoutPaymentOrCartRetested": false,
+    "mobileVisualRetested": false
+  },
+  "nativeSourceFiles": [
+    {
+      "filename": "config/settings_data.json",
+      "checksumMd5": "6356b9d3f29fb740a70d4901ed0219e9"
+    },
+    {
+      "filename": "config/settings_schema.json",
+      "checksumMd5": "bc7424086642bb4aa680ff31e29c9f46"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "f3b47af4036ff4a9230967b1d1ff411f"
+    },
+    {
+      "filename": "snippets/bc-porcelanosa-buybox.liquid",
+      "checksumMd5": "58b0f474e8c2541670db59cf5155422a"
+    },
+    {
+      "filename": "snippets/bc-weekday-delivery.liquid",
+      "checksumMd5": "b648100f2d9766e10891ad09943ecebf"
+    }
+  ],
+  "sourceSync": {
+    "branch": "fix/product-cards-2026-10-14",
+    "directory": "shopify/current/",
+    "files": [
+      "config/settings_schema.json",
+      "sections/main-product.liquid",
+      "snippets/bc-porcelanosa-buybox.liquid",
+      "snippets/bc-weekday-delivery.liquid"
+    ],
+    "protectedSettingsDataNotOverwritten": true,
+    "shopifyignorePreserved": true,
+    "reason": "Existing config/settings_data API-body checksum exception remains open under AGENTS.md and docs/git-sync/2026-11-03/README.md; fresh body retained only as audit snapshot",
+    "fullThemeParityClaimed": false,
+    "localWindowsGitVerified": false
+  },
+  "shippingNow": {
+    "node": {
+      "id": "gid://shopify/Market/94864998666",
+      "name": "Nederland",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "nodes": [
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+                "currency": "EUR",
+                "freeDeliveryMinimumValue": {
+                  "amount": "100.01",
+                  "currencyCode": "EUR"
+                },
+                "name": "Standaard",
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "6.95",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              }
+            ],
+            "pageInfo": {
+              "hasNextPage": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "nextAction": "Implement the four agreed checkout tariff groups and product assignments, test thresholds and mixed carts, then align Google shipping labels/costs/parcel lead times",
+  "googleChangedThisTurn": false,
+  "inventoryOrPricesChangedThisTurn": false,
+  "activeWriterAfterHandoff": false
+}

@@ -413,7 +413,10 @@
                       {%- assign bc_hotbath_article_scope = bc_hotbath_article_scope | strip -%}
                       {%- assign bc_delivery_vendor = product.vendor | strip | downcase -%}
                       {%- if settings.bc_temporary_in_stock -%}
-                        <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}"><span class="bc-buybox__delivery-title">{{ 'bc_delivery.temporary_in_stock' | t }}</span></aside>
+                        <aside class="bc-buybox__delivery-card" aria-label="{{ 'bc_delivery.information' | t | escape }}">
+                          <span class="bc-buybox__delivery-title">{{ 'bc_delivery.temporary_in_stock' | t }}</span>
+                          {%- render 'bc-weekday-delivery', product: product -%}
+                        </aside>
                       {%- elsif bc_fabriecio_supplier_product -%}
                         {%- render 'bc-fabriecio-delivery', product: product -%}
                       {%- elsif bc_delivery_vendor == 'wiesbaden' -%}
@@ -1311,7 +1314,8 @@
             </button>
           </bc-product-disclosure>
         {%- endif -%}
-        {{ bc_documents_markup }}
+        {%- assign bc_document_vendor = product.vendor | strip | downcase -%}
+        {%- unless bc_document_vendor == 'lagoo' -%}{{ bc_documents_markup }}{%- endunless -%}
         <div id="ProductSet-{{ section.id }}" class="bc-product-set-anchor"{% if bc_set_markup == blank %} hidden{% endif %}>
           {{ bc_set_markup }}
         </div>
@@ -1319,6 +1323,9 @@
       {%- endif -%}
     </div>
     {%- endif -%}
+
+    {%- assign bc_document_vendor = product.vendor | strip | downcase -%}
+    {%- if bc_document_vendor == 'lagoo' -%}{{ bc_documents_markup }}{%- endif -%}
 
     <div id="ProductAccessories-{{ section.id }}" class="bc-accessories-anchor"{% if bc_accessories_markup == blank %} hidden{% endif %}>{{ bc_accessories_markup }}</div>
 

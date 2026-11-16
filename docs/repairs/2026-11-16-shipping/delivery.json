@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "WEEKDAY_POSTNL_DRAFT_SAVED_WAITING_THEME_PUBLICATION_GOOGLE_BLOCKED",
+  "status": "POSTNL_WEEKDAY_MESSAGE_LIVE_VERIFIED_SHIPPING_TARIFFS_AND_GOOGLE_PENDING",
   "ownerConfirmedStock": {
     "allCurrentlyOfferedProductsInStock": true,
     "keepInStockUntilStockLinksAdded": true,
@@ -21,7 +21,7 @@
     "after": "Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis.",
     "scope": "Configured parcel product types only",
     "draftApplied": true,
-    "liveApplied": false
+    "liveApplied": true
   },
   "missingOwnerFacts": [
     {
@@ -94,7 +94,7 @@
   "implementation": {
     "id": "gid://shopify/OnlineStoreTheme/196542005514",
     "name": "BadkamerCity - PostNL werkdagen 14u",
-    "role": "UNPUBLISHED"
+    "role": "MAIN"
   },
   "implementationEvidence": "weekday-implementation.json",
   "googleAutoReviewBlock": {
@@ -107,5 +107,6 @@
     "rejectionReason": "Saving would publish an all-products 1-business-day Google delivery promise while the user has not confirmed that large goods follow the same schedule and has stated delivery varies by article; the visible shipping costs also remain the old incomplete global rules.",
     "response": "Cancelled editor; verified previous 2–5 day service; no alternate write route attempted",
     "next": "Complete native shipping product groups/tariffs first; then configure matching Google labels and parcel-only delivery schedule"
-  }
+  },
+  "publicationEvidence": "weekday-publication.json"
 }

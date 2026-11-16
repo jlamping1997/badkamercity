@@ -95,6 +95,7 @@ Renders the reusable tile purchase controls inside the existing product page.
       <div class="bc-tile__total"><span>{{ 'bc_tiles.total' | t }}</span><strong class="bc-buybox__price-current" data-tile-total>{{ tile_variant.price | money }}</strong></div>
     </div>
     <p class="bc-tile__delivery{% unless settings.bc_temporary_in_stock %}{% if tile.order_type == 'Bestelartikel' %} is-order{% elsif tile.order_type == blank %} is-unknown{% endif %}{% endunless %}" data-tile-delivery role="status"><span class="bc-tile__dot" aria-hidden="true"></span><span data-tile-delivery-text>{% if settings.bc_temporary_in_stock %}{{ 'bc_delivery.temporary_in_stock' | t }}{% else %}{% if tile.order_type != blank %}{{ tile.order_type | escape }} · {% endif %}{{ tile.lead_time | default: tile_delivery_unknown | escape }}{% endif %}</span></p>
+    {%- if settings.bc_temporary_in_stock -%}{%- render 'bc-weekday-delivery', product: product -%}{%- endif -%}
     {{ actions_markup }}
   </div>
   {%- else -%}
@@ -123,6 +124,7 @@ Renders the reusable tile purchase controls inside the existing product page.
       <div class="bc-tile__total"><span>{{ 'bc_tiles.total' | t }}</span><strong class="bc-buybox__price-current" data-tile-total>{{ tile_variant.price | money }}</strong></div>
     </div>
     <p class="bc-tile__delivery{% unless settings.bc_temporary_in_stock %}{% if tile.order_type == 'Bestelartikel' %} is-order{% elsif tile.order_type == blank %} is-unknown{% endif %}{% endunless %}" data-tile-delivery role="status"><span class="bc-tile__dot" aria-hidden="true"></span><span data-tile-delivery-text>{% if settings.bc_temporary_in_stock %}{{ 'bc_delivery.temporary_in_stock' | t }}{% else %}{% if tile.order_type != blank %}{{ tile.order_type | escape }} · {% endif %}{{ tile.lead_time | default: tile_delivery_unknown | escape }}{% endif %}</span></p>
+    {%- if settings.bc_temporary_in_stock -%}{%- render 'bc-weekday-delivery', product: product -%}{%- endif -%}
     {{ actions_markup }}
     <p class="bc-tile__contact" data-tile-contact role="status" hidden>{{ 'bc_tiles.contact_delivery' | t }}</p>
     <noscript><p class="bc-tile__contact">{{ 'bc_tiles.large_order_note' | t }}</p></noscript>
