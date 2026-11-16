@@ -77,15 +77,17 @@
     "googleMerchantChanged": false,
     "storefrontTextChanged": true,
     "storefrontDeliveryPageLive": true,
-    "globalParcelCopyAwaitingThemePublication": true,
+    "globalParcelCopyAwaitingThemePublication": false,
     "realCheckoutRulesVerified": true,
     "quoteTestsPassed": 18,
     "productDeliveryMessageLive": true,
-    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196542005514",
+    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
     "shippingOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
     "inactiveRollbackOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
-    "previewThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
-    "previewThemeName": "BadkamerCity - verzendtarieven per productgroep"
+    "previewThemeId": null,
+    "previewThemeName": null,
+    "globalParcelCopyLive": true,
+    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018"
   },
   "delivery": {
     "reference": "delivery.json",
@@ -125,5 +127,6 @@
       "publishedToChannels": 0
     }
   ],
-  "xxlImportRequirement": "Explicit bc_shipping_xxl tag after verifying 120 × 250–320 cm; no active XXL products found in full tile read and broad title cross-check. New imports must validate their productType and group membership before publication."
+  "xxlImportRequirement": "Explicit bc_shipping_xxl tag after verifying 120 × 250–320 cm; no active XXL products found in full tile read and broad title cross-check. New imports must validate their productType and group membership before publication.",
+  "googleSetupStatus": "READ_ONLY_AUDIT_DONE_AUTOMATIC_IMPORT_ON_NO_LABELS_OWNER_MANUAL_MODE_NEXT"
 }
