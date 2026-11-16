@@ -1,0 +1,62 @@
+{
+  "status": "CALENDAR_MODEL_ONLY_NOT_LIVE_CHECKOUT",
+  "count": 8,
+  "cases": [
+    {
+      "orderedAt": "2026-11-16T12:59:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-17",
+      "expected": "2026-11-17",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-16T13:00:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-18",
+      "expected": "2026-11-18",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-19T12:59:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-20",
+      "expected": "2026-11-20",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-19T13:00:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-23",
+      "expected": "2026-11-23",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-20T12:59:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-23",
+      "expected": "2026-11-23",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-20T13:00:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-24",
+      "expected": "2026-11-24",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-21T08:00:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-24",
+      "expected": "2026-11-24",
+      "passed": true
+    },
+    {
+      "orderedAt": "2026-11-22T20:00:00Z",
+      "timezone": "Europe/Amsterdam",
+      "deliveryDate": "2026-11-24",
+      "expected": "2026-11-24",
+      "passed": true
+    }
+  ]
+}

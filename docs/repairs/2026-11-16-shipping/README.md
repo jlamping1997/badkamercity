@@ -1,3 +1,26 @@
+## Werkdagen bevestigd — gecontroleerd concept staat klaar
+
+De eigenaar houdt maandag t/m vrijdag aan. Vóór 14:00 geldt de volgende werkdag; vanaf 14:00 twee werkdagen. Vrijdag vóór 14:00 → maandag, vrijdag daarna of in het weekend → dinsdag. Nederlandse tijd (Europe/Amsterdam).
+
+**Opgeslagen concept: BadkamerCity - PostNL werkdagen 14u, thema 196542005514; niet gepubliceerd.** De gekoppelde Shopify-publicatietool vereist een apart akkoord voor dit benoemde thema.
+
+De twee teksten zijn aanpasbaar in Thema-instellingen → Tijdelijke voorraadweergave:
+
+- Op werkdagen vóór 14:00 besteld, volgende werkdag in huis.
+- Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis.
+
+De melding verschijnt alleen bij66 gecontroleerde PostNL-productsoorten en een bestelbare variant, ook in de aparte mozaïek-buybox. Onbekende types en pallet/XXL krijgen geen dagbelofte. Voorraadstatus, aantallen en bestaande leveranciersgegevens blijven behouden. Later kan de tijdelijke voorraadweergave uit en kunnen echte status-/levertijdkoppelingen worden gebruikt.
+
+Controle: echte Shopify-render en browser op kraan + mozaïek positief, gewone pallettegel negatief. Actuele Brauer-menu's veiliggesteld:174 bestanden gelijkgetrokken met MAIN en hun hashes teruggelezen. Acht kalendergevallen doorgerekend. Geen echte checkout-/betalingstest voor deze tekstwijziging. Mobiele screenshots via de koppeling mislukten; geen mobiele visuele pass geclaimd.
+
+**Google bleef ongewijzigd.** Automatische goedkeuringscontrole wees het opslaan van één werkdag voor All products af: groottransporttermijn niet bevestigd en nieuwe transporttarieven nog niet live. De editor is geannuleerd; bestaande Complete NL All products-service met2–5dagen is teruggelezen. Geen omweg geprobeerd. Eerst Shopify-tariefgroepen en productindeling afronden; daarna Google labels/tarieven en specifiek PostNL-levertijden gelijkzetten.
+
+[Implementatie en exact vervolg](weekday-implementation.json) · [Kalendergevallen](weekday-calendar-examples.json) · [Conceptafbeelding](weekday-theme-preview.jpg) · [Vijf opgeslagen themabestanden](weekday-theme/).
+
+**Volgende eigenaarshandeling:** expliciet publicatie van dit benoemde thema bevestigen. Daarna native publicatie, verse MAIN-readback en de vijf bestanden naar shopify/current op de codebranch synchroniseren. De oorspronkelijke MAIN196690379018 blijft tot dan live.
+
+---
+
 # Actueel verzendschema — 16 november 2026
 
 ## Voorraad en levertijd — laatste eigenaarsinstructie

@@ -67,10 +67,9 @@
     "xxl": "€300 complete transport, never €75 + €300; threshold is €1000 instead of €500"
   },
   "unknownsNotToInvent": [
-    "Processing/shipping/delivery days including weekends and holidays",
-    "Whether next-day service also applies to pallet/XXL transport",
-    "Product-to-shipping-group assignments need checking before deploy",
-    "Product subtotal after discounts remains a technical convention to verify"
+    "Large-goods next-day promise not confirmed; keep it off pallet/XXL",
+    "Native product-to-shipping-group assignments and all four tariff groups still need deployment and checkout verification",
+    "Google all-products one-day service must not be retried before the recorded auto-review concerns are addressed"
   ],
   "deployment": {
     "shopifyChanged": false,
@@ -82,9 +81,12 @@
     "reference": "delivery.json",
     "ownerDefaultAvailability": "in_stock",
     "cutoff": "14:00 Europe/Amsterdam",
-    "beforeCutoff": "Morgen in huis",
-    "afterCutoff": "Overmorgen in huis",
-    "status": "WAITING_DELIVERY_CALENDAR_AND_PALLET_SCOPE",
+    "processingAndDeliveryDays": "Mon–Fri",
+    "beforeCutoff": "Next weekday",
+    "afterCutoff": "Two weekdays",
+    "weekend": "Tuesday",
+    "status": "PARCEL_DRAFT_SAVED_WAITING_PUBLICATION_GOOGLE_SAVE_REJECTED",
+    "largeGoodsDayPromiseConfirmed": false,
     "keepAllCurrentProductsInStock": true
   }
 }
