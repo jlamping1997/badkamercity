@@ -1,0 +1,22 @@
+{% doc %}
+  Renders the weekday promise only for the configured parcel product types.
+  @param {product} product - The current product.
+{% enddoc %}
+{%- liquid
+  assign weekday_product_type = product.type | handleize
+  assign weekday_parcel_types = settings.bc_weekday_delivery_product_types | newline_to_br | split: '<br />'
+  assign weekday_parcel_match = false
+  for weekday_parcel_type in weekday_parcel_types
+    assign weekday_parcel_type_key = weekday_parcel_type | strip | handleize
+    if weekday_product_type != blank and weekday_parcel_type_key == weekday_product_type
+      assign weekday_parcel_match = true
+      break
+    endif
+  endfor
+-%}
+{%- if settings.bc_weekday_delivery_enabled and weekday_parcel_match and product.selected_or_first_available_variant.available -%}
+  <p class="bc-buybox__delivery-copy">
+    {{- settings.bc_weekday_delivery_before | escape -}}<br>
+    {{- settings.bc_weekday_delivery_after | escape -}}
+  </p>
+{%- endif -%}

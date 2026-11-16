@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "status": "OWNER_STOCK_AND_CUTOFF_DEFINED_WAITING_DELIVERY_CALENDAR_AND_PALLET_SCOPE",
+  "status": "WEEKDAY_POSTNL_DRAFT_SAVED_WAITING_THEME_PUBLICATION_GOOGLE_BLOCKED",
   "ownerConfirmedStock": {
     "allCurrentlyOfferedProductsInStock": true,
     "keepInStockUntilStockLinksAdded": true,
@@ -17,21 +17,18 @@
     "exactCutoffConvention": "At 14:00 belongs to after-cutoff period; not yet deployed"
   },
   "proposedProductMessage": {
-    "before": "Op voorraad — vóór 14:00 besteld, morgen in huis",
-    "after": "Op voorraad — na 14:00 besteld, overmorgen in huis",
-    "liveApplied": false,
-    "calendarAwareLogicRequired": true
+    "before": "Op werkdagen vóór 14:00 besteld, volgende werkdag in huis.",
+    "after": "Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis.",
+    "scope": "Configured parcel product types only",
+    "draftApplied": true,
+    "liveApplied": false
   },
   "missingOwnerFacts": [
     {
-      "id": "delivery_calendar",
-      "question": "Op welke dagen worden orders verwerkt/verzonden en bezorgd, inclusief vrijdag, zaterdag, zondag en feestdagen?",
-      "why": "Tomorrow/day-after-tomorrow cannot safely be resolved from a cutoff alone"
-    },
-    {
       "id": "large_goods_scope",
       "question": "Geldt dezelfde bezorgbelofte voor tegels, baden, douchewanden en XXL, of gaat dit transport op afspraak/met eigen termijn?",
-      "why": "Stock status does not determine pallet-transit time"
+      "why": "Stock status does not determine pallet-transit time",
+      "status": "NOT_CONFIRMED_DO_NOT_APPLY_PARCEL_PROMISE_TO_LARGE_GOODS"
     }
   ],
   "liveVerification": {
@@ -71,5 +68,44 @@
     "existingShippingRules": "Unchanged; rules.json still contains four agreed tariff groups",
     "M444AB": "Keep published including Google",
     "SPOM1633BL": "Preserve existing Google-only exclusion"
+  },
+  "calendar": {
+    "handlingDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "deliveryDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "cutoff": "14:00",
+    "timezone": "Europe/Amsterdam",
+    "before": "Next weekday",
+    "after": "Two weekdays",
+    "weekend": "Process Monday; deliver Tuesday",
+    "nationalHolidayTableAdded": false
+  },
+  "implementation": {
+    "id": "gid://shopify/OnlineStoreTheme/196542005514",
+    "name": "BadkamerCity - PostNL werkdagen 14u",
+    "role": "UNPUBLISHED"
+  },
+  "implementationEvidence": "weekday-implementation.json",
+  "googleAutoReviewBlock": {
+    "accountId": "5902025216",
+    "serviceId": "1",
+    "changeSaved": false,
+    "currentServiceAfterCancel": "Complete; Netherlands; All products; 2–5 days",
+    "attempted": "Cutoff 14:00 Amsterdam, handling 0–0 Mon–Fri, transit 1–1 Mon–Fri; fees untouched",
+    "autoReviewRejected": true,
+    "rejectionReason": "Saving would publish an all-products 1-business-day Google delivery promise while the user has not confirmed that large goods follow the same schedule and has stated delivery varies by article; the visible shipping costs also remain the old incomplete global rules.",
+    "response": "Cancelled editor; verified previous 2–5 day service; no alternate write route attempted",
+    "next": "Complete native shipping product groups/tariffs first; then configure matching Google labels and parcel-only delivery schedule"
   }
 }
