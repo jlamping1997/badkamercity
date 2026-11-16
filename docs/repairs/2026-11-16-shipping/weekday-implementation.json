@@ -1,10 +1,10 @@
 {
   "date": "2026-11-16",
-  "status": "DRAFT_SAVED_RENDER_VERIFIED_WAITING_EXPLICIT_THEME_PUBLICATION",
+  "status": "OWNER_PUBLISHED_LIVE_VERIFIED",
   "theme": {
     "id": "gid://shopify/OnlineStoreTheme/196542005514",
     "name": "BadkamerCity - PostNL werkdagen 14u",
-    "role": "UNPUBLISHED"
+    "role": "MAIN"
   },
   "originalMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
   "weekdayCalendar": {
@@ -133,7 +133,44 @@
     "browserPalletTile": "PASS: Op voorraad, no PostNL weekday promise",
     "mobileVisualVerification": "UNAVAILABLE: dedicated screenshot tool failed twice; no mobile visual pass claimed",
     "shopifyLiquidValidator": "Unavailable due to missing @shopify/theme-check-common dependency; actual Shopify render verified",
-    "realCheckoutOrPayment": false
+    "realCheckoutOrPayment": false,
+    "postPublication": {
+      "method": "Fresh public HTTP without preview cookies or preview_theme_id",
+      "results": [
+        {
+          "kind": "kraan",
+          "url": "https://badkamercity.nl/products/fabriecio-bkk-1001",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": true,
+          "afterCutoffText": true,
+          "liquidError": false
+        },
+        {
+          "kind": "mozaiek",
+          "url": "https://badkamercity.nl/products/cottoceramix-mosaico-defense-natural-27x31-va2711",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": true,
+          "afterCutoffText": true,
+          "liquidError": false
+        },
+        {
+          "kind": "pallettegel",
+          "url": "https://badkamercity.nl/products/porcelanosa-matt-white-mat-150-x-59-6-cm",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": false,
+          "afterCutoffText": false,
+          "liquidError": false
+        }
+      ],
+      "checkoutPaymentOrCartRetested": false,
+      "mobileVisualRetested": false
+    }
   },
   "screenshot": "weekday-theme-preview.jpg",
   "google": {
@@ -148,15 +185,32 @@
     "next": "Complete native shipping product groups/tariffs first; then configure matching Google labels and parcel-only delivery schedule"
   },
   "release": {
-    "published": false,
-    "confirmationRequiredByShopifyPublishTool": true,
+    "published": true,
+    "publishedBy": "OWNER",
+    "verifiedAt": "2026-11-16T15:32:28.022Z",
+    "themeId": "gid://shopify/OnlineStoreTheme/196542005514",
     "exactThemeName": "BadkamerCity - PostNL werkdagen 14u",
-    "nextAction": "After owner explicitly agrees to publish this named theme, use theme_publish for this theme, verify fresh MAIN, then sync the five theme files into shopify/current on the code branch"
+    "nextAction": "Implement the four agreed checkout tariff groups and product assignments, test thresholds and mixed carts, then align Google shipping labels/costs/parcel lead times"
   },
   "shippingRates": "Four agreed tariffs documented but still not deployed",
   "preservedChannels": {
     "M444AB": "Keep published including Google",
     "SPOM1633BL": "Preserve Google-only exclusion"
   },
-  "activeWriterAfterHandoff": false
+  "activeWriterAfterHandoff": false,
+  "sourceSync": {
+    "branch": "fix/product-cards-2026-10-14",
+    "directory": "shopify/current/",
+    "files": [
+      "config/settings_schema.json",
+      "sections/main-product.liquid",
+      "snippets/bc-porcelanosa-buybox.liquid",
+      "snippets/bc-weekday-delivery.liquid"
+    ],
+    "protectedSettingsDataNotOverwritten": true,
+    "shopifyignorePreserved": true,
+    "reason": "Existing config/settings_data API-body checksum exception remains open under AGENTS.md and docs/git-sync/2026-11-03/README.md; fresh body retained only as audit snapshot",
+    "fullThemeParityClaimed": false,
+    "localWindowsGitVerified": false
+  }
 }

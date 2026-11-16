@@ -1,3 +1,34 @@
+# Werkdagenmelding live — eigenaarpublicatie gecontroleerd
+
+**BadkamerCity - PostNL werkdagen 14u, thema 196542005514, staat nu MAIN.** De eigenaar heeft zelf gepubliceerd; de assistent heeft alleen gecontroleerd.
+
+Verse publieke controles zonder preview:
+
+| Product | Op voorraad + InStock | Werkdagenmelding |
+| --- | --- | --- |
+| Verlavio wastafelkraan | Ja | Beide14:00-regels zichtbaar |
+| Cottoceramix mozaïek | Ja | Beide14:00-regels zichtbaar |
+| Porcelanosa gewone pallettegel | Ja | Bewust geen PostNL-dagbelofte |
+
+Alle drie200 en geen Liquid-fout. Geen nieuwe koop-, betaling-, winkelwagen- of mobiele visuele test geclaimd. De eerdere174Brauer-hashcontroles blijven het voorbereidingsbewijs; geen nieuwe volledige themapariteit geclaimd.
+
+## Exact volgende stap
+
+**Vier afgesproken verzendtariefgroepen daadwerkelijk in Shopify instellen**, met betrouwbare productindeling en controle van totale bestelbedragen, gratisgrenzen, gemengde merken/groepen en korting. De verse NL-Market heeft nog één algemene optie: €6,95 t/m€100, gratis vanaf€100,01. De nieuwe pallet-, douchewand- en XXL-bedragen staan nog niet live.
+
+Daarna Google labels, kosten en specifiek PostNL-levertijden laten aansluiten. De eerdere automatische blokkade is niet opnieuw geprobeerd; Google is deze beurt niet aangepast.
+
+## Vastgelegde bron
+
+- [Verse publicatiecontrole](weekday-publication.json)
+- [Voorbereiding en eerdere Google-blokkade](weekday-implementation.json)
+- Vier livebronfiles overgenomen naar shopify/current/ op fix/product-cards-2026-10-14.
+- config/settings_data.json blijft onder de bestaande API-body/pariteitsuitzondering en .shopifyignore-guard. De API-body staat alleen als dossiercapture; geen volledige herstelpariteit of Windows-controle geclaimd.
+
+---
+
+## Historische voorbereiding vóór de eigenaarpublicatie
+
 ## Werkdagen bevestigd — gecontroleerd concept staat klaar
 
 De eigenaar houdt maandag t/m vrijdag aan. Vóór 14:00 geldt de volgende werkdag; vanaf 14:00 twee werkdagen. Vrijdag vóór 14:00 → maandag, vrijdag daarna of in het weekend → dinsdag. Nederlandse tijd (Europe/Amsterdam).
