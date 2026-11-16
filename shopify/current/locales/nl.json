@@ -85,7 +85,7 @@
     "no_shipping": "Niet nodig",
     "total": "Totaal",
     "estimated_total": "Totaal voor Nederland",
-    "free_shipping_rule": "Gratis verzending bij een producttotaal boven {{ amount }} na korting.",
+    "free_shipping_rule": "Gratis pakketverzending bij een producttotaal boven {{ amount }} na korting. Voor tegels, baden en doucheglas gelden andere tarieven.",
     "shipping_estimate": "Voor een Nederlands bezorgadres. Je definitieve totaal staat bij afrekenen.",
     "shipping_destination": "Verzendkosten worden berekend zodra je je bezorgadres invult bij afrekenen.",
     "shipping_none": "Deze artikelen hoeven niet te worden verzonden.",
@@ -1324,7 +1324,7 @@
     "search_title": "Zoeken: '{{ terms }}' ({{ total }}) – {{ shop }}",
     "usp_label": "Voordelen van Badkamercity",
     "delivery_per_item": "Levertijd per artikel",
-    "free_shipping": "Gratis verzending boven €100",
+    "free_shipping": "Gratis pakketverzending boven €100",
     "expert_advice": "Persoonlijk advies van onze experts",
     "tile_box": "per doos",
     "tile_area": "per m²"

@@ -85,7 +85,7 @@
     "no_shipping": "Not required",
     "total": "Total",
     "estimated_total": "Total for the Netherlands",
-    "free_shipping_rule": "Free shipping when the product total after discounts is above {{ amount }}.",
+    "free_shipping_rule": "Free parcel shipping when the product total after discounts is above {{ amount }}. Different rates apply to tiles, baths and shower glass.",
     "shipping_estimate": "For a Dutch delivery address. Your final total is shown at checkout.",
     "shipping_destination": "Shipping is calculated when you enter your delivery address at checkout.",
     "shipping_none": "These items do not require shipping.",
@@ -1324,7 +1324,7 @@
     "search_title": "Search: '{{ terms }}' ({{ total }}) – {{ shop }}",
     "usp_label": "Benefits of Badkamercity",
     "delivery_per_item": "Delivery time per item",
-    "free_shipping": "Free shipping on orders over €100",
+    "free_shipping": "Free parcel shipping on orders over €100",
     "expert_advice": "Personal advice from our experts",
     "tile_box": "per box",
     "tile_area": "per m²"

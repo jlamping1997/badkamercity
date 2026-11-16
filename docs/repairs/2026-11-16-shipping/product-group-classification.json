@@ -1,0 +1,475 @@
+{
+  "date": "2026-11-16",
+  "status": "ALL_ACTIVE_PRODUCTS_COVERED",
+  "activeProducts": 28977,
+  "groups": [
+    {
+      "id": "gid://shopify/Collection/587456610570",
+      "title": "BC verzending – Glastransport",
+      "productsCount": {
+        "count": 1836,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/587456643338",
+      "title": "BC verzending – XXL transport",
+      "productsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/587456676106",
+      "title": "BC verzending – Pallettransport",
+      "productsCount": {
+        "count": 3562,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    },
+    {
+      "id": "gid://shopify/Collection/587456708874",
+      "title": "BC verzending – Pakket",
+      "productsCount": {
+        "count": 23579,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      }
+    }
+  ],
+  "types": {
+    "tileTypes": [
+      "Tegels",
+      "Vloertegels",
+      "Wandtegels"
+    ],
+    "mosaicTypes": [
+      "Mozaïektegels",
+      "Mozaiektegel"
+    ],
+    "bathTypes": [
+      "Half Vrijstaande Baden",
+      "Halfvrijstaand bad",
+      "Halfvrijstaande baden",
+      "Hoekbad",
+      "Vrijstaand bad",
+      "Vrijstaande Baden",
+      "Whirlpoolbad"
+    ],
+    "glassTypes": [
+      "Badwand",
+      "Badwanden",
+      "Douche schuifdeur",
+      "Douchecabine",
+      "Douchecabines",
+      "Douchedeuren",
+      "Draaibare douchedeur",
+      "Glasplaat voor douchedeur",
+      "Glasplaat voor inloopdouche",
+      "Inloopdouche",
+      "Inloopdouches",
+      "Nisdeuren",
+      "Pendeldeur",
+      "Schuifdeur",
+      "Vijfhoekige douchecabine",
+      "Vouwdeur",
+      "Zijwand voor douche",
+      "Losse glasdelen",
+      "Setgebonden glasdelen"
+    ]
+  },
+  "sources": {
+    "glass": {
+      "title": "BC verzending – Glastransport",
+      "handle": "bc-verzending-glastransport",
+      "descriptionHtml": "<p>Interne automatische verzendgroep. Complete glasproducten; kleine onderdelen blijven pakketverzending. Niet publiceren als winkelcollectie.</p>",
+      "sources": [
+        {
+          "source": {
+            "title": "Complete glasproducten",
+            "targetType": "PRODUCTS",
+            "inclusion": {
+              "matchType": "ALL",
+              "conditions": [
+                {
+                  "productStatus": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "ACTIVE"
+                    ]
+                  }
+                },
+                {
+                  "productType": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "Badwand",
+                      "Badwanden",
+                      "Douche schuifdeur",
+                      "Douchecabine",
+                      "Douchecabines",
+                      "Douchedeuren",
+                      "Draaibare douchedeur",
+                      "Glasplaat voor douchedeur",
+                      "Glasplaat voor inloopdouche",
+                      "Inloopdouche",
+                      "Inloopdouches",
+                      "Nisdeuren",
+                      "Pendeldeur",
+                      "Schuifdeur",
+                      "Vijfhoekige douchecabine",
+                      "Vouwdeur",
+                      "Zijwand voor douche",
+                      "Losse glasdelen",
+                      "Setgebonden glasdelen"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "pallet": {
+      "title": "BC verzending – Pallettransport",
+      "handle": "bc-verzending-pallet",
+      "descriptionHtml": "<p>Interne automatische verzendgroep: normale tegels en baden, exclusief mozaïek en XXL. €75 onder €500, gratis vanaf €500. Niet publiceren als winkelcollectie.</p>",
+      "sources": [
+        {
+          "source": {
+            "title": "Tegels en baden",
+            "targetType": "PRODUCTS",
+            "inclusion": {
+              "matchType": "ALL",
+              "conditions": [
+                {
+                  "productStatus": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "ACTIVE"
+                    ]
+                  }
+                },
+                {
+                  "productType": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "Tegels",
+                      "Vloertegels",
+                      "Wandtegels",
+                      "Half Vrijstaande Baden",
+                      "Halfvrijstaand bad",
+                      "Halfvrijstaande baden",
+                      "Hoekbad",
+                      "Vrijstaand bad",
+                      "Vrijstaande Baden",
+                      "Whirlpoolbad"
+                    ]
+                  }
+                }
+              ]
+            },
+            "exclusion": {
+              "matchType": "ANY",
+              "conditions": [
+                {
+                  "collection": {
+                    "values": [
+                      "gid://shopify/Collection/587456643338"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "parcel": {
+      "title": "BC verzending – Pakket",
+      "handle": "bc-verzending-pakket",
+      "descriptionHtml": "<p>Interne automatische verzendgroep voor alle actieve artikelen buiten pallet-, glas- en XXL-transport. Inclusief mozaïek en meubels volgens eigenaarafspraak. €6,95 tot en met €100, gratis vanaf €100,01. Niet publiceren als winkelcollectie.</p>",
+      "sources": [
+        {
+          "source": {
+            "title": "Overige artikelen",
+            "targetType": "PRODUCTS",
+            "inclusion": {
+              "matchType": "ALL",
+              "conditions": [
+                {
+                  "productStatus": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "ACTIVE"
+                    ]
+                  }
+                },
+                {
+                  "productTag": {
+                    "matchType": "ANY",
+                    "relation": "NOT_TAGGED_WITH",
+                    "values": [
+                      "bc_shipping_xxl"
+                    ]
+                  }
+                }
+              ]
+            },
+            "exclusion": {
+              "matchType": "ANY",
+              "conditions": [
+                {
+                  "productType": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "Tegels",
+                      "Vloertegels",
+                      "Wandtegels",
+                      "Half Vrijstaande Baden",
+                      "Halfvrijstaand bad",
+                      "Halfvrijstaande baden",
+                      "Hoekbad",
+                      "Vrijstaand bad",
+                      "Vrijstaande Baden",
+                      "Whirlpoolbad",
+                      "Badwand",
+                      "Badwanden",
+                      "Douche schuifdeur",
+                      "Douchecabine",
+                      "Douchecabines",
+                      "Douchedeuren",
+                      "Draaibare douchedeur",
+                      "Glasplaat voor douchedeur",
+                      "Glasplaat voor inloopdouche",
+                      "Inloopdouche",
+                      "Inloopdouches",
+                      "Nisdeuren",
+                      "Pendeldeur",
+                      "Schuifdeur",
+                      "Vijfhoekige douchecabine",
+                      "Vouwdeur",
+                      "Zijwand voor douche",
+                      "Losse glasdelen",
+                      "Setgebonden glasdelen"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "xxl": {
+      "title": "BC verzending – XXL transport",
+      "handle": "bc-verzending-xxl",
+      "descriptionHtml": "<p>Interne verzendgroep voor XXL-tegels 120 × 250–320 cm. Bij import expliciet markeren met bc_shipping_xxl na maatcontrole. €300 transport, gratis vanaf €1.000. Niet publiceren als winkelcollectie.</p>",
+      "sources": [
+        {
+          "source": {
+            "title": "Gecontroleerde XXL-tegels",
+            "targetType": "PRODUCTS",
+            "inclusion": {
+              "matchType": "ALL",
+              "conditions": [
+                {
+                  "productStatus": {
+                    "matchType": "ANY",
+                    "relation": "EQUALS",
+                    "values": [
+                      "ACTIVE"
+                    ]
+                  }
+                },
+                {
+                  "productTag": {
+                    "matchType": "ANY",
+                    "relation": "TAGGED_WITH",
+                    "values": [
+                      "bc_shipping_xxl"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "membershipProbes": [
+    {
+      "id": "gid://shopify/Collection/587456610570",
+      "title": "BC verzending – Glastransport",
+      "productsCount": {
+        "count": 1836,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "mosaic": false,
+      "tile": false,
+      "glass": true,
+      "bath": false
+    },
+    {
+      "id": "gid://shopify/Collection/587456643338",
+      "title": "BC verzending – XXL transport",
+      "productsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "mosaic": false,
+      "tile": false,
+      "glass": false,
+      "bath": false
+    },
+    {
+      "id": "gid://shopify/Collection/587456676106",
+      "title": "BC verzending – Pallettransport",
+      "productsCount": {
+        "count": 3562,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "mosaic": false,
+      "tile": true,
+      "glass": false,
+      "bath": true
+    },
+    {
+      "id": "gid://shopify/Collection/587456708874",
+      "title": "BC verzending – Pakket",
+      "productsCount": {
+        "count": 5300,
+        "precision": "EXACT"
+      },
+      "resourcePublicationsCount": {
+        "count": 0,
+        "precision": "EXACT"
+      },
+      "mosaic": false,
+      "tile": false,
+      "glass": false,
+      "bath": false,
+      "note": "Initial count was still indexing. Later final count 23579 and mosaic membership true; see finalGroupCounts."
+    }
+  ],
+  "finalGroupCounts": {
+    "nodes": [
+      {
+        "id": "gid://shopify/Collection/587456610570",
+        "title": "BC verzending – Glastransport",
+        "productsCount": {
+          "count": 1836,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456643338",
+        "title": "BC verzending – XXL transport",
+        "productsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456676106",
+        "title": "BC verzending – Pallettransport",
+        "productsCount": {
+          "count": 3562,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456708874",
+        "title": "BC verzending – Pakket",
+        "productsCount": {
+          "count": 23579,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      }
+    ],
+    "active": {
+      "count": 28977,
+      "precision": "EXACT"
+    }
+  },
+  "xxl": {
+    "activeCount": 0,
+    "fullTileRead": 3773,
+    "ordinaryTiles": 3494,
+    "mosaics": 279,
+    "largeGoodsRead": 1904,
+    "noRemainingVariantPages": true,
+    "unclassifiedTitleCrossCheck": {
+      "products": {
+        "nodes": [],
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": null
+        }
+      },
+      "active": {
+        "count": 28977,
+        "precision": "EXACT"
+      }
+    },
+    "importTag": "bc_shipping_xxl",
+    "requiresVerifiedDimensions": "120 × 250–320 cm",
+    "automaticTaggingClaimed": false
+  },
+  "exceptions": {
+    "mosaico30x100": "Porcelanosa Carrara Blanco Mosaico 30 × 100 cm remains an ordinary wall tile; the word Mosaico does not turn it into a mosaic mat",
+    "accessories": "Small profiles, handles, hinges and related parts remain parcel; full loose glass panels are glass transport"
+  },
+  "collectionPublicationPolicy": "Internal unpublished collections only. No new public category, navigation, SEO landing page, product type, price or inventory update."
+}
