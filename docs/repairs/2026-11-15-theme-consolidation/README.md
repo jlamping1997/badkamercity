@@ -1,3 +1,7 @@
+# Gepubliceerd — 16 november 2026
+
+**PUBLISHED / PUBLIC_DESKTOP_QA_VERIFIED:** samengevoegd thema196690379018 staat MAIN. Kraan-, spiegelkast- en deurkeuzes buiten preview gecontroleerd. [Publicatiebewijs en hervatpunt](PUBLICATION-2026-11-16.md). De status en publicatieopdracht hieronder zijn historie van vóór deze vrijgave.
+
 # Gezamenlijk actueel concept — 15 november 2026
 
 Status: VERIFIED_PREVIEW / OWNER_PUBLICATION_PENDING.
