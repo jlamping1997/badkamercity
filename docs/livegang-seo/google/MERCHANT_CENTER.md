@@ -1,3 +1,7 @@
+# Actuele aanvulling — 16 november 2026
+
+**ACCOUNT_DIAGNOSTICS_VERIFIED / RETURN_POLICY_SAVED:** gekoppeld account5902025216 rechtstreeks gelezen;24afgekeurd,bredePendinginitialreview,geenaccountbredeherstelpunten. NL-retourbeleid9497359424 opgeslagen en volledig teruggelezen. [Volledige bronstand,26uitzonderingen en hervatpunt](../merchant/2026-11-16-MERCHANT-REVIEW.md). De8novemberstatus en oude account-/Lagoo-claims hieronder zijn historische nulmetingen; recentereLagoo-fotocontroles en deze Merchant-readback zijn leidend. Geen volledige Google-vrijgave of purchasebewijs.
+
 # Merchant Center — productvermeldingen
 
 **Stand: 8 november 2026 — DOC-LIVE-01.** De [live audit](../../audits/2026-11-08/README.md) leest website en Shopify-configuratie. Huidige Merchant-toegang, domeinclaim, productbron, afkeuringen en bestemmingen zijn niet in het Merchant-account teruggelezen. De historische onboardingstatus 3/6 en het eerdere ontbreken van Google & YouTube zijn geen actuele accountstatus.
