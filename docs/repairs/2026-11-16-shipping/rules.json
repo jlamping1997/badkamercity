@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-11-16",
-  "status": "PRICING_RULES_DEFINED_NOT_DEPLOYED",
+  "status": "SHOPIFY_CHECKOUT_LIVE_VERIFIED_GOOGLE_PENDING",
   "currency": "EUR",
   "pricesIncludeVAT": true,
   "countryScope": "NL",
@@ -38,7 +38,7 @@
     {
       "id": "shower_screen",
       "products": [
-        "Shower screens"
+        "Complete shower glass: screens, doors, side panels, cabins, bath screens and loose complete glass panels; small accessories remain parcel"
       ],
       "priceMinor": 4500,
       "freeWhenSubtotalMinor": 50000,
@@ -68,16 +68,24 @@
   },
   "unknownsNotToInvent": [
     "Large-goods next-day promise not confirmed; keep it off pallet/XXL",
-    "Native product-to-shipping-group assignments and all four tariff groups still need deployment and checkout verification",
-    "Google all-products one-day service must not be retried before the recorded auto-review concerns are addressed"
+    "Google group-specific shipping labels/costs/parcel times are not yet aligned or verified",
+    "No current XXL products; native €300/€1000 tiers verified, no real XXL cart test",
+    "Discounted total basis follows native cart conventions; no fresh discount-specific quote test"
   ],
   "deployment": {
-    "shopifyChanged": false,
+    "shopifyChanged": true,
     "googleMerchantChanged": false,
-    "storefrontTextChanged": false,
-    "realCheckoutRulesVerified": false,
+    "storefrontTextChanged": true,
+    "storefrontDeliveryPageLive": true,
+    "globalParcelCopyAwaitingThemePublication": true,
+    "realCheckoutRulesVerified": true,
+    "quoteTestsPassed": 18,
     "productDeliveryMessageLive": true,
-    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196542005514"
+    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196542005514",
+    "shippingOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+    "inactiveRollbackOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+    "previewThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "previewThemeName": "BadkamerCity - verzendtarieven per productgroep"
   },
   "delivery": {
     "reference": "delivery.json",
@@ -90,5 +98,32 @@
     "status": "POSTNL_PRODUCT_MESSAGE_LIVE_VERIFIED_GOOGLE_PENDING",
     "largeGoodsDayPromiseConfirmed": false,
     "keepAllCurrentProductsInStock": true
-  }
+  },
+  "catalogAssignments": [
+    {
+      "collectionId": "gid://shopify/Collection/587456610570",
+      "title": "BC verzending – Glastransport",
+      "products": 1836,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456643338",
+      "title": "BC verzending – XXL transport",
+      "products": 0,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456676106",
+      "title": "BC verzending – Pallettransport",
+      "products": 3562,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456708874",
+      "title": "BC verzending – Pakket",
+      "products": 23579,
+      "publishedToChannels": 0
+    }
+  ],
+  "xxlImportRequirement": "Explicit bc_shipping_xxl tag after verifying 120 × 250–320 cm; no active XXL products found in full tile read and broad title cross-check. New imports must validate their productType and group membership before publication."
 }
