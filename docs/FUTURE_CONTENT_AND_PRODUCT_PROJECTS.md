@@ -13,6 +13,7 @@ Prioriteiten hieronder zijn een voorstel; de eigenaar bepaalt de uitvoeringsvolg
 | CONTENT-SUN-01 | Sunshower SEO en keuzehulp | Bestaande blog verbeteren, aanvullende vragen gericht beantwoorden | 2 |
 | BRAND-POR-01 | Hoogwaardige Porcelanosa-merkpagina | Inspirerende en bruikbare ingang naar merk, series en tegels | 3 |
 | BC-QUOTE-001 / BC-PRICE-001 | Offerte vergelijken en prijsaanvraag | Subtiele ingang en werkende handmatige opvolging | 4, eerst commerciële afspraken |
+| CONTENT-HB-SPOM-01 | Hotbath SPOM745 / SPOM700 praktijkuitleg en vergelijkingsfoto | Duidelijke klachtvragen, leveringsinhoud en eigen foto verkalkt versus schoon | Tekstaanvulling uitgevoerd; foto wacht op eigenaar |
 | PRODUCT-PLAN-01 | Productkwaliteit en verrijking | Betrouwbare data, juiste foto's, duidelijke teksten en geteste kooproutes | Doorlopend in kleine gecontroleerde batches |
 
 ## CONTENT-LC-01 — Living Colours en PVD
@@ -158,6 +159,44 @@ Statusvoorbeeld: nog beoordelen → bron compleet → concept → gecontroleerd 
 Meet dekking van juiste foto's, bevestigde afwerkingen, volledige setinformatie en opgeloste conflicten. Geen SEO- of omzetwinst claimen zonder meting.
 Eindcriteria per batch: juiste identiteit, herleidbare feiten, goedgekeurde tekst/beelden, werkende relaties en geen verlies van bestaande koopfunctionaliteit.
 De eigenaar beoordeelt de eerste proef; daarna geldt de afgebakende uitvoeringsopdracht voor verdere batches.
+
+## CONTENT-HB-SPOM-01 — Hotbath SPOM745 / SPOM700 en vergelijkingsfoto
+
+Vastgelegd: 17 november 2026. Status: **TEKSTAANVULLING UITGEVOERD / FOTO OPEN**.
+
+### Open to-do voor de eigenaar
+
+- [ ] Maak een eigen vergelijkingsfoto van een verkalkt binnenwerk naast een schoon/nieuw exemplaar van hetzelfde type. Lever de foto later aan voor de SPOM745-productpagina en de bijbehorende adviespagina. Vermeld welk onderdeel op de foto staat; een vergelijking is geen bewijs dat ieder stroef draaiend binnenwerk door kalk is aangetast.
+
+Er is geen datum of herinnering ingesteld. De bestaande productfoto’s zijn door de eigenaar goedgekeurd en behouden.
+
+### Uitgevoerd op 17 november 2026
+
+- [x] Op SPOM745 en SPOM700 verduidelijkt dat het vervangingsonderdeel wordt geleverd en dat montagegereedschap niet wordt meegeleverd; de koper heeft zelf passend gereedschap nodig.
+- [x] Twee aangeleverde klantmails gelezen en uitsluitend geanonimiseerde, algemene klachtvragen verwerkt. Geen mails, namen, adressen, contactgegevens of klantfoto’s gepubliceerd of in Git opgeslagen.
+- [x] Productuitleg aangevuld voor zwaar draaien richting koud en de vraag of geen koud water na warm gebruik een passend binnenwerk aanwijst. Op de adviespagina ook een terugkerende klacht na herstel besproken.
+- [x] Native Shopify-readback bevestigt de aanvullingen op beide producten en de bestaande adviespagina; beide SPOM745-video’s behouden.
+- [x] De eerder in deze chat toegepaste onderdeleninformatie op 16 CB009/HB009-producten is vastgelegd als bestaande scope; geen nieuwe modelkoppelingen in deze vervolgronde toegevoegd.
+
+### Inhoudelijke grens en bron
+
+SPOM745 betreft de temperatuurregeling, SPOM700 de stop-omstel van de passend bevestigde Hotbath-uitvoering. Stroef draaien is een herkenbare klacht, geen universele diagnose of bewijs van passendheid. De aangeleverde mails bevestigen geen exact kraanmodel of toegepast SPOM-nummer. Geen nieuw percentage voor kalk als oorzaak en geen belofte dat deze onderdelen iedere kraan herstellen.
+
+De al gecontroleerde toepassing blijft HB009 achter B009/CB009 uit modelperiode 01/2016–12/2019; vanaf 2020 noemt Hotbath SPOM43 en SPOM1602. Bronnen:
+- [Hotbath B009/CB009 2016–2019](https://hotbath.com/files/compano/CB009/B-CB009%20model%202016-2019.pdf)
+- [Hotbath HB009 vanaf 2020](https://hotbath.com/files/compano/CB009/B-CB009_model%20vanaf%202020.pdf)
+
+### Resultaat en herstel
+
+- [SPOM745](https://badkamercity.nl/products/hotbath-spom745-thermostatisch-binnenwerk-en-adapter-2016-2019)
+- [SPOM700](https://badkamercity.nl/products/hotbath-spom700-hb-diverter-tbv-hb009)
+- [Adviespagina](https://badkamercity.nl/pages/hotbath-thermostaat-draait-stroef)
+
+Herstel van alleen deze vervolgronde: verwijder op SPOM745 de toegevoegde secties “Wat wordt geleverd?” en “Veelgestelde vragen over een stroef draaiende temperatuurknop”; op SPOM700 “Wat wordt geleverd?” en “Welke knop geeft de klacht?”; op de adviespagina “Herkenbare klachten bij een douchekraan” en “Heb ik zelf gereedschap nodig?”. Behoud de eerdere modeltabellen, video’s en links.
+
+Geen nieuwe visuele browser-, mobiele, checkout-, indexerings- of rankingmeting uitgevoerd in deze vervolgronde. Geen prijs, voorraad, kanaalpublicatie, themafile of instelling gewijzigd. Windows-pc en lokale Git-status zijn niet toegankelijk via deze connectors; geen lokale synchronisatie geclaimd.
+
+Volgende handeling voor dit geparkeerde foto-item: eigenaar levert de vergelijkingsfoto aan; daarna inhoud controleren en pas vervolgens aan de bestaande pagina’s koppelen.
 
 ## Checkpoint en eerstvolgende voorbereiding
 
