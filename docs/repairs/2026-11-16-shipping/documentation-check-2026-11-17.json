@@ -1,0 +1,610 @@
+{
+  "date": "2026-11-17",
+  "verifiedAt": "2026-11-17T10:25:37.051Z",
+  "status": "SHOPIFY_LIVE_VERIFIED_GOOGLE_DRAFT_SOURCE_FIELDS_REQUIRE_CORRECTION",
+  "authorization": "Owner requested Git documentation and explanation of bath product-type naming; no catalog normalization or Google live mutation requested in this turn.",
+  "nativeReadback": {
+    "themes": {
+      "nodes": [
+        {
+          "id": "gid://shopify/OnlineStoreTheme/196690379018",
+          "name": "BadkamerCity - verzendtarieven per productgroep",
+          "role": "MAIN"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false
+      }
+    },
+    "node": {
+      "id": "gid://shopify/Market/94864998666",
+      "name": "Nederland",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "nodes": [
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+                "name": "Standaard",
+                "isActive": false,
+                "freeDeliveryMinimumValue": {
+                  "amount": "100.01",
+                  "currencyCode": "EUR"
+                },
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                      "conditions": {
+                        "collections": null
+                      },
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "6.95",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              },
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+                "name": "Standaard",
+                "isActive": true,
+                "freeDeliveryMinimumValue": null,
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600891146",
+                      "conditions": {
+                        "collections": null
+                      },
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204544864522",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": {
+                              "amount": "100.0",
+                              "currencyCode": "EUR"
+                            },
+                            "price": {
+                              "amount": "6.95",
+                              "currencyCode": "EUR"
+                            }
+                          },
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204544897290",
+                            "minValue": {
+                              "amount": "100.01",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600923914",
+                      "conditions": {
+                        "collections": {
+                          "nodes": [
+                            {
+                              "id": "gid://shopify/Collection/587456676106",
+                              "title": "BC verzending – Pallettransport"
+                            }
+                          ],
+                          "pageInfo": {
+                            "hasNextPage": false
+                          }
+                        }
+                      },
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204544930058",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": {
+                              "amount": "499.99",
+                              "currencyCode": "EUR"
+                            },
+                            "price": {
+                              "amount": "75.0",
+                              "currencyCode": "EUR"
+                            }
+                          },
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204544962826",
+                            "minValue": {
+                              "amount": "500.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600956682",
+                      "conditions": {
+                        "collections": {
+                          "nodes": [
+                            {
+                              "id": "gid://shopify/Collection/587456610570",
+                              "title": "BC verzending – Glastransport"
+                            }
+                          ],
+                          "pageInfo": {
+                            "hasNextPage": false
+                          }
+                        }
+                      },
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204544995594",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": {
+                              "amount": "499.99",
+                              "currencyCode": "EUR"
+                            },
+                            "price": {
+                              "amount": "45.0",
+                              "currencyCode": "EUR"
+                            }
+                          },
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204545028362",
+                            "minValue": {
+                              "amount": "500.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600989450",
+                      "conditions": {
+                        "collections": {
+                          "nodes": [
+                            {
+                              "id": "gid://shopify/Collection/587456643338",
+                              "title": "BC verzending – XXL transport"
+                            }
+                          ],
+                          "pageInfo": {
+                            "hasNextPage": false
+                          }
+                        }
+                      },
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204545061130",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": {
+                              "amount": "999.99",
+                              "currencyCode": "EUR"
+                            },
+                            "price": {
+                              "amount": "300.0",
+                              "currencyCode": "EUR"
+                            }
+                          },
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1204545093898",
+                            "minValue": {
+                              "amount": "1000.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            }
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              }
+            ],
+            "pageInfo": {
+              "hasNextPage": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "catalogCounts": {
+    "tilesGeneric": {
+      "count": 0,
+      "precision": "EXACT"
+    },
+    "tilesFloor": {
+      "count": 1222,
+      "precision": "EXACT"
+    },
+    "tilesWall": {
+      "count": 2272,
+      "precision": "EXACT"
+    },
+    "active": {
+      "count": 28977,
+      "precision": "EXACT"
+    },
+    "nodes": [
+      {
+        "id": "gid://shopify/Collection/587456610570",
+        "title": "BC verzending – Glastransport",
+        "productsCount": {
+          "count": 1836,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456643338",
+        "title": "BC verzending – XXL transport",
+        "productsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456676106",
+        "title": "BC verzending – Pallettransport",
+        "productsCount": {
+          "count": 3562,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/587456708874",
+        "title": "BC verzending – Pakket",
+        "productsCount": {
+          "count": 23579,
+          "precision": "EXACT"
+        },
+        "resourcePublicationsCount": {
+          "count": 0,
+          "precision": "EXACT"
+        }
+      }
+    ]
+  },
+  "bathTypeCounts": [
+    {
+      "value": "Half Vrijstaande Baden",
+      "count": 13,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaand bad",
+      "count": 6,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaande baden",
+      "count": 1,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Hoekbad",
+      "count": 14,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaand bad",
+      "count": 29,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaande Baden",
+      "count": 4,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Whirlpoolbad",
+      "count": 1,
+      "precision": "EXACT"
+    }
+  ],
+  "expectedGooglePalletRows": [
+    {
+      "row": 1,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Wandtegels",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 2272
+    },
+    {
+      "row": 2,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Vloertegels",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 1222
+    },
+    {
+      "row": 3,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Tegels",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 0
+    },
+    {
+      "row": 4,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Half Vrijstaande Baden",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 13
+    },
+    {
+      "row": 5,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Halfvrijstaand bad",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 6
+    },
+    {
+      "row": 6,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Halfvrijstaande baden",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 1
+    },
+    {
+      "row": 7,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Hoekbad",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 14
+    },
+    {
+      "row": 8,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Vrijstaand bad",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 29
+    },
+    {
+      "row": 9,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Vrijstaande Baden",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 4
+    },
+    {
+      "row": 10,
+      "source": "Shopify App API",
+      "attribute": "product type",
+      "operator": "equals",
+      "literalValue": "Whirlpoolbad",
+      "join": "OR",
+      "setTo": "pallet",
+      "activeShopifyProducts": 1
+    }
+  ],
+  "screenshotObserved": {
+    "date": "2026-11-17",
+    "source": "Owner screenshots image(20261117-101733).png and image(20261117-101742).png",
+    "evidenceType": "USER_SCREENSHOT_VERIFIED",
+    "all10ExpectedLiteralValuesVisible": true,
+    "orJoinsVisible": true,
+    "setToLiteralPalletVisible": true,
+    "rows": [
+      {
+        "row": 1,
+        "literalValue": "Wandtegels",
+        "visibleSourceField": "Shopify App API.product t…",
+        "sourceFieldStatus": "Consistent with earlier verified product type row; label visually truncated"
+      },
+      {
+        "row": 2,
+        "literalValue": "Vloertegels",
+        "visibleSourceField": "Shopify App API.shopi",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 3,
+        "literalValue": "Tegels",
+        "visibleSourceField": "Shopify App API.shopify",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 4,
+        "literalValue": "Half Vrijstaande Baden",
+        "visibleSourceField": "Shopify App API.shopi",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 5,
+        "literalValue": "Halfvrijstaand bad",
+        "visibleSourceField": "Shopify App API.shop",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 6,
+        "literalValue": "Halfvrijstaande baden",
+        "visibleSourceField": "Shopify App API.shop",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 7,
+        "literalValue": "Hoekbad",
+        "visibleSourceField": "Shopify App API.shop",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 8,
+        "literalValue": "Vrijstaand bad",
+        "visibleSourceField": "Shopify App API.shop",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 9,
+        "literalValue": "Vrijstaande Baden",
+        "visibleSourceField": "Shopify App API.shopif",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      },
+      {
+        "row": 10,
+        "literalValue": "Whirlpoolbad",
+        "visibleSourceField": "Shopify App API.shopif",
+        "sourceFieldStatus": "Wrong attribute prefix; must select existing product type field"
+      }
+    ],
+    "fullRuleSaved": null,
+    "fullRuleApplied": null,
+    "testRulesReportVerified": false,
+    "saveAndApplicationEvidence": "No save/application confirmation is visible in the provided screenshots"
+  },
+  "earlierOwnerPreview": {
+    "date": "2026-11-17",
+    "source": "image(20261117-100358).png",
+    "evidenceType": "USER_SCREENSHOT_VERIFIED",
+    "offerIdFromPreviousLookup": "shopify_ZZ_10687518703882_54000406331658",
+    "visibleIdMatchesKnownOfferPrefix": true,
+    "previewLabel": "pallet",
+    "scope": "Only the single Wandtegels condition; not verification of the later 10-row rule"
+  },
+  "bathAliasExplanation": {
+    "facts": "The active catalog stores seven bath product-type values for 68 products. Three written variants describe half-freestanding baths; two variants describe freestanding baths. Corner baths and whirlpool baths are genuinely distinct product types sharing pallet shipping.",
+    "causeNotInvented": "No import-author or historical import-cause attribution; current non-uniform naming is verified.",
+    "normalizationPerformed": false,
+    "normalizationParked": "Later controlled vocabulary/import mapping plus dependency migration for collections, filters and Google. Preserve current aliases until coverage is checked."
+  },
+  "lastKnownGoogleCostOverride": {
+    "observedOn": "2026-11-16",
+    "notRecheckedThisTurn": true,
+    "offerId": "shopify_ZZ_10687518703882_54000406331658",
+    "shipping": {
+      "country": "NL",
+      "service": "Standaard",
+      "priceEUR": 6.95
+    },
+    "freeShippingThresholdEUR": 100.01,
+    "consequence": "Labels alone do not prove correct account-level costs while per-offer shipping and thresholds still apply."
+  },
+  "nextOwnerAction": "Correct the first field of rows 2–10 to the existing Shopify App API.product type attribute; keep all literal values, equals, OR joins and Set to pallet. Then OK, Save as draft, Test rules. Do not apply an unverified 10-row draft.",
+  "nextExecution": "Verify positive floor/wall/bath examples and a negative mosaic/parcel example. Then complete other groups and explicitly resolve incoming per-offer shipping/free-shipping thresholds and manual shipping mode before validating Google costs.",
+  "unchanged": {
+    "shopifyData": true,
+    "googleSettings": true,
+    "themeFiles": true,
+    "productTypes": true,
+    "prices": true,
+    "inventory": true,
+    "productPublications": true
+  },
+  "limitations": [
+    "No new Google browser read in this turn; UI observations are the owner's screenshots",
+    "Previous 18 live quote checks from 16 November retained; not repeated on 17 November",
+    "No full Google rule test or activation verified",
+    "No real XXL offer/cart exists for a test in current group count",
+    "No discount-specific checkout quote test",
+    "No local Git checkout in scratch and no Windows local sync verified",
+    "Protected canonical config/settings_data.json exception remains"
+  ]
+}

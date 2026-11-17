@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "date": "2026-11-16",
-  "status": "SHOPIFY_CHECKOUT_LIVE_VERIFIED_GOOGLE_PENDING",
+  "version": 3,
+  "date": "2026-11-17",
+  "status": "SHOPIFY_LIVE_VERIFIED_GOOGLE_DRAFT_SOURCE_FIELDS_REQUIRE_CORRECTION",
   "currency": "EUR",
   "pricesIncludeVAT": true,
   "countryScope": "NL",
@@ -87,7 +87,10 @@
     "previewThemeId": null,
     "previewThemeName": null,
     "globalParcelCopyLive": true,
-    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018"
+    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "googlePalletDraftStatus": "ONE_POSITIVE_OWNER_PREVIEW_FULL_RULE_SOURCE_FIELDS_REQUIRE_CORRECTION",
+    "googleChangedThisDocumentationTurn": false,
+    "shippingConfigurationChangedThisDocumentationTurn": false
   },
   "delivery": {
     "reference": "delivery.json",
@@ -128,5 +131,50 @@
     }
   ],
   "xxlImportRequirement": "Explicit bc_shipping_xxl tag after verifying 120 × 250–320 cm; no active XXL products found in full tile read and broad title cross-check. New imports must validate their productType and group membership before publication.",
-  "googleSetupStatus": "READ_ONLY_AUDIT_DONE_AUTOMATIC_IMPORT_ON_NO_LABELS_OWNER_MANUAL_MODE_NEXT"
+  "googleSetupStatus": "READ_ONLY_AUDIT_DONE_AUTOMATIC_IMPORT_ON_NO_LABELS_OWNER_MANUAL_MODE_NEXT",
+  "nativeConfigurationVerifiedAt": "2026-11-17T10:25:37.051Z",
+  "nativeCurrentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+  "bathProductTypeAliases": [
+    {
+      "value": "Half Vrijstaande Baden",
+      "count": 13,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaand bad",
+      "count": 6,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaande baden",
+      "count": 1,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Hoekbad",
+      "count": 14,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaand bad",
+      "count": 29,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaande Baden",
+      "count": 4,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Whirlpoolbad",
+      "count": 1,
+      "precision": "EXACT"
+    }
+  ],
+  "aliasNormalization": {
+    "performed": false,
+    "reason": "Current stored spellings remain valid until collections/filters/imports/Google are migrated together"
+  },
+  "documentation": "https://github.com/jlamping1997/badkamercity/blob/main/docs/VERZENDINSTELLINGEN.md",
+  "latestEvidence": "documentation-check-2026-11-17.json"
 }
