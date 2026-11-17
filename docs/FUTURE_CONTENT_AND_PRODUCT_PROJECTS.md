@@ -164,6 +164,8 @@ De eigenaar beoordeelt de eerste proef; daarna geldt de afgebakende uitvoeringso
 
 Vastgelegd: 17 november 2026. Status: **TEKSTAANVULLING UITGEVOERD / FOTO OPEN**.
 
+**Vervolguitbreiding op 17 november 2026 — LIVE:** SPOM745 inmiddels ook brongecontroleerd opgenomen voor HB007/B007/CB007 en Buddy SDS1/Cobber SDS9 uit 2016–2019. Er zijn 84 extra modelproductverwijzingen toegevoegd; de adviespagina bevat nu zes model-/periodecombinaties. HBCB7067 heeft een eigen serviceblok met de huidige fabrikantverwijzingen SPOM1603/SPOM1600; SPOM745/SPOM700 daarvoor onbevestigd. SDS1/SDS9 gebruiken SPOM1602 als omstel. SPOM700 niet automatisch aan iedere SPOM745-toepassing gekoppeld. [Actuele mapping, bronnen en readback](https://github.com/jlamping1997/badkamercity/blob/fix/product-cards-2026-10-14/docs/product-content/2026-11-17-hotbath-spom/COMPATIBILITY.md). De foto-checkbox hieronder blijft open.
+
 ### Open to-do voor de eigenaar
 
 - [ ] Maak een eigen vergelijkingsfoto van een verkalkt binnenwerk naast een schoon/nieuw exemplaar van hetzelfde type. Lever de foto later aan voor de SPOM745-productpagina en de bijbehorende adviespagina. Vermeld welk onderdeel op de foto staat; een vergelijking is geen bewijs dat ieder stroef draaiend binnenwerk door kalk is aangetast.
@@ -182,7 +184,7 @@ Er is geen datum of herinnering ingesteld. De bestaande productfoto’s zijn doo
 
 SPOM745 betreft de temperatuurregeling, SPOM700 de stop-omstel van de passend bevestigde Hotbath-uitvoering. Stroef draaien is een herkenbare klacht, geen universele diagnose of bewijs van passendheid. De aangeleverde mails bevestigen geen exact kraanmodel of toegepast SPOM-nummer. Geen nieuw percentage voor kalk als oorzaak en geen belofte dat deze onderdelen iedere kraan herstellen.
 
-De al gecontroleerde toepassing blijft HB009 achter B009/CB009 uit modelperiode 01/2016–12/2019; vanaf 2020 noemt Hotbath SPOM43 en SPOM1602. Bronnen:
+De eerste controle betrof HB009 achter B009/CB009 uit modelperiode 01/2016–12/2019; vanaf 2020 noemt Hotbath SPOM43 en SPOM1602. De bredere actuele mapping staat in het hierboven gelinkte vervolgdossier. Oorspronkelijke bronnen:
 - [Hotbath B009/CB009 2016–2019](https://hotbath.com/files/compano/CB009/B-CB009%20model%202016-2019.pdf)
 - [Hotbath HB009 vanaf 2020](https://hotbath.com/files/compano/CB009/B-CB009_model%20vanaf%202020.pdf)
 
