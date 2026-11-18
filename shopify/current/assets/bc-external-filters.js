@@ -673,7 +673,6 @@
       const stockOverride = root.dataset.temporaryInStock === 'true';
       delivery.textContent=stockOverride ? root.dataset.cardDelivery : data.delivery_text || root.dataset.cardDelivery || '';
       delivery.classList.toggle('bc-card-delivery--stock',stockOverride || data.delivery_in_stock===true);
-      card.querySelector('.bc-card-color').textContent = canonicalColor(data.color);
       const price = card.querySelector('.bc-filter-card__price');
       const priceLabel = productPrice(data);
       if (priceLabel) {
@@ -752,7 +751,6 @@
       if (!model || !card.isConnected || model.data !== data) return;
       if (currentColor) {
         data.color = currentColor;
-        card.querySelector('.bc-card-color').textContent = canonicalColor(currentColor);
         card.querySelector('.bc-filter-card__title a').textContent = productTitle(model.product, data);
       }
       if (options.length) {
@@ -853,6 +851,15 @@
     function renderCardColors(card) {
       const model=cardModels.get(card);if(!model)return;
       const row=card.querySelector('[data-bc-card-colors]');
+      const label=card.querySelector('.bc-card-color');
+      const color=canonicalColor(model.data?.color);
+      const hasChoice = model.options.length > 1;
+      const caption = color && !hasChoice ? `${uiText('cardColour','Kleur')}: ${color}` : color;
+      if (label.textContent !== caption) label.textContent = caption;
+      if (!hasChoice) {
+        row.replaceChildren();
+        return;
+      }
       const isSelected = option => option.linkOnly ? option.selected === true : option.handle === model.product.handle;
       const compact=window.matchMedia('(max-width: 749px)').matches;
       const availableWidth = row.parentElement.clientWidth - (compact ? 32 : 0);
