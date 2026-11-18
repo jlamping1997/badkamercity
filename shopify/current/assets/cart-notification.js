@@ -61,12 +61,6 @@ class CartNotification extends HTMLElement {
   }
 
   renderContents(parsedState) {
-    // Avoid the cart dialog on iPhone, where it can block touch input.
-    if (/\biPhone\b/.test(navigator.userAgent)) {
-      window.location.assign(window.routes.cart_url);
-      return;
-    }
-
     this.closing = false;
     this.cartItemKey = parsedState.key || parsedState.items?.[0]?.key;
     this.getSectionsToRender().forEach((section) => {
