@@ -73,9 +73,11 @@
         </div>
       </div>
       <div class="bc-brand-slider__viewport" data-brand-viewport>
-        <ul class="bc-brand-list bc-brand-slider__track" id="BrandTrack-{{ section.id }}" data-brand-track role="list" tabindex="0" aria-labelledby="HomeBrands-{{ section.id }}">
-          {% render 'bc-brand-items', mode: 'slider' %}
-        </ul>
+        <div class="bc-brand-slider__lane" data-brand-lane>
+          <ul class="bc-brand-list bc-brand-slider__track" id="BrandTrack-{{ section.id }}" data-brand-track role="list" tabindex="0" aria-labelledby="HomeBrands-{{ section.id }}">
+            {% render 'bc-brand-items', mode: 'slider' %}
+          </ul>
+        </div>
       </div>
     </bc-brand-slider>
   </section>
