@@ -47,16 +47,19 @@
       endif
     endif
   assign card_variant = product.selected_or_first_available_variant
-  assign card_color = product.metafields.custom.kleur.value | default: product.metafields.bc_filters.kleur.value | default: ''
-  assign card_manifest = product.metafields.bc_data.filter_manifest.value
-  assign card_sku = card_variant.sku | strip | upcase
-  assign manifest_sku = card_manifest.sku | strip | upcase
-  if card_manifest.format == 'verified-product-filters-v1' and manifest_sku == card_sku and card_sku != blank and card_manifest.values.kleur != blank
-    assign card_color = card_manifest.values.kleur
+  assign card_vendor = product.vendor | downcase
+  assign sunshower_selection = product.metafields.bc_sunshower.configuration.value.selected
+  assign tile_type = product.type | handleize
+  assign is_tile = false
+  if product.metafields.tiles.size.value != blank or product.metafields.custom.bron_toelichtingen_json.value.tiles != blank or tile_type contains 'vloertegel' or tile_type contains 'wandtegel' or tile_type contains 'mozaiektegel' or tile_type == 'tegels'
+    assign is_tile = true
   endif
-  if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank and product.metafields.custom.kleur.value != blank
-    assign card_color = product.metafields.custom.kleur.value
-  endif
+  capture brauer_choice_source
+    if card_vendor == 'brauer'
+      render 'bc-brauer-choices', product: product, mode: 'card-data'
+    endif
+  endcapture
+  assign brauer_choice_source = brauer_choice_source | strip | default: 'null'
   assign card_supplier_stock = product.metafields.custom.leverancier_voorraad.value
   assign card_supplier_date = product.metafields.custom.leverancier_verwachte_datum.value
   assign card_delivery = 'bc_delivery.lead_time_on_request' | t
@@ -82,14 +85,30 @@
     assign card_can_add = true
   endif
 -%}
-{%- capture card_switcher -%}{%- if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank -%}{%- render 'bc-jeeo-colors', product: product, section: section -%}{%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants != blank -%}{%- render 'bc-wiesbaden-colors', product: product, section: section -%}{%- elsif current_switch_group != blank -%}{%- render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url -%}{%- endif -%}{%- endcapture -%}
+{%- capture card_switcher -%}
+  {%- if product.vendor == 'JEE-O' and product.metafields.custom.color_variants.value != blank -%}
+    {%- render 'bc-jeeo-colors', product: product, section: section -%}
+  {%- elsif product.vendor == 'Wiesbaden' and product.metafields.custom.color_variants.value != blank -%}
+    {%- render 'bc-wiesbaden-colors', product: product, section: section -%}
+  {%- elsif product.vendor == 'Lagoo' and product.metafields.custom.lagoo_choices.value != blank -%}
+    {%- render 'bc-lagoo-choices', product: product, section: section -%}
+  {%- elsif product.metafields.custom.fabriecio_choices.value != blank -%}
+    {%- render 'bc-fabriecio-choices', product: product, section: section -%}
+  {%- elsif current_switch_group != blank and brauer_choice_source == 'null' -%}
+    {%- render 'bc-product-switcher', product: product, section: section, switch_group: current_switch_group, data_url: bc_switcher_data_url -%}
+  {%- endif -%}
+{%- endcapture -%}
 <script type="application/json" data-bc-card-data>{
 "id":{{ product.id | json }},
 "handle":{{ product.handle | json }},
 "title":{{ product.title | json | replace: '<', '\u003c' }},
 "short_title":{{ product.metafields.custom.card_title.value | default: '' | json | replace: '<', '\u003c' }},
 "vendor":{{ product.vendor | json }},
-"color":{{ card_color | json | replace: '<', '\u003c' }},
+"color":{% capture card_colour_name %}{% render 'bc-card-colour-name', product: product %}{% endcapture %}{{ card_colour_name | strip | json | replace: '<', '\u003c' }},
+"colours":{% capture card_colours %}{% render 'bc-card-colors', product: product, mode: 'data' %}{% endcapture %}{{ card_colours | replace: '<', '\u003c' }},
+"is_tile":{{ is_tile | json }},
+"brauer_choices":{{ brauer_choice_source | replace: '<', '\u003c' }},
+"sunshower_choices":{% if sunshower_selection.kleur != blank %}{"selection":{{ sunshower_selection | json | replace: '<', '\u003c' }},"url":{{ 'bc-sunshower-products.json' | asset_url | json }}}{% else %}null{% endif %},
 "price_cents":{{ product.price_min | json }},
 "price_varies":{{ product.price_varies | json }},
 "specs":{% render 'bc-card-specs', product: product, mode: 'data' %},
