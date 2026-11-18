@@ -385,3 +385,25 @@ body #MainContent .bc-card-delivery.bc-card-delivery--stock::before {
   border-radius: 50%;
   background-color: currentColor;
 }
+
+.bc-card-colors--native {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 1px;
+  position: relative;
+  z-index: 3;
+}
+.bc-card-colors--native .bc-card-swatch {
+  flex: 0 0 23px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #a6adb3;
+  border-radius: 50%;
+  background: var(--bc-swatch, #ddd8d3);
+}
+.bc-card-swatch[data-current-color] { outline: 1px solid #142c47; outline-offset: 2px; cursor: default; }
+.bc-card-colors--native .bc-card-color-more { color: #526579; font-size: 12px; }
+.bc-search-card__colours { padding: 0 12px 8px; }
