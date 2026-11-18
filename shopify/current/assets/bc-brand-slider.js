@@ -1,9 +1,13 @@
 (() => {
   if (customElements.get('bc-brand-slider')) return;
 
+  const pixelsPerSecond = 22;
+  const wrap = (value, width) => ((value % width) + width) % width;
+
   class BrandSlider extends HTMLElement {
     connectedCallback() {
       this.track = this.querySelector('[data-brand-track]');
+      this.viewport = this.querySelector('[data-brand-viewport]');
       this.controls = this.querySelector('[data-brand-controls]');
       this.previous = this.querySelector('[data-brand-previous]');
       this.next = this.querySelector('[data-brand-next]');
@@ -18,9 +22,8 @@
       this.focused = false;
       this.keyboardManual = false;
       this.inView = true;
-      this.animationFrame = null;
+      this.animation = null;
       this.loopWidth = 0;
-      this.boost = 0;
       this.drag = null;
       this.suppressClick = false;
 
@@ -32,8 +35,8 @@
       this.track.addEventListener('pointerdown', event => this.startDrag(event), { ...options, passive: true });
       this.track.addEventListener('pointermove', event => this.dragMove(event), { ...options, passive: true });
       window.addEventListener('pointerup', event => this.endDrag(event), { ...options, passive: true });
-      window.addEventListener('pointercancel', event => this.endDrag(event, true), { ...options, passive: true });
-      this.track.addEventListener('lostpointercapture', event => this.endDrag(event, true), options);
+      window.addEventListener('pointercancel', event => this.endDrag(event), { ...options, passive: true });
+      this.track.addEventListener('lostpointercapture', event => this.endDrag(event), options);
       this.track.addEventListener('dragstart', event => {
         if (this.loopWidth) event.preventDefault();
       }, options);
@@ -62,6 +65,12 @@
       }, options);
       this.addEventListener('focusin', event => {
         this.focused = event.target.matches(':focus-visible');
+        if (this.focused && this.loopWidth && this.track.contains(event.target)) {
+          this.keyboardManual = true;
+          this.clearLoop();
+          if (event.target !== this.track) event.target.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+          this.update();
+        }
         this.syncMotion();
       }, options);
       this.addEventListener('focusout', event => {
@@ -79,7 +88,7 @@
       this.resizeObserver?.disconnect();
       if ('ResizeObserver' in window) {
         this.resizeObserver = new ResizeObserver(resize);
-        this.resizeObserver.observe(this.track);
+        this.resizeObserver.observe(this.viewport || this.track);
       }
       this.intersectionObserver?.disconnect();
       if (this.autoRequested && 'IntersectionObserver' in window) {
@@ -88,59 +97,82 @@
           this.inView = entries.some(entry => entry.isIntersecting);
           this.syncMotion();
         }, { threshold: 0.01 });
-        this.intersectionObserver.observe(this);
+        this.intersectionObserver.observe(this.viewport || this.track);
       }
       this.configure();
     }
 
-    eligible() {
-      return this.autoRequested && !this.reduced.matches && this.originals.length > 1;
-    }
-
     configure() {
-      const position = this.loopWidth ? Math.abs(this.track.scrollLeft) % this.loopWidth : Math.abs(this.track.scrollLeft);
+      const fraction = this.loopWidth ? this.position() / this.loopWidth : null;
+      const scrollPosition = Math.abs(this.track.scrollLeft);
       this.clearLoop();
-      if (this.eligible() && !this.keyboardManual) {
-        const gap = parseFloat(getComputedStyle(this.track).columnGap) || 0;
-        const width = this.originals.reduce((total, item) => total + item.getBoundingClientRect().width + gap, 0);
-        if (width > 0 && this.track.clientWidth > 0) {
-          this.loopWidth = width;
-          this.setAttribute('data-brand-looping', '');
-          const fragment = document.createDocumentFragment();
-          const copies = Math.ceil(this.track.clientWidth / width) + 1;
-          for (let copy = 0; copy < copies; copy++) {
-            for (const item of this.originals) {
-              const clone = item.cloneNode(true);
-              clone.setAttribute('data-brand-clone', '');
-              clone.setAttribute('aria-hidden', 'true');
-              clone.removeAttribute('id');
-              clone.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
-              clone.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(node => { node.tabIndex = -1; });
-              fragment.appendChild(clone);
-            }
-          }
-          this.track.appendChild(fragment);
-          this.cyclePosition = position % width;
-          this.shift(0);
-        }
+      this.layoutWidth = (this.viewport || this.track).clientWidth;
+      this.motionPreference = this.reduced.matches;
+      if (this.autoRequested && this.viewport && this.track.animate && !this.motionPreference &&
+          !this.keyboardManual && this.originals.length > 1 && this.layoutWidth > 0) {
+        this.createLoop(fraction, scrollPosition);
       }
       this.update();
       this.syncMotion();
     }
 
+    createLoop(fraction, scrollPosition) {
+      const style = getComputedStyle(this.track);
+      const gap = parseFloat(style.columnGap) || 0;
+      const width = this.originals.reduce((total, item) => total + item.getBoundingClientRect().width + gap, 0);
+      if (width <= 0) return;
+      this.direction = style.direction === 'rtl' ? -1 : 1;
+      this.setAttribute('data-brand-looping', '');
+      const fragment = document.createDocumentFragment();
+      const copies = Math.ceil(this.layoutWidth / width) + 1;
+      for (let copy = 0; copy < copies; copy++) {
+        for (const item of this.originals) {
+          const clone = item.cloneNode(true);
+          clone.setAttribute('data-brand-clone', '');
+          clone.setAttribute('aria-hidden', 'true');
+          clone.removeAttribute('id');
+          clone.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
+          clone.querySelectorAll('a, button, input, select, textarea, [tabindex]').forEach(node => { node.tabIndex = -1; });
+          fragment.appendChild(clone);
+        }
+      }
+      const firstClone = fragment.firstElementChild;
+      this.track.appendChild(fragment);
+      const first = this.originals[0];
+      this.loopWidth = Math.abs(firstClone.getBoundingClientRect().left - first.getBoundingClientRect().left);
+      if (!this.loopWidth) {
+        this.clearLoop();
+        return;
+      }
+      this.track.scrollLeft = 0;
+      this.duration = this.loopWidth / pixelsPerSecond * 1000;
+      this.animation = this.track.animate([
+        { transform: `translate3d(${-this.direction * this.loopWidth}px, 0, 0)` },
+        { transform: 'translate3d(0, 0, 0)' }
+      ], { duration: this.duration, iterations: Infinity, easing: 'linear' });
+      this.animation.pause();
+      this.seek(fraction === null ? scrollPosition : fraction * this.loopWidth);
+    }
+
+    position() {
+      const elapsed = wrap(this.animation?.currentTime || 0, this.duration);
+      return wrap(this.loopWidth * (1 - elapsed / this.duration), this.loopWidth);
+    }
+
+    seek(position) {
+      const elapsed = wrap(-position / this.loopWidth, 1) * this.duration;
+      this.animation.currentTime = elapsed;
+    }
+
     shift(pixels) {
-      if (!this.loopWidth) return;
-      const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
-      this.cyclePosition = ((this.cyclePosition - direction * pixels) % this.loopWidth + this.loopWidth) % this.loopWidth;
-      this.track.scrollLeft = direction * this.cyclePosition;
+      if (this.animation) this.seek(this.position() - this.direction * pixels);
     }
 
     startDrag(event) {
       if (!this.loopWidth || this.drag || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
       this.suppressClick = false;
       this.focused = false;
-      this.boost = 0;
-      this.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, lastX: event.clientX, time: event.timeStamp, velocity: 0, active: false, type: event.pointerType };
+      this.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, lastX: event.clientX, active: false, type: event.pointerType };
       this.syncMotion();
     }
 
@@ -151,7 +183,7 @@
         const x = event.clientX - drag.x, y = event.clientY - drag.y;
         if (Math.max(Math.abs(x), Math.abs(y)) < 6) return;
         if (drag.type !== 'mouse' && Math.abs(y) > Math.abs(x)) {
-          this.drag = null;
+          this.endDrag(event);
           return;
         }
         drag.active = true;
@@ -160,71 +192,41 @@
         this.setAttribute('data-brand-dragging', '');
       }
       const pixels = event.clientX - drag.lastX;
-      const seconds = Math.max(8, event.timeStamp - drag.time) / 1000;
-      drag.velocity = Math.max(-1600, Math.min(1600, pixels / seconds));
       drag.lastX = event.clientX;
-      drag.time = event.timeStamp;
       this.shift(pixels);
     }
 
-    endDrag(event, cancelled = false) {
+    endDrag(event) {
       const drag = this.drag;
       if (!drag || event.pointerId !== drag.id) return;
       this.drag = null;
       this.removeAttribute('data-brand-dragging');
       if (this.track.hasPointerCapture?.(event.pointerId)) this.track.releasePointerCapture(event.pointerId);
-      this.boost = !cancelled && drag.active && event.timeStamp - drag.time < 120 ? drag.velocity : 0;
       this.syncMotion();
     }
 
-    canRun() {
-      return this.loopWidth > 0 && !this.focused && this.inView && !document.hidden;
-    }
-
     syncMotion() {
-      if (this.canRun()) {
-        if (this.animationFrame == null) {
-          this.cyclePosition = Math.abs(this.track.scrollLeft) % this.loopWidth;
-          this.lastTime = null;
-          this.setAttribute('data-brand-moving', '');
-          this.animationFrame = requestAnimationFrame(time => this.animate(time));
-        }
-      } else this.stopMotion();
-    }
-
-    animate(time) {
-      this.animationFrame = null;
-      if (!this.canRun()) { this.stopMotion(); return; }
-      if (this.lastTime != null) {
-        const seconds = Math.min(0.1, Math.max(0, (time - this.lastTime) / 1000));
-        const decay = Math.exp(-5 * seconds);
-        this.shift(22 * seconds + this.boost * (1 - decay) / 5);
-        this.boost *= decay;
-        if (Math.abs(this.boost) < 0.1) this.boost = 0;
-      }
-      this.lastTime = time;
-      this.animationFrame = requestAnimationFrame(next => this.animate(next));
-    }
-
-    stopMotion() {
-      if (this.animationFrame != null) cancelAnimationFrame(this.animationFrame);
-      this.animationFrame = null;
-      this.lastTime = null;
-      this.boost = 0;
-      this.removeAttribute('data-brand-moving');
+      if (!this.animation) return;
+      const playing = !this.drag && !this.focused && this.inView && !document.hidden;
+      this.toggleAttribute('data-brand-moving', playing);
+      if (playing && this.animation.playState !== 'running') this.animation.play();
+      else if (!playing && this.animation.playState !== 'paused') this.animation.pause();
     }
 
     clearLoop() {
-      this.stopMotion();
+      if (!this.hasAttribute('data-brand-looping')) return;
+      const position = this.animation ? this.position() : 0;
+      this.animation?.cancel();
+      this.animation = null;
+      const pointerId = this.drag?.id;
       this.drag = null;
+      if (pointerId != null && this.track.hasPointerCapture?.(pointerId)) this.track.releasePointerCapture(pointerId);
       this.removeAttribute('data-brand-dragging');
-      if (!this.loopWidth) return;
-      const position = Math.abs(this.track.scrollLeft) % this.loopWidth;
-      const direction = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+      this.removeAttribute('data-brand-moving');
       this.track.querySelectorAll('[data-brand-clone]').forEach(node => node.remove());
       this.loopWidth = 0;
       this.removeAttribute('data-brand-looping');
-      this.track.scrollLeft = direction * Math.min(position, Math.max(0, this.track.scrollWidth - this.track.clientWidth));
+      this.track.scrollLeft = this.direction * Math.min(position, Math.max(0, this.track.scrollWidth - this.track.clientWidth));
     }
 
     behavior() {
@@ -238,9 +240,7 @@
       const step = first.getBoundingClientRect().width + gap;
       const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
       if (this.loopWidth) {
-        if (this.focused) this.shift(-direction * rtl * step);
-        else this.boost = -direction * rtl * step * 5;
-        this.syncMotion();
+        this.shift(-direction * rtl * step);
         return;
       }
       const visible = Math.max(1, Math.floor((this.track.clientWidth + gap) / Math.max(step, 1)));
@@ -253,9 +253,12 @@
     }
 
     scheduleLayout() {
-      this.stopMotion();
       if (this.layoutFrame) return;
-      this.layoutFrame = requestAnimationFrame(() => { this.layoutFrame = null; this.configure(); });
+      this.layoutFrame = requestAnimationFrame(() => {
+        this.layoutFrame = null;
+        if ((this.viewport || this.track).clientWidth !== this.layoutWidth ||
+            this.reduced.matches !== this.motionPreference) this.configure();
+      });
     }
 
     update() {
