@@ -2,6 +2,8 @@
   if (customElements.get('bc-brand-slider')) return;
 
   const pixelsPerSecond = 22;
+  const glideDuration = 0.36;
+  const swipeMemory = 100;
   const wrap = (value, width) => ((value % width) + width) % width;
 
   class BrandSlider extends HTMLElement {
@@ -23,6 +25,7 @@
       this.keyboardManual = false;
       this.inView = true;
       this.animation = null;
+      this.glideFrame = null;
       this.loopWidth = 0;
       this.drag = null;
       this.suppressClick = false;
@@ -35,8 +38,8 @@
       this.track.addEventListener('pointerdown', event => this.startDrag(event), { ...options, passive: true });
       this.track.addEventListener('pointermove', event => this.dragMove(event), { ...options, passive: true });
       window.addEventListener('pointerup', event => this.endDrag(event), { ...options, passive: true });
-      window.addEventListener('pointercancel', event => this.endDrag(event), { ...options, passive: true });
-      this.track.addEventListener('lostpointercapture', event => this.endDrag(event), options);
+      window.addEventListener('pointercancel', event => this.endDrag(event, true), { ...options, passive: true });
+      this.track.addEventListener('lostpointercapture', event => this.endDrag(event, true), options);
       this.track.addEventListener('dragstart', event => {
         if (this.loopWidth) event.preventDefault();
       }, options);
@@ -147,8 +150,8 @@
       this.track.scrollLeft = 0;
       this.duration = this.loopWidth / pixelsPerSecond * 1000;
       this.animation = this.track.animate([
-        { transform: `translate3d(${-this.direction * this.loopWidth}px, 0, 0)` },
-        { transform: 'translate3d(0, 0, 0)' }
+        { transform: 'translate3d(0, 0, 0)' },
+        { transform: `translate3d(${-this.direction * this.loopWidth}px, 0, 0)` }
       ], { duration: this.duration, iterations: Infinity, easing: 'linear' });
       this.animation.pause();
       this.seek(fraction === null ? scrollPosition : fraction * this.loopWidth);
@@ -156,12 +159,11 @@
 
     position() {
       const elapsed = wrap(this.animation?.currentTime || 0, this.duration);
-      return wrap(this.loopWidth * (1 - elapsed / this.duration), this.loopWidth);
+      return this.loopWidth * elapsed / this.duration;
     }
 
     seek(position) {
-      const elapsed = wrap(-position / this.loopWidth, 1) * this.duration;
-      this.animation.currentTime = elapsed;
+      this.animation.currentTime = wrap(position, this.loopWidth) / this.loopWidth * this.duration;
     }
 
     shift(pixels) {
@@ -170,9 +172,14 @@
 
     startDrag(event) {
       if (!this.loopWidth || this.drag || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+      this.cancelGlide();
       this.suppressClick = false;
       this.focused = false;
-      this.drag = { id: event.pointerId, x: event.clientX, y: event.clientY, lastX: event.clientX, active: false, type: event.pointerType };
+      this.drag = {
+        id: event.pointerId, x: event.clientX, y: event.clientY,
+        lastX: event.clientX, lastTime: event.timeStamp, velocity: null,
+        active: false, type: event.pointerType
+      };
       this.syncMotion();
     }
 
@@ -183,7 +190,7 @@
         const x = event.clientX - drag.x, y = event.clientY - drag.y;
         if (Math.max(Math.abs(x), Math.abs(y)) < 6) return;
         if (drag.type !== 'mouse' && Math.abs(y) > Math.abs(x)) {
-          this.endDrag(event);
+          this.endDrag(event, true);
           return;
         }
         drag.active = true;
@@ -192,28 +199,63 @@
         this.setAttribute('data-brand-dragging', '');
       }
       const pixels = event.clientX - drag.lastX;
+      const elapsed = Math.max(8, event.timeStamp - drag.lastTime);
+      const sample = Math.max(-1800, Math.min(1800, pixels * 1000 / elapsed));
+      const weight = Math.min(1, elapsed / 40);
+      drag.velocity = drag.velocity === null ? sample : drag.velocity + (sample - drag.velocity) * weight;
       drag.lastX = event.clientX;
+      drag.lastTime = event.timeStamp;
       this.shift(pixels);
     }
 
-    endDrag(event) {
+    endDrag(event, cancelled = false) {
       const drag = this.drag;
       if (!drag || event.pointerId !== drag.id) return;
       this.drag = null;
       this.removeAttribute('data-brand-dragging');
       if (this.track.hasPointerCapture?.(event.pointerId)) this.track.releasePointerCapture(event.pointerId);
+      const recent = Math.max(0, 1 - (event.timeStamp - drag.lastTime) / swipeMemory);
+      const velocity = (drag.velocity || 0) * recent;
+      if (!cancelled && drag.active && Math.abs(velocity) > 30) this.glide(velocity);
       this.syncMotion();
+    }
+
+    glide(velocity) {
+      const position = this.position();
+      const start = performance.now();
+      const autoplayVelocity = -this.direction * pixelsPerSecond;
+      const step = now => {
+        const seconds = Math.max(0, Math.min(glideDuration, (now - start) / 1000));
+        const progress = seconds / glideDuration;
+        const distance = autoplayVelocity * seconds +
+          (velocity - autoplayVelocity) * glideDuration * (1 - (1 - progress) ** 3) / 3;
+        this.seek(position - this.direction * distance);
+        if (progress < 1) this.glideFrame = requestAnimationFrame(step);
+        else {
+          this.glideFrame = null;
+          this.syncMotion();
+        }
+      };
+      this.glideFrame = requestAnimationFrame(step);
+    }
+
+    cancelGlide() {
+      if (this.glideFrame != null) cancelAnimationFrame(this.glideFrame);
+      this.glideFrame = null;
     }
 
     syncMotion() {
       if (!this.animation) return;
-      const playing = !this.drag && !this.focused && this.inView && !document.hidden;
-      this.toggleAttribute('data-brand-moving', playing);
+      const visible = !this.focused && this.inView && !document.hidden;
+      if (!visible) this.cancelGlide();
+      const playing = visible && !this.drag && this.glideFrame == null;
+      this.toggleAttribute('data-brand-moving', playing || this.glideFrame != null);
       if (playing && this.animation.playState !== 'running') this.animation.play();
       else if (!playing && this.animation.playState !== 'paused') this.animation.pause();
     }
 
     clearLoop() {
+      this.cancelGlide();
       if (!this.hasAttribute('data-brand-looping')) return;
       const position = this.animation ? this.position() : 0;
       this.animation?.cancel();
