@@ -1,7 +1,8 @@
 {% doc %}
 Renders the prepared Brauer choices for the exact current product.
 @param {product} product - Current product with its native variant.
-@param {section} section - Product section.
+@param {section} [section] - Product section.
+@param {string} [mode] - Use card-data for the choice source as JSON.
 {% enddoc %}
 {%- liquid
   assign bc_brauer_bucket = product.id | divided_by: 32768 | modulo: 8
@@ -30,6 +31,9 @@ Renders the prepared Brauer choices for the exact current product.
   assign bc_brauer_asset = bc_brauer_parts[1] | strip
 -%}
 {%- if bc_brauer_group != blank and bc_brauer_asset != blank -%}
+  {%- if mode == 'card-data' -%}
+    {"id":{{ bc_brauer_group | json }},"url":{{ bc_brauer_asset | asset_url | json }}}
+  {%- else -%}
   {{ 'bc-hotbath-swatches.css' | asset_url | stylesheet_tag }}
   {{ 'bc-brauer-choices.css' | asset_url | stylesheet_tag }}
   <div class="bc-buybox__switcher-groups bc-hotbath-switcher--mobile bc-brauer-choices"
@@ -39,4 +43,5 @@ Renders the prepared Brauer choices for the exact current product.
     data-product-handle="{{ product.handle | escape }}"
     data-choice-source="{{ bc_brauer_asset | asset_url }}" hidden></div>
   <script src="{{ 'bc-brauer-choices.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
 {%- endif -%}
