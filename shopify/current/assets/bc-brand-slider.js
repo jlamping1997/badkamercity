@@ -4,12 +4,14 @@
   const pixelsPerSecond = 22;
   const glideDuration = 0.36;
   const swipeMemory = 100;
+  const nativeScrollQuiet = 220;
   const wrap = (value, width) => ((value % width) + width) % width;
 
   class BrandSlider extends HTMLElement {
     connectedCallback() {
       this.track = this.querySelector('[data-brand-track]');
       this.viewport = this.querySelector('[data-brand-viewport]');
+      this.lane = this.querySelector('[data-brand-lane]');
       this.controls = this.querySelector('[data-brand-controls]');
       this.previous = this.querySelector('[data-brand-previous]');
       this.next = this.querySelector('[data-brand-next]');
@@ -20,6 +22,11 @@
       const options = { signal: this.events.signal };
       this.originals = [...this.track.children].filter(item => !item.hasAttribute('data-brand-clone'));
       this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.touchMode = window.matchMedia('(pointer: coarse)');
+      this.nativeTouch = false;
+      this.nativeTouching = false;
+      this.nativeScrolling = false;
+      this.nativeResumeTimer = null;
       this.autoRequested = this.hasAttribute('data-brand-autoplay');
       this.focused = false;
       this.keyboardManual = false;
@@ -35,7 +42,13 @@
       this.track.addEventListener('scroll', () => {
         if (!this.loopWidth) this.scheduleUpdate();
       }, { ...options, passive: true });
-      this.track.addEventListener('pointerdown', event => this.startDrag(event), { ...options, passive: true });
+      const passive = { ...options, passive: true };
+      this.viewport?.addEventListener('touchstart', () => this.startNativeTouch(), passive);
+      this.viewport?.addEventListener('touchend', event => this.endNativeTouch(event), passive);
+      this.viewport?.addEventListener('touchcancel', event => this.endNativeTouch(event), passive);
+      this.viewport?.addEventListener('scroll', () => this.waitForNativeScroll(), passive);
+      this.viewport?.addEventListener('scrollend', () => this.endNativeScroll(), passive);
+      this.track.addEventListener('pointerdown', event => this.startDrag(event), passive);
       this.track.addEventListener('pointermove', event => this.dragMove(event), { ...options, passive: true });
       window.addEventListener('pointerup', event => this.endDrag(event), { ...options, passive: true });
       window.addEventListener('pointercancel', event => this.endDrag(event, true), { ...options, passive: true });
@@ -88,6 +101,7 @@
       const resize = () => this.scheduleLayout();
       window.addEventListener('resize', resize, options);
       this.reduced.addEventListener?.('change', resize, options);
+      this.touchMode.addEventListener?.('change', resize, options);
       this.resizeObserver?.disconnect();
       if ('ResizeObserver' in window) {
         this.resizeObserver = new ResizeObserver(resize);
@@ -106,11 +120,12 @@
     }
 
     configure() {
-      const fraction = this.loopWidth ? this.position() / this.loopWidth : null;
+      const fraction = this.loopWidth ? this.visualPosition() / this.loopWidth : null;
       const scrollPosition = Math.abs(this.track.scrollLeft);
       this.clearLoop();
       this.layoutWidth = (this.viewport || this.track).clientWidth;
       this.motionPreference = this.reduced.matches;
+      this.nativeTouch = Boolean(this.lane && this.touchMode.matches);
       if (this.autoRequested && this.viewport && this.track.animate && !this.motionPreference &&
           !this.keyboardManual && this.originals.length > 1 && this.layoutWidth > 0) {
         this.createLoop(fraction, scrollPosition);
@@ -126,8 +141,9 @@
       if (width <= 0) return;
       this.direction = style.direction === 'rtl' ? -1 : 1;
       this.setAttribute('data-brand-looping', '');
+      this.toggleAttribute('data-brand-native-touch', this.nativeTouch);
       const fragment = document.createDocumentFragment();
-      const copies = Math.ceil(this.layoutWidth / width) + 1;
+      const copies = Math.ceil(this.layoutWidth / width) + (this.nativeTouch ? 2 : 1);
       for (let copy = 0; copy < copies; copy++) {
         for (const item of this.originals) {
           const clone = item.cloneNode(true);
@@ -148,6 +164,10 @@
         return;
       }
       this.track.scrollLeft = 0;
+      if (this.nativeTouch) {
+        this.lane.style.width = `${2 * this.loopWidth + this.layoutWidth}px`;
+        this.viewport.scrollLeft = this.direction * this.loopWidth;
+      }
       this.duration = this.loopWidth / pixelsPerSecond * 1000;
       this.animation = this.track.animate([
         { transform: 'translate3d(0, 0, 0)' },
@@ -162,6 +182,11 @@
       return this.loopWidth * elapsed / this.duration;
     }
 
+    visualPosition() {
+      const offset = this.nativeTouch ? this.direction * this.viewport.scrollLeft : 0;
+      return wrap(this.position() + offset, this.loopWidth);
+    }
+
     seek(position) {
       this.animation.currentTime = wrap(position, this.loopWidth) / this.loopWidth * this.duration;
     }
@@ -170,8 +195,42 @@
       if (this.animation) this.seek(this.position() - this.direction * pixels);
     }
 
+    startNativeTouch() {
+      if (!this.nativeTouch || !this.animation) return;
+      clearTimeout(this.nativeResumeTimer);
+      this.nativeResumeTimer = null;
+      this.nativeTouching = true;
+      this.nativeScrolling = true;
+      this.syncMotion();
+    }
+
+    endNativeTouch(event) {
+      if (!this.nativeScrolling || event.touches.length) return;
+      this.nativeTouching = false;
+      this.waitForNativeScroll();
+    }
+
+    waitForNativeScroll() {
+      if (!this.nativeScrolling || this.nativeTouching) return;
+      clearTimeout(this.nativeResumeTimer);
+      this.nativeResumeTimer = setTimeout(() => this.endNativeScroll(), nativeScrollQuiet);
+    }
+
+    endNativeScroll() {
+      if (!this.nativeScrolling || this.nativeTouching) return;
+      clearTimeout(this.nativeResumeTimer);
+      this.nativeResumeTimer = null;
+      this.nativeScrolling = false;
+      const offset = this.direction * this.viewport.scrollLeft;
+      const halfCycle = this.loopWidth / 2;
+      const centered = halfCycle + wrap(offset - halfCycle, this.loopWidth);
+      if (Math.abs(offset - centered) > 1) this.viewport.scrollLeft = this.direction * centered;
+      this.syncMotion();
+      this.scheduleLayout();
+    }
+
     startDrag(event) {
-      if (!this.loopWidth || this.drag || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+      if (this.nativeTouch || !this.loopWidth || this.drag || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
       this.cancelGlide();
       this.suppressClick = false;
       this.focused = false;
@@ -248,7 +307,7 @@
       if (!this.animation) return;
       const visible = !this.focused && this.inView && !document.hidden;
       if (!visible) this.cancelGlide();
-      const playing = visible && !this.drag && this.glideFrame == null;
+      const playing = visible && !this.drag && !this.nativeScrolling && this.glideFrame == null;
       this.toggleAttribute('data-brand-moving', playing || this.glideFrame != null);
       if (playing && this.animation.playState !== 'running') this.animation.play();
       else if (!playing && this.animation.playState !== 'paused') this.animation.pause();
@@ -256,8 +315,17 @@
 
     clearLoop() {
       this.cancelGlide();
+      clearTimeout(this.nativeResumeTimer);
+      this.nativeResumeTimer = null;
+      this.nativeTouching = false;
+      this.nativeScrolling = false;
       if (!this.hasAttribute('data-brand-looping')) return;
-      const position = this.animation ? this.position() : 0;
+      const position = this.animation ? this.visualPosition() : 0;
+      if (this.nativeTouch) {
+        this.viewport.scrollLeft = 0;
+        this.lane.style.removeProperty('width');
+        this.removeAttribute('data-brand-native-touch');
+      }
       this.animation?.cancel();
       this.animation = null;
       const pointerId = this.drag?.id;
@@ -298,8 +366,10 @@
       if (this.layoutFrame) return;
       this.layoutFrame = requestAnimationFrame(() => {
         this.layoutFrame = null;
+        if (this.nativeScrolling) return;
         if ((this.viewport || this.track).clientWidth !== this.layoutWidth ||
-            this.reduced.matches !== this.motionPreference) this.configure();
+            this.reduced.matches !== this.motionPreference ||
+            Boolean(this.lane && this.touchMode.matches) !== this.nativeTouch) this.configure();
       });
     }
 
