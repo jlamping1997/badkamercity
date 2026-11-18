@@ -52,12 +52,11 @@
     flex-direction: column;
     flex: auto;
     min-width: 0;
-    padding: 0;
+    padding: 0 32px 0 0;
     gap: 3px;
   }
   body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__vendor, .bc-search-card__vendor, .bc-card-vendor) {
     margin: 0;
-    padding-right: 34px;
     color: #77849a;
     font-size: 10px;
     line-height: 1.4;
@@ -70,7 +69,6 @@
     overflow: hidden;
     min-height: 0;
     margin: 0;
-    padding-right: 24px;
     color: #0f2740;
     font-size: 14px;
     line-height: 1.35;
@@ -114,9 +112,9 @@
     height: 22px;
     border: 1px solid #a6adb3;
     border-radius: 50%;
-    background: var(--bc-swatch);
+    background: var(--bc-swatch, #ddd8d3);
   }
-  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch[aria-pressed=true]::before {
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch:is([aria-pressed=true], [data-current-color])::before {
     outline: 2px solid #0f2740;
     outline-offset: 3px;
   }
@@ -153,17 +151,30 @@
   }
   body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-delivery {
     min-height: 0;
-    margin: 3px 24px 0 0;
+    margin: 3px 0 0;
     font-size: 11px;
     line-height: 1.4;
   }
-  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-card-specs, .bc-card-cart, .quick-add, .card__inner > .card__content) { display: none; }
-  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-actions { display: block; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid :is(.bc-card-specs:not(.bc-card-specs--tile), .bc-card-cart, .quick-add, .card__inner > .card__content) { display: none; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-specs--tile:not([hidden]) {
+    display: grid;
+    min-height: 0;
+    gap: 2px;
+    margin: 2px 0;
+    color: #526579;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-specs--tile dt { font-weight: 600; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-actions { display: block; position: static; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-colors--native { height: auto; flex-wrap: wrap; gap: 0; }
+  body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-swatch[data-current-color] { outline: none; }
   body #MainContent :is(.bc-collection, .template-search) #product-grid .bc-card-view {
     display: flex;
     position: absolute;
-    right: -6px;
+    right: 0;
     top: 50%;
+    z-index: 3;
     transform: translateY(-50%);
     align-items: center;
     justify-content: center;
