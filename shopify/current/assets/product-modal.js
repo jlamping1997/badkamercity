@@ -5,8 +5,8 @@ if (!customElements.get('product-modal')) {
       constructor() {
         super();
         this.activeMediaIndex = 0;
-        this.touchStartX = null;
-        this.touchStartY = null;
+        this.mobileView = window.matchMedia('(max-width: 749px)');
+        this.swipeStart = null;
         this.onModalClick = this.onModalClick.bind(this);
         this.onModalPointerDown = this.onModalPointerDown.bind(this);
         this.onModalPointerUp = this.onModalPointerUp.bind(this);
@@ -55,6 +55,7 @@ if (!customElements.get('product-modal')) {
         this.addEventListener('click', this.onModalClick);
         this.addEventListener('pointerdown', this.onModalPointerDown, { passive: true });
         this.addEventListener('pointerup', this.onModalPointerUp, true);
+        this.addEventListener('pointercancel', () => { this.swipeStart = null; });
         this.addEventListener('keyup', this.onModalKeyup);
       }
 
@@ -96,15 +97,20 @@ if (!customElements.get('product-modal')) {
           return;
         }
 
-        if (activeImage) {
+        if (activeImage && !this.mobileView.matches) {
           event.preventDefault();
           this.toggleZoom(activeImage);
         }
       }
 
       onModalPointerDown(event) {
-        this.touchStartX = event.clientX;
-        this.touchStartY = event.clientY;
+        this.swipeStart = null;
+        if (!event.isPrimary) return;
+        if (this.mobileView.matches && (
+          event.pointerType !== 'touch' ||
+          !event.target.closest('.product-media-modal__content:not(.is-zoomed) img.active')
+        )) return;
+        this.swipeStart = { id: event.pointerId, x: event.clientX, y: event.clientY };
       }
 
       onModalPointerUp(event) {
@@ -114,13 +120,12 @@ if (!customElements.get('product-modal')) {
 
         if (isModalControl) event.stopImmediatePropagation();
 
-        if (this.touchStartX === null || this.touchStartY === null) return;
+        const start = this.swipeStart;
+        this.swipeStart = null;
+        if (!start || start.id !== event.pointerId) return;
 
-        const deltaX = event.clientX - this.touchStartX;
-        const deltaY = event.clientY - this.touchStartY;
-
-        this.touchStartX = null;
-        this.touchStartY = null;
+        const deltaX = event.clientX - start.x;
+        const deltaY = event.clientY - start.y;
 
         if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY)) return;
 
@@ -151,8 +156,15 @@ if (!customElements.get('product-modal')) {
 
       toggleZoom(image) {
         if (!image) return;
-        image.classList.toggle('is-zoomed');
-        this.querySelector('.product-media-modal__content')?.classList.toggle('is-zoomed', image.classList.contains('is-zoomed'));
+        const content = this.querySelector('.product-media-modal__content');
+        if (!content) return;
+        const zoomed = image.classList.toggle('is-zoomed');
+        content.classList.toggle('is-zoomed', zoomed);
+        this.updateZoomControl(zoomed);
+        if (this.mobileView.matches) {
+          content.scrollLeft = zoomed ? (content.scrollWidth - content.clientWidth) / 2 : 0;
+          content.scrollTop = zoomed ? (content.scrollHeight - content.clientHeight) / 2 : 0;
+        }
       }
 
       toggleFullscreen() {
@@ -171,10 +183,24 @@ if (!customElements.get('product-modal')) {
       }
 
       resetZoom() {
-        this.querySelectorAll('.product-media-modal__content img.is-zoomed').forEach((image) => {
-          image.classList.remove('is-zoomed');
-        });
-        this.querySelector('.product-media-modal__content')?.classList.remove('is-zoomed');
+        this.swipeStart = null;
+        const content = this.querySelector('.product-media-modal__content');
+        if (content) {
+          content.querySelectorAll('img.is-zoomed').forEach((image) => image.classList.remove('is-zoomed'));
+          content.classList.remove('is-zoomed');
+          if (this.mobileView.matches) {
+            content.scrollLeft = 0;
+            content.scrollTop = 0;
+          }
+        }
+        this.updateZoomControl(false);
+      }
+
+      updateZoomControl(zoomed) {
+        const button = this.querySelector('[data-product-modal-zoom]');
+        if (!button) return;
+        button.setAttribute('aria-pressed', String(zoomed));
+        button.setAttribute('aria-label', zoomed ? 'Uitzoomen' : 'Inzoomen');
       }
 
       updateControls() {
