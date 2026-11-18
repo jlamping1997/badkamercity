@@ -148,7 +148,12 @@
     </div>
   </a>
   {%- if card_product.vendor == 'JEE-O' and card_product.metafields.custom.color_variants.value != blank -%}
-    {% render 'bc-jeeo-colors', product: card_product, mode: 'card' %}
+    {%- capture native_colours -%}{% render 'bc-jeeo-colors', product: card_product, mode: 'card' %}{%- endcapture -%}
+    {{- native_colours -}}
+  {%- endif -%}
+  {%- if native_colours == blank -%}
+    {%- capture native_colours -%}{% render 'bc-card-colors', product: card_product %}{%- endcapture -%}
+    {%- if native_colours != blank -%}<div class="bc-search-card__colours">{{ native_colours }}</div>{%- endif -%}
   {%- endif -%}
 </article>
 
