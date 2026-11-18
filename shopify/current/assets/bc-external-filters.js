@@ -391,7 +391,7 @@
         try {
           const asset = new URL(imageUrl, location.origin);
           if ((asset.origin === location.origin || asset.hostname === 'cdn.shopify.com') &&
-              /^https?:$/.test(asset.protocol) && /\/bc-(?:wiesbaden|jeeo)-swatch-[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/.test(asset.pathname)) {
+              /^https?:$/.test(asset.protocol) && /\/bc-(?:wiesbaden|jeeo|lagoo)-swatch-[a-z0-9]+(?:-[a-z0-9]+)*\.svg$/.test(asset.pathname)) {
             return `url("${asset.href}") center / cover`;
           }
         } catch (_) { /* Keep the named-color fallback. */ }
@@ -639,7 +639,11 @@
     function updateCard(card, data) {
       const model = cardModels.get(card);
       if (!model || !data) return;
+      const selectedColour = model.options.find(option => !option.linkOnly && option.handle === data.handle);
+      data.color = (data.colours?.name || data.color || '').trim() || selectedColour?.color || '';
       model.data = data;
+      if (!model.colorGroup) model.options = (data.colours?.items || []).map(option => ({ ...option, linkOnly: true }));
+      card.querySelector('[data-bc-card-specs]').classList.toggle('bc-card-specs--tile', data.is_tile === true);
       renderCardSpecs(card, data.specs);
       model.product = {...model.product,handle:data.handle,title:data.title,price_cents:data.price_cents,price_varies:data.price_varies,image_url:data.image_url};
       const href = productPath(model.product);
@@ -727,25 +731,91 @@
       renderPagination(state.lastData?.found || 0);
     }
 
-    async function loadCardColors(card,data) {
+    function loadChoicePayload(sourceUrl) {
+      const url = new URL(sourceUrl, location.origin);
+      if (url.origin !== location.origin && url.hostname !== 'cdn.shopify.com') return null;
+      if (!choiceCache.has(url.href)) {
+        const promise = fetch(url.href, { credentials: 'omit' }).then(response => {
+          if (!response.ok) throw new Error('Kleuren niet beschikbaar');
+          return response.json();
+        }).catch(error => {
+          choiceCache.delete(url.href);
+          throw error;
+        });
+        choiceCache.set(url.href, promise);
+      }
+      return choiceCache.get(url.href);
+    }
+
+    function setCardColorGroup(card, data, groupId, currentColor, options, allColorsLabel = '') {
+      const model = cardModels.get(card);
+      if (!model || !card.isConnected || model.data !== data) return;
+      if (currentColor) {
+        data.color = currentColor;
+        card.querySelector('.bc-card-color').textContent = canonicalColor(currentColor);
+        card.querySelector('.bc-filter-card__title a').textContent = productTitle(model.product, data);
+      }
+      if (options.length) {
+        model.colorGroup = groupId;
+        model.allColorsLabel = allColorsLabel;
+        model.options = options.filter(option => !model.unavailableColors.has(option.handle));
+      }
+      renderCardColors(card);
+    }
+
+    async function loadBrauerCardColors(card, data) {
+      const source = data.brauer_choices;
+      const group = await loadChoicePayload(source.url);
+      if (group?.id !== source.id || !Array.isArray(group.products) || !Array.isArray(group.axes)) return;
+      const current = group.products.find(product => product.handle === data.handle);
+      const colourAxis = group.axes.find(axis => axis.key === 'colour');
+      if (!current || !colourAxis || String(current.id).split('/').pop() !== String(data.id) ||
+          String(current.variant_id).split('/').pop() !== String(data.variant_id)) return;
+      const otherAxes = group.axes.filter(axis => axis !== colourAxis);
+      const byColour = new Map();
+      for (const product of group.products) {
+        const colour = product.options?.colour;
+        if (!product.handle || !colour ||
+            !otherAxes.every(axis => String(product.options[axis.key] ?? '') === String(current.options[axis.key] ?? ''))) continue;
+        const matches = byColour.get(colour) || [];
+        matches.push(product);
+        byColour.set(colour, matches);
+      }
+      const label = value => colourAxis.labels?.[value] || String(value || '');
+      const options = [];
+      for (const [colour, matches] of byColour) {
+        const target = matches.find(item => item.handle === current.handle) || (matches.length === 1 ? matches[0] : null);
+        if (target) options.push({ ...target, color: label(colour) });
+      }
+      const price = option => Number.isSafeInteger(option.price_cents) ? option.price_cents : Infinity;
+      options.sort((left, right) => (group.price_order ? price(left) - price(right) : 0) ||
+        left.color.localeCompare(right.color, 'nl', { numeric: true, sensitivity: 'base' }));
+      setCardColorGroup(card, data, group.id, label(current.options?.colour), options);
+    }
+
+    async function loadSunshowerCardColors(card, data) {
+      const source = data.sunshower_choices;
+      const payload = await loadChoicePayload(source.url);
+      if (!Array.isArray(payload?.products) || !source.selection?.kleur) return;
+      const current = payload.products.find(product => String(product.variant_id) === String(data.variant_id));
+      if (current?.url !== `/products/${data.handle}` || current.selection.kleur !== source.selection.kleur) return;
+      const fixed = Object.entries(source.selection).filter(([key]) => key !== 'kleur');
+      const options = payload.products.filter(product => /^\/products\/[\w-]+$/.test(product.url || '') &&
+        product.selection?.kleur && fixed.every(([key, value]) => product.selection[key] === value))
+        .map(product => ({ handle: product.url.split('/').pop(), color: product.selection.kleur }));
+      setCardColorGroup(card, data, 'sunshower', source.selection.kleur, options);
+    }
+
+    async function loadCardColors(card, data) {
+      if (data.brauer_choices?.url) return loadBrauerCardColors(card, data);
+      if (data.sunshower_choices?.url) return loadSunshowerCardColors(card, data);
       if (!data.switcher_html) return;
-      const doc=new DOMParser().parseFromString(data.switcher_html,'text/html');
-      const source=doc.querySelector('[data-bc-product-switcher-v2]');
+      const doc = new DOMParser().parseFromString(data.switcher_html, 'text/html');
+      const source = doc.querySelector('[data-bc-product-switcher-v2]');
       if (!source) return;
       const inline = source.querySelector('[data-bc-switcher-inline]');
-      let payload;
-      if (inline) {
-        try { payload = JSON.parse(inline.textContent); } catch (_) { return; }
-      } else {
-        if (!source.dataset.switcherDataUrl) return;
-        const url=new URL(source.dataset.switcherDataUrl,location.origin);
-        if (url.origin !== location.origin && url.hostname !== 'cdn.shopify.com') return;
-        if (!choiceCache.has(url.href)) {
-          const promise=fetch(url.href,{credentials:'omit'}).then(r=>{if(!r.ok)throw new Error('Kleuren niet beschikbaar');return r.json();}).catch(e=>{choiceCache.delete(url.href);throw e;});
-          choiceCache.set(url.href,promise);
-        }
-        payload=await choiceCache.get(url.href);
-      }
+      const payload = inline ? JSON.parse(inline.textContent)
+        : source.dataset.switcherDataUrl && await loadChoicePayload(source.dataset.switcherDataUrl);
       if (!payload || typeof payload !== 'object') return;
       const groups=Array.isArray(payload.groups) ? payload.groups : Object.values(payload.groups || {});
       const group=groups.find(g=>g.id===source.dataset.switchGroup);
@@ -753,45 +823,69 @@
       const current=group.products.find(p=>p.handle===data.handle);
       const menu=(group.menus || []).find(m=>/^(kleur|basiskleur|color|colour)$/i.test(m.key));
       if (!current || !menu) return;
-      if (!data.color && current.options?.[menu.key]) {
-        data.color=current.options[menu.key];
-        card.querySelector('.bc-card-color').textContent=canonicalColor(data.color);
-        card.querySelector('.bc-filter-card__title a').textContent=productTitle(cardModels.get(card).product,data);
-      }
       const options=group.products.filter(p=>p.handle && p.options?.[menu.key] && Object.entries(current.options || {}).every(([key,value])=>key===menu.key || p.options?.[key]===value));
       const unique=[];const seen=new Set();
       for(const option of options){const color=canonicalColor(option.options[menu.key]);if(!seen.has(color)){seen.add(color);unique.push({...option,color});}}
-      const model=cardModels.get(card);
-      if (!model || !card.isConnected) return;
-      model.colorGroup=group.id;
-      model.allColorsLabel=source.dataset.labelAllColors || '';
-      model.options=unique.length>1 ? unique.filter(option => !model.unavailableColors.has(option.handle)) : [];
-      renderCardColors(card);
+      setCardColorGroup(card, data, group.id, data.color || current.options?.[menu.key],
+        unique.length > 1 || !data.colours?.items?.length ? unique : [], source.dataset.labelAllColors);
+    }
+
+    function cardSwatch(option, model) {
+      if (option.swatch_url && /^(wiesbaden|jeeo|lagoo)-colors-/.test(model.colorGroup || '')) {
+        return swatch(option.color, option.swatch_url);
+      }
+      if (/^#[0-9a-f]{6}$/i.test(option.hex || '')) return option.hex;
+      const wood = /forest|honey|mokka|wheat|seashell|cacao|tann?$/i.test(option.color);
+      const image = option.image || (model.data?.is_tile || wood ? option.image_url : '');
+      if (image) {
+        try {
+          const url = new URL(image, location.origin);
+          if ((url.origin === location.origin || url.hostname === 'cdn.shopify.com') &&
+              /^https?:$/.test(url.protocol) && /^\/(?:cdn\/shop\/files\/|s\/files\/)/.test(url.pathname)) {
+            url.searchParams.set('width', '64');
+            return `url("${url.href.replace(/"/g, '%22')}") center / cover`;
+          }
+        } catch (_) { /* Use the existing named-colour swatch. */ }
+      }
+      return swatch(option.color);
     }
 
     function renderCardColors(card) {
       const model=cardModels.get(card);if(!model)return;
       const row=card.querySelector('[data-bc-card-colors]');
-      const selected=model.product.handle;
+      const isSelected = option => option.linkOnly ? option.selected === true : option.handle === model.product.handle;
       const compact=window.matchMedia('(max-width: 749px)').matches;
-      const width=Math.max(0,(row.clientWidth || 180)-(compact ? 0 : 6));
+      const availableWidth = row.parentElement.clientWidth - (compact ? 32 : 0);
+      const width = Math.max(0, (row.clientWidth || availableWidth || 180) - (compact ? 0 : 6));
       const slot=compact ? 36 : 30;
       const moreWidth=compact ? 34 : 38;
       const allFit=Math.floor((width+(compact ? 0 : 7))/slot);
       const limit=model.options.length<=Math.min(4,allFit) ? model.options.length : Math.min(4,Math.max(1,Math.floor((width-moreWidth)/slot)));
       const visible=model.options.slice(0,limit);
-      const active=model.options.find(option=>option.handle===selected);
+      const active=model.options.find(isSelected);
       if(active && !visible.includes(active) && visible.length)visible[visible.length-1]=active;
       const hidden=model.options.length-visible.length;
       let more='';
       if(hidden>0){
         const url=new URL(productPath(model.product),location.origin);
-        url.searchParams.set('bc_colors',model.colorGroup);
-        url.hash='bc-product-colors';
+        if (model.colorGroup && !model.colorGroup.startsWith('BRAUER-') && model.colorGroup !== 'sunshower') {
+          url.searchParams.set('bc_colors',model.colorGroup);
+          url.hash='bc-product-colors';
+        }
         const label=model.allColorsLabel ? model.allColorsLabel.replace('__COUNT__',String(model.options.length)) : `${uiText('labelMore','Toon meer')} (${hidden})`;
         more=`<a class="bc-card-color-more" data-bc-card-more-colors href="${attr(url.pathname+url.search+url.hash)}" aria-label="${attr(label)}" title="${attr(label)}">+${hidden}</a>`;
       }
-      row.innerHTML=visible.map(option=>`<button type="button" class="bc-card-swatch" data-bc-card-color="${attr(option.handle)}" aria-label="${attr(option.color)}" title="${attr(option.color)}" aria-pressed="${option.handle===selected}" style="--bc-swatch:${attr(swatch(option.color, /^(wiesbaden|jeeo)-colors-/.test(model.colorGroup || '') ? option.swatch_url : ''))}"><span class="visually-hidden">${escapeHtml(option.color)}</span></button>`).join('')+more;
+      row.innerHTML = visible.map(option => {
+        const active = isSelected(option);
+        const label = attr(option.color);
+        const attributes = `class="bc-card-swatch" aria-label="${label}" title="${label}" style="--bc-swatch:${attr(cardSwatch(option, model))}"`;
+        const text = `<span class="visually-hidden">${escapeHtml(option.color)}</span>`;
+        if (active) return `<span ${attributes} data-current-color="true">${text}</span>`;
+        if (option.linkOnly && /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?products\//i.test(option.url || '')) {
+          return `<a ${attributes} href="${attr(option.url)}">${text}</a>`;
+        }
+        return `<button type="button" ${attributes} data-bc-card-color="${attr(option.handle)}" aria-pressed="false">${text}</button>`;
+      }).join('') + more;
     }
 
     let colorResizeFrame;
