@@ -72,9 +72,11 @@
           <a class="bc-brand-slider__all" href="{{ section.settings.brands_link | default: '/collections?view=merken' | escape }}">{{ section.settings.brands_label | escape }}</a>
         </div>
       </div>
-      <ul class="bc-brand-list bc-brand-slider__track" id="BrandTrack-{{ section.id }}" data-brand-track role="list" tabindex="0" aria-labelledby="HomeBrands-{{ section.id }}">
-        {% render 'bc-brand-items', mode: 'slider' %}
-      </ul>
+      <div class="bc-brand-slider__viewport" data-brand-viewport>
+        <ul class="bc-brand-list bc-brand-slider__track" id="BrandTrack-{{ section.id }}" data-brand-track role="list" tabindex="0" aria-labelledby="HomeBrands-{{ section.id }}">
+          {% render 'bc-brand-items', mode: 'slider' %}
+        </ul>
+      </div>
     </bc-brand-slider>
   </section>
   {% liquid
