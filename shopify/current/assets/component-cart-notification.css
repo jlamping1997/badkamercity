@@ -4,6 +4,8 @@ dialog.cart-notification {
   position: fixed;
   inset: 2.4rem 2.4rem auto auto;
   box-sizing: border-box;
+  /* The mobile sticky header disables pointer events on its outer section. */
+  pointer-events: auto;
   width: min(44rem, calc(100vw - 4.8rem));
   max-width: none;
   max-height: calc(100dvh - 4.8rem);
