@@ -386,6 +386,8 @@ body #MainContent .bc-card-delivery.bc-card-delivery--stock::before {
   background-color: currentColor;
 }
 
+.bc-card-color:empty, .bc-card-colors:empty { display: none; }
+
 .bc-card-colors--native {
   display: flex;
   gap: 7px;
