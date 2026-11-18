@@ -12,6 +12,11 @@
   assign value_2 = ''
   assign label_1 = 'products.product.card_type' | t
   assign label_2 = 'products.product.card_sku' | t
+  assign tile = false
+  assign type_key = product.type | handleize
+  if product.metafields.tiles.size.value != blank or product.metafields.custom.bron_toelichtingen_json.value.tiles != blank or type_key contains 'vloertegel' or type_key contains 'wandtegel' or type_key contains 'mozaiektegel' or type_key == 'tegels'
+    assign tile = true
+  endif
   if manifest.format == 'verified-product-filters-v1' and manifest_sku == expected_sku and expected_sku != blank
     assign values = manifest.values
     if values.kraanmontage != blank
@@ -36,6 +41,40 @@
   if value_2 == blank
     assign value_2 = sku
   endif
+  if tile
+    assign label_1 = 'products.product.card_tile_size' | t
+    assign value_1 = product.metafields.tiles.size.value | strip
+    assign length = product.metafields.bc_filters.tegel_lengte_mm.value
+    assign width = product.metafields.bc_filters.tegel_breedte_mm.value
+    if length > 0 and width > 0
+      assign length_cm = length | divided_by: 10.0
+      assign width_cm = width | divided_by: 10.0
+      assign whole_length = length_cm | floor
+      assign whole_width = width_cm | floor
+      if length_cm == whole_length
+        assign length_cm = whole_length
+      endif
+      if width_cm == whole_width
+        assign width_cm = whole_width
+      endif
+      if request.locale.iso_code == 'nl'
+        assign length_cm = length_cm | replace: '.', ','
+        assign width_cm = width_cm | replace: '.', ','
+      endif
+      assign value_1 = length_cm | append: ' × ' | append: width_cm | append: ' cm'
+    endif
+    assign finish = product.metafields.tiles.execution.value | default: product.metafields.bc_filters.afwerking.value | default: product.metafields.custom.afwerking.value | strip
+    assign look = product.metafields.tiles.look.value | strip
+    assign label_2 = 'products.product.card_tile_finish' | t
+    assign value_2 = finish
+    if look != blank
+      if finish == blank
+        assign value_2 = look
+      elsif look != finish
+        assign value_2 = look | append: ' · ' | append: finish
+      endif
+    endif
+  endif
 -%}
 {%- if mode == 'data' -%}
   {%- capture json_less_than -%}\u003c{%- endcapture -%}
@@ -45,7 +84,7 @@
     {%- if value_2 != blank -%}{"label":{{ label_2 | json | replace: '<', json_less_than }},"value":{{ value_2 | append: '' | json | replace: '<', json_less_than }}}{%- endif -%}
   ]
 {%- elsif value_1 != blank or value_2 != blank -%}
-  <dl class="bc-card-specs">
+  <dl class="bc-card-specs{% if tile %} bc-card-specs--tile{% endif %}">
     {%- if value_1 != blank -%}<div><dt>{{ label_1 | escape }}:</dt><dd>{{ value_1 | escape }}</dd></div>{%- endif -%}
     {%- if value_2 != blank -%}<div><dt>{{ label_2 | escape }}:</dt><dd>{{ value_2 | escape }}</dd></div>{%- endif -%}
   </dl>
