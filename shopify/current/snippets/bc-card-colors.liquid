@@ -114,11 +114,15 @@
 {%- if mode == 'data' -%}
   {"name":{{ current_colour | json }},"items":[{{ entries_markup }}]}
 {%- elsif count > 0 -%}
-  {%- if current_colour != blank -%}<p class="bc-card-color">{{ current_colour | escape }}</p>{%- endif -%}
-  <div class="bc-card-colors bc-card-colors--native" role="group" aria-label="{{ 'products.product.card_colour' | t | escape }}">
-    {{- entries_markup -}}
-    {%- if count > visible_count -%}
-      <a class="bc-card-color-more" href="{{ product.url }}" aria-label="{{ 'bc_hotbath_mobile.all_colors' | t: count: count | escape }}">+{{ count | minus: visible_count }}</a>
-    {%- endif -%}
-  </div>
+  {%- if current_colour != blank -%}
+    <p class="bc-card-color">{% if count == 1 %}{{ 'products.product.card_colour' | t | escape }}: {% endif %}{{ current_colour | escape }}</p>
+  {%- endif -%}
+  {%- if count > 1 -%}
+    <div class="bc-card-colors bc-card-colors--native" role="group" aria-label="{{ 'products.product.card_colour' | t | escape }}">
+      {{- entries_markup -}}
+      {%- if count > visible_count -%}
+        <a class="bc-card-color-more" href="{{ product.url }}" aria-label="{{ 'bc_hotbath_mobile.all_colors' | t: count: count | escape }}">+{{ count | minus: visible_count }}</a>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
 {%- endif -%}
