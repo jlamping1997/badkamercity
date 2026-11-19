@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "regressionTests": 74,
+  "reports": [
+    {
+      "scriptReport": "docs/repairs/2026-11-08/whole-euro-prices/checks.json",
+      "tests": 31,
+      "result": "PASS",
+      "scope": "Offline actual Liquid and full external-filter JS. Shopify money filters are stubbed with Intl; live preview is separate. No checkout, order, physical phone or real network claim."
+    },
+    {
+      "scriptReport": "docs/repairs/2026-11-08/mobile-product-list/contract-results.json",
+      "tests": 26,
+      "result": "PASS",
+      "scope": "Offline real Liquid and full filter JS with synthetic data. Not browser layout, live network, real SKU/color switching or purchase proof."
+    },
+    {
+      "scriptReport": "docs/repairs/2026-11-09/predictive-search-prices/checks.json",
+      "tests": 17,
+      "result": "PASS",
+      "scope": "Actual predictive section and shared money snippet execute in LiquidJS; Shopify money filters are stubbed with Intl. Browser/Shopify preview evidence is separate."
+    }
+  ],
+  "themeValidation": {
+    "files": 10,
+    "errors": 0,
+    "status": "VALID",
+    "schemaSource": "cached official schema; upstream refresh network timeout"
+  },
+  "liveSourceCaptureMd5Matches": 10,
+  "physicalPhoneCheckoutPurchaseConsent": "NOT_TESTED_THIS_TASK",
+  "newStorefrontLogicIntroduced": false,
+  "gitSourceReconciledFromExistingLive": true
+}

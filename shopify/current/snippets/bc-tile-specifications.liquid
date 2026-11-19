@@ -1,0 +1,61 @@
+{% doc %}
+  Renders the stored tile specifications in the existing specification table.
+  @param {product} product - The current tile product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- assign tile_specifications = product.metafields.custom.complete_specificaties.value -%}
+{%- capture tile_groups -%}
+  {%- for group in tile_specifications -%}
+    {%- assign group_name = group.group | strip | downcase -%}
+    {%- unless group_name == 'levering' or group_name == 'delivery' -%}
+    {%- capture tile_rows -%}
+      {%- for item in group.items -%}
+        {%- liquid
+          assign display_value = item.value | append: '' | strip
+          assign normalized_value = display_value | downcase
+          if normalized_value == 'none' or normalized_value == 'null' or normalized_value == 'onbekend' or normalized_value == '-'
+            assign display_value = ''
+          endif
+          if display_value != blank
+            case item.key
+              when 'kleur'
+                assign tile_color = product.metafields.tiles.color.value | default: display_value
+                assign normalized_color = tile_color | downcase
+                if normalized_color != 'none' and normalized_color != 'null'
+                  assign display_value = tile_color
+                endif
+              when 'afwerking'
+                assign display_value = display_value | downcase | capitalize
+              when 'oppervlaktestructuur'
+                assign display_value = display_value | downcase | replace: 'relief', 'reliëf' | capitalize | replace: '3d', '3D'
+              when 'kleurvariatie'
+                assign display_value = display_value | downcase | replace: ' - ', ' – ' | capitalize
+              when 'technische_kenmerken'
+                assign display_value = display_value | downcase | capitalize
+            endcase
+          endif
+        -%}
+        {%- if display_value != blank and item.label != blank -%}
+          {%- render 'bc-product-detail-row', value: display_value, label: item.label -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign tile_rows = tile_rows | strip -%}
+    {%- if tile_rows != blank -%}
+      <tbody>
+        <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group.group | escape }}</th></tr>
+        {{ tile_rows }}
+      </tbody>
+    {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign tile_groups = tile_groups | strip -%}
+{%- if tile_groups != blank -%}
+  <section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+    <div class="bc-product-specs__inner">
+      <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">{{ 'bc_specs.title' | t }}</h2>
+      <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">{{ tile_groups }}</table>
+    </div>
+  </section>
+{%- endif -%}

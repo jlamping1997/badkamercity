@@ -1,0 +1,15 @@
+{% layout none %}
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Hotbath mobiele controle</title><style>body{font:15px system-ui;background:#eef1f3;margin:20px}header{margin:0 0 14px}iframe{display:block;border:1px solid #bcc8ce;background:white;width:390px;height:820px}label{margin-right:15px}#status{margin:8px 0}</style></head><body>
+<header><label>Testbreedte <select id="width"><option value="320">320 px</option><option value="375">375 px</option><option value="390" selected>390 px</option><option value="744">744 px</option></select></label><span id="status">Voorbeeld wordt geladen</span></header>
+<iframe id="preview" title="Mobiele productpagina"></iframe>
+<script>
+const frame=document.getElementById('preview');
+document.getElementById('width').addEventListener('change',event=>{frame.style.width=event.target.value+'px'});
+const source=new URL({{ product.url | json }},location.origin);
+source.searchParams.set('preview_theme_id','195688694026');
+fetch(source.href,{credentials:'same-origin'}).then(response=>{if(!response.ok)throw new Error('Niet beschikbaar');return response.text()}).then(html=>{
+const doc=new DOMParser().parseFromString(html,'text/html');const base=doc.createElement('base');base.href=source.href;doc.head.prepend(base);
+frame.srcdoc='<!doctype html>'+doc.documentElement.outerHTML;
+document.getElementById('status').textContent='Actuele conceptpagina — mobiele testweergave';
+}).catch(()=>{document.getElementById('status').textContent='Voorbeeld kon niet worden geladen'});
+</script></body></html>

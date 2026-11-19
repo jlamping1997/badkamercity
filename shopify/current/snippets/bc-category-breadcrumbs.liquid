@@ -1,0 +1,72 @@
+{%- comment -%}
+  Canonical category path from the existing navigation menu, matched by collection ID.
+  A direct main-category match takes precedence over cross-links further down the menu.
+  No product assignment is inferred here. This snippet is for collection pages only.
+{%- endcomment -%}
+{%- liquid
+  assign tree_menu = navigation_menu | default: linklists['main-menu']
+  assign current_category = current_collection | default: collection
+  assign path_parent = nil
+  assign path_grandparent = nil
+  assign best_depth = 99
+  for root_link in tree_menu.links
+    if root_link.type == 'collection_link' and root_link.object.id == current_category.id
+      assign best_depth = 0
+      assign path_parent = nil
+      assign path_grandparent = nil
+    endif
+    for middle_link in root_link.links
+      if middle_link.type == 'collection_link' and middle_link.object.id == current_category.id and best_depth > 1
+        assign best_depth = 1
+        assign path_grandparent = nil
+        assign path_parent = root_link
+      endif
+      for leaf_link in middle_link.links
+        if leaf_link.type == 'collection_link' and leaf_link.object.id == current_category.id and best_depth > 2
+          assign best_depth = 2
+          assign path_grandparent = root_link
+          assign path_parent = middle_link
+        endif
+      endfor
+    endfor
+  endfor
+  if current_category.id == 570058113290
+    assign path_parent = nil
+    assign path_grandparent = nil
+  endif
+  assign home_absolute_url = routes.root_url | prepend: request.origin
+  assign current_absolute_url = current_category.url | prepend: request.origin
+  assign breadcrumb_position = 2
+-%}
+{%- if current_category != blank -%}
+  <nav class="bc-category-path" aria-label="Kruimelpad">
+    <ol role="list">
+      <li><a href="{{ routes.root_url }}">Home</a></li>
+      {%- if path_grandparent != blank -%}
+        <li><span aria-hidden="true">›</span><a href="{{ path_grandparent.url | escape }}">{{ path_grandparent.title | escape }}</a></li>
+      {%- endif -%}
+      {%- if path_parent != blank -%}
+        <li><span aria-hidden="true">›</span><a href="{{ path_parent.url | escape }}">{{ path_parent.title | escape }}</a></li>
+      {%- endif -%}
+      <li><span aria-hidden="true">›</span><span aria-current="page">{{ current_category.title | escape }}</span></li>
+    </ol>
+  </nav>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":{{ home_absolute_url | json | replace: '<', '\u003c' }}}
+      {%- if path_grandparent != blank -%}
+        ,{"@type":"ListItem","position":{{ breadcrumb_position }},"name":{{ path_grandparent.title | json | replace: '<', '\u003c' }},"item":{{ path_grandparent.url | prepend: request.origin | json | replace: '<', '\u003c' }}}
+        {%- assign breadcrumb_position = breadcrumb_position | plus: 1 -%}
+      {%- endif -%}
+      {%- if path_parent != blank -%}
+        ,{"@type":"ListItem","position":{{ breadcrumb_position }},"name":{{ path_parent.title | json | replace: '<', '\u003c' }},"item":{{ path_parent.url | prepend: request.origin | json | replace: '<', '\u003c' }}}
+        {%- assign breadcrumb_position = breadcrumb_position | plus: 1 -%}
+      {%- endif -%}
+      ,{"@type":"ListItem","position":{{ breadcrumb_position }},"name":{{ current_category.title | json | replace: '<', '\u003c' }},"item":{{ current_absolute_url | json | replace: '<', '\u003c' }}}
+    ]
+  }
+  </script>
+{%- endif -%}

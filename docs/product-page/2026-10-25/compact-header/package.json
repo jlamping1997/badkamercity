@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test-breadcrumbs.mjs"
+  },
+  "devDependencies": {
+    "liquidjs": "10.30.0"
+  }
+}

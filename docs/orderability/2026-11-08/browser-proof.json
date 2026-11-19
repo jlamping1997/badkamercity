@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-08",
+  "livePage": "https://badkamercity.nl/products/fabriecio-bc-2009",
+  "previewExited": true,
+  "finalAddButtonEnabled": true,
+  "tests": [
+    {
+      "sku": "BC_2009",
+      "handle": "fabriecio-bc-2009",
+      "variantId": "gid://shopify/ProductVariant/54059594875146",
+      "action": "Clicked actual product-page In winkelwagen button",
+      "baselineItems": 0,
+      "cartItems": 1,
+      "quantity": 1,
+      "cartRestoredEmpty": true
+    },
+    {
+      "sku": "RR6001",
+      "handle": "revoir-paris-re-bel-blanc-vloertegel-mat-60x60-cm",
+      "variantId": "gid://shopify/ProductVariant/54061689209098",
+      "action": "Entered 1 m², displayed 1 box of 1.44 m², clicked actual product-page In winkelwagen button",
+      "baselineItems": 0,
+      "cartItems": 1,
+      "quantity": 1,
+      "unitPrice": "€99.29",
+      "cartRestoredEmpty": true
+    }
+  ],
+  "checkoutTested": false
+}

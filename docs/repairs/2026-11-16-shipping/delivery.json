@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-16",
+  "status": "POSTNL_WEEKDAY_MESSAGE_LIVE_VERIFIED_SHIPPING_TARIFFS_AND_GOOGLE_PENDING",
+  "ownerConfirmedStock": {
+    "allCurrentlyOfferedProductsInStock": true,
+    "keepInStockUntilStockLinksAdded": true,
+    "source": "Owner explicitly states all products are in stock; inventory/lead-time integrations follow later",
+    "defaultWebsiteLabel": "Op voorraad",
+    "desiredGoogleAvailability": "in_stock",
+    "fabricatedStockQuantities": false
+  },
+  "cutoff": {
+    "time": "14:00",
+    "timezone": "Europe/Amsterdam",
+    "beforeCutoff": "Morgen in huis",
+    "afterCutoff": "Overmorgen in huis",
+    "exactCutoffConvention": "At 14:00 belongs to after-cutoff period; not yet deployed"
+  },
+  "proposedProductMessage": {
+    "before": "Op werkdagen vóór 14:00 besteld, volgende werkdag in huis.",
+    "after": "Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis.",
+    "scope": "Configured parcel product types only",
+    "draftApplied": true,
+    "liveApplied": true
+  },
+  "missingOwnerFacts": [
+    {
+      "id": "large_goods_scope",
+      "question": "Geldt dezelfde bezorgbelofte voor tegels, baden, douchewanden en XXL, of gaat dit transport op afspraak/met eigen termijn?",
+      "why": "Stock status does not determine pallet-transit time",
+      "status": "NOT_CONFIRMED_DO_NOT_APPLY_PARCEL_PROMISE_TO_LARGE_GOODS"
+    }
+  ],
+  "liveVerification": {
+    "activePublishedProductCount": {
+      "count": 28977,
+      "precision": "EXACT"
+    },
+    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "publicPageChecks": [
+      {
+        "url": "https://badkamercity.nl/products/fabriecio-gm-1004",
+        "visibleStatus": "Op voorraad",
+        "structuredOfferAvailability": "http://schema.org/InStock",
+        "nextDayClaimFound": false,
+        "adminVariantAvailableForSale": true
+      },
+      {
+        "url": "https://badkamercity.nl/products/wiesbaden-rooster-voor-douchegoot-60-x-7-cm-rvs-33-4213",
+        "visibleStatus": "Op voorraad",
+        "structuredOfferAvailability": "http://schema.org/InStock",
+        "nextDayClaimFound": false
+      }
+    ],
+    "scope": "Two public product-page samples, one a tracked-zero but sellable variant; not an exhaustive catalog or processed Merchant Center feed audit",
+    "merchantCenterProcessedAvailabilityReadThisTurn": false,
+    "previousMerchantGlobalService": "Earlier audit observed generic 2–5 business days; not changed",
+    "liveWritesPerformed": false
+  },
+  "implementationAfterCalendarConfirmed": [
+    "Keep owner-confirmed default In stock and preserve valid sales/channel exclusions",
+    "Add calendar-aware 14:00 delivery copy to available products in Europe/Amsterdam; integrate later product-specific overrides without rebuilding",
+    "Use correct handling cutoff, handling business days and transit days for Google, with pallet-specific service labels if needed",
+    "Verify visible status, structured data, buyability and processed Google availability; do not treat InStock structured data as proof that Merchant Center already processed every offer",
+    "Check Friday/weekend/holiday and 13:59/14:00 boundary examples before publishing delivery promises"
+  ],
+  "preservation": {
+    "existingShippingRules": "Unchanged; rules.json still contains four agreed tariff groups",
+    "M444AB": "Keep published including Google",
+    "SPOM1633BL": "Preserve existing Google-only exclusion"
+  },
+  "calendar": {
+    "handlingDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "deliveryDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "cutoff": "14:00",
+    "timezone": "Europe/Amsterdam",
+    "before": "Next weekday",
+    "after": "Two weekdays",
+    "weekend": "Process Monday; deliver Tuesday",
+    "nationalHolidayTableAdded": false
+  },
+  "implementation": {
+    "id": "gid://shopify/OnlineStoreTheme/196542005514",
+    "name": "BadkamerCity - PostNL werkdagen 14u",
+    "role": "MAIN"
+  },
+  "implementationEvidence": "weekday-implementation.json",
+  "googleAutoReviewBlock": {
+    "accountId": "5902025216",
+    "serviceId": "1",
+    "changeSaved": false,
+    "currentServiceAfterCancel": "Complete; Netherlands; All products; 2–5 days",
+    "attempted": "Cutoff 14:00 Amsterdam, handling 0–0 Mon–Fri, transit 1–1 Mon–Fri; fees untouched",
+    "autoReviewRejected": true,
+    "rejectionReason": "Saving would publish an all-products 1-business-day Google delivery promise while the user has not confirmed that large goods follow the same schedule and has stated delivery varies by article; the visible shipping costs also remain the old incomplete global rules.",
+    "response": "Cancelled editor; verified previous 2–5 day service; no alternate write route attempted",
+    "next": "Complete native shipping product groups/tariffs first; then configure matching Google labels and parcel-only delivery schedule"
+  },
+  "publicationEvidence": "weekday-publication.json"
+}

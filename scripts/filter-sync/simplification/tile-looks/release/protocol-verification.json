@@ -1,0 +1,50 @@
+{
+  "status": "READY_LOCAL_PROTOCOL_NOT_SERVER_EXECUTED",
+  "tests_passed": 91,
+  "tests_skipped": 0,
+  "worker_tests": 26,
+  "release_tests": 65,
+  "lifecycle_and_guards": 55,
+  "bundle_and_live_adapter_tests": 10,
+  "upstream_lifecycle_cases_preserved": 42,
+  "legacy_no_snapshot_case": "REPLACED_WITH_PREFLIGHT_REJECTION_REQUIRED_SEVEN_EXISTING_FLAGS",
+  "independent_review": "PASS_NO_REMAINING_BLOCKERS",
+  "independent_review_verified": {
+    "tests_passed": 91,
+    "ascii_roundtrip": "PASS",
+    "fresh_rebuild_bytes": "EXACT",
+    "snapshot_swap_race_repro": "PASS_HUMAN_POINTER_AND_OLD_WORKER_PRESERVED"
+  },
+  "installer_sha256": "73088a72cafbfa895a047214e085eea5d0c2727749e6c63bf34f401c00ed30d5",
+  "installer_bytes": 49441,
+  "base_worker_sha256": "ecfc142a4fb15e66df297ec20884826be1bd4e8c491fb20bdb3e17cc281ba69a",
+  "target_worker_sha256": "79f676d035fdd6d250e2daec51b886d1aa54c117707718d7ea9695300c21c43d",
+  "api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "api_source_unchanged": true,
+  "theme_write": false,
+  "shopify_write": false,
+  "private_runtime_sources_embedded": false,
+  "private_catalog_or_product_ids_embedded": false,
+  "dynamic_fresh_source_counts": true,
+  "deadline_seconds": 900,
+  "recovery_seconds": 240,
+  "required_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1",
+    "tile_format_codes_v1",
+    "acero_gray_v1",
+    "cotto_visual_colors_v1",
+    "tile_bone_beige_v1",
+    "more_tile_colors_v1",
+    "tile_looks_v1"
+  ],
+  "private_fixtures_local_only": [
+    "../worker/private-base-sync.py",
+    "../worker/private-candidate-sync.py",
+    "../worker/private-current-app.py"
+  ],
+  "server_staging": "NOT_EXECUTED",
+  "server_activation": "NOT_EXECUTED",
+  "browser_check": "NOT_EXECUTED",
+  "pinned_download_url": "ROOT_TO_ADD_AFTER_RELEASE_COMMIT"
+}

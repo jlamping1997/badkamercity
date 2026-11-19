@@ -1,0 +1,48 @@
+{%- liquid
+  assign spec_metafield = metafield
+  assign spec_type = spec_metafield.type | default: ''
+  assign has_value = false
+  assign is_boolean = false
+  assign output_value = ''
+
+  if spec_metafield != blank
+    assign output_value = spec_metafield.value
+
+    assign output_str = output_value | downcase | strip
+    if spec_type contains 'boolean' or output_value == true or output_value == false or output_str == 'true' or output_str == 'false'
+      assign is_boolean = true
+      assign has_value = true
+      if output_str == 'true' or output_value == true
+        assign output_value = true
+      elsif output_str == 'false' or output_value == false
+        assign output_value = false
+      endif
+    elsif output_value != blank
+      assign has_value = true
+    endif
+  endif
+-%}
+
+{%- if has_value -%}
+  <tr class="bc-product-specs__row">
+    <th class="bc-product-specs__label" scope="row">
+      {{ label }}
+      {%- if uitleg_url -%}
+        <a href="{{ uitleg_url }}" class="bc-product-specs__uitleg-link" target="_blank" rel="noopener">Uitleg</a>
+      {%- endif -%}
+    </th>
+    <td class="bc-product-specs__value">
+      {%- if is_boolean -%}
+        <span class="bc-product-specs__boolean-icon">
+          {% if output_value %}
+            <span class="bc-product-specs__icon-true">{{ 'icon-true.svg' | asset_url | img_tag: 'Ja', 'icon-true' }}</span>
+          {% else %}
+            <span class="bc-product-specs__icon-false">{{ 'icon-false.svg' | asset_url | img_tag: 'Nee', 'icon-false' }}</span>
+          {% endif %}
+        </span>
+      {%- else -%}
+        {{ output_value | escape }}
+      {%- endif -%}
+    </td>
+  </tr>
+{%- endif -%}

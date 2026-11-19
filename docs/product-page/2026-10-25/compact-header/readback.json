@@ -1,0 +1,47 @@
+{
+  "main": {
+    "id": "195703472394",
+    "role": "MAIN",
+    "processing": false,
+    "count": 553,
+    "differences": [],
+    "qaOriginal": true
+  },
+  "preview": {
+    "id": "195703996682",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "count": 553,
+    "differences": [
+      "assets/section-main-product.css",
+      "sections/main-product.liquid",
+      "snippets/bc-hotbath-normal-intro.liquid",
+      "snippets/bc-product-breadcrumbs.liquid"
+    ],
+    "qaOriginal": true
+  },
+  "uploadedContentExact": true,
+  "browser": {
+    "mobile390": {
+      "contentWidth": 375,
+      "scrollWidth": 375,
+      "titleWidth": 349,
+      "titleHeight": 137.5,
+      "shortIntroElements": 0
+    },
+    "mobile320": {
+      "contentWidth": 305,
+      "scrollWidth": 305,
+      "titleWidth": 279,
+      "shortIntroElements": 0,
+      "colorsExpanded": 10
+    },
+    "desktop": {
+      "contentWidth": 1348,
+      "scrollWidth": 1348,
+      "titleHeight": 65.4375,
+      "shortIntroElements": 0,
+      "breadcrumbLinks": 4
+    }
+  }
+}

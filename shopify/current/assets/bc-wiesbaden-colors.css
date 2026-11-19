@@ -1,0 +1,12 @@
+[data-bc-compact-colors="true"].bc-hotbath-switcher--mobile {
+  display: grid;
+  gap: 1.6rem;
+}
+[data-bc-compact-colors="true"] .bc-hotbath-swatch__surface {
+  background: #fff;
+}
+[data-bc-compact-colors="true"] .bc-hotbath-swatch__surface img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

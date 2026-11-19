@@ -1,0 +1,46 @@
+{
+  "status": "PASS_INDEPENDENT_RELEASE_STRUCTURE",
+  "counts": {
+    "main_files": 1436,
+    "concept_files": 1684,
+    "unchanged_existing_files": 1434,
+    "changed_existing_files": 2,
+    "new_bounded_json_assets": 248,
+    "active_wiesbaden_routes": 268,
+    "current_products_unique": 1845,
+    "compact_optin_groups": 254,
+    "existing_noncompact_groups_retained": 14,
+    "held_products_checked": 65,
+    "held_products_in_any_active_group": 0,
+    "old_route_count": 35,
+    "new_route_count": 233,
+    "old_routes_repointed": 1
+  },
+  "checks": {
+    "only_allowlist_section_change": true,
+    "only_wiesbaden_router_change": true,
+    "all_routes_have_one_exact_group": true,
+    "all_menu_tuples_unique": true,
+    "all_product_url_identities_exact": true,
+    "all_other_theme_files_preserved": true,
+    "shared_js_unchanged": true,
+    "all65_holds_absent_from_active_groups": true,
+    "all65_current_route_fields_still_empty": true
+  },
+  "errors": [],
+  "limits": [
+    "Structural and current source-file comparison only; no newly executed real-browser/mobile/cart test or full1845-product Admin readback claimed.",
+    "Fourteen existing noncompact groups remain outside compact allowlist, as on MAIN; all their group routes and assets remain available.",
+    "Superseded added JSON files are retained unused; route resolution selects only268current bounded assets."
+  ],
+  "source_sha256": {
+    "sections/main-product.liquid": "b71e04ad11b34f577b0ac80460e94f7faea7fc3dbc338d6eeca5f937bd03fd53",
+    "snippets/bc-choice-data-source.liquid": "204e5a16e553c94e4ac8ed8e7dc8501f36ff22576a3d62001165298bae9dd41a"
+  },
+  "fresh_held_Admin_readback": {
+    "status": "PASS_65_CURRENT_ROUTE_FIELDS_EMPTY",
+    "checkedProducts": 65,
+    "nonemptyRouteProducts": [],
+    "scope": "Fresh read-only Admin65 held products; switch_group,color_variants,custom.group,switch_key all empty. No mutation."
+  }
+}

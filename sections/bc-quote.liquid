@@ -1,0 +1,41 @@
+{{ 'bc-quote.css' | asset_url | stylesheet_tag }}
+{% liquid
+  assign form_id = section.settings.form_id | strip
+  assign unexpected = form_id | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9'
+  assign form_ready = false
+  if form_id.size >= 10 and form_id.size <= 20 and unexpected == blank
+    if section.settings.integration_enabled
+      assign form_ready = true
+    elsif section.settings.integration_preview and theme.role == 'unpublished'
+      assign form_ready = true
+    endif
+  endif
+%}
+<section class="bcq" aria-labelledby="QuoteHeading-{{ section.id }}">
+  <div class="bcq-shell">
+    <nav class="bcq-crumb" aria-label="{{ 'bc_assortment.breadcrumb' | t | escape }}"><a href="{{ routes.root_url }}">{{ 'bc_assortment.home' | t }}</a><span aria-hidden="true">›</span><span>{{ 'bc_quote.crumb' | t }}</span></nav>
+    <div class="bcq-main">
+      <div class="bcq-intro"><p class="bcq-eyebrow">{{ 'bc_quote.eyebrow' | t }}</p><h1 id="QuoteHeading-{{ section.id }}">{{ 'bc_quote.heading' | t }}</h1><p class="bcq-lead">{{ 'bc_quote.intro' | t }}</p>
+      </div>
+      <div class="bcq-panel" id="QuoteForm-{{ section.id }}">{% unless form_ready %}<h2>{{ 'bc_quote.form_heading' | t }}</h2><p class="bcq-muted">{{ 'bc_quote.form_intro' | t }}</p>{% endunless %}
+        {% if form_ready %}
+          <iframe class="bcq-frame" title="{{ 'bc_quote.iframe_title' | t | escape }}" src="https://form.jotform.com/{{ form_id | escape }}" loading="lazy" width="100%" height="1100"></iframe>
+          <a class="bcq-external" href="https://form.jotform.com/{{ form_id | escape }}" target="_blank" rel="noopener">{{ 'bc_quote.open_form' | t }} ↗</a>
+        {% elsif section.settings.show_preview %}
+          <p class="bcq-preview" role="note">{{ 'bc_quote.preview' | t }}</p>
+          <fieldset class="bcq-demo" disabled aria-describedby="QuotePreview-{{ section.id }}"><legend class="visually-hidden">{{ 'bc_quote.preview' | t }}</legend>
+            <div class="bcq-field"><span class="bcq-label">{{ 'bc_quote.kind' | t }}</span><div class="bcq-options"><label><input type="radio" checked name="quote-kind-{{ section.id }}">{{ 'bc_quote.whole' | t }}</label><label><input type="radio" name="quote-kind-{{ section.id }}">{{ 'bc_quote.single' | t }}</label></div></div>
+            <div class="bcq-pair"><div class="bcq-field"><label for="QuoteName-{{ section.id }}">{{ 'bc_quote.name' | t }}</label><input id="QuoteName-{{ section.id }}" type="text" autocomplete="name"></div><div class="bcq-field"><label for="QuoteEmail-{{ section.id }}">{{ 'bc_quote.email' | t }}</label><input id="QuoteEmail-{{ section.id }}" type="email" autocomplete="email"></div></div>
+            <div class="bcq-field"><label for="QuotePhone-{{ section.id }}">{{ 'bc_quote.phone' | t }}</label><input id="QuotePhone-{{ section.id }}" type="tel" autocomplete="tel"></div>
+            <div class="bcq-field"><label for="QuoteFile-{{ section.id }}">{{ 'bc_quote.file' | t }}</label><div class="bcq-drop"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7zM14 3v5h4M12 17v-6m-3 3 3-3 3 3"/></svg><span>{{ 'bc_quote.upload' | t }}</span><input id="QuoteFile-{{ section.id }}" type="file" accept=".pdf,.jpg,.jpeg,.png"><small>{{ 'bc_quote.file_help' | t }}</small></div></div>
+            <div class="bcq-field"><label for="QuoteMessage-{{ section.id }}">{{ 'bc_quote.message' | t }}</label><textarea id="QuoteMessage-{{ section.id }}" rows="3" placeholder="{{ 'bc_quote.message_help' | t | escape }}"></textarea></div><button class="bcq-button" type="button">{{ 'bc_quote.send' | t }} <span aria-hidden="true">→</span></button>
+          </fieldset><p class="bcq-privacy" id="QuotePreview-{{ section.id }}">{{ 'bc_quote.privacy' | t }}</p>
+        {% else %}<p class="bcq-unavailable">{{ 'bc_quote.not_ready' | t }}</p><a class="bcq-button" href="{{ pages.contact.url }}">{{ 'bc_quote.contact' | t }} →</a>{% endif %}
+      </div>
+    </div>
+    <details class="bcq-help"><summary>{{ 'bc_quote.faq_3' | t }}<span aria-hidden="true">+</span></summary><p>{{ 'bc_quote.faq_3_answer' | t }}</p><p>{{ 'bc_quote.tip_text' | t }}</p></details>
+  </div>
+</section>
+{% schema %}
+{"name":"Offerte vergelijken","settings":[{"type":"text","id":"form_id","label":"Jotform formulier-ID","info":"Alleen het numerieke ID van het gecontroleerde formulier. Geen API-sleutel."},{"type":"checkbox","id":"integration_preview","label":"Jotform in concept testen","default":false,"info":"Werkt alleen in een ongepubliceerd thema. Klantactivatie blijft apart uit."},{"type":"checkbox","id":"integration_enabled","label":"Uploadkoppeling activeren","default":false,"info":"Pas na privébestandstoegang, notificatie, verwijdering en ontvangsttest."},{"type":"checkbox","id":"show_preview","label":"Voorbeeldformulier tonen","default":false,"info":"Alle velden zijn uitgeschakeld. Zet uit vóór publicatie."}],"presets":[{"name":"Offerte vergelijken"}]}
+{% endschema %}

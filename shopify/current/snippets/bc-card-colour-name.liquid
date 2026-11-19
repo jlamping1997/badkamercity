@@ -1,0 +1,26 @@
+{% doc %}
+  Outputs an explicitly recorded product colour.
+  @param {product} product - Product or linked colour edition.
+{% enddoc %}
+{%- liquid
+  assign value = product.metafields.custom.kleur.value | default: product.metafields.tiles.color.value | default: product.metafields.bc_filters.kleur.value
+  assign manifest = product.metafields.bc_data.filter_manifest.value
+  assign sku = product.selected_or_first_available_variant.sku | strip | upcase
+  assign manifest_sku = manifest.sku | strip | upcase
+  if manifest.format == 'verified-product-filters-v1' and sku != blank and manifest_sku == sku and manifest.values.kleur != blank
+    assign value = manifest.values.kleur
+  endif
+  if value == blank
+    assign value = product.metafields.bc_sunshower.configuration.value.selected.kleur | default: product.metafields.custom.basiskleur.value
+  endif
+  if value == blank
+    for group in product.metafields.custom.complete_specificaties.value
+      assign colour = group.items | find: 'key', 'kleur'
+      if colour.value != blank
+        assign value = colour.value
+        break
+      endif
+    endfor
+  endif
+  echo value | strip
+-%}

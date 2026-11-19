@@ -1,0 +1,25 @@
+{
+  "validation": [
+    {
+      "file": "sections/main-product.liquid",
+      "code": 0,
+      "output": "## Validation Summary\n\n**Overall Status:** ⚠️ VALID (with warnings)\n**Total Files:** 1\n\n## Detailed Results\n\n### File 1\n**Artifact ID:** bc-compact-pdp-main-product\n**Revision:** 1\n*Use same ID & increment revision when retrying on an improvement of this artifact*\n\n**Status:** ⚠️ INFORM\n**Details:** main-product.liquid passed all checks (with 3 non-error finding(s)):\nWARNING [line 1426, col 116]: Liquid complexity is 229, which exceeds the maximum of 120. The decision at line 1426 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.\nWARNING [line 2241, col 9]: The variable 'seo_media' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'seo_media'.\nWARNING [line 1888, col 45]: Unknown object 'continue' used.\n\n\n"
+    },
+    {
+      "file": "snippets/bc-product-breadcrumbs.liquid",
+      "code": 0,
+      "output": "## Validation Summary\n\n**Overall Status:** ✅ VALID\n**Total Files:** 1\n\n## Detailed Results\n\n### File 1\n**Artifact ID:** bc-compact-pdp-bc-product-breadcrumbs\n**Revision:** 1\n*Use same ID & increment revision when retrying on an improvement of this artifact*\n\n**Status:** ✅ SUCCESS\n**Details:** bc-product-breadcrumbs.liquid passed all checks.\n\n\n"
+    },
+    {
+      "file": "snippets/bc-hotbath-normal-intro.liquid",
+      "code": 0,
+      "output": "## Validation Summary\n\n**Overall Status:** ✅ VALID\n**Total Files:** 1\n\n## Detailed Results\n\n### File 1\n**Artifact ID:** bc-compact-pdp-bc-hotbath-normal-intro\n**Revision:** 1\n*Use same ID & increment revision when retrying on an improvement of this artifact*\n\n**Status:** ✅ SUCCESS\n**Details:** bc-hotbath-normal-intro.liquid passed all checks.\n\n\n"
+    },
+    {
+      "file": "assets/section-main-product.css",
+      "code": 0,
+      "output": "## Validation Summary\n\n**Overall Status:** ✅ VALID\n**Total Files:** 1\n\n## Detailed Results\n\n### File 1\n**Artifact ID:** bc-compact-pdp-section-main-product\n**Revision:** 1\n*Use same ID & increment revision when retrying on an improvement of this artifact*\n\n**Status:** ✅ SUCCESS\n**Details:** section-main-product.css passed all checks.\n\n\n"
+    }
+  ],
+  "baselineValidation": "## Validation Summary\n\n**Overall Status:** ⚠️ VALID (with warnings)\n**Total Files:** 1\n\n## Detailed Results\n\n### File 1\n**Artifact ID:** bc-pdp-header-baseline\n**Revision:** 1\n*Use same ID & increment revision when retrying on an improvement of this artifact*\n\n**Status:** ⚠️ INFORM\n**Details:** main-product.liquid passed all checks (with 3 non-error finding(s)):\nWARNING [line 1410, col 116]: Liquid complexity is 229, which exceeds the maximum of 120. The decision at line 1410 pushed it over the limit. Consider simplifying conditional logic, or moving self-contained decision logic into snippets with the render tag.\nWARNING [line 2225, col 9]: The variable 'seo_media' is assigned but not used; SUGGESTED FIXES: Remove the unused variable 'seo_media'.\nWARNING [line 1872, col 45]: Unknown object 'continue' used.\n\n\n"
+}

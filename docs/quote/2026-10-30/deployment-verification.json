@@ -1,0 +1,70 @@
+{
+  "main": {
+    "id": "gid://shopify/OnlineStoreTheme/195915448586",
+    "role": "MAIN",
+    "files": 1344,
+    "changed": []
+  },
+  "draft": {
+    "id": "gid://shopify/OnlineStoreTheme/195916628234",
+    "role": "UNPUBLISHED",
+    "files": 1348,
+    "changed": [
+      "assets/bc-quote.css",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/bc-quote-teaser.liquid",
+      "sections/bc-quote.liquid",
+      "templates/index.json",
+      "templates/page.offerte-vergelijken.json"
+    ]
+  },
+  "checks": [
+    {
+      "filename": "sections/bc-quote.liquid",
+      "equal": true
+    },
+    {
+      "filename": "sections/bc-quote-teaser.liquid",
+      "equal": true
+    },
+    {
+      "filename": "assets/bc-quote.css",
+      "equal": true
+    },
+    {
+      "filename": "templates/page.offerte-vergelijken.json",
+      "equal": true
+    },
+    {
+      "filename": "templates/index.json",
+      "equal": true
+    },
+    {
+      "filename": "locales/nl.json",
+      "equal": true
+    },
+    {
+      "filename": "locales/en.default.json",
+      "equal": true
+    }
+  ],
+  "qaRestored": true,
+  "page": {
+    "pages": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Page/166573539594",
+          "handle": "offerte-vergelijken",
+          "title": "Offerte vergelijken",
+          "isPublished": false,
+          "templateSuffix": "offerte-vergelijken"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjoxNjY1NzM1Mzk1OTQsImxhc3RfdmFsdWUiOiIxNjY1NzM1Mzk1OTQifQ=="
+      }
+    }
+  }
+}

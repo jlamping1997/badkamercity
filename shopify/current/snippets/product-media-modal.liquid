@@ -1,0 +1,100 @@
+{% comment %}
+  Renders a product media modal. Also see 'product-media-gallery'
+
+  Accepts:
+  - product: {Object} Product liquid object
+  - variant_images: {Array} Product images associated with a variant
+
+  Usage:
+  {% render 'product-media-modal' %}
+{% endcomment %}
+
+<product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
+  <div
+    class="product-media-modal__dialog color-{{ section.settings.color_scheme }} gradient"
+    role="dialog"
+    aria-label="{{ 'products.modal.label' | t }}"
+    aria-modal="true"
+    tabindex="-1"
+  >
+    <div class="product-media-modal__counter" data-product-modal-counter>1 / {{ product.media.size }}</div>
+
+    <div class="product-media-modal__toolbar" aria-label="Afbeelding opties">
+      <button type="button" class="product-media-modal__toolbar-button" aria-label="Inzoomen" data-product-modal-zoom>
+        <span aria-hidden="true">&#9906;</span>
+      </button>
+      <button type="button" class="product-media-modal__toolbar-button" aria-label="Volledig scherm" data-product-modal-fullscreen>
+        <span aria-hidden="true">&#9974;</span>
+      </button>
+      <button type="button" class="product-media-modal__toolbar-button" aria-label="Thumbnails tonen" data-product-modal-thumbnails>
+        <span aria-hidden="true">&#9638;</span>
+      </button>
+    </div>
+
+    <button
+      id="ModalClose-{{ section.id }}"
+      type="button"
+      class="product-media-modal__toggle"
+      aria-label="{{ 'accessibility.close' | t }}"
+    >
+      {{ 'icon-close.svg' | inline_asset_content }}
+    </button>
+
+    <button
+      type="button"
+      class="product-media-modal__nav product-media-modal__nav--previous"
+      aria-label="Vorige afbeelding"
+      data-product-modal-previous
+    >
+      <span aria-hidden="true">&#8249;</span>
+    </button>
+
+    <button
+      type="button"
+      class="product-media-modal__nav product-media-modal__nav--next"
+      aria-label="Volgende afbeelding"
+      data-product-modal-next
+    >
+      <span aria-hidden="true">&#8250;</span>
+    </button>
+
+    <div
+      class="product-media-modal__content color-{{ section.settings.color_scheme }} gradient"
+      role="document"
+      aria-label="{{ 'products.modal.label' | t }}"
+      tabindex="0"
+    >
+      {%- for media in product.media -%}
+        {%- liquid
+          if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+            assign variant_image = true
+          else
+            assign variant_image = false
+          endif
+
+          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+        -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="product-media-modal__thumbnails" aria-label="Productafbeeldingen">
+      {%- for media in product.media -%}
+        <button
+          type="button"
+          class="product-media-modal__thumbnail"
+          data-product-modal-thumbnail
+          data-media-id="{{ media.id }}"
+          aria-label="Toon afbeelding {{ forloop.index }}"
+        >
+          <img
+            src="{{ media.preview_image | image_url: width: 160 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            width="80"
+            height="{{ 80 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+          >
+        </button>
+      {%- endfor -%}
+    </div>
+  </div>
+</product-modal>

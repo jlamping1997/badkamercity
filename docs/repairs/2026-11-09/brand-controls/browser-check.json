@@ -1,0 +1,59 @@
+{
+  "task": "BRAND-CONTROLS-01",
+  "status": "VERIFIED_DESKTOP_PREVIEW",
+  "date": "2026-11-09",
+  "themeId": "196416504074",
+  "themeName": "BadkamerCity - Merkenbalk zonder pijlen",
+  "urlAfterRedirect": "https://badkamercity.nl/",
+  "viewport": {
+    "width": 1348,
+    "height": 936
+  },
+  "buttonsInBrandSlider": 0,
+  "overviewLink": {
+    "text": "Alle merken",
+    "href": "/collections?view=merken",
+    "width": 130.65625,
+    "height": 44,
+    "background": "rgb(16, 43, 67)",
+    "color": "rgb(255, 255, 255)",
+    "borderRadius": "999px",
+    "actualClick": {
+      "url": "https://badkamercity.nl/collections?view=merken",
+      "heading": "Onze merken"
+    }
+  },
+  "rail": {
+    "x": 0,
+    "width": 1348,
+    "documentWidth": 1348,
+    "loadedOriginalLogos": 8,
+    "moving": true
+  },
+  "mouseDrag": {
+    "from": [
+      800,
+      545
+    ],
+    "to": [
+      1100,
+      545
+    ],
+    "before": {
+      "time": 1794264252419,
+      "scrollLeft": 2150
+    },
+    "after": {
+      "time": 1794264261013,
+      "scrollLeft": 1830,
+      "moving": true
+    },
+    "navigation": "Homepage remained open"
+  },
+  "screenshot": "homepage-preview.jpg",
+  "notTested": [
+    "Physical phone/tablet and real touch gesture",
+    "Actual FPS or speed benchmark"
+  ],
+  "syntheticCoverage": "Existing 31 motion/pointer tests now include startup without controls at 320,390,750,989,1348,4000px"
+}

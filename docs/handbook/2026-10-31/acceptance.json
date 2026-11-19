@@ -1,0 +1,402 @@
+[
+  {
+    "id": "A01",
+    "group": "Header",
+    "action": "Home en PDP op gelijke breedte bovenaan openen",
+    "expected": "Logopositie en bovenrij gelijk",
+    "status": "EERDER BEWIJS",
+    "evidence": "HDR-01"
+  },
+  {
+    "id": "A02",
+    "group": "Header",
+    "action": "Downscroll voorbij header en bewust omhoog",
+    "expected": "Alleen zoekrij klapt volgens drempels",
+    "status": "EERDER BEWIJS",
+    "evidence": "HDR-01"
+  },
+  {
+    "id": "A03",
+    "group": "Header",
+    "action": "Typen met suggesties en vervolgens scrollen",
+    "expected": "Bediening houdt zoekrij beschikbaar",
+    "status": "ONTWERP",
+    "evidence": "53"
+  },
+  {
+    "id": "A04",
+    "group": "Header",
+    "action": "Menu open na diepe scroll en weer sluiten",
+    "expected": "Header gepind, daarna pagina vrij scrollbaar",
+    "status": "EERDER BEWIJS",
+    "evidence": "HDR-01"
+  },
+  {
+    "id": "A05",
+    "group": "Header",
+    "action": "Tab in compacte zoekstaat",
+    "expected": "Geen focus op verborgen invoer",
+    "status": "ONTWERP",
+    "evidence": "53/75"
+  },
+  {
+    "id": "A06",
+    "group": "Menu",
+    "action": "Terug aanklikken en daarna met Tab bereiken",
+    "expected": "Geen pointerkader; zichtbare keyboardfocus",
+    "status": "EERDER BEWIJS",
+    "evidence": "HDR-01"
+  },
+  {
+    "id": "A07",
+    "group": "Menu",
+    "action": "Diep niveau openen en Terug kiezen",
+    "expected": "Vorige menulaag, geen browserback",
+    "status": "ONTWERP",
+    "evidence": "55"
+  },
+  {
+    "id": "A08",
+    "group": "Menu",
+    "action": "Mobiel open, resizen naar desktop en terug",
+    "expected": "Overlay/scrolllock opgeruimd",
+    "status": "EERDER BEWIJS",
+    "evidence": "NAV-02"
+  },
+  {
+    "id": "A09",
+    "group": "Navigatie",
+    "action": "990/1024/1280/1348/1359 preview openen",
+    "expected": "Elf ingangen in 6+5 zonder overloop",
+    "status": "EERDER BEWIJS",
+    "evidence": "NAV-02"
+  },
+  {
+    "id": "A10",
+    "group": "Navigatie",
+    "action": "1360/1366/1440/1536/1920 preview openen",
+    "expected": "Elf ingangen zonder scrollknoppen",
+    "status": "EERDER BEWIJS",
+    "evidence": "NAV-02"
+  },
+  {
+    "id": "A11",
+    "group": "Navigatie",
+    "action": "Tweede rij dropdown en Escape bedienen",
+    "expected": "Paneel onder hele bar; focus herstelt",
+    "status": "EERDER BEWIJS",
+    "evidence": "NAV-02"
+  },
+  {
+    "id": "A12",
+    "group": "Navigatie",
+    "action": "Merken via echte top-level link openen",
+    "expected": "Directorybestemming bereikbaar",
+    "status": "EERDER BEWIJS",
+    "evidence": "NAV-02"
+  },
+  {
+    "id": "A13",
+    "group": "Navigatie",
+    "action": "Live homepage GET lezen",
+    "expected": "MAIN bevat nog twee railcontrols",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A14",
+    "group": "Retour",
+    "action": "Live retourpagina GET lezen",
+    "expected": "HTTP 200 en native contactformmarkup",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A15",
+    "group": "Retour",
+    "action": "Desktoplive headerlink lezen",
+    "expected": "/pages/retour-aanmelden aanwezig",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A16",
+    "group": "Retour",
+    "action": "Hidden Page in MAIN versus conceptfixture",
+    "expected": "Geen lege live link; veilige preview",
+    "status": "EERDER BEWIJS",
+    "evidence": "RET-01/RET-02"
+  },
+  {
+    "id": "A17",
+    "group": "Retour",
+    "action": "Vereiste velden leeg en e-mail ongeldig",
+    "expected": "Native foutfeedback, geen vals succes",
+    "status": "ONTWERP",
+    "evidence": "69"
+  },
+  {
+    "id": "A18",
+    "group": "Retour",
+    "action": "Reden leeg laten bij geldige invoer",
+    "expected": "Reden blijft optioneel",
+    "status": "ONTWERP",
+    "evidence": "69"
+  },
+  {
+    "id": "A19",
+    "group": "Retour",
+    "action": "Fictieve afgesproken aanvraag verzenden",
+    "expected": "Ontvangst in inbox/spam en antwoord bewezen",
+    "status": "ONTWERP",
+    "evidence": "MAIL_DELIVERY_PENDING"
+  },
+  {
+    "id": "A20",
+    "group": "Retour",
+    "action": "Label handmatig beantwoorden",
+    "expected": "Juiste ontvanger/order en afgesproken instructie",
+    "status": "ONTWERP",
+    "evidence": "70"
+  },
+  {
+    "id": "A21",
+    "group": "Footer",
+    "action": "Home en gewone routes op adresstring scannen",
+    "expected": "String niet in onderzochte footers",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A22",
+    "group": "Footer",
+    "action": "Accordion mobiel en desktoplinks bedienen",
+    "expected": "Juiste uitklapstaat en echte bestemmingen",
+    "status": "ONTWERP",
+    "evidence": "68"
+  },
+  {
+    "id": "A23",
+    "group": "Homepage",
+    "action": "749 en 750 vergelijken",
+    "expected": "Banners en categorieopbouw volgen grens",
+    "status": "ONTWERP",
+    "evidence": "57"
+  },
+  {
+    "id": "A24",
+    "group": "Assortiment",
+    "action": "749/750 met zoeken en reset",
+    "expected": "DOM-volgorde en openstaat logisch",
+    "status": "EERDER BEWIJS",
+    "evidence": "ASSORT-02"
+  },
+  {
+    "id": "A25",
+    "group": "Merken",
+    "action": "Directory GET en zoekinteractie",
+    "expected": "GET bereikbaar; lokale filter apart testen",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A26",
+    "group": "Zoeken",
+    "action": "Predictive typen, pijlen, Enter, Escape",
+    "expected": "Juiste suggestie en focusherstel",
+    "status": "ONTWERP",
+    "evidence": "56"
+  },
+  {
+    "id": "A27",
+    "group": "Zoeken",
+    "action": "Native zoekterm en nulresultaat GET",
+    "expected": "Beide routes HTTP 200; client apart",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A28",
+    "group": "Filters",
+    "action": "Twee snelle filterwijzigingen",
+    "expected": "Laatste verzoek bepaalt resultaten",
+    "status": "ONTWERP",
+    "evidence": "59"
+  },
+  {
+    "id": "A29",
+    "group": "Filters",
+    "action": "Timeout/fout van externe lijst",
+    "expected": "Bruikbare native fallback",
+    "status": "ONTWERP",
+    "evidence": "59"
+  },
+  {
+    "id": "A30",
+    "group": "Filters",
+    "action": "Range wijzigen en browser Terug/Vooruit",
+    "expected": "URL, controls en resultaten coherent",
+    "status": "ONTWERP",
+    "evidence": "59"
+  },
+  {
+    "id": "A31",
+    "group": "Kaart",
+    "action": "Twee kleuren en terug kiezen",
+    "expected": "Foto/link/variant/prijs/hartje coherent",
+    "status": "ONTWERP",
+    "evidence": "60"
+  },
+  {
+    "id": "A32",
+    "group": "PDP",
+    "action": "Variant in zelfde product kiezen",
+    "expected": "AJAX-info en URL passen bij variant",
+    "status": "ONTWERP",
+    "evidence": "61"
+  },
+  {
+    "id": "A33",
+    "group": "PDP",
+    "action": "Ander product via uitvoering kiezen",
+    "expected": "Nieuwe juiste product-URL en gegevens",
+    "status": "ONTWERP",
+    "evidence": "61"
+  },
+  {
+    "id": "A34",
+    "group": "Tegels",
+    "action": "Geldige 10m² en 10% op eerder gekozen PDP",
+    "expected": "Uitkomst volgens echte doosinhoud",
+    "status": "EERDER BEWIJS",
+    "evidence": "30-oktober-Verona-proef"
+  },
+  {
+    "id": "A35",
+    "group": "Tegels",
+    "action": "Exact en net boven doosgrens rekenen",
+    "expected": "Correct omhoog afronden",
+    "status": "ONTWERP",
+    "evidence": "62"
+  },
+  {
+    "id": "A36",
+    "group": "Tegels",
+    "action": "Leeg/nul/negatief/komma invoeren",
+    "expected": "Feedback of geldige normalisatie, geen NaN",
+    "status": "ONTWERP",
+    "evidence": "62"
+  },
+  {
+    "id": "A37",
+    "group": "Merkdata",
+    "action": "Volledige, gedeeltelijke en buiten-guard bron",
+    "expected": "Juiste prioriteit en veilige fallback",
+    "status": "ONTWERP",
+    "evidence": "63"
+  },
+  {
+    "id": "A38",
+    "group": "Onderdelen",
+    "action": "Inbegrepen/vereist/optioneel vergelijken",
+    "expected": "Geen onbedoelde betaalde selectie",
+    "status": "ONTWERP",
+    "evidence": "64"
+  },
+  {
+    "id": "A39",
+    "group": "Media",
+    "action": "Galerij, zoom en Escape bedienen",
+    "expected": "Juiste media/teller en focusherstel",
+    "status": "ONTWERP",
+    "evidence": "65"
+  },
+  {
+    "id": "A40",
+    "group": "Document",
+    "action": "Ontbrekende en dubbele documentbron",
+    "expected": "Geen lege knop, geen duplicaat",
+    "status": "ONTWERP",
+    "evidence": "65"
+  },
+  {
+    "id": "A41",
+    "group": "Cart",
+    "action": "Geplande add met variant en aantal",
+    "expected": "Teruggelezen regel exact; schrijfproef apart",
+    "status": "ONTWERP",
+    "evidence": "66"
+  },
+  {
+    "id": "A42",
+    "group": "Cart",
+    "action": "Bewaren/herstellen met gevulde cart",
+    "expected": "Betekenis en mogelijke optelling verklaard",
+    "status": "ONTWERP",
+    "evidence": "66"
+  },
+  {
+    "id": "A43",
+    "group": "Wishlist",
+    "action": "Twee uitvoeringen bewaren/herladen/verwijderen",
+    "expected": "Identiteit en teller consistent",
+    "status": "ONTWERP",
+    "evidence": "67"
+  },
+  {
+    "id": "A44",
+    "group": "Wishlist",
+    "action": "Corrupt/geblokkeerd geheugen en verdwenen product",
+    "expected": "Bruikbare fout-/lege staat",
+    "status": "ONTWERP",
+    "evidence": "67"
+  },
+  {
+    "id": "A45",
+    "group": "Content",
+    "action": "Hygrometer eind-URL GET lezen",
+    "expected": "Bekende 404 bevestigd; geen stille fix",
+    "status": "NIEUW GET",
+    "evidence": "http-refresh.json"
+  },
+  {
+    "id": "A46",
+    "group": "Content",
+    "action": "H2-opbouw in gewijzigd adviesartikel",
+    "expected": "Correcte sectieverdeling en kophiërarchie",
+    "status": "ONTWERP",
+    "evidence": "72"
+  },
+  {
+    "id": "A47",
+    "group": "SEO",
+    "action": "Canonical/robots/schema per gewijzigde route",
+    "expected": "Bij route en verkoopdata passende markup",
+    "status": "ONTWERP",
+    "evidence": "74"
+  },
+  {
+    "id": "A48",
+    "group": "A11y",
+    "action": "Alle actieve overlays met keyboard bedienen",
+    "expected": "Focus zichtbaar, sluitroute en herstel",
+    "status": "ONTWERP",
+    "evidence": "75"
+  },
+  {
+    "id": "A49",
+    "group": "Performance",
+    "action": "Koude home/PDP op gelijke omgeving meten",
+    "expected": "Echte LCP/CLS/INP-data met bronmoment",
+    "status": "ONTWERP",
+    "evidence": "76"
+  },
+  {
+    "id": "A50",
+    "group": "Offerte",
+    "action": "Gates bij hidden Page en MAIN controleren",
+    "expected": "Klantactivatie blijft uit zonder vrijgave",
+    "status": "ONTWERP",
+    "evidence": "71"
+  }
+]

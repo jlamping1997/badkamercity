@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-cart-bc" viewBox="0 0 24 24">
+  <g class="icon-cart-bc__cart">
+    <path class="icon-cart-bc__handle" d="M3 5.25h2.9l1.2 7.2a1.2 1.2 0 0 0 1.18 1h8.25a1.2 1.2 0 0 0 1.14-.84l1.33-4.43H7.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    <path class="icon-cart-bc__frame" d="M8.1 13.45 9.35 16h7.9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    <path class="icon-cart-bc__front" d="M16.2 13.45 17.55 8.2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    <path class="icon-cart-bc__top" d="M8.2 8.2h10.65" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+  </g>
+  <circle class="icon-cart-bc__wheel icon-cart-bc__wheel--rear" cx="9.4" cy="18.4" r="1.15" fill="currentColor"/>
+  <circle class="icon-cart-bc__wheel icon-cart-bc__wheel--front" cx="16.5" cy="18.4" r="1.15" fill="currentColor"/>
+</svg>

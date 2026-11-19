@@ -1,0 +1,47 @@
+{
+  "status": "PREVIEW_VERIFIED_NOT_PUBLISHED",
+  "main_theme": "196116087050",
+  "preview_theme": "196227170570",
+  "baseline_theme_files": 1378,
+  "main_files_unchanged": 1378,
+  "preview_theme_files": 1381,
+  "admin": {
+    "products": 861,
+    "expected_products": 861,
+    "choice_fields": 665,
+    "delivery_fields": 851,
+    "metadata_errors": [],
+    "protected_field_changes": [],
+    "passed": true
+  },
+  "runtime": {
+    "status": "PASS",
+    "products": 665,
+    "optionChecks": 5425,
+    "navigationChecks": 4096,
+    "currentSelectionChecks": 1299,
+    "archivedDisabledChecks": 30,
+    "failures": 0
+  },
+  "browser": {
+    "desktop_width": 1363,
+    "malmo_urls": [
+      "fabriecio-vsb-2001",
+      "fabriecio-vsb-2003",
+      "fabriecio-vsb-2004",
+      "fabriecio-vsb-2002"
+    ],
+    "native_navigation": "PASS",
+    "swatches_loaded": 2,
+    "horizontal_overflow": false,
+    "isolated_component_widths": [
+      320,
+      390
+    ],
+    "component_overflow": false,
+    "physical_phone": "NOT_TESTED",
+    "cart_checkout": "NOT_TESTED"
+  },
+  "qa_template": "neutralized after delete operation blocked",
+  "next_action": "Owner reviews preview"
+}

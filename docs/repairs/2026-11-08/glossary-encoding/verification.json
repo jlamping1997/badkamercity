@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-08",
+  "status": "PASS_WITH_EXPLICIT_LIMITS",
+  "task": "CONTENT-ENCODING-02",
+  "adminPagesRead": 122,
+  "publishedPagesRead": 120,
+  "pagesChanged": 13,
+  "visibleAccentRepairs": 19,
+  "leadingBomRemovals": 4,
+  "mutationsSucceeded": 13,
+  "exactFinalPageReadbacks": 13,
+  "identityTemplatePublicationAndMetafieldsPreserved": true,
+  "publicBeforeAfterPages": 13,
+  "publicHeadCanonicalH1BodyLinksAndStructurePreserved": true,
+  "publication": {
+    "main": 196368531722,
+    "knownFilesExact": 6,
+    "publicFooterRoutes": 14,
+    "commonFooterFingerprints": 1,
+    "themeWrites": 0
+  },
+  "glossary": {
+    "currentPublicListLinks": 109,
+    "adminPublishedTargets": 109,
+    "redirectWrites": 0,
+    "hygroAlreadyRepairedBeforeTask": true
+  },
+  "noChanges": [
+    "Theme code and publication",
+    "Products, prices, images, stock or commercial terms",
+    "Redirect configuration",
+    "Native legal policies",
+    "SEO metadata, handles and page publication status"
+  ],
+  "notTested": [
+    "New browser JavaScript or physical mobile journey",
+    "Mail delivery, online withdrawal confirmation, checkout/payment, purchase or consent tracking",
+    "All destination pages through browser/HTTP; glossary linkage is an Admin mapping check",
+    "Full product safety, technical claims or glossary factcheck"
+  ],
+  "repositoryStorage": "Executor verifies new remote commits and changed blobs separately after preparing this dossier"
+}

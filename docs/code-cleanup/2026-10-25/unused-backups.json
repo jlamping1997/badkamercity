@@ -1,0 +1,14 @@
+{
+  "files": [
+    "assets/bc-product-switcher.backup-debug.js",
+    "assets/bc-product-switcher.js.backup-qa-round-1-20260706-214223",
+    "assets/bc-product-switcher.js.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.backup-before-production.json",
+    "assets/product-switcher-data.backup.json",
+    "assets/product-switcher-data.json.backup-qa-round-1-20260706-214223",
+    "assets/product-switcher-data.json.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.json.backup-qa-round-2-20260707-111611"
+  ],
+  "literalReferences": [],
+  "rollback": "Restore exact before files from unused-backups.zip; all originals also remain in MAIN 195704848650"
+}

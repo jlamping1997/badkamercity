@@ -1,0 +1,33 @@
+{% doc %}
+  Shows a reviewed category path above the product heading.
+  @param {product} product - Current product.
+{% enddoc %}
+{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
+{%- assign reviewed_scope = reviewed_scope | strip -%}
+{%- if reviewed_scope != blank -%}
+  {%- capture category_links -%}
+    {%- if reviewed_scope == 'pilot' -%}
+      <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/kranen">{{ 'bc_pilot_category.kranen' | t }}</a></li>
+      <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/wastafelkranen">{{ 'bc_pilot_category.wastafelkranen' | t }}</a></li>
+      <li><span aria-hidden="true">/</span><a href="{{ routes.collections_url }}/opbouw-wastafelkranen">{{ 'bc_pilot_category.opbouw' | t }}</a></li>
+    {%- else -%}
+      {%- for handle in product.metafields.bc_data.content_review.value.category_handles -%}
+        {%- assign category = collections[handle] -%}
+        {%- assign memberships = product.collections | where: 'handle', handle -%}
+        {%- if category != blank and memberships.size > 0 -%}
+          <li><span aria-hidden="true">/</span><a href="{{ category.url | escape }}">{{ category.title | escape }}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  {%- assign category_links = category_links | strip -%}
+  {%- if category_links != blank -%}
+    <nav class="bc-product-breadcrumbs" aria-label="{{ 'ss.breadcrumb' | t | escape }}">
+      <ol role="list">
+        <li><a href="{{ routes.root_url }}">{{ 'ss.home' | t }}</a></li>
+        {{ category_links }}
+        <li><span aria-hidden="true">/</span><span aria-current="page">{{ product.title | escape }}</span></li>
+      </ol>
+    </nav>
+  {%- endif -%}
+{%- endif -%}

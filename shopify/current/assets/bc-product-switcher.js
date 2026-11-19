@@ -1,0 +1,936 @@
+(function () {
+  const ROOT_SELECTOR = '[data-bc-product-switcher-v2]';
+  const DEFAULT_DATA_URL = '/assets/product-switcher-data.json';
+  const BUTTON_THRESHOLD = 5;
+  const HOTBATH_SWATCHES = {
+    'chroom': 'cr',
+    'geborsteld nikkel': 'gn',
+    'geborsteld messing': 'bb',
+    'verouderd messing': 'ab',
+    'mat wit': 'wh',
+    'verouderd ijzer': 'ai',
+    'gepolijst zwart pvd': 'pbp',
+    'geborsteld zwart pvd': 'mbp',
+    'geborsteld messing pvd': 'bbp',
+    'geborsteld koper pvd': 'bcp',
+    'geborsteld gunmetal pvd': 'bgp',
+    'rvs 316': 'ix',
+    'tuscan bronze': 'tb'
+  };
+
+  function isColorMenu(menu) {
+    return /^(kleur|basiskleur|color|colour)$/i.test(normalize(menu.key));
+  }
+
+  function swatchUrl(value, urls) {
+    const code = HOTBATH_SWATCHES[normalize(value).toLowerCase()];
+    const source = urls[normalize(value)] || urls[code];
+    if (!source) return '';
+    try {
+      const pageOrigin = window.location.origin === 'null' ? new URL(document.baseURI).origin : window.location.origin;
+      const url = new URL(source, pageOrigin);
+      return url.protocol === 'https:' &&
+        (url.origin === pageOrigin || url.hostname === 'cdn.shopify.com') ? url.href : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  const dataPromises = new Map();
+
+  function createSwitcherPositionKeeper(window, document) {
+    const storageKey = 'bc:product-switcher:position:v1';
+    const ttl = 30000;
+
+    function optedIn(root) {
+      return root?.dataset?.bcPreservePosition === 'true';
+    }
+
+    function routeKey(value) {
+      try {
+        const url = new URL(value, window.location.origin);
+        if (url.origin !== window.location.origin || !url.pathname.includes('/products/')) return null;
+        url.searchParams.delete('preview_theme_id');
+        url.searchParams.sort();
+        return url.pathname + url.search + url.hash;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function discard(token) {
+      if (!token) return;
+      try {
+        const saved = JSON.parse(window.sessionStorage.getItem(storageKey) || 'null');
+        if (saved?.savedAt === token.savedAt && saved?.group === token.group && saved?.target === token.target) {
+          window.sessionStorage.removeItem(storageKey);
+        }
+      } catch (_) {}
+    }
+
+    function remember(root, destination, groupData) {
+      if (!optedIn(root)) return null;
+      const target = routeKey(destination);
+      const group = String(root.dataset.switchGroup || '').trim();
+      if (!target || !group) return null;
+      let token;
+      try {
+        const rect = root.getBoundingClientRect();
+        if (!Number.isFinite(rect.top)) return null;
+        token = { version: 1, group, target, top: rect.top, height: rect.height,
+          width: window.innerWidth, savedAt: Date.now() };
+        if (groupData?.id === group && root.dataset.switcherDataUrl) {
+          const handoff = { dataUrl: root.dataset.switcherDataUrl, group: groupData };
+          if (JSON.stringify(handoff).length <= 128000) token.handoff = handoff;
+        }
+        try {
+          window.sessionStorage.setItem(storageKey, JSON.stringify(token));
+        } catch (_) {
+          delete token.handoff;
+          window.sessionStorage.setItem(storageKey, JSON.stringify(token));
+        }
+        return token;
+      } catch (_) {
+        discard(token);
+        return null;
+      }
+    }
+
+    function prepare(root) {
+      if (!optedIn(root)) return null;
+      let saved;
+      try {
+        const value = window.sessionStorage.getItem(storageKey);
+        if (!value) return null;
+        window.sessionStorage.removeItem(storageKey);
+        saved = JSON.parse(value);
+      } catch (_) {
+        return null;
+      }
+      const age = Date.now() - saved?.savedAt;
+      const currentRoute = routeKey(window.location.href);
+      if (saved?.version !== 1 || !Number.isFinite(saved?.top) || !Number.isFinite(age) ||
+          age < 0 || age > ttl || saved.group !== String(root.dataset.switchGroup || '').trim() ||
+          !currentRoute || saved.target !== currentRoute) return null;
+
+      const cached = saved.handoff?.group;
+      const dataGroup = saved.handoff?.dataUrl === root.dataset.switcherDataUrl &&
+        cached?.id === saved.group && Array.isArray(cached.menus) && cached.menus.length > 0 &&
+        cached.menus.length <= 32 && Array.isArray(cached.products) && cached.products.length > 1 &&
+        cached.products.length <= 1000 && cached.products.some(product =>
+          product.handle === root.dataset.productHandle && routeKey(product.url) === currentRoute)
+        ? cached : null;
+
+      const position = window.BCChoicePosition?.prepare(root, saved);
+      return position ? { ...position, dataGroup } : { dataGroup, activate() {}, cancel() {} };
+    }
+
+    return { remember, prepare, discard };
+  }
+
+  const switcherPosition = createSwitcherPositionKeeper(window, document);
+
+  // Bewaar de uitgeklapte kleurkeuzes alleen tijdens het navigeren naar een andere uitvoering.
+  const EXPANDED_COLORS_KEY = 'bc:product-switcher:expanded-colors:v1';
+  const EXPANDED_COLORS_TTL = 30000;
+
+  function restoreExpandedColors(group, menus) {
+    let saved;
+    try {
+      saved = JSON.parse(window.sessionStorage.getItem(EXPANDED_COLORS_KEY) || 'null');
+      if (saved) window.sessionStorage.removeItem(EXPANDED_COLORS_KEY);
+    } catch (_) {
+      return new Set();
+    }
+    const age = Date.now() - Number(saved?.savedAt);
+    if (saved?.version !== 1 || saved.group !== group ||
+        saved.target !== window.location.pathname || !Array.isArray(saved.keys) ||
+        !Number.isFinite(age) || age < 0 || age > EXPANDED_COLORS_TTL) return new Set();
+    const available = new Set(menus.filter(isColorMenu).map((menu) => menu.key));
+    return new Set(saved.keys.filter((key) => typeof key === 'string' && available.has(key)));
+  }
+
+  function rememberExpandedColors(group, expanded, destination) {
+    if (!expanded.size) return null;
+    try {
+      const url = new URL(destination, window.location.origin);
+      if (url.origin !== window.location.origin || !url.pathname.startsWith('/products/')) return null;
+      const token = {
+        version: 1, group, target: url.pathname, keys: Array.from(expanded), savedAt: Date.now()
+      };
+      window.sessionStorage.setItem(EXPANDED_COLORS_KEY, JSON.stringify(token));
+      return token;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function discardExpandedColors(token) {
+    if (!token) return;
+    try {
+      const saved = JSON.parse(window.sessionStorage.getItem(EXPANDED_COLORS_KEY) || 'null');
+      if (saved?.group === token.group && saved?.target === token.target &&
+          saved?.savedAt === token.savedAt) {
+        window.sessionStorage.removeItem(EXPANDED_COLORS_KEY);
+      }
+    } catch (_) {}
+  }
+
+  function normalize(value) {
+    return String(value ?? '').trim();
+  }
+
+  function warn(message, detail) {
+    if (detail !== undefined) {
+      console.warn(`BCProductSwitcherV2: ${message}`, detail);
+    } else {
+      console.warn(`BCProductSwitcherV2: ${message}`);
+    }
+  }
+
+  function debug(message, detail) {
+    if (detail !== undefined) {
+      console.info(`BCProductSwitcherV2 debug: ${message}`, detail);
+    } else {
+      console.info(`BCProductSwitcherV2 debug: ${message}`);
+    }
+  }
+
+  function fetchJson(url) {
+    return fetch(url, { credentials: 'same-origin' }).then((response) => {
+      if (!response.ok) throw new Error(`Could not load ${url}: ${response.status}`);
+      return response.json();
+    });
+  }
+
+  function loadSwitcherData(dataUrl, fallbackUrl) {
+    const primaryUrl = dataUrl || DEFAULT_DATA_URL;
+    if (!dataPromises.has(primaryUrl)) {
+      const promise = fetchJson(primaryUrl).catch(error => {
+        if (fallbackUrl && fallbackUrl !== primaryUrl) return fetchJson(fallbackUrl);
+        throw error;
+      }).catch(error => {
+        dataPromises.delete(primaryUrl);
+        throw error;
+      });
+      dataPromises.set(primaryUrl, promise);
+    }
+    return dataPromises.get(primaryUrl);
+  }
+
+  function getProductOption(product, key) {
+    return normalize(product?.options?.[key]);
+  }
+
+  function getMenus(group) {
+    return Array.isArray(group?.menus)
+      ? [...group.menus]
+          .filter((menu) => normalize(menu?.key))
+          .sort((a, b) => Number(a.order || 0) - Number(b.order || 0))
+      : [];
+  }
+
+  function getProducts(group) {
+    return Array.isArray(group?.products)
+      ? [...group.products].sort((a, b) => Number(a.sort_order || 0) - Number(b.sort_order || 0))
+      : [];
+  }
+
+  function getValuesForMenu(products, key) {
+    const menuValues = Array.isArray(this?.values) ? this.values.map(normalize).filter(Boolean) : [];
+    if (menuValues.length) return menuValues;
+
+    const values = [];
+    const seen = new Set();
+
+    products.forEach((product) => {
+      const value = getProductOption(product, key);
+      if (!value || seen.has(value)) return;
+      values.push(value);
+      seen.add(value);
+    });
+
+    return values;
+  }
+
+  function hasPartialMatch(products, state) {
+    return products.some((product) =>
+      Object.entries(state).every(([key, value]) => {
+        const normalizedValue = normalize(value);
+        if (!normalizedValue) return true;
+        return getProductOption(product, key) === normalizedValue;
+      })
+    );
+  }
+
+  function findExactMatch(products, menus, state) {
+    const matches = products.filter((product) =>
+      menus.every((menu) => getProductOption(product, menu.key) === normalize(state[menu.key]))
+    );
+    return matches.length === 1 ? matches[0] : undefined;
+  }
+
+  function getExactProductFacts(product, facts) {
+    if (!product || !normalize(product.product_id) || !Array.isArray(facts)) return undefined;
+    const matches = facts.filter((fact) => fact &&
+      normalize(fact.product_id) === normalize(product.product_id));
+    if (matches.length !== 1 || matches[0].variant_count !== 1 ||
+        normalize(matches[0].variant_id) !== normalize(product.variant_id) ||
+        normalize(matches[0].sku) !== normalize(product.sku) ||
+        normalize(matches[0].handle) !== normalize(product.handle)) return undefined;
+    return matches[0];
+  }
+
+  function orderCompatibleColors(products, menus, state, menu, values, facts) {
+    const candidates = values.map((value, index) => {
+      const product = findExactMatch(products, menus, { ...state, [menu.key]: value });
+      const fact = getExactProductFacts(product, facts);
+      const price = fact?.price_cents;
+      return { value, index, product, price,
+        priced: Number.isSafeInteger(price) && price >= 0 };
+    });
+    if (candidates.some((candidate) => candidate.product && !candidate.priced)) return values;
+    return candidates.sort((a, b) => Number(Boolean(b.product)) - Number(Boolean(a.product)) ||
+      (a.product && b.product ? a.price - b.price : 0) || a.index - b.index)
+      .map((candidate) => candidate.value);
+  }
+
+  function getColorVisibleLimit(values, display, isVerlavio) {
+    if (isVerlavio) return values.length;
+    const limit = display?.visible_color_limit;
+    return Number.isInteger(limit) && limit > 0 && limit <= 24 ? limit : 4;
+  }
+
+  function getDisplayType(menu, values) {
+    const displayType = normalize(menu.display_type).toLowerCase();
+    if (displayType === 'buttons' || displayType === 'dropdown') return displayType;
+    return values.length > BUTTON_THRESHOLD ? 'dropdown' : 'buttons';
+  }
+
+  function isMeasurementMenu(menu) {
+    return /^(maat|lengte|breedte|hoogte|diameter|afmeting)$/i.test(normalize(menu.key));
+  }
+
+  function compareMeasurements(a, b) {
+    const numbers = (value) => (normalize(value).match(/\d+(?:[.,]\d+)?/g) || [])
+      .map((part) => Number(part.replace(',', '.')));
+    const left = numbers(a);
+    const right = numbers(b);
+    if (left.length && right.length) {
+      for (let index = 0; index < Math.min(left.length, right.length); index += 1) {
+        if (left[index] !== right[index]) return left[index] - right[index];
+      }
+      if (left.length !== right.length) return left.length - right.length;
+    }
+    return normalize(a).localeCompare(normalize(b), undefined, { numeric: true, sensitivity: 'base' });
+  }
+
+  function formatMeasurement(value) {
+    return normalize(value)
+      .replace(/\s*[x×]\s*(?=\d)/gi, ' × ')
+      .replace(/Ø\s*(?=\d)/g, 'Ø ')
+      .replace(/(\d)\s*(cm|mm|m)\b/gi, (_, number, unit) => `${number} ${unit.toLowerCase()}`);
+  }
+
+  function createCheck() {
+    const check = document.createElement('span');
+    check.className = 'bc-buybox__option-check';
+    check.setAttribute('aria-hidden', 'true');
+    check.textContent = '\u2713';
+    return check;
+  }
+
+  function createText(value) {
+    const text = document.createElement('span');
+    text.className = 'bc-buybox__option-text';
+    text.textContent = value;
+    return text;
+  }
+
+  class BCProductSwitcherV2 {
+    constructor(root, data, positionRestore) {
+      this.root = root;
+      this.data = data;
+      this.groupId = normalize(root.dataset.switchGroup);
+      this.productHandle = normalize(root.dataset.productHandle);
+      this.productUrl = normalize(root.dataset.productUrl);
+      this.group = this.findGroup();
+      this.menus = getMenus(this.group);
+      this.products = getProducts(this.group);
+      this.choiceDisplay = this.group?.choice_display && typeof this.group.choice_display === 'object'
+        ? this.group.choice_display : {};
+      this.runtimeFacts = [];
+      if (this.choiceDisplay.exact_candidate_swatches === true) {
+        try {
+          const facts = JSON.parse(this.root.querySelector('script[data-bc-choice-facts]')?.textContent || '[]');
+          if (Array.isArray(facts) && facts.length <= 1000) this.runtimeFacts = facts;
+        } catch (_) {}
+      }
+      this.currentProduct = this.findCurrentProduct();
+      this.state = {};
+      this.productRoot = root.closest('product-info');
+      this.isNavigating = false;
+      this.positionRestore = positionRestore;
+
+      debug('container found', {
+        currentHandle: this.productHandle,
+        currentSwitchGroup: this.groupId,
+        productUrl: this.productUrl,
+        groupFound: Boolean(this.group),
+        menuCount: this.menus.length,
+        productCount: this.products.length,
+      });
+
+      if (!this.group) {
+        warn(`group "${this.groupId}" was not found.`, {
+          currentHandle: this.productHandle,
+          currentSwitchGroup: this.groupId,
+          availableGroups: Array.isArray(this.data?.groups) ? this.data.groups.length : 0,
+        });
+        this.hide();
+        return;
+      }
+
+      if (!this.currentProduct) {
+        warn(`current product "${this.productHandle}" was not found in group "${this.groupId}".`, {
+          currentHandle: this.productHandle,
+          currentSwitchGroup: this.groupId,
+          groupFound: true,
+          menuCount: this.menus.length,
+          productCount: this.products.length,
+          firstHandles: this.products.slice(0, 5).map((product) => normalize(product.handle)),
+        });
+        this.hide();
+        return;
+      }
+
+      if (!this.menus.length || this.products.length < 2) {
+        warn(`group "${this.groupId}" does not contain enough switcher data.`, {
+          currentHandle: this.productHandle,
+          currentSwitchGroup: this.groupId,
+          groupFound: true,
+          menuCount: this.menus.length,
+          productCount: this.products.length,
+        });
+        this.hide();
+        return;
+      }
+
+      this.state = this.buildInitialState();
+      this.isVerlavio = this.root.dataset.bcVerlavioChoices === 'true';
+      this.verlavioContext = normalize(this.root.dataset.bcVerlavioContext);
+      this.choiceLabels = {};
+      if (this.isVerlavio) {
+        try {
+          const labels = JSON.parse(this.root.dataset.bcVerlavioLabels || '{}');
+          if (labels && typeof labels === 'object' && !Array.isArray(labels)) this.choiceLabels = labels;
+        } catch (_) {}
+      }
+      this.compactChoices = this.root.dataset.hotbathMobileA === 'true' || this.root.dataset.bcCompactColors === 'true' || this.choiceDisplay.compact_colors === true;
+      try {
+        this.swatchUrls = JSON.parse(this.root.dataset.hotbathSwatchUrls || '{}');
+        if (!this.swatchUrls || typeof this.swatchUrls !== 'object') this.swatchUrls = {};
+      } catch (_) {
+        this.swatchUrls = {};
+      }
+      if (this.root.dataset.bcCompactColors === 'true' || this.choiceDisplay.exact_candidate_swatches === true) {
+        const colorMenu = this.menus.find(isColorMenu);
+        if (this.choiceDisplay.exact_candidate_swatches === true && colorMenu) {
+          this.swatchUrls = Object.fromEntries(this.getMenuValues(colorMenu).map((value) => {
+            const destination = findExactMatch(this.products, this.menus, { ...this.state, [colorMenu.key]: value });
+            const fact = getExactProductFacts(destination, this.runtimeFacts);
+            return [value, typeof fact?.first_image_url === 'string' ? fact.first_image_url : ''];
+          }));
+        } else if (this.isVerlavio && colorMenu) {
+          this.swatchUrls = Object.fromEntries(this.getMenuValues(colorMenu).map((value) => {
+            const destination = findExactMatch(this.products, this.menus, { ...this.state, [colorMenu.key]: value });
+            return [value, destination?.swatch_url || ''];
+          }));
+        } else {
+          this.swatchUrls = Object.fromEntries(this.products.map(product => [getProductOption(product, 'kleur'), product.swatch_url || '']));
+        }
+      }
+      this.expandedColors = this.compactChoices
+        ? restoreExpandedColors(this.groupId, this.menus) : new Set();
+      this.openColorList = new URL(window.location.href).searchParams.get('bc_colors') === this.groupId;
+      if(this.openColorList)this.menus.filter(isColorMenu).forEach(menu=>this.expandedColors.add(menu.key));
+      this.render();
+      this.syncControls();
+      this.root.hidden = false;
+      this.root.dataset.bcProductSwitcherV2Initialized = 'true';
+      if(this.openColorList){
+        this.positionRestore?.cancel();
+        const key=this.menus.find(isColorMenu)?.key;
+        const target=[...this.root.querySelectorAll('[data-switcher-group]')].find(node=>node.dataset.switcherGroup===key);
+        if(target){
+          target.id='bc-product-colors';target.tabIndex=-1;target.style.scrollMarginBlock='2rem';
+          requestAnimationFrame(()=>{if(target.isConnected){target.scrollIntoView({block:'center',behavior:'instant'});target.focus({preventScroll:true});}});
+        }
+      }else this.positionRestore?.activate();
+      this.onPageShow = (event) => {
+        if (!this.root.isConnected) {
+          window.removeEventListener('pageshow', this.onPageShow);
+          return;
+        }
+        if (event?.persisted && this.choiceDisplay.refresh_on_bfcache === true) {
+          window.location.reload();
+          return;
+        }
+        if (!this.isNavigating) return;
+        this.setNavigating(false);
+        this.state = this.buildInitialState();
+        this.syncControls();
+        this.status.textContent = '';
+      };
+      window.addEventListener('pageshow', this.onPageShow);
+
+      debug('rendered', {
+        currentHandle: this.productHandle,
+        currentSwitchGroup: this.groupId,
+        groupFound: true,
+        menuCount: this.menus.length,
+        productCount: this.products.length,
+      });
+    }
+
+    findGroup() {
+      const groups = Array.isArray(this.data?.groups) ? this.data.groups : [];
+      return groups.find((group) => normalize(group.id) === this.groupId);
+    }
+
+    findCurrentProduct() {
+      return this.products.find((product) => {
+        if (normalize(product.handle) === this.productHandle) return true;
+        return this.productUrl && normalize(product.url) === this.productUrl;
+      });
+    }
+
+    buildInitialState() {
+      return this.menus.reduce((state, menu) => {
+        state[menu.key] = getProductOption(this.currentProduct, menu.key);
+        return state;
+      }, {});
+    }
+
+    getMenuValues(menu) {
+      const values = getValuesForMenu.call(menu, this.products, menu.key);
+      if (this.choiceDisplay.color_order === 'compatible_price_asc' && isColorMenu(menu)) {
+        return orderCompatibleColors(this.products, this.menus, this.state, menu, values, this.runtimeFacts);
+      }
+      return this.isVerlavio && isMeasurementMenu(menu) ? [...values].sort(compareMeasurements) : values;
+    }
+
+    getMenuLabel(menu) {
+      const fallback = normalize(menu.label) || menu.key;
+      if (!this.isVerlavio) return fallback;
+      if (isColorMenu(menu)) return normalize(this.choiceLabels.color) || fallback;
+      if (this.verlavioContext === 'shower_set') {
+        const keys = { vorm: 'set_shape', uitvoering: 'head_mount', maat: 'head_size' };
+        return normalize(this.choiceLabels[keys[menu.key]]) || fallback;
+      }
+      if (this.verlavioContext === 'shower_head') {
+        const keys = { vorm: 'head_shape', maat: 'head_size' };
+        return normalize(this.choiceLabels[keys[menu.key]]) || fallback;
+      }
+      return fallback;
+    }
+
+    getValueLabel(menu, value) {
+      const raw = normalize(value);
+      if (!this.isVerlavio) return raw;
+      if (isColorMenu(menu)) return normalize(this.choiceLabels.colors?.[raw]) || raw;
+      if (menu.key === 'overloop') {
+        const key = { Ja: 'with_overflow', Nee: 'without_overflow' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      if (menu.key === 'uitvoering' && this.verlavioContext === 'shower_set') {
+        const key = { Muur: 'wall', Plafond: 'ceiling' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      if (menu.key === 'vorm') {
+        const key = { Rond: 'round', Vierkant: 'square' }[raw];
+        return normalize(this.choiceLabels[key]) || raw;
+      }
+      return isMeasurementMenu(menu) ? formatMeasurement(raw) : raw;
+    }
+
+    getDisplayMenus() {
+      const menus = this.compactChoices
+        ? [...this.menus].sort((a, b) => Number(isColorMenu(b)) - Number(isColorMenu(a)))
+        : this.menus;
+      if (!this.isVerlavio || !['shower_set', 'shower_head'].includes(this.verlavioContext)) return menus;
+      const order = this.verlavioContext === 'shower_set' ? ['vorm', 'uitvoering', 'maat'] : ['vorm', 'maat'];
+      const rank = (menu) => isColorMenu(menu) ? -1 : order.includes(menu.key) ? order.indexOf(menu.key) : order.length;
+      return [...menus].sort((a, b) => rank(a) - rank(b));
+    }
+
+    hide() {
+      this.positionRestore?.cancel();
+      this.root.innerHTML = '';
+      this.root.hidden = true;
+    }
+
+    render() {
+      const fragment = document.createDocumentFragment();
+      const compact = this.compactChoices === true;
+      this.root.classList.toggle('bc-hotbath-switcher--mobile', compact);
+
+      const menus = this.getDisplayMenus();
+      menus.forEach((menu) => {
+        const values = this.getMenuValues(menu);
+        if (!values.length) return;
+        if (values.length === 1 && menu.hide_if_single_value === true) return;
+
+        const groupElement = document.createElement('div');
+        groupElement.className = 'bc-buybox__option-group bc-buybox__switcher-group';
+        groupElement.dataset.switcherGroup = menu.key;
+
+        const label = document.createElement('p');
+        label.className = 'form__label bc-buybox__option-label';
+        label.textContent = this.getMenuLabel(menu);
+        if (compact && isColorMenu(menu)) {
+          const selected = document.createElement('strong');
+          selected.className = 'bc-hotbath-selected-color';
+          selected.dataset.hotbathSelectedColor = menu.key;
+          selected.textContent = this.getValueLabel(menu, this.state[menu.key]);
+          label.append(document.createTextNode(': '), selected);
+        }
+        groupElement.append(label);
+
+        if (compact && isColorMenu(menu)) {
+          groupElement.append(this.renderSwatches(menu, values));
+        } else if (this.openColorList && isColorMenu(menu)) {
+          groupElement.append(this.renderButtons(menu, values));
+        } else if (!compact && getDisplayType(menu, values) === 'dropdown') {
+          groupElement.append(this.renderSelect(menu, values));
+        } else {
+          groupElement.append(this.renderButtons(menu, values));
+        }
+
+        fragment.append(groupElement);
+      });
+
+      this.root.innerHTML = '';
+      this.status = document.createElement('p');
+      this.status.className = 'bc-buybox__switch-status';
+      this.status.setAttribute('role', 'status');
+      this.status.setAttribute('aria-live', 'polite');
+      this.status.setAttribute('aria-atomic', 'true');
+      this.root.append(fragment, this.status);
+    }
+
+    renderSwatches(menu, values) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'bc-hotbath-colors';
+      const list = document.createElement('div');
+      list.className = 'bc-hotbath-swatches';
+      list.id = `bc-hotbath-colors-${this.root.dataset.sectionId || this.productHandle}-${menu.key}`;
+      list.setAttribute('role', 'group');
+      list.setAttribute('aria-label', this.getMenuLabel(menu));
+      const selectedValue = normalize(this.state[menu.key]);
+      const visibleLimit = getColorVisibleLimit(values, this.choiceDisplay, this.isVerlavio);
+      const visibleValues = new Set(values.slice(0, visibleLimit));
+      if (!visibleValues.has(selectedValue) && values.includes(selectedValue)) {
+        visibleValues.delete(values[visibleLimit - 1]);
+        visibleValues.add(selectedValue);
+      }
+      const buttons = values.map((value) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'bc-hotbath-swatch';
+        button.dataset.switchField = menu.key;
+        button.dataset.switchValue = value;
+        button.setAttribute('aria-label', this.getValueLabel(menu, value));
+        button.setAttribute('aria-pressed', 'false');
+        const chip = document.createElement('span');
+        chip.className = 'bc-hotbath-swatch__chip';
+        chip.setAttribute('aria-hidden', 'true');
+        const surface = document.createElement('span');
+        surface.className = 'bc-hotbath-swatch__surface';
+        const fallback = document.createElement('span');
+        fallback.className = 'bc-hotbath-swatch__fallback';
+        fallback.textContent = (HOTBATH_SWATCHES[normalize(value).toLowerCase()] ||
+          value.split(/\s+/).map((word) => word.charAt(0)).join('').slice(0, 3)).toUpperCase();
+        const colorName = document.createElement('span');
+        colorName.className = 'bc-hotbath-swatch__label';
+        colorName.textContent = this.getValueLabel(menu, value);
+        const url = swatchUrl(value, this.swatchUrls);
+        if (!url && this.choiceDisplay.exact_candidate_swatches === true) {
+          const candidate = findExactMatch(this.products, this.menus, { ...this.state, [menu.key]: value });
+          fallback.textContent = candidate ? 'Productfoto volgt' : 'Niet mogelijk';
+        }
+        if (url) {
+          const img = document.createElement('img');
+          img.src = url;
+          img.alt = '';
+          img.width = 80;
+          img.height = 80;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.addEventListener('load', () => button.classList.add('has-swatch-image'));
+          img.addEventListener('error', () => {
+            button.classList.remove('has-swatch-image');
+            if (this.choiceDisplay.exact_candidate_swatches === true) fallback.textContent = 'Productfoto volgt';
+            img.remove();
+          });
+          surface.append(img);
+        }
+        const check = document.createElement('span');
+        check.className = 'bc-hotbath-swatch__check';
+        check.setAttribute('aria-hidden', 'true');
+        check.textContent = '\u2713';
+        surface.append(fallback);
+        chip.append(surface, check);
+        button.append(chip, colorName);
+        button.addEventListener('click', () => this.updateSelection(menu.key, value));
+        return button;
+      });
+      list.append(...buttons);
+      wrapper.append(list);
+      let toggle;
+      let toggleLabel;
+      let badge;
+      const syncExpansion = () => {
+        const expanded = this.expandedColors.has(menu.key);
+        buttons.forEach((button) => {
+          button.hidden = !expanded && !visibleValues.has(button.dataset.switchValue);
+        });
+        if (!toggle) return;
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggleLabel.textContent = expanded
+          ? normalize(this.root.dataset.labelLessColors || 'Minder kleuren')
+          : normalize(this.root.dataset.labelAllColors || 'Bekijk alle __COUNT__ kleuren')
+            .replace('__COUNT__', String(values.length));
+        badge.hidden = expanded;
+      };
+      if (values.length > visibleLimit) {
+        toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'bc-hotbath-colors__toggle';
+        toggle.setAttribute('aria-controls', list.id);
+        toggleLabel = document.createElement('span');
+        toggleLabel.className = 'bc-hotbath-colors__toggle-label';
+        badge = document.createElement('span');
+        badge.className = 'bc-hotbath-colors__count';
+        badge.setAttribute('aria-hidden', 'true');
+        badge.textContent = `+${values.length - visibleValues.size}`;
+        toggle.append(toggleLabel, badge);
+        toggle.addEventListener('click', () => {
+          if (this.expandedColors.has(menu.key)) this.expandedColors.delete(menu.key);
+          else this.expandedColors.add(menu.key);
+          syncExpansion();
+          toggle.focus({ preventScroll: true });
+        });
+        wrapper.append(toggle);
+      }
+      syncExpansion();
+      return wrapper;
+    }
+
+    renderButtons(menu, values) {
+      const buttonList = document.createElement('div');
+      buttonList.className = 'bc-buybox__config-buttons';
+      buttonList.setAttribute('role', 'group');
+      buttonList.setAttribute('aria-label', this.getMenuLabel(menu));
+
+      values.forEach((value) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'bc-buybox__config-button';
+        button.dataset.switchField = menu.key;
+        button.dataset.switchValue = value;
+        button.setAttribute('aria-pressed', 'false');
+        button.append(createCheck(), createText(this.getValueLabel(menu, value)));
+        button.addEventListener('click', () => this.updateSelection(menu.key, value));
+        buttonList.append(button);
+      });
+
+      return buttonList;
+    }
+
+    renderSelect(menu, values) {
+      const wrapper = document.createElement('div');
+      const select = document.createElement('select');
+
+      wrapper.className = 'bc-buybox__config-select-wrap';
+      wrapper.dataset.switchField = menu.key;
+      select.className = 'bc-buybox__config-select';
+      select.dataset.switchField = menu.key;
+      select.setAttribute('aria-label', this.getMenuLabel(menu));
+
+      values.forEach((value) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = this.getValueLabel(menu, value);
+        select.append(option);
+      });
+
+      select.addEventListener('change', () => this.updateSelection(menu.key, select.value));
+      wrapper.append(select);
+      return wrapper;
+    }
+
+    syncControls() {
+      this.root.querySelectorAll('[data-hotbath-selected-color]').forEach((label) => {
+        const menu = this.menus.find((item) => item.key === label.dataset.hotbathSelectedColor);
+        label.textContent = menu ? this.getValueLabel(menu, this.state[menu.key]) : normalize(this.state[label.dataset.hotbathSelectedColor]);
+      });
+      this.root.querySelectorAll('button[data-switch-field][data-switch-value]').forEach((button) => {
+        const field = button.dataset.switchField;
+        const value = normalize(button.dataset.switchValue);
+        const isActive = normalize(this.state[field]) === value;
+        const candidateState = { ...this.state, [field]: value };
+        const isEnabled = this.choiceDisplay.exact_candidate_swatches === true
+          ? Boolean(findExactMatch(this.products, this.menus, candidateState))
+          : hasPartialMatch(this.products, candidateState);
+
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        button.disabled = this.isNavigating || !isEnabled;
+        button.title = isEnabled ? '' : 'Niet mogelijk met de overige keuzes.';
+        button.setAttribute('aria-disabled', String(button.disabled));
+      });
+
+      this.root.querySelectorAll('select[data-switch-field]').forEach((select) => {
+        const field = select.dataset.switchField;
+        const currentValue = normalize(this.state[field]);
+        select.disabled = this.isNavigating;
+
+        Array.from(select.options).forEach((option) => {
+          const candidateState = { ...this.state, [field]: normalize(option.value) };
+          option.disabled = this.choiceDisplay.exact_candidate_swatches === true
+            ? !findExactMatch(this.products, this.menus, candidateState)
+            : !hasPartialMatch(this.products, candidateState);
+        });
+
+        if (currentValue && select.value !== currentValue) select.value = currentValue;
+      });
+    }
+
+    setNavigating(navigating) {
+      this.isNavigating = navigating;
+      this.root.setAttribute('aria-busy', String(navigating));
+      if (!this.productRoot) return;
+      if (navigating) {
+        this.productRoot.dataset.bcNavigating = 'true';
+        this.lockedButtons = Array.from(this.productRoot.querySelectorAll('.product-form__submit'))
+          .map((button) => ({ button, disabled: button.disabled }));
+        this.lockedButtons.forEach(({ button }) => { button.disabled = true; });
+      } else {
+        delete this.productRoot.dataset.bcNavigating;
+        this.lockedButtons?.forEach(({ button, disabled }) => { button.disabled = disabled; });
+        this.lockedButtons = [];
+      }
+    }
+
+    updateSelection(field, value) {
+      if (this.isNavigating) return;
+      const submit = this.productRoot?.querySelector('.product-form__submit');
+      if (submit?.getAttribute('aria-busy') === 'true' || submit?.classList.contains('loading')) {
+        this.syncControls();
+        this.status.textContent = 'Wacht tot het toevoegen aan de winkelwagen klaar is.';
+        return;
+      }
+      const nextState = { ...this.state, [field]: normalize(value) };
+      const matchedProduct = findExactMatch(this.products, this.menus, nextState);
+      const matchedUrl = normalize(matchedProduct?.url);
+      let destination;
+      try {
+        destination = new URL(matchedUrl, window.location.origin);
+      } catch (_) {
+        destination = null;
+      }
+      if (!matchedUrl || !destination || destination.origin !== window.location.origin ||
+          !destination.pathname.includes('/products/') ||
+          destination.pathname.split('/').pop() !== normalize(matchedProduct?.handle)) {
+        this.syncControls();
+        this.status.textContent = 'Deze combinatie kan niet worden geopend. Kies een andere uitvoering.';
+        return;
+      }
+      if (normalize(matchedProduct.handle) === this.productHandle) {
+        this.syncControls();
+        this.status.textContent = '';
+        return;
+      }
+
+      if (this.isVerlavio || this.choiceDisplay.exact_candidate_swatches === true) {
+        const currentUrl = new URL(window.location.href);
+        if (currentUrl.searchParams.has('preview_theme_id')) {
+          ['preview_theme_id', '_fd', 'pb', '_ab', '_sc'].forEach((key) => {
+            if (currentUrl.searchParams.has(key)) destination.searchParams.set(key, currentUrl.searchParams.get(key));
+          });
+        }
+      }
+
+      const positionToken = switcherPosition.remember(this.root, destination.href, this.group);
+      const expandedToken = this.compactChoices
+        ? rememberExpandedColors(this.groupId, this.expandedColors, destination.href) : null;
+      this.state = nextState;
+      this.setNavigating(true);
+      this.syncControls();
+      this.status.textContent = 'De gekozen uitvoering wordt geopend…';
+      try {
+        window.location.assign(destination.href);
+      } catch (_) {
+        switcherPosition.discard(positionToken);
+        discardExpandedColors(expandedToken);
+        this.setNavigating(false);
+        this.state = this.buildInitialState();
+        this.syncControls();
+        this.status.textContent = 'Openen is niet gelukt. Probeer de uitvoering opnieuw te kiezen.';
+      }
+    }
+  }
+
+  function init(root = document) {
+    const switcherRoots = Array.from(root.querySelectorAll(ROOT_SELECTOR)).filter(
+      (switcherRoot) => switcherRoot.dataset.bcProductSwitcherV2Initialized !== 'true'
+    );
+
+    if (!switcherRoots.length) return;
+    const positionRestores = new Map(switcherRoots.map((switcherRoot) => [switcherRoot, switcherPosition.prepare(switcherRoot)]));
+    const pendingRoots = switcherRoots.filter(switcherRoot => {
+      const restore = positionRestores.get(switcherRoot);
+      const inline = switcherRoot.querySelector('script[data-bc-switcher-inline]');
+      if (inline) {
+        switcherRoot.dataset.bcProductSwitcherV2Initialized = 'true';
+        try {
+          new BCProductSwitcherV2(switcherRoot, JSON.parse(inline.textContent), restore);
+        } catch (error) {
+          warn('inline switcher data could not be loaded.', error);
+          restore?.cancel();
+          switcherRoot.innerHTML = '';
+          switcherRoot.hidden = true;
+        }
+        return false;
+      }
+      if (!restore?.dataGroup) return true;
+      new BCProductSwitcherV2(switcherRoot, { groups: [restore.dataGroup] }, restore);
+      return false;
+    });
+    if (!pendingRoots.length) return;
+
+    pendingRoots.forEach(switcherRoot => {
+      const dataUrl = switcherRoot.dataset.switcherDataUrl;
+      loadSwitcherData(dataUrl, switcherRoot.dataset.switcherFallbackUrl)
+        .then(data => new BCProductSwitcherV2(switcherRoot, data, positionRestores.get(switcherRoot)))
+        .catch(error => {
+          warn('switcher data could not be loaded.', error);
+          positionRestores.get(switcherRoot)?.cancel();
+          switcherRoot.innerHTML = '';
+          switcherRoot.hidden = true;
+        });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => init());
+  } else {
+    init();
+  }
+})();
+
+
+
+
+

@@ -1,0 +1,284 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-cart-page.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign bc_shipping_known = false
+  assign bc_shipping_price = 0
+  assign bc_shipping_threshold = 10000
+  if cart.requires_shipping and localization.country.iso_code == 'NL' and cart.currency.iso_code == 'EUR'
+    assign bc_shipping_known = true
+    if cart.total_price <= bc_shipping_threshold
+      assign bc_shipping_price = 695
+    endif
+  endif
+  assign bc_cart_total = cart.total_price | plus: bc_shipping_price
+  assign bc_threshold_money = bc_shipping_threshold | money
+-%}
+
+<div
+  class="bc-cart-summary gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
+  id="main-cart-footer"
+  data-id="{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="cart__footer isolate section-{{ section.id }}-padding">
+      {%- if settings.show_cart_note -%}
+        <cart-note class="cart__note field">
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea
+            class="text-area field__input"
+            name="note"
+            form="cart"
+            id="Cart-note"
+            placeholder="{{ 'sections.cart.note' | t }}"
+          >{{ cart.note }}</textarea>
+        </cart-note>
+      {%- endif -%}
+
+      <div class="cart__blocks">
+        <div class="js-contents">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {%- when 'subtotal' -%}
+                <div
+                  class="bc-cart-overview"
+                  data-bc-cart-summary
+                  data-bc-product-total="{{ cart.total_price | money | escape }}"
+                  data-bc-total-label="{{ 'bc_cart_page.product_total' | t | escape }}"
+                  data-bc-shipping-pending-label="{{ 'bc_cart_page.calculated_at_checkout' | t | escape }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="bc-cart-summary__heading">
+                    <span class="bc-cart-summary__icon" aria-hidden="true">
+                      <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke-linecap="round"/></svg>
+                    </span>
+                    <h2>{{ 'bc_cart_page.summary_heading' | t }}</h2>
+                  </div>
+
+                  <bc-cart-discount
+                    hidden
+                    data-section-id="{{ section.id }}"
+                    data-cart-url="{{ routes.cart_url }}"
+                    data-update-url="{{ routes.cart_update_url }}"
+                    data-message-invalid="{{ 'bc_cart_page.discount_invalid' | t | escape }}"
+                    data-message-success="{{ 'bc_cart_page.discount_success' | t | escape }}"
+                    data-message-shipping="{{ 'bc_cart_page.discount_shipping' | t | escape }}"
+                    data-message-error="{{ 'bc_cart_page.discount_error' | t | escape }}"
+                    data-message-removed="{{ 'bc_cart_page.discount_removed' | t | escape }}"
+                    data-message-loading="{{ 'bc_cart_page.discount_loading' | t | escape }}"
+                    data-message-code-label="{{ 'bc_cart_page.discount_code_label' | t | escape }}"
+                    data-message-remove="{{ 'bc_cart_page.discount_remove' | t | escape }}"
+                    data-message-pending="{{ 'bc_cart_page.discount_pending' | t | escape }}"
+                    data-message-empty="{{ 'bc_cart_page.discount_empty' | t | escape }}"
+                  >
+                    <form data-bc-discount-form>
+                      <label for="BC-Cart-Discount" class="bc-cart-discount__label">
+                        <span class="bc-cart-icon" aria-hidden="true">{{- 'icon-discount.svg' | inline_asset_content -}}</span>
+                        {{ 'bc_cart_page.discount_label' | t }}
+                      </label>
+                      <div class="bc-cart-discount__entry">
+                        <input
+                          id="BC-Cart-Discount"
+                          name="discount"
+                          type="text"
+                          autocomplete="off"
+                          autocapitalize="characters"
+                          spellcheck="false"
+                          placeholder="{{ 'bc_cart_page.discount_placeholder' | t | escape }}"
+                          aria-describedby="BC-Cart-Discount-Status"
+                        >
+                        <button type="submit">{{ 'bc_cart_page.discount_apply' | t }}</button>
+                      </div>
+                    </form>
+                    <ul class="bc-cart-discount__codes list-unstyled" data-bc-discount-codes></ul>
+                    <p class="bc-cart-discount__status" id="BC-Cart-Discount-Status" data-bc-discount-status role="status" aria-live="polite"></p>
+                  </bc-cart-discount>
+                  <noscript><p class="bc-cart-discount__fallback">{{ 'bc_cart_page.discount_no_js' | t }}</p></noscript>
+
+                  <dl class="bc-cart-costs">
+                    <div class="bc-cart-costs__row">
+                      <dt>{{ 'bc_cart_page.items_subtotal' | t: count: cart.item_count }}</dt>
+                      <dd>{{ cart.original_total_price | money }}</dd>
+                    </div>
+                    {%- if cart.total_discount > 0 -%}
+                      <div class="bc-cart-costs__row bc-cart-costs__row--discount">
+                        <dt>{{ 'bc_cart_page.discounts' | t }}</dt>
+                        <dd>−{{ cart.total_discount | money }}</dd>
+                      </div>
+                      <div class="bc-cart-costs__row">
+                        <dt>{{ 'bc_cart_page.products_after_discounts' | t }}</dt>
+                        <dd>{{ cart.total_price | money }}</dd>
+                      </div>
+                    {%- endif -%}
+                    <div class="bc-cart-costs__row">
+                      <dt>
+                        {%- if bc_shipping_known -%}
+                          {{ 'bc_cart_page.shipping_nl' | t }}
+                        {%- else -%}
+                          {{ 'bc_cart_page.shipping' | t }}
+                        {%- endif -%}
+                      </dt>
+                      <dd data-bc-shipping-price{% if bc_shipping_known and bc_shipping_price == 0 %} class="bc-cart-costs__free"{% endif %}>
+                        {%- if cart.requires_shipping == false -%}
+                          {{ 'bc_cart_page.no_shipping' | t }}
+                        {%- elsif bc_shipping_known -%}
+                          {%- if bc_shipping_price == 0 -%}
+                            {{ 'bc_cart_page.free' | t }}
+                          {%- else -%}
+                            {{ bc_shipping_price | money }}
+                          {%- endif -%}
+                        {%- else -%}
+                          {{ 'bc_cart_page.calculated_at_checkout' | t }}
+                        {%- endif -%}
+                      </dd>
+                    </div>
+                  </dl>
+
+                  {%- if cart.cart_level_discount_applications.size > 0 -%}
+                    <ul class="discounts list-unstyled bc-cart-order-discounts" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li class="discounts__discount discounts__discount--position">
+                          {{- 'icon-discount.svg' | inline_asset_content -}}
+                          {{ discount.title | escape }}
+                          <span>(−{{ discount.total_allocated_amount | money }})</span>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+
+                  <div class="totals">
+                    <h3 class="totals__total" data-bc-total-label>
+                      {%- if bc_shipping_known -%}
+                        {{ 'bc_cart_page.estimated_total' | t }}
+                      {%- elsif cart.requires_shipping -%}
+                        {{ 'bc_cart_page.product_total' | t }}
+                      {%- else -%}
+                        {{ 'bc_cart_page.total' | t }}
+                      {%- endif -%}
+                    </h3>
+                    <p class="totals__total-value" data-bc-order-total>{{ bc_cart_total | money }}</p>
+                  </div>
+
+                  <p class="tax-note caption-large">
+                    {%- if cart.duties_included and cart.taxes_included -%}
+                      {{ 'bc_cart_page.duties_taxes_included' | t }}
+                    {%- elsif cart.taxes_included -%}
+                      {{ 'bc_cart_page.taxes_included' | t }}
+                    {%- elsif cart.duties_included -%}
+                      {{ 'bc_cart_page.duties_included' | t }}
+                    {%- else -%}
+                      {{ 'bc_cart_page.taxes_at_checkout' | t }}
+                    {%- endif -%}
+                    {% if cart.requires_shipping %}
+                      {% if bc_shipping_known %}
+                        {{ 'bc_cart_page.shipping_estimate' | t }}
+                      {% else %}
+                        {{ 'bc_cart_page.shipping_destination' | t }}
+                      {% endif %}
+                    {% endif %}
+                  </p>
+                  {%- if bc_shipping_known -%}
+                    <p class="bc-cart-shipping-note" data-bc-shipping-promise>
+                      <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="M2 5h12v12H2V5Zm12 5h4l4 4v3h-8v-7Z" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+                      <span>{{ 'bc_cart_page.free_shipping_rule' | t: amount: bc_threshold_money }}</span>
+                    </p>
+                  {%- endif -%}
+                </div>
+              {%- else -%}
+                <div class="cart__ctas" {{ block.shopify_attributes }}>
+                  <button
+                    type="submit"
+                    id="checkout"
+                    class="cart__checkout-button button"
+                    name="checkout"
+                    {% if cart == empty %}
+                      disabled
+                    {% endif %}
+                    form="cart"
+                  >
+                    <span>{{ 'bc_cart_page.checkout' | t }}</span>
+                    <svg class="bc-cart-icon bc-cart-checkout-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 12h18m-7-7 7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+                <p class="bc-cart-secure">
+                  <svg class="bc-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-linecap="round"/><path d="M12 14v3" stroke-linecap="round"/></svg>
+                  {{ 'bc_cart_page.secure_checkout' | t }}
+                </p>
+            {%- endcase -%}
+          {% endfor %}
+
+          <div id="cart-errors" role="alert"></div>
+          {%- if shop.enabled_payment_types != empty -%}
+            <div class="bc-cart-payments">
+              <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+              <ul class="bc-cart-payments__list list-unstyled" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                  <li>{{ type | payment_type_svg_tag: class: 'bc-cart-payment-icon' }}</li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },    
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

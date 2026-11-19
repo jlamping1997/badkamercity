@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "themeId": "gid://shopify/OnlineStoreTheme/195947036938",
+  "environment": {
+    "node": "v24.22.1",
+    "dom": "happy-dom 21.0.4"
+  },
+  "safety": {
+    "realNetwork": false,
+    "realCartActions": false,
+    "productionWrites": false,
+    "syntheticProductsOnly": true
+  },
+  "scope": "Actual filter and listing closures with synthetic API/section responses; FX-37 includes actual native facets popstate/grid method with stubbed native request orchestration. Numeric validity uses an explicit tolerance shim. CSS, geometry, full history traversal and mobile device behavior are not certified.",
+  "results": [
+    {
+      "id": "FX-01",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "automaticActivationWithoutOptIn": true,
+        "searchReadCredentialsOmitted": true,
+        "perPage": 24
+      }
+    },
+    {
+      "id": "FX-02",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "customURLStateParsed": true,
+        "sortResetsPage": true,
+        "unrelatedQueryAndHashPreserved": true
+      }
+    },
+    {
+      "id": "FX-03",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "productSearchUsesGlobalProfile": true,
+        "qAndSearchContextRetained": true
+      }
+    },
+    {
+      "id": "FX-04",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "nonProductSearchSkipped": true
+      }
+    },
+    {
+      "id": "FX-05",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "dualBoundDraftSurvivesDebounce": true,
+        "debounceMs": 300,
+        "eurosConvertedToIntegerCents": true
+      }
+    },
+    {
+      "id": "FX-06",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "fractionalIntegerControlRejectedBeforeAPI": true
+      }
+    },
+    {
+      "id": "FX-07",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "oneBoundCanBeCleared": true,
+        "rangeChipRemovesWholeRange": true
+      }
+    },
+    {
+      "id": "FX-08",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "booleanLabelDoesNotChangeAPIBooleanString": true,
+        "groupedOptionSendsExactMemberValues": true
+      }
+    },
+    {
+      "id": "FX-09",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "singleSelectUsesRawExactRange": true,
+        "displayDivisorAffectsLabelOnly": true
+      }
+    },
+    {
+      "id": "FX-10",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "clearAllResetsFiltersRangesPageButRetainsSort": true
+      }
+    },
+    {
+      "id": "FX-11",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "paginationWritesStateAndScrolls": true,
+        "newFilterReturnsToPageOne": true,
+        "scrollBehavior": "smooth without local reduced-motion check"
+      }
+    },
+    {
+      "id": "FX-12",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "validZeroResultsRemainExternal": true
+      }
+    },
+    {
+      "id": "FX-13",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "trigger": "network",
+        "originalNodesAndInlineDisplaysRestored": true
+      }
+    },
+    {
+      "id": "FX-14",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "trigger": "HTTP",
+        "originalNodesAndInlineDisplaysRestored": true
+      }
+    },
+    {
+      "id": "FX-15",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "trigger": "profile count mismatch",
+        "originalNodesAndInlineDisplaysRestored": true
+      }
+    },
+    {
+      "id": "FX-16",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "trigger": "shape",
+        "originalNodesAndInlineDisplaysRestored": true
+      }
+    },
+    {
+      "id": "FX-17",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "trigger": "global handle",
+        "originalNodesAndInlineDisplaysRestored": true
+      }
+    },
+    {
+      "id": "FX-18",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "newestRequestWinsEvenWhenOldTransportIgnoresAbort": true
+      }
+    },
+    {
+      "id": "FX-19",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "lateOldErrorCannotTriggerFallbackAfterNewSuccess": true
+      }
+    },
+    {
+      "id": "FX-20",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "timeoutMs": 12000,
+        "nativeFallbackAfterAbort": true
+      }
+    },
+    {
+      "id": "FX-21",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "externalPopstateOwnsEventWhileActive": true,
+        "nativeListenerReceivesEventAfterFallback": true,
+        "nativeListenerIsStubNotFacetsExecution": true
+      }
+    },
+    {
+      "id": "FX-22",
+      "classification": "DEFECT_REPRODUCED",
+      "observations": {
+        "configuredVisibleValues": 2,
+        "initialVisible": 2,
+        "afterExpandCollapseVisible": 6,
+        "conditionalSyntheticConfiguration": true,
+        "liveProfilesNotClaimedAffected": true
+      }
+    },
+    {
+      "id": "FX-23",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "sameCountWrongCollectionHandleAccepted": true,
+        "serverOccurrenceNotEstablished": true
+      }
+    },
+    {
+      "id": "FX-24",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "nativeFilterSortPageNotTranslated": true,
+        "nativeAndExternalURLDialectsCoexist": true,
+        "initialServerFilteringNotSimulated": true
+      }
+    },
+    {
+      "id": "FX-25",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "invertedFiniteRangeReachesAPI": true,
+        "backendHandlingNotTested": true
+      }
+    },
+    {
+      "id": "FX-26",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "matchingShopifyIdHydratesCardAndAvailability": true
+      }
+    },
+    {
+      "id": "FX-27",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "mismatchedHydrationProductIdRejected": true,
+        "addRemainsDisabled": true
+      }
+    },
+    {
+      "id": "FX-28",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "failedCardCacheEntryEvictedForRetry": true
+      }
+    },
+    {
+      "id": "FX-29",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "staleHydrationCannotOverwriteNewGrid": true
+      }
+    },
+    {
+      "id": "FX-30",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "syntheticDrawerEscapeRestoresOpenerAndInert": true,
+        "notRealMobileOrFocusTrapEvidence": true
+      }
+    },
+    {
+      "id": "FX-31",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "desktopQueryClosesDrawerAndRemovesDialogRole": true
+      }
+    },
+    {
+      "id": "FX-32",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "searchableFlagDoesNotCreateOptionSearch": true,
+        "seriesForcedPrimaryDespiteMoreSection": true
+      }
+    },
+    {
+      "id": "FX-33",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "rangeDraftSurvivesFilterDOMReplacementBeforeDebounce": true
+      }
+    },
+    {
+      "id": "FX-34",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "latestColorIntentWinsOverOutOfOrderSectionReads": true,
+        "handleColorAndLinkStayAligned": true
+      }
+    },
+    {
+      "id": "FX-35",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "cardTimeoutMs": 5000,
+        "failedHydrationKeepsAddDisabledWithoutReplacingWholeList": true
+      }
+    },
+    {
+      "id": "FX-36",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "initialFailureKeepsOriginalNativeNodes": true
+      }
+    },
+    {
+      "id": "FX-37",
+      "classification": "DEFECT_REPRODUCED",
+      "observations": {
+        "afterFallbackPopstateRunsBothControllers": true,
+        "actualNativeGridReplacementDetachesExternalClosureReferences": true,
+        "laterExternalSuccessMarksActiveButLiveGridRemainsNative": true,
+        "nativeTransportIsStubbed": true,
+        "liveOccurrenceNotEstablished": true
+      }
+    },
+    {
+      "id": "FL-01",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "floatingButtonMovedToBody": true,
+        "eligibleSyntheticGeometryShowsShortcut": true,
+        "secondInitDoesNotCreateAnotherButton": true
+      }
+    },
+    {
+      "id": "FL-02",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "anotherOpenDialogSuppressesFloatingShortcut": true
+      }
+    },
+    {
+      "id": "FL-03",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "shortcutChoosesExternalOrNativeOpenerFromActiveClass": true,
+        "openerHandlersAndGeometrySynthetic": true
+      }
+    },
+    {
+      "id": "FL-04",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "nonMobileMediaQueryHidesShortcut": true,
+        "notDeviceOrCSSProof": true
+      }
+    }
+  ]
+}

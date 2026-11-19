@@ -1,0 +1,1241 @@
+{
+  "schemaVersion": 1,
+  "themeId": "gid://shopify/OnlineStoreTheme/195818389770",
+  "manifestCheckedAt": "2026-10-28T03:15:25.372Z",
+  "baselineCommit": "c8f76eea2bf8a81ab0f54196e239e0b3930fe20a",
+  "sourceFiles": 85,
+  "components": [
+    {
+      "id": "pdp",
+      "document": "components/PRODUCT_PAGES.md",
+      "sources": [
+        "sections/main-product.liquid",
+        "sections/main-sunshower.liquid",
+        "snippets/product-media-gallery.liquid",
+        "assets/media-gallery.js",
+        "assets/product-info.js",
+        "snippets/product-variant-picker.liquid",
+        "snippets/buy-buttons.liquid",
+        "snippets/bc-product-detail-specs.liquid",
+        "snippets/bc-hotbath-normal-scope.liquid",
+        "snippets/bc-hotbath-public-specs.liquid",
+        "snippets/bc-wiesbaden-reviewed-scope.liquid",
+        "snippets/bc-wiesbaden-reviewed-specs.liquid",
+        "snippets/bc-product-detail-specs-mapped.liquid",
+        "snippets/bc-product-mapped-spec-row.liquid",
+        "snippets/bc-product-description.liquid",
+        "snippets/bc-product-documents.liquid",
+        "snippets/bc-product-set-components.liquid",
+        "snippets/bc-product-accessories.liquid",
+        "assets/bc-product-disclosure.js"
+      ]
+    },
+    {
+      "id": "choices",
+      "document": "components/PRODUCT_CHOICES.md",
+      "sources": [
+        "snippets/bc-product-switcher.liquid",
+        "assets/bc-product-switcher.js",
+        "snippets/bc-hotbath-menu-route.liquid",
+        "snippets/bc-hotbath-menu-source.liquid",
+        "snippets/bc-wiesbaden-colors.liquid",
+        "snippets/bc-sunshower-choices.liquid",
+        "assets/bc-sunshower-page.js",
+        "assets/bc-choice-position.js",
+        "snippets/bc-product-inbouw.liquid",
+        "assets/bc-product-inbouw.js",
+        "assets/bc-hotbath-mobile.js"
+      ]
+    },
+    {
+      "id": "cards",
+      "document": "components/PRODUCT_CARDS_AND_FILTERS.md",
+      "sources": [
+        "snippets/card-product.liquid",
+        "snippets/bc-card-product-search.liquid",
+        "snippets/bc-card-title.liquid",
+        "snippets/bc-card-specs.liquid",
+        "snippets/bc-card-delivery.liquid",
+        "sections/main-collection-product-grid.liquid",
+        "sections/main-search.liquid",
+        "snippets/bc-external-filters.liquid",
+        "assets/bc-external-filters.js",
+        "assets/bc-external-filters.css",
+        "sections/bc-card-data.liquid",
+        "snippets/bc-mobile-listing.liquid",
+        "assets/bc-mobile-listing.js",
+        "sections/bc-sunshower-landing.liquid",
+        "snippets/bc-sunshower-shop-card.liquid",
+        "assets/bc-sunshower-shop.js",
+        "sections/home-popular-products.liquid",
+        "sections/home-sunshower.liquid"
+      ]
+    },
+    {
+      "id": "cart",
+      "document": "components/CART_AND_FEEDBACK.md",
+      "sources": [
+        "assets/product-form.js",
+        "assets/cart-notification.js",
+        "snippets/cart-notification.liquid",
+        "sections/cart-notification-product.liquid",
+        "sections/cart-notification-button.liquid",
+        "sections/cart-icon-bubble.liquid",
+        "sections/main-cart-items.liquid",
+        "sections/main-cart-footer.liquid",
+        "assets/cart.js",
+        "assets/bc-cart-page.js",
+        "assets/bc-cart-tools.js"
+      ]
+    },
+    {
+      "id": "navigation",
+      "document": "components/NAVIGATION_AND_STORAGE.md",
+      "sources": [
+        "sections/header-group.json",
+        "sections/header.liquid",
+        "snippets/header-drawer.liquid",
+        "snippets/header-search.liquid",
+        "assets/predictive-search.js",
+        "assets/bc-wishlist.js"
+      ]
+    },
+    {
+      "id": "data",
+      "document": "components/DATA_PIPELINES.md",
+      "sources": [
+        "snippets/bc-choice-data-source.liquid",
+        "assets/product-switcher-data.json",
+        "assets/bc-sunshower-products.json",
+        "sections/bc-meubelhub.liquid",
+        "snippets/bc-content-without-styles.liquid"
+      ]
+    },
+    {
+      "id": "styles",
+      "document": "components/MOTION_AND_STYLES.md",
+      "sources": [
+        "layout/theme.liquid",
+        "assets/bc-product-cards.css",
+        "assets/bc-product-page.css",
+        "assets/bc-hotbath-swatches.css",
+        "assets/bc-hotbath-mobile.css",
+        "assets/bc-wiesbaden-colors.css",
+        "assets/bc-sunshower-page.css",
+        "assets/bc-sunshower-configurator.css",
+        "assets/component-cart-notification.css"
+      ]
+    },
+    {
+      "id": "foundations",
+      "document": "components/FOUNDATIONS_AND_TOOLING.md",
+      "sources": [
+        "config/settings_schema.json",
+        "assets/bc-photoswipe.esm.js",
+        "assets/constants.js",
+        "assets/pubsub.js",
+        "assets/global.js",
+        "assets/base.css"
+      ]
+    }
+  ],
+  "coverage": "Curated source/line index. Not a complete runtime dependency graph.",
+  "files": [
+    {
+      "path": "assets/base.css",
+      "components": [
+        "foundations"
+      ],
+      "md5": "06d9f32480e25d4e75899f5a67784dc3",
+      "sha256": "9c201f1da8a9351de0e4a8e98f96827fb1b4f87d9f68d80ca8f1b9f7c5e270c5",
+      "bytes": 95319,
+      "lines": 4193,
+      "gitBlobSha": "aa4b523853db3d151bc74ad7b06d4047171356a6",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/base.css"
+      ]
+    },
+    {
+      "path": "assets/bc-cart-page.js",
+      "components": [
+        "cart"
+      ],
+      "md5": "742b3e0336732b2ca52c0b01d5c011ca",
+      "sha256": "b8b154071f930ac181b8f4825c7d9f33099e0ec7043b05823f6c5640a12e37f4",
+      "bytes": 13650,
+      "lines": 336,
+      "gitBlobSha": "1f3c798d3595ba8900c7ac3f505e1b071e6c97d5",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-cart-tools.js",
+      "components": [
+        "cart"
+      ],
+      "md5": "b982861be133a2964abac752e406d3df",
+      "sha256": "17259d0534c0233ed253cfd8104c429ca96f180994d9dee8a38ee89a2f9b90f6",
+      "bytes": 4925,
+      "lines": 90,
+      "gitBlobSha": "fdf631d5b372a1c8acdb47e7d2cb258087ef5584",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-choice-position.js",
+      "components": [
+        "choices"
+      ],
+      "md5": "8debcfa105fe54d539159264d2e93254",
+      "sha256": "5fea59de9dac95e00c546f02a155edd8f7eeb0db47caf794de57349c4434254d",
+      "bytes": 4008,
+      "lines": 107,
+      "gitBlobSha": "55012f9b345aabcde438f6c06ebb227f5e118fe1",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/assets/bc-choice-position.js"
+      ]
+    },
+    {
+      "path": "assets/bc-external-filters.css",
+      "components": [
+        "cards"
+      ],
+      "md5": "737b2e9bf593105a80239a345daec40d",
+      "sha256": "e82228894300a4cd8a4dcf3cafdb9947ff669c49d589d521496901f20b2b555a",
+      "bytes": 18801,
+      "lines": 478,
+      "gitBlobSha": "f37e3037b9157a86740eb372018e8dbb58c6446b",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "components": [
+        "cards"
+      ],
+      "md5": "b4ffa57bc3f5d374b7da66e74a1a2d00",
+      "sha256": "1175df58115f16b0e77e95a55356d11e57cfc954894265368ea252d552a30958",
+      "bytes": 46701,
+      "lines": 947,
+      "gitBlobSha": "27e6678d4f5a112b0176fc4ab87ee0bfe6e4ffe4",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-hotbath-mobile.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "c1b4a29194548e6f005de35aba6b80a9",
+      "sha256": "2088f38bcb1efe9d63b59f6f51e99e37606fd4f03ccd93b4542323da6eb0fd6d",
+      "bytes": 5872,
+      "lines": 188,
+      "gitBlobSha": "509815a27cad378b0da2f4ef7795c9355cfa3c7c",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/2026-10-25/desktop-options/theme/assets/bc-hotbath-mobile.css"
+      ]
+    },
+    {
+      "path": "assets/bc-hotbath-mobile.js",
+      "components": [
+        "choices"
+      ],
+      "md5": "6481320f6f2a092ba4da129cbbb70fee",
+      "sha256": "41da9c6ac42b03467883c1ec12243177509ed67b3ec83a0de927f245c4a2f654",
+      "bytes": 9760,
+      "lines": 221,
+      "gitBlobSha": "862252f1e9428248751cbb92ed08f09e03fa468e",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/2026-10-25/desktop-options/theme/assets/bc-hotbath-mobile.js"
+      ]
+    },
+    {
+      "path": "assets/bc-hotbath-swatches.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "e88820a1d7dc5b293d7ec4974bafb657",
+      "sha256": "9f3a52fd735ee4886af5d059a718930799a33e02b3fface651e536fb0da3e2a6",
+      "bytes": 5403,
+      "lines": 73,
+      "gitBlobSha": "9c28ef6e81dcee0fcdd16046559354f55ced143c",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/2026-10-25/desktop-options/theme/assets/bc-hotbath-swatches.css"
+      ]
+    },
+    {
+      "path": "assets/bc-mobile-listing.js",
+      "components": [
+        "cards"
+      ],
+      "md5": "dde904cf82e99c1ef9517991613c0cca",
+      "sha256": "106b3ac643fc576f5ccec8eecd78e354cc8ee04bb4487ff0bec23ced9ced684a",
+      "bytes": 2422,
+      "lines": 49,
+      "gitBlobSha": "a298b0ad27b34158c0d99605b762c94c941864b5",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-photoswipe.esm.js",
+      "components": [
+        "foundations"
+      ],
+      "md5": "97ca880233a37aa88ecd4e06b53c45bd",
+      "sha256": "542069771beb34dc461cdb9374da8af643c591ebf65d8ec36331dd9a0681ebd4",
+      "bytes": 54270,
+      "lines": 5,
+      "gitBlobSha": "cc924b79afa73872c466467d64da07bfe0d0953d",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-product-cards.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "sha256": "f6e02f729096055f614318894b071ee20b5cb70edb00daaeb5ea02ec891ff485",
+      "bytes": 14783,
+      "lines": 362,
+      "gitBlobSha": "a9981091722a06f92dfbb1046b9781e93ba92a55",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-product-disclosure.js",
+      "components": [
+        "pdp"
+      ],
+      "md5": "7e702ef77c2a34064f044d5689c86587",
+      "sha256": "2b2c792348baa4af3d5089d63368f5f4fa012d505a5fa9e64e4864951b2359b0",
+      "bytes": 5419,
+      "lines": 137,
+      "gitBlobSha": "23d0bf6e8b9e6d209594be46dc8518a97d9e13ce",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-product-inbouw.js",
+      "components": [
+        "choices"
+      ],
+      "md5": "d840d8079cc88fde8c682a98b3e83414",
+      "sha256": "1bd23cbbb7288951542ae4a022d3968a064c530c47306c6fbcc7e574b87b5fd4",
+      "bytes": 13714,
+      "lines": 308,
+      "gitBlobSha": "47dd431a1f618f9228db3c3866465d409a5e1152",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/2026-10-25/desktop-options/theme/assets/bc-product-inbouw.js"
+      ]
+    },
+    {
+      "path": "assets/bc-product-page.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "d1c0a60270b3363d1c5e348edbac9d08",
+      "sha256": "79d4b49672d1f87a5a8ed906b26565648e81f21741e12f71c2157aa5989f9b2f",
+      "bytes": 26591,
+      "lines": 941,
+      "gitBlobSha": "3888e56d5c6b0d215471a3ed758c057f023f2d3a",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "components": [
+        "choices"
+      ],
+      "md5": "c6b414ec8cf180ff45181222e807fcef",
+      "sha256": "b14748ca2764c6cfbe50c24ee9416faa7379c1a92a67cfb1c2c7d4d7274f2409",
+      "bytes": 30067,
+      "lines": 769,
+      "gitBlobSha": "5d79bd4364ce3a75598882a0a58659362a7e05cd",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-sunshower-configurator.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "babd95e7c11d3859ac2e6f8b4c9219d9",
+      "sha256": "75df3d75cb3eed8d22c22e9111d00cff66e3923f62bb793ea80d1c90d99fd48e",
+      "bytes": 14823,
+      "lines": 141,
+      "gitBlobSha": "11f67a0ccba91dc37745bb160cc01f8482e12caf",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-sunshower-page.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "feb2965dd8f68bb543e75e68f589ba51",
+      "sha256": "d54cecb495eef4036f3cc11020581ffc4e0e623a88e87bd048f23502abd7fdd9",
+      "bytes": 25464,
+      "lines": 327,
+      "gitBlobSha": "3bb7ff3b4c79ba1acbd04903b6c4d64b317133cf",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "components": [
+        "choices"
+      ],
+      "md5": "6e6a5705e8b99716634fae55f722883c",
+      "sha256": "3a6ca514e433fef20db66d8a650df937f9b4fd8c5e333e0675fadde44b2ecfc8",
+      "bytes": 23438,
+      "lines": 389,
+      "gitBlobSha": "c37d5f2b988f25c487ed01094c57c7709ed32d51",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/assets/bc-sunshower-page.js"
+      ]
+    },
+    {
+      "path": "assets/bc-sunshower-products.json",
+      "components": [
+        "data"
+      ],
+      "md5": "c9147500c5a54eb41ff1894f9a20d004",
+      "sha256": "c7ef1922cc14b1238f3f6cfc5b4cd6df61dd92b1a726fc33c96167ffe6ad4053",
+      "bytes": 35852,
+      "lines": 1,
+      "gitBlobSha": "81f59a26a0cc96daf7bae89de86c55f613ecc814",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "components": [
+        "cards"
+      ],
+      "md5": "d769df34404e1a69d949fabbf3291b7a",
+      "sha256": "704739cf6cb13c8224079612080a4f2e49bbbde8a677e98fa6dd2e4dbb5d03ac",
+      "bytes": 13891,
+      "lines": 344,
+      "gitBlobSha": "331f654a733dd5382f036094605f825df8971fe6",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-wiesbaden-colors.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "162a5f81acd71afd2b56b4ac17c2bacf",
+      "sha256": "5b58f11c698380fe167d362b6b635a47725a24f9bd88834c3ff26d5954a55902",
+      "bytes": 302,
+      "lines": 12,
+      "gitBlobSha": "52222f66d4ec56e7de4af371b380d5b003023217",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "components": [
+        "navigation"
+      ],
+      "md5": "2767cda3d4c02b89cb62d2f35bdd9676",
+      "sha256": "c41a892f0eef9829b1bf8071e51afb6b9a0fbe2c4a39474f446218e5ed6ba6fd",
+      "bytes": 20126,
+      "lines": 453,
+      "gitBlobSha": "56d3c42d61cebcae98f48edc132d81ba69eff21a",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "components": [
+        "cart"
+      ],
+      "md5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "sha256": "d5af8928331010e436151ce88aa90c75257889f362032b341037c1b8dcb043a6",
+      "bytes": 3630,
+      "lines": 93,
+      "gitBlobSha": "72d888d5be85e28ddc22ab1caa1be3cf97e63329",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/cart.js",
+      "components": [
+        "cart"
+      ],
+      "md5": "6a8fa14d592e5fc2ad010504072b1ed0",
+      "sha256": "b33430d6fd18ea739f9023dea93a73d169a311a895b2f835a8f0153dca51a06e",
+      "bytes": 12299,
+      "lines": 319,
+      "gitBlobSha": "bf5cd83912040bf44a23e155813db6721b810eb3",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/component-cart-notification.css",
+      "components": [
+        "styles"
+      ],
+      "md5": "1ecdc8d97b60be62e5781e173fc25d9d",
+      "sha256": "a10ac581b6a811ff8181f59901d3499e3d918590523f30b26c4ce17e22bd92ef",
+      "bytes": 5313,
+      "lines": 149,
+      "gitBlobSha": "a23005efec67e43faf548f60bea19e6cef9710ad",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/constants.js",
+      "components": [
+        "foundations"
+      ],
+      "md5": "7ad1b8e2173604151ea8ab2ed9aff17a",
+      "sha256": "a4ff033599b9fe25fc9c7f22a18f70d786da73c8dd8b514811b2d04d93fe9674",
+      "bytes": 267,
+      "lines": 9,
+      "gitBlobSha": "2d88e036386d588b5c436c09dfdd50d309555c63",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/constants.js"
+      ]
+    },
+    {
+      "path": "assets/global.js",
+      "components": [
+        "foundations"
+      ],
+      "md5": "08121b6a62a561415810b8d2c27edf22",
+      "sha256": "41d96b970f39749773b8d1d69087682bad9f70f24b5400e6fecb3e49f7389253",
+      "bytes": 63019,
+      "lines": 1847,
+      "gitBlobSha": "72574663b9fb75d132833591f1740aecde331a94",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/global.js"
+      ]
+    },
+    {
+      "path": "assets/media-gallery.js",
+      "components": [
+        "pdp"
+      ],
+      "md5": "93eda3a7f3c450c1e59b0c9ff678dc6b",
+      "sha256": "bc93e7df4b154996ca8f68912ffb255f7258689d7b923a27fa13a037dc4d60f3",
+      "bytes": 7283,
+      "lines": 152,
+      "gitBlobSha": "20b6e5716ebc2a503cf49deffb3e59026f5e52b4",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/media-gallery.js"
+      ]
+    },
+    {
+      "path": "assets/predictive-search.js",
+      "components": [
+        "navigation"
+      ],
+      "md5": "0a23e91fa72ca52f1997e1cde63e20dd",
+      "sha256": "f2319aa05bdb51077be12347c947a475a1897ac2feef7bb154aa8c60a7770af8",
+      "bytes": 8995,
+      "lines": 277,
+      "gitBlobSha": "313b1bc1b76ba474332c9b23d95a91c0dfdca58b",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/predictive-search.js"
+      ]
+    },
+    {
+      "path": "assets/product-form.js",
+      "components": [
+        "cart"
+      ],
+      "md5": "0586d77956e5a083c08f5461a7c648f3",
+      "sha256": "688dd62324465f4249a53e4d91c00f8816da35cf9ebb1bd2c00252a49d854611",
+      "bytes": 7533,
+      "lines": 179,
+      "gitBlobSha": "a0aea149956f6a1cb60b8c7ef8e30f7ba3cd023a",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/hotbath/2026-10-24/inbouw/implementation/theme/assets/product-form.js"
+      ]
+    },
+    {
+      "path": "assets/product-info.js",
+      "components": [
+        "pdp"
+      ],
+      "md5": "a8b1364ce8b67e42283a7a03067036ce",
+      "sha256": "26e86f7de2f15d281757ef65e6ac9cb0a7842f27fcf5c2b89dc34ebe51f74656",
+      "bytes": 18557,
+      "lines": 455,
+      "gitBlobSha": "494dd449e09056f09776bd8a189f1c67c5dcf92d",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/product-info.js"
+      ]
+    },
+    {
+      "path": "assets/product-switcher-data.json",
+      "components": [
+        "data"
+      ],
+      "md5": "4d75f574881b74b4929da3fd9a018d78",
+      "sha256": "2fb482d5b4012944c61f44453f6b0fddf1a09740ee140e6f834b3bf1bdc9aa21",
+      "bytes": 1941637,
+      "lines": 47607,
+      "gitBlobSha": "069d5eaab736dfd329c91c74689a6420c443837d",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "assets/pubsub.js",
+      "components": [
+        "foundations"
+      ],
+      "md5": "7985cbe794e5d51f66ec66fcae2da7cd",
+      "sha256": "85151191a873cb91c7079bee9626b11533286c2d928aa0ba99129ab7e0c5e734",
+      "bytes": 623,
+      "lines": 25,
+      "gitBlobSha": "5cd455de62eaeb64cb6bacdb17bc3effabbb0440",
+      "exactTrackedMatchesAtBaseline": [
+        "assets/pubsub.js"
+      ]
+    },
+    {
+      "path": "config/settings_schema.json",
+      "components": [
+        "foundations"
+      ],
+      "md5": "70b4665da3569296af1ffd3cbbb04514",
+      "sha256": "9af0130e20e0965822acf27da527d3ad6ae834ea1717fd2b844bf9153ef4a98e",
+      "bytes": 41735,
+      "lines": 1455,
+      "gitBlobSha": "91fb207aa144734bbf2515381d2ada2961fb8802",
+      "exactTrackedMatchesAtBaseline": [
+        "config/settings_schema.json"
+      ]
+    },
+    {
+      "path": "layout/theme.liquid",
+      "components": [
+        "styles"
+      ],
+      "md5": "11f200a79997b9e5666b9e2417bbdcbe",
+      "sha256": "c69ef2ced5ab39fedf894f837238ef6d4ca94a798f99e890178db5bbcf1e5c6b",
+      "bytes": 22421,
+      "lines": 384,
+      "gitBlobSha": "c00b6018244e3d8f1fcd3dcc92f6631a025b7867",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "94916ad19c1588391444ff0325e57de7",
+      "sha256": "46ee8813af4a8dc910676c11109d3511c6d53b09010442de0202d6b9eeb14a93",
+      "bytes": 5271,
+      "lines": 101,
+      "gitBlobSha": "376f10ba83e6ae3350cd753254deee886e5eaa93",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/bc-meubelhub.liquid",
+      "components": [
+        "data"
+      ],
+      "md5": "28dc83dc08f2307ab67d2dca8d77fd3f",
+      "sha256": "35790086ea5c3eae2873aa668f31b888538aa66eeb32f52e701ffefbda62a1d3",
+      "bytes": 18665,
+      "lines": 228,
+      "gitBlobSha": "e0bad3d551115284b43e8f23037d7b492a5499e9",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/sections/bc-meubelhub.liquid"
+      ]
+    },
+    {
+      "path": "sections/bc-sunshower-landing.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "d1ee724ee3b8361bfa578749606f8ae4",
+      "sha256": "8ca203f94f2ed2ba75df5a41d6a5b95bb62b4313cc0fa0cd4f1d3b9360908920",
+      "bytes": 18773,
+      "lines": 297,
+      "gitBlobSha": "e4df087387aa8a07d48c77fe3056e9f6ff58b358",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/cart-icon-bubble.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "dfe9c0b0bc3fc29bb795431ec22ba24f",
+      "sha256": "ea452fed136e3e2039593bb3a57d62f1d90c366b0d6ea5db3bc5e4cb2bee1206",
+      "bytes": 30,
+      "lines": 1,
+      "gitBlobSha": "d15439469ca887ba4ad6b28ae1d6a2048a0f0df5",
+      "exactTrackedMatchesAtBaseline": [
+        "sections/cart-icon-bubble.liquid"
+      ]
+    },
+    {
+      "path": "sections/cart-notification-button.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "b777aa012f4fd7e77104de40168a8fa7",
+      "sha256": "83ef76a4bdad2fe6f4012e31c9a8e318f2d09a6e6b73c67b7b9994ddd6ed298f",
+      "bytes": 55,
+      "lines": 1,
+      "gitBlobSha": "eb87de0f17fdbadefaede67af467d3505a0d2eb9",
+      "exactTrackedMatchesAtBaseline": [
+        "sections/cart-notification-button.liquid"
+      ]
+    },
+    {
+      "path": "sections/cart-notification-product.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "370b5cae8302ab84e52db512abceabd1",
+      "sha256": "e26d41bfe0a57f52bc2f8715845ccbd1d2d10cdc71aa32461ad25b28db949986",
+      "bytes": 2287,
+      "lines": 55,
+      "gitBlobSha": "07de7365b9507efb87023b4d4674aafdf3e3be07",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/header-group.json",
+      "components": [
+        "navigation"
+      ],
+      "md5": "13e606ac7b86f74e4e6a4e1aa15aa83a",
+      "sha256": "504e3629bac5c6a261202e2742934ecebc7a02313061795503b3fd662ceef160",
+      "bytes": 1156,
+      "lines": 38,
+      "gitBlobSha": "f49604024ff3f1211e31b91c8231e2c39628a19c",
+      "exactTrackedMatchesAtBaseline": [
+        "sections/header-group.json"
+      ]
+    },
+    {
+      "path": "sections/header.liquid",
+      "components": [
+        "navigation"
+      ],
+      "md5": "00f18963eea6ea4ed2f5ad491755057a",
+      "sha256": "dcd290db4a4a56b03e69f1248d6d7696ee218b7125cd63db75a306d9c6b61bd1",
+      "bytes": 67096,
+      "lines": 1998,
+      "gitBlobSha": "45dff200a38cda91930e7a07048cd091389e9a62",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/sections/header.liquid"
+      ]
+    },
+    {
+      "path": "sections/home-popular-products.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "61b0fa708a7d7c69bdb7fc50cca47830",
+      "sha256": "a9dbf4cc259444494251c509006b659ddae9721d80832cfcb5cfb6378ab427d5",
+      "bytes": 20093,
+      "lines": 546,
+      "gitBlobSha": "d7066204bfa3dccfbb9302ef20b79d73e3d070e4",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/home-sunshower.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "97e50d194a14d5febe37bdba47e4d6f4",
+      "sha256": "db86a0e0338f25d0a257ad218f49a22dbcb8fad14b74453d98ef7fec55aba597",
+      "bytes": 2896,
+      "lines": 78,
+      "gitBlobSha": "3b2142a53486fc51f2752b4ab2b3f94eee6c5a39",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/main-cart-footer.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "7835f868cca569d3fe55df62650fbc3d",
+      "sha256": "9b89c619453375829330f36cb842f808a28618d00698e0bcbbe462ac23b810ab",
+      "bytes": 6986,
+      "lines": 136,
+      "gitBlobSha": "6065e0bef6fee37073e65b9c6b0770c70807f958",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/main-cart-items.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "61d49faeb73cc08da64625dac910144f",
+      "sha256": "0435560ffed3eebadd5dc3328cbffbdfa50cd4972054583d9de7ebeb7733186c",
+      "bytes": 28948,
+      "lines": 551,
+      "gitBlobSha": "7bae0c90b10e029bcb71a4ad14b41589fc75f820",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/main-collection-product-grid.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "d5b2024cfdaa22781537be049f303069",
+      "sha256": "6770aac6835530ee43c92522cf12b226e82c5c830c36d1d0d74d4bfbb98581c0",
+      "bytes": 16152,
+      "lines": 435,
+      "gitBlobSha": "c90cb0272c4afc7169fd15a1c0f3d9904c0f8d62",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/sections/main-collection-product-grid.liquid"
+      ]
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "29df7a0fcdae6aeb38233e5e3b562f1f",
+      "sha256": "2f2b1f50739739e35cba693d3ff7d208df756bcaf3525365a25d10328c223bfb",
+      "bytes": 139440,
+      "lines": 2891,
+      "gitBlobSha": "3526aa1729f23d6439dcdaf355fc4188ac14b14c",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "3de257061f0e313921a361c13ab53fbe",
+      "sha256": "e99c16d1645e352ff593d5e08dec116b7f3c80ded3946b00d95db99a13ba1005",
+      "bytes": 29802,
+      "lines": 1018,
+      "gitBlobSha": "30a7972c3c53f1bed15445c8a962317dd31b9690",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/sections/main-search.liquid"
+      ]
+    },
+    {
+      "path": "sections/main-sunshower.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "8de08df00ef54024133536351c6a55d6",
+      "sha256": "e4032838361b15177fda9696e25630b84fa8eb44c70fa759080fa4ea5f54d7bf",
+      "bytes": 20387,
+      "lines": 139,
+      "gitBlobSha": "9be74823391503c215f5b0beafe3c3b61151ab04",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/sections/main-sunshower.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-card-delivery.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "fc2fab3feb538ba47ec5e4b1b8bace47",
+      "sha256": "209e0b882db533b1473812344ba184a189503174546241016815b770c66e7b2a",
+      "bytes": 177,
+      "lines": 4,
+      "gitBlobSha": "ba67511b4dea8792111ca02c62e103e175f1fa2d",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "736db421ff31f0c056ef0e29affe05b5",
+      "sha256": "cf953cea10f2647979f27d97f4dac45cbaaf8b7290da54b786726df1f3774680",
+      "bytes": 6246,
+      "lines": 140,
+      "gitBlobSha": "6730f24ef0554dae5aaf03f06db2c8256f788b5c",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-card-specs.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "47a521747ac018766838a0a9ab0f6215",
+      "sha256": "99889d334533ba37f7d326c161d7a58e4cabb3494387ffd7b83f48d62d873b29",
+      "bytes": 1548,
+      "lines": 40,
+      "gitBlobSha": "2b34f1158e9c348bc71ad393621ac4553954f04b",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/bc-card-specs.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-card-title.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "4bb1bb2b40344e801af1cf5e98be0f8d",
+      "sha256": "01fcc098d92b63ee924803f485fdf45d3f6ea1af9dababc2f80a1cd6e2b14690",
+      "bytes": 822,
+      "lines": 22,
+      "gitBlobSha": "d38e27944dc1112c50a43e2ce4bbd90161838768",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/bc-card-title.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-choice-data-source.liquid",
+      "components": [
+        "data"
+      ],
+      "md5": "4a7f03e38cb5b1a488640466fd0ef8a3",
+      "sha256": "7bbbeaf6c4e3ed69f36258d64e67096e0bdfd92a704444ebc3c927cc6bc6b0d1",
+      "bytes": 74269,
+      "lines": 1367,
+      "gitBlobSha": "5fe738a73405b45cc7f5bab53f2ddba95fee24eb",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/snippets/bc-choice-data-source.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-content-without-styles.liquid",
+      "components": [
+        "data"
+      ],
+      "md5": "a712392f344fd6856c82af26fb385303",
+      "sha256": "258501deae6a4ee8acd9d2c1f9063b8f1badb29c6bbf1cef4953732f58a2b4af",
+      "bytes": 526,
+      "lines": 14,
+      "gitBlobSha": "72c79504dcd976d7fa123b47343f02e95c73ccfc",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/snippets/bc-content-without-styles.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "6e1d8cbfbc09a9ca01eda00c66e74047",
+      "sha256": "a97b9fb79f000040197617618b2a34e8165e0f5c55751569e573a8dae34d4efd",
+      "bytes": 1941,
+      "lines": 39,
+      "gitBlobSha": "dc6e1eb116ef3e54803294f80c7cdf868fe586ce",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-hotbath-menu-route.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "3412a030be7a7e94ee9e62122ed459ad",
+      "sha256": "23b619f753261a687e21ffd8a737c3f398987b202551c4b8e1080f3a80ed1a90",
+      "bytes": 73698,
+      "lines": 458,
+      "gitBlobSha": "16bf1ff96b4e8787106e3275af06dccaaf030d24",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/hotbath/2026-10-24/rollout/rollout-theme/snippets/bc-hotbath-menu-route.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-hotbath-menu-source.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "adbffac7e398a3464e5d49a41cf8dcdc",
+      "sha256": "14d2764971e8faf91f40d21900ccdf006ffc5cd44543dac371b743c2b5d9df35",
+      "bytes": 402,
+      "lines": 12,
+      "gitBlobSha": "4e5b6fe64fea4684e7f4c2c8640d7212b8bd1b62",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/hotbath/2026-10-24/rollout/rollout-theme/snippets/bc-hotbath-menu-source.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-hotbath-normal-scope.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "8affc82ef126f3f4623f6fe13d3f5913",
+      "sha256": "621a7db7b9a08fbfe81f525b1c01f5e78a221423d5a7f395ebbecdaad71b48d0",
+      "bytes": 1403,
+      "lines": 30,
+      "gitBlobSha": "37bb4662eaca0d6ae90de9a15f44572c6d17b309",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/bc-hotbath-normal-scope.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-hotbath-public-specs.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "197413e04f977451cb070786e2534ab2",
+      "sha256": "ff8ee881d9f24880a1a8c174ab88db1c36cb6919d7701ed3802582d77cad6a4e",
+      "bytes": 4501,
+      "lines": 96,
+      "gitBlobSha": "3c80166569ada4ab2b69fb373a62cdb19b5c4dc4",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/bc-hotbath-public-specs.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-mobile-listing.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "5be4f84b6c94566bf404e1e38572052a",
+      "sha256": "5fa5ff4d1a9800949daeb24ffc24b159f2419c7de00d5f7a1c56c98633cfc1c1",
+      "bytes": 612,
+      "lines": 8,
+      "gitBlobSha": "99450f577707565becc008807ec851fc7c430448",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-accessories.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "d1b82e807ecc7821c27432c9525410b0",
+      "sha256": "806995c57e615123aaeffd8ae5c809d5e5390e04169c550270952f3d785d3dde",
+      "bytes": 4346,
+      "lines": 71,
+      "gitBlobSha": "571478fa63a339e5b03b2688b3c8f72ae2bcef2f",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-description.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "4fabd9ad065deb45de43cef4a76076e3",
+      "sha256": "8656b3f619c5239250e92328c0cdde658bb4a3a51993bdb2280f4274b8de3bd6",
+      "bytes": 4055,
+      "lines": 78,
+      "gitBlobSha": "41dfff15533e0c3fd74fafb0b54c0686f3e04b2e",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-detail-specs-mapped.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "762422a7835dbdc59922132221b753ba",
+      "sha256": "4af8fe70d9e05fbef3dc8c2391e6f7d29b5c35d44e2cdfee44689ff7dafc24e7",
+      "bytes": 4000,
+      "lines": 57,
+      "gitBlobSha": "051c2810dadb9a05c7a3bf37112889eb8f2b05bd",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-detail-specs.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "4487f2b0c434235cfea1ade4efcc6a07",
+      "sha256": "e0eddf98e5695861cc17e97803407150fbf880d151e262555594c869c7e42731",
+      "bytes": 1350,
+      "lines": 26,
+      "gitBlobSha": "afe59c58b38592346c99170dfe236659571d3a48",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-content/wiesbaden/24.3710-admin/snippets/bc-product-detail-specs.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-product-documents.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "8ee0a9ec35bd232694cceb08e241360b",
+      "sha256": "ecb08a34ed16455473d978d70f0e8b9f6e518a073b93e2432190c5a1a57748a6",
+      "bytes": 2859,
+      "lines": 49,
+      "gitBlobSha": "adbc219f04ac2cc1fbe2b336f35a922693e62edf",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-inbouw.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "4d2811e6848c3fb0aac9c4b91df84b38",
+      "sha256": "48b2c0c0cfb3f4072c01f9ccfd3e5e8d7b93d90037e702ba0704c1753d48bb72",
+      "bytes": 6703,
+      "lines": 137,
+      "gitBlobSha": "0f26843646c9b8682ce1c71c24c4a683789231c5",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-mapped-spec-row.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "cec4ea7bfbdf77bfa6e28fe1d46acb14",
+      "sha256": "6fb459c34d3e0ca90f9c3c0999e0ca61e4d6c40700b3edc2e392369679773d34",
+      "bytes": 1668,
+      "lines": 51,
+      "gitBlobSha": "d5623c5f3da447e2dc03edc7cee460d73a01b5e2",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-set-components.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "39d8869689fc0bc8db1d4b5fbfd7c434",
+      "sha256": "5fe9d76fcf24eb540c2581159034381e72fc9a477d9e7fc1fcd8c75d13a54686",
+      "bytes": 4409,
+      "lines": 82,
+      "gitBlobSha": "a70a4c8554c1e6e0b80b35826fe69a50765f04be",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-product-switcher.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "116f4877b74ad92b7d3748e07138202d",
+      "sha256": "9f6f3448561f2d41cebc54930765be87f38cb9b6e0f9c1845e6250d77138489b",
+      "bytes": 3176,
+      "lines": 63,
+      "gitBlobSha": "f008586c4b5016f73e4d253ae66e1766a4fdf8b2",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/snippets/bc-product-switcher.liquid"
+      ]
+    },
+    {
+      "path": "snippets/bc-sunshower-choices.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "f4c1544c12d938a8c1ada56ae23a8c89",
+      "sha256": "dee78666d77db90832c2442d861317491f237e3d5d0036070d07eb72394e607d",
+      "bytes": 2012,
+      "lines": 34,
+      "gitBlobSha": "b7f60e6ee6df32e59274e9f1395e4f218889baa6",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-sunshower-shop-card.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "3905b96d3e2fab66dbdb0e69eb4906ad",
+      "sha256": "acd4575954413d650ff8b23bcd900b01c5259a025e3c6d1362bfed07c158b855",
+      "bytes": 8704,
+      "lines": 127,
+      "gitBlobSha": "055acd8fd734021d8d489d9bd246a1f642b956b3",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-wiesbaden-colors.liquid",
+      "components": [
+        "choices"
+      ],
+      "md5": "840b7ad90ce0f96a865e94af9ee00d25",
+      "sha256": "29936e934fe39ecf4eda604241d98ccb062284da02e1c31dfb931b5ae5382a9d",
+      "bytes": 2848,
+      "lines": 64,
+      "gitBlobSha": "feb20863fdd3c6c7c73ad6d54817671b02bf53cd",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-wiesbaden-reviewed-scope.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "51a7b82e104d7f244d5cb903bcfc8e68",
+      "sha256": "f839903a5a9b2d3c0a1bfc071c10eee6ed670eb7696fa37c2a19d3754b0268a0",
+      "bytes": 1119,
+      "lines": 28,
+      "gitBlobSha": "0dd4fb80abdfdb99cdeb8a3b7b83a9da335acb4d",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "90f7c5a7a0534c2db234b016abdc1500",
+      "sha256": "910d7b5a5fe67f625319d6eeafb87b3e8cdd44ff36463cc59e1d579bd0fbff5c",
+      "bytes": 3281,
+      "lines": 58,
+      "gitBlobSha": "5b39a254b8482601a273d8ae538f0528ec244a29",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/buy-buttons.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "c50abe1cb9295a48369869fd80867147",
+      "sha256": "f35d8d522650afcb0de503401b6f5fec98c6b0a13d9ecdf029258c9d87ddd3ac",
+      "bytes": 7634,
+      "lines": 170,
+      "gitBlobSha": "f84a67ec59c2e69217bd2faeebb6c6ead3b24ece",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/product-switcher/hotbath/2026-10-24/inbouw/implementation/theme/snippets/buy-buttons.liquid"
+      ]
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "components": [
+        "cards"
+      ],
+      "md5": "59017e48e5fb53446843a3273947fb5b",
+      "sha256": "472857c53652f96716f0d5a3e8f14ebbc48be0cb6bf0b826ffc72dd0401669f1",
+      "bytes": 34624,
+      "lines": 627,
+      "gitBlobSha": "418a7857ab8df1c6f27efe529dfe392155a60720",
+      "exactTrackedMatchesAtBaseline": [
+        "docs/code-cleanup/2026-10-25/theme/snippets/card-product.liquid"
+      ]
+    },
+    {
+      "path": "snippets/cart-notification.liquid",
+      "components": [
+        "cart"
+      ],
+      "md5": "1bc5c6a6842551c8ed5c2af0642b12aa",
+      "sha256": "ddf70c43bf517f258a2d024b1c1ab51fea137416a9c73f291e370114f7ce5041",
+      "bytes": 1343,
+      "lines": 23,
+      "gitBlobSha": "a1381b4d1ab52aa2a39020bb8fdc5e09cbc26db3",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/header-drawer.liquid",
+      "components": [
+        "navigation"
+      ],
+      "md5": "7787f4aa05d00a066658a4ec292f269a",
+      "sha256": "0e859f97adb22adcd6fcf1442d5fb20283f3710c29ae5b41dcce86b2e49131f1",
+      "bytes": 15086,
+      "lines": 284,
+      "gitBlobSha": "3bd7e785ad1161bbc15cdd93cc1bbb2d91b5aa49",
+      "exactTrackedMatchesAtBaseline": []
+    },
+    {
+      "path": "snippets/header-search.liquid",
+      "components": [
+        "navigation"
+      ],
+      "md5": "1b16e730671221c91a48f8186ec52155",
+      "sha256": "1b73513b7b85a53c5d0ed352a6d44b3930d1b601524f046ec4c1b19e904026ca",
+      "bytes": 4402,
+      "lines": 115,
+      "gitBlobSha": "4e65ad845992aeb35021749359b5956761a61f45",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/header-search.liquid"
+      ]
+    },
+    {
+      "path": "snippets/product-media-gallery.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "bd78934f76753c8786a93badcc787cee",
+      "sha256": "a2a962f20c86433d6275743ad34dd792faf60c25be523c5458ee59f63ca6552c",
+      "bytes": 15102,
+      "lines": 337,
+      "gitBlobSha": "cf0a828a7d9eda2d940b56557dc10844106b7cd8",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/product-media-gallery.liquid"
+      ]
+    },
+    {
+      "path": "snippets/product-variant-picker.liquid",
+      "components": [
+        "pdp"
+      ],
+      "md5": "06e5b016c79ed31dd258d2fc7901a756",
+      "sha256": "504c6fae45d1372498845b98ffcac83452c12d273f9686ce318c88e5db4b8d11",
+      "bytes": 8189,
+      "lines": 186,
+      "gitBlobSha": "a0de813599fcbddaeaf3fc010916069f8c216c30",
+      "exactTrackedMatchesAtBaseline": [
+        "snippets/product-variant-picker.liquid"
+      ]
+    }
+  ]
+}

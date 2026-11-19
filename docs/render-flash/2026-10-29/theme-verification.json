@@ -1,0 +1,40 @@
+{
+  "baselineCount": 1337,
+  "copyParityBeforeWrites": true,
+  "mainId": "gid://shopify/OnlineStoreTheme/195913482506",
+  "mainRole": "MAIN",
+  "mainCount": 1337,
+  "mainDifferences": [],
+  "draftId": "gid://shopify/OnlineStoreTheme/195915448586",
+  "draftRole": "UNPUBLISHED",
+  "draftCount": 1338,
+  "draftDifferences": [
+    "assets/icon-arrow.svg",
+    "layout/theme.liquid",
+    "sections/header.liquid",
+    "snippets/bc-first-paint.liquid"
+  ],
+  "qaRestored": true,
+  "exactReadbacks": [
+    {
+      "filename": "assets/icon-arrow.svg",
+      "md5": "6ad52f6801a11de32979e7d3297b071d",
+      "exact": true
+    },
+    {
+      "filename": "layout/theme.liquid",
+      "md5": "3444d4e0704c8ec7346b7d1f8d378b98",
+      "exact": true
+    },
+    {
+      "filename": "sections/header.liquid",
+      "md5": "7054f3488312c3dca1e25f340bca6ddf",
+      "exact": true
+    },
+    {
+      "filename": "snippets/bc-first-paint.liquid",
+      "md5": "12c0ed7f9e90cc01f2731813e4b72613",
+      "exact": true
+    }
+  ]
+}

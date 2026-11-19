@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-16",
+  "verifiedAt": "2026-11-16T16:53:33.382Z",
+  "status": "SINGLE_WALL_TILE_DRAFT_PREVIEW_PENDING",
+  "ownerScreenshot": {
+    "sourceName": "Shopify App API",
+    "sourceId": "10793224912",
+    "dataTarget": "847441096",
+    "advancedDataSourceManagementEnabled": true,
+    "rule": "Shopify App API.product type equals literal wandtegels => shipping_label literal pallet",
+    "preview": "No item found; no product selected/loaded",
+    "draftSaved": false,
+    "ruleApplied": false
+  },
+  "liveOfferRead": {
+    "merchantAccount": "5902025216",
+    "offerId": "shopify_ZZ_10687518703882_54000406331658",
+    "title": "Porcelanosa Matt White wandtegel mat – 60 × 150 cm",
+    "productType": "Wandtegels",
+    "priceEUR": 268.07,
+    "shipping": {
+      "country": "NL",
+      "service": "Standaard",
+      "priceEUR": 6.95
+    },
+    "freeShippingThreshold": {
+      "country": "NL",
+      "amountEUR": 100.01
+    },
+    "source": "API / Shopify App API",
+    "url": "https://merchants.google.com/mc/items/details?a=5902025216&offerId=shopify_ZZ_10687518703882_54000406331658&language=nl&channel=0&feedLabel=EUR_94864998666",
+    "method": "Live Merchant Center product details, Additional details expanded; no edit or save"
+  },
+  "criticalFinding": "This ordinary wall tile currently carries product-level shipping=NL/Standaard/6.95 EUR and free_shipping_threshold=NL/100.01 EUR. Group-specific account policies alone must not be assumed to fix these overrides.",
+  "nextOwnerAction": "Preview > Search > enter exact offerId shopify_ZZ_10687518703882_54000406331658, open it, inspect draft shipping_label. Expected pallet; result NOT YET VERIFIED.",
+  "nextExecution": "After positive/negative preview checks, extend mutually exclusive group labels. Before applying Google costs, verify the owner's manual shipping-mode save and how the old per-offer shipping/free_shipping_threshold data are removed or overridden for large goods. Do not promise correct transport costs based on labels alone.",
+  "noWritesToShopifyOrGoogle": true,
+  "limits": [
+    "No successful rule preview yet",
+    "No label rule applied or source reprocessed",
+    "Owner's manual shipping-mode save not freshly confirmed",
+    "No change to Google delivery times; retain earlier no-all-products-one-day restriction",
+    "XXL has no current product"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "themeId": "gid://shopify/OnlineStoreTheme/195818389770",
+  "checkedAt": "2026-10-28T17:28:26.558Z",
+  "method": "Existing capture bytes verified against fresh Shopify metadata",
+  "files": [
+    {
+      "path": "assets/bc-external-filters.css",
+      "expectedMd5": "737b2e9bf593105a80239a345daec40d",
+      "expectedBytes": 18801,
+      "sha256": "e82228894300a4cd8a4dcf3cafdb9947ff669c49d589d521496901f20b2b555a"
+    },
+    {
+      "path": "assets/bc-hotbath-mobile.css",
+      "expectedMd5": "c1b4a29194548e6f005de35aba6b80a9",
+      "expectedBytes": 5872,
+      "sha256": "2088f38bcb1efe9d63b59f6f51e99e37606fd4f03ccd93b4542323da6eb0fd6d"
+    },
+    {
+      "path": "assets/bc-product-cards.css",
+      "expectedMd5": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "expectedBytes": 14783,
+      "sha256": "f6e02f729096055f614318894b071ee20b5cb70edb00daaeb5ea02ec891ff485"
+    },
+    {
+      "path": "assets/bc-product-page.css",
+      "expectedMd5": "d1c0a60270b3363d1c5e348edbac9d08",
+      "expectedBytes": 26591,
+      "sha256": "79d4b49672d1f87a5a8ed906b26565648e81f21741e12f71c2157aa5989f9b2f"
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "expectedMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "expectedBytes": 30067,
+      "sha256": "b14748ca2764c6cfbe50c24ee9416faa7379c1a92a67cfb1c2c7d4d7274f2409"
+    },
+    {
+      "path": "assets/bc-sunshower-configurator.css",
+      "expectedMd5": "babd95e7c11d3859ac2e6f8b4c9219d9",
+      "expectedBytes": 14823,
+      "sha256": "75df3d75cb3eed8d22c22e9111d00cff66e3923f62bb793ea80d1c90d99fd48e"
+    },
+    {
+      "path": "assets/bc-sunshower-page.css",
+      "expectedMd5": "feb2965dd8f68bb543e75e68f589ba51",
+      "expectedBytes": 25464,
+      "sha256": "d54cecb495eef4036f3cc11020581ffc4e0e623a88e87bd048f23502abd7fdd9"
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "expectedMd5": "6e6a5705e8b99716634fae55f722883c",
+      "expectedBytes": 23438,
+      "sha256": "3a6ca514e433fef20db66d8a650df937f9b4fd8c5e333e0675fadde44b2ecfc8"
+    },
+    {
+      "path": "assets/bc-sunshower.js",
+      "expectedMd5": "4de95617f0b550ce081177397ede51b8",
+      "expectedBytes": 3247,
+      "sha256": "47cdd372b644d362b5a1403f994dac892cd91ca3d2e50b241fce3fe68bf09fdb"
+    },
+    {
+      "path": "assets/component-slider.css",
+      "expectedMd5": "e2231598446cf160392747d3d1edceae",
+      "expectedBytes": 9783,
+      "sha256": "639f46c3630d97862ebea55c5b4cc539d110688b263eebdb7721f9fac0d25bf3"
+    },
+    {
+      "path": "assets/global.js",
+      "expectedMd5": "08121b6a62a561415810b8d2c27edf22",
+      "expectedBytes": 63019,
+      "sha256": "41d96b970f39749773b8d1d69087682bad9f70f24b5400e6fecb3e49f7389253"
+    },
+    {
+      "path": "assets/media-gallery.js",
+      "expectedMd5": "93eda3a7f3c450c1e59b0c9ff678dc6b",
+      "expectedBytes": 7283,
+      "sha256": "bc93e7df4b154996ca8f68912ffb255f7258689d7b923a27fa13a037dc4d60f3"
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "expectedMd5": "de7255901d36e616ca491da374952621",
+      "expectedBytes": 65208,
+      "sha256": "81144493fb6859df4caee371a825c4df3ed6c227ff22062d4e8212b2cfccf8a7"
+    },
+    {
+      "path": "layout/theme.liquid",
+      "expectedMd5": "11f200a79997b9e5666b9e2417bbdcbe",
+      "expectedBytes": 22421,
+      "sha256": "c69ef2ced5ab39fedf894f837238ef6d4ca94a798f99e890178db5bbcf1e5c6b"
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "expectedMd5": "29df7a0fcdae6aeb38233e5e3b562f1f",
+      "expectedBytes": 139440,
+      "sha256": "2f2b1f50739739e35cba693d3ff7d208df756bcaf3525365a25d10328c223bfb"
+    },
+    {
+      "path": "sections/main-sunshower.liquid",
+      "expectedMd5": "8de08df00ef54024133536351c6a55d6",
+      "expectedBytes": 20387,
+      "sha256": "e4032838361b15177fda9696e25630b84fa8eb44c70fa759080fa4ea5f54d7bf"
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "expectedMd5": "736db421ff31f0c056ef0e29affe05b5",
+      "expectedBytes": 6246,
+      "sha256": "cf953cea10f2647979f27d97f4dac45cbaaf8b7290da54b786726df1f3774680"
+    },
+    {
+      "path": "snippets/bc-product-switcher.liquid",
+      "expectedMd5": "116f4877b74ad92b7d3748e07138202d",
+      "expectedBytes": 3176,
+      "sha256": "9f6f3448561f2d41cebc54930765be87f38cb9b6e0f9c1845e6250d77138489b"
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "expectedMd5": "59017e48e5fb53446843a3273947fb5b",
+      "expectedBytes": 34624,
+      "sha256": "472857c53652f96716f0d5a3e8f14ebbc48be0cb6bf0b826ffc72dd0401669f1"
+    },
+    {
+      "path": "snippets/product-media-gallery.liquid",
+      "expectedMd5": "bd78934f76753c8786a93badcc787cee",
+      "expectedBytes": 15102,
+      "sha256": "a2a962f20c86433d6275743ad34dd792faf60c25be523c5458ee59f63ca6552c"
+    },
+    {
+      "path": "snippets/product-thumbnail.liquid",
+      "expectedMd5": "bcfec1bc3ec849609f435f102e9ab50b",
+      "expectedBytes": 6885,
+      "sha256": "abcc9e2261a50884e563dd03c6f4eaa0a76d812ccaa748eaaf06ca708b7a4338"
+    },
+    {
+      "path": "snippets/product-variant-picker.liquid",
+      "expectedMd5": "06e5b016c79ed31dd258d2fc7901a756",
+      "expectedBytes": 8189,
+      "sha256": "504c6fae45d1372498845b98ffcac83452c12d273f9686ce318c88e5db4b8d11"
+    },
+    {
+      "path": "templates/product.json",
+      "expectedMd5": "741ac2a6d0e579cd24a91f410714406c",
+      "expectedBytes": 2966,
+      "sha256": "7533c26615af05508b07df876ca2b5ab3e23c49ede316b0facbba93fe87febba"
+    },
+    {
+      "path": "templates/product.sunshower.json",
+      "expectedMd5": "d1b6070f357c96a6e90d1ef5e1605632",
+      "expectedBytes": 489,
+      "sha256": "77ba3119cc79d6d46f2efe9f7cadc3e9df1b15a563afb66ba4aa7a0018d87d84"
+    },
+    {
+      "path": "assets/product-info.js",
+      "expectedMd5": "a8b1364ce8b67e42283a7a03067036ce",
+      "expectedBytes": 18557,
+      "sha256": "26e86f7de2f15d281757ef65e6ac9cb0a7842f27fcf5c2b89dc34ebe51f74656"
+    },
+    {
+      "path": "templates/page.bc-mobile-qa.liquid",
+      "expectedMd5": "24ae4cff55afe7f2453e4e9b6a0c2479",
+      "expectedBytes": 371,
+      "sha256": "cfc6180f04b21c91d7cdd2879621fddb7fcb66f15ea15d5c6841bff7a225cdd8"
+    },
+    {
+      "path": "templates/product.bc-hotbath-data.json",
+      "expectedMd5": "f6ecf20b09053697af07b5b1ca4e7cd3",
+      "expectedBytes": 1408,
+      "sha256": "798b71443594a366a38851fb596a09dc6a2c537a4b13759e8c250ae1b4122b9a"
+    },
+    {
+      "path": "templates/product.bc-hotbath-pilot.json",
+      "expectedMd5": "89cbac0460d18a50c88f93bf977a0c6b",
+      "expectedBytes": 1411,
+      "sha256": "528591f80852e095cbd53a5aea3dafff0e553804c4ef8649718f24d9d9c76be1"
+    },
+    {
+      "path": "templates/product.bc-responsive-qa.liquid",
+      "expectedMd5": "0533e89005d1b3541da4f4b8e099567a",
+      "expectedBytes": 448,
+      "sha256": "2b454b86a055e16da1fc8208c146f3314141733c2654ce3e9666f57e9d66269a"
+    }
+  ]
+}

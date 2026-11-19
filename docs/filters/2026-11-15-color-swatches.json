@@ -1,0 +1,59 @@
+{
+  "task": "FILTER-COLOR-SWATCH-01",
+  "date": "2026-11-15",
+  "status": "VERIFIED_PREVIEW_RELEASE_PENDING",
+  "sourceMain": {
+    "id": "196542005514",
+    "name": "BadkamerCity - Lagoo Bijlagen Sunshower stijl"
+  },
+  "candidate": {
+    "id": "196690379018",
+    "name": "BadkamerCity - complete filterkleuren",
+    "role": "UNPUBLISHED"
+  },
+  "codeCommit": "cd688df7b2c404279f2f1c569bfc90074f9a7f48",
+  "file": "assets/bc-external-filters.js",
+  "colors": {
+    "Bruin": "#94745a",
+    "Geel": "#e6c64e",
+    "Oranje": "#df884b",
+    "Rood": "#c76059",
+    "Paars": "#92739f",
+    "Multicolor": "six-color conic gradient"
+  },
+  "checks": {
+    "syntax": "PASS",
+    "tileColorGroups": 17,
+    "existingFinishSamplesUnchanged": 17,
+    "manufacturerImagePriority": "PASS",
+    "externalImageSafety": "PASS",
+    "fullThemeParity": {
+      "live": 2522,
+      "draft": 2522,
+      "changed": [
+        "assets/bc-external-filters.js"
+      ],
+      "onlyDraft": []
+    },
+    "readBack": "exact"
+  },
+  "browser": {
+    "environment": "Cloud Chrome desktop",
+    "page": "https://badkamercity.nl/collections/wandtegels",
+    "all17ComputedColors": "PASS",
+    "redFilter": {
+      "before": 2272,
+      "after": 77,
+      "cleared": 2272
+    },
+    "screenshot": "real browser; all color circles visible"
+  },
+  "scope": "Only the shared swatch mapping changed compared with current MAIN. The three latest Lagoo document files were carried from MAIN to the candidate to retain the published fix. Other drafts and all products untouched.",
+  "limitations": [
+    "Not published",
+    "No new mobile/hardware/checkout validation",
+    "Unrelated native fallback on collections/all observed; no change to index/profile policy"
+  ],
+  "rollback": "Before publication, leave current MAIN active. To remove only this change later, revert the multicolor branch and five named-color branches in swatch(), preserving any subsequent edits.",
+  "next": "Owner reviews and publishes BadkamerCity - complete filterkleuren."
+}

@@ -1,8 +1,12 @@
 {% doc %}
   Provides the endpoint and collection context for the optional external filters.
   @param {string} collection_handle - The current collection handle.
+  @param {boolean} [search_mode] - Whether this is a search results page.
   @param {string} section_id - The product grid section identifier.
 {% enddoc %}
+
+{{ 'bc-mobile-compact-list.css' | asset_url | stylesheet_tag }}
+
 
 <!-- BC_EXTERNAL_FILTERS_V1 -->
 
@@ -13,7 +17,28 @@
   id="BcExternalFilters"
   data-api-base="https://vps-7ffd625d.vps.ovh.net/verified"
   data-collection="{{ collection_handle | escape }}"
-  data-products-count="{{ collection.all_products_count }}"
+  data-search-mode="{{ search_mode | default: false }}"
+  data-search-title="{{ 'bc_listing.search_title' | t: terms: search.terms, total: '__BC_COUNT__', shop: shop.name | escape_once }}"
+  data-search-query="{{ search.terms | escape }}"
+  data-products-count="{% unless search_mode %}{{ collection.all_products_count }}{% endunless %}"
+  data-card-data-section="bc-card-data"
+  data-empty-label="{{ 'templates.search.no_results' | t: terms: search.terms | escape }}"
+  data-label-tile-box="{{ 'bc_listing.tile_box' | t | escape }}"
+  data-label-tile-area="{{ 'bc_listing.tile_area' | t | escape }}"
+  data-label-add="{{ 'bc_listing.add' | t | escape }}"
+  data-label-added="{{ 'bc_listing.added' | t | escape }}"
+  data-label-cart-error="{{ 'bc_listing.cart_error' | t | escape }}"
+  data-label-color-error="{{ 'bc_listing.color_error' | t | escape }}"
+  data-label-more="{{ 'bc_listing.more' | t | escape }}"
+  data-label-less="{{ 'bc_listing.less' | t | escape }}"
+  data-label-more-filters="{{ 'bc_listing.more_filters' | t | escape }}"
+  data-label-search-filter="{{ 'bc_listing.search_filter' | t | escape }}"
   data-section-id="{{ section_id | escape }}"
+  data-card-type="{{ 'products.product.card_type' | t | escape }}"
+  data-card-sku="{{ 'products.product.card_sku' | t | escape }}"
+  data-card-delivery="{{ 'bc_delivery.lead_time_on_request' | t | escape }}"
+  data-card-view="{{ 'products.product.card_view' | t | escape }}"
+  data-card-tax="{{ 'products.product.card_tax' | t | escape }}"
+  data-tax-included="{{ shop.taxes_included }}"
   hidden
 ></div>

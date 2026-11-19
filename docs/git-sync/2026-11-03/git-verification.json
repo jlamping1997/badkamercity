@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-11-03T12:34:11.008Z",
+  "code_branch": "fix/product-cards-2026-10-14",
+  "code_snapshot_commit": "d4cc4bcf360d1f91d5a6ab8270a0ad7a188f0434",
+  "main_documentation_commit": "2384fce048ed49b9fe264779049ad5b16f29a2c7",
+  "source_path": "shopify/current",
+  "theme_id": "196110090506",
+  "theme_role": "MAIN",
+  "live_manifest_files": 1374,
+  "current_theme_files": 1366,
+  "git_readback_exact_to_capture": 1366,
+  "missing": [],
+  "captured_source_not_byte_equal_to_shopify": [
+    "config/settings_data.json"
+  ],
+  "upload_guard": "shopify/current/.shopifyignore",
+  "main_commit_documentation_only": true,
+  "old_root_untouched": true,
+  "live_manifest_unchanged_during_capture": true
+}

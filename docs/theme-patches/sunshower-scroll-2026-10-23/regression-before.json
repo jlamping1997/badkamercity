@@ -1,0 +1,76 @@
+{
+  "file": "bc-sunshower-page.first-switch-before.js",
+  "passed": 11,
+  "total": 16,
+  "tests": [
+    {
+      "name": "Cold first click captures position before async catalog and layout changes",
+      "result": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1050\n"
+    },
+    {
+      "name": "Restore still corrects load and image shifts after the original two-second cutoff",
+      "result": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n1450 !== 250\n"
+    },
+    {
+      "name": "First preview navigation survives Shopify removing preview_theme_id",
+      "result": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1050\n"
+    },
+    {
+      "name": "Semantic query remains required and query order is stable",
+      "result": "FAIL",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1050\n"
+    },
+    {
+      "name": "User pointerdown cancels corrections immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "User touchstart cancels corrections immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "User wheel cancels corrections immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "User keydown cancels corrections immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "User pagehide cancels corrections immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "No record leaves ordinary product visits and native scroll restoration unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Stored position is consumed only once",
+      "result": "PASS"
+    },
+    {
+      "name": "Bad route, TTL, future values, malformed records do not restore or crash",
+      "result": "PASS"
+    },
+    {
+      "name": "Blocked storage preserves navigation with native configurator anchor fallback",
+      "result": "FAIL",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'https://badkamercity.nl/products/white'\n- 'https://badkamercity.nl/products/white#sunshower-configurator'\n"
+    },
+    {
+      "name": "Failed catalog restores controls and does not store a position",
+      "result": "PASS"
+    },
+    {
+      "name": "Loaded page stops correction after settling and late layout does not pull visitor",
+      "result": "PASS"
+    },
+    {
+      "name": "Absolute max timeout restores browser setting when load never arrives",
+      "result": "PASS"
+    }
+  ]
+}

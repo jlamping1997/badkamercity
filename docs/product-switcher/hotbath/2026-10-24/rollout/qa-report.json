@@ -1,0 +1,122 @@
+{
+  "captured_at": "2026-10-24T10:22:48.486Z",
+  "theme_id": "195649929482",
+  "theme_name": "BadkamerCity - Hotbath keuzemenus 24 okt",
+  "role": "UNPUBLISHED / Draft visible in preview bar",
+  "environment": {
+    "browser": "Chrome cloud desktop",
+    "viewport_screenshot": "1348 x 926",
+    "mobile_tested": false
+  },
+  "result": "PASS for representative menu transitions, SPOM exclusions and one cart line",
+  "checks": [
+    {
+      "case": "Gent height",
+      "from": "GT003IX",
+      "to": "GT003MIX",
+      "result": "pass"
+    },
+    {
+      "case": "Buddy IBS12 handshower",
+      "from": "IBS12CR",
+      "to": "IBS12CR1",
+      "result": "pass"
+    },
+    {
+      "case": "ACE numeric head diameter",
+      "from": "IBS-ACE2001",
+      "to": "IBS-ACE2013",
+      "url": "https://badkamercity.nl/products/hotbath-ace-ibs-ace2013-inbouw-doucheset-2-weg-staafhanddouche-30cm-hoofddouche-wandarm-wandhouder-chroom",
+      "result": "pass"
+    },
+    {
+      "case": "Archie added colour",
+      "from": "AR105EXT18IX",
+      "to": "AR105EXT18BCP",
+      "url": "https://badkamercity.nl/products/hotbath-ar105ext18bcp",
+      "result": "pass"
+    },
+    {
+      "case": "Rails length and number of bars",
+      "from": "RASS50-1CR",
+      "via": "RASS80-1CR",
+      "to": "RASS80-3CR",
+      "url": "https://badkamercity.nl/products/hotbath-rass80-3cr",
+      "result": "pass"
+    },
+    {
+      "case": "Existing CB003 height regression",
+      "from": "CB003CAB",
+      "to": "CB003MCAB",
+      "url": "https://badkamercity.nl/products/hotbath-cobber-cb003mc-wastafelkraan-medium-verouderd-messing",
+      "result": "pass"
+    },
+    {
+      "case": "Archie length preserves colour",
+      "from": "AR105EXT18BCP",
+      "to": "AR105EXT25BCP",
+      "url": "https://badkamercity.nl/products/hotbath-ar105ext25bcp",
+      "result": "pass"
+    },
+    {
+      "case": "SPOM3 excluded",
+      "buyButton": true,
+      "errors": false,
+      "kies": false,
+      "menuCount": 0,
+      "title": "Hotbath SPOM3 HB Binnenwerk 008/011/020 A3",
+      "url": "https://badkamercity.nl/products/hotbath-spom3-hb-binnenwerk-008-011-020-a3",
+      "result": "pass"
+    },
+    {
+      "case": "G50 title-SPOM excluded",
+      "buyButton": true,
+      "errors": false,
+      "kies": false,
+      "menuCount": 0,
+      "title": "Hotbath G50 Uitlopend Ponsi binnenwerk 1/2'' (180) SPOM3",
+      "url": "https://badkamercity.nl/products/hotbath-g50-uitlopend-ponsi-binnenwerk-1-2-180-spom3",
+      "result": "pass"
+    },
+    {
+      "case": "Cart after selection",
+      "sku": "AR105EXT25BCP",
+      "variant": "53794299412746",
+      "quantity": 1,
+      "cleanup": "removed own line, cart empty",
+      "result": "pass"
+    }
+  ],
+  "cart": {
+    "initial": "empty",
+    "added_sku": "AR105EXT25BCP",
+    "variant": "53794299412746",
+    "quantity": 1,
+    "cleanup": "own line removed; empty cart visibly confirmed",
+    "order_or_payment": false
+  },
+  "screenshots": [
+    "qa-rails-menu-20261024.jpg",
+    "qa-cart-selected-20261024.jpg"
+  ],
+  "limitations": [
+    "Representative desktop sample only; no real phone or mobile viewport test.",
+    "No exhaustive browser test of every combination; source data validation handled separately.",
+    "No checkout, payment or order placed."
+  ],
+  "observations": [
+    "No Liquid error rendered on tested product pages.",
+    "SPOM3 and G50 title-SPOM3 retain enabled In winkelwagen button, have zero V2 menu roots and no Kies je uitvoering heading.",
+    "No product image rendered on sampled Gent/Archie/Rails pages. Bounded MAIN comparison of Gent GT003IX confirms zero gallery images also on MAIN195611492618 (preview bar Sunshower blog23okt); media absence pre-exists for that sample. Other missing-photo samples not compared against MAIN."
+  ],
+  "media_comparison": {
+    "sku": "GT003IX",
+    "public_main_theme": "195611492618",
+    "main_preview_bar": "BadkamerCity - Sunshower blog 23 okt",
+    "main_gallery_image_count": 0,
+    "hotbath_draft_theme": "195649929482",
+    "draft_gallery_image_count": 0,
+    "conclusion": "Missing photo for this sampled product is pre-existing on current MAIN; not caused by rollout.",
+    "returned_to_hotbath_preview": true
+  }
+}

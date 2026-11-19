@@ -1,0 +1,67 @@
+--- a/assets/bc-sunshower-configurator.css
++++ b/assets/bc-sunshower-configurator.css
+@@ -1,5 +1,7 @@
+ .ss-config-page .ss-hero{gap:32px}
+-.ss-config-page .ss-gallery__main{height:auto;min-height:0;max-height:none;aspect-ratio:3/4;border-radius:12px;overflow:hidden}
++.ss-config-page .ss-gallery__main{display:block;height:auto;min-height:0;max-height:none;aspect-ratio:auto;border-radius:12px;overflow:hidden}
++.ss-config-page .ss-gallery__main:disabled{min-height:280px;cursor:default}
++.ss-config-page .ss-gallery__photo{width:100%;height:auto;max-height:760px;object-fit:contain}
+ .ss-config-page .ss-gallery__expand{left:auto;right:16px;bottom:16px;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;font-size:24px;box-shadow:0 2px 12px #0f274014}
+ .ss-config-page .ss-gallery__thumbs{gap:10px;padding:2px;margin-top:16px}
+ .ss-config-page .ss-gallery__thumb{flex-basis:calc((100% - 30px)/4);height:104px;border-radius:8px;padding:5px}
+@@ -67,7 +69,7 @@
+ @media(min-width:990px) and (max-width:1150px){.ss-configurator .ss-buybox__content{padding:24px 20px 18px}.ss-configurator .ss-config-choice--met_uv .ss-config-option{gap:6px;padding-left:9px}.ss-config-model-icons .ss-config-icon{width:20px}.ss-configurator .ss-config-choice--kleur .ss-config-options{gap:10px}}
+ @media(max-width:749px){
+   .ss-config-page .ss-hero{gap:24px}
+-  .ss-config-page .ss-gallery__main{aspect-ratio:4/5;max-height:570px}
++  .ss-config-page .ss-gallery__photo{max-height:570px}
+   .ss-config-page .ss-gallery__thumb{flex-basis:76px;height:76px}
+   .ss-page .ss-configurator{border-radius:12px}
+   .ss-configurator .ss-buybox__content{padding:22px 18px 18px}
+--- a/assets/bc-sunshower-page.js
++++ b/assets/bc-sunshower-page.js
+@@ -57,13 +57,28 @@
+         }
+       }));
+       const mainPhoto = page.querySelector('.ss-gallery__photo');
+-      page.querySelectorAll('[data-ss-photo]').forEach(button => button.addEventListener('click',() => {
+-        mainPhoto.src = button.dataset.ssPhoto;
+-        mainPhoto.removeAttribute('srcset');
+-        page.querySelectorAll('[data-ss-photo]').forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++      const photoButtons = [...page.querySelectorAll('[data-ss-photo]')];
++      let photoRequest = 0;
++      photoButtons.forEach(button => button.addEventListener('click',() => {
++        const request = ++photoRequest;
++        if (!mainPhoto || button.getAttribute('aria-pressed') === 'true') return;
++        const photo = new Image();
++        photo.onload = () => {
++          if (request !== photoRequest) return;
++          const width = Number(button.dataset.ssPhotoWidth) > 0 ? Number(button.dataset.ssPhotoWidth) : photo.naturalWidth;
++          const height = Number(button.dataset.ssPhotoHeight) > 0 ? Number(button.dataset.ssPhotoHeight) : photo.naturalHeight;
++          if (width > 0 && height > 0) {
++            mainPhoto.width = width;
++            mainPhoto.height = height;
++          }
++          mainPhoto.removeAttribute('srcset');
++          mainPhoto.src = button.dataset.ssPhoto;
++          photoButtons.forEach(other => { other.classList.toggle('is-selected',other === button); other.setAttribute('aria-pressed',String(other === button)); });
++        };
++        photo.src = button.dataset.ssPhoto;
+       }));
+       const lightbox = page.querySelector('[data-ss-lightbox]');
+-      page.querySelector('[data-ss-open-image]')?.addEventListener('click',() => { if (!mainPhoto) return; lightbox.querySelector('img').src = mainPhoto.currentSrc || mainPhoto.src; lightbox.showModal(); });
++      page.querySelector('[data-ss-open-image]')?.addEventListener('click',() => { if (!mainPhoto) return; lightbox.querySelector('img').src = mainPhoto.src || mainPhoto.currentSrc; lightbox.showModal(); });
+       page.querySelector('[data-ss-close-image]').addEventListener('click',() => lightbox.close());
+       lightbox.addEventListener('click',event => { if (event.target === lightbox) lightbox.close(); });
+       const description = page.querySelector('[data-ss-description]');
+--- a/sections/main-sunshower.liquid
++++ b/sections/main-sunshower.liquid
+@@ -26,7 +26,7 @@
+         </button>
+         {%- if photos.size > 1 -%}
+           <div class="ss-gallery__thumbs" role="group" aria-label="{{ 'ss.photos' | t }}">
+-            {%- for photo in photos -%}<button type="button" class="ss-gallery__thumb{% if forloop.first %} is-selected{% endif %}" data-ss-photo="{{ photo.preview_image | image_url: width: 1400 }}" aria-label="{{ 'ss.photo_number' | t: number: forloop.index }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ photo.preview_image | image_url: width: 180 | image_tag: width: 84, height: 84, loading: 'lazy', alt: '' }}</button>{%- endfor -%}
++            {%- for photo in photos -%}<button type="button" class="ss-gallery__thumb{% if forloop.first %} is-selected{% endif %}" data-ss-photo="{{ photo.preview_image | image_url: width: 1400 }}" data-ss-photo-width="{{ photo.preview_image.width }}" data-ss-photo-height="{{ photo.preview_image.height }}" aria-label="{{ 'ss.photo_number' | t: number: forloop.index }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ photo.preview_image | image_url: width: 180 | image_tag: width: 84, height: 84, loading: 'lazy', alt: '' }}</button>{%- endfor -%}
+           </div>
+         {%- endif -%}
+       </div>

@@ -1,0 +1,238 @@
+{
+  "timestamp_utc": "2026-11-08T15:34:27.113Z",
+  "status": "VERIFIED_THEME_AND_HTML",
+  "scope": "READ_ONLY",
+  "main": {
+    "id": "gid://shopify/OnlineStoreTheme/196328685834",
+    "name": "BadkamerCity - Homepage SEO 8 nov",
+    "role": "MAIN",
+    "updatedAt": "2026-11-08T11:49:21Z"
+  },
+  "live_git_parity": [
+    {
+      "filename": "layout/theme.liquid",
+      "git_path": "shopify/current/layout/theme.liquid",
+      "git_branch": "fix/product-cards-2026-10-14",
+      "git_blob_sha": "f5e6b33ee61e461876cfa308c08ff92a8f62d236",
+      "live_md5": "21a1c2db077ec6ebe5c5cd41161ca187",
+      "byte_exact": true
+    },
+    {
+      "filename": "sections/footer-group.json",
+      "git_path": "shopify/current/sections/footer-group.json",
+      "git_branch": "fix/product-cards-2026-10-14",
+      "git_blob_sha": "e47adf599847391c081b1e369fa413c6684421c8",
+      "live_md5": "f57d42afd9dbbc8faac64d21bda9bfff",
+      "byte_exact": true
+    },
+    {
+      "filename": "sections/footer.liquid",
+      "git_path": "shopify/current/sections/footer.liquid",
+      "git_branch": "fix/product-cards-2026-10-14",
+      "git_blob_sha": "3ad0e8372c0e2b558a1e258b97d49135c3e3632a",
+      "live_md5": "7e413995480f5066044e3e43805b5388",
+      "byte_exact": true
+    },
+    {
+      "filename": "snippets/bc-home-footer.liquid",
+      "git_path": "shopify/current/snippets/bc-home-footer.liquid",
+      "git_branch": "fix/product-cards-2026-10-14",
+      "git_blob_sha": "dd7f653d8d2be745051288198792cdf4a0b2901f",
+      "live_md5": "63943bf38ac942f65e342cc0348cb992",
+      "byte_exact": true
+    }
+  ],
+  "configuration": {
+    "compact_homepage": true,
+    "max_blocks": 18,
+    "total_blocks": 18,
+    "empty_url_blocks": [
+      {
+        "id": "service_2",
+        "type": "service",
+        "label": "Veelgestelde vragen"
+      },
+      {
+        "id": "service_3",
+        "type": "service",
+        "label": "Bezorgen & afhalen"
+      },
+      {
+        "id": "service_5",
+        "type": "service",
+        "label": "Garantie & service"
+      },
+      {
+        "id": "info_1",
+        "type": "info",
+        "label": "Over ons"
+      },
+      {
+        "id": "info_2",
+        "type": "info",
+        "label": "Badkamerinspiratie"
+      },
+      {
+        "id": "info_3",
+        "type": "info",
+        "label": "Badkameradvies"
+      },
+      {
+        "id": "info_5",
+        "type": "info",
+        "label": "Showroom"
+      },
+      {
+        "id": "info_6",
+        "type": "info",
+        "label": "Zakelijk"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "service_1",
+        "type": "service",
+        "label": "Contact",
+        "url": "/pages/contact"
+      },
+      {
+        "id": "service_2",
+        "type": "service",
+        "label": "Veelgestelde vragen",
+        "url": null
+      },
+      {
+        "id": "service_3",
+        "type": "service",
+        "label": "Bezorgen & afhalen",
+        "url": null
+      },
+      {
+        "id": "service_4",
+        "type": "service",
+        "label": "Retour aanmelden",
+        "url": "/pages/retour-aanmelden"
+      },
+      {
+        "id": "service_5",
+        "type": "service",
+        "label": "Garantie & service",
+        "url": null
+      },
+      {
+        "id": "service_6",
+        "type": "service",
+        "label": "Zoeken",
+        "url": "/search"
+      },
+      {
+        "id": "category_1",
+        "type": "category",
+        "label": "Badkamermeubels",
+        "url": "/collections/badkamermeubels"
+      },
+      {
+        "id": "category_2",
+        "type": "category",
+        "label": "Kranen",
+        "url": "/collections/kranen"
+      },
+      {
+        "id": "category_3",
+        "type": "category",
+        "label": "Douches",
+        "url": "/collections/douches"
+      },
+      {
+        "id": "category_4",
+        "type": "category",
+        "label": "Toiletten",
+        "url": "/collections/toiletten"
+      },
+      {
+        "id": "category_5",
+        "type": "category",
+        "label": "Wastafels",
+        "url": "/collections/wastafels"
+      },
+      {
+        "id": "category_6",
+        "type": "category",
+        "label": "Tegels",
+        "url": "/collections/tegels"
+      },
+      {
+        "id": "info_1",
+        "type": "info",
+        "label": "Over ons",
+        "url": null
+      },
+      {
+        "id": "info_2",
+        "type": "info",
+        "label": "Badkamerinspiratie",
+        "url": null
+      },
+      {
+        "id": "info_3",
+        "type": "info",
+        "label": "Badkameradvies",
+        "url": null
+      },
+      {
+        "id": "info_4",
+        "type": "info",
+        "label": "Onze merken",
+        "url": "/collections?view=merken"
+      },
+      {
+        "id": "info_5",
+        "type": "info",
+        "label": "Showroom",
+        "url": null
+      },
+      {
+        "id": "info_6",
+        "type": "info",
+        "label": "Zakelijk",
+        "url": null
+      }
+    ],
+    "contact_phone_empty": true,
+    "contact_address_empty": true,
+    "payment_enable": true,
+    "show_policy": true,
+    "quote_link_enabled": false
+  },
+  "proposal": {
+    "status": "PROPOSED",
+    "renderer": "sections/footer.liquid standard bcf-v3",
+    "compact_homepage": false,
+    "blocks_total": 17,
+    "service_count": 4,
+    "category_count": 10,
+    "info_count": 3,
+    "shipping_link_requires_existing_public_policy": true,
+    "homepage_targets": [
+      "/#HomeAdvice",
+      "/#HomeInspiration"
+    ],
+    "preserve_guards": [
+      "bc-returns-url",
+      "bc-footer-quote"
+    ],
+    "no_live_changes": true
+  },
+  "evidence_files": [
+    "footer-route-matrix.json",
+    "ANALYSIS.md"
+  ],
+  "limits": [
+    "No new runtime/mobile test",
+    "No cookie runtime test",
+    "No proof of active payment gateways",
+    "No Shopify writes",
+    "No public Git writes",
+    "No cart mutation"
+  ]
+}

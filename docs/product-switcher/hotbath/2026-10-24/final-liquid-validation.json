@@ -1,0 +1,33 @@
+{
+  "status": "NO_ERRORS",
+  "changed_files": 10,
+  "latest_scroll_results": [
+    {
+      "success": true,
+      "responses": [
+        {
+          "result": "success",
+          "resultDetail": "bc-product-switcher.liquid passed all checks.",
+          "artifactId": "hotbath-preview-switcher",
+          "artifactRevision": 2
+        }
+      ]
+    },
+    {
+      "success": true,
+      "responses": [
+        {
+          "result": "success",
+          "resultDetail": "bc-product-switcher.js passed all checks.",
+          "artifactId": "hotbath-preview-scroll",
+          "artifactRevision": 1
+        }
+      ]
+    }
+  ],
+  "baseline_warnings": {
+    "count": 3,
+    "section_complexity_before": 208,
+    "section_complexity_after": 214
+  }
+}

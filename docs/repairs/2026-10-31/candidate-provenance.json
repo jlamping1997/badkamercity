@@ -1,0 +1,64 @@
+{
+  "themeId": "gid://shopify/OnlineStoreTheme/195947036938",
+  "checkedAt": "2026-10-31T09:01:17.348Z",
+  "files": [
+    {
+      "path": "assets/cart-notification.js",
+      "expectedMd5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "expectedBytes": 3630,
+      "sha256": "e3fe86840e5cf051ba477315f48afe547d936114f3eb8839a032de83a5c3f4dd",
+      "candidateMd5": "cbae7b0df17ace03b85f2e9a430075bc",
+      "candidateBytes": 4030
+    },
+    {
+      "path": "assets/bc-product-switcher.js",
+      "expectedMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "expectedBytes": 30067,
+      "sha256": "b14748ca2764c6cfbe50c24ee9416faa7379c1a92a67cfb1c2c7d4d7274f2409",
+      "candidateMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "candidateBytes": 30067
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "expectedMd5": "6e6a5705e8b99716634fae55f722883c",
+      "expectedBytes": 23438,
+      "sha256": "464944a150d847b82aebb8b56dd07d014826cc7497e49c61ea95915bf0382bdd",
+      "candidateMd5": "db1b13be1778d5b4e679dc755f7667f8",
+      "candidateBytes": 24266
+    },
+    {
+      "path": "assets/bc-product-inbouw.js",
+      "expectedMd5": "d840d8079cc88fde8c682a98b3e83414",
+      "expectedBytes": 13714,
+      "sha256": "1bd23cbbb7288951542ae4a022d3968a064c530c47306c6fbcc7e574b87b5fd4",
+      "candidateMd5": "d840d8079cc88fde8c682a98b3e83414",
+      "candidateBytes": 13714
+    },
+    {
+      "path": "assets/bc-external-filters.js",
+      "expectedMd5": "45fd7aee85d90ffa5d7386211c17345a",
+      "expectedBytes": 46890,
+      "sha256": "fa47ac4a04c9c71fd83a3dcacf5b02560b1a2e80b0e18456c5f00611f34e8f79",
+      "candidateMd5": "362188e25eae9fe5bb7726ced279f412",
+      "candidateBytes": 47191
+    },
+    {
+      "path": "assets/bc-mobile-listing.js",
+      "expectedMd5": "dde904cf82e99c1ef9517991613c0cca",
+      "expectedBytes": 2422,
+      "sha256": "106b3ac643fc576f5ccec8eecd78e354cc8ee04bb4487ff0bec23ced9ced684a",
+      "candidateMd5": "dde904cf82e99c1ef9517991613c0cca",
+      "candidateBytes": 2422
+    },
+    {
+      "path": "assets/facets.js",
+      "expectedMd5": "5c4c1b43e6a69788c6488f263f5228be",
+      "expectedBytes": 14293,
+      "sha256": "5ebbdc1a4166bd66533946c7601880d2226b1565fed7c54c3c57c4b330f987cf",
+      "candidateMd5": "5c4c1b43e6a69788c6488f263f5228be",
+      "candidateBytes": 14293
+    }
+  ],
+  "method": "Fresh full MAIN manifest; body reused only when exact metadata MD5 matches",
+  "scope": "Explicit repair candidate; baseline expectedMd5 and candidate hashes distinct"
+}

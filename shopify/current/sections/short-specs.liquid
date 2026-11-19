@@ -1,0 +1,40 @@
+{% comment %}
+Losse sectie voor korte specificaties, flexibel te plaatsen via de theme editor.
+{% endcomment %}
+
+<section class="bc-short-specs-wide-section">
+  <div class="bc-short-specs-wide__container">
+    <h2 class="bc-short-specs-wide__title">Specificaties</h2>
+    <table class="bc-short-specs-wide__table">
+      <tbody>
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.basiskleur, label: 'Basiskleur' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.breedte_diameter_hoofddouche, label: 'Breedte/diameter hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_straalsoorten_hoofddouche, label: 'Aantal straalsoorten hoofddouche' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.thermostatisch, label: 'Thermostatisch', uitleg_url: '#' %}
+        {% render 'bc-product-spec-row', metafield: product.metafields.custom.aantal_uitgangen_tegelijk_bedienbaar, label: 'Aantal uitgangen tegelijk bedienbaar' %}
+      </tbody>
+    </table>
+    <a href="#bc-full-specs" class="bc-short-specs-wide__more-btn">Bekijk alle specificaties</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Short Specs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titel",
+      "default": "Specificaties"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Short Specs"
+    }
+  ]
+}
+{% endschema %}

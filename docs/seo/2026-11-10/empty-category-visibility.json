@@ -1,0 +1,285 @@
+{
+  "task": "EMPTY-CATEGORIES-01",
+  "status": "WITHDRAWN_BY_OWNER",
+  "checked_at": "2026-11-10T08:43:40.250Z",
+  "owner_override": true,
+  "prior_membership_proposals_withdrawn": 5,
+  "products_added": 0,
+  "publication_mutation": {
+    "name": "publishableUnpublish",
+    "blocked": true,
+    "category": "destructive",
+    "reason": "Unpublishing is blocked to prevent accidental storefront catalog removal.",
+    "state_changed": false
+  },
+  "empty_collections": 57,
+  "already_unpublished": 1,
+  "main": {
+    "id": "196441932042",
+    "role": "MAIN",
+    "seo_unchanged": 4
+  },
+  "preview": {
+    "id": "196395073802",
+    "name": "Reserve - gelijk aan live 10 nov",
+    "role": "UNPUBLISHED",
+    "files": 1401,
+    "differences_from_main": 0
+  },
+  "source_baseline": {
+    "files_each": 1401,
+    "preexisting_reserve_differences": 4
+  },
+  "theme_files_written": 4,
+  "theme_files_readback_exact": 4,
+  "functional_difference_from_main": "layout/theme.liquid only",
+  "layout_checksum": "da90d8d7760316b49e2741d0bccd4707",
+  "validation": {
+    "official_errors": 0,
+    "preexisting_warning": "scheme_classes",
+    "noindex_render_cases": 119,
+    "metadata_regressions": 22,
+    "real_preview_checks": 71,
+    "real_preview_targets": 56,
+    "real_preview_controls": 15,
+    "all_pass": true
+  },
+  "native_collection_states_unchanged": 56,
+  "menu_links_to_targets": 0,
+  "description_links_to_targets": 0,
+  "public_links_to_targets_in_20_preflight_responses": 0,
+  "live_noindex": false,
+  "sitemap_changed": false,
+  "publication_pending": false,
+  "wiesbaden_concept_written": false,
+  "main_written": false,
+  "next": "Continue Wiesbaden QA on the combined concept; do not add the withdrawn noindex delta.",
+  "owner_index_choice": "Categories may remain indexable; no extra noindex",
+  "historical_noindex_handles": [
+    {
+      "id": "gid://shopify/Collection/569194971402",
+      "handle": "frontpage"
+    },
+    {
+      "id": "gid://shopify/Collection/569436537098",
+      "handle": "outlet"
+    },
+    {
+      "id": "gid://shopify/Collection/569436930314",
+      "handle": "decoratie-vintage"
+    },
+    {
+      "id": "gid://shopify/Collection/569437225226",
+      "handle": "textiel"
+    },
+    {
+      "id": "gid://shopify/Collection/569437323530",
+      "handle": "sanitaire-veiligheid"
+    },
+    {
+      "id": "gid://shopify/Collection/570055753994",
+      "handle": "toilet-accessoires-sets"
+    },
+    {
+      "id": "gid://shopify/Collection/570056474890",
+      "handle": "douchezitjes"
+    },
+    {
+      "id": "gid://shopify/Collection/570057883914",
+      "handle": "badmeubel-sets"
+    },
+    {
+      "id": "gid://shopify/Collection/570058146058",
+      "handle": "badmeubel-met-waskom"
+    },
+    {
+      "id": "gid://shopify/Collection/570058178826",
+      "handle": "badmeubel-zonder-spiegel"
+    },
+    {
+      "id": "gid://shopify/Collection/570058244362",
+      "handle": "badmeubel-met-spiegel"
+    },
+    {
+      "id": "gid://shopify/Collection/570058277130",
+      "handle": "badmeubel-met-spiegelkast"
+    },
+    {
+      "id": "gid://shopify/Collection/570058375434",
+      "handle": "halfhoge-kasten"
+    },
+    {
+      "id": "gid://shopify/Collection/570058735882",
+      "handle": "badkamermeubel-met-wastafel"
+    },
+    {
+      "id": "gid://shopify/Collection/570059784458",
+      "handle": "urinoirspoelers"
+    },
+    {
+      "id": "gid://shopify/Collection/570060472586",
+      "handle": "complete-toiletsets"
+    },
+    {
+      "id": "gid://shopify/Collection/570060538122",
+      "handle": "staande-toiletten"
+    },
+    {
+      "id": "gid://shopify/Collection/570060603658",
+      "handle": "bidetten"
+    },
+    {
+      "id": "gid://shopify/Collection/570060669194",
+      "handle": "urinoirs"
+    },
+    {
+      "id": "gid://shopify/Collection/570061095178",
+      "handle": "duoblok-toilet"
+    },
+    {
+      "id": "gid://shopify/Collection/570061127946",
+      "handle": "toilet-met-losse-stortbak"
+    },
+    {
+      "id": "gid://shopify/Collection/570061357322",
+      "handle": "hangende-reservoirs"
+    },
+    {
+      "id": "gid://shopify/Collection/570061390090",
+      "handle": "accessoires-sets"
+    },
+    {
+      "id": "gid://shopify/Collection/570061750538",
+      "handle": "toiletblokhouder"
+    },
+    {
+      "id": "gid://shopify/Collection/570062012682",
+      "handle": "vrijhangende-wastafels"
+    },
+    {
+      "id": "gid://shopify/Collection/570062274826",
+      "handle": "gootstenen"
+    },
+    {
+      "id": "gid://shopify/Collection/570062471434",
+      "handle": "overloopringen"
+    },
+    {
+      "id": "gid://shopify/Collection/570063847690",
+      "handle": "vierkant"
+    },
+    {
+      "id": "gid://shopify/Collection/570063880458",
+      "handle": "rechthoek"
+    },
+    {
+      "id": "gid://shopify/Collection/570064601354",
+      "handle": "sunshower"
+    },
+    {
+      "id": "gid://shopify/Collection/570066043146",
+      "handle": "inbouwbaden"
+    },
+    {
+      "id": "gid://shopify/Collection/570066436362",
+      "handle": "1-delig"
+    },
+    {
+      "id": "gid://shopify/Collection/570067321098",
+      "handle": "toiletspiegels"
+    },
+    {
+      "id": "gid://shopify/Collection/570067484938",
+      "handle": "spiegelkast-met-verlichting"
+    },
+    {
+      "id": "gid://shopify/Collection/570067517706",
+      "handle": "spiegelkast-zonder-verlichting"
+    },
+    {
+      "id": "gid://shopify/Collection/570067616010",
+      "handle": "spiegelbevestiging"
+    },
+    {
+      "id": "gid://shopify/Collection/570067976458",
+      "handle": "tegelstroken"
+    },
+    {
+      "id": "gid://shopify/Collection/570068074762",
+      "handle": "populair"
+    },
+    {
+      "id": "gid://shopify/Collection/570068336906",
+      "handle": "tegellijm"
+    },
+    {
+      "id": "gid://shopify/Collection/570068369674",
+      "handle": "voorstrijkmiddel"
+    },
+    {
+      "id": "gid://shopify/Collection/570068402442",
+      "handle": "voegmortel"
+    },
+    {
+      "id": "gid://shopify/Collection/570068435210",
+      "handle": "silicone-kit"
+    },
+    {
+      "id": "gid://shopify/Collection/570068467978",
+      "handle": "leveling-systeem"
+    },
+    {
+      "id": "gid://shopify/Collection/570068795658",
+      "handle": "opbouwspots"
+    },
+    {
+      "id": "gid://shopify/Collection/570068861194",
+      "handle": "wandlampen"
+    },
+    {
+      "id": "gid://shopify/Collection/570069156106",
+      "handle": "paneelradiatoren"
+    },
+    {
+      "id": "gid://shopify/Collection/570069188874",
+      "handle": "lage-temperatuur-radiatoren"
+    },
+    {
+      "id": "gid://shopify/Collection/570069287178",
+      "handle": "spiegelverwarming"
+    },
+    {
+      "id": "gid://shopify/Collection/570069352714",
+      "handle": "onderblokken"
+    },
+    {
+      "id": "gid://shopify/Collection/570069385482",
+      "handle": "radiatorkranen"
+    },
+    {
+      "id": "gid://shopify/Collection/570069418250",
+      "handle": "voetventielen"
+    },
+    {
+      "id": "gid://shopify/Collection/570069451018",
+      "handle": "thermostaatknoppen"
+    },
+    {
+      "id": "gid://shopify/Collection/570069483786",
+      "handle": "knelsets"
+    },
+    {
+      "id": "gid://shopify/Collection/570069549322",
+      "handle": "waterontharders"
+    },
+    {
+      "id": "gid://shopify/Collection/570069582090",
+      "handle": "schakelmateriaal"
+    },
+    {
+      "id": "gid://shopify/Collection/571034927370",
+      "handle": "ibs70-cobber-doucheset"
+    }
+  ],
+  "active_noindex_handles": []
+}

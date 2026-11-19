@@ -1,0 +1,186 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    class="bc-buybox__variant-selects"
+    data-section="{{ section.id }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign swatch_count = option.values | map: 'swatch' | compact | size
+        assign picker_type = block.settings.picker_type
+        assign option_handle = option.name | handleize
+
+        if option_handle == 'kleur'
+          assign picker_type = 'dropdown'
+        endif
+
+        if option_handle != 'kleur' and swatch_count > 0 and block.settings.swatch_shape != 'none'
+          if picker_type == 'dropdown'
+            assign picker_type = 'swatch_dropdown'
+          else
+            assign picker_type = 'swatch'
+          endif
+        endif
+      -%}
+      {%- if option_handle == 'configuratie' and picker_type == 'button' -%}
+        {%- liquid
+          assign config_selection_parts = option.selected_value | split: '|'
+          assign selected_mount = config_selection_parts[0] | strip
+          assign selected_glijstang = config_selection_parts[1] | strip | replace_first: 'Glijstang ', '' | strip
+          assign mount_values_raw = ''
+          assign glijstang_values_raw = ''
+
+          for value in option.values
+            assign config_parts = value | split: '|'
+            assign config_mount = config_parts[0] | strip
+            assign config_glijstang = config_parts[1] | strip | replace_first: 'Glijstang ', '' | strip
+
+            if config_mount != blank
+              assign mount_values_raw = mount_values_raw | append: config_mount | append: '||'
+            endif
+
+            if config_glijstang != blank
+              assign glijstang_values_raw = glijstang_values_raw | append: config_glijstang | append: '||'
+            endif
+          endfor
+
+          assign mount_values = mount_values_raw | split: '||' | uniq
+          assign glijstang_values = glijstang_values_raw | split: '||' | uniq
+        -%}
+        <div
+          class="product-form__input bc-buybox__option-group bc-buybox__option-group--config"
+          data-config-picker
+          data-config-option-position="{{ option.position }}"
+          data-selected-mount="{{ selected_mount | escape }}"
+          data-selected-glijstang="{{ selected_glijstang | escape }}"
+        >
+          <div class="bc-buybox__config-group">
+            <p class="form__label bc-buybox__option-label">Type bevestiging hoofddouche</p>
+            <div class="bc-buybox__config-buttons" role="list" aria-label="Type bevestiging hoofddouche">
+              {%- for mount_value in mount_values -%}
+                {%- assign mount_value = mount_value | strip -%}
+                {%- if mount_value != blank -%}
+                  <button
+                    type="button"
+                    class="bc-buybox__config-button"
+                    data-config-part-button
+                    data-config-part-type="mount"
+                    data-config-part-value="{{ mount_value | escape }}"
+                    aria-pressed="{% if mount_value == selected_mount %}true{% else %}false{% endif %}"
+                  >
+                    <span class="bc-buybox__option-check" aria-hidden="true">&#10003;</span>
+                    <span class="bc-buybox__option-text">{{ mount_value }}</span>
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <div class="bc-buybox__config-group">
+            <p class="form__label bc-buybox__option-label">Met glijstang</p>
+            <div class="bc-buybox__config-buttons" role="list" aria-label="Met glijstang">
+              {%- for glijstang_value in glijstang_values -%}
+                {%- assign glijstang_value = glijstang_value | strip -%}
+                {%- if glijstang_value != blank -%}
+                  <button
+                    type="button"
+                    class="bc-buybox__config-button"
+                    data-config-part-button
+                    data-config-part-type="glijstang"
+                    data-config-part-value="{{ glijstang_value | escape }}"
+                    aria-pressed="{% if glijstang_value == selected_glijstang %}true{% else %}false{% endif %}"
+                  >
+                    <span class="bc-buybox__option-check" aria-hidden="true">&#10003;</span>
+                    <span class="bc-buybox__option-text">{{ glijstang_value }}</span>
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <fieldset class="js product-form__input product-form__input--pill bc-buybox__config-source" hidden>
+            <legend class="visually-hidden">{{ option.name }}</legend>
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </fieldset>
+        </div>
+      {%- elsif picker_type == 'swatch' -%}
+        <fieldset class="js product-form__input product-form__input--swatch bc-buybox__option-group{% if option.values.size == 1 %} bc-buybox__option-group--single{% endif %}">
+          <legend class="form__label bc-buybox__option-label">
+            {{ option.name }}:
+            <span data-selected-value>
+              {{- option.selected_value -}}
+            </span>
+          </legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+      {%- elsif picker_type == 'button' -%}
+        <fieldset class="js product-form__input product-form__input--pill bc-buybox__option-group{% if option.values.size == 1 %} bc-buybox__option-group--single{% endif %}">
+          <legend class="form__label bc-buybox__option-label">{{ option.name }}</legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+      {%- else -%}
+        <div class="product-form__input product-form__input--dropdown bc-buybox__option-group{% if option.values.size == 1 %} bc-buybox__option-group--single{% endif %}">
+          <label class="form__label bc-buybox__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+            {{ option.name }}
+          </label>
+          <div class="select bc-buybox__single-select">
+            {%- if picker_type == 'swatch_dropdown' -%}
+              <span
+                data-selected-value
+                class="dropdown-swatch"
+              >
+                {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+              </span>
+            {%- endif -%}
+            <select
+              id="Option-{{ section.id }}-{{ forloop.index0 }}"
+              class="select__select"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {% render 'product-variant-options',
+                product: product,
+                option: option,
+                block: block,
+                picker_type: picker_type
+              %}
+            </select>
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
+  </variant-selects>
+{%- endunless -%}

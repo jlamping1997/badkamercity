@@ -1,0 +1,170 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "bc-assortment",
+      "blocks": {
+        "category_0": {
+          "type": "category",
+          "settings": {
+            "collection": "kranen",
+            "title": "Kranen",
+            "asset": "bch-kranen.webp",
+            "supplement": "",
+            "mobile_title": "Kranen"
+          }
+        },
+        "category_1": {
+          "type": "category",
+          "settings": {
+            "collection": "douches",
+            "title": "Douche",
+            "asset": "bch-douches.webp",
+            "supplement": "douchekranen|douche-accessoires",
+            "mobile_title": "Douche"
+          }
+        },
+        "category_2": {
+          "type": "category",
+          "settings": {
+            "collection": "badkamermeubels",
+            "title": "Badkamermeubels",
+            "asset": "bch-badkamermeubels.webp",
+            "supplement": "badkamerspiegels|wastafel-toebehoren",
+            "mobile_title": "Badmeubels"
+          }
+        },
+        "category_3": {
+          "type": "category",
+          "settings": {
+            "collection": "wastafels",
+            "title": "Wastafels",
+            "asset": "bch-wastafels.webp",
+            "supplement": "wastafelkranen|wastafel-toebehoren",
+            "mobile_title": "Wastafels"
+          }
+        },
+        "category_4": {
+          "type": "category",
+          "settings": {
+            "collection": "toiletten",
+            "title": "Toiletten & fonteinen",
+            "asset": "bch-toiletten.webp",
+            "supplement": "toilet-accessoires",
+            "mobile_title": "Toiletten"
+          }
+        },
+        "category_5": {
+          "type": "category",
+          "settings": {
+            "collection": "baden",
+            "title": "Baden",
+            "asset": "bch-baden.webp",
+            "supplement": "badkranen|badafvoeren-vulsystemen|bad-accessoires",
+            "mobile_title": "Baden"
+          }
+        },
+        "category_6": {
+          "type": "category",
+          "settings": {
+            "collection": "tegels",
+            "title": "Tegels",
+            "asset": "bch-tegels.webp",
+            "supplement": "",
+            "mobile_title": "Tegels"
+          }
+        },
+        "category_7": {
+          "type": "category",
+          "settings": {
+            "collection": "spiegels-en-verlichting",
+            "title": "Spiegels & verlichting",
+            "asset": "bch-spiegels.webp",
+            "supplement": "",
+            "mobile_title": "Spiegels"
+          }
+        },
+        "category_8": {
+          "type": "category",
+          "settings": {
+            "collection": "accessoires",
+            "title": "Accessoires",
+            "asset": "bch-accessoires.webp",
+            "supplement": "",
+            "mobile_title": "Accessoires"
+          }
+        },
+        "category_9": {
+          "type": "category",
+          "settings": {
+            "collection": "verwarming-en-ventilatie",
+            "title": "Verwarming & ventilatie",
+            "asset": "bca-verwarming.webp",
+            "supplement": "radiatortoebehoren",
+            "mobile_title": "Verwarming"
+          }
+        },
+        "sunshower": {
+          "type": "promotion",
+          "settings": {
+            "brand": "Sunshower",
+            "heading": "Warmte onder de douche",
+            "label": "Ontdek Sunshower",
+            "link": "/pages/sunshower",
+            "image": "shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png",
+            "dark": true
+          }
+        },
+        "porcelanosa": {
+          "type": "promotion",
+          "settings": {
+            "brand": "Porcelanosa",
+            "heading": "Tegels met karakter",
+            "label": "Ontdek Porcelanosa",
+            "link": "/collections/vendors?q=Porcelanosa",
+            "asset": "bca-porcelanosa.webp",
+            "dark": false
+          }
+        }
+      },
+      "block_order": [
+        "category_0",
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4",
+        "category_5",
+        "category_6",
+        "category_7",
+        "category_8",
+        "category_9",
+        "sunshower",
+        "porcelanosa"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "heading": "Ontdek ons assortiment",
+        "intro": "Alles voor jouw badkamer, overzichtelijk bij elkaar.",
+        "categories_heading": "Waar ben je naar op zoek?",
+        "promotions_heading": "Uitgelicht voor jouw badkamer",
+        "directory_heading": "Alle categorieën, per afdeling",
+        "seo_heading": "Vind wat past bij jouw badkamer",
+        "seo_text": "<p>Van wastafelkranen en badkamermeubels tot tegels, spiegels en accessoires: bekijk ons assortiment per afdeling. Gebruik de categoriezoeker als je al weet wat je nodig hebt, of ontdek de mogelijkheden via de categorieën hierboven.</p><p>Maak je keuze compleet met bijpassende onderdelen en lees bij ieder product de specificaties. Twijfel je over de combinatie of uitvoering? Neem contact op voor persoonlijk advies.</p>",
+        "advice_heading": "Hulp bij het kiezen?",
+        "advice_text": "We denken graag met je mee.",
+        "advice_link": "/pages/contact"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,32 @@
+[data-bc-verlavio-choices="true"] {
+  container-type: inline-size;
+}
+
+[data-bc-verlavio-choices="true"] .bc-hotbath-swatches {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem .8rem;
+}
+
+[data-bc-verlavio-choices="true"] .bc-hotbath-swatch {
+  gap: .7rem;
+}
+
+[data-bc-verlavio-choices="true"] .bc-hotbath-swatch__chip {
+  width: 56px;
+  height: 56px;
+  flex-basis: 56px;
+}
+
+[data-bc-verlavio-choices="true"] .bc-hotbath-swatch__label {
+  text-wrap: balance;
+}
+
+[data-bc-verlavio-choices="true"] .bc-buybox__config-button {
+  min-height: 44px;
+}
+
+@container (min-width: 420px) {
+  [data-bc-verlavio-choices="true"] .bc-hotbath-swatches {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "tests": 18,
+  "results": [
+    {
+      "test": "price-one-area-price",
+      "result": "PASS"
+    },
+    {
+      "test": "bc-card-product-search-one-area-price",
+      "result": "PASS"
+    },
+    {
+      "test": "hydration-data-verified-area-price",
+      "result": "PASS"
+    },
+    {
+      "test": "price-normal-or-unit-14900",
+      "result": "PASS"
+    },
+    {
+      "test": "price-normal-or-unit-2995",
+      "result": "PASS"
+    },
+    {
+      "test": "bc-card-product-search-normal-or-unit-14900",
+      "result": "PASS"
+    },
+    {
+      "test": "bc-card-product-search-normal-or-unit-2995",
+      "result": "PASS"
+    },
+    {
+      "test": "unit-mode-with-stale-box-area-not-m2",
+      "result": "PASS"
+    },
+    {
+      "test": "area-price-derived-from-real-box-price",
+      "result": "PASS"
+    },
+    {
+      "test": "no-box-compare-at-mixed-with-area-price",
+      "result": "PASS"
+    },
+    {
+      "test": "variant-family-minimum-area-price",
+      "result": "PASS"
+    },
+    {
+      "test": "selected-variant-price",
+      "result": "PASS"
+    },
+    {
+      "test": "pdp-area-only-above-calculator-total-below",
+      "result": "PASS"
+    },
+    {
+      "test": "real-controller-3-half-m2-boxes-equals-75-euros",
+      "result": "PASS"
+    },
+    {
+      "test": "area-rounds-up-to-whole-boxes-and-real-cart-quantity",
+      "result": "PASS"
+    },
+    {
+      "test": "real-cent-rounding-3-times-6907-not-rounded-area-total",
+      "result": "PASS"
+    },
+    {
+      "test": "full-external-filter-26-regressions-with-new-area-contract",
+      "result": "PASS"
+    },
+    {
+      "test": "31-price-format-regressions-with-new-area-contract",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Liquid rendering and actual JS controllers in Happy DOM; no browser geometry or completed order."
+}

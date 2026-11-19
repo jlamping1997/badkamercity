@@ -1,0 +1,42 @@
+{
+  "time": "2026-10-31T00:24:00.247Z",
+  "parity": {
+    "themeId": "gid://shopify/OnlineStoreTheme/195947036938",
+    "name": "BadkamerCity - Categorieen zonder schuiven",
+    "role": "UNPUBLISHED",
+    "fileCount": 1354,
+    "differentFiles": 0,
+    "verifiedAt": "2026-10-31T00:17:27.385Z",
+    "method": "Reused previous unpublished release; synchronized only header from current MAIN"
+  },
+  "themes": [
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195948839178",
+      "name": "BadkamerCity - Retourknop in header",
+      "role": "MAIN",
+      "count": 1354,
+      "processing": false,
+      "changed": [],
+      "missing": []
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195947036938",
+      "name": "BadkamerCity - Categorieen zonder schuiven",
+      "role": "UNPUBLISHED",
+      "count": 1354,
+      "processing": false,
+      "changed": [
+        {
+          "filename": "sections/header.liquid",
+          "checksumMd5": "7870254f401e4fb747bcd9beb6140c89"
+        }
+      ],
+      "missing": []
+    }
+  ],
+  "headerExact": true,
+  "qaExact": true,
+  "qaMd5": "24ae4cff55afe7f2453e4e9b6a0c2479",
+  "liveThemeWrites": 0,
+  "published": false
+}

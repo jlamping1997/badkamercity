@@ -1,0 +1,72 @@
+{
+  "status": "PASS_DATA_CHECKS_GENERATION_CHANGED",
+  "checked_utc": "2026-11-09T09:04:30.787859+00:00",
+  "generation_before": "bc_sync_20261109t085106_9d0429",
+  "generation_after": "bc_sync_20261109t090044_ed9be2",
+  "stable_single_generation": false,
+  "generation_change_note": "The final health equality assertion failed after all data membership assertions passed; the index refreshed during the observation window. No claim that all requests read one atomic generation, and no claim about the cause of refresh.",
+  "profiles": 227,
+  "tiles": 3496,
+  "tile_color_coverage_pct": 95.91,
+  "tile_products_with_base_color": 3353,
+  "tile_products_without_base_color": 143,
+  "other_colors": 0,
+  "color_groups": 17,
+  "newly_changed_products_verified": 573,
+  "new_scoped_color_products": 155,
+  "new_source_empty_recovered_products": 418,
+  "all_tile_ids_exactly_match_expected": true,
+  "all_17_tile_color_memberships_exactly_match_expected": true,
+  "color_counts": {
+    "Beige": 643,
+    "Blauw": 425,
+    "Brons": 3,
+    "Bruin": 222,
+    "Geel": 87,
+    "Goud": 27,
+    "Grijs": 561,
+    "Groen": 442,
+    "Koper": 7,
+    "Multicolor": 260,
+    "Oranje": 138,
+    "Paars": 21,
+    "Rood": 96,
+    "Roze": 79,
+    "Wit": 449,
+    "Zilver": 28,
+    "Zwart": 163
+  },
+  "exact_source_bone_products_beige": 65,
+  "exact_source_acero_products_gray": 27,
+  "format_counts": {
+    "60x60": 159,
+    "60x120": 58,
+    "60x150": 92,
+    "formats_or": 309
+  },
+  "format_values": 132,
+  "cottoceramix": {
+    "products": 3159,
+    "color_coverage_pct": 95.47,
+    "profile_group": "general",
+    "format_filter_present": false
+  },
+  "end_generation_small_checks": {
+    "/api/v1/profile/tegels": {
+      "products": 3496,
+      "color_coverage_pct": 95.91,
+      "format_values": 132
+    },
+    "/api/v1/search": {
+      "found": 0
+    }
+  },
+  "test_procedure_sha256": "2c47dd9989c2868adceeb71edd0aab86458626d9c588ea9d34a908891726f0f5",
+  "limitations": [
+    "Data requests span a generation change; not an atomic single-generation proof",
+    "Seven snapshot flags and installed file hashes come from owner server log, not independently public API",
+    "No new browser/mobile/checkout/reboot test",
+    "No direct systemd timer read; refresh cause not independently identified",
+    "Detailed private IDs were not serialized because final generation-equality assertion stopped original verifier; all data assertions before that point completed successfully"
+  ]
+}

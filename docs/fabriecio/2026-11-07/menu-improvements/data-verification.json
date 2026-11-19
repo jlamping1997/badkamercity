@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-07T22:23:37.218Z",
+  "freshBeforeFetchedAt": "2026-11-07T22:15:14.429Z",
+  "actualReadbackCompletedAt": "2026-11-07T22:21:15.700Z",
+  "actualReadbackOwners": 481,
+  "expectedPlanOwners": 481,
+  "everyActualAfterValueMatchesPlan": true,
+  "everyFreshBeforeValueMatchesPlan": true,
+  "exactStoredValueStringMatches": 481,
+  "queriedNonMenuFieldsUnchangedForAll481": true,
+  "queriedNonMenuFields": [
+    "featuredMedia",
+    "handle",
+    "id",
+    "onlineStoreUrl",
+    "productType",
+    "status",
+    "title",
+    "vendor"
+  ],
+  "metafieldIdsAndTypesPreserved": true,
+  "allActualChangesMatchAllowedPaths": true,
+  "actualChanges": {
+    "photoReferences": 494,
+    "ownerSortOrder": 406,
+    "removedMenuValues": 30,
+    "numericMenusReordered": 15
+  },
+  "removedValuesByProvenDeletedSku": {
+    "BR-7008D-90": 2,
+    "DDC_700": 6,
+    "DM-120B-OK": 7,
+    "DM-80W-OK": 7,
+    "SF-004-9070": 5,
+    "SPL-80": 3
+  },
+  "realLiveJsReexecutedOnActualStoredValues": true,
+  "sourceJsSha256": "c61ac1a631cf61e97e14dfef55d35e2b0dbb4798e3597f964684b09362955802",
+  "validTransitionsBefore": 4096,
+  "validTransitionsAfter": 4096,
+  "validTransitionsExactlyUnchanged": true,
+  "transitionsSha256": "1a82b15cc8fe9e4eb99097215796b96b6b944abaffdbce61b0309b767f390b33",
+  "currentStatesExactlyUnchanged": true,
+  "before": {
+    "ownersWithMenus": 665,
+    "ownersWithoutMenus": 186,
+    "productRecords": 4761,
+    "optionValues": 5425,
+    "currentSelections": 1299,
+    "unavailableValues": 30,
+    "wrongCurrentColorWinners": 406,
+    "colorImageMismatches": 372,
+    "missingOrStalePhotoReferences": 494
+  },
+  "actualAfterMerged": {
+    "ownersWithMenus": 665,
+    "ownersWithoutMenus": 186,
+    "productRecords": 4761,
+    "optionValues": 5395,
+    "currentSelections": 1299,
+    "unavailableValues": 0,
+    "wrongCurrentColorWinners": 0,
+    "colorImageMismatches": 0,
+    "missingOrStalePhotoReferences": 0
+  },
+  "evidenceBoundaries": {
+    "changedOwners": "All 481 owners use actual Shopify post-write readback choices.value and queried product fields.",
+    "unchangedOwners": "The other 370 owners retain their fresh prewrite values in the merged graph; they were not targets of the update and were not separately reread after writes.",
+    "variantIdsAndSkus": "Retained from the earlier live-catalog snapshots to keep the same transition fingerprint; fresh-before/readback queries did not request variant data.",
+    "mutations": "This verifier made no external reads or writes."
+  },
+  "inputs": [
+    {
+      "file": "forward-plan.json",
+      "sha256": "be286b23144128ebc3cf93d96ab50aaf015d656c40371a8aac80d0992c0a5074"
+    },
+    {
+      "file": "rollback-plan.json",
+      "sha256": "1ef183f134365fa7d55b6bb19428f3a23603a8dba17892b5f2946234aabe61ed"
+    },
+    {
+      "file": "fresh-before-cas.json",
+      "sha256": "3954764a373d9dce40f22002c36788f872454f0371a2f404ba453e8218bb93f7"
+    },
+    {
+      "file": "applied-readback.json",
+      "sha256": "ac04b5ab49fe38675d6f6993fe61816216ebf4abdf9641eb75578057cc3afe9f"
+    }
+  ]
+}

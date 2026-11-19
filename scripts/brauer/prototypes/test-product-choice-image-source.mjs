@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import { firstLinkedProductImage, replaceLinkedProductImages } from './product-choice-image-source.mjs';
+
+const first={id:'image-a',src:'https://example.invalid/a.jpg',media_type:'image'};
+const second={id:'image-b',src:'https://example.invalid/b.jpg',media_type:'image'};
+const product={id:'product-a',sku:'article-a',images:[first]};
+const other={id:'product-b',sku:'article-b',images:[second]};
+const products=new Map([[product.id,product],[other.id,other]]);
+const choice={linked_product_id:product.id,sku:product.sku};
+assert.equal(firstLinkedProductImage(choice,products),first);
+assert(replaceLinkedProductImages(products,product.id,product.sku,[first,second]));
+assert.equal(firstLinkedProductImage(choice,products).id,first.id);
+assert(replaceLinkedProductImages(products,product.id,product.sku,[second,first]));
+assert.equal(firstLinkedProductImage(choice,products).id,second.id);
+assert.equal(firstLinkedProductImage({linked_product_id:product.id,sku:other.sku},products),null);
+assert.equal(firstLinkedProductImage({linked_product_id:'missing',sku:product.sku},products),null);
+assert.equal(replaceLinkedProductImages(products,product.id,other.sku,[first]),false);
+assert.equal(replaceLinkedProductImages(products,'missing',product.sku,[first]),false);
+assert.equal(replaceLinkedProductImages(products,product.id,product.sku,[{media_type:'video',src:'https://example.invalid/video.mp4'}]),false);
+assert(replaceLinkedProductImages(products,product.id,product.sku,[]));
+assert.equal(firstLinkedProductImage(choice,products),null);
+assert.equal(firstLinkedProductImage({linked_product_id:other.id,sku:other.sku},products),second);
+assert(replaceLinkedProductImages(products,product.id,product.sku,[{id:'empty-first',src:''},second]));
+assert.equal(firstLinkedProductImage(choice,products),null);
+assert(replaceLinkedProductImages(products,product.id,product.sku,[first]));
+assert.equal(firstLinkedProductImage(choice,products).id,first.id);
+console.log('PASS: product identity, append, reorder, remove, empty first image, video rejection and isolation.');

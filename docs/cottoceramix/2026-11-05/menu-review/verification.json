@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-05",
+  "status": "REVIEW_COMPLETE_NO_STORE_WRITES",
+  "themeId": "196238639370",
+  "browser": "Chrome desktop",
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "liveSeries": [
+    "Funky",
+    "Re-Bel",
+    "Croccante",
+    "Zelij",
+    "Magnetism",
+    "Lula",
+    "Marea Alta Mat"
+  ],
+  "liveObservations": 26,
+  "actualBrowserCalculationChecks": {
+    "boxTotals": "26/26 PASS",
+    "boxCeilings": "26/26 PASS",
+    "desktopHorizontalOverflow": "0/26"
+  },
+  "staticCoreAudit": {
+    "publishedNewProducts": 824,
+    "groups": 126,
+    "realCoreSwitches": 11314
+  },
+  "scopeLimits": [
+    "126-family check is offline against source-matched selection core and previous Admin readback, not browser interaction with every product.",
+    "No physical mobile device, new cart addition, shipping, checkout, payment or feed sync tested this turn.",
+    "Some immediate navigation snapshots preceded async main photo load; settled snapshots confirmed destination photos for all seven series."
+  ],
+  "observations": [
+    {
+      "label": "Funky ingeklapt geselecteerde Seaport",
+      "sku": "CF3003",
+      "requestedOrSuppliedM2": "1,68",
+      "wastePercent": "0",
+      "boxes": 2,
+      "boxM2": "0,84",
+      "boxPrice": "88.16",
+      "total": "176.32"
+    },
+    {
+      "label": "Funky Garden na kleurwissel en 4,1m2 plus 10%",
+      "sku": "CF3006",
+      "requestedOrSuppliedM2": "4,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,84",
+      "boxPrice": "88.16",
+      "total": "528.96"
+    },
+    {
+      "label": "Funky Garden volledig geladen",
+      "sku": "CF3006",
+      "requestedOrSuppliedM2": "4,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,84",
+      "boxPrice": "88.16",
+      "total": "528.96"
+    },
+    {
+      "label": "Re-Bel Blanc 60 m2modus",
+      "sku": "RR6001",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "1,44",
+      "boxPrice": "99.29",
+      "total": "595.74"
+    },
+    {
+      "label": "Re-Bel Blanc naar 100 behoudt m2",
+      "sku": "RR1001",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 5,
+      "boxM2": "2",
+      "boxPrice": "159.90",
+      "total": "799.50"
+    },
+    {
+      "label": "Re-Bel Petrol behoudt 100 en 7,3m2",
+      "sku": "RR1009",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 5,
+      "boxM2": "2",
+      "boxPrice": "159.90",
+      "total": "799.50"
+    },
+    {
+      "label": "Re-Bel 3 handmatige dozen naar 60",
+      "sku": "RR6009",
+      "requestedOrSuppliedM2": "4,32",
+      "wastePercent": "0",
+      "boxes": 3,
+      "boxM2": "1,44",
+      "boxPrice": "99.29",
+      "total": "297.87"
+    },
+    {
+      "label": "Re-Bel browser terug naar 100 met 3 dozen",
+      "sku": "RR1009",
+      "requestedOrSuppliedM2": "6",
+      "wastePercent": "0",
+      "boxes": 3,
+      "boxM2": "2",
+      "boxPrice": "159.90",
+      "total": "479.70"
+    },
+    {
+      "label": "Croccante Menta 60 voor formaatwissel",
+      "sku": "BC6006",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "1,44",
+      "boxPrice": "84.89",
+      "total": "509.34"
+    },
+    {
+      "label": "Croccante Menta 80 na formaatwissel",
+      "sku": "BC8006",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 7,
+      "boxM2": "1,28",
+      "boxPrice": "95.94",
+      "total": "671.58"
+    },
+    {
+      "label": "Croccante 80 volledig geladen",
+      "sku": "BC8006",
+      "requestedOrSuppliedM2": "7,3",
+      "wastePercent": "10",
+      "boxes": 7,
+      "boxM2": "1,28",
+      "boxPrice": "95.94",
+      "total": "671.58"
+    },
+    {
+      "label": "Zelij 24 kleuren 10x10",
+      "sku": "MZ0710",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 3,
+      "boxM2": "0,81",
+      "boxPrice": "72.05",
+      "total": "216.15"
+    },
+    {
+      "label": "Zelij Amarillo naar 5x20",
+      "sku": "MZ0720",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,46",
+      "boxPrice": "50.58",
+      "total": "303.48"
+    },
+    {
+      "label": "Zelij 5x20 volledig geladen",
+      "sku": "MZ0720",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,46",
+      "boxPrice": "50.58",
+      "total": "303.48"
+    },
+    {
+      "label": "Zelij laatste kleur Via Lactea ingeklapt",
+      "sku": "MZ2420",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,46",
+      "boxPrice": "57.48",
+      "total": "344.88"
+    },
+    {
+      "label": "Magnetism rechthoek Blue",
+      "sku": "AM2505",
+      "requestedOrSuppliedM2": "0,469",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,469",
+      "boxPrice": "44.53",
+      "total": "44.53"
+    },
+    {
+      "label": "Magnetism Hexa Blue",
+      "sku": "AM1605",
+      "requestedOrSuppliedM2": "0,418",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,418",
+      "boxPrice": "43.87",
+      "total": "43.87"
+    },
+    {
+      "label": "Magnetism Hexa volledig geladen",
+      "sku": "AM1605",
+      "requestedOrSuppliedM2": "0,418",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,418",
+      "boxPrice": "43.87",
+      "total": "43.87"
+    },
+    {
+      "label": "Lula Aqua 5x25",
+      "sku": "HL0506",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 4,
+      "boxM2": "0,6",
+      "boxPrice": "35.37",
+      "total": "141.48"
+    },
+    {
+      "label": "Lula Aqua 5x50",
+      "sku": "HL5006",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 4,
+      "boxM2": "0,6",
+      "boxPrice": "41.37",
+      "total": "165.48"
+    },
+    {
+      "label": "Marea Alta Mat Bianco eigen familie",
+      "sku": "MAR107M",
+      "requestedOrSuppliedM2": "0,45",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,45",
+      "boxPrice": "51.73",
+      "total": "51.73"
+    },
+    {
+      "label": "Marea Alta blijft Alta Mat bij Blu",
+      "sku": "MAR110M",
+      "requestedOrSuppliedM2": "0,45",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,45",
+      "boxPrice": "51.73",
+      "total": "51.73"
+    },
+    {
+      "label": "Marea Alta Blu volledig geladen",
+      "sku": "MAR110M",
+      "requestedOrSuppliedM2": "0,45",
+      "wastePercent": "0",
+      "boxes": 1,
+      "boxM2": "0,45",
+      "boxPrice": "51.73",
+      "total": "51.73"
+    },
+    {
+      "label": "Funky duurdere Ametyst behoudt 4,1m2 en 10%",
+      "sku": "CF3009",
+      "requestedOrSuppliedM2": "4,1",
+      "wastePercent": "10",
+      "boxes": 6,
+      "boxM2": "0,84",
+      "boxPrice": "92.36",
+      "total": "554.16"
+    },
+    {
+      "label": "Lula 5x50 geladen controle",
+      "sku": "HL5006",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 4,
+      "boxM2": "0,6",
+      "boxPrice": "41.37",
+      "total": "165.48"
+    },
+    {
+      "label": "Lula 5x50 foto na laden",
+      "sku": "HL5006",
+      "requestedOrSuppliedM2": "2,1",
+      "wastePercent": "10",
+      "boxes": 4,
+      "boxM2": "0,6",
+      "boxPrice": "41.37",
+      "total": "165.48"
+    }
+  ]
+}

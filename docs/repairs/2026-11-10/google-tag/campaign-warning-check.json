@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-10",
+  "ownerScreenshot": {
+    "campaignStatus": "Eligible (Misconfigured)",
+    "diagnostic": "Your website is missing a Google tag",
+    "bidStrategy": "Maximise conversions",
+    "rawFilesPublished": false
+  },
+  "officialGoogleExplanation": {
+    "url": "https://support.google.com/google-ads/answer/1722131?hl=en",
+    "mayReferToNoBiddableConversionsInPastDays": 28,
+    "provesTagAbsent": false,
+    "causeVerified": false
+  },
+  "privateAggregateOrderHistoryChecked": true,
+  "consentProbe": {
+    "source": "Shopify native banner preview",
+    "action": "Accept",
+    "storewideSettingsChanged": false,
+    "productReloaded": true,
+    "helperState": "Loaded",
+    "receivedEvents": 0,
+    "fullConsentBehaviorVerified": false
+  },
+  "tagAssistant": {
+    "connection": "TIMEOUT",
+    "tagAbsenceVerified": false
+  },
+  "measurement": {
+    "purchaseTested": false,
+    "googleReceiptVerified": false
+  },
+  "next": {
+    "action": "Read Google Shopping App Purchase in Goals > Conversions > Summary",
+    "neededFields": [
+      "Tracking status",
+      "Primary or Secondary",
+      "Campaign conversion goal"
+    ],
+    "adsAccess": "AI_BROWSER_EXPLICITLY_DENIED"
+  },
+  "storeMutations": 0,
+  "campaignMutations": 0,
+  "published": false,
+  "screenshot": {
+    "path": "pixel-helper.jpg",
+    "sha256": "5f131c41634a976edb871d5e7e3e61bbf47b49753ae578c82aee56cccfa0da7b",
+    "unchangedImageBytes": true
+  }
+}

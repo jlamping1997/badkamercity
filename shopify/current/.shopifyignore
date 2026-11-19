@@ -1,0 +1,6 @@
+# Protected until the settings_data API checksum exception is independently closed.
+config/settings_data.json
+# Historical debug copies are not deployment source.
+assets/*.backup*
+assets/*backup-qa*
+assets/*backup-before-production*

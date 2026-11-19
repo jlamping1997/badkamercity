@@ -1,0 +1,9 @@
+{% doc %}
+Renders the quote action in the desktop header utilities.
+@param {string} url - Quote page or unpublished preview destination.
+@param {string} variant - desktop.
+{% enddoc %}
+<a class="bc-header-quote bc-header-quote--{{ variant | escape }}" href="{{ url | escape }}">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M12 18v-7m-3 3 3-3 3 3"/></svg>
+  <span class="bc-header-quote__copy"><strong>{{ 'bc_quote.header_button' | t }}</strong><small>{{ 'bc_quote.eyebrow' | t }}</small></span>
+</a>

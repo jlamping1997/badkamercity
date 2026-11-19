@@ -1,0 +1,202 @@
+diff --git a/assets/bc-typography.css b/assets/bc-typography.css
+new file mode 100644
+index 0000000..02d25e5
+--- /dev/null
++++ b/assets/bc-typography.css
+@@ -0,0 +1,153 @@
++body {
++  font-size: 1.6rem;
++  line-height: 1.6;
++  letter-spacing: normal;
++}
++
++body :is(button, input, select, textarea) {
++  font-family: var(--font-body-family);
++}
++
++body :is(.field__input, .select__select, .customer input, .customer select, .customer textarea) {
++  font-size: 1.6rem;
++  letter-spacing: normal;
++}
++
++body :is(.rte, .text-body) {
++  line-height: 1.65;
++}
++
++body .rte {
++  font-size: 1.6rem;
++}
++
++body .bc-header__utility-label {
++  max-width: 7.8rem;
++  font-size: 1.2rem;
++  line-height: 1.3;
++}
++
++body #Search-In-Header {
++  font-size: 1.6rem;
++  letter-spacing: normal;
++}
++
++body .bcssh-heading,
++body .bcsse-experience :is(h1, h2, h3) {
++  letter-spacing: -0.015em;
++}
++
++body .bcssh-link,
++body .bcsse-experience :is(.bcsse-model .bcsse-button, .bcsse-accessory .bcsse-button) {
++  font-size: 1.4rem;
++  line-height: 1.45;
++}
++
++body .bcsse-experience :is(.bcsse-model .bcsse-button, .bcsse-accessory .bcsse-button) {
++  white-space: normal;
++}
++
++body .bcsse-experience .bcsse-faq summary {
++  font-size: 1.6rem;
++  font-weight: 600;
++  line-height: 1.5;
++}
++
++body .bcsse-experience .bcsse-faq__answer {
++  font-size: 1.6rem;
++  line-height: 1.65;
++}
++
++body .ss-page :is(.ss-description__body, .ss-section-intro p) {
++  font-size: 1.6rem;
++  line-height: 1.65;
++}
++
++body .ss-page :is(.ss-quick-specs > div, .ss-spec-table > div, .ss-documents a, .ss-choice__explanation) {
++  font-size: 1.4rem;
++  line-height: 1.6;
++}
++
++body .ss-configurator :is(.ss-config-current, .ss-choice__help, .ss-config-option-copy small, .ss-config-tax, .ss-config-delivery, .ss-config-delivery strong, .ss-config-delivery a, .ss-complete-link) {
++  font-size: 1.3rem;
++  line-height: 1.5;
++}
++
++body .ss-configurator :is(.ss-config-option-copy strong, .ss-config-mount-label, .ss-config-legend) {
++  font-size: 1.5rem;
++  line-height: 1.45;
++}
++
++body .ss-configurator .ss-config-colour-name {
++  font-size: 1.2rem;
++  line-height: 1.4;
++}
++
++body .ss-configurator .ss-config-purchase > .ss-cart-button {
++  font-size: 1.5rem;
++  white-space: normal;
++}
++
++#MainContent product-info :is(.bc-buybox__delivery-title, .bc-buybox__delivery-copy) {
++  font-size: 1.4rem;
++  line-height: 1.5;
++}
++
++body .bc-card-tax,
++body .bcf-v3 :is(.bcf-copyright, .bcf-legal) {
++  font-size: 1.3rem;
++  line-height: 1.5;
++}
++
++@media (max-width: 749px) {
++  body .bcssh-intro {
++    font-size: 1.6rem;
++    line-height: 1.5;
++  }
++
++  body .bcsse-experience :is(.bcsse-model__description, .bcsse-accessory__description, .bcsse-installation__intro, .bcsse-installation__options, .bcsse-models__note) {
++    font-size: 1.4rem;
++    line-height: 1.6;
++  }
++
++  body .bcsse-experience :is(.bcsse-light-card__copy > span, .bcsse-light-detail__note, .bcsse-accessory-swipe-hint) {
++    font-size: 1.3rem;
++    line-height: 1.45;
++  }
++
++  body .bcsse-experience :is(.bcsse-light-detail__copy, .bcsse-light-model-link, .bcsse-model-disclosure__summary) {
++    font-size: 1.5rem;
++    line-height: 1.5;
++  }
++
++  body .bcsse-experience .bcsse-closing .bcsse-button {
++    font-size: 1.4rem;
++    white-space: normal;
++  }
++
++  body :is(.bc-collection, .template-search) #product-grid :is(.bc-filter-card__title, .bc-search-card__title, .card__heading) {
++    font-size: 1.5rem;
++    line-height: 1.5;
++  }
++
++  body :is(.bc-collection, .template-search) #product-grid :is(.bc-card-vendor, .bc-search-card__vendor, .bc-filter-card__vendor) {
++    font-size: 1.2rem;
++    line-height: 1.4;
++  }
++}
++
++body .ss-configurator .ss-config-heading p {
++  font-size: 1.4rem;
++  line-height: 1.6;
++}
++
++#MainContent product-info .bc-product-specs__uitleg-link {
++  font-size: 1.4rem;
++  line-height: 1.5;
++}
++
++@media (min-width: 1200px) {
++  body .bcsse-experience .bcsse-model .bcsse-button {
++    font-size: 1.5rem;
++  }
++}
+diff --git a/config/settings_data.json b/config/settings_data.json
+index 22acbc0..81325be 100644
+--- a/config/settings_data.json
++++ b/config/settings_data.json
+@@ -11,9 +11,9 @@
+   "current": {
+     "logo": "shopify://shop_images/Badkamer_city_LOGO-no_background.png",
+     "logo_width": 180,
+-    "type_header_font": "assistant_n4",
++    "type_header_font": "system_ui_n7",
+     "heading_scale": 100,
+-    "type_body_font": "assistant_n4",
++    "type_body_font": "system_ui_n4",
+     "body_scale": 100,
+     "page_width": 1200,
+     "spacing_sections": 0,
+diff --git a/layout/theme.liquid b/layout/theme.liquid
+index 53ff48b..13ec7e0 100644
+--- a/layout/theme.liquid
++++ b/layout/theme.liquid
+@@ -100,12 +100,12 @@
+       }
+ 
+       :root {
+-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
++        --font-body-family: {% if settings.type_body_font.family contains 'system_ui' %}system-ui{% else %}{{ settings.type_body_font.family }}{% endif %}, {{ settings.type_body_font.fallback_families }};
+         --font-body-style: {{ settings.type_body_font.style }};
+         --font-body-weight: {{ settings.type_body_font.weight }};
+         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+ 
+-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
++        --font-heading-family: {% if settings.type_header_font.family contains 'system_ui' %}system-ui{% else %}{{ settings.type_header_font.family }}{% endif %}, {{ settings.type_header_font.fallback_families }};
+         --font-heading-style: {{ settings.type_header_font.style }};
+         --font-heading-weight: {{ settings.type_header_font.weight }};
+ 
+@@ -257,6 +257,7 @@
+ 
+     {{ 'base.css' | asset_url | stylesheet_tag }}
+     {{ 'bc-product-cards.css' | asset_url | stylesheet_tag }}
++    {{ 'bc-typography.css' | asset_url | stylesheet_tag }}
+     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+ 
+     {%- if settings.cart_type == 'drawer' -%}

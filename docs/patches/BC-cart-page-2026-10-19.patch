@@ -1,0 +1,968 @@
+diff --git a/assets/bc-cart-page.css b/assets/bc-cart-page.css
+new file mode 100644
+index 0000000..32cea9e
+--- /dev/null
++++ b/assets/bc-cart-page.css
+@@ -0,0 +1,783 @@
++#MainContent:has(.bc-cart-items) {
++  --bc-cart-ink: #103246;
++  --bc-cart-muted: #526a78;
++  --bc-cart-cyan: #32cce1;
++  --bc-cart-line: #dce6eb;
++  display: grid;
++  grid-template-columns: minmax(0, 1fr);
++  align-content: start;
++  gap: 2rem;
++  padding: 3rem max(1.6rem, calc((100vw - 124rem) / 2)) 5rem;
++  background: linear-gradient(150deg, #edf9fc 0, #f5f8fa 36rem, #f5f8fa 100%);
++  color: var(--bc-cart-ink);
++}
++
++#MainContent:has(.bc-cart-items) > .shopify-section {
++  min-width: 0;
++}
++
++#MainContent:has(.bc-cart-items) > .shopify-section:not(:has(.bc-cart-items, .bc-cart-summary)) {
++  grid-column: 1 / -1;
++}
++
++.bc-cart-items,
++.bc-cart-summary {
++  color: var(--bc-cart-ink);
++  background: transparent;
++  font-size: 1.5rem;
++  letter-spacing: 0;
++}
++
++cart-items.bc-cart-items {
++  padding: 0;
++}
++
++.bc-cart-items > .page-width,
++.bc-cart-summary > .page-width {
++  max-width: none;
++  padding: 0;
++}
++
++.bc-cart-items .bc-cart-heading {
++  display: flex;
++  flex-wrap: wrap;
++  align-items: flex-end;
++  justify-content: space-between;
++  gap: 1.6rem;
++  margin: 0 0 2.6rem;
++}
++
++.bc-cart-eyebrow {
++  margin: 0 0 0.8rem;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  font-weight: 650;
++  line-height: 1.4;
++  letter-spacing: 0.07em;
++  text-transform: uppercase;
++}
++
++.bc-cart-items .bc-cart-heading .title {
++  margin: 0;
++  color: var(--bc-cart-ink);
++  font-size: clamp(3rem, 3vw, 4rem);
++  font-weight: 750;
++  line-height: 1.12;
++  letter-spacing: -0.035em;
++}
++
++.bc-cart-intro {
++  max-width: 42rem;
++  margin: 1rem 0 0;
++  color: var(--bc-cart-muted);
++  font-size: 1.5rem;
++  line-height: 1.5;
++}
++
++.bc-cart-back {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.7rem;
++  min-height: 4.4rem;
++  color: var(--bc-cart-ink);
++  font-size: 1.4rem;
++  font-weight: 600;
++  text-decoration-thickness: 0.1rem;
++  text-underline-offset: 0.35rem;
++}
++
++.bc-cart-back > span {
++  font-size: 1.8rem;
++}
++
++.bc-cart-items .cart__items {
++  padding: 0;
++  border: 0;
++}
++
++.bc-cart-list-heading {
++  display: flex;
++  align-items: baseline;
++  justify-content: space-between;
++  gap: 1rem;
++  margin-bottom: 1.2rem;
++}
++
++.bc-cart-list-heading h2 {
++  margin: 0;
++  color: var(--bc-cart-ink);
++  font-size: 1.7rem;
++  font-weight: 700;
++  line-height: 1.4;
++  letter-spacing: -0.01em;
++}
++
++.bc-cart-list-heading > span {
++  flex-shrink: 0;
++  color: var(--bc-cart-muted);
++  font-size: 1.3rem;
++}
++
++.bc-cart-items .cart-items {
++  display: block;
++  width: 100%;
++  border: 0;
++  border-spacing: 0;
++  box-shadow: none;
++}
++
++.bc-cart-items .cart-items thead {
++  position: absolute;
++  width: 1px;
++  height: 1px;
++  margin: -1px;
++  padding: 0;
++  overflow: hidden;
++  clip: rect(0, 0, 0, 0);
++  white-space: nowrap;
++  border: 0;
++}
++
++.bc-cart-items .cart-items tbody {
++  display: grid;
++  width: 100%;
++  gap: 1.2rem;
++}
++
++.bc-cart-items .cart-item {
++  display: grid;
++  grid-template-columns: 8rem minmax(0, 1fr);
++  grid-template-rows: auto auto;
++  gap: 1.8rem 1.4rem;
++  margin: 0;
++  padding: 1.6rem;
++  border: 1px solid var(--bc-cart-line);
++  border-radius: 1.6rem;
++  background: #fff;
++}
++
++.bc-cart-items .cart-item > td {
++  width: auto;
++  min-width: 0;
++  margin: 0;
++  padding: 0;
++}
++
++.bc-cart-items .cart-item__media {
++  grid-column: 1;
++  grid-row: 1;
++  align-self: start;
++  overflow: hidden;
++  border-radius: 1rem;
++  background: #f5f7f8;
++}
++
++.bc-cart-items .cart-item__image-container {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  width: 100%;
++  min-width: 0;
++  height: 9.2rem;
++  border: 0;
++  border-radius: 0;
++  background: #f5f7f8;
++}
++
++.bc-cart-items .cart-item__image {
++  display: block;
++  width: 100%;
++  height: 100%;
++  max-width: 100%;
++  object-fit: contain;
++}
++
++.bc-cart-items .cart-item__nested-line .cart-item__image {
++  width: 65%;
++}
++
++.bc-cart-items .cart-item__details {
++  grid-column: 2;
++  grid-row: 1;
++  min-width: 0;
++}
++
++.bc-cart-items .cart-item__details > * {
++  max-width: none;
++}
++
++.bc-cart-items .cart-item__name {
++  color: var(--bc-cart-ink);
++  font-size: 1.6rem;
++  font-weight: 700;
++  line-height: 1.35;
++  letter-spacing: -0.015em;
++  overflow-wrap: anywhere;
++}
++
++.bc-cart-items .product-option,
++.bc-cart-items .cart-item__details .caption-with-letter-spacing {
++  color: var(--bc-cart-muted);
++  font-size: 1.3rem;
++  line-height: 1.5;
++}
++
++.bc-cart-items .cart-item__details > .product-option,
++.bc-cart-items .cart-item__final-price {
++  color: var(--bc-cart-ink);
++}
++
++.bc-cart-items .cart-item__details dl {
++  margin-top: 0.6rem;
++}
++
++.bc-cart-items .cart-item__quantity {
++  grid-column: 1 / -1;
++  grid-row: 2;
++  justify-self: start;
++  align-self: center;
++}
++
++.bc-cart-items .cart-item__quantity-wrapper {
++  align-items: center;
++  flex-wrap: nowrap;
++}
++
++.bc-cart-items .quantity {
++  min-height: 4.4rem;
++  width: 10.6rem;
++  color: var(--bc-cart-ink);
++  background: #fff;
++}
++
++.bc-cart-items .quantity::after {
++  border: 1px solid #bcced8;
++  border-radius: 0.8rem;
++  box-shadow: none;
++}
++
++.bc-cart-items .quantity::before {
++  box-shadow: none;
++}
++
++.bc-cart-items .quantity__button {
++  width: 3.4rem;
++  min-width: 3.4rem;
++}
++
++.bc-cart-items .quantity__input {
++  padding: 0 0.2rem;
++  font-size: 1.4rem;
++}
++
++.bc-cart-items .cart-item cart-remove-button {
++  margin-left: 0.4rem;
++}
++
++.bc-cart-items cart-remove-button .button {
++  width: 4.4rem;
++  min-width: 4.4rem;
++  min-height: 4.4rem;
++  margin: 0;
++  color: var(--bc-cart-muted);
++}
++
++.bc-cart-items cart-remove-button .button:hover {
++  color: var(--bc-cart-ink);
++  background: #edf7f9;
++  border-radius: 0.8rem;
++}
++
++.bc-cart-items .cart-item__totals {
++  grid-column: 2;
++  grid-row: 2;
++  align-self: center;
++  justify-self: end;
++  min-height: 4.4rem;
++  align-items: center;
++}
++
++.bc-cart-items .cart-item__price-wrapper > *:only-child:not(.cart-item__discounted-prices) {
++  margin: 0;
++}
++
++.bc-cart-items .cart-item__totals .price {
++  color: var(--bc-cart-ink);
++  font-size: 1.6rem;
++  font-weight: 700;
++  line-height: 1.4;
++}
++
++.bc-cart-items .cart-item__totals .cart-item__old-price {
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  font-weight: 400;
++}
++
++.bc-cart-items .cart-item .loading__spinner {
++  top: 50%;
++  right: 0;
++  bottom: auto;
++  padding: 0;
++  transform: translateY(-50%);
++}
++
++.bc-cart-items .cart-item__error {
++  max-width: 100%;
++  margin-left: 0;
++}
++
++.bc-cart-items .cart-items__info {
++  z-index: 3;
++}
++
++.bc-cart-items .cart-item__nested-line {
++  margin-left: 1.6rem;
++  border-left: 3px solid #a9e6ef;
++}
++
++.bc-cart-summary .cart__footer,
++.cart__footer-wrapper:last-child .bc-cart-summary .cart__footer {
++  display: flex;
++  flex-direction: column;
++  gap: 2.4rem;
++  margin: 0;
++  padding: 2.4rem;
++  border: 1px solid #cddfe8;
++  border-top: 4px solid var(--bc-cart-cyan);
++  border-radius: 1.6rem;
++  background: #fff;
++  box-shadow: 0 1rem 3rem #10324608;
++}
++
++.bc-cart-summary .cart__footer > * {
++  width: 100%;
++  min-width: 0;
++  margin: 0;
++}
++
++.bc-cart-summary .cart__blocks > * + * {
++  margin-top: 1.6rem;
++}
++
++.bc-cart-summary__heading {
++  margin-bottom: 2.4rem;
++}
++
++.bc-cart-summary__heading .bc-cart-eyebrow {
++  font-size: 1.1rem;
++}
++
++.bc-cart-summary__heading h2 {
++  margin: 0;
++  color: var(--bc-cart-ink);
++  font-size: 2.5rem;
++  font-weight: 750;
++  line-height: 1.2;
++  letter-spacing: -0.025em;
++}
++
++.bc-cart-summary__subtotal {
++  display: flex;
++  align-items: baseline;
++  justify-content: space-between;
++  gap: 1.6rem;
++  margin-bottom: 1.6rem;
++  color: var(--bc-cart-muted);
++  font-size: 1.4rem;
++  line-height: 1.5;
++}
++
++.bc-cart-summary__subtotal > :last-child {
++  flex-shrink: 0;
++  color: var(--bc-cart-ink);
++  font-variant-numeric: tabular-nums;
++}
++
++.bc-cart-summary .discounts {
++  margin: 0 0 1.6rem;
++}
++
++.bc-cart-summary .discounts__discount--position {
++  justify-content: flex-start;
++  color: #20664e;
++  font-size: 1.3rem;
++  line-height: 1.5;
++}
++
++.bc-cart-summary .totals {
++  justify-content: space-between;
++  align-items: baseline;
++  flex-wrap: wrap;
++  gap: 1.6rem;
++  row-gap: 0.6rem;
++  padding-top: 1.8rem;
++  border-top: 1px solid var(--bc-cart-line);
++}
++
++.bc-cart-summary .totals > * {
++  margin: 0;
++  color: var(--bc-cart-ink);
++  line-height: 1.4;
++}
++
++.bc-cart-summary .totals .totals__total {
++  font-size: 1.6rem;
++  font-weight: 650;
++}
++
++.bc-cart-summary .totals .totals__total-value {
++  flex-shrink: 0;
++  max-width: 100%;
++  margin-left: auto;
++  overflow-wrap: anywhere;
++  font-size: 2.2rem;
++  font-weight: 750;
++  letter-spacing: -0.025em;
++  font-variant-numeric: tabular-nums;
++}
++
++.bc-cart-summary .tax-note {
++  margin: 1rem 0 0;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  line-height: 1.6;
++  text-align: left;
++}
++
++.bc-cart-summary .tax-note a {
++  color: inherit;
++  text-underline-offset: 0.25rem;
++}
++
++.bc-cart-summary .cart__ctas {
++  display: block;
++  margin-top: 2rem;
++}
++
++.bc-cart-summary .cart__checkout-button {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 1rem;
++  min-height: 5.6rem;
++  width: 100%;
++  max-width: none;
++  padding: 1.4rem 1.8rem;
++  border: 0;
++  border-radius: 0.8rem;
++  color: var(--bc-cart-ink);
++  background: var(--bc-cart-cyan);
++  font-size: 1.6rem;
++  font-weight: 750;
++  line-height: 1.35;
++  letter-spacing: 0;
++  box-shadow: none;
++  text-align: left;
++  transition: background-color 150ms ease;
++}
++
++.bc-cart-summary .cart__checkout-button::before,
++.bc-cart-summary .cart__checkout-button::after {
++  content: none;
++}
++
++.bc-cart-summary .cart__checkout-button:not([disabled]):hover {
++  background: #62dcea;
++}
++
++.bc-cart-checkout-arrow {
++  flex-shrink: 0;
++  font-size: 2.5rem;
++  font-weight: 400;
++  line-height: 1;
++}
++
++.bc-cart-summary .bc-cart-secure {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  gap: 0.7rem;
++  margin: 1rem 0 0;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  line-height: 1.6;
++}
++
++.bc-cart-secure::before {
++  content: "";
++  display: block;
++  width: 0.75rem;
++  height: 0.75rem;
++  border-radius: 50%;
++  background: #289780;
++}
++
++.bc-cart-summary .cart__dynamic-checkout-buttons {
++  max-width: none;
++}
++
++.bc-cart-summary .cart__note {
++  position: relative;
++  top: 0;
++  order: 1;
++  padding-top: 2.6rem;
++  border-top: 1px solid var(--bc-cart-line);
++}
++
++.bc-cart-summary .cart__note label {
++  position: absolute;
++  top: 1rem;
++  height: auto;
++  color: var(--bc-cart-muted);
++  font-size: 1.2rem;
++  line-height: 1.5;
++}
++
++.bc-cart-summary .cart__note .field__input {
++  min-height: 8rem;
++  padding: 1.2rem;
++  border-radius: 0.8rem;
++  font-size: 1.4rem;
++  line-height: 1.5;
++}
++
++.bc-cart-summary .cart__note::after,
++.bc-cart-summary .cart__note::before {
++  content: none;
++}
++
++.bc-cart-summary #cart-errors:empty {
++  display: none;
++}
++
++.bc-cart-summary #cart-errors {
++  font-size: 1.3rem;
++  line-height: 1.5;
++}
++
++.bc-cart-summary .bc-cart-payments {
++  padding-top: 1.6rem;
++  border-top: 1px solid var(--bc-cart-line);
++}
++
++.bc-cart-payments__list {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  flex-wrap: wrap;
++  gap: 0.7rem;
++  margin: 0;
++  padding: 0;
++}
++
++.bc-cart-payments__list li {
++  display: flex;
++}
++
++.bc-cart-payment-icon {
++  display: block;
++  width: 3.8rem;
++  height: 2.4rem;
++}
++
++#MainContent:has(.bc-cart-items.is-empty) > .shopify-section:has(.bc-cart-summary) {
++  display: none;
++}
++
++#MainContent:has(.bc-cart-items.is-empty) > .shopify-section:has(.bc-cart-items) {
++  grid-column: 1 / -1;
++}
++
++.bc-cart-items.is-empty .bc-cart-empty {
++  max-width: 68rem;
++  margin: 1rem auto;
++  padding: 5rem 2.4rem;
++  border: 1px solid var(--bc-cart-line);
++  border-radius: 2rem;
++  background: #fff;
++}
++
++.bc-cart-empty__bag {
++  position: relative;
++  display: block;
++  width: 5rem;
++  height: 5.2rem;
++  margin: 1rem auto 2.8rem;
++  border: 2px solid var(--bc-cart-ink);
++  border-radius: 0.8rem 0.8rem 1.4rem 1.4rem;
++  background: #e8f9fc;
++  transform: rotate(-6deg);
++}
++
++.bc-cart-empty__bag::before {
++  content: "";
++  position: absolute;
++  top: -1.2rem;
++  left: 1.2rem;
++  width: 2.2rem;
++  height: 2rem;
++  border: 2px solid var(--bc-cart-ink);
++  border-bottom: 0;
++  border-radius: 2rem 2rem 0 0;
++}
++
++.bc-cart-empty .cart__empty-text {
++  margin: 0.8rem 0 1.2rem;
++  color: var(--bc-cart-ink);
++  font-size: clamp(2.8rem, 3vw, 3.8rem);
++  font-weight: 750;
++  line-height: 1.15;
++  letter-spacing: -0.03em;
++}
++
++.bc-cart-empty__intro {
++  max-width: 38rem;
++  margin: 0 auto 2.4rem;
++  color: var(--bc-cart-muted);
++  font-size: 1.5rem;
++  line-height: 1.6;
++}
++
++.bc-cart-empty > .button {
++  min-height: 5.2rem;
++  border-radius: 0.8rem;
++  color: var(--bc-cart-ink);
++  background: var(--bc-cart-cyan);
++  font-size: 1.5rem;
++  font-weight: 700;
++  letter-spacing: 0;
++}
++
++.bc-cart-empty > .button::before,
++.bc-cart-empty > .button::after {
++  content: none;
++}
++
++.bc-cart-empty .cart__login-title {
++  margin-top: 3.2rem;
++  color: var(--bc-cart-ink);
++  font-size: 1.8rem;
++}
++
++.bc-cart-empty .cart__login-paragraph {
++  color: var(--bc-cart-muted);
++  font-size: 1.4rem;
++  line-height: 1.6;
++}
++
++.bc-cart-items a:focus-visible,
++.bc-cart-items button:focus-visible,
++.bc-cart-items input:focus-visible,
++.bc-cart-summary a:focus-visible,
++.bc-cart-summary button:focus-visible {
++  outline: 2px solid var(--bc-cart-ink);
++  outline-offset: 3px;
++  box-shadow: none;
++}
++
++@media screen and (min-width: 750px) {
++  #MainContent:has(.bc-cart-items) {
++    padding-top: 4rem;
++    padding-right: max(3.2rem, calc((100vw - 124rem) / 2));
++    padding-left: max(3.2rem, calc((100vw - 124rem) / 2));
++  }
++
++  .bc-cart-items .cart-item {
++    grid-template-columns: 10rem minmax(0, 1fr) auto;
++    gap: 1.6rem 2rem;
++    padding: 2rem;
++  }
++
++  .bc-cart-items .cart-item__media {
++    grid-row: 1 / 3;
++  }
++
++  .bc-cart-items .cart-item__image-container {
++    height: 12rem;
++  }
++
++  .bc-cart-items .cart-item__name {
++    font-size: 1.7rem;
++  }
++
++  .bc-cart-items .cart-item__quantity {
++    grid-column: 2;
++    grid-row: 2;
++  }
++
++  .bc-cart-items .cart-item__totals {
++    display: flex;
++    grid-column: 3;
++    grid-row: 1 / 3;
++    align-self: start;
++    min-height: 0;
++    padding-top: 0.2rem;
++  }
++
++  .bc-cart-summary .cart__footer {
++    padding: 2.8rem;
++  }
++
++  .cart__footer-wrapper:last-child .bc-cart-summary .cart__footer {
++    padding-bottom: 2.8rem;
++  }
++}
++
++@media screen and (min-width: 1100px) {
++  #MainContent:has(.bc-cart-items) {
++    grid-template-columns: minmax(0, 1fr) 39rem;
++    align-items: start;
++    gap: 3.2rem;
++    padding-bottom: 7rem;
++  }
++
++  #MainContent:has(.bc-cart-items) > .cart__footer-wrapper {
++    position: sticky;
++    top: 2.4rem;
++  }
++
++  .bc-cart-items .bc-cart-heading {
++    margin-bottom: 3.2rem;
++  }
++
++  .bc-cart-items .cart-item {
++    grid-template-columns: 10rem minmax(0, 1fr);
++  }
++
++  .bc-cart-items .cart-item__media {
++    grid-row: 1;
++  }
++
++  .bc-cart-items .cart-item__quantity {
++    grid-column: 1 / -1;
++    grid-row: 2;
++  }
++
++  .bc-cart-items .cart-item__totals {
++    grid-column: 2;
++    grid-row: 2;
++    align-self: center;
++  }
++}
++
++@media screen and (max-width: 360px) {
++  .bc-cart-items .cart-item__totals {
++    grid-column: 1 / -1;
++    grid-row: 3;
++    justify-self: end;
++    min-height: 0;
++    max-width: 100%;
++  }
++
++  .bc-cart-items .cart-item__price-wrapper {
++    max-width: 100%;
++    overflow-wrap: anywhere;
++  }
++}
++
++@media (prefers-reduced-motion: reduce) {
++  .bc-cart-summary .cart__checkout-button {
++    transition: none;
++  }
++}
+diff --git a/locales/en.default.json b/locales/en.default.json
+index 1e3ffbf..edfe0a0 100644
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -8,6 +8,21 @@
+  * ------------------------------------------------------------
+  */
+ {
++  "bc_cart_page": {
++    "eyebrow": "Your bathroom starts here",
++    "intro": "Everything together for your new bathroom.",
++    "continue_shopping": "Continue shopping",
++    "items_heading": "Your items",
++    "summary_eyebrow": "A final look",
++    "summary_heading": "Your order",
++    "items_subtotal": {
++      "one": "Items ({{ count }})",
++      "other": "Items ({{ count }})"
++    },
++    "checkout": "Continue to checkout",
++    "secure_checkout": "Secure checkout",
++    "empty_intro": "Make room for something beautiful. Explore everything for your bathroom."
++  },
+   "general": {
+     "password_page": {
+       "login_form_heading": "Enter store using password:",
+diff --git a/locales/nl.json b/locales/nl.json
+index 456c085..59b1cea 100644
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -8,6 +8,21 @@
+  * ------------------------------------------------------------
+  */
+ {
++  "bc_cart_page": {
++    "eyebrow": "Jouw badkamer begint hier",
++    "intro": "Alles bij elkaar voor jouw nieuwe badkamer.",
++    "continue_shopping": "Verder winkelen",
++    "items_heading": "Jouw artikelen",
++    "summary_eyebrow": "Nog even controleren",
++    "summary_heading": "Jouw bestelling",
++    "items_subtotal": {
++      "one": "Artikelen ({{ count }})",
++      "other": "Artikelen ({{ count }})"
++    },
++    "checkout": "Verder naar afrekenen",
++    "secure_checkout": "Veilig afrekenen",
++    "empty_intro": "Maak ruimte voor iets moois. Ontdek alles voor jouw badkamer."
++  },
+   "general": {
+     "password_page": {
+       "login_form_heading": "Ga winkel binnen met wachtwoord:",
+diff --git a/sections/main-cart-footer.liquid b/sections/main-cart-footer.liquid
+index 0ef29f1..a707920 100644
+--- a/sections/main-cart-footer.liquid
++++ b/sections/main-cart-footer.liquid
+@@ -18,7 +18,7 @@
+ {%- endstyle -%}
+ 
+ <div
+-  class="gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
++  class="bc-cart-summary gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
+   id="main-cart-footer"
+   data-id="{{ section.id }}"
+ >
+@@ -44,6 +44,14 @@
+               {% render block %}
+             {%- when 'subtotal' -%}
+               <div class="js-contents" {{ block.shopify_attributes }}>
++                <div class="bc-cart-summary__heading">
++                  <p class="bc-cart-eyebrow">{{ 'bc_cart_page.summary_eyebrow' | t }}</p>
++                  <h2>{{ 'bc_cart_page.summary_heading' | t }}</h2>
++                </div>
++                <div class="bc-cart-summary__subtotal">
++                  <span>{{ 'bc_cart_page.items_subtotal' | t: count: cart.item_count }}</span>
++                  <span>{{ cart.items_subtotal_price | money }}</span>
++                </div>
+                 <div>
+                   {%- if cart.cart_level_discount_applications.size > 0 -%}
+                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+@@ -115,9 +123,11 @@
+                   {% endif %}
+                   form="cart"
+                 >
+-                  {{ 'sections.cart.checkout' | t }}
++                  <span>{{ 'bc_cart_page.checkout' | t }}</span>
++                  <span class="bc-cart-checkout-arrow" aria-hidden="true">→</span>
+                 </button>
+               </div>
++              <p class="bc-cart-secure">{{ 'bc_cart_page.secure_checkout' | t }}</p>
+ 
+               {%- if additional_checkout_buttons -%}
+                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+@@ -127,7 +137,17 @@
+           {%- endcase -%}
+         {% endfor %}
+ 
+-        <div id="cart-errors"></div>
++        <div id="cart-errors" role="alert"></div>
++        {%- if shop.enabled_payment_types != empty -%}
++          <div class="bc-cart-payments">
++            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
++            <ul class="bc-cart-payments__list list-unstyled" role="list">
++              {%- for type in shop.enabled_payment_types -%}
++                <li>{{ type | payment_type_svg_tag: class: 'bc-cart-payment-icon' }}</li>
++              {%- endfor -%}
++            </ul>
++          </div>
++        {%- endif -%}
+       </div>
+     </div>
+   </div>
+diff --git a/sections/main-cart-items.liquid b/sections/main-cart-items.liquid
+index 89b09f3..842ddd1 100644
+--- a/sections/main-cart-items.liquid
++++ b/sections/main-cart-items.liquid
+@@ -4,6 +4,7 @@
+ {{ 'component-price.css' | asset_url | stylesheet_tag }}
+ {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+ {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
++{{ 'bc-cart-page.css' | asset_url | stylesheet_tag }}
+ 
+ {%- style -%}
+   .section-{{ section.id }}-padding {
+@@ -25,17 +26,24 @@
+ 
+ <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+ 
+-<cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
++<cart-items class="bc-cart-items gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+   <div class="page-width">
+-    <div class="title-wrapper-with-link">
+-      <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
+-      <a href="{{ routes.all_products_collection_url }}" class="underlined-link">
+-        {{- 'general.continue_shopping' | t -}}
++    <div class="title-wrapper-with-link bc-cart-heading">
++      <div>
++        <p class="bc-cart-eyebrow">{{ 'bc_cart_page.eyebrow' | t }}</p>
++        <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
++        <p class="bc-cart-intro">{{ 'bc_cart_page.intro' | t }}</p>
++      </div>
++      <a href="{{ routes.all_products_collection_url }}" class="bc-cart-back">
++        <span aria-hidden="true">←</span> {{ 'bc_cart_page.continue_shopping' | t }}
+       </a>
+     </div>
+ 
+-    <div class="cart__warnings">
++    <div class="cart__warnings bc-cart-empty">
++      <span class="bc-cart-empty__bag" aria-hidden="true"></span>
++      <p class="bc-cart-eyebrow">{{ 'bc_cart_page.eyebrow' | t }}</p>
+       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
++      <p class="bc-cart-empty__intro">{{ 'bc_cart_page.empty_intro' | t }}</p>
+       <a href="{{ routes.all_products_collection_url }}" class="button">
+         {{ 'general.continue_shopping' | t }}
+       </a>
+@@ -52,6 +60,10 @@
+       <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
+         <div class="js-contents">
+           {%- if cart != empty -%}
++            <div class="bc-cart-list-heading">
++              <h2>{{ 'bc_cart_page.items_heading' | t }}</h2>
++              <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
++            </div>
+             <table class="cart-items">
+               <caption class="visually-hidden">
+                 {{ 'sections.cart.title' | t }}
+@@ -95,7 +107,11 @@
+                             src="{{ item.image | image_url: width: 300 }}"
+                             class="cart-item__image {% if item.parent_relationship.parent != null %}global-media-settings{% endif %}"
+                             alt="{{ item.image.alt | escape }}"
+-                            loading="lazy"
++                            {% if forloop.first %}
++                              loading="eager"
++                            {% else %}
++                              loading="lazy"
++                            {% endif %}
+                             width="150"
+                             height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                           >

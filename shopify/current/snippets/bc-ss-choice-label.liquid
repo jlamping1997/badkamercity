@@ -1,0 +1,19 @@
+{% doc %}
+  Displays the visible content of a Sunshower option button.
+  @param {string} code - Configuration field code.
+  @param {string} value - Original catalog option value.
+  @param {string} label - Human-readable option label.
+{% enddoc %}
+{% case code %}
+  {% when 'met_uv' %}
+    <span class="ss-config-model-icons">{% render 'bc-ss-choice-icon', name: 'infrared' %}{% if value == 'true' %}{% render 'bc-ss-choice-icon', name: 'uv' %}{% endif %}</span>
+    <span class="ss-config-option-copy"><strong>Round {% if value == 'true' %}PLUS{% else %}ONE{% endif %}</strong><small>{% if value == 'true' %}{{ 'ss.config.ir_uv' | t }}{% else %}{{ 'ss.config.ir' | t }}{% endif %}</small></span>
+  {% when 'kleur' %}
+    <span class="ss-config-swatch ss-config-swatch--{{ value | handleize }}" aria-hidden="true"></span><span class="ss-config-colour-name">{{ label | escape }}</span>
+  {% when 'uitvoering' %}
+    <span class="ss-config-option-copy"><strong>{{ label | escape }}</strong><small>{% case value %}{% when 'Small' %}95 cm{% when 'Medium' %}140 cm{% when 'Large' %}185 cm{% endcase %}</small></span>
+  {% when 'plaatsing' %}
+    {% render 'bc-ss-choice-icon', name: value %}<span class="ss-config-mount-label">{{ label | escape }}</span>
+  {% else %}<span>{{ label | escape }}</span>
+{% endcase %}
+<span class="ss-config-selected" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 8 3 3 5-6"/></svg></span>

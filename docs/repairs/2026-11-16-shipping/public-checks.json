@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-16",
+  "method": "Fresh public HTTP; preview id only on preview URLs",
+  "rows": [
+    {
+      "kind": "preview_search",
+      "url": "https://badkamercity.nl/search?q=kraan&type=product&preview_theme_id=196690379018",
+      "status": 200,
+      "renderedTheme": 196542005514,
+      "liquidError": false,
+      "parcelShippingCopy": false
+    },
+    {
+      "kind": "live_delivery",
+      "url": "https://badkamercity.nl/pages/bezorgen-en-afhalen",
+      "status": 200,
+      "renderedTheme": 196542005514,
+      "liquidError": false,
+      "fourRatesPresent": true,
+      "mixedCartExample": true
+    },
+    {
+      "kind": "preview_parcel",
+      "url": "https://badkamercity.nl/products/fabriecio-bkk-1001?preview_theme_id=196690379018",
+      "status": 200,
+      "renderedTheme": 196542005514,
+      "liquidError": false,
+      "inStock": true,
+      "weekdayPromise": true,
+      "afterCutoff": true
+    },
+    {
+      "kind": "preview_pallet",
+      "url": "https://badkamercity.nl/products/porcelanosa-matt-white-mat-150-x-59-6-cm?preview_theme_id=196690379018",
+      "status": 200,
+      "renderedTheme": 196542005514,
+      "liquidError": false,
+      "inStock": true,
+      "weekdayPromise": false,
+      "afterCutoff": false
+    }
+  ],
+  "visualBrowserCheck": false,
+  "previewPassClaimed": false,
+  "browserEvidence": {
+    "initialAXVerifiedDraftName": true,
+    "initialAXVerifiedParcelShippingCopy": true,
+    "desktopScreenshotVerifiedDraftContext": true,
+    "postLoadTypesenseCanReplaceNativeSearchRows": true,
+    "mobileVisualVerified": false,
+    "publicHTTPPreviewNotAccepted": true,
+    "reason": "Fresh public HTTP ignored preview_theme_id and returned MAIN; not counted as successful preview verification. Cloud browser rendered the named Draft and updated copy."
+  }
+}

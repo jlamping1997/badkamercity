@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-08",
+  "git_branch": "fix/product-cards-2026-10-14",
+  "git_commit": "1b5108a2cb8ac13166b19189232838bdebcabeb2",
+  "theme_id": "196328685834",
+  "git_root": "shopify/current/",
+  "live_files": 1387,
+  "git_files": 1378,
+  "equal": 1363,
+  "different": [
+    "assets/bc-external-filters.css",
+    "assets/bc-external-filters.js",
+    "assets/bc-porcelanosa-buybox.js",
+    "assets/bc-product-cards.css",
+    "config/settings_data.json",
+    "config/settings_schema.json",
+    "sections/bc-card-data.liquid",
+    "sections/main-product.liquid",
+    "sections/main-sunshower.liquid",
+    "snippets/bc-card-delivery.liquid",
+    "snippets/bc-cart-delivery.liquid",
+    "snippets/bc-external-filters.liquid",
+    "snippets/bc-fabriecio-delivery.liquid",
+    "snippets/bc-porcelanosa-buybox.liquid",
+    "snippets/card-product.liquid"
+  ],
+  "live_only": [
+    "assets/bc-product-switcher.backup-debug.js",
+    "assets/bc-product-switcher.js.backup-qa-round-1-20260706-214223",
+    "assets/bc-product-switcher.js.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.backup-before-production.json",
+    "assets/product-switcher-data.backup.json",
+    "assets/product-switcher-data.json.backup-qa-round-1-20260706-214223",
+    "assets/product-switcher-data.json.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.json.backup-qa-round-2-20260707-111611",
+    "templates/product.bc-verlavio-review.liquid"
+  ],
+  "git_only": [],
+  "protected_exception": "config/settings_data.json: preserve existing upload/API-body guard; no automatic overwrite",
+  "method": "Complete paginated Admin manifest; local repository scan against live metadata. Differences are not automatically defects."
+}

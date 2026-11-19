@@ -1,0 +1,742 @@
+{
+  "date": "2026-11-16",
+  "status": "SHOPIFY_CHECKOUT_LIVE_VERIFIED_GOOGLE_PENDING",
+  "before": {
+    "shop": {
+      "currencyCode": "EUR",
+      "ianaTimezone": "Europe/Amsterdam",
+      "taxesIncluded": true,
+      "taxShipping": false,
+      "features": {
+        "marketDrivenShipping": true
+      },
+      "shipsToCountries": [
+        "NL"
+      ]
+    },
+    "themes": {
+      "nodes": [
+        {
+          "id": "gid://shopify/OnlineStoreTheme/196542005514",
+          "name": "BadkamerCity - PostNL werkdagen 14u",
+          "role": "MAIN"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false
+      }
+    },
+    "node": {
+      "id": "gid://shopify/Market/94864998666",
+      "name": "Nederland",
+      "status": "ACTIVE",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "nodes": [
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+                "isActive": true,
+                "currency": "EUR",
+                "description": null,
+                "freeDeliveryMinimumValue": {
+                  "amount": "100.01",
+                  "currencyCode": "EUR"
+                },
+                "includedCollections": {
+                  "nodes": [],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                },
+                "includedLocations": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/Location/106665476362"
+                    },
+                    {
+                      "id": "gid://shopify/Location/110481572106"
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                },
+                "name": "Standaard",
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                      "rates": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                            "minValue": {
+                              "amount": "0.0",
+                              "currencyCode": "EUR"
+                            },
+                            "maxValue": null,
+                            "price": {
+                              "amount": "6.95",
+                              "currencyCode": "EUR"
+                            },
+                            "transitTimeMinSeconds": null,
+                            "transitTimeMaxSeconds": null
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              }
+            ],
+            "pageInfo": {
+              "hasNextPage": false
+            }
+          }
+        }
+      }
+    },
+    "tiles": {
+      "count": 3494,
+      "precision": "EXACT"
+    },
+    "mosaic": {
+      "count": 279,
+      "precision": "EXACT"
+    }
+  },
+  "preparedOption": {
+    "name": "Standaard",
+    "currency": "EUR",
+    "isActive": false,
+    "description": "Verzendkosten op basis van productgroep en de waarde van de volledige bestelling.",
+    "rateGroups": [
+      {
+        "conditions": {
+          "originLocationsToAdd": [
+            "gid://shopify/Location/106665476362",
+            "gid://shopify/Location/110481572106"
+          ]
+        },
+        "rates": [
+          {
+            "minValue": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            },
+            "maxValue": {
+              "amount": "100.00",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "6.95",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "minValue": {
+              "amount": "100.01",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "conditions": {
+          "originLocationsToAdd": [
+            "gid://shopify/Location/106665476362",
+            "gid://shopify/Location/110481572106"
+          ],
+          "collectionsToAdd": [
+            "gid://shopify/Collection/587456676106"
+          ]
+        },
+        "rates": [
+          {
+            "minValue": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            },
+            "maxValue": {
+              "amount": "499.99",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "75.00",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "minValue": {
+              "amount": "500.00",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "conditions": {
+          "originLocationsToAdd": [
+            "gid://shopify/Location/106665476362",
+            "gid://shopify/Location/110481572106"
+          ],
+          "collectionsToAdd": [
+            "gid://shopify/Collection/587456610570"
+          ]
+        },
+        "rates": [
+          {
+            "minValue": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            },
+            "maxValue": {
+              "amount": "499.99",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "45.00",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "minValue": {
+              "amount": "500.00",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "conditions": {
+          "originLocationsToAdd": [
+            "gid://shopify/Location/106665476362",
+            "gid://shopify/Location/110481572106"
+          ],
+          "collectionsToAdd": [
+            "gid://shopify/Collection/587456643338"
+          ]
+        },
+        "rates": [
+          {
+            "minValue": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            },
+            "maxValue": {
+              "amount": "999.99",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "300.00",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "minValue": {
+              "amount": "1000.00",
+              "currencyCode": "EUR"
+            },
+            "price": {
+              "amount": "0.00",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "createdOption": {
+    "id": "gid://shopify/Market/94864998666",
+    "name": "Nederland",
+    "delivery": {
+      "shipping": {
+        "isEnabled": true,
+        "optionDefinitions": {
+          "nodes": [
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "name": "Standaard",
+              "isActive": true,
+              "freeDeliveryMinimumValue": {
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              },
+              "rateGroups": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                    "conditions": {
+                      "collections": null,
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "6.95",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false
+                }
+              }
+            },
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+              "name": "Standaard",
+              "isActive": false,
+              "freeDeliveryMinimumValue": null,
+              "rateGroups": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600891146",
+                    "conditions": {
+                      "collections": null,
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544864522",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "100.0",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "6.95",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544897290",
+                          "minValue": {
+                            "amount": "100.01",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600923914",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456676106",
+                            "title": "BC verzending – Pallettransport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      },
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544930058",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "499.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "75.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544962826",
+                          "minValue": {
+                            "amount": "500.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600956682",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456610570",
+                            "title": "BC verzending – Glastransport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      },
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544995594",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "499.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "45.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545028362",
+                          "minValue": {
+                            "amount": "500.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600989450",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456643338",
+                            "title": "BC verzending – XXL transport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      },
+                      "originLocations": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Location/106665476362"
+                          },
+                          {
+                            "id": "gid://shopify/Location/110481572106"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545061130",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "999.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "300.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545093898",
+                          "minValue": {
+                            "amount": "1000.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false
+                }
+              }
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  },
+  "activationInput": {
+    "delivery": {
+      "shipping": {
+        "optionDefinitionsToUpdate": [
+          {
+            "valueBased": {
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "isActive": false
+            }
+          },
+          {
+            "valueBased": {
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+              "isActive": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "activationReadback": {
+    "market": {
+      "id": "gid://shopify/Market/94864998666",
+      "name": "Nederland",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "nodes": [
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+                "name": "Standaard",
+                "isActive": false,
+                "freeDeliveryMinimumValue": {
+                  "amount": "100.01",
+                  "currencyCode": "EUR"
+                },
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602"
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              },
+              {
+                "__typename": "DeliveryValueBasedOptionDefinition",
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+                "name": "Standaard",
+                "isActive": true,
+                "freeDeliveryMinimumValue": null,
+                "rateGroups": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600891146"
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600923914"
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600956682"
+                    },
+                    {
+                      "id": "gid://shopify/DeliveryValueBasedRateGroup/509600989450"
+                    }
+                  ],
+                  "pageInfo": {
+                    "hasNextPage": false
+                  }
+                }
+              }
+            ],
+            "pageInfo": {
+              "hasNextPage": false
+            }
+          }
+        }
+      }
+    },
+    "userErrors": []
+  },
+  "finalReadback": {
+    "id": "gid://shopify/Market/94864998666",
+    "delivery": {
+      "shipping": {
+        "optionDefinitions": {
+          "nodes": [
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "name": "Standaard",
+              "isActive": false,
+              "freeDeliveryMinimumValue": {
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              }
+            },
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+              "name": "Standaard",
+              "isActive": true,
+              "freeDeliveryMinimumValue": null
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  },
+  "rollback": {
+    "marketId": "gid://shopify/Market/94864998666",
+    "input": {
+      "delivery": {
+        "shipping": {
+          "optionDefinitionsToUpdate": [
+            {
+              "valueBased": {
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+                "isActive": false
+              }
+            },
+            {
+              "valueBased": {
+                "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+                "isActive": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "warning": "Fresh-read both option IDs and active flags before applying; do not overwrite later changes. Restore delivery-page-before.html separately if reverting rates."
+  },
+  "pricesChanged": false,
+  "inventoryChanged": false,
+  "productPublicationChanged": false,
+  "googleChanged": false,
+  "assistantPublishedTheme": false
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "checks": 13,
+  "results": [
+    {
+      "test": "Hotbath-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "Wiesbaden-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "Cottoceramix-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "JEE-O-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "Lagoo-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "Porcelanosa-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "Sunshower-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "The Mosaic Factory-verified-local-logo-matches-source-record",
+      "result": "PASS"
+    },
+    {
+      "test": "directory-same-eight-self-hosted-logos-nine-valid-brand-links",
+      "result": "PASS"
+    },
+    {
+      "test": "slider-same-eight-self-hosted-logos-nine-valid-brand-links",
+      "result": "PASS"
+    },
+    {
+      "test": "merchant-logo-and-brand-link-override-bundled-default",
+      "result": "PASS"
+    },
+    {
+      "test": "unknown-future-brand-stays-readable-without-broken-image",
+      "result": "PASS"
+    },
+    {
+      "test": "only-brand-help-text-changes-no-existing-settings-redefined",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Original asset signatures/hashes and actual shared Liquid; browser rendering and live asset responses checked separately."
+}

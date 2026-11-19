@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-08",
+  "status": "PAGES_APPLIED_VERIFIED; THEME_PREVIEW_VERIFIED_NOT_PUBLISHED",
+  "themeId": 196368531722,
+  "themeName": "BadkamerCity - Klantenservice 8 nov",
+  "newThemeFiles": [
+    {
+      "filename": "sections/footer-group.json",
+      "checksumMd5": "abcaca20857230d1a79526dfba0dbd6d"
+    },
+    {
+      "filename": "sections/bc-homepage.liquid",
+      "checksumMd5": "d32a554a0e4548bb937329857bfde004"
+    }
+  ],
+  "exactBodyReadback": true,
+  "mainUnchanged": true,
+  "priorReturnFourFilesPreserved": true,
+  "changes": [
+    "New published delivery/pickup Page and two SEO metafields",
+    "Contact order number clarified as optional and delivery Page linked",
+    "Footer service_3 points to delivery Page",
+    "HomeDelivery uses delivery Page if native shipping policy absent; Contact fallback retained"
+  ],
+  "noChanges": [
+    "Rates/profiles/taxes",
+    "Main theme files or theme publication",
+    "Native legal policies",
+    "Product availability, inventory, prices, images",
+    "Checkout/order/payment/form submission"
+  ]
+}
+

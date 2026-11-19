@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-11-09T07:51:30.444Z",
+  "mainId": "196368531722",
+  "mainFiles": 1390,
+  "trackedIncludingDeployGuard": 1382,
+  "sharedFiles": 1381,
+  "comparedSharedFiles": 1380,
+  "equalBefore": 1370,
+  "equalAfter": 1380,
+  "differencesBefore": 10,
+  "differencesAfter": 0,
+  "protectedBodyException": "config/settings_data.json",
+  "onlyMain": [
+    "assets/bc-product-switcher.backup-debug.js",
+    "assets/bc-product-switcher.js.backup-qa-round-1-20260706-214223",
+    "assets/bc-product-switcher.js.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.backup-before-production.json",
+    "assets/product-switcher-data.backup.json",
+    "assets/product-switcher-data.json.backup-qa-round-1-20260706-214223",
+    "assets/product-switcher-data.json.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.json.backup-qa-round-2-20260707-111611",
+    "templates/product.bc-verlavio-review.liquid"
+  ],
+  "onlyGit": [
+    ".shopifyignore"
+  ],
+  "guardChanged": false,
+  "settingsDataWritten": false,
+  "shopifyWrites": 0,
+  "blindDeployAllowed": false,
+  "windowsWorkspace": "NOT_CHECKED"
+}

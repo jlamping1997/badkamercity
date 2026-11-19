@@ -1,0 +1,180 @@
+{
+  "version": 3,
+  "date": "2026-11-17",
+  "status": "SHOPIFY_LIVE_VERIFIED_GOOGLE_DRAFT_SOURCE_FIELDS_REQUIRE_CORRECTION",
+  "currency": "EUR",
+  "pricesIncludeVAT": true,
+  "countryScope": "NL",
+  "subtotalBasis": "Total product subtotal of the whole order after discounts, before shipping; all brands and product groups count",
+  "supplierTransportCosts": "Internal costs only; never add a shipping fee per supplier or brand",
+  "combinationRule": {
+    "method": "HIGHEST_APPLICABLE_GROUP_RATE_ONCE",
+    "basis": "Working convention proposed in conversation; customer must not pay per brand",
+    "extraFeePerBrand": false
+  },
+  "groups": [
+    {
+      "id": "parcel",
+      "products": [
+        "Ordinary parcel products, including taps and shower sets",
+        "Furniture",
+        "All mosaic products, sold per mat, piece or box"
+      ],
+      "priceMinor": 695,
+      "freeWhenSubtotalMinor": 10001,
+      "source": "Owner-confirmed rates; retain existing exact-100 boundary",
+      "mosaicQuantityLimit": null
+    },
+    {
+      "id": "pallet",
+      "products": [
+        "Regular tiles, excluding all mosaics and XXL tiles",
+        "Baths"
+      ],
+      "priceMinor": 7500,
+      "freeWhenSubtotalMinor": 50000,
+      "source": "Owner-confirmed €75 and €500 threshold; exact-500 convention proposed in conversation"
+    },
+    {
+      "id": "shower_screen",
+      "products": [
+        "Complete shower glass: screens, doors, side panels, cabins, bath screens and loose complete glass panels; small accessories remain parcel"
+      ],
+      "priceMinor": 4500,
+      "freeWhenSubtotalMinor": 50000,
+      "source": "Owner-confirmed €45 and €500 threshold; exact-500 convention proposed in conversation"
+    },
+    {
+      "id": "xxl",
+      "products": [
+        "XXL tiles in the stated 120 x 250–320 cm range"
+      ],
+      "priceMinor": 30000,
+      "freeWhenSubtotalMinor": 100000,
+      "source": "Latest owner clarification: €300 total transport, free from €1000",
+      "includesCrateAndTransport": true,
+      "additionalStandardPalletFee": false
+    }
+  ],
+  "boundaries": {
+    "parcelAt100": "€6.95, preserving existing setting; free above €100",
+    "normalAt500": "Free, using proposed 'vanaf €500' convention",
+    "xxlAt1000": "Free, using owner's explicit 'gratis vanaf €1000' statement"
+  },
+  "overrides": {
+    "mosaic": "Always parcel pricing under latest owner statement; supersedes earlier 1–2-box limit",
+    "furniture": "Parcel pricing; no separate furniture transport tariff",
+    "xxl": "€300 complete transport, never €75 + €300; threshold is €1000 instead of €500"
+  },
+  "unknownsNotToInvent": [
+    "Large-goods next-day promise not confirmed; keep it off pallet/XXL",
+    "Google group-specific shipping labels/costs/parcel times are not yet aligned or verified",
+    "No current XXL products; native €300/€1000 tiers verified, no real XXL cart test",
+    "Discounted total basis follows native cart conventions; no fresh discount-specific quote test"
+  ],
+  "deployment": {
+    "shopifyChanged": true,
+    "googleMerchantChanged": false,
+    "storefrontTextChanged": true,
+    "storefrontDeliveryPageLive": true,
+    "globalParcelCopyAwaitingThemePublication": false,
+    "realCheckoutRulesVerified": true,
+    "quoteTestsPassed": 18,
+    "productDeliveryMessageLive": true,
+    "productDeliveryThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "shippingOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+    "inactiveRollbackOptionId": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+    "previewThemeId": null,
+    "previewThemeName": null,
+    "globalParcelCopyLive": true,
+    "currentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+    "googlePalletDraftStatus": "ONE_POSITIVE_OWNER_PREVIEW_FULL_RULE_SOURCE_FIELDS_REQUIRE_CORRECTION",
+    "googleChangedThisDocumentationTurn": false,
+    "shippingConfigurationChangedThisDocumentationTurn": false
+  },
+  "delivery": {
+    "reference": "delivery.json",
+    "ownerDefaultAvailability": "in_stock",
+    "cutoff": "14:00 Europe/Amsterdam",
+    "processingAndDeliveryDays": "Mon–Fri",
+    "beforeCutoff": "Next weekday",
+    "afterCutoff": "Two weekdays",
+    "weekend": "Tuesday",
+    "status": "POSTNL_PRODUCT_MESSAGE_LIVE_VERIFIED_GOOGLE_PENDING",
+    "largeGoodsDayPromiseConfirmed": false,
+    "keepAllCurrentProductsInStock": true
+  },
+  "catalogAssignments": [
+    {
+      "collectionId": "gid://shopify/Collection/587456610570",
+      "title": "BC verzending – Glastransport",
+      "products": 1836,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456643338",
+      "title": "BC verzending – XXL transport",
+      "products": 0,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456676106",
+      "title": "BC verzending – Pallettransport",
+      "products": 3562,
+      "publishedToChannels": 0
+    },
+    {
+      "collectionId": "gid://shopify/Collection/587456708874",
+      "title": "BC verzending – Pakket",
+      "products": 23579,
+      "publishedToChannels": 0
+    }
+  ],
+  "xxlImportRequirement": "Explicit bc_shipping_xxl tag after verifying 120 × 250–320 cm; no active XXL products found in full tile read and broad title cross-check. New imports must validate their productType and group membership before publication.",
+  "googleSetupStatus": "READ_ONLY_AUDIT_DONE_AUTOMATIC_IMPORT_ON_NO_LABELS_OWNER_MANUAL_MODE_NEXT",
+  "nativeConfigurationVerifiedAt": "2026-11-17T10:25:37.051Z",
+  "nativeCurrentMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+  "bathProductTypeAliases": [
+    {
+      "value": "Half Vrijstaande Baden",
+      "count": 13,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaand bad",
+      "count": 6,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Halfvrijstaande baden",
+      "count": 1,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Hoekbad",
+      "count": 14,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaand bad",
+      "count": 29,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Vrijstaande Baden",
+      "count": 4,
+      "precision": "EXACT"
+    },
+    {
+      "value": "Whirlpoolbad",
+      "count": 1,
+      "precision": "EXACT"
+    }
+  ],
+  "aliasNormalization": {
+    "performed": false,
+    "reason": "Current stored spellings remain valid until collections/filters/imports/Google are migrated together"
+  },
+  "documentation": "https://github.com/jlamping1997/badkamercity/blob/main/docs/VERZENDINSTELLINGEN.md",
+  "latestEvidence": "documentation-check-2026-11-17.json"
+}

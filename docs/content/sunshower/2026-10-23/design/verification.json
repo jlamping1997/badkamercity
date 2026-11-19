@@ -1,0 +1,106 @@
+{
+  "status": "PREVIEW_READY_DESKTOP_VERIFIED",
+  "date": "2026-10-23",
+  "task": "Geef de bestaande Sunshower-blog een mooi, uitzonderlijk duidelijk ontwerp binnen de BadkamerCity-huisstijl.",
+  "branch": "fix/product-cards-2026-10-14",
+  "baseCommit": "d3e920da5bd5b75b1e3bedebbe2421979a60980f",
+  "article": {
+    "id": "gid://shopify/Article/629505622282",
+    "url": "https://badkamercity.nl/blogs/nieuws/sunshower-infrarood-of-uv",
+    "isPublished": true,
+    "bodyUnchanged": true,
+    "summaryUnchanged": true,
+    "templateSuffix": null
+  },
+  "themes": {
+    "target": {
+      "role": "UNPUBLISHED",
+      "count": 514,
+      "added": [
+        "sections/bc-advice-article.liquid",
+        "templates/article.bc-advice-qa.liquid"
+      ],
+      "changed": [
+        "locales/en.default.json",
+        "locales/nl.json",
+        "templates/article.json"
+      ],
+      "removed": []
+    },
+    "live": {
+      "role": "MAIN",
+      "count": 512,
+      "added": [],
+      "changed": [],
+      "removed": []
+    }
+  },
+  "files": [
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "e2cc3e4fd7931e82ccbe62ee4c732a02"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "9b3bf5f62f1232d3bed92755748539d2"
+    },
+    {
+      "filename": "sections/bc-advice-article.liquid",
+      "checksumMd5": "c284e3d31b00b0b8b20f980d19387541"
+    },
+    {
+      "filename": "templates/article.bc-advice-qa.liquid",
+      "checksumMd5": "ff29adcee03191029d7c0d3bc822a551"
+    },
+    {
+      "filename": "templates/article.json",
+      "checksumMd5": "ab0fb133b9253d0f8afd943d035017ad"
+    }
+  ],
+  "preserved": {
+    "landingTemplateChecksum": "0d27abe7c513d5b710112feebbd26b51",
+    "sunshowerScrollChecksum": "e2f193488f4e2ec132f0b2d70d161a44"
+  },
+  "tests": {
+    "themeCheck": {
+      "artifact": "badkamercity-sunshower-advice-design",
+      "revision": 3,
+      "result": "SUCCESS",
+      "files": 4,
+      "mode": "full-app, recommended checks; bundled official schemas used because remote schema refresh timed out"
+    },
+    "qaAliasThemeCheck": {
+      "artifact": "badkamercity-advice-responsive-qa",
+      "revision": 2,
+      "result": "SUCCESS"
+    },
+    "adminReadback": "Five files exact; Shopify added its normal generated-file header to article.json. Article body preserved exactly.",
+    "browser": {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "result": "PASS",
+      "checks": [
+        "Actual unpublished theme shown in preview bar",
+        "Hero title/summary/photos display in house style",
+        "Both images loaded",
+        "No horizontal article overflow",
+        "Native comparison CTA lands on the first h2",
+        "Semantic table has column and row headings",
+        "All six original sections and visible source links present"
+      ]
+    },
+    "physicalMobile": "NOT_TESTED",
+    "narrowViewport": "BLOCKED: temporary 320/390 iframe fixture was refused by browser. No responsive pass claimed.",
+    "checkout": "NOT_TESTED; no commerce logic changes",
+    "googleRankings": "NOT_TESTED"
+  },
+  "qaCleanup": {
+    "file": "templates/article.bc-advice-qa.liquid",
+    "delete": "BLOCKED by Shopify setup-mcp safety policy: Theme deletion is blocked — it could take down the live storefront.",
+    "safeResult": "Neutralized as a simple alternate article template containing only {% section 'bc-advice-article' %}. No iframe, scripts or navigation; default article.json remains the active route. File was not assigned to any article.",
+    "optionalCleanup": "Merchant can delete the unused alias in Shopify Admin. Not required for the standard article route."
+  },
+  "publication": "No MAIN writes or themePublish. Merchant reviews/publishes according to AGENTS.md."
+}

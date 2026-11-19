@@ -1,0 +1,114 @@
+{
+  "task": "CARD-AVAILABILITY-01",
+  "date": "2026-11-15",
+  "status": "VERIFIED_PREVIEW_PUBLICATION_PENDING",
+  "main": {
+    "id": "196690379018",
+    "role": "MAIN",
+    "name": "BadkamerCity - complete filterkleuren"
+  },
+  "candidate": {
+    "id": "196542005514",
+    "role": "UNPUBLISHED",
+    "name": "BadkamerCity - bescherming oude productkaarten"
+  },
+  "codeCheckpoint": "27d60780c851329fdb07aa0a500bb90d0a8792d0",
+  "files": [
+    {
+      "filename": "assets/bc-external-filters.js",
+      "checksumMd5": "233369e777d302c823c2a2447aae6093"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "9fbf44a6e1deef389700394148287696"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "b1c3dce7153e1c5fa2f44555eba9ae3a"
+    },
+    {
+      "filename": "snippets/bc-external-filters.liquid",
+      "checksumMd5": "d4ff1473f526fdfadb064d5c4ec0adf8"
+    }
+  ],
+  "parity": {
+    "main": 2522,
+    "draft": 2524,
+    "diff": [
+      "assets/bc-external-filters.js",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/bc-card-availability-qa.liquid",
+      "snippets/bc-external-filters.liquid",
+      "templates/page.bc-card-availability-qa.json"
+    ],
+    "onlyDraft": [
+      "sections/bc-card-availability-qa.liquid",
+      "templates/page.bc-card-availability-qa.json"
+    ],
+    "missing": [],
+    "mainChanged": []
+  },
+  "qaCleanup": {
+    "fileDeletion": "blocked by connector (no retry via another deletion method)",
+    "safeAlternative": "Unused QA section emptied; alternate page template reset byte-exact to the standard page template",
+    "verified": true,
+    "files": [
+      {
+        "filename": "sections/bc-card-availability-qa.liquid",
+        "checksumMd5": "2e95f7087efdaec3c62bfd1226c95832"
+      },
+      {
+        "filename": "templates/page.bc-card-availability-qa.json",
+        "checksumMd5": "96b5d9c8238f35a844a4637f1920d56c"
+      }
+    ]
+  },
+  "validation": {
+    "newBehaviorTests": {
+      "pass": 30,
+      "fail": 0
+    },
+    "existingSuite": {
+      "before": {
+        "pass": 26,
+        "fail": 6
+      },
+      "after": {
+        "pass": 26,
+        "fail": 6
+      },
+      "newFailures": 0,
+      "note": "Six identical historical price expectations fail on unchanged MAIN and candidate. No price formatting changes made."
+    },
+    "officialThemeValidator": {
+      "revision": 2,
+      "passed": 6,
+      "errors": 0,
+      "docset": "Official bundled fallback resources used after latest-docset network timeout"
+    }
+  },
+  "browser": {
+    "environment": "Cloud Chrome desktop",
+    "negativeCase": "Isolated old-index response contains G1104TC and G6110; actual Shopify section and product JSON reads used",
+    "result": "Only G1104TC remains, no G6110 link, count is 1 product op deze pagina; actual product link opens correct PDP",
+    "normalCategory": "Wastafelkranen",
+    "filter": "Zilver",
+    "sort": "price_asc",
+    "count": 224,
+    "pages": "1 and 2 of 10",
+    "page2Cards": 24,
+    "page2Pending": 0,
+    "horizontalOverflow": false,
+    "cartCheckout": "NOT_TESTED",
+    "physicalMobile": "NOT_TESTED"
+  },
+  "dataScope": "No Shopify product, publication, price, stock, media, external index or VPS changes. Product ordering remains deferred.",
+  "limitations": [
+    "Front-end confirmation guard; does not rebuild or fully audit the external index",
+    "After confirmed stale result, count is explicitly page-local and raw paging offsets are preserved",
+    "Facet counts still come from the external index",
+    "Transient transport/5xx/malformed data do not prove a missing product and are retained",
+    "Publication still belongs to owner"
+  ]
+}

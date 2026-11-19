@@ -1,0 +1,23 @@
+<section class="bc-wishlist-page page-width" data-bc-wishlist-page aria-labelledby="BCWishlistTitle">
+  <header class="bc-wishlist-page__header">
+    <div>
+      <p class="bc-wishlist-page__eyebrow">Jouw favorieten</p>
+      <h1 id="BCWishlistTitle">Mijn verlanglijst</h1>
+      <p class="bc-wishlist-page__count" data-bc-wishlist-page-count>Je bewaarde producten laden…</p>
+    </div>
+    <a class="bc-wishlist-page__continue" href="{{ routes.all_products_collection_url }}">Verder winkelen <span aria-hidden="true">&nbsp;→</span></a>
+  </header>
+  <p data-bc-wishlist-loading class="bc-wishlist-page__loading" role="status">Verlanglijst laden…</p>
+  <div data-bc-wishlist-empty class="bc-wishlist-page__empty" hidden>
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21 4.7 14C-1.7 7.9 6.9-1.3 12 6c5.1-7.3 13.7 1.9 7.3 8L12 21Z"/></svg>
+    <h2>Je verlanglijst is nog leeg</h2>
+    <p>Bewaar de producten die je mooi vindt met het hartje. Hier vind je ze later eenvoudig terug.</p>
+    <a class="bc-wishlist-page__continue" href="{{ routes.all_products_collection_url }}">Bekijk ons assortiment</a>
+  </div>
+  <div class="bc-wishlist-grid" data-bc-wishlist-grid role="list" hidden></div>
+  <p class="bc-wishlist-page__note">Je verlanglijst blijft bewaard in deze browser op dit apparaat. Wis je de browsergegevens of gebruik je een ander apparaat, dan wordt je lijst niet automatisch meegenomen. Prijzen worden opnieuw uit de winkel opgehaald.</p>
+  <noscript>Schakel JavaScript in om je verlanglijst te bekijken en producten op te slaan.</noscript>
+</section>
+{% schema %}
+{"name":"BadkamerCity verlanglijst","settings":[]}
+{% endschema %}

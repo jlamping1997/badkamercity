@@ -1,0 +1,23 @@
+{% comment %} Productinformatie sectie: titel, prijs, variant, winkelwagen {% endcomment %}
+<section class="bc-product-info-section">
+  <div class="bc-product-info__container">
+    <h1 class="bc-product-title">{{ product.title }}</h1>
+    <div class="bc-product-vendor">{{ product.vendor }}</div>
+    <div class="bc-product-price">{% render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' %}</div>
+    {% render 'product-variant-picker', product: product %}
+    {% render 'buy-buttons', product: product %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Info",
+  "tag": "section",
+  "class": "section",
+  "presets": [
+    {
+      "name": "Product Info"
+    }
+  ]
+}
+{% endschema %}

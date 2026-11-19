@@ -1,0 +1,68 @@
+{
+  "main": {
+    "id": "gid://shopify/OnlineStoreTheme/195916628234",
+    "role": "MAIN",
+    "files": 1344,
+    "changed": []
+  },
+  "draft": {
+    "id": "gid://shopify/OnlineStoreTheme/195915448586",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "files": 1344,
+    "changed": [
+      "assets/bc-assortment.css",
+      "assets/bc-assortment.js",
+      "locales/en.default.json",
+      "locales/nl.json",
+      "sections/bc-assortment.liquid",
+      "templates/list-collections.json"
+    ]
+  },
+  "baseline": {
+    "byteIdentical": 1341,
+    "jsonExceptions": [
+      {
+        "filename": "locales/en.default.json",
+        "semanticEqual": true
+      },
+      {
+        "filename": "locales/nl.json",
+        "semanticEqual": true
+      },
+      {
+        "filename": "templates/list-collections.json",
+        "semanticEqual": true
+      }
+    ]
+  },
+  "sourceChecks": [
+    {
+      "filename": "sections/bc-assortment.liquid",
+      "equal": true,
+      "mode": "TEXT"
+    },
+    {
+      "filename": "assets/bc-assortment.css",
+      "equal": true,
+      "mode": "TEXT"
+    },
+    {
+      "filename": "assets/bc-assortment.js",
+      "equal": true,
+      "mode": "TEXT"
+    },
+    {
+      "filename": "locales/nl.json",
+      "equal": true,
+      "mode": "JSON_SEMANTIC"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "equal": true,
+      "mode": "JSON_SEMANTIC"
+    }
+  ],
+  "qaRestored": true,
+  "qaChecksumMd5": "c76529d094fb4d534f9cd3352c63f4b4"
+}

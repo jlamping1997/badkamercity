@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-08",
+  "before_status": 404,
+  "first_response": {
+    "status": 301,
+    "location": "/blogs/nieuws"
+  },
+  "final_response": {
+    "status": 200,
+    "url": "https://badkamercity.nl/blogs/nieuws",
+    "h1": [
+      "Nieuws"
+    ],
+    "canonical": [
+      "https://badkamercity.nl/blogs/nieuws"
+    ]
+  },
+  "status": "PASS",
+  "method": "Public HTTP without preview, including explicit no-follow response",
+  "initial_post_create_probe": "Still404during propagation; later base path and query-string path301verified, no repeated create"
+}

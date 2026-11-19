@@ -1,0 +1,1226 @@
+{
+  "batch": "BATCH16",
+  "status": "INSPECTED_NOT_RESOLVED",
+  "count": 65,
+  "counts_by_hold_type": {
+    "HOLD_BUNDLE_COMPONENT_MAPPING": 3,
+    "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED": 8,
+    "HOLD_SOURCE_GEOMETRY": 1,
+    "HOLD_COMPATIBILITY": 6,
+    "HOLD_GENERATION_IDENTITY": 2,
+    "HOLD_MENU_MODEL_EXTENSION": 1,
+    "HELD_SOURCE_DIMENSION_CONFLICT": 3,
+    "HELD_CORE_FUNCTION_MAPPING": 3,
+    "HELD_ALIAS_ROUTING_POLICY": 34,
+    "HOLD_POTENTIAL_DUPLICATE": 2,
+    "HOLD_DUPLICATE_COMMERCIAL_IDENTITY": 2
+  },
+  "products": [
+    {
+      "id": "gid://shopify/Product/10657255653642",
+      "sku": "32.3594",
+      "title": "Wiesbaden Porta fonteinset met Metro kraan",
+      "source_url": "https://www.wiesbaden.nl/one-pack-porta-fontein-metro-kraan-32-3594.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_BUNDLE_COMPONENT_MAPPING",
+      "reason": "Two real Porta corner-basin kits exist.32.3594 explicitly Metro tap;32.3524 source lists generic tap, trap, fixings and drain grid without exact tap model. Official images show different taps. Exact full component equivalence/difference is not established, so do not invent a simple finish or tap-model menu or call each unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "32.3522",
+        "32.3594",
+        "32.3524"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657283768586",
+      "sku": "32.3403",
+      "title": "Wiesbaden Slide waskom rechthoekig 55 x 35 x 12 cm keramiek glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657283899658",
+      "sku": "32.3406",
+      "title": "Wiesbaden Piazza waskom vierkant 40 x 40 x 15 cm keramiek glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657284817162",
+      "sku": "32.3404",
+      "title": "Wiesbaden Circle waskom rond 42 x 15 cm keramiek glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657285669130",
+      "sku": "32.3409",
+      "title": "Wiesbaden Scala waskom rechthoekig 56 x 37 x 10,5 cm keramiek glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657285931274",
+      "sku": "32.3453",
+      "title": "Wiesbaden Vesta wandcloset met Vesta toiletzitting softclose en quick release glans wit",
+      "source_url": "https://www.wiesbaden.nl/vesta-wandcloset-met-vesta-toiletzitting-softclose-en-quick-release-glans-wit-32-3453.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_SOURCE_GEOMETRY",
+      "reason": "Same named family as32.3466/2501, but official drawings use different height references:3453 shows400mm to a lower protrusion while3466/2501 show390mm to a floor/reference line including clearance. This is not proof of a real height difference. Rear fixing/outlet geometry equivalence is not fully established; source also calls outletPK versus bareAO. No unique-role claim and no forced merge.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "32.3466",
+        "32.2501"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657286422794",
+      "sku": "32.3524",
+      "title": "Wiesbaden one-Pack Porta hoekfontein compleet wit",
+      "source_url": "https://www.wiesbaden.nl/one-pack-porta-hoekfontein-compleet-wit-32-3524.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_BUNDLE_COMPONENT_MAPPING",
+      "reason": "Two real Porta corner-basin kits exist.32.3594 explicitly Metro tap;32.3524 source lists generic tap, trap, fixings and drain grid without exact tap model. Official images show different taps. Exact full component equivalence/difference is not established, so do not invent a simple finish or tap-model menu or call each unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "32.3522",
+        "32.3594",
+        "32.3524"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657287962890",
+      "sku": "33.4200",
+      "title": "Wiesbaden Stankafsluiter voor douchegoot kunststof",
+      "source_url": "https://www.wiesbaden.nl/stankafsluiter-voor-douchegoot-kunststof-33-4200.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Real same-role design generation counterparts exist, but source gives old/generic versusnewdesign without confirmed drain generation/fit mapping. They cannot be safely offered as interchangeable colour/size variants or counted unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4200",
+        "33.4202",
+        "33.4201",
+        "33.4203",
+        "33.4207"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657288683786",
+      "sku": "33.4157",
+      "title": "Wiesbaden Haarfilter voor douchegoot kunststof grijs",
+      "source_url": "https://www.wiesbaden.nl/haarfilter-voor-douchegoot-kunststof-grijs-33-4157.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Manufacturer distinguishes generic old and newdesign plastic filters; no exact generation/fit compatibility proof for a clear menu. Same-role siblings prohibit singleton classification.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4157",
+        "33.4158"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657290060042",
+      "sku": "33.4245",
+      "title": "Wiesbaden rooster type 3 voor 3e generatie douchegoot 100 x 7 cm RVS",
+      "source_url": "https://www.wiesbaden.nl/wiesbaden-rooster-type-3-voor-3e-generatie-douchegoot-100-x-7-cm-rvs-33-4245.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_GENERATION_IDENTITY",
+      "reason": "33.4245 explicitly3eGeneratie,33.4244 genericOverig; both Type3 but generation may differ or metadata may be omitted. No primary proof closes generation/fit, so neither unique nor safe length pair.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4244",
+        "33.4245"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657299071242",
+      "sku": "32.3402",
+      "title": "Wiesbaden Slide opzetwastafel 65,5 x 39,5 x 13,5 cm glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657304084746",
+      "sku": "32.3492",
+      "title": "Wiesbaden Kronos fontein 32 x 27,5 x 16 cm keramiek glans wit",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657306312970",
+      "sku": "32.4701",
+      "title": "Wiesbaden Sensor voorzetreservoir+ombouw zwart",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657306870026",
+      "sku": "33.4218",
+      "title": "Wiesbaden rooster standaard voor 3e generatie douchegoot 110 x 7 cm RVS",
+      "source_url": null,
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_PRIMARY_IDENTITY_NOT_CORROBORATED",
+      "reason": "Exact cached supplier match is absent. This row has not passed a per-SKU recovered PRIMARY_IDENTITY proof combining exact full Wiesbaden SKU/model/role/finish and current own-media alignment. A recovered listing/manual alone is insufficient; supplier snapshot absence alone is not treated as proof of invalidity.",
+      "action_required": "Obtain exact official full product identity and compare official SKU photo/drawing with current Shopify own media; record live/indexed/404 bounds and preserve supplier_match:false if unchanged.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657307066634",
+      "sku": "33.4244",
+      "title": "Wiesbaden Rooster type 3 voor douchegoot 90 x 7 cm RVS",
+      "source_url": "https://www.wiesbaden.nl/rooster-type-3-voor-douchegoot-90-x-7-cm-rvs-33-4244.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_GENERATION_IDENTITY",
+      "reason": "33.4245 explicitly3eGeneratie,33.4244 genericOverig; both Type3 but generation may differ or metadata may be omitted. No primary proof closes generation/fit, so neither unique nor safe length pair.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4244",
+        "33.4245"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657315619082",
+      "sku": "32.6013",
+      "title": "Wiesbaden Vesta wandcloset rimless mat wit met Shade slim toiletzitting softclose en quick release mat zwart",
+      "source_url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-mat-wit-met-shade-slim-toiletzitting-softclose-en-quick-release-mat-zwart-32-6013.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_MENU_MODEL_EXTENSION",
+      "reason": "Exact source identifies a mixed bowl/seat-colour bundle. Same ordinary Vesta rimless bowl family already has matwhite/white-seat32.6012 and other seats, but existing unqualified ShadeSlim axis cannot represent both seat colours at the same bowl colour. Requires explicit seat-colour model/label extension and revalidation of the existing cohort, not NO_MENU.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "32.6012",
+        "32.6014",
+        "32.3412",
+        "32.3418"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657315684618",
+      "sku": "33.4207",
+      "title": "Wiesbaden pakkingsring voor kunststof stankafsluiter grijs",
+      "source_url": "https://www.wiesbaden.nl/pakkingsring-voor-kunststof-stankafsluiter-grijs-33-4207.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Primary33.4207 page gives diameter3.5cm;33.4203 is explicitly newdesign. Same-role generation counterparts exist but compatible stankafsluiter/drain fit is not established for both. Hold rather than pretend unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4207",
+        "33.4203",
+        "33.4200",
+        "33.4202"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657319846154",
+      "sku": "32.3693",
+      "title": "Wiesbaden Fonteinset Rhea S mini met fontein rechts glans wit, Casma kraan, sifon en afvoerplug zwart/chroom",
+      "source_url": "https://www.wiesbaden.nl/fonteinset-rhea-s-mini-met-fontein-rechts-glans-wit-casma-kraan-sifon-en-afvoerplug-zwart-chroom-32-3693.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_BUNDLE_COMPONENT_MAPPING",
+      "reason": "Same right-white RheaSmini kit body exists32.3531 and related Carrara/quartz/black kits.32.3693 specifies Casma tap and mixed black/chrome components; finish-only equivalence requires explicit all-component mapping.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "32.3531",
+        "32.3530",
+        "39.3610",
+        "39.3611"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657321320714",
+      "sku": "33.4203",
+      "title": "Wiesbaden pakkingsring voor kunststof stankafsluiter grijs - nieuw design",
+      "source_url": "https://www.wiesbaden.nl/pakkingsring-voor-kunststof-stankafsluiter-grijs-nieuw-design-33-4203.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Primary33.4207 page gives diameter3.5cm;33.4203 is explicitly newdesign. Same-role generation counterparts exist but compatible stankafsluiter/drain fit is not established for both. Hold rather than pretend unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4207",
+        "33.4203",
+        "33.4200",
+        "33.4202"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657321681162",
+      "sku": "33.4158",
+      "title": "Wiesbaden Haarfilter voor douchegoot kunststof grijs - nieuw design",
+      "source_url": "https://www.wiesbaden.nl/haarfilter-voor-douchegoot-kunststof-grijs-nieuw-design-33-4158.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Manufacturer distinguishes generic old and newdesign plastic filters; no exact generation/fit compatibility proof for a clear menu. Same-role siblings prohibit singleton classification.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4157",
+        "33.4158"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657333117194",
+      "sku": "20.3592",
+      "title": "Wiesbaden Slim glasplaat spiegelrook- naar helder glas 1200x2000 8mm nano",
+      "source_url": "https://www.wiesbaden.nl/slim-glasplaat-spiegelrook-naar-helder-glas-1200x2000-8mm-nano-20-3592.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_SOURCE_DIMENSION_CONFLICT",
+      "reason": "Source titles/currentShop nominal900/1000/1200 are contradicted by attached manufacturer drawings for900 and1200. The three linked installation PDFs are byteidentical generic Slim instructions without SKU/width mapping. Hold complete mirror-smoke family pending manufacturer clarification; do not swap widths or assume attachments wrong.",
+      "action_required": "Manufacturer must reconcile nominal SKU width with its attached drawing dimensions before a size menu is safe.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657333805322",
+      "sku": "20.3591",
+      "title": "Wiesbaden Slim glasplaat spiegelrook- naar helder glas 1000x2000 8mm nano",
+      "source_url": "https://www.wiesbaden.nl/slim-glasplaat-spiegelrook-naar-helder-glas-1000x2000-8mm-nano-20-3591.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_SOURCE_DIMENSION_CONFLICT",
+      "reason": "Source titles/currentShop nominal900/1000/1200 are contradicted by attached manufacturer drawings for900 and1200. The three linked installation PDFs are byteidentical generic Slim instructions without SKU/width mapping. Hold complete mirror-smoke family pending manufacturer clarification; do not swap widths or assume attachments wrong.",
+      "action_required": "Manufacturer must reconcile nominal SKU width with its attached drawing dimensions before a size menu is safe.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657342718218",
+      "sku": "33.4202",
+      "title": "Wiesbaden Stankafsluiter voor douchegoot kunststof - new design",
+      "source_url": "https://www.wiesbaden.nl/stankafsluiter-voor-douchegoot-kunststof-new-design-33-4202.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_COMPATIBILITY",
+      "reason": "Real same-role design generation counterparts exist, but source gives old/generic versusnewdesign without confirmed drain generation/fit mapping. They cannot be safely offered as interchangeable colour/size variants or counted unique.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "33.4200",
+        "33.4202",
+        "33.4201",
+        "33.4203",
+        "33.4207"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657348419850",
+      "sku": "33.4494",
+      "title": "Wiesbaden UniMatch open afvoerplug verlengd 5/4\" mat wit",
+      "source_url": "https://www.wiesbaden.nl/unimatch-open-afvoerplug-verlengd-5-4-mat-wit-33-4494.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_CORE_FUNCTION_MAPPING",
+      "reason": "Manufacturer names this extended open drain, but reports Pop-upJa and OverloopJa while FullyClosingNee. Verify exact open/overflow role against existing extended-open cohort before appending; no closing/interchangeability promise.",
+      "action_required": "Manufacturer to confirm drain open/pop-up/overflow function and exact counterpart SKU; then check existing group closure.",
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json",
+        "batch16/remaining-register.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657349894410",
+      "sku": "33.4492",
+      "title": "Wiesbaden UniMatch open afvoerplug 5/4''mat wit",
+      "source_url": "https://www.wiesbaden.nl/unimatch-open-afvoerplug-5-4-mat-wit-33-4492.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_CORE_FUNCTION_MAPPING",
+      "reason": "Manufacturer name says open drain but FullyClosingJa/Pop-upJa contradict the open role. Do not append as an ordinary matwhite open-drain finish without resolving actual function.",
+      "action_required": "Confirm whether this exact SKU is permanently open or closable, overflow suitability, and correct counterpart family.",
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json",
+        "batch16/remaining-register.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657358610698",
+      "sku": "20.3590",
+      "title": "Wiesbaden Slim glasplaat spiegelrook- naar helder glas 900x2000 8mm nano",
+      "source_url": "https://www.wiesbaden.nl/slim-glasplaat-spiegelrook-naar-helder-glas-900x2000-8mm-nano-20-3590.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_SOURCE_DIMENSION_CONFLICT",
+      "reason": "Source titles/currentShop nominal900/1000/1200 are contradicted by attached manufacturer drawings for900 and1200. The three linked installation PDFs are byteidentical generic Slim instructions without SKU/width mapping. Hold complete mirror-smoke family pending manufacturer clarification; do not swap widths or assume attachments wrong.",
+      "action_required": "Manufacturer must reconcile nominal SKU width with its attached drawing dimensions before a size menu is safe.",
+      "related_skus": [],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10657380565258",
+      "sku": "33.4451",
+      "title": "Wiesbaden UniMatch clickwaste afvoerplug verlengd 5/4\" mat wit",
+      "source_url": "https://www.wiesbaden.nl/unimatch-clickwaste-afvoerplug-verlengd-5-4-mat-wit-33-4451.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_CORE_FUNCTION_MAPPING",
+      "reason": "Manufacturer clickwaste extended drain reports MethefstangJa alongside Pop-upJa. Existing colour-extension would hide an unverified control/inclusion difference.",
+      "action_required": "Confirm exact push/lever operation and included lever parts, then compare existing extended-clickwaste cohort.",
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json",
+        "batch16/remaining-register.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10676237664522",
+      "sku": "20.3417",
+      "title": "Wiesbaden Sita inloopdouche met handdoekhouder 100x200 cm chroom/8 mm helder glas met Nano coating",
+      "source_url": "https://www.wiesbaden.nl/sita-inloopdouche-met-handdoekhouder-100x200-cm-chroom-8-mm-helder-glas-met-nano-coating-20-3417.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3406"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3406"
+    },
+    {
+      "id": "gid://shopify/Product/10676237730058",
+      "sku": "20.3418",
+      "title": "Wiesbaden Sita inloopdouche met handdoekhouder 110x200 cm chroom/8 mm helder glas met Nano coating",
+      "source_url": "https://www.wiesbaden.nl/sita-inloopdouche-met-handdoekhouder-110x200-cm-chroom-8-mm-helder-glas-met-nano-coating-20-3418.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3407"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3407"
+    },
+    {
+      "id": "gid://shopify/Product/10676237893898",
+      "sku": "20.3419",
+      "title": "Wiesbaden Sita inloopdouche met handdoekhouder 120x200 cm chroom/8 mm helder glas met Nano coating",
+      "source_url": "https://www.wiesbaden.nl/sita-inloopdouche-met-handdoekhouder-120x200-cm-chroom-8-mm-helder-glas-met-nano-coating-20-3419.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3408"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3408"
+    },
+    {
+      "id": "gid://shopify/Product/10676237926666",
+      "sku": "20.3446",
+      "title": "Wiesbaden Sita inloopdouche met handdoekhouder 80x200 cm chroom/8 mm helder glas met Nano coating",
+      "source_url": "https://www.wiesbaden.nl/sita-inloopdouche-met-handdoekhouder-80x200-cm-chroom-8-mm-helder-glas-met-nano-coating-20-3446.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3404"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3404"
+    },
+    {
+      "id": "gid://shopify/Product/10676269154570",
+      "sku": "20.2800",
+      "title": "Wiesbaden Slide nis schuifdeur 1100 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1100-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-2800.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.2854"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.2854"
+    },
+    {
+      "id": "gid://shopify/Product/10676269187338",
+      "sku": "20.2801",
+      "title": "Wiesbaden Slide nis schuifdeur 1200 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1200-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-2801.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.2850"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.2850"
+    },
+    {
+      "id": "gid://shopify/Product/10676269220106",
+      "sku": "20.2802",
+      "title": "Wiesbaden Slide nis schuifdeur 1400 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1400-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-2802.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.2853"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.2853"
+    },
+    {
+      "id": "gid://shopify/Product/10676269252874",
+      "sku": "20.2803",
+      "title": "Wiesbaden Slide nis schuifdeur dubbel 1800 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-dubbel-1800-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-2803.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.2999"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.2999"
+    },
+    {
+      "id": "gid://shopify/Product/10676269285642",
+      "sku": "20.2810",
+      "title": "Wiesbaden Slide nis schuifdeur 1100 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1100-x-2000-x-8-mm-nano-helder-glas-chroom-20-2810.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3854"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3854"
+    },
+    {
+      "id": "gid://shopify/Product/10676269318410",
+      "sku": "20.2811",
+      "title": "Wiesbaden Slide nis schuifdeur 1200 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1200-x-2000-x-8-mm-nano-helder-glas-chroom-20-2811.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3850"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3850"
+    },
+    {
+      "id": "gid://shopify/Product/10676269351178",
+      "sku": "20.2812",
+      "title": "Wiesbaden Slide nis schuifdeur 1400 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1400-x-2000-x-8-mm-nano-helder-glas-chroom-20-2812.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3853"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3853"
+    },
+    {
+      "id": "gid://shopify/Product/10676269383946",
+      "sku": "20.2813",
+      "title": "Wiesbaden Slide nis schuifdeur 1600 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1600-x-2000-x-8-mm-nano-helder-glas-chroom-20-2813.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3997"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3997"
+    },
+    {
+      "id": "gid://shopify/Product/10676269416714",
+      "sku": "20.2814",
+      "title": "Wiesbaden Slide nis schuifdeur 1700 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-1700-x-2000-x-8-mm-nano-helder-glas-chroom-20-2814.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3998"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3998"
+    },
+    {
+      "id": "gid://shopify/Product/10676269449482",
+      "sku": "20.2815",
+      "title": "Wiesbaden Slide nis schuifdeur dubbel 1800 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/slide-nis-schuifdeur-dubbel-1800-x-2000-x-8-mm-nano-helder-glas-chroom-20-2815.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3999"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3999"
+    },
+    {
+      "id": "gid://shopify/Product/10676270137610",
+      "sku": "20.3593",
+      "title": "Wiesbaden Double hoekinstap cabine met 2 draaideuren 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/double-hoekinstap-cabine-met-2-draaideuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3593.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3846"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3846"
+    },
+    {
+      "id": "gid://shopify/Product/10676270170378",
+      "sku": "20.3594",
+      "title": "Wiesbaden Entra cabine kwartrond met 2 schuifdeuren 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/entra-cabine-kwartrond-met-2-schuifdeuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3594.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3849"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3849"
+    },
+    {
+      "id": "gid://shopify/Product/10676270203146",
+      "sku": "20.3595",
+      "title": "Wiesbaden Entra hoekinstap cabine met 2 schuifdeuren 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/entra-hoekinstap-cabine-met-2-schuifdeuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3595.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3857"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3857"
+    },
+    {
+      "id": "gid://shopify/Product/10676270235914",
+      "sku": "20.3713",
+      "title": "Wiesbaden Double cabine kwartrond met 2 draaideuren 1000 x 1000 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/double-cabine-kwartrond-met-2-draaideuren-1000-x-1000-x-2000-x-8-mm-nano-helder-glas-chroom-20-3713.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3848"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3848"
+    },
+    {
+      "id": "gid://shopify/Product/10676270268682",
+      "sku": "20.3714",
+      "title": "Wiesbaden Double cabine kwartrond met 2 draaideuren 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/double-cabine-kwartrond-met-2-draaideuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3714.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3847"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3847"
+    },
+    {
+      "id": "gid://shopify/Product/10676270498058",
+      "sku": "20.3749",
+      "title": "Wiesbaden Curf cabine kwartrond met 1 draaideur links 900 x 900 x 2000 x 8 mm helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/curf-cabine-kwartrond-met-1-draaideur-links-900-x-900-x-2000-x-8-mm-helder-glas-chroom-20-3749.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3855"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3855"
+    },
+    {
+      "id": "gid://shopify/Product/10676270661898",
+      "sku": "20.3750",
+      "title": "Wiesbaden Curf cabine kwartrond met 1 draaideur rechts 900 x 900 x 2000 x 8 mm helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/curf-cabine-kwartrond-met-1-draaideur-rechts-900-x-900-x-2000-x-8-mm-helder-glas-chroom-20-3750.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3856"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3856"
+    },
+    {
+      "id": "gid://shopify/Product/10676273053962",
+      "sku": "20.3760",
+      "title": "Wiesbaden Salone cabine met 1 draaideur 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-1-draaideur-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3760.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3840"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3840"
+    },
+    {
+      "id": "gid://shopify/Product/10676273086730",
+      "sku": "20.3761",
+      "title": "Wiesbaden Salone cabine met 1 draaideur 1000 x 1000 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-1-draaideur-1000-x-1000-x-2000-x-8-mm-nano-helder-glas-chroom-20-3761.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3841"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3841"
+    },
+    {
+      "id": "gid://shopify/Product/10676273152266",
+      "sku": "20.3762",
+      "title": "Wiesbaden Salone cabine met 2 draaideuren 900 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-2-draaideuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3762.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3845"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3845"
+    },
+    {
+      "id": "gid://shopify/Product/10676273185034",
+      "sku": "20.3763",
+      "title": "Wiesbaden Salone cabine met 2 draaideuren 1000 x 1000 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-2-draaideuren-1000-x-1000-x-2000-x-8-mm-nano-helder-glas-chroom-20-3763.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3844"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3844"
+    },
+    {
+      "id": "gid://shopify/Product/10676273217802",
+      "sku": "20.3765",
+      "title": "Wiesbaden Salone cabine met 1 draaideur 900 x 900 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-1-draaideur-900-x-900-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3765.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3800"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3800"
+    },
+    {
+      "id": "gid://shopify/Product/10676273250570",
+      "sku": "20.3766",
+      "title": "Wiesbaden Salone cabine met 1 draaideur 1000 x 1000 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-1-draaideur-1000-x-1000-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3766.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3801"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3801"
+    },
+    {
+      "id": "gid://shopify/Product/10676273316106",
+      "sku": "20.3767",
+      "title": "Wiesbaden Salone cabine met 2 draaideuren 900 x 900 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/salone-cabine-met-2-draaideuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3767.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3918"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3918"
+    },
+    {
+      "id": "gid://shopify/Product/10676273348874",
+      "sku": "20.3770",
+      "title": "Wiesbaden Skyline hoekinstap cabine met 2 schuifdeuren 800 x 800 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/skyline-hoekinstap-cabine-met-2-schuifdeuren-800-x-800-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3770.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3715"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3715"
+    },
+    {
+      "id": "gid://shopify/Product/10676273447178",
+      "sku": "20.3771",
+      "title": "Wiesbaden Skyline hoekinstap cabine met 2 schuifdeuren 900 x 900 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/skyline-hoekinstap-cabine-met-2-schuifdeuren-900-x-900-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3771.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3716"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3716"
+    },
+    {
+      "id": "gid://shopify/Product/10676273676554",
+      "sku": "20.3772",
+      "title": "Wiesbaden Skyline hoekinstap cabine met 2 schuifdeuren 1000 x 1000 x 2000 x 8 mm nano helder glas/mat zwart",
+      "source_url": "https://www.wiesbaden.nl/skyline-hoekinstap-cabine-met-2-schuifdeuren-1000-x-1000-x-2000-x-8-mm-nano-helder-glas-mat-zwart-20-3772.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3717"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3717"
+    },
+    {
+      "id": "gid://shopify/Product/10676274921738",
+      "sku": "20.3782",
+      "title": "Wiesbaden Pared cabine met 1 schuifdeur 1200 x 800 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/pared-cabine-met-1-schuifdeur-1200-x-800-x-2000-x-8-mm-nano-helder-glas-chroom-20-3782.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3852"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3852"
+    },
+    {
+      "id": "gid://shopify/Product/10676274987274",
+      "sku": "20.3783",
+      "title": "Wiesbaden Pared cabine met 1 schuifdeur 1200 x 900 x 2000 x 8 mm nano helder glas/chroom",
+      "source_url": "https://www.wiesbaden.nl/pared-cabine-met-1-schuifdeur-1200-x-900-x-2000-x-8-mm-nano-helder-glas-chroom-20-3783.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3851"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3851"
+    },
+    {
+      "id": "gid://shopify/Product/10676288061706",
+      "sku": "20.3420",
+      "title": "Wiesbaden Sita inloopdouche met handdoekhouder 140x200 cm chroom/8 mm helder glas met Nano coating",
+      "source_url": "https://www.wiesbaden.nl/sita-inloopdouche-met-handdoekhouder-140x200-cm-chroom-8-mm-helder-glas-met-nano-coating-20-3420.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HELD_ALIAS_ROUTING_POLICY",
+      "reason": "No primary evidence supports a distinguishing generation/function option between these exact-title physical counterparts. Adding both would duplicate a variant tuple. Keep this product untouched pending a catalog alias/canonical routing decision; no merge, removal, redirection or unsupported generation label.",
+      "action_required": "Choose canonical catalogue/alias routing policy with exact counterpart SKU before duplicate menu tuples are introduced.",
+      "related_skus": [
+        "20.3409"
+      ],
+      "evidence_files": [
+        "batch16/shower-review.json"
+      ],
+      "canonical_lookalike_sku": "20.3409"
+    },
+    {
+      "id": "gid://shopify/Product/10676288094474",
+      "sku": "21.3521",
+      "title": "Wiesbaden Voorzetpaneel met poten voor douchebak 90 x 90 x 4 cm glans wit",
+      "source_url": "https://www.wiesbaden.nl/voorzetpaneel-met-poten-voor-douchebak-90-x-90-x-4-cm-glans-wit-21-3521.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_POTENTIAL_DUPLICATE",
+      "reason": "Official panel drawings are byte-identical905x905x100mm. One title omitsvierkant while the other includes it. No primary model/fit difference established; potential duplicate/alias, not two unique products or menu choices.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "21.3521",
+        "21.3560"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10676288127242",
+      "sku": "21.3522",
+      "title": "Wiesbaden Voorzetpaneel met poten voor douchebak kwartrond 90 x 90 x 4 cm glans wit",
+      "source_url": "https://www.wiesbaden.nl/voorzetpaneel-met-poten-voor-douchebak-kwartrond-90-x-90-x-4-cm-glans-wit-21-3522.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_DUPLICATE_COMMERCIAL_IDENTITY",
+      "reason": "Two distinctactiveSKUs have identical exact manufacturer title/nominal90x90x4/glosswhite/quarterpanel role; officialdrawing andmanual PDFs byte-identical. No honestcustomer-facingaxis distinguishes theseSKUs.21.3522manufacturerdescription explicitlyCompoacrylpanel fortray21.3511; equivalentcommercialrole/replacementortraygenerationfor21.3563notestablished. Needmanufacturer SKUreplacement/compatibletrayconfirmation;donotcreateSKUorGenerationaxisanddonotmarkunique.",
+      "action_required": "Confirm whether these two identical quarter-round panel SKUs are aliases or obtain an exact compatible-tray/model distinction; choose the canonical catalogue routing before adding duplicate options.",
+      "evidence_files": [
+        "batch16/general-gap-dispositions.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10676288160010",
+      "sku": "21.3560",
+      "title": "Wiesbaden Voorzetpaneel met poten voor douchebak vierkant 90 x 90 x 4 cm glans wit",
+      "source_url": "https://www.wiesbaden.nl/voorzetpaneel-met-poten-voor-douchebak-vierkant-90-x-90-x-4-cm-glans-wit-21-3560.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_POTENTIAL_DUPLICATE",
+      "reason": "Official panel drawings are byte-identical905x905x100mm. One title omitsvierkant while the other includes it. No primary model/fit difference established; potential duplicate/alias, not two unique products or menu choices.",
+      "action_required": "Resolve the explicit manufacturer component/function/geometry question, then verify exact current canonical peers before any menu changes.",
+      "related_skus": [
+        "21.3521",
+        "21.3560"
+      ],
+      "evidence_files": [
+        "batch16/parts-and-single-model-review.json"
+      ]
+    },
+    {
+      "id": "gid://shopify/Product/10676288356618",
+      "sku": "21.3563",
+      "title": "Wiesbaden Voorzetpaneel met poten voor douchebak kwartrond 90 x 90 x 4 cm glans wit",
+      "source_url": "https://www.wiesbaden.nl/voorzetpaneel-met-poten-voor-douchebak-kwartrond-90-x-90-x-4-cm-glans-wit-21-3563.html",
+      "fresh_eligibility": "ACTIVE_PUBLISHED_SINGLE_SKU_NO_GROUP_OR_LEGACY_ROUTE",
+      "commercial_product_fields_preserved": true,
+      "disposition": "HELD_WITH_CONCRETE_REASON",
+      "hold_type": "HOLD_DUPLICATE_COMMERCIAL_IDENTITY",
+      "reason": "Two distinctactiveSKUs have identical exact manufacturer title/nominal90x90x4/glosswhite/quarterpanel role; officialdrawing andmanual PDFs byte-identical. No honestcustomer-facingaxis distinguishes theseSKUs.21.3522manufacturerdescription explicitlyCompoacrylpanel fortray21.3511; equivalentcommercialrole/replacementortraygenerationfor21.3563notestablished. Needmanufacturer SKUreplacement/compatibletrayconfirmation;donotcreateSKUorGenerationaxisanddonotmarkunique.",
+      "action_required": "Confirm whether these two identical quarter-round panel SKUs are aliases or obtain an exact compatible-tray/model distinction; choose the canonical catalogue routing before adding duplicate options.",
+      "evidence_files": [
+        "batch16/general-gap-dispositions.json"
+      ]
+    }
+  ],
+  "verification": {
+    "all_65_readback_unchanged": true,
+    "counts_as_resolved": false,
+    "next_action": "Resolve the recorded primary identity, component, geometry, compatibility, generation or commercial-alias question for each exact SKU; then re-read current canonical peers before proposing any menu."
+  }
+}

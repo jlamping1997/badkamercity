@@ -1,0 +1,133 @@
+{
+  "status": "PRODUCTS_LIVE_CART_PREVIEW_VERIFIED_AWAITING_MERCHANT_PUBLICATION",
+  "files": [
+    {
+      "path": "shopify/current/sections/main-cart-items.liquid",
+      "sha256": "58e3740ab8661f6b4ab4e68d16470445015fef1d96149221e3b19a6ffd35c341"
+    },
+    {
+      "path": "shopify/current/sections/cart-notification-product.liquid",
+      "sha256": "cb1fad2055c34de617e26b3a3fa093b37fb57ed7140fd6dad5f797e11d1919c9"
+    },
+    {
+      "path": "shopify/current/snippets/bc-cart-delivery.liquid",
+      "sha256": "03f8199fa174b554fb9a69cfcf30072d5b0fa55ebbe74140cfd4434a113e151c"
+    },
+    {
+      "path": "shopify/current/snippets/bc-cart-unit-label.liquid",
+      "sha256": "f8162d5842ddeb420ce6c0d0797523b6a5f9d971b8d1b8f43b54ab0b569f4f36"
+    }
+  ],
+  "contract_test": {
+    "status": "PASS",
+    "checks": [
+      "22 unique SKU/product/variant identities and complete 11 x 2 choice matrix",
+      "Every color switch preserves the current size; size switches preserve color",
+      "10 m2 plus 10 percent gives 8 x 1.44 or 6 x 2 m2 at exact box prices",
+      "Cart unit label is per box for tiles and per item for normal and missing metadata",
+      "Real notification section renders box label and preserves normal item label",
+      "Real cart section renders box units with normal and discounted prices",
+      "Cart uses confirmed tile lead times, escapes text and keeps neutral fallback"
+    ],
+    "scope": "Liquid rendering and real selection/calculation code with explicit fixtures; no browser, checkout, shipment or payment claim"
+  },
+  "liquid_validation": {
+    "success": true,
+    "revision": 2,
+    "files": 5
+  },
+  "theme_comparison": {
+    "status": "PASS",
+    "main": {
+      "id": "gid://shopify/OnlineStoreTheme/196227170570",
+      "role": "MAIN",
+      "files": 1381,
+      "changed": []
+    },
+    "preview": {
+      "id": "gid://shopify/OnlineStoreTheme/196238639370",
+      "role": "UNPUBLISHED",
+      "files": 1382,
+      "changed": [
+        "sections/main-cart-items.liquid",
+        "sections/cart-notification-product.liquid",
+        "snippets/bc-cart-delivery.liquid",
+        "snippets/bc-cart-unit-label.liquid",
+        "assets/bc-external-filters.js"
+      ]
+    },
+    "baselineParity": {
+      "mainFiles": 1381,
+      "previewFiles": 1381,
+      "differences": [],
+      "mainDrift": []
+    },
+    "integration": {
+      "searchSource": "196116087050",
+      "sourceMd5": "e0783b4ed15e1acc70ff1518cf2b5f20",
+      "exactReadback": [
+        {
+          "filename": "assets/bc-external-filters.js",
+          "checksum": "e0783b4ed15e1acc70ff1518cf2b5f20",
+          "exact": true
+        },
+        {
+          "filename": "sections/cart-notification-product.liquid",
+          "checksum": "6fd541101710cbf172ee1e73fd868c13",
+          "exact": true
+        },
+        {
+          "filename": "sections/main-cart-items.liquid",
+          "checksum": "d24617ce3e5dcdc0674c377b2727993f",
+          "exact": true
+        },
+        {
+          "filename": "snippets/bc-cart-delivery.liquid",
+          "checksum": "37a9c58423cf64e21ce4daea092204dc",
+          "exact": true
+        },
+        {
+          "filename": "snippets/bc-cart-unit-label.liquid",
+          "checksum": "dd782587e437d808903d296be3c60d32",
+          "exact": true
+        }
+      ]
+    },
+    "evidence": "Full pre/post inventory for four cart paths, followed by a single acknowledged search-asset write and exact readback of all five paths; MAIN role unchanged"
+  },
+  "browser_preview": {
+    "status": "PASS",
+    "theme": "gid://shopify/OnlineStoreTheme/196238639370",
+    "sku": "RR6001",
+    "boxes": 3,
+    "m2": 4.32,
+    "boxPriceCents": 9929,
+    "totalCents": 29787,
+    "notificationUnit": "per doos",
+    "cartUnit": "per doos",
+    "delivery": [
+      "Voorraadartikel",
+      "Op voorraad bij leverancier"
+    ],
+    "unitPrice": "€68,95/m²",
+    "cartImageLoaded": true,
+    "cleanupEmpty": true,
+    "method": "Real Chrome product button, notification and cart; own test line removed",
+    "checkout": "NOT_TESTED",
+    "physicalMobile": "NOT_TESTED"
+  },
+  "search_integration": {
+    "status": "EXACT_COPY_VERIFIED",
+    "runtime_tests": 23,
+    "passed": 23,
+    "md5": "e0783b4ed15e1acc70ff1518cf2b5f20"
+  },
+  "search_visibility": {
+    "status": "OPEN",
+    "queries": [
+      "RR6001",
+      "Re-Bel"
+    ],
+    "browser_results": 0
+  }
+}

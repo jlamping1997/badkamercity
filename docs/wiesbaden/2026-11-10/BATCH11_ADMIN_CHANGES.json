@@ -1,0 +1,3787 @@
+{
+  "batch": "WIESBADEN BATCH11",
+  "date": "2026-11-10",
+  "status": "APPLIED_VERIFIED",
+  "scope": "Create-only custom.switch_group and custom.color_variants; no overwritten metafields",
+  "themeId": "gid://shopify/OnlineStoreTheme/196441932042",
+  "mainId": "gid://shopify/OnlineStoreTheme/196416504074",
+  "codeBaseline": "c4115ba741cf7621b3c4e3f1308f689d962a478d",
+  "rollback": "Read current fields first; delete only entries still exactly equal to recorded after values and identity/digest; preserve any concurrent change. Restore only the two changed concept Liquid bodies from codeBaseline (shopify/current/). New group JSON assets may remain unreferenced. Never write MAIN, settings_data.json or publish.",
+  "changes": [
+    {
+      "ownerId": "gid://shopify/Product/10657282621706",
+      "sku": "29.3948",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163489546",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657282949386",
+      "sku": "29.3945",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163456778",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283244298",
+      "sku": "29.3984",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163424010",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283408138",
+      "sku": "29.3994",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163391242",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657296875786",
+      "sku": "29.3947",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163358474",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297596682",
+      "sku": "29.2984",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163325706",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297694986",
+      "sku": "29.2945",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163292938",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657299628298",
+      "sku": "29.2946",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163260170",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657303265546",
+      "sku": "29.6984",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163227402",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304314122",
+      "sku": "29.6945",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163194634",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304740106",
+      "sku": "29.5945",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163161866",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314636042",
+      "sku": "29.7946",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163129098",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324531978",
+      "sku": "29.6946",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163096330",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324990730",
+      "sku": "29.5984",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163063562",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657335116042",
+      "sku": "29.7945",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163030794",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341767946",
+      "sku": "29.6935",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162998026",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657356939530",
+      "sku": "29.5948",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162965258",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372537098",
+      "sku": "29.6936",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162932490",
+      "afterCompareDigest": "84d527d99e303f112f4eb23d22b44b0fa25a58da571dac201b931f9e6878e50b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657280786698",
+      "sku": "24.3803",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-304-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162899722",
+      "afterCompareDigest": "4d74fc7820d5381f8d5d9a3b5b5808e5e68b11d86996bfa7bf0e59b7ff10c88c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657325383946",
+      "sku": "24.3726",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-304-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162866954",
+      "afterCompareDigest": "4d74fc7820d5381f8d5d9a3b5b5808e5e68b11d86996bfa7bf0e59b7ff10c88c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657281474826",
+      "sku": "29.3816",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162834186",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657282031882",
+      "sku": "29.3815",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162801418",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657296908554",
+      "sku": "29.2816",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162768650",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297858826",
+      "sku": "29.2815",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162735882",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304543498",
+      "sku": "29.6815",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657162703114",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307885834",
+      "sku": "29.5815",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164505354",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657313521930",
+      "sku": "29.7816",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164472586",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657320993034",
+      "sku": "29.2913",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164439818",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657321124106",
+      "sku": "29.5913",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164407050",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657321484554",
+      "sku": "29.4913",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164374282",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657321517322",
+      "sku": "29.7912",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164341514",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657325678858",
+      "sku": "29.5816",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164308746",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657329938698",
+      "sku": "29.3834",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164275978",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657333870858",
+      "sku": "29.2813",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164243210",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657334296842",
+      "sku": "29.3848",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164210442",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657334493450",
+      "sku": "29.2829",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164177674",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336033546",
+      "sku": "29.7815",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164144906",
+      "afterCompareDigest": "1a0d6587e96985c54dbf3aa353d767c9748882650199dfeadc1cb65307b53a49"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280426762",
+      "sku": "29.2080",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164112138",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280492298",
+      "sku": "29.2081",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164079370",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280557834",
+      "sku": "29.2082",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164046602",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280590602",
+      "sku": "29.2083",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164013834",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280656138",
+      "sku": "29.2084",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163981066",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280721674",
+      "sku": "29.2085",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163948298",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282229002",
+      "sku": "29.2090",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163915530",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282261770",
+      "sku": "29.2091",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163882762",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282294538",
+      "sku": "29.2092",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163849994",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282327306",
+      "sku": "29.2093",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163817226",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282360074",
+      "sku": "29.2094",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163784458",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282425610",
+      "sku": "29.2095",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163751690",
+      "afterCompareDigest": "7f33bfeccc3ddd7dd3ac6d1cdbc01a877b871c05656dda7c1867ceab4241818d"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279607562",
+      "sku": "29.2040",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657163718922",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279640330",
+      "sku": "29.2041",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165422858",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279673098",
+      "sku": "29.2042",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165390090",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279705866",
+      "sku": "29.2043",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165357322",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279738634",
+      "sku": "29.2044",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165324554",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279771402",
+      "sku": "29.2045",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165291786",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280164618",
+      "sku": "29.2050",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165259018",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280197386",
+      "sku": "29.2051",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165226250",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280230154",
+      "sku": "29.2052",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165193482",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280262922",
+      "sku": "29.2053",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165160714",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280295690",
+      "sku": "29.2054",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165127946",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280361226",
+      "sku": "29.2055",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165095178",
+      "afterCompareDigest": "bce20015fdd987b58d27e00a58fb09b9e4f7a27cbd4da27651472f6c13be1879"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285669642",
+      "sku": "29.4090",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165062410",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285702410",
+      "sku": "29.4091",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657165029642",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285767946",
+      "sku": "29.4092",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164996874",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285866250",
+      "sku": "29.4093",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164964106",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285899018",
+      "sku": "29.4094",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164931338",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285931786",
+      "sku": "29.4095",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164898570",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285964554",
+      "sku": "29.5040",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164865802",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285997322",
+      "sku": "29.5041",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164833034",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286062858",
+      "sku": "29.5042",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164800266",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286095626",
+      "sku": "29.5043",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164767498",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286128394",
+      "sku": "29.5044",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164734730",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286161162",
+      "sku": "29.5045",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164701962",
+      "afterCompareDigest": "14447baf58f909b5bb5390e60a941447cd88dea64ce7ffd4662219ea6a1250ac"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389871370",
+      "sku": "29.4040",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164669194",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283506954",
+      "sku": "29.4041",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657164636426",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283539722",
+      "sku": "29.4042",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167028490",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283638026",
+      "sku": "29.4043",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166995722",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283703562",
+      "sku": "29.4044",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166962954",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283834634",
+      "sku": "29.4080",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166930186",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283867402",
+      "sku": "29.4081",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166897418",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283932938",
+      "sku": "29.4082",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166864650",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283965706",
+      "sku": "29.4083",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166831882",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283998474",
+      "sku": "29.4084",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166799114",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676284064010",
+      "sku": "29.4085",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166766346",
+      "afterCompareDigest": "8c2606e6bd6039b8d7711bf0fdc549cd055a99a9ceab5d87841b014d6042fde9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657380794634",
+      "sku": "29.3062",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166733578",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657380925706",
+      "sku": "29.3065",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166700810",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657380991242",
+      "sku": "29.3072",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166668042",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657381122314",
+      "sku": "29.3075",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166635274",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389052170",
+      "sku": "29.3060",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166602506",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389150474",
+      "sku": "29.3063",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166569738",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389248778",
+      "sku": "29.3070",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166536970",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389347082",
+      "sku": "29.3073",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166504202",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657405763850",
+      "sku": "29.3061",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166471434",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657405829386",
+      "sku": "29.3064",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166438666",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657405894922",
+      "sku": "29.3071",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166405898",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657405960458",
+      "sku": "29.3074",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166373130",
+      "afterCompareDigest": "7ca50f459a395116c521b7034cc9042852cf0599d3183a75510cff9b73e01acc"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340195082",
+      "sku": "29.3041",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166340362",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340326154",
+      "sku": "29.3044",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166307594",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340457226",
+      "sku": "29.3047",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166274826",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340588298",
+      "sku": "29.3050",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657166242058",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341899018",
+      "sku": "29.3039",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168240906",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341997322",
+      "sku": "29.3042",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168208138",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657342095626",
+      "sku": "29.3045",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168175370",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657342226698",
+      "sku": "29.3048",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168142602",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372569866",
+      "sku": "29.3040",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168109834",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372635402",
+      "sku": "29.3043",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168077066",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372700938",
+      "sku": "29.3046",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168044298",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372766474",
+      "sku": "29.3049",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168011530",
+      "afterCompareDigest": "52ad221a6e4f4f996b5051d089d2593d2f08160ac487ae74a3a000fba08aee87"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283834122",
+      "sku": "29.4118",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167978762",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314767114",
+      "sku": "29.6006",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167945994",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314799882",
+      "sku": "29.6014",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167913226",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657315389706",
+      "sku": "29.6005",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167880458",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657315455242",
+      "sku": "29.6013",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167847690",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657322107146",
+      "sku": "29.6248",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167814922",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657323122954",
+      "sku": "29.6249",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167782154",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657335181578",
+      "sku": "29.6012",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167749386",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657373323530",
+      "sku": "29.7104",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167716618",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657393082634",
+      "sku": "29.7100",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167683850",
+      "afterCompareDigest": "ba00f6e5eef5823b1cffec8f03f53b9cd230d3e69ba24803d1dff40979b4a347"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657298448650",
+      "sku": "29.4120",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167651082",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657299497226",
+      "sku": "29.4123",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167618314",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307361546",
+      "sku": "29.6060",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167585546",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307918602",
+      "sku": "29.6061",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167552778",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657310605578",
+      "sku": "29.5947",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167520010",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657318600970",
+      "sku": "29.4122",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167487242",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324204298",
+      "sku": "29.6252",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657167454474",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657330888970",
+      "sku": "29.6062",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169322250",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657360576778",
+      "sku": "29.6251",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169289482",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657365164298",
+      "sku": "29.7101",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169256714",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657393148170",
+      "sku": "29.7105",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169223946",
+      "afterCompareDigest": "2dee68984ebf4696951b85d43306b30de014335bf7ef8ca50b8b003efbb29ac6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657291600138",
+      "sku": "39.3501",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169191178",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657291665674",
+      "sku": "39.3506",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169158410",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657295499530",
+      "sku": "39.3508",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169125642",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657296417034",
+      "sku": "39.3507",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169092874",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657312571658",
+      "sku": "39.3500",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169060106",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657312669962",
+      "sku": "39.3505",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169027338",
+      "afterCompareDigest": "c6f499559ff9ee5347455dc2fce59b3a65a97036fa8ae2b909966328cd87f162"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657295532298",
+      "sku": "39.3523",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-rond-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168994570",
+      "afterCompareDigest": "493f4e884bc6d64c117bca24def2f273929e3020187336614ea87655862a89c6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657296548106",
+      "sku": "39.3522",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-raw-fontein-rond-hardsteen-gezoet-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168961802",
+      "afterCompareDigest": "493f4e884bc6d64c117bca24def2f273929e3020187336614ea87655862a89c6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336557834",
+      "sku": "21.3666",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-liora-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168929034",
+      "afterCompareDigest": "ca5b6a2ddf4e71547ea796ea266ab765f7bebd73afcfd06fbc89d7a7026fb958"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336688906",
+      "sku": "21.3671",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-liora-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168896266",
+      "afterCompareDigest": "ca5b6a2ddf4e71547ea796ea266ab765f7bebd73afcfd06fbc89d7a7026fb958"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336983818",
+      "sku": "21.3672",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-liora-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168863498",
+      "afterCompareDigest": "ca5b6a2ddf4e71547ea796ea266ab765f7bebd73afcfd06fbc89d7a7026fb958"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657376960778",
+      "sku": "21.3677",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168830730",
+      "afterCompareDigest": "437e553947ea0ec185cd8b9ce5a846d444f602fbcc3939a6fa56cacf843a742e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657395671306",
+      "sku": "21.3678",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168797962",
+      "afterCompareDigest": "437e553947ea0ec185cd8b9ce5a846d444f602fbcc3939a6fa56cacf843a742e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657367032074",
+      "sku": "21.3679",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168765194",
+      "afterCompareDigest": "437e553947ea0ec185cd8b9ce5a846d444f602fbcc3939a6fa56cacf843a742e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657367130378",
+      "sku": "21.3684",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168732426",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657377091850",
+      "sku": "21.3682",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168699658",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657377190154",
+      "sku": "21.3686",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168666890",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657395736842",
+      "sku": "21.3683",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168634122",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657367195914",
+      "sku": "21.3688",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168601354",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657377288458",
+      "sku": "21.3631",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168568586",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657386201354",
+      "sku": "21.3632",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657168535818",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657395802378",
+      "sku": "21.3687",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170370826",
+      "afterCompareDigest": "bf2524b26c4af5f3efb93251b0a2d79e8743c255f7ce5b36eb85e234c51a9422"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336852746",
+      "sku": "21.3662",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170338058",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336951050",
+      "sku": "21.3668",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170305290",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657360937226",
+      "sku": "21.3663",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170272522",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657361035530",
+      "sku": "21.3673",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170239754",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336819978",
+      "sku": "21.3674",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170206986",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657361002762",
+      "sku": "21.3669",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170174218",
+      "afterCompareDigest": "a975259910a758ebd3987043dc8efddb3ef790a340def4ef7333fd721ef301bf"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657367294218",
+      "sku": "33.2147",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-demis-inbouwnis-ovaal-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170141450",
+      "afterCompareDigest": "2517d37fd302f413b566dd28efa8209c2255a63622cd3e19d14a1f77847d866c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657377321226",
+      "sku": "33.2141",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-demis-inbouwnis-ovaal-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170108682",
+      "afterCompareDigest": "2517d37fd302f413b566dd28efa8209c2255a63622cd3e19d14a1f77847d866c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657377419530",
+      "sku": "33.2148",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-demis-inbouwnis-ovaal-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170075914",
+      "afterCompareDigest": "2517d37fd302f413b566dd28efa8209c2255a63622cd3e19d14a1f77847d866c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657395867914",
+      "sku": "33.2142",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-demis-inbouwnis-ovaal-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170043146",
+      "afterCompareDigest": "2517d37fd302f413b566dd28efa8209c2255a63622cd3e19d14a1f77847d866c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657287241994",
+      "sku": "33.4134",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170010378",
+      "afterCompareDigest": "3d2e0e0ec6829ce77fb6d36f29e0cd458177728b6639aea8f30f850854b57ba9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288257802",
+      "sku": "33.4133",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169977610",
+      "afterCompareDigest": "3d2e0e0ec6829ce77fb6d36f29e0cd458177728b6639aea8f30f850854b57ba9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288323338",
+      "sku": "33.4136",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169944842",
+      "afterCompareDigest": "3d2e0e0ec6829ce77fb6d36f29e0cd458177728b6639aea8f30f850854b57ba9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657305133322",
+      "sku": "33.4132",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169912074",
+      "afterCompareDigest": "3d2e0e0ec6829ce77fb6d36f29e0cd458177728b6639aea8f30f850854b57ba9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657305166090",
+      "sku": "33.4135",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169879306",
+      "afterCompareDigest": "3d2e0e0ec6829ce77fb6d36f29e0cd458177728b6639aea8f30f850854b57ba9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657289077002",
+      "sku": "33.4223",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-type-1-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169846538",
+      "afterCompareDigest": "4400f30f99af1cfb0c704d06f500ca5993a1191085b693bb72dd1dfc49eec29a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657306968330",
+      "sku": "33.4224",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-type-1-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169813770",
+      "afterCompareDigest": "4400f30f99af1cfb0c704d06f500ca5993a1191085b693bb72dd1dfc49eec29a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657290125578",
+      "sku": "33.4253",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-type-4-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169781002",
+      "afterCompareDigest": "db05293e4aa89ae36fbaaaa4813f1b3f673fbce13db5c914b89fdde8cb88e3c9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307197706",
+      "sku": "33.4252",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-type-4-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169748234",
+      "afterCompareDigest": "db05293e4aa89ae36fbaaaa4813f1b3f673fbce13db5c914b89fdde8cb88e3c9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288061194",
+      "sku": "33.4213",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169715466",
+      "afterCompareDigest": "5c8ffb15641593fb8baa0fd8ecac38120fc3d8c36854a81bf50dca54a54135f0"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288880394",
+      "sku": "33.4214",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169682698",
+      "afterCompareDigest": "5c8ffb15641593fb8baa0fd8ecac38120fc3d8c36854a81bf50dca54a54135f0"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657289011466",
+      "sku": "33.4217",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169649930",
+      "afterCompareDigest": "5c8ffb15641593fb8baa0fd8ecac38120fc3d8c36854a81bf50dca54a54135f0"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657289896202",
+      "sku": "33.4216",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169617162",
+      "afterCompareDigest": "5c8ffb15641593fb8baa0fd8ecac38120fc3d8c36854a81bf50dca54a54135f0"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657308705034",
+      "sku": "33.4215",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657169584394",
+      "afterCompareDigest": "5c8ffb15641593fb8baa0fd8ecac38120fc3d8c36854a81bf50dca54a54135f0"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657310343434",
+      "sku": "33.4284",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171386634",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657310474506",
+      "sku": "33.4281",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171353866",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657311228170",
+      "sku": "33.4283",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171321098",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657311293706",
+      "sku": "33.4280",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171288330",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657328922890",
+      "sku": "33.4285",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171255562",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657329250570",
+      "sku": "33.4282",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171222794",
+      "afterCompareDigest": "4589cba90ef5175cac4a973e1fee709a041f06e9e49017248c0786e408a60770"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657286816010",
+      "sku": "33.4123",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171190026",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657286979850",
+      "sku": "33.4124",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171157258",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657287045386",
+      "sku": "33.4127",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171124490",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657287143690",
+      "sku": "33.4130",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171091722",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288159498",
+      "sku": "33.4126",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171058954",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657288192266",
+      "sku": "33.4129",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657171026186",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304969482",
+      "sku": "33.4125",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170993418",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657305100554",
+      "sku": "33.4128",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170960650",
+      "afterCompareDigest": "75592e3ff61df6dfe105814b4de8d22fbf9380338b932ea5da39f4a1a450ab95"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657289797898",
+      "sku": "38.3770",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tigris-badkamer-ledverlichting-enkel-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170927882",
+      "afterCompareDigest": "099800295513429eeb5d69452ef68baf5c609eb4a736e36515875bcf3994e318"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657290780938",
+      "sku": "38.3771",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-tigris-badkamer-ledverlichting-enkel-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170895114",
+      "afterCompareDigest": "099800295513429eeb5d69452ef68baf5c609eb4a736e36515875bcf3994e318"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657279672586",
+      "sku": "21.3690",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-trapeze-vrijstaand-ligbad-acryl-glans-wit-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170862346",
+      "afterCompareDigest": "d9e9cf851a95e2f1ce41db2a1440e68bfa8eb964441189d59ca465de663044b3"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657280065802",
+      "sku": "21.3685",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-trapeze-vrijstaand-ligbad-acryl-glans-wit-met-waste-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170829578",
+      "afterCompareDigest": "d9e9cf851a95e2f1ce41db2a1440e68bfa8eb964441189d59ca465de663044b3"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297924362",
+      "sku": "36.4052",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170796810",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657301397770",
+      "sku": "36.4071",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170764042",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657316143370",
+      "sku": "36.4051",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170731274",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657321091338",
+      "sku": "36.4072",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170698506",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657383219466",
+      "sku": "36.4055",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170665738",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657383448842",
+      "sku": "36.4064",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170632970",
+      "afterCompareDigest": "ab89e7f724fc43551863089b2c42ede090709c5d58b7eaf8d541cf5993b1538e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657301266698",
+      "sku": "36.4062",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-betonlook-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657170600202",
+      "afterCompareDigest": "c1038e8d12061ae8901beadefaec998949eec13698e6090ba3c32c5d9b379062"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657320960266",
+      "sku": "36.4061",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-julia-fontein-solid-surface-betonlook-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657176400138",
+      "afterCompareDigest": "c1038e8d12061ae8901beadefaec998949eec13698e6090ba3c32c5d9b379062"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657286193418",
+      "sku": "32.3499",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rhea-xxs-fontein-keramiek-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657176367370",
+      "afterCompareDigest": "543bd9cd05182f2c68cbb8eef1b2d5aeeed77e75eb50d4196a801bcfab7794cd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304215818",
+      "sku": "32.3498",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rhea-xxs-fontein-keramiek-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657176334602",
+      "afterCompareDigest": "543bd9cd05182f2c68cbb8eef1b2d5aeeed77e75eb50d4196a801bcfab7794cd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657373421834",
+      "sku": "32.1498",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rhea-xxs-fontein-keramiek-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657176301834",
+      "afterCompareDigest": "543bd9cd05182f2c68cbb8eef1b2d5aeeed77e75eb50d4196a801bcfab7794cd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657384333578",
+      "sku": "32.1499",
+      "namespace": "custom",
+      "key": "switch_group",
+      "type": "single_line_text_field",
+      "before": null,
+      "after": "wiesbaden-rhea-xxs-fontein-keramiek-maat",
+      "afterMetafieldId": "gid://shopify/Metafield/71657176269066",
+      "afterCompareDigest": "543bd9cd05182f2c68cbb8eef1b2d5aeeed77e75eb50d4196a801bcfab7794cd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657282621706",
+      "sku": "29.3948",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282621706\",\"gid://shopify/Product/10657299628298\",\"gid://shopify/Product/10657314636042\",\"gid://shopify/Product/10657324531978\",\"gid://shopify/Product/10657372537098\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146646794",
+      "afterCompareDigest": "26f3287e9e143dfe27f0507ab306fcaec1bd1e95c44c612e89ed6a280b4f7f65"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657282949386",
+      "sku": "29.3945",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146614026",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283244298",
+      "sku": "29.3984",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146581258",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283408138",
+      "sku": "29.3994",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146548490",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657296875786",
+      "sku": "29.3947",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146515722",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297596682",
+      "sku": "29.2984",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146482954",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657297694986",
+      "sku": "29.2945",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146450186",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657299628298",
+      "sku": "29.2946",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282621706\",\"gid://shopify/Product/10657299628298\",\"gid://shopify/Product/10657314636042\",\"gid://shopify/Product/10657324531978\",\"gid://shopify/Product/10657372537098\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146417418",
+      "afterCompareDigest": "26f3287e9e143dfe27f0507ab306fcaec1bd1e95c44c612e89ed6a280b4f7f65"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657303265546",
+      "sku": "29.6984",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146384650",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304314122",
+      "sku": "29.6945",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146351882",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304740106",
+      "sku": "29.5945",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146319114",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314636042",
+      "sku": "29.7946",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282621706\",\"gid://shopify/Product/10657299628298\",\"gid://shopify/Product/10657314636042\",\"gid://shopify/Product/10657324531978\",\"gid://shopify/Product/10657372537098\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146286346",
+      "afterCompareDigest": "26f3287e9e143dfe27f0507ab306fcaec1bd1e95c44c612e89ed6a280b4f7f65"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324531978",
+      "sku": "29.6946",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282621706\",\"gid://shopify/Product/10657299628298\",\"gid://shopify/Product/10657314636042\",\"gid://shopify/Product/10657324531978\",\"gid://shopify/Product/10657372537098\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146253578",
+      "afterCompareDigest": "26f3287e9e143dfe27f0507ab306fcaec1bd1e95c44c612e89ed6a280b4f7f65"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324990730",
+      "sku": "29.5984",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146220810",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657335116042",
+      "sku": "29.7945",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146188042",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341767946",
+      "sku": "29.6935",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282949386\",\"gid://shopify/Product/10657296875786\",\"gid://shopify/Product/10657297694986\",\"gid://shopify/Product/10657304314122\",\"gid://shopify/Product/10657304740106\",\"gid://shopify/Product/10657335116042\",\"gid://shopify/Product/10657341767946\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146155274",
+      "afterCompareDigest": "3949e714f98815e380b5c1e8e809ba85725d74ac95b71554d55aac09a30ed042"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657356939530",
+      "sku": "29.5948",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283244298\",\"gid://shopify/Product/10657283408138\",\"gid://shopify/Product/10657297596682\",\"gid://shopify/Product/10657303265546\",\"gid://shopify/Product/10657324990730\",\"gid://shopify/Product/10657356939530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146122506",
+      "afterCompareDigest": "a76b3e6c52f3576faf5ce2ac994544945aac470758cf7bcdb3242290057008cb"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372537098",
+      "sku": "29.6936",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657282621706\",\"gid://shopify/Product/10657299628298\",\"gid://shopify/Product/10657314636042\",\"gid://shopify/Product/10657324531978\",\"gid://shopify/Product/10657372537098\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146089738",
+      "afterCompareDigest": "26f3287e9e143dfe27f0507ab306fcaec1bd1e95c44c612e89ed6a280b4f7f65"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280426762",
+      "sku": "29.2080",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146056970",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280492298",
+      "sku": "29.2081",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146024202",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280557834",
+      "sku": "29.2082",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657145991434",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280590602",
+      "sku": "29.2083",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657145958666",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280656138",
+      "sku": "29.2084",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657145925898",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280721674",
+      "sku": "29.2085",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280426762\",\"gid://shopify/Product/10676280492298\",\"gid://shopify/Product/10676280557834\",\"gid://shopify/Product/10676280590602\",\"gid://shopify/Product/10676280656138\",\"gid://shopify/Product/10676280721674\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657145893130",
+      "afterCompareDigest": "b7f8abca1f816004f56e314bd1dce43dd387f1bc8549fb6b316fc9f264476a0a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282229002",
+      "sku": "29.2090",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657145860362",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282261770",
+      "sku": "29.2091",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147531530",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282294538",
+      "sku": "29.2092",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147498762",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282327306",
+      "sku": "29.2093",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147465994",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282360074",
+      "sku": "29.2094",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147433226",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676282425610",
+      "sku": "29.2095",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676282229002\",\"gid://shopify/Product/10676282261770\",\"gid://shopify/Product/10676282294538\",\"gid://shopify/Product/10676282327306\",\"gid://shopify/Product/10676282360074\",\"gid://shopify/Product/10676282425610\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147400458",
+      "afterCompareDigest": "5ed4b1314a4771700081a941258084df168942bcc678522c1bc0eb70e5e5e526"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279607562",
+      "sku": "29.2040",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147367690",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279640330",
+      "sku": "29.2041",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147334922",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279673098",
+      "sku": "29.2042",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147302154",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279705866",
+      "sku": "29.2043",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147269386",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279738634",
+      "sku": "29.2044",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147236618",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676279771402",
+      "sku": "29.2045",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676279607562\",\"gid://shopify/Product/10676279640330\",\"gid://shopify/Product/10676279673098\",\"gid://shopify/Product/10676279705866\",\"gid://shopify/Product/10676279738634\",\"gid://shopify/Product/10676279771402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147203850",
+      "afterCompareDigest": "a1ae76c9c7d989451b969841529ab930dc6e9411f234573cd83058971c18ad47"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280164618",
+      "sku": "29.2050",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147171082",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280197386",
+      "sku": "29.2051",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147138314",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280230154",
+      "sku": "29.2052",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147105546",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280262922",
+      "sku": "29.2053",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147072778",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280295690",
+      "sku": "29.2054",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147040010",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676280361226",
+      "sku": "29.2055",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676280164618\",\"gid://shopify/Product/10676280197386\",\"gid://shopify/Product/10676280230154\",\"gid://shopify/Product/10676280262922\",\"gid://shopify/Product/10676280295690\",\"gid://shopify/Product/10676280361226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147007242",
+      "afterCompareDigest": "373db9e414822059c81913674d89d5cdf9dc0ebfd8c6514df0283de36a3706a6"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285669642",
+      "sku": "29.4090",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146974474",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285702410",
+      "sku": "29.4091",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146941706",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285767946",
+      "sku": "29.4092",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146908938",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285866250",
+      "sku": "29.4093",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146876170",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285899018",
+      "sku": "29.4094",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146843402",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285931786",
+      "sku": "29.4095",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285669642\",\"gid://shopify/Product/10676285702410\",\"gid://shopify/Product/10676285767946\",\"gid://shopify/Product/10676285866250\",\"gid://shopify/Product/10676285899018\",\"gid://shopify/Product/10676285931786\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146810634",
+      "afterCompareDigest": "01a6e8651446586dc20843d92ca1beffaf0e238492f6096a5e7b84ace05ae9c5"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285964554",
+      "sku": "29.5040",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146777866",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676285997322",
+      "sku": "29.5041",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657146745098",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286062858",
+      "sku": "29.5042",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148547338",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286095626",
+      "sku": "29.5043",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148514570",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286128394",
+      "sku": "29.5044",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148481802",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676286161162",
+      "sku": "29.5045",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676285964554\",\"gid://shopify/Product/10676285997322\",\"gid://shopify/Product/10676286062858\",\"gid://shopify/Product/10676286095626\",\"gid://shopify/Product/10676286128394\",\"gid://shopify/Product/10676286161162\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148449034",
+      "afterCompareDigest": "0aa69460aad5734dca7ca156e3fdd6ab827c1041467d88a53880e2a8fa265485"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657389871370",
+      "sku": "29.4040",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657389871370\",\"gid://shopify/Product/10676283506954\",\"gid://shopify/Product/10676283539722\",\"gid://shopify/Product/10676283638026\",\"gid://shopify/Product/10676283703562\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148416266",
+      "afterCompareDigest": "ce8a3e9be371632387b3512242faec7e3aef11259c1f6491bc288976a80f459e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283506954",
+      "sku": "29.4041",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657389871370\",\"gid://shopify/Product/10676283506954\",\"gid://shopify/Product/10676283539722\",\"gid://shopify/Product/10676283638026\",\"gid://shopify/Product/10676283703562\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148383498",
+      "afterCompareDigest": "ce8a3e9be371632387b3512242faec7e3aef11259c1f6491bc288976a80f459e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283539722",
+      "sku": "29.4042",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657389871370\",\"gid://shopify/Product/10676283506954\",\"gid://shopify/Product/10676283539722\",\"gid://shopify/Product/10676283638026\",\"gid://shopify/Product/10676283703562\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148350730",
+      "afterCompareDigest": "ce8a3e9be371632387b3512242faec7e3aef11259c1f6491bc288976a80f459e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283638026",
+      "sku": "29.4043",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657389871370\",\"gid://shopify/Product/10676283506954\",\"gid://shopify/Product/10676283539722\",\"gid://shopify/Product/10676283638026\",\"gid://shopify/Product/10676283703562\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148317962",
+      "afterCompareDigest": "ce8a3e9be371632387b3512242faec7e3aef11259c1f6491bc288976a80f459e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283703562",
+      "sku": "29.4044",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657389871370\",\"gid://shopify/Product/10676283506954\",\"gid://shopify/Product/10676283539722\",\"gid://shopify/Product/10676283638026\",\"gid://shopify/Product/10676283703562\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148285194",
+      "afterCompareDigest": "ce8a3e9be371632387b3512242faec7e3aef11259c1f6491bc288976a80f459e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283834634",
+      "sku": "29.4080",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148252426",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283867402",
+      "sku": "29.4081",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148219658",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283932938",
+      "sku": "29.4082",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148186890",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283965706",
+      "sku": "29.4083",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148154122",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676283998474",
+      "sku": "29.4084",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148121354",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10676284064010",
+      "sku": "29.4085",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10676283834634\",\"gid://shopify/Product/10676283867402\",\"gid://shopify/Product/10676283932938\",\"gid://shopify/Product/10676283965706\",\"gid://shopify/Product/10676283998474\",\"gid://shopify/Product/10676284064010\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148088586",
+      "afterCompareDigest": "c6ea967c3f2c9d6b271da16ef8d567a7e5d9ecc0b6633ca1052ffd675946991a"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340195082",
+      "sku": "29.3041",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148055818",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340326154",
+      "sku": "29.3044",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148023050",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340457226",
+      "sku": "29.3047",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147990282",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657340588298",
+      "sku": "29.3050",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147957514",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341899018",
+      "sku": "29.3039",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147924746",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657341997322",
+      "sku": "29.3042",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147891978",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657342095626",
+      "sku": "29.3045",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147859210",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657342226698",
+      "sku": "29.3048",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147826442",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372569866",
+      "sku": "29.3040",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147793674",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372635402",
+      "sku": "29.3043",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340195082\",\"gid://shopify/Product/10657340326154\",\"gid://shopify/Product/10657341899018\",\"gid://shopify/Product/10657341997322\",\"gid://shopify/Product/10657372569866\",\"gid://shopify/Product/10657372635402\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657147760906",
+      "afterCompareDigest": "96b172cabbd52a6c0379044ec9ab51719b3fe351ebae36228ed1013e6d5764f2"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372700938",
+      "sku": "29.3046",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149759754",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657372766474",
+      "sku": "29.3049",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657340457226\",\"gid://shopify/Product/10657340588298\",\"gid://shopify/Product/10657342095626\",\"gid://shopify/Product/10657342226698\",\"gid://shopify/Product/10657372700938\",\"gid://shopify/Product/10657372766474\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149726986",
+      "afterCompareDigest": "0ed354a115c2a47fce4ea05927fd9e63fb14914a9268fb4f3fab9d7d6cf265b8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657283834122",
+      "sku": "29.4118",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283834122\",\"gid://shopify/Product/10657314767114\",\"gid://shopify/Product/10657315389706\",\"gid://shopify/Product/10657393082634\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149694218",
+      "afterCompareDigest": "52ba600ba77b6e989185a40335522d328deceaba07cc7ad131d7df76b1a658e9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314767114",
+      "sku": "29.6006",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283834122\",\"gid://shopify/Product/10657314767114\",\"gid://shopify/Product/10657315389706\",\"gid://shopify/Product/10657393082634\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149661450",
+      "afterCompareDigest": "52ba600ba77b6e989185a40335522d328deceaba07cc7ad131d7df76b1a658e9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657314799882",
+      "sku": "29.6014",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149628682",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657315389706",
+      "sku": "29.6005",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283834122\",\"gid://shopify/Product/10657314767114\",\"gid://shopify/Product/10657315389706\",\"gid://shopify/Product/10657393082634\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149595914",
+      "afterCompareDigest": "52ba600ba77b6e989185a40335522d328deceaba07cc7ad131d7df76b1a658e9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657315455242",
+      "sku": "29.6013",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149563146",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657322107146",
+      "sku": "29.6248",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149530378",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657323122954",
+      "sku": "29.6249",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149497610",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657335181578",
+      "sku": "29.6012",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149464842",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657373323530",
+      "sku": "29.7104",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657314799882\",\"gid://shopify/Product/10657315455242\",\"gid://shopify/Product/10657322107146\",\"gid://shopify/Product/10657323122954\",\"gid://shopify/Product/10657335181578\",\"gid://shopify/Product/10657373323530\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149432074",
+      "afterCompareDigest": "5e0bb56217557e04a398aa6a7d684a1c2df16a25aa8a436a20d0ba6b80a6c25b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657393082634",
+      "sku": "29.7100",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657283834122\",\"gid://shopify/Product/10657314767114\",\"gid://shopify/Product/10657315389706\",\"gid://shopify/Product/10657393082634\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149399306",
+      "afterCompareDigest": "52ba600ba77b6e989185a40335522d328deceaba07cc7ad131d7df76b1a658e9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657298448650",
+      "sku": "29.4120",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657298448650\",\"gid://shopify/Product/10657299497226\",\"gid://shopify/Product/10657310605578\",\"gid://shopify/Product/10657318600970\",\"gid://shopify/Product/10657365164298\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149366538",
+      "afterCompareDigest": "40ad943ff5254af173b204448d9d3b8d2a6d0490bab8f51b5fd65d5a5f10991e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657299497226",
+      "sku": "29.4123",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657298448650\",\"gid://shopify/Product/10657299497226\",\"gid://shopify/Product/10657310605578\",\"gid://shopify/Product/10657318600970\",\"gid://shopify/Product/10657365164298\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149333770",
+      "afterCompareDigest": "40ad943ff5254af173b204448d9d3b8d2a6d0490bab8f51b5fd65d5a5f10991e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307361546",
+      "sku": "29.6060",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149301002",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657307918602",
+      "sku": "29.6061",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149268234",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657310605578",
+      "sku": "29.5947",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657298448650\",\"gid://shopify/Product/10657299497226\",\"gid://shopify/Product/10657310605578\",\"gid://shopify/Product/10657318600970\",\"gid://shopify/Product/10657365164298\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149235466",
+      "afterCompareDigest": "40ad943ff5254af173b204448d9d3b8d2a6d0490bab8f51b5fd65d5a5f10991e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657318600970",
+      "sku": "29.4122",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657298448650\",\"gid://shopify/Product/10657299497226\",\"gid://shopify/Product/10657310605578\",\"gid://shopify/Product/10657318600970\",\"gid://shopify/Product/10657365164298\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149202698",
+      "afterCompareDigest": "40ad943ff5254af173b204448d9d3b8d2a6d0490bab8f51b5fd65d5a5f10991e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657324204298",
+      "sku": "29.6252",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149169930",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657330888970",
+      "sku": "29.6062",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149137162",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657360576778",
+      "sku": "29.6251",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149104394",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657365164298",
+      "sku": "29.7101",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657298448650\",\"gid://shopify/Product/10657299497226\",\"gid://shopify/Product/10657310605578\",\"gid://shopify/Product/10657318600970\",\"gid://shopify/Product/10657365164298\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149071626",
+      "afterCompareDigest": "40ad943ff5254af173b204448d9d3b8d2a6d0490bab8f51b5fd65d5a5f10991e"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657393148170",
+      "sku": "29.7105",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657307361546\",\"gid://shopify/Product/10657307918602\",\"gid://shopify/Product/10657324204298\",\"gid://shopify/Product/10657330888970\",\"gid://shopify/Product/10657360576778\",\"gid://shopify/Product/10657393148170\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149038858",
+      "afterCompareDigest": "fcbb5b777522932cacd1b3b03a1434a9299e1a3ced7f7a1ee72ca2a2f34b9a82"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336557834",
+      "sku": "21.3666",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657336557834\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657149006090",
+      "afterCompareDigest": "5a4caeff9d8c892b86e3412ad5de53d3a6ee9a4ea46faf6996a72aaa973bdd60"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657376960778",
+      "sku": "21.3677",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657376960778\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657148973322",
+      "afterCompareDigest": "42527fb3c5c7398ce38a191f0188feed8636bcef3c28de5806d8b88fa4959a7c"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657336852746",
+      "sku": "21.3662",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657336852746\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150284042",
+      "afterCompareDigest": "114275f95e4f7e987f21f9ff679ca392a1abe1255a308d2cab094627bf90e90b"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657360937226",
+      "sku": "21.3663",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657360937226\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150251274",
+      "afterCompareDigest": "1ae2e2165148c423631a38af720367d4a6b45cc55b4602275bf99a0ebc3d79bd"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657286193418",
+      "sku": "32.3499",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657286193418\",\"gid://shopify/Product/10657373421834\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150218506",
+      "afterCompareDigest": "23e5151b689ffc1f4a9fd54f25833b6392f79803ed71c253e944b5a7597a16d9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657304215818",
+      "sku": "32.3498",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657304215818\",\"gid://shopify/Product/10657384333578\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150185738",
+      "afterCompareDigest": "2f607dc07e6330c2867b073f7b5caa7bc1c12abb6c2d6099596308364d43baf8"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657373421834",
+      "sku": "32.1498",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657286193418\",\"gid://shopify/Product/10657373421834\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150152970",
+      "afterCompareDigest": "23e5151b689ffc1f4a9fd54f25833b6392f79803ed71c253e944b5a7597a16d9"
+    },
+    {
+      "ownerId": "gid://shopify/Product/10657384333578",
+      "sku": "32.1499",
+      "namespace": "custom",
+      "key": "color_variants",
+      "type": "list.product_reference",
+      "before": null,
+      "after": "[\"gid://shopify/Product/10657304215818\",\"gid://shopify/Product/10657384333578\"]",
+      "afterMetafieldId": "gid://shopify/Metafield/71657150120202",
+      "afterCompareDigest": "2f607dc07e6330c2867b073f7b5caa7bc1c12abb6c2d6099596308364d43baf8"
+    }
+  ],
+  "assets": [
+    {
+      "filename": "assets/bc-choice-data-0b26fcc54276b0cb.json",
+      "group": "wiesbaden-caral-baduitloop-rond-1-2-maat",
+      "count": 18,
+      "sha256": "0b26fcc54276b0cb8bebd7cdb5033d950cff1c267a02ad05f822cdec5dd423fe",
+      "md5": "006f3772408fbd1971134dc5d782aa11"
+    },
+    {
+      "filename": "assets/bc-choice-data-a37fa13adf56e2c9.json",
+      "group": "wiesbaden-304-hoofddouche-rond-maat",
+      "count": 2,
+      "sha256": "a37fa13adf56e2c96662e069fe55d5febb4958dfe37b6715ec682e18ff6c23b1",
+      "md5": "1be8a8d0325236823a2a6fedae97650c"
+    },
+    {
+      "filename": "assets/bc-choice-data-f3361b86dad01cc5.json",
+      "group": "wiesbaden-unimatch-hoofddouche-rond-maat",
+      "count": 17,
+      "sha256": "f3361b86dad01cc5208cdb27c493059a1be3f88899d6cc9d37bb7549b192b756",
+      "md5": "240cc32d2e0aa344b90a64aeb593bd5c"
+    },
+    {
+      "filename": "assets/bc-choice-data-b5ee0ccfed5d84ba.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-3-standen-handdouche-maat",
+      "count": 12,
+      "sha256": "b5ee0ccfed5d84baca5f5e8ee611bab50b8d0a6452ce1a8848574b89ea876578",
+      "md5": "c586c647180e708c80f2a0dfc62a5cbf"
+    },
+    {
+      "filename": "assets/bc-choice-data-dc2cac826ff15b82.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-baduitloop-en-staafhanddouche-maat",
+      "count": 12,
+      "sha256": "dc2cac826ff15b82fdd4c66de56c0a76a6ac1e61327d09dc2b557d89a9cdfe5e",
+      "md5": "84b27ac9bacaf0620108b0653b8473f3"
+    },
+    {
+      "filename": "assets/bc-choice-data-a3afbefc3ac6da7b.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-3-standen-handdouche-maat",
+      "count": 12,
+      "sha256": "a3afbefc3ac6da7bb973a108c96f23bce52fcd77c703de70dc49f6c5dfde2dc3",
+      "md5": "c5030fcf6919c5b5ec774d84740426ef"
+    },
+    {
+      "filename": "assets/bc-choice-data-61076622ce2398be.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-2-stopkranen-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "count": 11,
+      "sha256": "61076622ce2398be2cf4b1492b51cd12a40161467cce639fc4e54eed68f70140",
+      "md5": "dac47c0d3e33426c6eab1a25d2e75492"
+    },
+    {
+      "filename": "assets/bc-choice-data-b75dca3b778e7c3d.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-2-weg-rond-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "count": 12,
+      "sha256": "b75dca3b778e7c3d4620d89d440f18ffb83d3e1614ae2ece87934ba08c80e6f7",
+      "md5": "7c355bb6f4c4151c5cf085456a77ac7f"
+    },
+    {
+      "filename": "assets/bc-choice-data-41daa1ee2240730a.json",
+      "group": "wiesbaden-caral-inbouwthermostaat-compleet-met-hoofddouche-en-staafhanddouche-maat",
+      "count": 12,
+      "sha256": "41daa1ee2240730a222bc9fc071d8194c850d8d7b3afd7c752376e96dbf46fbf",
+      "md5": "4ee30762b438b5248f094e383f4e6537"
+    },
+    {
+      "filename": "assets/bc-choice-data-2fe91d3122c815f7.json",
+      "group": "wiesbaden-caral-rozet-kraangedeelte-eenhendel-wastafelkraan-maat",
+      "count": 10,
+      "sha256": "2fe91d3122c815f707246ab45459a30bddb06d74f532bed90291072c9939943c",
+      "md5": "77da61f5605544c466bb76aefc568b0d"
+    },
+    {
+      "filename": "assets/bc-choice-data-2dfb235f128b4b30.json",
+      "group": "wiesbaden-caral-rozet-uitloop-eenhendel-wastafelkraan-maat",
+      "count": 11,
+      "sha256": "2dfb235f128b4b30c0b6f97c5025235c7387df102140bf0dab67b6a70acb5eb2",
+      "md5": "68687efec69fad4cecbc29a1f99c69c1"
+    },
+    {
+      "filename": "assets/bc-choice-data-acbde53f9e9f1b98.json",
+      "group": "wiesbaden-raw-fontein-hardsteen-gezoet-maat",
+      "count": 6,
+      "sha256": "acbde53f9e9f1b98e923aeec0f00d2787fefa90b8063042f5eed154c68964ccd",
+      "md5": "17f3ef4aa11d013b118638ee2b3c3b3d"
+    },
+    {
+      "filename": "assets/bc-choice-data-3e55e9d5288aaba4.json",
+      "group": "wiesbaden-raw-fontein-rond-hardsteen-gezoet-maat",
+      "count": 2,
+      "sha256": "3e55e9d5288aaba4285f99599f1f0683ed49007b09120cfcf6435b15a5eb5abb",
+      "md5": "d3efa3733201d7c5daa5aa3c600858e4"
+    },
+    {
+      "filename": "assets/bc-choice-data-cadee15b40c3bda3.json",
+      "group": "wiesbaden-liora-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "count": 3,
+      "sha256": "cadee15b40c3bda3dc6d00235ba1e321a25a30740ff75e14d9cff8c4e7ecb277",
+      "md5": "0693e9e780966c74e85c50c46f0dfaee"
+    },
+    {
+      "filename": "assets/bc-choice-data-7ac4dc2f23d06950.json",
+      "group": "wiesbaden-rivi-half-vrijstaand-ligbad-acryl-met-waste-maat",
+      "count": 3,
+      "sha256": "7ac4dc2f23d06950d05310b462e1e82051c6f261728775bc30e9e94d301470e4",
+      "md5": "9cf0aa328d2f90e59cd887a73d5e8ff2"
+    },
+    {
+      "filename": "assets/bc-choice-data-0dfd25f0835b4a0e.json",
+      "group": "wiesbaden-rivi-hoekbad-acryl-met-waste-maat",
+      "count": 8,
+      "sha256": "0dfd25f0835b4a0e63325be7b08754645c108134354d8d945bfcaf9bcffe0506",
+      "md5": "e205e434a2d5261c6668a5a336ee3a56"
+    },
+    {
+      "filename": "assets/bc-choice-data-7a153d5fa70cea03.json",
+      "group": "wiesbaden-zenn-hoekbad-acryl-met-waste-maat",
+      "count": 6,
+      "sha256": "7a153d5fa70cea03e4f51a4fc4c667aacb0a03b2f9b87345653432b562b17ebb",
+      "md5": "fdf21c05608b02d586126f4720d05d38"
+    },
+    {
+      "filename": "assets/bc-choice-data-9877d28c881df472.json",
+      "group": "wiesbaden-demis-inbouwnis-ovaal-maat",
+      "count": 4,
+      "sha256": "9877d28c881df472dbd6b3d39aed0da2fe9363297a3e706e5ba45c603a141396",
+      "md5": "148b14d5e99644abf8a9f191c33bab1e"
+    },
+    {
+      "filename": "assets/bc-choice-data-8c315d0eca219933.json",
+      "group": "wiesbaden-glasrooster-voor-douchegoot-glanzend-maat",
+      "count": 5,
+      "sha256": "8c315d0eca219933bd3ce4be2e088b9e4e653b387b3518f5de455a80488e7c39",
+      "md5": "cb6de19e16a0d45b880e50df584d2fa0"
+    },
+    {
+      "filename": "assets/bc-choice-data-50b844554d5ddbf5.json",
+      "group": "wiesbaden-rooster-type-1-voor-douchegoot-maat",
+      "count": 2,
+      "sha256": "50b844554d5ddbf56b7a6e446dbc5a5bb8cba7c6e99673183779f0f575771525",
+      "md5": "1d9452ed4ccbb2f84ef1c62c62c41bee"
+    },
+    {
+      "filename": "assets/bc-choice-data-b37408496dd1456b.json",
+      "group": "wiesbaden-rooster-type-4-voor-douchegoot-maat",
+      "count": 2,
+      "sha256": "b37408496dd1456b0ec59c2ee71b807ef76d13d131fe06b370cc223b18911333",
+      "md5": "26af4b64cdff046af014ca75cf144bf5"
+    },
+    {
+      "filename": "assets/bc-choice-data-5a3625c7e672a344.json",
+      "group": "wiesbaden-rooster-voor-douchegoot-maat",
+      "count": 5,
+      "sha256": "5a3625c7e672a344085759114a01aaf3c0f1ed9ab9d1d7bf1ef45ef156c645ad",
+      "md5": "a7a6173b0ef5a2d03ff2bf997ba4b3e5"
+    },
+    {
+      "filename": "assets/bc-choice-data-d426935bda8d55b9.json",
+      "group": "wiesbaden-rooster-voor-douchegoot-met-flens-maat",
+      "count": 6,
+      "sha256": "d426935bda8d55b9b6faa52f537ea3a4835568ea5ae283dee1dec7657817880c",
+      "md5": "b9d4cfda5c6ebf2fbe35f9395f155754"
+    },
+    {
+      "filename": "assets/bc-choice-data-5c9271289bc234c6.json",
+      "group": "wiesbaden-tegelrooster-voor-douchegoot-maat",
+      "count": 8,
+      "sha256": "5c9271289bc234c6329a954b01fb94ef541413c5e903fd7c531ec1c225993fae",
+      "md5": "0c7f748d5cb89f14424f169ef4c6610f"
+    },
+    {
+      "filename": "assets/bc-choice-data-2db89981a03a139f.json",
+      "group": "wiesbaden-tigris-badkamer-ledverlichting-enkel-maat",
+      "count": 2,
+      "sha256": "2db89981a03a139f26d5d4b619eba37b661174bc7918cf2674d4a6a705cb43e8",
+      "md5": "0171267b1b8553419cf1d356291eb408"
+    },
+    {
+      "filename": "assets/bc-choice-data-7b534f12e1b46949.json",
+      "group": "wiesbaden-trapeze-vrijstaand-ligbad-acryl-glans-wit-met-waste-maat",
+      "count": 2,
+      "sha256": "7b534f12e1b469496104e489ff1ce827d5de30072c0dcaaa544fd784be11640f",
+      "md5": "52600492b676b013532ce6825d860454"
+    },
+    {
+      "filename": "assets/bc-choice-data-d124590545ae7ca5.json",
+      "group": "wiesbaden-julia-fontein-solid-surface-maat",
+      "count": 6,
+      "sha256": "d124590545ae7ca5f246eb82630d84a0e633c0f7c17b2f5970fedbb18c484301",
+      "md5": "c53206eb438f0012a041bbe7397d9229"
+    },
+    {
+      "filename": "assets/bc-choice-data-5465866014bded0b.json",
+      "group": "wiesbaden-julia-fontein-solid-surface-betonlook-maat",
+      "count": 2,
+      "sha256": "5465866014bded0b4df51bcc4a747b23da75677fea3bfaa1ea9e6d612b9c0fa8",
+      "md5": "b13e0df31abbc8a21feefdbe9dcbf533"
+    },
+    {
+      "filename": "assets/bc-choice-data-992b15fe0fa7b759.json",
+      "group": "wiesbaden-rhea-xxs-fontein-keramiek-maat",
+      "count": 4,
+      "sha256": "992b15fe0fa7b759dc71d631c5c7a38ee2dfc08aa4f8b540f994b4b472972214",
+      "md5": "205f7cbd011b9766e838f151da26f0f5"
+    }
+  ],
+  "themeBefore": [
+    {
+      "filename": "assets/bc-product-switcher.js",
+      "checksumMd5": "ff7075328e5397765f4765ed89e0dddf"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "f3d9d1eb2c665a0805b28874185c077b"
+    },
+    {
+      "filename": "snippets/bc-choice-data-source.liquid",
+      "checksumMd5": "0de85a394197cb8c9e90421331e6dae6"
+    }
+  ],
+  "themeAfter": [
+    {
+      "filename": "assets/bc-choice-data-0b26fcc54276b0cb.json",
+      "checksumMd5": "006f3772408fbd1971134dc5d782aa11"
+    },
+    {
+      "filename": "assets/bc-choice-data-0dfd25f0835b4a0e.json",
+      "checksumMd5": "e205e434a2d5261c6668a5a336ee3a56"
+    },
+    {
+      "filename": "assets/bc-choice-data-2db89981a03a139f.json",
+      "checksumMd5": "0171267b1b8553419cf1d356291eb408"
+    },
+    {
+      "filename": "assets/bc-choice-data-2dfb235f128b4b30.json",
+      "checksumMd5": "68687efec69fad4cecbc29a1f99c69c1"
+    },
+    {
+      "filename": "assets/bc-choice-data-2fe91d3122c815f7.json",
+      "checksumMd5": "77da61f5605544c466bb76aefc568b0d"
+    },
+    {
+      "filename": "assets/bc-choice-data-3e55e9d5288aaba4.json",
+      "checksumMd5": "d3efa3733201d7c5daa5aa3c600858e4"
+    },
+    {
+      "filename": "assets/bc-choice-data-41daa1ee2240730a.json",
+      "checksumMd5": "4ee30762b438b5248f094e383f4e6537"
+    },
+    {
+      "filename": "assets/bc-choice-data-50b844554d5ddbf5.json",
+      "checksumMd5": "1d9452ed4ccbb2f84ef1c62c62c41bee"
+    },
+    {
+      "filename": "assets/bc-choice-data-5465866014bded0b.json",
+      "checksumMd5": "b13e0df31abbc8a21feefdbe9dcbf533"
+    },
+    {
+      "filename": "assets/bc-choice-data-5a3625c7e672a344.json",
+      "checksumMd5": "a7a6173b0ef5a2d03ff2bf997ba4b3e5"
+    },
+    {
+      "filename": "assets/bc-choice-data-5c9271289bc234c6.json",
+      "checksumMd5": "0c7f748d5cb89f14424f169ef4c6610f"
+    },
+    {
+      "filename": "assets/bc-choice-data-61076622ce2398be.json",
+      "checksumMd5": "dac47c0d3e33426c6eab1a25d2e75492"
+    },
+    {
+      "filename": "assets/bc-choice-data-7a153d5fa70cea03.json",
+      "checksumMd5": "fdf21c05608b02d586126f4720d05d38"
+    },
+    {
+      "filename": "assets/bc-choice-data-7ac4dc2f23d06950.json",
+      "checksumMd5": "9cf0aa328d2f90e59cd887a73d5e8ff2"
+    },
+    {
+      "filename": "assets/bc-choice-data-7b534f12e1b46949.json",
+      "checksumMd5": "52600492b676b013532ce6825d860454"
+    },
+    {
+      "filename": "assets/bc-choice-data-8c315d0eca219933.json",
+      "checksumMd5": "cb6de19e16a0d45b880e50df584d2fa0"
+    },
+    {
+      "filename": "assets/bc-choice-data-9877d28c881df472.json",
+      "checksumMd5": "148b14d5e99644abf8a9f191c33bab1e"
+    },
+    {
+      "filename": "assets/bc-choice-data-992b15fe0fa7b759.json",
+      "checksumMd5": "205f7cbd011b9766e838f151da26f0f5"
+    },
+    {
+      "filename": "assets/bc-choice-data-a37fa13adf56e2c9.json",
+      "checksumMd5": "1be8a8d0325236823a2a6fedae97650c"
+    },
+    {
+      "filename": "assets/bc-choice-data-a3afbefc3ac6da7b.json",
+      "checksumMd5": "c5030fcf6919c5b5ec774d84740426ef"
+    },
+    {
+      "filename": "assets/bc-choice-data-acbde53f9e9f1b98.json",
+      "checksumMd5": "17f3ef4aa11d013b118638ee2b3c3b3d"
+    },
+    {
+      "filename": "assets/bc-choice-data-b37408496dd1456b.json",
+      "checksumMd5": "26af4b64cdff046af014ca75cf144bf5"
+    },
+    {
+      "filename": "assets/bc-choice-data-b5ee0ccfed5d84ba.json",
+      "checksumMd5": "c586c647180e708c80f2a0dfc62a5cbf"
+    },
+    {
+      "filename": "assets/bc-choice-data-b75dca3b778e7c3d.json",
+      "checksumMd5": "7c355bb6f4c4151c5cf085456a77ac7f"
+    },
+    {
+      "filename": "assets/bc-choice-data-cadee15b40c3bda3.json",
+      "checksumMd5": "0693e9e780966c74e85c50c46f0dfaee"
+    },
+    {
+      "filename": "assets/bc-choice-data-d124590545ae7ca5.json",
+      "checksumMd5": "c53206eb438f0012a041bbe7397d9229"
+    },
+    {
+      "filename": "assets/bc-choice-data-d426935bda8d55b9.json",
+      "checksumMd5": "b9d4cfda5c6ebf2fbe35f9395f155754"
+    },
+    {
+      "filename": "assets/bc-choice-data-dc2cac826ff15b82.json",
+      "checksumMd5": "84b27ac9bacaf0620108b0653b8473f3"
+    },
+    {
+      "filename": "assets/bc-choice-data-f3361b86dad01cc5.json",
+      "checksumMd5": "240cc32d2e0aa344b90a64aeb593bd5c"
+    },
+    {
+      "filename": "assets/bc-product-switcher.js",
+      "checksumMd5": "ff7075328e5397765f4765ed89e0dddf"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "9881976f05733d029eadc2d6611b9537"
+    },
+    {
+      "filename": "snippets/bc-choice-data-source.liquid",
+      "checksumMd5": "e4ed3c0dd0a954607a741f00f50e3136"
+    }
+  ],
+  "mainHashes": {
+    "assets/bc-product-switcher.js": "ff7075328e5397765f4765ed89e0dddf",
+    "sections/main-product.liquid": "9b134675d81453a9727e70371de788f6",
+    "snippets/bc-choice-data-source.liquid": "71ef019fbbb4dd5b8695c37a2749333c"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "verifiedAt": "2026-11-07T22:21:44.735Z",
+  "runtime": "Node v24.22.1 with jsdom 31.0.0",
+  "runsActualSharedScript": true,
+  "noNetworkRequests": true,
+  "cssLayoutVerified": false,
+  "total": 19,
+  "passed": 19,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Reproduces old wrong-shape thumbnail and selects the exact current round product after the fix",
+      "passed": true
+    },
+    {
+      "name": "Shows all six color buttons with translated visible and accessible labels, without an extra expander",
+      "passed": true
+    },
+    {
+      "name": "Orders complete-set menus clearly and sorts sizes while keeping their raw identities",
+      "passed": true
+    },
+    {
+      "name": "Changing only maat=25cm opens its exact product and retains preview context",
+      "passed": true
+    },
+    {
+      "name": "Changing only kleur=Chroom opens its exact product and retains preview context",
+      "passed": true
+    },
+    {
+      "name": "Changing only vorm=Vierkant opens its exact product and retains preview context",
+      "passed": true
+    },
+    {
+      "name": "Changing only uitvoering=Muur opens its exact product and retains preview context",
+      "passed": true
+    },
+    {
+      "name": "Unavailable color combination remains disabled instead of silently changing shape",
+      "passed": true
+    },
+    {
+      "name": "Ambiguous matching products cannot navigate and do not pick an arbitrary thumbnail",
+      "passed": true
+    },
+    {
+      "name": "Clickwaste displays clear overflow choices and keeps Ja/Nee routing identities",
+      "passed": true
+    },
+    {
+      "name": "Compound dimensions and decimal sizes sort numerically and are formatted for display only",
+      "passed": true
+    },
+    {
+      "name": "Standalone shower heads receive their own context labels, without mounting or set labels",
+      "passed": true
+    },
+    {
+      "name": "Inbouwbox or other color-only product keeps a single color menu",
+      "passed": true
+    },
+    {
+      "name": "English translations change only the visible labels, not the raw selections",
+      "passed": true
+    },
+    {
+      "name": "Malformed optional display labels fall back to the original data without breaking navigation",
+      "passed": true
+    },
+    {
+      "name": "Active cart submission still blocks a product switch",
+      "passed": true
+    },
+    {
+      "name": "Hotbath compact switcher retains byte-identical rendered controls and the same destination behavior",
+      "passed": true
+    },
+    {
+      "name": "Other compact-color brand retains byte-identical rendered controls and the same destination behavior",
+      "passed": true
+    },
+    {
+      "name": "Generic unscoped preview navigation retains byte-identical rendered controls and the same destination behavior",
+      "passed": true
+    }
+  ]
+}

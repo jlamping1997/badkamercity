@@ -1,0 +1,114 @@
+{
+  "task": "SEO-HOME-01",
+  "date": "2026-11-08",
+  "status": "PREVIEW_VERIFIED_OWNER_REVIEW_PENDING",
+  "main_theme": {
+    "id": "196341825802",
+    "role": "MAIN",
+    "files": 1387,
+    "changed_files": 0
+  },
+  "concept_theme": {
+    "id": "196328685834",
+    "name": "BadkamerCity - Homepage SEO 8 nov",
+    "role": "UNPUBLISHED",
+    "files": 1387
+  },
+  "before_features": {
+    "files": 1387,
+    "checksum_differences": 0
+  },
+  "after_features": {
+    "differences": [
+      {
+        "filename": "layout/theme.liquid",
+        "checksumMd5": "21a1c2db077ec6ebe5c5cd41161ca187",
+        "size": "23372"
+      },
+      {
+        "filename": "locales/en.default.json",
+        "checksumMd5": "2c8bfee4d87afa5e1ba315975002e59d",
+        "size": "72368"
+      },
+      {
+        "filename": "locales/nl.json",
+        "checksumMd5": "472dfe44ee6a1488ae4621fcdd60b148",
+        "size": "75995"
+      },
+      {
+        "filename": "sections/header.liquid",
+        "checksumMd5": "4bc7f4894fe7638800d34b5f18447435",
+        "size": "76414"
+      },
+      {
+        "filename": "snippets/meta-tags.liquid",
+        "checksumMd5": "1653100feefb53519b3585220e37b314",
+        "size": "2695"
+      },
+      {
+        "filename": "templates/index.json",
+        "checksumMd5": "dbeb7ae76a652cc869bab52681084d07",
+        "size": "19541"
+      }
+    ],
+    "unexpected_differences": 0,
+    "missing_files": 0
+  },
+  "settings_data": {
+    "written": false,
+    "returned_bodies_equal": true,
+    "metadata_md5": "d6a5642b02e3b8773a5e4e37aed01256",
+    "historical_api_body_exception_closed": false,
+    "upload_guard_preserved": true
+  },
+  "qa_template": {
+    "path": "templates/product.bc-verlavio-review.liquid",
+    "restored_md5": "9046f6312adff5be09cfca657cf351a9",
+    "temporary_frame_attempt": "Browser refused remote frames; no mobile visual pass claimed"
+  },
+  "syntax": {
+    "files": 6,
+    "success": true,
+    "preexisting_warning": "Unknown object scheme_classes in unchanged layout code",
+    "docs_source": "Bundled schemas; latest docs cache refresh failed"
+  },
+  "http": {
+    "response_pairs": 7,
+    "requests": 14,
+    "correct_theme_context": true,
+    "non_home_metadata_unchanged": 6,
+    "canonical_unchanged": 7,
+    "wishlist_noindex_preserved": true
+  },
+  "browser": {
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "homepage_h1_count": 1,
+    "heading": "Alles voor jouw badkamer.",
+    "description_chars": 153,
+    "og_image_count": 1,
+    "document_overflow": false,
+    "visual_desktop": true,
+    "mobile_visual": "NOT_TESTED: frame embedding refused; local snapshot navigation unsupported by browser URL policy",
+    "phone_hardware": "NOT_TESTED"
+  },
+  "publication": {
+    "published": false,
+    "performed_by_agent": false
+  },
+  "reserve_theme": {
+    "id": "196354474250",
+    "name": "BadkamerCity - Reservekopie voor homepage SEO",
+    "feature_writes": 0,
+    "last_known_processing": true,
+    "not_the_review_target": true
+  },
+  "limits": [
+    "No physical phone/tablet test",
+    "No cart, checkout, payment or form submission",
+    "No live theme writes or product mutations",
+    "No new Google ranking/indexing claim"
+  ]
+}

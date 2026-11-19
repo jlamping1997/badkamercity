@@ -1,0 +1,11 @@
+{
+  "name": "bc-smooth-switch-regression",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test-position.mjs && node test-switcher.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4"
+  }
+}

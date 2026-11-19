@@ -1,0 +1,100 @@
+{
+  "draftFiles": 492,
+  "liveRole": "MAIN",
+  "unchangedLive": true,
+  "untouchedDraft": true,
+  "untouchedCount": 482,
+  "contents": [
+    {
+      "file": "sections/bc-sunshower-landing.liquid",
+      "exact": true,
+      "semanticJSON": null
+    },
+    {
+      "file": "assets/bc-sunshower-landing.css",
+      "exact": true,
+      "semanticJSON": null
+    },
+    {
+      "file": "sections/home-sunshower.liquid",
+      "exact": true,
+      "semanticJSON": null
+    },
+    {
+      "file": "assets/bc-home-sunshower.css",
+      "exact": true,
+      "semanticJSON": null
+    },
+    {
+      "file": "templates/page.bc-sunshower.json",
+      "exact": false,
+      "semanticJSON": true
+    },
+    {
+      "file": "templates/index.json",
+      "exact": true,
+      "semanticJSON": true
+    },
+    {
+      "file": "locales/nl.json",
+      "exact": true,
+      "semanticJSON": true
+    },
+    {
+      "file": "locales/en.default.json",
+      "exact": true,
+      "semanticJSON": true
+    },
+    {
+      "file": "locales/nl.schema.json",
+      "exact": true,
+      "semanticJSON": true
+    },
+    {
+      "file": "locales/en.default.schema.json",
+      "exact": true,
+      "semanticJSON": true
+    }
+  ],
+  "baseTheme": "195336700170",
+  "draftTheme": "195338076426",
+  "page": {
+    "id": "166120390922",
+    "handle": "sunshower",
+    "templateSuffix": "bc-sunshower",
+    "isPublished": true
+  },
+  "hero": {
+    "filename": "badkamercity-sunshower-sfeer-warm.jpg",
+    "source": "https://sunshower.eu/media/up3bwity/sunshower_inspiratie_sanitairwinkel.jpg"
+  },
+  "checks": {
+    "themeCheck": {
+      "revision": 2,
+      "files": 10,
+      "result": "VALID",
+      "schemaSource": "bundled fallback after docs refresh timed out",
+      "telemetry": "opted out"
+    },
+    "renderContractCases": 7,
+    "review": "no material blocker",
+    "browser": {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "h1": 1,
+      "landingImagesLoaded": 5,
+      "overflow": false,
+      "heroHeight": 330,
+      "bannerHeight": 230,
+      "bannerImageLoaded": true,
+      "bannerLink": true,
+      "oneLink": true,
+      "plusLink": true,
+      "faqOpen": true
+    },
+    "mobile": "NOT_TESTED: available browser has no viewport control; keyboard attempt did not resize",
+    "checkout": "NOT_TESTED"
+  }
+}
