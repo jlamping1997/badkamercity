@@ -14,6 +14,15 @@ Bij **elke** taak:
 
 **Bronprioriteit bij inconsistenties:** recente expliciete gebruikersinstructie en veiligheidsgrenzen → verse read-only Shopify/Git/meting → gedateerde actuele handoff → historische logs/masterplan. Een oud plan dat “implementation blocked” zegt bewijst **niet** dat later geïmplementeerde en gepubliceerde onderdelen nog ontbreken; het bevat wel belangrijke oorspronkelijke besluiten en open vragen.
 
+### Herinnering bij de import van grote tegels
+
+Bij iedere tegelimport: controleer de nominale tegelmaten (in cm) vóór publicatie. Is de langste zijde groter dan 120 cm, meld dit dan direct aan de eigenaar met het artikelnummer, de maat en de huidige verzendgroep. Ook 60 × 150 cm verdient die controle. Precies 120 × 120 cm overschrijdt de grens niet.
+
+De maatgrens is een **herinnering**. De gepubliceerde XXL-staffel geldt voor 120 × 250–320 cm. Bevestig bij andere grote formaten eerst de transportwijze. Volg voor een bevestigde XXL-tegel [de vaste verzendinstructie](https://github.com/jlamping1997/badkamercity/blob/main/docs/VERZENDINSTELLINGEN.md):
+- Controleer in Shopify de tag `bc_shipping_xxl` en de selectie in de XXL-verzendcollectie, buiten de gewone palletgroep.
+- Controleer voor hetzelfde artikel in Merchant Center het uiteindelijke `shipping_label` = `xxl`, met voorrang boven `pallet` en `pakket`. Een producttyperegel voor `XXL-tegels` leest geen Shopify-tag.
+- Bij het eerste XXL-artikel: richt de Nederlandse XXL-verzendservice in en vergelijk een tariefproef in Shopify met Merchant Center en de bezorgpagina: €300 totaal onder €1.000, gratis vanaf exact €1.000. Meld ontbrekende dekking vóór livegang.
+
 ## 2. Wat altijd verboden is zonder aparte toestemming
 
 - Live/MAIN-thème bestanden schrijven of zelfstandig publiceren/omwisselen.
