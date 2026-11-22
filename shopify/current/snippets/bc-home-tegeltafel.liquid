@@ -1,0 +1,244 @@
+{% doc %}
+  Displays the homepage tile showcase and the existing delivery, returns and 3D advice links.
+  @param {section} section - Homepage settings
+  @param {string} delivery_url - Delivery information
+  @param {string} returns_url - Returns information
+  @param {string} help_url - Tile advice link
+  @param {string} inspiration_url - Main tile collection link
+  @param {string} [appointment_form] - Existing contact form; shown when no booking link is set
+{% enddoc %}
+{%- liquid
+  assign guide_url = collections['kitkat-mozaiek'].url | default: inspiration_url
+  assign wood_url = collections['houtlook-tegels'].url | default: inspiration_url
+  assign coral = section.settings.tile_coral | default: all_products['porcelanosa-coral-caliza-mat-120-x-120-cm']
+  assign wood = section.settings.tile_wood | default: all_products['cottoceramix-belice-r-natural-26x180-vb2603']
+  assign porcelain_vendor = coral.vendor | default: 'Porcelanosa'
+  assign vendor_url = porcelain_vendor | url_for_vendor
+  assign porcelain_url = section.settings.tile_porcelain_link | default: vendor_url
+  assign coral_image = section.settings.tile_coral_image | default: coral.images[1] | default: coral.featured_image
+  assign wood_image = section.settings.tile_wood_image | default: wood.images[1] | default: wood.featured_image
+  assign booking_url = section.settings.booking_link | default: '#HomeAdvice'
+  assign colours = 'cherry|the-mosaic-factory-sevilla-kitkat-mini-finger-smoked-cherry-glossy-mozaiektegel-sef12012|Smoked Cherry|Sevilla Mini · glanzend|Glanzende roodbruine strookjes~beige|the-mosaic-factory-sevilla-kitkat-mini-finger-desert-beige-glossy-mozaiektegel-sef12225|Desert Beige|Sevilla Mini · glanzend|Glanzende zandbeige strookjes~sage|the-mosaic-factory-sevilla-kitkat-original-finger-sage-green-matt-mozaiektegel-sef20575|Sage Green|Sevilla Original · mat|Matte saliegroene strookjes' | split: '~'
+-%}
+<section class="bch-shell bct-table" id="HomeInspiration" aria-labelledby="HomeTileTitle-{{ section.id }}">
+  <header class="bct-heading">
+    <h2 id="HomeTileTitle-{{ section.id }}">{{ section.settings.tile_table_heading | escape }}</h2>
+    <p>{{ section.settings.tile_table_text | escape }}</p>
+    <a class="bct-button" href="{{ inspiration_url | escape }}">Alle badkamertegels</a>
+  </header>
+  <div class="bct-materials">
+    <article class="bct-material bct-mosaic">
+      <fieldset class="bct-kitkat">
+        <legend class="visually-hidden">Kies een kleur KitKat-mozaïek</legend>
+        {% for colour in colours %}
+          {%- assign key = colour | split: '|' | first -%}
+          <input class="bct-radio visually-hidden" type="radio" id="Bct-{{ section.id }}-{{ key }}" name="Bct-{{ section.id }}" data-bct-colour="{{ key }}"{% if forloop.first %} checked{% endif %}>
+        {% endfor %}
+        <div class="bct-views">
+          {% for colour in colours %}
+            {%- liquid
+              assign fields = colour | split: '|'
+              assign setting_key = 'tile_kitkat_' | append: fields[0]
+              assign product_handle = fields[1]
+              assign tile = section.settings[setting_key] | default: all_products[product_handle]
+              assign tile_url = tile.url | default: guide_url
+              assign tile_alt = fields[4]
+            -%}
+            <a class="bct-photo" data-bct-photo="{{ fields[0] }}" href="{{ tile_url | escape }}" aria-label="Bekijk {{ fields[2] | escape }}">
+              {% if tile.featured_image != blank %}
+                {{ tile.featured_image | image_url: width: 900 | image_tag: widths: '320,480,640,900', sizes: '(min-width: 990px) 38vw, 90vw', alt: tile_alt, loading: 'lazy' }}
+              {% endif %}
+              <span class="bct-spec"><span>{{ fields[3] | escape }}</span><span>Bekijk tegel</span></span>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="bct-picker">
+          {% for colour in colours %}
+            {%- assign fields = colour | split: '|' -%}
+            <label for="Bct-{{ section.id }}-{{ fields[0] }}" data-bct-chip="{{ fields[0] }}"><span class="bct-dot" aria-hidden="true"></span>{{ fields[2] | escape }}</label>
+          {% endfor %}
+        </div>
+      </fieldset>
+      <div class="bct-caption">
+        <h3>KitKat-mozaïek</h3>
+        <p>De smalle strookjes van The Mosaic Factory zitten op een matje. Bij de Sevilla Mini is elk strookje <span class="bct-measure">1,2 × 9,2 cm</span>. Liever een grover patroon? Kies dan de Original van <span class="bct-measure">2 × 14,5 cm</span>.</p>
+        <a class="bct-button bct-button-main" href="{{ guide_url }}">Bekijk alle KitKat-tegels</a>
+      </div>
+    </article>
+    <article class="bct-material bct-porcelain">
+      {% if coral_image %}
+        <div class="bct-sample bct-room">
+          {{ coral_image | image_url: width: 950 | image_tag: widths: '240,360,570,760,950', sizes: '(min-width: 990px) 29vw, (min-width: 750px) 44vw, 30vw', alt: 'Matbeige Coral Caliza in een badkamer met een vrijstaand bad.', loading: 'lazy' }}
+        </div>
+      {% endif %}
+      <div class="bct-caption">
+        <h3>Porcelanosa</h3>
+        <p>Porcelanosa maakt sinds 1973 keramische tegels in Spanje. Bij <a href="{{ coral.url | default: porcelain_url | escape }}">Coral Caliza</a> kun je een matte vloer combineren met voelbaar reliëf op de wand, allebei in dezelfde tint.</p>
+        <a class="bct-button" href="{{ porcelain_url | escape }}">Bekijk Porcelanosa</a>
+      </div>
+    </article>
+    <article class="bct-material bct-wood">
+      {% if wood_image %}
+        <div class="bct-sample bct-wood-photo">
+          {{ wood_image | image_url: width: 950 | image_tag: widths: '240,360,570,760,950', sizes: '(min-width: 990px) 29vw, (min-width: 750px) 44vw, 30vw', alt: 'Lichtbruine Belice-R Natural houtlook tegels onder een eettafel.', loading: 'lazy' }}
+        </div>
+      {% endif %}
+      <div class="bct-caption">
+        <h3>Houtlook tegels</h3>
+        <p>Keramisch parket is een tegelvloer die eruitziet als houten planken. Je kunt hem gewoon dweilen. Op de foto zie je de matte <a href="{{ wood.url | default: wood_url | escape }}">Belice-R Natural</a> van <span class="bct-measure">180 cm</span> lang.</p>
+        <a class="bct-button" href="{{ wood_url }}">Bekijk houtlook tegels</a>
+      </div>
+    </article>
+  </div>
+  <nav class="bct-service" aria-label="Service bij de tegeltafel">
+    <a class="bct-service-main" href="{{ help_url | escape }}">Advies over tegels</a>
+    <a href="{{ booking_url | escape }}"{% if section.settings.booking_link != blank %} id="HomeAdvice"{% endif %}>3D-advies</a>
+    <a id="HomeDelivery" href="{{ delivery_url | escape }}">Bezorgen en afhalen</a>
+    <a id="HomeReturns" href="{{ returns_url | escape }}">Retour aanmelden</a>
+  </nav>
+  {% if appointment_form != blank %}
+    <details class="bch-appointment bct-appointment" id="HomeAdvice">
+      <summary>{{ 'bc_home.support.appointment' | t }}</summary>
+      <div class="bch-appointment__body" id="HomeAdviceRequest-{{ section.id }}">
+        {{ appointment_form }}
+      </div>
+    </details>
+  {% endif %}
+</section>
+
+{% stylesheet %}
+  .bch-home .bct-table {
+    --bct-line: #c5d6e4;
+    --bct-muted: #415b6d;
+    --bct-photo-height: clamp(228px, 21.4vw, 308px);
+    border-top: 4px solid var(--bch-navy);
+    padding: 0 clamp(22px, 3.8vw, 56px) 26px;
+    margin-block: 20px 30px;
+    scroll-margin-top: 130px;
+  }
+  .bct-heading {
+    display: grid;
+    grid-template-columns: 1fr 1.16fr auto;
+    align-items: center;
+    gap: clamp(17px, 2.8vw, 44px);
+    padding: clamp(24px, 3vw, 44px) 0 clamp(21px, 2.6vw, 37px);
+  }
+  .bch-home .bct-heading h2 {
+    font-size: clamp(42px, 5.35vw, 76px);
+    line-height: .98;
+    font-weight: 650;
+    letter-spacing: -.066em;
+  }
+  .bct-heading p { max-width: 47ch; color: var(--bct-muted); font-size: clamp(16px, 1.23vw, 18px); }
+  .bct-materials {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.24fr) minmax(0, 1fr);
+    grid-template-areas: "porcelain mosaic wood";
+    reading-flow: grid-rows;
+    gap: clamp(14px, 1.45vw, 22px);
+  }
+  .bct-material { display: flex; flex-direction: column; min-width: 0; }
+  .bct-mosaic { grid-area: mosaic; }
+  .bct-porcelain { grid-area: porcelain; }
+  .bct-wood { grid-area: wood; }
+  .bct-sample, .bct-kitkat { width: 100%; height: var(--bct-photo-height); overflow: hidden; background: #edf1f2; }
+  .bct-room img { object-position: 49% 67%; }
+  .bct-wood-photo img { object-position: 50% 88%; }
+  .bct-measure { white-space: nowrap; }
+  .bct-caption { display: flex; flex: 1; flex-direction: column; align-items: start; padding: 18px 0 21px; }
+  .bch-home .bct-caption h3 { margin: 0; color: inherit; font-size: clamp(20px, 2.05vw, 29px); line-height: 1.15; font-weight: 650; letter-spacing: -.04em; }
+  .bch-home .bct-caption p { margin: 9px 0 17px; max-width: 48ch; color: var(--bct-muted); font-size: clamp(16px, 1.14vw, 17px); line-height: 1.52; }
+  .bch-home .bct-caption p a { color: var(--bch-navy); text-decoration: underline #648498; text-underline-offset: .16em; }
+  .bch-home .bct-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 46px;
+    padding: 10px 16px;
+    border: 1px solid var(--bch-navy);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--bch-navy);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .bch-home .bct-button:hover { background: var(--bch-pale); }
+  .bct-caption .bct-button { margin-top: auto; }
+  .bch-home .bct-button-main { background: var(--bch-navy); color: #fff; }
+  .bch-home .bct-button-main:hover { background: #1b4c6a; }
+
+  .bct-kitkat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: var(--bch-navy);
+    background: #f0f2f1;
+  }
+  .bct-views { position: relative; flex: 1; min-height: 0; }
+  .bct-photo { display: none; position: absolute; inset: 0; }
+  .bct-photo:focus-visible { outline-offset: -4px; }
+  .bct-photo img { padding: 48px 7% 4px; object-fit: contain; filter: drop-shadow(0 5px 3px #142b3426); }
+  .bct-spec { position: absolute; inset: 9px 12px auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; line-height: 1.3; }
+  .bct-spec > :last-child { padding: 6px 11px; border: 1px solid #93acb9; border-radius: 6px; background: #fff; font-weight: 650; }
+  .bct-photo:hover .bct-spec > :last-child { background: var(--bch-pale); border-color: var(--bch-navy); }
+  .bct-picker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 7px 5px; }
+  .bct-picker label { display: flex; justify-content: center; align-items: center; gap: 5px; min-width: 0; min-height: 44px; font-size: 14px; line-height: 1.22; text-align: center; cursor: pointer; text-underline-offset: .23em; }
+  .bct-picker label:hover { text-decoration: underline; }
+  .bct-dot { display: inline-block; flex: 0 0 13px; height: 13px; border: 1px solid #34465966; border-radius: 50%; }
+  [data-bct-chip="cherry"] .bct-dot { background: #784640; }
+  [data-bct-chip="beige"] .bct-dot { background: #d5bc9d; }
+  [data-bct-chip="sage"] .bct-dot { background: #929779; }
+  [data-bct-colour="cherry"]:checked ~ .bct-views [data-bct-photo="cherry"],
+  [data-bct-colour="beige"]:checked ~ .bct-views [data-bct-photo="beige"],
+  [data-bct-colour="sage"]:checked ~ .bct-views [data-bct-photo="sage"] { display: block; }
+  [data-bct-colour="cherry"]:checked ~ .bct-picker [data-bct-chip="cherry"],
+  [data-bct-colour="beige"]:checked ~ .bct-picker [data-bct-chip="beige"],
+  [data-bct-colour="sage"]:checked ~ .bct-picker [data-bct-chip="sage"] {
+    font-weight: 700;
+    text-decoration: underline #16809b 2px;
+  }
+  [data-bct-colour="cherry"]:focus-visible ~ .bct-picker [data-bct-chip="cherry"],
+  [data-bct-colour="beige"]:focus-visible ~ .bct-picker [data-bct-chip="beige"],
+  [data-bct-colour="sage"]:focus-visible ~ .bct-picker [data-bct-chip="sage"] { outline: 2px solid #175e6f; outline-offset: -2px; }
+
+  .bct-service { display: flex; flex-wrap: wrap; align-items: center; gap: 0 clamp(18px, 2.8vw, 40px); min-height: 55px; border-top: 1px solid var(--bct-line); color: var(--bct-muted); font-size: 14px; }
+  .bch-home .bct-service a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline #9ba6a2; text-underline-offset: .18em; scroll-margin-top: 155px; }
+  .bct-service-main { margin-right: auto; font-weight: 625; }
+  .bct-appointment:not([open], :target) { display: none; }
+  .bct-appointment { max-width: 650px; }
+
+  @media (min-width: 750px) and (max-width: 989px) {
+    .bct-heading { grid-template-columns: 1fr auto; }
+    .bct-heading p { grid-area: 2 / 1 / auto / -1; }
+    .bct-materials { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "mosaic mosaic" "porcelain wood"; }
+  }
+  @media (max-width: 749px) {
+    .bch-home .bct-table { padding-inline: clamp(15px, 4.5vw, 25px); }
+    .bct-heading { display: flex; align-items: flex-start; flex-direction: column; gap: 0; padding: 21px 0 16px; }
+    .bch-home .bct-heading h2 { font-size: clamp(39px, 11.5vw, 57px); }
+    .bch-home .bct-heading p { margin: 10px 0 14px; font-size: 16px; }
+    .bct-materials { display: flex; flex-direction: column; gap: 0; }
+    .bct-material { border-top: 1px solid var(--bct-line); padding-block: 17px; }
+    .bct-porcelain, .bct-wood { display: grid; grid-template-columns: minmax(77px, 31%) 1fr; gap: clamp(12px, 4vw, 21px); align-items: start; }
+    .bct-sample { height: auto; aspect-ratio: 3 / 4; }
+    .bct-wood-photo img { object-position: 30% 86%; }
+    .bct-caption { padding: 0; }
+    .bch-home .bct-caption h3 { font-size: clamp(23px, 5.9vw, 29px); }
+    .bch-home .bct-caption p { margin: 7px 0 13px; font-size: 16px; line-height: 1.48; }
+    .bch-home .bct-button { padding-inline: 12px; }
+    .bct-kitkat { height: clamp(200px, 62vw, 300px); }
+    .bct-mosaic .bct-caption { padding-top: 14px; }
+    .bct-picker { margin-inline: 4px; }
+    .bct-picker label { font-size: clamp(12px, 3.25vw, 14px); }
+    .bct-dot { flex-basis: 11px; height: 11px; }
+    .bct-service { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10px; padding-block: 6px; }
+    .bct-service-main { margin-right: 0; }
+  }
+{% endstylesheet %}

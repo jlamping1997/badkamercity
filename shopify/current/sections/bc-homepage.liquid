@@ -4,7 +4,6 @@
   assign campaigns = section.blocks | where: 'type', 'campaign'
   assign categories = section.blocks | where: 'type', 'category'
   assign form_id = 'HomeAdviceForm-' | append: section.id
-  assign request_id = 'HomeAdviceRequest-' | append: section.id
   assign contact_url = pages.contact.url | default: routes.root_url
 %}
 <div class="bch-home" data-bch-home id="Home-{{ section.id }}">
@@ -86,55 +85,36 @@
     assign returns_url = pages['retour-aanmelden'].url | default: shop.refund_policy.url | default: contact_url
     assign inspiration_url = section.settings.inspiration_link | default: collections['tegels'].url | default: routes.all_products_collection_url
     assign help_url = section.settings.help_link | default: contact_url
-    assign help_heading = 'bc_home.support.heading' | t
-    assign help_text = 'bc_home.support.text' | t
-    assign help_label = 'bc_home.support.contact' | t
   %}
-  <div class="bch-shell bch-discover">
-    <section class="bch-inspire-card" id="HomeInspiration" aria-labelledby="HomeInspirationTitle-{{ section.id }}">
-      <div class="bch-inspire-card__image">{% render 'bc-home-image', image: section.settings.inspiration_image, asset: 'bch-inspiration.webp', alt: '', sizes: '(min-width: 990px) 440px, 100vw', width: 900, height: 720 %}</div>
-      <div class="bch-inspire-card__copy">
-        <p class="bch-eyebrow">{{ 'bc_home.support.inspiration' | t }}</p>
-        <h2 id="HomeInspirationTitle-{{ section.id }}">{{ section.settings.inspiration_heading | escape }}</h2>
-        <a class="bch-discover-button" href="{{ inspiration_url | escape }}">{{ section.settings.inspiration_label | escape }}</a>
+  {%- capture appointment_form -%}
+    {%- if section.settings.booking_link == blank -%}
+    <p>{{ 'bc_home.form.explanation' | t }}</p>
+    {% form 'contact', id: form_id %}
+      {% if form.posted_successfully? %}<p class="bch-form-success" role="status" tabindex="-1">{{ 'bc_home.form.success' | t }}</p>{% endif %}
+      {% if form.errors %}<div class="bch-form-errors" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+      <input type="hidden" name="contact[onderwerp]" value="3D-afspraak Badkamercity">
+      <div class="bch-form-grid">
+        <div><label for="{{ form_id }}-name">{{ 'bc_home.form.name' | t }}</label><input id="{{ form_id }}-name" name="contact[name]" autocomplete="name" required value="{{ form.name | default: customer.name | escape }}"></div>
+        <div><label for="{{ form_id }}-email">{{ 'bc_home.form.email' | t }}</label><input id="{{ form_id }}-email" name="contact[email]" type="email" autocomplete="email" autocapitalize="off" required value="{{ form.email | default: customer.email | escape }}"{% if form.errors contains 'email' %} aria-invalid="true"{% endif %}></div>
+        <div><label for="{{ form_id }}-phone">{{ 'bc_home.form.phone' | t }}</label><input id="{{ form_id }}-phone" name="contact[telefoon]" type="tel" autocomplete="tel" value="{{ form.phone | escape }}"></div>
+        <div><label for="{{ form_id }}-moment">{{ 'bc_home.form.moment' | t }}</label><input id="{{ form_id }}-moment" name="contact[voorkeursmoment]" placeholder="{{ 'bc_home.form.moment_hint' | t }}"></div>
       </div>
-    </section>
-    <section class="bch-help-card" id="HomeAdvice" aria-labelledby="HomeAdviceTitle-{{ section.id }}">
-      <h2 id="HomeAdviceTitle-{{ section.id }}">{{ section.settings.help_heading | default: help_heading | escape }}</h2>
-      <p class="bch-help-card__text">{{ section.settings.help_text | default: help_text | escape }}</p>
-      <a class="bch-discover-button" href="{{ help_url | escape }}">{{ section.settings.help_label | default: help_label | escape }}</a>
-      <nav class="bch-help-card__services" aria-label="{{ 'bc_home.support.services_label' | t | escape }}">
-        <a id="HomeDelivery" href="{{ delivery_url | escape }}"><span class="bch-icon" aria-hidden="true">{{ 'icon-box.svg' | inline_asset_content }}</span><span>{{ 'bc_home.services.pickup' | t }}</span></a>
-        <a id="HomeReturns" href="{{ returns_url | escape }}"><span class="bch-icon" aria-hidden="true">{{ 'icon-return.svg' | inline_asset_content }}</span><span>{{ 'bc_home.services.returns' | t }}</span></a>
-      </nav>
-      {% if section.settings.booking_link == blank %}
-      <details class="bch-appointment bch-appointment--subtle" id="{{ request_id }}">
-        <summary>{{ 'bc_home.support.appointment' | t }}</summary>
-        <div class="bch-appointment__body">
-          <p>{{ 'bc_home.form.explanation' | t }}</p>
-          {% form 'contact', id: form_id %}
-            {% if form.posted_successfully? %}<p class="bch-form-success" role="status" tabindex="-1">{{ 'bc_home.form.success' | t }}</p>{% endif %}
-            {% if form.errors %}<div class="bch-form-errors" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
-            <input type="hidden" name="contact[onderwerp]" value="3D-afspraak Badkamercity">
-            <div class="bch-form-grid">
-              <div><label for="{{ form_id }}-name">{{ 'bc_home.form.name' | t }}</label><input id="{{ form_id }}-name" name="contact[name]" autocomplete="name" required value="{{ form.name | default: customer.name | escape }}"></div>
-              <div><label for="{{ form_id }}-email">{{ 'bc_home.form.email' | t }}</label><input id="{{ form_id }}-email" name="contact[email]" type="email" autocomplete="email" autocapitalize="off" required value="{{ form.email | default: customer.email | escape }}"{% if form.errors contains 'email' %} aria-invalid="true"{% endif %}></div>
-              <div><label for="{{ form_id }}-phone">{{ 'bc_home.form.phone' | t }}</label><input id="{{ form_id }}-phone" name="contact[telefoon]" type="tel" autocomplete="tel" value="{{ form.phone | escape }}"></div>
-              <div><label for="{{ form_id }}-moment">{{ 'bc_home.form.moment' | t }}</label><input id="{{ form_id }}-moment" name="contact[voorkeursmoment]" placeholder="{{ 'bc_home.form.moment_hint' | t }}"></div>
-            </div>
-            <label for="{{ form_id }}-body">{{ 'bc_home.form.message' | t }}</label>
-            <textarea id="{{ form_id }}-body" name="contact[body]" rows="4" required>{{ form.body | escape }}</textarea>
-            <p class="bch-form-note">{{ 'bc_home.form.confirmation' | t }}</p>
-            {% if shop.privacy_policy != blank %}<p class="bch-form-note"><a href="{{ shop.privacy_policy.url }}">{{ 'bc_home.form.privacy' | t }}</a></p>{% endif %}
-            <button class="bch-button" type="submit">{{ 'bc_home.form.submit' | t }} <span aria-hidden="true">&rarr;</span></button>
-          {% endform %}
-        </div>
-      </details>
-      {% else %}
-        <a class="bch-help-card__appointment" href="{{ section.settings.booking_link | escape }}">{{ 'bc_home.support.appointment' | t }}</a>
-      {% endif %}
-    </section>
-  </div>
+      <label for="{{ form_id }}-body">{{ 'bc_home.form.message' | t }}</label>
+      <textarea id="{{ form_id }}-body" name="contact[body]" rows="4" required>{{ form.body | escape }}</textarea>
+      <p class="bch-form-note">{{ 'bc_home.form.confirmation' | t }}</p>
+      {% if shop.privacy_policy != blank %}<p class="bch-form-note"><a href="{{ shop.privacy_policy.url }}">{{ 'bc_home.form.privacy' | t }}</a></p>{% endif %}
+      <button class="bch-button" type="submit">{{ 'bc_home.form.submit' | t }}</button>
+    {% endform %}
+    {%- endif -%}
+  {%- endcapture -%}
+  {% render 'bc-home-tegeltafel',
+    section: section,
+    delivery_url: delivery_url,
+    returns_url: returns_url,
+    help_url: help_url,
+    inspiration_url: inspiration_url,
+    appointment_form: appointment_form
+  %}
 </div>
 {% schema %}
 {
@@ -148,6 +128,62 @@
     ]
   },
   "settings": [
+    {
+      "type": "header",
+      "content": "De tegeltafel"
+    },
+    {
+      "type": "text",
+      "id": "tile_table_heading",
+      "label": "Kop",
+      "default": "De tegeltafel"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_table_text",
+      "label": "Korte inleiding",
+      "default": "Wat past er achter de wastafel bij een vloer met houtnerf? Probeer bij het mozaïek eens het glanzende roodbruin en daarna het matte saliegroen."
+    },
+    {
+      "type": "product",
+      "id": "tile_kitkat_cherry",
+      "label": "KitKat Smoked Cherry"
+    },
+    {
+      "type": "product",
+      "id": "tile_kitkat_beige",
+      "label": "KitKat Desert Beige"
+    },
+    {
+      "type": "product",
+      "id": "tile_kitkat_sage",
+      "label": "KitKat Sage Green"
+    },
+    {
+      "type": "product",
+      "id": "tile_coral",
+      "label": "Porcelanosa-voorbeeld"
+    },
+    {
+      "type": "product",
+      "id": "tile_wood",
+      "label": "Houtlookvoorbeeld"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_coral_image",
+      "label": "Porcelanosa sfeerfoto"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_wood_image",
+      "label": "Houtlook sfeerfoto"
+    },
+    {
+      "type": "url",
+      "id": "tile_porcelain_link",
+      "label": "Link naar alle Porcelanosa-tegels"
+    },
     {
       "type": "header",
       "content": "USP’s"
