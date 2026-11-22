@@ -1,0 +1,56 @@
+{% doc %}
+  Offers the tile sample explicitly linked to this product.
+  @param {product} product - Original full-size tile
+  @param {string} section_id - Product section ID
+{% enddoc %}
+{%- assign sample = product.metafields.custom.bc_sample_variant.value -%}
+{%- assign sample_enabled = shop.metafields.custom.bc_samples_enabled.value -%}
+{%- if request.design_mode -%}
+  {%- assign sample_enabled = true -%}
+{%- endif -%}
+{%- if sample_enabled == true and sample != blank and sample.available and sample.product.type == 'Tegelsample' and sample.product.published_at != blank -%}
+  {%- liquid
+    capture sample_count
+      render 'bc-sample-count'
+    endcapture
+    assign sample_count = sample_count | plus: 0
+    assign source_sku = product.selected_or_first_available_variant.sku
+    assign selected_here = cart | item_count_for_variant: sample.id
+    assign already_chosen = false
+    if sample.product.handle == 'tegelsample-cottoceramix' and selected_here > 0
+      assign already_chosen = true
+    endif
+  -%}
+  <bc-tile-sample
+    data-cart-url="{{ routes.cart_url }}"
+    {% if sample.product.handle == 'tegelsample-cottoceramix' %}data-once="{{ 'bc_samples.one_cotto' | t | escape }}"{% endif %}
+    data-at-limit="{{ 'bc_samples.limit' | t | escape }}"
+    data-error="{{ 'bc_samples.error' | t | escape }}"
+    data-added="{{ 'bc_samples.added' | t | escape }}"
+  >
+    <form action="{{ routes.cart_add_url }}" method="post" aria-describedby="bc-sample-help-{{ section_id }}">
+      <input type="hidden" name="id" value="{{ sample.id }}">
+      <input type="hidden" name="quantity" value="1">
+      <input type="hidden" name="return_to" value="{{ routes.cart_url }}">
+      {%- if source_sku != blank -%}
+        <input type="hidden" name="properties[Artikelnummer tegel]" value="{{ source_sku | escape }}">
+      {%- endif -%}
+      <button type="submit" class="button button--secondary button--full-width" {% if sample_count >= 5 or already_chosen %}disabled{% endif %}>
+        {{ 'bc_samples.order' | t }}
+        <span data-sample-first {% if sample_count > 0 %}hidden{% endif %}>({{ sample.price | money }})</span>
+        <span data-sample-extra {% if sample_count == 0 %}hidden{% endif %}>({{ sample.price | divided_by: 2 | money }})</span>
+      </button>
+      <p id="bc-sample-help-{{ section_id }}">{{ 'bc_samples.explanation' | t }}{% if sample.product.handle == 'tegelsample-cottoceramix' %} {{ 'bc_samples.cotto_terms' | t }}{% endif %}</p>
+      <p role="status" aria-live="polite" data-sample-status>{% if sample_count >= 5 %}{{ 'bc_samples.limit' | t }}{% elsif already_chosen %}{{ 'bc_samples.one_cotto' | t }}{% endif %}</p>
+      <a href="{{ routes.cart_url }}" data-sample-cart {% if sample_count < 5 and already_chosen == false %}hidden{% endif %}>{{ 'bc_samples.view_cart' | t }}</a>
+    </form>
+  </bc-tile-sample>
+{%- endif -%}
+{% stylesheet %}
+  bc-tile-sample { display: block; margin-block: 1.2rem 1.6rem; }
+  bc-tile-sample .button { width: 100%; min-height: 4.6rem; font-weight: 650; gap: .4em; }
+  bc-tile-sample p { margin: .7rem 0 0; font-size: 1.45rem; line-height: 1.45; }
+  bc-tile-sample [data-sample-status]:empty { display: none; }
+  bc-tile-sample [data-sample-cart] { display: inline-block; padding-block: .55rem; color: inherit; text-underline-offset: .2em; }
+  bc-tile-sample [hidden] { display: none; }
+{% endstylesheet %}

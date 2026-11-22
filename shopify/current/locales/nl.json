@@ -8,6 +8,16 @@
  * ------------------------------------------------------------
  */
 {
+  "bc_samples": {
+    "order": "Bestel een sample",
+    "explanation": "De eerste sample kost € 5,00. Elke volgende kost € 2,50. Je kunt tot vijf samples tegelijk bestellen.",
+    "limit": "Je kunt maximaal vijf samples per bestelling kiezen. Haal eerst een sample uit je winkelwagen als je een andere wilt proberen.",
+    "error": "Controleer je winkelwagen. We konden het toevoegen van de sample niet bevestigen.",
+    "added": "De sample zit in je winkelwagen.",
+    "view_cart": "Bekijk je winkelwagen",
+    "one_cotto": "Deze sample zit al in je winkelwagen. Je kunt elke Cottoceramix-tegel één keer als sample kiezen.",
+    "cotto_terms": "Van elke Cottoceramix-tegel kun je één sample kiezen."
+  },
   "bc": {
     "inbouw": {
       "title": "Inbouwdeel meebestellen?",

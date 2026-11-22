@@ -117,6 +117,7 @@
                   </thead>
 
                   <tbody role="rowgroup">
+                    {%- capture bc_samples_in_cart -%}{%- render 'bc-sample-count' -%}{%- endcapture -%}
                     {%- for item in cart.items -%}
                       <tr
                         id="CartDrawer-Item-{{ item.index | plus: 1 }}"
@@ -311,9 +312,7 @@
                                     data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                     min="0"
                                     data-min="{{ item.variant.quantity_rule.min }}"
-                                    {% if item.variant.quantity_rule.max != null %}
-                                      max="{{ item.variant.quantity_rule.max }}"
-                                    {% endif %}
+                                    {% render 'bc-sample-quantity-attributes', item: item, sample_count: bc_samples_in_cart %}
                                     step="{{ item.variant.quantity_rule.increment }}"
                                     {% # theme-check-enable %}
                                     aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"

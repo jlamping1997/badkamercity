@@ -1,0 +1,167 @@
+{% doc %}
+  Renders one tile swatch with its colour, finish and strip dimensions.
+  @param {product} tile - The product in the collection.
+{% enddoc %}
+{%- liquid
+  assign translation_prefix = 'sections.bc-kitkat-guide.'
+  assign sku = tile.selected_or_first_available_variant.sku | strip | upcase
+  assign maker = tile.vendor | strip | downcase
+  assign record = ''
+  if maker == 'the mosaic factory'
+    case sku
+    when 'SEF12012'
+      assign record = 'mini|Smoked Cherry|Roodbruin|rood,bruin|glans'
+    when 'SEF12078'
+      assign record = 'mini|Pink|Lichtroze|roze|glans'
+    when 'SEF12100'
+      assign record = 'mini|White|Wit|wit|glans'
+    when 'SEF12115'
+      assign record = 'mini|Soft White|Zachtwit|wit|glans'
+    when 'SEF12140'
+      assign record = 'mini|White|Wit|wit|mat'
+    when 'SEF12225'
+      assign record = 'mini|Desert Beige|Zandbeige|beige|glans'
+    when 'SEF12325'
+      assign record = 'mini|Grey-Blue Speckle|Grijsblauw met een spikkel|grijs,blauw|glans'
+    when 'SEF12525'
+      assign record = 'mini|Light Green Speckle|Lichtgroen met een spikkel|groen|glans'
+    when 'SEF12545'
+      assign record = 'mini|Urban Olive|Olijfgroen|groen|glans'
+    when 'SEF12625'
+      assign record = 'mini|Azure Blue Speckle|Azuurblauw met een spikkel|blauw|glans'
+    when 'SEF12915'
+      assign record = 'mini|Black|Zwart|zwart|glans'
+    when 'SEF12925'
+      assign record = 'mini|Black|Zwart|zwart|mat'
+    when 'SEF20010'
+      assign record = 'original|Terra Red|Terrarood|rood|glans'
+    when 'SEF20015'
+      assign record = 'original|Terra Cotta|Terracotta|rood,bruin|mat'
+    when 'SEF20030'
+      assign record = 'original|Yellow|Geel|geel|glans'
+    when 'SEF20080'
+      assign record = 'original|Vintage Pink|Oudroze|roze|mat'
+    when 'SEF20100'
+      assign record = 'original|White with Blue Speckle|Wit met blauwe spikkels|wit|glans'
+    when 'SEF20120'
+      assign record = 'original|Vintage White|Gebroken wit|wit|glans'
+    when 'SEF20125'
+      assign record = 'original|Turquoise|Turquoise|blauw,groen|glans'
+    when 'SEF20140'
+      assign record = 'original|White|Wit|wit|mat'
+    when 'SEF20195'
+      assign record = 'original|Stracciatella|Gebroken wit met donkere spikkels|wit|mat'
+    when 'SEF20200'
+      assign record = 'original|Café Latte|Koffiebeige|beige,bruin|glans'
+    when 'SEF20250'
+      assign record = 'original|Vanilla|Vanillebeige met fijne spikkels|beige|mat'
+    when 'SEF20300'
+      assign record = 'original|Light Grey|Lichtgrijs|grijs|glans'
+    when 'SEF20360'
+      assign record = 'original|Grey|Grijs|grijs|glans'
+    when 'SEF20400'
+      assign record = 'original|Blue-Grey|Blauwgrijs|blauw,grijs|glans'
+    when 'SEF20500'
+      assign record = 'original|Ocean Green|Zeegroen|groen,blauw|glans'
+    when 'SEF20525'
+      assign record = 'original|Forest Green|Bosgroen|groen|glans'
+    when 'SEF20550'
+      assign record = 'original|Green|Groen|groen|glans'
+    when 'SEF20555'
+      assign record = 'original|Army Green|Legergroen|groen|mat'
+    when 'SEF20575'
+      assign record = 'original|Sage Green|Saliegroen|groen|mat'
+    when 'SEF20600'
+      assign record = 'original|Jeans Blue|Jeansblauw|blauw|glans'
+    when 'SEF20725'
+      assign record = 'original|Navy Blue|Marineblauw|blauw|mat'
+    when 'SEF20800'
+      assign record = 'original|Crème Caramel|Karamelbruin|bruin|glans'
+    when 'SEF20B'
+      assign record = 'original|Bronze Metallic|Brons|brons|metallic'
+    when 'SEF22100'
+      assign record = 'kitkat22|White|Wit|wit|glans'
+    when 'SEF22140'
+      assign record = 'kitkat22|White|Wit|wit|mat'
+    when 'SEF22915'
+      assign record = 'kitkat22|Black|Zwart|zwart|glans'
+    when 'SEF22925'
+      assign record = 'kitkat22|Black|Zwart|zwart|mat'
+    when 'SEF-OH-20915'
+      assign record = 'osiris|Carbon Gray|Antraciet|grijs|glans'
+    when 'SEF-OH-20925'
+      assign record = 'osiris|Carbon Gray|Antraciet|grijs|mat'
+    when 'SEF-OH-MIX-1'
+      assign record = 'osiris|Carbon Shades of Gray|Donkere mix van grijstinten|grijs,zwart|mix'
+    when 'SEF-OH-MIX-2'
+      assign record = 'osiris|Carbon Shades of Chalk|Antraciet met lichtere grijstinten|grijs,zwart|mix'
+    when 'NTK01'
+      assign record = 'travertin|Travertin Convex|Natuurlijk beige|beige|steen'
+    when 'NTK02'
+      assign record = 'travertin|Travertin Flat|Natuurlijk beige|beige|steen'
+    when 'NTK03'
+      assign record = 'travertin|Travertin Original|Natuurlijk beige|beige|steen'
+    endcase
+  endif
+
+  if record != blank
+    assign fields = record | split: '|'
+    assign series = fields[0]
+    assign name = fields[1]
+    assign shade = fields[2]
+    assign colors = fields[3]
+    assign finish = fields[4]
+    assign material = 'keramiek'
+    assign series_label = translation_prefix | append: series | t
+    assign finish_label = translation_prefix | append: finish | t
+    case series
+      when 'mini'
+        assign size = '12'
+        assign dimensions = '12 × 92 mm'
+      when 'kitkat22'
+        assign size = '22-145'
+        assign dimensions = '22 × 145 mm'
+      when 'travertin'
+        assign material = 'travertin'
+        if sku == 'NTK01'
+          assign size = '19'
+          assign dimensions = '19 × 152 mm'
+        else
+          assign size = '22-148'
+          assign dimensions = '22 × 148 mm'
+        endif
+      else
+        assign size = '20'
+        assign dimensions = '20 × 145 mm'
+    endcase
+  else
+    assign material = 'overig'
+    assign series = 'overig'
+    assign colors = 'overig'
+    assign finish = 'overig'
+    assign size = 'overig'
+    assign name = tile.title
+    assign series_label = tile.vendor
+  endif
+-%}
+<li data-kg-item="{{ tile.id }}" data-kg-material="{{ material }}" data-kg-size="{{ size }}" data-kg-series="{{ series }}" data-kg-color="{{ colors }}" data-kg-finish="{{ finish }}">
+  <a class="kg-swatch" href="{{ tile.url }}">
+    <span class="kg-swatch-image">
+      {%- if tile.featured_image -%}
+        {{ tile.featured_image
+          | image_url: width: 440
+          | image_tag: widths: '140,230,340,440', sizes: '(min-width: 990px) 175px, (min-width: 620px) 22vw, 45vw', loading: 'lazy', alt: ''
+        }}
+      {%- endif -%}
+    </span>
+    <span class="kg-swatch-copy">
+      <span class="kg-swatch-name">{{ name | escape }}</span>
+      {%- if record != blank -%}
+        <span class="kg-swatch-shade">{{ shade | escape }} · {{ finish_label | escape }}</span>
+        <span class="kg-swatch-line">{{ series_label | escape }} · {{ dimensions }}</span>
+      {%- else -%}
+        <span class="kg-swatch-line">{{ series_label | escape }}</span>
+      {%- endif -%}
+    </span>
+  </a>
+</li>

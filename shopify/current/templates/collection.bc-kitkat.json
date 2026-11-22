@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "guide": {
+      "type": "bc-kitkat-guide",
+      "blocks": {
+        "mini": {
+          "type": "series",
+          "settings": {
+            "key": "mini",
+            "title": "Sevilla Mini",
+            "size": "12 × 92 mm",
+            "description": "Klein en licht bol. Door de smalle strookjes zie je veel fijne voeglijnen. Hier zie je Smoked Cherry in glans.",
+            "example": "the-mosaic-factory-sevilla-kitkat-mini-finger-smoked-cherry-glossy-mozaiektegel-sef12012"
+          }
+        },
+        "original": {
+          "type": "series",
+          "settings": {
+            "key": "original",
+            "title": "Sevilla Original",
+            "size": "20 × 145 mm",
+            "description": "Deze langere strookjes zijn licht hol. Het licht valt daardoor anders op de randen dan in het midden. Dit is Sage Green in mat.",
+            "example": "the-mosaic-factory-sevilla-kitkat-original-finger-sage-green-matt-mozaiektegel-sef20575"
+          }
+        },
+        "kitkat22": {
+          "type": "series",
+          "settings": {
+            "key": "kitkat22",
+            "title": "Sevilla KitKat Finger",
+            "size": "22 × 145 mm",
+            "description": "Even lang als de Original en iets breder. Kies uit wit of zwart, allebei in mat of glans. Op de foto zie je wit in glans.",
+            "example": "the-mosaic-factory-sevilla-kitkat-finger-white-glossy-mozaiektegel-sef22100"
+          }
+        },
+        "osiris": {
+          "type": "series",
+          "settings": {
+            "key": "osiris",
+            "title": "Osiris Hertman",
+            "size": "20 × 145 mm",
+            "description": "De maat van de Original, met een eigen kleurenpalet. Bij deze Carbon Shades of Gray zitten matte en glanzende strookjes op één mat.",
+            "example": "the-mosaic-factory-osiris-hertman-kitkat-original-finger-carbon-shades-of-gray-matt-glossy-mozaiektegel-sef-oh-mix-1"
+          }
+        },
+        "travertin": {
+          "type": "series",
+          "settings": {
+            "key": "travertin",
+            "title": "KitKat van travertin",
+            "size": "19 × 152 mm of 22 × 148 mm",
+            "description": "Travertin is natuursteen. De Convex heeft een bolle voorkant. De Flat is vlak. De Original is even groot en licht hol. De tekening en kleur van de steen verschillen per mat.",
+            "example": "the-mosaic-factory-natural-stone-travertine-beige-matt-mozaiektegel-ntk01"
+          }
+        }
+      },
+      "block_order": [
+        "mini",
+        "original",
+        "kitkat22",
+        "osiris",
+        "travertin"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "guide"
+  ]
+}

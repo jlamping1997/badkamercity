@@ -52,7 +52,7 @@ class CartItems extends HTMLElement {
   }
 
   resetQuantityInput(id) {
-    const input = this.querySelector(`#Quantity-${id}`);
+    const input = this.querySelector(`input.quantity__input[data-index="${id}"]`);
     input.value = input.getAttribute('value');
     this.isEnterPressed = false;
   }
@@ -157,21 +157,23 @@ class CartItems extends HTMLElement {
 
   updateQuantity(line, quantity, event, name, variantId) {
     const page = this.tagName === 'CART-ITEMS' && window.BCCartPage;
-    if (page?.isActive(this)) {
-      const queuedEvent = { currentTarget: event.currentTarget };
-      return page.quantity(this, () => this.performQuantityUpdate(line, quantity, queuedEvent, name, variantId));
-    }
-    return this.performQuantityUpdate(line, quantity, event, name, variantId);
+    const sampleInput = this.querySelector(`input[data-bc-sample-key][data-index="${line}"]`);
+    const queuedEvent = { currentTarget: event.currentTarget };
+    const change = (lineKey) => this.performQuantityUpdate(line, quantity, queuedEvent, name, variantId, lineKey);
+    const update = sampleInput && window.BCTileSamples
+      ? () => window.BCTileSamples.changeLine(this, line, sampleInput, quantity, change)
+      : () => change();
+    return page?.isActive(this) ? page.quantity(this, update) : update();
   }
 
-  performQuantityUpdate(line, quantity, event, name, variantId) {
+  performQuantityUpdate(line, quantity, event, name, variantId, lineKey) {
     const eventTarget = event.currentTarget instanceof CartRemoveButton ? 'clear' : 'change';
     const cartPerformanceUpdateMarker = CartPerformance.createStartingMarker(`${eventTarget}:user-action`);
 
     this.enableLoading(line);
 
     const body = JSON.stringify({
-      line,
+      ...(lineKey ? { id: lineKey } : { line }),
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,

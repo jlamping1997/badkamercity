@@ -8,6 +8,16 @@
  * ------------------------------------------------------------
  */
 {
+  "bc_samples": {
+    "order": "Order a sample",
+    "explanation": "Your first sample costs €5.00. Each additional sample costs €2.50. You can order up to five samples at a time.",
+    "limit": "You can choose up to five samples per order. Remove one from your cart to try another.",
+    "error": "Check your cart. We could not confirm that the sample was added.",
+    "added": "The sample is in your cart.",
+    "view_cart": "View cart",
+    "one_cotto": "This sample is already in your cart. Each Cottoceramix tile can be ordered as a sample once per order.",
+    "cotto_terms": "You can choose one sample of each Cottoceramix tile."
+  },
   "bc": {
     "inbouw": {
       "title": "Add the rough-in part?",
