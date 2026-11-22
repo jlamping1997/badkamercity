@@ -124,3 +124,56 @@
   .kg-button { padding-inline: 12px; }
   .kg-range-grid { gap: 24px 12px; }
 }
+
+.kg-rooms { margin-top: clamp(26px, 4.6vw, 56px); }
+.kg-room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 28px);
+  margin-top: 16px;
+}
+.kg-room { display: flex; flex-direction: column; min-width: 0; }
+.kg-room-photo {
+  display: block;
+  aspect-ratio: 1.55;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #eff3f3;
+}
+.kg-room-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.kg-room-copy { display: grid; justify-items: start; gap: 8px; padding-top: 12px; height: 100%; }
+.kg-room-copy p { font-size: 16px; color: var(--kg-muted); }
+.kg-room-copy a { align-self: end; }
+.kg-colour-choices { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.kg-colour-choices + .kg-controls { margin-top: 12px; }
+.kg-colour {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  min-height: 44px;
+  border: 1px solid #95acb7;
+  border-radius: 999px;
+  background: white;
+  color: var(--kg-navy);
+  cursor: pointer;
+  font-size: 15px !important;
+}
+.kg-colour[aria-pressed="true"] { border-color: var(--kg-navy); color: white; background: var(--kg-navy); }
+.kg-colour:disabled { cursor: default; opacity: .48; }
+.kg-colour-dot { width: 13px; height: 13px; border-radius: 50%; border: 1px solid #667d84; }
+.kg-colour[data-kg-colour="beige"] .kg-colour-dot { background: #c9ac8b; }
+.kg-colour[data-kg-colour="groen"] .kg-colour-dot { background: #71876b; }
+.kg-colour[data-kg-colour="wit"] .kg-colour-dot { background: #fff9f0; }
+.kg-colour[data-kg-colour="blauw"] .kg-colour-dot { background: #41677e; }
+.kg-colour[data-kg-colour="rood"] .kg-colour-dot { background: #a35345; }
+@media (max-width: 640px) {
+  .kg-room-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 5px 5px 14px;
+    margin-inline: -5px;
+  }
+  .kg-room { flex: 0 0 84%; scroll-snap-align: start; }
+}

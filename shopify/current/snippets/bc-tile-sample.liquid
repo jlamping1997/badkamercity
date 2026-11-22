@@ -35,7 +35,7 @@
       {%- if source_sku != blank -%}
         <input type="hidden" name="properties[Artikelnummer tegel]" value="{{ source_sku | escape }}">
       {%- endif -%}
-      <button type="submit" class="button button--secondary button--full-width" {% if sample_count >= 5 or already_chosen %}disabled{% endif %}>
+      <button type="submit" class="bc-tile-sample__submit button button--secondary button--full-width" {% if sample_count >= 5 or already_chosen %}disabled{% endif %}>
         {{ 'bc_samples.order' | t }}
         <span data-sample-first {% if sample_count > 0 %}hidden{% endif %}>({{ sample.price | money }})</span>
         <span data-sample-extra {% if sample_count == 0 %}hidden{% endif %}>({{ sample.price | divided_by: 2 | money }})</span>
@@ -47,8 +47,25 @@
   </bc-tile-sample>
 {%- endif -%}
 {% stylesheet %}
-  bc-tile-sample { display: block; margin-block: 1.2rem 1.6rem; }
-  bc-tile-sample .button { width: 100%; min-height: 4.6rem; font-weight: 650; gap: .4em; }
+  bc-tile-sample { display: block; width: 100%; padding-block-start: .8rem; margin-block-end: 1.6rem; }
+  .product__info-container:has(> .bc-buybox__purchase-row) > bc-tile-sample { order: 31; }
+  bc-tile-sample .bc-tile-sample__submit {
+    width: 100%;
+    min-height: 5.6rem;
+    padding-inline: 1.2rem;
+    border: 1px solid var(--bc-pdp-green, #087f3d);
+    border-radius: 999px;
+    color: var(--bc-pdp-green, #087f3d);
+    background: #fff;
+    font-weight: 700;
+    gap: .4em;
+  }
+  bc-tile-sample .bc-tile-sample__submit::before,
+  bc-tile-sample .bc-tile-sample__submit::after { display: none; }
+  bc-tile-sample .bc-tile-sample__submit:hover:enabled {
+    color: var(--bc-pdp-green-hover, #066532);
+    background: #eef7f0;
+  }
   bc-tile-sample p { margin: .7rem 0 0; font-size: 1.45rem; line-height: 1.45; }
   bc-tile-sample [data-sample-status]:empty { display: none; }
   bc-tile-sample [data-sample-cart] { display: inline-block; padding-block: .55rem; color: inherit; text-underline-offset: .2em; }

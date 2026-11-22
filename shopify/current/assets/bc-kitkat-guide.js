@@ -22,6 +22,16 @@
       this.empty = this.querySelector('[data-kg-empty]');
       this.pager = this.querySelector('[data-kg-pager]');
       this.clear = this.querySelector('[data-kg-clear]');
+      this.colourChoices = [...this.querySelectorAll('[data-kg-colour]')];
+      const colourGroup = this.querySelector('[data-kg-colour-choices]');
+      if (colourGroup) colourGroup.hidden = false;
+      for (const button of this.colourChoices) {
+        button.addEventListener('click', () => {
+          const select = this.controls.color;
+          select.value = select.value === button.dataset.kgColour ? '' : button.dataset.kgColour;
+          this.change();
+        });
+      }
 
       const params = new URL(window.location.href).searchParams;
       for (const [key, select] of Object.entries(this.controls)) {
@@ -113,6 +123,12 @@
           option.hidden = option.value === 'overig' && this.allFetched && !rows.some(row => row[key].includes('overig'));
           option.textContent = this.allFetched ? option.dataset.label + ' (' + count + ')' : option.dataset.label;
         }
+      }
+      for (const button of this.colourChoices) {
+        const value = button.dataset.kgColour;
+        const option = [...this.controls.color.options].find(entry => entry.value === value);
+        button.disabled = option?.disabled ?? true;
+        button.setAttribute('aria-pressed', String(choices.color === value));
       }
       const count = filtering ? shown : Number(this.dataset.kgTotal);
       this.status.textContent = count + ' ' + (count === 1 ? this.dataset.kgOne : this.dataset.kgMany);

@@ -117,22 +117,22 @@
     case series
       when 'mini'
         assign size = '12'
-        assign dimensions = '12 × 92 mm'
+        assign dimensions = '1,2 × 9,2 cm'
       when 'kitkat22'
         assign size = '22-145'
-        assign dimensions = '22 × 145 mm'
+        assign dimensions = '2,2 × 14,5 cm'
       when 'travertin'
         assign material = 'travertin'
         if sku == 'NTK01'
           assign size = '19'
-          assign dimensions = '19 × 152 mm'
+          assign dimensions = '1,9 × 15,2 cm'
         else
           assign size = '22-148'
-          assign dimensions = '22 × 148 mm'
+          assign dimensions = '2,2 × 14,8 cm'
         endif
       else
         assign size = '20'
-        assign dimensions = '20 × 145 mm'
+        assign dimensions = '2 × 14,5 cm'
     endcase
   else
     assign material = 'overig'
