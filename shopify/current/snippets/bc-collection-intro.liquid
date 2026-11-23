@@ -21,3 +21,12 @@ Renders the introduction from a collection description, with a category-specific
     {%- endcase -%}
   </p>
 {%- endif -%}
+{%- liquid
+  assign kitkat_guide = collections['kitkat-mozaiek']
+  assign current_brand = current_collection.current_vendor | handleize
+-%}
+{%- if kitkat_guide != blank -%}
+  {%- if current_collection.handle == 'tegels' or current_brand == 'the-mosaic-factory' -%}
+    <p><a href="{{ kitkat_guide.url }}">Bekijk de KitKat-tegels van The Mosaic Factory</a></p>
+  {%- endif -%}
+{%- endif -%}
