@@ -15,11 +15,14 @@
 
     const apiBase = root.dataset.apiBase;
     const collectionHandle = root.dataset.collection;
+    const apiCollectionHandle = collectionHandle === 'all' ? '__all__' : collectionHandle;
     const isSearch = root.dataset.searchMode === 'true';
     const sectionRoot = root.closest(isSearch ? '.template-search' : '.bc-collection');
-    const searchTypes = new URL(window.location.href).searchParams.get('type');
+    const initialParams = new URL(window.location.href).searchParams;
+    const searchTypes = initialParams.get('type');
     if (isSearch && searchTypes && !searchTypes.split(',').includes('product')) return;
     if (!apiBase || !collectionHandle || !sectionRoot) return;
+    if ([...initialParams.keys()].some((key) => key.startsWith('filter.'))) return;
 
     const layout =
       sectionRoot.querySelector('.facets-vertical.page-width') ||
@@ -34,6 +37,7 @@
     }
 
     const nativeAside = sectionRoot.querySelector(isSearch ? '#main-search-filters' : '#main-collection-filters');
+    const hasNativeFilters = !!nativeAside?.querySelector('[name^="filter."]');
     const nativeSort = sectionRoot.querySelector(isSearch ? 'facet-filters-form.template-search__toolbar' : 'facet-filters-form.facets-vertical-sort');
     const nativePagination = productContainer.querySelector('.pagination-wrapper');
     const nativeNodes = [nativeAside, nativeSort, nativePagination, ...sectionRoot.querySelectorAll('[data-bc-native-search-status]')].filter(Boolean);
@@ -42,6 +46,8 @@
     const nativeSearchQuery = isSearch ? (new URL(window.location.href).searchParams.get('q') ?? root.dataset.searchQuery ?? '*') : null;
     const nativeSearchHasResults = isSearch && !!productGrid.querySelector('.bc-search-card, .article-card-wrapper');
     const expectedCount = isSearch ? NaN : Number(root.dataset.productsCount);
+    // Shopify returns 25,001 for every count above its Liquid pagination limit.
+    const shopifyCountCap = 25001;
     const cardDataCache = new Map();
     const missingCardData = Object.freeze({ missing: true });
     let catalogScope = '';
@@ -320,7 +326,7 @@
           signal: controller.signal,
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            collection: collectionHandle,
+            collection: apiCollectionHandle,
             q: isSearch ? (new URL(window.location.href).searchParams.get('q') ?? root.dataset.searchQuery ?? '*') : '*',
             page: state.page,
             per_page: state.perPage,
@@ -336,15 +342,16 @@
             !Number.isInteger(data.found) || data.found < 0) {
           throw new Error('Ongeldig filterantwoord');
         }
+        if (data.collection?.handle !== apiCollectionHandle) {
+          throw new Error('Onjuiste filtercollectie');
+        }
+        const profileCount = data.collection.profile_products;
         if (Number.isFinite(expectedCount) &&
-            (!Number.isInteger(data.collection?.profile_products) ||
-             data.collection.profile_products !== expectedCount)) {
+            (!Number.isInteger(profileCount) || Math.min(profileCount, shopifyCountCap) !== expectedCount)) {
           throw new Error('Filterindex en collectie komen niet overeen');
         }
-        if (isSearch && data.collection?.handle !== '__all__') {
-          throw new Error('Onjuiste zoekindex');
-        }
-        if (shouldKeepNativeSearchResults(data)) {
+        if ((!externalActive && hasNativeFilters && data.facets.length === 0) ||
+            shouldKeepNativeSearchResults(data)) {
           nativeFallback = true;
           clearTimeout(rangeTimer);
           setExternalMode(false);
@@ -372,8 +379,9 @@
         nativeFallback = true;
         clearTimeout(rangeTimer);
         setExternalMode(false);
-        errorBox.textContent =
-          'De uitgebreide filters zijn tijdelijk niet beschikbaar. Je kunt de gewone filters en productlijst blijven gebruiken.';
+        errorBox.textContent = hasNativeFilters
+          ? 'De uitgebreide filters zijn tijdelijk niet beschikbaar. Je kunt de gewone filters blijven gebruiken.'
+          : 'De filters zijn tijdelijk niet beschikbaar. Probeer de pagina opnieuw te laden.';
         errorBox.hidden = false;
       } finally {
         clearTimeout(timeout);
