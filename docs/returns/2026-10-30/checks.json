@@ -1,0 +1,94 @@
+{
+  "count": 22,
+  "scope": "Isolated render and form contract; not email delivery",
+  "checks": [
+    {
+      "name": "Native Liquid contact backend and return_to back declared",
+      "result": "PASS"
+    },
+    {
+      "name": "Fields identify customer, products, intent and optional reason",
+      "result": "PASS"
+    },
+    {
+      "name": "No reason, order number or attachment needed to withdraw",
+      "result": "PASS"
+    },
+    {
+      "name": "Initial required fields block an empty submission",
+      "result": "PASS"
+    },
+    {
+      "name": "Return with no optional fields is valid",
+      "result": "PASS"
+    },
+    {
+      "name": "Invalid email remains blocked",
+      "result": "PASS"
+    },
+    {
+      "name": "Each control has a unique name, ID and label",
+      "result": "PASS"
+    },
+    {
+      "name": "Request types include return, exchange and problem",
+      "result": "PASS"
+    },
+    {
+      "name": "Fixed topic classifies merchant mail",
+      "result": "PASS"
+    },
+    {
+      "name": "Customer data is escaped before redisplay",
+      "result": "PASS"
+    },
+    {
+      "name": "Server success replaces form controls with receipt",
+      "result": "PASS"
+    },
+    {
+      "name": "Server errors retain form and show alert",
+      "result": "PASS"
+    },
+    {
+      "name": "FAQ works with native details and email alternative exists",
+      "result": "PASS"
+    },
+    {
+      "name": "Both language namespaces are complete",
+      "result": "PASS"
+    },
+    {
+      "name": "No implicit free label, refund, account or marketing operation",
+      "result": "PASS"
+    },
+    {
+      "name": "Return URL contract main page false",
+      "result": "PASS"
+    },
+    {
+      "name": "Return URL contract main page true",
+      "result": "PASS"
+    },
+    {
+      "name": "Return URL contract unpublished page false",
+      "result": "PASS"
+    },
+    {
+      "name": "Return URL contract unpublished page true",
+      "result": "PASS"
+    },
+    {
+      "name": "Blank footer address renders no address or old label",
+      "result": "PASS"
+    },
+    {
+      "name": "Footer configuration clears only address and sets return destination",
+      "result": "PASS"
+    },
+    {
+      "name": "Locale changes are additive only",
+      "result": "PASS"
+    }
+  ]
+}

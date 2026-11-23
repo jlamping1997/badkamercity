@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "scope": "Curated source links extended by DOC-02C. Broad per-file source metadata is in reference/source-index.json; not a full runtime graph.",
+  "components": [
+    {
+      "id": "pdp",
+      "document": "components/PRODUCT_PAGES.md",
+      "sources": [
+        "sections/main-product.liquid",
+        "sections/main-sunshower.liquid",
+        "snippets/product-media-gallery.liquid",
+        "assets/media-gallery.js",
+        "assets/product-info.js",
+        "snippets/product-variant-picker.liquid",
+        "snippets/buy-buttons.liquid",
+        "snippets/bc-product-detail-specs.liquid",
+        "snippets/bc-hotbath-normal-scope.liquid",
+        "snippets/bc-hotbath-public-specs.liquid",
+        "snippets/bc-wiesbaden-reviewed-scope.liquid",
+        "snippets/bc-wiesbaden-reviewed-specs.liquid",
+        "snippets/bc-product-detail-specs-mapped.liquid",
+        "snippets/bc-product-mapped-spec-row.liquid",
+        "snippets/bc-product-description.liquid",
+        "snippets/bc-product-documents.liquid",
+        "snippets/bc-product-set-components.liquid",
+        "snippets/bc-product-accessories.liquid",
+        "assets/bc-product-disclosure.js"
+      ]
+    },
+    {
+      "id": "choices",
+      "document": "components/PRODUCT_CHOICES.md",
+      "sources": [
+        "snippets/bc-product-switcher.liquid",
+        "assets/bc-product-switcher.js",
+        "snippets/bc-hotbath-menu-route.liquid",
+        "snippets/bc-hotbath-menu-source.liquid",
+        "snippets/bc-wiesbaden-colors.liquid",
+        "snippets/bc-sunshower-choices.liquid",
+        "assets/bc-sunshower-page.js",
+        "assets/bc-choice-position.js",
+        "snippets/bc-product-inbouw.liquid",
+        "assets/bc-product-inbouw.js",
+        "assets/bc-hotbath-mobile.js"
+      ]
+    },
+    {
+      "id": "cards",
+      "document": "components/PRODUCT_CARDS_AND_FILTERS.md",
+      "sources": [
+        "snippets/card-product.liquid",
+        "snippets/bc-card-product-search.liquid",
+        "snippets/bc-card-title.liquid",
+        "snippets/bc-card-specs.liquid",
+        "snippets/bc-card-delivery.liquid",
+        "sections/main-collection-product-grid.liquid",
+        "sections/main-search.liquid",
+        "snippets/bc-external-filters.liquid",
+        "assets/bc-external-filters.js",
+        "assets/bc-external-filters.css",
+        "sections/bc-card-data.liquid",
+        "snippets/bc-mobile-listing.liquid",
+        "assets/bc-mobile-listing.js",
+        "sections/bc-sunshower-landing.liquid",
+        "snippets/bc-sunshower-shop-card.liquid",
+        "assets/bc-sunshower-shop.js",
+        "sections/home-popular-products.liquid",
+        "sections/home-sunshower.liquid"
+      ]
+    },
+    {
+      "id": "cart",
+      "document": "components/CART_AND_FEEDBACK.md",
+      "sources": [
+        "assets/product-form.js",
+        "assets/cart-notification.js",
+        "snippets/cart-notification.liquid",
+        "sections/cart-notification-product.liquid",
+        "sections/cart-notification-button.liquid",
+        "sections/cart-icon-bubble.liquid",
+        "sections/main-cart-items.liquid",
+        "sections/main-cart-footer.liquid",
+        "assets/cart.js",
+        "assets/bc-cart-page.js",
+        "assets/bc-cart-tools.js"
+      ]
+    },
+    {
+      "id": "navigation",
+      "document": "components/NAVIGATION_AND_STORAGE.md",
+      "sources": [
+        "sections/header-group.json",
+        "sections/header.liquid",
+        "snippets/header-drawer.liquid",
+        "snippets/header-search.liquid",
+        "assets/predictive-search.js",
+        "assets/bc-wishlist.js"
+      ]
+    },
+    {
+      "id": "data",
+      "document": "components/DATA_PIPELINES.md",
+      "sources": [
+        "snippets/bc-choice-data-source.liquid",
+        "assets/product-switcher-data.json",
+        "assets/bc-sunshower-products.json",
+        "sections/bc-meubelhub.liquid",
+        "snippets/bc-content-without-styles.liquid"
+      ]
+    },
+    {
+      "id": "styles",
+      "document": "components/MOTION_AND_STYLES.md",
+      "sources": [
+        "layout/theme.liquid",
+        "assets/bc-product-cards.css",
+        "assets/bc-product-page.css",
+        "assets/bc-hotbath-swatches.css",
+        "assets/bc-hotbath-mobile.css",
+        "assets/bc-wiesbaden-colors.css",
+        "assets/bc-sunshower-page.css",
+        "assets/bc-sunshower-configurator.css",
+        "assets/component-cart-notification.css"
+      ]
+    },
+    {
+      "id": "foundations",
+      "document": "components/FOUNDATIONS_AND_TOOLING.md",
+      "sources": [
+        "config/settings_schema.json",
+        "assets/bc-photoswipe.esm.js",
+        "assets/constants.js",
+        "assets/pubsub.js",
+        "assets/global.js",
+        "assets/base.css"
+      ]
+    },
+    {
+      "id": "footer",
+      "document": "components/FOOTER.md",
+      "sources": [
+        "sections/footer-group.json",
+        "sections/footer.liquid"
+      ]
+    },
+    {
+      "id": "homepage",
+      "document": "components/HOMEPAGE.md",
+      "sources": [
+        "templates/index.json",
+        "sections/home-sunshower.liquid",
+        "sections/home-hero.liquid",
+        "sections/home-category-grid.liquid",
+        "sections/home-popular-products.liquid",
+        "sections/home-complete-bathroom.liquid",
+        "sections/home-shop-by-style.liquid",
+        "sections/home-brand-rail.liquid",
+        "sections/home-mijn-badkamercity.liquid",
+        "sections/home-help-cta.liquid"
+      ]
+    },
+    {
+      "id": "hubs",
+      "document": "components/COLLECTIONS_AND_HUBS.md",
+      "sources": [
+        "sections/main-category-landing.liquid",
+        "sections/bc-meubelhub.liquid",
+        "sections/bc-collection-advice.liquid",
+        "sections/bc-brand-directory.liquid",
+        "snippets/bc-category-children.liquid",
+        "snippets/bc-category-destination.liquid",
+        "snippets/bc-content-without-styles.liquid",
+        "assets/bc-meubelhub.js"
+      ]
+    },
+    {
+      "id": "content",
+      "document": "components/CONTENT_AND_FORMS.md",
+      "sources": [
+        "sections/main-glossary.liquid",
+        "sections/main-glossary-page.liquid",
+        "sections/bc-advice-article.liquid",
+        "sections/main-blog.liquid",
+        "sections/contact-form.liquid",
+        "sections/newsletter.liquid",
+        "sections/main-page.liquid"
+      ]
+    },
+    {
+      "id": "accounts",
+      "document": "components/ACCOUNTS_AND_SYSTEM_PAGES.md",
+      "sources": [
+        "sections/main-login.liquid",
+        "sections/main-register.liquid",
+        "sections/main-reset-password.liquid",
+        "sections/main-activate-account.liquid",
+        "sections/main-addresses.liquid",
+        "sections/main-account.liquid",
+        "sections/main-order.liquid",
+        "sections/main-404.liquid",
+        "sections/main-password-header.liquid",
+        "sections/main-password-footer.liquid",
+        "templates/gift_card.liquid",
+        "layout/password.liquid",
+        "assets/customer.js"
+      ]
+    },
+    {
+      "id": "seo",
+      "document": "components/SEO_AND_LOCALIZATION.md",
+      "sources": [
+        "layout/theme.liquid",
+        "snippets/meta-tags.liquid",
+        "locales/nl.json",
+        "config/settings_schema.json"
+      ]
+    }
+  ]
+}

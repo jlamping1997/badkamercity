@@ -1,0 +1,207 @@
+{
+  "schema_version": 3,
+  "updated_on": "2026-11-08",
+  "task": "CATEGORY-COPY-01",
+  "status": "CATEGORY_DESCRIPTION_LINK_REPAIRS_APPLIED_VERIFIED",
+  "active_branch": "fix/product-cards-2026-10-14",
+  "current_audit": "../repairs/2026-11-08/category-content-links/README.md",
+  "main_theme_at_capture": "196368531722",
+  "live_manifest_files": 1387,
+  "git_theme_paths": 1378,
+  "live_git_parity": {
+    "byte_equal": 1363,
+    "different": 15,
+    "live_only": 9,
+    "git_only": 0,
+    "scope": "Historical broad audit source comparison; not re-enumerated in CONTENT-ENCODING-02"
+  },
+  "admin_inventory": {
+    "pages": 122,
+    "published_pages": 120,
+    "collections": 227,
+    "standard_collections": 210,
+    "category_landing_collections": 16,
+    "furniture_hubs": 1,
+    "scope": "Pages freshly complete; collection counts retain preceding broad audit timestamp"
+  },
+  "http_routes_checked": 18,
+  "http_status_counts": {
+    "200": 17,
+    "404": 1
+  },
+  "http_scope": "Recorded category QA:8parentbefore-afterpairs plus9confirmedemptytargets and1expecteddormant404;18uniquepaths/26responses. ServerHTMLonly; noJS/browser/mobile claim.",
+  "audit_complete": false,
+  "documentation_complete": false,
+  "footer": {
+    "finding": "FOOTER-F02",
+    "status": "OWNER_PUBLISHED_LIVE_HTML_VERIFIED",
+    "current_renderers": [
+      "bcf-v2 bcf-v3"
+    ],
+    "core_files_live_git_exact": 4,
+    "targeted_html_routes": 14,
+    "configured_blocks": 17,
+    "max_blocks": 18,
+    "empty_url_blocks": 0,
+    "proposed_blocks": 17,
+    "live_changes": true,
+    "published_main": "196368531722",
+    "category_limit": 10,
+    "owner_published": true,
+    "delivery_page_link_live": true,
+    "core_files_live_git_exact_scope": "Retained earlier footer-core comparison; current round verifies six customer-service featurefiles separately."
+  },
+  "open_verifications": [
+    "theme_parity_drift",
+    "mobile_runtime_and_focus",
+    "native_policy_rendering_and_scope",
+    "address_dependent_delivery_and_product_coverage",
+    "payment_order_and_mail",
+    "consent_network_behavior",
+    "ga4_purchase_value_currency_deduplication",
+    "authorized_external_backend_app_sources"
+  ],
+  "next_action": "Check same-site collection links in published Pages and blog content against actual target visibility and offering before any edits.",
+  "background_worker_active": false,
+  "historical_capture_2026_10_28": {
+    "schema_version": 2,
+    "updated_on": "2026-10-28",
+    "task": "UI-01",
+    "status": "PREVIEW_READY_DESKTOP_TESTED_MOBILE_OPEN_NOT_PUBLISHED",
+    "active_branch": "fix/product-cards-2026-10-14",
+    "source_commit": "521c487b9c58b49f5de36fb16de210170f24d4d8",
+    "main_source_commit": "178d55292a25f93a2c2639e97cfe18680dba72e0",
+    "main_theme_at_capture": "195818389770",
+    "audit_complete": false,
+    "documentation_complete": false,
+    "live_manifest_files": 1262,
+    "current_reconstruction": {
+      "files": 557,
+      "byte_match": 556,
+      "byte_mismatch": 1,
+      "manifest_only": 705
+    },
+    "http_routes_checked": 35,
+    "public_search_reads": 4,
+    "current_browser_scope": "Desktop1363x936: original comparisons, real preview gallery clicks on Wiesbaden/Hotbath, Space previous on Wiesbaden. 320/390/1024 iframe test refused; not mobile proof.",
+    "next_task": "UI-01-OWNER-REVIEW",
+    "next_action": "Owner reviews concept BadkamerCity - gelijke fotopijlen on desktop and mobile before publication; other UI-C01/C02/C03 changes remain proposed.",
+    "open_blockers": [
+      "settings_data_byte_parity",
+      "checkout_configuration_access_denied",
+      "fresh_authorized_vps_and_custom_app_sources",
+      "mobile_browser_and_operational_verification",
+      "google_and_deployment_state"
+    ],
+    "background_worker_active": false,
+    "glossary_links_checked": 109,
+    "glossary_published_targets": 108,
+    "glossary_confirmed_404": 1,
+    "current_targeted_source_files": 29,
+    "current_executed_source_files": 2,
+    "current_isolated_cases": 15,
+    "current_isolated_classifications": {
+      "CONTROL_PASSED": 15,
+      "DEFECT_REPRODUCED": 0,
+      "BOUNDARY_CONFIRMED": 0
+    },
+    "excluded_scopes": [
+      "checkout"
+    ],
+    "mapping_structure": {
+      "rows": 715,
+      "unique_body_variants": 44
+    },
+    "glossary_body_structure": {
+      "published_pages": 109,
+      "direct_h2": 655,
+      "nested_h2_pages": 0,
+      "predicted_duplicate_id_pages": 0
+    },
+    "current_public_search_reads": 0,
+    "current_source_method": "Fresh complete Shopify metadata; 29 existing captured source files matched MD5/size; no new full body download.",
+    "preview_theme": "195850764554",
+    "preview_name": "BadkamerCity - gelijke fotopijlen",
+    "parked_tasks": [
+      "DOC-03E header/predictive-search"
+    ],
+    "preview_initial_matching_files": 1262,
+    "preview_final_changed_files": 3,
+    "preview_final_unchanged_files": 1259,
+    "main_final_changed_files": 0,
+    "qa_template_restored_exactly": true,
+    "native_mobile_browser_verified": false,
+    "platform_copy_processing": false
+  },
+  "current_refresh_scope_complete": true,
+  "overall_site_release_complete": false,
+  "completion_scope": "Eight targeted collectiondescription repairs and nine emptylistlinks verified; dormant unpublished route explained. Overall product/runtime/mobile/checkout/legal/measurement work remains open.",
+  "latest_followup": "../repairs/2026-11-08/category-content-links/README.md",
+  "returns_preview": {
+    "theme": "196368531722",
+    "status": "OWNER_PUBLISHED_PUBLIC_HTML_VERIFIED",
+    "feature_files": 6,
+    "previous_return_feature_files": 4,
+    "scope": "Six feature MD5s match previous preview/Git; published home/return content and14footer routes checked. No full manifest recount thisround."
+  },
+  "previous_http_capture_2026_11_08": {
+    "main_theme_at_capture": "196328685834",
+    "http_routes_checked": 364,
+    "http_status_counts": {
+      "200": 360,
+      "404": 4
+    },
+    "http_scope": "Server responses; includes deliberate 404 probe; no claim of 364 browser flows."
+  },
+  "live_manifest_files_scope": "Previous full DELIVERY-INFO-01 manifest; this round rechecked only six featurefiles",
+  "content_encoding": {
+    "status": "APPLIED_VERIFIED",
+    "pages": 13,
+    "accent_repairs": 19,
+    "leading_boms_removed": 4,
+    "exact_admin_readbacks": 13,
+    "public_before_after_pass": 13,
+    "glossary_links_mapped": 109,
+    "redirect_writes": 0
+  },
+  "historical_returns_preview": {
+    "theme": "196368531722",
+    "status": "NOT_PUBLISHED",
+    "feature_files": 4,
+    "equal_other_files": 1383
+  },
+  "shipping_effective": {
+    "marketDrivenShipping": true,
+    "market": "94864998666",
+    "active_option": "1251671343370",
+    "origin_locations": 2,
+    "supplier_variants_read": 851,
+    "cart_quotes": 8,
+    "legacy_location_warning": "EXPLAINED_BY_MARKETS",
+    "shipping_mutations": 0
+  },
+  "blog_redirect": {
+    "id": "689424761098",
+    "source": "/blogs/news",
+    "target": "/blogs/nieuws",
+    "public_status_chain": [
+      301,
+      200
+    ]
+  },
+  "category_content_links": {
+    "published_descriptions_read": 226,
+    "changed_descriptions": 8,
+    "removed_links": 9,
+    "exact_final_admin_readbacks": 8,
+    "public_parents_before_after": 8,
+    "confirmed_empty_targets": 9,
+    "furniture_inline_styleblocks_preserved": 3,
+    "menus_unchanged": 9,
+    "new_collections_published": 0,
+    "redirects_created": 0,
+    "product_writes": 0,
+    "theme_writes": 0,
+    "published_collection_inventory_scope": "226publishedcollections completely read; total/other admin inventory fields retain their original stated capture."
+  }
+}

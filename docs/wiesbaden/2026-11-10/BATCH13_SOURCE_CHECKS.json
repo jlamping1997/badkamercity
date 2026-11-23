@@ -1,0 +1,720 @@
+{
+  "scope": "Public primary-source metadata and review decisions; no raw supplier data or procurement prices.",
+  "height": {
+    "status": "PASS_SOURCE_CONFIGURATION_WITH_LIMITS",
+    "resolved_metadata_flags": [
+      {
+        "sku": "29.1613",
+        "flag": "Source Aantal kraangaten=2-gats",
+        "evidence": "Official-linked drawing shows single Ø35 mounting hole/one body; geometry matches29.1610 at148.5height/122.5reach. Current .nl description calls a Style single-lever washbasin tap. Retain as standard Style, no spec rewrite."
+      },
+      {
+        "sku": "29.1618",
+        "flag": "Source Model=Afbouwdeel",
+        "evidence": "Official-linked drawing byte-identical to29.1610. Main product photo and current .nl description depict/describe complete single-lever washbasin tap. Retain as standard Style, no component claim added."
+      }
+    ],
+    "limits": [
+      "Configuration navigation can include different spout reach, dimensions and mounting details; never claim only the height differs.",
+      "Use source model label XL(hoog), not an invented exact height shared across colours.",
+      "No inbouwdeel, compatibility, included connection hose, certification or equal material/coating claim added.",
+      "Existing original specifications remain unchanged; numeric dimensions below are observed only on named inspected drawings, not extrapolated to everySKU."
+    ]
+  },
+  "height_assets": [
+    {
+      "sku": "29.1610",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.1610.jpg",
+      "kind": "image",
+      "bytes": 77135,
+      "sha256": "afd76a7b63c7658533bd653531b46c61f355ce4c42037b9a470eaecba9d4d1ca"
+    },
+    {
+      "sku": "29.1610",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.1610.jpg",
+      "kind": "line_drawings",
+      "bytes": 46076,
+      "sha256": "62932554d65ae55ac290888fedc64e105c17ff55d2c57c36a65c8495055b2f04"
+    },
+    {
+      "sku": "29.1613",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.1613.jpg",
+      "kind": "image",
+      "bytes": 34137,
+      "sha256": "ebd93015f73741e316c2631e297f33b9c9bd0e4dd8979351dc5adbcaf2beed8e"
+    },
+    {
+      "sku": "29.1613",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.1613.jpg",
+      "kind": "line_drawings",
+      "bytes": 314114,
+      "sha256": "0d2f3f26393d5cb728b273aba98ba3303869c3b77ac97beaba9b23b4dad0a015"
+    },
+    {
+      "sku": "29.1618",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.1618.jpg",
+      "kind": "image",
+      "bytes": 314679,
+      "sha256": "5c295ee3a975638bdc74beeff70c8ec7cc49f6d3865da01f02e5d86891ce31bc"
+    },
+    {
+      "sku": "29.1618",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.1618.jpg",
+      "kind": "line_drawings",
+      "bytes": 46076,
+      "sha256": "62932554d65ae55ac290888fedc64e105c17ff55d2c57c36a65c8495055b2f04"
+    },
+    {
+      "sku": "29.1620",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.1620.jpg",
+      "kind": "image",
+      "bytes": 188563,
+      "sha256": "b1ff1fa85be48344ea57a9768bab60dedef94eea94db9d5bfb869abe3395ba3f"
+    },
+    {
+      "sku": "29.1620",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.1620.jpg",
+      "kind": "line_drawings",
+      "bytes": 47011,
+      "sha256": "0c09cc538a5c3f2df1afcc009fc929bb4021259ec04f5a58e992a6f19f6758ef"
+    },
+    {
+      "sku": "22.3701",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/22.3701.jpg",
+      "kind": "line_drawings",
+      "bytes": 111399,
+      "sha256": "7f474ba5f722386ee1343a06acd16bcd4f0d97764e8e3f8a6f080498fc9be17b"
+    },
+    {
+      "sku": "22.3720",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/22.3720.jpg",
+      "kind": "line_drawings",
+      "bytes": 117262,
+      "sha256": "6450c58f273d9bdc08145d65f03524de18a5e7847587fff3f7260710cbe376b5"
+    },
+    {
+      "sku": "22.3730",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/22.3730.jpg",
+      "kind": "line_drawings",
+      "bytes": 270630,
+      "sha256": "3530d19b1f3287442bee2a038e39e9753a0b97d8f2038758efd4fd31928340af"
+    },
+    {
+      "sku": "22.3770",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/22.3770.jpg",
+      "kind": "line_drawings",
+      "bytes": 37691,
+      "sha256": "9b1ca19b1f96562ddd073d845014b5bf7800ab1edce4311277da61f448d4436f"
+    },
+    {
+      "sku": "29.5301",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.5301.jpg",
+      "kind": "line_drawings",
+      "bytes": 205170,
+      "sha256": "71c4a8f0d474eba7f899c3292aca20cb6374f20557135e15cfa8be3aa1c697a7"
+    },
+    {
+      "sku": "29.5311",
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.5311.jpg",
+      "kind": "line_drawings",
+      "bytes": 144583,
+      "sha256": "f30bfeed753e31735776a128d822f5455040b89584c2b375bf7e550d926a3db7"
+    }
+  ],
+  "toilet": {
+    "status": "PASS_SEAT_NAVIGATION_SUPPORTED",
+    "primary_evidence": [
+      {
+        "sku": "32.3450",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-glans-wit-32-3450.html",
+        "evidence": "Manufacturer page explicitly says supplied without seat",
+        "web_ref": "turn16search2"
+      },
+      {
+        "sku": "32.3418",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-mat-wit-32-3418.html",
+        "evidence": "Manufacturer page explicitly says supplied without seat",
+        "web_ref": "turn16search1"
+      },
+      {
+        "sku": "32.3419",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-mat-zwart-32-3419.html",
+        "evidence": "Manufacturer page explicitly says supplied without seat",
+        "web_ref": "turn16search0"
+      },
+      {
+        "sku": "32.2502",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-met-flatline-toiletzitting-softclose-en-quick-release-glans-wit-32-2502.html",
+        "evidence": "Manufacturer description gives52cm wall projection for exact named seat bundle",
+        "web_ref": "turn17search2"
+      },
+      {
+        "sku": "32.3454",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-met-vesta-toiletzitting-softclose-en-quick-release-glans-wit-32-3454.html",
+        "evidence": "Manufacturer description gives52cm wall projection for exact named seat bundle",
+        "web_ref": "turn17search0"
+      },
+      {
+        "sku": "32.6014",
+        "url": "https://www.wiesbaden.nl/vesta-wandcloset-rimless-met-shade-slim-toiletzitting-softclose-en-quick-release-glans-wit-32-6014.html",
+        "evidence": "Manufacturer description gives52cm wall projection for exact named seat bundle",
+        "web_ref": "turn17search1"
+      }
+    ],
+    "drawing_evidence": {
+      "source": "Official-linked manufacturer Compano drawings from cached wiesbaden.nl pages",
+      "drawings": [
+        {
+          "sku": "32.3450",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3450.jpg",
+          "bytes": 26037,
+          "sha256": "703a74f2761b999e95d35c3e3894fea94b4929facee192adb264b15d97140696",
+          "pixel_sha256": "d31883f788793c7f773efaffcb7cfcbbf7b06063d41dd3c8346dcea58048bd55",
+          "size": [
+            690,
+            690
+          ],
+          "status": "FETCHED"
+        },
+        {
+          "sku": "32.3418",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3418.jpg",
+          "bytes": 26037,
+          "sha256": "703a74f2761b999e95d35c3e3894fea94b4929facee192adb264b15d97140696",
+          "pixel_sha256": "d31883f788793c7f773efaffcb7cfcbbf7b06063d41dd3c8346dcea58048bd55",
+          "size": [
+            690,
+            690
+          ],
+          "status": "FETCHED"
+        },
+        {
+          "sku": "32.3419",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3419.jpg",
+          "bytes": 26037,
+          "sha256": "703a74f2761b999e95d35c3e3894fea94b4929facee192adb264b15d97140696",
+          "pixel_sha256": "d31883f788793c7f773efaffcb7cfcbbf7b06063d41dd3c8346dcea58048bd55",
+          "size": [
+            690,
+            690
+          ],
+          "status": "FETCHED"
+        },
+        {
+          "sku": "32.2502",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.2502.jpg",
+          "bytes": 26037,
+          "sha256": "703a74f2761b999e95d35c3e3894fea94b4929facee192adb264b15d97140696",
+          "pixel_sha256": "d31883f788793c7f773efaffcb7cfcbbf7b06063d41dd3c8346dcea58048bd55",
+          "size": [
+            690,
+            690
+          ],
+          "status": "FETCHED"
+        },
+        {
+          "sku": "32.3454",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.3454.jpg",
+          "bytes": 57342,
+          "sha256": "c343cc81d02cd246d8cab320b9f7e3433264da8979d35c1adfc51910ad8b483d",
+          "pixel_sha256": "573fb0c124d495bc5164cdfb2d7ecf321ceccfc09740603d0b7d8dc31b209596",
+          "size": [
+            1502,
+            419
+          ],
+          "status": "FETCHED"
+        },
+        {
+          "sku": "32.6014",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/32.6014.jpg",
+          "bytes": 26037,
+          "sha256": "703a74f2761b999e95d35c3e3894fea94b4929facee192adb264b15d97140696",
+          "pixel_sha256": "d31883f788793c7f773efaffcb7cfcbbf7b06063d41dd3c8346dcea58048bd55",
+          "size": [
+            690,
+            690
+          ],
+          "status": "FETCHED"
+        }
+      ],
+      "visually_inspected": [
+        "32.3450",
+        "32.3454"
+      ],
+      "finding": "All inspected standard bowl drawings show the same 520 x360 mm footprint,390 mm bowl height,180 mm fixing centres and horizontal Ø100 outlet 200 mm above floor. Five of six representative drawings are byte-identical; Vesta-seat bundle32.3454 drawing uses a larger layout of the same geometry and dimensions. Source AO/PK taxonomy therefore does not imply different physical bowl geometry for this grouping. Specifications unchanged.",
+      "limits": "Representative standard bowl drawing review only; no replacement-seat fit or hydraulic-certification claim"
+    },
+    "limits": [
+      "Keep ordinary/cold/warm-cold separate; no shared plumbing or dimensions assertion",
+      "Standard Vesta seat mat-wit combination absent; must be disabled rather than substituted",
+      "No standalone seat compatibility claims or invented includedhardware",
+      "Existing useful colour routes count only because new seat axis adds value",
+      "AO/PK taxonomy inconsistency resolved for navigation with representative primary drawings; do not rewrite source fields."
+    ]
+  },
+  "handdouche_sets": {
+    "status": "PASS_SEMANTIC_GROUPING_WITH_EXPLICIT_TYPE_AXIS",
+    "rules": [
+      "Keep the three mounting classes separate. Do not merge standalone bar/holder/handdouche components into complete sets.",
+      "Use exactly source-supported type labels: Staaf – 1 stand, Rond Ø 12 cm – 3 standen.",
+      "Do not create a Formaat axis from missing dimensions for staaf versus 12 cm for round; it is a handdouche design detail absorbed in the type label.",
+      "Preserve all source bicolour finish labels exactly; never collapse to base colour.",
+      "Do not create unsupported round/bicolour products; missing tuples remain disabled.",
+      "Colour references must retain Type handdouche and all other chosen attributes; do not expand each colour field to every product in the merged family.",
+      "Preserve existing product descriptions/specifications/promises, including no new compatibility, identical component length/material or inbouwdeel claims.",
+      "Fresh Admin identity, current references and final runtime/rendered choice tests are outside this review and must pass before writes."
+    ],
+    "visual_evidence": {
+      "main_photos_reviewed": 6,
+      "glijstang_shared_bar_drawing": {
+        "source_skus": [
+          "29.3889",
+          "29.3883"
+        ],
+        "decoded_RGB_equal": true,
+        "dimensions": [
+          1332,
+          1663
+        ],
+        "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+        "file_bytes_equal": false,
+        "interpretation": "Same depicted bar geometry. This review does not infer box contents from photo absence."
+      },
+      "asset_manifest": [
+        {
+          "sku": "29.3889",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3889.jpg",
+          "sha256": "e8da870ff2a3533393bb452f0e467f64ab1a3bdf6c86847b52bd99f890ca2575",
+          "bytes": 80740,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3889",
+          "kind": "line_drawings",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3889.jpg",
+          "sha256": "1426ee89e31375ae7798f308eb175c983eee7d3c3893d78242448233cdee5ce9",
+          "bytes": 246408,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3883",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3883.jpg",
+          "sha256": "68746eed0a07aacd004f17f2bc8b9da96d16055baa64451730f7b78f56a80718",
+          "bytes": 87239,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3883",
+          "kind": "line_drawings",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3883.jpg",
+          "sha256": "8c1453c3e6d84d279b96a8ec5d6403af3995957e65e1c6f2d60b5b92add28ef3",
+          "bytes": 246408,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3723",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3723.jpg",
+          "sha256": "79295afbcf97eedf63ae1b07483cbc5bd323e34b6d080319071d3fa7dadd7422",
+          "bytes": 1474462,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3717",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3717.jpg",
+          "sha256": "74819b344d94f2d9e610f7b84b997ef3ed71304dae1ab2155099539bfb34e488",
+          "bytes": 559239,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3734",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3734.jpg",
+          "sha256": "4e59b14441a0ba4226edf4b84c7f3cacf751e13252ebf8fab78102f30d35ae33",
+          "bytes": 109433,
+          "status": "FETCHED"
+        },
+        {
+          "sku": "29.3700",
+          "kind": "image",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3700.jpg",
+          "sha256": "4226585cba1f70437f14bd195c1683f83bdaa8283566d89dbb5c89d86e5801be",
+          "bytes": 1502376,
+          "status": "FETCHED"
+        }
+      ]
+    },
+    "search_limit": "Current search mainly exposed catalogue listings, so no claim of fresh full text reads of all 50 manufacturer product pages."
+  },
+  "base_review": {
+    "base_intake": 187,
+    "new_function_conflict_holds": 37,
+    "prior_comfort_hold": 2,
+    "remaining_base": 148,
+    "new_configuration_intake": 172,
+    "remaining_total": 320,
+    "root_selects_exact300_whole_cohorts": true,
+    "magnum": "All 18 source titles explicitly area m2 and wattage; 9 sizes ×2 thermostat colours. Proposed labels Kleur thermostaat and Oppervlakte / vermogen. No sizing advice.",
+    "stonea": "All 9 full range labels90-80 ×100-70/140-110/180-150cm; never use parser terminal70/110/150 alone.",
+    "cadans_glijstangset6": "No opposed relevant function values; source exact assembly type remains separate from standard round12cm/staaf sets.",
+    "caral_beam6": "No opposed relevant function values; exact whole-SKU titles, no linking inbouwdelen.",
+    "reviews": [
+      {
+        "id": "wiesbaden-caral-afbouwdeel-badrandthermostaat-4-gats-keuze",
+        "source_candidates": [
+          "candidate-78a0a699c32e"
+        ],
+        "count": 6,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Model Afbouwdeel/Buis; Temperatuurbegrenzing Ja/Nee."
+      },
+      {
+        "id": "wiesbaden-caral-afbouwdeel-inbouwthermostaat-2-weg-keuze",
+        "source_candidates": [
+          "candidate-17c2c88116a5"
+        ],
+        "count": 6,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "29.5510 Model Inbouwdeel and basin/kitchen suitability Ja, against Afbouwdeel/Nee peers."
+      },
+      {
+        "id": "wiesbaden-unimatch-buisverbinder-keuze",
+        "source_candidates": [
+          "candidate-6c96b0857994"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-unimatch-buisverbinder-t-stuk-keuze",
+        "source_candidates": [
+          "candidate-bab6d0d5320d"
+        ],
+        "count": 4,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glaskoppelingset-voor-profielloze-inloopdouche-2-stuks-keuze",
+        "source_candidates": [
+          "candidate-ebcd897328a1"
+        ],
+        "count": 8,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glas-voor-nisdeur-nano-helder-glas-keuze",
+        "source_candidates": [
+          "candidate-937b16f8f3ea"
+        ],
+        "count": 4,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glas-voor-nisdeur-nano-rookglas-keuze",
+        "source_candidates": [
+          "candidate-d1e36f615fe9"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glas-voor-nisdeur-nano-vintage-brons-glas-keuze",
+        "source_candidates": [
+          "candidate-2b2e3b1d42d3"
+        ],
+        "count": 3,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Type deur single with/without fixed panel despite loose glass title."
+      },
+      {
+        "id": "wiesbaden-less-glas-voor-nisdeur-nano-spiegelrook-naar-helder-glas-keuze",
+        "source_candidates": [
+          "candidate-e62728f91f89"
+        ],
+        "count": 6,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glasplaat-nano-helder-glas-keuze",
+        "source_candidates": [
+          "candidate-d60878355462"
+        ],
+        "count": 7,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glasplaat-nano-rookglas-keuze",
+        "source_candidates": [
+          "candidate-fe351aac2530"
+        ],
+        "count": 4,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-glasplaat-nano-spiegelrook-naar-helder-glas-keuze",
+        "source_candidates": [
+          "candidate-2813cdfa9a4d"
+        ],
+        "count": 8,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-unimatch-cadans-glijstangset-compleet-met-handdouche-3-standen-keuze",
+        "source_candidates": [
+          "candidate-b0f971931181"
+        ],
+        "count": 6,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-slim-hoekprofiel-keuze",
+        "source_candidates": [
+          "candidate-dcbea4aaf703"
+        ],
+        "count": 7,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-caral-inbouwthermostaat-compleet-met-beam-hoofddouche-en-glijstang-en-staafhanddouche-keuze",
+        "source_candidates": [
+          "candidate-527397c91ed1"
+        ],
+        "count": 6,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-style-wastafelkraan-inbouw-keuze",
+        "source_candidates": [
+          "candidate-677231056fa4"
+        ],
+        "count": 5,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Aantal kraangaten 1-gats/2-gats."
+      },
+      {
+        "id": "wiesbaden-caral-glijstuk-voor-thermostatische-regendoucheset-opbouw-keuze",
+        "source_candidates": [
+          "candidate-0ce7a3c39605"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-caral-thermostaatkraan-voor-thermostatische-regendoucheset-opbouw-keuze",
+        "source_candidates": [
+          "candidate-027d40bfa3bf"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-caral-rozet-voor-thermostatische-regendoucheset-opbouw-keuze",
+        "source_candidates": [
+          "candidate-ccf4cd9b7467"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-laro-wastafel-met-2-kraangaten-ronde-hoeken-dubbel-solid-surface-keuze",
+        "source_candidates": [
+          "candidate-cfd677500f1f"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-novira-onderkast-afgeronde-hoeken-met-2-laden-2-uitsparingen-keuze",
+        "source_candidates": [
+          "candidate-195bbdf8fe5d"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-amador-schuimstraalbreker-fonteinkraan-met-muurbevestiging-keuze",
+        "source_candidates": [
+          "candidate-a3e5f1682ad5"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-caral-thermostatische-regendoucheset-opbouw-keuze",
+        "source_candidates": [
+          "candidate-200935ff3984"
+        ],
+        "count": 6,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Koele behuizing Ja/Nee and KIWA Ja/Nee."
+      },
+      {
+        "id": "wiesbaden-slim-profielset-met-stabilisatiestang-keuze",
+        "source_candidates": [
+          "candidate-d34ad41fd863"
+        ],
+        "count": 7,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-slim-set-stabilisatiestangen-voor-vrijstaande-inloopdouches-keuze",
+        "source_candidates": [
+          "candidate-6538da66d257"
+        ],
+        "count": 7,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-slim-stabilisatiestang-keuze",
+        "source_candidates": [
+          "candidate-a490f18bf053"
+        ],
+        "count": 7,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-ribbd-thermostatische-badmengkraan-hartafstand-keuze",
+        "source_candidates": [
+          "candidate-4a2dfb282dce"
+        ],
+        "count": 4,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Aansluiting aanvoer Binnendraad/Buitendraad."
+      },
+      {
+        "id": "wiesbaden-style-thermostatische-badmengkraan-waterval-cooltouch-keuze",
+        "source_candidates": [
+          "candidate-7e434bc10d95"
+        ],
+        "count": 5,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Zelfsluitend, vaste hoofddouche and Koele behuizing opposed Ja/Nee values."
+      },
+      {
+        "id": "wiesbaden-afstandhouder-voor-tegelroosters-kunststof-keuze",
+        "source_candidates": [
+          "candidate-3727d6a6ebfa"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-unimatch-sifon-rozet-x-keuze",
+        "source_candidates": [
+          "candidate-0b9b95a49f1a"
+        ],
+        "count": 2,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-brush-dubbele-toiletrolhouder-keuze",
+        "source_candidates": [
+          "candidate-cdfe60197198"
+        ],
+        "count": 2,
+        "status": "HOLD_SOURCE_FUNCTION_CONFLICT",
+        "reason": "Met klep Ja/Nee."
+      },
+      {
+        "id": "wiesbaden-ultimo-3-0-toiletzitting-softclose-en-quick-release-keuze",
+        "source_candidates": [
+          "candidate-70a2c2bd0494"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-caral-verlengset-afbouwdeel-2-weg-keuze",
+        "source_candidates": [
+          "candidate-c47270ca2229"
+        ],
+        "count": 6,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-schroevenset-voor-ophangbeugel-2-stuks-keuze",
+        "source_candidates": [
+          "candidate-947aadd64617"
+        ],
+        "count": 3,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-comfort-zijwand-met-hoekprofiel-nano-helder-glas-keuze",
+        "source_candidates": [
+          "candidate-2f7a580e306b"
+        ],
+        "count": 2,
+        "status": "HOLD_PRIOR_COMFORT_PER_ROOT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-less-losse-glasplaat-vintage-brons-keuze",
+        "source_candidates": [
+          "candidate-bdfc0c74cf48",
+          "candidate-6d4a976d2b25"
+        ],
+        "count": 4,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-wiesbaden-by-magnum-vloerverwarming-wifi-keuze",
+        "source_candidates": [
+          "candidate-33081878ad00",
+          "candidate-a66d075f1c7f",
+          "candidate-bfa7a6648075",
+          "candidate-ca54470a9fc7",
+          "candidate-280db6211cae",
+          "candidate-0ed37a4429a6",
+          "candidate-48fb5463bc17",
+          "candidate-a34ca61a2327",
+          "candidate-5a042a700ba6"
+        ],
+        "count": 18,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      },
+      {
+        "id": "wiesbaden-stonea-voorzetpaneel-inkortbaar-met-potenset-keuze",
+        "source_candidates": [
+          "candidate-5f8b0706b399",
+          "candidate-ab93071eb279",
+          "candidate-5c52f0387aa5"
+        ],
+        "count": 9,
+        "status": "RETAIN_EXACT_SOURCE_COHORT",
+        "reason": "Exact source names/options and no opposing relevant function values in available metadata; preserve all specs and make no compatibility/component claims."
+      }
+    ]
+  }
+}

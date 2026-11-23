@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "mode": "ready",
+      "width": 390
+    },
+    {
+      "mode": "pending",
+      "width": 390
+    },
+    {
+      "mode": "ready",
+      "width": 1280
+    },
+    {
+      "mode": "pending",
+      "width": 1280
+    }
+  ],
+  "idleMutationLoops": false,
+  "quantityUpdates": true,
+  "layoutPreservedOnResize": true
+}

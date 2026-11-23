@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "method": "Offline jsdom DOM execution of the generated documentation only; no browser layout, network, storefront or phone claim",
+  "checks": [
+    "48 chapter links",
+    "one H1",
+    "unique IDs and working internal anchors",
+    "embedded public catalog count",
+    "vendor filter 337 Porcelanosa",
+    "three Verona Cubik matches",
+    "empty-result handling",
+    "catalog pagination and return",
+    "full-text search and no-result",
+    "mobile content toggle state",
+    "no script execution errors"
+  ],
+  "errors": []
+}

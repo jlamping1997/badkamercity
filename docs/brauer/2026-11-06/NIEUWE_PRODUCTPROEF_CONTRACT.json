@@ -1,0 +1,221 @@
+{
+  "checkpoint": "BRAUER-17",
+  "date": "2026-11-07",
+  "status": "IMPLEMENTED_TEST_ONLY - eigenaar beoordeelt nieuwe families",
+  "families": [
+    {
+      "id": "cabin",
+      "articles": 12,
+      "valid_transitions": 96,
+      "rejected_transitions": 0,
+      "ambiguous_transitions": 0,
+      "reachable": 12
+    },
+    {
+      "id": "void-door",
+      "articles": 132,
+      "valid_transitions": 2508,
+      "rejected_transitions": 132,
+      "ambiguous_transitions": 0,
+      "reachable": 132
+    },
+    {
+      "id": "basin",
+      "articles": 13,
+      "valid_transitions": 91,
+      "rejected_transitions": 39,
+      "ambiguous_transitions": 0,
+      "reachable": 13
+    },
+    {
+      "id": "cabinet",
+      "articles": 120,
+      "valid_transitions": 2400,
+      "rejected_transitions": 360,
+      "ambiguous_transitions": 60,
+      "reachable": 120
+    },
+    {
+      "id": "tall",
+      "articles": 45,
+      "valid_transitions": 810,
+      "rejected_transitions": 0,
+      "ambiguous_transitions": 0,
+      "reachable": 45
+    },
+    {
+      "id": "mirror",
+      "articles": 90,
+      "valid_transitions": 1890,
+      "rejected_transitions": 0,
+      "ambiguous_transitions": 0,
+      "reachable": 90
+    },
+    {
+      "id": "design-tap",
+      "articles": 12,
+      "valid_transitions": 96,
+      "rejected_transitions": 0,
+      "ambiguous_transitions": 0,
+      "reachable": 12
+    },
+    {
+      "id": "fountain",
+      "articles": 38,
+      "valid_transitions": 428,
+      "rejected_transitions": 28,
+      "ambiguous_transitions": 0,
+      "reachable": 38
+    }
+  ],
+  "checks": {
+    "shopify_writes": 0,
+    "browser_layout": "NOT_TESTED: no browser execution",
+    "photo_checks": 1613,
+    "total_example_records": 462,
+    "verified_photo_articles": 98,
+    "first_image_binding": "PASS: add/append/reorder/remove and identity guards",
+    "all_articles_reachable": true,
+    "six_colour_limit": true,
+    "btw_source_check": "PASS: Decimal 21% / half-up; matched prepared proposal",
+    "fragment_bytes": 876510
+  },
+  "rules": [
+    "Geen Shopify-import, ook geen DRAFT, tot alle aangekondigde leveranciersbeelden/PDFs zijn ontvangen en geïnventariseerd.",
+    "Geen Shopify- of themawrites in deze taak.",
+    "Iedere foto uit eerste galerijbeeld exact gecontroleerde SKU en EAN; tijdelijke dealerbeelden zijn geen ontvangst van het officiële pakket.",
+    "Afbeeldingen van alle kleur- en configuratiekeuzes uit exact gekoppeld kandidaatproduct, met behoud van andere keuzes.",
+    "Maximaal zes kleuren zichtbaar; actieve kleur blijft bij inklappen zichtbaar.",
+    "Ontbrekende combinaties blijven grijs; ontbrekend beeld maakt geldig artikel niet ongeldig.",
+    "Galactic cabine 120x90/160x90: twee knoppen; omkeerbaarheid geeft geen fictieve L/R-SKUs.",
+    "Void deurbevestiging aan muur of glas; deurmaat volgt bronartikel. Geen universele zijwand of fictief montagemaatbereik.",
+    "Aurora: 13 exacte SKU/EANs op breedte, midden/links/rechts en 0/1/2 kraangaten; breedtelabels uit alle 13 gecontroleerde dealerartikelen.",
+    "Trust MFC standaard apart van ondiep, grepen niet inbegrepen; afvoerindeling alleen bij werkelijke ambiguïteit.",
+    "Adore standaard MFC: 120cm deur links/rechts en 160cm twee deuren omkeerbaar als drie expliciete uitvoeringen; Wavy uitgesloten.",
+    "Impress Deluxe MFC: breedte en deuren als gecombineerde uitvoering, intern/extern verlicht. Geen onbewezen bediening of dimmer aangenomen.",
+    "Carving/Stripe lage modellen: eigen foto’s, reguliere losse model A-E grepen niet hergebruikt.",
+    "Opbouw fonteinkranen: design en uitloop als echte bronassen; Coffee beperkt tot bestaande artikelen.",
+    "Maatverrijking is exact-SKU-only; niet gecontroleerde buitenmaten Te bevestigen. Nooit Joy-maten naar Trust kopiëren."
+  ],
+  "public_sources": [
+    {
+      "sku": "5-CE-001-HD6",
+      "ean": "8720359388100",
+      "url": "https://www.badkamerxxl.nl/brauer-chrome-carving-lage-opbouw-wastafelmengkraan-model-a-chroom-5-ce-001-hd6",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/5-CE-001-HD6/images/480x480/5-CE-001-HD6.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/5-CE-001-HD6/images/200x200/5-CE-001-HD6.jpg",
+      "photo_sha256": "d222237e084337dc93fd0009732272d212826635bfe3b5605ac7b52c57449300"
+    },
+    {
+      "sku": "5-CE-001-HD7",
+      "ean": "8720724562852",
+      "url": "https://www.badkamerxxl.nl/brauer-stripe-lage-opbouw-wastafelmengkraan-model-a-chroom-5-ce-001-hd7",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/5-CE-001-HD7/images/480x480/5-CE-001-HD7.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/5-CE-001-HD7/images/200x200/5-CE-001-HD7.jpg",
+      "photo_sha256": "e9d987365cd5c27c5c383730a42814e5a765844e9c9191f0982d513ef51615cc"
+    },
+    {
+      "sku": "5-CE-006",
+      "ean": "4260483798887",
+      "url": "https://www.badkamerxxl.nl/brauer-chrome-edition-fonteinkraan-koud-water-chroom-5-ce-006",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/5-CE-006/images/480x480/5-CE-006.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/5-CE-006/images/200x200/5-CE-006.jpg",
+      "photo_sha256": "64a8cee38904b2455952bb60b8657b0db23dabb7aa04ed99c43b9940a346c500"
+    },
+    {
+      "sku": "5-CE-320",
+      "ean": "8720724520234",
+      "url": "https://www.badkamerxxl.nl/brauer-chrome-edition-opbouw-fonteinkraan-met-gebogen-uitloop-chroom",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/5-CE-320/images/480x480/5-CE-320.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/5-CE-320/images/200x200/5-CE-320.jpg",
+      "photo_sha256": "cb1232fdec66ac22a372556cf2dfae334faecf9dfc64b43df4f85ac2908bbdb7"
+    },
+    {
+      "sku": "GS-GTC1H12090200CE",
+      "ean": "8721357902084",
+      "url": "https://www.badkamerxxl.nl/brauer-galactic-douchecabine-met-schuifdeur-helder-glas-120x90x200-omkeerbaar-incl-glascoating-chroom",
+      "first_gallery_image": "https://cdn.xxlfiles.nl/products/4912786/images/480x480/4912786-3.jpg",
+      "preview_url": "https://cdn.xxlfiles.nl/products/4912786/images/200x200/4912786-3.jpg",
+      "photo_sha256": "a540a7af05c874b47d07bac758c61a3cf10e8b2cde7b8afdb8f4579db0f573f7"
+    },
+    {
+      "sku": "GS-VON2H6050200CE",
+      "ean": "8720359359483",
+      "url": "https://www.badkamerxxl.nl/bewonen-sean-2-delige-nisopstelling-type-b-inloopwand-met-nisdeur-type-b-110-cm-50-60-chroom",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/GS-VON2H6050200CE/images/480x480/GS-VON2H6050200CE.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/GS-VON2H6050200CE/images/200x200/GS-VON2H6050200CE.jpg",
+      "photo_sha256": "5ca6c8ec577bf7099cc42d50cf4569c983e19ae21abf4d4f5766aae3323c5f04"
+    },
+    {
+      "sku": "GS-VON3H6050200CE",
+      "ean": "8720359359490",
+      "url": "https://www.badkamerxxl.nl/bewonen-sean-2-delige-nisopstelling-type-c-inloopwand-met-nisdeur-aaneengeschakeld-110-cm-50-60-chroom",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/GS-VON3H6050200CE/images/480x480/GS-VON3H6050200CE.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/GS-VON3H6050200CE/images/200x200/GS-VON3H6050200CE.jpg",
+      "photo_sha256": "0418ebc3891e54ec2b8fd0d6af4939fb07fff690e086f34fc168286a1710555e"
+    },
+    {
+      "sku": "HK-AD120LCH",
+      "ean": "8720359307453",
+      "url": "https://www.badkamerxxl.nl/bewonen-hoge-kast-nexxt-120-old-castle-linksdraaiend-7137",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/HK-AD120LCH/images/480x480/HK-AD120LCH.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/HK-AD120LCH/images/200x200/HK-AD120LCH.jpg",
+      "photo_sha256": "07d566fc8188f0191a4767461e65036fbc23f587aca77989558800bdcf1db62a"
+    },
+    {
+      "sku": "HK-AD160CH",
+      "ean": "8720359307637",
+      "url": "https://www.badkamerxxl.nl/bewonen-hoge-kast-nexxt-160-old-castle-7136",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/HK-AD160CH/images/480x480/HK-AD160CH.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/HK-AD160CH/images/200x200/HK-AD160CH.jpg",
+      "photo_sha256": "08e2fc997a506863643de0ac37ca3eef7b0725ac6b2ad7fc9eb3bf0c696ba7ef"
+    },
+    {
+      "sku": "OK-TR80CH",
+      "ean": "8720724546739",
+      "url": "https://www.badkamerxxl.nl/brauer-trust-onderkast-80-excl-opbouwgrepen-met-2-softclose-lades-en-1-sifon-uitsparing-chateau-ok-tr80ch",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/3870114/images/480x480/ok-tr80ch-mb-mgoa480gk.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/3870114/images/200x200/ok-tr80ch-mb-mgoa480gk.jpg",
+      "photo_sha256": "ae815be1b62bf8bf4e345c0c613a26a61c3d4f6e431186bce0a9df13c4792df4"
+    },
+    {
+      "sku": "SK-IMD100CH",
+      "ean": "8720359343253",
+      "url": "https://www.badkamerxxl.nl/bewonen-spiegelkast-dual-100-old-castle-7263",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/SK-IMD100CH/images/480x480/SK-IMD100CH.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/SK-IMD100CH/images/200x200/SK-IMD100CH.jpg",
+      "photo_sha256": "83561da1d3becf5470591f29804704b201a0fbccb3045babc520c297b5cf20b4"
+    },
+    {
+      "sku": "WT-AU1000HW",
+      "ean": "8720359355164",
+      "url": "https://www.badkamerxxl.nl/bewonen-wastafel-wave-100cm-zonder-kraangat",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/WT-AU1000HW/images/480x480/WT-AU1000HW.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/WT-AU1000HW/images/200x200/WT-AU1000HW.jpg",
+      "photo_sha256": "f5dd6fbaf20f679ac859e13d80891eee277c14e1c64ac10f2e204de05acf42d4"
+    },
+    {
+      "sku": "WT-AU1000LHW",
+      "ean": "8720359355188",
+      "url": "https://www.badkamerxxl.nl/bewonen-wastafel-wave-100cm-links-zonder-kraangat",
+      "first_gallery_image": "https://cdn.projectxxl.nl/products/WT-AU1000LHW/images/480x480/WT-AU1000LHW.jpg",
+      "preview_url": "https://cdn.projectxxl.nl/products/WT-AU1000LHW/images/200x200/WT-AU1000LHW.jpg",
+      "photo_sha256": "78dc2f1c781b852deeb046be774dd1744a978a5fcf06f5fdce28d903202abcc4"
+    }
+  ],
+  "not_changed": [
+    "Productbasis-XLSX versie 1",
+    "Bestaande 14-familieproef en vijf losse hendelbeelden",
+    "Shopifyproducten, thema, media, prijzen, voorraad en publicaties"
+  ],
+  "open": [
+    "Drie eerdere BRAUER-15 maatbronconflicten",
+    "Liquid ThemeCheck ontbrekende dependency",
+    "Echte browserlayout/native bediening/live integratie NOT_TESTED",
+    "Compatibiliteit wastafel/onderkast/topblad niet als combinatieset bewezen",
+    "Niet elke nieuwe SKU heeft al een tijdelijke foto"
+  ],
+  "next_action": "Eigenaar beoordeelt acht nieuwe offline menu’s; herstel concrete feedback vóór uitbreiding of import.",
+  "source_registry_sha256": "171b7e2f344cffc5a816888fc71f3caf551bdf9c6590acdb4833ac377d9a72dd",
+  "public_sources_note": "13 representatieve bronregels uit de lokaal gecontroleerde 98-foto-registry; volledige prijs-/brondata en beeldbytes niet in publieke Git."
+}

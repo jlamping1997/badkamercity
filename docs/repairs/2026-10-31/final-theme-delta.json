@@ -1,0 +1,141 @@
+{
+  "main": {
+    "id": "195947036938",
+    "role": "MAIN",
+    "count": 1354,
+    "unchangedFromOpening": true
+  },
+  "draft": {
+    "id": "195948839178",
+    "role": "UNPUBLISHED",
+    "count": 1355
+  },
+  "delta": [
+    {
+      "path": "assets/bc-external-filters.js",
+      "mainMd5": "45fd7aee85d90ffa5d7386211c17345a",
+      "draftMd5": "ae1f3629f216eb474479249346b56fbe",
+      "bytes": "48187"
+    },
+    {
+      "path": "assets/bc-mobile-compact-list.css",
+      "mainMd5": "86684c4697483302c9e52c016f010974",
+      "draftMd5": "8d7a8ea654a6c72adbcb3013f074ada1",
+      "bytes": "8085"
+    },
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "mainMd5": "40975f22d5b7bdd762ad1bd6ae580596",
+      "draftMd5": "3e33d63c03a80c8e6423682e5f6d77bd",
+      "bytes": "21087"
+    },
+    {
+      "path": "assets/bc-sunshower-page.js",
+      "mainMd5": "6e6a5705e8b99716634fae55f722883c",
+      "draftMd5": "db1b13be1778d5b4e679dc755f7667f8",
+      "bytes": "24266"
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "mainMd5": "d769df34404e1a69d949fabbf3291b7a",
+      "draftMd5": "ca1654691aa993c3d542e2efa200e518",
+      "bytes": "13931"
+    },
+    {
+      "path": "assets/bc-wishlist.js",
+      "mainMd5": "2767cda3d4c02b89cb62d2f35bdd9676",
+      "draftMd5": "0454629d2b341fc435d30351f5ddb7cb",
+      "bytes": "21221"
+    },
+    {
+      "path": "assets/cart-notification.js",
+      "mainMd5": "95346b88ba71a01cea3f56e6edb1ba35",
+      "draftMd5": "cbae7b0df17ace03b85f2e9a430075bc",
+      "bytes": "4030"
+    },
+    {
+      "path": "layout/theme.liquid",
+      "mainMd5": "7b17172e06148f30cdf940de6da9504c",
+      "draftMd5": "413a857c928c57f1315e4ce681d22b65",
+      "bytes": "23030"
+    },
+    {
+      "path": "locales/en.default.json",
+      "mainMd5": "1117fe17162d1ca12ff3a83c2763415e",
+      "draftMd5": "d456bc88732f6c2c436eb6b3b4b28b27",
+      "bytes": "70174"
+    },
+    {
+      "path": "locales/nl.json",
+      "mainMd5": "6664478c61d4fc53c27537bf44bba952",
+      "draftMd5": "77661423d7b74967176e8ee28a52a89b",
+      "bytes": "73777"
+    },
+    {
+      "path": "sections/bc-card-data.liquid",
+      "mainMd5": "94916ad19c1588391444ff0325e57de7",
+      "draftMd5": "6bbfc201c43e503af8ea17dd364633f6",
+      "bytes": "5349"
+    },
+    {
+      "path": "sections/footer-group.json",
+      "mainMd5": "037363080cfe44da4c5fa9cb1c7d339b",
+      "draftMd5": "f57d42afd9dbbc8faac64d21bda9bfff",
+      "bytes": "5430"
+    },
+    {
+      "path": "sections/footer.liquid",
+      "mainMd5": "357e83e6a7ef260476a0f3dd589de980",
+      "draftMd5": "7e413995480f5066044e3e43805b5388",
+      "bytes": "34581"
+    },
+    {
+      "path": "sections/main-search.liquid",
+      "mainMd5": "3de257061f0e313921a361c13ab53fbe",
+      "draftMd5": "b647e71ebdcabefb709f2e912258a71b",
+      "bytes": "29830"
+    },
+    {
+      "path": "snippets/bc-card-product-search.liquid",
+      "mainMd5": "736db421ff31f0c056ef0e29affe05b5",
+      "draftMd5": "f3aafce6bb9c722bef00a59b38c5bc1a",
+      "bytes": "6310"
+    },
+    {
+      "path": "snippets/bc-card-tile-price.liquid",
+      "mainMd5": null,
+      "draftMd5": "14b7bca6fd71fd4999c8402995d43b42",
+      "bytes": "1285"
+    },
+    {
+      "path": "snippets/bc-external-filters.liquid",
+      "mainMd5": "2fcf24fd535cea6f6dabf795c97e3fbf",
+      "draftMd5": "ab3c8ef482b4f51e2063e72f4e3ce2dd",
+      "bytes": "2271"
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "mainMd5": "f928b0a4ec49dc8bb33f74bfd49fa043",
+      "draftMd5": "a4485b36b1e0ae45db437744a62ecd92",
+      "bytes": "9372"
+    },
+    {
+      "path": "snippets/bc-search-usp-strip.liquid",
+      "mainMd5": "c636940c8566257ae7dc05ee1084cfc0",
+      "draftMd5": "64cf85748078a3ede0254a02f00fceb6",
+      "bytes": "922"
+    },
+    {
+      "path": "snippets/card-product.liquid",
+      "mainMd5": "59017e48e5fb53446843a3273947fb5b",
+      "draftMd5": "4377040586d06a1b694632411aa406a1",
+      "bytes": "34879"
+    },
+    {
+      "path": "snippets/meta-tags.liquid",
+      "mainMd5": "ecc6351e747bad1e4cba6be6fe05d72e",
+      "draftMd5": "ba4e93a774dd810e6c3be694ed8ede71",
+      "bytes": "1714"
+    }
+  ]
+}

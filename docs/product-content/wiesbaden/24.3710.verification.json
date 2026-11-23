@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-20",
+  "status": "LOCAL_REVIEW_NOT_APPLIED",
+  "sku": "24.3710",
+  "series": "304",
+  "branch": "fix/product-cards-2026-10-14",
+  "starting_commit": "435e0f4",
+  "main_theme": "195449651466",
+  "historical_main_theme": "195392143626",
+  "store_mutations": 0,
+  "theme_mutations": 0,
+  "index_mutations": 0,
+  "source_run_reused": true,
+  "new_full_scrape": false,
+  "theme_files_read": 27,
+  "theme_baseline": [
+    {
+      "filename": "assets/bc-external-filters.js",
+      "md5": "6d5aa662041b04d0ee32465913922c66"
+    },
+    {
+      "filename": "locales/nl.json",
+      "md5": "011e125f728e1b915c03da1f83d9a20a"
+    },
+    {
+      "filename": "sections/main-collection-product-grid.liquid",
+      "md5": "2015969bd2fe762bd118c3756b6b389d"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "md5": "f72891c0e0688dfe145efd09501e643d"
+    },
+    {
+      "filename": "snippets/bc-external-filters.liquid",
+      "md5": "83facafcc1e12b8afb1a515b799f39c1"
+    },
+    {
+      "filename": "snippets/bc-product-description.liquid",
+      "md5": "4fabd9ad065deb45de43cef4a76076e3"
+    },
+    {
+      "filename": "snippets/bc-product-detail-row.liquid",
+      "md5": "08bc0835e74ddaaee7db7f4dc7cd0947"
+    },
+    {
+      "filename": "snippets/bc-product-detail-specs-legacy.liquid",
+      "md5": "fe2cbb259184ca0a47952333da4d9b53"
+    },
+    {
+      "filename": "snippets/bc-product-detail-specs.liquid",
+      "md5": "d5408ddfa619dd0bcf574674f265021f"
+    },
+    {
+      "filename": "templates/product.json",
+      "md5": "741ac2a6d0e579cd24a91f410714406c"
+    },
+    {
+      "filename": "assets/bc-product-cards.css",
+      "md5": "56d0058eb32bba4f8ee7adced2a67fa2"
+    },
+    {
+      "filename": "assets/component-complementary-products.css",
+      "md5": "aa1e9eb04ec4b89f8fb79e21e4133abc"
+    },
+    {
+      "filename": "assets/component-product-accessories.css",
+      "md5": "2ed8d118994e4bcf8a9c024af2c2ff2f"
+    },
+    {
+      "filename": "assets/component-product-model.css",
+      "md5": "fa2e8992d97dc0122e2acbf4849a7bbc"
+    },
+    {
+      "filename": "assets/component-product-pros-cons.css",
+      "md5": "ce98baeba2a53aea40ca1beb7be81db2"
+    },
+    {
+      "filename": "assets/component-product-set.css",
+      "md5": "77f62104a79b6d240dac346877a56725"
+    },
+    {
+      "filename": "assets/component-product-variant-picker.css",
+      "md5": "63ee358233ac776a6c472b1f607f36a5"
+    },
+    {
+      "filename": "assets/section-featured-product.css",
+      "md5": "29222c7fee37a60c5427f68a8269c06c"
+    },
+    {
+      "filename": "assets/section-main-product.css",
+      "md5": "ae64b5374992a025a2c754034fd61d93"
+    },
+    {
+      "filename": "assets/section-related-products.css",
+      "md5": "2501b9d0b60e8403b8e6541584706b48"
+    },
+    {
+      "filename": "snippets/bc-hotbath-normal-scope.liquid",
+      "md5": "8affc82ef126f3f4623f6fe13d3f5913"
+    },
+    {
+      "filename": "snippets/bc-hotbath-public-specs.liquid",
+      "md5": "197413e04f977451cb070786e2534ab2"
+    },
+    {
+      "filename": "snippets/bc-product-detail-specs-mapped.liquid",
+      "md5": "762422a7835dbdc59922132221b753ba"
+    },
+    {
+      "filename": "snippets/bc-sunshower-panel.liquid",
+      "md5": "6234e3fbd1c79ad2e35c1917dc3e1b3c"
+    },
+    {
+      "filename": "layout/theme.liquid",
+      "md5": "7df06c3ee4d69ae2eb897c268c233ef8"
+    },
+    {
+      "filename": "snippets/bc-product-mapped-spec-row.liquid",
+      "md5": "cec4ea7bfbdf77bfa6e28fe1d46acb14"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "md5": "299507172ec0e1a4e4dca981dbd95ecd"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "gid://shopify/MetafieldDefinition/409709641994",
+      "namespace": "custom",
+      "key": "complete_specificaties",
+      "type": {
+        "name": "json"
+      },
+      "access": {
+        "storefront": "PUBLIC_READ"
+      }
+    },
+    {
+      "id": "gid://shopify/MetafieldDefinition/418932031754",
+      "namespace": "custom",
+      "key": "card_title",
+      "type": {
+        "name": "single_line_text_field"
+      },
+      "access": {
+        "storefront": "PUBLIC_READ"
+      }
+    },
+    {
+      "id": "gid://shopify/MetafieldDefinition/409275793674",
+      "namespace": "custom",
+      "key": "categoriepad",
+      "type": {
+        "name": "single_line_text_field"
+      },
+      "access": {
+        "storefront": "PUBLIC_READ"
+      }
+    }
+  ],
+  "patch": {
+    "path": "docs/patches/BC-wiesbaden-24.3710-review-2026-10-20.patch",
+    "sha256": "93bba8cf706082faf849dcc70747f1b6581a7d34a1de425e7fcfd5d351394924",
+    "files": [
+      "snippets/bc-product-detail-specs.liquid",
+      "snippets/bc-wiesbaden-reviewed-specs.liquid",
+      "locales/nl.json",
+      "locales/en.default.json"
+    ],
+    "forward_byte_exact": true,
+    "reverse_all_27_files_and_set_exact": true,
+    "windows_git_setting_for_byte_proof": "git -c core.autocrlf=false apply"
+  },
+  "tests": {
+    "liquid_groups": 14,
+    "theme_check": {
+      "revision": 3,
+      "files_success": 4,
+      "errors": 0,
+      "warnings": 0,
+      "schema_source": "local official toolkit cache"
+    },
+    "source_rows": 27,
+    "proposed_rows": 33,
+    "local_browser": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "rows": 33,
+        "loadedImages": true,
+        "title": "Wiesbaden 304 wastafelkraan met coldstart – geborsteld RVS",
+        "table": {
+          "x": 199,
+          "y": 1167.046875,
+          "width": 1042,
+          "height": 1887.609375,
+          "top": 1167.046875,
+          "right": 1241,
+          "bottom": 3054.65625,
+          "left": 199
+        }
+      },
+      {
+        "width": 390,
+        "scrollWidth": 390,
+        "rows": 33,
+        "loadedImages": true,
+        "title": "Wiesbaden 304 wastafelkraan met coldstart – geborsteld RVS",
+        "table": {
+          "x": 29,
+          "y": 1446.203125,
+          "width": 332,
+          "height": 2025.4375,
+          "top": 1446.203125,
+          "right": 361,
+          "bottom": 3471.640625,
+          "left": 29
+        }
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "rows": 33,
+        "loadedImages": true,
+        "title": "Wiesbaden 304 wastafelkraan met coldstart – geborsteld RVS",
+        "table": {
+          "x": 29,
+          "y": 1687.0625,
+          "width": 262,
+          "height": 2302.5625,
+          "top": 1687.0625,
+          "right": 291,
+          "bottom": 3989.625,
+          "left": 29
+        }
+      }
+    ],
+    "read_only_api_cases": [
+      {
+        "label": "existing_matching_filters",
+        "filters": {
+          "f_serie": [
+            "304"
+          ],
+          "f_materiaal": [
+            "RVS"
+          ],
+          "f_kraanmontage": [
+            "Opbouw"
+          ]
+        },
+        "ranges": {},
+        "status": 200,
+        "found": 1,
+        "expected": 1
+      },
+      {
+        "label": "incompatible_series",
+        "filters": {
+          "f_serie": [
+            "WRONG-SERIES"
+          ]
+        },
+        "ranges": {},
+        "status": 200,
+        "found": 0,
+        "expected": 0
+      },
+      {
+        "label": "confirmed_but_missing_tap_hole_value",
+        "filters": {},
+        "ranges": {
+          "f_aantal_kraangaten": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        "status": 200,
+        "found": 0,
+        "expected": 0
+      }
+    ],
+    "live_browser": [
+      {
+        "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcf_f_materiaal=RVS",
+        "width": 1440,
+        "scrollWidth": 1440,
+        "externalActive": true,
+        "productPresent": true,
+        "theme": 195449651466
+      },
+      {
+        "url": "https://badkamercity.nl/collections/opbouw-wastafelkranen?bcf_f_serie=304&bcf_f_materiaal=RVS",
+        "width": 390,
+        "scrollWidth": 390,
+        "externalActive": true,
+        "productPresent": true,
+        "theme": 195449651466
+      }
+    ],
+    "network_abort_fallback": {
+      "externalActive": false,
+      "nativeProducts": 24,
+      "nativeFiltersVisible": true
+    }
+  },
+  "historical_failed_attempts": [
+    "Combined GraphQL query rejected; separate queries succeeded.",
+    "Theme validator missing dependencies; copied toolkit to isolated run directory and installed official packages.",
+    "Incorrect numeric filter request returned 400; corrected to ranges per actual frontend.",
+    "Incorrect handcrafted filter URL returned 400; corrected to bcf_f_serie and bcf_f_materiaal.",
+    "Browser harness did not exit after assertion; only its own process stopped and catch corrected.",
+    "Exact byte test caught CRLF conversion and extra tool-transfer newline; baseline hashes and LF candidate corrected; final forward/reverse passed.",
+    "One batched wrapper exited 0 despite earlier native failures; stderr inspected, failures recorded and rerun with explicit native exit checks."
+  ],
+  "not_tested": [
+    "Shopify product or theme writes",
+    "Native Shopify rendering of proposed JSON",
+    "Index refresh",
+    "New one-hole filter after import",
+    "Physical phones",
+    "Checkout",
+    "Shop-wide regression"
+  ],
+  "next_action": "Owner reviews local example before separately authorizing any Shopify/index application."
+}

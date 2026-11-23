@@ -1,0 +1,21 @@
+{% doc %}
+  Renders the effective limit of a single cart quantity input.
+  @param {line_item} item - Current cart line
+  @param {number} sample_count - Total physical samples across all lines
+{% enddoc %}
+{%- liquid
+  assign max_quantity = item.variant.quantity_rule.max
+  if item.product.type == 'Tegelsample'
+    assign remaining = 5 | minus: sample_count | plus: item.quantity | at_least: 0
+    if max_quantity == blank or max_quantity > remaining
+      assign max_quantity = remaining
+    endif
+    if item.product.handle == 'tegelsample-cottoceramix'
+      assign chosen = cart | item_count_for_variant: item.variant_id
+      assign max_per_line = 1 | minus: chosen | plus: item.quantity | at_least: 0
+      assign max_quantity = max_quantity | at_most: max_per_line
+    endif
+  endif
+-%}
+{%- if max_quantity != blank %} max="{{ max_quantity }}"{% endif -%}
+{%- if item.product.type == 'Tegelsample' %} data-bc-sample-key="{{ item.key | escape }}" data-bc-sample-limit="{{ 'bc_samples.limit' | t | escape }}"{% if item.product.handle == 'tegelsample-cottoceramix' %} data-bc-sample-once="{{ 'bc_samples.one_cotto' | t | escape }}"{% endif %}{% endif -%}

@@ -1,0 +1,24 @@
+{% doc %}
+  Responsive homepage image with an editable Shopify image and a bundled fallback.
+  @param {image} [image] - Optional image chosen in the theme editor.
+  @param {string} asset - Bundled fallback filename.
+  @param {string} [alt] - Alternative text.
+  @param {string} [sizes] - Responsive image sizes.
+  @param {boolean} [priority] - Whether this image is the initial campaign image.
+  @param {number} [width] - Intrinsic fallback width.
+  @param {number} [height] - Intrinsic fallback height.
+{% enddoc %}
+{% liquid
+  assign image_loading = 'lazy'
+  assign image_priority = 'auto'
+  if priority
+    assign image_loading = 'eager'
+    assign image_priority = 'high'
+  endif
+  assign image_sizes = sizes | default: '100vw'
+%}
+{% if image != blank %}
+  {{ image | image_url: width: 1800 | image_tag: widths: '180, 300, 480, 750, 1100, 1500, 1800', sizes: image_sizes, loading: image_loading, fetchpriority: image_priority, alt: alt }}
+{% elsif asset != blank %}
+  <img src="{{ asset | asset_url }}" width="{{ width | default: 1200 }}" height="{{ height | default: 400 }}" alt="{{ alt | escape }}" loading="{{ image_loading }}" fetchpriority="{{ image_priority }}" decoding="async">
+{% endif %}

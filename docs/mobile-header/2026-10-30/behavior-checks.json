@@ -1,0 +1,90 @@
+{
+  "suite": "Isolated JavaScript behavior; synthetic geometry, no visual/phone claim",
+  "count": 21,
+  "checks": [
+    {
+      "name": "Initial search visible and focusable",
+      "result": "PASS"
+    },
+    {
+      "name": "Downward scroll retains header and hides only search",
+      "result": "PASS"
+    },
+    {
+      "name": "Small reversal does not flash search",
+      "result": "PASS"
+    },
+    {
+      "name": "Deliberate upward scroll reveals search",
+      "result": "PASS"
+    },
+    {
+      "name": "Returning near top always reveals",
+      "result": "PASS"
+    },
+    {
+      "name": "Slow 1px downward scroll still collapses",
+      "result": "PASS"
+    },
+    {
+      "name": "Slow upward scroll accumulates intent",
+      "result": "PASS"
+    },
+    {
+      "name": "No collapse near top",
+      "result": "PASS"
+    },
+    {
+      "name": "Search typing keeps search visible",
+      "result": "PASS"
+    },
+    {
+      "name": "Open predictive results preserve search",
+      "result": "PASS"
+    },
+    {
+      "name": "Open menu freezes compact state",
+      "result": "PASS"
+    },
+    {
+      "name": "Open dialog freezes current header state",
+      "result": "PASS"
+    },
+    {
+      "name": "Bottom rubber band does not reveal accidentally",
+      "result": "PASS"
+    },
+    {
+      "name": "Top rubber band stays expanded",
+      "result": "PASS"
+    },
+    {
+      "name": "Desktop does not compact",
+      "result": "PASS"
+    },
+    {
+      "name": "Crossing breakpoint resets mobile safely",
+      "result": "PASS"
+    },
+    {
+      "name": "Pointer and keyboard modality switch independently",
+      "result": "PASS"
+    },
+    {
+      "name": "Repeated initialization does not replace controller",
+      "result": "PASS"
+    },
+    {
+      "name": "Section unload restores attributes and metrics",
+      "result": "PASS"
+    },
+    {
+      "name": "Section reload makes exactly one working controller",
+      "result": "PASS"
+    },
+    {
+      "name": "History return to top restores search",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "route": "/collections/losse-onderkasten",
+      "preview": false,
+      "status": 200,
+      "mobile_css": false,
+      "h1": [
+        "Losse onderkasten"
+      ],
+      "canonical": "https://badkamercity.nl/collections/losse-onderkasten"
+    },
+    {
+      "route": "/collections/wastafelkranen",
+      "preview": false,
+      "status": 200,
+      "mobile_css": false,
+      "h1": [
+        "Wastafelkranen"
+      ],
+      "canonical": "https://badkamercity.nl/collections/wastafelkranen"
+    },
+    {
+      "route": "/search?q=Sulora&type=product",
+      "preview": false,
+      "status": 200,
+      "mobile_css": false,
+      "h1": [
+        "Zoekresultaten voor 'Sulora'"
+      ],
+      "canonical": "https://badkamercity.nl/search?q=sulora&type=product"
+    }
+  ],
+  "scope": "Three unauthenticated public MAIN HTML pages. Candidate query-only HTTP did not establish preview access; candidate is verified separately in Admin and browser. No Section Rendering or mobile geometry proof from these HTTP reads."
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-17",
+  "scope": "all_thirteen_mobile_root_categories",
+  "mainAtStart": "195334668554",
+  "codeCheckpoint": "0bc285d30709851a4db0f5cbd3e12a737c087c52",
+  "copyBeforeWrite": {
+    "id": "195334865162",
+    "processing": false,
+    "role": "UNPUBLISHED",
+    "identicalChecksums": 481
+  },
+  "readback": {
+    "candidate": "gid://shopify/OnlineStoreTheme/195334865162",
+    "role": "UNPUBLISHED",
+    "processing": false,
+    "files": 487,
+    "changed": [
+      "snippets/bc-mobile-category-icon.liquid",
+      "assets/bc-nav-accessoires.svg",
+      "assets/bc-nav-badkamerverlichting.svg",
+      "assets/bc-nav-meer.svg",
+      "assets/bc-nav-outlet.svg",
+      "assets/bc-nav-tegels.svg",
+      "assets/bc-nav-verwarming.svg"
+    ],
+    "unexpected": [],
+    "bodyMismatches": [],
+    "unchangedExisting": 480,
+    "liveRole": "MAIN",
+    "liveFiles": 481,
+    "liveChanged": [],
+    "passed": true
+  },
+  "themeCheck": {
+    "passed": 7,
+    "total": 7,
+    "docsSource": "bundled fallback"
+  },
+  "liquidJs": "PASS: 13 root SVGs, aliases, future fallback, identical menu routing/Outlet link, unchanged first 7 SVGs/header/drawer/shared icons",
+  "patch": {
+    "forward": "PASS --ignore-space-change",
+    "reverse": "PASS --ignore-space-change"
+  },
+  "independentReview": "No blocking findings; full tree diff exactly 6 new assets and 1 mapping change; SVG overview inspected",
+  "browser": {
+    "width": 1348,
+    "rootSvgCount": 13,
+    "rootSvgViewBox": "0 0 32 32",
+    "submenuButtons": 12,
+    "outlet": {
+      "tag": "A",
+      "href": "/collections/outlet"
+    },
+    "previewNameVerified": true,
+    "liquidErrors": false
+  },
+  "notTested": [
+    "real 360px mobile browser",
+    "mobile label wrapping",
+    "mobile scroll to Outlet and click",
+    "mobile submenu runtime and close/reopen",
+    "Windows synchronization"
+  ],
+  "publication": "Not performed; merchant reviews"
+}

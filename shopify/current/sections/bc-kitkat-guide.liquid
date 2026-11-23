@@ -1,0 +1,599 @@
+{{ 'bc-kitkat-guide.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-kitkat-guide.js' | asset_url }}" defer="defer"></script>
+{%- assign translation_prefix = 'sections.bc-kitkat-guide.' -%}
+{%- paginate collection.products by 250 -%}
+  <bc-kitkat-guide class="bc-kg"
+    data-kg-guide
+    data-kg-section="{{ section.id | escape }}"
+    data-kg-page="{{ paginate.current_page }}"
+    data-kg-pages="{{ paginate.pages }}"
+    data-kg-total="{{ paginate.items }}"
+    data-kg-page-param="{{ paginate.page_param | escape }}"
+    data-kg-one="{{ translation_prefix | append: 'result_one' | t | escape }}"
+    data-kg-many="{{ translation_prefix | append: 'result_many' | t | escape }}"
+    data-kg-loading="{{ translation_prefix | append: 'loading' | t | escape }}"
+    data-kg-partial="{{ translation_prefix | append: 'partial' | t | escape }}">
+    <nav aria-label="{{ translation_prefix | append: 'breadcrumb' | t | escape }}" class="kg-crumb">
+      <a href="{{ routes.root_url }}">{{ translation_prefix | append: 'home' | t }}</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ collections['tegels'].url | default: routes.all_products_collection_url }}">{{ translation_prefix | append: 'tiles' | t }}</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ collection.title | escape }}</span>
+    </nav>
+    {% if paginate.current_page == 1 %}
+      <header class="kg-hero">
+        <div class="kg-intro">
+          <h1>{{ translation_prefix | append: 'guide_heading' | t }}</h1>
+          {%- assign intro = section.settings.intro | strip -%}
+          {%- if intro == blank -%}
+            {%- assign intro = translation_prefix | append: 'guide_intro' | t -%}
+          {%- endif -%}
+          <p class="kg-lead">{{ intro | escape }}</p>
+          <div class="kg-hero-actions">
+            <a class="kg-button kg-primary" href="#kitkat-kleuren">{{ translation_prefix | append: 'browse' | t }}</a>
+            <a class="kg-button kg-secondary" href="#kitkat-formaten">{{ translation_prefix | append: 'compare' | t }}</a>
+          </div>
+        </div>
+        {%- assign hero = section.settings.hero_image | default: collection.image -%}
+        {% if hero %}
+          <figure class="kg-hero-photo">
+            {{ hero
+              | image_url: width: 1340
+              | image_tag: widths: '430,650,900,1100,1340', sizes: '(min-width: 1280px) 570px, (min-width: 750px) 44vw, 96vw', loading: 'eager', fetchpriority: 'high'
+            }}
+          </figure>
+        {% endif %}
+      </header>
+      {%- assign room_blocks = section.blocks | where: 'type', 'room' -%}
+      {% if room_blocks.size > 0 %}
+        <section class="kg-rooms" aria-labelledby="kg-rooms-title-{{ section.id }}">
+          <h2 id="kg-rooms-title-{{ section.id }}">{{ translation_prefix | append: 'rooms_heading' | t }}</h2>
+          <div class="kg-room-grid">
+            {% for block in room_blocks %}
+              {% liquid
+                assign tile = block.settings.tile
+                assign image_index = block.settings.image_number | minus: 1
+                assign room_photo = block.settings.room_photo | default: tile.images[image_index]
+              %}
+              {% if tile != blank and room_photo != blank %}
+                <article class="kg-room" {{ block.shopify_attributes }}>
+                  <a class="kg-room-photo" href="{{ tile.url }}" aria-label="{{ block.settings.link_label | default: tile.title | escape }}">
+                    {{ room_photo | image_url: width: 840 | image_tag: widths: '300,420,620,840', sizes: '(min-width: 1000px) 29vw, (min-width: 620px) 42vw, 88vw', loading: 'lazy', alt: block.settings.alt }}
+                  </a>
+                  <div class="kg-room-copy">
+                    <h3>{{ block.settings.title | escape }}</h3>
+                    <p>{{ block.settings.description | escape }}</p>
+                    <a class="kg-button kg-secondary" href="{{ tile.url }}">{{ block.settings.link_label | default: tile.title | escape }}</a>
+                  </div>
+                </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    {% else %}
+      <header class="kg-page-header">
+        <h1>{{ translation_prefix | append: 'guide_heading' | t }}</h1>
+        <a class="kg-button kg-secondary" href="{{ collection.url }}#kitkat-formaten">{{ translation_prefix | append: 'compare' | t }}</a>
+      </header>
+    {% endif %}
+
+    <section class="kg-catalog" id="kitkat-kleuren" aria-labelledby="kg-colors-title-{{ section.id }}">
+      <h2 id="kg-colors-title-{{ section.id }}" tabindex="-1">{{ translation_prefix | append: 'color_heading' | t }}</h2>
+      <p class="kg-section-note">{{ translation_prefix | append: 'color_note' | t }}</p>
+      {% if paginate.current_page == 1 %}
+        {%- assign shade_guides = 'beige,groen,wit' | split: ',' -%}
+        <details class="kg-colour-guide">
+          <summary>{{ translation_prefix | append: 'colour_help' | t }}</summary>
+          <ul role="list">
+            {% for shade in shade_guides %}
+              {% liquid
+                case shade
+                  when 'beige'
+                    assign handles = 'the-mosaic-factory-sevilla-kitkat-mini-finger-desert-beige-glossy-mozaiektegel-sef12225,the-mosaic-factory-natural-stone-travertine-beige-matt-mozaiektegel-ntk01'
+                  when 'groen'
+                    assign handles = 'the-mosaic-factory-sevilla-kitkat-original-finger-sage-green-matt-mozaiektegel-sef20575,the-mosaic-factory-sevilla-kitkat-original-finger-forest-green-glossy-mozaiektegel-sef20525'
+                  when 'wit'
+                    assign handles = 'the-mosaic-factory-sevilla-kitkat-original-finger-vintage-white-glossy-mozaiektegel-sef20120'
+                endcase
+                assign handles = handles | split: ','
+              %}
+              <li>
+                <p><strong>{{ translation_prefix | append: shade | t }}.</strong> {{ translation_prefix | append: 'colour_' | append: shade | t }}</p>
+                {% for handle in handles %}
+                  {%- assign tile = all_products[handle] -%}
+                  {% if tile != blank %}
+                    <a href="{{ tile.url }}">{{ translation_prefix | append: 'tile_' | append: shade | append: '_' | append: forloop.index | t }}</a>
+                  {% endif %}
+                {% endfor %}
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
+      <div class="kg-colour-choices" data-kg-colour-choices hidden aria-label="{{ translation_prefix | append: 'quick_colour' | t | escape }}">
+        {% assign featured_colours = 'beige,groen,wit,blauw,rood' | split: ',' %}
+        {% for colour in featured_colours %}
+          <button type="button" class="kg-colour" data-kg-colour="{{ colour }}" aria-pressed="false">
+            <span class="kg-colour-dot" aria-hidden="true"></span>
+            {{ translation_prefix | append: colour | t }}
+          </button>
+        {% endfor %}
+      </div>
+      <form data-kg-form class="kg-controls" hidden>
+        {%- assign dimensions = 'color,finish,size,material,series' | split: ',' -%}
+        {% for dimension in dimensions %}
+          {%- liquid
+            case dimension
+              when 'material'
+                assign values = 'keramiek,travertin,overig'
+              when 'size'
+                assign values = '12,19,20,22-145,22-148,overig'
+              when 'series'
+                assign values = 'mini,original,kitkat22,osiris,travertin,overig'
+              when 'color'
+                assign values = 'beige,blauw,brons,bruin,geel,grijs,groen,rood,roze,wit,zwart,overig'
+              when 'finish'
+                assign values = 'mat,glans,mix,metallic,steen,overig'
+            endcase
+            assign values = values | split: ','
+          -%}
+          <label>
+            <span>{{ translation_prefix | append: dimension | t }}</span>
+            <select data-kg-filter="{{ dimension }}">
+              <option value="">{{ translation_prefix | append: 'all' | t }}</option>
+              {% for value in values %}
+                <option value="{{ value }}">
+                  {%- if dimension == 'size' and value != 'overig' -%}
+                    {%- case value -%}
+                      {%- when '12' -%}1,2 × 9,2 cm
+                      {%- when '19' -%}1,9 × 15,2 cm
+                      {%- when '20' -%}2 × 14,5 cm
+                      {%- when '22-145' -%}2,2 × 14,5 cm
+                      {%- when '22-148' -%}2,2 × 14,8 cm
+                    {%- endcase -%}
+                  {%- else -%}
+                    {{- translation_prefix | append: value | t -}}
+                  {%- endif -%}
+                </option>
+              {% endfor %}
+            </select>
+          </label>
+        {% endfor %}
+        <button class="kg-clear" type="reset" data-kg-clear>{{ translation_prefix | append: 'reset' | t }}</button>
+      </form>
+      <p role="status" aria-live="polite" aria-atomic="true" class="kg-result" data-kg-result>
+        {% if paginate.items == 1 %}{{ paginate.items }} {{ translation_prefix | append: 'result_one' | t }}{% else %}{{ paginate.items }} {{ translation_prefix | append: 'result_many' | t }}{% endif %}
+      </p>
+      <ul class="kg-palette" data-kg-list role="list">
+        {% for tile in collection.products %}
+          {% render 'bc-kitkat-item', tile: tile %}
+        {% endfor %}
+      </ul>
+      {% if paginate.items == 0 %}<p class="kg-empty">{{ translation_prefix | append: 'empty_collection' | t }}</p>{% endif %}
+      <div data-kg-empty class="kg-empty" hidden>
+        <p>{{ translation_prefix | append: 'empty' | t }}</p>
+        <button type="button" class="kg-button kg-secondary" data-kg-reset>{{ translation_prefix | append: 'reset' | t }}</button>
+      </div>
+      {% if paginate.pages > 1 %}
+        <nav data-kg-pager class="kg-pager" aria-label="{{ translation_prefix | append: 'pagination' | t | escape }}">
+          {% if paginate.previous %}<a href="{{ paginate.previous.url }}#kitkat-kleuren">{{ translation_prefix | append: 'previous' | t }}</a>{% endif %}
+          <span>{{ translation_prefix | append: 'page_number' | t: number: paginate.current_page, total: paginate.pages }}</span>
+          {% if paginate.next %}<a href="{{ paginate.next.url }}#kitkat-kleuren">{{ translation_prefix | append: 'next' | t }}</a>{% endif %}
+        </nav>
+      {% endif %}
+    </section>
+    {% if paginate.current_page == 1 %}
+      {%- assign series_blocks = section.blocks | where: 'type', 'series' -%}
+      {% if series_blocks.size > 0 %}
+        <section id="kitkat-formaten" class="kg-ranges" aria-labelledby="kg-ranges-title-{{ section.id }}">
+          <h2 id="kg-ranges-title-{{ section.id }}">{{ translation_prefix | append: 'range_heading' | t }}</h2>
+          <p class="kg-section-note">{{ translation_prefix | append: 'range_note' | t }}</p>
+          {%- assign table_rows = 'mini|1,2 × 9,2|28,2 × 30,8;original|2 × 14,5|29,6 × 29,9;kitkat22|2,2 × 14,5|29,6 × 30;osiris|2 × 14,5|29,6 × 29,9;stone_convex|1,9 × 15,2|30,1 × 30,8;stone_flat_original|2,2 × 14,8|30 × 30' | split: ';' -%}
+          <table class="kg-size-table">
+            <caption>{{ translation_prefix | append: 'size_table' | t }}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{{ translation_prefix | append: 'series' | t }}</th>
+                <th scope="col">{{ translation_prefix | append: 'one_tile_cm' | t }}</th>
+                <th scope="col">{{ translation_prefix | append: 'one_sheet_cm' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in table_rows %}
+                {%- assign columns = row | split: '|' -%}
+                <tr>
+                  <th scope="row">{{ translation_prefix | append: columns[0] | t }}</th>
+                  <td>{{ columns[1] }}</td>
+                  <td>{{ columns[2] }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <div class="kg-range-grid">
+            {% for block in series_blocks %}
+              {% assign example = block.settings.example %}
+              <article class="kg-range{% if block.settings.key == 'travertin' %} kg-range-stone{% endif %}" {{ block.shopify_attributes }}>
+                {% if example.featured_image %}
+                  <div class="kg-range-photo kg-tone-{{ block.settings.key | escape }}">
+                    {{ example.featured_image
+                      | image_url: width: 580
+                      | image_tag: widths: '210,330,440,580', sizes: '(min-width: 1100px) 240px, (min-width: 750px) 22vw, 42vw', loading: 'lazy', alt: ''
+                    }}
+                  </div>
+                {% endif %}
+                <div class="kg-range-text">
+                  <p class="kg-dimensions">{{ block.settings.size | escape }}</p>
+                  <h3>{{ block.settings.title | escape }}</h3>
+                  <p class="kg-range-note">{{ block.settings.description | escape }}</p>
+                </div>
+                <button type="button" class="kg-button kg-secondary" data-kg-choose="{{ block.settings.key | escape }}" hidden
+                  aria-label="{{ translation_prefix | append: 'choose_series' | t: name: block.settings.title | escape }}">
+                  {{ translation_prefix | append: 'choose' | t }}
+                </button>
+                {% if example %}
+                  <a class="kg-button kg-secondary" data-kg-fallback href="{{ example.url }}">{{ translation_prefix | append: 'example' | t }}</a>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+      <section class="kg-questions" aria-labelledby="kg-questions-title-{{ section.id }}">
+        <div>
+          <h2 id="kg-questions-title-{{ section.id }}">{{ translation_prefix | append: 'faq_title' | t }}</h2>
+          {% if pages['contact'] %}
+            <a class="kg-button kg-secondary" href="{{ pages['contact'].url }}">{{ translation_prefix | append: 'contact' | t }}</a>
+          {% endif %}
+        </div>
+        <div>
+          {% assign tips = 'boxes,wet_wall,samples,grout,stone_care,laying' | split: ',' %}
+          {% for tip in tips %}
+            <details>
+              <summary>{{ translation_prefix | append: 'q_' | append: tip | t }}</summary>
+              <p>{{ translation_prefix | append: 'a_' | append: tip | t }}</p>
+              {% liquid
+                assign linked_tile = blank
+                if tip == 'boxes' or tip == 'samples'
+                  assign linked_tile = all_products['the-mosaic-factory-sevilla-kitkat-original-finger-sage-green-matt-mozaiektegel-sef20575']
+                elsif tip == 'wet_wall'
+                  assign linked_tile = all_products['the-mosaic-factory-sevilla-kitkat-original-finger-bronze-metallic-mozaiektegel-sef20b']
+                endif
+              %}
+              {% if linked_tile != blank %}
+                <a href="{{ linked_tile.url }}">{{ translation_prefix | append: 'product_' | append: tip | t }}</a>
+              {% endif %}
+            </details>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  </bc-kitkat-guide>
+{%- endpaginate -%}
+
+{% stylesheet %}
+  .bc-kg .kg-colour-guide {
+    margin-block: 1.4rem .2rem;
+    border-bottom: 1px solid var(--kg-line);
+    font-size: 1.6rem;
+  }
+  .bc-kg .kg-colour-guide summary { cursor: pointer; padding: 1rem 0; font-weight: 650; }
+  .bc-kg .kg-colour-guide ul { display: grid; gap: 1rem; list-style: none; padding: 0 0 1.4rem; }
+  .bc-kg .kg-colour-guide a { display: inline-block; margin: .3rem 1.2rem .1rem 0; text-decoration: underline; }
+  .bc-kg .kg-size-table { width: 100%; margin-top: 1.6rem; border-collapse: collapse; table-layout: fixed; font-size: clamp(1.3rem, 1.12vw, 1.6rem); }
+  .bc-kg .kg-size-table caption { text-align: start; padding-bottom: .7rem; font-weight: 650; }
+  .bc-kg .kg-size-table :is(th, td) { padding: .8rem clamp(.45rem, 1.5vw, 1.2rem); text-align: start; vertical-align: top; border-bottom: 1px solid var(--kg-line); }
+  .bc-kg .kg-size-table thead { background: var(--kg-wash); }
+  .bc-kg .kg-size-table :first-child > tr > :first-child { width: 42%; }
+  .bc-kg .kg-size-table :is(th, td) { overflow-wrap: anywhere; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KitKat-keuzehulp",
+  "tag": "section",
+  "enabled_on": {
+    "templates": [
+      "collection"
+    ]
+  },
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Inleiding",
+      "info": "Vul dit in om de standaardinleiding te vervangen."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Sfeerfoto",
+      "info": "Standaard verschijnt de foto van de collectie."
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "series",
+      "name": "Tegelserie",
+      "settings": [
+        {
+          "type": "select",
+          "id": "key",
+          "label": "Serie in de keuzehulp",
+          "options": [
+            {
+              "value": "mini",
+              "label": "Sevilla Mini"
+            },
+            {
+              "value": "original",
+              "label": "Sevilla Original"
+            },
+            {
+              "value": "kitkat22",
+              "label": "Sevilla KitKat Finger"
+            },
+            {
+              "value": "osiris",
+              "label": "Osiris Hertman"
+            },
+            {
+              "value": "travertin",
+              "label": "Travertin"
+            }
+          ],
+          "default": "mini"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Serienaam"
+        },
+        {
+          "type": "text",
+          "id": "size",
+          "label": "Maat van één strookje"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Korte uitleg"
+        },
+        {
+          "type": "product",
+          "id": "example",
+          "label": "Voorbeeldtegel"
+        }
+      ],
+      "limit": 5
+    },
+    {
+      "type": "room",
+      "name": "Sfeerbeeld",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "product",
+          "id": "tile",
+          "label": "Tegel op de foto"
+        },
+        {
+          "type": "image_picker",
+          "id": "room_photo",
+          "label": "Eigen sfeerfoto"
+        },
+        {
+          "type": "range",
+          "id": "image_number",
+          "label": "Nummer van de productfoto",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 2
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Beschrijving van het beeld"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Kop"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Korte uitleg"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Tekst op de knop"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "breadcrumb": "Breadcrumb",
+      "home": "Home",
+      "tiles": "Tiles",
+      "browse": "Browse colours",
+      "compare": "Compare sizes",
+      "range_heading": "What is the difference between Sevilla Mini and Original?",
+      "range_note": "Mini has shorter, narrower strips. It brings a fine pattern to a small splashback. Original has longer strips that can look calmer on a larger wall. Use the sheet size to work out how much to order.",
+      "choose_series": "Browse the colours of {{ name }}",
+      "choose": "Choose this range",
+      "example": "View this tile",
+      "color_heading": "Choose your KitKat tile",
+      "color_note": "Start with a colour you like. Open a tile to see its price, more photos and the sample button.",
+      "material": "Material",
+      "keramiek": "Ceramic",
+      "travertin": "Travertine",
+      "steen": "Natural stone",
+      "size": "Size per finger tile",
+      "series": "Range",
+      "color": "Colour",
+      "finish": "Matt or glossy",
+      "all": "All",
+      "overig": "Other",
+      "mini": "Sevilla Mini",
+      "original": "Sevilla Original",
+      "kitkat22": "Sevilla KitKat Finger",
+      "osiris": "Osiris Hertman",
+      "beige": "Beige",
+      "blauw": "Blue",
+      "brons": "Bronze",
+      "bruin": "Brown",
+      "geel": "Yellow",
+      "grijs": "Grey",
+      "groen": "Green",
+      "rood": "Red",
+      "roze": "Pink",
+      "wit": "White",
+      "zwart": "Black",
+      "mat": "Matt",
+      "glans": "Glossy",
+      "mix": "Matt and glossy",
+      "metallic": "Metallic",
+      "result_one": "option",
+      "result_many": "options",
+      "loading": "Loading the remaining options.",
+      "partial": "These results are for this page. Use the page links to continue.",
+      "empty_collection": "There are currently no KitKat tiles in this collection.",
+      "reset": "Clear selection",
+      "empty": "This combination is currently unavailable. Try another colour or clear your selection.",
+      "pagination": "KitKat tile pages",
+      "previous": "Previous page",
+      "next": "Next page",
+      "page_number": "Page {{ number }} of {{ total }}",
+      "faq_title": "Questions about KitKat mosaics",
+      "contact": "Ask a question",
+      "q_stone_care": "How do I clean travertine?",
+      "a_stone_care": "Use an acid-free cleaner suitable for natural stone. The Mosaic Factory recommends sealing both the tile and the joints to help protect against stains.",
+      "q_grout": "Which grout colour goes with my tile?",
+      "a_grout": "For a quiet finish, choose grout close to the tile colour. Terracotta grout blends well with Smoked Cherry. A light grout outlines each dark red tile.",
+      "q_laying": "Should the finger tiles run vertically or horizontally?",
+      "a_laying": "Hold a sheet against your wall and turn it by a quarter turn. Vertical tiles draw your eye upwards. Horizontal tiles emphasise the width. For a niche, check how the lines meet the edge.",
+      "rooms_heading": "See KitKat tiles in a room",
+      "quick_colour": "Pick a colour",
+      "guide_heading": "KitKat tiles from The Mosaic Factory",
+      "guide_intro": "KitKat mosaic tiles come as narrow strips on a sheet. Use them behind a basin, inside a niche or above a kitchen worktop. Compare glossy sandy beige, matt sage green and real travertine.",
+      "colour_help": "Choosing between beige, green and white?",
+      "colour_beige": "Desert Beige is sandy and glossy. Travertine has its own natural pattern. Put both next to your floor tile to see which feels calmer.",
+      "colour_groen": "Sage Green is soft and matt. Forest Green is darker and glossy. Compare them in the light where they will be installed.",
+      "colour_wit": "Vintage White is glossy off-white. A close grout colour gives a softer look. Darker grout makes each strip stand out.",
+      "tile_beige_1": "Desert Beige",
+      "tile_beige_2": "Travertine Convex",
+      "tile_groen_1": "Sage Green",
+      "tile_groen_2": "Forest Green",
+      "tile_wit_1": "Vintage White",
+      "size_table": "Individual strip and sheet sizes",
+      "one_tile_cm": "Strip (cm)",
+      "one_sheet_cm": "Sheet (cm)",
+      "stone_convex": "Travertine Convex",
+      "stone_flat_original": "Travertine Flat and Original",
+      "q_boxes": "How many KitKat mosaic sheets do I need?",
+      "a_boxes": "Multiply the width and height in metres. A 1.20 by 1 metre wall is 1.20 m². A box of Sevilla Original Sage Green contains 10 sheets, covering 0.89 m². You would need two boxes. Check the coverage of your chosen tile and allow for cuts.",
+      "product_boxes": "Check the box coverage of Sage Green",
+      "q_wet_wall": "Can KitKat tiles be used in a shower?",
+      "a_wet_wall": "Check the manufacturer’s specifications for use on wet walls. Bronze Metallic is for dry indoor walls. The Mosaic Factory advises against using it in showers and on kitchen splashbacks. Ask which travertine tile suits your space and how to protect the stone.",
+      "product_wet_wall": "View Bronze Metallic",
+      "q_samples": "Can I order a sample first?",
+      "a_samples": "Open the tile and choose Order a sample. The first is €5 and each additional sample is €2.50, up to five per order. Delivery is extra. Compare the sample in daylight and under your bathroom lighting.",
+      "product_samples": "View Sage Green"
+    },
+    "nl": {
+      "breadcrumb": "Kruimelpad",
+      "home": "Home",
+      "tiles": "Tegels",
+      "browse": "Kies een kleur",
+      "compare": "Vergelijk de maten",
+      "range_heading": "Wat is het verschil tussen Sevilla Mini en Original?",
+      "range_note": "De Mini heeft kortere, smallere strookjes. Achter een fonteintje zie je daardoor al snel veel fijne lijntjes. De langere Original oogt vaak rustiger op een grote wand. De maat van het matje heb je nodig om te bepalen hoeveel je moet bestellen.",
+      "choose_series": "Bekijk de kleuren van {{ name }}",
+      "choose": "Kies deze serie",
+      "example": "Bekijk deze tegel",
+      "color_heading": "Kies je KitKat-tegel",
+      "color_note": "Begin met een kleur die je mooi vindt. Open een tegel voor de prijs, meer foto’s en de sampleknop.",
+      "material": "Materiaal",
+      "keramiek": "Keramiek",
+      "travertin": "Travertin",
+      "steen": "Natuursteen",
+      "size": "Maat per strookje",
+      "series": "Serie",
+      "color": "Kleur",
+      "finish": "Mat of glans",
+      "all": "Alle",
+      "overig": "Overig",
+      "mini": "Sevilla Mini",
+      "original": "Sevilla Original",
+      "kitkat22": "Sevilla KitKat Finger",
+      "osiris": "Osiris Hertman",
+      "beige": "Beige",
+      "blauw": "Blauw",
+      "brons": "Brons",
+      "bruin": "Bruin",
+      "geel": "Geel",
+      "grijs": "Grijs",
+      "groen": "Groen",
+      "rood": "Rood",
+      "roze": "Roze",
+      "wit": "Wit",
+      "zwart": "Zwart",
+      "mat": "Mat",
+      "glans": "Glans",
+      "mix": "Mat en glans",
+      "metallic": "Metallic",
+      "result_one": "uitvoering",
+      "result_many": "uitvoeringen",
+      "loading": "De overige uitvoeringen worden geladen.",
+      "partial": "Je ziet de resultaten op deze pagina. Gebruik de paginalinks om verder te kijken.",
+      "empty_collection": "Er staan op dit moment geen KitKat-tegels in deze collectie.",
+      "reset": "Wis selectie",
+      "empty": "Deze combinatie is er op dit moment niet. Kies een andere kleur of wis je selectie.",
+      "pagination": "Pagina’s met KitKat-tegels",
+      "previous": "Vorige pagina",
+      "next": "Volgende pagina",
+      "page_number": "Pagina {{ number }} van {{ total }}",
+      "faq_title": "Vragen over KitKat-mozaïek",
+      "contact": "Stel je vraag",
+      "q_stone_care": "Hoe maak ik travertin schoon?",
+      "a_stone_care": "Maak travertin schoon met een zuurvrij middel voor natuursteen. The Mosaic Factory adviseert de tegels en voegen te behandelen met een beschermmiddel voor natuursteen. Dat helpt tegen vlekken.",
+      "q_grout": "Welke voegkleur past bij mijn tegel?",
+      "a_grout": "Wil je een rustig vlak, kies dan een voeg dicht bij de tegelkleur. Een terracottakleurige voeg mengt bijvoorbeeld mooi met Smoked Cherry. Neem je bij diezelfde roodbruine tegel een lichte voeg, dan zie je de omtrek van elk strookje.",
+      "q_laying": "Zet ik de strookjes rechtop of leg ik ze dwars?",
+      "a_laying": "Houd een mat tegen de wand en draai hem een kwartslag. Rechtop volgt je oog de hoogte, dwars volgt het de breedte. Kijk bij een nis ook hoe de lijnen aansluiten op de rand.",
+      "rooms_heading": "Zo staat KitKat in een ruimte",
+      "quick_colour": "Kies snel een kleur",
+      "guide_heading": "KitKat-tegels van The Mosaic Factory",
+      "guide_intro": "Achter je wastafel, in een nis of boven je keukenblad: met KitKat-tegels geef je ook een klein stuk wand een eigen uitstraling. De smalle strookjes zitten samen op een matje. Je kunt kiezen van glanzend zandbeige tot mat saliegroen en echt travertin.",
+      "colour_help": "Twijfel je tussen beige, groen en wit?",
+      "colour_beige": "Desert Beige is zandbeige en glanst. Bij echt travertin zie je juist de tekening van de steen. Houd ze naast je vloertegel als je een rustige wand zoekt.",
+      "colour_groen": "Sage Green is zacht saliegroen en mat. Forest Green is dieper groen en glanst. Bekijk ze naast elkaar op de plek waar de tegel straks komt.",
+      "colour_wit": "Vintage White is gebroken wit met glans. Een voeg in ongeveer dezelfde kleur geeft rust. Met een donkerdere voeg zie je elk strookje duidelijker.",
+      "tile_beige_1": "Desert Beige",
+      "tile_beige_2": "Travertin Convex",
+      "tile_groen_1": "Sage Green",
+      "tile_groen_2": "Forest Green",
+      "tile_wit_1": "Vintage White",
+      "size_table": "Maten per strookje en per matje",
+      "one_tile_cm": "Strookje (cm)",
+      "one_sheet_cm": "Matje (cm)",
+      "stone_convex": "Travertin Convex (bol)",
+      "stone_flat_original": "Travertin Flat en Original",
+      "q_boxes": "Hoeveel KitKat-mozaïekmatjes heb ik nodig?",
+      "a_boxes": "Vermenigvuldig de breedte en hoogte in meters. Een wand van 1,20 bij 1 meter is 1,20 m². Eén doos Sevilla Original Sage Green bevat 10 matjes en is goed voor 0,89 m². Voor die wand heb je dus twee dozen nodig. Kijk bij je eigen uitvoering hoeveel er in een doos zit en houd rekening met snijverlies.",
+      "product_boxes": "Bekijk de doosinhoud van Sage Green",
+      "q_wet_wall": "Kunnen KitKat-tegels in de douche?",
+      "a_wet_wall": "Kies voor een douchewand een uitvoering die de fabrikant geschikt vindt voor natte wanden. Kijk daarvoor bij de specificaties van de tegel. Bronze Metallic is bedoeld voor een droge binnenwand. The Mosaic Factory raadt deze af in de douche en achter het keukenblad. Vraag bij travertin welke uitvoering bij jouw plek past en hoe je de steen beschermt.",
+      "product_wet_wall": "Bekijk Bronze Metallic",
+      "q_samples": "Kan ik eerst een sample bestellen?",
+      "a_samples": "Open de tegel die je wilt zien en kies ‘Bestel een sample’. De eerste kost €5. Elke volgende kost €2,50, met maximaal vijf per bestelling. De verzending komt erbij. Bekijk de sample bij daglicht én bij je eigen badkamerlamp.",
+      "product_samples": "Bekijk Sage Green"
+    }
+  }
+}
+{% endschema %}

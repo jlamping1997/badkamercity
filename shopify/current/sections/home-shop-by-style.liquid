@@ -1,0 +1,710 @@
+{%- liquid
+  assign section_heading = section.settings.eyebrow | default: 'Shop op stijl'
+  assign show_extended_content = section.settings.show_extended_content
+-%}
+
+{%- style -%}
+  .home-shop-style-{{ section.id }} {
+    --hss-text: #0f2740;
+    --hss-muted: #516273;
+    --hss-blue: #1f6685;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    background: #ffffff;
+    color: var(--hss-text);
+  }
+
+  .home-shop-style-{{ section.id }} .page-width {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__shell {
+    display: grid;
+    gap: 12px;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__title {
+    min-width: 0;
+    margin: 0;
+    color: var(--hss-text);
+    font-size: clamp(2.2rem, 2vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__view-all,
+  .home-shop-style-{{ section.id }} .home-shop-style__secondary-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    max-width: 100%;
+    color: #176b9b;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__extended-intro {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__extended-title {
+    margin: 0;
+    color: var(--hss-text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__intro {
+    min-width: 0;
+    max-width: 80rem;
+    color: var(--hss-muted);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__intro > :first-child {
+    margin-top: 0;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__intro > :last-child {
+    margin-bottom: 0;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min(82%, 320px);
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #a5b9c7 #eef3f6;
+    padding: 4px 4px 12px;
+    margin: 0 -4px;
+    list-style: none;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__item {
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__card {
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(15, 39, 64, 0.12);
+    border-radius: 8px;
+    background: #dbe7ee;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__card--featured {
+    border-color: rgba(31, 102, 133, 0.24);
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__tile {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    height: 100%;
+    min-width: 0;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__tile::before {
+    content: '';
+    display: block;
+    grid-area: 1 / 1;
+    aspect-ratio: 16 / 9;
+    pointer-events: none;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #c4d8e3;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__image,
+  .home-shop-style-{{ section.id }} .home-shop-style__placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__image {
+    transition: transform 200ms ease;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__placeholder {
+    fill: #9bb8c8;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    grid-area: 1 / 1;
+    align-self: end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    min-width: 0;
+    padding: 16px;
+    color: #ffffff;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__content::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: -24px 0 0;
+    background: linear-gradient(180deg, rgba(15, 39, 64, 0) 0px, rgba(15, 39, 64, 0.64) 36px, rgba(15, 39, 64, 0.84) 100%);
+    pointer-events: none;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: auto;
+    padding-bottom: 12px;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: rgba(15, 39, 64, 0.65);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__card-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__card-text {
+    margin: 0;
+    color: #f0f5f8;
+    font-size: 1.4rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__cta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__support {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__support-card {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid rgba(15, 39, 64, 0.1);
+    border-radius: 8px;
+    background: #f6f9fb;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__support-title {
+    margin: 0 0 6px;
+    color: var(--hss-text);
+    font-size: 1.6rem;
+    line-height: 1.3;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} .home-shop-style__support-text {
+    margin: 0;
+    color: var(--hss-muted);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .home-shop-style-{{ section.id }} a.home-shop-style__tile:focus-visible {
+    outline: 3px solid #f4cd45;
+    outline-offset: -3px;
+    border-radius: 7px;
+  }
+
+  .home-shop-style-{{ section.id }} a.home-shop-style__tile:focus-visible::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    inset: 3px;
+    border: 2px solid var(--hss-text);
+    border-radius: 5px;
+    pointer-events: none;
+  }
+
+  .home-shop-style-{{ section.id }} a.home-shop-style__view-all:focus-visible,
+  .home-shop-style-{{ section.id }} a.home-shop-style__secondary-link:focus-visible,
+  .home-shop-style-{{ section.id }} .home-shop-style__grid:focus-visible {
+    outline: 3px solid var(--hss-blue);
+    outline-offset: 2px;
+  }
+
+  @media screen and (min-width: 480px) {
+    .home-shop-style-{{ section.id }} .home-shop-style__grid {
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      overflow-x: visible;
+      padding: 0;
+      margin: 0;
+      scroll-snap-type: none;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__card-title {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .home-shop-style-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__view-all {
+      min-height: 32px;
+    }
+
+    .home-shop-style-{{ section.id }} .page-width {
+      padding-inline: 24px;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__shell {
+      gap: 12px;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__grid {
+      gap: 16px;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__card-title {
+      font-size: 2.4rem;
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__support {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .home-shop-style-{{ section.id }} .home-shop-style__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .home-shop-style-{{ section.id }} .home-shop-style__card-title {
+      font-size: clamp(2.2rem, 1.8vw, 2.6rem);
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .home-shop-style-{{ section.id }} a.home-shop-style__tile:hover .home-shop-style__image {
+      transform: scale(1.035);
+    }
+
+    .home-shop-style-{{ section.id }} a.home-shop-style__view-all:hover,
+    .home-shop-style-{{ section.id }} a.home-shop-style__secondary-link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-shop-style-{{ section.id }} .home-shop-style__image {
+      transition: none;
+      transform: none !important;
+    }
+  }
+{%- endstyle -%}
+
+<section class="home-shop-style home-shop-style-{{ section.id }}" aria-labelledby="ShopStyleHeading-{{ section.id }}">
+  <div class="page-width">
+    <div class="home-shop-style__shell">
+      <div class="home-shop-style__header">
+        <h2 class="home-shop-style__title" id="ShopStyleHeading-{{ section.id }}">{{ section_heading | escape }}</h2>
+        {%- if section.settings.primary_button_label != blank -%}
+          {%- if section.settings.primary_button_link != blank -%}
+            <a href="{{ section.settings.primary_button_link | escape }}" class="home-shop-style__view-all">{{ section.settings.primary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+          {%- else -%}
+            <span class="home-shop-style__view-all">{{ section.settings.primary_button_label | escape }} <span aria-hidden="true">&rarr;</span></span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+      {%- if show_extended_content -%}
+        {%- if section.settings.title != blank or section.settings.intro != blank -%}
+          <div class="home-shop-style__extended-intro">
+            {%- if section.settings.title != blank -%}
+              <h3 class="home-shop-style__extended-title">{{ section.settings.title }}</h3>
+            {%- endif -%}
+            {%- if section.settings.intro != blank -%}
+              <div class="home-shop-style__intro rte">{{ section.settings.intro }}</div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+
+      <ul class="home-shop-style__grid" role="list" tabindex="0" aria-labelledby="ShopStyleHeading-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign card_cta_label = section.settings.card_cta_label | default: 'Bekijk stijl'
+            if show_extended_content
+              assign card_cta_label = block.settings.link_label | default: card_cta_label
+            endif
+            assign card_label = block.settings.title | default: block.settings.image.alt | default: card_cta_label
+            assign card_description_id = 'ShopStyleDescription-' | append: section.id | append: '-' | append: block.id
+          -%}
+          <li class="home-shop-style__item">
+            <article class="home-shop-style__card{% if block.settings.featured %} home-shop-style__card--featured{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link | escape }}" class="home-shop-style__tile" aria-label="{{ card_label | escape }}"{% if show_extended_content and block.settings.text != blank %} aria-describedby="{{ card_description_id }}"{% endif %}>
+              {%- else -%}
+                <div class="home-shop-style__tile">
+              {%- endif -%}
+                <div class="home-shop-style__media">
+                  {%- if block.settings.image != blank -%}
+                    {{ block.settings.image | image_url: width: 1000 | image_tag:
+                      widths: '240, 360, 540, 720, 900, 1000',
+                      sizes: '(min-width: 1440px) 336px, (min-width: 1100px) calc(25vw - 24px), (min-width: 750px) calc(50vw - 32px), (min-width: 480px) calc(50vw - 22px), min(320px, calc(82vw - 26px))',
+                      class: 'home-shop-style__image',
+                      loading: 'lazy',
+                      alt: ''
+                    }}
+                  {%- else -%}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'home-shop-style__placeholder' }}
+                  {%- endif -%}
+                </div>
+
+                <div class="home-shop-style__content">
+                  {%- if show_extended_content -%}
+                    {%- if block.settings.kicker != blank or block.settings.secondary_kicker != blank -%}
+                      <div class="home-shop-style__meta">
+                        {%- if block.settings.kicker != blank -%}<span class="home-shop-style__tag">{{ block.settings.kicker | escape }}</span>{%- endif -%}
+                        {%- if block.settings.secondary_kicker != blank -%}<span class="home-shop-style__tag">{{ block.settings.secondary_kicker | escape }}</span>{%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="home-shop-style__card-title">{{ block.settings.title | escape }}</h3>
+                  {%- endif -%}
+                  {%- if show_extended_content and block.settings.text != blank -%}
+                    <p class="home-shop-style__card-text" id="{{ card_description_id }}">{{ block.settings.text | escape | newline_to_br }}</p>
+                  {%- endif -%}
+                  <span class="home-shop-style__cta">{{ card_cta_label | escape }} <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              {%- if block.settings.link != blank -%}
+                </a>
+              {%- else -%}
+                </div>
+              {%- endif -%}
+            </article>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if section.settings.secondary_button_label != blank -%}
+        {%- if section.settings.secondary_button_link != blank or show_extended_content -%}
+          <div class="home-shop-style__secondary">
+            {%- if section.settings.secondary_button_link != blank -%}
+              <a href="{{ section.settings.secondary_button_link | escape }}" class="home-shop-style__secondary-link">{{ section.settings.secondary_button_label | escape }} <span aria-hidden="true">&rarr;</span></a>
+            {%- else -%}
+              <span class="home-shop-style__secondary-link">{{ section.settings.secondary_button_label | escape }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if section.settings.support_title_1 != blank or section.settings.support_title_2 != blank or section.settings.support_title_3 != blank -%}
+        <div class="home-shop-style__support">
+          {%- for support_number in (1..3) -%}
+            {%- liquid
+              assign support_title_id = 'support_title_' | append: support_number
+              assign support_text_id = 'support_text_' | append: support_number
+              assign support_title = section.settings[support_title_id]
+              assign support_text = section.settings[support_text_id]
+            -%}
+            {%- if support_title != blank -%}
+              <div class="home-shop-style__support-card">
+                <h3 class="home-shop-style__support-title">{{ support_title | escape }}</h3>
+                {%- if support_text != blank -%}<p class="home-shop-style__support-text">{{ support_text | escape }}</p>{%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home shop by style",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_extended_content",
+      "label": "Toon extra teksten",
+      "default": false,
+      "info": "Toont de bestaande introteksten, kickers en kaartbeschrijvingen. Alle gegevens blijven bewaard."
+    },
+    {
+      "type": "text",
+      "id": "card_cta_label",
+      "label": "Compacte kaarttekst",
+      "default": "Bekijk stijl"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Shop op stijl"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Titel",
+      "default": "Vind de badkamerstijl die bij jouw huis past"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Van warm hotel chic tot strak modern: ontdek stijlen, materialen en sfeerpagina’s die je helpen om sneller de juiste keuzes te maken.</p>"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Primaire knop label",
+      "default": "Bekijk alle stijlen"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primaire knop link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Secundaire knop label",
+      "default": "Inspiratie bekijken"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secundaire knop link"
+    },
+    {
+      "type": "text",
+      "id": "support_title_1",
+      "label": "Support kaart 1 titel",
+      "default": "Per stijl doorvertalen"
+    },
+    {
+      "type": "text",
+      "id": "support_text_1",
+      "label": "Support kaart 1 tekst",
+      "default": "Koppel elke stijl aan een pagina met sfeerbeelden, producten en praktische tips."
+    },
+    {
+      "type": "text",
+      "id": "support_title_2",
+      "label": "Support kaart 2 titel",
+      "default": "Helpt oriënterende bezoekers"
+    },
+    {
+      "type": "text",
+      "id": "support_text_2",
+      "label": "Support kaart 2 tekst",
+      "default": "Niet iedereen zoekt eerst op product. Met stijlen geef je sneller richting en inspiratie."
+    },
+    {
+      "type": "text",
+      "id": "support_title_3",
+      "label": "Support kaart 3 titel",
+      "default": "Mooi na categorieën"
+    },
+    {
+      "type": "text",
+      "id": "support_text_3",
+      "label": "Support kaart 3 tekst",
+      "default": "Eerst functioneel zoeken op categorie, daarna verder verfijnen op sfeer en uitstraling."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "style_card",
+      "name": "Stijlkaart",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Uitgelichte kaart",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Afbeelding"
+        },
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Kicker",
+          "default": "Warm & luxe"
+        },
+        {
+          "type": "text",
+          "id": "secondary_kicker",
+          "label": "Tweede kicker"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel",
+          "default": "Hotel chic"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Tekst",
+          "default": "Rijke materialen, warme tinten en een luxe uitstraling met rust en comfort als basis."
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Ontdek deze stijl"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home shop by style",
+      "blocks": [
+        {
+          "type": "style_card",
+          "settings": {
+            "featured": true,
+            "kicker": "Warm & luxe",
+            "secondary_kicker": "Populaire stijl",
+            "title": "Hotel chic",
+            "text": "Donkere accenten, rijke materialen en sfeervolle verlichting voor een luxe badkamergevoel."
+          }
+        },
+        {
+          "type": "style_card",
+          "settings": {
+            "kicker": "Licht & rustig",
+            "title": "Japandi",
+            "text": "Zachte kleuren, natuurlijke materialen en minimalistische rust met veel balans."
+          }
+        },
+        {
+          "type": "style_card",
+          "settings": {
+            "kicker": "Strak & tijdloos",
+            "title": "Modern",
+            "text": "Heldere lijnen, slimme opbergruimte en een cleane uitstraling die lang mooi blijft."
+          }
+        },
+        {
+          "type": "style_card",
+          "settings": {
+            "kicker": "Warm & karaktervol",
+            "title": "Landelijk",
+            "text": "Houttinten, zachte vormen en een uitnodigende sfeer met een huiselijk gevoel."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

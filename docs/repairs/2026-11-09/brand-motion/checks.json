@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "checks": 23,
+  "results": [
+    {
+      "test": "desktop-continuous-full-width-coverage-with-nine-original-brands",
+      "result": "PASS"
+    },
+    {
+      "test": "rightward-motion-18px-per-second-with-fractional-frame-accumulation",
+      "result": "PASS"
+    },
+    {
+      "test": "cycle-wrap-retains-identical-logo-sequence-without-empty-gap",
+      "result": "PASS"
+    },
+    {
+      "test": "hover-pauses-and-leaving-resumes-without-catch-up-jump",
+      "result": "PASS"
+    },
+    {
+      "test": "keyboard-focus-pauses-and-blur-resumes",
+      "result": "PASS"
+    },
+    {
+      "test": "resuming-near-cycle-end-preserves-position-instead-of-clamping-to-original-row",
+      "result": "PASS"
+    },
+    {
+      "test": "explicit-pause-persists-until-play",
+      "result": "PASS"
+    },
+    {
+      "test": "hidden-document-stops-animation",
+      "result": "PASS"
+    },
+    {
+      "test": "offscreen-rail-stops-animation",
+      "result": "PASS"
+    },
+    {
+      "test": "visual-copies-have-no-duplicate-ids-or-tab-stops-and-keep-native-links",
+      "result": "PASS"
+    },
+    {
+      "test": "manual-arrow-navigation-stops-autoplay-and-restores-original-nine",
+      "result": "PASS"
+    },
+    {
+      "test": "live-reduced-motion-preference-disables-and-restores-automatic-mode",
+      "result": "PASS"
+    },
+    {
+      "test": "manual-swipe-and-buttons-no-automatic-motion-320px",
+      "result": "PASS"
+    },
+    {
+      "test": "manual-swipe-and-buttons-no-automatic-motion-390px",
+      "result": "PASS"
+    },
+    {
+      "test": "manual-swipe-and-buttons-no-automatic-motion-750px",
+      "result": "PASS"
+    },
+    {
+      "test": "manual-swipe-and-buttons-no-automatic-motion-989px",
+      "result": "PASS"
+    },
+    {
+      "test": "reduced-motion-starts-with-native-static-rail",
+      "result": "PASS"
+    },
+    {
+      "test": "ultrawide-viewport-keeps-entire-rail-filled",
+      "result": "PASS"
+    },
+    {
+      "test": "zero-or-one-brand-does-not-loop-0",
+      "result": "PASS"
+    },
+    {
+      "test": "zero-or-one-brand-does-not-loop-1",
+      "result": "PASS"
+    },
+    {
+      "test": "rtl-scroll-sign-still-moves-logos-physically-right",
+      "result": "PASS"
+    },
+    {
+      "test": "touch-interaction-on-wide-screen-switches-to-manual",
+      "result": "PASS"
+    },
+    {
+      "test": "editor-reconnect-cleans-copies-and-does-not-duplicate-controls",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Real marquee JavaScript with synthetic geometry, deterministic animation frames and viewport/media/visibility events. Browser visual motion checked separately."
+}

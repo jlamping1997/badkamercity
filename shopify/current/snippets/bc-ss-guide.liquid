@@ -1,0 +1,66 @@
+{% doc %}
+  @param {object} config - Configuration data
+  @param {object} documents - Product PDF links
+  @param {string} mode - content, help, faq, installation_specs or documents
+  @param {image} [photo] - Current product image
+  @param {string} [photo_alt] - Image alt text
+  @param {string} [field] - Choice field code
+  @param {string} section_id - Unique section ID
+{% enddoc %}
+{%- liquid
+  assign plus = false
+  if config.selected.met_uv == 'true'
+    assign plus = true
+  endif
+  assign model = 'ONE'
+  if plus
+    assign model = 'PLUS'
+  endif
+  assign height = 95
+  assign niche_height = 869
+  assign watts = 1050
+  case config.selected.uitvoering
+    when 'Medium'
+      assign height = 140
+      assign niche_height = 1319
+      assign watts = 2050
+    when 'Large'
+      assign height = 185
+      assign niche_height = 1769
+      assign watts = 3050
+  endcase
+  assign energy_cost = watts | times: 0.004 | money
+-%}
+{% if mode == 'help' %}
+  {% case field %}
+    {% when 'met_uv' %}
+      <p>{{ 'ss.guide.functions_intro' | t }}</p>
+      <div class="ss-help-cards ss-benefits">
+        <div><h3>{{ 'ss.benefits.ir_title' | t }}</h3><ul role="list"><li>{{ 'ss.benefits.ir_warmth' | t }}</li><li>{{ 'ss.benefits.ir_relax' | t }}</li><li>{{ 'ss.benefits.ir_circulation' | t }}</li><li>{{ 'ss.benefits.ir_tension' | t }}</li><li>{{ 'ss.benefits.ir_pain' | t }}</li></ul></div>
+        <div><h3>{{ 'ss.benefits.uv_title' | t }}</h3><ul role="list"><li>{{ 'ss.benefits.uv_vitamin' | t }}</li></ul><p class="ss-benefits__subheading">{{ 'ss.benefits.vitamin_intro' | t }}</p><ul role="list"><li>{{ 'ss.benefits.uv_immune' | t }}</li><li>{{ 'ss.benefits.uv_bones' | t }}</li><li>{{ 'ss.benefits.uv_muscles' | t }}</li></ul></div>
+      </div>
+      <p class="ss-note">{{ 'ss.guide.uv_use' | t }}</p>
+    {% when 'kleur' %}
+      <p>{{ 'ss.guide.colour_help' | t }}</p><div class="ss-colour-guide"><span><i class="ss-swatch ss-swatch--black"></i>Black</span><span><i class="ss-swatch ss-swatch--grey"></i>Organic Grey</span><span><i class="ss-swatch ss-swatch--sand"></i>Sand White</span><span><i class="ss-swatch ss-swatch--white"></i>White</span></div><p class="ss-note">{{ 'ss.guide.colour_note' | t }}</p>
+    {% when 'uitvoering' %}
+      <p>{{ 'ss.guide.size_help' | t }}</p><dl class="ss-size-guide"><div><dt>Small</dt><dd>33 × 95 cm · {{ 'ss.guide.coverage_small' | t }}</dd></div><div><dt>Medium</dt><dd>33 × 140 cm · {{ 'ss.guide.coverage_medium' | t }}</dd></div><div><dt>Large</dt><dd>33 × 185 cm · {{ 'ss.guide.coverage_large' | t }}</dd></div></dl><p class="ss-note">{{ 'ss.guide.size_note' | t }}</p>
+    {% when 'plaatsing' %}
+      <dl class="ss-mount-guide"><div><dt>{{ 'ss.guide.inbouw' | t }}</dt><dd>{{ 'ss.guide.mount_inbouw' | t }}</dd></div><div><dt>{{ 'ss.guide.opbouw' | t }}</dt><dd>{{ 'ss.guide.mount_opbouw' | t }}</dd></div><div><dt>{{ 'ss.guide.hoek' | t }}</dt><dd>{{ 'ss.guide.mount_hoek' | t }}</dd></div></dl><p class="ss-note">{{ 'ss.guide.mount_help_note' | t }}</p>
+  {% endcase %}
+{% elsif mode == 'content' %}
+  <section class="ss-container ss-light-story" id="ss-light-{{ section_id }}" aria-labelledby="ss-light-title-{{ section_id }}">
+    <div class="ss-light-story__image">{% if photo != blank %}{{ photo | image_url: width: 1000 | image_tag: widths: '400, 600, 1000', sizes: '(min-width: 750px) 460px, 100vw', loading: 'lazy', alt: photo_alt }}{% endif %}<span>Round {{ model }}</span></div>
+    <div class="ss-light-story__content"><span class="ss-eyebrow">{{ 'ss.redesign.light_eyebrow' | t }}</span><h2 id="ss-light-title-{{ section_id }}">{{ 'ss.redesign.light_title' | t }}</h2><p class="ss-light-story__intro">{{ 'ss.redesign.light_intro' | t }}</p>
+      <div class="ss-light-feature"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 25c-7-8 7-9 0-18m6 18c-7-8 7-9 0-18m6 18c-7-8 7-9 0-18"/></svg><div><h3>{{ 'ss.redesign.ir_title' | t }}</h3><p>{{ 'ss.redesign.ir_text' | t }}</p></div></div>
+      <div class="ss-light-feature ss-light-feature--uv"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="6"/><path d="M16 2v4m0 20v4M2 16h4m20 0h4M6 6l3 3m14 14 3 3M6 26l3-3M23 9l3-3"/></svg><div><h3>{% if plus %}{{ 'ss.redesign.uv_title' | t }}{% else %}{{ 'ss.redesign.one_title' | t }}{% endif %}</h3><p>{% if plus %}{{ 'ss.redesign.uv_text' | t }}{% else %}{{ 'ss.redesign.one_text' | t }}{% endif %}</p></div></div>
+      <div class="ss-energy-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m11 2-7 9h5l-1 7 8-10h-5l1-6Z"/></svg><span>{{ 'ss.redesign.energy_cost' | t: cost: energy_cost }}</span></div><small class="ss-energy-footnote">{{ 'ss.redesign.energy_note' | t }}</small>
+    </div>
+  </section>
+{% elsif mode == 'installation_specs' %}
+  <h3>{{ 'ss.redesign.installation_specs' | t }}</h3><dl class="ss-spec-table"><div><dt>{{ 'ss.guide.glass' | t }}</dt><dd>330 × {{ height | times: 10 }} mm <small>({{ 'ss.guide.width_height' | t }})</small></dd></div>{% if config.selected.plaatsing == 'Inbouw' %}<div><dt>{{ 'ss.guide.niche' | t }}</dt><dd>263 × {{ niche_height }} × ≥ 100 mm <small>({{ 'ss.guide.width_height_depth' | t }})</small></dd></div>{% endif %}<div><dt>{{ 'ss.guide.distance' | t }}</dt><dd>30–50 cm</dd></div></dl>{% if config.selected.plaatsing == 'Inbouw' %}<p class="ss-note ss-niche-note">{{ 'ss.guide.niche_note' | t }}</p>{% endif %}
+{% elsif mode == 'documents' %}
+  {% if documents.items.size > 0 %}<div class="ss-downloads" id="ss-docs-{{ section_id }}"><h3>{{ 'ss.documents' | t }}</h3><ul class="ss-documents" role="list">{% for document in documents.items %}{% assign document_url = document.url %}{% assign document_name = document.caption | downcase %}{% if config.selected.plaatsing == 'Inbouw' and document_name contains 'installatiehandleiding' %}{% assign document_url = 'https://sunshower.eu/media/wfadot2n/p6094-installation-guide-round-build-in-rev-i-website.pdf' %}{% endif %}<li><a href="{{ document_url | escape }}" target="_blank" rel="noopener"><svg class="ss-pdf-icon" viewBox="0 0 24 28" aria-hidden="true"><path d="M4 1h10l6 6v19H4V1Z M14 1v7h6"/><text x="5" y="21">PDF</text></svg><span>{{ document.caption | escape }}</span><svg class="ss-download-arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 14v3h14v-3"/></svg></a></li>{% endfor %}</ul></div>{% endif %}
+{% elsif mode == 'faq' %}
+  <section class="ss-container ss-faq" aria-labelledby="ss-faq-title-{{ section_id }}"><div class="ss-section-intro"><span class="ss-eyebrow">{{ 'ss.guide.faq_eyebrow' | t }}</span><h2 id="ss-faq-title-{{ section_id }}">{{ 'ss.guide.faq_title' | t }}</h2></div><div>{% assign faq_keys = 'difference,contents,dimensions,steam' | split: ',' %}{% for key in faq_keys %}{% assign question_key = 'ss.guide.faq_' | append: key | append: '_q' %}{% assign answer_key = 'ss.guide.faq_' | append: key | append: '_a' %}<details><summary>{{ question_key | t }}</summary><p>{{ answer_key | t }}</p></details>{% endfor %}</div></section>
+{% endif %}
+

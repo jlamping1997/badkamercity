@@ -1,0 +1,53 @@
+{
+  "scope": "READ_ONLY_AUDIT_PROPOSAL_NOT_APPLIED",
+  "date": "2026-11-08",
+  "main_theme_id": 196328685834,
+  "profiles_requested": 227,
+  "profiles_read": 227,
+  "collection_profiles": 226,
+  "global_profiles": 1,
+  "profile_errors": 0,
+  "profile_generation": "20261107T080100_ca321b",
+  "unique_filter_fields": 34,
+  "zero_filter_profiles": 62,
+  "zero_filter_empty_profiles": 56,
+  "global_profile_products": 15897,
+  "global_shopping_products": 15155,
+  "exact_color_names": 1002,
+  "existing_color_groups": 13,
+  "existing_grouped_exact_names": 36,
+  "existing_ungrouped_exact_names": 966,
+  "proposed_basic_colors": 18,
+  "mapping_proposal_status": {
+    "DUIDELIJKE_NAAM": 335,
+    "VOORSTEL_TINT": 160,
+    "BRONCONTROLE_NODIG": 486,
+    "GEEN_KLEUR": 21
+  },
+  "assigned_proposals": 495,
+  "open": 507,
+  "category_exact_colors": {
+    "wastafelkranen": 29,
+    "tegels": 807,
+    "cottoceramix": 792,
+    "kranen": 50
+  },
+  "gold_union_pilot": {
+    "found": 93,
+    "returned": 93,
+    "unique_ids": 93,
+    "messing_members_classification_approved": false,
+    "production_control_created": false
+  },
+  "live_md5": {
+    "assets/bc-external-filters.js": "5bc50f08e750aff663b8de6309e909ec",
+    "assets/bc-external-filters.css": "6e3cba08884edac08fdcf229a9fd170d",
+    "snippets/bc-external-filters.liquid": "fdbb71e4463e700b721c21ee95a38331"
+  },
+  "live_git_filter_files_parity": false,
+  "production_writes": 0,
+  "new_browser_mobile_test": false,
+  "full_sku_color_verification": false,
+  "report_review": "PASS_NO_MATERIAL_CORRECTIONS",
+  "next_action": "Owner reviews18basic-color proposal; then classify4ambiguous Wastafelkranen terms for bounded pilot. Before implementation, read real f_kleurgroep coverage and start from live-MAIN-parity UNPUBLISHED copy."
+}

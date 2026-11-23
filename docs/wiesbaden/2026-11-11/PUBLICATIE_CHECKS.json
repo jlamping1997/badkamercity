@@ -1,0 +1,42 @@
+{
+  "status": "VERIFIED_READY_MANUAL_PUBLICATION_REQUIRED",
+  "date": "2026-11-11",
+  "targetTheme": "196441932042",
+  "rollbackTheme": "196416504074",
+  "fullComparison": {
+    "mainFiles": 1436,
+    "conceptFiles": 1684,
+    "unchangedExistingFiles": 1434,
+    "modifiedExistingFiles": 2,
+    "newBoundedAssets": 248,
+    "removedFiles": 0
+  },
+  "scope": {
+    "menuGroups": 268,
+    "expandedProducts": 1845,
+    "reviewedResolved": 2386,
+    "vendorTotal": 2451,
+    "heldUntouched": 65
+  },
+  "browser": {
+    "desktop": "PASS Ribbd29.5301 Chroom/Standaard(coldstart)/€145 →29.5310 Chroom/XL(zondercoldstart)/€219",
+    "nativeCart": "PASS normal form added actual variant53859822338314 for29.5310 at€219, initial cart0; test-only line removed; cart0 restored",
+    "responsive": "PASS browser CSS viewport449px using native browser zoom; no horizontal overflow; buttons wrap and29.5310→29.5301 yields correct title/SKU/€145; zoom100% restored",
+    "physicalPhone": "NOT_TESTED",
+    "checkout": "NOT_TESTED"
+  },
+  "publication": {
+    "userExplicitlyAuthorized": true,
+    "route": "Shopify themePublish discovered; target-only role publication; previous MAIN retained for rollback",
+    "result": "BLOCKED_BY_CONNECTOR_SAFETY_POLICY",
+    "blocked": {
+      "blocked": true,
+      "matched": "themePublish",
+      "category": "destructive",
+      "reason": "Publishing a theme is blocked here. Use theme_publish after the user says yes to publishing the theme, or ask them to publish it in Shopify admin.",
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "dedicatedThemePublishToolAvailable": false,
+    "actionRequired": "Owner: Shopify Webshop>Themas>BadkamerCity - Wiesbaden vervolg concept>Publiceren, confirm. Keep65 holds untouched. No theme role change was performed."
+  }
+}

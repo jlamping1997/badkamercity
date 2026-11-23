@@ -1,0 +1,26 @@
+{{ 'bc-brands.css' | asset_url | stylesheet_tag }}
+
+<div class="bc-brand-directory page-width">
+  <h1 class="bc-brand-directory__heading">{{ section.settings.heading | escape }}</h1>
+  <ul class="bc-brand-list bc-brand-directory__grid" role="list">
+    {% render 'bc-brand-items' %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Merkenoverzicht",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titel",
+      "default": "Onze merken"
+    },
+    {
+      "type": "paragraph",
+      "content": "Logo’s en merklinks beheer je bij Thema-instellingen → Merken."
+    }
+  ]
+}
+{% endschema %}

@@ -1,4 +1,11 @@
 # BadkamerCity — complete thema-component- en instellingenreferentie
+
+> **9 november 2026 — GIT-SYNC-02:** de actuele codebranch bevat nu de al gepubliceerde kaart-overlay, filter-CSS en tijdelijke voorraadpresentatie inclusief tegelkoopbox. De tien files zijn bytegelijk vanuit MAIN overgenomen, geen nieuw storefrontgedrag. settings.bc_temporary_in_stock stuurt presentatie in de kaart-, cart-, Verlavio- en tegelpaden; het is geen bron voor voorraad of bestelbaarheid. [Bestandsreview en actuele pariteit](repairs/2026-11-09/published-source-sync/README.md).
+
+> **8 november 2026 — mobiele lijst en prijsopmaak:** de mobiele lijst is gepubliceerd op MAIN196354474250. Het nieuwe prijsconcept196368531722 gebruikt snippets/bc-money.liquid en assets/bc-money.js, geladen vóór de bestaande deferred consumenten. Alleen werkelijk hele EUR-bedragen vanaf €100 verliezen lege decimalen; data-afronding en m²-uitzondering staan in [het prijscontract](PRICING_POLICY.md). [Actuele uitvoering en grenzen](repairs/2026-11-08/whole-euro-prices/README.md).
+
+> **Actuele correctie 8 november 2026:** Badkamermeubels is nu `category-landing` → `main-category-landing` + advies, met zeven bestaande menukinderen. De oude hub en drie inline Admin-stijlblokken worden niet meer gebruikt; de drie blokken zijn verwijderd op eigenaarverzoek. Onderstaande oude hubtoewijzing/CSS-afhankelijkheid is historische broninformatie. [Bewijs en rollback](repairs/2026-11-08/furniture-standard/README.md).
+
 > **Automatisch samengesteld op 7 oktober 2026 uit de werkelijk live Shopify-theme-code #194864677130.** Dit is een code-index, geen bewijs dat iedere sectie ingeschakeld is of alle instellingen ingevuld zijn. Raadpleeg voor feitelijke waarden van actieve JSON-templates, de Shopify Theme Editor en Admin. De broncode blijft leidend. Aangemaakte referenties zijn statisch uit Liquid gedetecteerd en kunnen aanroepen binnen comments bevatten.
 
 ## Zo gebruik je dit bestand
@@ -1161,9 +1168,9 @@ Elke sectie hieronder heeft een bestand in `sections/`. Aanroepen via snippets/a
 **Statische code-afhankelijkheden:** `assets/icon-close.svg`, `assets/icon-tick.svg`
 
 ### 62. `sections/predictive-search.liquid`
-**Geen direct parsebaar Theme Editor-schema in dit bestand** (mogelijk via vaste sectiegroep of legacy-code).
-**Aangeroepen door JSON-template(s):** Geen directe JSON-template-match aangetroffen — mogelijk sectiegroup/dynamisch/niet actief.
-**Statische code-afhankelijkheden:** `snippets/loading-spinner.liquid`
+**Actief gecontroleerd op 9 november 2026:** de header laadt deze AJAX-sectie via predictive-search.js en /search/suggest met section_id=predictive-search. Een directe JSON-template-aanroep is voor deze route niet nodig.
+**Geen eigen Theme Editor-schema:** dit is de vaste antwoordsectie van de snelle zoekfunctie.
+**Gedeelde afhankelijkheden:** snippets/bc-money.liquid, snippets/loading-spinner.liquid en assets/component-predictive-search.css. Minimumprijs + Vanaf wanneer prijzen variëren; fotoloze titels gebruiken twee gridkolommen. [Bewijs en testgrenzen](repairs/2026-11-09/predictive-search-prices/README.md).
 
 ### 63. `sections/product-description.liquid`
 **Shopify Theme Editor naam:** Product Description. **Settings:** 0. **Blocktypen:** 0.

@@ -1,0 +1,46 @@
+{
+  "time": "2026-10-30T16:23:44.219Z",
+  "baselineCopy": {
+    "theme": "gid://shopify/OnlineStoreTheme/195948839178",
+    "count": 1354,
+    "different": 0,
+    "verifiedAt": "2026-10-30T16:21:00.107Z"
+  },
+  "themes": [
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195947036938",
+      "name": "BadkamerCity - Retour aanmelden en footer",
+      "role": "MAIN",
+      "processing": false,
+      "count": 1354,
+      "changed": [],
+      "missing": []
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/195948839178",
+      "name": "BadkamerCity - Retourknop in header",
+      "role": "UNPUBLISHED",
+      "processing": false,
+      "count": 1354,
+      "changed": [
+        {
+          "filename": "sections/header.liquid",
+          "checksumMd5": "78a34a0d90ff1df449f3f6ac05db476d"
+        }
+      ],
+      "missing": []
+    }
+  ],
+  "headerBodyExact": true,
+  "qaRestoredExact": true,
+  "qaRestoredMd5": "24ae4cff55afe7f2453e4e9b6a0c2479",
+  "page": {
+    "id": "gid://shopify/Page/166668894474",
+    "handle": "retour-aanmelden",
+    "templateSuffix": "retour-aanmelden",
+    "isPublished": false
+  },
+  "liveWrites": 0,
+  "pagePublication": 0,
+  "successfulSubmissions": 0
+}

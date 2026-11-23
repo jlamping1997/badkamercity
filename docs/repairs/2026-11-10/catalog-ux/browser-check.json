@@ -1,0 +1,53 @@
+{
+  "browser": "Cloud Chrome desktop",
+  "preview_theme": "196395073802",
+  "urls": [
+    "https://badkamercity.nl/collections/bad-accessoires",
+    "https://badkamercity.nl/collections/kranen",
+    "https://badkamercity.nl/collections/vendors?q=Hotbath"
+  ],
+  "checks": {
+    "external_card_title_hover": {
+      "cardHovered": true,
+      "mediaHovered": false,
+      "secondaryOpacity": "0"
+    },
+    "external_card_image_hover": {
+      "cardHovered": true,
+      "mediaHovered": true,
+      "secondaryOpacity": "0.0708081 (transition observed)"
+    },
+    "back_to_title": {
+      "mediaHovered": false,
+      "secondaryOpacity": "0"
+    },
+    "editorial": {
+      "width": 960,
+      "numbered_cards": 0,
+      "category_specific_copy": true,
+      "correct_links": true
+    },
+    "kranen_hub": {
+      "specific_heading_count": 1,
+      "faq_count": 3,
+      "document_overflow": false
+    },
+    "native_vendor": {
+      "external": false,
+      "cards": 24,
+      "native_image_hit_area_z_index": 3,
+      "document_overflow": false
+    },
+    "footer": {
+      "address": "Retouradres\nBadkamercity\nZichtenburglaan 150\n2544 EB Den Haag",
+      "containsHarrySuiker": false
+    }
+  },
+  "not_tested": [
+    "physical mobile/touch",
+    "native secondary-image visual swap (24 sampled native cards had at most one image)",
+    "real contact submission/cart/checkout",
+    "new server index or recommended order"
+  ],
+  "screenshot": "desktop-preview.jpg"
+}

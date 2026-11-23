@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-08",
+  "status": "PASS_WITH_EXPLICIT_LIMITS",
+  "adminPageReadback": true,
+  "publicPageReadback": "live-pages.json",
+  "cartRateSamples": "actual-rate-verification.json",
+  "nativeFormRetained": true,
+  "liquidChecks": {
+    "files": 2,
+    "revision": 1,
+    "success": true,
+    "details": "liquid-validation.json"
+  },
+  "previewRoutes": 4,
+  "fullManifest": {
+    "filesPerTheme": 1387,
+    "equal": 1381,
+    "expectedDifferences": 6,
+    "missing": 0,
+    "extra": 0,
+    "mainUnchanged": true,
+    "priorReturnFourFilesPreserved": true
+  },
+  "limits": [
+    "Unpublished theme; owner publication and subsequent live checks pending",
+    "No new mobile/visual browser or JavaScript execution in this round",
+    "No real payment, order, email, return confirmation or purchase/consent tracking test",
+    "Two NL cart quotes at 96.15 and109; not exact boundary or every SKU/address",
+    "Native shipping policy absent and write_legal_policies unavailable",
+    "Profile coversAllItems=false and one location without rates require separate investigation"
+  ],
+  "repositoryReadback": "Performed separately after preparing these files; remote commits and per-blob hashes must be verified by executor"
+}
+

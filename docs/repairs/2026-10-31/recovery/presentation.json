@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "method": "Offline LiquidJS with explicit translation/money fixtures; real tile core and buybox method in happy-dom. No browser/server/cart/email claim.",
+  "checks": [
+    "Tile JSON matches box area and actual selected unit price",
+    "Native tile label separates box and m² prices",
+    "Native unit measurement is not duplicated by the tile label",
+    "No invented tile unit for non-tile or zero area",
+    "Missing supplier price derives from box price and real box area",
+    "Variable product price avoids presenting a single native m² price",
+    "Empty collection SEO has escaped title-specific description",
+    "Existing SEO stays intact; non-collection gets no invented fallback",
+    "Description is limited and passed explicitly to isolated meta snippet",
+    "Search USP has no 75-euro or same-day shipping promise",
+    "Untouched empty area has neutral totals and disabled purchase",
+    "Entered surface uses real core, 10% waste and whole boxes",
+    "Invalid edited area shows feedback and prevents buying",
+    "Default waste remains 10% and initial field is not a box-sized order",
+    "Manual whole boxes still work and do not add waste twice",
+    "Invalid manual box quantity cannot preserve a stale total",
+    "Footer only exposes real link destinations outside Theme Editor",
+    "Footer brand directory configured; removed address remains empty"
+  ],
+  "sourceManifest": "final-source-provenance.json"
+}

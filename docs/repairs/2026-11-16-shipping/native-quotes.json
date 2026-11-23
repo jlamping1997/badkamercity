@@ -1,0 +1,439 @@
+{
+  "date": "2026-11-16",
+  "scope": "Live NL native shipping quotes, isolated anonymous carts",
+  "rows": [
+    {
+      "label": "Pakket 99,99",
+      "items": [
+        {
+          "id": 53188706271498,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 9999,
+      "expected_rate": "6.95",
+      "cart_total_cents": 9999,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "Pakket exact 100,00",
+      "items": [
+        {
+          "id": 53175596450058,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 10000,
+      "expected_rate": "6.95",
+      "cart_total_cents": 10000,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "label": "Gemengde merken pakket",
+      "items": [
+        {
+          "id": 53859734847754,
+          "quantity": 1
+        },
+        {
+          "id": 54059547394314,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 8118,
+      "expected_rate": "6.95",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 8118,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Mozaiek boven 100",
+      "items": [
+        {
+          "id": 53330763120906,
+          "quantity": 2
+        }
+      ],
+      "expected_total": 19190,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 19190,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Mozaiek 1 artikel",
+      "items": [
+        {
+          "id": 53330763120906,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 9595,
+      "expected_rate": "6.95",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 9595,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Pakket boven 100,00",
+      "items": [
+        {
+          "id": 53175596450058,
+          "quantity": 1
+        },
+        {
+          "id": 53175648354570,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 11200,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 11200,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Mozaiek 3 artikelen onder 100",
+      "items": [
+        {
+          "id": 53330764300554,
+          "quantity": 3
+        }
+      ],
+      "expected_total": 8985,
+      "expected_rate": "6.95",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 8985,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegels onder 500",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 26807,
+      "expected_rate": "75.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 26807,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "75.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Mozaiek 4 artikelen boven 100",
+      "items": [
+        {
+          "id": 53330764300554,
+          "quantity": 4
+        }
+      ],
+      "expected_total": 11980,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 11980,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegels boven 500",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 2
+        }
+      ],
+      "expected_total": 53614,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 53614,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegel en kraan onder 500",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        },
+        {
+          "id": 53175596450058,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 36807,
+      "expected_rate": "75.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 36807,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "75.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegel en kranen samen boven 500",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        },
+        {
+          "id": 53175596450058,
+          "quantity": 3
+        }
+      ],
+      "expected_total": 56807,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 56807,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Glas exact 500",
+      "items": [
+        {
+          "id": 53859858874634,
+          "quantity": 2
+        }
+      ],
+      "expected_total": 50000,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 50000,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Glas onder 500",
+      "items": [
+        {
+          "id": 53859858874634,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 25000,
+      "expected_rate": "45.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 25000,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "45.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Bad boven 500",
+      "items": [
+        {
+          "id": 53859735699722,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 119900,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 119900,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegel en glas hoogste tarief",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        },
+        {
+          "id": 53859765649674,
+          "quantity": 1
+        }
+      ],
+      "expected_total": 46707,
+      "expected_rate": "75.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 46707,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "75.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Tegel en glas samen boven 500",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        },
+        {
+          "id": 53859765649674,
+          "quantity": 1
+        },
+        {
+          "id": 53175648354570,
+          "quantity": 3
+        }
+      ],
+      "expected_total": 50307,
+      "expected_rate": "0.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 50307,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    },
+    {
+      "label": "Glas en kranen samen 499",
+      "items": [
+        {
+          "id": 53859765649674,
+          "quantity": 1
+        },
+        {
+          "id": 53175596450058,
+          "quantity": 3
+        }
+      ],
+      "expected_total": 49900,
+      "expected_rate": "45.00",
+      "passed": true,
+      "own_cart_cleaned": true,
+      "cart_total_cents": 49900,
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "45.00",
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ]
+    }
+  ],
+  "order_or_payment_created": false,
+  "interrupted_sequential_pilot_cleanup_verified": false,
+  "xxl_limit": "No current XXL products; native tiers read back, no real XXL cart test",
+  "status": "VERIFIED",
+  "completed_parallel_carts_cleaned": true
+}

@@ -1,0 +1,78 @@
+{
+  "verifiedAt": "2026-11-07T22:50:02.860Z",
+  "status": "DATA_APPLIED_DRAFT_VERIFIED_AWAITING_MERCHANT_PUBLICATION",
+  "main": {
+    "id": "gid://shopify/OnlineStoreTheme/196246372618",
+    "name": "BadkamerCity - Groene voorraadmelding",
+    "role": "MAIN",
+    "fileCount": 1385,
+    "unchangedSinceBeforeUpload": true
+  },
+  "draft": {
+    "id": "gid://shopify/OnlineStoreTheme/196341825802",
+    "name": "BadkamerCity - Verlavio keuzemenus 7 nov",
+    "role": "UNPUBLISHED",
+    "fileCount": 1387,
+    "processing": false,
+    "processingFailed": false
+  },
+  "productionFiles": [
+    {
+      "filename": "assets/bc-product-switcher.js",
+      "beforeMd5": "c6b414ec8cf180ff45181222e807fcef",
+      "afterMd5": "bb3a7122c7135cf26ff669f253c5449e"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "beforeMd5": "7137e51757e8af9d844a24bc995d4c13",
+      "afterMd5": "2c030d6e9515f1be1555ca423417cfa8"
+    },
+    {
+      "filename": "locales/nl.json",
+      "beforeMd5": "c84b00ad38e006f25574a08579cf21b6",
+      "afterMd5": "f6f2f1b8a0eceef6427c10a388613403"
+    },
+    {
+      "filename": "snippets/bc-fabriecio-choices.liquid",
+      "beforeMd5": "eab962d1ff1e998140d9adbd12d163a4",
+      "afterMd5": "8fc61b7850032efd1c07695fba5de668"
+    },
+    {
+      "filename": "assets/bc-verlavio-choices.css",
+      "beforeMd5": null,
+      "afterMd5": "8d278a291b4d5d98008fe8d530a2b7bf"
+    }
+  ],
+  "auxiliaryTemplate": {
+    "filename": "templates/product.bc-verlavio-review.liquid",
+    "beforeMd5": null,
+    "afterMd5": "9046f6312adff5be09cfca657cf351a9",
+    "purpose": "Temporary component-width QA interface neutralized after verification; standard product section only; no assignment was made in this task",
+    "deletionBlockedByConnector": true,
+    "neutralizedReadbackExact": true,
+    "doesNotClaimParityWithProductJsonTemplate": true
+  },
+  "unexpectedChanges": [],
+  "settingsDataUnchanged": true,
+  "browser": {
+    "passedRoutes": [
+      "BC_2009 → BG_2009: round, 25 cm, ceiling retained",
+      "BG_2009 → BG_2015: gold, 25 cm, ceiling retained",
+      "CLW_6001 → CLW_6002: copper retained; without-overflow selection"
+    ],
+    "componentWidthsCssPx": [
+      320,
+      390
+    ],
+    "sixVisibleLoadedColorImagesAtEachWidth": true,
+    "noHorizontalOverflowAtEitherWidth": true,
+    "physicalDeviceTested": false,
+    "previewSharingLinkUnavailable": "Copy link did not expose a share URL in this browser; review the named draft in Shopify or retained preview tab"
+  },
+  "limits": [
+    "Theme not published; MAIN files were not written",
+    "Stock settings and the previously requested temporary stock-text override unchanged",
+    "Data proof includes exact 481-owner write/readback; unchanged owners use their earlier fresh snapshot",
+    "No checkout or payment actions tested"
+  ]
+}

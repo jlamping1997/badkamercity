@@ -1,0 +1,217 @@
+{
+  "recordedAt": "2026-10-20T18:00:02.068069+00:00",
+  "scope": "Wiesbaden reviewed pilot 24.3710; no catalogue rollout",
+  "theme": {
+    "mainId": "195486253322",
+    "previewId": "195488317706",
+    "name": "BadkamerCity - Productpagina smal desktop",
+    "role": "UNPUBLISHED",
+    "comparison": {
+      "main": {
+        "before": 508,
+        "after": 508,
+        "changed": [],
+        "added": [],
+        "removed": [],
+        "unchanged": 508
+      },
+      "preview": {
+        "before": 509,
+        "after": 511,
+        "changed": [
+          {
+            "filename": "assets/section-main-product.css",
+            "checksumMd5": "53f4a37c42885e5cc7cfff0996270b2e"
+          },
+          {
+            "filename": "locales/en.default.json",
+            "checksumMd5": "9d5d7c4b1598fa51af48985af22c101f"
+          },
+          {
+            "filename": "locales/nl.json",
+            "checksumMd5": "42b7905e3d50d57245ec9155b90669b2"
+          },
+          {
+            "filename": "sections/main-product.liquid",
+            "checksumMd5": "d6d82ff85cf97d6e42a7e8be968f2ea7"
+          },
+          {
+            "filename": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+            "checksumMd5": "503968acfdffd45ecd6684352f827a87"
+          }
+        ],
+        "added": [
+          {
+            "filename": "snippets/bc-product-breadcrumbs.liquid",
+            "checksumMd5": "26b4a42babc7b8c9d978e4dd8a052771"
+          },
+          {
+            "filename": "snippets/bc-product-documents.liquid",
+            "checksumMd5": "214f375f30c5d123499f4bf3b0395776"
+          }
+        ],
+        "removed": [],
+        "unchanged": 504
+      }
+    },
+    "files": [
+      {
+        "filename": "sections/main-product.liquid",
+        "before_md5": "f72891c0e0688dfe145efd09501e643d",
+        "after_md5": "d6d82ff85cf97d6e42a7e8be968f2ea7"
+      },
+      {
+        "filename": "snippets/bc-wiesbaden-reviewed-specs.liquid",
+        "before_md5": "4904f0e0dc304ff37ab88db8f4bfcbda",
+        "after_md5": "503968acfdffd45ecd6684352f827a87"
+      },
+      {
+        "filename": "assets/section-main-product.css",
+        "before_md5": "fdd3874bda3a5e89c14823d417febcfe",
+        "after_md5": "53f4a37c42885e5cc7cfff0996270b2e"
+      },
+      {
+        "filename": "locales/nl.json",
+        "before_md5": "409250578bda93abc18ca0be20061b54",
+        "after_md5": "42b7905e3d50d57245ec9155b90669b2"
+      },
+      {
+        "filename": "locales/en.default.json",
+        "before_md5": "724f55fe10e472afb32736141f4cb921",
+        "after_md5": "9d5d7c4b1598fa51af48985af22c101f"
+      },
+      {
+        "filename": "snippets/bc-product-breadcrumbs.liquid",
+        "before_md5": null,
+        "after_md5": "26b4a42babc7b8c9d978e4dd8a052771"
+      },
+      {
+        "filename": "snippets/bc-product-documents.liquid",
+        "before_md5": null,
+        "after_md5": "214f375f30c5d123499f4bf3b0395776"
+      }
+    ],
+    "legacyQaTemplateUnchanged": "0533e89005d1b3541da4f4b8e099567a"
+  },
+  "productDocumentMetafield": {
+    "productId": "gid://shopify/Product/10657256210698",
+    "namespace": "custom",
+    "key": "technische_documenten",
+    "definition": {
+      "id": "gid://shopify/MetafieldDefinition/409276645642",
+      "name": "Technische documenten",
+      "type": {
+        "name": "list.url"
+      }
+    },
+    "type": "list.url",
+    "before": {
+      "id": "gid://shopify/Metafield/69530475102474",
+      "type": "list.url",
+      "jsonValue": [
+        "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/24.3710.jpg"
+      ],
+      "compareDigest": "8ca9dcfbf2414f66d92175235cf9d3261051ff2795a7a28414b396ad39facf28",
+      "definition": {
+        "id": "gid://shopify/MetafieldDefinition/409276645642",
+        "name": "Technische documenten",
+        "type": {
+          "name": "list.url"
+        }
+      }
+    },
+    "after": {
+      "id": "gid://shopify/Metafield/69530475102474",
+      "type": "list.url",
+      "jsonValue": [
+        "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/24.3710.jpg",
+        "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/24.3710.pdf"
+      ],
+      "compareDigest": "22728096772a72122d68fdd2406984eb45ed9b0cf5961fec17be0d2de4da329e",
+      "definition": {
+        "id": "gid://shopify/MetafieldDefinition/409276645642",
+        "name": "Technische documenten",
+        "type": {
+          "name": "list.url"
+        }
+      }
+    },
+    "mutationErrors": [],
+    "compareAndSet": true
+  },
+  "sourceHttpChecks": [
+    {
+      "url": "https://kh-compano.b-cdn.net/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/24.3710.jpg",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "bytes": 33573,
+      "jpegSignature": true
+    },
+    {
+      "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/24.3710.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 296291,
+      "pdfSignature": true
+    }
+  ],
+  "validation": {
+    "themeCheck": {
+      "success": true,
+      "files": 7,
+      "revision": 2,
+      "nonErrorFindings": [
+        "main-product Liquid complexity 208 exceeds120",
+        "unused seo_media",
+        "unknown continue object"
+      ]
+    },
+    "conditionalRendering": {
+      "cases": 9,
+      "allPassed": true,
+      "casesTested": [
+        "drawing and PDF",
+        "drawing only",
+        "PDF only",
+        "empty list",
+        "duplicate URLs",
+        "other SKU",
+        "other vendor",
+        "multiple variants",
+        "unsafe URL protocol"
+      ],
+      "breadcrumbLinks": 4,
+      "currentPage": true
+    }
+  },
+  "browser": {
+    "native": {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "breadcrumbCount": 1,
+      "oldBreadcrumbCount": 0,
+      "breadcrumbBottom": 237.984375,
+      "titleTop": 281.171875,
+      "specificationRows": 33,
+      "documentLinks": 2,
+      "horizontalOverflow": false,
+      "liquidErrors": false,
+      "attachmentAnchorClicked": true,
+      "attachmentTopAfterClick": 196.5,
+      "screenshots": [
+        "design/pdp-breadcrumb-top-20261020.jpg",
+        "design/pdp-bijlagen-20261020.jpg"
+      ]
+    },
+    "responsiveRecheck": {
+      "status": "BLOCKED_NOT_TESTED",
+      "reason": "Cloud Browser URL policy only permits http/https; data URL fixture was blocked. No workaround attempted.",
+      "previousNarrowDesktopCorrectionPreserved": true
+    },
+    "cartAndWishlistActions": "NOT_TESTED",
+    "physicalPhone": "NOT_TESTED"
+  },
+  "publication": "NOT_PUBLISHED; owner reviews and publishes existing draft"
+}

@@ -1,0 +1,14 @@
+{% doc %}
+Removes legacy embedded stylesheet elements while preserving the surrounding content.
+@param {string} content - Trusted merchant-authored HTML.
+{% enddoc %}
+{%- assign chunks = content | split: '<style' -%}
+{{- chunks.first -}}
+{%- for chunk in chunks offset: 1 -%}
+  {%- if chunk contains '</style>' -%}
+    {%- assign style_parts = chunk | split: '</style>' -%}
+    {%- for part in style_parts offset: 1 -%}{{- part -}}{%- endfor -%}
+  {%- else -%}
+    {{- '<style' -}}{{- chunk -}}
+  {%- endif -%}
+{%- endfor -%}

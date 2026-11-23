@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-16",
+  "status": "OWNER_PUBLISHED_LIVE_VERIFIED",
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/196542005514",
+    "name": "BadkamerCity - PostNL werkdagen 14u",
+    "role": "MAIN"
+  },
+  "originalMainThemeId": "gid://shopify/OnlineStoreTheme/196690379018",
+  "weekdayCalendar": {
+    "handlingDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "deliveryDays": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI"
+    ],
+    "cutoff": "14:00",
+    "timezone": "Europe/Amsterdam",
+    "before": "Next weekday",
+    "after": "Two weekdays",
+    "weekend": "Process Monday; deliver Tuesday",
+    "nationalHolidayTableAdded": false
+  },
+  "scope": {
+    "defaultStockUnchanged": true,
+    "inventoryQuantitiesWritten": false,
+    "parcelTypes": [
+      "Afbouwdeel voor badrandkraan",
+      "Afbouwdeel voor douchekraan",
+      "Afbouwdeel voor wastafelkraan",
+      "Badkranen",
+      "Badrandhanddoucheset",
+      "Bidetkraan",
+      "Bidetkranen",
+      "Douchekranen",
+      "Doucheset",
+      "Douchesystemen",
+      "Elektronische inbouw wastafelkraan",
+      "Fonteinkraan",
+      "Fonteinkraanset",
+      "Fonteinkranen",
+      "Glijstangset met handdouche",
+      "Handdouche",
+      "Handdouchehouder",
+      "Handdouchehouders",
+      "Handdouches",
+      "Handdouches en houders",
+      "Handdoucheset",
+      "Hoekstopkranen",
+      "Hoofddouche",
+      "Hoofddouchehouder",
+      "Hoofddouches",
+      "Inbouw badkraan",
+      "Inbouw douchemengkraan",
+      "Inbouw doucheset",
+      "Inbouw wastafelkraan",
+      "Inbouwbadkraan",
+      "Inbouwbadkranen",
+      "Inbouwdeel voor badrandkraan",
+      "Inbouwdeel voor douchekraan",
+      "Inbouwdeel voor vrijstaande badkraan",
+      "Inbouwdeel voor wastafelkraan",
+      "Inbouwdouchekraan",
+      "Inbouwdoucheset",
+      "Inbouwdouchesets",
+      "Inbouwfonteinkranen",
+      "Inbouwwastafelkraan",
+      "Inbouwwastafelkranen",
+      "Keukenkraan",
+      "Keukenkranen",
+      "Kraanbinnenwerk",
+      "Kraanonderdeel",
+      "Kraanrozet",
+      "Mozaiektegel",
+      "Mozaïektegels",
+      "Opbouw badkraan",
+      "Opbouw regendouches",
+      "Opbouw wastafelkraan",
+      "Opbouwbadkranen",
+      "Opbouwdouchekranen",
+      "Opbouwfonteinkranen",
+      "Opbouwwastafelkraan",
+      "Opbouwwastafelkranen",
+      "Regendoucheset opbouw",
+      "Regendouchesets",
+      "Thermostatische badkraan",
+      "Thermostatische douchekraan",
+      "Verlengset voor kraan",
+      "Vrijstaande badkraan",
+      "Vrijstaande badkranen",
+      "Wandaansluitbocht met handdouchehouder",
+      "Wastafelkraan",
+      "Wastafelkranen"
+    ],
+    "largeGoodsExcludedFromDayPromise": true,
+    "futureProductStockOverridesPreserved": true
+  },
+  "savedFiles": [
+    "snippets/bc-weekday-delivery.liquid",
+    "config/settings_schema.json",
+    "config/settings_data.json",
+    "sections/main-product.liquid",
+    "snippets/bc-porcelanosa-buybox.liquid"
+  ],
+  "baseline": {
+    "existingWorkingThemeId": "gid://shopify/OnlineStoreTheme/196542005514",
+    "originalWorkingName": "BadkamerCity - bescherming oude productkaarten",
+    "currentMainFileCount": 2525,
+    "comparisonWorkingFileCountBefore": 2524,
+    "nonBrauerBaselineDifferences": 0,
+    "currentBrauerFilesSyncedAndHashVerified": 174,
+    "reason": "An automatic full duplicate remained processing, so an existing unpublished theme was synchronized with all current Brauer differences before making the delivery edit",
+    "unusedAutoCopy": {
+      "id": "gid://shopify/OnlineStoreTheme/196760961290",
+      "name": "Reserve - automatische kopie 16 nov",
+      "usedForRelease": false
+    }
+  },
+  "verification": {
+    "nativeSavedFilesReadBack": true,
+    "brauerMatchingHashes": 174,
+    "calendarModelCases": 8,
+    "browserDesktopTap": "PASS: visible stock and both weekday lines, add-to-cart button present",
+    "browserMosaic": "PASS: same weekday lines in alternate per-box/per-piece tile buybox",
+    "browserPalletTile": "PASS: Op voorraad, no PostNL weekday promise",
+    "mobileVisualVerification": "UNAVAILABLE: dedicated screenshot tool failed twice; no mobile visual pass claimed",
+    "shopifyLiquidValidator": "Unavailable due to missing @shopify/theme-check-common dependency; actual Shopify render verified",
+    "realCheckoutOrPayment": false,
+    "postPublication": {
+      "method": "Fresh public HTTP without preview cookies or preview_theme_id",
+      "results": [
+        {
+          "kind": "kraan",
+          "url": "https://badkamercity.nl/products/fabriecio-bkk-1001",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": true,
+          "afterCutoffText": true,
+          "liquidError": false
+        },
+        {
+          "kind": "mozaiek",
+          "url": "https://badkamercity.nl/products/cottoceramix-mosaico-defense-natural-27x31-va2711",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": true,
+          "afterCutoffText": true,
+          "liquidError": false
+        },
+        {
+          "kind": "pallettegel",
+          "url": "https://badkamercity.nl/products/porcelanosa-matt-white-mat-150-x-59-6-cm",
+          "httpStatus": 200,
+          "inStock": true,
+          "structuredAvailability": "http://schema.org/InStock",
+          "beforeCutoffText": false,
+          "afterCutoffText": false,
+          "liquidError": false
+        }
+      ],
+      "checkoutPaymentOrCartRetested": false,
+      "mobileVisualRetested": false
+    }
+  },
+  "screenshot": "weekday-theme-preview.jpg",
+  "google": {
+    "accountId": "5902025216",
+    "serviceId": "1",
+    "changeSaved": false,
+    "currentServiceAfterCancel": "Complete; Netherlands; All products; 2–5 days",
+    "attempted": "Cutoff 14:00 Amsterdam, handling 0–0 Mon–Fri, transit 1–1 Mon–Fri; fees untouched",
+    "autoReviewRejected": true,
+    "rejectionReason": "Saving would publish an all-products 1-business-day Google delivery promise while the user has not confirmed that large goods follow the same schedule and has stated delivery varies by article; the visible shipping costs also remain the old incomplete global rules.",
+    "response": "Cancelled editor; verified previous 2–5 day service; no alternate write route attempted",
+    "next": "Complete native shipping product groups/tariffs first; then configure matching Google labels and parcel-only delivery schedule"
+  },
+  "release": {
+    "published": true,
+    "publishedBy": "OWNER",
+    "verifiedAt": "2026-11-16T15:32:28.022Z",
+    "themeId": "gid://shopify/OnlineStoreTheme/196542005514",
+    "exactThemeName": "BadkamerCity - PostNL werkdagen 14u",
+    "nextAction": "Implement the four agreed checkout tariff groups and product assignments, test thresholds and mixed carts, then align Google shipping labels/costs/parcel lead times"
+  },
+  "shippingRates": "Four agreed tariffs documented but still not deployed",
+  "preservedChannels": {
+    "M444AB": "Keep published including Google",
+    "SPOM1633BL": "Preserve Google-only exclusion"
+  },
+  "activeWriterAfterHandoff": false,
+  "sourceSync": {
+    "branch": "fix/product-cards-2026-10-14",
+    "directory": "shopify/current/",
+    "files": [
+      "config/settings_schema.json",
+      "sections/main-product.liquid",
+      "snippets/bc-porcelanosa-buybox.liquid",
+      "snippets/bc-weekday-delivery.liquid"
+    ],
+    "protectedSettingsDataNotOverwritten": true,
+    "shopifyignorePreserved": true,
+    "reason": "Existing config/settings_data API-body checksum exception remains open under AGENTS.md and docs/git-sync/2026-11-03/README.md; fresh body retained only as audit snapshot",
+    "fullThemeParityClaimed": false,
+    "localWindowsGitVerified": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-08",
+  "beforeCount": 0,
+  "created": {
+    "urlRedirect": {
+      "id": "gid://shopify/UrlRedirect/689424761098",
+      "path": "/blogs/news",
+      "target": "/blogs/nieuws"
+    },
+    "userErrors": []
+  },
+  "readback": {
+    "urlRedirects": {
+      "nodes": [
+        {
+          "id": "gid://shopify/UrlRedirect/689424761098",
+          "path": "/blogs/news",
+          "target": "/blogs/nieuws"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjo2ODk0MjQ3NjEwOTgsImxhc3RfdmFsdWUiOiI2ODk0MjQ3NjEwOTgifQ=="
+      }
+    }
+  },
+  "blogs": {
+    "blogs": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Blog/117849424138",
+          "title": "Nieuws",
+          "handle": "nieuws"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjoxMTc4NDk0MjQxMzgsImxhc3RfdmFsdWUiOiIyMDI2LTAzLTEyIDE0OjE2OjQzLjAwMDAwMCJ9"
+      }
+    }
+  },
+  "rollback": "Before removing this task-created redirect, confirm it still has the recorded path and target and has no intervening owner edits; no existing redirect was overwritten."
+}

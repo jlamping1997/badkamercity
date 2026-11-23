@@ -1,0 +1,12 @@
+{% doc %}
+Outputs unit only for Cottoceramix articles explicitly using whole sellable units.
+The unit controller validates quantities and pack counts; an invalid opt-in must
+not fall back to the unrelated generic delivery promise or an m² calculator.
+@param {product} product - The article to inspect.
+{% enddoc %}
+{%- liquid
+  assign unit_vendor = product.vendor | strip | downcase
+  if unit_vendor == 'cottoceramix' and product.metafields.custom.bron_toelichtingen_json.value.tiles.order_mode == 'unit'
+    echo 'unit'
+  endif
+-%}

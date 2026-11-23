@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "badkamercity-hotbath-mobile-a-qa",
+  "scripts": {
+    "test": "node tests/hotbath-mobile-total-test.cjs && node tests/hotbath-swatches-test.cjs && node tests/hotbath-mobile-observer-test.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4"
+  }
+}

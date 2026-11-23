@@ -1,0 +1,52 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const {Liquid} = require('liquidjs');
+const {JSDOM} = require('jsdom');
+const root = path.resolve(__dirname, '../../..');
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'source-data.json')));
+const template = JSON.parse(fs.readFileSync(path.join(root, 'templates/list-collections.json')));
+const locale = JSON.parse(fs.readFileSync(path.join(root, 'locales/nl.json')));
+const collections = Object.fromEntries(data.collections.map(c => [c.handle, {...c,url:'/collections/'+c.handle,products_count:c.productsCount.count}]));
+function links(items) { return items.map(item => ({...item,links:links(item.items||[]),type:item.url.startsWith('/collections/')?'collection_link':'page_link',object:collections[item.url.split('/collections/')[1]]})); }
+const nav = {links:links(data.menus.find(m=>m.handle==='main-menu').items)};
+const section = {...template.sections.main,id:'fixture'};
+section.settings.menu = nav;
+section.blocks = section.block_order.map(id => ({...section.blocks[id],id,settings:{...section.blocks[id].settings,collection:collections[section.blocks[id].settings.collection]}}));
+const engine = new Liquid({root:path.join(root,'snippets'),extname:'.liquid',strictFilters:false});
+engine.registerTag('doc',{parse(token,remain){while(remain.length){if(remain.shift().name==='enddoc')break;}},render(){return '';}});
+engine.registerFilter('t',(key,...args)=>{let s=key.split('.').reduce((v,k)=>v?.[k],locale)||key;for(const [name,val] of args.filter(Array.isArray))s=s.replace('{{ '+name+' }}',val);return s;});
+engine.registerFilter('asset_url',v=>'https://example.invalid/'+v);
+engine.registerFilter('stylesheet_tag',v=>'<link rel="stylesheet" href="'+v+'">');
+engine.registerFilter('image_url',v=>v?.url||'https://example.invalid/image.webp');
+engine.registerFilter('image_tag',()=>'<img width="480" height="480" alt="">');
+const source=fs.readFileSync(path.join(root,'sections/bc-assortment.liquid'),'utf8').replace(/{% schema %}[\s\S]*?{% endschema %}/,'').replace(/{% paginate collections by 250 %}/g,'').replace(/{% endpaginate %}/g,'').replace('for other in collections','for other in all_collections');
+const tests=[];
+const record=(name,fn)=>{fn();tests.push(name);};
+(async()=>{
+ const html=await engine.parseAndRender(source,{section,linklists:{'main-menu':nav},collections,all_collections:Object.values(collections),routes:{root_url:'/'},pages:{contact:{url:'/pages/contact'}},paginate:{pages:1}});
+ if (process.env.BC_TEST_HTML) fs.writeFileSync(process.env.BC_TEST_HTML,html);
+ for(const desktop of [false,true]){
+  const dom=new JSDOM(html,{runScripts:'outside-only',url:'https://badkamercity.nl/collections'});
+  const w=dom.window;let mediaListener;
+  const media={matches:desktop,addEventListener:(e,f)=>mediaListener=f,removeEventListener:()=>{}};
+  w.matchMedia=()=>media;
+  w.eval(fs.readFileSync(path.join(root,'assets/bc-assortment.js'),'utf8'));
+  const app=w.document.querySelector('bc-assortment'),input=app.querySelector('input');
+  const search=value=>{input.value=value;input.dispatchEvent(new w.Event('input',{bubbles:true}));};
+  const shown=()=>[...app.querySelectorAll('[data-bca-item]')].filter(x=>!x.hidden&&!x.closest('[data-bca-department]').hidden).map(x=>x.textContent.trim());
+  record('10 cards '+desktop,()=>assert.equal(app.querySelectorAll('.bca-card').length,10));
+  record('native directory without JS dependency '+desktop,()=>assert.ok(app.querySelectorAll('[data-bca-item]').length>140));
+  record('singular search '+desktop,()=>{search('wastafelkraan');assert.ok(shown().some(t=>t.includes('Wastafelkranen')));assert.ok(!app.querySelector('[data-bca-no-results]').hidden===false);});
+  record('nested context '+desktop,()=>{search('inbouw wastafel');assert.ok(shown().some(t=>t.includes('Inbouw wastafelkranen')));assert.ok(!shown().some(t=>t.includes('Inbouw douchesets')));});
+  record('synonym '+desktop,()=>{search('wasbak');assert.ok(shown().length>0);});
+  record('enter skips hidden ancestors '+desktop,()=>{search('fontein');input.focus();input.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));assert.equal(w.document.activeElement.tagName,'A');assert.equal(w.document.activeElement.closest('[hidden]'),null);});
+  record('no result and recovery '+desktop,()=>{search('nietsbestaatxyz');assert.equal(shown().length,0);assert.equal(app.querySelector('[data-bca-no-results]').hidden,false);app.querySelector('[data-bca-reset]').click();assert.equal(input.value,'');assert.equal(app.querySelector('[data-bca-overview]').hidden,false);assert.equal(w.document.activeElement,input);});
+  record('escape restores '+desktop,()=>{search('kraan');input.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(input.value,'');assert.ok([...app.querySelectorAll('[data-bca-department]')].every(d=>!d.hidden));});
+  record('layout change '+desktop,()=>{media.matches=!desktop;mediaListener();const dept=app.querySelector('[data-bca-department]');assert.equal(dept.open,!desktop);assert.equal(dept.querySelector('summary').tabIndex,!desktop?-1:0);});
+  record('supplement separated '+desktop,()=>{const was=[...app.querySelectorAll('[data-bca-department]')].find(d=>d.querySelector('summary').textContent.includes('Wastafels'));assert.ok(was.querySelector('.bca-supplement').textContent.includes('Wastafelkranen'));});
+  dom.window.close();
+ }
+ fs.writeFileSync(path.join(__dirname,'controller-tests.json'),JSON.stringify({scope:'Local LiquidJS/DOM fixture, not Shopify or browser rendering',passed:tests.length,tests},null,2));
+ console.log(tests.length+' local render/controller cases passed');
+})().catch(e=>{console.error(e);process.exit(1);});

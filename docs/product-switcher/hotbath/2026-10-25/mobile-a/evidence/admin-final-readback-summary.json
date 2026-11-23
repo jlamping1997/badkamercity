@@ -1,0 +1,124 @@
+{
+  "source": "Read-only Shopify Admin readback by executing parent agent",
+  "result": {
+    "checkedAt": "2026-10-25",
+    "fixTheme": {
+      "id": "gid://shopify/OnlineStoreTheme/195688890634",
+      "name": "BadkamerCity - Hotbath mobiel A afwerking",
+      "role": "UNPUBLISHED"
+    },
+    "liveTheme": {
+      "id": "gid://shopify/OnlineStoreTheme/195688694026",
+      "name": "BadkamerCity - Hotbath mobiel A 25 okt",
+      "role": "MAIN"
+    },
+    "changedFiles": 23,
+    "exactFinalMatch": true,
+    "fixFiles": 553,
+    "qaRouteRetired": true,
+    "liveUnchangedDuringFix": true,
+    "liveQaTemplatePresent": true
+  },
+  "independent_local_comparison": {
+    "expected_files": 23,
+    "exact_md5_matches": 23,
+    "unchanged_vs_original_536": 530,
+    "fix_total": 553,
+    "all_pages_complete": true
+  },
+  "raw_readback_sha256": "9606464ded56ad998d5cb50fc7f26ce4637af9fe385cab0bf6d2a6202a493840",
+  "changed_file_checksums": [
+    {
+      "filename": "assets/bc-hotbath-mobile.css",
+      "checksumMd5": "322aa2928fc1afd023bacbad339b3f21"
+    },
+    {
+      "filename": "assets/bc-hotbath-mobile.js",
+      "checksumMd5": "5f8c1834822c256aac10fc51b4807d33"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-ab.jpg",
+      "checksumMd5": "8192909b484c79f8c6cbaa19d1be12cc"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-ai.jpg",
+      "checksumMd5": "693eabcb1f6dd94f3a3559e30131b243"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-bb.jpg",
+      "checksumMd5": "e5303a79db6f43733c3795b52a95ea4e"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-bbp.jpg",
+      "checksumMd5": "92d41d3d6b30827d09f9adfd4e175f6c"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-bcp.jpg",
+      "checksumMd5": "6ee9a83ee8f0f0677c07b745cb28dc18"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-bgp.jpg",
+      "checksumMd5": "5c02147bbb33b600ba787763854f179c"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-cr.jpg",
+      "checksumMd5": "0126b56751ed5906f1eb0385278d45fd"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-gn.jpg",
+      "checksumMd5": "bb314deb318bb1d5ce330e3637ff0da9"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-ix.jpg",
+      "checksumMd5": "460723a65d5afffc0ecd14b295ff7f25"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-mbp.jpg",
+      "checksumMd5": "2e425c08f422ce15db3c526aded49b01"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-pbp.jpg",
+      "checksumMd5": "14ce4117804880211fa87751c5f8f31f"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-tb.jpg",
+      "checksumMd5": "d3ebb678af6fa9bbcbeddc53a0ec9beb"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatch-wh.jpg",
+      "checksumMd5": "a4899e94563053e3a2fcd15fd3c14a0d"
+    },
+    {
+      "filename": "assets/bc-hotbath-swatches.css",
+      "checksumMd5": "5cefbf7db9d4ad2ad2da6d22b99b78ac"
+    },
+    {
+      "filename": "assets/bc-product-sticky.js",
+      "checksumMd5": "f61a1a3bf4bba88dde740c105c2a7789"
+    },
+    {
+      "filename": "assets/bc-product-switcher.js",
+      "checksumMd5": "73bc7048f339289c8ea26e2e688fcc0b"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "dac4233e361fe1f360770ab51263b2d2"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "65d7419193744fc533efde0636f98429"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "7e6528e8346d0e2e8ca145157baf5b85"
+    },
+    {
+      "filename": "snippets/bc-product-switcher.liquid",
+      "checksumMd5": "c9a38c8300880d6ae656580ea132fc2e"
+    },
+    {
+      "filename": "templates/product.bc-mobile-review.liquid",
+      "checksumMd5": "1a2c1b3055f6d9cbb51dc506be7d0a0b"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "scope": "Live current-config quotes; separate large-goods tariff still requires owner values",
+  "destination": "NL public business postcode",
+  "rows": [
+    {
+      "label": "Klein artikel 99,99",
+      "items": [
+        {
+          "id": 53188706271498,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 9999,
+      "requires_shipping": true,
+      "current_config_expected_rate": "6.95",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "matches_current_config": true
+    },
+    {
+      "label": "Klein artikel exact 100,00",
+      "items": [
+        {
+          "id": 53175596450058,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 10000,
+      "requires_shipping": true,
+      "current_config_expected_rate": "6.95",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "matches_current_config": true
+    },
+    {
+      "label": "Kleine artikelen boven grens 112,00",
+      "items": [
+        {
+          "id": 53175596450058,
+          "quantity": 1
+        },
+        {
+          "id": 53175648354570,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 11200,
+      "requires_shipping": true,
+      "current_config_expected_rate": "0.00",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "matches_current_config": true
+    },
+    {
+      "label": "Gemengde merken onder grens 81,18",
+      "items": [
+        {
+          "id": 53859734847754,
+          "quantity": 1
+        },
+        {
+          "id": 54059547394314,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 8118,
+      "requires_shipping": true,
+      "current_config_expected_rate": "6.95",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "6.95",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "matches_current_config": true
+    },
+    {
+      "label": "Porcelanosa tegeldoos formaat 150 cm",
+      "items": [
+        {
+          "id": 54000406331658,
+          "quantity": 1
+        }
+      ],
+      "cart_total_cents": 26807,
+      "requires_shipping": true,
+      "current_config_expected_rate": "0.00",
+      "rates": [
+        {
+          "name": "Standaard",
+          "price": "0.00",
+          "delivery_date": null,
+          "delivery_range": [],
+          "delivery_days": []
+        }
+      ],
+      "matches_current_config": true
+    }
+  ],
+  "own_cart_cleaned": true,
+  "checkout_order_or_payment": false,
+  "status": "VERIFIED_CURRENT_CONFIG"
+}

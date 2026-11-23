@@ -1,0 +1,1182 @@
+diff --git a/locales/en.default.json b/locales/en.default.json
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -604,10 +604,126 @@
+     "lead_time_on_request": "Lead time on request"
+   },
+   "bc_specs": {
+-    "heading": "Specifications",
++    "title": "Specifications",
+     "yes": "Yes",
+     "no": "No",
+-    "identity_warning": "Specifications are hidden: check the article identity and available data."
++    "groups": {
++      "product": "Product",
++      "appearance": "Appearance and material",
++      "dimensions": "Dimensions",
++      "installation": "Installation and connections",
++      "features": "Features"
++    },
++    "fields": {
++      "artikelnummer": "Article number",
++      "merk": "Brand",
++      "serie": "Series",
++      "model": "Model",
++      "uitvoering": "Version",
++      "garantie": "Warranty",
++      "kleur": "Colour and finish",
++      "basiskleur": "Base colour",
++      "kleurgroep": "Colour group",
++      "glaskleur": "Glass colour",
++      "kleur_binnenzijde": "Interior colour",
++      "afwerking": "Finish",
++      "glansgraad": "Gloss level",
++      "materiaal": "Material",
++      "materiaal_inzet": "Insert material",
++      "vorm": "Shape",
++      "binnenvorm": "Interior shape",
++      "bladvorm": "Top shape",
++      "type_bad": "Bath type",
++      "vormgeving_stijlgroep": "Design / style",
++      "afwerking_greep": "Handle finish",
++      "afwerking_wand": "Wall finish",
++      "afmetingen_original": "Dimensions",
++      "afmeting": "Dimensions",
++      "lengte_mm": "Length (mm)",
++      "breedte_mm": "Width (mm)",
++      "breedte_diameter_mm": "Width / diameter (mm)",
++      "hoogte_mm": "Height (mm)",
++      "diepte_mm": "Depth (mm)",
++      "dikte_mm": "Thickness (mm)",
++      "glasdikte_mm": "Glass thickness (mm)",
++      "opbouwhoogte_totaal": "Overall height",
++      "hoogte_uitloop_mm": "Spout height (mm)",
++      "voorsprong_uitloop_mm": "Spout reach (mm)",
++      "diepte_uitloop": "Spout depth",
++      "inbouwdiepte": "Installation depth",
++      "breedte_diameter_hoofddouche": "Overhead shower width / diameter",
++      "dikte_hoofddouche": "Overhead shower thickness",
++      "breedte_diameter_douchekop": "Shower head width / diameter",
++      "diepte_douchekop": "Shower head depth",
++      "lengte_douchearm": "Shower arm length",
++      "lengte_doucheslang": "Shower hose length",
++      "gewicht": "Weight",
++      "inhoud": "Capacity",
++      "montage": "Installation",
++      "aantal_kraangaten": "Tap holes",
++      "aantal_grepen": "Handles",
++      "plaats_kraangat": "Tap hole position",
++      "kraangat": "Tap hole",
++      "plaats_afvoergat": "Drain position",
++      "plaats_bediening": "Control position",
++      "maat_aansluiting_aanvoer": "Supply connection size",
++      "maat_draadaansluiting_inch": "Thread connection size (inch)",
++      "warm_koud_aansluiting": "Hot / cold water connection",
++      "type_bevestiging_hoofddouche": "Overhead shower mounting",
++      "geschikt_voor_onderkast": "Suitable for vanity unit",
++      "geschikt_voor_vrijhangende_montage": "Suitable for wall-hung installation",
++      "met_bevestigingsmateriaal": "Mounting hardware included",
++      "verdekte_bevestiging": "Concealed mounting",
++      "inkortbaar": "Can be shortened",
++      "coldstart": "Cold start",
++      "thermostatisch": "Thermostatic",
++      "met_overloop": "With overflow",
++      "overloop": "Overflow",
++      "met_overloopgat": "With overflow hole",
++      "met_plug": "With waste",
++      "met_sifon": "With trap",
++      "met_afvoerplug": "With drain plug",
++      "met_badafvoer": "With bath waste",
++      "met_kraan": "Tap included",
++      "met_hoofddouche": "Overhead shower included",
++      "met_handdouche": "Hand shower included",
++      "met_doucheslang": "Shower hose included",
++      "met_douchearm": "Shower arm included",
++      "met_inbouwdeel": "Concealed body included",
++      "met_temperatuurregeling": "With temperature control",
++      "aantal_straalsoorten_hoofddouche": "Overhead shower spray modes",
++      "aantal_straalsoorten_handdouche": "Hand shower spray modes",
++      "met_watervalstraal": "With waterfall spray",
++      "vorm_uitloop": "Spout shape",
++      "type_handdouche": "Hand shower type",
++      "vorm_thermostaat": "Thermostat shape",
++      "aantal_uitgangen_tegelijk_bedienbaar": "Simultaneously controlled outlets",
++      "bediening_voor_aan_uit": "On / off control",
++      "softclose": "Soft close",
++      "quick_release": "Quick release",
++      "rimless": "Rimless",
++      "nano_coating": "Nano coating",
++      "vuilafstotend": "Dirt repellent",
++      "met_verlichting": "With lighting",
++      "met_verwarming": "With heating",
++      "dimbaar": "Dimmable",
++      "vermogen_w": "Power (W)",
++      "aantal_laden": "Drawers",
++      "aantal_waskommen": "Basins",
++      "aantal_glazen": "Glasses",
++      "met_bekers_glazen": "With cups / glasses",
++      "aantal_haken": "Hooks",
++      "aantal_handdoekstangen": "Towel rails",
++      "aantal_rollen": "Rolls",
++      "met_klep": "With cover",
++      "geschikt_voor_aantal_personen": "Suitable number of people",
++      "verstelbaar": "Adjustable",
++      "verstelbare_kop": "Adjustable head",
++      "zwenkbaar": "Swivelling",
++      "met_audio": "With audio",
++      "belgaqua_keurmerk": "Belgaqua certification",
++      "volumestroomklasse": "Flow rate class"
++    }
+   },
+   "bc_sunshower": {
+     "loading": "Uitvoering laden…",
+@@ -651,36 +767,36 @@
+   },
+   "ss": {
+     "config": {
+-  "title": "Configure your Sunshower",
+-  "subtitle": "Choose the version that suits your bathroom.",
+-  "met_uv": "Light function",
+-  "kleur": "Colour",
+-  "uitvoering": "Size",
+-  "plaatsing": "Installation",
+-  "help_met_uv": "What is the difference?",
+-  "help_kleur": "Details",
+-  "help_uitvoering": "Size guide",
+-  "help_plaatsing": "Details",
+-  "ir": "Infrared",
+-  "ir_uv": "Infrared + UV",
+-  "tax": "Including VAT",
+-  "ask_delivery": "Ask about delivery",
+-  "complete": "Complete your set"
+-},
++      "title": "Configure your Sunshower",
++      "subtitle": "Choose the version that suits your bathroom.",
++      "met_uv": "Light function",
++      "kleur": "Colour",
++      "uitvoering": "Size",
++      "plaatsing": "Installation",
++      "help_met_uv": "What is the difference?",
++      "help_kleur": "Details",
++      "help_uitvoering": "Size guide",
++      "help_plaatsing": "Details",
++      "ir": "Infrared",
++      "ir_uv": "Infrared + UV",
++      "tax": "Including VAT",
++      "ask_delivery": "Ask about delivery",
++      "complete": "Complete your set"
++    },
+     "benefits": {
+-  "ir_title": "Benefits of infrared",
+-  "ir_warmth": "Comfortable warmth for your body",
+-  "ir_relax": "Helps muscles and joints relax",
+-  "ir_circulation": "Stimulates circulation",
+-  "ir_tension": "Helps reduce muscle tension",
+-  "ir_pain": "May relieve muscle and joint pain",
+-  "uv_title": "Benefits of UV",
+-  "uv_vitamin": "UVB stimulates vitamin D production",
+-  "vitamin_intro": "Vitamin D supports:",
+-  "uv_immune": "Normal immune system function",
+-  "uv_bones": "The maintenance of strong bones and teeth",
+-  "uv_muscles": "Normal muscle function"
+-},
++      "ir_title": "Benefits of infrared",
++      "ir_warmth": "Comfortable warmth for your body",
++      "ir_relax": "Helps muscles and joints relax",
++      "ir_circulation": "Stimulates circulation",
++      "ir_tension": "Helps reduce muscle tension",
++      "ir_pain": "May relieve muscle and joint pain",
++      "uv_title": "Benefits of UV",
++      "uv_vitamin": "UVB stimulates vitamin D production",
++      "vitamin_intro": "Vitamin D supports:",
++      "uv_immune": "Normal immune system function",
++      "uv_bones": "The maintenance of strong bones and teeth",
++      "uv_muscles": "Normal muscle function"
++    },
+     "yes": "Yes",
+     "no": "No",
+     "loading": "Loading configuration…",
+@@ -824,6 +940,3 @@
+     }
+   }
+ }
+-
+-
+-
+diff --git a/locales/nl.json b/locales/nl.json
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -604,10 +604,126 @@
+     "lead_time_on_request": "Levertijd op aanvraag"
+   },
+   "bc_specs": {
+-    "heading": "Specificaties",
++    "title": "Specificaties",
+     "yes": "Ja",
+     "no": "Nee",
+-    "identity_warning": "Specificaties niet getoond: controleer de artikelidentiteit en beschikbare gegevens."
++    "groups": {
++      "product": "Product",
++      "appearance": "Uiterlijk en materiaal",
++      "dimensions": "Afmetingen",
++      "installation": "Montage en aansluiting",
++      "features": "Eigenschappen"
++    },
++    "fields": {
++      "artikelnummer": "Artikelnummer",
++      "merk": "Merk",
++      "serie": "Serie",
++      "model": "Model",
++      "uitvoering": "Uitvoering",
++      "garantie": "Garantie",
++      "kleur": "Kleur en uitvoering",
++      "basiskleur": "Basiskleur",
++      "kleurgroep": "Kleurgroep",
++      "glaskleur": "Glaskleur",
++      "kleur_binnenzijde": "Kleur binnenzijde",
++      "afwerking": "Afwerking",
++      "glansgraad": "Glansgraad",
++      "materiaal": "Materiaal",
++      "materiaal_inzet": "Materiaal inzet",
++      "vorm": "Vorm",
++      "binnenvorm": "Binnenvorm",
++      "bladvorm": "Bladvorm",
++      "type_bad": "Type bad",
++      "vormgeving_stijlgroep": "Vormgeving / stijlgroep",
++      "afwerking_greep": "Afwerking greep",
++      "afwerking_wand": "Afwerking wand",
++      "afmetingen_original": "Afmetingen",
++      "afmeting": "Afmeting",
++      "lengte_mm": "Lengte (mm)",
++      "breedte_mm": "Breedte (mm)",
++      "breedte_diameter_mm": "Breedte / diameter (mm)",
++      "hoogte_mm": "Hoogte (mm)",
++      "diepte_mm": "Diepte (mm)",
++      "dikte_mm": "Dikte (mm)",
++      "glasdikte_mm": "Glasdikte (mm)",
++      "opbouwhoogte_totaal": "Totale opbouwhoogte",
++      "hoogte_uitloop_mm": "Uitloophoogte (mm)",
++      "voorsprong_uitloop_mm": "Voorsprong uitloop (mm)",
++      "diepte_uitloop": "Diepte uitloop",
++      "inbouwdiepte": "Inbouwdiepte",
++      "breedte_diameter_hoofddouche": "Breedte / diameter hoofddouche",
++      "dikte_hoofddouche": "Dikte hoofddouche",
++      "breedte_diameter_douchekop": "Breedte / diameter douchekop",
++      "diepte_douchekop": "Diepte douchekop",
++      "lengte_douchearm": "Lengte douchearm",
++      "lengte_doucheslang": "Lengte doucheslang",
++      "gewicht": "Gewicht",
++      "inhoud": "Inhoud",
++      "montage": "Montage",
++      "aantal_kraangaten": "Aantal kraangaten",
++      "aantal_grepen": "Aantal grepen",
++      "plaats_kraangat": "Plaats kraangat",
++      "kraangat": "Kraangat",
++      "plaats_afvoergat": "Plaats afvoergat",
++      "plaats_bediening": "Plaats bediening",
++      "maat_aansluiting_aanvoer": "Maat aansluiting aanvoer",
++      "maat_draadaansluiting_inch": "Maat draadaansluiting (inch)",
++      "warm_koud_aansluiting": "Warm- / koudwateraansluiting",
++      "type_bevestiging_hoofddouche": "Bevestiging hoofddouche",
++      "geschikt_voor_onderkast": "Geschikt voor onderkast",
++      "geschikt_voor_vrijhangende_montage": "Geschikt voor vrijhangende montage",
++      "met_bevestigingsmateriaal": "Met bevestigingsmateriaal",
++      "verdekte_bevestiging": "Verdekte bevestiging",
++      "inkortbaar": "Inkortbaar",
++      "coldstart": "Coldstart",
++      "thermostatisch": "Thermostatisch",
++      "met_overloop": "Met overloop",
++      "overloop": "Overloop",
++      "met_overloopgat": "Met overloopgat",
++      "met_plug": "Met plug",
++      "met_sifon": "Met sifon",
++      "met_afvoerplug": "Met afvoerplug",
++      "met_badafvoer": "Met badafvoer",
++      "met_kraan": "Met kraan",
++      "met_hoofddouche": "Met hoofddouche",
++      "met_handdouche": "Met handdouche",
++      "met_doucheslang": "Met doucheslang",
++      "met_douchearm": "Met douchearm",
++      "met_inbouwdeel": "Met inbouwdeel",
++      "met_temperatuurregeling": "Met temperatuurregeling",
++      "aantal_straalsoorten_hoofddouche": "Aantal straalsoorten hoofddouche",
++      "aantal_straalsoorten_handdouche": "Aantal straalsoorten handdouche",
++      "met_watervalstraal": "Met watervalstraal",
++      "vorm_uitloop": "Vorm uitloop",
++      "type_handdouche": "Type handdouche",
++      "vorm_thermostaat": "Vorm thermostaat",
++      "aantal_uitgangen_tegelijk_bedienbaar": "Gelijktijdig bedienbare uitgangen",
++      "bediening_voor_aan_uit": "Aan- / uitbediening",
++      "softclose": "Softclose",
++      "quick_release": "Quick release",
++      "rimless": "Zonder spoelrand",
++      "nano_coating": "Nano coating",
++      "vuilafstotend": "Vuilafstotend",
++      "met_verlichting": "Met verlichting",
++      "met_verwarming": "Met verwarming",
++      "dimbaar": "Dimbaar",
++      "vermogen_w": "Vermogen (W)",
++      "aantal_laden": "Aantal laden",
++      "aantal_waskommen": "Aantal waskommen",
++      "aantal_glazen": "Aantal glazen",
++      "met_bekers_glazen": "Met bekers / glazen",
++      "aantal_haken": "Aantal haken",
++      "aantal_handdoekstangen": "Aantal handdoekstangen",
++      "aantal_rollen": "Aantal rollen",
++      "met_klep": "Met klep",
++      "geschikt_voor_aantal_personen": "Geschikt voor aantal personen",
++      "verstelbaar": "Verstelbaar",
++      "verstelbare_kop": "Verstelbare kop",
++      "zwenkbaar": "Zwenkbaar",
++      "met_audio": "Met audio",
++      "belgaqua_keurmerk": "Belgaqua keurmerk",
++      "volumestroomklasse": "Volumestroomklasse"
++    }
+   },
+   "bc_sunshower": {
+     "loading": "Uitvoering laden…",
+@@ -651,36 +767,36 @@
+   },
+   "ss": {
+     "config": {
+-  "title": "Stel jouw Sunshower samen",
+-  "subtitle": "Kies de uitvoering die bij jouw badkamer past.",
+-  "met_uv": "Lichtfunctie",
+-  "kleur": "Kleur",
+-  "uitvoering": "Formaat",
+-  "plaatsing": "Montage",
+-  "help_met_uv": "Wat is het verschil?",
+-  "help_kleur": "Uitleg",
+-  "help_uitvoering": "Maathulp",
+-  "help_plaatsing": "Uitleg",
+-  "ir": "Infrarood",
+-  "ir_uv": "Infrarood + UV",
+-  "tax": "Inclusief btw",
+-  "ask_delivery": "Vraag de levertijd op",
+-  "complete": "Maak je set compleet"
+-},
++      "title": "Stel jouw Sunshower samen",
++      "subtitle": "Kies de uitvoering die bij jouw badkamer past.",
++      "met_uv": "Lichtfunctie",
++      "kleur": "Kleur",
++      "uitvoering": "Formaat",
++      "plaatsing": "Montage",
++      "help_met_uv": "Wat is het verschil?",
++      "help_kleur": "Uitleg",
++      "help_uitvoering": "Maathulp",
++      "help_plaatsing": "Uitleg",
++      "ir": "Infrarood",
++      "ir_uv": "Infrarood + UV",
++      "tax": "Inclusief btw",
++      "ask_delivery": "Vraag de levertijd op",
++      "complete": "Maak je set compleet"
++    },
+     "benefits": {
+-  "ir_title": "Voordelen van infrarood",
+-  "ir_warmth": "Aangename warmte voor je lichaam",
+-  "ir_relax": "Helpt spieren en gewrichten ontspannen",
+-  "ir_circulation": "Stimuleert de doorbloeding",
+-  "ir_tension": "Helpt spierspanning verminderen",
+-  "ir_pain": "Kan spier- en gewrichtspijn verlichten",
+-  "uv_title": "Voordelen van UV",
+-  "uv_vitamin": "UVB stimuleert de aanmaak van vitamine D",
+-  "vitamin_intro": "Vitamine D ondersteunt:",
+-  "uv_immune": "Een normale werking van je immuunsysteem",
+-  "uv_bones": "Het behoud van sterke botten en tanden",
+-  "uv_muscles": "Een normale werking van je spieren"
+-},
++      "ir_title": "Voordelen van infrarood",
++      "ir_warmth": "Aangename warmte voor je lichaam",
++      "ir_relax": "Helpt spieren en gewrichten ontspannen",
++      "ir_circulation": "Stimuleert de doorbloeding",
++      "ir_tension": "Helpt spierspanning verminderen",
++      "ir_pain": "Kan spier- en gewrichtspijn verlichten",
++      "uv_title": "Voordelen van UV",
++      "uv_vitamin": "UVB stimuleert de aanmaak van vitamine D",
++      "vitamin_intro": "Vitamine D ondersteunt:",
++      "uv_immune": "Een normale werking van je immuunsysteem",
++      "uv_bones": "Het behoud van sterke botten en tanden",
++      "uv_muscles": "Een normale werking van je spieren"
++    },
+     "yes": "Ja",
+     "no": "Nee",
+     "loading": "Uitvoering laden…",
+@@ -824,6 +940,3 @@
+     }
+   }
+ }
+-
+-
+-
+diff --git a/sections/bc-brand-directory.liquid b/sections/bc-brand-directory.liquid
+new file mode 100644
+--- /dev/null
++++ b/sections/bc-brand-directory.liquid
+@@ -0,0 +1,115 @@
++{%- liquid
++  assign approved_vendors = 'hotbath|jee-o|sunshower|the mosaic factory|wiesbaden' | split: '|'
++  assign sorted_vendors = shop.vendors | sort_natural
++-%}
++
++<div class="bc-brand-directory page-width">
++  <h1 class="bc-brand-directory__heading">{{ section.settings.heading | escape }}</h1>
++  <ul class="bc-brand-directory__grid" role="list">
++    {%- for vendor in sorted_vendors -%}
++      {%- assign vendor_key = vendor | downcase -%}
++      {%- if approved_vendors contains vendor_key -%}
++        <li class="bc-brand-directory__item">
++          {{- vendor | link_to_vendor: class: 'bc-brand-directory__link' -}}
++        </li>
++      {%- endif -%}
++    {%- endfor -%}
++  </ul>
++</div>
++
++{% stylesheet %}
++  .bc-brand-directory {
++    width: 100%;
++    max-width: 1440px;
++    margin-inline: auto;
++    padding: 32px 16px 48px;
++    color: #0f2740;
++  }
++
++  .bc-brand-directory__heading {
++    margin: 0 0 24px;
++    color: inherit;
++    font-size: clamp(2.6rem, 3vw, 3.6rem);
++    font-weight: 700;
++    line-height: 1.2;
++  }
++
++  .bc-brand-directory__grid {
++    display: grid;
++    grid-template-columns: repeat(2, minmax(0, 1fr));
++    gap: 12px;
++    margin: 0;
++    padding: 0;
++    list-style: none;
++  }
++
++  .bc-brand-directory__item {
++    min-width: 0;
++  }
++
++  .bc-brand-directory__link {
++    display: flex;
++    align-items: center;
++    justify-content: center;
++    height: 100%;
++    min-height: 88px;
++    padding: 20px 16px;
++    border: 1px solid rgba(15, 39, 64, 0.12);
++    border-radius: 8px;
++    background: #fff;
++    color: inherit;
++    font-size: 1.7rem;
++    font-weight: 600;
++    line-height: 1.4;
++    text-align: center;
++    text-decoration: none;
++    overflow-wrap: anywhere;
++    transition: border-color 160ms ease, background-color 160ms ease;
++  }
++
++  .bc-brand-directory__link:hover {
++    border-color: #176b9b;
++    background: #f2f7fa;
++  }
++
++  .bc-brand-directory__link:focus-visible {
++    outline: 3px solid #176b9b;
++    outline-offset: 3px;
++  }
++
++  @media screen and (min-width: 750px) {
++    .bc-brand-directory {
++      padding: 40px 24px 64px;
++    }
++
++    .bc-brand-directory__grid {
++      grid-template-columns: repeat(3, minmax(0, 1fr));
++    }
++  }
++
++  @media screen and (min-width: 1100px) {
++    .bc-brand-directory__grid {
++      grid-template-columns: repeat(5, minmax(0, 1fr));
++    }
++  }
++
++  @media (prefers-reduced-motion: reduce) {
++    .bc-brand-directory__link {
++      transition: none;
++    }
++  }
++{% endstylesheet %}
++
++{% schema %}
++{
++  "name": "Merkenoverzicht",
++  "settings": [
++    {
++      "type": "text",
++      "id": "heading",
++      "label": "Titel",
++      "default": "Onze merken"
++    }
++  ]
++}
++{% endschema %}
+diff --git a/sections/home-hero.liquid b/sections/home-hero.liquid
+--- a/sections/home-hero.liquid
++++ b/sections/home-hero.liquid
+@@ -288,7 +288,7 @@
+   if section.index == 1
+     assign hero_fetch_priority = 'high'
+   endif
+-  assign hero_link_label = section.settings.hero_button_text | default: section.settings.hero_title | default: section.settings.hero_image.alt | default: 'BadkamerCity aanbiedingen'
++  assign hero_link_label = section.settings.hero_link_label | default: section.settings.hero_button_text | default: section.settings.hero_title | default: section.settings.hero_image.alt | default: 'BadkamerCity aanbiedingen'
+   assign hero_image_alt = section.settings.hero_image.alt | default: section.settings.hero_title | default: 'BadkamerCity aanbiedingen'
+   assign hero_has_inline_content = false
+   assign hero_has_inline_copy = false
+@@ -407,6 +407,7 @@
+             assign subtitle_key = 'banner_' | append: index | append: '_subtitle'
+             assign button_key = 'banner_' | append: index | append: '_button'
+             assign link_key = 'banner_' | append: index | append: '_link'
++            assign link_label_key = 'banner_' | append: index | append: '_link_label'
+             assign image_key = 'banner_' | append: index | append: '_image'
+             assign title_color_key = 'banner_' | append: index | append: '_title_color'
+             assign subtitle_color_key = 'banner_' | append: index | append: '_subtitle_color'
+@@ -430,7 +431,7 @@
+               assign banner_default_alt = 'Badkamerinspiratie voor elke stijl'
+             endif
+             assign banner_image_alt = banner_image.alt | default: banner_title | default: banner_default_alt
+-            assign banner_link_label = banner_button | default: banner_title | default: banner_image_alt
++            assign banner_link_label = section.settings[link_label_key] | default: banner_button | default: banner_title | default: banner_image_alt
+           -%}
+           <article class="home-hero__banner{% if banner_title != blank or banner_subtitle != blank %} home-hero__banner--has-copy{% endif %}" style="--hh-banner-ratio: {{ banner_image.aspect_ratio | default: 2 }};">
+             <div class="home-hero__media"{% if banner_focal_x != 50 or banner_focal_y != 50 %} style="object-position: {{ banner_focal_x }}% {{ banner_focal_y }}%;"{% endif %}>
+@@ -525,6 +526,12 @@
+       "label": "Hero button link"
+     },
+     {
++      "type": "text",
++      "id": "hero_link_label",
++      "label": "Hoofdbanner: linkbeschrijving",
++      "info": "Beschrijf de bestemming voor bezoekers die een schermlezer gebruiken."
++    },
++    {
+       "type": "color",
+       "id": "hero_title_color",
+       "label": "Hero title color",
+@@ -769,6 +776,12 @@
+       "label": "Banner 2 link"
+     },
+     {
++      "type": "text",
++      "id": "banner_1_link_label",
++      "label": "Banner 2: linkbeschrijving",
++      "info": "Beschrijf de bestemming voor bezoekers die een schermlezer gebruiken."
++    },
++    {
+       "type": "color",
+       "id": "banner_1_title_color",
+       "label": "Banner 2 title color",
+@@ -845,6 +858,12 @@
+       "label": "Banner 3 link"
+     },
+     {
++      "type": "text",
++      "id": "banner_2_link_label",
++      "label": "Banner 3: linkbeschrijving",
++      "info": "Beschrijf de bestemming voor bezoekers die een schermlezer gebruiken."
++    },
++    {
+       "type": "color",
+       "id": "banner_2_title_color",
+       "label": "Banner 3 title color",
+diff --git a/sections/main-product.liquid b/sections/main-product.liquid
+--- a/sections/main-product.liquid
++++ b/sections/main-product.liquid
+@@ -1920,6 +1920,7 @@
+       </div>
+     </div>
+ 
++    {%- capture bc_display_description -%}{%- render 'bc-product-description', product: product -%}{%- endcapture -%}
+     {%- capture bc_description_markup -%}
+     {%- if product.description != blank -%}
+       <div class="bc-product__summary is-expanded" id="ProductDescription-{{ section.id }}" data-product-summary>
+@@ -1930,7 +1931,7 @@
+             class="bc-product__summary-content rte"
+             data-product-summary-content
+           >
+-            {{ product.description
++            {{ bc_display_description
+               | replace: '<h1', '<h3' | replace: '</h1>', '</h3>'
+               | replace: '<H1', '<h3' | replace: '</H1>', '</h3>'
+               | replace: '<h2', '<h3' | replace: '</h2>', '</h3>'
+diff --git a/snippets/bc-product-description.liquid b/snippets/bc-product-description.liquid
+new file mode 100644
+--- /dev/null
++++ b/snippets/bc-product-description.liquid
+@@ -0,0 +1,78 @@
++{% doc %}
++  Removes only the known imported Wiesbaden specification table when every row is represented by matching product data.
++  @param {product} product - Current product.
++{% enddoc %}
++{%- liquid
++  assign description = product.description
++  assign vendor = product.vendor | strip | downcase
++  assign marker = '<h2>Specificaties</h2><table>'
++  assign parts = description | split: marker
++  if vendor == 'wiesbaden' and parts.size == 2
++    assign table_parts = parts.last | split: '</table>'
++    if parts.last contains '</table>'
++      assign table = table_parts.first
++      assign rows = table | split: '<tr>'
++      assign safe_to_replace = true
++      assign row_prefix = rows.first | strip
++      assign matched_article = false
++      if row_prefix != '<tbody>' or rows.size < 2
++        assign safe_to_replace = false
++      endif
++      assign mappings = 'Serie:serie|Kleur en uitvoering:kleur|Afwerking:afwerking|Materiaal:materiaal|Vorm:vorm|Afmetingen volgens bron:afmetingen_original|Breedte (mm):breedte_mm|Hoogte (mm):hoogte_mm|Diepte (mm):diepte_mm|Lengte (mm):lengte_mm|Glasdikte (mm):glasdikte_mm|Glaskleur:glaskleur|Nano coating:nano_coating|Garantie:garantie|Met overloop:met_overloop|Montage:montage|Softclose:softclose|Quick release:quick_release|Zonder spoelrand:rimless|Aantal laden:aantal_laden|Met verlichting:met_verlichting|Met verwarming:met_verwarming|Dimbaar:dimbaar|Vermogen (W):vermogen_w|Coldstart:coldstart|Thermostatisch:thermostatisch' | split: '|'
++      for row in rows offset: 1
++        assign cells = row | split: '<td>'
++        assign row_valid = false
++        if cells.size == 2 and row contains '<th scope="row">'
++          assign label = cells.first | split: '<th scope="row">' | last | split: '</th>' | first | strip
++          assign old_value = cells.last | split: '</td>' | first | strip_html | strip
++          if label == 'Artikelnummer'
++            if old_value == product.selected_or_first_available_variant.sku
++              assign row_valid = true
++              assign matched_article = true
++            endif
++          elsif label == 'EAN' or label == 'EAN-code'
++            assign row_valid = true
++          else
++            for mapping in mappings
++              assign pair = mapping | split: ':'
++              if pair.first == label
++                assign key = pair.last
++                assign spec = product.metafields.custom[key]
++                case spec.type
++                  when 'boolean'
++                    if spec.value == true and old_value == 'Ja'
++                      assign row_valid = true
++                    elsif spec.value == false and old_value == 'Nee'
++                      assign row_valid = true
++                    endif
++                  when 'number_decimal', 'number_integer'
++                    assign non_numeric = old_value | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: '.' | remove: ',' | remove: '-'
++                    assign old_number = old_value | replace: ',', '.' | plus: 0
++                    assign current_number = spec.value | plus: 0
++                    if old_value != blank and non_numeric == blank and old_number == current_number
++                      assign row_valid = true
++                    endif
++                  when 'single_line_text_field', 'multi_line_text_field'
++                    assign current_value = spec.value | append: '' | strip
++                    if current_value != blank and old_value == current_value
++                      assign row_valid = true
++                    endif
++                endcase
++                break
++              endif
++            endfor
++          endif
++        endif
++        if row_valid == false
++          assign safe_to_replace = false
++        endif
++      endfor
++      if safe_to_replace and matched_article
++        assign imported_table = marker | append: table | append: '</table>'
++        assign description = description | remove: imported_table
++      endif
++    endif
++  endif
++-%}
++{{- description -}}
++
+diff --git a/snippets/bc-product-detail-specs-mapped.liquid b/snippets/bc-product-detail-specs-mapped.liquid
+new file mode 100644
+--- /dev/null
++++ b/snippets/bc-product-detail-specs-mapped.liquid
+@@ -0,0 +1,57 @@
++{% doc %}
++  Shows the available public specifications for Wiesbaden and JEE-O.
++  @param {product} product - Current product.
++  @param {string} section_id - Main product section identifier.
++{% enddoc %}
++{%- liquid
++  assign vendor = product.vendor | strip | downcase
++  assign source_namespace = 'custom'
++  if vendor == 'jee-o'
++    assign source_namespace = 'specs'
++  endif
++  assign group_names = 'product,appearance,dimensions,installation,features' | split: ','
++-%}
++{%- capture spec_groups -%}
++  {%- for group_name in group_names -%}
++    {%- liquid
++      case group_name
++        when 'product'
++          assign fields = 'serie,model,uitvoering,garantie' | split: ','
++        when 'appearance'
++          assign fields = 'kleur,basiskleur,kleurgroep,glaskleur,kleur_binnenzijde,afwerking,glansgraad,materiaal,materiaal_inzet,vorm,binnenvorm,bladvorm,type_bad,vormgeving_stijlgroep,afwerking_greep,afwerking_wand' | split: ','
++        when 'dimensions'
++          assign fields = 'afmetingen_original,afmeting,lengte_mm,breedte_mm,breedte_diameter_mm,hoogte_mm,diepte_mm,dikte_mm,glasdikte_mm,opbouwhoogte_totaal,hoogte_uitloop_mm,voorsprong_uitloop_mm,diepte_uitloop,inbouwdiepte,breedte_diameter_hoofddouche,dikte_hoofddouche,breedte_diameter_douchekop,diepte_douchekop,lengte_douchearm,lengte_doucheslang,gewicht,inhoud' | split: ','
++        when 'installation'
++          assign fields = 'montage,aantal_kraangaten,aantal_grepen,plaats_kraangat,kraangat,plaats_afvoergat,plaats_bediening,maat_aansluiting_aanvoer,maat_draadaansluiting_inch,warm_koud_aansluiting,type_bevestiging_hoofddouche,geschikt_voor_onderkast,geschikt_voor_vrijhangende_montage,met_bevestigingsmateriaal,verdekte_bevestiging,inkortbaar' | split: ','
++        when 'features'
++          assign fields = 'coldstart,thermostatisch,met_overloop,overloop,met_overloopgat,met_plug,met_sifon,met_afvoerplug,met_badafvoer,met_kraan,met_hoofddouche,met_handdouche,met_doucheslang,met_douchearm,met_inbouwdeel,met_temperatuurregeling,aantal_straalsoorten_hoofddouche,aantal_straalsoorten_handdouche,met_watervalstraal,vorm_uitloop,type_handdouche,vorm_thermostaat,aantal_uitgangen_tegelijk_bedienbaar,bediening_voor_aan_uit,softclose,quick_release,rimless,nano_coating,vuilafstotend,met_verlichting,met_verwarming,dimbaar,vermogen_w,aantal_laden,aantal_waskommen,aantal_glazen,met_bekers_glazen,aantal_haken,aantal_handdoekstangen,aantal_rollen,met_klep,geschikt_voor_aantal_personen,verstelbaar,verstelbare_kop,zwenkbaar,met_audio,belgaqua_keurmerk,volumestroomklasse' | split: ','
++      endcase
++    -%}
++    {%- capture rows -%}
++      {%- if group_name == 'product' -%}
++        {%- assign article_label = 'bc_specs.fields.artikelnummer' | t -%}
++        {%- assign brand_label = 'bc_specs.fields.merk' | t -%}
++        {%- render 'bc-product-detail-row', value: product.selected_or_first_available_variant.sku, label: article_label -%}
++        {%- render 'bc-product-detail-row', value: product.vendor, label: brand_label -%}
++      {%- endif -%}
++      {%- for field in fields -%}
++        {%- render 'bc-product-mapped-spec-row', product: product, namespace: source_namespace, field: field -%}
++      {%- endfor -%}
++    {%- endcapture -%}
++    {%- assign rows = rows | strip -%}
++    {%- if rows != blank -%}
++      {%- assign group_key = 'bc_specs.groups.' | append: group_name -%}
++      <tbody>
++        <tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">{{ group_key | t }}</th></tr>
++        {{ rows }}
++      </tbody>
++    {%- endif -%}
++  {%- endfor -%}
++{%- endcapture -%}
++<section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
++  <div class="bc-product-specs__inner">
++    <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">{{ 'bc_specs.title' | t }}</h2>
++    <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">{{ spec_groups }}</table>
++  </div>
++</section>
++
+diff --git a/snippets/bc-product-detail-specs.liquid b/snippets/bc-product-detail-specs.liquid
+--- a/snippets/bc-product-detail-specs.liquid
++++ b/snippets/bc-product-detail-specs.liquid
+@@ -1,19 +1,20 @@
++{% doc %}
++  Routes product specifications to the matching data source.
++  @param {product} product - Current product.
++  @param {string} section_id - Main product section identifier.
++{% enddoc %}
++{%- assign specs_vendor = product.vendor | strip | downcase -%}
+ {%- if product.metafields.bc_sunshower.specifications.value != blank -%}
+   {%- render 'bc-sunshower-panel', product: product, section_id: section_id, mode: 'specifications' -%}
+ {%- else -%}
+-{% doc %}
+-  Shows verified grouped Hotbath specifications and preserves the previous renderer for other products.
+-  @param {product} product - Current product.
+-  @param {string} section_id - Main product section identifier.
+-{% enddoc %}
+-{%- capture bc_normal_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
+-{%- assign bc_normal_scope = bc_normal_scope | strip -%}
+-{%- if bc_normal_scope == 'ready' -%}
+-  {%- render 'bc-hotbath-public-specs', product: product, section_id: section_id -%}
+-{%- else -%}
+-  {%- render 'bc-product-detail-specs-legacy', product: product, section_id: section_id -%}
++  {%- capture bc_normal_scope -%}{%- render 'bc-hotbath-normal-scope', product: product -%}{%- endcapture -%}
++  {%- assign bc_normal_scope = bc_normal_scope | strip -%}
++  {%- if bc_normal_scope == 'ready' -%}
++    {%- render 'bc-hotbath-public-specs', product: product, section_id: section_id -%}
++  {%- elsif specs_vendor == 'wiesbaden' or specs_vendor == 'jee-o' -%}
++    {%- render 'bc-product-detail-specs-mapped', product: product, section_id: section_id -%}
++  {%- else -%}
++    {%- render 'bc-product-detail-specs-legacy', product: product, section_id: section_id -%}
++  {%- endif -%}
+ {%- endif -%}
+ 
+-
+-{%- endif -%}
+-
+diff --git a/snippets/bc-product-mapped-spec-row.liquid b/snippets/bc-product-mapped-spec-row.liquid
+new file mode 100644
+--- /dev/null
++++ b/snippets/bc-product-mapped-spec-row.liquid
+@@ -0,0 +1,51 @@
++{% doc %}
++  Renders one supported specification from the product's verified namespace.
++  @param {product} product - Current product.
++  @param {string} namespace - Source namespace.
++  @param {string} field - Public specification key.
++{% enddoc %}
++{%- liquid
++  assign source = product.metafields[namespace]
++  assign source_key = field
++  if namespace == 'specs'
++    case field
++      when 'coldstart'
++        assign source_key = 'met_koude_start'
++      when 'montage'
++        assign source_key = 'montagewijze'
++      when 'materiaal'
++        if source.materiaal.type == blank
++          assign source_key = 'materiaal_kraan'
++        endif
++    endcase
++  endif
++  assign spec = source[source_key]
++  assign label_key = 'bc_specs.fields.' | append: field
++  assign label = label_key | t
++  assign formatted = ''
++  case spec.type
++    when 'boolean'
++      if spec.value == true
++        assign formatted = 'bc_specs.yes' | t
++      elsif spec.value == false
++        assign formatted = 'bc_specs.no' | t
++      endif
++    when 'number_decimal', 'number_integer'
++      assign numeric_value = spec.value | plus: 0
++      assign integer_value = numeric_value | floor
++      if numeric_value == integer_value
++        assign formatted = integer_value | append: ''
++      else
++        assign formatted = numeric_value | append: ''
++        if request.locale.iso_code == 'nl'
++          assign formatted = formatted | replace: '.', ','
++        endif
++      endif
++  endcase
++-%}
++{%- if formatted != blank -%}
++  {%- render 'bc-product-detail-row', value: formatted, label: label -%}
++{%- elsif spec.type != blank -%}
++  {%- render 'bc-product-detail-row', metafield: spec, label: label -%}
++{%- endif -%}
++
+diff --git a/templates/index.json b/templates/index.json
+--- a/templates/index.json
++++ b/templates/index.json
+@@ -16,7 +16,7 @@
+         "hero_title": "",
+         "hero_subtitle": "",
+         "hero_button_text": "",
+-        "hero_button_link": "",
++        "hero_button_link": "/collections/vendors?q=Hotbath",
+         "hero_title_color": "#ffffff",
+         "hero_subtitle_color": "#ffffff",
+         "hero_title_position_mode": "inline",
+@@ -41,7 +41,7 @@
+         "banner_1_title": "",
+         "banner_1_subtitle": "",
+         "banner_1_button": "",
+-        "banner_1_link": "",
++        "banner_1_link": "/collections/vendors?q=THE%20MOSAIC%20FACTORY",
+         "banner_1_title_color": "#ffffff",
+         "banner_1_subtitle_color": "#ffffff",
+         "banner_1_button_text_color": "#0f2740",
+@@ -51,7 +51,7 @@
+         "banner_2_title": "",
+         "banner_2_subtitle": "",
+         "banner_2_button": "",
+-        "banner_2_link": "",
++        "banner_2_link": "/collections/badkamermeubels",
+         "banner_2_title_color": "#ffffff",
+         "banner_2_subtitle_color": "#ffffff",
+         "banner_2_button_text_color": "#0f2740",
+@@ -59,7 +59,10 @@
+         "banner_2_button_alignment": "left",
+         "banner_2_image": "shopify://shop_images/3.png",
+         "padding_top": 24,
+-        "padding_bottom": 24
++        "padding_bottom": 24,
++        "hero_link_label": "Shop Hotbath",
++        "banner_1_link_label": "Bekijk mozaïektegels van The Mosaic Factory",
++        "banner_2_link_label": "Bekijk badkamermeubels"
+       }
+     },
+     "home_category_grid_FgNMtn": {
+@@ -152,7 +155,7 @@
+       "settings": {
+         "title": "Shop per categorie",
+         "view_all_label": "Bekijk alle categorieën",
+-        "view_all_link": "",
++        "view_all_link": "/collections",
+         "menu": "main-menu",
+         "source_mode": "menu",
+         "columns_desktop": 4,
+@@ -169,7 +172,7 @@
+         "collection": "",
+         "product_count": 4,
+         "view_all_label": "Bekijk alle producten",
+-        "view_all_link": "",
++        "view_all_link": "/collections/all",
+         "add_to_cart_label": "In winkelwagen",
+         "padding_top": 24,
+         "padding_bottom": 24
+@@ -187,8 +190,8 @@
+         "step_2_text": "Jouw badkamer in 3D,\nhelemaal op maat",
+         "step_3_title": "Alles geregeld",
+         "step_3_text": "Van producten tot\nvakkundige montage",
+-        "cta_label": "Plan een gratis adviesgesprek",
+-        "cta_link": "",
++        "cta_label": "Vraag persoonlijk advies aan",
++        "cta_link": "/pages/contact",
+         "padding_top": 24,
+         "padding_bottom": 24
+       }
+@@ -205,8 +208,8 @@
+             "secondary_kicker": "Populaire stijl",
+             "title": "Hotel chic",
+             "text": "Donkere accenten, rijke materialen en sfeervolle verlichting voor een luxe badkamergevoel.",
+-            "link_label": "Ontdek deze stijl",
+-            "link": ""
++            "link_label": "Vraag stijladvies",
++            "link": "/pages/contact"
+           }
+         },
+         "style_card_qRJMQR": {
+@@ -218,8 +221,8 @@
+             "secondary_kicker": "",
+             "title": "Japandi",
+             "text": "Zachte kleuren, natuurlijke materialen en minimalistische rust met veel balans.",
+-            "link_label": "Ontdek deze stijl",
+-            "link": ""
++            "link_label": "Vraag stijladvies",
++            "link": "/pages/contact"
+           }
+         },
+         "style_card_zkCRii": {
+@@ -231,8 +234,8 @@
+             "secondary_kicker": "",
+             "title": "Modern",
+             "text": "Heldere lijnen, slimme opbergruimte en een cleane uitstraling die lang mooi blijft.",
+-            "link_label": "Ontdek deze stijl",
+-            "link": ""
++            "link_label": "Vraag stijladvies",
++            "link": "/pages/contact"
+           }
+         },
+         "style_card_eT449J": {
+@@ -244,8 +247,8 @@
+             "secondary_kicker": "",
+             "title": "Landelijk",
+             "text": "Houttinten, zachte vormen en een uitnodigende sfeer met een huiselijk gevoel.",
+-            "link_label": "Ontdek deze stijl",
+-            "link": ""
++            "link_label": "Vraag stijladvies",
++            "link": "/pages/contact"
+           }
+         }
+       },
+@@ -258,14 +261,14 @@
+       "name": "Home shop by style",
+       "settings": {
+         "show_extended_content": false,
+-        "card_cta_label": "Bekijk stijl",
++        "card_cta_label": "Vraag stijladvies",
+         "eyebrow": "Shop op stijl",
+         "title": "Vind de badkamerstijl die bij jouw huis past",
+         "intro": "<p>Van warm hotel chic tot strak modern: ontdek stijlen, materialen en sfeerpagina’s die je helpen om sneller de juiste keuzes te maken.</p>",
+-        "primary_button_label": "Bekijk alle stijlen",
+-        "primary_button_link": "",
+-        "secondary_button_label": "Inspiratie bekijken",
+-        "secondary_button_link": "",
++        "primary_button_label": "Vraag stijladvies",
++        "primary_button_link": "/pages/contact",
++        "secondary_button_label": "Vraag badkameradvies",
++        "secondary_button_link": "/pages/contact",
+         "support_title_1": "",
+         "support_text_1": "",
+         "support_title_2": "",
+@@ -284,47 +287,39 @@
+           "settings": {
+             "collection": "",
+             "custom_title": "Hotbath",
+-            "custom_link": ""
++            "custom_link": "/collections/vendors?q=Hotbath"
+           }
+         },
+         "brand_84x3qT": {
+           "type": "brand",
+           "settings": {
+             "collection": "",
+-            "custom_title": "Geberit",
+-            "custom_link": ""
++            "custom_title": "Wiesbaden",
++            "custom_link": "/collections/vendors?q=Wiesbaden"
+           }
+         },
+         "brand_AnL7GR": {
+           "type": "brand",
+           "settings": {
+             "collection": "",
+-            "custom_title": "IVY",
+-            "custom_link": ""
++            "custom_title": "JEE-O",
++            "custom_link": "/collections/vendors?q=JEE-O"
+           }
+         },
+         "brand_PN7t86": {
+           "type": "brand",
+           "settings": {
+             "collection": "",
+-            "custom_title": "INK",
+-            "custom_link": ""
++            "custom_title": "Sunshower",
++            "custom_link": "/collections/vendors?q=Sunshower"
+           }
+         },
+         "brand_aPUkce": {
+           "type": "brand",
+           "settings": {
+             "collection": "",
+-            "custom_title": "JEE-O",
+-            "custom_link": ""
+-          }
+-        },
+-        "brand_NQgeQ6": {
+-          "type": "brand",
+-          "settings": {
+-            "collection": "",
+-            "custom_title": "Quooker",
+-            "custom_link": ""
++            "custom_title": "THE MOSAIC FACTORY",
++            "custom_link": "/collections/vendors?q=THE%20MOSAIC%20FACTORY"
+           }
+         }
+       },
+@@ -333,8 +328,7 @@
+         "brand_84x3qT",
+         "brand_AnL7GR",
+         "brand_PN7t86",
+-        "brand_aPUkce",
+-        "brand_NQgeQ6"
++        "brand_aPUkce"
+       ],
+       "name": "Home brand rail",
+       "settings": {
+@@ -343,7 +337,7 @@
+         "intro": "Kies uit bekende merken en ontdek collecties die passen bij jouw stijl, budget en badkamerwensen.",
+         "show_all_brands_link": true,
+         "all_brands_label": "Bekijk alle merken",
+-        "all_brands_link": "",
++        "all_brands_link": "/collections?view=merken",
+         "padding_top": 16,
+         "padding_bottom": 16
+       }
+@@ -355,46 +349,46 @@
+           "type": "post",
+           "settings": {
+             "image": "shopify://shop_images/Landelijke_Badkamer_Banner.png",
+-            "caption": "Modern & licht",
+-            "link": ""
++            "caption": "Modern & licht: vraag advies",
++            "link": "/pages/contact"
+           }
+         },
+         "post_rYJY7b": {
+           "type": "post",
+           "settings": {
+             "image": "shopify://shop_images/Moderne_Badkamer_Banner.png",
+-            "caption": "Kleine badkamer",
+-            "link": ""
++            "caption": "Kleine badkamer: vraag advies",
++            "link": "/pages/contact"
+           }
+         },
+         "post_WpNLAG": {
+           "type": "post",
+           "settings": {
+             "image": "shopify://shop_images/Hotel_Chique_Banner.png",
+-            "caption": "Hotel chic",
+-            "link": ""
++            "caption": "Hotel chic: vraag advies",
++            "link": "/pages/contact"
+           }
+         },
+         "post_EB9FLc": {
+           "type": "post",
+           "settings": {
+             "image": "shopify://shop_images/Japandi_Banner.png",
+-            "caption": "Japandi",
+-            "link": ""
++            "caption": "Japandi: vraag advies",
++            "link": "/pages/contact"
+           }
+         },
+         "post_eGmzXM": {
+           "type": "post",
+           "settings": {
+             "caption": "Vrijstaande baden",
+-            "link": ""
++            "link": "/collections/vrijstaande-baden"
+           }
+         },
+         "post_aKFxxn": {
+           "type": "post",
+           "settings": {
+             "caption": "Inloopdouche",
+-            "link": ""
++            "link": "/collections/inloopdouches"
+           }
+         }
+       },
+@@ -412,8 +406,8 @@
+         "show_intro": false,
+         "intro": "<p>Ontdek stijlen, indelingen en details voor jouw badkamer.</p>",
+         "hashtag_label": "Badkamerinspiratie",
+-        "button_label": "Bekijk alle inspiratie",
+-        "button_link": "",
++        "button_label": "Vraag badkameradvies",
++        "button_link": "/pages/contact",
+         "padding_top": 24,
+         "padding_bottom": 24
+       }
+@@ -424,10 +418,10 @@
+       "settings": {
+         "heading": "Hulp nodig bij je badkamer?",
+         "text": "Onze adviseurs staan voor je klaar.\nVan eerste idee tot complete realisatie.",
+-        "primary_button_label": "Plan een afspraak",
+-        "primary_button_link": "",
++        "primary_button_label": "Vraag persoonlijk advies aan",
++        "primary_button_link": "/pages/contact",
+         "secondary_button_label": "Neem contact op",
+-        "secondary_button_link": "",
++        "secondary_button_link": "/pages/contact",
+         "service_1_label": "Persoonlijk\nadvies",
+         "service_2_label": "Complete\nbadkamer",
+         "service_3_label": "Vrijblijvend\nontwerp",
+@@ -447,4 +441,3 @@
+     "home_help_cta"
+   ]
+ }
+-
+diff --git a/templates/list-collections.merken.json b/templates/list-collections.merken.json
+new file mode 100644
+--- /dev/null
++++ b/templates/list-collections.merken.json
+@@ -0,0 +1,22 @@
++/*
++ * ------------------------------------------------------------
++ * IMPORTANT: The contents of this file are auto-generated.
++ *
++ * This file may be updated by the Shopify admin theme editor
++ * or related systems. Please exercise caution as any changes
++ * made to this file may be overwritten.
++ * ------------------------------------------------------------
++ */
++{
++  "sections": {
++    "main": {
++      "type": "bc-brand-directory",
++      "settings": {
++        "heading": "Onze merken"
++      }
++    }
++  },
++  "order": [
++    "main"
++  ]
++}

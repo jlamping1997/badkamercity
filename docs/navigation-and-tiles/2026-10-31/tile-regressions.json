@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "method": "Real buybox lifecycle and calculation core in happy-dom; synthetic product, session storage and markup fragments. No layout, native Escape/focus, server, cart or form claim.",
+  "checks": [
+    "Fresh product starts at 1 m², 10% waste and correct whole-box total",
+    "Zero edited area clears the previous total and blocks ordering",
+    "Clearing the default is an invalid explicit edit",
+    "Ten square metres still rounds 11 required m² to eight boxes",
+    "Manual whole boxes preserve their quantity without double waste",
+    "A saved explicit area and waste take precedence over the fresh default",
+    "A saved manual box quantity is restored",
+    "Invalid saved zero area falls back to the fresh 1 m² default",
+    "A product that cannot be ordered remains disabled at the valid default",
+    "Info button opens the dialog, sets expanded and restores body scrolling"
+  ],
+  "sources": [
+    {
+      "path": "assets/bc-porcelanosa-buybox.js",
+      "sha256": "9e0f43aa60da2e6203b07b5062d753ca19de8970c9b29a8ac28323d230a9279d"
+    },
+    {
+      "path": "snippets/bc-porcelanosa-buybox.liquid",
+      "sha256": "8e5792afa72927066eccefbd29312c7658dcfb9e1f2e0e4c8d85cd8fb50ed0af"
+    },
+    {
+      "path": "locales/nl.json",
+      "sha256": "c8b9d60c1b3a40e619ee389605e9c684d26f33267acacca5ef4f78ccdcbee180"
+    },
+    {
+      "path": "scripts/component-audit/fixtures/fix01-baseline/assets/bc-porcelanosa-core.js",
+      "sha256": "e2d87d7c6bcb9565f18b5c4d3c3ebc539a190953200c8377f358c624a9cdd3f7"
+    }
+  ]
+}

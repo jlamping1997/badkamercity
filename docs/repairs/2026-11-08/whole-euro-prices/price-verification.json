@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "verifiedAt": "2026-11-08T22:53:30.949Z",
+  "variantsRead": 17461,
+  "productsInBaseline": 15897,
+  "roundedVerified": 3335,
+  "unchangedVerified": 14126,
+  "areaPricedExcludedAndUnchanged": 3496,
+  "currency": "EUR",
+  "rule": "ROUND_HALF_UP for sale prices strictly above100 EUR; area-priced tiles excluded",
+  "priceErrors": [],
+  "metadataDifferences": [],
+  "pages": 88,
+  "mutationCalls": 50,
+  "readAfterEveryWrite": true,
+  "maxAbsolutePriceChangeEUR": "0.50",
+  "decimalPlanFNV32": "62297193",
+  "metadataComparison": "Structural equality of selected fields, independent of JSON object key order"
+}

@@ -1,0 +1,96 @@
+{
+  "codeBase": "02cdd42d18c3da1d87493758265a9466a6ec9fb6",
+  "codeCheckpoint": "a12bb9433cf30bc355cca7d6ef029cde35dd8622",
+  "files": [
+    {
+      "filename": "assets/bc-external-filters.css",
+      "git": "737b2e9bf593105a80239a345daec40d",
+      "main": "6e3cba08884edac08fdcf229a9fd170d",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande klikbaarheid tijdens laden en z-index van het hartje behouden; geen nieuwe filteractivering.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "assets/bc-porcelanosa-buybox.js",
+      "git": "e2dc6c17eb8715e710dcdd15381e7058",
+      "main": "473eeba8327cd6f89d97200db3a11319",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande tijdelijke voorraadtekst in stuk-/m²-herberekening; geen prijs- of hoeveelheidsformule veranderd.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "assets/bc-product-cards.css",
+      "git": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "main": "438c49d4e4cdac484d4dcc1937b674eb",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande kaart-overlay en lagen voor interactieve controls; groen voorraadlabel uit live behouden.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "config/settings_schema.json",
+      "git": "70b4665da3569296af1ffd3cbbb04514",
+      "main": "02f5169a612cc7674e3dc03a0bab3731",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Semantisch uitsluitend één bestaande checkboxgroep bc_temporary_in_stock toegevoegd, default false; overige verschil is bronopmaak. settings_data niet gelezen of geschreven.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/bc-card-delivery.liquid",
+      "git": "6c17c24ca0640676d562ab78fdd08dce",
+      "main": "efa714ef05aaf0eee5a5b750ad91c2f1",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande optionele tijdelijke levertekst en stock-class; originele fallback blijft behouden.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/bc-cart-delivery.liquid",
+      "git": "a5777ed5f3ddd64ba2af0f5eb422f59c",
+      "main": "ea28b06de6ff56f8fc6e8769682ea816",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande optionele tijdelijke levertekst; cart-identiteit, aantallen en bedragen ongewijzigd.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/bc-external-filters.liquid",
+      "git": "2a0136a8420e8a710f448c99d5fc3aad",
+      "main": "fdbb71e4463e700b721c21ee95a38331",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande voorraadpresentatie als dataset en vertaalde tekst doorgeven aan de reeds live JS.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/bc-fabriecio-delivery.liquid",
+      "git": "73b9f1ec4dc09bb952b9579a329dd21c",
+      "main": "0e255c766f3bd67220c5848dd64f002b",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande tijdelijke presentatie overnemen; oorspronkelijke voorraaddata niet herschrijven.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/bc-porcelanosa-buybox.liquid",
+      "git": "31019057c4adf03e5c6dbf785983f1e3",
+      "main": "b82624bacca20f3c8b854d0acdaeb585",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande datasets en startstatus voor dezelfde tijdelijke weergave; berekeningen/koopacties ongewijzigd.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    },
+    {
+      "filename": "snippets/card-product.liquid",
+      "git": "d9ccc5adadb8b9948ddc48e0344a9a2b",
+      "main": "a8951a378189614c7800573586795720",
+      "decision": "PRESERVE_OWNER_PUBLISHED_SOURCE_IN_GIT",
+      "reason": "Bestaande lege decoratieve kaartlink met tabindex=-1 en aria-hidden; normale toegankelijke titel-/medialinks en bediening behouden.",
+      "capturedBodyMd5Verified": true,
+      "liveWritten": false
+    }
+  ]
+}

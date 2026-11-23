@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "guide": {
+      "type": "bc-kitkat-guide",
+      "blocks": {
+        "mini": {
+          "type": "series",
+          "settings": {
+            "key": "mini",
+            "title": "Sevilla Mini",
+            "size": "1,2 × 9,2 cm",
+            "description": "Een fijne rij smalle, licht bolle strookjes. Op een klein stuk wand zie je snel een mooi patroon. Op de foto zie je glanzend roodbruin.",
+            "example": "the-mosaic-factory-sevilla-kitkat-mini-finger-smoked-cherry-glossy-mozaiektegel-sef12012"
+          }
+        },
+        "original": {
+          "type": "series",
+          "settings": {
+            "key": "original",
+            "title": "Sevilla Original",
+            "size": "2 × 14,5 cm",
+            "description": "De langere strookjes zorgen voor minder lijntjes op de wand. De randen vangen het licht. Op de foto zie je mat saliegroen.",
+            "example": "the-mosaic-factory-sevilla-kitkat-original-finger-sage-green-matt-mozaiektegel-sef20575"
+          }
+        },
+        "kitkat22": {
+          "type": "series",
+          "settings": {
+            "key": "kitkat22",
+            "title": "Sevilla KitKat Finger",
+            "size": "2,2 × 14,5 cm",
+            "description": "Deze strookjes zijn even lang als de Original en iets breder. Kies wit of zwart, in mat of glans. Op de foto zie je glanzend wit.",
+            "example": "the-mosaic-factory-sevilla-kitkat-finger-white-glossy-mozaiektegel-sef22100"
+          }
+        },
+        "osiris": {
+          "type": "series",
+          "settings": {
+            "key": "osiris",
+            "title": "Osiris Hertman",
+            "size": "2 × 14,5 cm",
+            "description": "Even groot als de Sevilla Original, met donkere grijstinten. Dit voorbeeld combineert matte en glanzende strookjes.",
+            "example": "the-mosaic-factory-osiris-hertman-kitkat-original-finger-carbon-shades-of-gray-matt-glossy-mozaiektegel-sef-oh-mix-1"
+          }
+        },
+        "travertin": {
+          "type": "series",
+          "settings": {
+            "key": "travertin",
+            "title": "KitKat van travertin",
+            "size": "1,9 × 15,2 cm of 2,2 × 14,8 cm",
+            "description": "Echt natuursteen met kleine kleurverschillen. Kies bol (Convex), vlak (Flat) of licht hol (Original).",
+            "example": "the-mosaic-factory-natural-stone-travertine-beige-matt-mozaiektegel-ntk01"
+          }
+        },
+        "room_beige": {
+          "type": "room",
+          "settings": {
+            "tile": "the-mosaic-factory-sevilla-kitkat-mini-finger-desert-beige-glossy-mozaiektegel-sef12225",
+            "image_number": 2,
+            "alt": "Wastafel met twee ovale spiegels en een wand met zandbeige mozaïek.",
+            "title": "Zandbeige bij hout",
+            "description": "Het warme beige van Sevilla Mini Desert Beige past mooi bij een houten wastafelmeubel.",
+            "link_label": "Bekijk Desert Beige"
+          }
+        },
+        "room_white": {
+          "type": "room",
+          "settings": {
+            "tile": "the-mosaic-factory-sevilla-kitkat-original-finger-vintage-white-glossy-mozaiektegel-sef20120",
+            "image_number": 4,
+            "alt": "Wand met gebroken witte KitKat-tegels achter een plank.",
+            "title": "Gebroken wit met glans",
+            "description": "Vintage White is zacht wit. De glans vangt het licht en laat de smalle strookjes goed uitkomen.",
+            "link_label": "Bekijk Vintage White"
+          }
+        },
+        "room_stone": {
+          "type": "room",
+          "settings": {
+            "tile": "the-mosaic-factory-natural-stone-travertine-beige-matt-mozaiektegel-ntk01",
+            "image_number": 3,
+            "alt": "Travertinwand bij een wastafel met een verlichte ronde spiegel.",
+            "title": "Travertin achter de wastafel",
+            "description": "Van dichtbij zie je de tekening van de steen. De bolle strookjes geven de wand wat reliëf.",
+            "link_label": "Bekijk Travertin Convex"
+          }
+        }
+      },
+      "block_order": [
+        "mini",
+        "original",
+        "kitkat22",
+        "osiris",
+        "travertin",
+        "room_beige",
+        "room_white",
+        "room_stone"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "guide"
+  ]
+}

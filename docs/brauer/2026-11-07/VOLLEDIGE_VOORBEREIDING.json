@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-07",
+  "checkpoint": "BRAUER-19",
+  "scope": "Complete offline preparation. No Shopify importer or live theme changes.",
+  "source_rows": 13757,
+  "unique_skus": 13161,
+  "families": 1568,
+  "prepared_families": 1559,
+  "families_with_data_holds": 9,
+  "source_conflict_articles": 27,
+  "ambiguous_article_codes": 12,
+  "measurement_conflict_articles": 3,
+  "distinct_data_hold_articles": 42,
+  "future_articles": 163,
+  "retained_previous_exact_sku_audits": 64,
+  "price_checks": 13161,
+  "price_rounding": "Decimal half-up; independent integer-cent comparison",
+  "half_cent_rounding_cases": 469,
+  "sku_ean_and_handle_uniqueness": "PASS for all13161; store-wide collision check still pending",
+  "graph_reachability": "All generated family graphs connected. Twelve identical option identities remain held, not silently selected.",
+  "transitions": {
+    "valid": 155162,
+    "missing_rejected": 9822,
+    "ambiguous_never_auto_selected": 454
+  },
+  "unit_tests": 9,
+  "test_result": "PASS",
+  "conditional_directions_and_depth_height_splits": "PASS",
+  "source_receipt": {
+    "price_lists": 3,
+    "official_image_pdf_package_received": false
+  },
+  "collection_scan": {
+    "current_existing_collections": 227,
+    "product_type_proposals": 76,
+    "all_targets_exist": true,
+    "membership_rules_applied_or_released": false
+  },
+  "workbook": {
+    "sheets": [
+      "Overzicht",
+      "Producten",
+      "Keuzegroepen",
+      "Uitzonderingen"
+    ],
+    "articles": 13161,
+    "native_sku_ean_title_and_status_comparison": "PASS",
+    "recalculation": "PASS",
+    "formula_errors": 0,
+    "identifier_cells": "String SKU and EAN; exact readback preserved",
+    "user_note_fields": 4,
+    "visual_review": "PASS: all four sheets and the note-entry area rendered and visually inspected",
+    "exact_user_note_sku_ean_reader": "PASS: 13161 rows"
+  },
+  "not_tested": [
+    "Live Shopify selectors/specs/delivery/card/PDP/cart integration",
+    "Physical mobile/touch",
+    "Full store-wide SKU/EAN/handle collisions",
+    "Current write-input schema and definition compatibility"
+  ],
+  "shopify_writes": 0,
+  "import_allowed": false,
+  "next_action": "Receive and inventory official supplier image/PDF package, then resolve held source cases and prepare the reviewed integration pilot."
+}

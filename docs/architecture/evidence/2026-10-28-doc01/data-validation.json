@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "counts": {
+    "products": 11343,
+    "variants": 11343,
+    "metafields": 241064,
+    "media": 32065,
+    "product_media": 32065,
+    "collections": 226,
+    "product_collections": 39064,
+    "inventory_levels": 11343,
+    "references_data": 19
+  },
+  "statusCounts": {
+    "ACTIVE": 11342,
+    "DRAFT": 1
+  },
+  "productTemplateCounts": {
+    "(default)": 11270,
+    "bc-hotbath-pilot": 1,
+    "sunshower": 72
+  },
+  "collectionTemplateCounts": {
+    "(default)": 209,
+    "bc-meubelhub": 1,
+    "category-landing": 16
+  },
+  "fieldPaths": 447,
+  "metafieldKeysAndTypes": 253,
+  "unhandledNestedPagination": 0,
+  "duplicateProductIds": 0,
+  "duplicateVariantIds": 0,
+  "orphanVariants": 0,
+  "databaseIntegrity": "ok",
+  "databaseForeignKeyErrors": 0,
+  "productAndVariantCountsMatchStartAndEnd": true,
+  "mediaCountMatchesEveryProduct": true,
+  "runtimeJsonAssets": 674,
+  "mediaBinariesIncluded": false,
+  "snapshotAtomic": false,
+  "source": "Shopify read-only Admin GraphQL connector",
+  "windowStart": "2026-10-28T02:10:21Z",
+  "windowEnd": "2026-10-28T02:43:01.726Z",
+  "metafieldCountsByOwnerType": {
+    "COLLECTION": 22,
+    "PRODUCT": 241042
+  }
+}

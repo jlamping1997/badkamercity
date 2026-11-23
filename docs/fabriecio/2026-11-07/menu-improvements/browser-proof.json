@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-11-07T22:46:06.420Z",
+  "uiTransitions": [
+    {
+      "test": "Copper to gold keeps round/25cm/ceiling",
+      "pass": true,
+      "url": "https://badkamercity.nl/products/fabriecio-bg-2009"
+    },
+    {
+      "test": "Round to square keeps gold/25cm/ceiling after page load",
+      "pass": true,
+      "url": "https://badkamercity.nl/products/fabriecio-bg-2015"
+    },
+    {
+      "test": "Met overloop to Zonder overloop keeps copper",
+      "pass": true,
+      "url": "https://badkamercity.nl/products/fabriecio-clw-6002"
+    }
+  ],
+  "narrowComponentQa": [
+    {
+      "width": 320,
+      "buttons": [
+        {
+          "height": 83.1875,
+          "label": "Chroom",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 76.65625
+        },
+        {
+          "height": 83.1875,
+          "label": "Mat zwart",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 76.671875
+        },
+        {
+          "height": 99.375,
+          "label": "Geborsteld goud",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 76.65625
+        },
+        {
+          "height": 83.1875,
+          "label": "Gunmetal",
+          "loaded": true,
+          "top": 197.9375,
+          "visible": true,
+          "width": 76.65625
+        },
+        {
+          "height": 83.1875,
+          "label": "RVS",
+          "loaded": true,
+          "top": 197.9375,
+          "visible": true,
+          "width": 76.671875
+        },
+        {
+          "height": 99.375,
+          "label": "Geborsteld koper",
+          "loaded": true,
+          "top": 197.9375,
+          "visible": true,
+          "width": 76.65625
+        }
+      ],
+      "columns": "76.6562px 76.6719px 76.6562px",
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "groupWidth": 246,
+      "pageScrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "buttons": [
+        {
+          "height": 83.1875,
+          "label": "Chroom",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 100
+        },
+        {
+          "height": 83.1875,
+          "label": "Mat zwart",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 100
+        },
+        {
+          "height": 83.1875,
+          "label": "Geborsteld goud",
+          "loaded": true,
+          "top": 86.5625,
+          "visible": true,
+          "width": 100
+        },
+        {
+          "height": 83.1875,
+          "label": "Gunmetal",
+          "loaded": true,
+          "top": 181.75,
+          "visible": true,
+          "width": 100
+        },
+        {
+          "height": 83.1875,
+          "label": "RVS",
+          "loaded": true,
+          "top": 181.75,
+          "visible": true,
+          "width": 100
+        },
+        {
+          "height": 99.375,
+          "label": "Geborsteld koper",
+          "loaded": true,
+          "top": 181.75,
+          "visible": true,
+          "width": 100
+        }
+      ],
+      "columns": "100px 100px 100px",
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "groupWidth": 316,
+      "pageScrollWidth": 390,
+      "viewport": 390
+    }
+  ],
+  "scope": "Own server-rendered product-choice component at 320/390 CSS pixels; not a full physical-phone test."
+}

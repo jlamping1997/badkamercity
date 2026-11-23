@@ -1,0 +1,128 @@
+{% doc %}
+  Renders confirmed colours for a product card or returns their data for the filtered cards.
+  @param {product} product - Card product.
+  @param {string} [mode] - Use data for JSON output.
+{% enddoc %}
+{%- liquid
+  capture current_colour
+    render 'bc-card-colour-name', product: product
+  endcapture
+  assign current_colour = current_colour | strip
+  assign colour_option_names = 'kleur,color,colour,basiskleur,kleur-afwerking' | split: ','
+  assign tile_products = product.metafields.tiles.group_products.value
+  assign tile_size = product.metafields.tiles.size.value
+  assign tile_finish = product.metafields.tiles.execution.value
+  assign tile_application = product.metafields.tiles.application.value
+  assign related_products = product.metafields.custom.color_variants.value
+  assign relative_kind = 'current'
+  assign entries = 'current' | split: ','
+  if tile_products.size > 1
+    assign relative_kind = 'tile'
+    assign entries = tile_products
+  elsif related_products.size > 1
+    assign relative_kind = 'linked'
+    assign entries = related_products
+  endif
+  for option in product.options_with_values
+    assign option_key = option.name | handleize
+    if colour_option_names contains option_key and option.values.size > 0
+      assign relative_kind = 'variant'
+      assign entries = option.values
+      break
+    endif
+  endfor
+  assign count = 0
+  assign visible_count = 0
+  assign seen = '|'
+-%}
+{%- capture entries_markup -%}
+  {%- for entry in entries -%}
+    {%- liquid
+      assign entry_product = product
+      assign label = current_colour
+      assign href = product.url
+      assign selected = true
+      assign image = blank
+      assign hex = blank
+      if relative_kind == 'variant'
+        assign label = entry.name | strip
+        assign selected = entry.selected
+        assign href = entry.product_url
+        if href == blank and entry.variant
+          assign href = product.url | append: '?variant=' | append: entry.variant.id
+        elsif href == blank and product.options_with_values.size == 1
+          assign href = product.url | append: '?option_values=' | append: entry.id
+        endif
+        if entry.swatch.image
+          assign image = entry.swatch.image | image_url: width: 64
+        elsif entry.swatch.color
+          assign hex = entry.swatch.color | color_to_hex
+        elsif entry.variant.image
+          assign image = entry.variant.image | image_url: width: 64
+        endif
+      elsif relative_kind != 'current'
+        assign entry_product = entry
+        if entry_product.vendor != product.vendor or entry_product.type != product.type
+          continue
+        endif
+        if relative_kind == 'tile'
+          if entry_product.metafields.tiles.size.value != tile_size or entry_product.metafields.tiles.execution.value != tile_finish or entry_product.metafields.tiles.application.value != tile_application
+            continue
+          endif
+        endif
+        capture label
+          render 'bc-card-colour-name', product: entry_product
+        endcapture
+        assign label = label | strip
+        assign href = entry_product.url
+        assign selected = false
+        if entry_product.id == product.id
+          assign selected = true
+        endif
+      endif
+      if label == blank or href == blank
+        continue
+      endif
+      assign label_key = label | downcase | append: '|' | prepend: '|'
+      if seen contains label_key
+        continue
+      endif
+      assign seen = seen | append: label_key
+      if selected
+        assign current_colour = label
+      endif
+      if relative_kind == 'tile' or tile_size != blank or mode != 'data' and image == blank and hex == blank
+        if image == blank and entry_product.featured_image != blank
+          assign image = entry_product.featured_image | image_url: width: 64
+        endif
+      endif
+      assign count = count | plus: 1
+    -%}
+    {%- if mode == 'data' -%}
+      {%- if count > 1 -%},{%- endif -%}
+      {"color":{{ label | json }},"handle":{{ entry_product.handle | json }},"url":{{ href | json }},"selected":{{ selected | json }},"image":{{ image | default: '' | json }},"hex":{{ hex | default: '' | json }}}
+    {%- elsif visible_count < 3 or selected -%}
+      {%- assign visible_count = visible_count | plus: 1 -%}
+      {%- if selected -%}
+        <span class="bc-card-swatch" data-current-color="true" aria-label="{{ label | escape }}" title="{{ label | escape }}"{% if image != blank %} style="--bc-swatch: url('{{ image | escape }}') center / cover"{% elsif hex != blank %} style="--bc-swatch: {{ hex | escape }}"{% endif %}><span class="visually-hidden">{{ label | escape }}</span></span>
+      {%- else -%}
+        <a class="bc-card-swatch" href="{{ href | escape }}" aria-label="{{ label | escape }}" title="{{ label | escape }}"{% if image != blank %} style="--bc-swatch: url('{{ image | escape }}') center / cover"{% elsif hex != blank %} style="--bc-swatch: {{ hex | escape }}"{% endif %}><span class="visually-hidden">{{ label | escape }}</span></a>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if mode == 'data' -%}
+  {"name":{{ current_colour | json }},"items":[{{ entries_markup }}]}
+{%- elsif count > 0 -%}
+  {%- if current_colour != blank -%}
+    <p class="bc-card-color">{% if count == 1 %}{{ 'products.product.card_colour' | t | escape }}: {% endif %}{{ current_colour | escape }}</p>
+  {%- endif -%}
+  {%- if count > 1 -%}
+    <div class="bc-card-colors bc-card-colors--native" role="group" aria-label="{{ 'products.product.card_colour' | t | escape }}">
+      {{- entries_markup -}}
+      {%- if count > visible_count -%}
+        <a class="bc-card-color-more" href="{{ product.url }}" aria-label="{{ 'bc_hotbath_mobile.all_colors' | t: count: count | escape }}">+{{ count | minus: visible_count }}</a>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+{%- endif -%}

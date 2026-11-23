@@ -1,0 +1,194 @@
+{
+  "metrics": {
+    "selected": 236,
+    "ready_groups": 7,
+    "ready_products": 229,
+    "review": 7,
+    "excluded": 0
+  },
+  "families": [
+    {
+      "family": "RARH",
+      "articles": 12,
+      "pdf_pages": [
+        464,
+        465
+      ],
+      "printed_pages": [
+        462,
+        463
+      ],
+      "choices": [
+        "kleur",
+        "aantal_stangen"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RARV",
+      "articles": 22,
+      "pdf_pages": [
+        478,
+        479,
+        480
+      ],
+      "printed_pages": [
+        476,
+        477,
+        478
+      ],
+      "choices": [
+        "kleur",
+        "aantal_stangen"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RAS",
+      "articles": 78,
+      "pdf_pages": [
+        466,
+        467,
+        468,
+        469
+      ],
+      "printed_pages": [
+        464,
+        465,
+        466,
+        467
+      ],
+      "choices": [
+        "kleur",
+        "lengte",
+        "aantal_stangen"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RAS8050",
+      "articles": 8,
+      "pdf_pages": [
+        474
+      ],
+      "printed_pages": [
+        472
+      ],
+      "choices": [
+        "kleur"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RASS",
+      "articles": 80,
+      "pdf_pages": [
+        470,
+        471,
+        472,
+        473
+      ],
+      "printed_pages": [
+        468,
+        469,
+        470,
+        471
+      ],
+      "choices": [
+        "kleur",
+        "lengte",
+        "aantal_stangen"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RASS8050",
+      "articles": 7,
+      "pdf_pages": [
+        474
+      ],
+      "printed_pages": [
+        472
+      ],
+      "choices": [
+        "kleur"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    },
+    {
+      "family": "RASV",
+      "articles": 22,
+      "pdf_pages": [
+        476,
+        477
+      ],
+      "printed_pages": [
+        474,
+        475
+      ],
+      "choices": [
+        "kleur",
+        "aantal_stangen"
+      ],
+      "membership_basis": "EXACT_BOOK_MODEL_AND_EXACT_CURRENT_TITLE_TEMPLATE",
+      "installation_note": "Only same afbouw/set article class; MBASES installation parts and single spare rails never included. Book says inbouwdeel must be ordered separately."
+    }
+  ],
+  "review": [
+    {
+      "sku": "RARVM135-1TB",
+      "handle": "hotbath-more-rails-rarvm135-round-handdoekwarmer-135cm-tuscan-bronze",
+      "reason": "UNKNOWN_EXACT_RAILS_MODEL",
+      "title": "Hotbath &More Rails RARVM135 Round handdoekwarmer 135cm – tuscan bronze – RARVM135-1TB"
+    },
+    {
+      "sku": "RARV135-1PBP",
+      "handle": "hotbath-rarv135-1pbp",
+      "reason": "FINISH_NOT_CONFIRMED_FOR_EXACT_BOOK_SET",
+      "title": "Hotbath set van 1 rails  RARV135 ROUND135 cm met - RARV135-1PBP"
+    },
+    {
+      "sku": "RARV135-2PBP",
+      "handle": "hotbath-rarv135-2pbp",
+      "reason": "FINISH_NOT_CONFIRMED_FOR_EXACT_BOOK_SET",
+      "title": "Hotbath set van 2 rails  RARV135 ROUND135 cm met - RARV135-2PBP"
+    },
+    {
+      "sku": "RARV135-3PBP",
+      "handle": "hotbath-rarv135-3pbp",
+      "reason": "TITLE_TEMPLATE_OR_FIXED_FEATURE_CONFLICT",
+      "title": "Hotbath set van 3 rails  RARV135 ROUND135 cm met - RARV135-3PBP"
+    },
+    {
+      "sku": "RASV135-1PBP",
+      "handle": "hotbath-rasv135-1pbp",
+      "reason": "FINISH_NOT_CONFIRMED_FOR_EXACT_BOOK_SET",
+      "title": "Hotbath set van 1 rails  RASV135 SQUARE135 cm met separate schakelaar excl inbouwelement - RASV135-1PBP"
+    },
+    {
+      "sku": "RASV135-2PBP",
+      "handle": "hotbath-rasv135-2pbp",
+      "reason": "FINISH_NOT_CONFIRMED_FOR_EXACT_BOOK_SET",
+      "title": "Hotbath set van 2 rails  RASV135 SQUARE135 cm met separate schakelaar excl inbouwelement - RASV135-2PBP"
+    },
+    {
+      "sku": "RASV135-3PBP",
+      "handle": "hotbath-rasv135-3pbp",
+      "reason": "FINISH_NOT_CONFIRMED_FOR_EXACT_BOOK_SET",
+      "title": "Hotbath set van 3 rails  RASV135 SQUARE135 cm met separate schakelaar excl inbouwelement - RASV135-3PBP"
+    }
+  ],
+  "excluded": [],
+  "book_limitations": [
+    "Book family rules were absent in book_rules.json; exact model evidence read directly from local Edition18 PDF.",
+    "PDF477 table has apparent RASS80-3 typo; RASV135-3 is separately confirmed by heading and complete set description.",
+    "Group membership does not assert that a separate inbouwdeel is supplied; existing prices and titles are preserved.",
+    "RARVM integrated-switch model is separate from RARV separate-switch models and excluded here."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": "FLASH-01",
+  "source_main": "195913482506",
+  "target_draft": "195915448586",
+  "status": "PREVIEW_READY / NOT_PUBLISHED",
+  "deployment_files": [
+    {
+      "filename": "layout/theme.liquid",
+      "md5": "3444d4e0704c8ec7346b7d1f8d378b98"
+    },
+    {
+      "filename": "sections/header.liquid",
+      "md5": "7054f3488312c3dca1e25f340bca6ddf"
+    },
+    {
+      "filename": "assets/icon-arrow.svg",
+      "md5": "6ad52f6801a11de32979e7d3297b071d"
+    },
+    {
+      "filename": "snippets/bc-first-paint.liquid",
+      "md5": "12c0ed7f9e90cc01f2731813e4b72613"
+    }
+  ],
+  "baseline": [
+    {
+      "filename": "assets/icon-arrow.svg",
+      "md5": "e3e6e2cda39714982dfbc87f33be3f40"
+    },
+    {
+      "filename": "layout/theme.liquid",
+      "md5": "11f200a79997b9e5666b9e2417bbdcbe"
+    },
+    {
+      "filename": "sections/header.liquid",
+      "md5": "541b93c1ba9d938144d95f57f7d4fbeb"
+    }
+  ],
+  "unchanged_imports": [
+    "assets/bc-typography.css",
+    "assets/bc-wishlist.css",
+    "assets/bc-wishlist.js"
+  ],
+  "qa_template": "templates/index.bc-homepage-review.liquid",
+  "qa_cleanup": "Original inert QA template restored exactly",
+  "code_checkpoint": "901ebfdd35400233da1337c1f1e9822739ff60cc",
+  "copy_parity": "1337/1337 checksum equal before writes",
+  "main_unchanged": "1337/1337",
+  "final_draft_count": 1338,
+  "test_evidence": [
+    "startup-comparison.jpg",
+    "startup-metrics.json",
+    "browser-check.json",
+    "theme-verification.json"
+  ]
+}

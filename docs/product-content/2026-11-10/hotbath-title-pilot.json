@@ -1,0 +1,1507 @@
+{
+  "checked_at": "2026-11-10T00:18:44.803Z",
+  "scope": "12 Hotbath BAA16 articles; one real model family, not 12 separate product types",
+  "applied": false,
+  "products": [
+    {
+      "id": "gid://shopify/Product/10534270370058",
+      "sku": "BAA16CR",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-chroom-baa16cr",
+      "current_long": "Hotbath &More badgreep – chroom",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Chroom",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16CR",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Chroom",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Chroom",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16CR",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "416e4a09ef24d19d4689bc841b4ed4fd842e2d3ca0f1577053fdace6b5fc1e67",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Chroom",
+            "kleur": "Chroom",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534301761802",
+      "sku": "BAA16BB",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-geborsteld-messing-baa16bb",
+      "current_long": "Hotbath &More badgreep – geborsteld messing",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld messing",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16BB",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Goud",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld messing",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16BB",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "f8b42fae8a5b8ab1eadfb526d6a98bc4b3192285fd63c30b6d27b98efa74d29a",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Goud",
+            "kleur": "Geborsteld messing",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534301827338",
+      "sku": "BAA16AB",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-verouderd-messing-baa16ab",
+      "current_long": "Hotbath &More badgreep – verouderd messing",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Verouderd messing",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16AB",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Brons",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Verouderd messing",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16AB",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "3dea5e54695b405e0d14f0d7ad752b20f7f4aa85880efd7fe0b38d67cac19391",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Brons",
+            "kleur": "Verouderd messing",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534540312842",
+      "sku": "BAA16BGP",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-geborsteld-gunmetal-pvd-baa16bgp",
+      "current_long": "Hotbath &More badgreep – geborsteld gunmetal PVD",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld gunmetal PVD",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16BGP",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Gunmetal",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld gunmetal PVD",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16BGP",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "6a9927b0583fa182b129767173459ee6a916d12e4987b2afaeb355f45c19ea40",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Gunmetal",
+            "kleur": "Geborsteld gunmetal PVD",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534540378378",
+      "sku": "BAA16BCP",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-geborsteld-koper-pvd-baa16bcp",
+      "current_long": "Hotbath &More badgreep – geborsteld koper PVD",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld koper PVD",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16BCP",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Koper",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld koper PVD",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16BCP",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "8647c6bb27bd4add1b0e6ffae937869f7be6f043d01f070fde9bef006149da38",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Koper",
+            "kleur": "Geborsteld koper PVD",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534540443914",
+      "sku": "BAA16BBP",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-geborsteld-messing-pvd-baa16bbp",
+      "current_long": "Hotbath &More badgreep – geborsteld messing PVD",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld messing PVD",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16BBP",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Goud",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld messing PVD",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16BBP",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "911000f24c9cabc7fc15e14d6978230cec9e7343dba572c93e746310b2c6337d",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Goud",
+            "kleur": "Geborsteld messing PVD",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534540509450",
+      "sku": "BAA16MBP",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-geborsteld-zwart-pvd-baa16mbp",
+      "current_long": "Hotbath &More badgreep – geborsteld zwart PVD",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld zwart PVD",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16MBP",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Zwart",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld zwart PVD",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16MBP",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "aa76b139c569d7046ec0a90fd94701fa761a400ac09ae501be533743743c9114",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Zwart",
+            "kleur": "Geborsteld zwart PVD",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10534540574986",
+      "sku": "BAA16PBP",
+      "url": "https://badkamercity.nl/products/hotbath-more-badgreep-gepolijst-zwart-pvd-baa16pbp",
+      "current_long": "Hotbath &More badgreep – gepolijst zwart PVD",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Gepolijst zwart PVD",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16PBP",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Zwart",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Gepolijst zwart PVD",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16PBP",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "de065afd9f170684dad900dbae2d83fc011df9732740b44a6a026a725766653c",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Zwart",
+            "kleur": "Gepolijst zwart PVD",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10640873128202",
+      "sku": "BAA16GN",
+      "url": "https://badkamercity.nl/products/hotbath-baa16gn",
+      "current_long": "Hotbath &More badgreep – geborsteld nikkel",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Geborsteld nikkel",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16GN",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "RVS",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Geborsteld nikkel",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16GN",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "344713fce744980ec73ea3a9d3aa1fb1a244bfdab7a5bf5d67ea5d0b7655bae6",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "RVS",
+            "kleur": "Geborsteld nikkel",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10640873324810",
+      "sku": "BAA16WH",
+      "url": "https://badkamercity.nl/products/hotbath-baa16wh",
+      "current_long": "Hotbath &More badgreep – mat wit",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Mat wit",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16WH",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Wit",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Mat wit",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16WH",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "e5f3de4059eeabbdcf2022a9b4990f9a1af3071c619c5035b0a8dbb570e7f1b4",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Wit",
+            "kleur": "Mat wit",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10640921952522",
+      "sku": "BAA16AI",
+      "url": "https://badkamercity.nl/products/hotbath-baa16ai",
+      "current_long": "Hotbath &More badgreep – verouderd ijzer",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Verouderd ijzer",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16AI",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Gunmetal",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Verouderd ijzer",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16AI",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "c4693ec20e0e741cdc1b6fa40f8e1a9b0834a9c899ddde9d474d057d1edebac3",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Gunmetal",
+            "kleur": "Verouderd ijzer",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    },
+    {
+      "id": "gid://shopify/Product/10640922247434",
+      "sku": "BAA16TB",
+      "url": "https://badkamercity.nl/products/hotbath-baa16tb",
+      "current_long": "Hotbath &More badgreep – tuscan bronze",
+      "current_short": null,
+      "proposed_short": "Badgreep 30 cm",
+      "proposed_long": "Hotbath &More BAA16 rechte badgreep, hartmaat 30 cm – Tuscan bronze",
+      "evidence": {
+        "source": "Current SKU-linked complete_specificaties and filter_manifest; manufacturer dimension crosscheck pending",
+        "structured_specs": [
+          {
+            "group": "Product",
+            "items": [
+              {
+                "key": "fabrikantnummer",
+                "label": "Fabrikantnummer",
+                "value": "BAA16TB",
+                "unit": ""
+              },
+              {
+                "key": "merk",
+                "label": "Merk",
+                "value": "Hotbath",
+                "unit": ""
+              },
+              {
+                "key": "serie",
+                "label": "Serie",
+                "value": "&More",
+                "unit": ""
+              }
+            ]
+          },
+          {
+            "group": "Algemeen",
+            "items": [
+              {
+                "key": "lengte",
+                "label": "Lengte",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "diepte",
+                "label": "Diepte",
+                "value": "11,2 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "kleurgroep",
+                "label": "Kleurgroep",
+                "value": "Brons",
+                "unit": ""
+              },
+              {
+                "key": "kleur",
+                "label": "Kleur",
+                "value": "Tuscan bronze",
+                "unit": ""
+              },
+              {
+                "key": "materiaal",
+                "label": "Materiaal",
+                "value": "Messing",
+                "unit": ""
+              },
+              {
+                "key": "vorm",
+                "label": "Vorm",
+                "value": "Recht",
+                "unit": ""
+              },
+              {
+                "key": "hartmaat_beugel",
+                "label": "Hartmaat beugel",
+                "value": "30 cm",
+                "unit": "cm"
+              },
+              {
+                "key": "verdekte_bevestiging",
+                "label": "Verdekte bevestiging",
+                "value": "Ja",
+                "unit": ""
+              },
+              {
+                "key": "met_bevestigingsmateriaal",
+                "label": "Met bevestigingsmateriaal",
+                "value": "Ja",
+                "unit": ""
+              }
+            ]
+          }
+        ],
+        "manifest": {
+          "version": "2026-10-12",
+          "sku": "BAA16TB",
+          "fields": [
+            "artikelsoort",
+            "diepte_mm",
+            "kleur",
+            "kleurgroep",
+            "lengte_mm",
+            "materiaal",
+            "productsoort",
+            "serie",
+            "vorm"
+          ],
+          "values_sha256": "de415c74855e1e4de037abf962b9e08daeccd3ef7f1c43135509ffcde9e9304c",
+          "values": {
+            "productsoort": "Badgreep",
+            "artikelsoort": "Product",
+            "serie": "&More",
+            "lengte_mm": 300,
+            "diepte_mm": 112,
+            "kleurgroep": "Brons",
+            "kleur": "Tuscan bronze",
+            "materiaal": "Messing",
+            "vorm": "Recht"
+          },
+          "format": "verified-product-filters-v1"
+        }
+      },
+      "status": "PROPOSAL_NOT_APPLIED"
+    }
+  ]
+}

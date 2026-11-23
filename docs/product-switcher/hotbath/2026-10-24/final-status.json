@@ -1,0 +1,33 @@
+{
+  "status": "PREVIEW_READY_DESKTOP_VERIFIED",
+  "preview_theme_id": "195649929482",
+  "main_theme_id": "195611492618",
+  "groups": 4,
+  "product_pages": 395,
+  "newly_linked": 387,
+  "tests": {
+    "catalogue": 7,
+    "mapping": 11,
+    "scroll": 15,
+    "liquid": "NO_ERRORS_BASELINE_WARNINGS_RETAINED",
+    "admin_files_exact": 10,
+    "main_unchanged_files": 512
+  },
+  "next_batch": {
+    "existing_groups": 34,
+    "new_product_links": 77
+  },
+  "report_status": {
+    "label": "Concept gereed; desktop gecontroleerd",
+    "desktop": "Kleur- en configuratiewissels, vier winkelwagenregels en de bestaande CB003-menu’s gecontroleerd.",
+    "scroll": "Positiebehoud bevestigd bij IBS70, BAA03 en BAA09. Eigen scrollbeweging blijft leidend.",
+    "mobile": "Fysieke telefoon en mobiele bediening nog niet getest.",
+    "publication": "Niet gepubliceerd. Het bestaande live thema en de productgegevens zijn behouden."
+  },
+  "limits": [
+    "Fysieke mobiel niet getest",
+    "Geen CWV of laadtijdmeting",
+    "BAA03BGP en BAA09BGP hebben bestaande ontbrekende productfoto’s",
+    "Geen order of betaling uitgevoerd"
+  ]
+}

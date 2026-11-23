@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "tests": 31,
+  "results": [
+    {
+      "test": "delayed-request-never-flashes-box-price-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "delayed-request-never-flashes-box-price-search",
+      "result": "PASS"
+    },
+    {
+      "test": "http-error-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "http-error-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "reject-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "reject-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "timeout-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "timeout-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "json-error-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "json-error-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "null-section-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "null-section-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "broken-payload-safe-product-link-collection",
+      "result": "PASS"
+    },
+    {
+      "test": "broken-payload-safe-product-link-search",
+      "result": "PASS"
+    },
+    {
+      "test": "wrong-identity-cannot-show-misleading-price",
+      "result": "PASS"
+    },
+    {
+      "test": "missing-price-cannot-show-misleading-price",
+      "result": "PASS"
+    },
+    {
+      "test": "invalid-unit-price-cannot-show-misleading-price",
+      "result": "PASS"
+    },
+    {
+      "test": "invalid-box-area-cannot-show-misleading-price",
+      "result": "PASS"
+    },
+    {
+      "test": "negative-price-cannot-show-misleading-price",
+      "result": "PASS"
+    },
+    {
+      "test": "normal-whole-euro-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "normal-cents-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "unit-product-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "normal-range-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "tile-range-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "zero-price-retains-verified-price",
+      "result": "PASS"
+    },
+    {
+      "test": "english-loading-label",
+      "result": "PASS"
+    },
+    {
+      "test": "english-failure-label",
+      "result": "PASS"
+    },
+    {
+      "test": "missing-section-config-does-not-load-forever",
+      "result": "PASS"
+    },
+    {
+      "test": "index-failure-keeps-native-unit-price",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-localized-label-contract-nl",
+      "result": "PASS"
+    },
+    {
+      "test": "real-liquid-localized-label-contract-en.default",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Actual filter JS in Happy DOM and Liquid label rendering, synthetic offline data, including errors/timeouts. No live network-fault injection or completed order."
+}

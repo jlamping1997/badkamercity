@@ -1,0 +1,60 @@
+{
+  "color": {
+    "product": "hotbath-cobber-cb105ext25-afbouwdeel-inbouw-wastafelkraan-25cm-geborsteld-nikkel",
+    "ready": true,
+    "handoff": true,
+    "calls": 1,
+    "scrollCalls": [
+      {
+        "ms": 647,
+        "top": 422.645751953125
+      }
+    ],
+    "scrollY": 423,
+    "target": 77.40625,
+    "top": 75.4,
+    "error": -2,
+    "trace": [
+      {
+        "ms": 323,
+        "y": 0
+      },
+      {
+        "ms": 648,
+        "y": 423
+      }
+    ],
+    "settledMs": 3946
+  },
+  "length": {
+    "product": "hotbath-cobber-cb105ext18-afbouwdeel-inbouw-wastafelkraan-18cm-geborsteld-nikkel",
+    "ready": true,
+    "handoff": true,
+    "calls": 1,
+    "scrollCalls": [
+      {
+        "ms": 745,
+        "top": 157.90478515625
+      }
+    ],
+    "scrollY": 158,
+    "target": 341.40625,
+    "top": 340.4,
+    "error": -1,
+    "trace": [
+      {
+        "ms": 349,
+        "y": 0
+      },
+      {
+        "ms": 745,
+        "y": 158
+      }
+    ],
+    "settledMs": 3727
+  },
+  "manualScroll": {
+    "beforeTop": 340.4,
+    "afterTop": 59.40625
+  }
+}

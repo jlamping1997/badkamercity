@@ -1,0 +1,31 @@
+## Validation Summary
+
+**Overall Status:** ⚠️ VALID (with warnings)
+**Total Files:** 3
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** BC-FIX-01
+**Revision:** 6
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/bc-external-filters.liquid passed all checks.
+
+### File 2
+**Artifact ID:** BC-FIX-01
+**Revision:** 6
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ⚠️ INFORM
+**Details:** layout/theme.liquid passed all checks (with non-error findings):
+WARNING [line 71, col 36]: Unknown object 'scheme_classes' used.
+
+### File 3
+**Artifact ID:** BC-FIX-01
+**Revision:** 6
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/meta-tags.liquid passed all checks.

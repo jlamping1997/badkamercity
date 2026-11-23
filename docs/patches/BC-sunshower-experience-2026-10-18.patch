@@ -1,0 +1,2025 @@
+diff --git a/assets/bc-home-sunshower.css b/assets/bc-home-sunshower.css
+index 38a1c30..196755b 100644
+--- a/assets/bc-home-sunshower.css
++++ b/assets/bc-home-sunshower.css
+@@ -1,24 +1,41 @@
+ .bcssh {
+-  padding-block: 18px;
+-  color: #0f2740;
+-  background: #fff;
++  position: relative;
++  isolation: isolate;
++  color: #fff;
++  background: #0c2b43;
++}
++
++.bcssh::after {
++  position: absolute;
++  z-index: -1;
++  inset: 0;
++  background: linear-gradient(90deg, rgb(8 35 56 / 97%) 0%, rgb(8 35 56 / 87%) 31%, rgb(8 35 56 / 44%) 49%, rgb(8 35 56 / 7%) 67%, transparent 80%);
++  content: '';
++  pointer-events: none;
++}
++
++.bcssh-media {
++  position: absolute;
++  z-index: -2;
++  inset: 0;
++  display: block;
++  overflow: hidden;
++}
++
++.bcssh-image {
++  display: block;
++  width: 100%;
++  height: 100%;
++  object-fit: cover;
++  object-position: 78% center;
+ }
+ 
+ .bcssh-container {
+   box-sizing: border-box;
+   width: 100%;
+   max-width: 1440px;
++  min-height: 340px;
+   margin-inline: auto;
+-  padding-inline: 16px;
+-}
+-
+-.bcssh-card {
+-  display: grid;
+-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+-  min-height: 210px;
+-  border: 1px solid #e8e1d6;
+-  border-radius: 12px;
+-  background: #f5f1e9;
+ }
+ 
+ .bcssh-content {
+@@ -26,55 +43,69 @@
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+-  gap: 8px;
+-  min-width: 0;
+-  padding: 18px 14px;
++  gap: 14px;
++  box-sizing: border-box;
++  width: 58%;
++  min-height: inherit;
++  padding: 36px 64px;
+ }
+ 
+ .bcssh-eyebrow {
+-  margin: 0;
+-  color: #3a6576;
+-  font-size: 1.1rem;
+-  font-weight: 700;
+-  line-height: 1.2;
+-  letter-spacing: 0.11em;
++  margin: 0 0 3px;
++  color: #fff;
++  font-size: 1.2rem;
++  font-weight: 500;
++  line-height: 1.3;
++  letter-spacing: 0.22em;
+   text-transform: uppercase;
+ }
+ 
++.bcssh-eyebrow::after {
++  display: block;
++  width: 54px;
++  height: 2px;
++  margin-top: 11px;
++  background: #43d9ee;
++  content: '';
++}
++
+ .bcssh-heading {
+-  max-width: 23ch;
++  max-width: 13ch;
+   margin: 0;
+-  color: #0f2740;
+-  font-size: 2rem;
+-  font-weight: 650;
+-  line-height: 1.14;
+-  letter-spacing: -0.025em;
++  color: #fff;
++  font-size: clamp(3.8rem, 3.7vw, 5rem);
++  font-weight: 750;
++  line-height: 1.04;
++  letter-spacing: -0.035em;
+   overflow-wrap: break-word;
++  text-wrap: balance;
+ }
+ 
+ .bcssh-intro {
++  max-width: 44ch;
+   margin: 0;
+-  color: #516273;
+-  font-size: 1.2rem;
+-  line-height: 1.4;
++  color: #fff;
++  font-size: 1.6rem;
++  font-weight: 400;
++  line-height: 1.45;
+ }
+ 
+ .bcssh-link {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+-  gap: 7px;
++  gap: 12px;
+   box-sizing: border-box;
+   max-width: 100%;
+-  min-height: 44px;
+-  margin-top: 2px;
+-  padding: 9px 11px;
+-  border: 1px solid #0f2740;
+-  border-radius: 7px;
+-  color: #fff;
+-  background: #0f2740;
+-  font-size: 1.15rem;
+-  font-weight: 600;
++  min-height: 46px;
++  margin-top: 3px;
++  padding: 11px 20px;
++  border: 1px solid #43d9ee;
++  border-radius: 3px;
++  color: #082b43;
++  background: #43d9ee;
++  font-size: 1.4rem;
++  font-weight: 700;
+   line-height: 1.3;
+   text-decoration: none;
+   text-align: center;
+@@ -82,77 +113,94 @@
+ }
+ 
+ .bcssh-link:hover {
+-  border-color: #1f6685;
+-  color: #fff;
+-  background: #1f6685;
++  border-color: #8beaf6;
++  color: #082b43;
++  background: #8beaf6;
+ }
+ 
+ .bcssh-link:focus-visible {
+-  outline: 3px solid #176b9b;
++  outline: 3px solid #fff;
+   outline-offset: 4px;
+ }
+ 
+ .bcssh-arrow {
+-  flex-shrink: 0;
+-}
+-
+-.bcssh-media {
+-  position: relative;
+-  min-width: 0;
+-  border-radius: 0 11px 11px 0;
+-  overflow: hidden;
++  flex: 0 0 auto;
+ }
+ 
+-.bcssh-image {
+-  position: absolute;
+-  inset: 0;
+-  display: block;
++.bcssh--text-only .bcssh-content {
+   width: 100%;
+-  height: 100%;
+-  object-fit: cover;
+-  object-position: 72% center;
+ }
+ 
+-.bcssh-card--text-only {
+-  grid-template-columns: minmax(0, 1fr);
+-  min-height: 0;
++@media screen and (max-width: 989px) and (min-width: 750px) {
++  .bcssh-content {
++    width: 64%;
++    padding-inline: 32px;
++  }
+ }
+ 
+-@media screen and (min-width: 750px) {
+-  .bcssh {
+-    padding-block: 24px;
++@media screen and (max-width: 749px) {
++  .bcssh::after {
++    background: linear-gradient(90deg, rgb(8 35 56 / 97%) 0%, rgb(8 35 56 / 88%) 34%, rgb(8 35 56 / 61%) 51%, rgb(8 35 56 / 15%) 70%, transparent 83%);
+   }
+ 
+-  .bcssh-card {
+-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+-    min-height: 230px;
++  .bcssh-container {
++    min-height: 318px;
+   }
+ 
+   .bcssh-content {
+-    gap: 9px;
+-    padding: 24px 32px;
++    gap: 11px;
++    width: min(70%, 270px);
++    padding: 24px 20px;
+   }
+ 
+   .bcssh-eyebrow {
+-    font-size: 1.2rem;
++    margin-bottom: 1px;
++    font-size: 1.1rem;
++    letter-spacing: 0.2em;
++  }
++
++  .bcssh-eyebrow::after {
++    width: 42px;
++    margin-top: 8px;
+   }
+ 
+   .bcssh-heading {
+-    font-size: clamp(2.6rem, 2.4vw, 3.2rem);
++    max-width: 10ch;
++    font-size: 3.3rem;
++    line-height: 1.04;
+   }
+ 
+   .bcssh-intro {
++    max-width: 23ch;
+     font-size: 1.4rem;
++    line-height: 1.4;
+   }
+ 
+   .bcssh-link {
+-    padding-inline: 18px;
+-    font-size: 1.3rem;
++    gap: 8px;
++    min-height: 44px;
++    margin-top: 2px;
++    padding: 10px 12px;
++    font-size: 1.25rem;
++  }
++
++  .bcssh-media--art-directed .bcssh-image {
++    object-position: 78% center;
++  }
++}
++
++@media screen and (max-width: 359px) {
++  .bcssh-content {
++    width: 72%;
++    padding-inline: 16px;
++  }
++
++  .bcssh-heading {
++    font-size: 3rem;
+   }
+ 
+-  .bcssh-card--text-only {
+-    grid-template-columns: minmax(0, 1fr);
+-    min-height: 0;
++  .bcssh-intro {
++    font-size: 1.3rem;
+   }
+ }
+ 
+diff --git a/assets/bc-sunshower-landing.css b/assets/bc-sunshower-landing.css
+index f56afa6..6c1ae89 100644
+--- a/assets/bc-sunshower-landing.css
++++ b/assets/bc-sunshower-landing.css
+@@ -1,600 +1,209 @@
+-.bcssl-landing {
+-  --bcssl-navy: #10354f;
+-  --bcssl-cream: #f7f3ed;
+-  --bcssl-cyan: #4bd1ed;
+-  color: var(--bcssl-navy);
+-  background: #fff;
+-  font-size: 16px;
+-  line-height: 1.55;
+-}
+-
+-.bcssl-landing *,
+-.bcssl-landing *::before,
+-.bcssl-landing *::after {
+-  box-sizing: border-box;
+-}
+-
+-.bcssl-wrap {
+-  width: 100%;
+-  max-width: 1152px;
+-  margin-inline: auto;
+-  padding: 20px 16px 40px;
+-}
+-
+-.bcssl-landing p {
+-  margin: 0;
+-}
+-
+-.bcssl-title,
+-.bcssl-heading,
+-.bcssl-subheading,
+-.bcssl-model__title {
+-  margin: 0;
+-  color: inherit;
+-  font-family: inherit;
+-  font-weight: 700;
+-  letter-spacing: -0.025em;
+-  text-transform: none;
+-}
+-
+-.bcssl-title {
+-  max-width: 560px;
+-  font-size: 30px;
+-  line-height: 1.12;
+-}
+-
+-.bcssl-heading {
+-  font-size: 25px;
+-  line-height: 1.2;
+-}
+-
+-.bcssl-subheading {
+-  font-size: 18px;
+-  line-height: 1.3;
+-}
+-
+-.bcssl-eyebrow {
+-  font-size: 11px;
+-  font-weight: 700;
+-  letter-spacing: 0.14em;
+-  line-height: 1.4;
+-  text-transform: uppercase;
+-}
+-
+-.bcssl-hero {
+-  display: grid;
+-  gap: 18px;
+-}
+-
+-.bcssl-hero__copy {
+-  display: grid;
+-  justify-items: start;
+-  gap: 9px;
+-}
+-
+-.bcssl-hero__intro {
+-  max-width: 450px;
+-  font-size: 15px;
++.bcsse-experience {
++  --bcsse-navy: #0b3049;
++  --bcsse-cyan: #37d7ef;
++  --bcsse-cream: #faf8f5;
++  --bcsse-border: #e7e4df;
++  color: var(--bcsse-navy);
++  background: var(--bcsse-cream);
++  font-size: 1.6rem;
+   line-height: 1.5;
++  isolation: isolate;
++}
++.bcsse-experience *, .bcsse-experience *::before, .bcsse-experience *::after { box-sizing: border-box; }
++.bcsse-experience p, .bcsse-experience h1, .bcsse-experience h2, .bcsse-experience h3 { margin: 0; }
++.bcsse-experience h1, .bcsse-experience h2, .bcsse-experience h3 { color: inherit; font-family: inherit; font-weight: 750; letter-spacing: -0.035em; text-transform: none; }
++.bcsse-experience a { color: inherit; }
++.bcsse-experience a:focus-visible, .bcsse-experience summary:focus-visible { outline: 3px solid #157fa4; outline-offset: 4px; }
++.bcsse-hero a:focus-visible, .bcsse-closing a:focus-visible { outline-color: #fff; }
++.bcsse-wrap { width: 100%; max-width: 1360px; margin-inline: auto; padding-inline: 1.8rem; }
++.bcsse-section { scroll-margin-top: 11rem; }
++.bcsse-eyebrow { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-size: 1.1rem; font-weight: 500; line-height: 1.4; letter-spacing: 0.2em; text-transform: uppercase; }
++.bcsse-eyebrow::after { display: block; width: 4.7rem; height: 2px; background: var(--bcsse-cyan); content: ''; }
++.bcsse-hero { position: relative; overflow: hidden; color: #fff; background: var(--bcsse-navy); }
++.bcsse-hero__media, .bcsse-hero::after { position: absolute; inset: 0; }
++.bcsse-hero__media { display: block; }
++.bcsse-hero__image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 76% center; }
++.bcsse-hero::after { background: linear-gradient(90deg, rgba(6,39,61,.98), rgba(7,41,63,.86) 28%, rgba(7,41,63,.32) 65%, rgba(7,41,63,.02)); content: ''; pointer-events: none; }
++.bcsse-hero__inner { position: relative; z-index: 1; display: flex; align-items: center; min-height: 30rem; padding-block: 2.7rem; }
++.bcsse-hero__copy { display: flex; width: 72%; max-width: 59rem; align-items: flex-start; flex-direction: column; }
++.bcsse-experience .bcsse-title { max-width: 31rem; margin-top: 1.5rem; font-size: clamp(3.2rem,8.4vw,4.6rem); line-height: 1.04; text-wrap: balance; }
++.bcsse-experience .bcsse-hero__intro { max-width: 34rem; margin-top: 1rem; font-size: 1.4rem; line-height: 1.5; }
++.bcsse-button { display: inline-flex; min-height: 4.6rem; align-items: center; justify-content: center; gap: 1.1rem; padding: 1.1rem 1.8rem; border: 1px solid transparent; border-radius: .4rem; font-size: 1.4rem; font-weight: 700; line-height: 1.35; text-align: center; text-decoration: none; transition: background-color 160ms ease, border-color 160ms ease; }
++.bcsse-button span, .bcsse-text-link span { flex: 0 0 auto; font-size: 1.9rem; font-weight: 400; line-height: 1; }
++.bcsse-experience .bcsse-button--cyan { color: #082a40; background: var(--bcsse-cyan); }
++.bcsse-experience .bcsse-button--cyan:hover { background: #7ee8f6; }
++.bcsse-experience .bcsse-button--navy { color: #fff; background: var(--bcsse-navy); }
++.bcsse-experience .bcsse-button--navy:hover { background: #194c69; }
++.bcsse-experience .bcsse-button--outline { border-color: var(--bcsse-navy); color: var(--bcsse-navy); background: transparent; }
++.bcsse-experience .bcsse-button--outline:hover { background: #eaf7f9; }
++.bcsse-hero .bcsse-button { margin-top: 1.8rem; }
++.bcsse-text-link { display: inline-flex; min-height: 4.4rem; align-items: center; gap: 1.2rem; font-size: 1.4rem; font-weight: 500; line-height: 1.4; text-decoration-thickness: 1px; text-underline-offset: .45rem; }
++.bcsse-hero__accessories { margin-top: .4rem; }
++.bcsse-nav { display: flex; align-items: center; justify-content: center; gap: clamp(1.4rem,5vw,4.8rem); min-height: 5rem; padding: .1rem 1.6rem; border-bottom: 1px solid var(--bcsse-border); background: #fffdfa; }
++.bcsse-nav a { display: inline-flex; min-height: 4.6rem; align-items: center; font-size: 1.3rem; font-weight: 500; text-decoration: none; }
++.bcsse-nav a:hover { text-decoration: underline; text-underline-offset: .5rem; }
++.bcsse-section-head { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 1.8rem; }
++.bcsse-section-head > .bcsse-eyebrow { display: none; }
++.bcsse-heading { font-size: clamp(2.5rem,6.3vw,3.4rem); line-height: 1.15; text-wrap: balance; }
++.bcsse-intro { font-size: 1.5rem; }
++.bcsse-models { padding-block: 2.8rem 2.4rem; }
++.bcsse-model-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; gap: 1.1rem; }
++.bcsse-model { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--bcsse-border); border-radius: .9rem; background: #fff; }
++.bcsse-model__media { position: relative; aspect-ratio: 1.05; overflow: hidden; background: #eee8df; }
++.bcsse-model__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
++.bcsse-model:first-child .bcsse-model__image { object-position: 58% center; }
++.bcsse-model:last-child .bcsse-model__image { object-position: 78% center; }
++.bcsse-model__body { display: flex; flex: 1; align-items: flex-start; flex-direction: column; gap: .9rem; padding: 1.4rem 1.1rem 1.2rem; }
++.bcsse-model__title { font-size: clamp(1.8rem,4.8vw,2.5rem); line-height: 1.15; }
++.bcsse-badge { display: inline-flex; align-items: center; min-height: 2.6rem; padding: .3rem .9rem; border-radius: .65rem; font-size: 1.1rem; font-weight: 600; line-height: 1.35; }
++.bcsse-badge--ir { color: #7c271c; background: #ffd3c6; }
++.bcsse-badge--uv { color: #104566; background: #d0f1ff; }
++.bcsse-model__description { padding-bottom: .4rem; font-size: 1.25rem; line-height: 1.5; }
++.bcsse-model .bcsse-button { width: 100%; margin-top: auto; gap: .6rem; padding-inline: .6rem; font-size: 1.15rem; }
++.bcsse-experience .bcsse-models__note { margin-top: 1.5rem; font-size: 1.2rem; line-height: 1.5; text-align: center; }
++.bcsse-accessories { padding-block: 2.8rem; background: #fff; }
++.bcsse-accessory-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 1.3rem; }
++.bcsse-accessory { display: grid; grid-template-columns: minmax(0,.68fr) minmax(0,1fr); min-width: 0; overflow: hidden; border: 1px solid var(--bcsse-border); border-radius: .7rem; background: #fffdfa; }
++.bcsse-accessory__media { position: relative; display: block; min-height: 14rem; overflow: hidden; background: #f2f0eb; }
++.bcsse-accessory__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
++.bcsse-accessory--seat .bcsse-accessory__image { object-fit: cover; object-position: 35% bottom; transform: scale(3); transform-origin: 37% 100%; }
++.bcsse-accessory--wiper .bcsse-accessory__image { object-fit: cover; mix-blend-mode: normal; }
++.bcsse-accessory__body { display: flex; align-items: flex-start; flex-direction: column; justify-content: center; gap: .45rem; padding: 1rem 1rem 1.1rem; }
++.bcsse-experience .bcsse-accessory__media:focus-visible { outline-offset: -4px; }
++.bcsse-accessory__title { font-size: 1.65rem; line-height: 1.2; }
++.bcsse-accessory__title a { text-decoration: none; }
++.bcsse-accessory__title a:hover { text-decoration: underline; text-underline-offset: .3rem; }
++.bcsse-accessory__description { font-size: 1.15rem; }
++.bcsse-accessory__price { font-size: 1.4rem; font-weight: 650; }
++.bcsse-accessory .bcsse-button { width: 100%; min-height: 4.4rem; margin-top: .7rem; padding: .8rem .5rem; gap: .6rem; font-size: 1.1rem; }
++.bcsse-swatches { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin: 0 0 0 -.6rem; padding: 0; list-style: none; }
++.bcsse-swatch { display: grid; width: 4.4rem; height: 4.4rem; place-items: center; border-radius: 50%; }
++.bcsse-swatch__color { width: 2rem; height: 2rem; border: 1px solid #928f88; border-radius: 50%; }
++.bcsse-swatch--selected .bcsse-swatch__color { outline: 1px solid var(--bcsse-navy); outline-offset: 3px; }
++.bcsse-swatch__color--white { background: #f5f2e9; }
++.bcsse-swatch__color--black { background: #252a29; }
++.bcsse-swatch__color--grey { background: #747e72; }
++.bcsse-swatch__color--sand { background: #d6c3ab; }
++.bcsse-installation { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1fr); align-items: center; gap: 1.6rem; padding-block: 2.8rem; }
++.bcsse-installation__media { position: relative; align-self: stretch; min-height: 22rem; overflow: hidden; border-radius: .7rem; background: #e9e2d9; }
++.bcsse-installation__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
++.bcsse-installation__copy { display: flex; align-items: flex-start; flex-direction: column; gap: 1rem; padding-block: .5rem; }
++.bcsse-installation__copy .bcsse-eyebrow { display: none; }
++.bcsse-installation .bcsse-heading { font-size: 2.4rem; }
++.bcsse-installation__options, .bcsse-installation__intro, .bcsse-installation .bcsse-text-link { font-size: 1.2rem; }
++.bcsse-installation__options { line-height: 1.65; }
++.bcsse-installation .bcsse-text-link { gap: .6rem; }
++.bcsse-faq { padding-block: 0 2.8rem; }
++.bcsse-faq__list { display: grid; gap: .8rem; }
++.bcsse-faq__item { border: 1px solid var(--bcsse-border); border-radius: .5rem; background: #fff; }
++.bcsse-faq summary { display: flex; min-height: 4.8rem; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 1.2rem 1.4rem; font-size: 1.25rem; font-weight: 500; line-height: 1.45; list-style: none; cursor: pointer; }
++.bcsse-faq summary::-webkit-details-marker { display: none; }
++.bcsse-faq__plus { position: relative; flex: 0 0 1.4rem; width: 1.4rem; height: 1.4rem; }
++.bcsse-faq__plus::before, .bcsse-faq__plus::after { position: absolute; inset: calc(50% - .5px) 0 auto; height: 1px; background: currentColor; content: ''; }
++.bcsse-faq__plus::after { transform: rotate(90deg); }
++.bcsse-faq__item[open] .bcsse-faq__plus::after { display: none; }
++.bcsse-faq__answer { padding: 0 1.4rem 1.5rem; font-size: 1.3rem; line-height: 1.65; }
++.bcsse-closing { color: #fff; background: linear-gradient(110deg,#0a2e48,#164563); }
++.bcsse-closing__inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 2.4rem; }
++.bcsse-closing .bcsse-eyebrow { display: none; }
++.bcsse-closing__heading { font-size: 2.1rem; line-height: 1.2; }
++.bcsse-closing .bcsse-button { flex: 0 0 auto; max-width: 52%; padding-inline: 1.2rem; font-size: 1.15rem; }
++.bcsse-mobile-cta { position: fixed; z-index: 8; right: 0; bottom: 0; left: 0; padding: .9rem 1.8rem calc(.9rem + env(safe-area-inset-bottom,0px)); border-top: 1px solid #dce3e6; background: rgba(255,255,255,.97); box-shadow: 0 -.4rem 2rem rgba(11,48,73,.08); }
++.bcsse-mobile-cta .bcsse-button { width: 100%; }
++body.overflow-hidden .bcsse-mobile-cta, body.overflow-hidden-mobile .bcsse-mobile-cta, body.overflow-hidden-tablet .bcsse-mobile-cta, body:has(cart-drawer.active,dialog[open],menu-drawer details[open],details-modal details[open]) .bcsse-mobile-cta { visibility: hidden; }
++@media (max-width: 749px) {
++  body:has(.bcsse-experience) { padding-bottom: calc(7.6rem + env(safe-area-inset-bottom, 0px)); }
++}
++@media (max-width: 359px) {
++  .bcsse-wrap { padding-inline: 1.4rem; }
++  .bcsse-model-grid { gap: .8rem; }
++  .bcsse-model__body { padding-inline: .9rem; }
++  .bcsse-model .bcsse-button { font-size: 1.05rem; }
++  .bcsse-model .bcsse-button span { display: none; }
++  .bcsse-accessory { grid-template-columns: minmax(0,.48fr) minmax(0,1fr); }
++  .bcsse-accessory__body { padding-inline: .8rem; }
++  .bcsse-installation { gap: 1.2rem; }
++  .bcsse-installation .bcsse-heading { font-size: 2.1rem; }
++  .bcsse-installation .bcsse-text-link { flex-wrap: wrap; }
++  .bcsse-closing__inner { flex-direction: column; align-items: flex-start; }
++  .bcsse-closing .bcsse-button { max-width: 100%; }
+ }
+-
+-.bcssl-text-link {
+-  display: inline-flex;
+-  align-items: center;
+-  gap: 12px;
+-  min-height: 44px;
+-  color: inherit;
+-  font-size: 13px;
+-  font-weight: 600;
+-  text-underline-offset: 4px;
+-}
+-
+-.bcssl-hero__media {
+-  height: 154px;
+-  overflow: hidden;
+-  border-radius: 12px;
+-  background: var(--bcssl-cream);
+-}
+-
+-.bcssl-hero__image {
+-  display: block;
+-  width: 100%;
+-  height: 100%;
+-  object-fit: cover;
+-  object-position: 72% center;
+-}
+-
+-.bcssl-section {
+-  margin-top: 30px;
+-}
+-
+-.bcssl-section__head {
+-  display: grid;
+-  gap: 7px;
+-  margin-bottom: 16px;
+-}
+-
+-.bcssl-intro {
+-  font-size: 14px;
+-  line-height: 1.55;
+-}
+-
+-.bcssl-models {
+-  scroll-margin-top: 24px;
+-}
+-
+-.bcssl-model-grid,
+-.bcssl-mount-grid {
+-  display: grid;
+-  grid-template-columns: repeat(2, minmax(0, 1fr));
+-  gap: 12px;
+-}
+-
+-.bcssl-model {
+-  display: flex;
+-  min-width: 0;
+-  flex-direction: column;
+-  overflow: hidden;
+-  border: 1px solid #e3e5e5;
+-  border-radius: 12px;
+-  background: #fff;
+-}
+-
+-.bcssl-model__media {
+-  height: 140px;
+-  padding: 7px 7px 0;
+-  background: #fff;
+-}
+-
+-.bcssl-model__image {
+-  display: block;
+-  width: 100%;
+-  height: 100%;
+-  border-radius: 7px;
+-  object-fit: cover;
+-  object-position: center;
+-}
+-
+-.bcssl-model__body {
+-  display: flex;
+-  flex: 1;
+-  align-items: flex-start;
+-  flex-direction: column;
+-  gap: 9px;
+-  padding: 12px 10px 10px;
+-}
+-
+-.bcssl-model__title {
+-  font-size: 20px;
+-  line-height: 1.2;
+-}
+-
+-.bcssl-badge {
+-  display: inline-flex;
+-  align-items: center;
+-  min-height: 26px;
+-  padding: 3px 8px;
+-  border-radius: 6px;
+-  font-size: 11px;
+-  font-weight: 600;
+-  line-height: 1.4;
+-}
+-
+-.bcssl-badge--ir {
+-  background: #ffebdc;
+-}
+-
+-.bcssl-badge--uv {
+-  background: #eeeafb;
+-}
+-
+-.bcssl-model__description {
+-  padding-bottom: 4px;
+-  font-size: 12px;
+-  line-height: 1.5;
+-}
+-
+-.bcssl-button {
+-  display: inline-flex;
+-  align-items: center;
+-  justify-content: center;
+-  gap: 8px;
+-  min-height: 44px;
+-  padding: 10px 8px;
+-  border: 1px solid transparent;
+-  border-radius: 7px;
+-  font-size: 12px;
+-  font-weight: 700;
+-  line-height: 1.4;
+-  text-align: center;
+-  text-decoration: none;
+-}
+-
+-.bcssl-model .bcssl-button {
+-  width: 100%;
+-  margin-top: auto;
+-}
+-
+-.bcssl-button--navy {
+-  color: #fff;
+-  background: var(--bcssl-navy);
+-}
+-
+-.bcssl-button--cyan {
+-  color: var(--bcssl-navy);
+-  background: var(--bcssl-cyan);
+-}
+-
+-.bcssl-button:hover {
+-  text-decoration: underline;
+-  text-underline-offset: 3px;
+-}
+-
+-.bcssl-landing a:focus-visible,
+-.bcssl-faq summary:focus-visible {
+-  outline: 3px solid #177698;
+-  outline-offset: 4px;
+-}
+-
+-.bcssl-advice a:focus-visible {
+-  outline-color: #fff;
+-}
+-
+-.bcssl-landing .bcssl-models__note {
+-  margin-top: 12px;
+-  font-size: 12px;
+-  line-height: 1.5;
+-  text-align: center;
+-}
+-
+-.bcssl-explain {
+-  display: grid;
+-  gap: 22px;
+-  padding: 24px 18px;
+-  border-radius: 12px;
+-  background: var(--bcssl-cream);
+-}
+-
+-.bcssl-explain__intro {
+-  display: grid;
+-  gap: 9px;
+-}
+-
+-.bcssl-light-grid {
+-  display: grid;
+-  gap: 18px;
+-}
+-
+-.bcssl-light {
+-  display: grid;
+-  grid-template-columns: 42px minmax(0, 1fr);
+-  align-items: start;
+-  gap: 12px;
+-}
+-
+-.bcssl-light__mark {
+-  display: grid;
+-  width: 42px;
+-  height: 42px;
+-  place-items: center;
+-  border-radius: 50%;
+-  font-size: 12px;
+-  font-weight: 700;
+-  letter-spacing: 0.04em;
+-}
+-
+-.bcssl-light__mark--ir {
+-  background: #ffe2cb;
+-}
+-
+-.bcssl-light__mark--uv {
+-  background: #e7e1fa;
+-}
+-
+-.bcssl-light p {
+-  margin-top: 4px;
+-  font-size: 13px;
+-  line-height: 1.55;
+-}
+-
+-.bcssl-mount-tile {
+-  overflow: hidden;
+-  border: 1px solid #e8e5df;
+-  border-radius: 10px;
+-  background: var(--bcssl-cream);
+-}
+-
+-.bcssl-mount-tile__image {
+-  display: block;
+-  width: 100%;
+-  height: 125px;
+-  object-fit: cover;
+-  object-position: center;
+-}
+-
+-.bcssl-mount-tile__copy {
+-  padding: 12px;
+-}
+-
+-.bcssl-mount-tile__copy p {
+-  margin-top: 5px;
+-  font-size: 12px;
+-  line-height: 1.5;
+-}
+-
+-.bcssl-landing .bcssl-mount__sizes {
+-  margin-top: 16px;
+-  font-size: 14px;
+-  font-weight: 600;
+-  text-align: center;
+-  word-spacing: 0.2em;
+-}
+-
+-.bcssl-landing .bcssl-mount__note {
+-  margin-top: 5px;
+-  font-size: 13px;
+-  text-align: center;
+-}
+-
+-.bcssl-advice {
+-  display: grid;
+-  justify-items: start;
+-  gap: 18px;
+-  margin-top: 30px;
+-  padding: 24px 20px;
+-  border-radius: 12px;
+-  color: #fff;
+-  background: var(--bcssl-navy);
+-}
+-
+-.bcssl-advice .bcssl-heading {
+-  font-size: 23px;
+-}
+-
+-.bcssl-advice p {
+-  max-width: 550px;
+-  margin-top: 6px;
+-  color: #fff;
+-  font-size: 14px;
+-  line-height: 1.55;
+-}
+-
+-.bcssl-advice .bcssl-button {
+-  min-width: 190px;
+-  padding-inline: 20px;
+-  font-size: 14px;
+-}
+-
+-.bcssl-faq__list {
+-  margin-top: 14px;
+-}
+-
+-.bcssl-faq__item {
+-  border-bottom: 1px solid #dce1e5;
+-}
+-
+-.bcssl-faq summary {
+-  display: flex;
+-  align-items: center;
+-  justify-content: space-between;
+-  gap: 18px;
+-  min-height: 56px;
+-  padding: 14px 2px;
+-  font-size: 14px;
+-  line-height: 1.5;
+-  list-style: none;
+-  cursor: pointer;
+-}
+-
+-.bcssl-faq summary::-webkit-details-marker {
+-  display: none;
+-}
+-
+-.bcssl-faq__plus {
+-  position: relative;
+-  flex: 0 0 16px;
+-  width: 16px;
+-  height: 16px;
+-}
+-
+-.bcssl-faq__plus::before,
+-.bcssl-faq__plus::after {
+-  position: absolute;
+-  top: 7px;
+-  left: 0;
+-  width: 16px;
+-  height: 2px;
+-  background: currentColor;
+-  content: '';
+-}
+-
+-.bcssl-faq__plus::after {
+-  transform: rotate(90deg);
+-}
+-
+-.bcssl-faq__item[open] .bcssl-faq__plus::after {
+-  display: none;
+-}
+-
+-.bcssl-faq__answer {
+-  max-width: 800px;
+-  padding: 0 28px 18px 2px;
+-  font-size: 14px;
+-  line-height: 1.65;
+-}
+-
+-@media (max-width: 349px) {
+-  .bcssl-title {
+-    font-size: 28px;
+-  }
+-
+-  .bcssl-model-grid {
+-    grid-template-columns: minmax(0, 1fr);
+-  }
+-
+-  .bcssl-model__body {
+-    padding: 14px;
+-  }
+-
+-  .bcssl-model .bcssl-button {
+-    font-size: 14px;
+-  }
+-
+-  .bcssl-mount-grid {
+-    gap: 10px;
+-  }
+-
+-  .bcssl-mount-tile__copy {
+-    padding: 10px;
+-  }
+-}
+-
+ @media (min-width: 750px) {
+-  .bcssl-wrap {
+-    padding: 30px 24px 64px;
+-  }
+-
+-  .bcssl-hero {
+-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+-    align-items: center;
+-    gap: 32px;
+-    border-radius: 14px;
+-    background: var(--bcssl-cream);
+-  }
+-
+-  .bcssl-hero__copy {
+-    gap: 14px;
+-    padding: 24px 0 24px 30px;
+-  }
+-
+-  .bcssl-title {
+-    font-size: clamp(32px, 3.2vw, 44px);
+-  }
+-
+-  .bcssl-heading {
+-    font-size: 30px;
+-  }
+-
+-  .bcssl-hero__intro {
+-    font-size: 16px;
+-  }
+-
+-  .bcssl-text-link {
+-    min-height: 44px;
+-    font-size: 14px;
+-  }
+-
+-  .bcssl-hero__media {
+-    height: 330px;
+-    border-radius: 0 14px 14px 0;
+-  }
+-
+-  .bcssl-section,
+-  .bcssl-advice {
+-    margin-top: 44px;
+-  }
+-
+-  .bcssl-section__head {
+-    gap: 9px;
+-    margin-bottom: 22px;
+-  }
+-
+-  .bcssl-intro {
+-    font-size: 16px;
+-  }
+-
+-  .bcssl-model-grid,
+-  .bcssl-mount-grid {
+-    gap: 20px;
+-  }
+-
+-  .bcssl-model__media {
+-    height: 220px;
+-    padding: 10px 10px 0;
+-  }
+-
+-  .bcssl-model__body {
+-    gap: 12px;
+-    padding: 20px;
+-  }
+-
+-  .bcssl-model__title {
+-    font-size: 28px;
+-  }
+-
+-  .bcssl-badge {
+-    min-height: 30px;
+-    padding: 4px 12px;
+-    font-size: 13px;
+-  }
+-
+-  .bcssl-model__description {
+-    font-size: 15px;
+-  }
+-
+-  .bcssl-button {
+-    min-height: 48px;
+-    font-size: 15px;
+-  }
+-
+-  .bcssl-landing .bcssl-models__note {
+-    margin-top: 16px;
+-    font-size: 14px;
+-  }
+-
+-  .bcssl-explain {
+-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+-    align-items: center;
+-    gap: 40px;
+-    padding: 32px;
+-  }
+-
+-  .bcssl-light p {
+-    font-size: 14px;
+-  }
+-
+-  .bcssl-mount-tile__image {
+-    height: 210px;
+-  }
+-
+-  .bcssl-mount-tile__copy {
+-    padding: 18px 20px;
+-  }
+-
+-  .bcssl-mount-tile__copy .bcssl-subheading {
+-    font-size: 22px;
+-  }
+-
+-  .bcssl-mount-tile__copy p {
+-    font-size: 14px;
+-  }
+-
+-  .bcssl-landing .bcssl-mount__sizes {
+-    margin-top: 22px;
+-    font-size: 16px;
+-  }
+-
+-  .bcssl-landing .bcssl-mount__note {
+-    font-size: 15px;
+-  }
+-
+-  .bcssl-advice {
+-    grid-template-columns: minmax(0, 1fr) auto;
+-    align-items: center;
+-    gap: 30px;
+-    padding: 30px 32px;
+-  }
+-
+-  .bcssl-advice .bcssl-heading {
+-    font-size: 28px;
+-  }
+-
+-  .bcssl-advice .bcssl-button {
+-    min-width: 220px;
+-  }
+-
+-  .bcssl-faq summary,
+-  .bcssl-faq__answer {
+-    font-size: 16px;
+-  }
+-}
++  .bcsse-experience { padding-bottom: 0; }
++  .bcsse-wrap { padding-inline: 3.2rem; }
++  .bcsse-hero__inner { min-height: 38rem; padding-block: 4.2rem; }
++  .bcsse-hero__copy { width: 54%; }
++  .bcsse-experience .bcsse-title { max-width: 49rem; font-size: clamp(4.7rem,5.1vw,6.4rem); margin-top: 1.8rem; }
++  .bcsse-experience .bcsse-hero__intro { max-width: 52rem; font-size: 1.9rem; }
++  .bcsse-hero .bcsse-button { margin-top: 2.2rem; padding-inline: 2.6rem; font-size: 1.6rem; }
++  .bcsse-hero__accessories { font-size: 1.5rem; }
++  .bcsse-eyebrow { font-size: 1.2rem; }
++  .bcsse-nav { min-height: 5.2rem; }
++  .bcsse-nav a { font-size: 1.5rem; }
++  .bcsse-section-head { gap: 1rem; margin-bottom: 2.2rem; }
++  .bcsse-section-head > .bcsse-eyebrow { display: inline-flex; }
++  .bcsse-heading { font-size: clamp(3.4rem,3.4vw,4.6rem); }
++  .bcsse-intro { font-size: 1.8rem; }
++  .bcsse-models { padding-block: 3.4rem 3.2rem; }
++  .bcsse-model-grid { gap: 2rem; }
++  .bcsse-model__media { position: relative; aspect-ratio: 1.45; }
++  .bcsse-model__body { gap: 1.2rem; padding: 2.2rem; }
++  .bcsse-model__title { font-size: 2.8rem; }
++  .bcsse-badge { padding: .4rem 1.1rem; font-size: 1.3rem; }
++  .bcsse-model__description { font-size: 1.6rem; }
++  .bcsse-model .bcsse-button { min-height: 4.8rem; font-size: 1.4rem; }
++  .bcsse-experience .bcsse-models__note { margin-top: 1.8rem; font-size: 1.4rem; }
++  .bcsse-accessories { padding-block: 3.4rem; }
++  .bcsse-accessory-grid { gap: 1.7rem; }
++  .bcsse-accessory { grid-template-columns: minmax(0,.7fr) minmax(0,1fr); }
++  .bcsse-accessory__media { min-height: 20rem; }
++  .bcsse-accessory__body { gap: .7rem; padding: 2rem; }
++  .bcsse-accessory__title { font-size: 2.1rem; }
++  .bcsse-accessory__description { font-size: 1.4rem; }
++  .bcsse-accessory__price { font-size: 1.6rem; }
++  .bcsse-accessory .bcsse-button { width: auto; padding-inline: 1.5rem; font-size: 1.3rem; }
++  .bcsse-installation { gap: 4rem; padding-block: 3.8rem; }
++  .bcsse-installation__media { min-height: 28rem; }
++  .bcsse-installation__copy { gap: 1.5rem; }
++  .bcsse-installation__copy .bcsse-eyebrow { display: inline-flex; }
++  .bcsse-installation .bcsse-heading { font-size: 3.5rem; }
++  .bcsse-installation__options, .bcsse-installation__intro, .bcsse-installation .bcsse-text-link { font-size: 1.6rem; }
++  .bcsse-faq { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; gap: 4rem; padding-block: 0 3.4rem; }
++  .bcsse-faq .bcsse-heading { font-size: 3.2rem; }
++  .bcsse-faq__list { gap: 0; }
++  .bcsse-faq__item { border: 0; border-bottom: 1px solid var(--bcsse-border); border-radius: 0; background: transparent; }
++  .bcsse-faq summary { padding-inline: 0; font-size: 1.4rem; }
++  .bcsse-faq__answer { padding-inline: 0; font-size: 1.4rem; }
++  .bcsse-closing__inner { padding-block: 3rem; gap: 3rem; }
++  .bcsse-closing .bcsse-eyebrow { display: inline-flex; }
++  .bcsse-closing__heading { font-size: 3rem; }
++  .bcsse-closing .bcsse-button { padding-inline: 2.5rem; font-size: 1.5rem; }
++  .bcsse-mobile-cta { display: none; }
++}
++@media (min-width: 990px) {
++  .bcsse-hero__inner { min-height: 42rem; }
++  .bcsse-model { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); }
++  .bcsse-model__media { min-height: 28rem; aspect-ratio: auto; }
++  .bcsse-model__body { justify-content: center; padding: 2.4rem; }
++  .bcsse-model__description { padding-block: .4rem 1rem; }
++  .bcsse-model .bcsse-button { margin-top: .7rem; }
++  .bcsse-accessory-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
++  .bcsse-accessory { grid-template-columns: minmax(0,.65fr) minmax(0,1fr); }
++  .bcsse-accessory__media { min-height: 24rem; }
++  .bcsse-accessory__body { gap: .6rem; padding: 1.3rem; }
++  .bcsse-accessory__title { font-size: 1.8rem; }
++  .bcsse-accessory__description { font-size: 1.2rem; }
++  .bcsse-accessory .bcsse-button { width: 100%; padding-inline: .6rem; font-size: 1.1rem; }
++  .bcsse-installation__media { min-height: 32rem; }
++}
++@media (min-width: 1200px) {
++  .bcsse-hero__inner { min-height: 44rem; }
++  .bcsse-model__title { font-size: 3.1rem; }
++  .bcsse-model__body { padding: 2.8rem; }
++  .bcsse-model__description { font-size: 1.8rem; }
++  .bcsse-model .bcsse-button { font-size: 1.5rem; }
++  .bcsse-accessory__title { font-size: 1.95rem; }
++  .bcsse-accessory__body { padding: 1.7rem; }
++  .bcsse-accessory .bcsse-button { font-size: 1.2rem; }
++}
++@media (prefers-reduced-motion: reduce) { .bcsse-button { transition: none; } }
+diff --git a/locales/en.default.json b/locales/en.default.json
+index 3d29650..e2ecefb 100644
+--- a/locales/en.default.json
++++ b/locales/en.default.json
+@@ -1010,5 +1010,87 @@
+       "install_question": "What do I need to arrange for installation?",
+       "install_answer": "Have a qualified installer check what is needed for your chosen configuration. Preparation, positioning and the electrical connection must meet the installation instructions for that model. Technical information is available on the product page."
+     }
++  },
++  "ss_home_v2": {
++    "eyebrow": "Sunshower",
++    "heading": "Warmth in your shower.",
++    "intro": "ONE with infrared. PLUS with infrared + UV.",
++    "cta": "Discover Sunshower",
++    "image_alt": "A Sunshower in a warm bathroom"
++  },
++  "ss_experience": {
++    "hero": {
++      "eyebrow": "Sunshower",
++      "heading": "More from your shower.",
++      "intro": "Infrared warmth, with or without UV.",
++      "button": "Open the configurator",
++      "accessories": "Shop accessories",
++      "image_alt": "Sunshower with blue UV light in a warm-toned bathroom"
++    },
++    "navigation": {
++      "label": "On this Sunshower page",
++      "models": "Models",
++      "accessories": "Accessories",
++      "installation": "Installation"
++    },
++    "models": {
++      "heading": "Which Sunshower suits you?",
++      "note": "Choose the size, colour and installation in the configurator."
++    },
++    "one": {
++      "heading": "Round ONE",
++      "badge": "Infrared",
++      "description": "Warmth while you shower.",
++      "button": "Configure ONE",
++      "image_alt": "Sunshower Round ONE with red infrared light"
++    },
++    "plus": {
++      "heading": "Round PLUS",
++      "badge": "Infrared + UV",
++      "description": "Choose warmth or UV light.",
++      "button": "Configure PLUS",
++      "image_alt": "Sunshower Round PLUS in blue UV mode"
++    },
++    "accessories": {
++      "heading": "Complete your Sunshower",
++      "intro": "For comfort and care.",
++      "cleaning_heading": "Cleaning set",
++      "cleaning_description": "Cleaner & coating",
++      "seat_heading": "Sunseat",
++      "seat_description": "Shower stool",
++      "wiper_heading": "Shower squeegee",
++      "wiper_description": "SunSwipe",
++      "product_button": "View product",
++      "color_button": "Choose your colour",
++      "colors_label": "Colours for {{ product }}",
++      "color_link": "View {{ product }} in {{ color }}"
++    },
++    "colors": {
++      "white": "White",
++      "black": "Black",
++      "grey": "Organic Grey",
++      "sand": "Sand White"
++    },
++    "installation": {
++      "heading": "Fits your plans.",
++      "options": "Built-in · Wall-mounted · Corner-mounted",
++      "intro": "Explore the options for your shower.",
++      "button": "Ask for installation advice",
++      "image_alt": "Sunshower integrated into a shower with warm natural-stone colours"
++    },
++    "faq": {
++      "heading": "Good to know",
++      "difference_question": "What is the difference between ONE and PLUS?",
++      "difference_answer": "Round ONE provides infrared warmth. Round PLUS has infrared and UV; you choose which function to use. Explore the configurations and options in the configurator.",
++      "size_question": "Which size fits my shower?",
++      "size_answer": "This depends on your space and installation method. Choose a size in the configurator, then check the dimensions and installation drawing on the product page. Ask us for advice if you are unsure.",
++      "install_question": "What does the installation require?",
++      "install_answer": "Space, ventilation and electrical requirements vary by model. Before buying, ask your installer to check the installation manual for your chosen model."
++    },
++    "closing": {
++      "heading": "Ready for your Sunshower?",
++      "button": "Start the configurator",
++      "mobile_button": "Configure your Sunshower"
++    }
+   }
+ }
+diff --git a/locales/en.default.schema.json b/locales/en.default.schema.json
+index 78ca96e..862615f 100644
+--- a/locales/en.default.schema.json
++++ b/locales/en.default.schema.json
+@@ -3407,9 +3407,10 @@
+       }
+     },
+     "home_sunshower": {
+-      "name": "Sunshower banner",
+-      "image": "Sunshower lifestyle image",
+-      "link": "Sunshower landing page"
++      "name": "Sunshower home hero",
++      "image": "Desktop atmosphere photo",
++      "link": "Sunshower link",
++      "mobile_image": "Mobile atmosphere photo (optional)"
+     },
+     "bc_sunshower_landing": {
+       "name": "Sunshower landing page",
+@@ -3422,5 +3423,34 @@
+       "opbouw_image": "Wall-mounted image",
+       "advice_url": "Personal advice link"
+     }
++  },
++  "ss_experience": {
++    "name": "Sunshower experience",
++    "settings": {
++      "hero_image": "Desktop atmosphere image",
++      "hero_mobile_image": "Mobile atmosphere image (optional)",
++      "configurator_url": "Configurator link (optional)",
++      "one_product": "ONE product in configurator",
++      "plus_product": "PLUS product in configurator",
++      "one_image": "ONE photo with infrared",
++      "plus_image": "PLUS photo with UV",
++      "installation_image": "Installation photo",
++      "inbouw_image": "Existing built-in photo (fallback)",
++      "opbouw_image": "Existing wall-mounted photo",
++      "advice_url": "Installation advice link"
++    },
++    "accessory": {
++      "name": "Accessory",
++      "kind": "Accessory type",
++      "cleaning": "Cleaning set",
++      "seat": "Sunseat",
++      "wiper": "Shower squeegee",
++      "product": "Displayed product",
++      "image_override": "Alternative product image (optional)",
++      "product_white": "Product in White",
++      "product_black": "Product in Black",
++      "product_grey": "Product in Organic Grey",
++      "product_sand": "Product in Sand White"
++    }
+   }
+ }
+diff --git a/locales/nl.json b/locales/nl.json
+index 7de5268..685c558 100644
+--- a/locales/nl.json
++++ b/locales/nl.json
+@@ -1010,5 +1010,87 @@
+       "install_question": "Wat moet ik regelen voor de installatie?",
+       "install_answer": "Laat een vakbekwame installateur controleren wat nodig is voor de gekozen uitvoering. De voorbereiding, plaatsing en elektrische aansluiting moeten passen bij de installatievoorschriften van dat model. De technische informatie staat op de productpagina."
+     }
++  },
++  "ss_home_v2": {
++    "eyebrow": "Sunshower",
++    "heading": "Warmte onder de douche.",
++    "intro": "ONE met infrarood. PLUS met infrarood + UV.",
++    "cta": "Ontdek Sunshower",
++    "image_alt": "Een Sunshower in een warme badkamer"
++  },
++  "ss_experience": {
++    "hero": {
++      "eyebrow": "Sunshower",
++      "heading": "Meer uit jouw douche.",
++      "intro": "Infraroodwarmte, met of zonder UV.",
++      "button": "Naar de configurator",
++      "accessories": "Shop accessoires",
++      "image_alt": "Sunshower in een warme badkamer, met blauw UV-licht"
++    },
++    "navigation": {
++      "label": "Op deze Sunshower-pagina",
++      "models": "Modellen",
++      "accessories": "Accessoires",
++      "installation": "Installatie"
++    },
++    "models": {
++      "heading": "Welke Sunshower past bij jou?",
++      "note": "Kies formaat, kleur en montage in de configurator."
++    },
++    "one": {
++      "heading": "Round ONE",
++      "badge": "Infrarood",
++      "description": "Warmte tijdens het douchen.",
++      "button": "Stel ONE samen",
++      "image_alt": "Sunshower Round ONE met rood infraroodlicht"
++    },
++    "plus": {
++      "heading": "Round PLUS",
++      "badge": "Infrarood + UV",
++      "description": "Kies voor warmte of UV-licht.",
++      "button": "Stel PLUS samen",
++      "image_alt": "Sunshower Round PLUS in de blauwe UV-stand"
++    },
++    "accessories": {
++      "heading": "Maak je Sunshower compleet",
++      "intro": "Voor comfort en onderhoud.",
++      "cleaning_heading": "Reinigingsset",
++      "cleaning_description": "Cleaner & coating",
++      "seat_heading": "Sunseat",
++      "seat_description": "Douchekruk",
++      "wiper_heading": "Douchewisser",
++      "wiper_description": "SunSwipe",
++      "product_button": "Bekijk product",
++      "color_button": "Kies jouw kleur",
++      "colors_label": "Kleuren voor {{ product }}",
++      "color_link": "Bekijk {{ product }} in {{ color }}"
++    },
++    "colors": {
++      "white": "White",
++      "black": "Black",
++      "grey": "Organic Grey",
++      "sand": "Sand White"
++    },
++    "installation": {
++      "heading": "Past in jouw plannen.",
++      "options": "Inbouw · Opbouw vlak · Opbouw hoek",
++      "intro": "Bekijk de mogelijkheden voor jouw douche.",
++      "button": "Vraag installatieadvies",
++      "image_alt": "Sunshower geïntegreerd in een douche met warme natuursteentinten"
++    },
++    "faq": {
++      "heading": "Goed om te weten",
++      "difference_question": "Wat is het verschil tussen ONE en PLUS?",
++      "difference_answer": "Round ONE geeft infraroodwarmte. Round PLUS heeft infrarood én UV; je kiest welke functie je gebruikt. In de configurator bekijk je de uitvoeringen en mogelijkheden.",
++      "size_question": "Welk formaat past in mijn douche?",
++      "size_answer": "Dat hangt af van de beschikbare ruimte en de montagewijze. Kies een formaat in de configurator en controleer de afmetingen en installatietekening op de productpagina. Twijfel je? Vraag ons om advies.",
++      "install_question": "Wat is er nodig voor de installatie?",
++      "install_answer": "De benodigde ruimte, ventilatie en elektrische aansluiting verschillen per uitvoering. Laat je installateur vóór de aankoop de installatiehandleiding van het gekozen model controleren."
++    },
++    "closing": {
++      "heading": "Klaar voor jouw Sunshower?",
++      "button": "Start de configurator",
++      "mobile_button": "Stel jouw Sunshower samen"
++    }
+   }
+ }
+diff --git a/locales/nl.schema.json b/locales/nl.schema.json
+index f87395e..a32e6be 100644
+--- a/locales/nl.schema.json
++++ b/locales/nl.schema.json
+@@ -3407,9 +3407,10 @@
+       }
+     },
+     "home_sunshower": {
+-      "name": "Sunshower-banner",
+-      "image": "Sunshower-sfeerfoto",
+-      "link": "Sunshower-landingspagina"
++      "name": "Sunshower homepage",
++      "image": "Sfeerfoto desktop",
++      "link": "Link naar Sunshower",
++      "mobile_image": "Sfeerfoto mobiel (optioneel)"
+     },
+     "bc_sunshower_landing": {
+       "name": "Sunshower landingspagina",
+@@ -3422,5 +3423,34 @@
+       "opbouw_image": "Opbouw afbeelding",
+       "advice_url": "Link voor persoonlijk advies"
+     }
++  },
++  "ss_experience": {
++    "name": "Sunshower ervaring",
++    "settings": {
++      "hero_image": "Sfeerbeeld desktop",
++      "hero_mobile_image": "Sfeerbeeld mobiel (optioneel)",
++      "configurator_url": "Link naar configurator (optioneel)",
++      "one_product": "ONE-product in configurator",
++      "plus_product": "PLUS-product in configurator",
++      "one_image": "ONE-foto met infrarood",
++      "plus_image": "PLUS-foto met UV",
++      "installation_image": "Installatiefoto",
++      "inbouw_image": "Bestaande inbouwfoto (terugval)",
++      "opbouw_image": "Bestaande opbouwfoto",
++      "advice_url": "Link naar installatieadvies"
++    },
++    "accessory": {
++      "name": "Accessoire",
++      "kind": "Soort accessoire",
++      "cleaning": "Reinigingsset",
++      "seat": "Sunseat",
++      "wiper": "Douchewisser",
++      "product": "Getoond product",
++      "image_override": "Andere productfoto (optioneel)",
++      "product_white": "Product in White",
++      "product_black": "Product in Black",
++      "product_grey": "Product in Organic Grey",
++      "product_sand": "Product in Sand White"
++    }
+   }
+ }
+diff --git a/sections/bc-sunshower-landing.liquid b/sections/bc-sunshower-landing.liquid
+index 8140513..7a17774 100644
+--- a/sections/bc-sunshower-landing.liquid
++++ b/sections/bc-sunshower-landing.liquid
+@@ -3,216 +3,265 @@
+ {%- liquid
+   assign one_product = section.settings.one_product
+   assign plus_product = section.settings.plus_product
+-  assign hero_image = section.settings.hero_image | default: one_product.featured_image
++  assign hero_image = section.settings.hero_image | default: plus_product.featured_image
++  assign hero_mobile_image = section.settings.hero_mobile_image | default: hero_image
+   assign one_image = section.settings.one_image | default: one_product.featured_image
+   assign plus_image = section.settings.plus_image | default: plus_product.featured_image
++  assign installation_image = section.settings.installation_image | default: section.settings.inbouw_image
+   assign advice_url = section.settings.advice_url | default: pages.contact.url
+-  assign hero_alt = 'ss_landing.hero.image_alt' | t
+-  assign one_alt = 'ss_landing.one.image_alt' | t
+-  assign plus_alt = 'ss_landing.plus.image_alt' | t
+-  assign inbouw_alt = 'ss_landing.mount.inbouw_alt' | t
+-  assign opbouw_alt = 'ss_landing.mount.opbouw_alt' | t
++  assign models_anchor = '#bcsse-models-' | append: section.id
++  assign one_configurator_url = one_product.url | append: '#sunshower-configurator'
++  assign plus_configurator_url = plus_product.url | append: '#sunshower-configurator'
++  assign configurator_url = section.settings.configurator_url
++  if configurator_url == blank
++    if one_product != blank
++      assign configurator_url = one_configurator_url
++    elsif plus_product != blank
++      assign configurator_url = plus_configurator_url
++    else
++      assign configurator_url = models_anchor
++    endif
++  endif
++  assign hero_alt = 'ss_experience.hero.image_alt' | t
++  assign one_alt = 'ss_experience.one.image_alt' | t
++  assign plus_alt = 'ss_experience.plus.image_alt' | t
++  assign installation_alt = 'ss_experience.installation.image_alt' | t
++  assign has_accessories = false
++  for block in section.blocks
++    if block.settings.product != blank
++      assign has_accessories = true
++    endif
++  endfor
+ -%}
+ 
+-<div class="bcssl-landing">
+-  <div class="bcssl-wrap">
+-    <section class="bcssl-hero" aria-labelledby="bcssl-title-{{ section.id }}">
+-      <div class="bcssl-hero__copy">
+-        <p class="bcssl-eyebrow">{{ 'ss_landing.hero.eyebrow' | t }}</p>
+-        <h1 class="bcssl-title" id="bcssl-title-{{ section.id }}">{{ 'ss_landing.hero.heading' | t }}</h1>
+-        <p class="bcssl-hero__intro">{{ 'ss_landing.hero.intro' | t }}</p>
+-        <a class="bcssl-text-link" href="#bcssl-models-{{ section.id }}">{{ 'ss_landing.hero.compare' | t }} <span aria-hidden="true">↓</span></a>
++<div class="bcsse-experience">
++  <section class="bcsse-hero" aria-labelledby="bcsse-title-{{ section.id }}">
++    {%- if hero_image != blank -%}
++      <picture class="bcsse-hero__media">
++        {%- if hero_mobile_image != blank -%}
++          <source media="(max-width: 749px)" srcset="{{ hero_mobile_image | image_url: width: 480 }} 480w, {{ hero_mobile_image | image_url: width: 750 }} 750w, {{ hero_mobile_image | image_url: width: 1100 }} 1100w" sizes="100vw" width="{{ hero_mobile_image.width }}" height="{{ hero_mobile_image.height }}">
++        {%- endif -%}
++        {{- hero_image | image_url: width: 2400 | image_tag: class: 'bcsse-hero__image', widths: '750, 1100, 1500, 1800, 2400', sizes: '100vw', width: hero_image.width, height: hero_image.height, loading: 'eager', fetchpriority: 'high', alt: hero_alt -}}
++      </picture>
++    {%- endif -%}
++    <div class="bcsse-wrap bcsse-hero__inner">
++      <div class="bcsse-hero__copy">
++        <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++        <h1 class="bcsse-title" id="bcsse-title-{{ section.id }}">{{ 'ss_experience.hero.heading' | t }}</h1>
++        <p class="bcsse-hero__intro">{{ 'ss_experience.hero.intro' | t }}</p>
++        <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}">{{ 'ss_experience.hero.button' | t }} <span aria-hidden="true">→</span></a>
++        {%- if has_accessories -%}
++          <a class="bcsse-text-link bcsse-hero__accessories" href="#bcsse-accessories-{{ section.id }}">{{ 'ss_experience.hero.accessories' | t }} <span aria-hidden="true">→</span></a>
++        {%- endif -%}
+       </div>
+-      {%- if hero_image != blank -%}
+-        <div class="bcssl-hero__media">
+-          {{- hero_image | image_url: width: 1400 | image_tag: class: 'bcssl-hero__image', widths: '360, 540, 750, 1000, 1400', sizes: '(min-width: 1152px) 592px, (min-width: 750px) 52vw, calc(100vw - 32px)', width: hero_image.width, height: hero_image.height, loading: 'eager', fetchpriority: 'high', alt: hero_alt -}}
+-        </div>
+-      {%- endif -%}
+-    </section>
++    </div>
++  </section>
+ 
+-    <section class="bcssl-models bcssl-section" id="bcssl-models-{{ section.id }}" aria-labelledby="bcssl-models-title-{{ section.id }}">
+-      <div class="bcssl-section__head">
+-        <h2 class="bcssl-heading" id="bcssl-models-title-{{ section.id }}">{{ 'ss_landing.models.heading' | t }}</h2>
+-        <p class="bcssl-intro">{{ 'ss_landing.models.intro' | t }}</p>
+-      </div>
+-      <div class="bcssl-model-grid">
+-        <article class="bcssl-model">
+-          {%- if one_image != blank -%}
+-            <div class="bcssl-model__media">
+-              {{- one_image | image_url: width: 1000 | image_tag: class: 'bcssl-model__image', widths: '240, 360, 540, 750, 1000', sizes: '(min-width: 1152px) 530px, (min-width: 750px) 45vw, (min-width: 350px) calc((100vw - 68px) / 2), calc(100vw - 56px)', width: one_image.width, height: one_image.height, loading: 'lazy', alt: one_alt -}}
+-            </div>
+-          {%- endif -%}
+-          <div class="bcssl-model__body">
+-            <h3 class="bcssl-model__title">{{ 'ss_landing.one.heading' | t }}</h3>
+-            <p class="bcssl-badge bcssl-badge--ir">{{ 'ss_landing.one.badge' | t }}</p>
+-            <p class="bcssl-model__description">{{ 'ss_landing.one.description' | t }}</p>
+-            {%- if one_product != blank -%}
+-              <a class="bcssl-button bcssl-button--navy" href="{{ one_product.url }}">{{ 'ss_landing.one.button' | t }} <span aria-hidden="true">→</span></a>
+-            {%- endif -%}
+-          </div>
+-        </article>
+-        <article class="bcssl-model">
+-          {%- if plus_image != blank -%}
+-            <div class="bcssl-model__media">
+-              {{- plus_image | image_url: width: 1000 | image_tag: class: 'bcssl-model__image', widths: '240, 360, 540, 750, 1000', sizes: '(min-width: 1152px) 530px, (min-width: 750px) 45vw, (min-width: 350px) calc((100vw - 68px) / 2), calc(100vw - 56px)', width: plus_image.width, height: plus_image.height, loading: 'lazy', alt: plus_alt -}}
+-            </div>
+-          {%- endif -%}
+-          <div class="bcssl-model__body">
+-            <h3 class="bcssl-model__title">{{ 'ss_landing.plus.heading' | t }}</h3>
+-            <p class="bcssl-badge bcssl-badge--uv">{{ 'ss_landing.plus.badge' | t }}</p>
+-            <p class="bcssl-model__description">{{ 'ss_landing.plus.description' | t }}</p>
+-            {%- if plus_product != blank -%}
+-              <a class="bcssl-button bcssl-button--navy" href="{{ plus_product.url }}">{{ 'ss_landing.plus.button' | t }} <span aria-hidden="true">→</span></a>
+-            {%- endif -%}
+-          </div>
+-        </article>
+-      </div>
+-      <p class="bcssl-models__note">{{ 'ss_landing.models.note' | t }}</p>
+-    </section>
++  <nav class="bcsse-nav" aria-label="{{ 'ss_experience.navigation.label' | t | escape }}">
++    <a href="{{ models_anchor }}">{{ 'ss_experience.navigation.models' | t }}</a>
++    {%- if has_accessories -%}<a href="#bcsse-accessories-{{ section.id }}">{{ 'ss_experience.navigation.accessories' | t }}</a>{%- endif -%}
++    <a href="#bcsse-installation-{{ section.id }}">{{ 'ss_experience.navigation.installation' | t }}</a>
++  </nav>
+ 
+-    <section class="bcssl-explain bcssl-section" aria-labelledby="bcssl-explain-title-{{ section.id }}">
+-      <div class="bcssl-explain__intro">
+-        <p class="bcssl-eyebrow">{{ 'ss_landing.explain.eyebrow' | t }}</p>
+-        <h2 class="bcssl-heading" id="bcssl-explain-title-{{ section.id }}">{{ 'ss_landing.explain.heading' | t }}</h2>
+-        <p class="bcssl-intro">{{ 'ss_landing.explain.intro' | t }}</p>
+-      </div>
+-      <div class="bcssl-light-grid">
+-        <div class="bcssl-light">
+-          <span class="bcssl-light__mark bcssl-light__mark--ir" aria-hidden="true">IR</span>
+-          <div>
+-            <h3 class="bcssl-subheading">{{ 'ss_landing.explain.ir_heading' | t }}</h3>
+-            <p>{{ 'ss_landing.explain.ir_text' | t }}</p>
++  <section class="bcsse-models bcsse-wrap bcsse-section" id="bcsse-models-{{ section.id }}" aria-labelledby="bcsse-models-title-{{ section.id }}">
++    <div class="bcsse-section-head">
++      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++      <h2 class="bcsse-heading" id="bcsse-models-title-{{ section.id }}">{{ 'ss_experience.models.heading' | t }}</h2>
++    </div>
++    <div class="bcsse-model-grid">
++      <article class="bcsse-model">
++        {%- if one_image != blank -%}
++          <div class="bcsse-model__media">
++            {{- one_image | image_url: width: 900 | image_tag: class: 'bcsse-model__image', widths: '200, 300, 450, 600, 900', sizes: '(min-width: 1440px) 300px, (min-width: 990px) 23vw, (min-width: 750px) 44vw, 46vw', width: one_image.width, height: one_image.height, loading: 'lazy', alt: one_alt -}}
+           </div>
++        {%- endif -%}
++        <div class="bcsse-model__body">
++          <h3 class="bcsse-model__title">{{ 'ss_experience.one.heading' | t }}</h3>
++          <p class="bcsse-badge bcsse-badge--ir">{{ 'ss_experience.one.badge' | t }}</p>
++          <p class="bcsse-model__description">{{ 'ss_experience.one.description' | t }}</p>
++          {%- if one_product != blank -%}<a class="bcsse-button bcsse-button--navy" href="{{ one_configurator_url }}">{{ 'ss_experience.one.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
+         </div>
+-        <div class="bcssl-light">
+-          <span class="bcssl-light__mark bcssl-light__mark--uv" aria-hidden="true">UV</span>
+-          <div>
+-            <h3 class="bcssl-subheading">{{ 'ss_landing.explain.uv_heading' | t }}</h3>
+-            <p>{{ 'ss_landing.explain.uv_text' | t }}</p>
++      </article>
++      <article class="bcsse-model">
++        {%- if plus_image != blank -%}
++          <div class="bcsse-model__media">
++            {{- plus_image | image_url: width: 900 | image_tag: class: 'bcsse-model__image', widths: '200, 300, 450, 600, 900', sizes: '(min-width: 1440px) 300px, (min-width: 990px) 23vw, (min-width: 750px) 44vw, 46vw', width: plus_image.width, height: plus_image.height, loading: 'lazy', alt: plus_alt -}}
+           </div>
++        {%- endif -%}
++        <div class="bcsse-model__body">
++          <h3 class="bcsse-model__title">{{ 'ss_experience.plus.heading' | t }}</h3>
++          <p class="bcsse-badge bcsse-badge--uv">{{ 'ss_experience.plus.badge' | t }}</p>
++          <p class="bcsse-model__description">{{ 'ss_experience.plus.description' | t }}</p>
++          {%- if plus_product != blank -%}<a class="bcsse-button bcsse-button--navy" href="{{ plus_configurator_url }}">{{ 'ss_experience.plus.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
+         </div>
+-      </div>
+-    </section>
++      </article>
++    </div>
++    <p class="bcsse-models__note">{{ 'ss_experience.models.note' | t }}</p>
++  </section>
+ 
+-    <section class="bcssl-mount bcssl-section" aria-labelledby="bcssl-mount-title-{{ section.id }}">
+-      <div class="bcssl-section__head">
+-        <h2 class="bcssl-heading" id="bcssl-mount-title-{{ section.id }}">{{ 'ss_landing.mount.heading' | t }}</h2>
+-        <p class="bcssl-intro">{{ 'ss_landing.mount.intro' | t }}</p>
+-      </div>
+-      <div class="bcssl-mount-grid">
+-        <article class="bcssl-mount-tile">
+-          {%- if section.settings.inbouw_image != blank -%}
+-            {{- section.settings.inbouw_image | image_url: width: 1000 | image_tag: class: 'bcssl-mount-tile__image', widths: '240, 360, 540, 750, 1000', sizes: '(min-width: 1152px) 544px, (min-width: 750px) 46vw, calc((100vw - 44px) / 2)', width: section.settings.inbouw_image.width, height: section.settings.inbouw_image.height, loading: 'lazy', alt: inbouw_alt -}}
+-          {%- endif -%}
+-          <div class="bcssl-mount-tile__copy">
+-            <h3 class="bcssl-subheading">{{ 'ss_landing.mount.inbouw_heading' | t }}</h3>
+-            <p>{{ 'ss_landing.mount.inbouw_text' | t }}</p>
+-          </div>
+-        </article>
+-        <article class="bcssl-mount-tile">
+-          {%- if section.settings.opbouw_image != blank -%}
+-            {{- section.settings.opbouw_image | image_url: width: 1000 | image_tag: class: 'bcssl-mount-tile__image', widths: '240, 360, 540, 750, 1000', sizes: '(min-width: 1152px) 544px, (min-width: 750px) 46vw, calc((100vw - 44px) / 2)', width: section.settings.opbouw_image.width, height: section.settings.opbouw_image.height, loading: 'lazy', alt: opbouw_alt -}}
+-          {%- endif -%}
+-          <div class="bcssl-mount-tile__copy">
+-            <h3 class="bcssl-subheading">{{ 'ss_landing.mount.opbouw_heading' | t }}</h3>
+-            <p>{{ 'ss_landing.mount.opbouw_text' | t }}</p>
+-          </div>
+-        </article>
++  {%- if has_accessories -%}
++    <section class="bcsse-accessories bcsse-section" id="bcsse-accessories-{{ section.id }}" aria-labelledby="bcsse-accessories-title-{{ section.id }}">
++      <div class="bcsse-wrap">
++        <div class="bcsse-section-head">
++          <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++          <h2 class="bcsse-heading" id="bcsse-accessories-title-{{ section.id }}">{{ 'ss_experience.accessories.heading' | t }}</h2>
++          <p class="bcsse-intro">{{ 'ss_experience.accessories.intro' | t }}</p>
++        </div>
++        <div class="bcsse-accessory-grid">
++          {%- for block in section.blocks -%}
++            {%- liquid
++              assign accessory_product = block.settings.product
++              assign accessory_image = block.settings.image_override | default: accessory_product.featured_image
++              assign accessory_kind = block.settings.kind | default: 'cleaning'
++              assign accessory_image_width = 720
++              assign accessory_image_widths = '180, 270, 360, 540, 720'
++              assign accessory_image_sizes = '(min-width: 1440px) 210px, (min-width: 990px) 15vw, (min-width: 750px) 25vw, 40vw'
++              if accessory_kind == 'seat'
++                assign accessory_image_width = 1500
++                assign accessory_image_widths = '540, 720, 1080, 1500'
++                assign accessory_image_sizes = '(min-width: 1440px) 630px, (min-width: 990px) 45vw, (min-width: 750px) 75vw, 120vw'
++              endif
++              assign accessory_heading_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_heading'
++              assign accessory_heading = accessory_heading_key | t
++              assign accessory_description_key = 'ss_experience.accessories.' | append: accessory_kind | append: '_description'
++              assign accessory_button_key = 'ss_experience.accessories.product_button'
++              if accessory_kind == 'seat'
++                assign accessory_button_key = 'ss_experience.accessories.color_button'
++              endif
++              assign colors = 'white,black,grey,sand' | split: ','
++            -%}
++            {%- if accessory_product != blank -%}
++              <article class="bcsse-accessory bcsse-accessory--{{ accessory_kind }}" {{ block.shopify_attributes }}>
++                {%- if accessory_image != blank -%}
++                  <a class="bcsse-accessory__media" href="{{ accessory_product.url }}" aria-label="{{ accessory_heading | escape }}">
++                    {{- accessory_image | image_url: width: accessory_image_width | image_tag: class: 'bcsse-accessory__image', widths: accessory_image_widths, sizes: accessory_image_sizes, width: accessory_image.width, height: accessory_image.height, loading: 'lazy', alt: accessory_product.title -}}
++                  </a>
++                {%- endif -%}
++                <div class="bcsse-accessory__body">
++                  <h3 class="bcsse-accessory__title"><a href="{{ accessory_product.url }}">{{ accessory_heading }}</a></h3>
++                  {%- if accessory_kind == 'cleaning' -%}
++                    <p class="bcsse-accessory__description">{{ accessory_description_key | t }}</p>
++                  {%- else -%}
++                    <ul class="bcsse-swatches" aria-label="{{ 'ss_experience.accessories.colors_label' | t: product: accessory_heading | escape }}">
++                      {%- for color in colors -%}
++                        {%- liquid
++                          assign color_setting = 'product_' | append: color
++                          assign color_product = block.settings[color_setting]
++                          assign color_label_key = 'ss_experience.colors.' | append: color
++                          assign color_label = color_label_key | t
++                          assign swatch_current = false
++                          if color_product.id == accessory_product.id
++                            assign swatch_current = true
++                          endif
++                        -%}
++                        {%- if color_product != blank -%}
++                          <li><a class="bcsse-swatch{% if swatch_current %} bcsse-swatch--selected{% endif %}" href="{{ color_product.url }}" aria-label="{{ 'ss_experience.accessories.color_link' | t: product: accessory_heading, color: color_label | escape }}" title="{{ color_label | escape }}"><span class="bcsse-swatch__color bcsse-swatch__color--{{ color }}" aria-hidden="true"></span></a></li>
++                        {%- endif -%}
++                      {%- endfor -%}
++                    </ul>
++                  {%- endif -%}
++                  <p class="bcsse-accessory__price">{{ accessory_product.price | money }}</p>
++                  <a class="bcsse-button bcsse-button--outline" href="{{ accessory_product.url }}">{{ accessory_button_key | t }} <span aria-hidden="true">→</span></a>
++                </div>
++              </article>
++            {%- endif -%}
++          {%- endfor -%}
++        </div>
+       </div>
+-      <p class="bcssl-mount__sizes">{{ 'ss_landing.mount.sizes' | t }}</p>
+-      <p class="bcssl-mount__note">{{ 'ss_landing.mount.note' | t }}</p>
+     </section>
++  {%- endif -%}
+ 
+-    <section class="bcssl-advice" aria-labelledby="bcssl-advice-title-{{ section.id }}">
+-      <div>
+-        <h2 class="bcssl-heading" id="bcssl-advice-title-{{ section.id }}">{{ 'ss_landing.advice.heading' | t }}</h2>
+-        <p>{{ 'ss_landing.advice.text' | t }}</p>
++  <section class="bcsse-installation bcsse-wrap bcsse-section" id="bcsse-installation-{{ section.id }}" aria-labelledby="bcsse-installation-title-{{ section.id }}">
++    {%- if installation_image != blank -%}
++      <div class="bcsse-installation__media">
++        {{- installation_image | image_url: width: 1400 | image_tag: class: 'bcsse-installation__image', widths: '300, 450, 700, 1000, 1400', sizes: '(min-width: 1440px) 640px, (min-width: 750px) 46vw, 40vw', width: installation_image.width, height: installation_image.height, loading: 'lazy', alt: installation_alt -}}
+       </div>
+-      {%- if advice_url != blank -%}
+-        <a class="bcssl-button bcssl-button--cyan" href="{{ advice_url }}">{{ 'ss_landing.advice.button' | t }} <span aria-hidden="true">→</span></a>
+-      {%- endif -%}
+-    </section>
++    {%- endif -%}
++    <div class="bcsse-installation__copy">
++      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++      <h2 class="bcsse-heading" id="bcsse-installation-title-{{ section.id }}">{{ 'ss_experience.installation.heading' | t }}</h2>
++      <p class="bcsse-installation__options">{{ 'ss_experience.installation.options' | t }}</p>
++      <p class="bcsse-installation__intro">{{ 'ss_experience.installation.intro' | t }}</p>
++      {%- if advice_url != blank -%}<a class="bcsse-text-link" href="{{ advice_url }}">{{ 'ss_experience.installation.button' | t }} <span aria-hidden="true">→</span></a>{%- endif -%}
++    </div>
++  </section>
+ 
+-    <section class="bcssl-faq bcssl-section" aria-labelledby="bcssl-faq-title-{{ section.id }}">
+-      <h2 class="bcssl-heading" id="bcssl-faq-title-{{ section.id }}">{{ 'ss_landing.faq.heading' | t }}</h2>
+-      <div class="bcssl-faq__list">
+-        <details class="bcssl-faq__item">
+-          <summary>{{ 'ss_landing.faq.difference_question' | t }}<span class="bcssl-faq__plus" aria-hidden="true"></span></summary>
+-          <div class="bcssl-faq__answer"><p>{{ 'ss_landing.faq.difference_answer' | t }}</p></div>
+-        </details>
+-        <details class="bcssl-faq__item">
+-          <summary>{{ 'ss_landing.faq.size_question' | t }}<span class="bcssl-faq__plus" aria-hidden="true"></span></summary>
+-          <div class="bcssl-faq__answer"><p>{{ 'ss_landing.faq.size_answer' | t }}</p></div>
+-        </details>
+-        <details class="bcssl-faq__item">
+-          <summary>{{ 'ss_landing.faq.mount_question' | t }}<span class="bcssl-faq__plus" aria-hidden="true"></span></summary>
+-          <div class="bcssl-faq__answer"><p>{{ 'ss_landing.faq.mount_answer' | t }}</p></div>
+-        </details>
+-        <details class="bcssl-faq__item">
+-          <summary>{{ 'ss_landing.faq.install_question' | t }}<span class="bcssl-faq__plus" aria-hidden="true"></span></summary>
+-          <div class="bcssl-faq__answer"><p>{{ 'ss_landing.faq.install_answer' | t }}</p></div>
+-        </details>
+-      </div>
+-    </section>
++  <section class="bcsse-faq bcsse-wrap bcsse-section" aria-labelledby="bcsse-faq-title-{{ section.id }}">
++    <div class="bcsse-section-head">
++      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++      <h2 class="bcsse-heading" id="bcsse-faq-title-{{ section.id }}">{{ 'ss_experience.faq.heading' | t }}</h2>
++    </div>
++    <div class="bcsse-faq__list">
++      <details class="bcsse-faq__item">
++        <summary>{{ 'ss_experience.faq.difference_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
++        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.difference_answer' | t }}</p></div>
++      </details>
++      <details class="bcsse-faq__item">
++        <summary>{{ 'ss_experience.faq.size_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
++        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.size_answer' | t }}</p></div>
++      </details>
++      <details class="bcsse-faq__item">
++        <summary>{{ 'ss_experience.faq.install_question' | t }}<span class="bcsse-faq__plus" aria-hidden="true"></span></summary>
++        <div class="bcsse-faq__answer"><p>{{ 'ss_experience.faq.install_answer' | t }}</p></div>
++      </details>
++    </div>
++  </section>
++
++  <section class="bcsse-closing" aria-labelledby="bcsse-closing-title-{{ section.id }}">
++    <div class="bcsse-wrap bcsse-closing__inner">
++      <p class="bcsse-eyebrow">{{ 'ss_experience.hero.eyebrow' | t }}</p>
++      <h2 class="bcsse-closing__heading" id="bcsse-closing-title-{{ section.id }}">{{ 'ss_experience.closing.heading' | t }}</h2>
++      <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}">{{ 'ss_experience.closing.button' | t }} <span aria-hidden="true">→</span></a>
++    </div>
++  </section>
++  <div class="bcsse-mobile-cta">
++    <a class="bcsse-button bcsse-button--cyan" href="{{ configurator_url }}">{{ 'ss_experience.closing.mobile_button' | t }} <span aria-hidden="true">→</span></a>
+   </div>
+ </div>
+ 
+ {% schema %}
+ {
+-  "name": "t:sections.bc_sunshower_landing.name",
++  "name": "t:ss_experience.name",
+   "tag": "section",
+-  "class": "bcssl-section-root",
++  "class": "bcsse-section-root",
++  "max_blocks": 3,
+   "settings": [
+-    {
+-      "type": "image_picker",
+-      "id": "hero_image",
+-      "label": "t:sections.bc_sunshower_landing.hero_image"
+-    },
+-    {
+-      "type": "product",
+-      "id": "one_product",
+-      "label": "t:sections.bc_sunshower_landing.one_product"
+-    },
+-    {
+-      "type": "product",
+-      "id": "plus_product",
+-      "label": "t:sections.bc_sunshower_landing.plus_product"
+-    },
+-    {
+-      "type": "image_picker",
+-      "id": "one_image",
+-      "label": "t:sections.bc_sunshower_landing.one_image"
+-    },
+-    {
+-      "type": "image_picker",
+-      "id": "plus_image",
+-      "label": "t:sections.bc_sunshower_landing.plus_image"
+-    },
+-    {
+-      "type": "image_picker",
+-      "id": "inbouw_image",
+-      "label": "t:sections.bc_sunshower_landing.inbouw_image"
+-    },
+-    {
+-      "type": "image_picker",
+-      "id": "opbouw_image",
+-      "label": "t:sections.bc_sunshower_landing.opbouw_image"
+-    },
+-    {
+-      "type": "url",
+-      "id": "advice_url",
+-      "label": "t:sections.bc_sunshower_landing.advice_url"
+-    }
++    { "type": "image_picker", "id": "hero_image", "label": "t:ss_experience.settings.hero_image" },
++    { "type": "image_picker", "id": "hero_mobile_image", "label": "t:ss_experience.settings.hero_mobile_image" },
++    { "type": "url", "id": "configurator_url", "label": "t:ss_experience.settings.configurator_url" },
++    { "type": "product", "id": "one_product", "label": "t:ss_experience.settings.one_product" },
++    { "type": "product", "id": "plus_product", "label": "t:ss_experience.settings.plus_product" },
++    { "type": "image_picker", "id": "one_image", "label": "t:ss_experience.settings.one_image" },
++    { "type": "image_picker", "id": "plus_image", "label": "t:ss_experience.settings.plus_image" },
++    { "type": "image_picker", "id": "installation_image", "label": "t:ss_experience.settings.installation_image" },
++    { "type": "image_picker", "id": "inbouw_image", "label": "t:ss_experience.settings.inbouw_image" },
++    { "type": "image_picker", "id": "opbouw_image", "label": "t:ss_experience.settings.opbouw_image" },
++    { "type": "url", "id": "advice_url", "label": "t:ss_experience.settings.advice_url" }
+   ],
+-  "presets": [
++  "blocks": [
+     {
+-      "name": "t:sections.bc_sunshower_landing.name"
++      "type": "accessory",
++      "name": "t:ss_experience.accessory.name",
++      "settings": [
++        { "type": "select", "id": "kind", "label": "t:ss_experience.accessory.kind", "options": [
++          { "value": "cleaning", "label": "t:ss_experience.accessory.cleaning" },
++          { "value": "seat", "label": "t:ss_experience.accessory.seat" },
++          { "value": "wiper", "label": "t:ss_experience.accessory.wiper" }
++        ], "default": "cleaning" },
++        { "type": "product", "id": "product", "label": "t:ss_experience.accessory.product" },
++        { "type": "image_picker", "id": "image_override", "label": "t:ss_experience.accessory.image_override" },
++        { "type": "product", "id": "product_white", "label": "t:ss_experience.accessory.product_white" },
++        { "type": "product", "id": "product_black", "label": "t:ss_experience.accessory.product_black" },
++        { "type": "product", "id": "product_grey", "label": "t:ss_experience.accessory.product_grey" },
++        { "type": "product", "id": "product_sand", "label": "t:ss_experience.accessory.product_sand" }
++      ]
+     }
+   ],
+-  "enabled_on": {
+-    "templates": [
+-      "page"
+-    ]
+-  }
++  "presets": [{ "name": "t:ss_experience.name", "blocks": [
++    { "type": "accessory", "settings": { "kind": "cleaning" } },
++    { "type": "accessory", "settings": { "kind": "seat" } },
++    { "type": "accessory", "settings": { "kind": "wiper" } }
++  ] }],
++  "enabled_on": { "templates": ["page"] }
+ }
+ {% endschema %}
+diff --git a/sections/home-sunshower.liquid b/sections/home-sunshower.liquid
+index 402f7fd..3b2142a 100644
+--- a/sections/home-sunshower.liquid
++++ b/sections/home-sunshower.liquid
+@@ -5,26 +5,41 @@
+   if sunshower_link == blank
+     assign sunshower_link = pages['sunshower'].url | default: '/pages/sunshower'
+   endif
+-  assign image_alt = 'ss_home.image_alt' | t
++  assign hero_image = section.settings.image
++  assign mobile_image = section.settings.mobile_image
++  assign image_alt = 'ss_home_v2.image_alt' | t
++  assign image_loading = 'lazy'
++  assign image_priority = 'auto'
++  if section.index == nil or section.index <= 1
++    assign image_loading = 'eager'
++    assign image_priority = 'high'
++  endif
+ -%}
+ 
+-<section class="bcssh" aria-labelledby="bcssh-title-{{ section.id }}">
+-  <div class="bcssh-container">
+-    <div class="bcssh-card{% if section.settings.image == blank %} bcssh-card--text-only{% endif %}">
+-      <div class="bcssh-content">
+-        <p class="bcssh-eyebrow">{{ 'ss_home.eyebrow' | t | escape }}</p>
+-        <h2 class="bcssh-heading" id="bcssh-title-{{ section.id }}">{{ 'ss_home.heading' | t | escape }}</h2>
+-        <p class="bcssh-intro">{{ 'ss_home.intro' | t | escape }}</p>
+-        <a class="bcssh-link" href="{{ sunshower_link | escape }}">
+-          <span>{{ 'ss_home.cta' | t | escape }}</span>
+-          <svg class="bcssh-arrow" viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+-        </a>
+-      </div>
+-      {%- if section.settings.image != blank -%}
+-        <div class="bcssh-media">
+-          {{ section.settings.image | image_url: width: 1200 | image_tag: class: 'bcssh-image', widths: '240, 400, 600, 800, 1200', sizes: '(min-width: 1440px) 640px, (min-width: 750px) 46vw, 40vw', loading: 'lazy', alt: image_alt }}
+-        </div>
++<section class="bcssh{% if hero_image == blank %} bcssh--text-only{% endif %}" aria-labelledby="bcssh-title-{{ section.id }}">
++  {%- if hero_image != blank -%}
++    <picture class="bcssh-media{% if mobile_image != blank %} bcssh-media--art-directed{% endif %}">
++      {%- if mobile_image != blank -%}
++        <source
++          media="(max-width: 749px)"
++          srcset="{{ mobile_image | image_url: width: 390 }} 390w, {{ mobile_image | image_url: width: 600 }} 600w, {{ mobile_image | image_url: width: 900 }} 900w"
++          sizes="100vw"
++          width="{{ mobile_image.width }}"
++          height="{{ mobile_image.height }}"
++        >
+       {%- endif -%}
++      {{ hero_image | image_url: width: 2400 | image_tag: class: 'bcssh-image', widths: '600, 900, 1200, 1600, 2000, 2400', sizes: '100vw', width: hero_image.width, height: hero_image.height, loading: image_loading, fetchpriority: image_priority, alt: image_alt }}
++    </picture>
++  {%- endif -%}
++  <div class="bcssh-container">
++    <div class="bcssh-content">
++      <p class="bcssh-eyebrow">{{ 'ss_home_v2.eyebrow' | t | escape }}</p>
++      <h2 class="bcssh-heading" id="bcssh-title-{{ section.id }}">{{ 'ss_home_v2.heading' | t | escape }}</h2>
++      <p class="bcssh-intro">{{ 'ss_home_v2.intro' | t | escape }}</p>
++      <a class="bcssh-link" href="{{ sunshower_link | escape }}">
++        <span>{{ 'ss_home_v2.cta' | t | escape }}</span>
++        <svg class="bcssh-arrow" viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
++      </a>
+     </div>
+   </div>
+ </section>
+@@ -43,6 +58,11 @@
+       "id": "image",
+       "label": "t:sections.home_sunshower.image"
+     },
++    {
++      "type": "image_picker",
++      "id": "mobile_image",
++      "label": "t:sections.home_sunshower.mobile_image"
++    },
+     {
+       "type": "url",
+       "id": "link",
+diff --git a/sections/main-sunshower.liquid b/sections/main-sunshower.liquid
+index a4c840a..0010f97 100644
+--- a/sections/main-sunshower.liquid
++++ b/sections/main-sunshower.liquid
+@@ -30,7 +30,7 @@
+           </div>
+         {%- endif -%}
+       </div>
+-      <div class="ss-buybox ss-configurator" data-ss-buybox>
++      <div class="ss-buybox ss-configurator" id="sunshower-configurator" data-ss-buybox>
+         <div class="ss-buybox__content">
+           <header class="ss-config-heading"><h2>{{ 'ss.config.title' | t }}</h2><p>{{ 'ss.config.subtitle' | t }}</p></header>
+           <div class="ss-choices" data-ss-choices>
+diff --git a/templates/index.json b/templates/index.json
+index b2c08e2..eb470fd 100644
+--- a/templates/index.json
++++ b/templates/index.json
+@@ -63,7 +63,8 @@
+         "hero_link_label": "Shop Hotbath",
+         "banner_1_link_label": "Bekijk mozaïektegels van The Mosaic Factory",
+         "banner_2_link_label": "Bekijk badkamermeubels"
+-      }
++      },
++      "disabled": true
+     },
+     "home_category_grid_FgNMtn": {
+       "type": "home-category-grid",
+@@ -432,15 +433,15 @@
+     "home_sunshower": {
+       "type": "home-sunshower",
+       "settings": {
+-        "image": "shopify://shop_images/badkamercity-sunshower-sfeer-warm.jpg",
++        "image": "shopify://shop_images/bc-sunshower-beleving-uv-hero-v2.png",
+         "link": "/pages/sunshower"
+       }
+     }
+   },
+   "order": [
++    "home_sunshower",
+     "home_hero_gDkwi8",
+     "home_category_grid_FgNMtn",
+-    "home_sunshower",
+     "home_popular_products",
+     "home_complete_bathroom",
+     "home_shop_by_style_BK9a6q",
+diff --git a/templates/page.bc-sunshower.json b/templates/page.bc-sunshower.json
+index 6ce4339..5520318 100644
+--- a/templates/page.bc-sunshower.json
++++ b/templates/page.bc-sunshower.json
+@@ -12,15 +12,53 @@
+     "main": {
+       "type": "bc-sunshower-landing",
+       "settings": {
+-        "hero_image": "shopify://shop_images/badkamercity-sunshower-sfeer-warm.jpg",
++        "hero_image": "shopify://shop_images/bc-sunshower-beleving-uv-hero-v2.png",
+         "one_product": "sunshower-round-one-medium-inbouw-white",
+         "plus_product": "sunshower-round-plus-medium-inbouw-white",
+-        "one_image": "shopify://shop_images/sunshower-oneplus_l_white_opbouw.jpg",
+-        "plus_image": "shopify://shop_images/sunshower-oneplus_l_white_opbouw-1.jpg",
++        "one_image": "shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png",
++        "plus_image": "shopify://shop_images/bc-sunshower-beleving-uv-hero-v2.png",
+         "inbouw_image": "shopify://shop_images/sunshower-oneplus_m_white_inbouw_ir_geheel-1.jpg",
+         "opbouw_image": "shopify://shop_images/sunshower-oneplus_m_white_opbouw_ir_geheel-1.jpg",
+-        "advice_url": "/pages/contact"
+-      }
++        "advice_url": "/pages/contact",
++        "installation_image": "shopify://shop_images/bc-sunshower-beleving-infrarood-v2.png",
++        "configurator_url": "/products/sunshower-round-one-medium-inbouw-white#sunshower-configurator"
++      },
++      "blocks": {
++        "cleaning": {
++          "type": "accessory",
++          "settings": {
++            "kind": "cleaning",
++            "product": "sunshower-cleaning-set"
++          }
++        },
++        "sunseat": {
++          "type": "accessory",
++          "settings": {
++            "kind": "seat",
++            "product": "sunshower-sunseat-douchekruk-sand-white",
++            "product_white": "sunshower-sunseat-douchekruk-white",
++            "product_black": "sunshower-sunseat-douchekruk-black",
++            "product_grey": "sunshower-sunseat-douchekruk-organic-grey",
++            "product_sand": "sunshower-sunseat-douchekruk-sand-white"
++          }
++        },
++        "sunswipe": {
++          "type": "accessory",
++          "settings": {
++            "kind": "wiper",
++            "product": "sunshower-sunswipe-douchewisser-sand-white",
++            "product_white": "sunshower-sunswipe-douchewisser-white",
++            "product_black": "sunshower-sunswipe-douchewisser-black",
++            "product_grey": "sunshower-sunswipe-douchewisser-organic-grey",
++            "product_sand": "sunshower-sunswipe-douchewisser-sand-white"
++          }
++        }
++      },
++      "block_order": [
++        "cleaning",
++        "sunseat",
++        "sunswipe"
++      ]
+     }
+   },
+   "order": [

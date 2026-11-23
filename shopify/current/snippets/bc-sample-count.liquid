@@ -1,0 +1,12 @@
+{% doc %}
+  Returns the number of physical tile samples in the cart.
+{% enddoc %}
+{%- liquid
+  assign sample_count = 0
+  for line in cart.items
+    if line.product.type == 'Tegelsample'
+      assign sample_count = sample_count | plus: line.quantity
+    endif
+  endfor
+  echo sample_count
+-%}

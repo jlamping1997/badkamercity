@@ -1,0 +1,53 @@
+<style>
+  .bc-collection .facets-vertical { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 3rem; }
+  .bc-collection #ProductGridContainer { min-width: 0; }
+  .bc-collection #product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .bc-collection #product-grid > .grid__item { width: auto; max-width: none; }
+  @media (max-width: 749px) {
+    .bc-collection .facets-vertical { grid-template-columns: minmax(0, 1fr); }
+    .bc-collection #product-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>
+<div class="page-width">
+  <h1>Controle productbeschikbaarheid</h1>
+  <p>Proef met één bestaand product en de verborgen G6110. Alleen G1104 hoort hieronder te blijven staan.</p>
+</div>
+<div class="bc-collection">
+  {% render 'bc-external-filters', collection_handle: 'availability-qa', section_id: section.id %}
+  <div class="facets-vertical page-width">
+    <aside id="main-collection-filters">Controle wordt geladen.</aside>
+    <facet-filters-form class="facets-vertical-sort"></facet-filters-form>
+    <div id="ProductGridContainer">
+      <ul id="product-grid" class="grid product-grid"></ul>
+      <div class="pagination-wrapper"></div>
+    </div>
+  </div>
+</div>
+{% assign qa_product = all_products['lagoo-g1104tc'] %}
+<script>
+  (() => {
+    const root = document.getElementById('BcExternalFilters');
+    root.dataset.apiBase = location.origin + '/bc-availability-qa';
+    root.dataset.productsCount = '2';
+    const originalFetch = window.fetch.bind(window);
+    window.fetch = (input, options) => {
+      const url = new URL(typeof input === 'string' ? input : input.url || input.href, location.origin);
+      if (url.origin === location.origin && url.pathname === '/bc-availability-qa/api/v1/search') {
+        const payload = {
+          found: 2,
+          collection: {handle: 'availability-qa', profile_products: 2},
+          facets: [],
+          products: [
+            {id: {{ qa_product.id | append: '' | json }}, handle: 'lagoo-g1104tc', vendor: 'Lagoo', title: {{ qa_product.title | json | replace: '<', '\u003c' }}, image_url: ''},
+            {id: 'qa-unavailable', handle: 'lagoo-g6110', vendor: 'Lagoo', title: 'Garda G6110 zeephouder', image_url: ''}
+          ]
+        };
+        return Promise.resolve(new Response(JSON.stringify(payload), {status: 200, headers: {'Content-Type': 'application/json'}}));
+      }
+      return originalFetch(input, options);
+    };
+  })();
+</script>
+{% schema %}
+{"name":"Beschikbaarheidstest","settings":[]}
+{% endschema %}

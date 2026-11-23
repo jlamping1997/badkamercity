@@ -1,0 +1,88 @@
+{% doc %}
+  Shows the configured parcel delivery promise as one line beside the stock status.
+  @param {product} product - The current product.
+{% enddoc %}
+{%- liquid
+  assign weekday_product_type = product.type | handleize
+  assign weekday_parcel_types = settings.bc_weekday_delivery_product_types | newline_to_br | split: '<br />'
+  assign weekday_parcel_match = false
+  for weekday_parcel_type in weekday_parcel_types
+    assign weekday_parcel_type_key = weekday_parcel_type | strip | handleize
+    if weekday_product_type != blank and weekday_parcel_type_key == weekday_product_type
+      assign weekday_parcel_match = true
+      break
+    endif
+  endfor
+-%}
+{%- if settings.bc_weekday_delivery_enabled and weekday_parcel_match and product.selected_or_first_available_variant.available -%}
+  {%- liquid
+    assign before_message = settings.bc_weekday_delivery_before | strip
+    assign after_message = settings.bc_weekday_delivery_after | strip
+    assign tomorrow_message = ''
+    if before_message == 'Op werkdagen vóór 14:00 besteld, volgende werkdag in huis.'
+      assign before_message = 'Op werkdagen vóór 14:00 besteld = volgende werkdag in huis'
+      assign tomorrow_message = 'Vóór 14:00 besteld = morgen in huis'
+    endif
+    if after_message == 'Na 14:00 of in het weekend besteld: binnen 2 werkdagen in huis.'
+      assign after_message = 'Binnen 2 werkdagen in huis'
+    endif
+  -%}
+  {%- if before_message != blank or after_message != blank -%}
+    <bc-delivery-line class="bc-buybox__delivery-copy bc-delivery-line" data-before="{{ before_message | escape }}" data-after="{{ after_message | escape }}" data-tomorrow="{{ tomorrow_message | escape }}">
+      <span class="bc-delivery-line__icon" aria-hidden="true">{{ 'icon-truck.svg' | inline_asset_content }}</span>
+      <span data-delivery-text>{{ before_message | default: after_message | escape }}</span>
+    </bc-delivery-line>
+  {%- endif -%}
+{%- endif -%}
+
+{% stylesheet %}
+  .bc-buybox__delivery-copy.bc-delivery-line {
+    display: flex;
+    align-items: flex-start;
+    gap: .55rem;
+    margin: .55rem 0 .8rem;
+  }
+
+  .bc-delivery-line__icon {
+    display: flex;
+    align-items: center;
+    flex: 0 0 1.6rem;
+    height: 1.45em;
+    color: #2f763f;
+  }
+
+  .bc-delivery-line__icon svg {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  if (!customElements.get('bc-delivery-line')) {
+    customElements.define('bc-delivery-line', class extends HTMLElement {
+      connectedCallback() {
+        const label = this.querySelector('[data-delivery-text]');
+        if (!label) return;
+
+        const time = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/Amsterdam',
+          weekday: 'short',
+          hour: 'numeric',
+          hourCycle: 'h23'
+        }).formatToParts(new Date());
+        const weekday = time.find(part => part.type === 'weekday')?.value;
+        const hour = Number(time.find(part => part.type === 'hour')?.value);
+        const beforeCutoff = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(weekday) && hour < 14;
+
+        if (beforeCutoff) {
+          const tomorrow = weekday !== 'Fri' && this.dataset.tomorrow;
+          label.textContent = tomorrow || this.dataset.before || this.dataset.after;
+        } else {
+          label.textContent = this.dataset.after || this.dataset.before;
+        }
+      }
+    });
+  }
+{% endjavascript %}

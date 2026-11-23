@@ -1,0 +1,131 @@
+{
+  "task": "UI-01",
+  "environment": {
+    "node": "v24.22.1",
+    "dom": "happy-dom 21.0.4"
+  },
+  "caseCount": 15,
+  "executedSources": [
+    "whole existing global.js",
+    "whole candidate media-gallery.js"
+  ],
+  "candidateSha256": "950f98bb8994bf4aa21cf3885cada4a21ed55b84b0fc153d6b7f0fc073e410e5",
+  "limitations": [
+    "Synthetic markup and geometry/mediaqueries; real SliderComponent and MediaGallery classes.",
+    "No actual browser mobile viewport, keyboard default activation, zoom media playback, touch or cart actions.",
+    "No network; scroll, timers and animations are controlled models."
+  ],
+  "results": [
+    {
+      "id": "GA-01",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "renderedMedia": 0,
+        "controlsHidden": true
+      }
+    },
+    {
+      "id": "GA-02",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "renderedMedia": 1,
+        "controlsHidden": true
+      }
+    },
+    {
+      "id": "GA-03",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "initialBoundaries": true,
+        "count": "1 / 3"
+      }
+    },
+    {
+      "id": "GA-04",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "nextSelectsSameMediaAndThumbnail": true
+      }
+    },
+    {
+      "id": "GA-05",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "endStopsWithoutWrapping": true
+      }
+    },
+    {
+      "id": "GA-06",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "startStopsWithoutWrapping": true
+      }
+    },
+    {
+      "id": "GA-07",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "directThumbnailKeepsOverlayInSync": true
+      }
+    },
+    {
+      "id": "GA-08",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "variantPrependRecomputesOrderAndControls": true
+      }
+    },
+    {
+      "id": "GA-09",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "hiddenMediaExcluded": true
+      }
+    },
+    {
+      "id": "GA-10",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "mobileModelWithoutThumbnailsWorks": true,
+        "noDesktopFade": true
+      }
+    },
+    {
+      "id": "GA-11",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "realSliderScrollEventUpdatesOverlayInMobileModel": true
+      }
+    },
+    {
+      "id": "GA-12",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "rapidClicksCancelPreviousFade": true,
+        "newestSelectionWins": true,
+        "durationMs": 180
+      }
+    },
+    {
+      "id": "GA-13",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "reducedMotionSkipsFade": true
+      }
+    },
+    {
+      "id": "GA-14",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "disconnectCancelsFade": true
+      }
+    },
+    {
+      "id": "GA-15",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "singleMediaAfterVariantUpdateHidesControls": true
+      }
+    }
+  ]
+}

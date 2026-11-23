@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-18",
+  "task": "Kun je nu het lettertype wat duidelijker maken op de hele site",
+  "baseline": {
+    "id": "gid://shopify/OnlineStoreTheme/195384312074",
+    "name": "BadkamerCity - Sunshower mobiel infrarood en UV",
+    "role": "MAIN",
+    "files": 494
+  },
+  "preview": {
+    "id": "gid://shopify/OnlineStoreTheme/195385753866",
+    "name": "BadkamerCity - Duidelijkere typografie",
+    "role": "UNPUBLISHED",
+    "files": 495
+  },
+  "identityBeforeWrite": {
+    "count": 494,
+    "id": "gid://shopify/OnlineStoreTheme/195385753866",
+    "role": "UNPUBLISHED",
+    "processing": false
+  },
+  "finalDiff": {
+    "draftChanges": [
+      "assets/bc-typography.css",
+      "config/settings_data.json",
+      "layout/theme.liquid"
+    ],
+    "mainChanges": 0,
+    "baselineCount": 494,
+    "unchangedCount": 492
+  },
+  "readbackExact": [
+    {
+      "file": "layout/theme.liquid",
+      "exact": true
+    },
+    {
+      "file": "config/settings_data.json",
+      "exact": true
+    },
+    {
+      "file": "assets/bc-typography.css",
+      "exact": true
+    }
+  ],
+  "qaTemplateRestored": true,
+  "mainUnchanged": true,
+  "checks": {
+    "themeCheck": "Revision5: all three changed files pass, existing non-error Unknown object scheme_classes warning at line58. Fresh direct layout dependencies and en.default.json provided; remaining validator context from repository. Initial incomplete context errors fixed; bundled schema fallbacks used.",
+    "settings": "Only current type_body_font and type_header_font changed; both scales100 and all other current/preset data preserved.",
+    "review": "Independent source review; desktop size reductions and footer specificity corrected.",
+    "desktop": {
+      "viewport": [
+        1363,
+        936
+      ],
+      "font": "system-ui with platform fallback stack",
+      "root": "10px",
+      "body": "16px/1.6",
+      "home": true,
+      "sunshower": true,
+      "sunshowerConfigurator": true,
+      "collectionWastafelkranen": {
+        "cards": 24,
+        "overflow": false
+      },
+      "standardPdp": {
+        "path": "/products/sunshower-cleaning-set",
+        "h1": 1,
+        "delivery": "14px",
+        "button": "15px",
+        "overflow": false
+      },
+      "contact": {
+        "emailInput": "16px",
+        "overflow": false
+      },
+      "emptyCart": {
+        "overflow": false
+      },
+      "categoryHub": {
+        "fontApplied": true,
+        "overflow": false
+      },
+      "navigation": "Wider font activates existing horizontal category rail; arrows available. Header behavior source unchanged."
+    },
+    "mobile": {
+      "method": "Server-rendered main HTML plus actual deployed CSS in internal srcdoc component frames; no full mobile browser or header.",
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "components": [
+        "Sunshower landing",
+        "Sunshower PLUS configurator"
+      ],
+      "noHorizontalPageOverflow": true,
+      "noClippedControls": true,
+      "modelButtonsAt320": "14px",
+      "faq": "16px",
+      "lightCaption": "13px",
+      "configDelivery": "13px",
+      "configButton": "15px",
+      "priceRowAt320": {
+        "clientWidth": 247,
+        "scrollWidth": 247
+      }
+    }
+  },
+  "notTested": [
+    "Physical iOS/Android",
+    "Full mobile header/menu integration",
+    "Checkout/payment",
+    "Account/gift-card/password browser runtime",
+    "All catalogue content pages",
+    "Windows local sync",
+    "Performance benchmark"
+  ],
+  "rollback": "Do not publish preview; after publication restore only two changed existing files and remove new CSS if unused, or previous theme if no later changes.",
+  "patch": {
+    "patch": "/workspace/scratch/87a9ff83233e/typography-git/docs/patches/BC-site-typography-2026-10-18.patch",
+    "bytes": 6129,
+    "sha256": "289da0558f2b1732a97f9c57475bffb082efec50f42a36c6da1811a9acd43a00",
+    "forward_apply_check": true,
+    "forward_exact_bytes": true,
+    "reverse_apply_check": true,
+    "reverse_exact_bytes": true,
+    "files": {
+      "layout/theme.liquid": {
+        "baseline_sha256": "7b580a49ab4eb6db8726e62d8acbac64f8880bec231549ef378feea2b17978e6",
+        "desired_sha256": "529d7f21a2019710589ca1238c93e4d37f74b1fa457ccb57a3805dd4b4ed5431",
+        "baseline_bytes": 21715,
+        "desired_bytes": 21956
+      },
+      "config/settings_data.json": {
+        "baseline_sha256": "e096439ecd5abbd26a1fb6f3600c8e4f4bbc236d584f9033d5cb4c0d8ee5a0a6",
+        "desired_sha256": "8e541329bae08f9b069e6388f78ec3b048d05aa18c1abba796a83745d704f14d",
+        "baseline_bytes": 12599,
+        "desired_bytes": 12599
+      },
+      "assets/bc-typography.css": {
+        "baseline_sha256": null,
+        "desired_sha256": "caab726f2942bcd91045ea8de00a072fbe2cc855feb0236853b058efa001e029",
+        "baseline_bytes": null,
+        "desired_bytes": 3657
+      }
+    },
+    "numstat": [
+      "153\t0\tassets/bc-typography.css",
+      "2\t2\tconfig/settings_data.json",
+      "3\t2\tlayout/theme.liquid"
+    ]
+  },
+  "mobileMeasurements": [
+    {
+      "button": null,
+      "caption": "13px",
+      "clippedControls": [],
+      "delivery": null,
+      "faq": "16px",
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "sun",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "button": "15px",
+      "caption": null,
+      "clippedControls": [],
+      "delivery": "13px",
+      "faq": null,
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "config",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "button": null,
+      "caption": "13px",
+      "clippedControls": [],
+      "delivery": null,
+      "faq": "16px",
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "sun",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "button": "15px",
+      "caption": null,
+      "clippedControls": [],
+      "delivery": "13px",
+      "faq": null,
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "config",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "button": null,
+      "caption": "13px",
+      "clippedControls": [],
+      "delivery": null,
+      "faq": "16px",
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "sun",
+      "overflow": false,
+      "width": 430
+    },
+    {
+      "button": "15px",
+      "caption": null,
+      "clippedControls": [],
+      "delivery": "13px",
+      "faq": null,
+      "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "name": "config",
+      "overflow": false,
+      "width": 430
+    }
+  ]
+}

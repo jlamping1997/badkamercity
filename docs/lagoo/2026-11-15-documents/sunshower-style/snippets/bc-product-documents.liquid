@@ -1,0 +1,79 @@
+{% doc %}
+  Displays technical documents for reviewed Wiesbaden and imported Hotbath products.
+  @param {product} product - Current product.
+  @param {string} section_id - Main product section identifier.
+{% enddoc %}
+{%- liquid
+  assign documents = product.metafields.custom.technische_documenten
+-%}
+{%- capture reviewed_scope -%}{%- render 'bc-wiesbaden-reviewed-scope', product: product -%}{%- endcapture -%}
+{%- assign reviewed_scope = reviewed_scope | strip -%}
+{%- assign document_vendor = product.vendor | downcase | strip -%}
+{%- if document_vendor == 'hotbath' and product.metafields.bc_data.documents_visible.value == true -%}
+  {%- assign reviewed_scope = 'hotbath' -%}
+{%- endif -%}
+{%- if document_vendor == 'lagoo' and documents.type == 'list.url' -%}
+  {%- assign reviewed_scope = 'lagoo' -%}
+{%- endif -%}
+{%- if reviewed_scope != blank and documents.type == 'list.url' -%}
+  {%- capture document_rows -%}
+    {%- assign document_urls = documents.value | uniq -%}
+    {%- for document_url in document_urls -%}
+      {%- liquid
+        assign protocol = document_url | slice: 0, 8
+        assign document_path = document_url | split: '?' | first | split: '#' | first | downcase
+        assign extension = document_path | split: '/' | last | split: '.' | last
+        assign label_key = 'bc_product_documents.document'
+        assign file_type = extension | upcase
+        if extension == 'jpg' or extension == 'jpeg' or extension == 'png' or extension == 'webp'
+          assign label_key = 'bc_product_documents.drawing'
+        elsif extension == 'pdf' and document_path contains '/handleidingen/'
+          assign label_key = 'bc_product_documents.manual'
+        endif
+      -%}
+      {%- if document_vendor == 'lagoo' -%}
+        {%- assign lagoo_filename = document_url | split: '?' | first | split: '/' | last | url_decode -%}
+        {%- assign lagoo_parts = lagoo_filename | split: '-' -%}
+        {%- capture lagoo_prefix -%}{{ lagoo_parts[0] }}-{{ lagoo_parts[1] }}-{{ lagoo_parts[2] }}-{%- endcapture -%}
+        {%- assign lagoo_label = lagoo_filename | remove_first: lagoo_prefix | remove: '.pdf' | remove: '.PDF' | remove: '.stp' | remove: '.STP' | remove: '.dwg' | remove: '.DWG' | replace: '-', ' ' | replace: '_', ' ' -%}
+        {%- if document_url contains 'youtube.com/' or document_url contains 'youtu.be/' -%}
+          {%- assign lagoo_label = 'Montagevideo' -%}
+          {%- assign file_type = 'Video' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if protocol == 'https://' -%}
+        <li>
+          <a href="{{ document_url | escape }}" target="_blank" rel="noopener noreferrer">
+            <svg class="bc-product-documents__file{% if extension == 'pdf' %} bc-product-documents__file--pdf{% endif %}" viewBox="0 0 24 28" aria-hidden="true"><path d="M4 1h10l6 6v19H4V1Z M14 1v7h6"/><text x="5" y="21">{{ file_type | escape }}</text></svg>
+            <span>{% if document_vendor == 'lagoo' %}{{ lagoo_label | escape }}{% else %}{{ label_key | t }} {{ product.selected_or_first_available_variant.sku | escape }}{% if extension != 'pdf' and forloop.index > 1 %} ({{ forloop.index }}){% endif %}{% endif %}</span>
+            <svg class="bc-product-documents__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 14v3h14v-3"/></svg>
+          </a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- assign document_rows = document_rows | strip -%}
+  {%- if document_rows != blank -%}
+    <div class="bc-product-documents{% if document_vendor == 'lagoo' %} bc-product-documents--lagoo{% endif %}" id="ProductDocuments-{{ section_id | escape }}" aria-labelledby="ProductDocumentsTitle-{{ section_id | escape }}">
+      <h3 id="ProductDocumentsTitle-{{ section_id | escape }}">{{ 'ss.documents' | t }}</h3>
+      <ul class="bc-product-documents__list" role="list">{{ document_rows }}</ul>
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+
+{% stylesheet %}
+.bc-product-documents--lagoo{width:100%;margin:32px 0 48px;color:#0f2740}
+.bc-product-documents--lagoo h3{font-size:16px;font-weight:600;margin:0 0 14px}
+.bc-product-documents--lagoo .bc-product-documents__list{display:block;list-style:none;padding:0;margin:0}
+.bc-product-documents--lagoo .bc-product-documents__list li{margin:0;border:0}
+.bc-product-documents--lagoo .bc-product-documents__list li:nth-child(even){background:#f1f3f5}
+.bc-product-documents--lagoo .bc-product-documents__list a{display:flex;align-items:center;gap:12px;padding:14px 16px;min-height:48px;color:inherit;text-decoration:none;font-size:16px;line-height:1.7}
+.bc-product-documents--lagoo .bc-product-documents__list a:hover span{text-decoration:underline;text-underline-offset:3px}
+.bc-product-documents--lagoo .bc-product-documents__list a:focus-visible{outline:2px solid #0f2740;outline-offset:-2px}
+.bc-product-documents--lagoo .bc-product-documents__file{width:22px;height:28px;flex:0 0 22px;fill:none;stroke:#e14343;stroke-width:1}
+.bc-product-documents--lagoo .bc-product-documents__file text{fill:#e14343;stroke:none;font-size:6px;font-family:Arial,sans-serif}
+.bc-product-documents--lagoo .bc-product-documents__list a>span{flex:1;min-width:0;overflow-wrap:anywhere}
+.bc-product-documents--lagoo .bc-product-documents__arrow{width:20px;height:20px;flex:0 0 20px;margin-left:auto;fill:none;stroke:#526b7d;stroke-width:1.5}
+@media(max-width:749px){.bc-product-documents--lagoo .bc-product-documents__list a{font-size:14px;padding:12px 10px}}
+{% endstylesheet %}

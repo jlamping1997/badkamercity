@@ -1,0 +1,81 @@
+{
+  "test": "Actual production calculate() method with isolated form fixtures",
+  "sourcePath": "/workspace/scratch/7e8fc832643e/hotbath-checkpoint/after/assets/bc-hotbath-mobile.js",
+  "sourceSha256": "4a26a3d113ec7b07b64ba4aea139f460aa1eaca80dcb7c169e3a95254c276021",
+  "cases": 18,
+  "passed": 18,
+  "results": [
+    {
+      "name": "yes one: trim plus body",
+      "passed": true
+    },
+    {
+      "name": "yes two: two trims plus two bodies",
+      "passed": true
+    },
+    {
+      "name": "no two: trims only",
+      "passed": true
+    },
+    {
+      "name": "product without addon",
+      "passed": true
+    },
+    {
+      "name": "no paid preselection",
+      "passed": true
+    },
+    {
+      "name": "zero quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "fractional quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "empty quantity rejected",
+      "passed": true
+    },
+    {
+      "name": "native validity rule respected",
+      "passed": true
+    },
+    {
+      "name": "stale variant price rejected",
+      "passed": true
+    },
+    {
+      "name": "mixed currencies rejected",
+      "passed": true
+    },
+    {
+      "name": "missing price rejected",
+      "passed": true
+    },
+    {
+      "name": "unsafe integer total rejected",
+      "passed": true
+    },
+    {
+      "name": "unavailable selected addon rejected",
+      "passed": true
+    },
+    {
+      "name": "uncertain cart operation rejected",
+      "passed": true
+    },
+    {
+      "name": "unsupported selling plan rejected",
+      "passed": true
+    },
+    {
+      "name": "disabled selected choice rejected",
+      "passed": true
+    },
+    {
+      "name": "invalid product mapping rejected",
+      "passed": true
+    }
+  ]
+}

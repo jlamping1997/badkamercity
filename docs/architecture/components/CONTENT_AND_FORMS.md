@@ -1,0 +1,79 @@
+# Pagina's, begrippen, advies, blog en formulieren
+
+> **Actuele contentcorrectie — CATEGORY-COPY-01:** ook categorieomschrijvingen kunnen afwijkende interne links bevatten. Negen dode productkeuzes uit acht bestaande descriptionHtml-bodies gehaald; tekst grotendeels behouden, één tegelzin gericht vervangen. [Bron-/HTML-bewijs en herstel](../../repairs/2026-11-08/category-content-links/README.md). Page-/blogteksten vallen onder de volgende gerichte controle; geen nieuwe formulier-/mailtest.
+
+> **Actueel CONTENT-ENCODING-02 — 8 november:** MAIN 196368531722 is live; 122 Pages/120 gepubliceerd volledig gelezen. Negentien kapotte accenten op negen uitlegpagina’s plus vier voorloop-BOM’s op vier andere Pages hersteld. Dertien exacte Admin-readbacks en publieke voor/na-controles; titel, SEO, canonical, H1, links en structuur behouden. Alle 109 actuele termlinks mappen op gepubliceerde Pages, nul loops. Hygrometerketen publiek 200, al vóór deze taak correct; nul redirectwrites. [Bewijs en herstel](../../repairs/2026-11-08/glossary-encoding/README.md). Native policies, technische factcheck, JS/mobiel/mail/herroepingsbevestiging behouden hun aparte grenzen.
+
+> **Actueel 8 november — DELIVERY-INFO-01:** Contactbody/SEO en RapoWash-tekens zijn live hersteld; Antikalk heeft één H1 en RapoWash eigen SEO. Nieuwe gepubliceerde Page 166963937546 /pages/bezorgen-en-afhalen heeft één H1, NL-tariefinformatie en afhalen na bevestiging/op afspraak. Contact behoudt zijn native formulier, bestelnummer is expliciet indien bekend en de bezorg-Page is gelinkt. Retourcopy staat nog in hetzelfde concept 196368531722 — Klantenservice 8 nov. [Actuele uitvoering](../../repairs/2026-11-08/delivery-information/README.md). De aantallen en open-contentregels in de eerdere nulmeting hieronder behouden hun bronmoment; native policyopmaak/scope en mail-/herroepingsbevestiging blijven apart open.
+
+## Eerdere brede inhoudsmeting — 8 november 2026
+
+[Centraal auditrapport](../../audits/2026-11-08/README.md), MAIN **196328685834**. Verse Admin-inventaris telt **121 Pages: 119 gepubliceerd en 2 ongepubliceerd**. Toewijzingen: 109 `begrip`, 6 `page`, 1 `contact`, 1 `begrippenlijst`, 1 `bc-sunshower`, 1 `bc-wishlist`, 1 `offerte-vergelijken` en 1 `retour-aanmelden`. Alle 119 gepubliceerde Page-routes zijn opgenomen in de brede 364 HTML-checks; dit is geen volledige tekstuele factcheck of formulierproef.
+
+| Actuele route / onderwerp | Vastgesteld | Open vervolg |
+| --- | --- | --- |
+| `/pages/contact` | HTTP 200; alleen contactformulier, 68 tekens hoofdinhoud; geen volledige contactpresentatie | Correcte openbare contactgegevens zichtbaar maken; geen verzonden formulier of mailbezorging bewezen |
+| `/pages/retour-aanmelden` | HTTP 200; eigen Page/toewijzing aanwezig | Geen bewezen complete herroepingsfunctie of ontvangstbevestiging; policy, formulier en mailketen apart toetsen |
+| `/policies/terms-of-service`, `/policies/legal-notice` | HTTP 200; ge-escapete HTML in hoofdinhoud | Opmaak als echte richtext/HTML herstellen en opnieuw controleren |
+| `/pages/antikalk` | Twee H1's | Eén paginatitel behouden zonder de begrippen-DOM te breken |
+| `/pages/rapowash` | Titel/beschrijving gekopieerd van reukslot | Inhoudelijk passende eigen SEO-metadata |
+| `/pages/hygro-meter` | HTTP 200 met H1 Hygro(meter) | Oude GLOSS-F01-keten naar `/pages/hygrometer` is in deze meting niet als geheel opnieuw vrijgegeven |
+
+De actuele voetertest vindt vijf policy-links; native shippingpolicy ontbreekt. Contact-/retouradres niet gelijkstellen aan geregistreerde vestiging; btw/KvK-validatie volgt het livegangdossier. Lokale anchors hebben in de brede responsecontrole geen ontbrekende doelen; dat bewijst geen correcte native keyboard-/scrollbediening. De gedateerde inventaris van 28 oktober, de 109-termketen en DOM-replays hieronder blijven historisch bewijs.
+
+## Historische inhoudsanalyse — 28 oktober
+
+Bronmoment **28 oktober 2026**. Verse Admin-inventaris: **119 Pages, 118 gepubliceerd**, één blog `nieuws`, één artikel. Alle ontvangen page-/collectiebodies zijn op inline style/script onderzocht; geen pagebody bevat die tags. Dit is geen inhoudelijke factcheck van iedere uitlegtekst.
+
+## Paginafamilies en bronnen
+
+| Familie | Toewijzing | Opbouw |
+| --- | --- | --- |
+| Begrippenlijst | Eén `begrippenlijst` | `main-glossary`, 109 termblocks in template |
+| Uitlegpagina | 109 `begrip` | `main-glossary-page`, titel/body uit Page |
+| Algemene/oudere pagina | Zes suffix `page` | Er is geen `page.page.json` in het actuele manifest; effectieve terugval expliciet controleren |
+| Contact | Eén `contact` | `main-page` en `contact-form` |
+| Sunshower | Eén `bc-sunshower` | Landing + richtextadvies; gekoppelde eigen product-/configuratiestroom |
+| Verlanglijst | Eén `bc-wishlist` | `bc-wishlist-page` + browseropslag |
+
+Van de zes records met suffix `page` zijn er vijf gepubliceerd. Dit is een toewijzingssignaal, **geen bewezen 404**: een ontbrekende alternatieve template kan een standaardweergave opleveren. De ongepubliceerde Page Merken is niet de actieve vendor-directory. Zie het [Admin-register](../reference/ADMIN.md) voor de concrete routes en bronmomenten.
+
+## Begrippenlijst
+
+De lijst komt uit **templateblocks**, niet automatisch uit alle Pages met suffix `begrip`. Iedere term heeft letter, label en keywords. De server maakt A–Z-groepen en links `/begrippenlijst/<handleize-term>`. Shopify-redirects verbinden die oude/menselijke routes aan `/pages/...`. Een term toevoegen vraagt dus drie samenhangende controles: block → bestaand/gepubliceerd Page-record → redirectbestemming.
+
+Zoeken in de lijst is lokale filtering van reeds aanwezige DOM: Nederlandse lowercase + trim, match op term/keywords, lege groepen verbergen, A–Z-toestand bijwerken, live resultaatstext en nulresultaat tonen. Er is geen Typesense-request voor dit zoekveld. Zonder JavaScript blijven de lijst en anchors bestaan. Dit is een andere zoekfunctie dan de header of productfilters; uniforme veldstyling kan wel gedeeld worden.
+
+### Historische verbindingstest — 28 oktober; opgevolgd door CONTENT-ENCODING-02
+
+De 109 werkelijk gerenderde termlinks zijn gekoppeld aan alle 120 redirects en 119 Page-records. **108** komen bij gepubliceerde Pages met aanwezige begripstemplate uit; er zijn geen loops in deze ketens. **GLOSS-F01:** Hygro(meter) linkt naar `/begrippenlijst/hygrometer`, redirect naar `/pages/hygrometer`; dat Page-record ontbreekt en een gerichte GET bevestigt **404**. Er bestaat wel een andere hygro-gerelateerde Page, maar het juiste inhoudelijke doel moet vóór correctie worden gekozen. Geen redirect of Page gewijzigd. [Verbindingsbewijs](../evidence/2026-10-28-complete/glossary-links.json).
+
+## Begripspagina
+
+De server rendert `page.title`, `page.content`, optionele teruglink en sidebar. Een inline controller markeert een eerste losse paragraaf als samenvatting en maakt kaarten rondom **directe H2-kinderen**. Titelwoorden zoals gerelateerde, let je op en voordelen kiezen presentatievarianten. Hij maakt een inhoudsopgave en toont die pas bij meer dan één entry. Geneste headings en bestaande IDs vragen afzonderlijke controle; willekeurige HTML uit een editor valt niet automatisch in hetzelfde model.
+
+De desktopbrowser bevestigt 109→1→0→109 zichtbare termen bij zoeken/wissen en een werkende Rimless-link. De geladen Rimless-pagina heeft zes inhoudskaarten en zes inhoudslinks. Dit test niet iedere term, headingvariatie of mobiel.
+
+De oorspronkelijke body blijft leesbaar zonder JavaScript. Wijzigingen in de body kunnen dus zowel semantiek als de latere DOM-indeling raken. De Glossary Upload-app is geïnstalleerd; de huidige broncode, beheerrechten en volledige import-/rollbackketen van die app zijn niet via de themafiles vastgesteld.
+
+## Blog en adviesartikel
+
+`blog.json` gebruikt `main-blog`; `article.json` gebruikt het maatwerk **bc-advice-article**. De oude `main-article` blijft beschikbaar maar is niet de toegewezen standaardartikelrenderer.
+
+De adviesrenderer schat leestijd met woorden/200, kan auteur/datum tonen en splitst inhoud letterlijk op `<h2>`. Bij geschikte splits bouwt hij genummerde inhoudslinks, secties en een mobiele contents-disclosure; anders toont hij de body als geheel. H2's met attributen of afwijkende schrijfwijze zijn een af te bakenen contentcontract. De huidige meetronde noemt dat geen defect zonder een passende live body te reproduceren.
+
+Sunshower-tag en ingestelde ONE/PLUS-beelden kiezen een specifieke visuele variant; anders kan het artikelbeeld worden gebruikt. De renderer publiceert `article | structured_data`. Een syntactisch geldige JSON-LD is geen bewijs dat Google een rich result zal tonen.
+
+## Contact en nieuwsbrief
+
+`contact-form` gebruikt Shopify `form 'contact'`, met naam, e-mail, telefoon en bericht, plus server-success-/errorweergave. `aria-required` is een toegankelijkheidsaanduiding; het is niet hetzelfde als HTML `required` of bewezen servervalidatie. In deze documentatieronde is **geen formulier verstuurd**. Ontvangst in de juiste mailbox, spam/reCAPTCHA, foutfocus en gegevensbewaring blijven operationele controles.
+
+`newsletter` en `email-signup-banner` gebruiken `form 'customer'` en tag `newsletter`. De banner is onderdeel van de passwordtemplate; aanwezigheid van een nieuwsbriefsectie in het thema betekent niet dat een homepage-inschrijving actief is. Geen testinschrijving of marketingbericht verzonden.
+
+Onderhoud: algemene inhoud bij Online Store Pages/Blogs; lijstblocks en templatepresentatie in Theme Editor; redirects in Shopify redirects; vertalingen in locales; formulierontvanger/marketingbeleid in het relevante beheer. Een gerenderde bedankmelding bewijst nog geen e-mailbezorging.
+
+Acceptatie: nieuwe/lege term, accent/keywords/nulresultaat, redirectloop/ontbrekend doel, standaardtemplate-terugval, direct/genest H2, meerdere H1's, ontbrekend artikelbeeld, keyboardlinks, contactfouten en daadwerkelijke bezorging onder een afgesproken test. [Bron-/instellingenreferentie](../reference/SECTIONS.md).
+
+## Methoden en inputcontracten verdiept
+
+[CONTENT_DOM_CONTRACTS](micro/CONTENT_DOM_CONTRACTS.md) volgt lokale zoeknormalisatie, verborgen A–Z-anchors, directe H2-transformatie en TOC-ID-botsingen. Nieuwe read van 119 Pages: alle 109 gepubliceerde begripspagina’s hebben samen 655 directe H2’s, geen geneste H2’s en geen voorspelde ID-conflicten. Geen inhoudelijke factcheck of oplossing van GLOSS-F01.

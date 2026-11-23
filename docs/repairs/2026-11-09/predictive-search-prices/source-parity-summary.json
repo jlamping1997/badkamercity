@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-09",
+  "scope": "Fresh manifest metadata vs current tracked theme source after the three-file patch; protected settings_data body excluded",
+  "trackedGitFiles": 1382,
+  "mainFiles": 1388,
+  "draftFiles": 1390,
+  "sharedGitMain": 1379,
+  "comparedShared": 1378,
+  "equalToMain": 1343,
+  "intendedDraftDifferences": 27,
+  "intendedPathsMatchGit": true,
+  "otherSharedDifferences": 10,
+  "otherDifferences": [
+    {
+      "filename": "assets/bc-external-filters.css",
+      "git": "737b2e9bf593105a80239a345daec40d",
+      "main": "6e3cba08884edac08fdcf229a9fd170d",
+      "draft": "6e3cba08884edac08fdcf229a9fd170d"
+    },
+    {
+      "filename": "assets/bc-porcelanosa-buybox.js",
+      "git": "e2dc6c17eb8715e710dcdd15381e7058",
+      "main": "473eeba8327cd6f89d97200db3a11319",
+      "draft": "473eeba8327cd6f89d97200db3a11319"
+    },
+    {
+      "filename": "assets/bc-product-cards.css",
+      "git": "56d0058eb32bba4f8ee7adced2a67fa2",
+      "main": "438c49d4e4cdac484d4dcc1937b674eb",
+      "draft": "438c49d4e4cdac484d4dcc1937b674eb"
+    },
+    {
+      "filename": "config/settings_schema.json",
+      "git": "70b4665da3569296af1ffd3cbbb04514",
+      "main": "02f5169a612cc7674e3dc03a0bab3731",
+      "draft": "02f5169a612cc7674e3dc03a0bab3731"
+    },
+    {
+      "filename": "snippets/bc-card-delivery.liquid",
+      "git": "6c17c24ca0640676d562ab78fdd08dce",
+      "main": "efa714ef05aaf0eee5a5b750ad91c2f1",
+      "draft": "efa714ef05aaf0eee5a5b750ad91c2f1"
+    },
+    {
+      "filename": "snippets/bc-cart-delivery.liquid",
+      "git": "a5777ed5f3ddd64ba2af0f5eb422f59c",
+      "main": "ea28b06de6ff56f8fc6e8769682ea816",
+      "draft": "ea28b06de6ff56f8fc6e8769682ea816"
+    },
+    {
+      "filename": "snippets/bc-external-filters.liquid",
+      "git": "2a0136a8420e8a710f448c99d5fc3aad",
+      "main": "fdbb71e4463e700b721c21ee95a38331",
+      "draft": "fdbb71e4463e700b721c21ee95a38331"
+    },
+    {
+      "filename": "snippets/bc-fabriecio-delivery.liquid",
+      "git": "73b9f1ec4dc09bb952b9579a329dd21c",
+      "main": "0e255c766f3bd67220c5848dd64f002b",
+      "draft": "0e255c766f3bd67220c5848dd64f002b"
+    },
+    {
+      "filename": "snippets/bc-porcelanosa-buybox.liquid",
+      "git": "31019057c4adf03e5c6dbf785983f1e3",
+      "main": "b82624bacca20f3c8b854d0acdaeb585",
+      "draft": "b82624bacca20f3c8b854d0acdaeb585"
+    },
+    {
+      "filename": "snippets/card-product.liquid",
+      "git": "d9ccc5adadb8b9948ddc48e0344a9a2b",
+      "main": "a8951a378189614c7800573586795720",
+      "draft": "a8951a378189614c7800573586795720"
+    }
+  ],
+  "onlyMain": [
+    "assets/bc-product-switcher.backup-debug.js",
+    "assets/bc-product-switcher.js.backup-qa-round-1-20260706-214223",
+    "assets/bc-product-switcher.js.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.backup-before-production.json",
+    "assets/product-switcher-data.backup.json",
+    "assets/product-switcher-data.json.backup-qa-round-1-20260706-214223",
+    "assets/product-switcher-data.json.backup-qa-round-1-rerun-20260707-110751",
+    "assets/product-switcher-data.json.backup-qa-round-2-20260707-111611",
+    "templates/product.bc-verlavio-review.liquid"
+  ],
+  "onlyGit": [
+    ".shopifyignore",
+    "assets/bc-money.js",
+    "snippets/bc-money.liquid"
+  ],
+  "protectedBodyException": "config/settings_data.json",
+  "mainWritten": false,
+  "blindDeployAllowed": false,
+  "localDeployGuard": ".shopifyignore",
+  "trackedThemeFilesExcludingDeployGuard": 1381,
+  "onlyGitThemeFiles": [
+    "assets/bc-money.js",
+    "snippets/bc-money.liquid"
+  ]
+}

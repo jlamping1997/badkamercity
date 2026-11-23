@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-19",
+  "status": "IMPLEMENTED_PREVIEW",
+  "task": "Clear cart only; original checkout design and payment flow retained",
+  "branch": "fix/product-cards-2026-10-14",
+  "sourceCheckpoint": "561cb01d67159a45b381dd72a0ceed068c4fdea1",
+  "theme": {
+    "baselineId": 195388080394,
+    "previewId": 195392143626,
+    "baselineBeforeFeatureIdenticalFiles": 501,
+    "draft": {
+      "role": "UNPUBLISHED",
+      "name": "BadkamerCity - Winkelwagen helder",
+      "count": 502,
+      "processing": false,
+      "sourceExact": true,
+      "otherFilesUnchanged": 495,
+      "otherFileChecksumsExact": true,
+      "qaRestored": true
+    },
+    "main": {
+      "role": "MAIN",
+      "count": 501,
+      "allChecksumsUnchanged": true
+    }
+  },
+  "files": [
+    {
+      "filename": "assets/cart.js",
+      "md5": "6a8fa14d592e5fc2ad010504072b1ed0",
+      "existedInBaseline": true
+    },
+    {
+      "filename": "assets/bc-cart-page.js",
+      "md5": "9ad5617ad6e8254f92f0bb61cec98c52",
+      "existedInBaseline": false
+    },
+    {
+      "filename": "assets/bc-cart-page.css",
+      "md5": "a7c3ed8e44b57e006166b41729f62be7",
+      "existedInBaseline": true
+    },
+    {
+      "filename": "sections/main-cart-items.liquid",
+      "md5": "b8e1d673883629094ef8376669e32a69",
+      "existedInBaseline": true
+    },
+    {
+      "filename": "sections/main-cart-footer.liquid",
+      "md5": "5dcdd11be16ed02be7f033dafe4e19f0",
+      "existedInBaseline": true
+    },
+    {
+      "filename": "locales/nl.json",
+      "md5": "011e125f728e1b915c03da1f83d9a20a",
+      "existedInBaseline": true
+    },
+    {
+      "filename": "locales/en.default.json",
+      "md5": "299507172ec0e1a4e4dca981dbd95ecd",
+      "existedInBaseline": true
+    }
+  ],
+  "shipping": {
+    "scope": "Netherlands only; live Admin setting applies before theme publication",
+    "thresholdAfterProductDiscountsEUR": "strictly greater than 100.00",
+    "paidThroughEUR": "100.00",
+    "paidRateEUR": "6.95",
+    "freeFromEUR": "100.01",
+    "previousFreeFromEUR": "55.00",
+    "otherZonesUnchanged": true,
+    "adminReadbackVerified": true,
+    "actualStorefrontQuotes": [
+      {
+        "productsEUR": "58.00",
+        "shippingEUR": "6.95"
+      },
+      {
+        "productsEUR": "87.00",
+        "shippingEUR": "6.95"
+      },
+      {
+        "productsEUR": "116.00",
+        "shippingEUR": "0.00"
+      }
+    ],
+    "exactCentBoundary": "Admin conditions and executable Liquid tests; not a live exact-cent cart quote",
+    "cartEstimate": "NL/EUR storefront localization, final shipping determined using delivery address"
+  },
+  "tests": {
+    "controller": {
+      "groups": 16,
+      "result": "PASS",
+      "kind": "Actual authored JavaScript in JSDOM with controlled API responses"
+    },
+    "liquid": {
+      "policyCases": 13,
+      "fullFooterRenders": 13,
+      "contracts": "PASS",
+      "result": "PASS",
+      "kind": "Actual Liquid source, Shopify formatting filters stubbed"
+    },
+    "themeCheck": {
+      "artifact": "bc-cart-clear-20261019",
+      "revision": 2,
+      "result": "SUCCESS for all 7 production files",
+      "notes": "Cached schema fallback used after remote schema fetch failures"
+    },
+    "qaThemeCheck": {
+      "artifact": "bc-cart-clear-qa",
+      "revision": 3,
+      "result": "SUCCESS",
+      "restored": true
+    },
+    "adminToolkit": {
+      "artifact": "bc-cart-clear-admin",
+      "revision": 2,
+      "result": "VALID",
+      "version": "2026-07"
+    },
+    "patch": {
+      "files": 7,
+      "bytes": 64244,
+      "sha256": "b883c31d79da993cd418987d28eb5f358c92ebe2be679f4478ec528bde43ffdf",
+      "forward": "byte and file-set exact",
+      "reverse": "byte and file-set exact"
+    }
+  },
+  "browser": {
+    "desktop": {
+      "url": "https://badkamercity.nl/cart",
+      "viewport": [
+        1363,
+        936
+      ],
+      "threeDistinctProducts": true,
+      "counts": [
+        1,
+        1,
+        3
+      ],
+      "totalEUR": "3137.01",
+      "plusMinus": {
+        "wiperQuantity": "3→4→3",
+        "totalsEUR": [
+          "3137.01",
+          "3166.01",
+          "3137.01"
+        ]
+      },
+      "invalidCode": {
+        "serverChecked": true,
+        "status": "No applicable discount; clear feedback",
+        "noMoneyReduction": true,
+        "checkoutReenabled": true
+      },
+      "removeSequence": {
+        "rows": "3→2→1→0",
+        "totalsEUR": [
+          "3137.01",
+          "412.01",
+          "93.95"
+        ],
+        "shippingEUR": [
+          "0.00",
+          "0.00",
+          "6.95"
+        ]
+      },
+      "greenRGB": "19,119,68",
+      "overflow": false,
+      "emptyStateVerified": true,
+      "testCartRestoredEmpty": true
+    },
+    "mobile": {
+      "kind": "Static production component fixture; full mobile site and physical phones not tested",
+      "iframeWidths": [
+        320,
+        390,
+        430
+      ],
+      "clientWidths": [
+        305,
+        375,
+        415
+      ],
+      "scrollbarWidth": 15,
+      "noHorizontalOverflow": true,
+      "allNineProductImagesLoaded": true,
+      "threeProductRowsEach": true,
+      "summaryBelowProductsEach": true,
+      "couponVisible": true,
+      "quantityFontPX": 16,
+      "greenRGB": "19,119,68",
+      "fixtureOnly": "Scripts and forms blocked. Static coupon layout forces the enhanced component visible despite :not(:defined); noscript fallback hidden. No mobile functionality claim."
+    }
+  },
+  "notTested": [
+    "Physical iOS/Android and full mobile header/footer integration",
+    "Real valid store discount code end-to-end (valid/invalid/multiple/shipping code cases covered by controlled response tests; invalid code tested on actual storefront)",
+    "Bundles and selling-plan purchases end-to-end",
+    "Checkout, order, payment or customer data submission",
+    "Future JavaScript-driven app blocks; actual cart template has none",
+    "Windows local state"
+  ],
+  "privacy": "Only public product data and own temporary cart. No customer/order data or checkout tokens saved.",
+  "publish": "Not published by agent; merchant reviews preview and decides",
+  "nextAction": "Owner reviews BadkamerCity - Winkelwagen helder on phone and decides whether to publish"
+}

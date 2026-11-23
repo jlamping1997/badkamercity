@@ -1,0 +1,34 @@
+{% doc %}
+  Renders linked Sunshower choices using the shared product buybox styling.
+  @param {product} product - Current complete Sunshower product.
+  @param {section} section - Main product section.
+{% enddoc %}
+{{ 'bc-sunshower.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bc-sunshower.js' | asset_url }}" defer="defer"></script>
+{%- assign config = product.metafields.bc_sunshower.configuration.value -%}
+<div class="bc-sunshower-choices" data-sunshower-choices data-catalog="{{ 'bc-sunshower-products.json' | asset_url }}" data-loading="{{ 'bc_sunshower.loading' | t | escape }}" data-error="{{ 'bc_sunshower.error' | t | escape }}">
+  <div class="bc-sunshower-choices__grid">
+    {%- for field in config.fields -%}
+      <div class="bc-buybox__option-group">
+        <label class="form__label bc-buybox__option-label" for="Sunshower-{{ section.id }}-{{ field.code }}">{{ field.label | escape }}</label>
+        <div class="bc-buybox__config-select-wrap">
+          <select class="bc-buybox__config-select" id="Sunshower-{{ section.id }}-{{ field.code }}" data-sunshower-field="{{ field.code | escape }}" aria-describedby="SunshowerHelp-{{ section.id }}-{{ field.code }}">
+            {%- for value in field.values -%}
+              <option value="{{ value | escape }}"{% if config.selected[field.code] == value %} selected{% endif %}>{{ field.value_labels[value] | default: value | escape }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+  <details class="bc-sunshower-choices__help">
+    <summary>{{ 'bc_sunshower.choice_help' | t }}</summary>
+    <dl>
+      {%- for field in config.fields -%}
+        <dt>{{ field.label | escape }}</dt><dd id="SunshowerHelp-{{ section.id }}-{{ field.code }}">{{ field.explanation | escape }}</dd>
+      {%- endfor -%}
+    </dl>
+  </details>
+  <p class="bc-sunshower-choices__status" role="status" aria-live="polite"></p>
+  <noscript><p>{{ 'bc_sunshower.javascript' | t }}</p></noscript>
+</div>

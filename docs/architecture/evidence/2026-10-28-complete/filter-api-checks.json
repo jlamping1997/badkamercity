@@ -1,0 +1,73 @@
+{
+  "method": "Read-only search POSTs, no cart/product/index mutations. Does not test browser preflight or backend internals.",
+  "cases": [
+    {
+      "collection": "wastafelkranen",
+      "q": "*",
+      "sort": "relevance",
+      "status": 200,
+      "corsOrigin": "https://badkamercity.nl",
+      "found": 573,
+      "returnedProducts": 4,
+      "facetCount": 10,
+      "collectionMetadata": {
+        "handle": "wastafelkranen",
+        "title": "Wastafelkranen",
+        "profile_products": 573,
+        "shopping_products": 573
+      },
+      "responseShapeValid": true
+    },
+    {
+      "collection": "inloopdouches",
+      "q": "*",
+      "sort": "relevance",
+      "status": 200,
+      "corsOrigin": "https://badkamercity.nl",
+      "found": 305,
+      "returnedProducts": 4,
+      "facetCount": 7,
+      "collectionMetadata": {
+        "handle": "inloopdouches",
+        "title": "Inloopdouches",
+        "profile_products": 305,
+        "shopping_products": 305
+      },
+      "responseShapeValid": true
+    },
+    {
+      "collection": "__all__",
+      "q": "sunshower",
+      "sort": "relevance",
+      "status": 200,
+      "corsOrigin": "https://badkamercity.nl",
+      "found": 104,
+      "returnedProducts": 4,
+      "facetCount": 5,
+      "collectionMetadata": {
+        "handle": "__all__",
+        "title": "Alle producten",
+        "profile_products": 11342,
+        "shopping_products": 10600
+      },
+      "responseShapeValid": true
+    },
+    {
+      "collection": "wastafelkranen",
+      "q": "*",
+      "sort": "price_asc",
+      "status": 200,
+      "corsOrigin": "https://badkamercity.nl",
+      "found": 573,
+      "returnedProducts": 4,
+      "facetCount": 10,
+      "collectionMetadata": {
+        "handle": "wastafelkranen",
+        "title": "Wastafelkranen",
+        "profile_products": 573,
+        "shopping_products": 573
+      },
+      "responseShapeValid": true
+    }
+  ]
+}

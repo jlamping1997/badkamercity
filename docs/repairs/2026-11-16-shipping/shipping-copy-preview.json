@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-16",
+  "status": "OWNER_PUBLISHED_MAIN_VERIFIED",
+  "liveTheme": {
+    "id": "196542005514",
+    "name": "BadkamerCity - PostNL werkdagen 14u"
+  },
+  "previewTheme": {
+    "id": "gid://shopify/OnlineStoreTheme/196690379018",
+    "name": "BadkamerCity - verzendtarieven per productgroep",
+    "role": "MAIN"
+  },
+  "beforeManifestComparison": {
+    "diff": [
+      {
+        "filename": "config/settings_data.json",
+        "live": "6356b9d3f29fb740a70d4901ed0219e9",
+        "working": "d6a5642b02e3b8773a5e4e37aed01256"
+      },
+      {
+        "filename": "config/settings_schema.json",
+        "live": "bc7424086642bb4aa680ff31e29c9f46",
+        "working": "34d8bcd4da73ac1b0dcc6895bb3b2509"
+      },
+      {
+        "filename": "sections/main-product.liquid",
+        "live": "f3b47af4036ff4a9230967b1d1ff411f",
+        "working": "6868798371450e2cfb0d1b92d42a3a7a"
+      },
+      {
+        "filename": "snippets/bc-porcelanosa-buybox.liquid",
+        "live": "58b0f474e8c2541670db59cf5155422a",
+        "working": "939efdf4f6b06ff0c3520f901d2a63fe"
+      },
+      {
+        "filename": "snippets/bc-weekday-delivery.liquid",
+        "live": "b648100f2d9766e10891ad09943ecebf",
+        "working": null
+      }
+    ],
+    "extra": []
+  },
+  "baseFilesCopied": [
+    {
+      "filename": "config/settings_data.json",
+      "checksumMd5": "6356b9d3f29fb740a70d4901ed0219e9"
+    },
+    {
+      "filename": "config/settings_schema.json",
+      "checksumMd5": "bc7424086642bb4aa680ff31e29c9f46"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "f3b47af4036ff4a9230967b1d1ff411f"
+    },
+    {
+      "filename": "snippets/bc-porcelanosa-buybox.liquid",
+      "checksumMd5": "58b0f474e8c2541670db59cf5155422a"
+    },
+    {
+      "filename": "snippets/bc-weekday-delivery.liquid",
+      "checksumMd5": "b648100f2d9766e10891ad09943ecebf"
+    }
+  ],
+  "localeFilesChanged": [
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "ff2a81401db08343399a4a6c54013b93"
+    },
+    {
+      "filename": "locales/nl.json",
+      "checksumMd5": "50dd44e8f04697b48253140d9fc10076"
+    }
+  ],
+  "readbackAll7ContentEqual": true,
+  "brauerPreservation": "All other 2521 native live files were equal before syncing the five differing or missing weekday files; only two locales changed afterwards.",
+  "browserCheck": {
+    "initialAXVerifiedDraftName": true,
+    "initialAXVerifiedParcelShippingCopy": true,
+    "desktopScreenshotVerifiedDraftContext": true,
+    "postLoadTypesenseCanReplaceNativeSearchRows": true,
+    "mobileVisualVerified": false,
+    "publicHTTPPreviewNotAccepted": true,
+    "reason": "Fresh public HTTP ignored preview_theme_id and returned MAIN; not counted as successful preview verification. Cloud browser rendered the named Draft and updated copy."
+  },
+  "protectedCanonicalSettingsDataUnchanged": true,
+  "assistantPublished": false,
+  "nextAction": "In Shopify Google & YouTube > Instellingen > Verzendgegevens, select manual setup in Google Merchant Center and save; leave Productsynchronisatie enabled.",
+  "ownerPublicationVerifiedAt": "2026-11-16T16:27:29.649Z",
+  "latestGoogleSetupReference": "google-setup-check.json"
+}

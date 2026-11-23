@@ -1,0 +1,555 @@
+diff --git a/assets/bc-external-filters.js b/assets/bc-external-filters.js
+index 59473cc..dc87c4e 100644
+--- a/assets/bc-external-filters.js
++++ b/assets/bc-external-filters.js
+@@ -47,6 +47,9 @@
+     let filtersRendered = false;
+     let rangeTimer;
+ 
++    const drawerMedia = window.matchMedia('(max-width: 989px)');
++    let drawerTrigger;
++
+     const state = {
+       filters: {},
+       ranges: {},
+@@ -61,6 +64,7 @@
+     const sidebar = document.createElement('aside');
+     sidebar.className = 'facets-wrapper bc-external-filter-sidebar';
+     sidebar.setAttribute('aria-label', 'Filters');
++    sidebar.id = 'BcFilterDrawer';
+     sidebar.innerHTML = `
+       <div class="bc-filter-panel">
+         <div class="bc-filter-panel__header">
+@@ -87,7 +91,7 @@
+     toolbar.className = 'bc-filter-toolbar';
+     toolbar.innerHTML = `
+       <div class="bc-filter-toolbar__left">
+-        <button type="button" class="bc-filter-mobile-button" data-bc-open-filters>
++        <button type="button" class="bc-filter-mobile-button" aria-controls="BcFilterDrawer" aria-expanded="false" data-bc-open-filters>
+           Filters
+         </button>
+         <span class="bc-filter-count" data-bc-count>Producten laden…</span>
+@@ -132,7 +136,19 @@
+     sidebar.querySelector('.bc-filter-panel__close').addEventListener('click', closeDrawer);
+     overlay.addEventListener('click', closeDrawer);
+     document.addEventListener('keydown', (event) => {
+-      if (event.key === 'Escape') closeDrawer();
++      if (!document.documentElement.classList.contains('bc-filter-drawer-open')) return;
++      if (event.key === 'Escape') { event.preventDefault(); closeDrawer(); }
++      if (event.key === 'Tab') {
++        const focusable = [...sidebar.querySelectorAll('button, input, select, summary, a[href]')]
++          .filter((node) => !node.disabled && node.getClientRects().length);
++        const first = focusable[0];
++        const last = focusable[focusable.length - 1];
++        if (event.shiftKey && (document.activeElement === first || !sidebar.contains(document.activeElement))) {
++          event.preventDefault(); last?.focus();
++        } else if (!event.shiftKey && (document.activeElement === last || !sidebar.contains(document.activeElement))) {
++          event.preventDefault(); first?.focus();
++        }
++      }
+     });
+ 
+     sortSelect.addEventListener('change', () => {
+@@ -150,6 +166,7 @@
+       runSearch();
+     }, { capture: true });
+ 
++    drawerMedia.addEventListener('change', () => { closeDrawer(); syncDrawerAccessibility(); });
+     setExternalMode(false);
+     runSearch();
+ 
+@@ -244,6 +261,7 @@
+         state.lastData = null;
+       }
+       externalActive = active;
++      syncDrawerAccessibility();
+     }
+ 
+     async function runSearch() {
+@@ -482,6 +500,7 @@
+                   ${product.product_type ? `<div><dt>${escapeHtml(root.dataset.cardType || 'Productsoort')}:</dt><dd>${escapeHtml(product.product_type)}</dd></div>` : ''}
+                   ${product.sku ? `<div><dt>${escapeHtml(root.dataset.cardSku || 'Artikelnummer')}:</dt><dd>${escapeHtml(product.sku)}</dd></div>` : ''}
+                 </dl>
++                <p class="bc-card-delivery">${escapeHtml(root.dataset.cardDelivery || 'Levertijd op aanvraag')}</p>
+                 <div class="bc-filter-card__price">${formatPrice(product.price_cents)}</div>
+                 ${root.dataset.taxIncluded === 'true' ? `<span class="bc-card-tax">${escapeHtml(root.dataset.cardTax)}</span>` : ''}
+                 <a class="bc-card-view" href="${attr(href)}">${escapeHtml(root.dataset.cardView || 'Bekijk product')} <span aria-hidden="true">&rarr;</span></a>
+@@ -681,12 +700,32 @@
+       productContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+     }
+ 
++    function syncDrawerAccessibility() {
++      const open = document.documentElement.classList.contains('bc-filter-drawer-open');
++      sidebar.inert = drawerMedia.matches && !open;
++      if (drawerMedia.matches) {
++        sidebar.setAttribute('role', 'dialog');
++        sidebar.setAttribute('aria-modal', 'true');
++      } else {
++        sidebar.removeAttribute('role');
++        sidebar.removeAttribute('aria-modal');
++      }
++      toolbar.querySelector('[data-bc-open-filters]').setAttribute('aria-expanded', String(open));
++    }
++
+     function openDrawer() {
++      if (!externalActive || !drawerMedia.matches) return;
++      drawerTrigger = document.activeElement;
+       document.documentElement.classList.add('bc-filter-drawer-open');
++      syncDrawerAccessibility();
++      sidebar.querySelector('.bc-filter-panel__close').focus({ preventScroll: true });
+     }
+ 
+     function closeDrawer() {
++      const wasOpen = document.documentElement.classList.contains('bc-filter-drawer-open');
+       document.documentElement.classList.remove('bc-filter-drawer-open');
++      syncDrawerAccessibility();
++      if (wasOpen && drawerTrigger?.isConnected) drawerTrigger.focus({ preventScroll: true });
+     }
+ 
+     function setLoading(loading) {
+diff --git a/assets/bc-mobile-listing.js b/assets/bc-mobile-listing.js
+new file mode 100644
+index 0000000..a298b0a
+--- /dev/null
++++ b/assets/bc-mobile-listing.js
+@@ -0,0 +1,49 @@
++(() => {
++  'use strict';
++  const init = () => {
++    const button = document.querySelector('[data-bc-floating-filter]');
++    const section = document.querySelector('.template-search, .bc-collection');
++    if (!button || !section || button.dataset.initialized) return;
++    button.dataset.initialized = 'true';
++    document.body.appendChild(button);
++    const mobile = window.matchMedia('(max-width: 749px)');
++    let frame;
++    let returnFocus = false;
++    const trigger = () => document.documentElement.classList.contains('bc-external-filters-active')
++      ? section.querySelector('[data-bc-open-filters]')
++      : section.querySelector('.mobile-facets__open-wrapper');
++    const update = () => {
++      frame = null;
++      const opener = trigger();
++      const grid = section.querySelector('#product-grid');
++      const open = document.documentElement.classList.contains('bc-filter-drawer-open') ||
++        Boolean(section.querySelector('.mobile-facets__disclosure[open]'));
++      const otherOverlay = Boolean(document.querySelector('menu-drawer details[open], cart-drawer.active, dialog[open], .search-modal[open]'));
++      const rect = grid?.getBoundingClientRect();
++      const show = mobile.matches && opener?.getClientRects().length && rect &&
++        opener.getBoundingClientRect().bottom < 0 && rect.top < window.innerHeight && rect.bottom > 100 && !open && !otherOverlay;
++      button.hidden = !show;
++      if (!open && returnFocus) {
++        returnFocus = false;
++        (show ? button : opener)?.focus({ preventScroll: true });
++      }
++    };
++    const schedule = () => { if (!frame) frame = window.requestAnimationFrame(update); };
++    button.addEventListener('click', () => {
++      const opener = trigger();
++      if (!opener) return;
++      returnFocus = true;
++      opener.click();
++      schedule();
++    });
++    window.addEventListener('scroll', schedule, { passive: true });
++    window.addEventListener('resize', schedule, { passive: true });
++    document.addEventListener('toggle', schedule, true);
++    mobile.addEventListener('change', schedule);
++    new MutationObserver(schedule).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
++    new MutationObserver(schedule).observe(section, { childList: true, subtree: true });
++    update();
++  };
++  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
++  else init();
++})();
+diff --git a/assets/bc-product-cards.css b/assets/bc-product-cards.css
+index 39fb7ab..a998109 100644
+--- a/assets/bc-product-cards.css
++++ b/assets/bc-product-cards.css
+@@ -191,3 +191,172 @@
+   max-height: none;
+ }
+ .bc-filter-empty { grid-column: 1 / -1; padding: 24px !important; }
++
++.bc-card-delivery {
++  margin: 0;
++  color: #526575;
++  font-size: 12px;
++  line-height: 1.45;
++}
++.bc-floating-filter { display: none; }
++.bc-floating-filter[hidden] { display: none !important; }
++
++@media (max-width: 749px) {
++  .template-search #product-grid > .product-grid,
++  .bc-collection #product-grid.product-grid {
++    grid-template-columns: minmax(0, 1fr);
++    gap: 0;
++  }
++  :is(.template-search, .bc-collection) #product-grid > .grid__item,
++  .template-search #product-grid > .grid > .grid__item {
++    width: 100%;
++    max-width: none;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card,
++  .template-search #product-grid .bc-search-card__link,
++  .bc-collection #product-grid .card-wrapper {
++    height: auto;
++    min-height: 0;
++    border: 0;
++    border-bottom: 1px solid #e1e7ed;
++    border-radius: 0;
++    box-shadow: none;
++    overflow: visible;
++    padding: 20px 0;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card,
++  .template-search #product-grid .bc-search-card__link,
++  .bc-collection #product-grid .card-wrapper > .card {
++    display: grid;
++    grid-template-columns: minmax(0, 34%) minmax(0, 1fr);
++    gap: 16px;
++    align-items: start;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__media,
++  .template-search #product-grid .bc-search-card__media,
++  .bc-collection #product-grid .card__inner {
++    width: 100%;
++    aspect-ratio: 1;
++    min-height: 0;
++    height: auto;
++    margin: 0;
++    padding: 0;
++    border-radius: 0;
++    background: #fff;
++    align-self: start;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__media img,
++  .template-search #product-grid .bc-search-card__image,
++  .bc-collection #product-grid .card__media .media img {
++    padding: 4px;
++    object-fit: contain;
++    object-position: center;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__info,
++  .template-search #product-grid .bc-search-card__content,
++  .bc-collection #product-grid .card > .card__content > .card__information {
++    min-width: 0;
++    padding: 0;
++    gap: 6px;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__title,
++  .template-search #product-grid .bc-search-card__title,
++  .template-search #product-grid .bc-search-card__title-wrap,
++  .bc-collection #product-grid .card > .card__content .card__heading {
++    min-height: 0;
++    font-size: 15px;
++    line-height: 1.4;
++    display: block;
++    overflow: visible;
++    -webkit-line-clamp: unset;
++    overflow-wrap: anywhere;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__vendor,
++  .template-search #product-grid .bc-search-card__vendor,
++  .bc-collection #product-grid .bc-card-vendor {
++    font-size: 10px;
++    line-height: 1.3;
++    margin: 0;
++    letter-spacing: .05em;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-card-specs,
++  :is(.template-search, .bc-collection) #product-grid .bc-card-view,
++  .bc-collection #product-grid .card__inner > .card__content {
++    display: none;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-card-delivery {
++    margin-top: 5px;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__price,
++  .template-search #product-grid .bc-search-card__price-wrap,
++  .bc-collection #product-grid .card-information > .price {
++    margin-top: 0;
++    padding-top: 0;
++    border-top: 0;
++  }
++  :is(.template-search, .bc-collection) #product-grid .bc-filter-card__price,
++  .template-search #product-grid .bc-search-card__price:not(.price--on-sale) .price-item--regular,
++  .template-search #product-grid .bc-search-card__price .price-item--sale,
++  .bc-collection #product-grid .card-information > .price {
++    font-size: 21px;
++    font-weight: 700;
++    line-height: 1.25;
++  }
++  .bc-collection #product-grid .card > .card__content {
++    display: block;
++    min-width: 0;
++    padding: 0;
++  }
++  .bc-collection #product-grid .card-information { gap: 6px; }
++  .bc-collection #product-grid .card__content .quick-add { margin-top: 12px; }
++  .template-search .template-search__title { font-size: 25px; line-height: 1.2; }
++  .template-search .template-search__eyebrow,
++  .template-search .template-search__subtitle { display: none; }
++  .template-search .template-search__header { margin-bottom: 20px; }
++  .bc-floating-filter:not([hidden]) {
++    display: inline-flex;
++    align-items: center;
++    justify-content: center;
++    gap: 8px;
++    position: fixed;
++    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
++    left: 50%;
++    transform: translateX(-50%);
++    z-index: 3;
++    min-height: 44px;
++    padding: 10px 20px;
++    border: 1px solid #d9e1e8;
++    border-radius: 999px;
++    background: #fff;
++    color: #0f2740;
++    box-shadow: 0 3px 16px #0f274025;
++    font: inherit;
++    font-size: 14px;
++    font-weight: 600;
++    cursor: pointer;
++  }
++  .bc-floating-filter:focus-visible { outline: 2px solid #285e86; outline-offset: 3px; }
++  :is(.template-search, .bc-collection) .bc-filter-toolbar {
++    display: grid;
++    grid-template-columns: auto minmax(0, 1fr);
++    gap: 8px 12px;
++    padding: 0 0 14px;
++    border: 0;
++    border-bottom: 1px solid #e1e7ed;
++    border-radius: 0;
++    margin-bottom: 0;
++  }
++  :is(.template-search, .bc-collection) .bc-filter-toolbar__left { display: contents; }
++  :is(.template-search, .bc-collection) .bc-filter-count { grid-column: 1 / -1; grid-row: 2; color: #607184; font-size: 12px; }
++  :is(.template-search, .bc-collection) .bc-filter-toolbar__right { grid-column: 2; grid-row: 1; min-width: 0; }
++  :is(.template-search, .bc-collection) .bc-filter-mobile-button,
++  :is(.template-search, .bc-collection) .bc-filter-sort {
++    min-height: 44px;
++    width: 100%;
++    min-width: 0;
++    font-size: 14px;
++    border-radius: 8px;
++  }
++  :is(.template-search, .bc-collection) .bc-filter-active:empty { margin: 0; }
++  :is(.template-search, .bc-collection) .bc-filter-active:not(:empty) { margin: 12px 0 0; }
++}
+diff --git a/scripts/test-external-filters.cjs b/scripts/test-external-filters.cjs
+index abedb4d..eb38823 100644
+--- a/scripts/test-external-filters.cjs
++++ b/scripts/test-external-filters.cjs
+@@ -32,6 +32,7 @@ async function fixture(searchMode = false, shortTitle = null) {
+   }
+   if (shortTitle !== null) dom.window.document.querySelector('#BcExternalFilters').dataset.cardDataSection = 'bc-card-data';
+   const w = dom.window;
++  w.matchMedia = () => ({ matches: true, addEventListener() {} });
+   const calls = [];
+   let fail = false;
+   let count = 1;
+@@ -188,3 +189,31 @@ test('External cards read current short titles from Shopify and escape markup',
+     assert.equal(f.w.document.querySelector('.bc-filter-card__title a').title, 'Kraan');
+   } finally { f.dom.window.close(); }
+ });
++
++test('Mobile filters open, close with Escape, and recover from API failure', async () => {
++  const f = await fixture();
++  try {
++    const opener = f.w.document.querySelector('[data-bc-open-filters]');
++    const drawer = f.w.document.querySelector('#BcFilterDrawer');
++    assert.equal(drawer.inert, true);
++    opener.focus(); opener.click();
++    assert.equal(opener.getAttribute('aria-expanded'), 'true');
++    assert.equal(drawer.inert, false);
++    assert.equal(f.w.document.activeElement, drawer.querySelector('.bc-filter-panel__close'));
++    f.w.document.dispatchEvent(new f.w.KeyboardEvent('keydown', { key: 'Escape' }));
++    assert.equal(drawer.inert, true);
++    assert.equal(f.w.document.activeElement, opener);
++    opener.click(); f.fail();
++    f.w.document.querySelector('#BcFilterSort').dispatchEvent(new f.w.Event('change', { bubbles: true }));
++    await flush();
++    assert.equal(drawer.hidden, true);
++    assert(!f.w.document.documentElement.classList.contains('bc-filter-drawer-open'));
++  } finally { f.dom.window.close(); }
++});
++test('Product cards make no unverified stock or delivery promise', async () => {
++  const f = await fixture();
++  try {
++    assert.equal(f.w.document.querySelector('.bc-card-delivery').textContent, 'Levertijd op aanvraag');
++    assert(!f.w.document.querySelector('.bc-filter-card').textContent.includes('Op voorraad'));
++  } finally { f.dom.window.close(); }
++});
+diff --git a/scripts/test-mobile-listing.cjs b/scripts/test-mobile-listing.cjs
+new file mode 100644
+index 0000000..d10d368
+--- /dev/null
++++ b/scripts/test-mobile-listing.cjs
+@@ -0,0 +1,51 @@
++const { test } = require('node:test');
++const assert = require('node:assert/strict');
++const { JSDOM } = require('jsdom');
++const fs = require('node:fs');
++const source = fs.readFileSync(require('node:path').join(__dirname, '../assets/bc-mobile-listing.js'), 'utf8');
++const tick = () => new Promise(resolve => setTimeout(resolve, 30));
++async function fixture() {
++  const dom = new JSDOM(`<html class="bc-external-filters-active"><body><section class="template-search"><button data-bc-open-filters>Filters</button><details class="mobile-facets__disclosure"><summary class="mobile-facets__open-wrapper">Native filters</summary></details><div id="product-grid">Products</div><button data-bc-floating-filter hidden>Filter</button></section></body></html>`, { runScripts:'outside-only', pretendToBeVisual:true });
++  const w = dom.window;
++  let mobile = true, top = 100, bottom = 1400;
++  w.matchMedia = () => ({ get matches() { return mobile; }, addEventListener() {} });
++  for (const el of w.document.querySelectorAll('[data-bc-open-filters], summary')) {
++    el.getClientRects = () => [{}];
++    el.getBoundingClientRect = () => ({ bottom:top });
++  }
++  w.document.querySelector('#product-grid').getBoundingClientRect = () => ({top:-100,bottom});
++  w.document.querySelector('[data-bc-open-filters]').onclick = () => w.document.documentElement.classList.add('bc-filter-drawer-open');
++  w.eval(source); w.document.dispatchEvent(new w.Event('DOMContentLoaded')); await tick();
++  const update = async data => { if ('top' in data) top=data.top; if ('bottom' in data) bottom=data.bottom; if ('mobile' in data) mobile=data.mobile; w.dispatchEvent(new w.Event('scroll')); await tick(); };
++  return {dom,w,update,button:w.document.querySelector('[data-bc-floating-filter]')};
++}
++test('Shortcut appears only after toolbar scrolls away and disappears beyond results or on desktop', async () => {
++  const f = await fixture();
++  try {
++    assert.equal(f.button.hidden,true);
++    await f.update({top:-10}); assert.equal(f.button.hidden,false);
++    await f.update({bottom:80}); assert.equal(f.button.hidden,true);
++    await f.update({bottom:1400,mobile:false}); assert.equal(f.button.hidden,true);
++  } finally { f.dom.window.close(); }
++});
++test('Shortcut opens existing external drawer, hides during filtering, and restores focus', async () => {
++  const f = await fixture();
++  try {
++    await f.update({top:-10}); f.button.click(); await tick();
++    assert(f.w.document.documentElement.classList.contains('bc-filter-drawer-open'));
++    assert.equal(f.button.hidden,true);
++    f.w.document.documentElement.classList.remove('bc-filter-drawer-open'); await tick();
++    assert.equal(f.button.hidden,false);
++    assert.equal(f.w.document.activeElement,f.button);
++  } finally { f.dom.window.close(); }
++});
++test('After external fallback the shortcut opens native Shopify filters', async () => {
++  const f = await fixture();
++  try {
++    await f.update({top:-10});
++    f.w.document.documentElement.classList.remove('bc-external-filters-active'); await tick();
++    f.button.click(); await tick();
++    assert.equal(f.w.document.querySelector('details').open,true);
++    assert.equal(f.button.hidden,true);
++  } finally { f.dom.window.close(); }
++});
+diff --git a/sections/main-collection-product-grid.liquid b/sections/main-collection-product-grid.liquid
+index 8638551..2fdddd0 100644
+--- a/sections/main-collection-product-grid.liquid
++++ b/sections/main-collection-product-grid.liquid
+@@ -188,6 +188,7 @@
+                 >
+                   {% render 'card-product',
+                     card_product: product,
++                    show_card_delivery: true,
+                     media_aspect_ratio: section.settings.image_ratio,
+                     image_shape: section.settings.image_shape,
+                     show_secondary_image: section.settings.show_secondary_image,
+@@ -216,6 +217,8 @@
+   {%- endif -%}
+ </div>
+ 
++{% render 'bc-mobile-listing' %}
++
+ {% schema %}
+ {
+   "name": "t:sections.main-collection-product-grid.name",
+diff --git a/sections/main-search.liquid b/sections/main-search.liquid
+index 97e1066..e46c10e 100644
+--- a/sections/main-search.liquid
++++ b/sections/main-search.liquid
+@@ -819,6 +819,8 @@
+   {{ 'mask-arch.svg' | inline_asset_content }}
+ {%- endif -%}
+ 
++{% render 'bc-mobile-listing' %}
++
+ {% schema %}
+ {
+   "name": "t:sections.main-search.name",
+diff --git a/snippets/bc-card-delivery.liquid b/snippets/bc-card-delivery.liquid
+new file mode 100644
+index 0000000..ba67511
+--- /dev/null
++++ b/snippets/bc-card-delivery.liquid
+@@ -0,0 +1,4 @@
++{% doc %}
++  Renders a neutral delivery label until supplier delivery data is verified.
++{% enddoc %}
++<p class="bc-card-delivery">{{ 'bc_delivery.lead_time_on_request' | t }}</p>
+diff --git a/snippets/bc-card-product-search.liquid b/snippets/bc-card-product-search.liquid
+index d9f29c2..446be42 100644
+--- a/snippets/bc-card-product-search.liquid
++++ b/snippets/bc-card-product-search.liquid
+@@ -61,7 +61,7 @@
+               {{ featured_media | image_url }} {{ featured_media.width }}w
+             "
+             src="{{ featured_media | image_url: width: 420 }}"
+-            sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
++            sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 32vw"
+             alt="{{ featured_media.alt | default: card_product.title | escape }}"
+             class="bc-search-card__image bc-search-card__image--primary"
+             loading="{{ media_loading }}"
+@@ -81,7 +81,7 @@
+                 {{ secondary_media | image_url }} {{ secondary_media.width }}w
+               "
+               src="{{ secondary_media | image_url: width: 420 }}"
+-              sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 44vw"
++              sizes="(min-width: 990px) 22vw, (min-width: 750px) 30vw, 32vw"
+               alt="{{ secondary_media.alt | default: featured_media.alt | default: card_product.title | escape }}"
+               class="bc-search-card__image bc-search-card__image--secondary"
+               loading="lazy"
+@@ -105,6 +105,8 @@
+ 
+       {% render 'bc-card-specs', product: card_product %}
+ 
++      {% render 'bc-card-delivery' %}
++
+       <div class="bc-search-card__price-wrap">
+         <div class="price bc-search-card__price{% if is_on_sale %} price--on-sale{% endif %}">
+           <div class="price__container">
+diff --git a/snippets/bc-external-filters.liquid b/snippets/bc-external-filters.liquid
+index 5be7dd1..0d56e22 100644
+--- a/snippets/bc-external-filters.liquid
++++ b/snippets/bc-external-filters.liquid
+@@ -22,6 +22,7 @@
+   data-section-id="{{ section_id | escape }}"
+   data-card-type="{{ 'products.product.card_type' | t | escape }}"
+   data-card-sku="{{ 'products.product.card_sku' | t | escape }}"
++  data-card-delivery="{{ 'bc_delivery.lead_time_on_request' | t | escape }}"
+   data-card-view="{{ 'products.product.card_view' | t | escape }}"
+   data-card-tax="{{ 'products.product.card_tax' | t | escape }}"
+   data-tax-included="{{ shop.taxes_included }}"
+diff --git a/snippets/bc-mobile-listing.liquid b/snippets/bc-mobile-listing.liquid
+new file mode 100644
+index 0000000..99450f5
+--- /dev/null
++++ b/snippets/bc-mobile-listing.liquid
+@@ -0,0 +1,8 @@
++{% doc %}
++  Provides the mobile filter shortcut for a product listing.
++{% enddoc %}
++<button type="button" class="bc-floating-filter" data-bc-floating-filter hidden>
++  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="9" cy="18" r="2" fill="currentColor"/></svg>
++  {{ 'products.facets.filter_button' | t }}
++</button>
++<script src="{{ 'bc-mobile-listing.js' | asset_url }}" defer="defer"></script>
+diff --git a/snippets/card-product.liquid b/snippets/card-product.liquid
+index e14df8a..aa04eed 100644
+--- a/snippets/card-product.liquid
++++ b/snippets/card-product.liquid
+@@ -203,6 +203,7 @@
+               </p>
+             {%- endif -%}
+ 
++            {% if show_card_delivery %}{% render 'bc-card-delivery' %}{% endif %}
+             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+             {% if shop.taxes_included %}<span class="bc-card-tax">{{ 'products.product.card_tax' | t }}</span>{% endif %}
+             <a class="bc-card-view" href="{{ card_product.url }}">{{ 'products.product.card_view' | t }} <span aria-hidden="true">&rarr;</span></a>

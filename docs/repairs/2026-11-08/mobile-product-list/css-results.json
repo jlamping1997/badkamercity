@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "tests": 20,
+  "results": [
+    {
+      "kind": "native-collection",
+      "width": 320,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-collection",
+      "width": 390,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-collection",
+      "width": 430,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-collection",
+      "width": 750,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-collection",
+      "width": 1348,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-collection",
+      "width": 320,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-collection",
+      "width": 390,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-collection",
+      "width": 430,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-collection",
+      "width": 750,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-collection",
+      "width": 1348,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-search",
+      "width": 320,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-search",
+      "width": 390,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-search",
+      "width": 430,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-search",
+      "width": 750,
+      "result": "PASS"
+    },
+    {
+      "kind": "native-search",
+      "width": 1348,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-search",
+      "width": 320,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-search",
+      "width": 390,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-search",
+      "width": 430,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-search",
+      "width": 750,
+      "result": "PASS"
+    },
+    {
+      "kind": "external-search",
+      "width": 1348,
+      "result": "PASS"
+    }
+  ],
+  "scope": "Offline DOM CSS-cascade checks with old styles deliberately loaded last. No real browser geometry, screenshot, overflow, touch or purchase proof."
+}

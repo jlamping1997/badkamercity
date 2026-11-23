@@ -1,0 +1,377 @@
+{
+  "task": "DOC-03D",
+  "sourceTheme": "gid://shopify/OnlineStoreTheme/195818389770",
+  "node": "v24.22.1",
+  "dom": "happy-dom 21.0.4",
+  "executedSources": [
+    "assets/bc-wishlist.js",
+    "assets/bc-sunshower-shop.js"
+  ],
+  "sourceSha256": [
+    {
+      "path": "assets/bc-wishlist.js",
+      "sha256": "c41a892f0eef9829b1bf8071e51afb6b9a0fbe2c4a39474f446218e5ed6ba6fd"
+    },
+    {
+      "path": "assets/bc-sunshower-shop.js",
+      "sha256": "704739cf6cb13c8224079612080a4f2e49bbbde8a677e98fa6dd2e4dbb5d03ac"
+    }
+  ],
+  "caseCount": 43,
+  "classifications": {
+    "CONTROL_PASSED": 34,
+    "DEFECT_REPRODUCED": 2,
+    "BOUNDARY_CONFIRMED": 7
+  },
+  "limitations": [
+    "Synthetic storage only; storage event delivery is manual, not native cross-tab scheduling.",
+    "All product and cart responses are synthetic; zero actual cart or storefront requests.",
+    "Timers, navigation, image preloads and request transport are stubs; no CSS, layout, focus, screen reader, touch or native browser proof.",
+    "MutationObserver is disabled except WL-40 and WL-43, which use the DOM library observer.",
+    "No account sync, checkout, real customer storage, cart restore or current business product data inspected."
+  ],
+  "results": [
+    {
+      "id": "WL-01",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "emptyState": true,
+        "noRequests": true
+      }
+    },
+    {
+      "id": "WL-02",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "invalidEntriesDropped": true,
+        "stringsNormalisedAndBounded": true,
+        "unknownSourceBecomesCard": true
+      }
+    },
+    {
+      "id": "WL-03",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "badOrDifferentSchemaReadsEmpty": true,
+        "originalBytesRetained": true,
+        "noMigrationOrRepair": true
+      }
+    },
+    {
+      "id": "WL-04",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "badOrDifferentSchemaReadsEmpty": true,
+        "originalBytesRetained": true,
+        "noMigrationOrRepair": true
+      }
+    },
+    {
+      "id": "WL-05",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "readDeniedLooksEmpty": true,
+        "noReadErrorToast": true
+      }
+    },
+    {
+      "id": "WL-06",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "memoryLimit": 100,
+        "loadDoesNotRewriteStorage": true
+      }
+    },
+    {
+      "id": "WL-07",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "duplicateStoredIdentitiesRemain": true,
+        "badgeCountsEntries": true,
+        "noClaimNormalToggleCreatesDuplicates": true
+      }
+    },
+    {
+      "id": "WL-08",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "listReturnsCopies": true,
+        "noExpiryForOldTimestamp": true,
+        "hasUsesExactStrings": true
+      }
+    },
+    {
+      "id": "WL-09",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "knownVariantTogglesWithoutProductRequest": true,
+        "eventAfterCommitAndCountSync": true
+      }
+    },
+    {
+      "id": "WL-10",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "failedWritePreservesMemoryAndStorage": true,
+        "noSuccessEvent": true,
+        "busyReleased": true
+      }
+    },
+    {
+      "id": "WL-11",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "fullListBlocksAdditionButAllowsRemoval": true
+      }
+    },
+    {
+      "id": "WL-12",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "nearestFormVariantOverridesStaleButtonDataset": true
+      }
+    },
+    {
+      "id": "WL-13",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "sunshowerPageVariantOverridesForm": true
+      }
+    },
+    {
+      "id": "WL-14",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "unknownVariantUsesProductRead": true
+      }
+    },
+    {
+      "id": "WL-15",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "fallbackSelectsFirstAvailableVariant": true
+      }
+    },
+    {
+      "id": "WL-16",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "savingUnavailableFavouriteAllowed": true,
+        "saveIsNotPurchaseEligibility": true
+      }
+    },
+    {
+      "id": "WL-17",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "oneExistingVariantRemovedWithoutRead": true
+      }
+    },
+    {
+      "id": "WL-18",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "ambiguousVariantsRequireProductPage": true
+      }
+    },
+    {
+      "id": "WL-19",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "sameButtonPendingClickIgnored": true
+      }
+    },
+    {
+      "id": "WL-20",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "failedProductCacheEvictedAndRetryWorks": true
+      }
+    },
+    {
+      "id": "WL-21",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "keyAndClearStorageEventsReloadAndNotify": true,
+        "unrelatedKeyIgnored": true
+      }
+    },
+    {
+      "id": "WL-22",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "sequentialTabsKeepBothWhenStorageEventDeliveredBeforeSecondEdit": true
+      }
+    },
+    {
+      "id": "WL-23",
+      "classification": "DEFECT_REPRODUCED",
+      "observations": {
+        "finding": "WISH-F01",
+        "secondTabWritesFromStaleMemory": true,
+        "firstFavouriteLost": true,
+        "storageEventsExplicitlyDelayed": true,
+        "noNativeMultiTabSchedulingClaim": true
+      }
+    },
+    {
+      "id": "WL-24",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "pageUsesProductPriceAndExactVariant": true,
+        "eligibleDetailVariantGetsAddButton": true
+      }
+    },
+    {
+      "id": "WL-25",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "missingVariantHasNoPurchaseButtonAndCanBeRemoved": true
+      }
+    },
+    {
+      "id": "WL-26",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-27",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-28",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-29",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-30",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-31",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "complexOrUnavailableVariantKeepsProductLink": true
+      }
+    },
+    {
+      "id": "WL-32",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "productHTTPErrorKeepsFavouriteAndRemoval": true
+      }
+    },
+    {
+      "id": "WL-33",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "lateProductResponseCannotReviveRemovedCard": true
+      }
+    },
+    {
+      "id": "WL-34",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "productWorkerLimitPerRender": 4,
+        "nextItemStartsAfterCompletion": true
+      }
+    },
+    {
+      "id": "WL-35",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "syntheticAddPostsExactVariantOnce": true,
+        "successNavigatesToCartAndRetainsFavourite": true,
+        "noRealCartRequest": true
+      }
+    },
+    {
+      "id": "WL-36",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "syntheticAddErrorRestoresButton": true,
+        "noNavigationOnError": true
+      }
+    },
+    {
+      "id": "WL-37",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "successCacheHasNoTTL": true,
+        "rerenderAndAddReuseCachedEligibility": true,
+        "serverRemainsCartAuthority": true,
+        "noPriceOrStockFreezeClaim": true
+      }
+    },
+    {
+      "id": "WL-38",
+      "classification": "BOUNDARY_CONFIRMED",
+      "observations": {
+        "noProductRequestTimeout": true,
+        "perCardLoadingCanRemainIndefinitely": true,
+        "removalStillPresent": true
+      }
+    },
+    {
+      "id": "WL-39",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "titlesUseTextContent": true,
+        "javascriptImageRejected": true,
+        "notGeneralSecurityAudit": true
+      }
+    },
+    {
+      "id": "WL-40",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "externalCardsDecorated": true,
+        "actualDOMLibraryMutationObserverSchedulesNewCardSync": true
+      }
+    },
+    {
+      "id": "WL-41",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "duplicateScriptBootGuard": true,
+        "refreshCoalescesOneFrame": true,
+        "toastHidesAfter2900msModel": true
+      }
+    },
+    {
+      "id": "WL-42",
+      "classification": "CONTROL_PASSED",
+      "observations": {
+        "variantChangeEventRefreshesPressedState": true
+      }
+    },
+    {
+      "id": "WL-43",
+      "classification": "DEFECT_REPRODUCED",
+      "observations": {
+        "finding": "WISH-F02",
+        "realSunshowerControllerCommitsNewHandleAndVariant": true,
+        "heartPressedAndClassRetainPreviousSavedState": true,
+        "nextHeartClickUsesCorrectNewIdentity": true,
+        "imagePreloadExplicitlySimulated": true
+      }
+    }
+  ]
+}

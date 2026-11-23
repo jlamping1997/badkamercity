@@ -1,0 +1,316 @@
+{
+  "fonteinsifon": {
+    "verdict": "Geometric drawings agree despite inconsistent Vorm taxonomy; color navigation is supported, no specification rewrite.",
+    "observed_dimensions": {
+      "body_diameter_mm": 50,
+      "body_height_mm": 90,
+      "inlet_adjustment_mm": "15–80",
+      "inlet_thread": "G1¼",
+      "outlet_diameter_mm": 31.75,
+      "outlet_length_mm": 330,
+      "wall_rosette_diameter_mm": 65,
+      "body_outlet_collar_diameter_mm": 45
+    },
+    "drawings": [
+      {
+        "sku": "33.4415",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.4415.jpg",
+        "sha256": "dc2dfd8fd98796696f1f3ec167b4d640d04e4d9d5f3a5f8923b2312b3928649e",
+        "bytes": 87202
+      },
+      {
+        "sku": "33.4416",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.4416.jpg",
+        "sha256": "dc2dfd8fd98796696f1f3ec167b4d640d04e4d9d5f3a5f8923b2312b3928649e",
+        "bytes": 87202
+      },
+      {
+        "sku": "33.4429",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.4429.jpg",
+        "sha256": "a29375085c8adf771404d1234de5bc37131b386d22d7c4a1c661dde93be27941",
+        "bytes": 434954
+      },
+      {
+        "sku": "33.7429",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.7429.jpg",
+        "sha256": "c62e9eda648d897f1e753e938292ea4327717dedba1abc79f90139a0d8c67be2",
+        "bytes": 116503
+      },
+      {
+        "sku": "33.4422",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.4422.jpg",
+        "sha256": "b9d3c7bf1be551f3933f592c9723bddafb5b34afeef2c228fee0f3204f74c59d",
+        "bytes": 434954
+      },
+      {
+        "sku": "33.4421",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.4421.jpg",
+        "sha256": "b9d3c7bf1be551f3933f592c9723bddafb5b34afeef2c228fee0f3204f74c59d",
+        "bytes": 434954
+      },
+      {
+        "sku": "33.5416",
+        "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/33.5416.jpg",
+        "sha256": "b9d3c7bf1be551f3933f592c9723bddafb5b34afeef2c228fee0f3204f74c59d",
+        "bytes": 434954
+      }
+    ],
+    "photos_visual_review": [
+      "33.4415",
+      "33.4429",
+      "33.4421",
+      "33.5416"
+    ],
+    "limits": "No hydraulic flow/certification equivalence claim. Photo33.4422 unavailable; its official drawing is byte-identical to33.4421/33.5416 and visually matches33.4429.",
+    "source_provenance": "Compano URLs are official manufacturer product images/line drawings linked in the cached wiesbaden.nl fact record for each SKU.",
+    "visually_inspected_drawings": [
+      "33.4415",
+      "33.4429",
+      "33.7429",
+      "33.4421"
+    ]
+  },
+  "glijstang": {
+    "date": "2026-11-10",
+    "status": "HOLD_RECOMMENDED_COMPONENTS_UNRESOLVED",
+    "family": "candidate-8fe6d101eeba",
+    "products": 6,
+    "primary_source_origin": "Images/drawings/manual URLs are linked by the cached official wiesbaden.nl product pages. No retailer data used.",
+    "source_claims": {
+      "met_slang_nee": [
+        "29.3864",
+        "29.3865",
+        "29.3866"
+      ],
+      "met_slang_ja": [
+        "29.3867",
+        "29.3868",
+        "29.3869"
+      ]
+    },
+    "verified": [
+      "All six main product images visually depict the same bare bar design in different finishes.",
+      "All six line drawings have identical decoded RGB pixels (1332 x1663); file metadata differs, so file SHA256 is not identical.",
+      "All six installation manuals are byte-identical."
+    ],
+    "inference": "Shared geometry and manufacturer documentation strongly indicate one bar model. However the source supplies contradictory hose-inclusion attributes; installation diagrams and main photos alone do not establish complete box contents.",
+    "recommendation": "Hold all six for source/supplier packaged-content confirmation; alternatively retain only if main agent explicitly accepts colour variant navigation without equal-component claim, documenting this unresolved difference. Do not claim no hose supplied.",
+    "manufacturer_page_fetch": "Search found no glijstang result; direct official page opens inaccessible through search tool. Official-linked asset retrieval succeeded.",
+    "evidence": [
+      {
+        "sku": "29.3864",
+        "assets": [
+          {
+            "sku": "29.3864",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3864.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3864-image.jpg",
+            "size": 187490,
+            "status": "PASS",
+            "sha256": "1d6ce8670c01bd96b3e219ea9f59f42642e7bbfc383e91c0504fdb6aa45179a5"
+          },
+          {
+            "sku": "29.3864",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3864.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3864-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "048bf9264e5f7cd860d9f4017f414e014558dd9f2639add5a1d057452cd20119",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3864",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3864.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3864-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      },
+      {
+        "sku": "29.3865",
+        "assets": [
+          {
+            "sku": "29.3865",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3865.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3865-image.jpg",
+            "size": 666264,
+            "status": "PASS",
+            "sha256": "42050ef6bbfe54582a4c25f68653e55e8e34db60f6db78430fbc7489a231a6fc"
+          },
+          {
+            "sku": "29.3865",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3865.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3865-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "d52941248943cc8641996dc9e9673c42b800eccf6107eba4df0ef2eca3d36cbc",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3865",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3865.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3865-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      },
+      {
+        "sku": "29.3866",
+        "assets": [
+          {
+            "sku": "29.3866",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3866.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3866-image.jpg",
+            "size": 193165,
+            "status": "PASS",
+            "sha256": "6f42803ebbbf761bba903568752d39ccfaa83b2c37482b8a786da3e9a9129c8c"
+          },
+          {
+            "sku": "29.3866",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3866.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3866-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "0a3d1a666538dabe9217c46a78ecce95c931577b2e017d287b8513b1630ed865",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3866",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3866.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3866-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      },
+      {
+        "sku": "29.3867",
+        "assets": [
+          {
+            "sku": "29.3867",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3867.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3867-image.jpg",
+            "size": 203984,
+            "status": "PASS",
+            "sha256": "61cd1406d90bac8d26d4ed8b90747daaab85038eaf77e963b3f328512653f32b"
+          },
+          {
+            "sku": "29.3867",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3867.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3867-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "9aea21db604dd57ef0535a814f32e8c3dd69036225e3e1c51ca5853dfed57164",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3867",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3867.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3867-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      },
+      {
+        "sku": "29.3868",
+        "assets": [
+          {
+            "sku": "29.3868",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3868.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3868-image.jpg",
+            "size": 192395,
+            "status": "PASS",
+            "sha256": "0e6856def010c0293846f7f1b6cb008654ceedc1766d0449ee167d713d88028b"
+          },
+          {
+            "sku": "29.3868",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3868.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3868-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "3ea70b21bbaa1019747df787419d0cf5528c2516a8a4d8628866e1de00f48ab5",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3868",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3868.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3868-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      },
+      {
+        "sku": "29.3869",
+        "assets": [
+          {
+            "sku": "29.3869",
+            "kind": "image",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Productafbeeldingen/29.3869.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3869-image.jpg",
+            "size": 205795,
+            "status": "PASS",
+            "sha256": "1d12a4ee9f4ec294316a8225ec8f2f672dc2327c6b9f09d6ed6c90ef3ecd2081"
+          },
+          {
+            "sku": "29.3869",
+            "kind": "line_drawings",
+            "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Lijntekeningen/29.3869.jpg",
+            "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3869-line_drawings.jpg",
+            "size": 246408,
+            "status": "PASS",
+            "sha256": "cd43ad368c19ce0a993a1476400b13291e47e8480ae73057da11e9f0fd01a6d0",
+            "pixel_sha256": "d11837f3d071867fb73ed48cbf73efa173986bd8cf090ccff011aa8fd8fa8bd9",
+            "dimensions": [
+              1332,
+              1663
+            ]
+          }
+        ],
+        "manual": {
+          "sku": "29.3869",
+          "url": "https://korverholland.compano.com/Data/Environments/000101/Attachment/Bijlage/Handleidingen/29.3869.pdf",
+          "path": "/workspace/scratch/6853da5b51fd/batch12/geometry/29.3869-manual.pdf",
+          "sha256": "29d42bf566655663901ad30ba0f1b87793a9f6945d33f429c021cf11a10cee1b",
+          "size": 642376
+        }
+      }
+    ]
+  },
+  "root_decision": {
+    "fonteinsifon": "INCLUDED; identical geometry supported, no source spec rewrite",
+    "glijstang": "HELD; packaged hose inclusion unresolved"
+  }
+}

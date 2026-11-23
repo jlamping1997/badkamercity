@@ -1,0 +1,22 @@
+{
+  "installer": "repair_acero_color.py",
+  "installer_bytes": 26615,
+  "installer_sha256": "5e3a7b4312f7cdeaf100f5306136644ffd65bd65f220169665d6f714c672642e",
+  "base_worker_sha256": "25e8c3b1763171875bebd5b85e7099b26f87e36f3ece0b9f1f21e1d37b56dbe3",
+  "base_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "base_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "target_worker_sha256": "3c6dd21f50081f4ad8d770194dc35a97c101a09910dd8892403e51b93f1495eb",
+  "target_api_sha256": "3a7701134be7ac55b0a83436ceb16ebb19ac0a88aba17c283490f90047f02094",
+  "target_api_ast_sha256": "4b4dcf726b3f66f06d5f62bc322c8a9a236459ddf32cf56a2440e4c10147570b",
+  "api_source_unchanged": true,
+  "deadline_seconds": 900,
+  "recovery_seconds": 240,
+  "required_snapshot_flags": [
+    "variant_aliases_v1",
+    "filter_simplification_v1",
+    "tile_format_codes_v1",
+    "acero_gray_v1"
+  ],
+  "private_runtime_sources_embedded": false,
+  "transport_ascii": true
+}

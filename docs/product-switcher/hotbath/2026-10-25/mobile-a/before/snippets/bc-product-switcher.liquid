@@ -1,0 +1,30 @@
+{% doc %}
+Renders the existing V2 product switcher with an optional scoped preview source.
+@param {product} product - The current product.
+@param {section} section - The containing section.
+@param {string} [switch_group] - Explicit group; defaults to the existing product field.
+@param {string} [data_url] - Explicit data URL; defaults to the existing shared asset.
+@example
+{% render 'bc-product-switcher', product: product, section: section %}
+{% enddoc %}
+{%- liquid
+  assign bc_switch_group = switch_group | default: product.metafields.custom.switch_group.value | default: product.metafields.custom.switch_group | strip
+  assign bc_switcher_default_data_url = 'product-switcher-data.json' | asset_url
+  assign bc_switcher_data_url = data_url | default: bc_switcher_default_data_url
+-%}
+
+{%- if bc_switch_group != blank -%}
+  <div
+    class="bc-buybox__switcher-groups"
+    data-bc-product-switcher-v2
+    data-switch-group="{{ bc_switch_group | escape }}"
+    data-product-handle="{{ product.handle | escape }}"
+    data-product-url="{{ product.url | escape }}"
+    data-section-id="{{ section.id | escape }}"
+    {% if data_url != blank %}data-bc-preserve-position="true"{% endif %}
+    data-switcher-data-url="{{ bc_switcher_data_url | escape }}"
+  ></div>
+  <script src="{{ 'bc-product-switcher.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+

@@ -1,0 +1,87 @@
+{%- comment -%}
+Bestaande Shopify-velden; alleen groepen met zichtbare rijen. Geen gegevens uit titels afleiden.
+{%- endcomment -%}
+{%- capture product_rows -%}
+{% render 'bc-product-detail-row', metafield: product.metafields.custom.artikelnummer, value: product.selected_or_first_available_variant.sku, label: 'Artikelnummer' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.fabrikantnummer, label: 'Fabrikantnummer' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.ean, label: 'EAN-code' %}
+              {% render 'bc-product-detail-row', value: product.vendor, label: 'Merk' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.serie, label: 'Serie' %}
+{%- endcapture -%}
+{%- assign product_rows = product_rows | strip -%}
+{%- capture general_rows -%}
+{% render 'bc-product-detail-row', metafield: product.metafields.custom.vormgeving_stijlgroep, label: 'Vormgeving / stijlgroep' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.kleurgroep, label: 'Kleurgroep' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.basiskleur, label: 'Basiskleur' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.glansgraad, label: 'Glansgraad' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.materiaal_kraan, label: 'Materiaal kraan' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.montagewijze, label: 'Montagewijze' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.afwerking_greep, label: 'Afwerking greep' %}
+{%- endcapture -%}
+{%- assign general_rows = general_rows | strip -%}
+{%- capture shower_rows -%}
+{% render 'bc-product-detail-row', metafield: product.metafields.custom.belgaqua_keurmerk, label: 'Belgaqua keurmerk' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.met_hoofddouche, label: 'Met hoofddouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.breedte_diameter_hoofddouche, label: 'Breedte/diameter hoofddouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.dikte_hoofddouche, label: 'Dikte hoofddouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.aantal_straalsoorten_hoofddouche, label: 'Aantal straalsoorten hoofddouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.type_bevestiging_hoofddouche, label: 'Type bevestiging hoofddouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.lengte_douchearm, label: 'Lengte douchearm' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.met_handdouche, label: 'Met handdouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.type_handdouche, label: 'Type handdouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.breedte_diameter_douchekop, label: 'Breedte/diameter douchekop' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.aantal_straalsoorten_handdouche, label: 'Aantal straalsoorten handdouche' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.met_glijstang, label: 'Met glijstang' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.met_doucheslang, label: 'Met doucheslang' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.lengte_doucheslang, label: 'Lengte doucheslang' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.vorm_thermostaat, label: 'Vorm thermostaat' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.thermostatisch, label: 'Thermostatisch' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.met_inbouwdeel, label: 'Met inbouwdeel' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.aantal_uitgangen_tegelijk_bedienbaar, label: 'Aantal uitgangen tegelijk bedienbaar' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.bediening_voor_aan_uit, label: 'Bediening voor aan/uit' %}
+{%- endcapture -%}
+{%- assign shower_rows = shower_rows | strip -%}
+{%- capture systems_rows -%}
+{% render 'bc-product-detail-row', metafield: product.metafields.custom.hotbath_ecoair_system, label: 'Hotbath EcoAir System' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.hotbath_shower_power_system, label: 'Hotbath Shower Power System' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.hotbath_fluhs, label: 'Hotbath Fluhs' %}
+              {% render 'bc-product-detail-row', metafield: product.metafields.custom.hotbath_plumber_friendly, label: 'Hotbath Plumber Friendly' %}
+{%- endcapture -%}
+{%- assign systems_rows = systems_rows | strip -%}
+{%- capture spec_groups -%}
+{%- if product_rows != blank -%}
+<tbody>
+<tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">Product</th></tr>
+{{ product_rows }}
+</tbody>
+{%- endif -%}
+{%- if general_rows != blank -%}
+<tbody>
+<tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">Algemene kenmerken</th></tr>
+{{ general_rows }}
+</tbody>
+{%- endif -%}
+{%- if shower_rows != blank -%}
+<tbody>
+<tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">Douche & Thermostaat</th></tr>
+{{ shower_rows }}
+</tbody>
+{%- endif -%}
+{%- if systems_rows != blank -%}
+<tbody>
+<tr class="bc-product-specs__header-row"><th class="bc-product-specs__header" colspan="2" scope="rowgroup">Hotbath Systemen</th></tr>
+{{ systems_rows }}
+</tbody>
+{%- endif -%}
+{%- endcapture -%}
+{%- assign spec_groups = spec_groups | strip -%}
+{%- if spec_groups != blank -%}
+  <section class="bc-product-specs" id="ProductSpecs-{{ section_id }}" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+    <div class="bc-product-specs__inner">
+      <h2 class="bc-product-specs__title" id="ProductSpecsTitle-{{ section_id }}">Specificaties</h2>
+      <table class="bc-product-specs__table" aria-labelledby="ProductSpecsTitle-{{ section_id }}">
+        {{ spec_groups }}
+      </table>
+    </div>
+  </section>
+{%- endif -%}

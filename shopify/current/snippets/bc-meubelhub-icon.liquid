@@ -1,0 +1,15 @@
+<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+{% case icon %}
+{% when 'arrow' %}<path d="M5 12h14m-6-6 6 6-6 6"/>
+{% when 'chevron' %}<path d="m9 5 7 7-7 7"/>
+{% when 'down' %}<path d="m6 9 6 6 6-6"/>
+{% when 'check' %}<path d="m5 12 4 4L19 6"/>
+{% when 'type' %}<path d="m2 7 10-5 10 5-10 5L2 7Zm0 5 10 5 10-5M2 17l10 5 10-5"/>
+{% when 'maat' %}<path d="m3 16 13-13 5 5L8 21 3 16Zm10-10 2 2m-5 1 2 2m-5 1 2 2m-5 1 2 2"/>
+{% when 'stijl' %}<path d="M14 4c2-3 5-3 6-1s-1 5-3 7l-6 6-4-4 7-8ZM7 13c-3 0-3 3-3 5-1 1-2 1-2 1 5 3 9 0 8-4"/>
+{% when 'merk' %}<path d="m3 13 10-10h8v8L11 21 3 13Z"/><circle cx="17" cy="7" r="1.1"/>
+{% when 'levering' %}<path d="M2 5h12v12H7m7-8h4l4 5v3h-3m-5 0h1M2 17H1V5h1"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+{% when 'schild' %}<path d="m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6l9-4Z"/><path d="m7 12 3 3 7-7"/>
+{% when 'advies' %}<path d="M4 13v-3a8 8 0 0 1 16 0v7c0 3-3 5-6 5"/><rect x="2" y="11" width="5" height="8" rx="2"/><rect x="17" y="11" width="5" height="8" rx="2"/><path d="M10 22h4"/>
+{% when 'combineren' %}<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/>
+{% else %}<path d="M5 12h14m-6-6 6 6-6 6"/>{% endcase %}</svg>

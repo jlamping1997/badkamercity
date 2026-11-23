@@ -1,0 +1,353 @@
+{
+  "date": "2026-11-17",
+  "verifiedAt": "2026-11-16T16:27:29.649Z",
+  "status": "OWNER_PALLET_DRAFT_SOURCE_FIELDS_REQUIRE_CORRECTION",
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/196690379018",
+    "name": "BadkamerCity - verzendtarieven per productgroep",
+    "role": "MAIN"
+  },
+  "shippingReadback": {
+    "id": "gid://shopify/Market/94864998666",
+    "name": "Nederland",
+    "delivery": {
+      "shipping": {
+        "isEnabled": true,
+        "optionDefinitions": {
+          "nodes": [
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1251671343370",
+              "name": "Standaard",
+              "isActive": false,
+              "freeDeliveryMinimumValue": {
+                "amount": "100.01",
+                "currencyCode": "EUR"
+              },
+              "rateGroups": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/489069838602",
+                    "conditions": {
+                      "collections": null
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1183821660426",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "6.95",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false
+                }
+              }
+            },
+            {
+              "__typename": "DeliveryValueBasedOptionDefinition",
+              "id": "gid://shopify/DeliveryValueBasedOptionDefinition/1272199119114",
+              "name": "Standaard",
+              "isActive": true,
+              "freeDeliveryMinimumValue": null,
+              "rateGroups": {
+                "nodes": [
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600891146",
+                    "conditions": {
+                      "collections": null
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544864522",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "100.0",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "6.95",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544897290",
+                          "minValue": {
+                            "amount": "100.01",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600923914",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456676106",
+                            "title": "BC verzending – Pallettransport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544930058",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "499.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "75.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544962826",
+                          "minValue": {
+                            "amount": "500.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600956682",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456610570",
+                            "title": "BC verzending – Glastransport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204544995594",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "499.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "45.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545028362",
+                          "minValue": {
+                            "amount": "500.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "gid://shopify/DeliveryValueBasedRateGroup/509600989450",
+                    "conditions": {
+                      "collections": {
+                        "nodes": [
+                          {
+                            "id": "gid://shopify/Collection/587456643338",
+                            "title": "BC verzending – XXL transport"
+                          }
+                        ],
+                        "pageInfo": {
+                          "hasNextPage": false
+                        }
+                      }
+                    },
+                    "rates": {
+                      "nodes": [
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545061130",
+                          "minValue": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": {
+                            "amount": "999.99",
+                            "currencyCode": "EUR"
+                          },
+                          "price": {
+                            "amount": "300.0",
+                            "currencyCode": "EUR"
+                          }
+                        },
+                        {
+                          "id": "gid://shopify/DeliveryValueBasedRate/1204545093898",
+                          "minValue": {
+                            "amount": "1000.0",
+                            "currencyCode": "EUR"
+                          },
+                          "maxValue": null,
+                          "price": {
+                            "amount": "0.0",
+                            "currencyCode": "EUR"
+                          }
+                        }
+                      ],
+                      "pageInfo": {
+                        "hasNextPage": false
+                      }
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false
+                }
+              }
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  },
+  "google": {
+    "accountId": "5902025216",
+    "shippingPoliciesObserved": 1,
+    "existingService": {
+      "id": "1",
+      "name": "price_based_EUR_611727081738_Custom_rate_price_based",
+      "status": "Complete",
+      "visibility": "Show on Google",
+      "scope": "All products",
+      "productCountDisplayed": 11915,
+      "paidRateEUR": 6.95,
+      "freeShippingOverDisplayedEUR": 100,
+      "deliveryBusinessDays": {
+        "min": 2,
+        "max": 5
+      },
+      "observedOn": "2026-11-16"
+    },
+    "shippingLabelsSelectable": "Not rechecked after owner draft; no full rule activation confirmed",
+    "labelEvidence": "Specific products showed only instructions to submit shipping_label and Continue was disabled. No labels available to select.",
+    "oldServiceEditorCancelledWithoutSaving": true,
+    "shippingWritesPerformed": false,
+    "allProductsOneDayRetry": false,
+    "shippingPoliciesObservedOn": "2026-11-16"
+  },
+  "shopifyGoogleChannel": {
+    "productsSync": "ON",
+    "shippingSync": "LAST_OBSERVED_AUTOMATIC_ON_2026-11-16_NOT_RECHECKED_AFTER_OWNER_HANDOFF",
+    "manualOptionExactLabel": "Verzendgegevens handmatig instellen in Google Merchant Center",
+    "dialogOpened": true,
+    "selectionChanged": false,
+    "saved": false,
+    "settingsURL": "https://admin.shopify.com/store/fpa9hu-i3/apps/google/settings",
+    "latestModeVerification": "Owner was instructed to save manual mode; not freshly confirmed after that handoff"
+  },
+  "nextOwnerAction": "Correct the first field of rows 2–10 to the existing Shopify App API.product type attribute; keep all literal values, equals, OR joins and Set to pallet. Then OK, Save as draft, Test rules. Do not apply an unverified 10-row draft.",
+  "nextExecution": "Verify positive floor/wall/bath examples and a negative mosaic/parcel example. Then complete other groups and explicitly resolve incoming per-offer shipping/free-shipping thresholds and manual shipping mode before validating Google costs.",
+  "unchanged": [
+    "Product prices",
+    "Inventory",
+    "Product publications",
+    "M444AB",
+    "Real Shopify checkout rates",
+    "Existing Google shipping costs and lead times"
+  ],
+  "googleSettingsURL": "https://merchants.google.com/mc/shipping/services?a=5902025216",
+  "limits": [
+    "No product labels applied yet",
+    "No Google shipping rate or delivery-time change saved",
+    "No current XXL product for a real cart or offer check",
+    "No new checkout tests; previous 18 passed checks retained",
+    "Protected canonical config/settings_data.json exception remains",
+    "No Windows local sync claimed"
+  ],
+  "latestVerification": "2026-11-16T16:53:33.382Z",
+  "latestOfferCheckReference": "documentation-check-2026-11-17.json",
+  "latestDocumentationAt": "2026-11-17T10:25:37.051Z",
+  "nativeVerifiedAt": "2026-11-17T10:25:37.051Z",
+  "ownerPositivePreview": {
+    "date": "2026-11-17",
+    "evidence": "USER_SCREENSHOT_VERIFIED",
+    "attribute": "shipping_label",
+    "value": "pallet",
+    "scope": "Single Wandtegels condition only"
+  },
+  "ownerFullDraft": {
+    "date": "2026-11-17",
+    "rows": 10,
+    "rightValuesAndORCorrect": true,
+    "sourceFieldsRows2To10NeedCorrection": true,
+    "saved": null,
+    "testRulesPassed": false,
+    "applied": null,
+    "saveOrApplyEvidence": "NOT_CONFIRMED"
+  },
+  "documentation": "../../VERZENDINSTELLINGEN.md",
+  "currentTurn": {
+    "documentationOnly": true,
+    "noGoogleBrowserRead": true,
+    "noShopifyOrGoogleWrites": true
+  }
+}

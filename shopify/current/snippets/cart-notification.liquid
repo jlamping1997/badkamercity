@@ -1,0 +1,23 @@
+{% doc %}
+  Renders the added-to-cart confirmation dialog.
+  @param {string} [color_scheme] - Theme color scheme.
+  @param {string} [desktop_menu_type] - Desktop navigation type.
+{% enddoc %}
+<cart-notification>
+  <div class="cart-notification-wrapper">
+    <dialog id="cart-notification" class="cart-notification" aria-labelledby="bc-cart-notification-title">
+      <div class="cart-notification__header">
+        <span class="cart-notification__success" aria-hidden="true">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
+        <h2 id="bc-cart-notification-title" class="cart-notification__heading">{{ 'general.cart.item_added' | t }}</h2>
+        <button type="button" class="cart-notification__close" data-cart-close aria-label="{{ 'accessibility.close' | t }}" autofocus>
+          {{ 'icon-close.svg' | inline_asset_content }}
+        </button>
+      </div>
+      <div id="cart-notification-product" class="cart-notification-product"></div>
+      <div class="cart-notification__links">
+        <a href="{{ routes.cart_url }}" id="cart-notification-button" class="cart-notification__primary">{{ 'general.cart.view_empty_cart' | t }}</a>
+        <button type="button" class="cart-notification__continue" data-cart-close>{{ 'bc_cart_page.continue_shopping' | t }}</button>
+      </div>
+    </dialog>
+  </div>
+</cart-notification>
