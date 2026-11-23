@@ -4,7 +4,13 @@
   @param {string} section_id - Main product section identifier.
 {% enddoc %}
 {%- assign specs_vendor = product.vendor | strip | downcase -%}
-{%- if product.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0 and product.metafields.custom.complete_specificaties.value != blank -%}
+{%- assign use_tile_specifications = false -%}
+{%- if product.metafields.custom.complete_specificaties.value != blank -%}
+  {%- if specs_vendor == 'the mosaic factory' or product.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0 -%}
+    {%- assign use_tile_specifications = true -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if use_tile_specifications -%}
   {%- render 'bc-tile-specifications', product: product, section_id: section_id -%}
 {%- elsif product.metafields.bc_sunshower.specifications.value != blank -%}
   {%- render 'bc-sunshower-panel', product: product, section_id: section_id, mode: 'specifications' -%}
