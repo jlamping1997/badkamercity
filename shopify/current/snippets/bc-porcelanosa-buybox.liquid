@@ -4,6 +4,7 @@ Renders the reusable tile purchase controls inside the existing product page.
 @param {section} section - The containing product section.
 @param {string} product_form_id - The existing Shopify product form ID.
 @param {string} actions_markup - Existing buy button and cart integration.
+@param {object} [mosaic] - Verified mosaic packaging data.
 {% enddoc %}
 {%- liquid
   assign tile = product.metafields.custom.bron_toelichtingen_json.value.tiles
@@ -12,6 +13,24 @@ Renders the reusable tile purchase controls inside the existing product page.
     render 'bc-cotto-unit-mode', product: product
   endcapture
   assign tile_order_mode = tile_order_mode | strip
+  assign tile_mosaic_sheet = false
+  if mosaic != blank
+    assign tile_order_mode = mosaic.order_mode
+    if mosaic.order_mode == 'unit'
+      assign tile = mosaic
+      assign tile_mosaic_sheet = true
+      assign sheet_label = 'per matje'
+      assign sheet_quantity = 'Aantal matjes'
+      assign sheet_one = '__COUNT__ matje'
+      assign sheet_many = '__COUNT__ matjes'
+      if request.locale.iso_code == 'en'
+        assign sheet_label = 'per sheet'
+        assign sheet_quantity = 'Number of sheets'
+        assign sheet_one = '__COUNT__ sheet'
+        assign sheet_many = '__COUNT__ sheets'
+      endif
+    endif
+  endif
   assign tile_vendor = product.vendor | strip | downcase
   assign tile_sale_unit = tile.sale_unit | default: ''
   assign tile_unit_count = tile.unit_count | default: 0 | plus: 0
@@ -58,8 +77,8 @@ Renders the reusable tile purchase controls inside the existing product page.
   endcapture
 -%}
 {{ 'bc-porcelanosa-buybox.css' | asset_url | stylesheet_tag }}
-<bc-porcelanosa-buybox data-temporary-in-stock="{{ settings.bc_temporary_in_stock }}" data-in-stock-label="{{ 'bc_delivery.temporary_in_stock' | t | escape }}" class="bc-tile-buybox" data-order-mode="{{ tile_order_mode | default: 'm2' }}" data-sale-unit="{{ tile_sale_unit | escape }}" data-unit-count="{{ tile_unit_count }}" {% if tile_vendor == 'cottoceramix' %}data-exact-size="true"{% endif %} data-unit-error="{{ 'bc_units.invalid_quantity' | t | escape }}" data-pieces-one="{{ 'bc_units.pieces_one' | t: count: '__COUNT__' | escape }}" data-pieces-many="{{ 'bc_units.pieces_many' | t: count: '__COUNT__' | escape }}" data-group="{{ tile_group | escape }}" data-section="{{ section.id }}" data-form="{{ product_form_id }}" data-root-url="{{ routes.root_url }}" data-product-id="{{ product.id }}" data-variant-id="{{ tile_variant.id }}" data-sku="{{ tile_variant.sku | escape }}" data-handle="{{ product.handle | escape }}" data-box-units="{{ tile_box_units }}" data-price-cents="{{ tile_variant.price }}" data-unit-price-cents="{{ tile_unit_cents }}" data-currency="{{ tile_currency | escape }}" data-color-layout="{{ tile.color_picker_layout | default: 'rail' | escape }}" data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}" data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}" data-preview="{{ tile_preview }}" data-lead-time="{{ tile.lead_time | escape }}" data-order-type="{{ tile.order_type | escape }}" data-choice-error="{{ 'bc_tiles.choice_error' | t | escape }}" data-box-error="{{ 'bc_tiles.box_error' | t | escape }}" data-area-error="{{ 'bc_tiles.area_error' | t | escape }}" data-contact-message="{{ 'bc_tiles.contact_delivery' | t | escape }}" data-delivery-unknown="{{ 'bc_tiles.delivery_unknown' | t | escape }}">
-  {%- capture tile_catalog -%}{"schema":1,"group":{{ tile_group | json }},"products":[{% render 'bc-tile-choice-data', article: product %}{% for related in product.metafields.tiles.group_products.value %}{% if related.id != product.id and related.published_at != blank %}{% if tile_order_mode == 'unit' %}{% capture related_mode %}{% render 'bc-cotto-unit-mode', product: related %}{% endcapture %}{% assign related_mode = related_mode | strip %}{% assign related_unit = related.metafields.custom.bron_toelichtingen_json.value.tiles %}{% if related_mode == 'unit' and related_unit.sale_unit == tile_sale_unit and related_unit.unit_count == tile.unit_count %},{% render 'bc-tile-choice-data', article: related %}{% endif %}{% elsif related.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0 %},{% render 'bc-tile-choice-data', article: related %}{% endif %}{% endif %}{% endfor %}]}{%- endcapture -%}
+<bc-porcelanosa-buybox data-temporary-in-stock="{{ settings.bc_temporary_in_stock }}" data-in-stock-label="{{ 'bc_delivery.temporary_in_stock' | t | escape }}" class="bc-tile-buybox" data-order-mode="{{ tile_order_mode | default: 'm2' }}" data-sale-unit="{{ tile_sale_unit | escape }}" data-unit-count="{{ tile_unit_count }}" {% if tile_vendor == 'cottoceramix' %}data-exact-size="true"{% endif %} data-unit-error="{{ 'bc_units.invalid_quantity' | t | escape }}" data-pieces-one="{% if tile_mosaic_sheet %}{{ sheet_one }}{% else %}{{ 'bc_units.pieces_one' | t: count: '__COUNT__' | escape }}{% endif %}" data-pieces-many="{% if tile_mosaic_sheet %}{{ sheet_many }}{% else %}{{ 'bc_units.pieces_many' | t: count: '__COUNT__' | escape }}{% endif %}" data-group="{{ tile_group | escape }}" data-section="{{ section.id }}" data-form="{{ product_form_id }}" data-root-url="{{ routes.root_url }}" data-product-id="{{ product.id }}" data-variant-id="{{ tile_variant.id }}" data-sku="{{ tile_variant.sku | escape }}" data-handle="{{ product.handle | escape }}" data-box-units="{{ tile_box_units }}" data-price-cents="{{ tile_variant.price }}" data-unit-price-cents="{{ tile_unit_cents }}" data-currency="{{ tile_currency | escape }}" data-color-layout="{{ tile.color_picker_layout | default: 'rail' | escape }}" data-label-all-colors="{{ 'bc_hotbath_mobile.all_colors' | t: count: '__COUNT__' | escape }}" data-label-less-colors="{{ 'bc_hotbath_mobile.less_colors' | t | escape }}" data-preview="{{ tile_preview }}" data-lead-time="{{ tile.lead_time | escape }}" data-order-type="{{ tile.order_type | escape }}" data-choice-error="{{ 'bc_tiles.choice_error' | t | escape }}" data-box-error="{{ 'bc_tiles.box_error' | t | escape }}" data-area-error="{{ 'bc_tiles.area_error' | t | escape }}" data-contact-message="{{ 'bc_tiles.contact_delivery' | t | escape }}" data-delivery-unknown="{{ 'bc_tiles.delivery_unknown' | t | escape }}">
+  {%- capture tile_catalog -%}{"schema":1,"group":{{ tile_group | json }},"products":[{% render 'bc-tile-choice-data', article: product, mosaic: mosaic %}{% for related in product.metafields.tiles.group_products.value %}{% if related.id != product.id and related.published_at != blank %}{% if tile_order_mode == 'unit' %}{% capture related_mode %}{% render 'bc-cotto-unit-mode', product: related %}{% endcapture %}{% assign related_mode = related_mode | strip %}{% assign related_unit = related.metafields.custom.bron_toelichtingen_json.value.tiles %}{% if related_mode == 'unit' and related_unit.sale_unit == tile_sale_unit and related_unit.unit_count == tile.unit_count %},{% render 'bc-tile-choice-data', article: related %}{% endif %}{% elsif related.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0 %},{% render 'bc-tile-choice-data', article: related %}{% endif %}{% endif %}{% endfor %}]}{%- endcapture -%}
   <script type="application/json" data-tile-catalog>{{ tile_catalog | replace: '<', '\u003c' }}</script>
   <div class="bc-tile__choices" data-tile-choices aria-busy="true" hidden>
     <fieldset class="bc-tile__field" data-tile-field="type"><legend>{{ 'bc_tiles.type' | t }}</legend><div class="bc-tile__buttons" data-tile-options></div></fieldset>
@@ -79,11 +98,11 @@ Renders the reusable tile purchase controls inside the existing product page.
   <p class="bc-tile__choice-status" data-tile-choice-status role="status" hidden></p>
   {%- if tile_order_mode == 'unit' -%}
   <div class="bc-tile__pricing">
-    <p class="bc-tile__price"><span data-tile-unit-price>{{ tile_variant.price | money }}</span><span class="bc-tile__per">{{ tile_sale_label_key | t }}</span></p>
+    <p class="bc-tile__price"><span data-tile-unit-price>{{ tile_variant.price | money }}</span><span class="bc-tile__per">{% if tile_mosaic_sheet %}{{ sheet_label }}{% else %}{{ tile_sale_label_key | t }}{% endif %}</span></p>
     <p class="bc-tile__vat">{{ 'bc_tiles.vat' | t }}</p>
   </div>
   <div class="bc-tile__calculator">
-    <label class="bc-tile__label" id="UnitQuantityLabel-{{ section.id }}" for="UnitQuantity-{{ section.id }}">{{ tile_quantity_label_key | t }}</label>
+    <label class="bc-tile__label" id="UnitQuantityLabel-{{ section.id }}" for="UnitQuantity-{{ section.id }}">{% if tile_mosaic_sheet %}{{ sheet_quantity }}{% else %}{{ tile_quantity_label_key | t }}{% endif %}</label>
     <div class="bc-tile__box-controls">
       <button type="button" data-unit-step="-1" aria-label="{{ 'bc_units.decrease' | t | escape }}" disabled>−</button>
       <input type="number" id="UnitQuantity-{{ section.id }}" name="quantity" form="{{ product_form_id }}" value="1" min="1" max="2147483647" step="1" inputmode="numeric" autocomplete="off" required data-unit-quantity aria-labelledby="UnitQuantityLabel-{{ section.id }}" aria-describedby="UnitError-{{ section.id }}">
@@ -91,7 +110,7 @@ Renders the reusable tile purchase controls inside the existing product page.
     </div>
     <p class="bc-tile__error" id="UnitError-{{ section.id }}" data-tile-error role="alert" hidden></p>
     <div class="bc-tile__summary" aria-live="polite" aria-atomic="true">
-      <p class="bc-tile__required">{{ 'bc_tiles.receives' | t }}: <strong data-unit-received>{{ 'bc_units.pieces_many' | t: count: tile_unit_count }}</strong></p>
+      <p class="bc-tile__required">{{ 'bc_tiles.receives' | t }}: <strong data-unit-received>{% if tile_mosaic_sheet %}{{ sheet_one | replace: '__COUNT__', '1' }}{% else %}{{ 'bc_units.pieces_many' | t: count: tile_unit_count }}{% endif %}</strong></p>
       <div class="bc-tile__total"><span>{{ 'bc_tiles.total' | t }}</span><strong class="bc-buybox__price-current" data-tile-total>{{ tile_variant.price | money }}</strong></div>
     </div>
     <p class="bc-tile__delivery{% unless settings.bc_temporary_in_stock %}{% if tile.order_type == 'Bestelartikel' %} is-order{% elsif tile.order_type == blank %} is-unknown{% endif %}{% endunless %}" data-tile-delivery role="status"><span class="bc-tile__dot" aria-hidden="true"></span><span data-tile-delivery-text>{% if settings.bc_temporary_in_stock %}{{ 'bc_delivery.temporary_in_stock' | t }}{% else %}{% if tile.order_type != blank %}{{ tile.order_type | escape }} · {% endif %}{{ tile.lead_time | default: tile_delivery_unknown | escape }}{% endif %}</span></p>
@@ -101,6 +120,14 @@ Renders the reusable tile purchase controls inside the existing product page.
   {%- else -%}
   <div class="bc-tile__pricing">
     <p class="bc-tile__price"><span data-tile-unit-price>{{ tile_unit_cents | money }}</span><span class="bc-tile__per">{{ 'bc_tiles.per_m2' | t }}</span></p>
+    {% if mosaic != blank %}
+      <p class="bc-tile__box-price">
+        <strong data-tile-box-price>{{ tile_variant.price | money }}</strong>
+        {% if request.locale.iso_code == 'en' %}per box{% else %}per doos{% endif %}
+        · <span data-tile-box-area>{{ tile.m2_per_box | replace: '.', ',' }}</span> m²
+        · {{ mosaic.sheets_per_box }} {% if request.locale.iso_code == 'en' %}sheets{% else %}matjes{% endif %}
+      </p>
+    {% endif %}
     <p class="bc-tile__vat">{{ 'bc_tiles.vat' | t }}</p>
   </div>
   <div class="bc-tile__calculator">

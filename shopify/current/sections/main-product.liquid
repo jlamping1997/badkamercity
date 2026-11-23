@@ -7,13 +7,31 @@
 -%}
 {%- liquid
   assign bc_tiles_enabled = false
+  assign bc_packaging_data = product.metafields.custom.bron_toelichtingen_json.value
+  assign bc_mosaic = bc_packaging_data.mosaic_packaging
+  assign bc_mosaic_variant = product.selected_or_first_available_variant
+  assign bc_mosaic_buybox_enabled = false
+  if bc_mobile_vendor == 'the mosaic factory' and bc_mosaic.sku != blank and bc_mosaic.sku == bc_mosaic_variant.sku
+    if bc_mosaic.order_mode == 'unit' and bc_mosaic.sale_unit == 'stuk' and bc_mosaic.unit_count == 1
+      assign bc_mosaic_buybox_enabled = true
+    elsif bc_mosaic.order_mode == 'm2'
+      assign bc_approved_box = bc_packaging_data.tiles
+      assign bc_approved_box_price = bc_approved_box.price_per_box.amount | times: 100 | round
+      if bc_approved_box.sale_unit == 'doos' and bc_mosaic.m2_per_box > 0 and bc_mosaic.m2_per_box == bc_approved_box.m2_per_box and bc_mosaic.sheets_per_box == bc_approved_box.pieces_per_box and bc_approved_box_price > 0 and bc_approved_box_price == bc_mosaic_variant.price
+        assign bc_mosaic_buybox_enabled = true
+      endif
+    endif
+  endif
+  unless bc_mosaic_buybox_enabled
+    assign bc_mosaic = nil
+  endunless
   capture bc_cotto_unit_mode
     render 'bc-cotto-unit-mode', product: product
   endcapture
   assign bc_cotto_unit_mode = bc_cotto_unit_mode | strip
   if product.metafields.custom.bron_toelichtingen_json.value.tiles.m2_per_box > 0
     assign bc_tiles_enabled = true
-  elsif bc_cotto_unit_mode == 'unit'
+  elsif bc_cotto_unit_mode == 'unit' or bc_mosaic != blank
     assign bc_tiles_enabled = true
   endif
 -%}
@@ -335,7 +353,13 @@
     {%- render 'bc-product-breadcrumbs', product: product -%}
     <header class="bc-product__header">
       {%- if product.vendor != blank -%}
-        <p class="bc-product__vendor">{{ product.vendor | escape }}</p>
+        <p class="bc-product__vendor">
+          {%- if bc_mobile_vendor == 'hotbath' and pages['hotbath'].url != blank -%}
+            <a href="{{ pages['hotbath'].url }}" aria-label="Bekijk het Hotbath-assortiment" style="color: inherit">{{ product.vendor | escape }}</a>
+          {%- else -%}
+            {{ product.vendor | escape }}
+          {%- endif -%}
+        </p>
       {%- endif -%}
       <h1 class="bc-product__title">{{ product.title | escape }}</h1>
       {%- if product.selected_or_first_available_variant.sku != blank -%}
@@ -1116,7 +1140,8 @@
             {%- endcase -%}
           {%- endfor -%}
           {%- if bc_tiles_enabled -%}
-            {%- render 'bc-porcelanosa-buybox', product: product, section: section, product_form_id: product_form_id, actions_markup: bc_buybox_actions_markup -%}
+            {%- if bc_mosaic != blank -%}{{ bc_buybox_options_markup }}{%- endif -%}
+            {%- render 'bc-porcelanosa-buybox', product: product, section: section, product_form_id: product_form_id, actions_markup: bc_buybox_actions_markup, mosaic: bc_mosaic -%}
           {%- else -%}
           {%- if bc_hotbath_menu_excluded == false and bc_hotbath_menu_disabled == false -%}
           {%- if bc_brauer_choices_markup != blank or product.metafields.custom.color_variants.value != blank or product.metafields.custom.fabriecio_choices.value != blank or product.metafields.bc_sunshower.configuration.value != blank or current_switch_group != blank or current_group != blank or product.has_only_default_variant == false -%}

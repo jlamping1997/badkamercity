@@ -1,6 +1,7 @@
 {% doc %}
 Serializes a tile article for the product selector using current Shopify data.
 @param {product} article - The tile product.
+@param {object} [mosaic] - Verified mosaic packaging data.
 {% enddoc %}
 {%- liquid
   assign variant = article.selected_or_first_available_variant
@@ -9,6 +10,12 @@ Serializes a tile article for the product selector using current Shopify data.
     render 'bc-cotto-unit-mode', product: article
   endcapture
   assign order_mode = order_mode | strip | default: 'm2'
+  if mosaic != blank
+    assign order_mode = mosaic.order_mode
+    if order_mode == 'unit'
+      assign data = mosaic
+    endif
+  endif
   assign execution = article.metafields.tiles.execution.value | split: ' · '
   capture finish
     for part in execution
